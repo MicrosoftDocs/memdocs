@@ -19,21 +19,6 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "sccm-apps",
-      "build_source_folder": "sccm/apps",
-      "build_output_subfolder": "sccm/apps",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "sccm-compliance",
       "build_source_folder": "sccm/compliance",
       "build_output_subfolder": "sccm/compliance",
