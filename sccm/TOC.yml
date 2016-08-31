@@ -6,11 +6,11 @@
     tocHref: /sccm/core/
     topicHref: /sccm/core/understand/introduction
   - name: Application management
-    tocHref: /sccm/app/
-    topicHref: /sccm/app/understand/get-started-with-application-management
+    tocHref: /sccm/apps/
+    topicHref: /sccm/apps/understand/get-started-with-application-management
   - name: Device compliance
     tocHref: /sccm/compliance/
-    topicHref: /sccm/compliance/undestand/ensure-device-compliance
+    topicHref: /sccm/compliance/understand/ensure-device-compliance
   - name: Mobile device management
     tocHref: /sccm/mdm/
     topicHref: /sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management
