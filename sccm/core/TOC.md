@@ -229,7 +229,7 @@
 ### [Prerequisites for Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
 ### [Introduction to Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
 ### [Configuring Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
-# [Operations for Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
+## [Operations for Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
 ### [Security and privacy for Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)
 ### [Example validation state transitions for Asset Intelligence in System Center Configuration Manager](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ### [Example Asset Intelligence general license import file in System Center Configuration Manager](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
