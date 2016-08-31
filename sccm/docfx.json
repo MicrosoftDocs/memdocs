@@ -3,7 +3,7 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md", "**/**.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -25,7 +25,11 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "~/toc.yml",
+      "ms.locale": "en-us"
+      }
     "fileMetadata": {},
     "template": [
       null
