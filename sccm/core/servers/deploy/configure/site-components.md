@@ -42,7 +42,7 @@ At each System Center Configuration Manager site you can configure site componen
   
 -   **Content distribution settings:**  You can configure settings that modify how the site server transfers content to its distribution points. When you increase the values you use for concurrent distribution settings, content distribution can use more network bandwidth.  
   
--   **Network Access Account:**  For information about configuring and using the Network Access Account, see [Network Access Account](../../../../core/plan-design/hierachy/manage-accounts-to-access-content.md#bkmk_NAA)  
+-   **Network Access Account:**  For information about configuring and using the Network Access Account, see [Network Access Account](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)  
   
  **Software Update Point:**  
   
@@ -56,9 +56,9 @@ At each System Center Configuration Manager site you can configure site componen
   
      Because the most secure method for clients to find management points is to publish them in Active Directory Domain Services, you will typically always select all functioning management points to publish to Active Directory Domain Services. However, this service location method requires that the schema is extended for Configuration Manager, there is a **System Management** container with appropriate security permissions for the site server to publish to this container, that the Configuration Manager site is configured to publish to Active Directory Domain Services, and that clients belong to the same Active Directory forest as the site server’s forest.  
   
-     When clients on the intranet cannot use Active Directory Domain Services to find management points, use [DNS](../../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) publishing.  
+     When clients on the intranet cannot use Active Directory Domain Services to find management points, use [DNS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) publishing.  
   
-     For general information about service location, see [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md).  
+     For general information about service location, see [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
   
 -   **Publish selected intranet management points in DNS:** Specify this option when clients on the intranet cannot find management points from Active Directory Domain Services, but they can use a DNS service location resource record (SRV RR) to find a management point in their assigned site.  
   
@@ -73,7 +73,7 @@ At each System Center Configuration Manager site you can configure site componen
     > [!WARNING]  
     >  For clients to find management points that are published in DNS, you must assign the clients to a specific site (rather than use automatic-site assignment) and configure these clients to use the site code with the domain suffix of their management point. For more information, see  [Locating Management Points](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
   
-     If Configuration Manager clients cannot use Active Directory Domain Services or DNS to find management points on the intranet, they fall back to using [WINS](../../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins). The first management point that is installed for the site is automatically published to WINS when it is configured to accept HTTP client connections on the intranet.  
+     If Configuration Manager clients cannot use Active Directory Domain Services or DNS to find management points on the intranet, they fall back to using [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins). The first management point that is installed for the site is automatically published to WINS when it is configured to accept HTTP client connections on the intranet.  
   
  **Status Reporting:**  
   

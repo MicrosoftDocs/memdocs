@@ -38,13 +38,13 @@ Use the information in the following topics when you're ready to start planning 
   
 -   [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md), including:  
   
-    -   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierachy/design-a-hierarchy-of-sites.md)  
+    -   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
   
     -   [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)  
   
-    -   [Fundamental concepts for content management in System Center Configuration Manager](../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)  
+    -   [Fundamental concepts for content management in System Center Configuration Manager](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
   
-    -   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md)  
+    -   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
   
 -   [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)  
   

@@ -59,7 +59,7 @@ author: Brenduns
   
  **/SDKINST <*FQDN*>**  
   
- Installs the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer. For more information about the SMS Provider, see the [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierachy/plan-for-the-sms-provider.md).  
+ Installs the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer. For more information about the SMS Provider, see the [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
   
  **/SDKDEINST <*FQDN*>**  
   
@@ -846,7 +846,7 @@ author: Brenduns
   
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.  
   
-         You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierachy/plan-for-the-sms-provider.md).  
+         You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
   
 -   **Key Name:** PrerequisiteComp  
   
@@ -1099,7 +1099,7 @@ author: Brenduns
   
     -   **Values:** <*FQDN of SMS Provider*>  
   
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure. You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierachy/plan-for-the-sms-provider.md).  
+    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure. You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
   
 -   **Key Name:** PrerequisiteComp  
   

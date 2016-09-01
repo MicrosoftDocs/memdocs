@@ -92,7 +92,7 @@ Before the compliance assessment data of the software update displays in the Sys
 #### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you do not configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  
   
- For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierachy/accounts.md).  
+ For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
   
 ### Synchronization Source  
  You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../../sup/plan-design/plan-for-software-updates.md#BKMK_SyncSource).  

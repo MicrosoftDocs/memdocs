@@ -164,7 +164,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the boot image. The wizard retrieves the boot image from the distribution point and writes it to the media.  
   
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
   
     -   If you selected **Site-based media** on the **Media Management** page of this wizard, in the **Management point** box, specify a management point from a primary site.  
   
@@ -179,7 +179,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the operating system image package. The wizard retrieves the operating system image from the distribution point and writes it to the media.  
   
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
   
 11. On the **Select Application** page, select application content to include in the media file, and then click **Next**.  
   

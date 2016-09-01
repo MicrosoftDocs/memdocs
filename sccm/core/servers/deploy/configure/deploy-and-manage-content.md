@@ -35,7 +35,7 @@ After you install distribution points for System Center Configuration Manager, y
   
 -   Task sequences  
   
- When you create a package that contains source files, such as an application deployment type or deployment package, the site on which the package is created becomes the site owner for the package content source. Configuration Manager copies the source files from the source file path that you specify for the object to the content library on the site server that owns the package content source.  Then, Configuration Manager replicates the information to additional sites. (See [The content library](../../../../core/plan-design/hierachy/the-content-library.md) for more information about this.)  
+ When you create a package that contains source files, such as an application deployment type or deployment package, the site on which the package is created becomes the site owner for the package content source. Configuration Manager copies the source files from the source file path that you specify for the object to the content library on the site server that owns the package content source.  Then, Configuration Manager replicates the information to additional sites. (See [The content library](../../../../core/plan-design/hierarchy/the-content-library.md) for more information about this.)  
   
  Use the following procedure to distribute content to distribution points.  
   

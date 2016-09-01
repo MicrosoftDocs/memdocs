@@ -259,7 +259,7 @@ This section contains security and privacy information for System Center Configu
   
  When clients connect to a site system by using HTTP rather than by using HTTPS, they use Windows authentication, which might fall back to using NTLM authentication rather than Kerberos authentication. When NTLM authentication is used, clients might connect to a rogue server.  
   
- The exception to this security best practice might be distribution points because package access accounts do not work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security Best Practices for Content Management](../../../core/plan-design/hierachy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
+ The exception to this security best practice might be distribution points because package access accounts do not work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security Best Practices for Content Management](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
   
  **Configure a certificate trust list (CTL) in IIS for site system roles.**  
   

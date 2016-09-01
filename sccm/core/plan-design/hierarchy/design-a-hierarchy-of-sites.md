@@ -40,7 +40,7 @@ Before installing the first site of a new System Center Configuration Manager hi
  Hierarchy topologies range from a single stand-alone primary site to a group of connected primary and secondary sites with a central administration site at the top-level (top-tier) site of the hierarchy.    
 The key driver of the type and count of sites that you use in a hierarchy is usually the number and type of devices you must support:  
   
- **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Sizing)). This topology is also successful when your companies different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)).  
+ **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Sizing)). This topology is also successful when your companies different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
   
  Benefit of this topology include:  
   
@@ -148,7 +148,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
   
 -   Background Intelligent Transfer Service (BITS) does not provide sufficient bandwidth control for your network requirements  
   
- For more information about content management options in Configuration Manager, see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md).  
+ For more information about content management options in Configuration Manager, see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
   
 ##  <a name="bkmk_beyond"></a> Beyond hierarchy topology  
  In addition to an initial hierarchy topology, consider what services or capabilities will be available from  different sites  in the hierarchy (site system roles), and how hierarchy wide configurations and capabilities will be managed in your infrastructure. The following are the  more common considerations and are covered in separate topics. These should be considered as they can influence or be influenced by your hierarchy design:  
@@ -165,15 +165,15 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
   
  **Review the following resources  for site specific configurations:**  
   
--   [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierachy/plan-for-the-sms-provider.md)  
+-   [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)  
   
--   [Plan for the site database for System Center Configuration Manager](../../../core/plan-design/hierachy/plan-for-the-site-database.md)  
+-   [Plan for the site database for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-site-database.md)  
   
--   [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md)  
+-   [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)  
   
 -   [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md)  
   
--   [Managing network bandwidth](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#bkmk_bandwidth) when deploying content within a site  
+-   [Managing network bandwidth](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_bandwidth) when deploying content within a site  
   
  **Consider configurations that span sites and hierarchies:**  
   

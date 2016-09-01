@@ -40,7 +40,7 @@ Clients in System Center Configuration Manager must locate a management point to
   
  Before you use DNS publishing for management points, make sure that DNS servers on the intranet have service location resource records (SRV RR) and corresponding host (A or AAA) resource records for the site's management points. The service location resource records can be created automatically by Configuration Manager or manually, by the DNS administrator who creates the records in DNS.  
   
- For more information about DNS publishing as a service location method for Configuration Manager clients, see [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md).  
+ For more information about DNS publishing as a service location method for Configuration Manager clients, see [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
   
  By default, clients search DNS for management points in their DNS domain. However, if there are no management points published in the clients’ domain, you must manually configure clients with a management point DNS suffix. You can configure this DNS suffix on clients either during or after client installation:  
   

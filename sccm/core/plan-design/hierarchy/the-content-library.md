@@ -53,4 +53,4 @@ For more information about how to configure the drive settings for the distribut
 -   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 Configuration Manager Service Pack 1 Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
 
 ## See Also
-[Fundamental concepts for content management](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)
+[Fundamental concepts for content management](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)

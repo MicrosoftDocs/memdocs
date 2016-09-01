@@ -85,7 +85,7 @@ Consider the following requirements before preparing the Configuration Manager i
   
  These site system roles can be installed on the single site system server or can be run separately on different servers depending the needs of your organization. Each site system server used for On\-premises Mobile Device Management must be configured as an HTTPS endpoint for communicating with trusted devices. For more information, see [Required trusted communications](#bkmk_trustedComs).  
   
- For more information on planning for site system roles, see [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md).  
+ For more information on planning for site system roles, see [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
   
  For more information on how to add the required site system roles, see [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mobile-device-management.md).  
   

@@ -246,7 +246,7 @@ Use the following information to help you plan for security in System Center Con
 9. Reconfigure other site system roles to use HTTPS client connections. If you want to manage clients on the Internet, ensure that site systems have an Internet FQDN and configure individual management points and distribution points to accept client connections from the Internet.  
   
     > [!IMPORTANT]  
-    >  Before you configure site system roles to accept connections from the Internet, review the planning information and prerequisites for Internet-based client management. For more information, see [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierachy/communications-between-endpoints.md).  
+    >  Before you configure site system roles to accept connections from the Internet, review the planning information and prerequisites for Internet-based client management. For more information, see [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
   
 10. Extend the PKI certificate rollout for clients and for site systems that run IIS, and configure the site system roles for HTTPS client connections and Internet connections, as required.  
   

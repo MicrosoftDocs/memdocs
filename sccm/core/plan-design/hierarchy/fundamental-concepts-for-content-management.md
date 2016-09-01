@@ -51,7 +51,7 @@ The key concepts for content management follow. When a concept requires addition
   
 -   **Multicast Connection Account** – Used for operating system deployments  
 
-For more information about these accounts, see [Manage accounts to access content](../../../core/plan-design/hierachy/manage-accounts-to-access-content.md)
+For more information about these accounts, see [Manage accounts to access content](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)
   
 ## Bandwidth throttling and scheduling  
  Both throttling and scheduling are options that help you control when content is distributed from a site server to distribution points. This is similar to, but not directly related to bandwidth controls for site to site file-based replication.  
@@ -118,7 +118,7 @@ For more information, see [Windows PE peer cache](../../../osd/plan-design/prepa
 ## Content Library  
  The single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content you distribute.  
   
-Learn more about the [content library](../../../core/plan-design/hierachy/the-content-library.md)
+Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md)
 
   
 ## Distribution point  
@@ -128,7 +128,7 @@ Learn more about the [content library](../../../core/plan-design/hierachy/the-co
   
 -   **Pull-distribution point** -  A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point) similar to how clients download content from distribution points. Pull-distribution points  can help you avoid network bandwidth bottlenecks that can occur when the site server must directly distribute content to each distributin point.  [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
   
--   **Cloud-based distribution point** – A variation of a distribution point installed in Microsoft Azure. [Use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierachy/use-a-cloud-based-distribution-point.md)  
+-   **Cloud-based distribution point** – A variation of a distribution point installed in Microsoft Azure. [Use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
   
  Standard distribution points support a range of configurations and features, like throttling and scheduling, PXE and Multicast, or prestaged content.  
   
@@ -169,7 +169,7 @@ Learn more about the [content library](../../../core/plan-design/hierachy/the-co
   
 -   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that cannot get a deployment from one of its preferred distribution points.  
   
- See [content source location scenarios](../../../core/plan-design/hierachy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.
+ See [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.
   
 ## Network bandwidth  
  To help manage the amount of network bandwidth used when you distribute content you can use the following options:  
@@ -189,7 +189,7 @@ For more information, see [Manage network bandwidth](Manage%20network%20bandwidt
   
 -   The **network connection speed** and a deployments configuration determine whether a client can download content from a distribution point when the client is in an associated boundary group  
   
- See [content source location scenarios](../../../core/plan-design/hierachy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
+ See [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
   
 ## On-demand content distribution  
  An option you can set for individual applications and packages (deployments) to enable on-demand content distribution to preferred distribution points.  
@@ -200,13 +200,13 @@ For more information, see [Manage network bandwidth](Manage%20network%20bandwidt
   
 -   Although this triggers Configuration Manager to automatically distribute the content to that clients preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment  
   
- See  [content source location scenarios](../../../core/plan-design/hierachy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
+ See  [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
   
   
 ## Package Transfer Manager  
  The site server component that transfers content to distribution points on other computers.  
   
- Learn more about the [Package Transfer Manager](../../../core/plan-design/hierachy/package-transfer-manager.md)  
+ Learn more about the [Package Transfer Manager](../../../core/plan-design/hierarchy/package-transfer-manager.md)  
   
 ## Preferred distribution point  
  distribution points that are associated with a client’s current boundary groups.  
@@ -217,7 +217,7 @@ For more information, see [Manage network bandwidth](Manage%20network%20bandwidt
   
 -   By default, clients can only download content from a preferred distribution point  
   
- See [content source location scenarios](../../../core/plan-design/hierachy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
+ See [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
   
 ## Prestage content  
  A process of transferring content to a distribution point without relying on  Configuration Manager to distribute the content across the network.  

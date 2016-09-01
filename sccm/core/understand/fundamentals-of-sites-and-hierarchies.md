@@ -56,7 +56,7 @@ When you install System Center Configuration Manager for the first time, the fir
   
 -   [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)  
   
--   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierachy/design-a-hierarchy-of-sites.md)  
+-   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
   
 -   [Install System Center Configuration Manager sites](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md)  
   
@@ -65,7 +65,7 @@ When you install System Center Configuration Manager for the first time, the fir
   
  For a smaller deployment of Configuration Manager you might initially run all of your site system roles directly on the site server computer. Then, as your managed environment and needs grow, you can  install additional site system servers to host additional site system roles to improve the sites efficiency in providing services to more devices.  
   
- For information about the different site system roles, see [Site system roles](../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md)  
+ For information about the different site system roles, see [Site system roles](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)  
   
 ## Publishing site information to Active Directory Domain Services  
  To simplify management of Configuration Manager, you can extend the Active Directory schema to support details used by Configuration Manager,  and then have sites publish their key information to Active Directory Domain Services (AD DS). This enables the computers that you want to manage to securely retrieve site related  information from the trusted source of AD DS. The information clients can retrieve identifies available sites, site system servers, and the services that those site system servers provide.  

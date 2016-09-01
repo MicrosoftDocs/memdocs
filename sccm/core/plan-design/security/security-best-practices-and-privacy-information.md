@@ -37,7 +37,7 @@ Use the following information to find security best practices and privacy inform
   
 ## Security and Privacy content:  
   
--   [Security and privacy for site administration in System Center Configuration Manager](../../../core/plan-design/hierachy/security-and-privacy-for-site-administration.md)  
+-   [Security and privacy for site administration in System Center Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
   
 -   [Security and privacy for reporting in System Center Configuration Manager](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
   
@@ -45,7 +45,7 @@ Use the following information to find security best practices and privacy inform
   
 -   [Security and privacy for clients in System Center Configuration Manager](../../../core/clients/deploy/plan/security-and-privacy-for-clients.md)  
   
--   [Security and privacy for content management for System Center Configuration Manager](../../../core/plan-design/hierachy/security-and-privacy-for-content-management.md)  
+-   [Security and privacy for content management for System Center Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-content-management.md)  
   
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
   

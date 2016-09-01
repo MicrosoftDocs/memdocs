@@ -229,7 +229,7 @@ update checklist for actions to take before starting the update:
   
 -   Secondary sites must be manually updated from within the Configuration Manager console.  
   
--   Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions of System Center Configuration Manager](../../../core/plan-design/hierachy/interoperability-between-different-versions.md).  
+-   Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions of System Center Configuration Manager](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
   
  **5.   Update Configuration Manager consoles**  
   

@@ -33,7 +33,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Planning for operating system deployment interoperability in System Center Configuration Manager
-When different System Center Configuration Manager sites in a single hierarchy use different versions, some Configuration Manager functionality is not available. Typically, functionality from the newer version of Configuration Manager is not accessible at sites or by clients that run a lower version. For more information, see [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierachy/interoperability-between-different-versions.md).  
+When different System Center Configuration Manager sites in a single hierarchy use different versions, some Configuration Manager functionality is not available. Typically, functionality from the newer version of Configuration Manager is not accessible at sites or by clients that run a lower version. For more information, see [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
   
  Consider the following when you upgrade the top-level site in your hierarchy and other sites in your hierarchy run Configuration Manager with a lower version:  
   

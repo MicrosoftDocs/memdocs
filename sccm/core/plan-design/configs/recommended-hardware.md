@@ -105,7 +105,7 @@ The following recommendations are guidelines  to help you scale your System Cent
 |Temp database files (.mdf and .ldf)|As needed|As needed|As needed|As needed|As needed|As needed|  
 |Content (distribution point shares)|As needed<sup>1</sup>|As needed<sup>1</sup>|As needed<sup>1</sup>|As needed<sup>1</sup>|As needed<sup>1</sup>|As needed<sup>1</sup>|  
   
- <sup>1</sup> The disk space guidance does not include the space required for content that is located in the content library on the site server or distribution points. For information about planning for the content library, see [The content library](../../../core/plan-design/hierachy/the-content-library.md).  
+ <sup>1</sup> The disk space guidance does not include the space required for content that is located in the content library on the site server or distribution points. For information about planning for the content library, see [The content library](../../../core/plan-design/hierarchy/the-content-library.md).  
   
  In addition to the preceding guidance, consider the following guidelines when you plan for disk space requirements:  
   

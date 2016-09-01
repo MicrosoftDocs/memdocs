@@ -268,7 +268,7 @@ Boundaries for System Center Configuration Manager define network locations on y
 -   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the client’s assigned site)  
   
 > [!NOTE]  
->  When a client roams (which means to change its network locations such as  when a laptop travels to a remote office location) it might use a management point (or proxy management point) from the local site at its new location before attempting to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md) for more information.  
+>  When a client roams (which means to change its network locations such as  when a laptop travels to a remote office location) it might use a management point (or proxy management point) from the local site at its new location before attempting to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) for more information.  
   
 ###  <a name="BKMK_BoundaryOverlap"></a> About overlapping boundaries  
  Configuration Manager supports overlapping boundary configurations for content location:  
@@ -284,7 +284,7 @@ Boundaries for System Center Configuration Manager define network locations on y
   
  By default, the network connection speed is configured as **Fast**, but it can also be configured as **Slow**. The network connection speed and the deployment configuration determine whether a client can download content from a distribution point when the client is in an associated boundary group.  
   
- For more information about how the network connection speed configuration affects how clients get content, see [Content source location scenarios](../../../../core/plan-design/hierachy/content-source-location-scenarios.md).  
+ For more information about how the network connection speed configuration affects how clients get content, see [Content source location scenarios](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
   
 ##  <a name="BKMK_BoundaryBestPractices"></a> Best practices for boundaries  
   

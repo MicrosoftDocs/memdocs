@@ -65,7 +65,7 @@ You can use System Center Configuration Manager task sequences to capture and re
   
     -   In the **Retry delay (in seconds)** box, specify how many seconds that the task sequence waits before it retries to capture the data.  
   
-    -   Select the **If computer account fails to connect to state store, use the Network Access account** check box to specify whether to use the Configuration Manager[Network Access Account](../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#bkmk_NAA) to connect to the state store.  
+    -   Select the **If computer account fails to connect to state store, use the Network Access account** check box to specify whether to use the Configuration Manager[Network Access Account](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_NAA) to connect to the state store.  
   
      On the **Options** tab, specify the following options:  
   

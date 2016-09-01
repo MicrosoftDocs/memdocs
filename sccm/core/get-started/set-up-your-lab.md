@@ -353,7 +353,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 4.  Type **.msi** into the dialog box and click **OK**.  
   
 ###  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
- You will create a [Determine when to use a primary site](../../core/plan-design/hierachy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SiteSystemScale) of potential devices.  
+ You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SiteSystemScale) of potential devices.  
 During this process, you will also install the Configuration Manager console, which will be used to manage your evaluation devices going forward.  
   
  Before you begin the installation, launch the  [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  

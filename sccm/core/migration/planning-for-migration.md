@@ -42,7 +42,7 @@ Before you migrate data to a System Center Configuration Manager destination hie
   
  Additionally, you might have to plan for overlap between the source hierarchy and your destination hierarchy. As an example, consider when the source hierarchy is configured to use the same network locations or boundaries as your destination hierarchy and you then install new clients to your destination hierarchy and use automatic site assignment. In this scenario, because a newly installed Configuration Manager client can select a site to join from either hierarchy, the client could incorrectly assign to your source hierarchy. Therefore, plan to assign each new client in the destination hierarchy to a specific site in that hierarchy instead of using automatic-site assignment.  
   
- For more information about site assignments, see the [Client site assignment considerations](../../core/plan-design/hierachy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) section in the [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierachy/interoperability-between-different-versions.md) topic.  
+ For more information about site assignments, see the [Client site assignment considerations](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) section in the [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md) topic.  
   
 ## Planning Topics  
  Use the following topics to help you plan how to migrate a supported source hierarchy to a System Center Configuration Manager destination hierarchy:  

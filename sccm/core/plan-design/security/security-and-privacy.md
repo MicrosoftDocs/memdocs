@@ -83,9 +83,9 @@ This topic includes resources for Security and Privacy for System Center Configu
   
 -   [Cryptographic controls technical reference for System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
   
--   [Ports used in System Center Configuration Manager](../../../core/plan-design/hierachy/ports.md)  
+-   [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
   
--   [Accounts used in System Center Configuration Manager](../../../core/plan-design/hierachy/accounts.md)  
+-   [Accounts used in System Center Configuration Manager](../../../core/plan-design/hierarchy/accounts.md)  
   
 ## See Also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../../protect/understand/protect-data-and-site-infrastructure.md)   

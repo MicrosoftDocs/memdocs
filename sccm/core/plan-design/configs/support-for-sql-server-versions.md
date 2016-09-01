@@ -141,7 +141,7 @@ You can use this version of SQL Server with no minimum cumulative update version
   
  At each site, both the instance of SQL Server that is used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.  
   
- Configuration Manager supports two exceptions to this collation to meet standards that are defined in GB18030 for use in China. For more information, see [International support in System Center Configuration Manager](../../../core/plan-design/hierachy/international-support.md).  
+ Configuration Manager supports two exceptions to this collation to meet standards that are defined in GB18030 for use in China. For more information, see [International support in System Center Configuration Manager](../../../core/plan-design/hierarchy/international-support.md).  
   
  **SQL Server features:**  
   
