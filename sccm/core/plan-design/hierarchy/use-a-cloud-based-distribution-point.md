@@ -216,5 +216,5 @@ When you use a cloud-based distribution, you:
      When you delete a cloud-based distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Windows Azure.  
   
 ## See Also  
- [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)   
+ [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)   
  [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)

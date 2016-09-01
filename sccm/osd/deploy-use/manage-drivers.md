@@ -112,7 +112,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 |**Create Prestage Content file**|Creates files that can be used to manually import content and its associated metadata. Use prestaged content when you have low network bandwidth between the site server and the distribution points where the driver package is stored.|  
 |**Delete**|Removes the driver package from the **Driver Packages** node.|  
 |**Distribute Content**|Distributes the driver package to distribution points, distribution point groups, and distribution point groups that are associated with collections.|  
-|**Manage Access Accounts**|Adds, modifies, or removes access accounts for the driver package.<br /><br /> For more information about Package Access Accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierachy/accounts.md).|  
+|**Manage Access Accounts**|Adds, modifies, or removes access accounts for the driver package.<br /><br /> For more information about Package Access Accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).|  
 |**Move**|Moves the driver package to another folder in the **Driver Packages** node.|  
 |**Update Distribution Points**|Updates the device driver package on all the distribution points where the package is stored. This action copies only the content that has changed after the last time it was distributed.|  
 |**Properties**|Opens the **Properties** dialog box where you can review and change the content and properties of the device driver. For example, you can change the name and description of the device driver, enable the device driver, and specify on which platforms the device driver can be run.|  

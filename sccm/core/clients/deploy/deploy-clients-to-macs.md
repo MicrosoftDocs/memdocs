@@ -153,7 +153,7 @@ Client installation and management for Mac computers in System Center Configurat
 ### Step 5: Configure the enrollment proxy point and the enrollment point  
  You must install both these site system roles in the same site but you do not have to install them on the same site system server, or in the same Active Directory forest.  
   
- For more information about site system role placement and considerations, see  [Site system roles](../../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierachy/plan-for-site-system-servers-and-site-system-roles.md).  
+ For more information about site system role placement and considerations, see  [Site system roles](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
   
  These procedures configure the site system roles to support Mac computers. Choose one of these procedures, depending on whether you will install a new site system server to support Mac computers or use an existing site system server:  
   

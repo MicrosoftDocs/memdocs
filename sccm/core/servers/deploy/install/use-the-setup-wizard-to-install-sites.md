@@ -356,7 +356,7 @@ When you expand a stand-alone primary site, you install a new central administra
   
     -   You can select the **Allow fallback source location for content** option to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no preferred distribution points are available.  
   
-     For  information about preferred distribution points, see the [Fundamental concepts for content management](../../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md) topic.  
+     For  information about preferred distribution points, see the [Fundamental concepts for content management](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) topic.  
   
 11. On the **Summary** page, verify the settings, and then click **Next** to install the secondary site. When the wizard presents  the **Completion** page, you can close the wizard. The secondary site installation continues in the background.  
 

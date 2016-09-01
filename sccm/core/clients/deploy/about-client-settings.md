@@ -149,7 +149,7 @@ All client settings in System Center Configuration Manager are managed in the Co
   
      If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is configured as **True** or **Enable user policy on clients** is configured as **Yes**, users will not receive user policies until the computer is connected to the intranet.  
   
-     For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierachy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierachy/communications-between-endpoints.md).  
+     For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
   
     > [!NOTE]  
     >  Application approval requests from users do not require user policies or user authentication.  

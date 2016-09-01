@@ -152,7 +152,7 @@ You install System Center Configuration Manager distribution points to host the 
 ##  <a name="bkmk_configs"></a> Distribution point configurations  
  Individual distribution points support a variety of different configurations. However, not all distribution point types support all configurations. For example, cloud-based distribution points do not support content deployments that are enabled for PXE or multicast. You can find information about specific limitation in the following topics:  
   
--   [Use a cloud-based distribution point with System Center Configuration Manager](../../../../core/plan-design/hierachy/use-a-cloud-based-distribution-point.md)  
+-   [Use a cloud-based distribution point with System Center Configuration Manager](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
   
 -   [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
   
@@ -166,7 +166,7 @@ You install System Center Configuration Manager distribution points to host the 
     > [!NOTE]  
     >  This option is only available when installing a new distribution point  
   
--   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see [Security best practices for content management](../../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#BKMK_Security_ContentManagement) in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md).  
+-   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see [Security best practices for content management](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#BKMK_Security_ContentManagement) in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
   
 -   **Allow clients to connect anonymously:** This setting specifies whether the distribution point will allow anonymous connections from Configuration Manager clients to the content library.  
   
@@ -322,7 +322,7 @@ You install System Center Configuration Manager distribution points to host the 
 ### Boundary Group  
  Manage the boundary groups for which this distribution point is assigned. You can associate boundary groups to a distribution point. During content deployment, clients must be in a boundary group associated with the distribution point to use it as a source location for content. You can select the **Allow clients to use this site system as a fallback source location for content** check box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available.  
   
- For more information about preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md).  
+ For more information about preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
   
 ### Schedule  
   

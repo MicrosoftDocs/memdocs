@@ -40,7 +40,7 @@ When you extend the Active Directory schema for System Center Configuration Mana
   
 -   If you’re not familiar with what extended schema provides a Configuration Manager deployment,  you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
   
--   When you don’t use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md),  
+-   When you don’t use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
   
 -   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don’t need to do more. The schema extensions are unchanged, and will already be in place.  
   

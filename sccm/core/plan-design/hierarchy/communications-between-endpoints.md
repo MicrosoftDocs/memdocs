@@ -96,9 +96,9 @@ Insert introduction here.
   
 -   When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
   
- For information about service location by clients, see  [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md).  
+ For information about service location by clients, see  [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
   
- For details about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierachy/ports.md)  
+ For details about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
   
 ###  <a name="BKMK_clientspan"></a> Considerations for client communications from the Internet or an untrusted forest  
  The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  
@@ -169,7 +169,7 @@ Although there is no requirement to have a trust between a client’s forest and
   
     -   [Manage Conflicting Records for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
   
-    -   [Network Access Account](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md#bkmk_NAA)  
+    -   [Network Access Account](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_NAA)  
   
     -   [How to Install Configuration Manager Clients on Workgroup Computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
   
@@ -236,7 +236,7 @@ Although there is no requirement to have a trust between a client’s forest and
   
 -   State migration point  
   
- See [Ports used in System Center Configuration Manager](../../../core/plan-design/hierachy/ports.md) for more information.  
+ See [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md) for more information.  
   
  **You might need to  configure site system role access to the site database:**  
   

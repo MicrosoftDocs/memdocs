@@ -26,7 +26,7 @@ To prepare for a successful deployment of one or more System Center Configuratio
  ## <a name="bkmk_options"></a> Options for installing different types of sites
  When you install a new Configuration Manager, the version of the source files you can use depends on the version of sites that are already in the hierarchy (if any), and the installation methods available to you depend on the type of site you want to install.  
 
-Before installing sites, ensure you have planned your hierarchy and understand the type of site you want to install. For more information, see [Design a hierarchy of sites](../../../../core/plan-design/hierachy/design-a-hierarchy-of-sites.md).
+Before installing sites, ensure you have planned your hierarchy and understand the type of site you want to install. For more information, see [Design a hierarchy of sites](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).
 
 
 ### First site
@@ -66,7 +66,7 @@ You use the Configuration Manager console to install a secondary site as a child
 
 ## <a name="bkmk_tasks"></a>  Common tasks to complete before starting an install
 -   Understand the hierarchy topology you will use for your deployment    
-     (see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierachy/design-a-hierarchy-of-sites.md))  
+     (see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md))  
   
 -   Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager (see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md))  
   
@@ -134,7 +134,7 @@ When the computer where you will run Setup is not connected to the Internet, or 
 **Identify optional ports** to use for site systems and clients.
  -  By default, site systems and clients use pre-defined ports to communicate.
  -  During Setup, you can configure alternate ports. 
- -  For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierachy/ports.md)
+ -  For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md)
 
 
 ## See Also:

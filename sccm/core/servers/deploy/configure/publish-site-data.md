@@ -39,7 +39,7 @@ After you extend the Active Directory schema for System Center Configuration Man
   
 -   **When a site does not publish to AD DS**, clients must have an alternative mechanism to locate their default management point.  
   
- For information about how clients find a management point see [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierachy/understand-how-clients-find-site-resources-and-services.md).  
+ For information about how clients find a management point see [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
   
 ## Configure sites to publish to AD DS  
  The following are the high-level steps:  

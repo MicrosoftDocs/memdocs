@@ -244,7 +244,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 |Count all instances of virtual applications|Displays a count of all detected App-V applications (App-V 4.6 only).|  
   
 ### Log files  
- Configuration Manager records information about virtual application deployments in log files. For information about the log files that are used by virtual applications and Configuration Manager application management, see [Log files in System Center Configuration Manager](../../core/plan-design/hierachy/log-files.md).  
+ Configuration Manager records information about virtual application deployments in log files. For information about the log files that are used by virtual applications and Configuration Manager application management, see [Log files in System Center Configuration Manager](../../core/plan-design/hierarchy/log-files.md).  
   
  Additionally, you can find logs for the App-V client in the following locations:  
   

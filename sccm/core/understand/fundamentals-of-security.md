@@ -71,7 +71,7 @@ Security for System Center Configuration Manager consists of several layers. The
 ## Configuration Manager accounts and groups  
  Configuration Manager uses the **Local System** account for most site operations. However, some management tasks might require creating and maintaining additional accounts. Several default groups and SQL Server roles are created during Setup. However, you might have to manually add computer or user accounts to these default groups and roles.  
   
- For more information, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierachy/accounts.md).  
+ For more information, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
   
 ## Privacy  
  Although enterprise management products offer many advantages because they can effectively manage lots of clients, you must also be aware of how this software might affect the privacy of users in your organization. System Center Configuration Manager includes many tools to collect data and monitor devices, some of which could raise privacy concerns.  

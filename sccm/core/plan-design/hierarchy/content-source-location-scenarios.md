@@ -228,4 +228,4 @@ System Center Configuration Manager supports several settings that combine to de
   
   ## See Also
   
- [Fundamental concepts for content management ](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)
+ [Fundamental concepts for content management ](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)

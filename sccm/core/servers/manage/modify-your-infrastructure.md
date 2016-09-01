@@ -67,7 +67,7 @@ After you install one or more sites, you might have need to modify configuration
   
  You can monitor the installation or removal of the SMS Provider by viewing the **ConfigMgrSetup.log** in the root folder of the site server on which you run Setup.  
   
- Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierachy/plan-for-the-sms-provider.md).  
+ Before modifying the SMS Provider at a site, be familiar with the information in [Plan for the SMS Provider for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
   
 #### To manage the SMS Provider configuration for a site  
   

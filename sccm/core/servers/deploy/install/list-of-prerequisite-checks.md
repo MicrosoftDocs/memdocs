@@ -441,7 +441,7 @@ The following sections detail the available prerequisite checks.
   
  **Required SQL Server Collation** - Verifies that the instance for SQL Server and the Configuration Manager site database, if installed, is configured to use the SQL_Latin1_General_CP1_CI_AS collation, unless you are using a Chinese operating system and require GB18030 support.  
   
- For information about changing your SQL Server instance and database collations, see [Setting and Changing Collations](http://go.microsoft.com/fwlink/p/?LinkID=234541) in the SQL Server 2008 R2 Books Online.  For information about enabling GB18030 support, see [International support in System Center Configuration Manager](../../../../core/plan-design/hierachy/international-support.md).  
+ For information about changing your SQL Server instance and database collations, see [Setting and Changing Collations](http://go.microsoft.com/fwlink/p/?LinkID=234541) in the SQL Server 2008 R2 Books Online.  For information about enabling GB18030 support, see [International support in System Center Configuration Manager](../../../../core/plan-design/hierarchy/international-support.md).  
   
 -   **Severity:** Error  
   

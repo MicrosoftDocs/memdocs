@@ -78,7 +78,7 @@ The following information describes how Package Transfer Manager manages the tra
     -   **Pull-distribution point:** After the pull-distribution point completes the content download, the distribution point verifies the hash of the content, and then submits a status message to the sites management point to indicate success. However, if after 60 minutes, this status is not received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm if the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
     
   ## See Also
-  [Fundamental concepts for content management](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)  
+  [Fundamental concepts for content management](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
     
     
     

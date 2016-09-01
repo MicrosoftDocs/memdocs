@@ -14,7 +14,7 @@ caps.latest.revision: 7
 author: Brenduns
 ---
 # Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager
-You can install System Center Configuration Manager cloud-based distribution points in Microsoft Azure. If your unfamiliar with cloud-based distribution points, see [Use a cloud-based distribution point](../../../../core/plan-design/hierachy/use-a-cloud-based-distribution-point.md) before continuing.
+You can install System Center Configuration Manager cloud-based distribution points in Microsoft Azure. If your unfamiliar with cloud-based distribution points, see [Use a cloud-based distribution point](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) before continuing.
  
  Before you begin the install, make sure that you have the required certificate files:  
   

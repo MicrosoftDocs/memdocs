@@ -4,13 +4,13 @@
 
 # [Not in Toc]
 **plan-design**
--  [Ports used in System Center Configuration Manager](plan-design/hierachy/ports.md)
--  [Log files in System Center Configuration Manager](plan-design/hierachy/log-files.md)
--  [Interoperability between different versions of System Center Configuration Manager](plan-design/hierachy/interoperability-between-different-versions.md)
--  [Accounts used in System Center Configuration Manager](plan-design/hierachy/accounts.md)
--  [Communications between endpoints in System Center Configuration Manager](plan-design/hierachy/communications-between-endpoints.md)
--  [International support in System Center Configuration Manager](plan-design/hierachy/international-support.md)
--  [Unicode and ASCII Support in System Center Configuration Manager](plan-design/hierachy/unicode-and-ascii-support.md)
+-  [Ports used in System Center Configuration Manager](plan-design/hierarchy/ports.md)
+-  [Log files in System Center Configuration Manager](plan-design/hierarchy/log-files.md)
+-  [Interoperability between different versions of System Center Configuration Manager](plan-design/hierarchy/interoperability-between-different-versions.md)
+-  [Accounts used in System Center Configuration Manager](plan-design/hierarchy/accounts.md)
+-  [Communications between endpoints in System Center Configuration Manager](plan-design/hierarchy/communications-between-endpoints.md)
+-  [International support in System Center Configuration Manager](plan-design/hierarchy/international-support.md)
+-  [Unicode and ASCII Support in System Center Configuration Manager](plan-design/hierarchy/unicode-and-ascii-support.md)
 -  [Schema extensions for System Center Configuration Manager](plan-design/network/schema-extensions.md)
 -  [Proxy server support in System Center Configuration Manager](plan-design/network/proxy-server-support.md)
 - [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](plan-design/network/example-deployment-of-pki-certificates.md)

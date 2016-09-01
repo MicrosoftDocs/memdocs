@@ -39,7 +39,7 @@ To monitor infrastructure and operations in System Center Configuration Manager,
 > [!NOTE]  
 >  The exception to this location is Migration, which is monitored directly in the **Migration** node in the **Administration** workspace. For more information, see [Operations for migrating to System Center Configuration Manager](../../../core/migration/operations-for-migration.md).  
   
- In addition to using the Configuration Manager console for monitoring, you can use the Configuration Manager reports, or view Configuration Manager log files for Configuration Manager components. For information about reports, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md). For information about log files, see [Log files in System Center Configuration Manager](../../../core/plan-design/hierachy/log-files.md).  
+ In addition to using the Configuration Manager console for monitoring, you can use the Configuration Manager reports, or view Configuration Manager log files for Configuration Manager components. For information about reports, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md). For information about log files, see [Log files in System Center Configuration Manager](../../../core/plan-design/hierarchy/log-files.md).  
   
  When you monitor sites, look for signs that indicate problems that require you to take action. For example:  
   

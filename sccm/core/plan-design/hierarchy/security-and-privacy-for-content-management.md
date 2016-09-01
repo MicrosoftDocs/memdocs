@@ -54,7 +54,7 @@ This topic contains security and privacy information for content management in S
   
  **Remove the distribution point role from the site server** - By default, a distribution point is installed on the same server as the site server. Clients do not have to communicate directly with the site server, so to reduce the attack surface, assign the distribution point role to other site systems and remove it from the site server.  
   
- **Secure content at the package access level** -  The distribution point share allows Read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This does not apply to cloud-based distribution points,  which do not support package access accounts. For more information about the Package Access Account, see [Manage accounts to access content](../../../core/plan-design/hierachy/manage-accounts-to-access-content.md).
+ **Secure content at the package access level** -  The distribution point share allows Read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This does not apply to cloud-based distribution points,  which do not support package access accounts. For more information about the Package Access Account, see [Manage accounts to access content](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).
  
   
  **If Configuration Manager installs IIS when you add a distribution point site system role, remove HTTP Redirection and IIS Management Scripts and Tools when the distribution point installation is complete** - The distribution point does not require HTTP Redirection and IIS Management Scripts and Tools. To reduce the attack surface, remove these role services for the web server (IIS) role.  For more information about the role services for the web server (IIS) role for distribution points, see   [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
@@ -103,5 +103,5 @@ Consider the folowing when planning for content management:
  Before you configure content management, consider your privacy requirements.  
     
 ## See Also  
- [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierachy/fundamental-concepts-for-content-management.md)   
+ [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)   
  [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)
