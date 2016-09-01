@@ -1,0 +1,8 @@
+# [Configuration Manager docs](index.md)
+## [Core infrastructure guide](core/understand/introduction.md)
+## [Application management guide](apps\understand\get-started-with-application-management.md)
+## [Device compliance guide](compliance\understand\ensure-device-compliance.md)
+## [Mobile device management guide](mdm\understand\manage-mobile-devices-with-on-premises-infrastructure.md)
+## [Operating system deployment guide](osd\understand\introduction-to-operating-system-deployment.md)
+## [Protect data and infrastructure guide](protect\understand\protect-data-and-site-infrastructure.md)
+## [Software update management guide](sup\understand\software-updates-introduction.md)
