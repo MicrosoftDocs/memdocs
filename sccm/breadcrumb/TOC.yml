@@ -21,5 +21,5 @@
     tocHref: /sccm/protect/
     topicHref: /sccm/protect/understand/protect-data-and-site-infrastructure
   - name: Software update management guide
-    tocHref: /sccm/sup/
-    topicHref: /sccm/sup/understand/software-updates-introduction
+    tocHref: /sccm/sum/
+    topicHref: /sccm/sum/understand/software-updates-introduction
