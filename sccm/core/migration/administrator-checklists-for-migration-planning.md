@@ -112,7 +112,7 @@ Use the following administrator checklists to help you plan your migration strat
   
      You must configure and synchronize software updates in the destination hierarchy before you can migrate software updates information from the source hierarchy.  
   
-     For more information, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md).  
+     For more information, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md).  
   
 -   **Install and configure additional site system roles in the destination hierarchy:**  
   

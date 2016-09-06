@@ -36,7 +36,7 @@ translation.priority.ht:
 The overall process for software updates in System Center Configuration Manager includes four main operational phases: synchronization, compliance assessment, deployment, and monitoring. The synchronization phase is the process of synchronizing the software update metadata from Microsoft Update and inserting it into the site server database. The compliance assessment phase is the process that client computers perform to scan for compliance of software updates and report the compliance state for the software updates. The deployment phase is the process of manually or automatically deploying the software updates to clients. Finally, the monitoring phase is the process of follow-on monitoring for software update deployment compliance.  
   
 > [!IMPORTANT]  
->  Before software update compliance assessment data is displayed in the Configuration Manager console and before you can deploy the software updates to clients, you must carefully plan for the software updates in your hierarchy and configure the software update dependencies to meet the needs of your environment. For more information about planning for software updates, see [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md). For more information about configuring software updates, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md).  
+>  Before software update compliance assessment data is displayed in the Configuration Manager console and before you can deploy the software updates to clients, you must carefully plan for the software updates in your hierarchy and configure the software update dependencies to meet the needs of your environment. For more information about planning for software updates, see [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md). For more information about configuring software updates, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md).  
   
  The following sections in this topic will help you with the operational phases for software updates in Configuration Manager:  
   
@@ -87,9 +87,9 @@ The overall process for software updates in System Center Configuration Manager 
 -   [Schedule and run the WSUS clean up task](#BKMK_WSUSCleanUp)  
   
 ##  <a name="BKMK_SUMSync"></a> Synchronize software updates  
- Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. The software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update on a predetermined schedule. Alternatively, you can manually initiate metadata synchronization from the Configuration Manager console. After the software update synchronization is complete at a central administration site, the site sends the child primary sites a synchronization request that instructs them to initiate synchronization. For more information about software update synchronization, see [Software updates synchronization](../../sup/understand/software-updates-introduction.md#BKMK_Synchronization).  
+ Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. The software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update on a predetermined schedule. Alternatively, you can manually initiate metadata synchronization from the Configuration Manager console. After the software update synchronization is complete at a central administration site, the site sends the child primary sites a synchronization request that instructs them to initiate synchronization. For more information about software update synchronization, see [Software updates synchronization](../../sum/understand/software-updates-introduction.md#BKMK_Synchronization).  
   
- You configure software update synchronization to run on a schedule as part of the properties for the software update point on the top-level site. After you configure the synchronization schedule you will typically not change the schedule as part of normal operations. However, you can manually initiate software update synchronization when it is necessary. For information about configuring the software update synchronization schedule, see [Step 2: Synchronize Software Updates](../../sup/deploy-use/configure-software-updates.md#BKMK_SUMSync).  
+ You configure software update synchronization to run on a schedule as part of the properties for the software update point on the top-level site. After you configure the synchronization schedule you will typically not change the schedule as part of normal operations. However, you can manually initiate software update synchronization when it is necessary. For information about configuring the software update synchronization schedule, see [Step 2: Synchronize Software Updates](../../sum/deploy-use/configure-software-updates.md#BKMK_SUMSync).  
   
  Use the following procedure to manually initiate software update synchronization.  
   
@@ -115,7 +115,7 @@ The overall process for software updates in System Center Configuration Manager 
  There are several methods available to you for downloading software updates in Configuration Manager. When you create an automatic deployment rule (ADR) or manually deploy software updates, the software updates are downloaded to the content library on the site server, and then copied to the content library on the distribution points that are associated with the configured deployment package. If you want to download the software updates before you deploy them, you can use the Download Updates Wizard. Doing this will enable you to verify that the software updates are available on distribution points before you deploy the software updates to client computers.  
   
 > [!NOTE]  
->  For information about monitoring content status, see the [Content status monitoring](../../sup/deploy-use/monitor-software-updates.md#BKMK_ContentStatus).  
+>  For information about monitoring content status, see the [Content status monitoring](../../sum/deploy-use/monitor-software-updates.md#BKMK_ContentStatus).  
   
  Use the following procedure to download software updates by using the Download Software Updates Wizard.  
   
@@ -333,7 +333,7 @@ The overall process for software updates in System Center Configuration Manager 
 > [!NOTE]  
 >  Unlike other deployment types, software updates are all downloaded to the client cache regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
   
- If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../../sup/understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
+ If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
   
  There are two main scenarios for deploying software updates: manual deployment and automatic deployment. Typically, you will initially manually deploy software updates to create a baseline for your client computers, and then you will manage software updates on clients by using automatic deployment.  
   
@@ -620,7 +620,7 @@ The overall process for software updates in System Center Configuration Manager 
   
 17. Click **Next** to deploy the software update.  
   
- After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../../sup/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  
+ After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  
   
 ###  <a name="BKMK_AutoDeploy"></a> Automatically deploy software updates  
  You can automatically deploy software updates by adding new software updates to an update group that has an active deployment or by using ADRs.  
@@ -916,7 +916,7 @@ The overall process for software updates in System Center Configuration Manager 
     > [!NOTE]  
     >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
   
- For more information about the deployment process, see [Software update deployment process](../../sup/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  
+ For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  
   
 ##  <a name="BKMK_WSUSCleanUp"></a> Schedule and run the WSUS clean up task  
  You can schedule and run the WSUS clean up task from the Configuration Manager console.  

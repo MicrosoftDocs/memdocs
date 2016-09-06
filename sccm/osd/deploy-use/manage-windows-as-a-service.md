@@ -51,9 +51,9 @@ translation.priority.ht:
 ##  <a name="BKMK_Prerequisites"></a> Prerequisites  
  To see data in the Windows 10 servicing dashboard, you must do the following:  
   
--   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer will not be evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sup/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer will not be evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
   
--   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates in System Center Configuration Manager](../../sup/plan-design/prerequisites-for-software-updates.md).  
+-   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  
   
 -   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
     
@@ -72,7 +72,7 @@ translation.priority.ht:
   
 -   Internet Explorer 9 or later must be installed on the computer that runs the Configuration Manager console.  
   
--   Software updates must be configured and synchronized. You must select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades will be available in the Configuration Manager console. For more information, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md).  
+-   Software updates must be configured and synchronized. You must select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades will be available in the Configuration Manager console. For more information, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md).  
   
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  
@@ -105,7 +105,7 @@ translation.priority.ht:
   
 -   **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the configured number of days.  
   
- When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates in System Center Configuration Manager](../../sup/deploy-use/monitor-software-updates.md).  
+ When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates in System Center Configuration Manager](../../sum/deploy-use/monitor-software-updates.md).  
   
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
  As you deploy Windows 10 CB, you can create one or more servicing plans to define the deployment rings that you want in your environment, and then monitor them in the Windows 10 servicing dashboard.   

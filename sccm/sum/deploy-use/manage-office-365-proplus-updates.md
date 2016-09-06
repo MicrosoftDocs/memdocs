@@ -37,4 +37,4 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
   
   
 ## See Also
-[Manage software updates in System Center Configuration Manager](../../sup/deploy-use/manage-software-updates.md)
+[Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md)

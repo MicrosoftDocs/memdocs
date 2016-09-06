@@ -606,7 +606,7 @@ All client settings in System Center Configuration Manager are managed in the Co
   
 -   **Software update scan schedule**  
   
-     Use this setting to specify how often the client initiates a software update compliance assessment scan. The compliance assessment scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sup/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+     Use this setting to specify how often the client initiates a software update compliance assessment scan. The compliance assessment scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
   
      By default a simple schedule is used and the compliance scan initiates every 7 days. You can choose to create a custom schedule to specify an exact start day and time, choose whether to use UTC or the local time, and configure the recurring interval for a specific day of the week.  
   

@@ -118,7 +118,7 @@ Each System Center Configuration Manager site you install includes a  a site ser
   
     -   Consider installing a software update point in secondary sites when data transfer across the network is slow.  
   
-     For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md).  
+     For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
   
 -   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/deploy-use/manage-user-state.md).  
   
@@ -154,7 +154,7 @@ Each System Center Configuration Manager site you install includes a  a site ser
     > [!TIP]  
     >  A proxy server must be configured on the site system server that hosts the software update point before you can select either option. The proxy server is only used for the specific options you select.  
   
-     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sup/deploy-use/configure-software-updates.md) topic.  
+     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
   
 -   **Service connection point** - When configured to be online (not offline), this site system role connects to Microsoft Intune and the Microsoft cloud service.  
   

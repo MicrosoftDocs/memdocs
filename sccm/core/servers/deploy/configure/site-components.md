@@ -46,7 +46,7 @@ At each System Center Configuration Manager site you can configure site componen
   
  **Software Update Point:**  
   
--   For information about  configuration options for the software update point component, see [Configure software updates in System Center Configuration Manager](../../../../sup/deploy-use/configure-software-updates.md).  
+-   For information about  configuration options for the software update point component, see [Configure software updates in System Center Configuration Manager](../../../../sum/deploy-use/configure-software-updates.md).  
   
  **Management  Point:**  
   
