@@ -50,7 +50,7 @@ Before the compliance assessment data of the software update displays in the Sys
 ##  <a name="BKMK_InstallSUP"></a> Step 1: Install and configure a software update point  
   
 > [!IMPORTANT]  
->  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md).  
+>  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md).  
   
  The software update point is required on the central administration site and on the primary sites in order to enable software updates compliance assessment and to deploy software updates to clients. The software update point is optional on secondary sites. The software update point site system role must be created on a server that has WSUS installed. The software update point interacts with the WSUS services to configure the software update settings and to request synchronization of software updates metadata. When you have a Configuration Manager hierarchy, install and configure the software update point on the central administration site first, then on child primary sites, and then optionally, on secondary sites. When you have a stand-alone primary site, not a central administration site, install and configure the software update point on the primary site first, and then optionally, on secondary sites. Some settings are only available when you configure the software update point on a top-level site. There are different options that you must consider depending on where you installed the software update point.  
   
@@ -82,12 +82,12 @@ Before the compliance assessment data of the software update displays in the Sys
 #### WSUS port settings  
  You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point.  
   
- To determine the website and port configurations in WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../sup/plan-design/determine-wsus-port-settings.md).  
+ To determine the website and port configurations in WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../sum/plan-design/determine-wsus-port-settings.md).  
   
 #### Configure SSL communications to WSUS  
  You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
   
- For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../../sup/plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ For more information about how to use SSL, see [Decide whether to configure WSUS to use SSL](../../sum/plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
   
 #### WSUS Server Connection Account  
  You can configure an account to be used by the site server when it connects to WSUS that runs on the software update point. When you do not configure this account, the Configuration Manager uses the computer account for the site server to connect to WSUS. Configure the WSUS Server Connection Account on the **Proxy and Account Settings** page of the wizard, or on the **Proxy and Account Settings** tab in Software update point Properties.  You can configure the account in different places of the wizard depending on the version of Configuration Manager that you use.  
@@ -95,7 +95,7 @@ Before the compliance assessment data of the software update displays in the Sys
  For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
   
 ### Synchronization Source  
- You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../../sup/plan-design/plan-for-software-updates.md#BKMK_SyncSource).  
+ You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../../sum/plan-design/plan-for-software-updates.md#BKMK_SyncSource).  
   
  Use the following table for the available options when you configure the software update point at a site.  
   
@@ -109,14 +109,14 @@ Before the compliance assessment data of the software update displays in the Sys
 -   **Synchronize from Microsoft Update**: Use this setting to synchronize software updates metadata from Microsoft Update. The central administration site must have Internet access; otherwise, synchronization will fail. This setting is available only when you configure the software update point on the top-level site.  
   
     > [!NOTE]  
-    >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../../sup/plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
+    >  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see [Configure firewalls](../../sum/plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
   
 -   **Synchronize from an upstream data source location**: Use this setting to synchronize software updates metadata from the upstream synchronization source. The child primary sites and secondary sites are automatically configured to use the parent site URL for this setting. You have the option to synchronize software updates from an existing WSUS server. Specify a URL, such as https://WSUSServer:8531, where 8531 is the port that is used to connect to the WSUS server.  
   
 -   **Do not synchronize from Microsoft Update or upstream data source**: Use this setting to manually synchronize software updates when the software update point at the top-level site is disconnected from the Internet. For more information, see the [Synchronize software updates from a disconnected software update point](#BKMK_SyncDisconnected) section in this topic.  
   
 > [!NOTE]  
->  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see the [Configure firewalls](../../sup/plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls) section in the [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md) topic.  
+>  When there is a firewall between the software update point and the Internet, the firewall might need to be configured to accept the HTTP and HTTPS ports that are used for the WSUS Web site. You can also choose to restrict access on the firewall to limited domains. For more information about how to plan for a firewall that supports software updates, see the [Configure firewalls](../../sum/plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls) section in the [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md) topic.  
   
  You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager does not use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
   
@@ -134,13 +134,13 @@ Before the compliance assessment data of the software update displays in the Sys
 ### Supersedence rules  
  Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
   
- On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../../sup/plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+ On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../../sum/plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
   
 > [!NOTE]  
 >  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
   
 ### Classifications  
- Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see the [Update classifications](../../sup/plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications) section in the [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md) topic.  
+ Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see the [Update classifications](../../sum/plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications) section in the [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md) topic.  
   
 > [!NOTE]  
 >  The **Classifications** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
@@ -158,7 +158,7 @@ Before the compliance assessment data of the software update displays in the Sys
 >  When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
   
 ### Languages  
- Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../../sup/plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
+ Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../../sum/plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
   
 > [!NOTE]  
 >  The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  
@@ -296,7 +296,7 @@ Before the compliance assessment data of the software update displays in the Sys
      The format can be summarized as follows: WSUSutil.exe is followed by the import command, the name of package file (.cab) that is created during the export operation, the path to the package file if it is in a different folder, and the name of a log file. WSUSutil.exe imports the metadata from the export server and creates a log file of the operation.  
   
 ## Classifications  
- Configure the classifications settings on the **Classifications** page of the wizard or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../../sup/plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
+ Configure the classifications settings on the **Classifications** page of the wizard or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../../sum/plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
   
 > [!NOTE]  
 >  The **Classifications** page of the wizard is available only when you configure the first software update point that you configure on a stand-alone primary site. This page is not displayed when you install additional software update points.  

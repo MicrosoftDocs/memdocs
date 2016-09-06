@@ -138,7 +138,7 @@ Deploying Configuration Manager clients in your environment has the following ex
   
     -   The client computer must be able to contact a distribution point or a management point in order to download supporting files.  
   
-     For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../../sup/plan-design/prerequisites-for-software-updates.md).  
+     For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../../sum/plan-design/prerequisites-for-software-updates.md).  
   
 -   Group Policy-based installation  
   

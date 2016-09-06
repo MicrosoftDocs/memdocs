@@ -116,7 +116,7 @@ To monitor infrastructure and operations in System Center Configuration Manager,
   
  **Monitor Software Updates**  
   
- See [Manage software updates in System Center Configuration Manager](../../../sup/deploy-use/manage-software-updates.md).  
+ See [Manage software updates in System Center Configuration Manager](../../../sum/deploy-use/manage-software-updates.md).  
   
 ##  <a name="BKMK_MonitorInfrastructure"></a> Monitor hierarchy infrastructure for Configuration Manager  
  Configuration Manager provides several methods to monitor the status and operations of your hierarchy. You can check system status of sites throughout the hierarchy, monitor intersite replication from a site hierarchy or geographical view, monitor replication links between sites for database replication, and use the Replication Link Analyzer tool to remediate replication issues.  

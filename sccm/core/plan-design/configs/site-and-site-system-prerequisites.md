@@ -408,7 +408,7 @@ author: Brenduns
   
 -   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point  
   
--   For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md)  
+-   For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  
   
 ### State migration point  
  **Requires the default IIS configuration.**  
@@ -757,7 +757,7 @@ author: Brenduns
   
 -   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point  
   
--   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md)  \
+-   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  \
   
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
  **IIS configuration:** Requires the default IIS configuration.  

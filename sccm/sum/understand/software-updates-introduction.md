@@ -53,7 +53,7 @@ Software updates in System Center Configuration Manager provides a set of tools 
 
 -   [Restart options for Windows 10 clients after software update installation](#BKMK_RestartOptions)
   
- For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft](../../sup/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
+ For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft](../../sum/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
   
 ##  <a name="BKMK_Synchronization"></a> Software updates synchronization  
  Software updates synchronization in Configuration Manager uses Microsoft Update to retrieve software updates metadata. The top-level site (central administration site or stand-alone primary site) synchronizes with Microsoft Update on a schedule or when you manually start synchronization from the Configuration Manager console. When Configuration Manager finishes software updates synchronization at the top-level site, software updates synchronization starts at child sites, if they exist. When synchronization is complete at each primary site or secondary site, a site-wide policy is created that provides to client computers the location of the software update points.  

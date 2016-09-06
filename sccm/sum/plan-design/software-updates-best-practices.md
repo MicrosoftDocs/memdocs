@@ -44,7 +44,7 @@ This topic includes best practices for software updates in System Center Configu
 > [!IMPORTANT]  
 >  You must also share the local WSUS content folders when you use a shared WSUS database for software update points.  
   
- For more information about software update point switching, see the [Software update point switching](../../sup/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching) section in the [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md) topic.  
+ For more information about software update point switching, see the [Software update point switching](../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching) section in the [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md) topic.  
   
 ### When Configuration Manager and WSUS use the same SQL Server, configure one of these to use a named instance and the other to use the default instance of SQL Server  
  When the Configuration Manager and WSUS databases use the same SQL Server and share the same instance of SQL Server, you cannot easily determine the resource usage between the two applications. When you use a different SQL Server instance for Configuration Manager and WSUS, it is easier to troubleshoot and diagnose resource usage issues that might occur for each application.  
@@ -65,4 +65,4 @@ This topic includes best practices for software updates in System Center Configu
  Always use an existing software update group when you use an automatic deployment rule to deploy Endpoint Protection definition updates on a frequent basis. Otherwise, potentially hundreds of software update groups will be created over time. Typically, definition update publishers will set definition updates to expire when they are superseded by four newer updates. Therefore, the software update group that is created by the automatic deployment rule will never contain more than four definition updates for the publisher: one active and three superseded.  
   
 ## See Also  
- [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md)
+ [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)

@@ -207,7 +207,7 @@ When a System Center Configuration Manager client is installed and successfully 
   
          For more information about deploying software and configuration baselines, see the following:  
   
-        -   [Configure software updates in System Center Configuration Manager](../../../sup/deploy-use/configure-software-updates.md)  
+        -   [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md)  
   
         -   [Plan for and configure compliance settings in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
   

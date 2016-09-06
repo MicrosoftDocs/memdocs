@@ -143,7 +143,7 @@ The following   are the primary management capabilities of
  **Software updates**  
   
  Provides a set of tools and resources that can help you manage, deploy, and monitor software updates in the enterprise. See  
-                            [Introduction to software updates in System Center Configuration Manager](../../../sup/understand/software-updates-introduction.md)  
+                            [Introduction to software updates in System Center Configuration Manager](../../../sum/understand/software-updates-introduction.md)  
   
 ## See Also  
  [Introduction to System Center Configuration Manager](../../../core/understand/introduction.md)
