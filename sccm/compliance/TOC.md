@@ -1,5 +1,5 @@
-# [Understand and explore](understand/ensure-device-compliance)
-## [Ensure device compliance](understand/ensure-device-compliance)
+# [Understand and explore](understand/ensure-device-compliance.md)
+## [Ensure device compliance](understand/ensure-device-compliance.md)
 # [Get started](get-started/get-started-with-compliance-settings.md)
 ## [Get started with compliance settings](get-started/get-started-with-compliance-settings.md)
 # [Plan and design](plan-design/plan-for-and-configure-compliance-settings.md)
