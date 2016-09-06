@@ -1,4 +1,5 @@
-# [Understand and explore](understand/backup-and-recovery.md)
+# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
