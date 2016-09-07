@@ -1,12 +1,12 @@
-- name: docs
+- name: Docs
   tochref: /
-  tochref: /index
+  tochref: /
   items:
     - name: Enterprise Mobility
       tocref: /enterprise-mobility/
-      tochref: /enterprise-mobility/index
+      tochref: /enterprise-mobility
       items:
-        - name: Configuration Manager docs
+        - name: Configuration Manager
           tocHref: /sccm/
           topicHref: /sccm/index
           items:
