@@ -151,8 +151,8 @@ The following are site system roles that can use a proxy server:
     > [!TIP]  
     >  A proxy server must be configured on the site system server that hosts the software update point before you can select either option. The proxy server is only used for the specific options you select.  
 
-  
-     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sup/deploy-use/configure-software-updates.md) topic.  
+
+     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
 
 -   **Service connection point** - When configured to be online (not offline), this site system role connects to Microsoft Intune and the Microsoft cloud service.  
 

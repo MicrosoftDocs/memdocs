@@ -114,6 +114,7 @@ Use the following checklist to help you plan a destination hierarchy before you 
 
     For more information, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md).  
 
+
 -   **Install and configure additional site system roles in the destination hierarchy:**  
 
     Configure additional site system roles and site systems that you will require.  

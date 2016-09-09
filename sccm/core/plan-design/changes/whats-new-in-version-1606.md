@@ -114,17 +114,17 @@ When viewing the properties of an application or package, there is now a link th
 ### Client setting to manage the Office 365 client agent
 You can now use a Configuration Manager client setting to manage the Office 365 client agent. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them.
 
-For details, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sup/deploy-use/manage-office-365-proplus-updates.md).
+For details, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Manually switch clients to a new software update point
 You can now enable the option for Configuration Manager clients to switch to a new software update point when there are issues with the active software update point. Once enabled, the clients will look for another software update point at the next scan.
 
-For details, see [Plan for software updates in Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
+For details, see [Plan for software updates in Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
 ### Restart options for Windows 10 clients after software update installation
 When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed. Beginning in Configuration Manager version 1606, the option to **Update and Restart**, and **Update and Shutdown** is available on Windows 10 computers in the Windows Power options whenever there is a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog will not display after the computer restarts.
 
-For details, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
+For details, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
 
 ## Operating system deployment
 

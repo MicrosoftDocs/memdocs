@@ -57,7 +57,7 @@ Use the following topics in this section to help you plan to use Endpoint Protec
   
  **Dependencies**  
   
--   Windows Server Update Services (WSUS) must be installed and configured for software updates synchronization if you want to use Configuration Manager software updates to deliver definition and engine updates. See [Prerequisites for software updates in System Center Configuration Manager](../../sup/plan-design/prerequisites-for-software-updates.md)  
+-   Windows Server Update Services (WSUS) must be installed and configured for software updates synchronization if you want to use Configuration Manager software updates to deliver definition and engine updates. See [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md)  
   
 -   Some definition update methods require that client computers have Internet access. If you use any of the following methods to update definitions on client computers, the client computer must be able to access the Internet:  
   
@@ -82,7 +82,7 @@ Use the following topics in this section to help you plan to use Endpoint Protec
     > [!IMPORTANT]  
     >  The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.  
   
--   A software update point site system role must be installed and configured to deliver definition updates if you want to use Configuration Manager software updates to deliver definition and engine updates. For more information about the requirements for the software update point site system role, sesee the Site System Requirements section of the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). For more information about how to install this site system role and configure it for Endpoint Protection, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md) and [Configuring Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/configure-endpoint-protection.md).  
+-   A software update point site system role must be installed and configured to deliver definition updates if you want to use Configuration Manager software updates to deliver definition and engine updates. For more information about the requirements for the software update point site system role, sesee the Site System Requirements section of the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). For more information about how to install this site system role and configure it for Endpoint Protection, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) and [Configuring Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/configure-endpoint-protection.md).  
   
 -   Client settings that install the Endpoint Protection client and configure Endpoint Protection. For more information about how to configure the client settings for Endpoint Protection, see "Configure Custom Client Settings" in [Configuring Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/configure-endpoint-protection.md).  
   
