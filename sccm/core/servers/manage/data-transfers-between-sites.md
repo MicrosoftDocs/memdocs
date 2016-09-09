@@ -179,6 +179,8 @@ As long as a replication link has a type of data enabled for distributed views, 
 
 -   Distributed views are supported only on replication links between a central administration site and a primary site.  
 
+-  The central administration site must use an Enterprise edition of SQL Server. The primary site does not have this requirement.
+
 -   The central administration site can have only one instance of the SMS Provider installed, and that instance must be installed on the site database server. This is required to support the Kerberos authentication required to enable the SQL Server at the central administration site to access the SQL Server at the child primary site. There are no limitations on the SMS Provider at the child primary site.  
 
 -   The central administration site can have only one SQL Server Reporting Services point installed, and it must be located on site database server. This is required to support the Kerberos authentication required to enable the SQL Server at the central administration site to access the SQL Server at the child primary site.  

@@ -78,7 +78,13 @@ translation.priority.ht:
 
     -   ERROR: SQL Server error: [25000][3906][Microsoft][SQL Server Native Client 11.0][SQL Server]Failed to update database "CM_AAA" because the database is read-only.   Configuration Manager Setup 1/21/2016 4:54:59 PM  7344 (0x1CB0)  
 
-     These errors are logged when  Setup tries to process  database roles on secondary replicas of the availability group. These  errors can be safely ignored.  
+     These errors are logged when  Setup tries to process  database roles on secondary replicas of the availability group. These  errors can be safely ignored.
+- **SQL servers that host additional availability groups:**
+
+  Prior to installing version 1610, when you use an availability group and then run Configuration Manager setup or install an update for Configuration Manager, each replica in each additional availability group on the SQL Server that hosts the Configuration Manager availability group must have the following configurations:
+    - **Manual Failover**
+    - **allow any read-only connection**
+
 
 ##  <a name="bkmk_BnR"></a> Changes for Backup and Recovery when you use a SQL Server AlwaysOn availability group  
  **Backup:**  
