@@ -78,6 +78,3 @@ In the 1512 Technical Preview we have added the following new settings in Endpoi
 **Prerequisites for using Endpoint Protection policies:**  
 
 Before you can use Endpoint Protection policies you must install and manage the Endpoint Protection client by using the Endpoint Protection client settings. This is done using the System Center Endpoint Protection client for Windows 7, Windows 8, Windows 8.1, or managed Windows Defender for Windows 10. See [Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-protection.md).  
-
-## See Also  
- [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)

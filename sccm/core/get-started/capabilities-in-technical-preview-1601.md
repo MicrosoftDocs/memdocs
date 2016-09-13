@@ -205,6 +205,3 @@ A client is online if it is currently connected to a Configuration Manager manag
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
  For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
-
-## See Also  
- [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)
