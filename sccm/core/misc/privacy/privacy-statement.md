@@ -357,6 +357,3 @@ The information we collect from you will be used by Microsoft and its controlled
 3.  Select the server that hosts the **service connection point**.  
 
 4.  In the **Site System Roles** details pane, select **service connection point** and then, on the **Site Role** tab, in the **Site Role** settings group, click **Remove Role**, and click **Yes** to confirm.  
-
-## See Also  
- [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)

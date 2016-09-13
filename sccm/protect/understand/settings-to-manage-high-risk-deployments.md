@@ -63,6 +63,3 @@ To reduce the risk of an unwanted high-risk deployment, you can configure the fo
 2.  On the **Home** tab, in the **Properties** group, click **Properties**, and then click the **Deployment Verification** tab.  
 
 3.  After setting configurations you want to use, click  **OK**  to save the configuration.  
-
-## See Also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
