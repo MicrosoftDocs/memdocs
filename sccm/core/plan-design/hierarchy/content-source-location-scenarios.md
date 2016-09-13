@@ -235,7 +235,3 @@ System Center Configuration Manager supports several settings that combine to de
 4.  The management point creates a trigger for Distribution Manager to distribute the content to all preferred distribution points for the client that made the content request.  
 
 5.  Distribution Manager distributes the content to all preferred distribution points, which enables additional clients to obtain the content without using a fallback distribution point.  
-
-
-## See Also
- [Fundamental concepts for content management ](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)

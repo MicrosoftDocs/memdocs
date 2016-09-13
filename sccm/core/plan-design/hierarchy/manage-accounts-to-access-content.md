@@ -106,6 +106,3 @@ If you create this account, create it as a low-rights, local account on the comp
 
 > [!IMPORTANT]  
 >  Do not grant this account interactive logon rights  
-
-## See Also
-[Fundamental concepts for content management](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)

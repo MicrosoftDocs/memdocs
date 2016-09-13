@@ -33,7 +33,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Security and privacy for site administration in System Center Configuration Manager
-This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy. 
+This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
 ##  <a name="BKMK_Security_Sites"></a> Security Best Practices for Site Administration  
  Use the following security best practices to help you secure System Center Configuration Manager sites and the hierarchy.  
@@ -370,7 +370,3 @@ Identify and follow the best practices for your version of IIS Server. However, 
  Discovery information is not sent to Microsoft. Discovery information is stored in the Configuration Manager database. Information is retained in the database until it is deleted by the site maintenance task **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval.  
 
  Before you configure additional discovery methods or extend Active Directory discovery, consider your privacy requirements.  
-
-## See Also  
- [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)   
- [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)

@@ -51,6 +51,3 @@ For more information about how to configure the drive settings for the distribut
 -   To prevent the content library from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before the content library is created.  
 
 -   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 Configuration Manager Service Pack 1 Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
-
-## See Also
-[Fundamental concepts for content management](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)

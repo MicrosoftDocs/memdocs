@@ -310,6 +310,3 @@ When other service location mechanisms fail, clients can find an initial managem
 By default, a primary site publishes to WINS the first management point at the site that is configured for HTTP and the first management point configured for HTTPS.  
 
 If you do not want clients to find an HTTP management point in WINS, configure clients with the CCMSetup.exe Client.msi property **SMSDIRECTORYLOOKUP=NOWINS**.  
-
-## See Also  
-[Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)

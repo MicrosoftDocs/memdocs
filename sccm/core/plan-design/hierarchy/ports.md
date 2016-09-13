@@ -694,6 +694,3 @@ The site server that runs Migration uses several ports to connect to applicable 
 |NetBIOS Name Resolution|137|--|  
 |NetBIOS Datagram Service|138|--|  
 |NetBIOS Session Service|--|139|  
-
-## See Also  
- [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
