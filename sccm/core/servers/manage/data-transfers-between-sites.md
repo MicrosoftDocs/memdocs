@@ -235,6 +235,3 @@ To configure the replication controls for a site database, you edit the properti
 
 > [!TIP]  
 >  You can configure database replication controls from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace you can also view the status of database replication for a replication link, and access the Replication Link Analyzer tool to help you investigate problems with replication.  
-
-## See Also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

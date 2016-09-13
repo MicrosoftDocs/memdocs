@@ -374,6 +374,3 @@ For information about the client and server languages that are supported by Conf
 3.  In the site’s **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
 
 4.  Click **OK** to close the site properties dialog box.  
-
-## See Also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

@@ -143,6 +143,3 @@ You install these fixes manually, using one of two methods:
 -   **Hotfix Installer:** This tool is used to manually install a hotfix that cannot be installed using the in-console method. This method is used for fixes that use the following file name structure: **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe**  
 
      For more information, see [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
-
-## See Also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

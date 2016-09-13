@@ -17,6 +17,3 @@ author: Brenduns
 These data flows display the process by which an in-console update you  select to install replicates to additional sites. These flows also display the process of extracting the update to run prerequisite checks and to install updates at a central administration site and at primary sites.  
 
  ![Flowchart - Replicate updates](media/Flowchart---Replicate-updates.png)  
-
-## See Also  
- [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)
