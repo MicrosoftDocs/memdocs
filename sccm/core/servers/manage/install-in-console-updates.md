@@ -168,7 +168,7 @@ Later, when you install  an update, you have the option to configure the update 
 
  We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.  
 
--   Child primary sites start the update automatically after the central administration site completes installation of the update. You can use [Service Windows for site servers](#bkmk_ServiceWindow) to control when a site installs updates.  
+-   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service Windows for site servers](#bkmk_ServiceWindow) to control when a primary site installs updates.  
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site update is complete. Automatic update of secondary site servers is not supported.  
 
@@ -249,6 +249,9 @@ After a secondary sites parent primary site is updated, you can then update the 
 2.  Click **Yes** to start the update of the secondary site.  
 
 To monitor the update installation on a secondary site, select the secondary site server, and then on the Home tab, in the Site group, click **Show Install Status**. You can also add the **Version** column to the console display so that you can view the version of each secondary site.  
+
+After a secondary site successfully updates, if the status in the console does not refresh or suggest the update has failed, you can use the **Retry installation** option. This option does not reinstall the update for a secondary site that did successfully install the update, but will force the console to update the status.
+
 
 ##  <a name="bkmk_retry"></a> Retry installation of a failed update  
 When an update fails to install, review the in-console feedback to identify resolutions for warnings and errors.  You can also view the ConfigMgrPrereq.log on the site server for more details. Before retrying the installation of an update you must resolve errors, and should resolve warnings.  

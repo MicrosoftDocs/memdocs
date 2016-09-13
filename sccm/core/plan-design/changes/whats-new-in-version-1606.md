@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: Brenduns
 ---
 # What&#39;s new in version 1606 of System Center Configuration Manager
-Update 1606 for System Center Configuration Manager is an update that is available as an in-console for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
+Update 1606 for System Center Configuration Manager is an update that is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
 > [!TIP]  
 >  Learn more about:  
 >   
 >  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)  
-> -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
+>  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
 
  The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
 
@@ -200,7 +200,7 @@ For details, see [Health attestation for System Center Configuration Manager](..
 
 ## Remote Control
 Allow your end-users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. End-users will only need to grant permission once per session, and the viewer will not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace, then navigating to **Client Settings**, then opening the **Remote Tools** panel in **Default Settings**.
- 
+
 
 ## See Also
 [What’s new in System Center Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md)
