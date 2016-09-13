@@ -58,6 +58,4 @@ System Center Configuration Manager collects diagnostics and usage data about it
 -   [Frequently asked questions about diagnostics and usage data for System Center Configuration Manager](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
 
 ## See Also  
- [Technical reference for System Center Configuration Manager](../Topic/Technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)   
- [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)   
  [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)

@@ -267,9 +267,3 @@ Beginning with System Center Configuration Manager version 1511, this level incl
 -   Software update scan success percentages  
 
 -   Minimum/maximum/average number of hours since last software update scan  
-
-## See Also  
- [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)   
- [How diagnostics and usage data is used for System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)   
- [How diagnostics and usage data is collected by System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)   
- [How to view diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)

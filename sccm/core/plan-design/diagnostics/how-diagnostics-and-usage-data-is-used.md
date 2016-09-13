@@ -60,9 +60,3 @@ Microsoft uses available data to improve to the product. The following are a few
 -   **Improved prerequisite checks:**  
 
      Based on the usage data, we have improved the prerequisite checks for installing an update to remove obsolete rules, account for additional cases, and in some cases to auto-remediate some issues.  
-
-## See Also  
- [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)   
- [Levels of diagnostic usage data collection for System Center Configuration Manager](../../../core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection.md)   
- [How diagnostics and usage data is collected by System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)   
- [How to view diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)
