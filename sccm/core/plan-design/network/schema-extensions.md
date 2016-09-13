@@ -155,6 +155,3 @@ When you extend the schema for System Center Configuration Manager, the followin
 > -   Class: cn=MS-SMS-Server-Locator-Point  
 
 You can ensure the preceding lists are current by viewing the **ConfigMgr_ad_schema.LDF** file from the **\SMSSETUP\BIN\x64** folder of the System Center Configuration Manager installation media.  
-
-## See Also  
- [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

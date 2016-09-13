@@ -143,6 +143,3 @@ Use the following procedure to view which accounts are configured for different 
     >  The password that you specify must match the password that is specified for the account in Active Directory Users and Computers.  
 
 6.  Click **OK** to complete the procedure.  
-
-## See Also  
- [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)

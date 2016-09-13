@@ -94,6 +94,3 @@ Configure the proxy server settings on the Active Software Update Point page of 
 3.  In Site system Properties, select the Proxy tab, and then configure the proxy settings for this primary site server.  
 
 4.  Click OK to save the new proxy server configuration.  
-
-## See Also  
- [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

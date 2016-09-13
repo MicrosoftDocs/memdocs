@@ -163,6 +163,3 @@ For example, you might have source files for a software deployment that include 
 > -   Edits you make to individual websites apply to only that website  
 >   
 >  The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
-
-## See Also  
- [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)

@@ -86,7 +86,3 @@ This topic includes resources for Security and Privacy for System Center Configu
 -   [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
 
 -   [Accounts used in System Center Configuration Manager](../../../core/plan-design/hierarchy/accounts.md)  
-
-## See Also  
- [Protect data and site infrastructure with System Center Configuration Manager](../../../protect/understand/protect-data-and-site-infrastructure.md)   
- [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md)
