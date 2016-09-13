@@ -171,6 +171,3 @@ For more information about mobile device management capabilities with Configurat
  With System Center Configuration Manager you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
 
  To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
-
-## See Also
- [Introduction to System Center Configuration Manager](../../../core/understand/introduction.md)

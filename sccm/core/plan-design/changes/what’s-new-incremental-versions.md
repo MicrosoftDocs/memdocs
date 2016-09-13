@@ -30,6 +30,3 @@ author: Brenduns
 
 
  Each update version is supported for a year after its release. We recommend you stay current with the most recent update version whenever possible. For more information, see [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md).  
-
- ## See Also  
- [Introduction to System Center Configuration Manager](../../../core/understand/introduction.md)

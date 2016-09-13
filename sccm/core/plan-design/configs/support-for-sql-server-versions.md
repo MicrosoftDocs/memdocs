@@ -226,6 +226,3 @@ When a SQL Server hosts a database from more than one site, each database must u
 If you have a firewall enabled on the computer that is running SQL Server, make sure that it is configured to allow the ports that are being used by your deployment and at any locations on the network between computers that communicate with the SQL Server.  
 
 For an example of how to configure SQL Server to use a specific port, see [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) in the SQL Server TechNet library.  
-
-## See Also  
- [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

@@ -765,8 +765,3 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
 **IIS configuration:** Requires the default IIS configuration.  
-
-
-
-## See Also
-[Supported Configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

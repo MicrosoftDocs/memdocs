@@ -208,6 +208,3 @@ If these settings are incorrectly entered by the user, this can increase the bur
 -   **Noncompliant** - Users have accepted a version of the terms and conditions, but not the latest version  
 
 -   **Unknown** -  Users have never accepted the terms and conditions, including those without an enrolled device  
-
-## See Also
-[What's new in Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md)
