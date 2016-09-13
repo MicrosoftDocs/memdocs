@@ -30,14 +30,14 @@ In this release, the following improvements have been made to this policy:
 
 1. Use the information in the [existing edition upgrade policy topic](Upgrade%20Windows%20devices%20to%20the%20latest%20version%20with%20the%20edition%20upgrade%20policy%20in%20Configuration%20Manager_deleted.md) to create an edition upgrade policy.
 2. Deploy this policy to a Windows 10 PC running the Configuration Manager client.
-Once the policy reaches a targeted Windows PC, the PC will be restarted within two hours to apply the upgrade. You cannot currently suppress this restart. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours. 
+Once the policy reaches a targeted Windows PC, the PC will be restarted within two hours to apply the upgrade. You cannot currently suppress this restart. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
 
 ### Known issue with this release
 In Configuration Manager client settings, you might see settings for **Edition Upgrade**. In this release, these settings are not functional. Use the instructions given above to upgrade Windows 10 to a newer version.
 
 ## Customizable Branding for Software Center Dialogs
 
-Custom branding for the Software Center was introduced in Configuration Manager version 1602. In Technical Preview version 1607, that branding is now extended to all associated dialog boxes and taskbar notifications to provide a more consistent experience to Software Center users. 
+Custom branding for the Software Center was introduced in Configuration Manager version 1602. In Technical Preview version 1607, that branding is now extended to all associated dialog boxes and taskbar notifications to provide a more consistent experience to Software Center users.
 
 ### Try it out!
 
@@ -50,19 +50,17 @@ Custom branding for the Software Center is applied according to the following ru
 3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#Configuring-the-Microsoft-Intune-subscription).
 
 ## Use the same network adapter for multiple PXE initiated deployments
-In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration. 
+In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration.
 
 For more information about this issue, see the [Configuration Manager OSD Support Team Blog](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
 
 ### Enable the feature to manage duplicate hardware identifiers  
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Updates and Servicing** > **Features**.
-2. In the display pane, select **Manage duplicate hardware identifiers**. 
-3. On the **Home** tab, in the **Features** group, click **Turn on**. 
+2. In the display pane, select **Manage duplicate hardware identifiers**.
+3. On the **Home** tab, in the **Features** group, click **Turn on**.
 
 ### Add hardware identifiers for Configuration Manager to ignore  
-1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**. 
-2. On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**. 
-3. Go to the **Client Approval and Conflicting Records** tab. 
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+2. On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
+3. Go to the **Client Approval and Conflicting Records** tab.
 4. Click **Add** in the **Duplicate hardware identifiers** section to add new hardware identifiers.
-## See Also  
- [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)

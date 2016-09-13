@@ -97,6 +97,3 @@ author: Brenduns
 
     > [!NOTE]  
     >  If you change the font of the Help topics in the Help window, the change also affects the font for webpages in Windows Internet Explorer.  
-
-## See Also  
- [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)

@@ -191,6 +191,3 @@ With the exception of the distribution point site system role and the computers 
     -   Security roles  
 
     -   Security scopes  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

@@ -183,6 +183,3 @@ Use the following checklist to migrate data from the source hierarchy to the des
 -   **Complete migration:**  
 
     After you have migrated data and clients from all sites in the source hierarchy, and you have upgraded applicable distribution points, you can complete migration. To complete migration you stop gathering data for each source site in the source hierarchy. You can then remove migration information that you do not need and decommission your source hierarchy infrastructure. For more information, see [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md).  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

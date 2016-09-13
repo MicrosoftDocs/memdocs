@@ -794,6 +794,3 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about the WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synchronized from the configured update source to the WSUS server database.|WSUS server|  
-
-## See Also  
- [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

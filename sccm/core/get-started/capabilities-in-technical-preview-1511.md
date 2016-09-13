@@ -193,6 +193,3 @@ Try to complete the following task and then use the feedback information near th
 1.  [Deploy software updates](https://technet.microsoft.com/library/gg712304.aspx) to the server cluster collection.  
 
 2.  [Monitor the software update deployment](https://technet.microsoft.com/library/gg712304.aspx).  
-
-## See Also  
- [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)

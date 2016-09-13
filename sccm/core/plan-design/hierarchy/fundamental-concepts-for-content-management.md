@@ -231,11 +231,3 @@ See [content source location scenarios](../../../core/plan-design/hierarchy/cont
  A process of transferring content to a distribution point without relying on  Configuration Manager to distribute the content across the network.  
 
  For more information, see [Manage network bandwidth](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md)
-
-
-
-
-
-
- ## See Also
- [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)

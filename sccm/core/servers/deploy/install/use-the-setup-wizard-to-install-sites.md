@@ -370,8 +370,3 @@ To expand a stand-alone primary site, use the procedure *[To install a primary o
 
     > [!TIP]  
     >  When you install more than one secondary site at a time, the prerequisite check runs against a single site at a time, and must complete for a site before it starts to check the next site.  
-
-
-
-## See Also
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)

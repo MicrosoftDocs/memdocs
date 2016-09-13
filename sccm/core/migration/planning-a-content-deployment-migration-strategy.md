@@ -202,6 +202,3 @@ To identify distribution points that are eligible for reassignment in the Config
  To minimize the network bandwidth that is used when you migrate content, consider transferring ownership of content to a site in the destination hierarchy that is close on the network to the content location in the source hierarchy. Because information about the content in the destination hierarchy is shared globally, it will be available at every site.  
 
  Although information about content is shared to all sites by using database replication, any content that you assign to a primary site and then deploy to distribution points at other primary sites, transfers by using file-based replication. This transfer is routed through the central administration site and then to the additional primary site. By centralizing packages that you plan to distribute to multiple primary sites before or during migration when you assign a site as the content owner, you can reduce data transfers across low bandwidth networks.  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

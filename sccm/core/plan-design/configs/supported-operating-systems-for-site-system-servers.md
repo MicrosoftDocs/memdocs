@@ -288,9 +288,3 @@ Use the information in this topic with the information in the following articles
 -   Only x64 is supported  
 
 -   Distribution points on this operating system does not support PXE or Multicast  
-
-
-
-
-## See Also  
- [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

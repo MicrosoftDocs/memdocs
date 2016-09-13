@@ -71,6 +71,3 @@ Just prior to installing the site system role, Configuration Manager checks the 
 
 > [!TIP]  
 >  The Windows PowerShell cmdlet, New-CMSiteSystemServer, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414) in the System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
-
-## See Also  
- [Add site system roles for System Center Configuration Manager](../../../../core/servers/deploy/configure/add-site-system-roles.md)

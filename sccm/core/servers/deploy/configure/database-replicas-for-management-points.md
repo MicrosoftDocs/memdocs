@@ -518,6 +518,3 @@ To support client notification with a database replica for a management point, y
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 
 5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.  
-
-## See Also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

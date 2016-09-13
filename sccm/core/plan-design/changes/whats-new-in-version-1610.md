@@ -20,15 +20,4 @@ Update 1610 for System Center Configuration Manager current branch is an update 
 >  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)  
 >  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
 
-The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
-
-
-
-
-
-
-
-
-
-## See Also
-[What’s new in System Center Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md)
+The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  

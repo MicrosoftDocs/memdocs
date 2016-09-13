@@ -140,6 +140,3 @@ Because the steps to create a custom website vary for different operating system
     2.  Start the **SMSWEB** website  
 
     3.  Restart the **SMS_SITE_COMPONENT_MANAGER** service on the site server of the site.  
-
-## See Also  
- [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)

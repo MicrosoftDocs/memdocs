@@ -228,6 +228,3 @@ Configuration Manager also uses:
 -   For a high-level technical overview of System Center Configuration Manager, see [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md).  
 
  When you are familiar with the basic concepts, use the System Center Configuration Manager documentation to help you successfully deploy and use Configuration Manager.  
-
-## See Also  
- [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md)

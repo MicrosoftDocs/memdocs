@@ -221,9 +221,5 @@ A cloud-based distribution point has the following limitations:
     -   It is best practice to back up and save a copy of both the management certificate and service certificate in use with a cloud-based distribution point. In the event that you restore the Configuration Manager primary site that manages the cloud-base distribution point to a different computer, you must re-import the certificates before you can continue to use them.  
 
 -   **Uninstall a cloud-based distribution point** : To uninstall a cloud-based distribution point, select the distribution point in the Configuration Manager console, and then select **Delete**.  
-  
-    When you delete a cloud-based distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Windows Azure.  
 
-## See Also  
- [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)   
- [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)
+    When you delete a cloud-based distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Windows Azure.  

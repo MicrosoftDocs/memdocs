@@ -237,7 +237,7 @@ With Technical Preview 1606 several changes have been introduced that apply to U
 
     When you install updates without using the option to Ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts with a State of **Prereq warning**, you can then select **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update install that ignores the prerequisite warnings.  
 
- 
+
 
 - **Cleaner view of updates:**
 
@@ -246,6 +246,3 @@ With Technical Preview 1606 several changes have been introduced that apply to U
 -   **Renamed option for pre-production:**
 
     In the Updates and Servicing node, the button what was named **Client options** is now renamed to **Promote Pre-production Client**.
-
-## See Also  
- [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)

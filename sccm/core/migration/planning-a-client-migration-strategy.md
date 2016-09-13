@@ -110,6 +110,3 @@ Additionally, you might have to reinstall some applications.
 Client inventory and compliance data is not saved when you migrate a client to the destination hierarchy. Instead, this information is recreated in the destination hierarchy when a client first sends its information to its assigned site. To help reduce the resulting network bandwidth requirements and server processing, consider migrating a small number of clients in phases rather than migrating a large number of clients at a single time.  
 
  Additionally, you cannot migrate customizations for hardware inventory from a source hierarchy. You must introduce these to the destination hierarchy independently from migration. For information about how to extend hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

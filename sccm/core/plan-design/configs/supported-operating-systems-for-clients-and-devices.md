@@ -328,6 +328,3 @@ author: Mtillman
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)** - This includes Business Productivity Online Standard Suite  
-
-## See Also
-[Supported Configurations for System Center Configuation Manager](../../../core/plan-design/configs/supported-configurations.md)

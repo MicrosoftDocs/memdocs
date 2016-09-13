@@ -284,6 +284,3 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
-
-## See Also  
- [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

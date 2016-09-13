@@ -101,7 +101,3 @@ Consider the folowing when planning for content management:
  Configuration Manager does not include any user data in content files, although an administrative user might choose to do this.  
 
  Before you configure content management, consider your privacy requirements.  
-
-## See Also  
- [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)   
- [Security and privacy for System Center Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)

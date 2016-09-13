@@ -190,6 +190,3 @@ You can install PowerShell before or after the Configuration Manager console ins
 |Site and database server|2 - 4|7 - 12|100|  
 |Site system server|1 - 4|2 - 4|50|  
 |Client|1 - 2|1 - 3|30|  
-
-## See Also  
- [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

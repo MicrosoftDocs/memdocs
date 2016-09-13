@@ -177,7 +177,3 @@ Each management can support the following number of devices:
         -   10,000 devices managed using On-Premises MDM  
 
         -   10,000 devices that run Mac and Windows CE 7.0  
-
-
-## See Also
- [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

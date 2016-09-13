@@ -286,6 +286,3 @@ This behavior enables the client to select the nearest server from which to tran
     -   A client on a boundary that is a member of two different boundary groups with different site assignments will randomly select a site to join, which might not be the site you intend the client to join.  This configuration is called overlapping boundaries.  
 
      Overlapping boundaries is not a problem for content location, and instead is often a desired  configuration that provides clients additional resources or content locations they can use.  
-
-## See Also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

@@ -34,7 +34,3 @@ Figure 1. Example of current branch servicing support.
 |1511|12/8/2015|12/8/2016|  
 |1602|3/11/2016|3/11/2017|
 |1606|7/22/2016|7/22/2017|
-
-
-## See Also
-[Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)

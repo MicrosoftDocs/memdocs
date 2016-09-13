@@ -136,7 +136,3 @@ When the computer where you will run Setup is not connected to the Internet, or 
  -  By default, site systems and clients use pre-defined ports to communicate.
  -  During Setup, you can configure alternate ports.
  -  For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md)
-
-
-## See Also:
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)

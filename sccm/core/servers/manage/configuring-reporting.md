@@ -34,7 +34,7 @@ translation.priority.ht:
 ---
 # Configuring reporting in System Center Configuration Manager
 Before you can create, modify, and run reports in the System Center Configuration Manager console, you must carry out a number of configuration tasks. Use the following sections in this topic to help you configure reporting in your Configuration Manager hierarchy:  
-    
+
  Before you proceed with installing and configuring Reporting Services in your hierarchy, review the following Configuration Manager reporting topics:  
 
 -   [Introduction to reporting in System Center Configuration Manager](../../../core/servers/manage/introduction-to-reporting.md)  
@@ -300,6 +300,3 @@ Before you can create, modify, and run reports in the System Center Configuratio
 3.  On the **Home** tab, in the **Settings** group, click **Report Options**.  
 
 4.  Select the default report server in the list, and then click **OK**. If no reporting services points are listed in the list, verify that you have a reporting services point successfully installed and configured in the site.  
-
-## See Also  
- [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)

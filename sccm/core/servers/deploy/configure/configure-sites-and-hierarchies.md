@@ -5,14 +5,14 @@ ms.date: 2016-07-22
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 caps.latest.revision: 15
 author: Brenduns
-translation.priority.ht: 
+translation.priority.ht:
   - cs-cz
   - de-de
   - en-gb
@@ -34,16 +34,16 @@ translation.priority.ht:
 ---
 # Configure sites and hierarchies for System Center Configuration Manager
 After you install your first System Center Configuration Manager site or add additional sites to your hierarchy, use the following checklist to ensure you consider the most common configurations that affect both sites and hierarchies.  
-  
+
 ## Checklist of common configurations for new and additional sites  
  In most deployments you will not need to configure the following options in any specific order:  
-  
+
 -   Some options build upon each other, such Active Directory Forest Discovery, boundaries,  and boundary groups.  
-  
+
 -   Several configurations have default values you can use without configuration changes, at least temporarily.  
-  
+
 -   Other configurations, like boundary groups and distribution point groups, require you to configure them before you can use them.  
-  
+
 |Action|Details|  
 |------------|-------------|  
 |Configure role-based administration|Role-based administration is how you to segregate administrative assignments to control which administrative users can view and manage different objects and data in your Configuration Manager environment.<br /><br /> Configurations for role-based administration are shared with all sites in a hierarchy.   <br />See [Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|  
@@ -60,6 +60,3 @@ After you install your first System Center Configuration Manager site or add add
 |Configure database replicas for management points|Configure a database replica to reduce the CPU load placed on the site database server by management points as they service requests from clients. See [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)|  
 |Configure a SQL Server AlwaysOn Availability Group to host the site database|Beginning with version 1602, you can configure availability groups as a high-availability and disaster-recovery solution for hosting the site database at primary sites and the central administration site. See [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)|  
 |Modify replication between sites|See [Data transfers between sites in System Center Configuration Manager](../../../../core/servers/manage/data-transfers-between-sites.md) to learn about the following subjects:<br /><br /> Configure [File-based replication](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute) between secondary sites<br /><br /> Configure [Database replication links](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> Configure [Distributed views](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
-  
-## See Also  
- [Start using System Center Configuration Manager](../../../../core/servers/deploy/start-using.md)

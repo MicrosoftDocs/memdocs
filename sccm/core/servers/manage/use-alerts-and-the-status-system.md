@@ -256,7 +256,7 @@ Because the status system maintains separate configurations for each site you mu
     -   **Raise alert** – Specify the threshold percentage for the alert.  
 
 6.  Click **OK** to close the *&lt;Collection Name*\>**Properties** dialog box.  
-  
+
 ##### To configure email notification for alerts  
 
 1.  In the Configuration Manager console navigate to **Monitoring** > **Alerts** > **Subscriptions**.  
@@ -318,6 +318,3 @@ Because the status system maintains separate configurations for each site you mu
      You can postpone an alert only when it is active.  
 
 -   You can edit the **Comment** of an alert so that other administrative users can see that you are aware of the alert. For example, in the comment you can identify how to resolve the condition, provide information about the current status of the condition, or explain why you postponed the alert.  
-
-## See Also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

@@ -273,7 +273,3 @@ For example, you can use the following command line to update a Configuration Ma
 >  To update a site database, deploy the update to the site server for that site.  
 
  For information about how to create collections, see [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
-
-## See Also  
- [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)   
- [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)

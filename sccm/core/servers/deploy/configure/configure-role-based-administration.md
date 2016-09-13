@@ -306,6 +306,3 @@ The current configuration for the securable object behavior changes the process 
 
     > [!CAUTION]  
     >  When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.  
-
-## See Also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

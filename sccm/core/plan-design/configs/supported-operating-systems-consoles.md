@@ -30,6 +30,3 @@ author: Brenduns
 -   **Windows 8** (x86, x64) – Professional, Enterprise  
 
 -   **Windows 7 with SP1** (x86, x64) – Professional, Enterprise, Ultimate  
-
-## See Also
- [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)

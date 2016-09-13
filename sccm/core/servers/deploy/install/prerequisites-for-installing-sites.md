@@ -114,10 +114,3 @@ The following are prerequisites for installing secondary sites:
         >  After setup completes, both accounts must retain sysadmin rights to SQL Server. It is not supported to remove the sysadmin rights from these accounts.  
 
 -   The secondary site server computer must meet all prerequisite configurations, which includes SQL Server and the default site system roles of the management point and distribution point.  
-
-
-
-
-
-## See Also
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)

@@ -217,6 +217,3 @@ Create security scopes when you have to limit access to separate instances of ob
 -   Different administrative users require different access for some instances of an object type. For example, one group of administrative users requires **Read** permission to specific software update groups, and another group of administrative users requires **Modify** and **Delete** permissions for other software update groups. Create different security scopes for these software update groups.  
 
 For information about how to configure security scopes for role-based administration, see the [Configure security scopes for an object](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) topic.  
-
-## See Also  
- [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)

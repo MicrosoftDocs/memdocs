@@ -194,6 +194,3 @@ For more information about reporting, see [Reporting in System Center Configurat
  There are no significant changes to software metering between Configuration Manager 2007 and System Center Configuration Manager. You can migrate your software metering rules from a supported source hierarchy to a destination hierarchy.  
 
  By default, software metering rules that you migrate to a destination hierarchy are not associated with a specific site in the destination hierarchy and instead apply to all clients in the hierarchy. To apply a software metering rule to clients at a specific site, you must edit the metering rule after it migrates.  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

@@ -35,6 +35,3 @@ translation.priority.ht:
 This data flow displays the process by which a site with an on-line  service connection point downloads in-console updates.  
 
  ![Flowchart - Download updates](media/Flowchart---Download-updates.png)  
-  
-## See Also  
- [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)

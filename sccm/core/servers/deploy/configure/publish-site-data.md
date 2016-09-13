@@ -81,6 +81,3 @@ For information about how clients find a management point see [Understand how cl
     >  If you enable sites to publish to a forest, you must extend the Active Directory schema of that forest for Configuration Manager, and the Active Directory Forest Account must have Full Control permissions to the System container in that forest.  
 
 5.  When you complete the configuration of this forest for use with Active Directory Forest Discovery, click **OK** to save the configuration.  
-
-## See Also  
- [Configure sites and hierarchies for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

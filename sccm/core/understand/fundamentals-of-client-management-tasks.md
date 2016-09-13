@@ -70,6 +70,3 @@ To monitor these operations in near real-time, you use the Configuration Manager
 -   Configure settings for Internet-based client management.  
 
 -   View configuration baselines that were deployed to the client, initiate compliance evaluation, and view compliance reports.  
-
-## See Also  
- [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md)

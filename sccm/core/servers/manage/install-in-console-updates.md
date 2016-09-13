@@ -367,7 +367,3 @@ On a site server you can configure service windows to control when infrastructur
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
     See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
-
-
-## See Also  
- [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)
