@@ -67,6 +67,3 @@ For more information about source sites and data gathering, see [Planning a sour
  The last step to complete migration is to clean up migration data. You can use the **Clean Up Migration Data** command after you have stopped gathering data for each source site in the source hierarchy. This optional action removes data about the current source hierarchy from the database of the destination hierarchy.  
 
  When you clean up migration data, most data about the migration is removed from the database of the destination hierarchy. However, details about migrated objects are retained. With these details, you can use the **Migration** workspace to reconfigure the source hierarchy that contains the data that was migrated to either resume migration from that source hierarchy, or to review the objects and site ownership of the objects that previously migrated.  
-
-## See Also  
- [Planning for migration to System Center Configuration Manager](../../core/migration/planning-for-migration.md)

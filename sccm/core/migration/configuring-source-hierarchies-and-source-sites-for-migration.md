@@ -112,6 +112,3 @@ Use the following procedure to configure additional source sites for Configurati
 7.  Click **OK** to save the configuration. This opens the **Data Gathering Status** dialog box, and data gathering starts automatically.  
 
 8.  When data gathering finishes, click **Close** to complete the configuration.  
-
-## See Also  
- [Migrate data between hierarchies in System Center Configuration Manager](../../core/migration/migrate-data-between-hierarchies.md)

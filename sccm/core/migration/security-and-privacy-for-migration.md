@@ -72,6 +72,3 @@ You can migrate some or all of the supported data from a source site to a destin
 Migration is not enabled by default and requires several configuration steps. Migration information is not sent to Microsoft.  
 
 Before you migrate data from a source hierarchy, consider your privacy requirements.  
-
-## See Also  
- [Migrate data between hierarchies in System Center Configuration Manager](../../core/migration/migrate-data-between-hierarchies.md)
