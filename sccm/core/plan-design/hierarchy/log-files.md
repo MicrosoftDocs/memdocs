@@ -5,7 +5,7 @@ ms.date: 2015-12-08
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -13,7 +13,7 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht: 
+translation.priority.ht:
   - cs-cz
   - de-de
   - en-gb
@@ -35,128 +35,128 @@ translation.priority.ht:
 ---
 # Log files in System Center Configuration Manager
 In System Center Configuration Manager, client and site server components record process information in individual log files. By default, client and server component logging is enabled in Configuration Manager. You can use the information in these log files to help you troubleshoot issues that might occur in your Configuration Manager hierarchy.  
-  
+
  The following sections provide details about the different log files. Use this information to view and monitor Configuration Manager client and server logs for operation details and identify error information that might help you to troubleshoot any problems.  
-  
+
 -   [About Configuration Manager Log Files](#BKMK_AboutLogs)  
-  
+
     -   [Configure Logging Options by Using the Configuration Manager Service Manager](#BKMK_LogOptions)  
-  
+
     -   [Locating Configuration Manager Logs](#BKMK_LogLocation)  
-  
+
 -   [Configuration Manager Client Logs](#BKMK_ClientLogs)  
-  
+
     -   [Client Operations](#BKMK_ClientOpLogs)  
-  
+
     -   [Client Installation Log Files](#BKMK_ClientInstallLog)  
-  
+
     -   [Client for Linux and UNIX](#BKMK_LogFilesforLnU)  
-  
+
     -   [Client for Mac Computers](#BKMK_LogfilesforMac)  
-  
+
 -   [Configuration Manager Site Server Log Files](#BKMK_ServerLogs)  
-  
+
     -   [Site Server and Site System Server Logs](#BKMK_SiteSiteServerLog)  
-  
+
     -   [Site Server Installation Log Files](#BKMK_SiteInstallLog)  
-  
+
     -   [Fallback Status Point Logs Files](#BKMK_FSPLog)  
-  
+
     -   [Management Point Logs Files](#BKMK_MPLog)  
-  
+
     -   [Software Update Point Log Files](#BKMK_SUPLog)  
-  
+
 -   [Log Files for Configuration Manager Functionality](#BKMK_FunctionLogs)  
-  
+
     -   [Application Management](#BKMK_AppManageLog)  
-  
+
     -   [Asset Intelligence](#BKMK_AILog)  
-  
+
     -   [Backup and Recovery](#BKMK_BnRLog)  
-  
+
     -   [Client Notification](#BKMK_BGB)  
-  
+
     -   [Certificate Enrollment](#BKMK_CertificateEnrollment)  
-  
+
     -   [Compliance Settings and Company Resource Access](#BKMK_CompSettingsLog)  
-  
+
     -   [Configuration Manager Console](#BKMK_ConsoleLog)  
-  
+
     -   [Content Management](#BKMK_ContentLog)  
-  
+
     -   [Discovery](#BKMK_DiscoveryLog)  
-  
+
     -   [Endpoint Protection](#BKMK_EPLog)  
-  
+
     -   [Extensions](#BKMK_Extensions)  
-  
+
     -   [Inventory](#BKMK_InventoryLog)  
-  
+
     -   [Metering](#BKMK_MeteringLog)  
-  
+
     -   [Migration](#BKMK_MigrationLog)  
-  
+
     -   [Mobile Devices](#BKMK_MDMLog)  
-  
+
     -   [Operating System Deployment](#BKMK_OSDLog)  
-  
+
     -   [Power Management](#BKMK_PowerMgmtLog)  
-  
+
     -   [Remote Control](#BKMK_RCLog)  
-  
+
     -   [Reporting](#BKMK_ReportLog)  
-  
+
     -   [Role-Based Administration](#BKMK_RBALog)  
-  
+
     -   [Service Connection Point](#BKMK_WITLog)  
-  
+
     -   [Software Updates](#BKMK_SU_NAPLog)  
-  
+
     -   [Wake On LAN](#BKMK_WOLLog)  
-  
+
     -   [Windows Update Agent](#BKMK_WULog)  
-  
+
     -   [WSUS Server](#BKMK_WSUSLog)  
-  
+
 ##  <a name="BKMK_AboutLogs"></a> About Configuration Manager Log Files  
  By default, most processes in Configuration Manager write operational information to a log file that is dedicated to that process. These log files are identified by the **.LOG** or **.LO_** extension. Configuration Manager writes to the .LOG file until that log reaches it maximum size. When the log is full, the .LOG file is copied to a file of the same name but with the .LO_ extension, and the process or component continues to write to the .LOG file. When the .LOG file again reaches its maximum size, the .LO_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by retaining the .LOG extension. An exception to the maximum size and use of the **.LO_** file is the client for Linux and UNIX. For information about how the client for Linux and UNIX uses log files, see Manage Log Files for the Client for Linux and UNIX in the [Client for Linux and UNIX](#BKMK_LogFilesforLnU) section in this topic.  
-  
+
  To view the logs, you can use the Configuration Manager log viewer tool, CMTrace, which is located in the **\SMSSETUP\TOOLS** folder of the Configuration Manager source media. The CMTrace tool is also added to all boot images that are added to the **Software Library**.  
-  
+
 ###  <a name="BKMK_LogOptions"></a> Configure Logging Options by Using the Configuration Manager Service Manager  
  Configuration Manager supports options that enable you to change where log files are stored and the log file size.  
-  
+
  Use the following procedure to use the **Configuration Manager Service Manager** to modify the size of log files, the name and location of the log file, and to force multiple components to write to a single log file.  
-  
+
 ##### To modify logging for a component:  
-  
+
 1.  In the Configuration Manager console, click **Monitoring**, click **System Status**, and then click either **Site Status** or **Component Status**.  
-  
+
 2.  On the **Home** tab, in the **Component** group, click **Start** and select **Configuration Manager Service Manager**.  
-  
+
 3.  When the Configuration Manager Service Manager opens, connect to the site that you want to manage.  
-  
+
      If you do not see the site that you want to manage, click **Site**, click **Connect**, and then enter the name of the site server for the correct site.  
-  
+
 4.  Expand the site and navigate to **Components** or **Servers**, depending on where the components that you want to manage are located.  
-  
+
 5.  In the right pane, select one or more components.  
-  
+
 6.  On the **Component** menu, click **Logging**.  
-  
+
 7.  In the **Configuration Manager Component Logging** dialog box, complete the available configuration options for your selection.  
-  
+
 8.  Click **OK** to save the configuration.  
-  
+
 ###  <a name="BKMK_LogLocation"></a> Locating Configuration Manager Logs  
  By default, Configuration Manager log files are stored in a variety of locations that depend on the process that creates the log file, and on the configuration of your site systems. Because the location of the log on a given computer can vary, use search to locate the relevant log files on your Configuration Manager computers to help you troubleshoot a specific scenario.  
-  
+
 ##  <a name="BKMK_ClientLogs"></a> Configuration Manager Client Logs  
  The following sections list the log files related to client operations, and client installation.  
-  
+
 ###  <a name="BKMK_ClientOpLogs"></a> Client Operations  
  The following table lists the log files found on the Configuration Manager client.  
-  
+
 |Log name|Description|  
 |--------------|-----------------|  
 |CAS.log|Content Access service. Maintains the local package cache on the client.|  
@@ -216,81 +216,81 @@ In System Center Configuration Manager, client and site server components record
 |Wedmtrace.log|Records operations related to write filters on Windows Embedded clients.|  
 |wakeprxy-install.log|Records installation information when clients receive the client setting option to enable wake-up proxy.|  
 |wakeprxy-uninstall.log|Records information about uninstalling wake-up proxy when clients receive the client setting option to disable wake-up proxy, if wake-up proxy was previously enabled.|  
-  
+
 ###  <a name="BKMK_ClientInstallLog"></a> Client Installation Log Files  
  The following table lists the log files that contain information related to the installation of the Configuration Manager client.  
-  
+
 |Log name|Description|  
 |--------------|-----------------|  
 |ccmsetup.log|Records **ccmsetup** tasks for client setup, client upgrade, and client removal. Can be used to troubleshoot client installation problems.|  
 |ccmsetup-ccmeval.log|Records **ccmsetup** tasks for client status and remediation.|  
 |CcmRepair.log|Records the repair activities of the client agent.|  
 |client.msi.log|Records setup tasks performed by client.msi. Can be used to troubleshoot client installation or removal problems.|  
-  
+
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
  The Configuration Manager client for Linux and UNIX records information in the following log files.  
-  
+
 > [!TIP]  
 >  Beginning with client for Linux and UNIX from cumulative update 1, you can use CMTrace to view the log files for the client for Linux and UNIX.  
-  
+
 > [!NOTE]  
 >  When you use the initial release of the client for Linux and UNIX and reference the documentation in this section, replace the following references for each file or process:  
 >   
 >  -   Replace **omiserver.bin** with **nwserver.bin**  
 > -   Replace **omi** with **nanowbem**  
-  
+
 |Log name|Details|  
 |--------------|-------------|  
 |scxcm.log|This is the log file for the core service of the Configuration Manager client for Linux and UNIX (ccmexec.bin). This log file contains information about the installation and ongoing operations of ccmexec.bin.<br /><br /> By default, this log file is created in the following location: **/var/opt/microsoft/scxcm.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of four different settings:|  
 |scxcmprovider.log|This is the log file for the CIM service of the Configuration Manager client for Linux and UNIX (omiserver.bin). This log file contains information about the ongoing operations of nwserver.bin.<br /><br /> By default, this log is created in the following location: **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> To change the location of the log file, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change the **PATH** field. You do not need to restart the client computer or service for the change to take effect.<br /><br /> You can set the log level to one of three different settings:|  
-  
+
  **Both log files support several levels of logging:**  
-  
+
 -   **scxcm.log** - To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the tag **MODULE** to the desired log level:  
-  
+
     -   ERROR: Indicates problems that require attention.  
-  
+
     -   WARNING: Indicates possible problems for the client operations.  
-  
+
     -   INFO: More detailed logging that indicates the status of various events on the client.  
-  
+
     -   TRACE: Verbose logging that is typically used to diagnose problems.  
-  
+
 -   **scxcmprovider.log** - To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the tag **MODULE** to the desired log level:  
-  
+
     -   ERROR: Indicates problems that require attention.  
-  
+
     -   WARNING: Indicates possible problems for the client operations.  
-  
+
     -   INFO: More detailed logging that indicates the status of various events on the client.  
-  
- Under normal operating conditions the ERROR log level should be used. The ERROR level of logging creates the smallest log file. As the log level is increased from ERROR to WARNING to INFO to TRACE, each step results in a larger log file as more data is written to the log file.  
-  
+
+Under normal operating conditions the ERROR log level should be used. The ERROR level of logging creates the smallest log file. As the log level is increased from ERROR to WARNING to INFO to TRACE, each step results in a larger log file as more data is written to the log file.  
+
 ####  <a name="BKMK_ManageLinuxLogs"></a> Manage Log Files for the Client for Linux and UNIX Client  
- The client for Linux and UNIX does not limit the maximum size of the client log files, nor does the client automatically copy the contents of its **.LOG** files to another file such as a **.LO_** file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
-  
- For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the clients log files. The Configuration Manager client for Linux and UNIX provides an interface that enables **logrotate** to signal the client as to when the log rotation completes, allowing the client to resume logging to the log file.  
-  
- For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
-  
+The client for Linux and UNIX does not limit the maximum size of the client log files, nor does the client automatically copy the contents of its **.LOG** files to another file such as a **.LO_** file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
+
+For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the clients log files. The Configuration Manager client for Linux and UNIX provides an interface that enables **logrotate** to signal the client as to when the log rotation completes, allowing the client to resume logging to the log file.  
+
+For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
+
 ###  <a name="BKMK_LogfilesforMac"></a> Client for Mac Computers  
- The Configuration Manager client for Mac computers records information in the following log files.  
-  
+The Configuration Manager client for Mac computers records information in the following log files.  
+
 |Log name|Details|  
 |--------------|-------------|  
 |CCMClient-*<date_time>*.log|Records activities that are related to the Mac client operations, which includes application management, inventory, and error logging.<br /><br /> This log file is located in the folder **/Library/Application Support/Microsoft/CCM/Logs** on the Mac computer.|  
 |CCMAgent-*<date_time>*.log|Records information that is related to client operations, which includes user logon and logoff operations and Mac computer activity.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
 |CCMNotifications-*<date_time>*.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
 |CCMPrefPane-*<date_time>*.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
-  
+
  Additionally, the log file SMS_DM.log on the site system server records communication between Mac computers and the management point that is enabled for mobile devices and Mac computers.  
-  
+
 ##  <a name="BKMK_ServerLogs"></a> Configuration Manager Site Server Log Files  
  The following sections list log files found on the site server or related to specific site system roles.  
-  
+
 ###  <a name="BKMK_SiteSiteServerLog"></a> Site Server and Site System Server Logs  
  The following table lists the log files found on the Configuration Manager site server and site system servers.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Records enrollment processing activity.|Site server|  
@@ -362,10 +362,10 @@ In System Center Configuration Manager, client and site server components record
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
 |swmproc.log|Records the processing of metering files and settings.|Site server|  
-  
+
 ###  <a name="BKMK_SiteInstallLog"></a> Site Server Installation Log Files  
  The following table lists the log files that contain information related to site installation.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrPrereq.log|Records pre-requisite component evaluation and installation activities.|Site server|  
@@ -373,19 +373,19 @@ In System Center Configuration Manager, client and site server components record
 |ConfigMgrSetupWizard.log|Records information related to activity in the Setup wizard.|Site Server|  
 |SMS_BOOTSTRAP.log|Records information about the progress of launching the secondary site installation process. Details of the actual setup process are contained in ConfigMgrSetup.log.|Site Server|  
 |smstsvc.log|Records information about the installation, use, and removal of a Windows service that is used to test network connectivity and permissions between servers, using the computer account of the server initiating the connection.|Site server and site systems|  
-  
+
 ###  <a name="BKMK_FSPLog"></a> Fallback Status Point Logs Files  
  The following table lists the log files that contain information related to the fallback status point.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |FspIsapi|Records details about communications to the fallback status point from mobile device legacy clients and client computers.|Site system server|  
 |fspMSI.log|Records messages generated by the installation of a fallback status point.|Site system server|  
 |fspmgr.log|Records activities of the fallback status point site system role.|Site system server|  
-  
+
 ###  <a name="BKMK_MPLog"></a> Management Point Logs Files  
  The following table lists the log files that contain information related to the management point.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|  
@@ -407,10 +407,10 @@ In System Center Configuration Manager, client and site server components record
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details of about the management point installation.|Site server|  
 |MPSetup.log|Records the management point installation wrapper process.|Site server|  
-  
+
 ###  <a name="BKMK_SUPLog"></a> Software Update Point Log Files  
- he following table lists the log files that contain information related to the software update point.  
-  
+ The following table lists the log files that contain information related to the software update point.  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Records details about the replication of software updates notification files from a parent to child sites.|Site server|  
@@ -421,13 +421,13 @@ In System Center Configuration Manager, client and site server components record
 |WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
 |wsyncmgr.log|Records details about the software updates synchronization process.|Site system server|  
 |WUSSyncXML.log|Records details about the Inventory Tool for the Microsoft Updates synchronization process.|The client computer configured as the synchronization host for the Inventory Tool for Microsoft Updates.|  
-  
+
 ##  <a name="BKMK_FunctionLogs"></a> Log Files for Configuration Manager Functionality  
  The following sections list log files related to the different functions in Configuration Manager.  
-  
+
 ###  <a name="BKMK_AppManageLog"></a> Application Management  
  The following table lists the log files that contain information related to Application Management.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |AppIntentEval.log|Records details about the current and intended state of applications, their applicability, whether requirements were met, deployment types, and dependencies.|Client|  
@@ -446,17 +446,17 @@ In System Center Configuration Manager, client and site server components record
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records the activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records the activities for Software Center prerequisite component validation.|Client|  
-  
+
  The following table lists the log files that contain information related to deploying packages and programs.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |execmgr.log|Records details about packages and task sequences that run.|Client|  
-  
+
 ###  <a name="BKMK_AILog"></a> Asset Intelligence  
  The following table lists the log files that contain information related to Asset Intelligence.  
-  
+
 |Log Name|Description|Computer with Log File|  
 |--------------|-----------------|----------------------------|  
 |AssetAdvisor.log|Records the activities of Asset Intelligence inventory actions.|Client|  
@@ -466,20 +466,20 @@ In System Center Configuration Manager, client and site server components record
 |AIUSSetup.log|Records details about the installation of Asset Intelligence synchronization point site system role.|Site system server|  
 |ManagedProvider.log|Records details about discovering software with an associated software identification tag. Also records activities relating to hardware inventory.|Site system server|  
 |MVLSImport.log|Records details about the processing of imported licensing files.|Site system server|  
-  
+
 ###  <a name="BKMK_BnRLog"></a> Backup and Recovery  
  The following table lists log files that contain information related to backup and recovery actions including site resets, and changes to the SMS Provider.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrSetup.log|Records information about setup and recovery tasks when Configuration Manager recovers a site from backup.|Site server|  
 |Smsbkup.log|Records details about the site backup activity.|Site server|  
 |smssqlbkup.log|Records output from the site database backup process when SQL Server is installed on a different server than the site server.|Site database server|  
 |Smswriter.log|Records information about the state of the Configuration Manager VSS writer that is used by the backup process.|Site server|  
-  
+
 ###  <a name="BKMK_CertificateEnrollment"></a> Certificate Enrollment  
  The following table lists the Configuration Manager log files that contain information related to certificate enrollment, which uses the certificate registration point and the Configuration Manager Policy Module on the server running Network Device Enrollment Service.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |Crp.log|Records the enrollment activities.|Certificate registration point|  
@@ -487,21 +487,21 @@ In System Center Configuration Manager, client and site server components record
 |Crpsetup.log|Records details about the installation and configuration of the certificate registration point.|Certificate registration point|  
 |Crpmsi.log|Records details about the installation and configuration of the certificate registration point.|Certificate registration point|  
 |NDESPlugin.log|Records the challenge verification and certificate enrollment activities.|Configuration Manager Policy Module and the Network Device Enrollment Service|  
-  
+
  In addition to the Configuration Manager log files, review the Windows Application logs in Event Viewer on the server running the Network Device Enrollment Service and the server hosting the certificate registration point. For example, look for messages from the **NetworkDeviceEnrollmentService** source. You can also use the following log files:  
-  
+
 -   IIS log files for Network Device Enrollment Service: **<path\>\inetpub\logs\LogFiles\W3SVC1**  
-  
+
 -   IIS log files for the certificate registration point: **<path\>\inetpub\logs\LogFiles\W3SVC1**  
-  
+
 -   Network Device Enrollment Policy log file: **mscep.log**  
-  
+
     > [!NOTE]  
     >  This file is located in the folder for the Network Device Enrollment Service account profile, for example, in C:\Users\SCEPSvc. For more information about how to enable logging for the Network Device Enrollment Service, see the [Enable Logging](http://go.microsoft.com/fwlink/?LinkId=320576) section in the Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS) article on the TechNet wiki.  
-  
+
 ###  <a name="BKMK_BGB"></a> Client Notification  
  The following table lists the log files that contain information related to client notification.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |bgbmgr.log|Records details about the activities of the site server relating to client notification tasks and processing online and task status files.|Site server|  
@@ -510,10 +510,10 @@ In System Center Configuration Manager, client and site server components record
 |bgbisapiMSI.log|Records details about the notification server installation and uninstall.|Management point|  
 |BgbHttpProxy.log|Records the activities of the notification HTTP proxy as it relays the messages of clients using HTTP to and from the notification server.|Client|  
 |CcmNotificationAgent.log|Records the activities of the notification agent such as client-server communication and information about tasks received and dispatched to other client agents.|Client|  
-  
+
 ###  <a name="BKMK_CompSettingsLog"></a> Compliance Settings and Company Resource Access  
  The following table lists the log files that contain information related to compliance settings and company resource access.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CIAgent.log|Records details about the process of remediation and compliance for compliance settings, software updates, and application management.|Client|  
@@ -521,19 +521,19 @@ In System Center Configuration Manager, client and site server components record
 |DCMAgent.log|Records high-level information about the evaluation, conflict reporting, and remediation of configuration items and applications.|Client|  
 |DCMReporting.log|Records information about reporting policy platform results into state messages for configuration items.|Client|  
 |DcmWmiProvider.log|Records information about reading configuration item synclets from Windows Management Instrumentation (WMI).|Client|  
-  
+
 ###  <a name="BKMK_ConsoleLog"></a> Configuration Manager Console  
  The following table lists the log files that contain information related to the Configuration Manager console.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Records the installation of the Configuration Manager console.|Computer that runs the Configuration Manager console|  
 |SmsAdminUI.log|Records information about the operation of the Configuration Manager console.|Computer that runs the Configuration Manager console|  
 |Smsprov.log|Records activities performed by the SMS Provider. Configuration Manager console activities use the SMS provider.|Site server or site system server|  
-  
+
 ###  <a name="BKMK_ContentLog"></a> Content Management  
  The following table lists the log files that contain information related to content management.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CloudDP-<guid\>.log|Records details for a specific cloud-based distribution point, including information about storage and content access.|Site system server|  
@@ -543,10 +543,10 @@ In System Center Configuration Manager, client and site server components record
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|  
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that are configured on a distribution point.|Site system role|  
 |smsdpprov.log|Records details about the extraction of compressed files received from a primary site. This log is generated by the WMI Provider of the remote distribution point.|A distribution point computer that is not co-located with the site server.|  
-  
+
 ###  <a name="BKMK_DiscoveryLog"></a> Discovery  
- he following table lists the log files that contain information related to Discovery.  
-  
+The following table lists the log files that contain information related to Discovery.  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |adsgdis.log|Records Active Directory Security Group Discovery actions.|Site server|  
@@ -556,55 +556,55 @@ In System Center Configuration Manager, client and site server components record
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
-  
+
 ###  <a name="BKMK_EPLog"></a> Endpoint Protection  
  The following table lists the log files that contain information related to Endpoint Protection.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |EndpointProtectionAgent.log|Records details about the installation of the Endpoint Protection client and the application of antimalware policy to that client.|Client|  
 |EPCtrlMgr.log|Records details about the synchronization of malware threat information from the Endpoint Protection role server into the Configuration Manager database.|Site system server|  
 |EPMgr.log|Monitors the status of the Endpoint Protection site system role.|Site system server|  
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|  
-  
+
 ###  <a name="BKMK_Extensions"></a> Extensions  
  The following table lists the log files that contain information related to Extensions.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |AdminUI.ExtensionInstaller.log|Records information about the download of extensions from Microsoft, and the installation and uninstallation of all extensions.|The computer that runs the Configuration Manager console|  
 |FeatureExtensionInstaller.log|Records information about the installation and removal of individual extensions when they are enabled or disabled in the Configuration Manager console.|The computer that runs the Configuration Manager console|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|The computer that runs the Configuration Manager console|  
-  
+
 ###  <a name="BKMK_InventoryLog"></a> Inventory  
  The following table lists the log files that contain information related to processing inventory data.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |dataldr.log|Records information about the processing of Management Information Format (MIF) files and hardware inventory in the Configuration Manager database.|Site server|  
 |invproc.log|Records the forwarding of MIF files from a secondary site to its parent site.|Secondary site server|  
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|  
-  
+
 ###  <a name="BKMK_MeteringLog"></a> Metering  
  The following table lists the log files that contain information related to metering.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Monitors all software metering processes.|Site server|  
-  
+
 ###  <a name="BKMK_MigrationLog"></a> Migration  
  The following table lists the log files that contain information related to migration.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Records information about migration actions that involve migration jobs, shared distribution points, and distribution point upgrades.|The top-level site in the Configuration Manager hierarchy, and each child primary site<br /><br /> In a multi-primary site hierarchy, use the log file created at the central administration site.|  
-  
+
 ###  <a name="BKMK_MDMLog"></a> Mobile Devices  
  The following sections list the log files that contain information related to managing mobile devices .  
-  
+
 ####  <a name="BKMK_EnrollmentLog"></a> Enrollment  
  The following table lists logs that contain information related to mobile device enrollment.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |DMPRP.log|Records communication between management points that are enabled for mobile devices and the management point endpoints.|Site system server|  
@@ -615,17 +615,17 @@ In System Center Configuration Manager, client and site server components record
 |enrollwebMSI.log|Records the Windows Installer data for the configuration of an enrollment proxy point.|Site system server|  
 |enrollmentservice.log|Records communication between an enrollment proxy point and an enrollment point.|Site system server|  
 |SMS_DM.log|Records communication between mobile devices, Mac computers and the management point that is enabled for mobile devices and Mac computers.|Site system server|  
-  
+
 ####  <a name="BKMK_ExchSrvLog"></a> Exchange Server Connector  
  The following table lists logs that contain information related to the Exchange Server connector.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Records the activities and the status of the Exchange Server connector.|Site server|  
-  
+
 ####  <a name="BKMK_MDLegLog"></a> Mobile Device Legacy  
  The following table lists logs that contain information related to the mobile device legacy client.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |DmCertEnroll.log|Records details about certificate enrollment data on mobile device legacy clients.|Client|  
@@ -646,10 +646,10 @@ In System Center Configuration Manager, client and site server components record
 |DmpStatus.log|Records status messages data from mobile device clients on a management point that is enabled for mobile devices.|Site system server|  
 |DmSvc.log|Records client communication from mobile device legacy clients with a management point that is enabled for mobile devices.|Client|  
 |FspIsapi.log|Records details about communications to the fallback status point from mobile device legacy clients and client computers.|Site system server|  
-  
+
 ###  <a name="BKMK_OSDLog"></a> Operating System Deployment  
  The following table lists the log files that contain information related to operating system deployment.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CAS.log|Records details when distribution points are found for referenced content.|Client|  
@@ -683,41 +683,41 @@ In System Center Configuration Manager, client and site server components record
 |TaskSequenceProvider.log|Records details about task sequences when they are imported, exported, or edited.|Site system server|  
 |loadstate.log|Records details about the User State Migration Tool (USMT) and restoring user state data.|Client|  
 |scanstate.log|Records details about the User State Migration Tool (USMT) and capturing user state data.|Client|  
-  
+
 ###  <a name="BKMK_PowerMgmtLog"></a> Power Management  
  The following table lists the log files that contain information related to power management.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|Records details about power management activities on the client computer, which include monitoring and the enforcement of settings by the Power Management Client Agent.|Client|  
-  
+
 ###  <a name="BKMK_RCLog"></a> Remote Control  
  The following table lists the log files that contain information related to remote control.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Records details about the activity of the remote control viewer.|Located in the *%temp%* folder on the computer running the remote control viewer.|  
-  
+
 ###  <a name="BKMK_ReportLog"></a> Reporting  
  The following table lists the Configuration Manager log files that contain information related to reporting.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |srsrp.log|Records information about the activity and status of the reporting services point.|Site system server|  
 |srsrpMSI.log|Records detailed results of the reporting services point installation process from the MSI output.|Site system server|  
 |srsrpsetup.log|Records results of the reporting services point installation process.|Site system server|  
-  
+
 ###  <a name="BKMK_RBALog"></a> Role-Based Administration  
  The following table lists the log files that contain information related to managing role-based administration.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |hman.log|Records information about site configuration changes, and the publishing of site information to Active Directory Domain Services.|Site server|  
 |SMSProv.log|Records WMI provider access to the site database.|Computer with the SMS Provider|  
-  
+
 ###  <a name="BKMK_WITLog"></a> Service Connection Point  
  The following table lists the log files that contain information related to the service connection point.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
@@ -737,10 +737,10 @@ In System Center Configuration Manager, client and site server components record
 |Smsprov.log|Records activities performed by the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
 |SrvBoot.log|Records details about the service connection point installer service.|Computer with the  service connection point|  
 |Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
-  
+
 ###  <a name="BKMK_SU_NAPLog"></a> Software Updates  
  The following table lists the log files that contain information related to software updates.  Additionally, some details remain related to Network Access Protection, a feature that is no longer available with  System Center Configuration Manager.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |ccmcca.log|Records details about the processing of compliance evaluation based on Configuration Manager NAP policy processing, and contains the processing of remediation for each software update required for compliance.|Client|  
@@ -768,32 +768,32 @@ In System Center Configuration Manager, client and site server components record
 |WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
 |wsyncmgr.log|Records details about the software updates synchronization process.|Site server|  
 |WUAHandler.log|Records details about the Windows Update Agent on the client when it searches for software updates.|Client|  
-  
+
 ###  <a name="BKMK_WOLLog"></a> Wake On LAN  
  The following table lists the log files that contain information related to using Wake on LAN.  
-  
+
 > [!NOTE]  
 >  Wehn you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_<domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |wolcmgr.log|Records details about which clients need to be sent wake-up packets, the number of wake-up packets sent, and the number of wake-up packets retried.|Site server|  
 |wolmgr.log|Records details about wake-up procedures, such as when to wake up deployments that are configured for Wake On LAN.|Site server|  
-  
+
 ###  <a name="BKMK_WULog"></a> Windows Update Agent  
  The following table lists the log files that contain information related to the Windows Update Agent.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment and whether there are updates to the agent components.|Client|  
-  
+
 ###  <a name="BKMK_WSUSLog"></a> WSUS Server  
  The following table lists the log files that contain information related to the WSUS server.  
-  
+
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about the WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synchronized from the configured update source to the WSUS server database.|WSUS server|  
-  
+
 ## See Also  
  [Site and hierarchy infrastructure technical reference for System Center Configuration Manager](../Topic/Site%20and%20hierarchy%20infrastructure%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

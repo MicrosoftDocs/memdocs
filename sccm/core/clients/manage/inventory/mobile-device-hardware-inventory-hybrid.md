@@ -5,14 +5,14 @@ ms.date: 2015-12-08
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 caps.latest.revision: 7
 author: barlanmsft
-translation.priority.ht: 
+translation.priority.ht:
   - cs-cz
   - de-de
   - en-gb
@@ -34,14 +34,14 @@ translation.priority.ht:
 ---
 # How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager
 In System Center Configuration Manager, you can collect the hardware inventory on iOS, Android, and Windows devices by using the Microsoft Intune connector. For information about how to configure hardware inventory, see [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
-  
+
  For information about how to get your devices enrolled with Microsoft Intune, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
-  
+
 ## Hardware inventory for mobile devices  
  The following tables list the inventory classes available for hardware inventory across commonly used mobile platforms.  
-  
+
  **iOS**  
-  
+
 |Hardware Inventory Class|iOS|  
 |------------------------------|---------|  
 |Name|Device_ComputerSystem.DeviceName|  
@@ -64,12 +64,12 @@ In System Center Configuration Manager, you can collect the hardware inventory o
 |Subscriber Carrier|Device_ComputerSystem.SubscriberCarrierNetwork|  
 |Cellular Technology|Device_ComputerSystem.CellularTechnology|  
 |Wi-Fi MAC|Device_WLAN.WiFiMAC|  
-  
+
  **Android**  
-  
+
 > [!NOTE]  
 >  **NOTE:** Android inventory classes are available when using the Android Company Portal app.  
-  
+
 |Hardware Inventory Class|Android|  
 |------------------------------|-------------|  
 |Name|Not applicable|  
@@ -92,9 +92,9 @@ In System Center Configuration Manager, you can collect the hardware inventory o
 |Subscriber Carrier|Device_ComputerSystem.SubscriberCarrierNetwork|  
 |Cellular Technology|Device_ComputerSystem.CellularTechnology|  
 |Wi-Fi MAC|Device_WLAN.WiFiMAC|  
-  
+
  **Windows Phone 8/8.1**  
-  
+
 |Hardware Inventory Class|Windows Phone 8 and Windows Phone 8.1|  
 |------------------------------|-------------------------------------------|  
 |Name|Device_ComputerSystem.DeviceName|  
@@ -117,9 +117,9 @@ In System Center Configuration Manager, you can collect the hardware inventory o
 |Subscriber Carrier|Not applicable|  
 |Cellular Technology|Not applicable|  
 |Wi-Fi MAC|Not applicable|  
-  
+
  **Windows RT**  
-  
+
 |Hardware Inventory Class|Windows RT|  
 |------------------------------|----------------|  
 |Name|Device_ComputerSystem.DeviceName|  
@@ -142,10 +142,7 @@ In System Center Configuration Manager, you can collect the hardware inventory o
 |Subscriber Carrier|Not applicable|  
 |Cellular Technology|Not applicable|  
 |Wi-Fi MAC|Win32_NetworkAdapter.MACAddress|  
-  
+
  <sup>1</sup> The phone number is masked with * except for the last 4 digits.  
-  
+
  For inventory to collect the phone number, the device must have a SIM card inserted, and a phone number provisioned by the carrier to that SIM.  
-  
-## See Also  
- [Configuring hardware inventory in System Center Configuration Manager](../Topic/Configuring%20hardware%20inventory%20in%20System%20Center%20Configuration%20Manager.md)

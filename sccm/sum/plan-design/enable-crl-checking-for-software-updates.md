@@ -44,4 +44,4 @@ By default, the certificate revocation list (CRL) is not checked when verifying 
      For example, for English (US) you would run **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
   
 ## See Also  
- [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md)
+ [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)

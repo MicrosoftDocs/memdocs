@@ -1,6 +1,6 @@
 
 
-#   [Understand and Explore](understand/introduction.md)
+#   [Understand and explore](understand/introduction.md)
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
@@ -14,7 +14,7 @@
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 
-#    [Plan and Design](plan-design/get-ready.md)
+#    [Plan and design](plan-design/get-ready.md)
 ##   [Product changes](plan-design/changes/features-and-capabilities.md)
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
@@ -94,7 +94,7 @@
 ###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 
-#    [Deploy Servers and Roles](servers/deploy/start-using.md)
+#    [Deploy servers and roles](servers/deploy/start-using.md)
 ##   [Install infrastructure](servers/deploy/install/setup-downloader.md)
 ###  [Before you run Setup](servers/deploy/install/setup-downloader.md)
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)

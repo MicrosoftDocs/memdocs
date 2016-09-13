@@ -5,7 +5,7 @@ ms.date: 2016-08-01
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -49,8 +49,5 @@ When you associate a collection with a device category, all devices in the categ
 2.  In the **Devices** list, the category is displayed in the **Device Category** column.
 > [!TIP]  
     >  If the **Device Category** column is not displayed, right-click the heading of one of the columns in the **Devices** list (like **Name**), then select **Device Category**.
-    
+
 If you assign a device to a category, and subsequently delete the category, the report **List of Devices enrolled per user in Microsoft Intune** will display a GUID in the **Device Category** column, instead of a category name.
-    
-## See Also  
- [Operations and maintenance for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/operations-and-maintenance-for-collections.md)

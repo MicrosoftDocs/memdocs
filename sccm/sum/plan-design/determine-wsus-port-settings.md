@@ -42,4 +42,4 @@ When you install and configure a software update point in System Center Configur
 2.  Expand **Sites**, right-click the Web site for the WSUS server, and then click **Edit Bindings**. In the Site Bindings dialog, the HTTP and HTTPS port values are displayed in the **Port** column.  
   
 ## See Also  
- [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md)
+ [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)

@@ -4,7 +4,7 @@ ms.custom: na
 ms.date: 2016-07-22
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -33,23 +33,23 @@ For more information about how to configure the drive settings for the distribut
 
 >  [!IMPORTANT]  
 >  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer Tool** in the System Center 2012 Configuration Manager Service Pack 1 Toolkit. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
-  
+
 ## About the content library on the Central Administration Site  
  By default, Configuration Manager creates a content library on the central administration site when the site installs. The content library is placed on the drive of the site server that has the most free disk space. Because you cannot install a distribution point on the central administration site, you cannot prioritize the drives for use for the content library. Similar to the content library on other site servers and on distribution points, when the drive that contains the content library runs out of available disk space, the content library automatically spans to the next available drive.  
-  
+
  Configuration Manager uses the content library on the central administration site in the following scenarios:  
-  
+
 -   When you create content at the central administration site.  
-  
+
 -   When you migrate content from another Configuration Manager site, and assign the central administration site as the site that will manage that content.  
-  
+
 > [!NOTE]  
 >  When you create content at a primary site and then distribute it to a different primary site or a secondary site below a different primary site, the central administration site temporarily stores that content in the scheduler inbox on the central administration site but does not add that content to its content library.  
-  
+
  Use the following options to manage the content library on the central administration site:  
-  
+
 -   To prevent the content library from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before the content library is created.  
-  
+
 -   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 Configuration Manager Service Pack 1 Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
 
 ## See Also

@@ -3,7 +3,7 @@
 ## [Icons used for software updates](understand/software-updates-icons.md)
 
 # [Plan and design](plan-design/plan-for-software-updates.md)
-## [What to know before you start](plan-design/what-to-know-before-you-start.md)
+## [Plan for software updates](plan-design/plan-for-software-updates.md)
 ### [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)
 <!-- ### [Best practices for software updates](plan-design/software-updates-best-practices.md) -->
 <!-- ### [Determine the port settings used by WSUS](plan-design/determine-wsus-port-settings.md) -->
@@ -14,14 +14,14 @@
 <!-- ## [Plan for software updates settings](plan-design/plan-for-software-updates-settings.md) -->
 <!-- ## [Plan for software updates maintenance windows](plan-design/plan-for-software-updates.md) -->
 
-# [Get started](get-started/what-to-know-before-you-start.md)
+# [Get started](get-started/prepare-for-software-updates-management.md)
 ## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
 ### [Install a software update point](get-started/install-a-software-update-point.md)
 ### [Synchronize software updates](get-started/synchronize-software-updates.md)
-#### [Synchronize software updates from a connected software update point](deploy-use/configure-software-updates.md)
-#### [Synchronize software updates from a disconnected software update point](deploy-use/configure-software-updates.md)
-### [Configure software updates settings](deploy-use/configure-software-updates.md)
-## [Remove a software update point](deploy-use/configure-software-updates.md)
+#### [Synchronize software updates from a connected software update point](get-started/synchronize-software-updates-connected.md)
+#### [Synchronize software updates from a disconnected software update point](get-started/synchronize-software-updates-disconnected.md)
+### [Configure software updates settings](get-started/configure-software-updates-settings.md)
+## [Remove a software update point](get-started/remove-a-software-update-point.md)
 
 # [Deploy and use](deploy-use/overview-of-the-software-updates-lifecycle.md)
 ## [Overview of the software updates lifecycle](deploy-use/overview-of-the-software-updates-lifecycle.md)

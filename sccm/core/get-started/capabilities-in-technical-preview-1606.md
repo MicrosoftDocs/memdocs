@@ -15,15 +15,15 @@ author: Brenduns
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**  
-*  When you update from Technical Preview 1604 to 1605, and then to version 1606, the update might fail and an error similar to the following is logged in the **cmupdate.log**: 
-    
+*  When you update from Technical Preview 1604 to 1605, and then to version 1606, the update might fail and an error similar to the following is logged in the **cmupdate.log**:
+
        ERROR: Failed to execute SQL Server command:  ~ ~-- Create site boundary group ~IF  dbo.fnIsCasOrStandalonePrimary() = 1 ~BEGIN ~   PRINT N'Create site boundary group during upgrade' ~   EXEC dbo.spBuildDefaultBoundaryGroups @UserName = N'SYSTEM' ~END          
-          
+
     If this occurs, in the **Updates and Servicing** node click **Check for updates**, and then **Retry** the update installation.
     ***
 
 **The following are new features you can try out with this version.**  
- 
+
 ## <a name="dmp_category"></a> Automatically categorize devices into collections
 You can create device categories, which can be used to automatically place devices in device collections when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. You can additionally change the category of a device from the Configuration Manager console.
 
@@ -50,7 +50,7 @@ When you associate a collection with a device category, all devices in the categ
 ## <a name="dmp_grace"></a> Enforcement grace period for required application and software update deployments
 
 In some cases, you might want give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments.
-For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. 
+For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed.
 To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
 
 ### Try it out!
@@ -63,7 +63,7 @@ All deployments that have this check-box selected and are which are targeted to 
 
 If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.
 Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages.
- 
+
 ##  <a name="dmp_devg"></a>Using Configuration Manager as a managed installer with Device Guard
 
 Device Guard is a Windows 10 feature that uses hardware and software features to strictly control what is allowed to run on the device.
@@ -79,7 +79,7 @@ Once this is done, configure the AppLocker policy file. After you configure the 
 Like all AppLocker policies, policies with Managed Installer rules can run in two modes:
 
 - Audit mode – Applications are note prevented from running, but any applications that would have been blocked are reported in a log file (This will be supported in a later release of Configuration Manager).
-- Enforcement enabled – Applications are blocked from running. 
+- Enforcement enabled – Applications are blocked from running.
 
 Further information about how to use Device Guard with Configuration Manager can be found on the [Enterprise Mobility and Security blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
 
@@ -91,15 +91,15 @@ Further reading:
 
  ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
-  
+
 ### Try it out!  
-  
+
 1.  Install more than one device management point in your hierarchy.  
-  
+
 2.  Enroll a  Windows 10 Anniversary Update device for On\-premises Mobile Device Management.  
-  
- For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
-  
+
+For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+
 ## <a name="cloud_proxy"></a>Cloud Proxy Service for managing clients on the Internet
 
 Cloud Proxy Service provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud proxy connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
@@ -118,7 +118,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
 - Only supports the management point, distribution point, and software update point roles.
 - User policies are not supported.
-- Cannot be used with [On-premises Mobile Device Management](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) in Configuration Manager. 
+- Cannot be used with [On-premises Mobile Device Management](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) in Configuration Manager.
 - Only supported on the Azure's public cloud platform.
 
 
@@ -134,7 +134,7 @@ The process for deploying Cloud Proxy Service includes the following steps:
 5. Add the cloud proxy connector point to your site.
 6. Configure the site system roles to accept cloud proxy traffic.
 
-The following sections provide more information for completing these steps. 
+The following sections provide more information for completing these steps.
 
 #### Create a custom SSL certificate
 
@@ -144,7 +144,7 @@ You can create a custom SSL certificate for Cloud Proxy Service in the same way 
 
 #### Export the client certificate's root
 
-The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it. 
+The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
 >[!NOTE]
 >Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_client2008_cm2012).
@@ -152,8 +152,8 @@ The easiest way to get export the root of the client certificates used on the ne
 1. In the Run window, type **mmc** and press Return.
 2. On the File menu in the management console, click **Add/Remove Snap-in...**.
 3. In the Add or Remove Snap-ins dialog box, click **Certificates**, click **Add >**, click **Computer account**, click **Next**, click **Local computer**, and then click **Finish**. Click **OK** to close the dialog box.
-4. Go to **Certificates > Personal > Certificates**. 
-5. Double-click the certificate for client authentication on the computer, click the Certification Path tab, and double-click the root authority (at the top of the path). 
+4. Go to **Certificates > Personal > Certificates**.
+5. Double-click the certificate for client authentication on the computer, click the Certification Path tab, and double-click the root authority (at the top of the path).
 6.  Click the Details tab, and click **Copy to File...**.
 7. Complete the Certificate Export Wizard using the default certificate format. Make note of the name and location of the root certificate you create. You will need it to configure Cloud Proxy Service in a later step.
 
@@ -161,14 +161,14 @@ The easiest way to get export the root of the client certificates used on the ne
 
 An Azure management certificate is required for Configuration Manager to access the Azure API and configure Cloud Proxy Service. For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
 - [Certificates overview for Azure Cloud Services](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Upload an Azure Management API Management Certificate](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/). 
+- [Upload an Azure Management API Management Certificate](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
 
 Make sure to copy the subscription ID associated with the management certificate. You will need it for configuring Cloud Proxy Service in the Configuration Manager console.
 
 #### Set up Cloud Proxy Service
 
-1. In the Configuration Manager console, go to **Administration > Cloud Services > Cloud Proxy Service**. 
-2. Click **Create Cloud Proxy Service**. 
+1. In the Configuration Manager console, go to **Administration > Cloud Services > Cloud Proxy Service**.
+2. Click **Create Cloud Proxy Service**.
 3. In Create Cloud Proxy Service Wizard, enter your Azure subscription ID (copied from the Azure management portal), click Browse, and select the certificate file you used to upload as an Azure management certificate. Click **Next**. Wait a few moments for the console to connect to Azure.
 4. Fill out the additional details in the wizard:
     - Specify the private key (.pfx file) that you exported from the custom SSL certificate.
@@ -181,10 +181,10 @@ Make sure to copy the subscription ID associated with the management certificate
 #### Configure primary site for client certification authentication
 
 1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
-2. Select the primary site for the clients you want to manage through Cloud Proxy Service, and click **Properties**. 
+2. Select the primary site for the clients you want to manage through Cloud Proxy Service, and click **Properties**.
 3. On the Client Computer Communications tab of the primary site property sheet, check the box next to **Use PKI client certificate (client authentication) when available**.
-4. Make sure to clear the box next to **Clients check the certificate revocation list (CRL) for site systems**. This option would only be required if you were publicly publishing your CRL. 
-5. Click **OK**. 
+4. Make sure to clear the box next to **Clients check the certificate revocation list (CRL) for site systems**. This option would only be required if you were publicly publishing your CRL.
+5. Click **OK**.
 
 #### Add the cloud proxy connector point
 
@@ -194,56 +194,56 @@ The cloud proxy connector point is a new site system role for communicating with
 
 The final step in setting up Cloud Proxy Service is to configure the site system roles to accept cloud proxy traffic. For Tech Preview 1606, only the management point, distribution point, and software update point roles are supported for Cloud Proxy Service. You must configure each role separately.
 
-1. In the Configuration Manager console, go to **Administration > Site Configuration > Servers and Site System Roles**. 
-2. Click the site system server for the role you want to configure for cloud proxy traffic. 
-3. Click the role, and then click **Properties**. 
-4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager Cloud Proxy traffic**, and then click **OK**. Repeat these steps for the remaining roles. 
+1. In the Configuration Manager console, go to **Administration > Site Configuration > Servers and Site System Roles**.
+2. Click the site system server for the role you want to configure for cloud proxy traffic.
+3. Click the role, and then click **Properties**.
+4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager Cloud Proxy traffic**, and then click **OK**. Repeat these steps for the remaining roles.
 
 #### Check status on a client on the Internet
 
-After the service and roles are completely configured, internal clients will get the location of Cloud Proxy Service on the next location request. Clients with updated location information can then communicate with Configuration Manager on the Internet. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer. 
+After the service and roles are completely configured, internal clients will get the location of Cloud Proxy Service on the next location request. Clients with updated location information can then communicate with Configuration Manager on the Internet. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.
 
 After clients have the new location information for Cloud Proxy Service, try checking the status of clients that are no longer on the internal private network but have Internet access. You can also monitor traffic on Cloud Proxy Service by going to **Administration > Cloud Services > Cloud Proxy Service**, selecting the service in the list pane, and viewing the traffic information in the details pane.   
 
 ## <a name="manage_o365"></a>Manage the Office 365 client agent in Configuration Manager  
-  
-Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Office 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting. 
 
-For more information, see [Manage Office 365 ProPlus updates](https://technet.microsoft.com/library/mt741983.aspx). 
+Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Office 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
+
+For more information, see [Manage Office 365 ProPlus updates](https://technet.microsoft.com/library/mt741983.aspx).
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.
 1. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
 2. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.
 ## <a name="osdpreservedriveletter"></a>The OSDPreserveDriveLetter task sequence variable has been deprecated
-The OSDPreserveDriveLetter task sequence variable determines whether or not the task sequence uses the drive letter captured in the operating system image WIM file when applying that image to a destination computer. This task sequence variable has been deprecated in Technical Preview 1606. During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer. 
+The OSDPreserveDriveLetter task sequence variable determines whether or not the task sequence uses the drive letter captured in the operating system image WIM file when applying that image to a destination computer. This task sequence variable has been deprecated in Technical Preview 1606. During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer.
 ## <a name="updatesandservicing"></a>Changes for the Updates and Servicing Node
 With Technical Preview 1606 several changes have been introduced that apply to Updates and Servicing in the Configuration Manager console:
-- **Node name change:** 
+- **Node name change:**
 
     In the **Monitoring** workspace, the **Site Servicing status** node has been renamed to **Updates and Servicing Status**.
-- **More installation status:** 
+- **More installation status:**
 
     When you view the update installation status for a site, the console now displays separate details for the following actions:
     - **Download**  (This applies only to the top-tier site where the service connection point site system role is installed)
     - **Replication**
     - **Prerequisites Check**
     - **Installation**
-  
-    Additionally, there is now more detailed information for each step, including in which log file you can view for more information.  
--   **New option to retry prerequisite failures:** 
 
-    In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the Ribbon named **Ignore prerequisite warnings**. 
- 
+  Additionally, there is now more detailed information for each step, including in which log file you can view for more information.  
+-   **New option to retry prerequisite failures:**
+
+    In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the Ribbon named **Ignore prerequisite warnings**.
+
     When you install updates without using the option to Ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts with a State of **Prereq warning**, you can then select **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update install that ignores the prerequisite warnings.  
 
  
 
-- **Cleaner view of updates:** 
+- **Cleaner view of updates:**
 
     When you view the **Updates and Servicing** node, you now see only the most recently installed update, and any new updates that are available for you to install. To view previously installed updates, you click the new **History** button which appears in the Ribbon.  
 
--   **Renamed option for pre-production:** 
+-   **Renamed option for pre-production:**
 
     In the Updates and Servicing node, the button what was named **Client options** is now renamed to **Promote Pre-production Client**.
 

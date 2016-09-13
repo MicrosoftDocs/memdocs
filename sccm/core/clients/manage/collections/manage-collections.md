@@ -5,7 +5,7 @@ ms.date: 2015-12-08
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -13,7 +13,7 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht: 
+translation.priority.ht:
   - cs-cz
   - de-de
   - en-gb
@@ -35,15 +35,15 @@ translation.priority.ht:
 ---
 # How to manage collections in System Center Configuration Manager
 Use the overview information in this topic to help you perform management tasks for collections in System Center Configuration Manager.  
-  
+
 > [!NOTE]  
 >  For information about how to create Configuration Manager collections, see [How to create collections in System Center Configuration Manager](../../../../core/clients/manage/collections/create-collections.md).  
-  
+
 ## How to manage device collections  
  In the **Assets and Compliance** workspace, select **Device Collections**, select the collection to manage, and then select a management task.  
-  
+
  Use the following table for more information about the management tasks that might require some information before you select them.  
-  
+
 |Management task|Details|More information|  
 |---------------------|-------------|----------------------|  
 |**Show Members**|Displays all of the resources that are members of the selected collection in a temporary node under the **Devices** node.|No additional information.|  
@@ -59,13 +59,13 @@ Use the overview information in this topic to help you perform management tasks 
 |**Copy**|Creates a copy of the selected collection. The new collection uses the selected collection as a limiting collection.|No additional information.|  
 |**Delete**|Deletes the selected collection. You can also delete all of the resources in the collection from the site database.<br /><br /> You cannot delete the collections that are built into Configuration Manager.|For a list of the built-in collections, see [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).|  
 |**Simulate Deployment**|Opens the **Simulate Application Deployment Wizard** which lets you test the results of an application deployment without installing or uninstalling the application.|[How to simulate application deployments with System Center Configuration Manager](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**Deploy**|Displays the following options:<br /><br /> - <br />                    **Application** – Opens the **Deploy Software Wizard** where you can select and configure an application deployment to the selected collection.<br /><br /> - <br />                    **Program** - Opens the **Deploy Software Wizard** where you can select and configure a package and program deployment to the selected collection.<br /><br /> - **Configuration Baseline** – Opens the **Deploy Configuration Baselines** dialog box where you can configure the deployment of one or more configuration baselines to the selected collection.<br /><br /> - <br />                    **Task Sequence** - Opens the **Deploy Software Wizard** where you can select and configure a task sequence deployment to the selected collection.<br /><br /> - <br />                    **Software Updates** – Opens the **Deploy Software Updates Wizard** where you can configure the deployment of software updates to resources in the selected collection.|[How to deploy applications with System Center Configuration Manager](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [Packages and programs in System Center Configuration Manager](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [Manage task sequences to automate tasks in System Center Configuration Manager](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [Manage software updates in System Center Configuration Manager](../../../../sup/deploy-use/manage-software-updates.md)|  
-  
+|**Deploy**|Displays the following options:<br /><br /> - <br />                    **Application** – Opens the **Deploy Software Wizard** where you can select and configure an application deployment to the selected collection.<br /><br /> - <br />                    **Program** - Opens the **Deploy Software Wizard** where you can select and configure a package and program deployment to the selected collection.<br /><br /> - **Configuration Baseline** – Opens the **Deploy Configuration Baselines** dialog box where you can configure the deployment of one or more configuration baselines to the selected collection.<br /><br /> - <br />                    **Task Sequence** - Opens the **Deploy Software Wizard** where you can select and configure a task sequence deployment to the selected collection.<br /><br /> - <br />                    **Software Updates** – Opens the **Deploy Software Updates Wizard** where you can configure the deployment of software updates to resources in the selected collection.|[How to deploy applications with System Center Configuration Manager](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [Packages and programs in System Center Configuration Manager](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [Manage task sequences to automate tasks in System Center Configuration Manager](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [Manage software updates in System Center Configuration Manager](../../../../sum/deploy-use/manage-software-updates.md)|  
+
 ## How to manage user collections  
  In the **Assets and Compliance** workspace, select **User Collections**, select the collection to manage, and then select a management task.  
-  
+
  Use the following table for more information about the management tasks that might require some information before you select them.  
-  
+
 |Management task|Details|More information|  
 |---------------------|-------------|----------------------|  
 |**Show Members**|Displays all of the resources that are members of the selected collection in a temporary node under the **Users** node.|No additional information.|  
@@ -78,10 +78,10 @@ Use the overview information in this topic to help you perform management tasks 
 |**Delete**|Deletes the selected collection. You can also delete all of the resources in the collection from the site database.<br /><br /> You cannot delete the collections that are built into Configuration Manager.|For a list of the built-in collections, see [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).|  
 |**Simulate Deployment**|Opens the **Simulate Application Deployment Wizard** which lets you test the results of an application deployment without installing or uninstalling the application.|[How to simulate application deployments with System Center Configuration Manager](../../../../apps/deploy-use/simulate-application-deployments.md)|  
 |**Deploy**|Displays the following options:<br /><br /> - **Application** – Opens the **Deploy Software Wizard** where you can select and configure an application deployment to the selected collection.<br /><br /> - <br />                    **Program** - Opens the **Deploy Software Wizard** where you can select and configure a package and program deployment to the selected collection.<br /><br /> - **Configuration Baseline** – Opens the **Deploy Configuration Baselines** dialog box where you can configure the deployment of one or more configuration baselines to the selected collection.|[How to deploy applications with System Center Configuration Manager](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [Packages and programs in System Center Configuration Manager](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
-  
+
 ##  <a name="BKMK_CollProp"></a> Collection properties  
  When you open the **Properties** dialog box for a collection, you can view and configure the following properties for a collection.  
-  
+
 |Tab name|More information|  
 |--------------|----------------------|  
 |**General**|Lets you view and configure general information about the selected collection including the collection name and the limiting collection.|  
@@ -93,6 +93,3 @@ Use the overview information in this topic to help you perform management tasks 
 |**Distribution Point Groups**|Lets you associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**Security**|Displays the administrative users who have permissions for the selected collection from associated roles and security scopes.|  
 |**Monitor**|Lets you configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md) and [How to monitor Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/monitor-endpoint-protection.md).|  
-  
-## See Also  
- [Operations and maintenance for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/operations-and-maintenance-for-collections.md)

@@ -209,10 +209,10 @@ Before you can use Endpoint Protection to manage security and malware on Configu
 6.  Click **OK** to close the **Configure Definition Update Sources** dialog box.  
   
 ####  <a name="BKMK_EPsup"></a> Using Configuration Manager Software Updates to Deliver Definition Updates  
- You can configure Configuration Manager software updates to deliver definition updates to client computers. This is done by configuring automatic deployment rules. Before you begin to create automatic deployment rules, make sure that you have configured Configuration Manager software updates. For more information, see [Introduction to software updates in System Center Configuration Manager](../../sup/understand/software-updates-introduction.md).  
+ You can configure Configuration Manager software updates to deliver definition updates to client computers. This is done by configuring automatic deployment rules. Before you begin to create automatic deployment rules, make sure that you have configured Configuration Manager software updates. For more information, see [Introduction to software updates in System Center Configuration Manager](../../sum/understand/software-updates-introduction.md).  
   
 > [!NOTE]  
->  This procedure is only for the items that must be specifically configured for Endpoint Protection. For more information about the Create Automatic Deployment Rule Wizard, see [Manage software updates in System Center Configuration Manager](../../sup/deploy-use/manage-software-updates.md).  
+>  This procedure is only for the items that must be specifically configured for Endpoint Protection. For more information about the Create Automatic Deployment Rule Wizard, see [Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md).  
   
 ###### To configure an automatic deployment rule to deliver definition updates  
   

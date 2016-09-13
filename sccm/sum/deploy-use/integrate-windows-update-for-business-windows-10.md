@@ -78,4 +78,4 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and won’t be counted as part of the overall compliance percentage.  
   
 ## See Also  
- [Manage software updates in System Center Configuration Manager](../../sup/deploy-use/manage-software-updates.md)
+ [Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md)

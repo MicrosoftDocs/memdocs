@@ -77,7 +77,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  Management points transfer information between client computers and the Configuration Manager site. They are required for software updates.  
   
 ### Software update point  
- You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md)  
+ You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)  
   
 ### Distribution points  
  Distribution points are required to store the content for software updates. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
@@ -87,7 +87,7 @@ This topic lists the prerequisites for software updates in System Center Configu
   
  For more information, see the following:  
   
--   The Client Settings for Software Updates section in the [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md) topic.  
+-   The Client Settings for Software Updates section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
   
 -   The  Software Updates section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
   
@@ -121,4 +121,4 @@ This topic lists the prerequisites for software updates in System Center Configu
 4.  Select the **Upgrades** classification in the [Software Update Point component properties](https://technet.microsoft.com/library/mt612804.aspx) and then start a [software updates synchronization](https://technet.microsoft.com/library/mt612804.aspx).  
   
 ## See Also  
- [Plan for software updates in System Center Configuration Manager](../../sup/plan-design/plan-for-software-updates.md)
+ [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)

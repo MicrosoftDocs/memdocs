@@ -39,7 +39,7 @@ The dashboard also displays tiles with details about client activity and data su
 ## Office 365 servicing dashboard
 The Configuration Manager 1608 Technical Preview introduces a new dashboard that allows you to track Office 365 clients, Office 365 client channels, and automatic deployment rules that have Office 365 Client selected in the set of available products. To view the dashboard, in the console go to **Software Library** > **Overview** > **Office 365 Servicing**. At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection. On the lower-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new ADR or  click **Create Client Agent Settings** to open Client Agent settings. 
 
-For more information about Office 365 ProPlus updates, see [Manage Office 365 ProPlus updates with Configuration Manager](../../sup/deploy-use/manage-office-365-proplus-updates.md).
+For more information about Office 365 ProPlus updates, see [Manage Office 365 ProPlus updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 
