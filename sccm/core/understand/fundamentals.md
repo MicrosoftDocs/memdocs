@@ -56,6 +56,3 @@ If you are new to System Center Configuration Manager, read the fundamental topi
 -   [Fundamentals of client management tasks for System Center Configuration Manager](../../core/understand/fundamentals-of-client-management-tasks.md)  
 
 -   [Fundamentals of security for System Center Configuration Manager](../../core/understand/fundamentals-of-security.md)  
-
-## See Also  
- [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)
