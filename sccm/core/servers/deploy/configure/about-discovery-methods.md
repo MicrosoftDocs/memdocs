@@ -489,6 +489,3 @@ You configure filtering on the **Option** tab in both **Active Directory System 
 Each discovery method supports a unique list of Active Directory attributes that can be discovered.  
 
 You can view and configure the list of  customized attributes on the **Active Directory Attributes** tab in both the **Active Directory System Discovery Properties** and **Active Directory User Discovery Properties** dialog boxes.  
-
-## See Also  
- [Run discovery for System Center Configuration Manager](../../../../core/servers/deploy/configure/run-discovery.md)

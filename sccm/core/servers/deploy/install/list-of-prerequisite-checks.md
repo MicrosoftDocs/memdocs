@@ -765,6 +765,3 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site    
     -   Primary site  
-
-## See Also  
- [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

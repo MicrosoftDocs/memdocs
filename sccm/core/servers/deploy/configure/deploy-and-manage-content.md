@@ -491,6 +491,3 @@ Use the following sections to prestage content.
 4.  On the **Content Locations** tab, select the distribution point or distribution point group in which to validate the content, click **Validate**, click **OK**, and then click **OK**. The content validation process starts for the content on the selected distribution point or distribution point group.  
 
 5.  To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and click the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed. For more information about monitoring the content status, see [Monitor content you have distributed with System Center Configuration Manager](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
-
-## See Also  
- [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)

@@ -178,8 +178,3 @@ Use the following procedure to uninstall a primary site.
     >  When there is a primary site attached to the central administration site, you must uninstall the primary site before you can uninstall the central administration site.  
 
 6.  Click **Yes** to confirm to uninstall the Configuration Manager central administration site.  
-
-## See Also  
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)  
-
-[Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

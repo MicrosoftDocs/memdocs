@@ -160,6 +160,3 @@ Use the following procedure to view distribution point configuration status.
 3.  Select the distribution point in which you want distribution point status information.  
 
 4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
-
-## See Also  
- [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)

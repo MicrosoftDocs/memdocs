@@ -434,6 +434,3 @@ You configure discovery methods to run at a  System Center Configuration Manager
     -   Description: **This component started**  
 
      This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
-
-## See Also  
- [Run discovery for System Center Configuration Manager](../../../../core/servers/deploy/configure/run-discovery.md)

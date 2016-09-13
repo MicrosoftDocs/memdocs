@@ -31,6 +31,3 @@ author: Brenduns
 -   Follow the documentation for the version of SQL Server that you use to guide you on how to move a user database. For example, if you use SQL Server 2014, see [Move User Databases](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) on TechNet.  
 
 -   After you complete the database file move, restart the SMS_Executive service on the Configuration Manager site server.  
-
-## See Also
- [Configure sites and hierarchies](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

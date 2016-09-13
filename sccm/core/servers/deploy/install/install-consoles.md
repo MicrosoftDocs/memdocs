@@ -86,7 +86,3 @@ Administrative users use the System Center Configuration Manager console to mana
   -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /uninstall /q**  
-
-
-## See Also
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)

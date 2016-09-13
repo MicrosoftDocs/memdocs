@@ -120,6 +120,3 @@ To map the service name that you provided with the Configuration Manager cloud-b
 4.  In **Site System Properties**, select the **Proxy** tab, and then configure the proxy settings for this primary site server.  
 
 5.  Click **OK** to save the new proxy server configuration.  
-
-## See Also  
- [Add site system roles for System Center Configuration Manager](../../../../core/servers/deploy/configure/add-site-system-roles.md)

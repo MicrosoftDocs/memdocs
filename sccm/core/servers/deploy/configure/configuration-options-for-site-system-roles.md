@@ -148,6 +148,3 @@ Reset the throttle values for the fallback status point if either of the followi
 -   You find that the current throttle settings create high CPU usage on the site server.  
 
 Do not change the settings for the fallback status point throttle settings unless you understand the consequences. For example, when you increase the throttle settings to high, the CPU usage on the site server can increase to high, which slows down all site operations.  
-
-## See Also  
- [Add site system roles for System Center Configuration Manager](../../../../core/servers/deploy/configure/add-site-system-roles.md)

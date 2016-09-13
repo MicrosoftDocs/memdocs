@@ -105,8 +105,3 @@ translation.priority.ht:
 
     > [!IMPORTANT]  
     >  When you enter the name of the virtual SQL Server cluster instance, do not enter the virtual Windows Server name created by the Windows Server cluster. If you use the virtual Windows Server name the site database installs on the local hard drive of the active Windows Server cluster node. This prevents successful failover if that node fails.  
-
-
-
-## See Also   
-[Configure sites and hierarchies](../../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

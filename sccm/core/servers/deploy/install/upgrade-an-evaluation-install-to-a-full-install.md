@@ -51,6 +51,3 @@ Because secondary sites are not treated as evaluation installations, you do not 
 
     > [!NOTE]  
     >  The title bar of Configuration Manager consoles that remain  connected to the site that you  upgrade might indicate that the site is still an evaluation version until you reconnect the console to the site.  
-
-## See Also  
-[Installing System Center Configuration Manager sites](../../../../core/servers/deploy/install/installing-sites.md)
