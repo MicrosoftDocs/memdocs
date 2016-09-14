@@ -1,5 +1,5 @@
 ---
-title: "Creating Mac computer applications with System Center Configuration Manager"
+title: "Create Mac computer applications with System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -32,7 +32,7 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Creating Mac computer applications with System Center Configuration Manager
+# Create Mac computer applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Mac computers.  
   
 > [!IMPORTANT]  

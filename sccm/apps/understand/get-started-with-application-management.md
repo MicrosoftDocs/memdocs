@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 caps.latest.revision: 18
-author: barlanmsft
+author: robstackmsft
 translation.priority.ht: 
   - cs-cz
   - de-de
@@ -62,7 +62,7 @@ In this topic, you'll learn the basics you need to know before you start working
 ## What application types can you deploy?  
  Configuration Manager supports deploying the following types of software:  
   
-|Type|Requires device to be enrolled with Intune|  
+|Type|Device must be enrolled with Intune|  
 |----------|------------------------------------------------|  
 |Windows Installer (*.msi file)|No|  
 |Windows app package (*.appx, \*.appxbundle)|No|  

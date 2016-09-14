@@ -67,7 +67,7 @@ translation.priority.ht:
 > -   If you need to recover, or restore you Configuration Manager database, we recommend that you perform a manual sync afterwards to ensure that your synchronized license data is up to date.  
 > -   While you can deploy iOS volume-purchased apps to user or device collections, VPP apps you deploy to a device without a user (for instance, a device you enrolled without user affinity using the Device Enrollment Program (DEP) or Apple Configurator) will not be installed.  
   
- Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to allow you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
+ Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to allow you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
   
 ## Step 1 - To get and upload an Apple VPP token  
   
@@ -119,6 +119,3 @@ A Configuration Manager application is created containing the Windows Store for 
  This report displays the name of each application together with the total number of licenses you purchased, the number of licenses available and more.  
   
  For help with running Configuration Manager reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-  
-## See Also  
- [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
