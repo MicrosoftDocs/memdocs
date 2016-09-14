@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: barlanmsft
+author: robstackmsft
 translation.priority.ht: 
   - cs-cz
   - de-de
@@ -38,21 +38,21 @@ In this topic, you'll jump right in and create an application with System Center
   
  This procedure is designed to give you an overview of how to create and deploy Configuration Manager applications. However, it does not cover every option you can configure, or how to create and deploy applications for other platforms.  
   
- For details about the differences when you install applications for other platforms, see one of the following topics:  
+ For specific details relevant to each platform, see one of the following topics:  
   
--   [Creating Windows applications with System Center Configuration Manager](../../apps/get-started/creating-windows-applications.md)  
+-   [Create Windows applications](../../apps/get-started/creating-windows-applications.md)  
   
--   [Creating iOS applications with System Center Configuration Manager](../../apps/get-started/creating-ios-applications.md)  
+-   [Create iOS applications](../../apps/get-started/creating-ios-applications.md)  
   
--   [Creating Android applications with System Center Configuration Manager](../../apps/get-started/creating-android-applications.md)  
+-   [Create Android applications](../../apps/get-started/creating-android-applications.md)  
   
--   [Creating Windows Phone applications with System Center Configuration Manager](../../apps/get-started/creating-windows-phone-applications.md)  
+-   [Create Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)  
   
--   [Creating Mac computer applications with System Center Configuration Manager](../../apps/get-started/creating-mac-computer-applications.md)  
+-   [Create Mac computer applications](../../apps/get-started/creating-mac-computer-applications.md)  
   
--   [Creating Linux and UNIX server applications with System Center Configuration Manager](../../apps/get-started/creating-linux-and-unix-server-applications.md)  
+-   [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md)  
   
- If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md) to learn about all the options available when you create and deploy applications.  
+If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [How to create applications](../../apps/deploy-use/create-applications.md) to learn about all the options available when you create and deploy applications.  
   
 ## Create and deploy the application  
  Use the information in the following sections to create, deploy, and monitor the **Contoso.msi** application for all Windows 10 PCs in your site.  
@@ -133,7 +133,7 @@ In this topic, you'll jump right in and create an application with System Center
   
      You'll end up with a dialog box that looks like this:  
   
-     ![App management requirements page](../../apps/get-started/media/App-management-requirements-page.png "App)  
+     ![App management requirements page](/sccm/apps/get-started/media/App-management-requirements-page.png)  
   
 4.  Click **OK** to close each property page you opened, and return to the **Applications** list in the Configuration Manager console.  
   
@@ -221,7 +221,7 @@ In this topic, you'll jump right in and create an application with System Center
     -   **Unknown** - Configuration Manager was unable to report the status of the deployment. Check back again later.  
   
 > [!TIP]  
->  There are a number of ways you can monitor application deployments. For full details, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+>  There are a few ways you can monitor application deployments. For full details, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
   
 ### End user experience  
  Users who have PCs running Windows 10 managed by Configuration Manager will shortly see a message telling them that they must install the Contoso application. Once they accept the installation, the application will be installed.  

@@ -80,8 +80,3 @@ Compliance settings in System Center Configuration Manager gives you the tools a
   
  [Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager](../Topic/Upgrade%20Windows%20devices%20with%20the%20edition%20upgrade%20policy%20in%20System%20Center%20Configuration%20Manager.md)  
   
-## Technical reference for compliance settings  
- In the [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md) topics, you'll find detailed information on all options and settings you can configure.  
-  
-## See Also  
- [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md)

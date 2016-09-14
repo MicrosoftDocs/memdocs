@@ -1,5 +1,5 @@
 ---
-title: "Deploying App-V virtual applications with System Center Configuration Manager"
+title: "Deploy App-V virtual applications with System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -33,35 +33,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Deploying App-V virtual applications with System Center Configuration Manager
+# Deploy App-V virtual applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy virtual applications.  
   
- Use the information in the following sections to help you plan to integrate your App-V environment with Configuration Manager.  
-  
--   [General considerations](#BKMK_General)  
-  
--   [Supported App-V versions](#BKMK_Supp)  
-  
--   [Steps to manage App-V virtual applications](#BKMK_Steps)  
-  
--   [Configuration Manager virtual application delivery methods](#BKMK_Delivery)  
-  
--   [Migrating from an App-V infrastructure to a Configuration Manager and App-V infrastructure](#BKMK_Migrate)  
-  
--   [Migrating App-V 5 connection groups to Configuration Manager virtual environments](#BKMK_Connection)  
-  
--   [Dynamic Suite Composition in App-V 4.6](#BKMK_DSC)  
-  
--   [Converting App-V 4.6 applications to App-V 5 applications](#BKMK_Convert)  
-  
--   [User and deployment configuration files](#BKMK_Config)  
-  
--   [App-V local interaction](#BKMK_Interact)  
-  
--   [App-V 5 Shared Content Store](#BKMK_SCS)  
-  
--   [Monitoring virtual applications](#BKMK_Monitor)  
-  
+ 
 ##  <a name="BKMK_General"></a> General considerations  
  You can use Configuration Manager to install and manage virtual applications as deployment types in an application. When you do this, the following considerations apply:  
   
