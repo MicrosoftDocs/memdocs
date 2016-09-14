@@ -59,5 +59,9 @@ translation.priority.ht:
 
 8.  Click **OK** to close the **Configure Definition Update UNC Paths** dialog box.
 
- > [!div class="button"]
- [Next step >](antimalware-policies-for-endpoint-protection.md)
+
+> [!div class="button"]
+[Next step >](endpoint-antimalware-policies.md)
+
+> [!div class="button"]
+[Back >](endpoint-configure-alerts.md)
