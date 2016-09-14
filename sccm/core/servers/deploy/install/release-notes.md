@@ -119,6 +119,16 @@ This issue affects System Center Configuration Manager version 1511 and 1602, an
     WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
     ```  
 
+###  Setup fails when using redist files from the CD.Latest folder with a manifest verification error
+When you run Setup from a CD.Latest folder created for version 1606 and use the redist files included with that CD.Latest folder, Setup fails with the following errors in the Configuration Manager Setup log:
+
+  - ERROR: File hash check failed for defaultcategories.dll
+  - ERROR: Manifest verification failed. Wrong version of manifest?
+
+**Workaround:**  Use one of the following:
+ - During Setup choose to download the most current redist files from Microsoft to use instead of those included in the CD.Latest folder.
+ - Manually delete the *cd.latest\redist\languagepack\zhh* folder, and then run Setup again.
+
 ## Backup and recovery
 ### Pre\-production client is not available after a site restore
 With version 1602, when you use pre-production clients and you restore the top-tier site of your hierarchy from a backup, the pre\-production client version is not available after the site is restored.  
