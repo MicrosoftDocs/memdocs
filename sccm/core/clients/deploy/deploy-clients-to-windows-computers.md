@@ -36,7 +36,7 @@ translation.priority.ht:
 # How to deploy clients to Windows computers in System Center Configuration Manager
 You can use different client deployment methods to install the System Center Configuration Manager client software on computers. To help you decide which deployment method to use, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
 
- Before you install Configuration Manager clients, ensure that all the prerequisites are in place and that you have completed all required deployment configurations. For more information, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) and [Planning considerations for deploying clients in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-considerations-for-deploying-clients.md).  
+ Before you install Configuration Manager clients, ensure that all the prerequisites are in place and that you have completed all required deployment configurations. For more information, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
 
  Use the following procedures to install clients in Configuration Manager.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for certificate profiles in System Center Configuration Manager"
+title: "Certificate profile security and privacy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-07
 ms.prod: configuration-manager

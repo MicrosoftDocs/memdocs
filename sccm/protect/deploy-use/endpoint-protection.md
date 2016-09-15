@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection in System Center Configuration Manager"
+title: "Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-27
 ms.prod: configuration-manager

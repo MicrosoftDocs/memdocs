@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection client frequently asked questions"
+title: "Endpoint Protection client frequently asked questions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-02
 ms.prod: configuration-manager

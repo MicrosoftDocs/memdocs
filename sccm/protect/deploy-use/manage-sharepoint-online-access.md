@@ -1,5 +1,5 @@
 ---
-title: "Manage SharePoint Online access in System Center Configuration Manager"
+title: "Manage SharePoint Online access | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-20
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Manage access to O365 services for PCs managed by System Center Configuration Manager"
+title: "Manage access to O365 services for managed PCs | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-16
 ms.prod: configuration-manager

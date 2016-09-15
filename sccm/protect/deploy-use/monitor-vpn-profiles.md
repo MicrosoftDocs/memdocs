@@ -1,5 +1,5 @@
 ---
-title: "How to monitor VPN profiles in System Center Configuration Manager"
+title: "Monitor VPN profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

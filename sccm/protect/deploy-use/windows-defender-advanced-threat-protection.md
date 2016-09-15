@@ -1,5 +1,5 @@
 ---
-title: "Windows Defender Advanced Threat Protection"
+title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-25
 ms.prod: configuration-manager
