@@ -1,5 +1,5 @@
 ---
-title: "Find a package family name (PFN) for per-app VPN"
+title: "Find a package family name (PFN) for per-app VPN | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/11/2016
 ms.reviewer: na

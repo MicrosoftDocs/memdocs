@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Windows Defender or Endpoint Protection client"
+title: "Troubleshooting Windows Defender or Endpoint Protection client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-02-05
 ms.prod: configuration-manager

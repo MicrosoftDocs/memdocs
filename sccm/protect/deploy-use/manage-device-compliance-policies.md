@@ -1,5 +1,5 @@
 ---
-title: "Manage device compliance policies in System Center Configuration Manager"
+title: "Manage device compliance policies | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-07
 ms.prod: configuration-manager

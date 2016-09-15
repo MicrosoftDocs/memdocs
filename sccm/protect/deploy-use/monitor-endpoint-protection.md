@@ -1,5 +1,5 @@
 ---
-title: "How to monitor Endpoint Protection in System Center Configuration Manager"
+title: "Monitor Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

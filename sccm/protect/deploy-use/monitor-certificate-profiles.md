@@ -1,5 +1,5 @@
 ---
-title: "How to monitor certificate profiles in System Center Configuration Manager"
+title: "Monitor certificate profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-01-15
 ms.prod: configuration-manager

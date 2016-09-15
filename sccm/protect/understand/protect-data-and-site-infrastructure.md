@@ -1,5 +1,5 @@
 ---
-title: "Protect data and site infrastructure with System Center Configuration Manager"
+title: "Protect data and site infrastructure | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

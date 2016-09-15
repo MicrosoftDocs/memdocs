@@ -1,5 +1,5 @@
 ---
-title: "Planning for certificate template permissions for certificate profiles in System Center Configuration Manager"
+title: "Planning certificate template permissions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

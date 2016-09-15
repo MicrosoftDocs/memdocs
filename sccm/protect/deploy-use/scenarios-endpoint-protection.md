@@ -1,5 +1,5 @@
 ---
-title: "Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager"
+title: "Scenario: Using System Center Endpoint Protection to protect computers from malware | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-01-29
 ms.prod: configuration-manager

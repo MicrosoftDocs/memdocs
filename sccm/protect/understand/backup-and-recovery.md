@@ -1,5 +1,5 @@
 ---
-title: "Backup and recovery for System Center Configuration Manager"
+title: "Backup and recovery | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-13
 ms.prod: configuration-manager
