@@ -71,7 +71,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-### To monitor the state of an application in the Configuration Manager console  
+## To monitor the state of an application in the Configuration Manager console  
   
 1.  In the Configuration Manager console, click **Monitoring**.  
   
@@ -97,5 +97,3 @@ In System Center Configuration Manager, you can monitor the deployment of all so
     > -   In the **Status Summarizers** dialog box, click **Application Deployment Summarizer**, and then click **Edit**.  
     > -   In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals and then click **OK**.  
   
-## See Also  
- [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md)
