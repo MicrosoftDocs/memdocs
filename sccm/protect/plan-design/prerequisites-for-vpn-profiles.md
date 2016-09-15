@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for VPN profiles in System Center Configuration Manager"
+title: "VPN profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-03-31
 ms.prod: configuration-manager

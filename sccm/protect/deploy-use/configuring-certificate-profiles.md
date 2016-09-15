@@ -1,5 +1,5 @@
----
-title: "Configuring certificate profiles in System Center Configuration Manager"
+ ---
+title: "Configuring certificate profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-07
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for Wi-Fi Profiles in System Center Configuration Manager"
+title: "Wi-Fi profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 0201-03-31
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Cryptographic controls technical reference for System Center Configuration Manager"
+title: "Cryptographic controls technical reference | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Manage access to services in System Center Configuration Manager"
+title: "Manage access to services | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-20
 ms.prod: configuration-manager

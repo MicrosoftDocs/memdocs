@@ -1,5 +1,5 @@
 ---
-title: "Manage email access in System Center Configuration Manager"
+title: "Manage email access | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-20
 ms.prod: configuration-manager
