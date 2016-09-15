@@ -1,4 +1,31 @@
-# Capacity planning recommendations for software updates  
+---
+# required metadata
+
+title: Plan for software updates capacity | Configuration Manager
+description:
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 9/14/2016
+ms.topic: article
+ms.prod:
+ms.service:
+ms.technology:
+ms.assetid: bec30e2e-a599-4b27-aaf0-eeae44b7346a
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+#ms.reviewer:
+#ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# Plan for software updates capacity
  You can use the following recommendations as a baseline that can help you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations that are listed in this topic depending on the following criteria: your specific networking environment, the hardware that you use to host the software update point site system, the number of clients that are installed, and the site system roles that are installed on the server.  
 
 ##  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  

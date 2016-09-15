@@ -95,7 +95,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update must be replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### Metadata-Only Icon  
- ![icon](../media/6e309e6c-44b6-4304-b20d-5d67caa3c3e5.gif "6e309e6c-44b6-4304-b20d-5d67caa3c3e5") The icon with the blue arrow represents a metadata-only software update.  
+ ![icon](../media/6e309e6c-44b6-4304-b20d-5d67caa3c3e5.gif "Metadata-only icon") The icon with the blue arrow represents a metadata-only software update.  
 
  **Description:**  
 
