@@ -34,6 +34,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+
 This walkthrough shows you how to configure System Center Configuration Manager to manage iOS, Windows, and Android (including Samsung KNOX) devices with the Microsoft Intune online service over the Internet. Although you use the Intune service, management tasks are done using the service connection point site system role, bringing your Configuration Manager and mobile device management (MDM) tasks together in the Configuration Manager console.
 
  You can configure Configuration Manager to let users access company resources on their devices in a secure, managed way. By using device management, you protect company data while letting users enroll their personal or company-owned devices to access company data. Management capabilities on devices:
@@ -70,6 +71,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
  |**Step 5:** [Verify mobile device management configuration](#verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
 
 ### Dependencies external to Configuration Manager
+
  If necessary, take the following steps to satisfy any dependencies external to Configuration Manager:
 
 1.  Make sure that you have a publicly registered domain name and each user has a public domain UPN  that can be verified by Intune. GoDaddy or Symantec are typical examples of companies that provide domain names.
@@ -105,6 +107,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
 4.  Optional, not recommended: If you are not using Active Directory Federation Services, reset users’ Microsoft Online passwords.
 
      If you are not using AD FS, you must set a Microsoft Online password for each user.
+
 
 ## Configure Microsoft Intune subscription
  The Intune subscription lets you specify your configuration settings for the Intune service. This includes specifying which users can enroll their devices and defining which mobile device platforms to manage. When you have created your subscription, you can then install the service connection point site system role that lets you connect to the Intune service. This site system role will push settings and applications to the Intune service. The Intune subscription does the following:
@@ -166,10 +169,12 @@ This walkthrough shows you how to configure System Center Configuration Manager 
  Once you've configured Intune management for mobile devices, you can create **Terms and Conditions**. Use terms and conditions to explain to users what happens when they enroll their devices. Users must accept the terms and conditions before they can enroll a device. See [Terms and Conditions in System Center Configuration Manager](../../mdm/deploy-use/terms-and-conditions.md).
 
 ##  Create service connection point site system role
+
  The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. The Configuration Manager service acts as a gateway that communicates with mobile devices and stores settings.
 
 > [!NOTE]
 >  The service connection point site system role may only be installed on a central administration site or stand-alone primary site. The service connection point must have Internet access.
+
 
 ### To configure the service connection point role
 
@@ -206,6 +211,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
 -   [Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune](set-up-windows-hybrid-device-management.md)
 
 ## Verify mobile device management configuration
+
  You can verify certain device management components by checking the following log files:
 
 -   Check the Cloudusersync.log to verify that user accounts are successfully synchronized.

@@ -1,4 +1,5 @@
 ---
+
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-05
