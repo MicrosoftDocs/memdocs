@@ -19,50 +19,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
  Many of the client settings are self-explanatory. Use the following sections for more information about the client settings that might require some information before you configure them.  
 
- Client settings for devices:  
-
--   [Background Intelligent Transfer](#BKMK_BITS)  
-
--   [Client Policy](#BKMK_ClientPolicyDeviceSettings)  
-
--   [Compliance Settings](#BKMK_Compliance)
-
--   [Computer Agent](#BKMK_ComputerAgentDeviceSettings)  
-
--   [Computer Restart](#BKMK_ComputerRestartDeviceSettings)  
-
--   [Endpoint Protection](#BKMK_EndpointProtectionDeviceSettings)  
-
--   [Hardware Inventory](#BKMK_HardwareInventoryDeviceSettings)  
-
--   [Metered Internet Connections](#BKMK_MeteredInternetConnetionsSettings)  
-
--   [Power Management](#BKMK_PowMgmtDeviceSettings)  
-
--   [Remote Tools](#BKMK_RemoteToolsDeviceSettings)  
-
--   [Software Deployment](#BKMK_SoftwareDeploymentDeviceSettings)  
-
--   [Software Inventory](#BKMK_SoftInventoryDeviceSettings)  
-
--   [Software Updates](#BKMK_SoftwareUpdatesDeviceSetting)  
-
--   [User and Device Affinity](#BKMK_UserDeviceAffinityDeviceSettings)  
-
-- [Client Cache Settings](#Client-Cache-Settings)
-
- Client settings for users:  
-
--   [Mobile Devices](#BKMK_MobileDevicesUserSettings)  
-
--   [Enrollment](#BKMK_EnrollmentUserSettings)  
-
--   [User and Device Affinity](#BKMK_UserDeviceAffinityUserSettings)  
-
-##  <a name="BKMK_ClientSettingsDevices"></a> Client Settings for Devices  
- Use the following sections for information about client device settings.  
-
-###  <a name="BKMK_BITS"></a> Background Intelligent Transfer  
+##  <a name="BKMK_BITS"></a> Background Intelligent Transfer  
 
 -   **Limit the maximum network bandwidth for BITS background transfers**  
 
@@ -88,7 +45,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Specify the maximum transfer rate in (Kbps) that will be used by Configuration Manager clients when outside of the specified BITS throttling window. This option can be configured only when you have selected to allow BITS throttling outside of the specified window.  
 
-###  <a name="BKMK_ClientPolicyDeviceSettings"></a> Client Policy  
+##  <a name="BKMK_ClientPolicyDeviceSettings"></a> Client Policy  
 
 -   **Client policy polling interval (minutes)**  
 
@@ -135,7 +92,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!NOTE]  
     >  Application approval requests from users do not require user policies or user authentication.  
 
-###  <a name="BKMK_Compliance"></a> Compliance Settings  
+##  <a name="BKMK_Compliance"></a> Compliance Settings  
 
 -   **Schedule compliance evaluation**  
 
@@ -147,7 +104,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      For more information about user data and profiles, see [How to create user data and profiles configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
 
-###  <a name="BKMK_ComputerAgentDeviceSettings"></a> Computer Agent  
+##  <a name="BKMK_ComputerAgentDeviceSettings"></a> Computer Agent  
 
 -   **Default Application Catalog website point**  
 
@@ -280,12 +237,12 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      If required software updates must install without delay when the configured deadline is reached, select **Yes** for this setting.  
 
-###  <a name="BKMK_ComputerRestartDeviceSettings"></a> Computer Restart  
+##  <a name="BKMK_ComputerRestartDeviceSettings"></a> Computer Restart  
  When you specify these computer restart settings, ensure that the value for the restart temporary notification interval and the value for the final countdown interval are shorter in duration than the shortest maintenance window that is applied to the computer.  
 
  For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-###  <a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  <a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
 
 -   **Manage Endpoint Protection client on client computers**  
 
@@ -323,7 +280,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select **True** or **Yes** if you want Configuration Manager to only install the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections and reduce network bandwidth during the initial installation of the definition update.  
 
-###  <a name="BKMK_HardwareInventoryDeviceSettings"></a> Hardware Inventory  
+##  <a name="BKMK_HardwareInventoryDeviceSettings"></a> Hardware Inventory  
 
 -   **Maximum custom MIF file size (KB)**  
 
@@ -349,7 +306,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!NOTE]  
     >  This setting is only available in the default client settings.  
 
-###  <a name="BKMK_MeteredInternetConnetionsSettings"></a> Metered Internet Connections  
+##  <a name="BKMK_MeteredInternetConnetionsSettings"></a> Metered Internet Connections  
  You can manage how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
 > [!NOTE]  
@@ -381,7 +338,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
     -   **Block**: The Configuration Manager client does not attempt to communicate with Configuration Manager sites when it is on a metered Internet connection. This is the default value.  
 
-###  <a name="BKMK_PowMgmtDeviceSettings"></a> Power Management  
+##  <a name="BKMK_PowMgmtDeviceSettings"></a> Power Management  
 
 -   **Allow users to exclude their device from power management**  
 
@@ -409,7 +366,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  This number must match the number in the site **Properties**. If you change this number in one place, it does not automatically update in the other place.  
 
-###  <a name="BKMK_RemoteToolsDeviceSettings"></a> Remote Tools  
+##  <a name="BKMK_RemoteToolsDeviceSettings"></a> Remote Tools  
 
 -   **Enable Remote Control on clients** and **Firewall exception profiles**  
 
@@ -493,7 +450,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select this more secure option if you want to use network-level authentication to establish Remote Desktop connections to client computers that run Windows Vista or later. Network-level authentication requires fewer remote computer resources initially because it completes user authentication before it establishes a Remote Desktop connection. This method is more secure because it can help protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.  
 
-###  <a name="BKMK_SoftwareDeploymentDeviceSettings"></a> Software Deployment  
+##  <a name="BKMK_SoftwareDeploymentDeviceSettings"></a> Software Deployment  
 
 -   **Schedule re-evaluation for deployments**  
 
@@ -504,7 +461,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      You can also initiate this action from a Configuration Manager client computer by selecting the action **Application Deployment Evaluation Cycle** from the **Actions** tab of **Configuration Manager** in Control Panel.  
 
-###  <a name="BKMK_SoftInventoryDeviceSettings"></a> Software Inventory  
+##  <a name="BKMK_SoftInventoryDeviceSettings"></a> Software Inventory  
 
 -   **Inventory reporting detail**  
 
@@ -576,7 +533,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
     -   **Inventoried names:** - Click the New icon to add a new inventoried name which will be replaced in software inventory by the name selected in the **Display name** list. You can add multiple names that will be replaced.  
 
-###  <a name="BKMK_SoftwareUpdatesDeviceSetting"></a> Software Updates  
+##  <a name="BKMK_SoftwareUpdatesDeviceSetting"></a> Software Updates  
 
 -   **Enable software updates on clients**  
 
@@ -614,7 +571,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Use this setting to specify the timeframe for the previous setting. You can enter a value from 1 to 23 hours and from 1 to 365 days. By default, this setting is configured for 7 days.  
 
-###  <a name="BKMK_UserDeviceAffinityDeviceSettings"></a> User and Device Affinity  
+##  <a name="BKMK_UserDeviceAffinityDeviceSettings"></a> User and Device Affinity  
 
 -   **User device affinity usage threshold (minutes)**  
 
@@ -631,7 +588,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select **True** or **Yes** to enable Configuration Manager to automatically create user device affinities based on the usage information that is collected.  
 
-### Client Cache Settings
+## Client Cache Settings
 
 - **Configure client cache size**
 
@@ -647,10 +604,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
   Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
-##  <a name="BKMK_ClientSettingsUsers"></a> Client Settings for Users  
- Use the following sections for information about user settings on clients.  
-
-###  <a name="BKMK_MobileDevicesUserSettings"></a> Mobile Devices  
+##  <a name="BKMK_MobileDevicesUserSettings"></a> Mobile Devices  
 
 -   **Mobile device enrollment profile**  
 
@@ -659,7 +613,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  Ensure that you have configured a certificate template to use for mobile device enrollment before you configure this option.  
 
-###  <a name="BKMK_EnrollmentUserSettings"></a> Enrollment  
+##  <a name="BKMK_EnrollmentUserSettings"></a> Enrollment  
 
 -   **Mobile device enrollment profile**  
 
@@ -668,7 +622,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  Ensure that you have configured a certificate template to use for mobile device enrollment or for Mac client certificate enrollment before you configure this option.  
 
-###  <a name="BKMK_UserDeviceAffinityUserSettings"></a> User and Device Affinity  
+##  <a name="BKMK_UserDeviceAffinityUserSettings"></a> User and Device Affinity  
 
 -   **Allow user to define their primary devices**  
 
