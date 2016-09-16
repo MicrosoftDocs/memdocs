@@ -36,10 +36,7 @@ translation.priority.ht:
 # How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  
   
-## Start the wizard and specify general information  
- Insert section body here.  
-  
-#### To create a custom Windows desktops and servers configuration item  
+## To create a custom Windows desktops and servers configuration item  
   
 1.  In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -56,7 +53,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-##  <a name="BKMK_Step3"></a> Provide detection method information  
+### Provide detection method information  
  Use this procedure to provide detection method information for the configuration item.  
   
 > [!NOTE]  
@@ -66,7 +63,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
  Use these procedures to configure detection methods in System Center 2012 Configuration Manager.  
   
-#### To detect an application installation by using the Windows Installer File  
+### To detect an application installation by using the Windows Installer File  
   
 1.  On the **Detection Methods** page of the **Create Configuration Item Wizard**, select the **Use Windows Installer detection** check box.  
   
@@ -76,13 +73,13 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 4.  Select the **This application is installed for one or more users** check box if you want to detect each user profile on the computer.  
   
-#### To detect a specific application and deployment type  
+### To detect a specific application and deployment type  
   
 1.  On the **Detection Methods** page of the **Create Configuration Item Wizard**, select the **Detect a specific application and deployment type** check box, then click **Select**.  
   
 2.  In the **Specify Application** dialog box, select the application and an associated deployment type that you want to detect.  
   
-#### To detect an application installation by using a custom script  
+### To detect an application installation by using a custom script  
   
 1.  On the **Detection Methods** page of the **Create Configuration Item Wizard**, select the **Use a custom script to detect this application** check box.  
   
@@ -96,12 +93,12 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 3.  Click **Open**, browse to the script that you want to use, and then click **Open**.  
   
-##  <a name="BKMK_Step4"></a> Configure settings  
+##  Configure settings  
  Use this procedure to configure the settings in the configuration item.  
   
  Settings represent the business or technical conditions that are used to assess compliance on client devices. You can configure a new setting or browse to an existing setting on a reference computer.  
   
-#### To create a setting  
+### To create a setting  
   
 1.  On the **Settings** page of the **Create Configuration Item Wizard**, click **New**.  
   
@@ -271,12 +268,12 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 4.  Click **OK** to save the setting and close the **Create Setting** dialog box.  
   
-##  <a name="BKMK_Step5"></a> Configure compliance rules  
+##  Configure compliance rules  
  Use the following procedure to configure compliance rules for the configuration item.  
   
  Compliance rules specify the conditions that define the compliance of a configuration item. Before a setting can be evaluated for compliance, it must have at least one compliance rule. WMI, registry, and script settings let you remediate values that are found to be noncompliant. You can create new rules or browse to an existing setting in any configuration item to select rules in it.  
   
-#### To create a compliance rule  
+### To create a compliance rule  
   
 1.  On the **Compliance Rules** page of the **Create Configuration Item Wizard**, click **New**.  
   
@@ -363,15 +360,13 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 3.  Click **OK** to close the **Create Rule** dialog box.  
   
-##  <a name="BKMK_Step6"></a> Specify supported platforms  
+##  Specify supported platforms  
  Supported platforms are the operating systems on which a configuration item is assessed for compliance.  
   
-#### To specify supported platforms for the configuration item  
+### To specify supported platforms for the configuration item  
   
 1.  On the **Supported Platforms** page of the **Create Configuration Item Wizard**, in the list, select the Windows versions on which you want the configuration item to be assessed for compliance, or click **Select all**.  
   
 ## Complete the wizard  
  On the **Summary** page of the Wizard, review the actions that will be taken, and then complete the wizard. The new configuration item is displayed in the **Configuration Items** node in the **Assets and Compliance** workspace.  
   
-## See Also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
