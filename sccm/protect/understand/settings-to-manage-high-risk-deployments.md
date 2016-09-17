@@ -1,5 +1,5 @@
 ---
-title: "Settings to manage high-risk deployments for System Center Configuration Manager"
+title: "Manage high-risk deployments | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

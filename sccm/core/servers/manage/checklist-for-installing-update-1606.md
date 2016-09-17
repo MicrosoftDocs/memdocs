@@ -72,7 +72,7 @@ For database replication, you can use the Replication Link Analyzer to help reso
 For more information, see   
 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
- **Set SQL Server AlwasyOn availability groups to manual failover:**  
+ **Set SQL Server AlwaysOn availability groups to manual failover:**  
  Before installing updates, like version 1606, ensure the availability group is set to manual failover. After the site updates, you can restore failover to be automatic. For more information see [SQL Server Always on for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
  **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
@@ -120,7 +120,7 @@ This can help you control when sites in your hierarchy install the update.
 Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
 
  **Run Setup Prerequisite Checker:**  Before you install update 1606, you can run the Prerequisite Checker independently from the update installation. When you install the update on the site, Prerequisite Checker runs again.  
-For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) topic.  
+For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) topic.  
 
 > [!IMPORTANT]  
 >  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you must perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  

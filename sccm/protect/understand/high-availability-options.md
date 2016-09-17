@@ -1,5 +1,5 @@
 ---
-title: "High availability options for System Center Configuration Manager"
+title: "High availability | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

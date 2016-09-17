@@ -52,23 +52,7 @@ You can install the System Center Configuration Manager client on computers that
 
  For information about the supported Linux and UNIX distributions and the hardware required to support the client for Linux and UNIX, see [Recommended hardware for System Center Configuration Manager](../../../../core/plan-design/configs/recommended-hardware.md).  
 
- Use the information in the following sections to help you plan to deploy the Configuration Manager client for Linux and UNIX.  
-
--   [Prerequisites for Client Deployment to Linux and UNIX Servers](#BKMK_ClientDeployPrereqforLnU)  
-
--   [Dependencies External to Configuration Manager:](#BKMK_ClientDeployExternalforLnU)  
-
--   [Planning for Communication across Forest Trusts for Linux and UNIX Servers](#BKMK_PlanningforCommunicationsforLnU)  
-
--   [Service Location by the client for Linux and UNIX](#BKMK_ServiceLocationforLnU)  
-
--   [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU)  
-
--   [About Certificates for use by Linux and UNIX Servers](#BKMK_AboutCertsforLnU)  
-
--   [Configuring Certificates for Linux and UNIX Servers](#BKMK_ConfigCertsforLnU)  
-
--   [About Linux and UNIX Operating Systems That do not Support SHA-256](#BKMK_NoSHA-256)  
+ Use the information in this article to help you plan to deploy the Configuration Manager client for Linux and UNIX.  
 
 ##  <a name="BKMK_ClientDeployPrereqforLnU"></a> Prerequisites for Client Deployment to Linux and UNIX Servers  
  Use the following information to determine the prerequisites you must have in place to successfully install the client for Linux and UNIX.  
