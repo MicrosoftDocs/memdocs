@@ -34,19 +34,9 @@ translation.priority.ht:
   - zh-tw
 ---
 # Determine the site system roles for System Center Configuration Manager clients
-Use the following sections to help you determine the site systems that you require to deploy Configuration Manager clients:  
+Use the information in this article to help you determine the site systems that you require to deploy Configuration Manager clients:  
 
--   [Determine Whether You Require a Management Point](#BKMK_Determine_MP)  
-
--   [Determine Whether You Require a Fallback Status Point](#BKMK_Determine_FSP)  
-
--   [Determine Whether You Require an Enrollment Point and an Enrollment Proxy Point](#BKMK_Determine_EnrollmentPoints)  
-
--   [Determine Whether You Require a Distribution Point](#BKMK_Determine_DP)  
-
--   [Determine Whether You Require an Application Catalog Website Point and an Application Catalog Web Services Point](#BKMK_Determine_ApplicationCatalogPoints)  
-
- For more information about where to install these site system roles in the hierarchy, see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
+ For more information about where to install required site system roles in the hierarchy, see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
 
  For more information about how to install and configure the site system roles that you require, see [Install site system roles](../../../../core/servers/deploy/configure/install-site-system-roles.md).  
 

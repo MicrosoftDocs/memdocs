@@ -169,8 +169,8 @@
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 
 
-#    [Deploy clients](clients/deploy/deploy-clients.md)
-##   [Planning considerations for deploying clients](clients/deploy/plan/planning-considerations-for-deploying-clients.md)
+#    [Deploy clients](clients/deploy/plan/client-installation-methods.md)
+##   [Planning considerations for deploying clients](clients/deploy/plan/client-installation-methods.md)
 ###  [Client installation methods](clients/deploy/plan/client-installation-methods.md)
 ###  [Determine the site system roles for clients](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
 ###  [Security and privacy for clients](clients/deploy/plan/security-and-privacy-for-clients.md)

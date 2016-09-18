@@ -34,19 +34,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Security and privacy for clients in System Center Configuration Manager
-This section contains security and privacy information for clients in System Center Configuration Manager and for mobile devices that are managed by the Exchange Server connector:  
-
--   [Security best practices for clients](#BKMK_Security_Cliients)  
-
--   [Security best practices for mobile devices](#bkmk_mobile)  
-
--   [Security best practices for Macs](#bkmk_macs)  
-
--   [Security issues for Configuration Manager clients](#BKMK_SecurityIssues_Clients)  
-
--   [Privacy information for Configuration Manager clients](#BKMK_Privacy_Cliients)  
-
--   [Privacy information for mobile devices that are managed with the Exchange Server Connector](#BKMK_Privacy_ExchangeConnector)  
+This article contains security and privacy information for clients in System Center Configuration Manager and for mobile devices that are managed by the Exchange Server connector:  
 
 ##  <a name="BKMK_Security_Cliients"></a> Security best practices for clients  
  When Configuration Manager accepts data from devices that run the Configuration Manager client, this introduces the risk that the clients could attack the site. For example, they could send malformed inventory, or attempt to overload the site systems. Deploy the Configuration Manager client only to devices that you trust. In addition, use the following security best practices to help protect the site from rogue or compromised devices:  

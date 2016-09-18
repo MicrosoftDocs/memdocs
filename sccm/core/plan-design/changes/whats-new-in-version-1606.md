@@ -63,6 +63,13 @@ The following are changes to Updates and Servicing in the Configuration Manager 
 ###  Pre-release features
 Beginning with 1606, you must give consent to use Pre-Release features in System Center Configuration Manager before you can select and enable their use. For more information, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
+### New distribution point update behavior
+Update 1606 introduces changes that improve the availability of distribution points when installing future updates.
+
+After update 1606 is installed, when you next install an update at that site that requires the automatic reinstallation of standard and pull-distribution point site system roles, all distribution points no longer go off-line to update at the same time. Instead, the site server uses the site’s content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
+
+
+
 ## <a name="accessibility"></a> Accessibility
 Beginning with version 1606, to navigate between the different nodes of a workspace, you can enter the first letter of a nodes name. Each key press moves the cursor to the next node that begins with that letter, and when using a screen reader, the reader reads out the name of that node. For more information about Accessibility options, see [Accessibility features in System Center Configuration Manager](../../../core/understand/accessibility-features.md).
 
