@@ -1,5 +1,5 @@
 ---
-title: "Manage Skype for Business Online access"
+title: "Manage Skype for Business Online access | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-20
 ms.prod: configuration-manager

@@ -62,7 +62,7 @@ Use the information in this topic to help you implement the necessary prerequisi
 |Reporting services point|To be able to use the reports in Configuration Manager for application management, you must first install and configure a reporting services point.<br /><br /> For more information, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).|  
 |Security permissions for application management|You must have the following security permissions to manage applications.<br /><br /> The **Application Author** security role includes the preceding listed permissions that are required to create, modify and retire applications in Configuration Manager.<br /><br /> **To deploy applications:**<br /><br /> The **Application Deployment Manager** security role includes the preceding listed permissions that are required to deploy applications in Configuration Manager.<br /><br /> The **Application Administrator** security role contains all of the permissions from both the **Application Author** and the **Application Deployment Manager** security roles.<br /><br /> For more information, see  [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).|  
   
-##  <a name="BKMK_SWC"></a> Configure Software Center and the Application Catalog (Windows PCs only)  
+##  Configure Software Center and the Application Catalog (Windows PCs only)  
  This section describes the steps to configure the Application Catalog and Software Center in System Center Configuration Manager.  
   
 ### Introduction  
@@ -214,7 +214,7 @@ Use the information in this topic to help you implement the necessary prerequisi
 > [!NOTE]  
 >  If you are logged in using a Domain Administrator account, notification messages from the Configuration Manager client (e.g., messages indicating that new software is available) will not be displayed.  
   
-###### To access the Application Catalog directly from a browser  
+#### To access the Application Catalog directly from a browser  
   
 -   In a browser, type the address of the Application Catalog website and confirm that the web page displays with the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
   
@@ -228,7 +228,7 @@ Use the information in this topic to help you implement the necessary prerequisi
   
     -   HTTP client connections and custom site system role settings: **http://<server\>:<port\>/<web application name\>**  
   
-###### To access the Application Catalog from Software Center (does not apply to the new version of Software Center)  
+#### To access the Application Catalog from Software Center (does not apply to the new version of Software Center)  
   
 1.  On a client computer, click **Start** > **All Programs** > **Microsoft System Center 2012** > **Configuration Manager** > **Software Center**.  
   
@@ -238,6 +238,4 @@ Use the information in this topic to help you implement the necessary prerequisi
   
 > [!WARNING]  
 >  After you have installed the Application Catalog site system roles, you will not immediately see the Application Catalog when you click the **Find additional applications from the Application Catalog** link from Software Center. The Application Catalog becomes available from Software Center after the client next downloads its client policy or up to 25 hours after the Application Catalog site system roles are installed.  
-  
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)
+ 

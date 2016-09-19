@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from network share in System Center Configuration Manager"
+title: "Endpoint Protection malware definitions from network share | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-05
 ms.prod: configuration-manager
@@ -59,5 +59,9 @@ translation.priority.ht:
 
 8.  Click **OK** to close the **Configure Definition Update UNC Paths** dialog box.
 
- > [!div class="button"]
- [Next step >](antimalware-policies-for-endpoint-protection.md)
+
+> [!div class="button"]
+[Next step >](endpoint-antimalware-policies.md)
+
+> [!div class="button"]
+[Back >](endpoint-configure-alerts.md)

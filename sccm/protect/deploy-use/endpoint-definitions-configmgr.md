@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from System Center Configuration Manager"
+title: "Endpoint Protection malware definitions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-05
 ms.prod: configuration-manager
@@ -119,5 +119,9 @@ translation.priority.ht:
 
 28. Verify that the new rule is displayed in the **Automatic Deployment Rules** node of the Configuration Manager console.
 
+
 > [!div class="button"]
-[Next step >](antimalware-policies-for-endpoint-protection.md)
+[Next step >](endpoint-antimalware-policies.md)
+
+> [!div class="button"]
+[Back >](endpoint-configure-alerts.md)

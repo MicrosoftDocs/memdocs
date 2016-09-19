@@ -1,5 +1,5 @@
 ---
-title: "Configure alerts for Endpoint Protection in System Center Configuration Manager"
+title: "Configure Endpoint Protection alerts | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-05
 ms.prod: configuration-manager
@@ -100,3 +100,6 @@ translation.priority.ht:
 
 > [!div class="button"]
 [Next step >](endpoint-definition-updates.md)
+
+> [!div class="button"]
+[Back >](endpoint-protection-site-role.md)
