@@ -199,6 +199,8 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
   -  Count of SCEP certificate, VPN, Wifi, certificate (.pfx) and Compliance Policy deployments by platform
 
+  - ***[New]*** Passport for Work policy (created, deployed)
+
 -   **Content:**
 
     -   Count of boundaries by type
@@ -321,13 +323,6 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 -   ***[New] Site updates:***
 
     -  Versions of installed Configuraton Manager hotfixes
-
-
-- ***[New]*** **Resource Access:**
-
-    - ***[New]*** Passport for Work policy (created, deployed)
-
-    - ***[New]***  WiFi policy (created, deployed)
 
 - ***[New]*** **Cloud Services:**
 
