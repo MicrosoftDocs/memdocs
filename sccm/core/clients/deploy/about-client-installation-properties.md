@@ -12,21 +12,9 @@ ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
 author: Mtillman
-S---
+---
 # About client installation properties in System Center Configuration Manager
 Use the System Center Configuration Manager CCMSetup.exe command to manually install the Configuration Manager client software on computers in your enterprise.  
-
- In this article:  
-
--   [About CCMSetup.exe](#aboutCCMSetup)  
-
--   [CCMSetup.exe Command-Line Properties](#BKMK_CCMSetupCommandLine)  
-
--   [CCMSetup.exe return codes](#ccmsetupReturnCodes)  
-
--   [Client.msi Properties](#clientMsiProps)  
-
--   [Supported Attribute Values for the PKI Certificate Selection Criteria](#BKMK_attributevalues)  
 
 ##  <a name="aboutCCMSetup"></a> About CCMSetup.exe  
  The CCMSetup.exe command downloads all the necessary files to complete the client installation from a specified management point or from a specified source location. These files might include the following:  
@@ -47,11 +35,11 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 > [!IMPORTANT]  
 >  You must specify all required CCMSetup properties before you specify properties for Client.msi.  
 
- CCMSetup.exe and its supporting files are located on the Configuration Manager site server in the **Client** folder of the Configuration Manager installation folder. This folder is shared to the network as *<Site Server Name\>*\\**SMS_***<Site Code\>***\Client**.  
+ CCMSetup.exe and its supporting files are located on the Configuration Manager site server in the **Client** folder of the Configuration Manager installation folder. This folder is shared to the network as *&lt;Site Server Name\>*\\**SMS_**&lt;Site Code\>**\Client**.  
 
  At the command prompt, the CCMSetup.exe command uses the following format:  
 
- **CCMSetup.exe [<Ccmsetup properties\>] [<client.msi setup properties>]**  
+ **CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]**  
 
  Example:  
 
@@ -83,7 +71,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **ccmsetup.exe /?**  
 
--   **/source:*<Path\>***  
+-   **/source:*&lt;Path\>***  
 
      Specifies the location from which to download installation files. You can use a local or UNC installation path. Files are downloaded by using the server message block (SMB) protocol.  
 
@@ -95,7 +83,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **ccmsetup.exe /source:"\\\computer\folder"**  
 
--   **/mp:*<Computer\>***  
+-   **/mp:*&lt;Computer\>***  
 
      Specifies a source management point for computers to connect to so that they can find the nearest distribution point to download the client installation files. If there are no distribution points or computers cannot download the files from the distribution points after 4 hours, clients download the files from the specified management point.  
 
@@ -114,7 +102,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
     > [!TIP]  
     >  If the client connects to a management point by using HTTPS, typically, you must specify the FQDN for this option rather than the computer name. The value that you specify must be included in the management point’s PKI certificate Subject or Subject Alternative Name. Although Configuration Manager supports a computer name only in this PKI certificate for connections on the intranet, as a security best practice, an FQDN is recommended.  
 
--   **/retry:*<Minutes\>***  
+-   **/retry:*&lt;Minutes\>***  
 
      Specifies the retry interval if CCMSetup.exe fails to download installation files. The default value is **10** minutes. CCMSetup continues to retry until it reaches the limit specified in the **downloadtimeout** installation property.  
 
@@ -150,7 +138,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **CCMSetup.exe /forcereboot**  
 
--   **/BITSPriority:*<Priority\>***  
+-   **/BITSPriority:*&lt;Priority\>***  
 
      Specifies the download priority when client installation files are downloaded over an HTTP connection. Possible values are as follows:  
 
@@ -166,7 +154,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **ccmsetup.exe /BITSPriority:HIGH**  
 
--   **/downloadtimeout:*<Minutes\>***  
+-   **/downloadtimeout:*&lt;Minutes\>***  
 
      Specifies the length of time in minutes that CCMSetup attempts to download the client installation files before it gives up. The default value is **1440** minutes (1 day).  
 
@@ -191,17 +179,17 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **CCMSetup.exe /UsePKICert /NoCRLCheck**  
 
--   **/config:*<configuration file\>***  
+-   **/config:*&lt;configuration file\>***  
 
-     Specifies the name of a text file containing client installation properties. Unless you also specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is *<%Windir%>*\Ccmsetup for 32-bit and 64-bit operating systems. If you specify the **/noservice** property, this file must be located in the same folder from which you run CCMSetup.exe.  
+     Specifies the name of a text file containing client installation properties. Unless you also specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is *&lt;%Windir%>*\Ccmsetup for 32-bit and 64-bit operating systems. If you specify the **/noservice** property, this file must be located in the same folder from which you run CCMSetup.exe.  
 
-     Example: **CCMSetup.exe /config:***<Configuration File Name.txt\>*  
+     Example: **CCMSetup.exe /config:***&lt;Configuration File Name.txt\>*  
 
-     Use the mobileclienttemplate.tcf file in the *<Configuration Manager directory\>*\bin*\\<platform\>* folder on the site server computer to provide the correct format of the file. This file also contains information in comment form about the sections and how they are used. Specify the client installation properties in the [Client Install] section, after the following text: **Install=INSTALL=ALL**.  
+     Use the mobileclienttemplate.tcf file in the *&lt;Configuration Manager directory\>*\bin*\\&lt;platform\>* folder on the site server computer to provide the correct format of the file. This file also contains information in comment form about the sections and how they are used. Specify the client installation properties in the [Client Install] section, after the following text: **Install=INSTALL=ALL**.  
 
      Example [Client Install] section entry: **Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100**  
 
--   **/skipprereq:*<filename\>***  
+-   **/skipprereq:*&lt;filename\>***  
 
      Specifies that CCMSetup.exe must not install the specified prerequisite program when the Configuration Manager client is installed.  
 
@@ -214,7 +202,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Specify that any existing client will be uninstalled and then a new client will be installed.  
 
--   **/ExcludeFeatures:*<feature\>***  
+-   **/ExcludeFeatures:*&lt;feature\>***  
 
      Specifies that CCMSetup.exe will not install the specified feature when the Configuration Manager client is installed.  
 
@@ -259,7 +247,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
      **CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”**  
 
     > [!TIP]  
-    >  Reference the mobileclient.tcf file in the <Configuration Manager directory\>\bin\\<platform\> folder on the site server computer to copy the **CertificateIssuers=***<string\>* that is configured for the site.  
+    >  Reference the mobileclient.tcf file in the &lt;Configuration Manager directory\>\bin\\&lt;platform\> folder on the site server computer to copy the **CertificateIssuers=***&lt;string\>* that is configured for the site.  
 
 -   **CCMCERTSEL**  
 
@@ -324,13 +312,13 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Specifies the Configuration Manager trusted root key where it cannot be retrieved from Active Directory Domain Services. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
-     Example: **CCMSetup.exe SMSPUBLICROOTKEY=<key\>**  
+     Example: **CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>**  
 
 -   **SMSROOTKEYPATH**  
 
      Used to reinstall the Configuration Manager trusted root key. Specifies the full path and file name to a file containing the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
-     Example: CCMSetup.exe **SMSROOTKEYPATH=<Full path and filename\>**  
+     Example: CCMSetup.exe **SMSROOTKEYPATH=&lt;Full path and filename\>**  
 
 -   **RESETKEYINFORMATION**  
 
@@ -491,7 +479,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      This certificate is stored in the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
 
-     Example: **CCMSetup.exe /UsePKICert SMSSIGNCERT=<Full path and file name\>**  
+     Example: **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;Full path and file name\>**  
 
 -   **SMSMP**  
 
