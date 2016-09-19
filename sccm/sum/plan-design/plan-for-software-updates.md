@@ -86,25 +86,7 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 -   [Restart options for Windows 10 clients after software update installation](#BKMK_RestartOptions)
 
-## Capacity planning recommendations for software updates  
- You can use the following recommendations as a baseline that can help you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations that are listed in this topic depending on the following criteria: your specific networking environment, the hardware that you use to host the software update point site system, the number of clients that are installed, and the site system roles that are installed on the server.  
 
-###  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
- The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point, and it also depends on whether the software update point site system role co-exists with another site system role:  
-
--   The software update point can support up to 25,000 clients when WSUS runs on the software update point computer and the software update point co-exists with another site system role.  
-
--   The software update point can support up to 150,000 clients when the remote computer meets the WSUS requirements to support this number of clients.   
-    By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
-
-### Capacity planning for software updates objects  
- Use the following capacity information to plan for software updates objects.  
-
--   **Limit of 1000 software updates in a deployment**  
-
-     You must limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule, specify a criteria that limits the number of software updates that are returned. The automatic deployment rule fails when the criteria that you specify returns more than 1000 software updates. You can check the status of the automatic deployment rule from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, do not select more than 1000 updates to deploy.  
-
-     You must also limit the number of software updates to 1000 in a configuration baseline. For more information, see [How to create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
  The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
