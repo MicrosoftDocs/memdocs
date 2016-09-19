@@ -46,7 +46,7 @@ Configuration baselines in System Center Configuration Manager contain predefine
   
  Use the following procedure to create a configuration baseline by using the **Create Configuration Baseline** dialog box.  
   
-### To create a configuration baseline  
+## Create a configuration baseline  
   
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
   
@@ -82,5 +82,3 @@ Configuration baselines in System Center Configuration Manager contain predefine
   
 9. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
   
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)

@@ -32,6 +32,7 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
+
 # Configuring Endpoint Protection in System Center Configuration Manager
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, set it up using this topic.  
 

@@ -35,22 +35,7 @@ translation.priority.ht:
 # Security and privacy for application management in System Center Configuration Manager
 This topic contains information about security and privacy for application management in System Center Configuration Manager. This topic also includes the Application Catalog and Software Center.  
   
- Use the following sections for more information:  
-  
--   [Security best practices for application management](#BKMK_Security_ApplicationManagement)  
-  
-    -   [Security issues for application management](#BKMK_SecurityIssuesApplicationManagement)  
-  
--   [Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog](#BKMK_CertificatesSilverlight5)  
-  
--   [Privacy information for application management](#BKMK_Privacy_ApplicationManagement)  
-  
-    -   [User device affinity](#BKMK_PrivacyUserDeviceAffinity)  
-  
-    -   [Application Catalog](#BKMK_PrivacyApplicationCatalog)  
-  
-##  <a name="BKMK_Security_ApplicationManagement"></a> Security best practices for application management  
- Use the following security best practices for application management:  
+##  Security best practices for application management  
   
 |Security best practice|More information|  
 |----------------------------|----------------------|  
@@ -70,7 +55,7 @@ This topic contains information about security and privacy for application manag
 |If you deploy applications for Mac computers, secure the location of the **.cmmac** file and secure the communication channel when you import this file into Configuration Manager.|Because the **.cmmac** file that the CMAppUtil tool generates and that you import into Configuration Manager is not signed or validated, to help prevent tampering of this file, store it  in a secured folder and use IPsec or SMB between the following computers:<br /><br /> - The computer that runs the Configuration Manager console.<br /><br /> - The computer that stores the **.cmmac** file.|  
 |If you configure a web application deployment type, use HTTPS rather than HTTP to secure the connection|If you deploy a web application by using an HTTP link rather than an HTTPS link, the device could be redirected to a rogue server and data transferred between the device and server could be tampered with.|  
   
-###  <a name="BKMK_SecurityIssuesApplicationManagement"></a> Security issues for application management  
+##  Security issues for application management  
  Application management has the following security issues:  
   
 -   Low-rights users can copy files from the client cache on the client computer.  
@@ -93,7 +78,7 @@ This topic contains information about security and privacy for application manag
   
      Although you can configure a client setting to restrict install permissions, for example, to primary users of a device, or to local administrators only, this setting does not work for the company portal. This could result in an elevation of privileges because a user could install an app that they should not be allowed to install.  
   
-##  <a name="BKMK_CertificatesSilverlight5"></a> Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog  
+##  Certificates for Microsoft Silverlight 5, and elevated trust mode required for the application catalog  
  Configuration Manager clients require Microsoft Silverlight 5, which must run in elevated trust mode for users to install software from the Application Catalog. By default, Silverlight applications run in partial trust mode to prevent applications from accessing user data. Configuration Manager automatically installs Microsoft Silverlight 5 on clients if it is not already installed, and by default, it configures the Computer Agent client setting **Allow Silverlight applications to run in elevated trust mode** to **Yes**. This setting allows signed and trusted Silverlight applications to request elevated trust mode.  
   
  When you install the Application Catalog website point site system role, the client also installs a Microsoft signing certificate in the Trusted Publishers computer certificate store on each Configuration Manager client computer. This certificate allows Silverlight applications that are signed by this certificate to run in the elevated trust mode that computers require to install software from the Application Catalog. Configuration Manager automatically manages this signing certificate. To ensure service continuity, do not manually delete or move this Microsoft signing certificate.  
@@ -105,7 +90,7 @@ This topic contains information about security and privacy for application manag
   
  For more information about trusted applications in Silverlight, see [Trusted Applications](http://go.microsoft.com/fwlink/p/?LinkId=252842).  
   
-##  <a name="BKMK_Privacy_ApplicationManagement"></a> Privacy information for application management  
+##  Privacy information for application management  
  Application management allows you to run any application, program, or script on any client computer or client mobile device in the hierarchy. Configuration Manager has no control over what types of applications, programs, or scripts you run or what type of information they transmit. During the application deployment process, Configuration Manager might transmit information between clients and servers that identify the device and logon accounts.  
   
  Configuration Manager maintains status information about the software deployment process. Software deployment status information is not encrypted during transmission unless the client communicates by using HTTPS. The status information is not stored in encrypted form in the database.  
@@ -124,7 +109,7 @@ This topic contains information about security and privacy for application manag
   
  Before you configure application management, consider your privacy requirements.  
   
-###  <a name="BKMK_PrivacyUserDeviceAffinity"></a> User device affinity  
+##  User device affinity  
  Configuration Manager might transmit information between clients and management point site systems that identify the computer and logon account and the summarized usage for logon accounts.  
   
  The information that is transmitted between the client and server is not encrypted unless the management point is configured to require clients communicate by using HTTPS.  
@@ -137,7 +122,7 @@ This topic contains information about security and privacy for application manag
   
  Computer and logon usage information that is used to establish user and device affinity is always enabled. In addition, users and administrative users can supply user device affinity information.  
   
-###  <a name="BKMK_PrivacyApplicationCatalog"></a> Application Catalog  
+##  Application Catalog  
  The Application Catalog allows the Configuration Manager administrator to publish any application or program or script for users to run. Configuration Manager has no control over what types of programs or scripts are published in the catalog, or what type of information they transmit.  
   
  Configuration Manager might transmit information between clients and the Application Catalog site system roles that identify the computer and logon accounts. The information that is transmitted between the client and servers is not encrypted unless these site system roles are configured to require that clients connect by using HTTPS.  
@@ -148,5 +133,3 @@ This topic contains information about security and privacy for application manag
   
  The Application Catalog is not installed by default. This installation requires several configuration steps.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

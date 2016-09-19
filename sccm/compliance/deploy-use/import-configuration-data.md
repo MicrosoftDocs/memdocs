@@ -44,7 +44,7 @@ In addition to creating configuration baselines and configuration items in the S
   
  For an example Configuration Pack that helps you manage compliance for System Center 2012 Configuration Manager site server roles, see [System Center 2012 Configuration Manager Configuration Pack](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
   
-## How to import configuration data  
+## Import configuration data  
  When you import a configuration baseline, some or all of the configuration items that are referenced in the configuration baseline might also be included in the cabinet file. During the import process, Configuration Manager verifies that all of the configuration items that are referenced in the configuration baseline are either also included in the cabinet file or already exist in the Configuration Manager site. The import process fails if you attempt to import a configuration baseline that references configuration data that Configuration Manager cannot locate.  
   
  Other scenarios where the import process might fail include the following:  
@@ -59,7 +59,7 @@ In addition to creating configuration baselines and configuration items in the S
   
 -   In a multi-site Configuration Manager hierarchy, the configuration data was originally imported from a parent site. You must update it from the same site and not a child site.  
   
-#### To import configuration data  
+### To import configuration data  
   
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
   
@@ -73,5 +73,3 @@ In addition to creating configuration baselines and configuration items in the S
   
  The imported configuration data displays in the **Compliance Settings** node in the **Assets and Compliance** workspace.  
   
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)

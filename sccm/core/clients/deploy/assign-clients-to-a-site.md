@@ -1,5 +1,5 @@
 ---
-title: "How to assign clients to a site in System Center Configuration Manager"
+title: "Assign clients to a site | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-21
 ms.prod: configuration-manager
@@ -12,25 +12,6 @@ ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # How to assign clients to a site in System Center Configuration Manager
 After a System Center Configuration Manager client is installed, it must join a Configuration Manager primary site before it can be managed. The site that a client joins is referred to as its assigned site. Clients cannot be assigned to a central administration site or to a secondary site.  
@@ -52,22 +33,6 @@ After a System Center Configuration Manager client is installed, it must join a 
 >  To avoid this behavior, disable the write filters before you assign the client on embedded devices, and then enable the write filters after you have verified that site assignment was successful.  
 
  If the client fails to assign to a site, the client software remains installed, but will be unmanaged. A client is considered unmanaged when it is installed but not assigned to a site, or is assigned to a site but cannot communicate with a management point.  
-
- Use the following sections for more information about client site assignment:  
-
--   [Using Manual Site Assignment for Computers](#BKMK_ManualAssignment)  
-
--   [Using Automatic Site Assignment for Computers](#BKMK_AutomaticAssignment)  
-
--   [Completing Site Assignment by Checking Site Compatibility](#BKMK_SiteCompatibility)  
-
--   [Locating Management Points](#BKMK_LocatingMPs)  
-
--   [Downloading Site Settings](#BKMK_DownloadSiteSettings)  
-
--   [Verifying Site Assignment](#BKMK_VerifyAssignment)  
-
--   [Roaming to Other Sites](#BKMK_Roaming)  
 
 ##  <a name="BKMK_ManualAssignment"></a> Using Manual Site Assignment for Computers  
  You can manually assign client computers to a site by using the following two methods:  
