@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 caps.latest.revision: 8
-author: barlanmsft
+author: robstackmsft
 translation.priority.ht: 
   - cs-cz
   - de-de
@@ -33,7 +33,6 @@ translation.priority.ht:
   - zh-tw
 ---
 # Security and privacy for application management in System Center Configuration Manager
-This topic contains information about security and privacy for application management in System Center Configuration Manager. This topic also includes the Application Catalog and Software Center.  
   
 ##  Security best practices for application management  
   

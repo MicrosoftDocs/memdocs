@@ -42,5 +42,3 @@ Compliance settings in System Center Configuration Manager lets you create and d
   
 -   [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
   
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)

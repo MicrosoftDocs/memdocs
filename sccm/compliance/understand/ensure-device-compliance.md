@@ -55,7 +55,7 @@ Compliance settings in System Center Configuration Manager gives you the tools a
   
  [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md)  
   
-### Plan and configure  
+### Plan and design  
  Before you start working with compliance settings, make sure you have implements the necessary prerequisites that you'll find in this topic.  
   
  [Plan for and configure compliance settings in System Center Configuration Manager](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
