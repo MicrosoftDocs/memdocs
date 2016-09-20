@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for deploying clients to Windows computers in System Center Configuration Manager"
+title: "Windows client deployment prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager
@@ -36,13 +36,7 @@ translation.priority.ht:
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
- Use the following sections to determine the prerequisites to install the Configuration Manager client on computers and mobile devices:  
-
--   [Prerequisites for Computer Clients](#BKMK_prereqs_computers)  
-
--   [Prerequisites for Mobile Device Clients](#BKMK_prereqs_mobiledevices)  
-
- Make sure that you also review [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) to confirm that devices meet the minimum hardware and operating system requirements for the Configuration Manager client.  
+  Make sure that you also review [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) to confirm that devices meet the minimum hardware and operating system requirements for the Configuration Manager client.  
 
  For information about the prerequisites for the Configuration Manager client for Linux and UNIX, see  [Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md).  
 

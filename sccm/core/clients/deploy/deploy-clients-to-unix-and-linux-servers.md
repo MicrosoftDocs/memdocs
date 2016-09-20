@@ -1,5 +1,5 @@
 ---
-title: "How to deploy clients to UNIX and Linux servers in System Center Configuration Manager"
+title: "Deplooy UNIX/Linux clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -40,22 +40,6 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
  The install script for the Configuration Manager client for Linux and UNIX supports command line properties. Some command line properties are required, while others are optional. For example, when you install the client, you must specify a management point from the site that is used by the Linux or UNIX server for its initial contact with the site. For the complete list of command line properties, see [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient).  
 
  After you install the client, you specify Client Settings in the Configuration Manager console to configure the client agent in the same way you would Windows-based clients. For more information, see  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
-
- Use the following sections to help you install the client for Linux and UNIX:  
-
--   [About Client Installation Packages and the Universal Agent](#BKMK_AboutInstallPackages)  
-
--   [Install the Client on Linux and UNIX Servers](#BKMK_InstallLnUClient)  
-
-    -   [To install the Configuration Manager Client on Linux and UNIX servers](#BKMK_ToInstallLnUClinent)  
-
-    -   [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient)  
-
-    -   [Uninstalling the Client from Linux and UNIX Servers](#BKMK_UninstallLnUClient)  
-
--   [Configure Request Ports for the Client for Linux and UNIX](#BKMK_ConfigLnUClientCommuincations)  
-
--   [Configure the Client for Linux and UNIX to Locate Management Points](#BKMK_ConfigClientMP)  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> About Client Installation Packages and the Universal Agent  
  To install the client for Linux and UNIX on a specific platform, you must use the applicable client installation package for the computer where you install the client. Applicable client installation packages are included as part of each client download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the **install** script that manages the installation of the client on each computer.  
