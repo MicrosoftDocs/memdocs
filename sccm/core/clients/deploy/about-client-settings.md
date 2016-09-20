@@ -508,7 +508,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     -   **Stop file collection when the total size of the files exceeds (KB)** – Specify the file size (in KB) after which no more of the files specified under **Name** will be collected.  
 
         > [!NOTE]  
-        >  The site server collects the five most recently changed versions of collected files and stores them in the *<ConfigMgr installation directory\>***\Inboxes\Sinv.box\Filecol** directory. If a file has not changed since the last software inventory was collected, the file will not be collected again.  
+        >  The site server collects the five most recently changed versions of collected files and stores them in the *&lt;ConfigMgr installation directory\>***\Inboxes\Sinv.box\Filecol** directory. If a file has not changed since the last software inventory was collected, the file will not be collected again.  
         >   
         >  Files larger than 20 MB are not collected by software inventory.  
         >   

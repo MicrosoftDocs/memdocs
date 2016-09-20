@@ -1,5 +1,5 @@
 ---
-title: "How to configure client settings in System Center Configuration Manager"
+title: "Configure client settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -38,15 +38,8 @@ You manage all client settings in System Center Configuration Manager from the *
 > [!NOTE]  
 >  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
- Use one of the following procedures to configure client settings:  
-
--   [How to Configure the Default Client Settings](#BKMK_DefaultClientSettings)  
-
--   [How to Create and Deploy Custom Client Settings](#BKMK_CustomClientSettings)  
-
--   [How to View Resultant Client Settings](#BKMK_ResultantClientSettings)  
-
 ##  <a name="BKMK_DefaultClientSettings"></a> How to Configure the Default Client Settings  
+
  Use the following procedure to configure the default client settings for all clients in the hierarchy.  
 
 #### To configure the default client settings  

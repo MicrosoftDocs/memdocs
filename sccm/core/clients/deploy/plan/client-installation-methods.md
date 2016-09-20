@@ -1,5 +1,5 @@
 ---
-title: "Client installation methods in System Center Configuration Manager"
+title: "Client installation methods | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -39,6 +39,7 @@ You can use different methods to install the System Center Configuration Manager
  The following sections outline the advantages and disadvantages of each client installation method to help you determine which will work best in your organization.  
 
 ## Client push installation  
+
  **Supported client platform:** Windows  
 
  **Advantages**  

@@ -1,5 +1,5 @@
 ---
-title: "How to deploy clients to Macs in System Center Configuration Manager"
+title: "Deploy Mac clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -306,7 +306,7 @@ Client installation and management for Mac computers in System Center Configurat
 
 3.  Wait until you see the **Completed installation** message. Although the installer displays a message that you must restart now, do not restart now but continue to the next step.  
 
-4.  From the Tools folder on the Mac computer, type the following: **sudo ./CMEnroll -s <enrollment_proxy_server_name> -ignorecertchainvalidation -u <'user name'>**  
+4.  From the Tools folder on the Mac computer, type the following: **sudo ./CMEnroll -s &lt;enrollment_proxy_server_name> -ignorecertchainvalidation -u &lt;user name'>**  
 
     > [!NOTE]  
     >  After the client installs, the Mac Computer Enrollment wizard opens to help you enroll the Mac computer. To enroll the client by this method, see [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) in this topic.  
@@ -327,7 +327,7 @@ Client installation and management for Mac computers in System Center Configurat
      Example: If the enrollment proxy point server is named **server02.contoso.com**, and a user name of **contoso\mnorth** has been granted permissions for the Mac client certificate template, type the following: **sudo ./CMEnroll -s server02.contoso.com –ignorecertchainvalidation -u 'contoso\mnorth'**  
 
     > [!IMPORTANT]  
-    >  If the username contains any of the characters **<>"+=,** then enrollment will fail.  
+    >  If the username contains any of the characters **&lt;>"+=,** then enrollment will fail.  
     >   
     >  To fix this problem, obtain an out-of-band certificate with a username that does not contain these characters.  
 

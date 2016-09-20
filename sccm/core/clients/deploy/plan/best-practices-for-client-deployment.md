@@ -1,5 +1,5 @@
 ---
-title: "Best practices for client deployment in System Center Configuration Manager"
+title: "Client deployment best practices | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager
