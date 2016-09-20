@@ -65,7 +65,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
  |Steps|Details|  
  |-----------|-------------|  
  |**Step 1:** Create an MDM collection|Create a Configuration Manager user collection with users whose devices can be enrolled|  
- |**Step 2:** [Create an Intune Subscription(#configure-microsoft-intune-subscription)]|The Intune service lets you manage devices over the Internet.|  
+ |**Step 2:** [Create an Intune Subscription](#configure-microsoft-intune-subscription)|The Intune service lets you manage devices over the Internet.|  
  |**Step 3:** [Create service connection point site system role](#create-service-connection-point-site-system-role)|The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. |  
  |**Step 4:** Enable device enrollment|MDM enrollment for [iOS](set-up-ios-hybrid-device-management.md), [Windows PC](set-up-windows-hybrid-device-management.md), and [Windows Phone](set-up-windows-phone-hybrid-enrollment.md) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
  |**Step 5:** [Verify mobile device management configuration](#verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
@@ -202,13 +202,10 @@ This walkthrough shows you how to configure System Center Configuration Manager 
 ## Enable mobile device enrollment
  Before devices can be enrolled, you must establish a trust relationship between the management solution and the managed mobile devices. This relationship is platform-specific so if, for example, you want to manage iOS devices, you must enable enrollment through Apple's servers with an Apple Push Notification service (APNs) certificate.  The following topics explain how to enable MDM for each set of devices:
 
--   [Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune](set-up-ios-hybrid-device-management.md)
-
--   [Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune](set-up-android-hybrid-device-management.md)
-
--   [Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune](set-up-windows-phone-hybrid-enrollment.md)
-
--   [Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune](set-up-windows-hybrid-device-management.md)
+-   [iOS hybrid device management](set-up-ios-hybrid-device-management.md)
+-   [Windows hybrid device management](set-up-windows-hybrid-device-management.md)
+-   [Android hybrid device management](set-up-android-hybrid-device-management.md)
+-   [Windows Phone and Windows 10 Mobile hybrid device management](set-up-windows-phone-hybrid-enrollment.md)
 
 ## Verify mobile device management configuration
 
