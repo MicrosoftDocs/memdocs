@@ -1,5 +1,5 @@
 ---
-title: "Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager"
+title: "Planning client deployment to Linux and UNIX computers | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

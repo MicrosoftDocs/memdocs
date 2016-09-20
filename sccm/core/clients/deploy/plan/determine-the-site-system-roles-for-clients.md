@@ -1,5 +1,5 @@
 ---
-title: "Determine the site system roles for System Center Configuration Manager clients"
+title: "Site system roles for clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

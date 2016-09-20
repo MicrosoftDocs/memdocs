@@ -41,9 +41,7 @@ Use simulated deployments if you want to test the applicability of an applicatio
 >   
 >  You cannot deploy an application with a deployment purpose of **Uninstall** if a simulated deployment of the same application is active.  
   
-## How to simulate an application deployment  
-  
-#### To simulate an application deployment  
+## Simulate an application deployment  
   
 1.  In the Configuration Manager console, select one of the following:  
   
@@ -69,5 +67,3 @@ Use simulated deployments if you want to test the applicability of an applicatio
   
 5.  Simulated applications appear in the **Deployments** node of the **Monitoring** workspace with a purpose of **Simulate**. For more information about how to monitor application deployments, see [Monitor applications from the System Center Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

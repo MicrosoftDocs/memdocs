@@ -70,5 +70,3 @@ After you have created configuration items and configuration baselines in System
 |**Delete**|Opens the **Delete Configuration Baseline** dialog box where you can review any references to this configuration baseline.<br /><br /> You must remove all references to a configuration baseline before you can delete the configuration baseline.|  
 |**Deploy**|Opens the **Deploy Configuration Baseline** dialog box where you can deploy one or more configuration baselines to devices in your hierarchy.<br /><br /> For details, see [How to deploy configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/deploy-configuration-baselines.md).|  
   
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)

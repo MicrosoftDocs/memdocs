@@ -441,14 +441,12 @@ This procedure configures custom client settings for Endpoint Protection which c
 
     > [!NOTE]  
     >  The **Default Client Antimalware Policy** cannot be exported.  
-
 -   If you want to install the Endpoint Protection client with the latest definitions, you must download them from the [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkID=200965).  
 
 ### How to install the Endpoint Protection client software on the reference computer  
  You can install the Endpoint Protection client locally on the reference computer from a command prompt.
 
 First, obtain the installation file **scepinstall.exe**. You can also install the client with an preconfigured antimalware policy or with an antimalware policy that you previously exported.  
-
 
 1.  Copy **scepinstall.exe** from the **Client** folder on the System Center 2012 Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.  
 
