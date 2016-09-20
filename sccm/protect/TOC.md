@@ -63,7 +63,7 @@
 ### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
 ### [Deploy email profiles](deploy-use/deploy-email-profiles.md)
 
-## [Manage access to services](deploy-use/manage-device-compliance-policies.md)
+## [Manage access to services](deploy-use/manage-access-to-services.md)
 ### [Manage device compliance policies](deploy-use/manage-device-compliance-policies.md)
 ### [Manage email access](deploy-use/manage-email-access.md)
 ### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)
