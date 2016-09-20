@@ -1,5 +1,5 @@
 ---
-title: "Example Asset Intelligence general license import file in System Center Configuration Manager"
+title: "Example Asset Intelligence general license import file | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
