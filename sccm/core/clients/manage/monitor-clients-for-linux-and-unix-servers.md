@@ -1,5 +1,5 @@
 ---
-title: "How to monitor clients for Linux and UNIX servers in System Center Configuration Manager"
+title: "Monitor Linux and UNIX clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

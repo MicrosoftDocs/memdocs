@@ -1,5 +1,5 @@
 ---
-title: "How to manage clients for Linux and UNIX servers in System Center Configuration Manager"
+title: "Manage Linux and UNIX clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -34,17 +34,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager
-When you manage Linux and UNIX servers with System Center Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. In addition, although the Configuration Manager client for Linux and UNIX does not have a user interface, you can force the client to manually poll for client policy. The following sections provide more information about these configurations.  
-
--   [Collections of Linux and UNIX servers](#BKMK_CollectionsforLnU)  
-
--   [Maintenance windows for Linux and UNIX servers](#BKMK_MaintenanceWindowsforLnU)  
-
--   [Client settings for Linux and UNIX servers](#BKMK_ClientSettingsforLnU)  
-
--   [Computer policy for Linux and UNIX servers](#BKMK_PolicyforLnU)  
-
--   [How to manage certificates on the client for Linux and UNIX](#BKMK_ManageLinuxCerts)  
+When you manage Linux and UNIX servers with System Center Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. In addition, although the Configuration Manager client for Linux and UNIX does not have a user interface, you can force the client to manually poll for client policy.
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
  You use collections to manage groups of Linux and UNIX servers in the same way you use collections to manage other client types. Collections can be direct membership collections or query based collections that identify client operating systems, hardware configurations, or other details about the client that are stored in the site database. For example, you can use collections that include Linux and UNIX servers to manage the following:  
@@ -98,6 +88,6 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 
 |Option|More information|  
 |------------|----------------------|  
-|importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **–password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX <Path to the PKCS#12 certificate> -password <Certificate password\> [-rootcerts <comma-separated list of certificates>]**|  
-|-importsitecert|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: **certutil -importsitecert <Path to the DER certificate\>**|  
-|-importcrl|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: **certutil -importcrl <comma separated CRL file paths\>**|  
+|importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **–password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
+|-importsitecert|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: **certutil -importsitecert &lt;Path to the DER certificate\>**|  
+|-importcrl|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: **certutil -importcrl &lt;comma separated CRL file paths\>**|  
