@@ -35,7 +35,7 @@ translation.priority.ht:
 # Levels of diagnostic usage data collection for version 1606 of System Center Configuration Manager
 System Center Configuration Manager version 1606 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.
 
-Changes from previous versions are noted with ***[New]***, ***[Updated]***, or ***[Removed]***.
+Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
 
 > [!IMPORTANT]
@@ -51,13 +51,13 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, or *
 
 
  -   Setup Information:
- 	- Build, install type, language packs, features you enabled  
+ 	  - Build, install type, language packs, features you enabled  
 
- 	-   Update pack deployment status and errors, download progress, and prereq errors 	
+ 	  -   Update pack deployment status and errors, download progress, and prereq errors 	
 
- 	-  Version of post-upgrade script
+ 	  -  Version of post-upgrade script
 
- 	-  Use of update fast ring
+ 	  -  Use of update fast ring
 
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
@@ -94,7 +94,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, or *
 -  Use of Network Discovery (enabled or disabled)
 -  Admin Console:
 
-	-  Statistics about console connections (OS version, language, SKU and architecture; system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
+	 -  Statistics about console connections (OS version, language, SKU and architecture; system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 
 - ***[New]*** SQL version, Service Pack level, edition, collation ID, character set
@@ -107,141 +107,161 @@ This level is recommended because it provides Microsoft with the minimum data re
 
 Beginning with System Center Configuration Manager version 1606, this level includes the following:
 
--   **Application management:**
+-   **Application management:**  
 
-  -    Basic usage/targeting information for deployment types used within the organization (user vs. device targeted, required vs. available, universal apps)  
+    -    Basic usage/targeting information for deployment types used within the organization (user vs. device targeted, required vs. available, universal apps)  
 
-  -   Application deployment information (install/uninstall, requires approval, user interaction enabled/disabled, dependency, supercedence)  
+    -   Application deployment information (install/uninstall, requires approval, user interaction enabled/disabled, dependency, supercedence)  
 
-  -   Available application request statistics  
+    -   Available application request statistics  
 
-  -   Count of packages by type  
+    -   Count of packages by type  
 
-  -   Count of application applicability by operating system  
+    -   Count of application applicability by operating system  
 
-  -    Count of package/program deployments  
+    -   Count of package/program deployments  
 
-  -   Count of App-V environments and deployment properties  
+    -   Count of App-V environments and deployment properties  
 
-  -   Count of Windows 10 licensed application licenses  
+    -   Count of Windows 10 licensed application licenses  
 
-  -    Minimum/maximum/average number of application deployments per user/device per time period
+    -   Minimum/maximum/average number of application deployments per user/device per time period
 
-  -   Maintenance window type and duration  
+    -   Maintenance window type and duration  
 
-  -   Application policy size and complexity statistics
+    -  Application policy size and complexity statistics
 
-  - ***[New]*** Count of WSfB apps and sync statistics (including summarized types of apps)
+    - ***[New]*** Count of Windows Store for Business (WSfB) apps and sync statistics (including summarized types of apps)  
 
-  - ***[New]*** BIOS age in years
+    - ***[New]*** Boundary group statistics (how many fast, slow, count per group)
 
-  - ***[New]*** OS age in months
+    - ***[New]*** MSI configuration options and counts
 
-  - ***[New]*** Count of Software Center actions
+    - ***[New]*** App requirements (count of built in conditions are referenced by which deployment technology)
 
-  - ***[New]*** Boundary group statistics (how many fast, slow, count per group)
+    - ***[New]*** App supersedence, maximum depth of chain
 
-  - ***[New]*** AMT client version
+    - ***[New]*** UDA usage, how created
 
-  - ***[New]*** Discovery types, enabled and schedule (full, incremental)
 
-  - ***[New]*** Statistical, How many objects found per discovery operation
 
-  - ***[New]*** Client deployment download errors
+-   **Client:**  
 
-  - ***[New]*** Client notification operation action status (how many times each is run, max number of targeted clients, average success rate)
+    -   List/count of enabled client agents  
 
-  - ***[New]*** Count of sites with WOL
+    -   Count of client installations from each source location type  
 
-  - ***[New]*** SQL change tracking - for perf issues, retention period, is auto cleanup working?
-
-  - ***[New]*** Collections without a deployment
-
-  - ***[New]*** Collection ID usage (not running out of IDs)
-
-  - ***[New]*** Deployment methods used for client, count of clients per deployment method
-
-  - ***[New]*** MSI configuration options and counts
-
-  - ***[New]*** App requirements (count of built in conditions are referenced by which deployment technology)
-
-  - ***[New]*** App supersedence, maximum depth of chain
-
-  - ***[New]*** UDA usage, how created
-
-  - ***[New]*** ATP Policies (count of policies, is it deployed)
-
-  - ***[New]*** Client cache size configuration
-
--   **Client:**
-
-    -   List/count of enabled client agents
-
-    -   Count of client installations from each source location type
-
-    -   Count of client installation failures
+    -   Count of client installation failures  
 
     -  ***[New]*** Client auto upgrade deployment configuration including client piloting
 
     -  ***[New]*** Client health statistics and top issue summary
 
--   **Compliance settings:**
+    - ***[New]*** BIOS age in years
 
-  -   Count of configuration items by type  
+    - ***[New]*** OS age in months
 
-  -   Basic configuration baseline information (count, number of deployments, and number of references)  
+    - ***[New]*** Count of Software Center actions
 
-  -   ***[Updated]*** Count of deployments referencing built-in settings (now capturing remediate setting)  
+    - ***[New]*** Active Management Technology (AMT) client version
 
-  -   ***[Updated]*** Count of rules and deployments created for custom settings (now capturing remediate setting)  
+    - ***[New]*** Client deployment download errors
 
-  -   Count of Simple Certificate Enrollment Protocol, VPN, WiFi, certificate (.pfx), and Compliance Policy templates deployed
+    - ***[New]*** Client notification operation action status (how many times each is run, max number of targeted clients, average success rate)
 
-  -  Count of SCEP certificate, VPN, Wifi, certificate (.pfx) and Compliance Policy deployments by platform
+    - ***[New]*** Deployment methods used for client, count of clients per deployment method
 
-  - ***[New]*** Passport for Work policy (created, deployed)
+    - ***[New]*** Client cache size configuration
 
--   **Content:**
 
-    -   Count of boundaries by type
 
-    -   Boundary group information (count of boundaries and site systems assigned to each boundary group)
+- ***[New]*** **Cloud Services:**
 
-    -   Distribution point group information (count of packages and distribution points assigned to each distribution point group)
+  - ***[New]*** Count of collections sync'd to OMS
 
-    -   Distribution point configuration information (use of branch cache, distribution point monitoring)
+  - ***[New]***  Is the OMS cloud connector enabled
 
-    -   Distribution Manager configuration information (threads, retry delay, number of retries, pull distribution point settings)
 
--   **Endpoint Protection:**
 
-    -   Endpoint protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group; this does not include any information about the settings included in the policy)
+- ***[New] Collections:***
 
-    -   Endpoint protection deployment errors (count of endpoint protection policy deployment error codes)
+    -  ***[Moved]*** Collection evaluation statistics (query time, assigned vs unassigned counts, counts by type, ID rollover, and rule usage)
 
-    -   Count of collections selected to appear in endpoint protection dashboard
+    - ***[New]*** Collections without a deployment
 
-    -   Count of alerts configured for endpoint protection feature
+    - ***[New]*** Collection ID usage (not running out of IDs)
+
+
+
+-   **Compliance settings:**  
+
+    -   Count of configuration items by type  
+
+    -   Basic configuration baseline information (count, number of deployments, and number of references)  
+
+    -   ***[Updated]*** Count of deployments referencing built-in settings (now capturing remediate setting)  
+
+    -   ***[Updated]*** Count of rules and deployments created for custom settings (now capturing remediate setting)  
+    -   Count of Simple Certificate Enrollment Protocol, VPN, WiFi, certificate (.pfx), and Compliance Policy templates deployed
+
+    -  Count of SCEP certificate, VPN, Wifi, certificate (.pfx) and Compliance Policy deployments by platform
+
+    - ***[New]*** Passport for Work policy (created, deployed)
+
+
+
+-   **Content:**  
+
+    -   Count of boundaries by type  
+
+    -   Boundary group information (count of boundaries and site systems assigned to each boundary group)  
+
+    -   Distribution point group information (count of packages and distribution points assigned to each distribution point group)  
+
+    -   Distribution point configuration information (use of branch cache, distribution point monitoring)  
+
+    -   Distribution Manager configuration information (threads, retry delay, number of retries, pull distribution point settings)  
+
+
+-   **Endpoint Protection:**  
+
+    -   Endpoint protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group; this does not include any information about the settings included in the policy)  
+
+    -   Endpoint protection deployment errors (count of endpoint protection policy deployment error codes)  
+
+    -   Count of collections selected to appear in endpoint protection dashboard  
+
+    -   Count of alerts configured for endpoint protection feature  
+
+    - ***[New]*** ATP Policies (count of policies, is it deployed)
+
 
 -   ***[Removed]*** **Mobile application management (MAM):**  
 
-      -   ***[Removed]*** Count of MAM-enabled Office and line of business applications and policy by operating system  
+    -   ***[Removed]*** Count of MAM-enabled Office and line of business applications and policy by operating system  
 
-      -   ***[Removed]*** Count of MAM application/policy deployments  
+    -   ***[Removed]*** Count of MAM application/policy deployments  
 
-      -   ***[Removed]*** Count of rules created per MAM setting  
+    -   ***[Removed]*** Count of rules created per MAM setting  
 
--   **Mobile device management (MDM):**
 
-    -   Count of mobile device actions (lock, pin rest, wipe, and retire) commands issued
+- ***[New]*** **Migration:**
 
-    -   Count of mobile devices managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)
+  -  ***[New]***  Count of migrated objects (use of migration wizard)
 
-    -   Mobile device polling schedule and statistics mobile device check in duration
 
-    -   Count of mobile device policies
 
-    -   Count of users with multiple enrolled mobile devices
+-   **Mobile device management (MDM):**  
+
+    -   Count of mobile device actions (lock, pin rest, wipe, and retire) commands issued  
+
+    -   Count of mobile devices managed by [!INCLUDE[cmshort](../Token/cmshort_md.md)] and [!INCLUDE[mit_first](../Token/mit_first_md.md)] and how they were enrolled (bulk, user-based)  
+
+    -   Mobile device polling schedule and statistics mobile device check in duration  
+
+    -   Count of mobile device policies  
+
+    -   Count of users with multiple enrolled mobile devices  
 
 -   **Microsoft Intune troubleshooting:**
 
@@ -251,88 +271,97 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Full and delta user synchronization statistics for Microsoft Intune
 
--   **On-premises mobile device management (MDM):**
 
-    -   Deployment success/failure statistics for on-premises MDM application deployments
+-   **On-premises mobile device management (MDM):**  
 
-    -   Count of Windows 10 bulk enrollment packages and profiles
+    -   Deployment success/failure statistics for on-premises MDM application deployments  
 
--   **Operating System Deployment:**
+    -   Count of Windows 10 bulk enrollment packages and profiles  
 
-    -   Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences
+
+
+-   **Operating System Deployment:**  
+
+    -   Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
 
     -   ***[New]*** Counts of task sequence step usage
 
 
--   **Software Updates:**
 
-    -   Total/average number of collections that have software update deployments and the maximum/average number of updates deployed
+-   **Site updates:**
 
-    -   Number of automatic deployment rules tied to synchronization
+    - Versions of installed Configuration Manager hotfixes
 
-    -   Number of automatic deployment rules that create new or add updates to an existing group
 
-    -   Available and deadline deltas used in automatic deployment rules
 
-    -   Average and maximum number of assignments per update
 
-    -   Count of updates created and deployed with System Center Update Publisher
+-   **Software Updates:**  
 
-    -   Count of update groups and assignments
+    -   Total/average number of collections that have software update deployments and the maximum/average number of updates deployed  
 
-    -   Count of update packages and the maximum/minimum/average number of distribution points targeted with packages
+    -   Number of automatic deployment rules tied to synchronization  
 
-    -   Number of update groups and minimum/maximum/average number of updates per group
+    -   Number of automatic deployment rules that create new or add updates to an existing group  
 
-    -   Number of updates and percentage of updates deployed, expired, superseded, downloaded, and containing EULAs
+    -   Available and deadline deltas used in automatic deployment rules  
 
-    -   Update scan error codes and machine count
+    -   Average and maximum number of assignments per update  
 
-    -   Client update evaluation and scan schedules
+    -   Count of updates created and deployed with System Center Update Publisher  
 
-    -   Software update point synchronization schedule
+    -   Count of update groups and assignments  
 
-    -   Number of automatic deployment rules with multiple deployments
+    -   Count of update packages and the maximum/minimum/average number of distribution points targeted with packages  
 
-    -   Configurations used for active Windows 10 servicing plans
+    -   Number of update groups and minimum/maximum/average number of updates per group  
 
-    -   Windows 10 dashboard content versions
+    -   Number of updates and percentage of updates deployed, expired, superseded, downloaded, and containing EULAs  
 
-    -   Count of Windows 10 clients that are using Windows Update for Business
+    -   Update scan error codes and machine count  
 
-    -   Cluster patching statistics
+    -   Client update evaluation and scan schedules  
 
-    -   Count of deployed Office 365 updates
+    -   Software update point synchronization schedule  
 
-    -    Classifications synced by Software Update Point
+    -   Number of automatic deployment rules with multiple deployments  
+
+    -   Configurations used for active Windows 10 servicing plans  
+
+    -   Windows 10 dashboard content versions  
+
+    -   Count of Windows 10 clients that are using Windows Update for Business  
+
+    -   Cluster patching statistics  
+
+    -   Count of deployed Office 365 updates  
+
+    -   Classifications synced by Software Update Point
 
     -   ***[New]*** Software update point load balancing statistics
 
--   **SQL/performance data:**
 
-    -   Count of largest database tables
 
-    -   SQL Always-On replica information
+-   **SQL/performance data:**  
 
-    -   Count of collections by type
+    -   Count of largest database tables  
 
-    -    Collection evaluation statistics (query time, assigned vs unassigned counts, counts by type, ID rollover, and rule usage)
+    -   SQL Always-On replica information  
 
-    - 	SQL change tracking retention period
+    -  SQL change tracking retention period
 
--   ***[New] Site updates:***
+    - ***[New]*** Discovery types, enabled and schedule (full, incremental)
 
-    -  Versions of installed Configuraton Manager hotfixes
+    - ***[New]*** Discovery operational statistics (count of objects found)
 
-- ***[New]*** **Cloud Services:**
+    - ***[New]*** SQL change tracking performance issues, retention period, and auto-cleanup state
 
-    - ***[New]*** Count of collections sync'd to OMS
 
-    - ***[New]***  Is the OMS cloud connector enabled
 
-- ***[New]*** **Migration:**
+- ***[New]*** **Miscellaneous**
 
-    -  ***[New]***  Count of migrated objects (use of migration wizard)
+    - ***[New]*** Count of sites with WOL
+
+
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in Basic and Enhanced. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.
