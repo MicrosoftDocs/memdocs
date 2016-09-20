@@ -31,5 +31,6 @@
       "branch": "master",
       "branch_mapping": {}
     }
-  ]
+  ],
+  "need_preview_pull_request": "true"
 }
