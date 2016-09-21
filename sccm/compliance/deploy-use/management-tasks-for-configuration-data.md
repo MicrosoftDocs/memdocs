@@ -34,13 +34,11 @@ translation.priority.ht:
   - zh-tw
 ---
 # Management tasks for configuration data in System Center Configuration Manager
-After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform actions with them.  
+After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  
   
-## To manage configuration items  
+## Manage configuration items  
   
--   In the **Assets and Compliance** workspace, expand **Compliance Settings**, select **Configuration Items**, select the configuration item to manage, and then select a management task.  
-  
- Use the following table for more information about the management tasks that might require some information before you select them.  
+-   In the **Assets and Compliance** workspace, expand **Compliance Settings** > **Configuration Items**, select the configuration item to manage, and then select a management task.  
   
 |Management task|Details|  
 |---------------------|-------------|  
@@ -51,11 +49,10 @@ After you have created configuration items and configuration baselines in System
 |**Copy**|Creates a copy of the selected configuration item with a name you specify. The new configuration item does not retain any relationship to the original configuration item. This means that the duplicate configuration item does not continue to inherit configuration information from the original configuration item.|  
 |**Delete**|Opens the **Delete Configuration Item** dialog box where you can review any references to this configuration item.<br /><br /> You must remove all references to a configuration item before you can delete the configuration item.|  
   
-## To manage configuration baselines  
+## Manage configuration baselines  
   
--   In the **Assets and Compliance** workspace, expand **Compliance Settings**, select **Configuration Baselines**, select the configuration baseline to manage, and then select a management task.  
+-   In the **Assets and Compliance** workspace, expand **Compliance Settings** > **Configuration Baselines**, select the configuration baseline to manage, and then select a management task.  
   
- Use the following table for more information about the management tasks that might require some information before you select them.  
   
 |Management task|Details|  
 |---------------------|-------------|  

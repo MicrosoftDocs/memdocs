@@ -66,14 +66,12 @@ System Center Configuration Manager continues to support packages and programs t
   
 -   [How to manage packages and programs](#BKMK_Manage)  
   
-##  <a name="BKMK_create"></a> How to create packages and programs  
+##  Create a package and programs  
  Use one of these procedures to help you create, or import packages and programs.  
   
 #### Create a package and program using the Create Package and Program wizard  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Packages**.  
   
 3.  In the **Home** tab, in the **Create** group, click **Create Package**.  
   
@@ -445,5 +443,3 @@ System Center Configuration Manager continues to support packages and programs t
   
 -   **Disabled**: Specifies whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
