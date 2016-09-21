@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 caps.latest.revision: 6
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft
 This topic provides an example scenario of how you can use software updates in System Center Configuration Manager to deploy and monitor the security software updates that Microsoft releases monthly.  

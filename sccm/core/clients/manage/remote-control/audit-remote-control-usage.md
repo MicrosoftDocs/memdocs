@@ -13,25 +13,7 @@ ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to audit remote control usage in System Center Configuration Manager
 You can use System Center Configuration Manager reports to view audit information for remote control.  
@@ -40,11 +22,11 @@ You can use System Center Configuration Manager reports to view audit informatio
 
  The following two reports are available with the category **Status Messages - Audit**:  
 
--   **Remote Control â€“ All computers remote controlled by a specific user** â€“ Displays a summary of remote control activity that a specific user initiated.  
+-   **Remote Control – All computers remote controlled by a specific user** – Displays a summary of remote control activity that a specific user initiated.  
 
--   **Remote Control â€“ All remote control information** â€“ Displays a summary of status messages about remote control of client computers.  
+-   **Remote Control – All remote control information** – Displays a summary of status messages about remote control of client computers.  
 
-### To run the report Remote Control â€“ All computers remote controlled by a specific user  
+### To run the report Remote Control – All computers remote controlled by a specific user  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -58,7 +40,7 @@ You can use System Center Configuration Manager reports to view audit informatio
 
 6.  When you have finished viewing the data in the report, close the report window.  
 
-### To run the report Remote Control â€“ All remote control information  
+### To run the report Remote Control – All remote control information  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 

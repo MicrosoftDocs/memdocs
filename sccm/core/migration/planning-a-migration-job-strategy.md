@@ -14,25 +14,7 @@ caps.latest.revision: 6
 caps.handback.revision: 0
 author: Brenduns
 robots: noindex
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Planning a migration job strategy in System Center Configuration Manager
 Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can configure one or more migration jobs per source site. This allows you to migrate all objects at one time or limited subsets of data with each job.  

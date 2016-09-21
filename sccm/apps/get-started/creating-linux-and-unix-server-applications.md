@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 caps.latest.revision: 7
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Create Linux and UNIX server applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for computers that run Linux and UNIX.  
@@ -63,7 +45,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 |Configuration|Details|  
 |-------------------|-------------|  
 |Use only configurations that are intended for computers, and do not use configurations that are intended for users.|The Configuration Manager client for Linux and UNIX does not support configurations that are intended for users.|  
-|Configure programs to download the software from the distribution point and run the programs from the local client cache|The Configuration Manager client for Linux and UNIX does not support running software from the distribution point. Instead, you must configure the software to download to the client and then install.<br /><br /> By default, after the client for Linux and UNIX installs software, that software is deleted from the clientâ€™s cache. However, packages that are configured with **Persist content in the client cache** are not deleted from the client and remain in the clientâ€™s cache after the software installs.<br /><br /> The client for Linux and UNIX does not support configurations for the client cache, and the maximum size of the client cache is limited only by the free disk space on the client computer.|  
+|Configure programs to download the software from the distribution point and run the programs from the local client cache|The Configuration Manager client for Linux and UNIX does not support running software from the distribution point. Instead, you must configure the software to download to the client and then install.<br /><br /> By default, after the client for Linux and UNIX installs software, that software is deleted from the client’s cache. However, packages that are configured with **Persist content in the client cache** are not deleted from the client and remain in the client’s cache after the software installs.<br /><br /> The client for Linux and UNIX does not support configurations for the client cache, and the maximum size of the client cache is limited only by the free disk space on the client computer.|  
 |Configure the Network Access Account for distribution point access|Linux and UNIX computers are designed to be workgroup computers. In order to access packages from the distribution point in the Configuration Manager site server domain, you must configure the Network Access Account for the site. You must specify this account as a software distribution component property and configure the account before you deploy software.<br /><br /> You can configure multiple Network Access Accounts at each site. The client for Linux and UNIX can use each of the accounts you configure as a Network Access Account.<br /><br /> For more information, see [Site components for System Center Configuration Manager](../../core/servers/deploy/configure/site-components.md).|  
   
  You can deploy packages and programs to collections that contain only Linux or UNIX clients, or you can deploy them to collections that contain a mix of client types, such as the **All Systems Collection**. However, non Linux or UNIX clients will not install the software and report failure.  
@@ -97,7 +79,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 |**Run**:<br /><br /> - All options|Settings are ignored|The client always runs packages with no user interface.<br /><br /> The client ignores all configuration options for Run.|  
 |After running:<br /><br /> - <br />                        Configuration Manager restarts computer<br /><br /> - Program controls restart<br /><br /> - <br />                        Configuration Manager logs the user off|An error is generated and the software install fails|The system restart setting and user specific settings are not supported.<br /><br /> When any setting other than the **No action required** setting is in use, the client generates an error and continues the software installation, with no action taken.|  
 |Program can run:<br /><br /> - Only when a user is logged on|An error is generated and the software install fails|User specific settings are not supported.<br /><br /> When this option is configured, the client generates an error and fails the installation of the software.<br /><br /> Other options are ignored and the software installation continues.|  
-|Run mode:<br /><br /> - Run with userâ€™s rights|Setting is ignored|User specific settings are not supported.<br /><br /> However, the client does support the configuration to run with Administrative rights.<br /><br /> When you specify **Run with administrative rights**, the Configuration Manager client uses its root credentials.<br /><br /> This setting does not generate an error or log entry. Instead, the software installation fails when the client generates an error for the prerequisite configuration of **Program can run** = **Only when a user is logged on**.|  
+|Run mode:<br /><br /> - Run with user’s rights|Setting is ignored|User specific settings are not supported.<br /><br /> However, the client does support the configuration to run with Administrative rights.<br /><br /> When you specify **Run with administrative rights**, the Configuration Manager client uses its root credentials.<br /><br /> This setting does not generate an error or log entry. Instead, the software installation fails when the client generates an error for the prerequisite configuration of **Program can run** = **Only when a user is logged on**.|  
 |Allow users to view and interact with the program installation.|Setting is ignored|User specific settings are not supported.<br /><br /> This configuration is ignored and the software installation continues.|  
 |Drive mode:<br /><br /> - All options|Settings are ignored|This setting is not supported because content is always downloaded to the client and run locally.|  
 |Run another program first|An error is generated and the software install fails|Recursive program installation is not supported.<br /><br /> When a program is configured to run another program first, the software installation fails, and the other program installation is not started.|  
@@ -123,7 +105,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 |Deployment property|Behavior|More information|  
 |-------------------------|--------------|----------------------|  
-|Deployment settings â€“ purpose:<br /><br /> - Available<br /><br /> - Required|Setting is ignored|User specific settings are not supported.<br /><br /> However, the client supports the setting **Required**, which enforces the scheduled installation time, but does not support manual installation prior to that scheduled time.|  
+|Deployment settings – purpose:<br /><br /> - Available<br /><br /> - Required|Setting is ignored|User specific settings are not supported.<br /><br /> However, the client supports the setting **Required**, which enforces the scheduled installation time, but does not support manual installation prior to that scheduled time.|  
 |Send wake-up packets|Setting is ignored|The client does not support this configuration.|  
 |Assignment schedule:<br /><br /> - logon<br /><br /> - logoff|An error is generated and the software install fails|User specific settings are not supported.<br /><br /> However, the client supports the setting **As soon as possible**.|  
 |Notification settings:<br /><br /> - Allow users to run the program independently of assignments|Setting is ignored|The client does not implement a user interface.|  

@@ -13,25 +13,7 @@ ms.assetid: c28d5ef5-3ea7-4ba2-af01-6600aa805d48
 caps.latest.revision: 17
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
 ||  
@@ -98,7 +80,7 @@ translation.priority.ht:
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Select the amount of time before the device will be locked if it is not being used.|
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
-|**Allow Smart Lock and other trust agents**|Letâ€™s you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.|
+|**Allow Smart Lock and other trust agents**|Let’s you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.|
   
 ###  <a name="BKMK_Device"></a> Device  
  These settings apply to Samsung KNOX devices only.  
@@ -145,7 +127,7 @@ translation.priority.ht:
     |**Screen sleep and wake button**|Enables or disables the screen sleep wake button on the device.|  
   
 ###  <a name="BKMK_Compliantdroid"></a> Compliant and noncompliant apps (Android)  
- Letâ€™s you specify a list of Android apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+ Let’s you specify a list of Android apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
@@ -157,8 +139,8 @@ translation.priority.ht:
     |-------------|----------------------|  
     |**Noncompliant apps list**|Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.|  
     |**Compliant apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the [apps section of Google Play](https://play.google.com/store/apps), search for the app you want to use.<br /><br /> Open the appâ€™s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.<br /><br /> **Example:** Search Google Play for **Microsoft Office Mobile**. The URL you use will be **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
-    |**Edit**|Letâ€™s you edit the name, publisher and URL of the selected app.|  
+    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the [apps section of Google Play](https://play.google.com/store/apps), search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.<br /><br /> **Example:** Search Google Play for **Microsoft Office Mobile**. The URL you use will be **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
+    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   

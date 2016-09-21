@@ -13,25 +13,7 @@ ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to monitor certificate profiles in System Center Configuration Manager
 After you deploy System Center Configuration Manager certificate profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the certificate profile:  

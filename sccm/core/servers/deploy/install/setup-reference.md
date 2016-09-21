@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 caps.latest.revision: 22
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Reference for System Center Configuration Manager Setup
 System Center Configuration Manager Setup provides links to several topics where are detailed in the following sections. The information in the following sections can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation:  
@@ -99,7 +81,7 @@ The three levels of data collection include:
 
 -   **Enhanced** includes the data in the Basic setting plus transmits data about the hierarchy, how each feature is used (frequency and duration), and enhanced diagnostic information like the memory state of your server when a system or app crash occurs. No personally identifiable data will be transmitted.  
 
--   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we wonâ€™t use that information to identify or contact you, or target advertising to you.  
+-   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we won’t use that information to identify or contact you, or target advertising to you.  
 
 For more information including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 

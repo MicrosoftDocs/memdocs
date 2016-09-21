@@ -13,25 +13,7 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configuring power management in System Center Configuration Manager
 Before you can use power management in System Center Configuration Manager, you must perform the following configuration steps.  
@@ -53,7 +35,7 @@ Before you can use power management in System Center Configuration Manager, you 
 
 6.  Configure the following value for the power management client settings:  
 
-    -   **Allow power management of devices** â€“ From the drop-down list, select **True** to enable power management.  
+    -   **Allow power management of devices** – From the drop-down list, select **True** to enable power management.  
 
 7.  Configure the client settings that you require. For a list of power management client settings that you can configure, see the [Power Management](../../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
 

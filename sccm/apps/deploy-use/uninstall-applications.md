@@ -12,28 +12,10 @@ ms.topic: article
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
-# How to uninstall applications with System Center Configuration Manager
+# Uninstall applications with System Center Configuration Manager
 Perform the following steps to uninstall an application by using System Center Configuration Manager:  
   
 -   Specify the command line to uninstall the deployment type content on the **Content** page of the **Create Deployment Type Wizard**.  
@@ -47,7 +29,7 @@ Perform the following steps to uninstall an application by using System Center C
   
 -   When you uninstall a Configuration Manager application, any dependent applications are not automatically uninstalled.  
   
--   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, then the uninstall might fail if the userâ€™s account does not have permissions to uninstall the application.  
+-   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, then the uninstall might fail if the user’s account does not have permissions to uninstall the application.  
   
 -   If you remove a user or device from a collection that has an application deployed to it, the application will not be automatically removed from the device.  
   
@@ -78,5 +60,3 @@ Perform the following steps to uninstall an application by using System Center C
     > [!NOTE]  
     >  When you select a deployment action of **Uninstall**, the deployment purpose is automatically configured as **Required**.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

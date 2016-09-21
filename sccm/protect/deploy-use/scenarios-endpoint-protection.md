@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 caps.latest.revision: 8
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager
 This topic provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in an organization from malware attacks.  
@@ -43,7 +25,7 @@ This topic provides an example scenario for how you can implement Endpoint Prote
   
 -   Use Configuration Manager software updates to download malware definitions to computers. If software updates are not available, for example if the computer is not connected to the corporate network, computers must download definition updates from Microsoft Update.  
   
--   Usersâ€™ computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
+-   Users’ computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
   
 -   Send an email alert whenever any one of the following events occurs:  
   

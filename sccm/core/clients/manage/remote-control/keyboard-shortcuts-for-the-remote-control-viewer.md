@@ -13,25 +13,7 @@ ms.assetid: f660dde3-a3c5-45ef-a75b-fd915c12cad1
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Keyboard shortcuts for the remote control viewer in System Center Configuration Manager
 When you use the System Center Configuration Manager remote control viewer, you can use the following keyboard shortcuts to control the client computer that is being administered.  

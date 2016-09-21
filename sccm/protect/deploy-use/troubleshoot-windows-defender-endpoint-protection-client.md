@@ -13,24 +13,7 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Troubleshooting Windows Defender or Endpoint Protection client
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
@@ -214,7 +197,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
      **Cd program files\microsoft security essentials**  
   
-     **Mpcmdrun ‚Äìremovedefinitions ‚Äìall**  
+     **Mpcmdrun ñremovedefinitions ñall**  
   
      **Exit**  
   
@@ -243,8 +226,8 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 ##  <a name="BKMK_Starting"></a> Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
   
- You receive a message notifying you that ‚Äú**Windows Defender or**  
- **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**‚Äù  
+ You receive a message notifying you that ì**Windows Defender or**  
+ **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**î  
   
  **Solution**  
   
@@ -252,7 +235,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 -   Close all applications and restart your computer.  
   
-#### Step 2: Make sure the ‚ÄúWindows Defender" or<br />      "Endpoint Protection‚Äù service is set to automatic and is started  
+#### Step 2: Make sure the ìWindows Defender" or<br />      "Endpoint Protectionî service is set to automatic and is started  
   
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
   

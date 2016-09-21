@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager

@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 caps.latest.revision: 6
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Endpoint Protection Client Help
 This version of Endpoint Protection includes the following new features and enhancements to better help protect your computer from threats:  

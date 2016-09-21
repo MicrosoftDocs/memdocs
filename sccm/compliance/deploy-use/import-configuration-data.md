@@ -13,25 +13,7 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to import configuration data with System Center Configuration Manager
 In addition to creating configuration baselines and configuration items in the System Center Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported SML schema. You can import configuration data from the following sources:  

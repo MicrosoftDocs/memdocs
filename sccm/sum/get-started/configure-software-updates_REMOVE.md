@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 40380e25-f563-40f8-b5ad-01c9a9698754
 caps.latest.revision: 16
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configure software updates in System Center Configuration Manager
 Before the compliance assessment data of the software update displays in the System Center Configuration Manager console and before you can deploy software updates to client computers, you must complete the following steps: install and configure a software update point, synchronize the software updates metadata, and verify the configuration for settings that are associated with software updates.  

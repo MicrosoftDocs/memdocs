@@ -13,25 +13,7 @@ ms.assetid: 5ab94b85-ac63-45b1-a4f6-17b0113920fd
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configuration items for devices managed without the System Center Configuration Manager client
 This topic list the System Center Configuration Manager configuration item types available for devices that are not managed by the Configuration Manager client, for example, devices that are enrolled with Microsoft Intune.  

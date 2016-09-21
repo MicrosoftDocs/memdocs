@@ -13,25 +13,7 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 caps.latest.revision: 11
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Set up your System Center Configuration Manager lab
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
@@ -133,7 +115,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 2.  In the **CN=System Management Properties** dialog box, click the **Security** tab, and then click **Add** to add the site server computer account. Grant the account **Full Control** permissions.  
 
-3.  Click **Advanced**, select the site serverâ€™s computer account, and then click **Edit**.  
+3.  Click **Advanced**, select the site server’s computer account, and then click **Edit**.  
 
 4.  In the **Apply onto** list, select **This object and all descendant objects**.  
 
@@ -149,7 +131,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 ##### To extend the Active Directory schema using extadsch.exe:  
 
-1.  Create a backup of the schema master domain controllerâ€™s system state. For more information about backing up master domain controller, please review [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
+1.  Create a backup of the schema master domain controller’s system state. For more information about backing up master domain controller, please review [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
 
 2.  Navigate to **\SMSSETUP\BIN\X64** in the installation media.  
 
@@ -218,7 +200,7 @@ For additional information, please review the following articles for why these .
 
 -   [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR Inside Out â€“ In-Process Side-by-Side](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR Inside Out – In-Process Side-by-Side](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
 
 **Enable BITS, IIS, and RDC**  
 

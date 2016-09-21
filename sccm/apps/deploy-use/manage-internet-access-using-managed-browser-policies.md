@@ -13,25 +13,7 @@ ms.assetid: 735c45b8-a545-4805-84e5-46204fabd1a6
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager
 In System Center Configuration Manager, you can deploy the Intune Managed Browser, a web browsing application, and associate the application with a managed browser policy. The managed browser policy configures an allow list or a block list that restricts the web sites that users of the managed browser can visit.  
@@ -64,9 +46,9 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
   
      On the **Managed Browser** page, select one of the following options:  
   
-    -   **Allow the managed browser to open only the URLs listed below** â€“ Specify a list of URLs that the managed browser can open.  
+    -   **Allow the managed browser to open only the URLs listed below** – Specify a list of URLs that the managed browser can open.  
   
-    -   **Block the managed browser from opening the URLs listed below** â€“ Specify a list of URLs that the managed browser will be blocked from opening.  
+    -   **Block the managed browser from opening the URLs listed below** – Specify a list of URLs that the managed browser will be blocked from opening.  
   
     > [!NOTE]  
     >  You cannot include both allowed and blocked URLs in the same managed browser policy.  
@@ -100,7 +82,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 ###  <a name="BKMK_URLs"></a> URL format for allowed and blocked URLs  
  Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
   
--   You can use the wildcard symbol â€˜**\***â€™ according to the rules in the permitted patterns list below.  
+-   You can use the wildcard symbol ‘**\***’ according to the rules in the permitted patterns list below.  
   
 -   Ensure that you prefix all URLs with **http** or **https** when entering them into the list.  
   
@@ -148,7 +130,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
     -   http://www.contoso.com: /*  
   
 > [!NOTE]  
->  *.microsoft.com is always allowed â€“ it is always treated as allowed.  
+>  *.microsoft.com is always allowed – it is always treated as allowed.  
   
 ### How conflicts between the allow and block list are resolved  
  If multiple managed browser policies are deployed to a device and the settings conflict, both the mode (allow or block) and the URL lists are evaluated for conflicts. In case of a conflict, the following behavior applies:  

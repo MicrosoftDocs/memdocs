@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Configure Custom Client Settings for Endpoint Protection
@@ -154,11 +136,11 @@ For more information about operating system deployment in Configuration Manager,
 3.  Open an elevated command prompt, navigate to the folder in which you installed PsTools, and then type the following command
 
    ```
-   Psexec.exe â€“s â€“i regedit.exe
+   Psexec.exe –s –i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  Use caution while you are running the Registry Editor in this manner; the â€“s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
+   >  Use caution while you are running the Registry Editor in this manner; the –s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.
 

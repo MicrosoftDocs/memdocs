@@ -13,25 +13,7 @@ ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 caps.latest.revision: 11
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Monitor hierarchy and replication infrastructure in System Center Configuration Manager
 To monitor infrastructure and operations in System Center Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
