@@ -1,5 +1,5 @@
 ---
-title: "Deplooy UNIX/Linux clients | System Center Configuration Manager"
+title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
