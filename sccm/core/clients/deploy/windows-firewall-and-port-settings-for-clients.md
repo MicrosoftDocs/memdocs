@@ -1,5 +1,5 @@
 ---
-title: "Windows Firewall and port settings for clients in System Center Configuration Manager"
+title: "Windows client firewall and port settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -144,7 +144,7 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP) from the client computer to the software update point.|--|80 or 8530 (See note 2, **Windows Server Update Services**)|  
 |Secure Hypertext Transfer Protocol (HTTPS) from the client computer to the software update point.|--|443 or 8531 (See note 2, **Windows Server Update Services**)|  
-|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:<Path\>**.|--|445|  
+|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:&lt;Path\>**.|--|445|  
 
 ### Ports that are used with Group Policy-based installation  
 
@@ -152,16 +152,16 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP) from the client computer to a management point when the connection is over HTTP.|--|80 (See note 1, **Alternate Port Available**)|  
 |Secure Hypertext Transfer Protocol (HTTPS) from the client computer to a management point when the connection is over HTTPS.|--|443 (See note 1, **Alternate Port Available**)|  
-|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:<Path\>**.|--|445|  
+|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:&lt;Path\>**.|--|445|  
 
 ### Ports that are used with manual installation and logon script-based installation  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Server Message Block (SMB) between the client computer and a network share from which you run CCMSetup.exe.<br /><br /> When you install Configuration Manager, the client installation source files are copied and automatically shared from the *<InstallationPath\>*\Client folder on management points. However, you can copy these files and create a new share on any computer on the network. Alternatively, you can eliminate this network traffic by running CCMSetup.exe locally, for example, by using removable media.|--|445|  
-|Hypertext Transfer Protocol (HTTP) from the client computer to a management point when the connection is over HTTP, and you do not specify the CCMSetup command-line property **/source:<Path\>**.|--|80 (See note 1, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS) from the client computer to a management point when the connection is over HTTPS, and you do not specify the CCMSetup command-line property **/source:<Path\>**.|--|443 (See note 1, **Alternate Port Available**)|  
-|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:<Path\>**.|--|445|  
+|Server Message Block (SMB) between the client computer and a network share from which you run CCMSetup.exe.<br /><br /> When you install Configuration Manager, the client installation source files are copied and automatically shared from the *&lt;InstallationPath\>*\Client folder on management points. However, you can copy these files and create a new share on any computer on the network. Alternatively, you can eliminate this network traffic by running CCMSetup.exe locally, for example, by using removable media.|--|445|  
+|Hypertext Transfer Protocol (HTTP) from the client computer to a management point when the connection is over HTTP, and you do not specify the CCMSetup command-line property **/source:&lt;Path\>**.|--|80 (See note 1, **Alternate Port Available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS) from the client computer to a management point when the connection is over HTTPS, and you do not specify the CCMSetup command-line property **/source:&lt;Path\>**.|--|443 (See note 1, **Alternate Port Available**)|  
+|Server Message Block (SMB) between the source server and the client computer when you specify the CCMSetup command-line property **/source:&lt;Path\>**.|--|445|  
 
 ### Ports that are used with software distribution-based installation  
 
@@ -180,4 +180,4 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 
  If the HTTP port is 80, the HTTPS port must be 443.  
 
- If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531. 
+ If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531.

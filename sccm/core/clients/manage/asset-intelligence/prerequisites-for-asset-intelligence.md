@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for Asset Intelligence in System Center Configuration Manager"
+title: "Asset Intelligence Prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Asset Intelligence in System Center Configuration Manager"
+title: "Asset Intelligence introduction | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -36,37 +36,8 @@ translation.priority.ht:
 # Introduction to Asset Intelligence in System Center Configuration Manager
 Asset Intelligence in System Center Configuration Manager lets you inventory and manage software license usage throughout your enterprise by using the Asset Intelligence catalog. Many hardware inventory Windows Management Instrumentation (WMI) classes improve the breadth of information that is collected about hardware and software titles that are being used. Over 60 reports present this information in easy-to-use format. Many of these reports link to more specific reports, where you can query for general information and drill down to more detailed information. You can add custom information to the Asset Intelligence catalog, such as custom software categories, software families, software labels, and hardware requirements. You can also connect to System Center Online to dynamically update the Asset Intelligence catalog with the most current information available. Microsoft customers can reconcile enterprise software license usage with purchased software licenses that are being used by importing software license information into the Configuration Manager site database.  
 
- The following sections in this topic help you use Asset Intelligence:  
-
--   [Asset Intelligence catalog](#BKMK_AssetIntelligenceCatalog)  
-
-    -   [Software categories](#BKMK_SoftwareCategories)  
-
-    -   [Software families](#BKMK_SoftwareFamilies)  
-
-    -   [Software labels](#BKMK_CustomLabels)  
-
-    -   [Inventoried software titles](#BKMK_InventoriedSoftwareTitles)  
-
-    -   [Hardware requirements](#BKMK_HardwareRequirements)  
-
--   [Asset Intelligence Synchronization Point](#AssetIntelligenceSycnronizationPoint)  
-
--   [Asset Intelligence home page](#BKMK_AssetIntelligenceHomePage)  
-
--   [Asset Intelligence reports](#BKMK_AssetIntelligenceReports)  
-
-    -   [Asset Intelligence hardware reports](#BKMK_HardwareReports)  
-
-    -   [Asset Intelligence license management reports](#BKMK_LicenseManagementReports)  
-
-    -   [Asset Intelligence software reports](#BKMK_SoftwareReports)  
-
-    -   [Asset Intelligence software identification tag reports](#BKMK_SoftwareIdTagReports)  
-
--   [Asset Intelligence validation states](#BKMK_ValidationStates)  
-
 ##  <a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence catalog  
+
  The Configuration Manager Asset Intelligence catalog is a set of database tables stored in the site database that contain categorization and identification information for over 300,000 software titles and versions. These database tables are also used to manage hardware requirements for specific software titles.  
 
  The Asset Intelligence catalog provides software license information for software titles that are being used, both of Microsoft and of non-Microsoft software. A predefined set of hardware requirements for software titles is available in the Asset Intelligence catalog, and you can create new user-defined hardware requirement information to meet custom requirements. In addition, you can customize information in the Asset Intelligence catalog, and you can upload software title information to System Center Online for categorization.  
@@ -243,4 +214,3 @@ Asset Intelligence in System Center Configuration Manager lets you inventory and
 >  After a categorization conflict is resolved, the item is not validated as conflicting again unless later categorization updates introduce new information about the item.  
 
  For examples of when a validation state might transition from one state to another, see [Example validation state transitions for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md).  
-  

@@ -1,5 +1,5 @@
 ---
-title: "Example validation state transitions for Asset Intelligence in System Center Configuration Manager"
+title: "Example validation state transitions for Asset Intelligence | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -34,17 +34,7 @@ translation.priority.ht:
   - zh-tw
 ---
 # Example validation state transitions for Asset Intelligence in System Center Configuration Manager
-Asset Intelligence validation states in System Center Configuration Manager are not static and can change from administrative actions that you take to affect the data that are stored in the Asset Intelligence catalog. This topic provides the following examples for possible validation state transitions:  
-
--   [Uncategorized catalog item is categorized by the administrative user](#BKMK_UncategorizedIsCategorized)  
-
--   [Categorized catalog item is recategorized by the administrative user](#BKMK_CategorizedIsReCategorized)  
-
--   [User-defined catalog item is recategorized by System Center Online](#BKMK_UserDefinedIsRecategorized)  
-
--   [Uncategorized catalog item is submitted to System Center Online for categorization](#BKMK_UncategorizedIsSubmitted)  
-
--   [User-defined catalog item is submitted to System Center Online for categorization](#BKMK_UserDefinedIsSubmitted)  
+Asset Intelligence validation states in System Center Configuration Manager are not static and can change from administrative actions that you take to affect the data that are stored in the Asset Intelligence catalog. This topic provides examples for possible validation state transitions.
 
 ##  <a name="BKMK_UncategorizedIsCategorized"></a> Uncategorized catalog item is categorized by the administrative user  
 

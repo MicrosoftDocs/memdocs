@@ -1,5 +1,5 @@
 ---
-title: "Linux and UNIX clients technical reference for System Center Configuration Manager"
+title: "UNIX/Linux client component services and commands | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -32,10 +32,8 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Linux and UNIX clients technical reference for System Center Configuration Manager
-This topic contains technical information for the System Center Configuration Manager client for Linux and UNIX.  
+# Linux and UNIX clients component services and commands for System Center Configuration Manager
 
-##  <a name="BKMK_ComponentsofClientforLnU"></a> Component Services of the Configuration Manager Client for Linux and UNIX  
  The following table identifies the client component services of the Configuration Manager client for Linux and UNIX.  
 
 |File name|More information|  
@@ -43,7 +41,6 @@ This topic contains technical information for the System Center Configuration Ma
 |ccmexec.bin|This service is equivalent to the ccmexc service on a Windows-based client. It is responsible for all communications with Configuration Manager site system roles, and also communicates with the omiserver.bin service to collect hardware inventory from the local computer.<br /><br /> For a list of supported command line arguments, run **ccmexec -h**|  
 |omiserver.bin|This service is the CIM server. The CIM server provides a framework for pluggable software modules called providers. Providers interact with Linux and UNIX computer resources and collect the hardware inventory data. For example, the **process provider** for a Linux computer collects data associated with the Linux operating system processes.|  
 
-## Commands for the Configuration Manager client for Linux and UNIX  
  The following tables list commands that you can use to start, stop, or restart the client services (ccmexec.bin and omiserver.bin) on each version of Linux or UNIX. When you start or stop the ccmexec service, the omiserver service also starts or stops.  
 
 |Operating system|Commands|  

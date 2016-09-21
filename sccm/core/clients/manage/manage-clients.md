@@ -1,5 +1,5 @@
 ---
-title: "How to manage clients in System Center Configuration Manager"
+title: "Manage clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -43,18 +43,6 @@ When a System Center Configuration Manager client is installed and successfully 
 >  Additionally, a device can also display in the console when the Configuration Manager client is not installed. This scenario can happen if the device is discovered but the Configuration Manager client is not installed and assigned. Mobile devices that are managed by using the Exchange Server connector do not install the Configuration Manager client. Additionally, devices that are enrolled by Microsoft Intune do not install the Configuration Manager client.  
 >   
 >  Use the **Client** column in the Configuration Manager console to determine whether the Configuration Manager client is installed so that you can manage it from the Configuration Manager console.  
-
--   [Manage Clients from the Devices Node](#BKMK_ManagingClients_DevicesNode)  
-
--   [Manage Clients from the Device Collections Node](#BKMK_ManagingClients_DeviceCollectionsNode)  
-
--   [Configure the Client Cache for Configuration Manager Clients](#BKMK_ClientCache)  
-
--   [Uninstall the Configuration Manager Client](#BKMK_UninstalClient)  
-
--   [Manage Conflicting Records for Configuration Manager Clients](#BKMK_ConflictingRecords)  
-
--   [Initiate Policy Retrieval for a Configuration Manager Client](#BKMK_PolicyRetrieval)  
 
 ##  <a name="BKMK_ManagingClients_DevicesNode"></a> Manage Clients from the Devices Node  
  Use the following procedure and table to manage one or more devices from the **Devices** node in the **Assets and Compliance** workspace.  
@@ -454,6 +442,6 @@ Beginning in Release 1606, you can adjust the size of the client cache folder wi
 
     -   Navigate to the file by using Windows Explorer, and double-click the script file.  
 
-    -   Open a command prompt, and type: **cscript <path\filename.vbs>**.  
+    -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
 
 5.  Click **OK** in the **Windows Script Host** dialog box.  

@@ -1,5 +1,5 @@
 ---
-title: "How to monitor client deployment status in System Center Configuration Manager"
+title: "Monitor client deployment status | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

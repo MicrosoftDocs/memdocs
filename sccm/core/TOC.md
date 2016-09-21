@@ -170,8 +170,9 @@
 
 
 #    [Deploy clients](clients/deploy/plan/client-installation-methods.md)
-##   [Planning considerations for deploying clients](clients/deploy/plan/client-installation-methods.md)
+##   [Planning for client deployment](clients/deploy/plan/client-installation-methods.md)
 ###  [Client installation methods](clients/deploy/plan/client-installation-methods.md)
+###  [Prerequisites for deploying clients to Windows computers](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 ###  [Determine the site system roles for clients](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
 ###  [Security and privacy for clients](clients/deploy/plan/security-and-privacy-for-clients.md)
 ###  [Best practices for client deployment](clients/deploy/plan/best-practices-for-client-deployment.md)
@@ -182,8 +183,8 @@
 ###  [Plan how to wake up clients](clients/deploy/plan/plan-wake-up-clients.md)
 ###  [Plan for managing Internet-based clients](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
-##   [Client deployment tasks](clients/deploy/client-deployment-tasks.md)
-###  [Prerequisites for deploying clients to Windows computers](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
+
+##   [Client deployment tasks](clients/deploy/configure-client-communication-ports.md)
 ###  [How to configure client communication ports](clients/deploy/configure-client-communication-ports.md)
 ###  [How to configure client computers to find management points by using DNS publishing](clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)
 ###  [How to configure client settings](clients/deploy/configure-client-settings.md)
@@ -197,12 +198,12 @@
 
 #    [Manage clients](clients/manage/monitor-and-manage-clients.md)
 
-##   [Monitor and manage clients](clients/manage/monitor-and-manage-clients.md)
+##   [Monitor and manage clients](clients/manage/monitor-clients.md)
 ###  [How to monitor clients](clients/manage/monitor-clients.md)
-###  [How to monitor clients for Linux and UNIX servers](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
+###  [How to monitor Linux and UNIX clients](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
 ###  [How to manage clients](clients/manage/manage-clients.md)
-###  [How to manage clients for Linux and UNIX servers](clients/manage/manage-clients-for-linux-and-unix-servers.md)
-###  [Sync data from Configuration Manager to the Microsoft Operations Management Suite](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
+###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 
 ##   [Collections](clients/manage/collections/collections-technical-reference.md)
 ###  [Introduction to collections](clients/manage/collections/introduction-to-collections.md)
@@ -233,12 +234,12 @@
 ###  [How to use Resource Explorer to view software inventory](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Security and privacy for software inventory](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
 
-##   [Asset Intelligence](clients/manage/asset-intelligence/asset-intelligence.md)
-###  [Prerequisites for Asset Intelligence](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
-###  [Introduction to Asset Intelligence](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
-###  [Configuring Asset Intelligence](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
-##   [Operations for Asset Intelligence](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
-###  [Security and privacy for Asset Intelligence](clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)
+##   [Asset Intelligence](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
+###  [Introduction](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
+###  [Prerequisites](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
+###  [Configure Asset Intelligence](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
+##   [Use Asset Intelligence](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
+###  [Security and privacy](clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)
 ###  [Example validation state transitions for Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Example Asset Intelligence general license import file](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
