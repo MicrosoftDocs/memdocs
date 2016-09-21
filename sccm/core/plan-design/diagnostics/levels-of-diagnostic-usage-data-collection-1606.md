@@ -255,7 +255,7 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Count of mobile device actions (lock, pin rest, wipe, and retire) commands issued  
 
-    -   Count of mobile devices managed by [!INCLUDE[cmshort](../Token/cmshort_md.md)] and [!INCLUDE[mit_first](../Token/mit_first_md.md)] and how they were enrolled (bulk, user-based)  
+    -   Count of mobile devices managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)  
 
     -   Mobile device polling schedule and statistics mobile device check in duration  
 
