@@ -80,7 +80,7 @@ Use System Center Configuration Manager remote connection profiles to allow your
 -   Before you configure remote connection profiles, consider your privacy requirements.  
 
 
-## Create a remote connection profile in System Center Configuration Manager
+## Create a remote connection profile
 Use the following steps to create a remote connection profile by using the System Center Configuration Manager**Create Remote Connection Profile Wizard**.  
   
  Before you use this procedure, ensure you have read the introductory information and prerequisites in [Working with remote connection profiles in System Center Configuration Manager](../../compliance/plan-design/working-with-remote-connection-profiles.md).  
@@ -98,7 +98,7 @@ Use the following steps to create a remote connection profile by using the Syste
         > [!NOTE]  
         >  Configuration Manager does not support an internationalized domain name to be used to specify a server in this box.  
         >   
-        >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **–** and **_** characters, which are separated by periods.  
+        >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **â€“** and **_** characters, which are separated by periods.  
   
     -   **Allow connections only from computers that run Remote Desktop with Network Level Authentication**  
   
@@ -117,11 +117,9 @@ Use the following steps to create a remote connection profile by using the Syste
   
  The new remote connection profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.  
   
-#### To deploy a remote connection profile  
+Deploy a remote connection profile  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click Remote Connection Profiles.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Remote Connection Profiles**.  
   
 3.  In the **Remote Connection Profiles** list, select the remote connection profile that you want to deploy, and then, in the **Home** tab, in the **Deployment** group, click **Deploy**.  
   
@@ -129,7 +127,7 @@ Use the following steps to create a remote connection profile by using the Syste
   
     -   **Collection** - Click **Browse** to select the device collection where you want to deploy the remote connection profile.  
   
-    -   **Remediate noncompliant rules when supported** - Enable this option to automatically remediate the remote connection profile when it is found to be noncompliant on a device, for example, when it is not present.  
+    -   **Remediate noncompliant rules when supported** - Enable this to automatically remediate the remote connection profile when it is found to be noncompliant on a device, for example, when it is not present.  
   
     -   **Allow remediation outside the maintenance window** - If a maintenance window has been configured for the collection to which you deploy the remote connection profile, enable this option to let Configuration Manager remediate the remote connection profile outside the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
   

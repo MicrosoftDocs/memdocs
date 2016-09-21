@@ -12,13 +12,11 @@ ms.topic: article
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
+author: robstackmsft
 
 ---
-# How to deploy applications with System Center Configuration Manager
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+# Deploy applications with System Center Configuration Manager
+ 
   
  Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
   
@@ -39,18 +37,18 @@ author: barlanmsft
   
 4.  On the **General** page of the Deploy Software Wizard, specify the following information:  
   
-    -   **Software** – This displays the application to deploy. You can click **Browse** to select a different application.  
+    -   **Software** â€“ This displays the application to deploy. You can click **Browse** to select a different application.  
   
-    -   **Collection** – Click **Browse** to select the collection to deploy the application to.  
+    -   **Collection** â€“ Click **Browse** to select the collection to deploy the application to.  
   
-    -   **Use default distribution point groups associated to this collection** – Select this option if you want to store the application content on the collection's default distribution point group. If you have not associated the selected collection with a distribution point group, this option is not available.  
+    -   **Use default distribution point groups associated to this collection** â€“ Select this option if you want to store the application content on the collection's default distribution point group. If you have not associated the selected collection with a distribution point group, this option is not available.  
   
-    -   **Automatically distribute content for dependencies** – If this is enabled and any of the deployment types in the application contain dependencies, then the dependent application content will be also sent to distribution points.  
+    -   **Automatically distribute content for dependencies** â€“ If this is enabled and any of the deployment types in the application contain dependencies, then the dependent application content will be also sent to distribution points.  
   
         > [!IMPORTANT]  
         >  If you update the dependent application after the primary application has been deployed, any new content for the dependency will not be automatically distributed.  
   
-    -   **Comments (optional)** – Optionally, enter a description of this deployment.  
+    -   **Comments (optional)** â€“ Optionally, enter a description of this deployment.  
   
 5.  On the **Content** page of the wizard, click **Add** to add the content that is associated with this deployment to distribution points or distribution point groups. If you have selected Use default distribution points associated to this collection on the **General** page of the wizard, then this option will be automatically populated and can only be modified by a member of the **Application Administrator** security role.  
   
@@ -58,14 +56,14 @@ author: barlanmsft
   
 7.  On the **Deployment Settings** page of the Deploy Software Wizard, specify the following information:  
   
-    -   **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
+    -   **Action** â€“ From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
   
         > [!NOTE]  
         >  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.  
         >   
         >  You cannot change the action of a deployment after it has been created.  
   
-    -   **Purpose** – From the drop-down list, choose one of the following options:  
+    -   **Purpose** â€“ From the drop-down list, choose one of the following options:  
   
         -   **Available** - If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.  
   
@@ -74,18 +72,18 @@ author: barlanmsft
             > [!NOTE]  
             >  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
   
-    -   Deploy automatically according to schedule whether or not a user is logged on – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
+    -   Deploy automatically according to schedule whether or not a user is logged on â€“ If the deployment is to a user, select this option to deploy the application to the userâ€™s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
   
-    -   **Send wake-up packets** – If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
+    -   **Send wake-up packets** â€“ If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
   
-    -   **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs** – This option is only available for deployments with a purpose of **Required**.  
+    -   **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs** â€“ This option is only available for deployments with a purpose of **Required**.  
   
-    -   **Require administrator approval if users request this application** – If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is unavailable when the deployment purpose is **Required** or when the application is deployed to a device collection.  
+    -   **Require administrator approval if users request this application** â€“ If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is unavailable when the deployment purpose is **Required** or when the application is deployed to a device collection.  
   
         > [!NOTE]  
         >  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If an approval request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
   
-    -   **Automatically upgrade any superseded version of this application** – If this option is selected, any superseded versions of the application will be upgraded with the superseding application.  
+    -   **Automatically upgrade any superseded version of this application** â€“ If this option is selected, any superseded versions of the application will be upgraded with the superseding application.  
   
 8.  On the **Scheduling** page of the Deploy Software Wizard, configure when this application will be deployed or made available to client devices.  
     The options on this page will differ depending on whether the deployment action is set to **Available** or **Required**.  

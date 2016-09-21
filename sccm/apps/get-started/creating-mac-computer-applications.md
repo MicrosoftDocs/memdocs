@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 caps.latest.revision: 9
-author: barlanmsft
+author: robstackmsft
 
 ---
 # Create Mac computer applications with System Center Configuration Manager
@@ -25,7 +25,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   Before you can deploy Mac application packages to Mac computers, you must use the **CMAppUtil** tool on a Mac computer to convert these applications into a format that can be read by Configuration Manager.  
   
--   Configuration Manager does not support the deployment of Mac applications to users; these deployments must be to a device. Similarly, for Mac application deployments, Configuration Manager does not support the **Pre-deploy software to the user’s primary device** option on the **Deployment Settings** page of the Deploy Software Wizard.  
+-   Configuration Manager does not support the deployment of Mac applications to users; these deployments must be to a device. Similarly, for Mac application deployments, Configuration Manager does not support the **Pre-deploy software to the userâ€™s primary device** option on the **Deployment Settings** page of the Deploy Software Wizard.  
   
 -   Mac applications support simulated deployments.  
   
@@ -76,7 +76,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
      For example, if you want to convert the contents of an Apple disk image file named **MySoftware.dmg** stored in the users desktop folder into a **cmmac** file in the same folder and you want to create **cmmac** files for all applications that are found in the disk image file. To do this, use the following command line:  
   
-     **./CMApputil –c /Users/** *<User Name\>* **/Desktop/MySoftware.dmg -o /Users/** *<User Name\>* **/Desktop -a**  
+     **./CMApputil â€“c /Users/** *<User Name\>* **/Desktop/MySoftware.dmg -o /Users/** *<User Name\>* **/Desktop -a**  
   
     > [!NOTE]  
     >  The application name must be no more than 128 characters in length.  
@@ -88,8 +88,8 @@ In addition to the other System Center Configuration Manager requirements and pr
     |**-h**|Displays the available command-line properties.|  
     |**-r**|Outputs the **detection.xml** of the provided **.cmmac** file to **stdout**. The output contains the detection parameters and the version of **CMAppUtil** that was used to create the **.cmmac** file.|  
     |**-c**|Specify the source file to be converted.|  
-    |**-o**|This property must be used in conjunction with the –c property to specify the output path.|  
-    |**-a**|Use this property in conjunction with the –c property and the disk image (**.dmg**) file to automatically create .cmmac files for all applications and packages that are found in the disk image file.|  
+    |**-o**|This property must be used in conjunction with the â€“c property to specify the output path.|  
+    |**-a**|Use this property in conjunction with the â€“c property and the disk image (**.dmg**) file to automatically create .cmmac files for all applications and packages that are found in the disk image file.|  
     |**-s**|Skips generating the **detection.xml** if no detection parameters are found and forces the creation of the **.cmmac** file without the **detection.xml** file.|  
     |**-v**|Displays more detailed output from the **CMAppUtil** tool together with diagnostic information.|  
   
@@ -198,7 +198,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   Deployments that have a purpose of **Available** are not supported.  
   
--   The **Pre-deploy software to the user’s primary device** option on the **Deployment Settings** page of the Deploy Software Wizard is not supported.  
+-   The **Pre-deploy software to the userâ€™s primary device** option on the **Deployment Settings** page of the Deploy Software Wizard is not supported.  
   
 -   Because Mac computers do not support Software Center, the setting **User notifications** on the **User Experience** page of the Deploy Software Wizard is ignored.  
   
@@ -214,5 +214,3 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
   
-## See Also  
- [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md)

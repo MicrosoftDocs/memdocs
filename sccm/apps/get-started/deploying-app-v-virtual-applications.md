@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: barlanmsft
+author: robstackmsft
 
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
@@ -66,11 +66,11 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   **Sequencing** - Sequencing is the process of converting an application into a virtual application by using the App-V Sequencer.  
   
--   **Create Configuration Manager applications** – Use the Create Deployment Type Wizard to import the sequenced application into a Configuration Manager deployment type that you can then add to an application. You can also create virtual environments that allow multiple virtual applications to share settings.  
+-   **Create Configuration Manager applications** â€“ Use the Create Deployment Type Wizard to import the sequenced application into a Configuration Manager deployment type that you can then add to an application. You can also create virtual environments that allow multiple virtual applications to share settings.  
   
--   **Distribution** – Distribution is the process of making App-V applications available on Configuration Manager distribution points.  
+-   **Distribution** â€“ Distribution is the process of making App-V applications available on Configuration Manager distribution points.  
   
--   **Deployment** – Deployment is the process of making the application available on client computers. This is referred to as streaming in an App-V full infrastructure. Configuration Manager provides two options for the deployment of virtual applications: **streaming** and **download and execute**.  
+-   **Deployment** â€“ Deployment is the process of making the application available on client computers. This is referred to as streaming in an App-V full infrastructure. Configuration Manager provides two options for the deployment of virtual applications: **streaming** and **download and execute**.  
   
 ##  <a name="BKMK_Delivery"></a> Configuration Manager virtual application delivery methods  
  Configuration Manager supports two methods for delivery of virtual applications to clients: streaming delivery and local delivery (download and execute):  
@@ -207,5 +207,3 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   Windows Vista, Windows 7, and Windows 8: **C:\ProgramData\Microsoft\Application Virtualization Client**  
   
-## See Also  
- [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md)
