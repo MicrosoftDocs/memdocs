@@ -13,25 +13,7 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to Create VPN profiles in System Center Configuration Manager
 Use the following links to learn about the steps to create VPN profiles in System Center Configuration Manager:  
@@ -74,7 +56,7 @@ Use the following links to learn about the steps to create VPN profiles in Syste
   
     -   **Description** - Enter a description to help you find the profile it in the System Center Configuration Manager console (up to 256 characters).  
   
-    -   **Import an existing VPN profile item from a file** â€“ Select this option to display the **Import VPN Profile** page. On this page, you can import VPN profile information that has previously been exported to an XML file (Windows 8.1 and Windows RT operating systems only).  
+    -   **Import an existing VPN profile item from a file** – Select this option to display the **Import VPN Profile** page. On this page, you can import VPN profile information that has previously been exported to an XML file (Windows 8.1 and Windows RT operating systems only).  
   
 ##  <a name="BKMK_Step3"></a> Step 3: Provide Connection Information for the VPN Profile  
   
@@ -97,7 +79,7 @@ Use the following links to learn about the steps to create VPN profiles in Syste
     |**Realm**|Specify the name of the authentication realm that you want to use. An authentication realm is a grouping of authentication resources that is used by the Pulse Secure connection type.|Pulse Secure|  
     |**Role**|Specify the name of the user role that has access to this connection.|Pulse Secure|  
     |**Login group or domain**|Specify the name of the login group or domain that you want to connect to.|Dell SonicWALL Mobile Connect|  
-    |**Fingerprint**|Specify a string, for example "Contoso Fingerprint Code" that will be used to verify the VPN server can be trusted.<br /><br /> A fingerprint can be:<br /><br /> - Sent to the client so it knows to trust any server presenting that same fingerprint when connecting.<br /><br /> - If the device doesnâ€™t already have the fingerprint it will prompt the user to trust the VPN server they are connecting to while showing the fingerprint (the user manually verifies the fingerprint and clicks trust to connect).|Check Point Mobile VPN|  
+    |**Fingerprint**|Specify a string, for example "Contoso Fingerprint Code" that will be used to verify the VPN server can be trusted.<br /><br /> A fingerprint can be:<br /><br /> - Sent to the client so it knows to trust any server presenting that same fingerprint when connecting.<br /><br /> - If the device doesn’t already have the fingerprint it will prompt the user to trust the VPN server they are connecting to while showing the fingerprint (the user manually verifies the fingerprint and clicks trust to connect).|Check Point Mobile VPN|  
     |**Send all network traffic through the VPN connection**|If this option is not selected, you can specify additional routes for the connection (for **Microsoft SSL (SSTP)**, **Microsoft Automatic**, **IKEv2**, **PPTP** and **L2TP** connection types), which is known as split or VPN tunneling.<br /><br /> Only connections to the company network are sent over a VPN tunnel. VPN tunneling is not used when you connect to resources on the Internet.|All|  
     |**Connection specific DNS suffix**|Optionally, specify the connection-specific Domain Name System (DNS) suffix for the connection.|- <br />                            Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - <br />                            IKEv2<br /><br /> - <br />                            PPTP<br /><br /> - <br />                            L2TP|  
     |**Bypass VPN when connected to company Wi-Fi network**|Specifies that the VPN connection will not be used when the device is connected to the company Wi-Fi network.|- <br />                        Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
@@ -169,21 +151,21 @@ Use the following links to learn about the steps to create VPN profiles in Syste
 ##  <a name="BKMK_6"></a> Step 6: Configure Further DNS Settings (if required)  
  On the **Configure Automatic VPN connection** page of the wizard, you can configure the following settings:  
   
--   **Enable VPN on-demand** â€“ Select this option if you want to configure further DNS settings on this page of the wizard for Windows Phone 8.1 devices. 
+-   **Enable VPN on-demand** – Select this option if you want to configure further DNS settings on this page of the wizard for Windows Phone 8.1 devices. 
 
 > [!Note]  
 > This setting applies only to Windows  Phone 8.1 devices and should only enabled on             VPN profiles that are going to be deployed to Windows Phone 8.1 devices. 
   
   
--   DNS Suffix list (for Windows Phone 8.1 devices only) â€“ Configures domains that will establish a VPN connection. For each domain you specify, add the DNS suffix, the DNS server address, and one of the following on-demand actions:  
+-   DNS Suffix list (for Windows Phone 8.1 devices only) – Configures domains that will establish a VPN connection. For each domain you specify, add the DNS suffix, the DNS server address, and one of the following on-demand actions:  
   
-    -   **Never establish** â€“ Never open a VPN connection  
+    -   **Never establish** – Never open a VPN connection  
   
-    -   **Establish if needed** â€“ Only open a VPN connection if the device needs to connect to resources  
+    -   **Establish if needed** – Only open a VPN connection if the device needs to connect to resources  
   
-    -   **Always establish** â€“ Always open the VPN connection  
+    -   **Always establish** – Always open the VPN connection  
   
--   **Merge** â€“ Copies any DNS suffices you configured into the **Trusted network list**.  
+-   **Merge** – Copies any DNS suffices you configured into the **Trusted network list**.  
   
 -   **Trusted network list** (for Windows Phone 8.1 devices only) - Specify one DNS suffix on each line. If the device is in a trusted network, the VPN connection will not be opened.  
   

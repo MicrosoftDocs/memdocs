@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 caps.latest.revision: 10
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Define site boundaries and boundary groups for System Center Configuration Manager
 Boundaries for System Center Configuration Manager define network locations on your intranet that can contain devices that you want to manage. Boundary groups are logical groups of  boundaries that you configure. Both boundary groups and boundaries are available throughout a  hierarchy and you do not configure them for individual sites.  
@@ -220,9 +202,9 @@ When you configure boundary groups, you add one or more boundaries to the bounda
 ###  <a name="BKMK_BoundarySiteAssignment"></a> About site assignment  
  You can configure each boundary group with an assigned site for clients.  
 
--   A newly installed client that uses automatic site assignment will join the assigned site of a boundary group that contains the clientâ€™s current network location.  
+-   A newly installed client that uses automatic site assignment will join the assigned site of a boundary group that contains the client’s current network location.  
 
--   After assigning to a site, a client does not change its site assignment when it changes its network location. For example, if the client roams to a new network location that is represented by a boundary in a boundary group with a different site assignment, the clientâ€™s assigned site will remain unchanged.  
+-   After assigning to a site, a client does not change its site assignment when it changes its network location. For example, if the client roams to a new network location that is represented by a boundary in a boundary group with a different site assignment, the client’s assigned site will remain unchanged.  
 
 -   When Active Directory System Discovery discovers a new resource, network information for the discovered resource is evaluated against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.  
 
@@ -246,9 +228,9 @@ This behavior enables the client to select the nearest server from which to tran
 
 -   A client attempts to use a preferred management point from its assigned site before using a   management point from its  assigned site that is not configured as preferred.  
 
--   To use this option you must enable it for the hierarchy, and configure boundary groups at individual primary sites to include the management points that should be associated with that boundary groupâ€™s associated boundaries  
+-   To use this option you must enable it for the hierarchy, and configure boundary groups at individual primary sites to include the management points that should be associated with that boundary group’s associated boundaries  
 
--   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the clientâ€™s assigned site)  
+-   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the client’s assigned site)  
 
 > [!NOTE]  
 >  When a client roams (which means to change its network locations such as  when a laptop travels to a remote office location) it might use a management point (or proxy management point) from the local site at its new location before attempting to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) for more information.  

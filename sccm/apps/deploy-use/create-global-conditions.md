@@ -12,29 +12,11 @@ ms.topic: article
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # How to create global conditions in System Center Configuration Manager
-In System Center Configuration Manager, global conditions are rules that represent business or technical conditions that you can use to specify how an application is provided and deployed to client devices. You can create global conditions from the **Global Conditions** node of the Configuration Manager console or from within the Create Deployment Type Wizard. Global conditions are accessed from the **Requirements** page of the Create Deployment Type Wizard.  
+In System Center Configuration Manager, global conditions are rules that represent business or technical conditions that you can use to specify how an application is provided and deployed to client devices. Global conditions are accessed from the **Requirements** page of the Create Deployment Type Wizard.  
   
 > [!NOTE]  
 >  You can only edit global conditions from the site where they were created.  
@@ -44,23 +26,19 @@ In System Center Configuration Manager, global conditions are rules that represe
 ## Provide basic information about the global condition  
  Several different types of global conditions are available. Different options are associated with the different global condition types. When you select a specific global condition type, Configuration Manager displays the options that apply to your selection.  
   
-#### To provide basic information about the global condition  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Global Conditions**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Global Conditions**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Global Condition**.  
   
 4.  In the **Create Global Condition** dialog box, provide a name and an optional description for the global condition.  
   
-5.  In the **Device type** drop-down list, choose whether the global condition is for a **Windows** computer, **Windows Mobile** device, or a **Nokia** device.  
+5.  In the **Device type** drop-down list, choose whether the global condition is for a **Windows** computer or a **Windows Mobile** device.  
   
 6.  In the **Condition Type** drop-down list, choose one of the following options:  
   
-    -   **Setting** â€“ This option checks for the existence of one or more items on client devices. For example, you can check that a particular file, folder, or registry key value exists on a client device.  
+    -   **Setting** – This option checks for the existence of one or more items on client devices. For example, you can check that a particular file, folder, or registry key value exists on a client device.  
   
-    -   **Expression** â€“ This option allows you to configure more complex rules to determine if the condition is satisfied on client devices. For example, you can determine if the physical memory on a computer is between 2 GB and 4 GB or to determine if a mobile device uses touch screen input.  
+    -   **Expression** – This option allows you to configure more complex rules to determine if the condition is satisfied on client devices. For example, you can determine if the physical memory on a computer is between 2 GB and 4 GB or to determine if a mobile device uses touch screen input.  
   
 ## Configure rules for the global condition  
  The procedure for defining the global condition rules is different depending on whether you are configuring a setting or an expression. Use the applicable procedure here to configure a setting or an expression for the global condition.  
@@ -100,7 +78,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
     -   **File system**  
   
-        -   **Type** â€“ From the drop-down list, select whether you want to search for a **File** or a **Folder**.  
+        -   **Type** – From the drop-down list, select whether you want to search for a **File** or a **Folder**.  
   
         -   **Path** - Specify the path to the specified file or folder on client computers. You can specify system environment variables and the *%USERPROFILE%* environment variable in the path.  
   
@@ -112,7 +90,7 @@ In System Center Configuration Manager, global conditions are rules that represe
             > [!NOTE]  
             >  If you specify a file or folder name and use wildcards, this might produce a high numbers of results. This could result in high resource use on the client computer and also high network traffic when reporting results to Configuration Manager.  
   
-        -   **Include subfolders** â€“ Enable this option if you also want to search any subfolders under the specified path.  
+        -   **Include subfolders** – Enable this option if you also want to search any subfolders under the specified path.  
   
         -   **This file or   folder is associated with a 64-bit application** - Choose whether the 64-bit system file location (*%windir%*\system32) should be searched in addition to the 32-bit system file location (*%windir%*\syswow64) on Configuration Manager clients that run a 64-bit version of Windows.  
   
@@ -129,7 +107,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
     -   **Registry key**  
   
-        -   **Hive** â€“ From the drop-down list, select the registry hive that you want to search in.  
+        -   **Hive** – From the drop-down list, select the registry hive that you want to search in.  
   
         -   **Key** - Specify the registry key name that you want to search for. The format used should be *key\subkey*.  
   
@@ -144,7 +122,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
         -   **Key** - Specify the registry key name that you want to search for. The format used should be *key\subkey*.  
   
-        -   **Value** â€“ Specify the value that must be contained within the specified registry key.  
+        -   **Value** – Specify the value that must be contained within the specified registry key.  
   
         -   **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that run a 64-bit version of Windows.  
   
@@ -153,9 +131,9 @@ In System Center Configuration Manager, global conditions are rules that represe
   
     -   **Script**  
   
-        -   **Discovery script** â€“ Click **Add** to enter, or browse to the script to use. You can use Windows PowerShell, VBScript or JScript scripts.  
+        -   **Discovery script** – Click **Add** to enter, or browse to the script to use. You can use Windows PowerShell, VBScript or JScript scripts.  
   
-        -   **Run scripts by using the logged on user credentials** â€“ If you enable this option, the script will run on client computers by using the logged on users credentials.  
+        -   **Run scripts by using the logged on user credentials** – If you enable this option, the script will run on client computers by using the logged on users credentials.  
   
             > [!NOTE]  
             >  The value returned by the script will be used to assess the compliance of the global condition. For example, when you use VBScript, you could use the command **WScript.Echo Result** to return the Result variable value to the global condition.  
@@ -164,7 +142,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
     -   **SQL query**  
   
-        -   **SQL Server instance** â€“ Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
+        -   **SQL Server instance** – Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
   
             > [!NOTE]  
             >  The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
@@ -173,7 +151,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
         -   **Column** - Specify the column name returned by the Transact-SQL statement to use to assess the compliance of the global condition.  
   
-        -   **Transact-SQL statement** â€“ Specify the full SQL query to use for the global condition. You can also click **Open** to open an existing SQL query.  
+        -   **Transact-SQL statement** – Specify the full SQL query to use for the global condition. You can also click **Open** to open an existing SQL query.  
   
     -   **WQL query**  
   

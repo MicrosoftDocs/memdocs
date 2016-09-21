@@ -10,25 +10,7 @@ ms.topic: article
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 caps.latest.revision: 8
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Ensure device compliance with System Center Configuration Manager
 Compliance settings in System Center Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. This helps you support the following business requirements:  
@@ -55,7 +37,7 @@ Compliance settings in System Center Configuration Manager gives you the tools a
   
  [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md)  
   
-### Plan and configure  
+### Plan and design  
  Before you start working with compliance settings, make sure you have implements the necessary prerequisites that you'll find in this topic.  
   
  [Plan for and configure compliance settings in System Center Configuration Manager](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  

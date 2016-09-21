@@ -13,25 +13,7 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager
 Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To protect devices you can issue:  
@@ -126,7 +108,7 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
   
 -   Minutes of inactivity before password is required  
   
--   Required password type ‚Äì minimum number of character sets  
+-   Required password type ñ minimum number of character sets  
   
 -   Allow camera  
   
@@ -191,7 +173,7 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
   
 -   For successful wipe of apps, make sure the apps are distributed through mobile device app management.  
   
--   For iOS, configure the setting ‚ÄúAllow backup to iCloud‚Äù to ‚ÄúDisallow‚Äù so that users can‚Äôt restore content using iCloud.  
+-   For iOS, configure the setting ìAllow backup to iCloudî to ìDisallowî so that users canít restore content using iCloud.  
   
 -   If an account has been deactivated, then after one year, the account will be retired by Intune and a selective wipe will be performed.  
   

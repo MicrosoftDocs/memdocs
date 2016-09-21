@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 caps.latest.revision: 16
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager
 Stand-alone media in System Center Configuration Manager contains everything that is required to deploy an  operating system on a computer. This includes the boot image, operating system image, and task sequence to install the operating system, including applications, drivers, and so on. Stand-alone media deployments let you deploy operating systems in the following conditions:  
@@ -67,7 +49,7 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 > [!NOTE]  
 >  If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:  
 >   
->  `â€œWMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)â€`  
+>  `“WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)”`  
 >   
 >  For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../../osd/understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:  
 >   

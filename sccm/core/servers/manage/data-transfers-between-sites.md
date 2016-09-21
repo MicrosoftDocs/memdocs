@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 caps.latest.revision: 12
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Data transfers between sites in System Center Configuration Manager
 System Center Configuration Manager uses **file-based replication** and **database replication** to transfer different types of information between sites.  The subjects in this topic can help you understand how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network.  
@@ -48,7 +30,7 @@ System Center Configuration Manager uses **file-based replication** and **databa
 
  Configuration Manager supports the following configurations for file replication routes:  
 
--   **File Replication Account**: This account is used to connect to the destination site and to write data to that siteâ€™s **SMS_SITE** share. Data written to this share is processed by the receiving site. By default, when a site is added to the hierarchy, Configuration Manager assigns the computer account of the new sites site server as that sites **File Replication Account**. This account is then added to the destination siteâ€™s **SMS_SiteToSiteConnection_&lt;Sitecode\>** group which is a local group on the computer that grants access to the **SMS_SITE** share. You can change this account to be a Windows user account. If you change the account, ensure you add the new account to the destination siteâ€™s **SMS_SiteToSiteConnection_&lt;Sitecode\>** group.  
+-   **File Replication Account**: This account is used to connect to the destination site and to write data to that site’s **SMS_SITE** share. Data written to this share is processed by the receiving site. By default, when a site is added to the hierarchy, Configuration Manager assigns the computer account of the new sites site server as that sites **File Replication Account**. This account is then added to the destination site’s **SMS_SiteToSiteConnection_&lt;Sitecode\>** group which is a local group on the computer that grants access to the **SMS_SITE** share. You can change this account to be a Windows user account. If you change the account, ensure you add the new account to the destination site’s **SMS_SiteToSiteConnection_&lt;Sitecode\>** group.  
 
     > [!NOTE]  
     >  Secondary sites always use the computer account of the secondary site server as the **File Replication Account**.  
@@ -59,7 +41,7 @@ System Center Configuration Manager uses **file-based replication** and **databa
 
     -   Use **Pulse mode** to specify the size of the data blocks that are sent to the destination site. You can also specify a time delay between sending each data block. Use this option when you must send data across a very low bandwidth network connection to the destination site. For example, you might have constraints to send 1 KB of data every five seconds, but not 1 KB every three seconds, regardless of the speed of the link or its usage at a given time.  
 
-    -   Use **Limited to maximum transfer rates by hour** to have a site send data to a destination site by using only the percentage of time that you specify. When you use this option, Configuration Manager does not identify the networkâ€™s available bandwidth, but instead divides the time it can send data into slices of time. Then data is sent in a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to **50%**, Configuration Manager transmits data for an amount of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.  
+    -   Use **Limited to maximum transfer rates by hour** to have a site send data to a destination site by using only the percentage of time that you specify. When you use this option, Configuration Manager does not identify the network’s available bandwidth, but instead divides the time it can send data into slices of time. Then data is sent in a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to **50%**, Configuration Manager transmits data for an amount of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.  
 
         > [!CAUTION]  
         >  By default, a site can use up to three **concurrent sendings** to transfer data to a destination site. When you enable rate limits for a file replication route, the **concurrent sendings** for sending data to that site are limited to one. This applies even when the **Limit available bandwidth (%)** is set to **100%**. For example, if you use the default settings for the sender, this reduces the transfer rate to the destination site to be one third of the default capacity.  
@@ -68,7 +50,7 @@ System Center Configuration Manager uses **file-based replication** and **databa
 
 To manage a file replication route, in the **Administration** workspace, expand the **Hierarchy Configuration** node, and select **File Replication**.  
 
-**Sender** - Each site has one sender. The sender manages the network connection from one site to a destination site, and can establish connections to multiple sites at the same time. To connect to a site, the sender uses the file replication route to the site to identify the account to use to establish the network connection. The sender also uses this account to write data to the destination siteâ€™s **SMS_SITE** share.  
+**Sender** - Each site has one sender. The sender manages the network connection from one site to a destination site, and can establish connections to multiple sites at the same time. To connect to a site, the sender uses the file replication route to the site to identify the account to use to establish the network connection. The sender also uses this account to write data to the destination site’s **SMS_SITE** share.  
 
  By default, the sender writes data to a destination site by using multiple **concurrent sendings**, typically referred to as a thread. Each concurrent sending, or thread, can transfer a different file-based object to the destination site. By default, when the sender begins to send an object, the sender continues to write blocks of data for that object until the entire object is sent. After all the data for the object has been sent, a new object can begin to send on that thread.  
 

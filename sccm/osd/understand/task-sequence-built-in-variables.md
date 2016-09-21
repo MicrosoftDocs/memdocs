@@ -13,25 +13,7 @@ ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Task sequence built-in variables in System Center Configuration Manager
 ||  
@@ -57,7 +39,7 @@ translation.priority.ht:
 |_SMSTSInWinPE|This variable is set to **true** when the current task sequence step is running in the Windows PE environment, and it is set to **false** if not. You can test this task sequence variable to determine the current operating system environment.|  
 |_SMSTSLastActionRetCode|Stores the return code that was returned by the last action that was run. This variable can be used as a condition to determine if the next step is run.<br /><br /> Example:<br /><br /> **0**|  
 |_SMSTSLastActionSucceeded|The variable is set to **true** if the last action succeeded and to **false** if the last action failed. If the last action was skipped because the step was disabled or the associated condition evaluated to **false**, this variable is not reset, which means it still holds the value for the previous action.|  
-|_SMSTSLaunchMode|Specifies the task sequence launch method. The task sequence can have the following values:<br /><br /> -   **SMS** - specifies that the task sequence is started by using the Configuration Manager client.<br />-   **UFD** - specifies that the task sequence is started by using USB media and that the USB media was created in Windows XP/2003.<br />-   **UFD+FORMAT** - specifies that the task sequence is started by using USB media and that the USB media was created in Windows Vista or later.<br />-   **CD** - specifies that the task sequence is started by using a CD.<br />-   **DVD** - specifies that the task sequence is started by using a DVD.<br />-   **PXE** - specifies that the task sequence is started from PXE.<br />-   **HD** â€“ specifies that the task sequence was started from a hard disk (prestaged media only).|  
+|_SMSTSLaunchMode|Specifies the task sequence launch method. The task sequence can have the following values:<br /><br /> -   **SMS** - specifies that the task sequence is started by using the Configuration Manager client.<br />-   **UFD** - specifies that the task sequence is started by using USB media and that the USB media was created in Windows XP/2003.<br />-   **UFD+FORMAT** - specifies that the task sequence is started by using USB media and that the USB media was created in Windows Vista or later.<br />-   **CD** - specifies that the task sequence is started by using a CD.<br />-   **DVD** - specifies that the task sequence is started by using a DVD.<br />-   **PXE** - specifies that the task sequence is started from PXE.<br />-   **HD** – specifies that the task sequence was started from a hard disk (prestaged media only).|  
 |_SMSTSLogPath|Stores the full path of the log directory. This can be used to determine where actions are logged. This value is not set when a hard drive is not available.|  
 |_SMSTSMachineName|Stores and specifies the computer name. Stores the name of the computer that the task sequence will use to log all status messages. To change the computer name in the new operating system, use the **OSDComputerName** variable.<br /><br /> Example:<br /><br /> **ABC**|  
 |_SMSTSMDataPath|Specifies the path defined by the SMSTSLocalDataDrive variable. When you define SMSTSLocalDataDrive before the task sequence starts, such as by setting a collection variable, Configuration Manager then defines the _SMSTSMDataPath variable once the Task Sequence starts.|  

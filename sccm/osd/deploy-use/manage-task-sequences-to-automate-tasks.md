@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage task sequences to automate tasks in System Center Configuration Manager
 Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks in System Center Configuration Manager](../../osd/plan-design/planning-considerations-for-automating-tasks.md).  
@@ -67,7 +49,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
  You can modify a task sequence by adding or removing task sequence steps, adding or removing task sequence groups, or by changing the order of the steps. Use the following procedure to modify an existing task sequence.  
   
 > [!IMPORTANT]  
->  When you edit a task sequence that was created by using the Create Task Sequence Wizard, the name of the step can be the action of the step or the type of the step. For example, you might see a step that has the name â€œPartition disk 0â€, which is the action for a step of type [Format and Partition Disk](../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their type, not necessarily by the name of the step that is displayed in the Editor.  
+>  When you edit a task sequence that was created by using the Create Task Sequence Wizard, the name of the step can be the action of the step or the type of the step. For example, you might see a step that has the name “Partition disk 0”, which is the action for a step of type [Format and Partition Disk](../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their type, not necessarily by the name of the step that is displayed in the Editor.  
   
 #### To edit a task sequence  
   
@@ -150,11 +132,11 @@ Use task sequences to automate steps in your System Center Configuration Manager
          Do not deploy task sequences that install operating systems to inappropriate collections, such as the **All Systems** collection. Be sure that the collection that you select contains only those computers that you want to run the task sequence.  
   
         > [!NOTE]  
-        >  When you deploy a high-risk deployment, such as an operating system, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the siteâ€™s properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the siteâ€™s minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+        >  When you deploy a high-risk deployment, such as an operating system, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site’s minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
         >   
         >  The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, the collection membership is not reevaluated for the high-risk deployment settings.  
         >   
-        >  For example, letâ€™s say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the siteâ€™s minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
+        >  For example, let’s say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site’s minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
         >   
         >  When you select a collection that contains a site role, the following applies:  
         >   

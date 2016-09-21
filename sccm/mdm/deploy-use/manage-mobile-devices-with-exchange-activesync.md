@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 caps.latest.revision: 8
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage mobile devices with System Center Configuration Manager and Exchange
 Use the Exchange Server connector in System Center Configuration Manager when you want to manage mobile devices that connect to Exchange Server (on-premises or online) by using the Microsoft Exchange ActiveSync protocol, and you cannot enroll them by using Configuration Manager. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
@@ -48,7 +30,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
   
  You can also configure the Exchange Server connector to manage the Exchange access rules and allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console, and users can remotely wipe their mobile devices by using the Application Catalog.  
   
- A userâ€™s mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the userâ€™s mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
+ A user’s mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the user’s mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
   
 > [!TIP]  
 >  If you manage a mobile device by using the Exchange Server connector and the mobile device is transferred to another user, delete the mobile device from the Configuration Manager console before the new owner of the mobile device configures his or her Exchange account on this transferred mobile device.  

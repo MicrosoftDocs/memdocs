@@ -13,25 +13,7 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
@@ -62,23 +44,23 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
     -   **Mac OS X Preferences** -  
   
-        -   **Application ID** â€“ Specify the application ID of the property list file from which you want to evaluate a key for compliance.  
+        -   **Application ID** – Specify the application ID of the property list file from which you want to evaluate a key for compliance.  
   
              For example, if you want to edit settings for the Safari Web browser, you might use **com.apple.Safari.plist**.  
   
-        -   **Key** â€“ Specify the name of the key that you want to evaluate for compliance on Mac computers. Use the following syntax: */<dictionary\>/<keyname\>*.  
+        -   **Key** – Specify the name of the key that you want to evaluate for compliance on Mac computers. Use the following syntax: */<dictionary\>/<keyname\>*.  
   
             > [!IMPORTANT]  
             >  The key name is case sensitive and will not be evaluated if it differs from the key name on the Mac computer. Additionally, you cannot edit the key name once you have specified it. If you need to edit the key name, delete and then recreate the setting.  
   
     -   **Script** -  
   
-        -   **Discovery Script** â€“ Click **Add Script**, and then enter a shell script to assess settings on the Mac computer for compliance. Use the **echo** command in the shell script to return values to Configuration Manager for compliance. Configuration Manager uses the results returned in **STDOUT** to evaluate compliance.  
+        -   **Discovery Script** – Click **Add Script**, and then enter a shell script to assess settings on the Mac computer for compliance. Use the **echo** command in the shell script to return values to Configuration Manager for compliance. Configuration Manager uses the results returned in **STDOUT** to evaluate compliance.  
   
             > [!IMPORTANT]  
             >  Do not include the **reboot** command in the discovery script. Because the discovery script runs each time the client restarts, this will cause the Mac computer to continually restart.  
   
-        -   **Remediation script (optional)** â€“ Optionally, click **Add Script** and then enter a shell script that is used to remediate any noncompliant settings found on Mac client computers.  
+        -   **Remediation script (optional)** – Optionally, click **Add Script** and then enter a shell script that is used to remediate any noncompliant settings found on Mac client computers.  
   
             > [!IMPORTANT]  
             >  To ensure that you do not introduce formatting characters that the Mac computer cannot interpret, do not use copy and paste but type in the script.  
@@ -113,7 +95,7 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
     -   For a rule type of **Value**, specify the following information:  
   
-        -   The setting must comply with the following rule â€“ Select an operator and a value which is assessed for compliance with the selected setting. You can use the following operators:  
+        -   The setting must comply with the following rule – Select an operator and a value which is assessed for compliance with the selected setting. You can use the following operators:  
   
             -   **Equals**  
   
@@ -133,12 +115,12 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
             -   **None of** - In the text box, specify one entry on each line.  
   
-        -   **Remediate noncompliant rules when supported** â€“ Select this option if you want Configuration Manager to automatically remediate noncompliant rules.  
+        -   **Remediate noncompliant rules when supported** – Select this option if you want Configuration Manager to automatically remediate noncompliant rules.  
   
             > [!IMPORTANT]  
             >  You can only remediate noncompliant rules when the rule operator is set to **Equals**.  
   
-        -   **Report noncompliance if this setting instance is not found** â€“ The configuration item reports noncompliance if this setting is not found on the Mac computer.  
+        -   **Report noncompliance if this setting instance is not found** – The configuration item reports noncompliance if this setting is not found on the Mac computer.  
   
     -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
   

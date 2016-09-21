@@ -13,25 +13,7 @@ ms.assetid: 3e62ee23-9f27-4d92-99fe-6cbb2215f0f1
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Operations and maintenance for remote control in System Center Configuration Manager
 Use the information in this section to find out more about operations and maintenance for remote control in System Center Configuration Manager.  

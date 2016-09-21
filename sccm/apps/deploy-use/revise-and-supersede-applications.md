@@ -13,25 +13,7 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to revise and supersede applications in System Center Configuration Manager
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  

@@ -13,25 +13,7 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Diagnostics and usage data for System Center Configuration Manager
 System Center Configuration Manager collects diagnostics and usage data about itself which is used by Microsoft to improve the installation experience, quality, and security of future releases.  

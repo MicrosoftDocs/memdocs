@@ -13,25 +13,7 @@ ms.assetid: c262291a-80fe-47f3-a6d0-a605fe8b1f06
 caps.latest.revision: 20
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
 ||  
@@ -97,7 +79,7 @@ translation.priority.ht:
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Specify the amount of time a device can be idle (have no user input) before it is locked.|  
-|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
 |**Send password recovery PIN to Exchange Server**||  
   
@@ -229,7 +211,7 @@ translation.priority.ht:
 |Setting name|Details|  
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
-|**Wi-Fi tethering**|Letâ€™s users use their device as a mobile hotspot.|  
+|**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
 |**Wi-Fi hotspot reporting**||  
 |**Manual Wi-Fi configuration**||  
@@ -255,13 +237,13 @@ translation.priority.ht:
 3.  When you are finished, click **OK**.  
   
 ### Certificates  
- Letâ€™s you import certificates to install on mobile devices.  
+ Let’s you import certificates to install on mobile devices.  
   
  Click **Import**, and then specify the following values:  
   
--   **Certificate file** â€“ Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
+-   **Certificate file** – Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
   
--   **Destination store** â€“ Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
+-   **Destination store** – Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
   
     -   **Root**  
   
@@ -275,7 +257,7 @@ translation.priority.ht:
   
     -   **Peer**  
   
--   **Role** â€“ If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
+-   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
   
     -   **Mobile Operator**  
   
@@ -314,7 +296,7 @@ translation.priority.ht:
 |**Work Folders URL**|Configures the location of a Windows Server work folder that users can connect to from their device.|  
   
 ### Allowed and blocked apps (Windows Phone only)  
- Letâ€™s you specify a list of Intune managed apps that are compliant, or not compliant in your company. Windows Phone can allow, or block the installation of these apps.  
+ Let’s you specify a list of Intune managed apps that are compliant, or not compliant in your company. Windows Phone can allow, or block the installation of these apps.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
@@ -326,8 +308,8 @@ translation.priority.ht:
     |-------------|----------------------|  
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
     |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the appâ€™s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Edit**|Letâ€™s you edit the name, publisher and URL of the selected app.|  
+    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
@@ -357,7 +339,7 @@ translation.priority.ht:
   
 ### Enterprise Data Protection  
 
-With the increase of employee-owned devices in the enterprise, thereâ€™s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterpriseâ€™s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
 
 Enterprise data protection (EDP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. EDP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
 

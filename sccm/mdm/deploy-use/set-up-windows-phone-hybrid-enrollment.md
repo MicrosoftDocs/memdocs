@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 1973f960-19c3-4b85-be71-063375357a5b
 caps.latest.revision: 14
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune
 Before you can manage Windows Phone 8.1 and later mobile devices with Configuration Manager using Intune,  users must install the Company Portal app from the Windows Phone Store and then enroll it.  To enroll the Windows Phone 8.0 and to deploy company apps, including the Company Portal app, to Windows Phone 8.1 and later devices, you must get a Symantec Enterprise Mobile Code Signing certificate. You cannot use a certificate issued by your own certification authority because only the Symantec certificate is trusted by Windows Phone devices.  
@@ -89,16 +71,16 @@ Before you can manage Windows Phone 8.1 and later mobile devices with Configurat
     Once the request has been approved, you will receive an email containing instructions for importing certificates. Follow the instructions in the email to import the certificates.  
   
 5.  **Verify certificates imported**   
-    To verify that the certificates have been imported correctly, go to the **Certificates** snap-in, right-click **Certificates**, and select **Find Certificates**. In the **Contains** field, enter ‚ÄúSymantec‚Äù, and click **Find Now**. The certificates you imported should appear in the results.  
+    To verify that the certificates have been imported correctly, go to the **Certificates** snap-in, right-click **Certificates**, and select **Find Certificates**. In the **Contains** field, enter ìSymantecî, and click **Find Now**. The certificates you imported should appear in the results.  
   
      ![certmgr&#45;WinPhone&#95;cert](../../mdm/deploy-use/media/certmgr-WinPhone_cert.jpg "certmgr-WinPhone_cert")  
   
 6.  **Export a signing certificate**   
-    Having verified that the certificates are present, you can export the .pfx file to sign the company portal. Select the Symantec certificate with **Intended purpose** ‚Äúcode-signing.‚Äù Right-click the code-signing certificate and select **Export**.  
+    Having verified that the certificates are present, you can export the .pfx file to sign the company portal. Select the Symantec certificate with **Intended purpose** ìcode-signing.î Right-click the code-signing certificate and select **Export**.  
   
      ![certExport&#45;WinPhone](../../mdm/deploy-use/media/certExport-WinPhone.jpg "certExport-WinPhone")  
   
-     In the **Certificate Export Wizard**, select **Yes, export the private key**, and then click **Next**. Select **Personal Information Exchange ‚ÄìPKCS #12 (.PFX)**, and check **Include all the certificates in the certification path if possible**. Complete the wizard. For more information, see how to [export a certificate with the private key](http://go.microsoft.com/fwlink/?LinkID=203031).  
+     In the **Certificate Export Wizard**, select **Yes, export the private key**, and then click **Next**. Select **Personal Information Exchange ñPKCS #12 (.PFX)**, and check **Include all the certificates in the certification path if possible**. Complete the wizard. For more information, see how to [export a certificate with the private key](http://go.microsoft.com/fwlink/?LinkID=203031).  
   
 7.  **Download the Company Portal**   
     Download the [Intune Company Portal for Windows Phone 8.0](http://go.microsoft.com/fwlink/?LinkId=268440) from the Download Center . The default installation location is `C:\Program Files (x86)\Microsoft Corporation\Windows Intune Company Portal for Windows Phone`.  

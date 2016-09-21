@@ -13,25 +13,7 @@ ms.assetid: c378e0f7-be49-4b96-a46b-7c5d9638bd96
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client
 Use the System Center Configuration Manager**iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
@@ -91,7 +73,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br /><br /> (iOS only)|  
-|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
   
 ###  <a name="BKMK_Device"></a> Device  
  These settings apply to both iOS and Mac OS X devices.  
@@ -190,7 +172,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Open documents in unmanaged apps in other managed apps**|For use with apps managed by Configuration Manager application management policies.|  
   
 ###  <a name="BKMK_CompiOS"></a> Compliant and noncompliant apps (iOS)  
- Letâ€™s you specify a list of iOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+ Let’s you specify a list of iOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
@@ -206,11 +188,11 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
          To specify the URL, from the iTunes App Store, search for the app you want to use.  
   
-         Open the appâ€™s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.  
+         Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.  
   
          **Example:** Search the store for the **Microsoft Word for iPad** app. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Edit** - Letâ€™s you edit the name, publisher and URL of the selected app.  
+    -   **Edit** - Let’s you edit the name, publisher and URL of the selected app.  
   
     -   **Remove** - Deletes the selected app from the list.  
   
@@ -227,7 +209,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
 ###  <a name="BKMK_CompiOS1"></a> Compliant and noncompliant apps (Mac OS X)  
- Letâ€™s you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+ Let’s you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
@@ -251,7 +233,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
         >   
         >  The format for Bundle ID is **com.contoso.appname**  
   
-    -   **Edit** - Letâ€™s you edit the name, publisher and bundle ID of the selected app.  
+    -   **Edit** - Let’s you edit the name, publisher and bundle ID of the selected app.  
   
     -   **Remove** - Deletes the selected app from the list.  
   
@@ -318,9 +300,9 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
     -   **Select App** - Select the app that will be allowed to run when the device is in kiosk mode. No other apps will be allowed to run on the device. Choose from:  
   
-        -   **Managed App** â€“ Click Browse, then select a managed app.  
+        -   **Managed App** – Click Browse, then select a managed app.  
   
-        -   **Store App** â€“ specify the URL to an app on the app store then click **Get App ID** to populate the **App ID** field.  
+        -   **Store App** – specify the URL to an app on the app store then click **Get App ID** to populate the **App ID** field.  
   
          To find the app URL:  
   

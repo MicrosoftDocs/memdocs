@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 caps.latest.revision: 19
 author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for software updates in System Center Configuration Manager
 Before you implement software updates in a System Center 2012 Configuration Manager production environment, you must first plan for this implementation. Use the following sections in this topic to plan for software updates in your Configuration Manager hierarchy:  
@@ -86,38 +68,15 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 -   [Restart options for Windows 10 clients after software update installation](#BKMK_RestartOptions)
 
-## Capacity planning recommendations for software updates  
- You can use the following recommendations as a baseline that can help you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations that are listed in this topic depending on the following criteria: your specific networking environment, the hardware that you use to host the software update point site system, the number of clients that are installed, and the site system roles that are installed on the server.  
 
-###  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
- The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point, and it also depends on whether the software update point site system role co-exists with another site system role:  
-
--   The software update point can support up to 25,000 clients when WSUS runs on the software update point computer and the software update point co-exists with another site system role.  
-
--   The software update point can support up to 150,000 clients when the remote computer meets the WSUS requirements to support this number of clients.   
-    By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
-
-### Capacity planning for software updates objects  
- Use the following capacity information to plan for software updates objects.  
-
--   **Limit of 1000 software updates in a deployment**  
-
-     You must limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule, specify a criteria that limits the number of software updates that are returned. The automatic deployment rule fails when the criteria that you specify returns more than 1000 software updates. You can check the status of the automatic deployment rule from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, do not select more than 1000 updates to deploy.  
-
-     You must also limit the number of software updates to 1000 in a configuration baseline. For more information, see [How to create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
- The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB clusterâ€™ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
+ The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
 
 > [!IMPORTANT]  
 >  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  
 
-###  <a name="BKMK_SUP"></a> Software update points in Configuration Manager  
- You can add multiple software update points at a Configuration Manager primary site. The ability to have multiple software update points at a site provides fault tolerance without requiring the complexity of NLB. However, the failover that you receive with multiple software update points is not as robust as NLB for pure load balancing, but it is rather designed for fault-tolerance. Also, the failover design of the software update point is different than the pure randomization model that is used in the design for management points. Unlike in the design of management points, in the software update points there are client and network performance costs that are associated with switching to a new software update point. When the client switches to a new WSUS server to scan for software updates, the result is an increase in the catalog size and associated client-side and network performance demands. Therefore, the client preserves affinity with the last software update point for which it successfully scanned.  
 
- The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you added your software update points and initiated software updates synchronization, you can view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
-
- When a software update point fails, and that software update point is configured as the synchronization source for the other software update points at the site, you must manually remove the failed software update point and select a new software update point to use as the synchronization source. For more information about how to remove a software update point, see the [Remove the software update point site system role](../../sum/deploy-use/configure-software-updates.md#BKMK_RemoveSUP) section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
 
 ####  <a name="BKMK_SUPList"></a> Software update point list  
  Configuration Manager provides the client with a software update point list in the following scenarios: when a new client receives the policy to enable software updates, or when a client cannot contact its software update point and needs to switch to another software update point. The client randomly selects a software update point from the list, and it prioritizes the software update points that are in the same forest. Configuration Manager provides clients with a different list depending on the type of client.  

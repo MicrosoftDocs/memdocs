@@ -93,7 +93,7 @@ After a System Center Configuration Manager client is installed, it must join a 
      The client first checks Active Directory Domain Services and if it finds a Configuration Manager (current branch) site published, site assignment succeeds. If this is not successful (for example, the Configuration Manager (current branch) site is not published or the computer is a workgroup client), the client then checks for site information from its assigned management point.  
 
     > [!NOTE]  
-    >  You can assign a management point to the client during client installation by using the Client.msi property **SMSMP=<server_name>**.  
+    >  You can assign a management point to the client during client installation by using the Client.msi property **SMSMP=&lt;server_name>**.  
 
      If both these methods fail, site assignment fails and you must manually assign the client.  
 

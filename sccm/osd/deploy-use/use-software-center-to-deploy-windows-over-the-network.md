@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 caps.latest.revision: 5
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use Software Center to deploy Windows over the network with System Center Configuration Manager
 The task sequence to install an operating system in System Center Configuration Manager can be made available in  Software Center. You can deploy an  operating system to Software Center  in the following operating system deployment scenarios:  

@@ -13,25 +13,7 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for security in System Center Configuration Manager
 Use the information in this topic to help you plan for security in System Center Configuration Manager.  
@@ -51,7 +33,7 @@ Use the information in this topic to help you plan for security in System Center
  Configuration Manager can automatically generate self-signed certificates when PKI certificates are not available, and some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you do not have to take additional action. One possible exception is the site server signing certificate. The site server signing certificate is always self-signed, and it ensures that the client policies that clients download from the management point were sent from the site server and were not tampered with.  
 
 ### Planning for the site server signing certificate (self-signed)  
- Clients can securely obtain a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot obtain a copy of the site server signing certificate by using one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the clientâ€™s first communication with the site is from the Internet, because the management point is connected to an untrusted network and therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
+ Clients can securely obtain a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot obtain a copy of the site server signing certificate by using one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the client’s first communication with the site is from the Internet, because the management point is connected to an untrusted network and therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
 
  Scenarios when clients cannot securely obtain a copy of the site server certificate include the following:  
 
@@ -59,7 +41,7 @@ Use the information in this topic to help you plan for security in System Center
 
     -   The Active Directory schema is not extended for Configuration Manager.  
 
-    -   The clientâ€™s site is not published to Active Directory Domain Services.  
+    -   The client’s site is not published to Active Directory Domain Services.  
 
     -   The client is from an untrusted forest or a workgroup.  
 
@@ -69,7 +51,7 @@ Use the following procedure to install clients together with a copy of the site 
 
 ##### To install clients with a copy of the site server signing certificate  
 
-1.  Locate the site server signing certificate on the clientâ€™s primary site server. The certificate is stored in the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
+1.  Locate the site server signing certificate on the client’s primary site server. The certificate is stored in the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
 
 2.  Export the certificate without the private key, store the file securely, and only access it from a secured channel (for example, by using SMB signing or IPsec).  
 
@@ -101,7 +83,7 @@ If your IIS site systems use PKI client certificates for client authentication o
 -   You use PKI client certificates that do not chain to a root certification authority (CA) certificate that is trusted by management points.  
 
     > [!NOTE]  
-    >  When you issue client PKI certificates from the same CA hierarchy that issues the server certificates that you use for management points, you do not have to specify this root CA certificate. However, if you use multiple CA hierarchies and you are not sure whether they trust each other, import the root CA for the clientsâ€™ CA hierarchy.  
+    >  When you issue client PKI certificates from the same CA hierarchy that issues the server certificates that you use for management points, you do not have to specify this root CA certificate. However, if you use multiple CA hierarchies and you are not sure whether they trust each other, import the root CA for the clients’ CA hierarchy.  
 
 If you must import root CA certificates for Configuration Manager, export them from the issuing CA or from the client computer. If you export the certificate from the issuing CA that is also the root CA, ensure that the private key is not exported. Store the exported certificate file in a secured location to prevent tampering. You must be able to access the file when you configure the site, so that if you access the file over the network, ensure that the communication is protected from tampering by using SMB signing or IPsec.  
 
@@ -109,7 +91,7 @@ If any of the root CA certificates that you import are renewed, you must import 
 
 These imported root CA certificates and the root CA certificate of each management point create the certificate issuers list that Configuration Manager computers use in the following ways:  
 
--   When clients connect to management points, the management point verifies that the client certificate chains to a trusted root certificate in the siteâ€™s certificate issuers list. If it does not, the certificate is rejected, and the PKI connection fails.  
+-   When clients connect to management points, the management point verifies that the client certificate chains to a trusted root certificate in the site’s certificate issuers list. If it does not, the certificate is rejected, and the PKI connection fails.  
 
 -   When clients select a PKI certificate, if they have a certificate issuers list, they select a certificate that chains to a trusted root certificate in the certificate issuers list. If there is no match, the client does not select a PKI certificate. For more information about the client certificate process, see the [Planning for PKI client certificate selection](#BKMK_PlanningForClientCertificateSelection) section in this topic.  
 
@@ -248,7 +230,7 @@ Clients can automatically retrieve the public copy of the trusted root key by us
 
 -   Clients are installed by using client push.  
 
-If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attackerâ€™s management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients by using the trusted root key.  
+If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker’s management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients by using the trusted root key.  
 
 Use the following procedures to pre-provision and verify the trusted root key for a Configuration Manager client:  
 
