@@ -13,25 +13,7 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 caps.latest.revision: 17
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  
@@ -97,7 +79,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Number of passwords remembered**|Prevents re-using previous passwords.|  
 |**Number of failed logon attempts before a device is wiped**|Wipes the device if the login fails this number of times.|  
 |**Idle time before mobile device is locked**|Specifies how many minutes the device must be inactive before it is automatically locked.|  
-|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
   
 ###  <a name="BKMK_Device"></a> Device  
   
@@ -137,7 +119,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 ### Enterprise Data Protection
 
-With the increase of employee-owned devices in the enterprise, thereâ€™s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterpriseâ€™s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
 
 Enterprise data protection (EDP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. EDP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
 

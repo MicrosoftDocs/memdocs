@@ -12,24 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: 16
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager
 
@@ -123,7 +106,7 @@ translation.priority.ht:
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure â€˜max text repl size (B)â€™, 2147483647
+    >     Exec sp_configure ‘max text repl size (B)’, 2147483647
     >     reconfigure
 
 

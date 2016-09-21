@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prerequisites for certificate profiles in System Center Configuration Manager
 Certificate profiles in System Center Configuration Manager have external dependencies and dependencies in the product.  
@@ -40,7 +22,7 @@ Certificate profiles in System Center Configuration Manager have external depend
 |Dependency|More information|  
 |----------------|----------------------|  
 |An enterprise issuing certification authority (CA) that is running Active Directory Certificate Services (AD CS).<br /><br /> To revoke certificates the computer account of the site server at the top of the hierarchy requires *Issue and Manage Certificates* rights for each certificate template used by a certificate profile in Configuration Manager. Alternatively, grant Certificate Manager permissions to grant permissions on all certificate templates used by that CA<br /><br /> Manager approval for certificate requests is supported. However, the certificate templates that are used to issue certificates must be configured for **Supply in the request** for the certificate subject so that System Center Configuration Manager can automatically supply this value.|For more information about Active Directory Certificate Services, see your Windows Server documentation.<br /><br /> For Windows Server 2012: [Active Directory Certificate Services Overview](http://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)|  
-|The Network Device Enrollment Service role service for Active Directory Certificate Services, running on Windows Server 2012 R2.<br /><br /> In addition:<br /><br /> Port numbers other than TCP 443 (for HTTPS) or TCP 80 (for HTTP) are not supported for the communication between the client and the Network Device Enrollment Service.<br /><br /> The server that is running the Network Device Enrollment Service must be on a different server from the issuing CA.|System Center Configuration Manager communicates with the Network Device Enrollment Service in Windows Server 2012 R2 to generate and verify Simple Certificate Enrollment Protocol (SCEP) requests.<br /><br /> If you will issue certificates to users or devices that connect from the Internet, such as mobile devices that are managed by Microsoft Intune, those devices must be able to access the server that runs the Network Device Enrollment Service from the Internet. For example, install the server in a perimeter network (also known as a DMZ, demilitarized zone, and screened subnet).<br /><br /> If you have a firewall between the server that is running the Network Device Enrollment Service and the issuing CA, you must configure the firewall to allow the communication traffic (DCOM) between the two servers. This firewall requirement also applies to the server running the System Center Configuration Manager site server and the issuing CA, so that System Center Configuration Manager can revoke certificates.<br /><br /> If the Network Device Enrollment Service is configured to require SSLâ€”a security best practiceâ€”make sure that connecting devices can access the certificate revocation list (CRL) to validate the server certificate.<br /><br /> For more information about the Network Device Enrollment Service in Windows Server 2012 R2, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).|  
+|The Network Device Enrollment Service role service for Active Directory Certificate Services, running on Windows Server 2012 R2.<br /><br /> In addition:<br /><br /> Port numbers other than TCP 443 (for HTTPS) or TCP 80 (for HTTP) are not supported for the communication between the client and the Network Device Enrollment Service.<br /><br /> The server that is running the Network Device Enrollment Service must be on a different server from the issuing CA.|System Center Configuration Manager communicates with the Network Device Enrollment Service in Windows Server 2012 R2 to generate and verify Simple Certificate Enrollment Protocol (SCEP) requests.<br /><br /> If you will issue certificates to users or devices that connect from the Internet, such as mobile devices that are managed by Microsoft Intune, those devices must be able to access the server that runs the Network Device Enrollment Service from the Internet. For example, install the server in a perimeter network (also known as a DMZ, demilitarized zone, and screened subnet).<br /><br /> If you have a firewall between the server that is running the Network Device Enrollment Service and the issuing CA, you must configure the firewall to allow the communication traffic (DCOM) between the two servers. This firewall requirement also applies to the server running the System Center Configuration Manager site server and the issuing CA, so that System Center Configuration Manager can revoke certificates.<br /><br /> If the Network Device Enrollment Service is configured to require SSL—a security best practice—make sure that connecting devices can access the certificate revocation list (CRL) to validate the server certificate.<br /><br /> For more information about the Network Device Enrollment Service in Windows Server 2012 R2, see [Using a Policy Module with the Network Device Enrollment Service](http://go.microsoft.com/fwlink/p/?LinkId=328657).|  
 |If the issuing CA runs Windows Server 2008 R2, this server requires a hotfix for SCEP renewal requests.|If the hotfix is not already installed on the issuing CA computer, install the hotfix. For more information, see article [2483564: Renewal request for an SCEP certificate fails in Windows Server 2008 R2 if the certificate is managed by using NDES](http://go.microsoft.com/fwlink/?LinkId=311945) in the Microsoft Knowledge Base.|  
 |A PKI client authentication certificate and exported root CA certificate.|This certificate authenticates the server that is running the Network Device Enrollment Service to System Center Configuration Manager.<br /><br /> For more information, see [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).|  
 |Supported device operating systems.|You can deploy certificate profiles to devices that run iOS, Windows 8.1, Windows RT 8.1, Windows 10, and Android operating systems.|  

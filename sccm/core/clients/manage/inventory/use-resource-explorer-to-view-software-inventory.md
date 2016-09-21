@@ -13,25 +13,7 @@ ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to use Resource Explorer to view software inventory in System Center Configuration Manager
 Use Resource Explorer in System Center Configuration Manager to view information about software inventory that has been collected from computers in your hierarchy.  
@@ -41,15 +23,15 @@ Use Resource Explorer in System Center Configuration Manager to view information
 
  Resource Explorer in Configuration Manager contains the following sections related to software inventory:  
 
--   **Software** â€“ The software section of Resource Explorer contains four sections:  
+-   **Software** – The software section of Resource Explorer contains four sections:  
 
-    -   **Collected Files** â€“ Displays information about files that were collected during software inventory.  
+    -   **Collected Files** – Displays information about files that were collected during software inventory.  
 
-    -   **File Details** â€“ Displays information about files that were inventoried during software inventory that are not associated with a specific product or manufacturer.  
+    -   **File Details** – Displays information about files that were inventoried during software inventory that are not associated with a specific product or manufacturer.  
 
-    -   **Last Software Scan** â€“ Displays the date and time of the last software inventory and file collection that was run on the client computer.  
+    -   **Last Software Scan** – Displays the date and time of the last software inventory and file collection that was run on the client computer.  
 
-    -   **Product Details** â€“ Displays information about the software products that were inventoried by software inventory, grouped by manufacturer.  
+    -   **Product Details** – Displays information about the software products that were inventoried by software inventory, grouped by manufacturer.  
 
 ## To run Resource Explorer from the Configuration Manager console  
  Use the following procedure to run Resource Explorer in Configuration Manager.  

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 5d7cbbb3-d92a-44e5-a208-fd28d68c99c7
 caps.latest.revision: 4
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Remote control technical reference for System Center Configuration Manager
 Use the following topics to help you find information about remote control in System Center Configuration Manager.  

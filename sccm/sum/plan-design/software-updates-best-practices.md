@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 caps.latest.revision: 6
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Best practices for software updates in System Center Configuration Manager
 This topic includes best practices for software updates in System Center Configuration Manager. The information is sorted into best practices for initial installation and best practices for ongoing operations.  
@@ -58,7 +40,7 @@ This topic includes best practices for software updates in System Center Configu
 ### Limit software updates to 1000 in a single software update deployment  
  You must limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule, verify that the criteria that you specify does not result in more than 1000 software updates. When you manually deploy software updates, do not select more than 1000 updates to deploy.  
   
-### Create a new software update group each time an automatic deployment rule runs for ‚ÄúPatch Tuesday‚Äù and for general deployment  
+### Create a new software update group each time an automatic deployment rule runs for ìPatch Tuesdayî and for general deployment  
  There is a limit of 1000 software updates for a software update deployment. When you create an automatic deployment rule, you specify whether to use an existing update group or create a new update group each time the rule runs. When you specify criteria in an automatic deployment rule that results in multiple software updates and the rule runs on a recurring schedule, specify to create a new software update group each time the rule runs. This will prevent the deployment from surpassing the limit of 1000 software updates per deployment.  
   
 ### Use an existing software update group for automatic deployment rules for Endpoint Protection definition updates  

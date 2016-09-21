@@ -13,28 +13,10 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 caps.latest.revision: 14
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Choose a device management solution for System Center Configuration Manager
-System Center Configuration Manager offers different solutions for managing PCs, servers, and devices. You can choose the solution thatâ€™s right for you based on the device platforms you need to manage and the management functionality you need.  
+System Center Configuration Manager offers different solutions for managing PCs, servers, and devices. You can choose the solution that’s right for you based on the device platforms you need to manage and the management functionality you need.  
   
  In this article:  
   

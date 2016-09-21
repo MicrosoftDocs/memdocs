@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
 caps.latest.revision: 8
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for and configure compliance settings in System Center Configuration Manager
 Before you start working with System Center Configuration Manager compliance settings, there are a few prerequisites you need to know about, and some configuring tasks you'll need to perform.  

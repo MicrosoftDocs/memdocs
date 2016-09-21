@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 caps.latest.revision: 6
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Linux and UNIX clients component services and commands for System Center Configuration Manager
 
@@ -47,7 +29,7 @@ translation.priority.ht:
 |----------------------|--------------|  
 |Universal Agent<br /><br /> RHEL 4 and SLES 9|Start: **/etc/init d/ccmexecd start**<br /><br /> Stop: **/etc/init d/ccmexecd stop**<br /><br /> Restart: **/etc/init d/ccmexecd restart**|  
 |Solaris 9|Start: **/etc/init d/ccmexecd start**<br /><br /> Stop: **/etc/init d/ccmexecd stop**<br /><br /> Restart: **/etc/init d/ccmexecd restart**|  
-|Solaris 10|Start:<br /><br /> **svcadm enable â€“s svc:/application/management/omiserver**<br /><br /> **svcadm enable â€“s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable â€“s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable â€“s svc:/application/management/omiserver**|  
-|Solaris 11|Start:<br /><br /> **svcadm enable â€“s svc:/application/management/omiserver**<br /><br /> **svcadm enable â€“s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable â€“s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable â€“s svc:/application/management/omiserver**|  
-|AIX|Start:<br /><br /> **startsrc â€“s omiserver**<br /><br /> **startsrc â€“s ccmexec**<br /><br /> Stop:<br /><br /> **stopsrc â€“s ccmexec**<br /><br /> **stopsrc â€“s omiserver**|  
+|Solaris 10|Start:<br /><br /> **svcadm enable –s svc:/application/management/omiserver**<br /><br /> **svcadm enable –s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable –s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable –s svc:/application/management/omiserver**|  
+|Solaris 11|Start:<br /><br /> **svcadm enable –s svc:/application/management/omiserver**<br /><br /> **svcadm enable –s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable –s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable –s svc:/application/management/omiserver**|  
+|AIX|Start:<br /><br /> **startsrc –s omiserver**<br /><br /> **startsrc –s ccmexec**<br /><br /> Stop:<br /><br /> **stopsrc –s ccmexec**<br /><br /> **stopsrc –s omiserver**|  
 |HP-UX|Start: **/sbin/init.d/ccmexecd start**<br /><br /> Stop: **/sbin/init.d/ccmexecd stop**<br /><br /> Restart: **/sbin/init.d/ccmexecd restart**|  

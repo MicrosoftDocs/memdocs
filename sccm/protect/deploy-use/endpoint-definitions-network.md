@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share for Configuration Manager

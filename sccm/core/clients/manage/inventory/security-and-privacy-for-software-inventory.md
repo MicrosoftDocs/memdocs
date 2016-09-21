@@ -13,25 +13,7 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for software inventory in System Center Configuration Manager
 This topic contains security and privacy information for software inventory in System Center Configuration Manager.  

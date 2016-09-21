@@ -13,25 +13,7 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Packages and programs in System Center Configuration Manager
 System Center Configuration Manager continues to support packages and programs that were used in Configuration Manager 2007. A deployment that uses packages and programs might be more suitable than a deployment that uses an application when you deploy any of the following:  
@@ -40,7 +22,7 @@ System Center Configuration Manager continues to support packages and programs t
   
 -   Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive.  
   
--   ‚ÄúOne-off‚Äù scripts that do not need to be continually monitored.  
+-   ìOne-offî scripts that do not need to be continually monitored.  
   
 -   Scripts that run on a recurring schedule and cannot use global evaluation.  
   
@@ -124,11 +106,11 @@ System Center Configuration Manager continues to support packages and programs t
   
             -   **Normal** - The program runs in the normal mode based on system and program defaults. This is the default mode.  
   
-            -   **Minimized** ‚Äì The program runs minimized on client devices. Users might see installation activity in the notification area or taskbar.  
+            -   **Minimized** ñ The program runs minimized on client devices. Users might see installation activity in the notification area or taskbar.  
   
-            -   **Maximized** ‚Äì The program runs maximized on client devices. Users will see all installation activity.  
+            -   **Maximized** ñ The program runs maximized on client devices. Users will see all installation activity.  
   
-            -   **Hidden** ‚Äì The program runs hidden on client devices. Users will not see any installation activity.  
+            -   **Hidden** ñ The program runs hidden on client devices. Users will not see any installation activity.  
   
         -   **Program can run** - Specify whether the program can run only when a user is logged on, run only when no user is logged on, or run regardless of whether  a user is logged on to the client computer.  
   
@@ -148,9 +130,9 @@ System Center Configuration Manager continues to support packages and programs t
   
     3.  On the **Requirements** page of the Create Package and Program Wizard, specify the following information:  
   
-        -   **Run another program first** ‚Äì You can use this setting to identify a package and program that will be run before this package and program will be run.  
+        -   **Run another program first** ñ You can use this setting to identify a package and program that will be run before this package and program will be run.  
   
-        -   **Platform requirements** ‚Äì Select **This program can run on any platform** or select **This program can run only on specified platforms** and then choose the operating systems that clients must be running to be able to install the package and program.  
+        -   **Platform requirements** ñ Select **This program can run on any platform** or select **This program can run only on specified platforms** and then choose the operating systems that clients must be running to be able to install the package and program.  
   
         -   **Estimated disk space** - Specify the amount of disk space that the software program requires to be able to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, units for the value must also be specified.  
   
@@ -185,9 +167,9 @@ System Center Configuration Manager continues to support packages and programs t
   
         -   **Command Line** - Enter the command line to use to start this program, or click **Browse** to browse to the file location.  
   
-        -   **Run command line in download folder** ‚Äì Select this option to run the program from the previously specified download folder.  
+        -   **Run command line in download folder** ñ Select this option to run the program from the previously specified download folder.  
   
-        -   **Run command line from this folder** ‚Äì Select this option to specify a different folder from which to run the program.  
+        -   **Run command line from this folder** ñ Select this option to specify a different folder from which to run the program.  
   
     3.  On the **Requirements** page of the wizard, specify the following information:  
   
@@ -245,7 +227,7 @@ System Center Configuration Manager continues to support packages and programs t
   
         -   **Required** - The package and program is deployed automatically, according to the configured schedule. However, a user can track the package and program deployment status and install it before the deadline by using Software Center.  
   
-    -   **Send wake-up packets** ‚Äì If the deployment purpose is set to **Required** and this option is selected, a wake-up packet will be sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
+    -   **Send wake-up packets** ñ If the deployment purpose is set to **Required** and this option is selected, a wake-up packet will be sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
   
     -   Select **Allow clients on a metered Internet connection to download content after  the installation deadline, which might incur additional costs** if required.  
   
@@ -267,11 +249,11 @@ System Center Configuration Manager continues to support packages and programs t
   
 9. On the **User Experience** page of the wizard, specify the following information:  
   
-    -   **Allow users to run the program independently of assignments** ‚Äì If enabled, users can install this software from Software Center regardless of any scheduled installation time.  
+    -   **Allow users to run the program independently of assignments** ñ If enabled, users can install this software from Software Center regardless of any scheduled installation time.  
   
-    -   **Software installation** ‚Äì Allows the software to be installed outside of any configured maintenance windows.  
+    -   **Software installation** ñ Allows the software to be installed outside of any configured maintenance windows.  
   
-    -   **System restart (if required to complete the installation)** ‚Äì If the software installation requires a device restart to complete, allow this to happen outside of any configured maintenance windows.  
+    -   **System restart (if required to complete the installation)** ñ If the software installation requires a device restart to complete, allow this to happen outside of any configured maintenance windows.  
   
     -   **Embedded Devices** - When you deploy packages and programs to Windows Embedded devices that are write filter enabled, you can specify to install the packages and programs on the temporary overlay and commit changes later, or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
   
@@ -280,11 +262,11 @@ System Center Configuration Manager continues to support packages and programs t
   
 10. On the **Distribution Points** page of the wizard, specify the following information:  
   
-    -   **Deployment options** ‚Äì Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  
+    -   **Deployment options** ñ Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  
   
-    -   **Allow clients to share content with other clients on the same subnet** ‚Äì Select this option to reduce load on the network by allowing clients to download content from other clients on the network that already downloaded and cached the content. This option utilizes Windows BranchCache and can be used on computers that run Windows Vista SP2 and later.  
+    -   **Allow clients to share content with other clients on the same subnet** ñ Select this option to reduce load on the network by allowing clients to download content from other clients on the network that already downloaded and cached the content. This option utilizes Windows BranchCache and can be used on computers that run Windows Vista SP2 and later.  
   
-    -   **Allow clients to use a fallback source location for content** ‚Äì If enabled, clients can search other distribution points in the hierarchy for required content if this is not available on the specified distribution point or distribution point groups.  
+    -   **Allow clients to use a fallback source location for content** ñ If enabled, clients can search other distribution points in the hierarchy for required content if this is not available on the specified distribution point or distribution point groups.  
   
 11. On the **Summary** page of the wizard, review the actions that will be taken and then complete the wizard.  
   
@@ -296,7 +278,7 @@ System Center Configuration Manager continues to support packages and programs t
 ##  <a name="BKMK_Monitor"></a> How to monitor packages and programs  
  To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
   
- Packages and programs also includes a number of built-in reports, which allow you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution ‚Äì Packages and Programs** and **Software Distribution ‚Äì Package and Program Deployment Status**.  
+ Packages and programs also includes a number of built-in reports, which allow you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution ñ Packages and Programs** and **Software Distribution ñ Package and Program Deployment Status**.  
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   

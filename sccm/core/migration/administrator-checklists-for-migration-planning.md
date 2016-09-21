@@ -13,25 +13,7 @@ ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Administrator checklists for migration planning in System Center Configuration Manager
 Use the following administrator checklists to help you plan your migration strategy to System Center Configuration Manager:  

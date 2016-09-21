@@ -13,25 +13,7 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 caps.latest.revision: 11
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy virtual applications.  
@@ -84,11 +66,11 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   **Sequencing** - Sequencing is the process of converting an application into a virtual application by using the App-V Sequencer.  
   
--   **Create Configuration Manager applications** â€“ Use the Create Deployment Type Wizard to import the sequenced application into a Configuration Manager deployment type that you can then add to an application. You can also create virtual environments that allow multiple virtual applications to share settings.  
+-   **Create Configuration Manager applications** – Use the Create Deployment Type Wizard to import the sequenced application into a Configuration Manager deployment type that you can then add to an application. You can also create virtual environments that allow multiple virtual applications to share settings.  
   
--   **Distribution** â€“ Distribution is the process of making App-V applications available on Configuration Manager distribution points.  
+-   **Distribution** – Distribution is the process of making App-V applications available on Configuration Manager distribution points.  
   
--   **Deployment** â€“ Deployment is the process of making the application available on client computers. This is referred to as streaming in an App-V full infrastructure. Configuration Manager provides two options for the deployment of virtual applications: **streaming** and **download and execute**.  
+-   **Deployment** – Deployment is the process of making the application available on client computers. This is referred to as streaming in an App-V full infrastructure. Configuration Manager provides two options for the deployment of virtual applications: **streaming** and **download and execute**.  
   
 ##  <a name="BKMK_Delivery"></a> Configuration Manager virtual application delivery methods  
  Configuration Manager supports two methods for delivery of virtual applications to clients: streaming delivery and local delivery (download and execute):  

@@ -13,30 +13,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Link users and devices with user device affinity in System Center Configuration Manager
-User device affinity in System Center Configuration Manager associates a user with one or more devices. This can eliminate the need to know the names of a userâ€™s devices in order to deploy an application to that user. Instead of deploying the application to each of the userâ€™s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
+User device affinity in System Center Configuration Manager associates a user with one or more devices. This can eliminate the need to know the names of a user’s devices in order to deploy an application to that user. Instead of deploying the application to each of the user’s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
   
- You can define primary devices that are typically the devices that users use on a daily basis to perform their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Office Visio, you can install it on the userâ€™s primary device by using a Windows Installer deployment. However, on a device that is not a primary device, you might deploy Microsoft Office Visio as a virtual application. You can also use user device affinity to predeploy software on a userâ€™s device when they are not logged in so that when the user logs on, the app is already installed and ready to run.  
+ You can define primary devices that are typically the devices that users use on a daily basis to perform their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Office Visio, you can install it on the user’s primary device by using a Windows Installer deployment. However, on a device that is not a primary device, you might deploy Microsoft Office Visio as a virtual application. You can also use user device affinity to predeploy software on a user’s device when they are not logged in so that when the user logs on, the app is already installed and ready to run.  
   
  You must manage user device affinity information for computers. User device affinities are automatically managed by Configuration Manager for the mobile devices that it enrolls.  
   
@@ -97,14 +79,14 @@ User device affinity in System Center Configuration Manager associates a user wi
   
     -   **User device affinity threshold (minutes)** - Specify the number of minutes of usage before a user device affinity is created.  
   
-    -   **User device affinity threshold (days)** â€“ Specify the number of days over which the usage based affinity threshold is measured.  
+    -   **User device affinity threshold (days)** – Specify the number of days over which the usage based affinity threshold is measured.  
   
-    -   **Automatically configure user device affinity from usage data** â€“ From the drop-down list, select **True** to enable the site to automatically create user device affinities. If you select **False**, then you must approve all user device affinity assignments.  
+    -   **Automatically configure user device affinity from usage data** – From the drop-down list, select **True** to enable the site to automatically create user device affinities. If you select **False**, then you must approve all user device affinity assignments.  
   
     > [!TIP]  
     >  **Example:** if **User device affinity threshold (minutes)** is specified as **60** minutes and **User device affinity threshold (days)** is specified at **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
     >   
-    >  After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the userâ€™s activity for the device falls below the configured thresholds, then the user device affinity will be removed. Configure **User device affinity threshold (days)** to a value of at least **7** days to avoid situations where an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
+    >  After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the configured thresholds, then the user device affinity will be removed. Configure **User device affinity threshold (days)** to a value of at least **7** days to avoid situations where an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
   
 ## Import user device affinities from a file  
  You can import a file that contains user device affinities to enable you to create many relationships at one time. For this procedure, the subject devices must have been discovered and exist as resources in the Configuration Manager database, otherwise this procedure will fail.  
@@ -119,9 +101,9 @@ User device affinity in System Center Configuration Manager associates a user wi
   
 4.  On the **Choose Mapping** page of the **Import User Device Affinity Wizard**, specify the following information:  
   
-    -   **File name** â€“ Specify a comma-separated values (.csv) file that contains a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on a separate line separated by a comma. Use the format *<Domain\>\\<user name\>*,*<device NetBIOS name\>*.  
+    -   **File name** – Specify a comma-separated values (.csv) file that contains a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on a separate line separated by a comma. Use the format *<Domain\>\\<user name\>*,*<device NetBIOS name\>*.  
   
-    -   **This file has column headings for reference purposes** â€“ If the comma-separated values file has a top-row header line, select this option and the header line will be ignored during the import.  
+    -   **This file has column headings for reference purposes** – If the comma-separated values file has a top-row header line, select this option and the header line will be ignored during the import.  
   
 5.  If the file you are importing contains more than two items on each line, you can use **Column** and **Assign** to specify which columns represent users and devices and which columns to ignore during import.  
   

@@ -13,25 +13,7 @@ ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Get ready for System Center Configuration Manager
 Use the information in the following topics when you're ready to start planning your System Center Configuration Manager deployment:  

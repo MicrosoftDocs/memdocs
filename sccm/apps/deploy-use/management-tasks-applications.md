@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 caps.latest.revision: 8
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Management tasks for System Center Configuration Manager applications
 Use the information in the following sections to help you manage System Center Configuration Manager applications and deployment types.  
@@ -63,7 +45,7 @@ Use the information in the following sections to help you manage System Center C
 |**Simulate Deployment**|Opens the **Simulate Application Deployment Wizard** where you can test the results of an application deployment to computers without installing or uninstalling the application.<br /><br /> See [How to simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Deploy**|Opens the **Deploy Software Wizard** where you can deploy the selected application to collections of computers in your hierarchy.<br /><br /> See [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).|  
 |**Distribute Content**|Opens the **Distribute Content Wizard** where you can copy the content for the selected application to distribution points in your hierarchy.<br /><br /> See [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
-|**View Relationships**|Displays a graphical diagram showing the relationships of the selected applications to other applications. Choose from one of the following:<br /><br /> - <br />                    **Dependency** â€“ Displays the applications that are dependent on, and the applications that the selected application depends on.<br /><br /> - <br />                    **Supersedence** â€“ Displays the applications that are superseded, and applications that the selected item is superseded by.<br /><br /> - <br />                    **Global Conditions** â€“ Displays the global conditions that are referenced by this application.<br /><br /> See [How to revise and supersede applications in System Center Configuration Manager](../../apps/deploy-use/revise-and-supersede-applications.md) and [How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md).|  
+|**View Relationships**|Displays a graphical diagram showing the relationships of the selected applications to other applications. Choose from one of the following:<br /><br /> - <br />                    **Dependency** – Displays the applications that are dependent on, and the applications that the selected application depends on.<br /><br /> - <br />                    **Supersedence** – Displays the applications that are superseded, and applications that the selected item is superseded by.<br /><br /> - <br />                    **Global Conditions** – Displays the global conditions that are referenced by this application.<br /><br /> See [How to revise and supersede applications in System Center Configuration Manager](../../apps/deploy-use/revise-and-supersede-applications.md) and [How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md).|  
   
 ##  Manage deployment types  
  In the **Software Library** workspace, expand **Application Management**, select **Applications**, select the application that contains the deployment type that you want to manage, in the details pane, click the **Deployment Types** tab, select the deployment type that you want to manage and then select a management task.  

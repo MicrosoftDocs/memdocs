@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 caps.latest.revision: 8
 author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Software metering in System Center Configuration Manager
@@ -104,7 +86,7 @@ Software metering has no external dependencies, only dependencies within the pro
   
     -   **Description** - An optional description for the software metering rule.  
   
-    -   **Apply this software metering rule to the following clients** â€“ Select whether you want to apply the software metering rule to all clients in the hierarchy or to the clients that are assigned to the site specified in the **Site** list.  
+    -   **Apply this software metering rule to the following clients** – Select whether you want to apply the software metering rule to all clients in the hierarchy or to the clients that are assigned to the site specified in the **Site** list.  
   
 5.  To continue, click **Next**.  
   

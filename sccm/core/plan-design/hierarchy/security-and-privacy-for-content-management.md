@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
 caps.latest.revision: 8
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for content management for System Center Configuration Manager
 This topic contains security and privacy information for content management in System Center Configuration Manager. Read it in conjunction with the following topics:  

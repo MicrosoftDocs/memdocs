@@ -13,36 +13,18 @@ ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
 caps.latest.revision: 17
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Extend the Active Directory schema for System Center Configuration Manager
 When you extend the Active Directory schema for System Center Configuration Manager you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
 
  We recommend that you use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and configuring clients, and enables clients to efficiently locate resources such as content servers and additional services provided by the various Configuration Manager site system roles.  
 
--   If youâ€™re not familiar with what extended schema provides a Configuration Manager deployment,  you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
+-   If you’re not familiar with what extended schema provides a Configuration Manager deployment,  you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
 
--   When you donâ€™t use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
+-   When you don’t use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
 
--   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you donâ€™t need to do more. The schema extensions are unchanged, and will already be in place.  
+-   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don’t need to do more. The schema extensions are unchanged, and will already be in place.  
 
 Extending the schema is a one-time action for any forest. To extend, and then make use of the extended Active Directory schema involves the following:  
 
@@ -89,7 +71,7 @@ Extending the schema for Configuration Manager requires you to:
 
 1.  Use an account that has the **Create All Child Objects** permission on the **System** container in Active Directory Domain Services.  
 
-2.  Run **ADSI Edit** (adsiedit.msc), and connect to the site serverâ€™s domain.  
+2.  Run **ADSI Edit** (adsiedit.msc), and connect to the site server’s domain.  
 
 3.  Create the container:  
 
@@ -109,7 +91,7 @@ Extending the schema for Configuration Manager requires you to:
     -   Select the **Security** tab, click **Add**, and then add the site server computer account with the  
         **Full Control** permission.  
 
-    -   Click **Advanced**, select the site serverâ€™s computer account, and then click **Edit**.  
+    -   Click **Advanced**, select the site server’s computer account, and then click **Edit**.  
 
     -   In the **Apply onto** list, select **This object and all descendant objects**.  
 

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 309b7936-a5ca-45c5-8bef-10424eb2e091
 caps.latest.revision: 13
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Protect apps using mobile application management policies in System Center Configuration Manager
 System Center Configuration Manager application management policies let you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all web links inside a managed browser. App management policies support:  
@@ -53,7 +35,7 @@ System Center Configuration Manager application management policies let you modi
   
 -   **Use a policy managed app** (Android and iOS): Has the App SDK built-in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
   
--   **Use a ‚Äòwrapped‚Äô app** ‚Äì (Android and iOS): Apps that are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx).  
+-   **Use a ëwrappedí app** ñ (Android and iOS): Apps that are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx).  
   
 ## Create and deploy an app with a mobile application management policy  
   
@@ -151,8 +133,8 @@ System Center Configuration Manager application management policies let you modi
     |**Prevent Android backups** or **Prevent iTunes and iCloud backups**|Disables the backup of any information from the app.|  
     |**Allow app to transfer data to other apps**|Specifies the apps that this app can send data to. You can choose to not allow data transfer to any app, only allow transfer to other restricted apps, or to allow transfer to any app.<br /><br /> For iOS devices, to prevent document transfer between managed and unmanaged apps, you must also configure and deploy a mobile device security policy that disables the setting **Allow managed documents in other unmanaged apps**.<br /><br /> If you select to only allow transfer to other restricted apps, the Intune PDF and image viewers (if deployed) will be used to open content of the respective types.|  
     |**Allow app to receive data from other apps**|Specifies the apps that this app can receive data from. You can choose to not allow data transfer from any app, only allow transfer from other restricted apps, or allow transfer from any app.|  
-    |**Prevent ‚ÄúSave As‚Äù**|Disables use of the **Save As** option in any app that uses this policy.|  
-    |**Restrict cut, copy and paste with other apps**|Specifies how cut, copy, and paste operations can be used with the app. Choose from:<br /><br /> **Blocked** ‚Äì Do not allow cut, copy, and paste operations between this app and other apps.<br /><br /> **Policy Managed Apps** ‚Äì Only allow cut, copy, and paste operations between this app and other restricted apps.<br /><br /> **Policy Managed Apps with Paste In** ‚Äì Allow data cut or copied from this app only to be pasted into other restricted apps. Allow data cut or copied from any app to be pasted into this app.<br /><br /> **Any App** ‚Äì No restrictions to cut, copy, and paste operations to, or from this app.|  
+    |**Prevent ìSave Asî**|Disables use of the **Save As** option in any app that uses this policy.|  
+    |**Restrict cut, copy and paste with other apps**|Specifies how cut, copy, and paste operations can be used with the app. Choose from:<br /><br /> **Blocked** ñ Do not allow cut, copy, and paste operations between this app and other apps.<br /><br /> **Policy Managed Apps** ñ Only allow cut, copy, and paste operations between this app and other restricted apps.<br /><br /> **Policy Managed Apps with Paste In** ñ Allow data cut or copied from this app only to be pasted into other restricted apps. Allow data cut or copied from any app to be pasted into this app.<br /><br /> **Any App** ñ No restrictions to cut, copy, and paste operations to, or from this app.|  
     |**Require simple PIN for access**|Requires the user to enter a PIN number which they specify to use this app. The user will be asked to set this up the first time they run the app.|  
     |**Number of attempts before PIN reset**|Specify the number of PIN entry attempts which can be made before the user must reset the PIN.|  
     |**Require corporate credentials for access**|Requires that the user must enter their corporate logon information before they can access the app.|  

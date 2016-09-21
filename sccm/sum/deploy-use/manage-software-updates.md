@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 70f66926-c067-404d-94f1-3ad1309566a6
 caps.latest.revision: 17
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage software updates in System Center Configuration Manager
 The overall process for software updates in System Center Configuration Manager includes four main operational phases: synchronization, compliance assessment, deployment, and monitoring. The synchronization phase is the process of synchronizing the software update metadata from Microsoft Update and inserting it into the site server database. The compliance assessment phase is the process that client computers perform to scan for compliance of software updates and report the compliance state for the software updates. The deployment phase is the process of manually or automatically deploying the software updates to clients. Finally, the monitoring phase is the process of follow-on monitoring for software update deployment compliance.  
@@ -616,7 +598,7 @@ The overall process for software updates in System Center Configuration Manager 
 16. On the Summary page, review the settings. To save the settings to a deployment template, click **Save As Template**, enter a name and select the settings that you want to include in the template, and then click **Save**. To change a configured setting, click the associated wizard page and change the setting.  
   
     > [!WARNING]  
-    >  The template name can consist of alphanumeric ASCII characters as well as **\\** (backslash) or **â€˜** (single quotation mark).  
+    >  The template name can consist of alphanumeric ASCII characters as well as **\\** (backslash) or **‘** (single quotation mark).  
   
 17. Click **Next** to deploy the software update.  
   
@@ -817,7 +799,7 @@ The overall process for software updates in System Center Configuration Manager 
 16. On the Summary page, review the settings. To save the settings to a deployment template, click **Save As Template**, enter a name and select the settings that you want to include in the template, and then click **Save**. To change a configured setting, click the associated wizard page and change the setting.  
   
     > [!WARNING]  
-    >  The template name can consist of alphanumeric ASCII characters as well as **\\** (backslash) or **â€˜** (single quotation mark).  
+    >  The template name can consist of alphanumeric ASCII characters as well as **\\** (backslash) or **‘** (single quotation mark).  
   
 17. Click **Next** to create the ADR.  
   

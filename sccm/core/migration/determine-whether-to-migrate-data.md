@@ -13,25 +13,7 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Determine whether to migrate data to System Center Configuration Manager
 In System Center Configuration Manager migration provides a process to  transfer data and configurations you have made from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  

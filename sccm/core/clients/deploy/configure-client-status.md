@@ -13,25 +13,7 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to configure client status in System Center Configuration Manager
 Before you can monitor System Center Configuration Manager client status and remediate problems that are found, you must configure your site to specify the parameters that are used to mark clients as inactive and configure options to alert you if client activity falls below a specified threshold. You can also disable computers from automatically remediating any problems that client status finds.  
@@ -94,11 +76,11 @@ Before you can monitor System Center Configuration Manager client status and rem
 
 6.  In the **Conditions** list of the **Alerts** tab, select each client status alert and then specify the following information.  
 
-    -   **Alert Name** â€“ Accept the default name or enter a new name for the alert.  
+    -   **Alert Name** – Accept the default name or enter a new name for the alert.  
 
-    -   **Alert Severity** â€“ From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
+    -   **Alert Severity** – From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
 
-    -   **Raise alert** â€“ Specify the threshold percentage for the alert.  
+    -   **Raise alert** – Specify the threshold percentage for the alert.  
 
 7.  Click **OK** to close the *&lt;collection Name\>***Properties** dialog box.  
 
@@ -113,9 +95,9 @@ Before you can monitor System Center Configuration Manager client status and rem
 
 3.  Enter one of the following values for this registry key:  
 
-    -   **True** â€“ The client computer will not automatically remediate any problems that are found. However, you will still be alerted in the **Monitoring** workspace about any problems with this client.  
+    -   **True** – The client computer will not automatically remediate any problems that are found. However, you will still be alerted in the **Monitoring** workspace about any problems with this client.  
 
-    -   **False** â€“ The client computer will automatically remediate problems when they are found and you will be alerted in the **Monitoring** workspace. This is the default setting.  
+    -   **False** – The client computer will automatically remediate problems when they are found and you will be alerted in the **Monitoring** workspace. This is the default setting.  
 
 4.  Close the registry editor.  
 

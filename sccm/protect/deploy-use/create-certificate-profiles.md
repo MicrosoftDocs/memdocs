@@ -13,25 +13,7 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 caps.latest.revision: 16
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create certificate profiles in System Center Configuration Manager
 Certificate profiles in System Center Configuration Manager integrate with Active Directory Certificate Services and the Network Device Enrollment Service role to provision managed devices with authentication certificates so that users can access company resources by using certificates. The information in this topic can help you create certificate profiles in System Center Configuration Manager.  
@@ -181,7 +163,7 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
   
     -   **Certificate validity period**: If you have run the certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE command on the issuing CA, which allows a custom validity period, you can specify the amount of remaining time before the certificate expires. For more information about this command, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../../protect/deploy-use/configuring-certificate-profiles.md#BKMK_Step1) in the [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md) topic.  
   
-         You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CAâ€™s certificate.  
+         You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA’s certificate.  
   
         > [!NOTE]  
         >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
@@ -204,7 +186,7 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
         > [!NOTE]  
         >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
   
-    -   **Extended key usage**: Click **Select** to add values for the certificateâ€™s intended purpose. In most cases, the certificate will require **Client Authentication** so that the user or device can authenticate to a server. However, you can add any other key usages as required.  
+    -   **Extended key usage**: Click **Select** to add values for the certificate’s intended purpose. In most cases, the certificate will require **Client Authentication** so that the user or device can authenticate to a server. However, you can add any other key usages as required.  
   
         > [!NOTE]  
         >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
