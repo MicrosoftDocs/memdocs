@@ -1,6 +1,6 @@
 # [Understand and explore](understand/get-started-with-application-management.md)
-## [Get started with application management](understand/get-started-with-application-management.md)
-# [Create and deploy an application](get-started/create-and-deploy-an-application.md)
+# [Get started with application management](understand/get-started-with-application-management.md)
+## [Create and deploy an application](get-started/create-and-deploy-an-application.md)
 ### [Create iOS applications](get-started/creating-ios-applications.md)
 ### [Create Mac computer applications](get-started/creating-mac-computer-applications.md)
 ### [Create Windows applications](get-started/creating-windows-applications.md)
