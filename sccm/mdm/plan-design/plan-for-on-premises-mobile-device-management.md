@@ -13,25 +13,7 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for On-premises Mobile Device Management in System Center Configuration Manager
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle On\-premises Mobile Device Management:  

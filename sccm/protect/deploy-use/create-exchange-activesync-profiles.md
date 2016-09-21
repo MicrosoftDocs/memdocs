@@ -13,25 +13,7 @@ ms.assetid: 15f0fd50-e196-44e5-b435-234d7ff6a5cd
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create Exchange ActiveSync email profiles in System Center Configuration Manager
 Create email profiles in System Center Configuration Manager to deploy email settings to users in your company. By deploying these settings, you reduce the end-user effort that is required to connect to corporate email on the company network for devices that use Exchange ActiveSync.  

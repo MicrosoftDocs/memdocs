@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: f1f80ed9-2516-43fe-97df-7cfe90ae6914
 caps.latest.revision: 5
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Compliance settings technical reference for System Center Configuration Manager
 This topic list the technical reference information for compliance settings in System Center Configuration Manager.  

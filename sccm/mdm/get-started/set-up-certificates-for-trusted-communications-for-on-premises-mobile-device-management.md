@@ -13,25 +13,7 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 caps.latest.revision: 27
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
 System Center Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
@@ -76,7 +58,7 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
     -   **Include in the IDP extension of issued CRLs**  
   
-5.  Click the **Exit Module** tab, click **Propertiesâ€¦**, then select **Allow certificates to be published to the file system**.  
+5.  Click the **Exit Module** tab, click **Properties…**, then select **Allow certificates to be published to the file system**.  
   
 6.  Click **OK** when notified that Active Directory Certificate Services must restarted.  
   
@@ -145,9 +127,9 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
 1.  On the server hosting the enrollment point, enrollment proxy point, distribution point, or device management point, click **Start** > **Administrative Tools** > **IIS Manager**.  
   
-2.  Under Connections, navigate to and right-click **Default Web Site**, and then  click **Edit Bindingsâ€¦**  
+2.  Under Connections, navigate to and right-click **Default Web Site**, and then  click **Edit Bindings…**  
   
-3.  In Site Bindings dialog, click **https**, and then click **Editâ€¦**  
+3.  In Site Bindings dialog, click **https**, and then click **Edit…**  
   
 4.  In the Edit Site Binding dialog, select the certificate you just enrolled for the **SSL certificate**, click **OK**, and then click **Close**.  
   
@@ -158,21 +140,21 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
  Follow these steps to export the root certificate of the web server's certificate.  
   
-1.  In IIS Manager, click **Default Web Site**, and then in the right Action panel, click **Bindingsâ€¦**  
+1.  In IIS Manager, click **Default Web Site**, and then in the right Action panel, click **Bindings…**  
   
-2.  In the Site Bindings dialog, click **https**, and then click **Editâ€¦**  
+2.  In the Site Bindings dialog, click **https**, and then click **Edit…**  
   
-3.  Make sure the web server certificate is selected, and click **Viewâ€¦**  
+3.  Make sure the web server certificate is selected, and click **View…**  
   
 4.  In properties of the web server certificate, click **Certification Path**, click the root at the top of the certification path, and click **View Certificate**.  
   
-5.  In the properties of the root certificate, click **Details**, and then click **Copy to Fileâ€¦**  
+5.  In the properties of the root certificate, click **Details**, and then click **Copy to File…**  
   
 6.  In the Certificate Export Wizard, click **Next**.  
   
 7.  Make sure **DER encoded binary X.509 (.CER)** is selected for format, and click **Next**.  
   
-8.  For the file name, click **Browseâ€¦**, choose a location to save the certificate file, name the file, and click **Save**.  
+8.  For the file name, click **Browse…**, choose a location to save the certificate file, name the file, and click **Save**.  
   
      Devices to be enrolled will need access to this file to import the root certificate, so you choose a common location that most computers and devices can access, or you can save it to a convenient location now (like the C drive) and move it to common location later.  
   

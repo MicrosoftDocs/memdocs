@@ -12,25 +12,7 @@ ms.technology:
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 caps.latest.revision: 11
 author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Integration with Windows Update for Business in Windows 10
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up to date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager has the ability to differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates .  
@@ -67,7 +49,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 #### To identify clients that use WUfB  
 
 1.  Disable the Windows Update Agent so it doesn't scan against WSUS,  if it was previously enabled.   
-    The registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer** can be set to indicate whether the computer is scanning against WSUS or Windows Update.  When the value is  2, itâ€™s not scanning against WSUS.  
+    The registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer** can be set to indicate whether the computer is scanning against WSUS or Windows Update.  When the value is  2, it’s not scanning against WSUS.  
 
 2.  There is a new attribute,  **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.  
 
@@ -75,7 +57,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to WUfB.  
 
-5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and wonâ€™t be counted as part of the overall compliance percentage.  
+5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and won’t be counted as part of the overall compliance percentage.  
 
 ## See Also  
  [Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md)

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
 caps.latest.revision: 6
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Cryptographic controls technical reference for System Center Configuration Manager
 System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. Signing ensures that if data has been altered in transit, the data will be discarded. Encryption prevents an attacker from reading the data by using a network protocol analyzer.  
@@ -155,7 +137,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  An additional type of certificate might be required for managing AMT-based computers out of band: an optional client certificate for 802.1X authenticated wired networks and wireless networks. The client certificate might be required by the AMT-based computer for authentication to the RADIUS server. When the RADIUS server is configured for EAP-TLS authentication, a client certificate is always required. When the RADIUS server is configured for EAP-TTLS/MSCHAPv2 or PEAPv0/EAP-MSCHAPv2, the RADIUS configuration specifies whether a client certificate is required or not. This certificate is requested by the AMT-based computer by using the same processes as the web server certificate request.  
   
 ### Operating System Deployment and PKI Certificates  
- When you use Configuration Manager to deploy operating systems and a management point requires HTTPS client connections, the client computer must also have a certificate to communicate with the management point, even though it is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario, you must create a PKI client authentication certificate and export it with the private key and then import it to the site server properties and also add the management pointâ€™s trusted root CA certificate.  
+ When you use Configuration Manager to deploy operating systems and a management point requires HTTPS client connections, the client computer must also have a certificate to communicate with the management point, even though it is in a transitional phase such as booting from task sequence media or a PXE-enabled distribution point. To support this scenario, you must create a PKI client authentication certificate and export it with the private key and then import it to the site server properties and also add the management point’s trusted root CA certificate.  
   
  If you create bootable media, you import the client authentication certificate when you create the bootable media. Configure a password on the bootable media to help protect the private key and other sensitive data configured in the task sequence. Every computer that boots from the bootable media will present the same certificate to the management point as required for client functions such as requesting client policy.  
   

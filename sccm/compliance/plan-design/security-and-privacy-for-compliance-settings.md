@@ -13,25 +13,7 @@ ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for compliance settings in System Center Configuration Manager
 This topic contains security and privacy information for compliance settings in System Center Configuration Manager.  

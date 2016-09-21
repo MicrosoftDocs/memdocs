@@ -13,25 +13,7 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to extend hardware inventory in System Center Configuration Manager
 System Center Configuration Manager hardware inventory reads information about devices from Windows PCs by using Windows Management Instrumentation (WMI). WMI is the Microsoft implementation of web-based Enterprise Management (WBEM), which is an industry standard for accessing management information in an enterprise environment. In previous versions of Configuration Manager, you could extend hardware inventory by modifying the file sms_def.mof on the site server. This file contained a list of WMI classes that could be read by Configuration Manager hardware inventory. If you edited this file, you could enable and disable existing classes, and also create new classes to inventory.  
@@ -45,7 +27,7 @@ System Center Configuration Manager hardware inventory reads information about d
  In Configuration Manager, you no longer edit the sms_def.mof file as you did in Configuration Manager 2007. Instead, you can enable and disable WMI classes, and add new classes to collect by hardware inventory by using client settings. Configuration Manager provides the following methods to extend hardware inventory.  
 
 > [!NOTE]  
->  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to the 1602 release. To keep using custom classes after you update, you must add these to the â€˜Added extensionsâ€™ section of the Configuration.mof file after you update to 1602.  
+>  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to the 1602 release. To keep using custom classes after you update, you must add these to the ‘Added extensions’ section of the Configuration.mof file after you update to 1602.  
 > However, you must not modify anything above this section, as these sections are reserved for  modification by Configuration Manager. A backup of your custom Configuration.mof can be found in:  
 > **<CM Install dir\>\data\hinvarchive\\**.  
 
@@ -112,9 +94,9 @@ System Center Configuration Manager hardware inventory reads information about d
 
 12. If you want to edit information about the selected WMI class, click **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
 
-    -   **Display name** â€“ Specify a friendly name for the class that will be displayed in Resource Explorer.  
+    -   **Display name** – Specify a friendly name for the class that will be displayed in Resource Explorer.  
 
-    -   **Properties** â€“ Specify the units in which each property of the WMI class will be displayed.  
+    -   **Properties** – Specify the units in which each property of the WMI class will be displayed.  
 
      You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
 

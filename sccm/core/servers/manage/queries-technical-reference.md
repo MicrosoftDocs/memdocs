@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
 caps.latest.revision: 4
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Queries technical reference for System Center Configuration Manager
 Queries in System Center Configuration Manager return information from the site database based on criteria that you specify. You can use queries to retrieve information about resources in your site or about inventory data and status messages.  

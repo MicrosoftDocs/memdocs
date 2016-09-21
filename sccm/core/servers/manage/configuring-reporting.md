@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 caps.latest.revision: 6
 author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configuring reporting in System Center Configuration Manager
 Before you can create, modify, and run reports in the System Center Configuration Manager console, you must carry out a number of configuration tasks. Use the following sections in this topic to help you configure reporting in your Configuration Manager hierarchy:  

@@ -13,25 +13,7 @@ ms.assetid: 77419bd8-548c-4f0f-beed-1ea0f752a4c7
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Hardware inventory in System Center Configuration Manager
 Use System Center Configuration Manager hardware inventory to collect detailed information about the hardware of client devices in your enterprise.  

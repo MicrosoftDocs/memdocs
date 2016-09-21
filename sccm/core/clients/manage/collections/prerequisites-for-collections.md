@@ -13,25 +13,7 @@ ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prerequisites for collections in System Center Configuration Manager
 Collections in System Center Configuration Manager contain only dependencies within the product.  

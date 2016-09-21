@@ -13,25 +13,7 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Remote connection profiles in System Center Configuration Manager
@@ -116,7 +98,7 @@ Use the following steps to create a remote connection profile by using the Syste
         > [!NOTE]  
         >  Configuration Manager does not support an internationalized domain name to be used to specify a server in this box.  
         >   
-        >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **â€“** and **_** characters, which are separated by periods.  
+        >  The server name must be no longer than 256 characters and can contain uppercase characters, lowercase characters, numeric characters, and the **–** and **_** characters, which are separated by periods.  
   
     -   **Allow connections only from computers that run Remote Desktop with Network Level Authentication**  
   

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 caps.latest.revision: 5
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configure security in System Center Configuration Manager
 Use the information in this topic to help you configure the following security-related options for System Center Configuration Manager:  

@@ -10,25 +10,7 @@ ms.topic: article
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 caps.latest.revision: 8
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Ensure device compliance with System Center Configuration Manager
 Compliance settings in System Center Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. This helps you support the following business requirements:  

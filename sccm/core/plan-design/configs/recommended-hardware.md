@@ -13,25 +13,7 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 caps.latest.revision: 26
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Recommended hardware for System Center Configuration Manager
 The following recommendations are guidelines  to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, sites systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
@@ -149,7 +131,7 @@ For best performance, use RAID 10 configurations for all data drives and 1Gbps E
 
 |Requirement|Details|  
 |-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computerâ€™s operating system.|  
+|Processor and memory|Refer to the processor and RAM requirements for the computer’s operating system.|  
 |Disk space|500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
 |Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
 

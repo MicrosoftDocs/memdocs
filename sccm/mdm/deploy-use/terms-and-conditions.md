@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Terms and Conditions in System Center Configuration Manager
 You can deploy System Center Configuration Manager terms and conditions to user groups to explain how device enrollment, access to work resources, and using the Company Portal affect devices and users. Users must accept the terms and conditions before they can use the Company Portal to enroll and access their work.  
@@ -58,7 +40,7 @@ You can deploy System Center Configuration Manager terms and conditions to user 
   
     -   **Text for terms** - The terms and conditions displayed to users in the Company Portal  
   
-    -   **Text to explain what it means if the user accepts** - Label users see regarding acceptance. **Example**: ‚ÄúI agree to the terms and conditions.‚Äù  
+    -   **Text to explain what it means if the user accepts** - Label users see regarding acceptance. **Example**: ìI agree to the terms and conditions.î  
   
      And then click **Next**.  
   

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 caps.latest.revision: 8
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for application management in System Center Configuration Manager
   

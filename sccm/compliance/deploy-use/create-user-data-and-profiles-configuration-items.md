@@ -13,35 +13,17 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Create user data and profiles configuration items in System Center Configuration Manager
 User data and profiles configuration items in System Center Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
   
--   Redirect a userâ€™s Documents folder to a network share.  
+-   Redirect a user’s Documents folder to a network share.  
   
--   Ensure that specified files stored on the network are available on a userâ€™s computer when the network connection is unavailable.  
+-   Ensure that specified files stored on the network are available on a user’s computer when the network connection is unavailable.  
   
--   Configure which files in a userâ€™s roaming profile are synchronized with a network share when the user logs on and off.  
+-   Configure which files in a user’s roaming profile are synchronized with a network share when the user logs on and off.  
   
  Unlike other configuration items in Configuration Manager, you do not add user data and profile configuration items to a configuration baseline which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.  
   
@@ -85,7 +67,7 @@ User data and profiles configuration items in System Center Configuration Manage
   
     -   **Roaming user profiles:** Check this box if you want to configure settings for roaming user profiles for this configuration item.  
   
-5.  On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the userâ€™s primary devices. For more information about folder redirection, see your Windows Server documentation.  
+5.  On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user’s primary devices. For more information about folder redirection, see your Windows Server documentation.  
   
     > [!NOTE]  
     >  This page of the wizard appears only if you checked the box **Folder redirection** on the **General** page of the wizard.  
@@ -119,11 +101,11 @@ User data and profiles configuration items in System Center Configuration Manage
         > [!IMPORTANT]  
         >  You can only deploy user data and profiles configuration items to user collections.  
   
-    -   **Remediate noncompliant rules when supported** â€“ Enable this option to automatically remediate any rules that are evaluated as noncompliant on client computers.  
+    -   **Remediate noncompliant rules when supported** – Enable this option to automatically remediate any rules that are evaluated as noncompliant on client computers.  
   
-    -   **Allow remediation outside the maintenance window** â€“ If a maintenance window has been configured for the collection to which you are deploying the configuration item, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration item, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
   
-    -   **Generate an alert** â€“ Enable this option to configure an alert that is generated if the configuration item compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
+    -   **Generate an alert** – Enable this option to configure an alert that is generated if the configuration item compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
     -   **Specify the compliance evaluation schedule for this configuration item** -  Specifies the schedule by which the deployed configuration item is evaluated on client computers. This can be either a simple or a custom schedule.  
   

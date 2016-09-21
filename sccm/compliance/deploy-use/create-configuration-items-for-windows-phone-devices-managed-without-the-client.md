@@ -13,25 +13,7 @@ ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
 Use the System Center Configuration Manager**Windows Phone** configuration item to manage settings  for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
@@ -92,7 +74,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
-|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
 |**Send password recovery PIN to Exchange Server**||  
   
 ### Device  
@@ -216,7 +198,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |Setting name|Details|  
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
-|**Wi-Fi tethering**|Letâ€™s users use their device as a mobile hotspot.|  
+|**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**||  
 |**Wi-Fi hotspot reporting**||  
   
@@ -241,13 +223,13 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 3.  When you are finished, click **OK**.  
   
 ###  <a name="BKMK_Certs"></a> Certificates  
- Letâ€™s you import certificates to install on mobile devices.  
+ Let’s you import certificates to install on mobile devices.  
   
  Click **Import**, and then specify the following values:  
   
--   **Certificate file** â€“ Click **Browse** and then select the certificate file with the extension **.cer** that you want to import.  
+-   **Certificate file** – Click **Browse** and then select the certificate file with the extension **.cer** that you want to import.  
   
--   **Destination store** â€“ Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
+-   **Destination store** – Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
   
     -   **Root**  
   
@@ -261,7 +243,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
     -   **Peer**  
   
--   **Role** â€“ If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
+-   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
   
     -   **Mobile Operator**  
   
@@ -296,7 +278,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Work Folders URL**|Configures the location of a Windows Server work folder that users can connect to from their device.|  
   
 ### Windows Phone allowed and blocked apps list (Windows Phone 8.1 only)  
- Letâ€™s you specify a list of Windows Phone apps that are compliant, or not compliant in your company. Apps that you specify as blocked cannot be installed by users. If you specify a list of allowed apps, users can only install apps in the list.  
+ Let’s you specify a list of Windows Phone apps that are compliant, or not compliant in your company. Apps that you specify as blocked cannot be installed by users. If you specify a list of allowed apps, users can only install apps in the list.  
   
  You cannot specify both allowed and blocked apps in the same configuration item.  
   
@@ -313,7 +295,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users will not be allowed to install.|  
     |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install.|  
     |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Phone Store page, search for the app you want to use.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> For the company portal app, or line of business apps, you do not have to specify a full URL, only the app GUID.|  
-    |**Edit**|Letâ€™s you edit the name, publisher and URL of the selected app.|  
+    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
