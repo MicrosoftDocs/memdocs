@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 caps.latest.revision: 9
-author: barlanmsft
+author: robstackmsft
 
 ---
 # Update and retire applications with System Center Configuration Manager
@@ -29,5 +29,3 @@ After a time, you will likely want to make changes to an application, uninstall 
   
      For more information, see [How to uninstall applications with System Center Configuration Manager](../../apps/deploy-use/uninstall-applications.md).  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)

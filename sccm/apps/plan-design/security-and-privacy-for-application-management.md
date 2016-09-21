@@ -37,7 +37,6 @@ author: robstackmsft
 |If you configure a web application deployment type, use HTTPS rather than HTTP to secure the connection|If you deploy a web application by using an HTTP link rather than an HTTPS link, the device could be redirected to a rogue server and data transferred between the device and server could be tampered with.|  
   
 ##  Security issues for application management  
- Application management has the following security issues:  
   
 -   Low-rights users can copy files from the client cache on the client computer.  
   
@@ -76,9 +75,9 @@ author: robstackmsft
   
  Configuration Manager maintains status information about the software deployment process. Software deployment status information is not encrypted during transmission unless the client communicates by using HTTPS. The status information is not stored in encrypted form in the database.  
   
- The use of Configuration Manager software installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software, and is separate from the Software License Terms for System Center 2012 Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
+ The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software, and is separate from the Software License Terms for System Center Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
   
- Software deployment does not happen by default and requires several configuration steps.  
+ Application deployment does not happen by default and requires several configuration steps.  
   
  Two optional features that help efficient software deployment are user device affinity and the Application Catalog:  
   
@@ -91,26 +90,17 @@ author: robstackmsft
  Before you configure application management, consider your privacy requirements.  
   
 ##  User device affinity  
- Configuration Manager might transmit information between clients and management point site systems that identify the computer and logon account and the summarized usage for logon accounts.  
-  
- The information that is transmitted between the client and server is not encrypted unless the management point is configured to require clients communicate by using HTTPS.  
-  
- The computer and logon account usage information that is used to map a user to a device is stored on client computers, sent to management points, and then stored in the Configuration Manager database. The old information is deleted from the database by default after 90 days. The deletion behavior is configurable by setting the **Delete Aged User Device Affinity Data** site maintenance task.  
-  
- Configuration Manager maintains status information about user device affinity. Status information is not encrypted during transmission unless clients are configured to communicate with management points by using HTTPS. Status information is not stored in encrypted form in the database.  
-  
- Computer, logon account usage information, and status information is not sent to Microsoft.  
-  
- Computer and logon usage information that is used to establish user and device affinity is always enabled. In addition, users and administrative users can supply user device affinity information.  
+-  Configuration Manager might transmit information between clients and management point site systems that identify the computer and logon account and the summarized usage for logon accounts.  
+-  The information that is transmitted between the client and server is not encrypted unless the management point is configured to require clients communicate by using HTTPS.  
+-  The computer and logon account usage information that is used to map a user to a device is stored on client computers, sent to management points, and then stored in the Configuration Manager database. The old information is deleted from the database by default after 90 days. The deletion behavior is configurable by setting the **Delete Aged User Device Affinity Data** site maintenance task.
+-  Configuration Manager maintains status information about user device affinity. Status information is not encrypted during transmission unless clients are configured to communicate with management points by using HTTPS. Status information is not stored in encrypted form in the database.  
+-  Computer, logon account usage information, and status information is not sent to Microsoft.  
+-  Computer and logon usage information that is used to establish user and device affinity is always enabled. In addition, users and administrative users can supply user device affinity information.  
   
 ##  Application Catalog  
- The Application Catalog allows the Configuration Manager administrator to publish any application or program or script for users to run. Configuration Manager has no control over what types of programs or scripts are published in the catalog, or what type of information they transmit.  
-  
- Configuration Manager might transmit information between clients and the Application Catalog site system roles that identify the computer and logon accounts. The information that is transmitted between the client and servers is not encrypted unless these site system roles are configured to require that clients connect by using HTTPS.  
-  
- The information about the application approval request is stored in the Configuration Manager database. The requests that are canceled or denied are deleted by default after 30 days, along with the corresponding request history entries. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. The application approval requests that are in approved and pending states are never deleted.  
-  
- Information that is sent to and from the Application Catalog is not sent to Microsoft.  
-  
- The Application Catalog is not installed by default. This installation requires several configuration steps.  
+-  The Application Catalog allows the Configuration Manager administrator to publish any application or program or script for users to run. Configuration Manager has no control over what types of programs or scripts are published in the catalog, or what type of information they transmit.    
+-  Configuration Manager might transmit information between clients and the Application Catalog site system roles that identify the computer and logon accounts. The information that is transmitted between the client and servers is not encrypted unless these site system roles are configured to require that clients connect by using HTTPS.  
+-  The information about the application approval request is stored in the Configuration Manager database. The requests that are canceled or denied are deleted by default after 30 days, along with the corresponding request history entries. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. The application approval requests that are in approved and pending states are never deleted.  
+-  Information that is sent to and from the Application Catalog is not sent to Microsoft.  
+-  The Application Catalog is not installed by default. This installation requires several configuration steps.  
   
