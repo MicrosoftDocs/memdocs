@@ -138,7 +138,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **CCMSetup.exe /forcereboot**  
 
--   **/BITSPriority:&lt;Priority\>***  
+-   **/BITSPriority:&lt;Priority\>**  
 
      Specifies the download priority when client installation files are downloaded over an HTTP connection. Possible values are as follows:  
 
@@ -154,7 +154,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **ccmsetup.exe /BITSPriority:HIGH**  
 
--   **/downloadtimeout:&lt;Minutes\>***  
+-   **/downloadtimeout:&lt;Minutes\>**  
 
      Specifies the length of time in minutes that CCMSetup attempts to download the client installation files before it gives up. The default value is **1440** minutes (1 day).  
 
@@ -179,13 +179,13 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **CCMSetup.exe /UsePKICert /NoCRLCheck**  
 
--   **/config:&lt;configuration file\>***  
+-   **/config:&lt;configuration file\>**  
 
-     Specifies the name of a text file containing client installation properties. Unless you also specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is &lt;%Windir%>*\Ccmsetup for 32-bit and 64-bit operating systems. If you specify the **/noservice** property, this file must be located in the same folder from which you run CCMSetup.exe.  
+     Specifies the name of a text file containing client installation properties. Unless you also specify the **/noservice** CCMSetup property, this file must be located in the CCMSetup folder, which is %Windir%\\Ccmsetup for 32-bit and 64-bit operating systems. If you specify the **/noservice** property, this file must be located in the same folder from which you run CCMSetup.exe.  
 
      Example: **CCMSetup.exe /config:&lt;Configuration File Name.txt\>**  
 
-     Use the mobileclienttemplate.tcf file in the &lt;Configuration Manager directory\>*\bin*\\&lt;platform\>* folder on the site server computer to provide the correct format of the file. This file also contains information in comment form about the sections and how they are used. Specify the client installation properties in the [Client Install] section, after the following text: **Install=INSTALL=ALL**.  
+     Use the mobileclienttemplate.tcf file in the &lt;Configuration Manager directory\>\\bin\\&lt;platform\> folder on the site server computer to provide the correct format of the file. This file also contains information in comment form about the sections and how they are used. Specify the client installation properties in the [Client Install] section, after the following text: **Install=INSTALL=ALL**.  
 
      Example [Client Install] section entry: **Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100**  
 
