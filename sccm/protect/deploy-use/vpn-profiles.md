@@ -74,7 +74,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 |PPTP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
 |L2TP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
   
-## Next steps  
+### Next steps  
  Use the following topics to help you plan for, configure, operate, and maintain VPN profiles in Configuration Manager.  
   
 -   [Prerequisites for VPN profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-vpn-profiles.md)  

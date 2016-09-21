@@ -301,5 +301,5 @@ System Center Configuration Manager uses signing and encryption to help protect 
 ##  <a name="BKMK_About_SSL-Vulnerabilities"></a> About SSL Vulnerabilities  
  We recommend the disabling of SSL 3.0, the enabling of TLS 1.1, and 1.2, and the reordering of TLS-related cipher suites, to improve the security of your Configuration Manager servers. You can learn how to take these actions in [this KB article](https://support.microsoft.com/en-us/kb/245030/). This action will not affect Configuration Manager functionality.  
   
-## See Also  
+### See also  
  [Technical reference for System Center Configuration Manager](../Topic/Technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

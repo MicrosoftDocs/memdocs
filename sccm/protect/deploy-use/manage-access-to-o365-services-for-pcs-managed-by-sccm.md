@@ -160,5 +160,5 @@ translation.priority.ht:
 >  Conditional access for PCs is not currently available to all Intune customers. If you are already using conditional access for PCs with **Intune**, you do not need to take any action. You can continue to use it.  
 > If you have not created conditional access policies for PCs you will need to submit a request for access. You can find out more information about known issues as well as how to get access to this feature at the [connect site](http://go.microsoft.com/fwlink/?LinkId=761472).  
   
-## See Also  
+### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)

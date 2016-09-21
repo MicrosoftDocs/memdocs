@@ -232,5 +232,5 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
 ###  <a name="BKMK_Step5"></a> Step 5: Complete the Wizard  
  On the **Summary** page of the wizard, review the actions that will be taken, and then complete the wizard. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices. For more information, see [How to deploy certificate profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-certificate-profiles.md).  
   
-## See Also  
+### See also  
  [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

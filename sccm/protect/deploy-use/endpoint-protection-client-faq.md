@@ -270,6 +270,6 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
   
 3.  Select the check boxes next to the real-time protections options you want to run, and then click **Save changes**. If you're prompted for an administrator password or confirmation, type the password or confirm the action.  
   
-## See Also  
+### See also  
  [Troubleshooting Windows Defender or Endpoint Protection client](../../protect/deploy-use/troubleshoot-windows-defender-endpoint-protection-client.md)   
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)

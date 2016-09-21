@@ -326,6 +326,6 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 -   If you're not sure of the file's origin, one of the best solutions is to run a full scan on your computer. A full scan may take some time to complete, but it makes it possible for Windows Defender or Endpoint Protection to look for the source of the infection and clean it.  
   
-## See Also  
+### See also  
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)

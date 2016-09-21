@@ -114,5 +114,5 @@ If a condition is not met, the user is presented with one of the following messa
   
 -   **Devices that are registered with AAD and compliant** – These devices can access Skype for Business Online.  
   
-## See Also  
+### See also  
  [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md)

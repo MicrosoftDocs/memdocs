@@ -203,5 +203,5 @@ Before you can use System Center Configuration Manager to enroll certificates on
   
  If you want to uninstall the System Center Configuration Manager Policy Module, use **Programs and Features** in Control Panel.  
   
-## See Also  
+### See also  
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

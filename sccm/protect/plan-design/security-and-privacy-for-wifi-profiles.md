@@ -50,5 +50,5 @@ This topic contains security and privacy information for Wi-Fi profiles in Syste
   
  Before you configure Wi-Fi profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
  [Wi-Fi Profiles in System Center Configuration Manager](../Topic/Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)

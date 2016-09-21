@@ -64,5 +64,5 @@ With System Center Configuration Manager you can configure site settings that wi
   
 3.  After setting configurations you want to use, choose  **OK**  to save the configuration.  
   
-## See Also  
+### See also  
  [Configure sites and hierarchies for System Center Configuration Manager](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

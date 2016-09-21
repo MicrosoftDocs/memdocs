@@ -70,5 +70,5 @@ The following information can help you plan for how to configure permissions for
   
 3.  On the issuing CA, on the **Security** tab in the properties for the certificate template, add one or more security groups to grant the user or device accounts Read and Enroll permissions.  
   
-## See Also  
+### See also  
  [Planning for certificate profiles in System Center Configuration Manager](../Topic/Planning%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

@@ -216,5 +216,5 @@ Use the following links to learn about the steps to create VPN profiles in Syste
   
  For information about how to deploy the VPN profile, see [How to deploy VPN profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-vpn-profiles.md).  
   
-## See Also  
+### See also  
  [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

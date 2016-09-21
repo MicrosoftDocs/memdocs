@@ -77,5 +77,5 @@ To deploy certificates to users or devices in System Center Configuration Manage
   
 6.  Click **OK** to close the **Deploy Certificate Profile** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor certificate profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-certificate-profiles.md).  
   
-## See Also  
+### See also  
  [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

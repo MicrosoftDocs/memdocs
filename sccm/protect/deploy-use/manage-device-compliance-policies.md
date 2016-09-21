@@ -173,5 +173,5 @@ translation.priority.ht:
 ## Next Steps  
  You can now use the compliance policy with conditional access policies to control access to services in your organization.  
   
-## See Also  
+### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)

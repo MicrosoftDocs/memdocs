@@ -115,5 +115,5 @@ Certificate profiles in System Center Configuration Manager works with Active Di
   
  To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  
   
-## See Also  
+### See also  
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

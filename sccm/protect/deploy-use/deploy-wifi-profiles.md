@@ -69,5 +69,5 @@ Wi-Fi profiles in System Center Configuration Manager must be deployed to one or
   
 5.  Click **OK** to close the **Deploy Wi-Fi Profile** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-wifi-profiles.md) .  
   
-## See Also  
+### See also  
  [Operations and maintenance for Wi-Fi Profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)

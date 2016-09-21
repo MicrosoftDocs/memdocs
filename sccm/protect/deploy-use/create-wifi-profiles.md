@@ -34,7 +34,32 @@ translation.priority.ht:
   - zh-tw
 ---
 # How to create Wi-Fi profiles in System Center Configuration Manager
-Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to the wireless network.  
+Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
+  
+ For example, you installed a new Wi-Fi network named **Contoso Wi-Fi**. You now want to provision all devices that run the iOS operating system with the settings required to connect to this network. You can create a Wi-Fi profile containing the settings necessary to connect to the **Contoso Wi-Fi** wireless network. Then, you can deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the company network in the list of wireless networks and can readily connect to this network.  
+  
+ You can configure the following device types with Wi-Fi profiles:  
+  
+-   Devices that run Windows 8.1 32-bit  
+  
+-   Devices that run Windows 8.1 64-bit  
+  
+-   Devices that run Windows RT 8.1  
+  
+-   Devices that run Windows Phone 8.1  
+  
+-   Devices that run Windows 10 Desktop or Mobile  
+  
+-   IPhone devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
+  
+-   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
+  
+-   Android devices that run version 4  
+  
+> [!IMPORTANT]  
+>  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled in Microsoft Intune]. For information about how to get your devices enrolled, see [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
+  
+ When you create a Wi-Fi profile, you can include a wide range of security settings. These include certificates for server validation and client authentication that have been provisioned by using Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
   
 ## Steps to Create a Wi-Fi Profile  
  Use the following required steps to create a Wi-Fi profile by using the **Create Wi-Fi Profile Wizard**.  
@@ -164,5 +189,5 @@ Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless 
   
  For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-wifii-profiles.md).  
   
-## See Also  
+### See also  
  [Operations and maintenance for Wi-Fi Profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)

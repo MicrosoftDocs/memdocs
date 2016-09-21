@@ -184,5 +184,5 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
   
  See [Manage SharePoint Online access with Microsoft Intune](https://technet.microsoft.com/library/dn705844.aspx) for information about how you can monitor the policy from the Intune console.  
   
-## See Also  
+### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)

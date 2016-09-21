@@ -71,5 +71,5 @@ VPN profiles in System Center Configuration Manager must be deployed to one or m
   
 5.  Click **OK** to close the **Deploy VPN Profile** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor VPN profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-vpn-profiles.md).  
   
-## See Also  
+### See also  
  [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
