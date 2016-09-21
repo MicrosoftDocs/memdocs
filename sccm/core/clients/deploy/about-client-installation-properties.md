@@ -61,7 +61,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
  The properties described in the following table are available to modify the installation behavior of CCMSetup.exe.  
 
 > [!IMPORTANT]  
->  If you have extended the Active Directory schema for Configuration Manager, many client installation properties are published in Active Directory Domain Services and read automatically by the Configuration Manager client. For a list of the client installation properties published in Active Directory Domain Services, see [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md)  
+>  If you have extended the Active Directory schema for Configuration Manager, many client installation properties are published in Active Directory Domain Services and read automatically by the Configuration Manager client. For a list of the client installation properties published in Active Directory Domain Services, see [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](about-client-installation-properties-published-to-active-directory-domain-services.md)  
 
 ##  <a name="BKMK_CCMSetupCommandLine"></a> CCMSetup.exe Command-Line Properties  
 
@@ -122,7 +122,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
 -   **/uninstall**  
 
-     Specifies that the Configuration Manager client software should be uninstalled. For more information, see [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+     Specifies that the Configuration Manager client software should be uninstalled. For more information, see [How to manage clients in System Center Configuration Manager](../manage/manage-clients.md).  
 
      Example: **ccmsetup.exe /uninstall**  
 
@@ -165,7 +165,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
      When specified, the client uses a PKI certificate that includes client authentication, if one is available. If a valid certificate cannot be found, the client falls back to using an HTTP connection and a self-signed certificate. When this option is not specified, the client uses a self-signed certificate and all communications to site systems are over HTTP.  
 
     > [!NOTE]  
-    >  There are some scenarios where you do not have to specify this property when you are installing a client to use a PKI client certificate. These scenarios include installing a client by using client push and software update point–based client installation. However, you must specify this property whenever you manually install a client and use the **/mp** property to specify a management point that is configured to accept only HTTPS client connections. You also must specify this property when you install a client for Internet-only communication, by using the CCMALWAYSINF=1 property (together with the properties for the Internet-based management point and the site code). For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+    >  There are some scenarios where you do not have to specify this property when you are installing a client to use a PKI client certificate. These scenarios include installing a client by using client push and software update point–based client installation. However, you must specify this property whenever you manually install a client and use the **/mp** property to specify a management point that is configured to accept only HTTPS client connections. You also must specify this property when you install a client for Internet-only communication, by using the CCMALWAYSINF=1 property (together with the properties for the Internet-based management point and the site code). For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
 
      Example: **CCMSetup.exe /UsePKICert**  
 
@@ -175,7 +175,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      When this option is not specified, the client checks the CRL before establishing an HTTPS connection by using PKI certificates.  
 
-     For more information about client CRL checking, see [Planning for PKI certificate revocation](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+     For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) in[Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
      Example: **CCMSetup.exe /UsePKICert /NoCRLCheck**  
 
@@ -232,7 +232,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      This property should be used in conjunction with CCMHOSTNAME, which specifies the FQDN of the Internet-based management point. It should also be used in conjunction with the CCMSetup property /UsePKICert and with the site code.  
 
-     For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+     For more information about Internet-based client management, see [Considerations for client communications from the Internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in  [Communications between endpoints in System Center Configuration Manager](../../plan-design/hierarchy/communications-between-endpoints.md).  
 
      Example: **CCMSetup.exe /UsePKICert  CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.COM SMSSITECODE=ABC**  
 
@@ -240,7 +240,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Specifies the certificate issuers list, which is a list of trusted root certification (CA) certificates that the Configuration Manager site trusts.  
 
-     For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+     For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
      This is a case-sensitive match for subject attributes that are in the root CA certificate. Attributes can be separated by a comma (,) or semi-colon (;). Multiple root CA certificates can be specified by using a separator bar. Example:  
 
@@ -310,13 +310,13 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
 -   **SMSPUBLICROOTKEY**  
 
-     Specifies the Configuration Manager trusted root key where it cannot be retrieved from Active Directory Domain Services. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+     Specifies the Configuration Manager trusted root key where it cannot be retrieved from Active Directory Domain Services. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
      Example: **CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>**  
 
 -   **SMSROOTKEYPATH**  
 
-     Used to reinstall the Configuration Manager trusted root key. Specifies the full path and file name to a file containing the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+     Used to reinstall the Configuration Manager trusted root key. Specifies the full path and file name to a file containing the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
      Example: CCMSetup.exe **SMSROOTKEYPATH=&lt;Full path and filename\>**  
 
@@ -422,7 +422,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 -   **SMSCACHESIZE**  
 
      > [!IMPORTANT]
-     > In Configuration Manager release 1606, new client settings are available for specifying the client cache folder size. The addition of those client settings effectively replaces using SMSCACHESIZE as a client.msi property to specify the size of the client cache. For more information, see the [client settings for cache size](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).  
+     > In Configuration Manager release 1606, new client settings are available for specifying the client cache folder size. The addition of those client settings effectively replaces using SMSCACHESIZE as a client.msi property to specify the size of the client cache. For more information, see the [client settings for cache size](about-client-settings.md#Client-Cache-Settings).  
 
      For 1602 and earlier, SMSCACHESIZE specifies the size of the client cache folder in megabyte (MB) or as a percentage when used with the PERCENTDISKSPACE or PERCENTFREEDISKSPACE property. If this property is not set, the folder defaults to a maximum size of 5120 MB. The lowest value that you can specify is 1 MB.  
 
@@ -467,7 +467,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
     -   NOWINS: This is the most secure setting for this property and prevents clients from finding a management point in WINS .  When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
 
-    -   WINSSECURE: In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+    -   WINSSECURE: In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
 
      If this property is not specified, the default value of WINSSECURE is used.  
 
@@ -519,7 +519,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
 
-     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)in [Determine the site system roles for System Center Configuration Manager clients](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md).  
+     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)in [Determine the site system roles for System Center Configuration Manager clients](plan/determine-the-site-system-roles-for-clients.md).  
 
      Example: **CCMSetup.exe FSP=SMSFP01**  
 
@@ -530,7 +530,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
     > [!NOTE]  
     >  You do not have to specify this property if the client is in the same domain as a published management point. In this scenario, the client’s domain is automatically used to search DNS for management points.  
 
-     For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service Location and how clients determine their assigned management point](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) in [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) .  
+     For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service Location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) in [Understand how clients find site resources and services for System Center Configuration Manager](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) .  
 
     > [!NOTE]  
     >  By default, DNS publishing is not enabled in Configuration Manager.  
@@ -560,7 +560,7 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 
      Example: **CCMSetup.exe NOTIFYONLY=TRUE**  
 
-     For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+     For more information, see [How to configure client status in System Center Configuration Manager](configure-client-status.md).  
 
 ##  <a name="BKMK_attributevalues"></a> Supported Attribute Values for the PKI Certificate Selection Criteria  
  Configuration Manager supports the following attribute values for the PKI certificate selection criteria:  
