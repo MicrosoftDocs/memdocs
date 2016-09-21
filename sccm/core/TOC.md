@@ -240,7 +240,7 @@
 ###  [Introduction to Asset Intelligence](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
 ###  [Prerequisites for Asset Intelligence](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
 ###  [Configure Asset Intelligence](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
-##   [Use Asset Intelligence](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
+###   [Use Asset Intelligence](clients/manage/asset-intelligence/operations-for-asset-intelligence.md)
 ###  [Security and privacy for Asset Intelligence](clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)
 ###  [Example validation state transitions for Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Example Asset Intelligence general license import file](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
