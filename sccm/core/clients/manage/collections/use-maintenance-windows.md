@@ -1,5 +1,5 @@
 ---
-title: "How to use maintenance windows in System Center Configuration Manager"
+title: "Use maintenance windows | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -55,16 +55,15 @@ Maintenance windows in System Center Configuration Manager provide a means by wh
 
 4.  On the **Home** tab, in the **Properties** group, click **Properties**.  
 
-5.  In the **Maintenance Windows** tab of the *<collection name\>***Properties** dialog box, click the **New** icon.  
+5.  In the **Maintenance Windows** tab of the **&lt;collection name\> Properties** dialog box, click the **New** icon.  
 
     > [!NOTE]  
     >  You cannot create maintenance windows for the **All Systems** collection.  
 
-6.  In the **<new\> Schedule** dialog box, specify a name, a schedule, and a recurrence pattern for the maintenance window. You can also enable the option to apply the schedule to only task sequences.  
+6.  In the **&lt;new\> Schedule** dialog box, specify a name, a schedule, and a recurrence pattern for the maintenance window. You can also enable the option to apply the schedule to only task sequences.  
 
 7.  From the **Apply this schedule to** drop-down list, select whether this maintenance window applies to all deployments, only software updates, or only task sequences.  
 
-8.  Click **OK** to close the **<new\> Schedule** dialog box and create the new maintenance window.  
+8.  Click **OK** to close the **&lt;new\> Schedule** dialog box and create the new maintenance window.  
 
-9. Close the *<collection name\>***Properties** dialog box.  
-  
+9. Close the **&lt;collection name\> Properties** dialog box.  
