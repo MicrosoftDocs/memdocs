@@ -15,17 +15,18 @@ author: Brenduns
 
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
- System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md).
+
+ System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [Whatâ€™s new in System Center Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md).
 
 
 
- The December 2015 release of System Center Configuration Manager (version 1511), is the latest product release of Configuration Manager from Microsoft.   It is tpically referred to as System Center Configuration Manager current branch. *Current branch* indicates this is a version that supports incremental updates to the product and can be an important distinction between this and past releases of Configuration Manager.  
+ The December 2015 release of System Center Configuration Manager (version 1511), is the latest product release of Configuration Manager from Microsoft.   It is typically referred to as System Center Configuration Manager current branch. *Current branch* indicates this is a version that supports incremental updates to the product and can be an important distinction between this and past releases of Configuration Manager.  
 
  With this release System Center Configuration Manager:  
 
 -   Does not  use a year or product identifier in the product name, as seen with past versions like Configuration Manager 2007 or System Center 2012 Configuration Manager.
 
--   Supports incremental in-product  updates, also called update versions. The iniital release is version 1511. Subsequent versions are released several times a year as in-console updates, like version 1602 or 1606.
+-   Supports incremental in-product  updates, also called update versions. The initial release is version 1511. Subsequent versions are released several times a year as in-console updates, like version 1602 or 1606.
 
 
 
@@ -36,7 +37,7 @@ author: Brenduns
  Some versions are only available as updates for existing sites (from within the Configuration Manager console), and cannot be used to install new Configuration Manager sites.   
 For example, the 1602 update is only available from within the Configuration Manager console and is used to update a site that runs a baseline version of 1511 to version 1602.  
 
-Periodically, an update version will also be released as a new baseline version (like udpate 1606) which can be used to install a new hierarchy wihtout the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
+Periodically, an update version will also be released as a new baseline version (like update 1606) which can be used to install a new hierarchy without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 
 
  For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)  
@@ -106,7 +107,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
 ## Software updates  
 
--   System Center Configuration Manager now has the ability to differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is manage with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sup/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   System Center Configuration Manager can now differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sup/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 -   You can now schedule and run the WSUS clean up task from the Configuration Manager console.  
     You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sup/deploy-use/manage-software-updates.md#BKMK_WSUSCleanUp).  
@@ -143,13 +144,13 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
 -   Limit the number of devices a user can enroll  
 
--   Specify terms and conditions users of the Company Portal must accept before accept before they can enroll or use the app  
+-   Specify terms and conditions users of the Company Portal must accept before they can enroll or use the app  
 
--   Added an device enrollment manager role to help manage large numbers of devices  
+-   Added a device enrollment manager role to help manage large numbers of devices  
 
 For more information about mobile device management capabilities with Configuration Manager and Intune, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
 
 ## On-premises Mobile Device Management  
- With System Center Configuration Manager you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
+ With System Center Configuration Manager, you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
 
  To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
