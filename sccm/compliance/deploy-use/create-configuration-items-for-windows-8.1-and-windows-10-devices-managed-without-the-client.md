@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client"
+title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client"
 ms.custom: na
 ms.date: 2016-06-22
 ms.prod: configuration-manager
@@ -15,18 +15,16 @@ caps.handback.revision: 0
 author: robstackmsft
 
 ---
-# How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
+# Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
 ||  
 |-|  
 |This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
   
  Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create a Windows 8.1 and Windows 10 configuration item  
+## Create a Windows 8.1 and Windows 10 configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -66,7 +64,7 @@ author: robstackmsft
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_Setref"></a> Windows 8.1 and Windows 10 configuration item settings reference  
+##  Windows 8.1 and Windows 10 configuration item settings reference  
   
 ### Password  
  These settings are for devices running Windows 10 and later only.  
@@ -79,11 +77,11 @@ author: robstackmsft
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Specify the amount of time a device can be idle (have no user input) before it is locked.|  
-|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
 |**Send password recovery PIN to Exchange Server**||  
   
-###  <a name="BKMK_Device"></a> Device  
+###  Device  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -134,7 +132,7 @@ author: robstackmsft
 |**Cookies**|Allow cookies to be saved on the device.|  
 |**Fraud warning**|Enable or disable warnings of potential fraudulent websites.|  
   
-###  <a name="BKMK_IE"></a> Internet Explorer  
+###  Internet Explorer  
  These settings are for devices running Windows 8.1 and Windows 10.  
   
 |Setting name|Details|  
@@ -151,7 +149,7 @@ author: robstackmsft
 |**Logging report location (URL)**|Specify a URL where visited websites will be logged when Enterprise Mode is active.|  
 |**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that will use Enterprise Mode when it is active.|  
   
-###  <a name="BKMK_Cloud"></a> Cloud  
+###  Cloud  
  These settings are for devices running Windows 8.1 and Windows 10.  
   
 |Setting name|Details|Windows 8.1|Windows 10|  
@@ -161,7 +159,7 @@ author: robstackmsft
 |**Microsoft Account**|Allow the use of a Microsoft account on the device.|Yes|Yes|  
 |**Settings synchronization over metered connections**|Allow settings to be synchronized when the Internet connection is metered.|Yes|Yes|  
   
-###  <a name="BKMK_Security"></a> Security  
+###  Security  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -176,7 +174,7 @@ author: robstackmsft
 |**Profile name**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile for all users**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
   
-###  <a name="BKMK_Peak"></a> Peak synchronization  
+###  Peak synchronization  
  These settings are for devices running Windows 10 and later only.  
   
 |Setting name|Details|  
@@ -185,7 +183,7 @@ author: robstackmsft
 |**Peak synchronization frequency**|Configure how often synchronization occurs during the peak hours you configured.|  
 |**Off-peak synchronization frequency**|Configure how often synchronization occurs outside of the peak hours you configured.|  
   
-###  <a name="BKMK_Roamin"></a> Roaming  
+###  Roaming  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -194,7 +192,7 @@ author: robstackmsft
 |**Email download while roaming**|Allows e-mail downloads when roaming.<br /><br /> (Windows 10 only)|  
 |**Data roaming**|Allow roaming between networks when accessing data.|  
   
-###  <a name="BKMK_Encryption"></a> Encryption  
+###  Encryption  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -205,13 +203,13 @@ author: robstackmsft
 |**Require email encryption**|Requires that emails are encrypted before they are sent.|  
 |**Encryption algorithm**|Select the algorithm for encrypting emails.|  
   
-###  <a name="BKMK_WiFI"></a> Wireless communications  
+###  Wireless communications  
  These settings are for devices running Windows 10 and later only.  
   
 |Setting name|Details|  
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
-|**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
+|**Wi-Fi tethering**|Lets users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
 |**Wi-Fi hotspot reporting**||  
 |**Manual Wi-Fi configuration**||  
@@ -237,13 +235,13 @@ author: robstackmsft
 3.  When you are finished, click **OK**.  
   
 ### Certificates  
- Let’s you import certificates to install on mobile devices.  
+ Lets you import certificates to install on mobile devices.  
   
  Click **Import**, and then specify the following values:  
   
--   **Certificate file** – Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
+-   **Certificate file** â€“ Click Browse and then select the certificate file with the extension **.cer** that you want to import.  
   
--   **Destination store** – Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
+-   **Destination store** â€“ Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
   
     -   **Root**  
   
@@ -257,7 +255,7 @@ author: robstackmsft
   
     -   **Peer**  
   
--   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
+-   **Role** â€“ If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
   
     -   **Mobile Operator**  
   
@@ -288,7 +286,7 @@ author: robstackmsft
 |**Pre-release features**|Allows Microsoft to deploy pre-release settings and features to the device.<br /><br /> (Windows 10 only)|  
 |**Manual root certificate installation**|(Windows 10 only)|  
   
-###  <a name="BKMK_WSWF"></a> Windows Server Work Folders  
+###  Windows Server Work Folders  
  These settings are for devices running Windows 8.1 and Windows 10.  
   
 |Setting name|Details|  
@@ -296,11 +294,11 @@ author: robstackmsft
 |**Work Folders URL**|Configures the location of a Windows Server work folder that users can connect to from their device.|  
   
 ### Allowed and blocked apps (Windows Phone only)  
- Let’s you specify a list of Intune managed apps that are compliant, or not compliant in your company. Windows Phone can allow, or block the installation of these apps.  
+ Lets you specify a list of Intune managed apps that are compliant, or not compliant in your company. Windows Phone can allow, or block the installation of these apps.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
-##### To specify apps that will be allowed or blocked  
+#### To specify apps that will be allowed or blocked  
   
 1.  On the **Allowed and Blocked Apps list** page, specify the following information:  
   
@@ -308,8 +306,8 @@ author: robstackmsft
     |-------------|----------------------|  
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
     |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
+    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the appâ€™s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+    |**Edit**|Lets you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
@@ -337,18 +335,13 @@ author: robstackmsft
 |**Allow Password Manager**|Allow the use of the password manager feature of the Edge browser.|  
 |**Enterprise Mode site list location**|Specifies where to find the list of web sites that will open in Enterprise mode. Users cannot edit this list.|  
   
-### Enterprise Data Protection  
+### Windows Information Protection (formerly Enterprise Data Protection) 
 
-With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+With the increase of employee-owned devices in the enterprise, thereâ€™s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterpriseâ€™s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
 
-Enterprise data protection (EDP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. EDP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
+Windows Information Protection (WIP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
 
- Configuration Manager EDP configuration items manage the list of apps protected by EDP, enterprise network locations, protection level, and encryption settings.
+ Configuration Manager WIP configuration items manage the list of apps protected by WIP, enterprise network locations, protection level, and encryption settings.
   
-> [!NOTE]  
->  Enterprise data protection is currently being tested with a number of enterprise customers, and will become available to Windows Insiders soon. To opt-in to receive preview builds of Windows, consider joining the [Windows Insider Program](https://insider.windows.com/).
-
-For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using enterprise data protection (EDP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp).
+For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
-## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

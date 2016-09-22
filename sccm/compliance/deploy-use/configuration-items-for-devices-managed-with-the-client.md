@@ -26,5 +26,3 @@ This topic list the System Center Configuration Manager configuration item types
   
 -   [How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)  
   
-## See Also  
- [How to create configuration items in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)
