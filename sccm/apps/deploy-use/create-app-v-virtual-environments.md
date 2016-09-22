@@ -1,5 +1,5 @@
 ---
-title: "How to create App-V virtual environments in System Center Configuration Manager"
+title: "Create App-V virtual environments | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Monitor app usage with software metering in System Center Configuration Manager"
+title: "Monitor app usage with software metering | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

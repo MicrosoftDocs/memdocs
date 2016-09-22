@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client"
+title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

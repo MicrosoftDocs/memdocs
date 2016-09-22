@@ -1,5 +1,5 @@
 ---
-title: "Packages and programs in System Center Configuration Manager"
+title: "Packages and programs | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-08
 ms.prod: configuration-manager

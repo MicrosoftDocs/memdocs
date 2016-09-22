@@ -1,5 +1,5 @@
 ---
-title: "Update and retire applications with System Center Configuration Manager"
+title: "Update and retire applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-05-26
 ms.prod: configuration-manager

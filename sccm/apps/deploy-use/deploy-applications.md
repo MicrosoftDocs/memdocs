@@ -1,5 +1,5 @@
 ---
-title: "How to deploy applications with System Center Configuration Manager"
+title: "Deploy applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-03-11
 ms.prod: configuration-manager

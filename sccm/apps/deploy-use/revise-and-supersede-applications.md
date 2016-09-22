@@ -1,5 +1,5 @@
 ---
-title: "How to revise and supersede applications in System Center Configuration Manager"
+title: "Revise and supersede applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-05-26
 ms.prod: configuration-manager

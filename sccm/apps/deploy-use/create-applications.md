@@ -1,5 +1,5 @@
 ---
-title: "Create applications with System Center Configuration Manager"
+title: "Create applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-05-09
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "How to create child configuration items in System Center Configuration Manager"
+title: "Create child configuration items | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

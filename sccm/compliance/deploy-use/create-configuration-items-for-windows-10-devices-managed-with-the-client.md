@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client"
+title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-27
 ms.prod: configuration-manager

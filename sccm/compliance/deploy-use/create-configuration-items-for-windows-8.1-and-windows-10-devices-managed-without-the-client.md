@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client"
+title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-22
 ms.prod: configuration-manager

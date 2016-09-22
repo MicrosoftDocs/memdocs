@@ -1,5 +1,5 @@
 ---
-title: "Link users and devices with user device affinity in System Center Configuration Manager"
+title: "Link users and devices with user device affinity | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

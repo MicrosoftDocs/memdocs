@@ -1,5 +1,5 @@
 ---
-title: "Ensure device compliance with System Center Configuration Manager"
+title: "Ensure device compliance | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-02-16
 ms.prod: configuration-manager

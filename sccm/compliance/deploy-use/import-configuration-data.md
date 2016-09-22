@@ -1,5 +1,5 @@
 ---
-title: "How to import configuration data with System Center Configuration Manager"
+title: "Import configuration data | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

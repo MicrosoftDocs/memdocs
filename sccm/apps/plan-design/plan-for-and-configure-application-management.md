@@ -1,5 +1,5 @@
 ---
-title: "Plan for and configure application management in System Center Configuration Manager"
+title: "Plan for and configure application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-05-10
 ms.prod: configuration-manager
