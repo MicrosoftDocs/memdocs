@@ -20,11 +20,11 @@ When you extend the Active Directory schema for System Center Configuration Mana
 
  We recommend that you use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and configuring clients, and enables clients to efficiently locate resources such as content servers and additional services provided by the various Configuration Manager site system roles.  
 
--   If you’re not familiar with what extended schema provides a Configuration Manager deployment,  you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
+-   If you're not familiar with what extended schema provides a Configuration Manager deployment,  you can read about [Schema extensions for System Center Configuration Manager](../../../core/plan-design/network/schema-extensions.md) to help you make this decision.  
 
--   When you don’t use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
+-   When you don't use an extended schema, you can configure other methods like DNS and WINS to locate services and site system servers. These methods of service location require additional configurations and are not the preferred method for service location by clients. To learn more about this, read [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md),  
 
--   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don’t need to do more. The schema extensions are unchanged, and will already be in place.  
+-   If your Active Directory schema was extended for Configuration Manager 2007 or System Center 2012 Configuration Manager, then you don't need to do more. The schema extensions are unchanged, and will already be in place.  
 
 Extending the schema is a one-time action for any forest. To extend, and then make use of the extended Active Directory schema involves the following:  
 
@@ -56,7 +56,7 @@ Extending the schema for Configuration Manager requires you to:
 
 2.  Use the LDIFDE command-line utility to import the contents of the **ConfigMgr_ad_schema.ldf** file into Active Directory Domain Services:  
 
-    -   For example, the following command line imports the schema extensions into Active Directory Domain Services, turns on verbose logging, and creates a log file during the import process: **ldifde -i -f ConfigMgr_ad_schema.ldf -v -j <location to store log file\>**  
+    -   For example, the following command line imports the schema extensions into Active Directory Domain Services, turns on verbose logging, and creates a log file during the import process: **ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;location to store log file\>**  
 
 3.  You can verify the schema extension was successful by reviewing a log file created by the command line used in the previous step.  
 
@@ -71,11 +71,11 @@ Extending the schema for Configuration Manager requires you to:
 
 1.  Use an account that has the **Create All Child Objects** permission on the **System** container in Active Directory Domain Services.  
 
-2.  Run **ADSI Edit** (adsiedit.msc), and connect to the site server’s domain.  
+2.  Run **ADSI Edit** (adsiedit.msc), and connect to the site server's domain.  
 
 3.  Create the container:  
 
-    -   Expand **Domain** <computer fully qualified domain name\>, expand <distinguished name\>, right-click **CN=System**, click **New**, and then click **Object**.  
+    -   Expand **Domain** &lt;computer fully qualified domain name\>, expand &lt;distinguished name\>, right-click **CN=System**, click **New**, and then click **Object**.  
 
     -   In the **Create Object** dialog box, select **Container**, and then click **Next**.  
 
@@ -91,7 +91,7 @@ Extending the schema for Configuration Manager requires you to:
     -   Select the **Security** tab, click **Add**, and then add the site server computer account with the  
         **Full Control** permission.  
 
-    -   Click **Advanced**, select the site server’s computer account, and then click **Edit**.  
+    -   Click **Advanced**, select the site server's computer account, and then click **Edit**.  
 
     -   In the **Apply onto** list, select **This object and all descendant objects**.  
 
