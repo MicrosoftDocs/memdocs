@@ -23,7 +23,7 @@ With System Center Configuration Manager, you can monitor migration in the Confi
 
 -   In the **Administration** workspace of the Configuration Manager console, expand the **Migration Jobs** node, select a migration job, and then select the **Objects in Job** tab.  
 
--   Use the Configuration Manager log files to review the migration progress or to identify any problems. Migration Manager is the Configuration Manager process that tracks migration actions and records these in the migmctrl.log file in the **\<InstallationPath\>\\LOGS** folder on the site server.  
+-   Use the Configuration Manager log files to review the migration progress or to identify any problems. Migration Manager is the Configuration Manager process that tracks migration actions and records these in the migmctrl.log file in the **\&lt;InstallationPath\>\\LOGS** folder on the site server.  
 
     > [!NOTE]  
     >  If a migration job fails, review the details in the migmctrl.log file as soon as possible. The migration log entries are continually added to the file and overwrite old details. If the entries are overwritten, you might not be able to identify whether any problems that you might encounter with the migrated objects relate to migration issues. Migration activity is logged at the top\-level site of the hierarchy regardless of the site your Configuration Manager console connects to when you configure migration.  

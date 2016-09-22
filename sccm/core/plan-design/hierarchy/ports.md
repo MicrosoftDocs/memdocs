@@ -67,7 +67,7 @@ The following sections detail the ports used for communication in Configuration 
 
 -   -- > indicates one computer initiates communication and the other computer always responds  
 
--   < -- > indicates that either computer can initiate communication  
+-   &lt; -- > indicates that either computer can initiate communication  
 
 ###  <a name="BKMK_PortsAI"></a> Asset Intelligence Synchronization Point -- > Microsoft  
 
@@ -290,7 +290,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsMP-Site"></a> Management Point < -- > Site Server  
+###  <a name="BKMK_PortsMP-Site"></a> Management Point &lt; -- > Site Server  
  (See note 5, **Communication between the site server and site systems**)  
 
 |Description|UDP|TCP|  
@@ -323,7 +323,7 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, Alternate Port Available)|  
 
-###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site Server < -- > Application Catalog Web Service Point  
+###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site Server &lt; -- > Application Catalog Web Service Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -331,7 +331,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> Site Server < -- > Application Catalog Website Point  
+###  <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> Site Server &lt; -- > Application Catalog Website Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -339,7 +339,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-AISP"></a> Site Server < -- > Asset Intelligence Synchronization Point  
+###  <a name="BKMK_PortsSite-AISP"></a> Site Server &lt; -- > Asset Intelligence Synchronization Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -379,7 +379,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Site Server < -- > Certificate Registration Point  
+###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Site Server &lt; -- > Certificate Registration Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -387,7 +387,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsEndpointProtection_SiteServer"></a> Site Server < -- > Endpoint Protection Point  
+###  <a name="BKMK_PortsEndpointProtection_SiteServer"></a> Site Server &lt; -- > Endpoint Protection Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -395,7 +395,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> Site Server < -- > Enrollment Point  
+###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> Site Server &lt; -- > Enrollment Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -403,7 +403,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> Site Server < -- > Enrollment Proxy Point  
+###  <a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> Site Server &lt; -- > Enrollment Proxy Point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -411,7 +411,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-FSP"></a> Site Server < -- > Fallback Status Point  
+###  <a name="BKMK_PortsSite-FSP"></a> Site Server &lt; -- > Fallback Status Point  
  (See note 5, **Communication between the site server and site systems**)  
 
 |Description|UDP|TCP|  
@@ -426,7 +426,7 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP)|--|80 (See note 1, **Proxy Server port**)|  
 
-###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site Server < -- > Issuing Certification Authority (CA)  
+###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site Server &lt; -- > Issuing Certification Authority (CA)  
  This communication is used when you deploy certificate profiles by using the certificate registration point. The communication is not used for every site server in the hierarchy; it is used only for the site server at the top of the hierarchy.  
 
 |Description|UDP|TCP|  
@@ -434,7 +434,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC (DCOM)|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-RSP"></a> Site Server < -- > Reporting Services Point  
+###  <a name="BKMK_PortsSite-RSP"></a> Site Server &lt; -- > Reporting Services Point  
  (See note 5, **Communication between the site server and site systems**)  
 
 |Description|UDP|TCP|  
@@ -443,7 +443,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-Site"></a> Site Server < -- > Site Server  
+###  <a name="BKMK_PortsSite-Site"></a> Site Server &lt; -- > Site Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -471,7 +471,7 @@ The following sections detail the ports used for communication in Configuration 
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-SUP"></a> Site Server < -- > Software Update Point  
+###  <a name="BKMK_PortsSite-SUP"></a> Site Server &lt; -- > Software Update Point  
  (See note 5, **Communication between the site server and site systems**)  
 
 |Description|UDP|TCP|  
@@ -480,7 +480,7 @@ The following sections detail the ports used for communication in Configuration 
 |Hypertext Transfer Protocol (HTTP)|--|80 or 8530 (See note 3, Windows Server Update Services)|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 or 8531 (See note 3, Windows Server Update Services)|  
 
-###  <a name="BKMK_PortsSite-SMP"></a> Site Server < -- > State Migration Point  
+###  <a name="BKMK_PortsSite-SMP"></a> Site Server &lt; -- > State Migration Point  
  (See note 5, **Communication between the site server and site systems**)  
 
 |Description|UDP|TCP|  
@@ -542,20 +542,20 @@ The following sections detail the ports used for communication in Configuration 
 
     -   If the HTTP port is 80, the HTTPS port must be 443.  
 
-    -   If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531.  
+    -   If the HTTP port is anything else, the HTTPS port must be 1 higherï¿½for example, 8530 and 8531.  
 
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 
 4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of the Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol defined by the following RFCs:  
 
-    -   RFC 350—TFTP  
+    -   RFC 350ï¿½TFTP  
 
-    -   RFC 2347—Option extension  
+    -   RFC 2347ï¿½Option extension  
 
-    -   RFC 2348—Block size option  
+    -   RFC 2348ï¿½Block size option  
 
-    -   RFC 2349—Time-out interval, and transfer size options  
+    -   RFC 2349ï¿½Time-out interval, and transfer size options  
 
      Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port will allow the TFTP service to receive incoming TFTP requests but will not allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
 
@@ -645,7 +645,7 @@ For an example of how to configure SQL Server to use a specific port, see [How t
 
 -   Site server --> site system: RPC dynamic TCP ports.  
 
--   Site server < --> site system: Server message blocks (SMB) using TCP port 445.  
+-   Site server &lt; --> site system: Server message blocks (SMB) using TCP port 445.  
 
 Application and package installations on distribution points require the following RPC ports:  
 

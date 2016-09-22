@@ -64,7 +64,7 @@ The following table lists additional details for this group:
 |Membership|Configuration Manager automatically manages the group membership. By default, each administrative user in a hierarchy and the site server computer account are members of the SMS Admins group on each SMS Provider computer in a site.|  
 |Permissions|SMS Admins rights and permissions are set in the WMI Control MMC snap-in. By default, the SMS Admins group is granted **Enable Account** and **Remote Enable** on the Root\SMS namespace. Authenticated Users has **Execute Methods**, **Provider Write**, and **Enable Account**<br /><br /> Administrative users who will use a remote Configuration Manager console require Remote Activation DCOM permissions on both the site server computer and the SMS Provider computer. It is a best practice to grant these rights to the SMS Admins to simplify administration instead of granting these rights directly to users or groups. For more information, see the [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) section in the [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) topic.|  
 
-### SMS_SiteSystemToSiteServerConnection_MP_<sitecode\>  
+### SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
  This group is used by Configuration Manager management points that are remote from the site server to connect to the site database. This group provides a management point access to the inbox folders on the site server and the site database.  
 
  The following table lists additional details for this group:  
@@ -75,7 +75,7 @@ The following table lists additional details for this group:
 |Membership|Configuration Manager automatically manages the group membership. By default, membership includes the computer accounts of remote computers that have a management point for the site.|  
 |Permissions|By default, this group has **Read**, **Read & execute**, and **List folder contents** permission to the **%path%\Microsoft Configuration Manager\inboxes** folder on the site server. Additionally, this group has the additional permission of **Write** to various subfolders below the **inboxes** to which the management point writes client data.|  
 
-### SMS_SiteSystemToSiteServerConnection_SMSProv_<sitecode\>  
+### SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitecode\>  
  This group is used by Configuration Manager SMS Provider computers that are remote from the site server to connect to the site server.  
 
  The following table lists additional details for this group:  
@@ -86,7 +86,7 @@ The following table lists additional details for this group:
 |Membership|Configuration Manager automatically manages the group membership. By default, membership includes the computer account or the domain user account that is used to connect to the site server from each remote computer that has installed a SMS Provider for the site.|  
 |Permissions|By default, this group has **Read**, **Read & execute**, and **List folder contents** permission to the **%path%\Microsoft Configuration Manager\inboxes** folder on the site server. Additionally, this group has the additional permission of **Write** or the permissions of **Write** and **Modify** to various subfolders below the **inboxes** to which the SMS Provider requires access.<br /><br /> This group also has **Read**, **Read & execute**, **List folder contents**, **Write**, and **Modify** permissions to the folders below **%path%\Microsoft Configuration Manager\OSD\boot** and **Read** permission to the folders below **%path%\Microsoft Configuration Manager\OSD\Bin** on the site server.|  
 
-### SMS_SiteSystemToSiteServerConnection_Stat_<sitecode\>  
+### SMS_SiteSystemToSiteServerConnection_Stat_&lt;sitecode\>  
  This group is used by the File Dispatch Manager on Configuration Manager remote site system computers to connect to the site server.  
 
  The following table lists additional details for this group:  
@@ -97,7 +97,7 @@ The following table lists additional details for this group:
 |Membership|Configuration Manager automatically manages the group membership. By default, membership includes the computer account or the domain user account that is used to connect to the site server from each remote site system computer that runs the File Dispatch Manager.|  
 |Permissions|By default, this group has **Read**, **Read & execute**, and **List folder contents** permission to the **%path%\Microsoft Configuration Manager\inboxes** folder and various subfolders below that location on the site server. Additionally, this group has the additional permissions of **Write** and **Modify** to the **%path%\Microsoft Configuration Manager\inboxes\statmgr.box** folder on the site server.|  
 
-### SMS_SiteToSiteConnection_<sitecode\>  
+### SMS_SiteToSiteConnection_&lt;sitecode\>  
  This group is used by Configuration Manager to enable file-based replication between sites in a hierarchy. For each remote site that directly transfers files to this site, this group contains  accounts configured as a **File Replication Account**  
 
  The following table lists additional details for this group:  
