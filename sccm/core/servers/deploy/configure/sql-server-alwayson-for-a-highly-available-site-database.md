@@ -106,7 +106,7 @@ author: Brenduns
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure ‘max text repl size (B)’, 2147483647
+    >     Exec sp_configure ï¿½max text repl size (B)ï¿½, 2147483647
     >     reconfigure
 
 
@@ -159,7 +159,7 @@ author: Brenduns
 
         -   **Replicas**: Specify the servers that will host secondary replicas  
 
-        -   **Listener**: Specify the **Listener DNS Name** as a full DNS name, like **<Listener_Server>.fabrikam.com**. This is used when you configure Configuration Manager to use the database in the availability group.
+        -   **Listener**: Specify the **Listener DNS Name** as a full DNS name, like **&lt;Listener_Server>.fabrikam.com**. This is used when you configure Configuration Manager to use the database in the availability group.
 
     -   On the **Select Initial Data Synchronization** page, select **Full**. After the wizard creates the availability group, the wizard will backup the primary database and transaction log, and restore them on each server that hosts a secondary replica. If you do not use this step, you will need to restore a copy of the site database to each server that hosts a secondary replica, and manually join that database to the group.  
 
@@ -186,7 +186,7 @@ author: Brenduns
 
 #### To move a site database to an availability group  
 
-1.  Run **Configuration Manager Setup** from **<Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
+1.  Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
 
 2.  On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**.  
 
@@ -194,7 +194,7 @@ author: Brenduns
 
 4.  Reconfigure the following for the site database:  
 
-    -   **SQL Server name:** Enter the virtual name for the availability group listener that you configured when creating the availability group. The virtual name should be a full DNS name, like **<endpointServer\>.fabrikam.com**  
+    -   **SQL Server name:** Enter the virtual name for the availability group listener that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;endpointServer\>.fabrikam.com**  
 
     -   **Instance:** This value must be blank to specify the default instance for the availability group listener of the availability group.  If the current site database is installed on a named instance, the named instance will be listed and must be cleared  
 
@@ -241,7 +241,7 @@ author: Brenduns
 
 4.  On the restored site database, change the backup model for the site database from **FULL** to **SIMPLE**.  See [View or Change the Recovery Model of a Database](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in the SQL Server documentation.  
 
-5.  Run **Configuration Manager Setup** from **<Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
+5.  Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
 
 6.  On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**.  
 

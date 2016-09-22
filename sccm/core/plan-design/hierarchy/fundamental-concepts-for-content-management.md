@@ -25,13 +25,13 @@ The key concepts for content management follow. When a concept requires addition
 ## Accounts used for content management  
  The following accounts can be used with content management:  
 
--   **Network Access Account** – Used by clients to connect to a distribution point and access content. By default, clients will first try their computer account  
+-   **Network Access Account** ï¿½ Used by clients to connect to a distribution point and access content. By default, clients will first try their computer account  
 
      This account is also used by pull-distribution points to obtain content from a source distribution point in a remote forest  
 
--   **Package access account** – By default, Configuration Manager grants access to content on a distribution point to generic access accounts Users and Administrators. However, you can configure additional permissions to restrict access. See <Manage Accounts to Access Package Content\>  
+-   **Package access account** ï¿½ By default, Configuration Manager grants access to content on a distribution point to generic access accounts Users and Administrators. However, you can configure additional permissions to restrict access. See &lt;Manage Accounts to Access Package Content\>  
 
--   **Multicast Connection Account** – Used for operating system deployments  
+-   **Multicast Connection Account** ï¿½ Used for operating system deployments  
 
 For more information about these accounts, see [Manage accounts to access content](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)
 
@@ -111,7 +111,7 @@ Learn more about the [content library](../../../core/plan-design/hierarchy/the-c
 
 -   **Pull-distribution point** -  A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point) similar to how clients download content from distribution points. Pull-distribution points  can help you avoid network bandwidth bottlenecks that can occur when the site server must directly distribute content to each distributin point.  [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
 
--   **Cloud-based distribution point** – A variation of a distribution point installed in Microsoft Azure. [Use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+-   **Cloud-based distribution point** ï¿½ A variation of a distribution point installed in Microsoft Azure. [Use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
 
 Standard distribution points support a range of configurations and features, like throttling and scheduling, PXE and Multicast, or prestaged content.  
@@ -151,7 +151,7 @@ Standard distribution points support a range of configurations and features, lik
 ## Fallback  
  Fallback settings are related to the use of **preferred distribution points** and to content source location that are used by clients.  
 
--   By default, clients only download content from a preferred distribution point (one that is associated with the client’s boundary groups)  
+-   By default, clients only download content from a preferred distribution point (one that is associated with the clientï¿½s boundary groups)  
 
 -   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that cannot get a deployment from one of its preferred distribution points.  
 
@@ -198,7 +198,7 @@ See  [content source location scenarios](../../../core/plan-design/hierarchy/con
  Learn more about the [Package Transfer Manager](../../../core/plan-design/hierarchy/package-transfer-manager.md)  
 
 ## Preferred distribution point  
- distribution points that are associated with a client’s current boundary groups.  
+ distribution points that are associated with a clientï¿½s current boundary groups.  
 
  You have the option to associate each distribution point with one or more boundary groups:  
 

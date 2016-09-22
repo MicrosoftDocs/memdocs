@@ -33,7 +33,7 @@ Each Configuration Manager console, Resource Explorer, tools, and custom scripts
  The SMS Provider helps enforce Configuration Manager security. It returns only the information that the administrative user who is running the Configuration Manager console is authorized to view.  
 
 > [!IMPORTANT]  
->  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site’s database.  
+>  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that siteï¿½s database.  
 
  For information about how to manage the SMS Provider, see [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) in [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md).  
 
@@ -167,7 +167,7 @@ The structure of the SMS Provider is defined by the WMI schema. Schema namespace
 
 |Namespace|Description|  
 |---------------|-----------------|  
-|Root\SMS\site_*<site code\>*|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
+|Root\SMS\site_*&lt;site code\>*|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
 |Root\SMS\SMS_ProviderLocation|Provides the location of the SMS Provider computers for a site.|  
 |Root\CIMv2|Location inventoried for WMI namespace information during hardware and software inventory.|  
 |Root\CCM|Configuration Manager client configuration policies and client data.|  

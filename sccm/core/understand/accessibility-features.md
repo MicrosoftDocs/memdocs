@@ -17,7 +17,7 @@ author: Brenduns
  System Center Configuration Manager includes features to help make it accessible for people with disabilities.
 
 
- ##  <a name="bkmk_aconsole"></a> Accessibility features for the Configuration Manager console  
+ ## <a name="bkmk_aconsole"></a> Accessibility features for the Configuration Manager console  
 -   To access a workspace, use the following keyboard shortcuts:  
 
     |Workspace|Keyboard shortcut|  
