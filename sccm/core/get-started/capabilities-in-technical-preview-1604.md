@@ -37,7 +37,7 @@ This article introduces the features that are available in the Technical Preview
 
     3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the Next arrow.  
 
-    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://<yourdomain\>/sccm**.  
+    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://&lt;yourdomain\>/sccm**.  
 
     5.  Complete the wizard.  
 

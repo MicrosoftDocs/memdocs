@@ -12,7 +12,7 @@ caps.latest.revision: 5
 author: Brenduns
 ---
 # Capabilities in Technical Preview 1511 for System Center Configuration Manager
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
 The following are new features you can try out with this version.  
 
@@ -121,7 +121,7 @@ To install a site that uses a SQL Server availability group:
 
 1.  Substitute the following when prompted by Configuration Manager Setup:  
 
-    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **<endpointServer\>.fabrikam.com**.  
+    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;endpointServer\>.fabrikam.com**.  
 
     -   **Instance**:  This value should remain blank. There is no instance in this configuration.  
 
