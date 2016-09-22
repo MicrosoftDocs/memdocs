@@ -30,9 +30,7 @@ Configuration baselines in System Center Configuration Manager contain predefine
   
 ## Create a configuration baseline  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Baselines**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Baselines**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Baseline**.  
   
@@ -60,7 +58,7 @@ Configuration baselines in System Center Configuration Manager contain predefine
   
 7.  Use the **Change Revision** list to select a specific or the latest revision of the configuration item to assess for compliance on client devices or select **Always Use Latest** to always use the latest revision. For more information about configuration item revisions, see [Management tasks for configuration data in System Center Configuration Manager](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  
   
-8.  If you want to remove a configuration item from the configuration baseline, select a configuration item, and then click **Remove**.  
+8.  To remove a configuration item from the configuration baseline, select a configuration item, and then click **Remove**.  
   
 9. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
   

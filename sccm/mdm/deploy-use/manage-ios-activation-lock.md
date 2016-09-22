@@ -58,7 +58,7 @@ The business benefits of this for corporate-owned devices are:
 - You can enable the user to do their work knowing that when the device needs to be repurposed, you can retire or unlock it
 
 
-## How to enable Activation Lock on supervised devices
+## Enable Activation Lock on supervised devices
 
 You use Configuration Manager compliance settings to create and deploy a configuration item of the type **iOS and Mac OS X** to enable Activation Lock on supervised devices:
 
@@ -67,8 +67,6 @@ You use Configuration Manager compliance settings to create and deploy a configu
 3. [Add the configuration item to a configuration baseline](https://technet.microsoft.com/library/mt629337.aspx).
 4. [Deploy this configuration baseline](https://technet.microsoft.com/library/mt629332.aspx) to a collection containing the iOS devices for which you want to enable Activation Lock.
 
-## How to bypass Activation Lock from the Configuration Manager console
-
 > [!IMPORTANT]
 > Ensure you are in physical possession of the device before you follow this procedure. If you do not, the Activation Lock will be bypassed and whoever is in possession of the device will have full access to it, allowing them to turn off Find My iPhone, erase the device, or reactivate it.
 
@@ -76,7 +74,7 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 
 
 
-### How to view the Activation Lock bypass code
+## View the Activation Lock bypass code
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the **Assets and Compliance** workspace, click **Devices**.
@@ -84,7 +82,7 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 4. On the **Home** tab, in the **Device** group, click **Remote Device Actions** > **View Activation Lock Bypass Code**.
 5. The **Activation Lock Bypass Code** dialog box displays the bypass code for the selected device.
 
-### How to bypass Activation Lock
+## Bypass Activation Lock
 
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the **Assets and Compliance** workspace, click **Devices**.
@@ -97,6 +95,4 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 	- The **Activation Lock Bypass State** column in the **Devices** view (this column is hidden by default).
 	- The **Remote Device Actions Information** section in the **Summary** tab of the details pane (when a device is selected).
   
-  
-## See Also  
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ 
