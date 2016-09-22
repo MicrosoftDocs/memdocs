@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 caps.latest.revision: 12
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Create a task sequence to upgrade an operating system in System Center Configuration Manager
 Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version with System Center Configuration Manager](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) scenario.  

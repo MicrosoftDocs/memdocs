@@ -13,25 +13,7 @@ ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 caps.latest.revision: 22
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Design a hierarchy of sites for System Center Configuration Manager
 Before installing the first site of a new System Center Configuration Manager hierarchy, you should understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of  management each site type provides. Then, after considering content management options that can reduce the number of sites you need to install, you can plan out a topology that efficiently serves your current business needs and can later expand to manage future growth.  
@@ -117,7 +99,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 ##  <a name="BKMK_ChooseSecondary"></a> Determine when to use a secondary site  
  Use secondary sites to manage the transfer of deployment content and client data across low-bandwidth networks.  
 
- You manage a secondary site from a central administration site or the secondary siteâ€™s direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
+ You manage a secondary site from a central administration site or the secondary site’s direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
 
  Consider installing a secondary site if any of the following conditions apply:  
 

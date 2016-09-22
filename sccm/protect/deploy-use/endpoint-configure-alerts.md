@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 #  Configure Alerts for Endpoint Protection in Configuration Manager
@@ -63,23 +45,23 @@ translation.priority.ht:
 
 7.  In the  **Conditions** list of the **Alerts** tab, select each Endpoint Protection alert, and then specify the following information:
 
-    -   **Alert Name** â€“ Accept the default name or enter a new name for the alert.
+    -   **Alert Name** – Accept the default name or enter a new name for the alert.
 
-    -   **Alert Severity** â€“ In the list, select the alert level to display in the Configuration Manager console.
+    -   **Alert Severity** – In the list, select the alert level to display in the Configuration Manager console.
 
 8.  Depending on the alert that you select, specify the following additional information:
 
     -   **Malware detection** - This alert is generated if malware is detected on any computer in the collection that you monitor. The **Malware detection threshold** specifies the malware detection levels at which this alert is generated:
 
-        -   **High â€“ All detections** - The alert is generated when there are one or more computers in the specified collection on which any malware is detected, regardless of what action the Endpoint Protection client takes.
+        -   **High – All detections** - The alert is generated when there are one or more computers in the specified collection on which any malware is detected, regardless of what action the Endpoint Protection client takes.
 
-        -   **Medium â€“ Detected, pending action** - The alert is generated when there is one or more computers in the specified collection on which malware is detected, and you must manually remove the malware.
+        -   **Medium – Detected, pending action** - The alert is generated when there is one or more computers in the specified collection on which malware is detected, and you must manually remove the malware.
 
-        -   **Low â€“ Detected, still active** - The alert is generated when there are one or more computers in the specified collection on which malware is detected and is still active.
+        -   **Low – Detected, still active** - The alert is generated when there are one or more computers in the specified collection on which malware is detected and is still active.
 
     -   **Malware outbreak** - This alert is generated if specified malware is detected on a specified percentage of computers in the collection that you monitor.
 
-        -   **Percentage of computers with malware detected** â€“ The alert is generated when the percentage of computers with malware that is detected in the collection exceeds the percentage that you specify. Specify a percentage from **1** through **99**.
+        -   **Percentage of computers with malware detected** – The alert is generated when the percentage of computers with malware that is detected in the collection exceeds the percentage that you specify. Specify a percentage from **1** through **99**.
 
             > [!NOTE]
             >  The percentage value is based on the number of computers in the collection, but excludes computers that do not have a Configuration Manager client installed. It includes computers that do not yet have the Endpoint Protection client installed.

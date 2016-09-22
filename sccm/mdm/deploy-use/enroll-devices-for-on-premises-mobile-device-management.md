@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: 6
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager
 To manage computers and devices with System Center Configuration Manager On\-premises Mobile Device Management, the devices need to be enrolled so that Configuration Manager can communicate with the devices for management tasks. Configuration Manager provides two methods for enrolling devices:  

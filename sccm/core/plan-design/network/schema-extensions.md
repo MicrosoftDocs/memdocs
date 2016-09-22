@@ -14,25 +14,7 @@ caps.latest.revision: 8
 caps.handback.revision: 0
 author: Brenduns
 robots: noindex
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Schema extensions for System Center Configuration Manager
 You can extend the Active Directory schema to support Configuration Manager. This edits a forests Active Directory schema  to add a new container and several attributes that are used by Configuration Manager sites to publish key information in Active Directory where clients can securely access it.  This information can simplify the deployment and configuration of clients, and helps clients locate site resources like servers with deployed content or that provide various services to clients.  
@@ -80,7 +62,7 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers require to install:  
 
-    -   **Use client push installation**. Before you use client installation method, make sure that all prerequisites are met. For more information, see the section ‚ÄúInstallation Method Dependencies‚Äù in Prerequisites for Computer Clients.  
+    -   **Use client push installation**. Before you use client installation method, make sure that all prerequisites are met. For more information, see the section ìInstallation Method Dependenciesî in Prerequisites for Computer Clients.  
 
     -   **Install clients manually** and provide client installation properties by using CCMSetup installation command-line properties. This must include the following:  
 
@@ -98,7 +80,7 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
     -   **Deploy a custom script to clients that updates the port information**. If clients cannot communicate with a site because of a port change, you cannot use Configuration Manager to  deploy this script. For example, you could use Group Policy.  
 
-**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a site‚Äôs public key is made available to all sites in the hierarchy.  
+**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a siteís public key is made available to all sites in the hierarchy.  
 
 -   **Workaround:** If you do not extend the schema, use the hierarchy maintenance tool, **preinst.exe**, to exchange the secure key information between sites.  
 

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
 caps.latest.revision: 6
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Operations for migrating to System Center Configuration Manager
 For migration in System Center Configuration Manager, after you successfully gather data from a source site in a supported source hierarchy, you can start to migrate data and clients. Use the information in the following sections to create and run migration jobs to migrate data, clients, and to then complete the migration process.  

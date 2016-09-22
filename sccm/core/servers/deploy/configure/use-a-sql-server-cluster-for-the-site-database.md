@@ -13,25 +13,7 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use a SQL Server cluster for the System Center Configuration Manager site database
 

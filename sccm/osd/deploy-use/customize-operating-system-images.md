@@ -13,25 +13,7 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 caps.latest.revision: 12
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Customize operating system images with System Center Configuration Manager
 Operating system images in System Center Configuration Manager are WIM files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. A custom operating system image is built and captured from a reference computer that you configure with all the required operating system files, support files, software updates, tools, and other software apps. The extent to which you manually configure the reference computer is up to you. You can completely automate the configuration of the reference computer by using a build and capture task sequence, you can manually configure certain aspects of the reference computer and then automate the rest by using task sequences, or you can manually configure the reference computer without using task sequences.  

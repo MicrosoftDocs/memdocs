@@ -1,5 +1,5 @@
 ---
-title: "How to create collections in System Center Configuration Manager"
+title: "Create collections | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create collections in System Center Configuration Manager
 Create collections in System Center Configuration Manager to represent logical groupings of users or devices. You can use collections to help you perform many tasks including application management, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).  
@@ -82,11 +64,11 @@ Create collections in System Center Configuration Manager to represent logical g
 
             -   **Attribute name**: In the list, select the attribute associated with the selected resource class that you want to search for. For example, if you want to select computers by their NetBIOS name, select **System Resource** in the **Resource class** list and **NetBIOS name** in the **Attribute name** list.  
 
-            -   **Exclude resources marked as obsolete** – If a client computer is marked as obsolete, do not include this value in the search results.  
+            -   **Exclude resources marked as obsolete** � If a client computer is marked as obsolete, do not include this value in the search results.  
 
-            -   **Exclude resources that do not have the Configuration Manager client installed** – If the search results include a resource that does not have a Configuration Manager client installed, this value will not be displayed in the search results.  
+            -   **Exclude resources that do not have the Configuration Manager client installed** � If the search results include a resource that does not have a Configuration Manager client installed, this value will not be displayed in the search results.  
 
-            -   **Value:** Enter a value for which you want to search the selected attribute name. You can use the percent character **%** as a wildcard. For example, if you wanted to search for computers that have a NetBIOS name beginning with ‘M’, enter **M%** in this field.  
+            -   **Value:** Enter a value for which you want to search the selected attribute name. You can use the percent character **%** as a wildcard. For example, if you wanted to search for computers that have a NetBIOS name beginning with �M�, enter **M%** in this field.  
 
         2.  On the **Select Resources** page of the **Create Direct Membership Rule Wizard**, select the resources that you want to add to the collection in the **Resources** list, and then click **Next**.  
 
@@ -98,11 +80,11 @@ Create collections in System Center Configuration Manager to represent logical g
 
             -   **Name**: Specify a unique name for the query rule.  
 
-            -   **Import Query Statement** – Opens the **Browse Query** dialog box where you can select a Configuration Manager query to use as the query rule for the collection. For more information about how to create these queries and some examples, see [How to create queries in System Center Configuration Manager](../../../../core/servers/manage/create-queries.md).  
+            -   **Import Query Statement** � Opens the **Browse Query** dialog box where you can select a Configuration Manager query to use as the query rule for the collection. For more information about how to create these queries and some examples, see [How to create queries in System Center Configuration Manager](../../../../core/servers/manage/create-queries.md).  
 
             -   **Resource class:** In the list, select the type of resource you want to search for and add to the collection. Select a value from **System Resource** values to search for inventory data returned from client computers or **Unknown Computer** to select from values returned by unknown computers.  
 
-            -   **Edit Query Statement** – Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
+            -   **Edit Query Statement** � Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
         2.  Click **OK** to close the **Query Rule Properties** dialog box and to save the query membership rule.  
 
@@ -118,7 +100,7 @@ Create collections in System Center Configuration Manager to represent logical g
 
         2.  Click **OK** to close the **Select Collections** dialog box and to save the exclude membership rule.  
 
-    -   **Use incremental updates for this collection** – Select this option to periodically scan for only new or changed resources from the previous collection evaluation and update the collection membership with only these resources, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
+    -   **Use incremental updates for this collection** � Select this option to periodically scan for only new or changed resources from the previous collection evaluation and update the collection membership with only these resources, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
 
         > [!IMPORTANT]  
         >  Collections configured by using query rules that use the following classes do not support incremental updates:  
@@ -138,7 +120,7 @@ Create collections in System Center Configuration Manager to represent logical g
         > -   SMS_GH_System_*  
         > -   SMS_GEH_System_*  
 
-    -   **Schedule a full update on this collection** – Select this option to schedule a regular full evaluation of the collection membership.  
+    -   **Schedule a full update on this collection** � Select this option to schedule a regular full evaluation of the collection membership.  
 
 6.  Complete the wizard to create the new collection. The new collection is displayed in the **Device Collections** node of the **Assets and Compliance** workspace.  
 
@@ -187,11 +169,11 @@ Create collections in System Center Configuration Manager to represent logical g
 
             -   **Name**: Specify a unique name for the query rule.  
 
-            -   **Import Query Statement** – Opens the **Browse Query** dialog box where you can select a Configuration Manager query to use as the query rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
+            -   **Import Query Statement** � Opens the **Browse Query** dialog box where you can select a Configuration Manager query to use as the query rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
             -   **Resource class**: In the list, select the type of resource you want to search for and add to the collection. Select from **User Resource** values to search for user information collected by Configuration Manager or **User Group Resource** to search for user group information collected by Configuration Manager.  
 
-            -   **Edit Query Statement** – Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
+            -   **Edit Query Statement** � Opens the **Query Statement Properties** dialog box where you can author a query to use as the rule for the collection. For more information about queries, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
         2.  Click **OK** to close the **Query Rule Properties** dialog box and to save the query membership rule.  
 
@@ -207,7 +189,7 @@ Create collections in System Center Configuration Manager to represent logical g
 
         2.  Click **OK** to close the **Select Collections** dialog box and to save the exclude membership rule.  
 
-    -   **Use incremental updates for this collection** – Select this option to periodically scan for only new or changed resources from the previous collection evaluation and update the collection membership with only these resources, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
+    -   **Use incremental updates for this collection** � Select this option to periodically scan for only new or changed resources from the previous collection evaluation and update the collection membership with only these resources, independently of a full collection evaluation. Incremental updates occur at 10 minute intervals.  
 
         > [!IMPORTANT]  
         >  Collections configured by using query rules that use the following classes do not support incremental updates:  
@@ -227,7 +209,7 @@ Create collections in System Center Configuration Manager to represent logical g
         > -   SMS_GH_System_*  
         > -   SMS_GEH_System_*  
 
-    -   **Schedule a full update on this collection** – Select this option to schedule a regular full evaluation of the collection membership.  
+    -   **Schedule a full update on this collection** � Select this option to schedule a regular full evaluation of the collection membership.  
 
 6.  Complete the wizard to create the new collection. The new collection is displayed in the **User Collections** node of the **Assets and Compliance** workspace.  
 

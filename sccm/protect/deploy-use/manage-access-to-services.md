@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: 76d86613-b87f-4fe5-9236-a573e00b613a
 caps.latest.revision: 26
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage access to services in System Center Configuration Manager
 Use **conditional access** in System Center Configuration Manager to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  

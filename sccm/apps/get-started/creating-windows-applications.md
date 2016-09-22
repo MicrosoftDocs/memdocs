@@ -11,26 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 caps.latest.revision: 8
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
 ---
 # Create Windows applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows devices.  
@@ -76,5 +57,3 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   App updates are supported when the MSI product code of each version is the same.  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)

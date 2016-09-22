@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 caps.latest.revision: 5
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Fundamentals of security for System Center Configuration Manager
 Security for System Center Configuration Manager consists of several layers. The first layer is provided by Windows security features for both the operating system and the network and include:  

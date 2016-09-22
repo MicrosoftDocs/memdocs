@@ -13,25 +13,7 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create Wi-Fi profiles in System Center Configuration Manager
 Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to the wireless network.  
@@ -90,7 +72,7 @@ Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless 
 1.  On the **Wi-Fi Profile** page of the Create Wi-Fi Profile Wizard, specify the descriptive name for the wireless Internet connection by using a maximum of 32 characters. This is the name that devices will display as the network name.  
   
     > [!IMPORTANT]  
-    >  Configuration Manager does not support using the apostrophe (**â€˜**) or comma (**,**) characters in the network name.  
+    >  Configuration Manager does not support using the apostrophe (**‘**) or comma (**,**) characters in the network name.  
   
 2.  In **SSID**, specify the name (SSID), of the wireless network that you want devices to be able to connect to. You can use a maximum of 32 characters. The SSID name is case-sensitive, so be sure to enter it exactly as it is configured.  
   
@@ -112,7 +94,7 @@ Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless 
   
 1.  On the **Security Configuration** page of the Create Wi-Fi Profile Wizard, Select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.  
   
-     For Android devices only: the security types **WPA â€“ Personal**, **WPA2 â€“ Personal** and **WEP** are not supported.  
+     For Android devices only: the security types **WPA – Personal**, **WPA2 – Personal** and **WEP** are not supported.  
   
 2.  Select the encryption method that the wireless network uses.  
   
@@ -132,7 +114,7 @@ Create Wi-Fi profiles in System Center Configuration Manager to deploy wireless 
 ### For iOS devices only:  
  Configure information for any certificates that are required for the Wi-Fi connection. You must configure the client certificate and either the trusted server certificate name or the root certificate, as follows:  
   
--   **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificateâ€™s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
+-   **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificate’s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
   
     > [!TIP]  
     >  If the client certificate that you select for EAP or client authentication for an iOS device will be used to authenticate to a Remote Authentication Dial-In User Service (RADIUS) server, such as a server that is running Network Policy Server, you must set the Subject Alternative Name to the User Principal Name.  

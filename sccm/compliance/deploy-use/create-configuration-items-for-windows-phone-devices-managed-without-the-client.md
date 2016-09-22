@@ -13,34 +13,14 @@ ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
 Use the System Center Configuration Manager**Windows Phone** configuration item to manage settings  for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
 ### To create a Windows Phone configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -80,7 +60,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_Setref"></a> Windows Phone configuration item settings reference  
+##  Windows Phone configuration item settings reference  
   
 ### Password  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
@@ -210,7 +190,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Require email encryption**|Require emails to be encrypted before they are sent.|  
 |**Encryption algorithm**|Select the algorithm used to encrypt emails.|  
   
-###  <a name="BKMK_WiFI"></a> Wireless communications  
+###  Wireless communications  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
   
 |Setting name|Details|  
@@ -240,7 +220,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 3.  When you are finished, click **OK**.  
   
-###  <a name="BKMK_Certs"></a> Certificates  
+###  Certificates  
  Let’s you import certificates to install on mobile devices.  
   
  Click **Import**, and then specify the following values:  
@@ -317,5 +297,3 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
-## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 4074d4fd-7a9b-4b80-9a0d-f4bfc63914fa
 caps.latest.revision: 5
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Collections technical reference for System Center Configuration Manager
 Collections in System Center Configuration Manager provide a method of managing groups of computers, mobile devices, users, and other resources in your organization.  

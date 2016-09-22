@@ -13,25 +13,7 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Accounts used in System Center Configuration Manager
 Use the following information to identify the Windows groups and the accounts that are used in System Center Configuration Manager, how they are used, and any requirements.  

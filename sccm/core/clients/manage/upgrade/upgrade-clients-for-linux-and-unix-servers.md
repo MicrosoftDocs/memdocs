@@ -13,35 +13,17 @@ ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager
-You can upgrade the version of the client for Linux and UNIX on a computer to a newer client version without first uninstalling the current client. To do so, install the new client installation package on the computer while using the **-keepdb** command line property. When the client for Linux and UNIX installs, it overwrites existing client data with the new client files. However, the **â€“keepdb** command line property directs the install process to retain the clients unique identifier (GUID), local database of information, and certificate store. This information is then used by the new client installation.  
+You can upgrade the version of the client for Linux and UNIX on a computer to a newer client version without first uninstalling the current client. To do so, install the new client installation package on the computer while using the **-keepdb** command line property. When the client for Linux and UNIX installs, it overwrites existing client data with the new client files. However, the **–keepdb** command line property directs the install process to retain the clients unique identifier (GUID), local database of information, and certificate store. This information is then used by the new client installation.  
 
- For example, you have a RHEL5 x64 computer that runs the client from the original release of the Configuration Manager client for Linux and UNIX. To upgrade this client to the client version from cumulative update 1, you manually run the **install** script to install the applicable client package from cumulative update 1, with the addition of the **â€“keepdb** command line switch. The command line you use resembles the following: **./install â€“mp <hostname\> -sitecode <code\> -keepdb ccm-Universal-x64.<build\>.tar**  
+ For example, you have a RHEL5 x64 computer that runs the client from the original release of the Configuration Manager client for Linux and UNIX. To upgrade this client to the client version from cumulative update 1, you manually run the **install** script to install the applicable client package from cumulative update 1, with the addition of the **–keepdb** command line switch. The command line you use resembles the following: **./install –mp <hostname\> -sitecode <code\> -keepdb ccm-Universal-x64.<build\>.tar**  
 
 ## How to use a Software Deployment to Upgrade the Client on Linux and UNIX Servers  
- You can use a software deployment to upgrade the client for Linux and UNIX to a new client version. However, the System Center Configuration Manager client cannot directly run the installation script to install the new client because the installation of a new client must first uninstall the current client. This would end the Configuration Manager client process that runs the installation script before the installation of the new client begins. To successfully use a software deployment to install the new client, you must schedule the installation to start at a future time and to be run by the operating systemâ€™s built-in scheduling capabilities.  
+ You can use a software deployment to upgrade the client for Linux and UNIX to a new client version. However, the System Center Configuration Manager client cannot directly run the installation script to install the new client because the installation of a new client must first uninstall the current client. This would end the Configuration Manager client process that runs the installation script before the installation of the new client begins. To successfully use a software deployment to install the new client, you must schedule the installation to start at a future time and to be run by the operating system’s built-in scheduling capabilities.  
 
- To accomplish this, use a software deployment to first copy the files for the new client installation package to the client computer, and then deploy and run a script to schedule the client installation process. The script uses the operating systemâ€™s built-in **at** command to delay its start. Then, when the script runs, its operation is managed by the client operating system and not the Configuration Manager client on the computer. This allows the command line called by the script to first uninstall the Configuration Manager client and then install the new client, completing the process of upgrade of the client on the Linux or UNIX computer. After the upgrade completes, the upgraded client remains managed by Configuration Manager.  
+ To accomplish this, use a software deployment to first copy the files for the new client installation package to the client computer, and then deploy and run a script to schedule the client installation process. The script uses the operating system’s built-in **at** command to delay its start. Then, when the script runs, its operation is managed by the client operating system and not the Configuration Manager client on the computer. This allows the command line called by the script to first uninstall the Configuration Manager client and then install the new client, completing the process of upgrade of the client on the Linux or UNIX computer. After the upgrade completes, the upgraded client remains managed by Configuration Manager.  
 
  Use the following procedure to help you configure a software deployment to upgrade the client for Linux and UNIX. The following steps and examples upgrade a RHEL5 x64 computer that runs the initial release of the client to the cumulative update 1 client version.  
 
@@ -53,7 +35,7 @@ You can upgrade the version of the client for Linux and UNIX on a computer to a 
 
 2.  Create a script to manage the upgrade of the Configuration Manager client, and then place a copy of the script in the same folder on the client computer as the client installation files from step 1.  
 
-     The script does not require a specific name, but must contain command lines sufficient to use the client installation files from a local folder on the client computer, and to install the client installation package by using the **â€“keepdb** command line property. You use the **â€“keepdb** command line property to maintain the unique identifier of the current client for use by the new client you are installing.  
+     The script does not require a specific name, but must contain command lines sufficient to use the client installation files from a local folder on the client computer, and to install the client installation package by using the **–keepdb** command line property. You use the **–keepdb** command line property to maintain the unique identifier of the current client for use by the new client you are installing.  
 
      For example, you create a script named **upgrade.sh** that contains the following lines, and then copy it to the **/tmp/PATCH** folder on the client computer:  
 
@@ -66,6 +48,6 @@ You can upgrade the version of the client for Linux and UNIX on a computer to a 
 
 3.  Use software deployment to have each client use the computers built-in **at** command to run the **upgrade.sh** script with a short delay before the script runs.  
 
-     For example, use the following command line to run the script: **at â€“f /tmp/upgrade.sh â€“m now + 5 minutes**  
+     For example, use the following command line to run the script: **at –f /tmp/upgrade.sh –m now + 5 minutes**  
 
  After the client successfully schedules the **upgrade.sh** script to run, the client submits a status message indicating the software deployment completed successfully. However, the actual client installation is then managed by the computer, after the delay. After the client upgrade completes, validate the install by reviewing the **/var/opt/microsoft/scxcm.log** file on the client computer. Additionally, you can confirm that the client is installed and communicating with the site by viewing details for the client in the **Devices** node of the **Assets and Compliance** workspace in the Configuration Manager console.  

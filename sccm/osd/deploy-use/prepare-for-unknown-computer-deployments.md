@@ -13,25 +13,7 @@ ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prepare for unknown computer deployments in System Center Configuration Manager
 Use the information in this topic to deploy operating systems to unknown computers in your System Center Configuration Manager environment. An unknown computer is a computer that is not managed by Configuration Manager. This means that there is no record of these computers in the Configuration Manager database. Unknown computers include the following:  
@@ -73,7 +55,7 @@ Use the information in this topic to deploy operating systems to unknown compute
   
  When an unknown computer is started, Configuration Manager recognizes the computer as an unprovisioned computer rather than an unknown computer. This means that the computer can now receive the task sequences that were deployed to the unknown computer object. The deployed task sequence then installs an operating system image that must include the Configuration Manager client.  
   
- After the Configuration Manager client is installed, a record for the computer is created and the computer is listed in the appropriate Configuration Manager collection. If the computer fails to install the operating system image or the Configuration Manager client, an â€œUnknownâ€ record for the computer is created and the computer appears in the **All Systems** collection.  
+ After the Configuration Manager client is installed, a record for the computer is created and the computer is listed in the appropriate Configuration Manager collection. If the computer fails to install the operating system image or the Configuration Manager client, an “Unknown” record for the computer is created and the computer appears in the **All Systems** collection.  
   
 > [!NOTE]  
 >  During the installation of the operating system image, the task sequence can retrieve collection variables but not computer variables from this computer.  

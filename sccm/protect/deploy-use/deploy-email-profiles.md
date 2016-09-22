@@ -13,25 +13,7 @@ ms.assetid: c976916e-2f0d-471d-ae19-721de9bbacfa
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to deploy email profiles in System Center Configuration Manager
 Email profiles in System Center Configuration Manager must be deployed to one or more collections of users or devices before they can be used.  

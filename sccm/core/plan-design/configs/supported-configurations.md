@@ -13,25 +13,7 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Supported configurations for System Center Configuration Manager
 As an on-premises solution, System Center Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server and Azure.

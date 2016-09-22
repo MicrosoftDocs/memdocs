@@ -13,25 +13,7 @@ ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
 caps.latest.revision: 3
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for email profiles in System Center Configuration Manager
 This topic contains security and privacy information for email profiles in System Center Configuration Manager.  

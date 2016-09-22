@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 caps.latest.revision: 9
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use a cloud-based distribution point with System Center Configuration Manager
 A cloud-based distribution point is a System Center Configuration Manager distribution point that is hosted in Microsoft Azure. The following information is intended to help you learn about configurations and limitations for using a cloud-based distribution point.

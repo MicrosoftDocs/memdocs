@@ -1,5 +1,5 @@
 ---
-title: "How to deploy clients to UNIX and Linux servers in System Center Configuration Manager"
+title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to deploy clients to UNIX and Linux servers in System Center Configuration Manager
 Before you can manage a Linux or UNIX server with System Center Configuration Manager, you must install the Configuration Manager client for Linux and UNIX on each Linux or UNIX server. You can accomplish the installation of the client manually on each computer, or use a shell script that installs the client remotely. Configuration Manager does not support the use of client push installation for Linux or UNIX servers. Optionally you can configure a Runbook for System Center Orchestrator to automate the install of the client on the Linux or UNIX server.  
@@ -40,22 +22,6 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
  The install script for the Configuration Manager client for Linux and UNIX supports command line properties. Some command line properties are required, while others are optional. For example, when you install the client, you must specify a management point from the site that is used by the Linux or UNIX server for its initial contact with the site. For the complete list of command line properties, see [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient).  
 
  After you install the client, you specify Client Settings in the Configuration Manager console to configure the client agent in the same way you would Windows-based clients. For more information, see  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
-
- Use the following sections to help you install the client for Linux and UNIX:  
-
--   [About Client Installation Packages and the Universal Agent](#BKMK_AboutInstallPackages)  
-
--   [Install the Client on Linux and UNIX Servers](#BKMK_InstallLnUClient)  
-
-    -   [To install the Configuration Manager Client on Linux and UNIX servers](#BKMK_ToInstallLnUClinent)  
-
-    -   [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient)  
-
-    -   [Uninstalling the Client from Linux and UNIX Servers](#BKMK_UninstallLnUClient)  
-
--   [Configure Request Ports for the Client for Linux and UNIX](#BKMK_ConfigLnUClientCommuincations)  
-
--   [Configure the Client for Linux and UNIX to Locate Management Points](#BKMK_ConfigClientMP)  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> About Client Installation Packages and the Universal Agent  
  To install the client for Linux and UNIX on a specific platform, you must use the applicable client installation package for the computer where you install the client. Applicable client installation packages are included as part of each client download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the **install** script that manages the installation of the client on each computer.  
@@ -109,7 +75,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
     > [!IMPORTANT]  
     >  You must use root credentials to install the client.  
 
-5.  Next, run the following command to install the Configuration Manager client: **./install â€“mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
+5.  Next, run the following command to install the Configuration Manager client: **./install –mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
 
      When you enter this command, use additional command-line properties you require.  For the list of command-line properties, see [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient)  
 
@@ -159,7 +125,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
 -   **-clean**  
 
-     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the clientâ€™s database and certificate store.  
+     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the client’s database and certificate store.  
 
 -   **-keepdb**  
 
@@ -234,7 +200,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
      Optional. Specifies additional PKI certificates to import that are not part of a management points certification authority (CA) hierarchy. If you specify multiple certificates in the command line, they should be comma delimited.  
 
-     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the siteâ€™s certificate issuers list.  
+     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the site’s certificate issuers list.  
 
      If you do not use this option, the Linux and UNIX client will verify the trust hierarchy using only the certificate in the **-UsePKICert** option.  
 

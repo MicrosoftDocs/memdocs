@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Link users and devices with user device affinity in System Center Configuration Manager
 User device affinity in System Center Configuration Manager associates a user with one or more devices. This can eliminate the need to know the names of a user’s devices in order to deploy an application to that user. Instead of deploying the application to each of the user’s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
@@ -162,5 +144,3 @@ User device affinity in System Center Configuration Manager associates a user wi
   
 4.  In the **Manage User Device Affinity Requests** dialog box, select an affinity request, then click **Approve** or **Reject**.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

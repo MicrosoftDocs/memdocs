@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 #  Using Configuration Manager Software Updates to Deliver Definition Updates
