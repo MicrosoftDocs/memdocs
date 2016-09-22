@@ -17,26 +17,27 @@ author: NathBarn
 ---
 # Setup hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
 
-Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Although you use the Intune service, management tasks are done using the service connection point site system role, bringing your Configuration Manager and mobile device management (MDM) tasks together in the Configuration Manager console.
-
-## Prerequisites
- Use the following information to setup device enrollment:
+Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Use the following steps to setup hybrid device enrollment with Configuration Manager and Intune.
 
  |Steps|Details|  
  |-----------|-------------|  
- |**Step 1:** [Create an MDM collection](#create-an-mdm-collection)|Create a Configuration Manager user collection with users whose devices can be enrolled|  
- |**Step :** [Domain name and Active Directory requirements](#domain-name-and-active -directory-requirements)|Confirm your organization's domain name service (DNS) and Active Directory user management meets MDM requirements|
- |**Step 2:** [Configure an Intune Subscription](#configure-microsoft-intune-subscription)|The Intune service lets you manage devices over the Internet.|  
- |**Step :** [Add terms and conditions for enrollment](#add-terms-and-conditions-for-enrollment)| Create terms and conditions to which users must agree before they can use the Company Portal app|
- |**Step 3:** [Configure service connection point site system role](#create-service-connection-point-site-system-role)|The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. |  
- |**Step 4:** [Enable platform enrollment](#enable-mobile-device-enrollment)|MDM enrollment for [iOS](set-up-ios-hybrid-device-management.md), [Windows PC](set-up-windows-hybrid-device-management.md), and [Windows Phone](set-up-windows-phone-hybrid-enrollment.md) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
- |**Step 5:** [Verify mobile device management configuration](#verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
+ |**Step 1:** [Create an MDM collection](#step-1-create-an-mdm-collection)|Create a Configuration Manager user collection with users whose devices can be enrolled|  
+ |**Step 2:** [Domain name and Active Directory requirements](#step-2-domain-name-and-active-directory-requirements)|Confirm your organization's domain name service (DNS) and Active Directory user management meets MDM requirements|
+ |**Step 3:** [Configure an Intune Subscription](#step-3-configure-microsoft-intune-subscription)|The Intune service lets you manage devices over the Internet.|  
+ |**Step 4:** [Add terms and conditions for enrollment](#step-4-add-terms-and-conditions-for-enrollment)| Create terms and conditions to which users must agree before they can use the Company Portal app|
+ |**Step 5:** [Configure service connection point site system role](#step-5-create-service-connection-point-site-system-role)|The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. |  
+ |**Step 6:** [Enable platform enrollment](#step-6-enable-mobile-device-platform-enrollment)|MDM enrollment for [iOS](set-up-ios-hybrid-device-management.md), [Windows PC](set-up-windows-hybrid-device-management.md), and [Windows Phone](set-up-windows-phone-hybrid-enrollment.md) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
+ |**Step 7:** [Verify mobile device management configuration](#step-7-verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
 
-## Create an MDM collection
+Looking for Intune without Configuration Manager?
+> [!div class="button"]
+[View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
+
+## Step 1: Create an MDM collection
 
 You will need a Configuration Manager user collection to specify users who can enroll devices into management. Only user collections can be targeted because Intune licenses are assigned to users. For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
 
-## Domain name and Active Directory requirements
+## Step 2: Domain name and Active Directory requirements
 
 If necessary, take the following steps to satisfy any dependencies external to Configuration Manager:
 
@@ -74,7 +75,7 @@ If necessary, take the following steps to satisfy any dependencies external to C
      If you are not using AD FS, you must set a Microsoft Online password for each user.
 
 
-## Configure Microsoft Intune subscription
+## Step 3: Configure Microsoft Intune subscription
  The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. The Intune subscription does the following:
 
 -   Retrieves the certificate that the service connection point requires to connect to the Intune service
@@ -126,10 +127,10 @@ If necessary, take the following steps to satisfy any dependencies external to C
 
 10. Complete the wizard.
 
-## Add terms and conditions for enrollment
+## Step 4: Add terms and conditions for enrollment
  Once you've configured Intune management for mobile devices, you can create **Terms and Conditions**. Use terms and conditions to explain to users what happens when they enroll their devices. Users must accept the terms and conditions before they can enroll a device. See [Terms and Conditions in System Center Configuration Manager](terms-and-conditions.md).
 
-##  Create service connection point site system role
+##  Step 5: Create service connection point site system role
 When you have created your subscription, you can then install the service connection point site system role that lets you connect to the Intune service. This site system role will push settings and applications to the Intune service.
 
  The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. The Configuration Manager service acts as a gateway that communicates with mobile devices and stores settings.
@@ -138,7 +139,7 @@ When you have created your subscription, you can then install the service connec
 >  The service connection point site system role may only be installed on a central administration site or stand-alone primary site. The service connection point must have Internet access.
 
 
-## Configure the service connection point role
+### Configure the service connection point role
 
 1.  In the Configuration Manager console, click **Administration**.
 
@@ -161,7 +162,7 @@ When you have created your subscription, you can then install the service connec
 
 2.  The certificate from step 1 is installed on the service connection point site role and is used to authenticate and authorize all further communication with the Microsoft Intune service.
 
-## Enable mobile device platform enrollment
+## Step 6: Enable mobile device platform enrollment
  Before devices can be enrolled, you must establish a trust relationship between the management solution and the managed mobile devices. This relationship is platform-specific so if, for example, you want to manage iOS devices, you must enable enrollment through Apple's servers with an Apple Push Notification service (APNs) certificate.  The following topics explain how to enable MDM for each set of devices:
 
 -   [iOS hybrid device management](set-up-ios-hybrid-device-management.md)
@@ -169,7 +170,7 @@ When you have created your subscription, you can then install the service connec
 -   [Android hybrid device management](set-up-android-hybrid-device-management.md)
 -   [Windows Phone and Windows 10 Mobile hybrid device management](set-up-windows-phone-hybrid-enrollment.md)
 
-## Verify mobile device management configuration
+## Step 7: Verify mobile device management configuration
 
  You can verify certain device management components by checking the following log files:
 
@@ -177,7 +178,7 @@ When you have created your subscription, you can then install the service connec
 
 -   Check the Sitecomp.log to verify that the service connection point was created successfully.
 
-## Managing Intune subscriptions associated with Configuration Manager
+### Managing Intune subscriptions associated with Configuration Manager
  If you add a Microsoft Intune (either a trial subscription or paid subscription) to Configuration Manager, and then need to switch to a different Intune subscription, you must delete both the  **Microsoft Intune Subscription** and the **Service connection point** from the Configuration Manager console before you can add a new subscription.
 
 #### How to delete an Intune subscription from Configuration Manager
