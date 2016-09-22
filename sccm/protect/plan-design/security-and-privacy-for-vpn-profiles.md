@@ -31,5 +31,6 @@ This topic contains security and privacy information for VPN profiles in System 
   
  Before you configure VPN profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
+
  [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md)

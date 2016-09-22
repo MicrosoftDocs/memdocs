@@ -16,7 +16,8 @@ author: Nbigman
 
 ---
 # How to create PFX certificate profiles in System Center Configuration Manager
-System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to user�s devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange. PFX certificates can be created within Configuration Manager or imported. With System Center Configuration Manager, imported or new PFX certificates can be deployed to iOS, Android, and Windows 10 devices. These files can then be deployed to multiple devices to support user-based PKI communication.  
+
+System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to userâ€™s devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange. PFX certificates can be created within Configuration Manager or imported. With System Center Configuration Manager, imported or new PFX certificates can be deployed to iOS, Android, and Windows 10 devices. These files can then be deployed to multiple devices to support user-based PKI communication.  
   
 > [!TIP]  
 >  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
@@ -43,7 +44,7 @@ System Center Configuration Manager allows you to provision personal information
   
         -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.  
   
-        -   **Personal Information Exchange � PKCS #12 (PFX) settings � import**: Select this to import a PFX certificate.  
+        -   **Personal Information Exchange â€“ PKCS #12 (PFX) settings â€“ import**: Select this to import a PFX certificate.  
   
 5.  In the **Certificate Properties** window of the **Create Certificate Profile** wizard, specify where the PFX certificate will be stored on targeted devices.  
   
@@ -104,5 +105,6 @@ System Center Configuration Manager allows you to provision personal information
   
     -   ComputerName = Name of host computer  
   
-## See Also  
+### See also  
+
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

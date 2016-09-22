@@ -40,5 +40,6 @@ This topic contains security and privacy information for certificate profiles in
   
  Before you configure certificate profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
+
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

@@ -16,6 +16,7 @@ author: NathBarn
 
 ---
 # Troubleshooting Windows Defender or Endpoint Protection client
+
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
   
 -   [Install the Endpoint Protection client](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Install)  
@@ -197,7 +198,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
      **Cd program files\microsoft security essentials**  
   
-     **Mpcmdrun �removedefinitions �all**  
+     **Mpcmdrun â€“removedefinitions â€“all**  
   
      **Exit**  
   
@@ -226,8 +227,8 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 ##  <a name="BKMK_Starting"></a> Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
   
- You receive a message notifying you that �**Windows Defender or**  
- **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**�  
+ You receive a message notifying you that â€œ**Windows Defender or**  
+ **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**â€  
   
  **Solution**  
   
@@ -235,7 +236,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 -   Close all applications and restart your computer.  
   
-#### Step 2: Make sure the �Windows Defender" or<br />      "Endpoint Protection� service is set to automatic and is started  
+#### Step 2: Make sure the â€œWindows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
   
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
   
@@ -309,6 +310,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 -   If you're not sure of the file's origin, one of the best solutions is to run a full scan on your computer. A full scan may take some time to complete, but it makes it possible for Windows Defender or Endpoint Protection to look for the source of the infection and clean it.  
   
-## See Also  
+### See also  
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
+
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)

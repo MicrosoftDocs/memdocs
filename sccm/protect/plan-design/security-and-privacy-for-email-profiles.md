@@ -30,5 +30,6 @@ This topic contains security and privacy information for email profiles in Syste
   
  Before you configure email profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
+
  [Email profiles in System Center Configuration Manager](../Topic/Email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
