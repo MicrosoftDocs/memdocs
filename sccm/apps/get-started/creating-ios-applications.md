@@ -1,5 +1,5 @@
 ---
-title: "Create iOS applications with System Center Configuration Manager"
+title: "Create iOS applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-16
 ms.prod: configuration-manager

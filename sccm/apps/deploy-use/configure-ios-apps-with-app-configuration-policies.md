@@ -1,5 +1,5 @@
 ---
-title: "Configure iOS apps with app configuration policies in System Center Configuration Manager"
+title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-03
 ms.prod: configuration-manager

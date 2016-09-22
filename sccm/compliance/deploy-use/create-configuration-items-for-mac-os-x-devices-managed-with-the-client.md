@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client"
+title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

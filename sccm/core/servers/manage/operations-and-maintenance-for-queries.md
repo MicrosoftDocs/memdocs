@@ -1,5 +1,5 @@
 ---
-title: "Operations and maintenance for queries in System Center Configuration Manager"
+title: "Operations and maintenance for queries | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

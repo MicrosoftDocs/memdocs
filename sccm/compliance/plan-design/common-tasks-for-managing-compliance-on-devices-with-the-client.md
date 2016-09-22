@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for managing compliance on devices with the System Center Configuration Manager client"
+title: "Common tasks for managing compliance on devices with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -95,13 +95,13 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
     -   **Name** > **Example Rule**  
   
-    -   **Selected setting** – Verify that the selected setting is **Example setting**.  
+    -   **Selected setting** â€“ Verify that the selected setting is **Example setting**.  
   
     -   **Rule type** > **Value**  
   
-    -   **The setting must comply with the following rule** – Verify that the setting name is correct and configure the option to specify that the setting value must equal **1**.  
+    -   **The setting must comply with the following rule** â€“ Verify that the setting name is correct and configure the option to specify that the setting value must equal **1**.  
   
-    -   **Remediate noncompliant rules when supported** – Check this box to ensure that Configuration Manager will reset the registry key value to the correct value if it is incorrect.  
+    -   **Remediate noncompliant rules when supported** â€“ Check this box to ensure that Configuration Manager will reset the registry key value to the correct value if it is incorrect.  
   
 6.  Complete the wizard to create the configuration item.  
   

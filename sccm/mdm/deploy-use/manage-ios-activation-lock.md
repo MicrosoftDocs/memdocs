@@ -1,5 +1,5 @@
 ---
-title: "Manage iOS Activation Lock with System Center Configuration Manager"
+title: "Manage iOS Activation Lock | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for application management in System Center Configuration Manager"
+title: "Security and privacy for application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

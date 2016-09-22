@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration baselines in System Center Configuration Manager"
+title: "Create configuration baselines | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-11
 ms.prod: configuration-manager

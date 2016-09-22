@@ -1,5 +1,5 @@
 ---
-title: "How to monitor compliance settings in System Center Configuration Manager"
+title: "Monitor compliance settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

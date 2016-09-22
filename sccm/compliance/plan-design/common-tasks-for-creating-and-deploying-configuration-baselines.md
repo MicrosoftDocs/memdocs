@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for creating and deploying configuration baselines with System Center Configuration Manager"
+title: "Common tasks for creating and deploying configuration baselines with System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "Best practices for power management in System Center Configuration Manager"
+title: "Best practices for power management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

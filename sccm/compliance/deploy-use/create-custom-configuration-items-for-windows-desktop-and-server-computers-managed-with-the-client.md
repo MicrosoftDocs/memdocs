@@ -1,5 +1,5 @@
 ---
-title: "How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client"
+title: "Create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -130,7 +130,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
         -   **File system**  
   
-            -   **Type** – In the list, select whether you want to search for a **File** or a **Folder**.  
+            -   **Type** â€“ In the list, select whether you want to search for a **File** or a **Folder**.  
   
             -   **Path** - Specify the path of the specified file or folder on client computers. You can specify system environment variables and the *%USERPROFILE%* environment variable in the path.  
   
@@ -144,7 +144,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
                 > [!NOTE]  
                 >  If you specify a file or folder name and use wildcards, this combination might produce a high numbers of results and could result in high resource use on the client computer and high network traffic when reporting results to Configuration Manager.  
   
-            -   **Include subfolders** – Enable this option if you also want to search any subfolders under the specified path.  
+            -   **Include subfolders** â€“ Enable this option if you also want to search any subfolders under the specified path.  
   
             -   **This file or folder is associated with a 64-bit application** - If enabled, only 64-bit file locations (such as *%ProgramFiles%*) will be checked on 64-bit computers. If this option is not enabled, both 32-bit (such as *%ProgramFiles(x86)%*) and 64-bit locations will be checked.  
   
@@ -161,7 +161,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
         -   **Registry key**  
   
-            -   **Hive** – In the list, select the registry hive that you want to search in.  
+            -   **Hive** â€“ In the list, select the registry hive that you want to search in.  
   
             -   **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
   
@@ -176,7 +176,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
             -   **Key** - Specify the registry key name that you want to search for. Use the format *key\subkey*.  
   
-            -   **Value** – Specify the value that must be contained within the specified registry key.  
+            -   **Value** â€“ Specify the value that must be contained within the specified registry key.  
   
             -   **This registry key is associated with a 64-bit application** - Specifies whether the 64-bit registry keys should be searched in addition to the 32-bit registry keys on clients that are running a 64-bit version of Windows.  
   
@@ -187,16 +187,16 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
         -   **Script**  
   
-            -   **Discovery script** – Click **Add** to enter, or browse to the script you want to use. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
+            -   **Discovery script** â€“ Click **Add** to enter, or browse to the script you want to use. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
   
-            -   **Run scripts by using the logged on user credentials** – If you enable this option, the script runs on client computers that use the credentials of the logged-on users.  
+            -   **Run scripts by using the logged on user credentials** â€“ If you enable this option, the script runs on client computers that use the credentials of the logged-on users.  
   
                 > [!NOTE]  
                 >  The value returned by the script is used to assess the compliance of the global condition. For example, when using VBScript, you could use the command **WScript.Echo Result** to return the *Result* variable value to the global condition.  
   
         -   **SQL query**  
   
-            -   **SQL Server instance** – Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
+            -   **SQL Server instance** â€“ Choose whether you want the SQL query to run on the default instance, all instances, or a specified database instance name.  
   
                 > [!NOTE]  
                 >  The instance name must refer to a local instance of SQL Server. To refer to a clustered SQL server instance, you should use a script setting.  
@@ -205,7 +205,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
             -   **Column** - Specify the column name returned by the Transact-SQL statement that is used to assess the compliance of the global condition.  
   
-            -   **Transact-SQL statement** – Specify the full SQL query you want to use for the global condition. You can also click **Open** to open an existing SQL query.  
+            -   **Transact-SQL statement** â€“ Specify the full SQL query you want to use for the global condition. You can also click **Open** to open an existing SQL query.  
   
                 > [!IMPORTANT]  
                 >  SQL Query settings do not support any SQL commands that modify the database. You can only use SQL commands that read information from the database.  
@@ -278,7 +278,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
     -   For a rule type of **Value**, specify the following information:  
   
-        -   **The setting must comply with the following rule** – Select an operator and a value which is assessed for compliance with the selected setting. You can use the following operators:  
+        -   **The setting must comply with the following rule** â€“ Select an operator and a value which is assessed for compliance with the selected setting. You can use the following operators:  
   
             |Operator|More information|  
             |--------------|----------------------|  
@@ -292,9 +292,9 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
             |One of|In the text box, specify one entry on each line.|  
             |None of|In the text box, specify one entry on each line.|  
   
-        -   **Remediate noncompliant rules when supported** – Select this option if you want Configuration Manager to automatically remediate noncompliant rules. Configuration Manager can automatically remediate the following rule types:  
+        -   **Remediate noncompliant rules when supported** â€“ Select this option if you want Configuration Manager to automatically remediate noncompliant rules. Configuration Manager can automatically remediate the following rule types:  
   
-            -   **Registry value** – The registry value is remediated if it is noncompliant, and created if it does not exist.  
+            -   **Registry value** â€“ The registry value is remediated if it is noncompliant, and created if it does not exist.  
   
             -   **Script** (by automatically running a remediation script).  
   
@@ -303,7 +303,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
             > [!IMPORTANT]  
             >  You can only remediate noncompliant rules when the rule operator is set to **Equals**.  
   
-        -   **Report noncompliance if this setting instance is not found** – The configuration item reports noncompliance if this setting is not found on client computers.  
+        -   **Report noncompliance if this setting instance is not found** â€“ The configuration item reports noncompliance if this setting is not found on client computers.  
   
         -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
   

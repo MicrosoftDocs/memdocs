@@ -1,5 +1,5 @@
 ---
-title: "Configuration items for devices managed without the System Center Configuration Manager client"
+title: "Configuration items for devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager

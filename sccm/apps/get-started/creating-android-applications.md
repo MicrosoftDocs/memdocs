@@ -1,5 +1,5 @@
 ---
-title: "Create Android applications with System Center Configuration Manager"
+title: "Create Android applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
