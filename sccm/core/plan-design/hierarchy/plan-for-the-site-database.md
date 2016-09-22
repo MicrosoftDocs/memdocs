@@ -13,25 +13,7 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for the site database for System Center Configuration Manager
 The site database server is a computer that runs a supported version of Microsoft SQL Server that stores information for Configuration Manager sites. Each site in a Configuration Manager hierarchy contains a site database and a server that is assigned the site database server role.  

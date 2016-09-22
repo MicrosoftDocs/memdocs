@@ -13,26 +13,9 @@ ms.assetid: 15f0fd50-e196-44e5-b435-234d7ff6a5cd
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
+
 # Exchange ActiveSync email profiles in System Center Configuration Manager
 Email profiles works with  Microsoft Intune to enable you to provision devices with email profiles and restrictions by using Exchange ActiveSync. This enables your users to access corporate email on their devices with minimal setup required on their part.  
   
@@ -224,4 +207,5 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
  For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy email profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-email-profiles.md).  
   
 ### See also  
+
  [Operations and maintenance for email profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

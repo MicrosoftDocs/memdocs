@@ -13,25 +13,7 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 caps.latest.revision: 25
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Evaluate System Center Configuration Manager by building your own lab environment
 Learn how to create a lab environment to evaluate System Center Configuration Manager for use in your organization.  

@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 caps.latest.revision: 9
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Database replicas for management points for System Center Configuration Manager
 System Center Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
@@ -170,10 +152,10 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(.â€¦)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+    6.  On the **Distribution Agent Security** page, click the properties button **(.…)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
-        >  The properties button, **(â€¦.)**, is in the fourth column of the display box.  
+        >  The properties button, **(….)**, is in the fourth column of the display box.  
 
         **Security settings:**  
 
@@ -391,7 +373,7 @@ In addition to configuring the management point to use the database replica serv
 
 ##### To configure remote management points to use the self-signed certificate of the database replica server  
 
-1.  Perform the following steps on the database replica server to export the serverâ€™s self-signed certificate:  
+1.  Perform the following steps on the database replica server to export the server’s self-signed certificate:  
 
     1.  Click **Start**, click **Run**, and type **mmc.exe**. In the empty console, click **File**, and then click **Add/Remove Snap-in**.  
 

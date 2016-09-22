@@ -13,25 +13,7 @@ ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Management tasks for configuration data in System Center Configuration Manager
 After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  

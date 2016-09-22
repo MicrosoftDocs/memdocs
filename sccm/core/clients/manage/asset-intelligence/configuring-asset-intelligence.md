@@ -13,25 +13,7 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configure Asset Intelligence in System Center Configuration Manager
 You must complete a number of configuration steps before you can use Asset Intelligence in System Center Configuration Manager to inventory and manage software license usage throughout your enterprise.  
@@ -192,9 +174,9 @@ You must complete a number of configuration steps before you can use Asset Intel
 
 |General license statement entry|Matching site database entries|  
 |-------------------------------------|------------------------------------|  
-|Name: â€MySoftwareâ€, ProductVersion0: â€2â€|ProductName0: â€œMysoftwareâ€, ProductVersion0: â€œ2.01.1234â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.02.5678â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.1234â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.5678â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.3579.000â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.10.1234â€|  
-|Name: â€œMySoftwareâ€, Version â€œ2.05â€|ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.1234â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.5678â€<br /><br /> ProductName0: â€œMySoftwareâ€, ProductVersion0: â€œ2.05.3579.000â€|  
-|Name: â€œMysoftwareâ€, Version â€œ2â€<br /><br /> Name: â€œMysoftwareâ€, Version â€œ2.05â€|Error during import. The import fails when more than one entry matches the same product version.|  
+|Name: ”MySoftware”, ProductVersion0: ”2”|ProductName0: “Mysoftware”, ProductVersion0: “2.01.1234”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.02.5678”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.05.1234”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.05.5678”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.05.3579.000”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.10.1234”|  
+|Name: “MySoftware”, Version “2.05”|ProductName0: “MySoftware”, ProductVersion0: “2.05.1234”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.05.5678”<br /><br /> ProductName0: “MySoftware”, ProductVersion0: “2.05.3579.000”|  
+|Name: “Mysoftware”, Version “2”<br /><br /> Name: “Mysoftware”, Version “2.05”|Error during import. The import fails when more than one entry matches the same product version.|  
 
  The following procedure describes the process that can be used to create a general license statement import file by using Microsoft Excel.  
 
@@ -212,7 +194,7 @@ You must complete a number of configuration steps before you can use Asset Intel
 
 6.  In the Configuration Manager console, use the Import Software License Wizard to import the newly created .csv license information file.  
 
-7.  Run the Asset Intelligence **License 15A â€“ Third Party Software Reconciliation Report** to verify that the licensing information has been successfully imported into the Asset Intelligence catalog.  
+7.  Run the Asset Intelligence **License 15A – Third Party Software Reconciliation Report** to verify that the licensing information has been successfully imported into the Asset Intelligence catalog.  
 
 > [!NOTE]  
 >  For an example of a general software license file that you can use for testing purposes, see [Example Asset Intelligence general license import file in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md).  

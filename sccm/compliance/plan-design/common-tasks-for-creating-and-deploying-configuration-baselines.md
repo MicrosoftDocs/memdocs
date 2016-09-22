@@ -13,25 +13,7 @@ ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
 This topic contains common scenarios to help you learn about how to create and deploy System Center Configuration Manager configuration baselines.  

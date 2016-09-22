@@ -13,25 +13,7 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create queries in System Center Configuration Manager
 Use the following sections in this topic to help you create or import queries in System Center Configuration Manager.  
@@ -83,7 +65,7 @@ Use the following sections in this topic to help you create or import queries in
   
     |Join type|Description|  
     |---------------|-----------------|  
-    |Inner|Displays only matching results â€” always used by joins that are created automatically.|  
+    |Inner|Displays only matching results — always used by joins that are created automatically.|  
     |Left|Displays all results for the base attribute and only the matching results for the join attribute.|  
     |Right|Displays all the results for the join attribute and only the matching results for the base attribute.|  
     |Full|Displays all the results for both the base attribute and the join attribute.|  

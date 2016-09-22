@@ -13,25 +13,7 @@ ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Best practices for reporting in System Center Configuration Manager
 Use the following best practices for reporting in System Center Configuration Manager:  

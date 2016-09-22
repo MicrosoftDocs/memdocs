@@ -13,25 +13,7 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Client installation methods in System Center Configuration Manager
 You can use different methods to install the System Center Configuration Manager client software on Windows devices, UNIX/Linux servers, and Mac computers in your enterprise. You can use one or any combination of these methods that suit your requirements.  

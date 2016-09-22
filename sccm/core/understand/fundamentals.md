@@ -13,25 +13,7 @@ ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 caps.latest.revision: 11
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Fundamentals of System Center Configuration Manager
 If you are new to System Center Configuration Manager, read the fundamental topics to learn about  basic concepts for Configuration Manager before you run setup to install your first site. If you are familiar with Configuration Manager, then you can dive right in and we recommend staring with [What's new in System Center Configuration Manager](../Topic/What's%20new%20in%20System%20Center%20Configuration%20Manager.md).  

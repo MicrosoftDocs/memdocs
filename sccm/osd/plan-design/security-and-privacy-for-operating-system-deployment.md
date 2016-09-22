@@ -13,25 +13,7 @@ ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for operating system deployment in System Center Configuration Manager
 This topic contains security and privacy information for operating system deployment in System Center Configuration Manager.  
@@ -202,7 +184,7 @@ This topic contains security and privacy information for operating system deploy
      Although collection variables offer a flexible method to deploy operating systems, this might result in information disclosure.  
   
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for operating system deployment  
- In addition to deploying operating systems to computers with no operating system, Configuration Manager can be used to migrate usersâ€™ files and settings from one computer to another. The administrator configures which information to transfer, including personal data files, configuration settings, and browser cookies.  
+ In addition to deploying operating systems to computers with no operating system, Configuration Manager can be used to migrate users’ files and settings from one computer to another. The administrator configures which information to transfer, including personal data files, configuration settings, and browser cookies.  
   
  The information is stored on a state migration point and is encrypted during transmission and storage. The information is allowed to be retrieved by the new computer associated with the state information. If the new computer loses the key to retrieve the information, a Configuration Manager administrator with the View Recovery Information right on computer association instance objects can access the information and associate it with a new computer. After the new computer restores the state information, it deletes the data after one day by default. You can configure when the state migration point removes data marked for deletion. The state migration information is not stored in the site database and is not sent to Microsoft.  
   

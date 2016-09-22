@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 79923a78-b076-4781-86f8-6178e5e1c892
 caps.latest.revision: 6
 author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Power management technical reference for System Center Configuration Manager
 Power management in System Center Configuration Manager provides a set of tools and resources that you can use to manage and monitor the power consumption of client computers in the enterprise.  

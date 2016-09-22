@@ -13,26 +13,10 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Troubleshooting Windows Defender or Endpoint Protection client
+
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
   
 -   [Install the Endpoint Protection client](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Install)  
@@ -214,7 +198,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
      **Cd program files\microsoft security essentials**  
   
-     **Mpcmdrun –removedefinitions –all**  
+     **Mpcmdrun â€“removedefinitions â€“all**  
   
      **Exit**  
   
@@ -243,8 +227,8 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 ##  <a name="BKMK_Starting"></a> Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
   
- You receive a message notifying you that “**Windows Defender or**  
- **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**”  
+ You receive a message notifying you that â€œ**Windows Defender or**  
+ **Endpoint Protection isn't monitoring your computer because the program's service stopped. You should restart it now.**â€  
   
  **Solution**  
   
@@ -252,7 +236,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 -   Close all applications and restart your computer.  
   
-#### Step 2: Make sure the “Windows Defender" or<br />      "Endpoint Protection” service is set to automatic and is started  
+#### Step 2: Make sure the â€œWindows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
   
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
   
@@ -328,4 +312,5 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
   
 ### See also  
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
+
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)

@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 caps.latest.revision: 10
 author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
 Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below:  
@@ -52,7 +34,7 @@ Enabling users to enroll their devices for System Center Configuration Manager O
   
 3.  Under User Settings, select **Yes** for **Allow users to enroll modern devices**.  
   
-4.  Next to **Modern device enrollment profile**, click **Set Profileâ€¦** and then click **Create...**  
+4.  Next to **Modern device enrollment profile**, click **Set Profile…** and then click **Create...**  
   
 5.  In Create Enrollment Profile, type a name for the enrollment profile, and choose the management site code you want users with the enrollment profile to use. Click **OK** several times to exit the Default Settings page.  
   
@@ -85,7 +67,7 @@ Enabling users to enroll their devices for System Center Configuration Manager O
   
 1.  On the device to be enrolled, locate the root certificate file and double-click it.  
   
-2.  In Certificate window, click **Install Certificateâ€¦**  
+2.  In Certificate window, click **Install Certificate…**  
   
 3.  In the Certificate Import Wizard, select **Local Machine**, and click **Next**.  
   

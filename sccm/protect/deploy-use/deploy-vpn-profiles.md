@@ -13,27 +13,10 @@ ms.assetid: bebe9d4b-66f0-41a6-9924-c42e18298690
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to deploy VPN profiles in System Center Configuration Manager
+
 VPN profiles in System Center Configuration Manager must be deployed to one or more collections before they can be used.  
   
  Use the **Deploy VPN Profile** dialog box to configure the deployment of VPN profiles. As part of the configuration, you define the collection to which the VPN profile is to be deployed and specify how often the VPN profile is evaluated for compliance.  
@@ -72,4 +55,5 @@ VPN profiles in System Center Configuration Manager must be deployed to one or m
 5.  Click **OK** to close the **Deploy VPN Profile** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor VPN profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-vpn-profiles.md).  
   
 ### See also  
+
  [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

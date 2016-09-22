@@ -13,25 +13,7 @@ ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Removed and deprecated features for System Center Configuration Manager
 This topic describes features, products, and operating systems that are removed from support with System Center Configuration Manager or will be removed in a future update (Deprecated). This is intended to provide early warning about future changes that might affect your use of Configuration Manager.  
@@ -46,8 +28,8 @@ This topic describes features, products, and operating systems that are removed 
 
 |**Feature**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
-|Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|√|  
-|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|  
+|Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|?|  
+|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|?|  
 
  **Deprecated server operating systems:**  
 
@@ -70,21 +52,21 @@ This topic describes features, products, and operating systems that are removed 
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
-|Windows XP|7/10/2015|√|  
+|Windows XP|7/10/2015|?|  
 |Windows XP Embedded|7/10/2015|Support ends with the first update released after 12/31/2016|  
-|Windows Server 2003|7/10/2015|√|  
-|Windows Server 2003 R2|7/10/2015|√|  
-|Windows Vista|7/10/2015|√|  
-|Mac OS X  10.6 – 10.8|7/10/2015|√|  
-|Windows Mobile 6.0 – 6.5|7/10/2015|√|  
-|Nokia Symbian Belle|7/10/2015|√|  
-|Windows CE 5.0 – 6.0|7/10/2015|√|  
+|Windows Server 2003|7/10/2015|?|  
+|Windows Server 2003 R2|7/10/2015|?|  
+|Windows Vista|7/10/2015|?|  
+|Mac OS X  10.6 � 10.8|7/10/2015|?|  
+|Windows Mobile 6.0 � 6.5|7/10/2015|?|  
+|Nokia Symbian Belle|7/10/2015|?|  
+|Windows CE 5.0 � 6.0|7/10/2015|?|  
 
  **Deprecated support for SQL Server versions as a site database:**  
 
 |**SQL Server versions**|**Deprecation first announced**|**Support removed**|   
 |-|-|-|  
-|SQL Server 2008|7/10/2015|√|  
+|SQL Server 2008|7/10/2015|?|  
 |SQL Server 2008 R2|7/10/2015|Support ends with the first update released after 12/31/2016|  
 
 ## Features removed in System Center Configuration Manager  

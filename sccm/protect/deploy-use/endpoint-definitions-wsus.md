@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager

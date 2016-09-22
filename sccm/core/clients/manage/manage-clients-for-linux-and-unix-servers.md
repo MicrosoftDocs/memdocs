@@ -13,25 +13,7 @@ ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager
 When you manage Linux and UNIX servers with System Center Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. In addition, although the Configuration Manager client for Linux and UNIX does not have a user interface, you can force the client to manually poll for client policy.
@@ -47,9 +29,9 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 
  Before you can identify a Linux or UNIX client by its operating system or distribution, you must successfully collect hardware inventory from the client. For information about collecting hardware inventory, see [Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md).  
 
- The default client settings for hardware inventory include information about a client computerâ€™s operating system. You can use the **Caption** property of the **Operating System** class to identify the operating system of a Linux or UNIX server.  
+ The default client settings for hardware inventory include information about a client computer’s operating system. You can use the **Caption** property of the **Operating System** class to identify the operating system of a Linux or UNIX server.  
 
- You can view details about computers that run the Configuration Manager client for Linux and UNIX in the Devices node of the Assets and Compliance workspace in the Configuration Manager console. In the Asset and Compliance workspace of the Configuration Manager console, you can view the name of each computerâ€™s operating system in the **Operating System** column.  
+ You can view details about computers that run the Configuration Manager client for Linux and UNIX in the Devices node of the Assets and Compliance workspace in the Configuration Manager console. In the Asset and Compliance workspace of the Configuration Manager console, you can view the name of each computer’s operating system in the **Operating System** column.  
 
  By default, Linux and UNIX servers are members of the **All Systems** collection. It is recommended that you build custom collections that include only Linux and UNIX servers, or a subset of them. This enables you to manage operations such as deploying software or assigning client settings to groups of applicable computers. For example, if you deploy software for RHEL6 x64 computers to a collection that contains both Windows and Linux computers, the status for the deployment will show partial success. Instead, when you deploy software to a collection that contains only RHEL6 x64 computers, you can use status messages and reports to accurately identify the success of the deployment.  
 
@@ -88,6 +70,6 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 
 |Option|More information|  
 |------------|----------------------|  
-|importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **â€“password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
+|importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **–password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
 |-importsitecert|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: **certutil -importsitecert &lt;Path to the DER certificate\>**|  
 |-importcrl|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: **certutil -importcrl &lt;comma separated CRL file paths\>**|  

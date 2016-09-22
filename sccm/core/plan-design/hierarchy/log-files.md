@@ -13,25 +13,7 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Log files in System Center Configuration Manager
 In System Center Configuration Manager, client and site server components record process information in individual log files. By default, client and server component logging is enabled in Configuration Manager. You can use the information in these log files to help you troubleshoot issues that might occur in your Configuration Manager hierarchy.  

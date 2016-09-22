@@ -13,25 +13,7 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to monitor compliance settings in System Center Configuration Manager
 After you have deployed System Center Configuration Manager configuration baselines to computers in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:

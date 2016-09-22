@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 caps.latest.revision: 10
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Language Packs in System Center Configuration Manager
 This topic provides technical details about language support in System Center Configuration Manager.  
@@ -60,7 +42,7 @@ This topic provides technical details about language support in System Center Co
 |Portuguese - Brazil|0416|PTB|  
 |Portuguese - Portugal|0816|PTG|  
 |Russian|0419|RUS|  
-|Spanish â€“ Spain|0c0a|ESN|  
+|Spanish – Spain|0c0a|ESN|  
 |Swedish|041d|SVE|  
 |Turkish|041f|TRK|  
 
@@ -96,7 +78,7 @@ This topic provides technical details about language support in System Center Co
  When you add support for mobile device languages, all mobile device client languages are included. You cannot select individual language packs for mobile device support. For information about supported languages for devices you manage with on-premises mobile device management,  see the [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS) section in the [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md) topic.  
 
 ### How to Identify Installed Language Packs  
-You can identify the language packs that are installed on a computer that runs the Configuration Manager client by viewing the locale ID (LCID) of the installed language packs in the computerâ€™s registry. This information is available in the following location:  
+You can identify the language packs that are installed on a computer that runs the Configuration Manager client by viewing the locale ID (LCID) of the installed language packs in the computer’s registry. This information is available in the following location:  
 
 -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 

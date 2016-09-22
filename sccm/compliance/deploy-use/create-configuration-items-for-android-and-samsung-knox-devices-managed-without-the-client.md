@@ -13,34 +13,14 @@ ms.assetid: c28d5ef5-3ea7-4ba2-af01-6600aa805d48
 caps.latest.revision: 17
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
-# How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+# Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
+
   
  Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings  for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create an Android and Samsung KNOX configuration item  
+## Create an Android and Samsung KNOX configuration item  
   
 1.  In the Configuration Manager console, click **Assets and compliance**.  
   
@@ -84,7 +64,7 @@ translation.priority.ht:
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_setref"></a> Android and Samsung KNOX configuration item settings reference  
+##  Android and Samsung KNOX configuration item settings reference  
   
 ### Password  
  These settings apply to both Android and Samsung KNOX devices.  
@@ -98,9 +78,9 @@ translation.priority.ht:
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Select the amount of time before the device will be locked if it is not being used.|
 |**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
-|**Allow Smart Lock and other trust agents**|Let’s you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.|
+|**Allow Smart Lock and other trust agents**|Lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.|
   
-###  <a name="BKMK_Device"></a> Device  
+###  Device  
  These settings apply to Samsung KNOX devices only.  
   
 |Setting name|Details|  
@@ -144,8 +124,8 @@ translation.priority.ht:
     |**Volume buttons**|Enables or disables the use of the volume buttons on the device.|  
     |**Screen sleep and wake button**|Enables or disables the screen sleep wake button on the device.|  
   
-###  <a name="BKMK_Compliantdroid"></a> Compliant and noncompliant apps (Android)  
- Let’s you specify a list of Android apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+###  Compliant and noncompliant apps (Android)  
+ Lets you specify a list of Android apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
@@ -158,7 +138,7 @@ translation.priority.ht:
     |**Noncompliant apps list**|Select this option if you want to specify a list of apps that will be reported as noncompliant if installed by users.|  
     |**Compliant apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other installed apps will be reported as noncompliant.|  
     |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the [apps section of Google Play](https://play.google.com/store/apps), search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the compliant or noncompliant apps list.<br /><br /> **Example:** Search Google Play for **Microsoft Office Mobile**. The URL you use will be **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**.|  
-    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
+    |**Edit**|Lets you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
@@ -172,5 +152,3 @@ translation.priority.ht:
   
  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

@@ -12,24 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 caps.latest.revision: 11
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for site system servers and site system roles for System Center Configuration Manager
 Each System Center Configuration Manager site you install includes a  a site server which is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server.   Site system servers (the site server or a remote site system server) support **site system roles**.
@@ -89,7 +72,7 @@ After a site installs, you can move the  location of some site system roles from
 
 -   **Enrollment point** - A site system role that uses PKI certificates for Configuration Manager to enroll mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
-     If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the userâ€™s forest so that the user can be authenticated.  
+     If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the user’s forest so that the user can be authenticated.  
 
 -   **Enrollment proxy point** - A site system role that manages Configuration Manager enrollment requests from mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 

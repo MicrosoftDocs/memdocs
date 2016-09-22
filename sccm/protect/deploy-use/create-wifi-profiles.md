@@ -13,27 +13,10 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create Wi-Fi profiles in System Center Configuration Manager
+
 Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
   
  For example, you installed a new Wi-Fi network named **Contoso Wi-Fi**. You now want to provision all devices that run the iOS operating system with the settings required to connect to this network. You can create a Wi-Fi profile containing the settings necessary to connect to the **Contoso Wi-Fi** wireless network. Then, you can deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the company network in the list of wireless networks and can readily connect to this network.  
@@ -115,7 +98,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 1.  On the **Wi-Fi Profile** page of the Create Wi-Fi Profile Wizard, specify the descriptive name for the wireless Internet connection by using a maximum of 32 characters. This is the name that devices will display as the network name.  
   
     > [!IMPORTANT]  
-    >  Configuration Manager does not support using the apostrophe (**‘**) or comma (**,**) characters in the network name.  
+    >  Configuration Manager does not support using the apostrophe (**â€˜**) or comma (**,**) characters in the network name.  
   
 2.  In **SSID**, specify the name (SSID), of the wireless network that you want devices to be able to connect to. You can use a maximum of 32 characters. The SSID name is case-sensitive, so be sure to enter it exactly as it is configured.  
   
@@ -137,7 +120,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
   
 1.  On the **Security Configuration** page of the Create Wi-Fi Profile Wizard, Select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.  
   
-     For Android devices only: the security types **WPA – Personal**, **WPA2 – Personal** and **WEP** are not supported.  
+     For Android devices only: the security types **WPA â€“ Personal**, **WPA2 â€“ Personal** and **WEP** are not supported.  
   
 2.  Select the encryption method that the wireless network uses.  
   
@@ -157,7 +140,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 ### For iOS devices only:  
  Configure information for any certificates that are required for the Wi-Fi connection. You must configure the client certificate and either the trusted server certificate name or the root certificate, as follows:  
   
--   **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificate’s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
+-   **Trusted server certificate names**: If the server that the device connects to uses a server authentication certificate to identify the server and help secure the communication channel, enter the name or names in that certificateâ€™s subject name or subject alternative name. The name or names are typically the fully qualified domain name of the server. For example, if the server certificate has a common name of srv1.contoso.com in the certificate subject, enter **srv1.contoso.com**. If the server certificate has multiple names that are specified in the subject alternative name, enter each name, separated by a semicolon.  
   
     > [!TIP]  
     >  If the client certificate that you select for EAP or client authentication for an iOS device will be used to authenticate to a Remote Authentication Dial-In User Service (RADIUS) server, such as a server that is running Network Policy Server, you must set the Subject Alternative Name to the User Principal Name.  
@@ -190,4 +173,5 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
  For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-wifii-profiles.md).  
   
 ### See also  
+
  [Operations and maintenance for Wi-Fi Profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)

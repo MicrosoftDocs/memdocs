@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 caps.latest.revision: 6
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for software updates in System Center Configuration Manager
 This topic contains security and privacy information for software updates in System Center Configuration Manager.  

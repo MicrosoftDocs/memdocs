@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 caps.latest.revision: 12
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # List of Prerequisite Checks for System Center Configuration Manager
 The following sections detail the available prerequisite checks.  
@@ -542,7 +524,7 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site  
 
-**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the â€˜Microsoft Intune Connector' site system role is not installed on the stand-alone primary site that you are expanding.  
+**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the ‘Microsoft Intune Connector' site system role is not installed on the stand-alone primary site that you are expanding.  
 
 -   **Severity:** Error  
 
