@@ -23,15 +23,15 @@ Use Resource Explorer in System Center Configuration Manager to view information
 
  Resource Explorer in Configuration Manager contains the following sections related to software inventory:  
 
--   **Software** – The software section of Resource Explorer contains four sections:  
+-   **Software** - The software section of Resource Explorer contains four sections:  
 
-    -   **Collected Files** – Displays information about files that were collected during software inventory.  
+    -   **Collected Files** - Displays information about files that were collected during software inventory.  
 
-    -   **File Details** – Displays information about files that were inventoried during software inventory that are not associated with a specific product or manufacturer.  
+    -   **File Details** - Displays information about files that were inventoried during software inventory that are not associated with a specific product or manufacturer.  
 
-    -   **Last Software Scan** – Displays the date and time of the last software inventory and file collection that was run on the client computer.  
+    -   **Last Software Scan** - Displays the date and time of the last software inventory and file collection that was run on the client computer.  
 
-    -   **Product Details** – Displays information about the software products that were inventoried by software inventory, grouped by manufacturer.  
+    -   **Product Details** - Displays information about the software products that were inventoried by software inventory, grouped by manufacturer.  
 
 ## To run Resource Explorer from the Configuration Manager console  
  Use the following procedure to run Resource Explorer in Configuration Manager.  

@@ -61,7 +61,7 @@ Internet-based client management lets you manage System Center Configuration Man
 -   Software update point  
 
  **About internet facing site systems:**   
-Although there is no requirement to have a trust between a client’s forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
  For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 

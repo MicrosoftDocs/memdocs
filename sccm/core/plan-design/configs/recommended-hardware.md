@@ -131,7 +131,7 @@ For best performance, use RAID 10 configurations for all data drives and 1Gbps E
 
 |Requirement|Details|  
 |-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computer’s operating system.|  
+|Processor and memory|Refer to the processor and RAM requirements for the computer's operating system.|  
 |Disk space|500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
 |Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
 

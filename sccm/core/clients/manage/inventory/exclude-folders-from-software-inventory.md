@@ -34,9 +34,9 @@ Use the following steps to configure System Center Configuration Manager softwar
 
 6.  In the **Device Settings** list, configure the following values:  
 
-    -   **Enable software inventory on clients** – From the drop-down list, select **True**.  
+    -   **Enable software inventory on clients** - From the drop-down list, select **True**.  
 
-    -   **Schedule software inventory and file collection schedule** – Configures the interval at which clients collect software inventory and files. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
+    -   **Schedule software inventory and file collection schedule** - Configures the interval at which clients collect software inventory and files. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
 
 7.  Configure the client settings that you require. For a list of software inventory client settings that you can configure, see the [Software Inventory](../../../../core/clients/deploy/about-client-settings.md#BKMK_SoftInventoryDeviceSettings) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
 

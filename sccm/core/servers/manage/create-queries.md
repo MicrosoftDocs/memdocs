@@ -65,7 +65,7 @@ Use the following sections in this topic to help you create or import queries in
 
     |Join type|Description|  
     |---------------|-----------------|  
-    |Inner|Displays only matching results � always used by joins that are created automatically.|  
+    |Inner|Displays only matching results - always used by joins that are created automatically.|  
     |Left|Displays all results for the base attribute and only the matching results for the join attribute.|  
     |Right|Displays all the results for the join attribute and only the matching results for the base attribute.|  
     |Full|Displays all the results for both the base attribute and the join attribute.|  

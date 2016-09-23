@@ -41,7 +41,7 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
   
     1.  In a browser, go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
   
-    2.  Complete the wizard using the certificate signing request (.csr) file. Download the APNs certificate and save the .pem file locally. This APNs certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune’s mobile device management authority.  
+    2.  Complete the wizard using the certificate signing request (.csr) file. Download the APNs certificate and save the .pem file locally. This APNs certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune's mobile device management authority.  
   
 4.  **Enable enrollment and upload the APNs certificate** - To enable iOS enrollment, upload the APNs certificate.  
   

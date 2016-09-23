@@ -38,4 +38,4 @@ Learn how to get a site installation script and how to use it for unattended sit
 This topic provides guidance on how to install a Configuration Manager console on a computer where you are not installing a site.
 
 [Upgrade an Eval installation to a Full installation](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)   
-Read this topic when you’re ready to upgrade your evaluation site to a fully licensed Configuration Manager site.
+Read this topic when you're ready to upgrade your evaluation site to a fully licensed Configuration Manager site.

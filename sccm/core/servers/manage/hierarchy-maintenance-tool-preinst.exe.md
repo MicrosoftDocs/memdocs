@@ -24,7 +24,7 @@ The Hierarchy Maintenance tool (Preinst.exe) passes commands to the System Cente
 
 -   To remove active jobs that are for a destination site that is no longer available.  
 
--   To delete a site server from the Configuration Manager console when you are unable to uninstall the site by using Setup. For example, if you physically remove a Configuration Manager site without first running Setup to uninstall the site, the site information will still exist in the parent site’s database, and the parent site will continue to attempt to communicate with the child site. To resolve this issue, you must run the Hierarchy Maintenance tool and manually delete the child site from the parent site’s database.  
+-   To delete a site server from the Configuration Manager console when you are unable to uninstall the site by using Setup. For example, if you physically remove a Configuration Manager site without first running Setup to uninstall the site, the site information will still exist in the parent site's database, and the parent site will continue to attempt to communicate with the child site. To resolve this issue, you must run the Hierarchy Maintenance tool and manually delete the child site from the parent site's database.  
 
 -   To stop all Configuration Manager services at a site without having to stop services individually.  
 
@@ -65,23 +65,23 @@ You can restart the Site Component Manager service using Service Manager. After 
 
 **/KEYFORPARENT** - Use this option on a site to distribute the site's public key to a parent site.  
 
-The /KEYFORPARENT option places the public key of the site in the file &lt;*SiteCode*>.CT4 at the root of the program files drive. After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT4 file to the parent site's …\Inboxes\hman.box folder (not hman.box\pubkey).  
+The /KEYFORPARENT option places the public key of the site in the file &lt;*SiteCode*>.CT4 at the root of the program files drive. After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT4 file to the parent site's ...\Inboxes\hman.box folder (not hman.box\pubkey).  
 
 **/KEYFORCHILD** - Use this option on a site to distribute the site's public key to a child site.  
 
-The /KEYFORCHILD option places the public key of the site in the file &lt;*SiteCode*>.CT5 at the root of the program files drive. After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT5 file to the child site's …\Inboxes\hman.box folder (not hman.box\pubkey).  
+The /KEYFORCHILD option places the public key of the site in the file &lt;*SiteCode*>.CT5 at the root of the program files drive. After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT5 file to the child site's ...\Inboxes\hman.box folder (not hman.box\pubkey).  
 
 **/CHILDKEYS** - You can use this option on the child sites of a site that you are recovering. Use this option to distribute public keys from multiple child sites to the recovering site.  
 
 The /CHILDKEYS option places the key from the site where you run the option, and all of that sites child sites public keys into the file &lt;*SiteCode*>.CT6.  
 
-After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT6 file to the recovering site's …\Inboxes\hman.box folder (not hman.box\pubkey).  
+After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT6 file to the recovering site's ...\Inboxes\hman.box folder (not hman.box\pubkey).  
 
 **/PARENTKEYS** - You can use this option on the parent site of a site that you are recovering. Use this option to distribute public keys from all parent sites to the recovering site.  
 
 The /PARENTKEYS option places the key from the site where you run the option, and the keys from each parent site above that site into the file &lt;SiteCode\>.CT7.  
 
-After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT7 file to the recovering site's …\Inboxes\hman.box folder (not hman.box\pubkey).  
+After you run preinst.exe with this option, manually copy the &lt;*SiteCode*>.CT7 file to the recovering site's ...\Inboxes\hman.box folder (not hman.box\pubkey).  
 
 ##  <a name="BKMK_ManuallyExchangeKeys"></a> Manually Exchange Public Keys Between Sites  
 By default, the **Require secure key exchange** option is enabled for Configuration Manager sites. When secure key exchange is required, there are two situations in which you must manually perform the initial key exchange between sites:  
@@ -99,7 +99,7 @@ You can use the Hierarchy Maintenance tool to export the public keys for each si
 
 1.  While logged on to the child site, open a command prompt and navigate to the location of **Preinst.exe**.  
 
-2.  Type the following to export the child site’s public key: **Preinst /keyforparent**  
+2.  Type the following to export the child site's public key: **Preinst /keyforparent**  
 
 3.  The /keyforparent option places the public key of the child site in the **&lt;site code\>.CT4** file located at the root of the system drive.  
 
@@ -109,7 +109,7 @@ You can use the Hierarchy Maintenance tool to export the public keys for each si
 
 1.  While logged on to the parent site, open a command prompt and navigate to the location of **Preinst.exe**.  
 
-2.  Type the following to export the parent site’s public key: **Preinst /keyforchild**.  
+2.  Type the following to export the parent site's public key: **Preinst /keyforchild**.  
 
 3.  The /keyforchild option places the public key of the parent site in the **&lt;site code\>.CT5** file located at the root of the system drive.  
 

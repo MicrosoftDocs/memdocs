@@ -70,7 +70,7 @@ Client installation and management for Mac computers in System Center Configurat
  For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012).  
 
 > [!IMPORTANT]  
->  Make sure that you specify the site system’s Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.  
+>  Make sure that you specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.  
 
 ### Step 2: Deploy a client authentication certificate to site system servers  
  These site systems might already have this certificate for Configuration Manager functionality. If not, deploy a client authentication certificate to the following computers that hold the following site system roles:  
@@ -300,13 +300,13 @@ Client installation and management for Mac computers in System Center Configurat
 
      The user name can be in the following formats:  
 
-    -   'domain\name’. For example: 'contoso\mnorth'  
+    -   'domain\name'. For example: 'contoso\mnorth'  
 
     -   'user@domain'. For example: 'mnorth@contoso.com'  
 
      The user name and corresponding password must match an Active Directory user account that is granted Read and Enroll permissions on the Mac client certificate template.  
 
-     Example: If the enrollment proxy point server is named **server02.contoso.com**, and a user name of **contoso\mnorth** has been granted permissions for the Mac client certificate template, type the following: **sudo ./CMEnroll -s server02.contoso.com –ignorecertchainvalidation -u 'contoso\mnorth'**  
+     Example: If the enrollment proxy point server is named **server02.contoso.com**, and a user name of **contoso\mnorth** has been granted permissions for the Mac client certificate template, type the following: **sudo ./CMEnroll -s server02.contoso.com -ignorecertchainvalidation -u 'contoso\mnorth'**  
 
     > [!IMPORTANT]  
     >  If the username contains any of the characters **&lt;>"+=,** then enrollment will fail.  
@@ -358,7 +358,7 @@ Client installation and management for Mac computers in System Center Configurat
 
     -   **User name** - The user name can be in the following formats:  
 
-        -   'domain\name’. For example: 'contoso\mnorth'  
+        -   'domain\name'. For example: 'contoso\mnorth'  
 
         -   'user@domain'. For example: 'mnorth@contoso.com'  
 
@@ -367,9 +367,9 @@ Client installation and management for Mac computers in System Center Configurat
 
          The user name and corresponding password must match an Active Directory user account that is granted Read and Enroll permissions on the Mac client certificate template.  
 
-    -   **Password** – Enter a corresponding password for the user name specified.  
+    -   **Password** - Enter a corresponding password for the user name specified.  
 
-    -   **Server name** – Enter the name of the enrollment proxy point server.  
+    -   **Server name** - Enter the name of the enrollment proxy point server.  
 
 3.  Click **Next** to continue, and then complete the wizard.  
 
@@ -385,7 +385,7 @@ Client installation and management for Mac computers in System Center Configurat
      **./CMUninstall -c**  
 
     > [!NOTE]  
-    >  The **–c** property instructs the client uninstall to also remove and client crash logs and log files. This is optional, but a best practice to help avoid confusion if you later reinstall the client.  
+    >  The **-c** property instructs the client uninstall to also remove and client crash logs and log files. This is optional, but a best practice to help avoid confusion if you later reinstall the client.  
 
 3.  If required, manually remove the client authentication certificate that Configuration Manager was using, or revoke it. CMUnistall does not remove or revoke this certificate.  
 
@@ -404,24 +404,24 @@ Client installation and management for Mac computers in System Center Configurat
 1.  Configure the following values in the ccmclient.plist file that control when the Renew Certificate Wizard opens:  
 
     > [!IMPORTANT]  
-    >  You must configure these values as strings. If you configure the values as integer data types (by using the **–int** property), they will not be read.  
+    >  You must configure these values as strings. If you configure the values as integer data types (by using the **-int** property), they will not be read.  
 
-    -   **RenewalPeriod1** – Specifies, in seconds, the first renewal period in which users can renew the certificate. The default value is 3,888,000 seconds (45 days).  
+    -   **RenewalPeriod1** - Specifies, in seconds, the first renewal period in which users can renew the certificate. The default value is 3,888,000 seconds (45 days).  
 
         > [!NOTE]  
         >  If **RenewalPeriod1** is configured and is greater than or equal to 300 seconds, the configured value will be used.  If the configured value is greater than 0 and less than 300 seconds, the default value of 45 days will be used.  
 
-    -   **RenewalPeriod2** – Specifies, in seconds, the second renewal period in which users can renew the certificate. The default value is 259,200 seconds (3 days).  
+    -   **RenewalPeriod2** - Specifies, in seconds, the second renewal period in which users can renew the certificate. The default value is 259,200 seconds (3 days).  
 
         > [!NOTE]  
         >  If **RenewalPeriod2** is configured and is greater than or equal to 300 seconds and is less than or equal to **RenewalPeriod1**, the configured value will be used. If **RenewalPeriod1** is greater than 3 days, a value of 3 days will be used for **RenewalPeriod2**.  If **RenewalPeriod1** is less than 3 days, then **RenewalPeriod2** is set to the same value as **RenewalPeriod1**.  
 
-    -   **RenewalReminderInterval1** – Specifies, in seconds, the frequency at which the Renew Certificate Wizard will be displayed to users during the first renewal period. The default value is 86,400 seconds (1 day).  
+    -   **RenewalReminderInterval1** - Specifies, in seconds, the frequency at which the Renew Certificate Wizard will be displayed to users during the first renewal period. The default value is 86,400 seconds (1 day).  
 
         > [!NOTE]  
         >  If **RenewalReminderInterval1** is greater than 300 seconds and less than the value configured for **RenewalPeriod1**, then the configured value will be used. Otherwise, the default value of 1 day will be used.  
 
-    -   **RenewalReminderInterval2** – Specifies, in seconds the frequency at which the Renew Certificate Wizard will be displayed to users during the second renewal period. The default value is 28,800 seconds (8 hours).  
+    -   **RenewalReminderInterval2** - Specifies, in seconds the frequency at which the Renew Certificate Wizard will be displayed to users during the second renewal period. The default value is 28,800 seconds (8 hours).  
 
         > [!NOTE]  
         >  If **RenewalReminderInterval2** is greater than 300 seconds, less   than or equal to **RenewalReminderInterval1** and less than or equal to **RenewalPeriod2**, then the configured value will be used. Otherwise, a value of 8 hours will be used.  
@@ -548,12 +548,12 @@ Client installation and management for Mac computers in System Center Configurat
 
 2.  Navigate to the folder where you extracted the contents of the macclient.dmg file that you downloaded from the Microsoft Download Center.  
 
-3.  Enter the following command-line: **sudo ./ccmsetup –MP <management point Internet FQDN\> -SubjectName <certificate subject value\>**  
+3.  Enter the following command-line: **sudo ./ccmsetup -MP <management point Internet FQDN\> -SubjectName <certificate subject value\>**  
 
     > [!IMPORTANT]  
     >  The certificate subject value is case-sensitive, so type it exactly as it appears in the certificate details.  
 
-     Example: If the Internet FQDN in the site system properties is **server03.contoso.com** and the Mac client certificate has the FQDN of **mac12.contoso.com** as a common name in the certificate subject, type: **sudo ./ccmsetup –MP server03.contoso.com –SubjectName mac12.contoso.com**  
+     Example: If the Internet FQDN in the site system properties is **server03.contoso.com** and the Mac client certificate has the FQDN of **mac12.contoso.com** as a common name in the certificate subject, type: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
 4.  Wait until you see the **Completed installation** message and then restart the Mac computer.  
 
@@ -646,7 +646,7 @@ Client installation and management for Mac computers in System Center Configurat
 15. After you have installed a new certificate on Mac computers that have the SMSID removed, run the following command to configure the client to use the new certificate:  
 
     ```  
-    sudo defaults write com.microsoft.ccmclient SubjectName –string <Subject_Name_of_New_Certificate>  
+    sudo defaults write com.microsoft.ccmclient SubjectName -string <Subject_Name_of_New_Certificate>  
     ```  
 
 16. If you have more than one certificate that contains the same subject value, you must then specify the certificate serial number to identify the certificate that you want to use for the Configuration Manager client. To do this, use the following command: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "<serial number\>"**.  

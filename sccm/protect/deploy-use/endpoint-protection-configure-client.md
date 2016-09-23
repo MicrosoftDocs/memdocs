@@ -136,11 +136,11 @@ For more information about operating system deployment in Configuration Manager,
 3.  Open an elevated command prompt, navigate to the folder in which you installed PsTools, and then type the following command
 
    ```
-   Psexec.exe –s –i regedit.exe
+   Psexec.exe -s -i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  Use caution while you are running the Registry Editor in this manner; the –s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
+   >  Use caution while you are running the Registry Editor in this manner; the -s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.
 

@@ -105,7 +105,7 @@ Configuration Manager cannot upgrade a site that uses a Network Load Balancing (
 
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster. (Beginning with System Center 2012 Configuration Manager SP1, there was no option in the Configuration Manager console to configure an NLB cluster)  
 
-**Disable all site maintenance tasks** at each site for the duration of that site’s upgrade:  
+**Disable all site maintenance tasks** at each site for the duration of that site's upgrade:  
 
 Before you upgrade to System Center Configuration Manager, disable any site maintenance task that might run during the time the upgrade process is active. This includes but is not limited to the following:  
 
@@ -268,7 +268,7 @@ For information about how to upgrade existing clients and how to install new cli
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
-Before you upgrade a site, test a copy of that site’s database for the upgrade.  
+Before you upgrade a site, test a copy of that site's database for the upgrade.  
 
 To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that does not host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that the version of Configuration Manager supports that is the source of the database copy.  
 
@@ -316,7 +316,7 @@ After you successfully upgrade a copy of the site database, proceed with the upg
 ##  <a name="bkmk_upgrade"></a> Upgrade sites  
 After you complete pre-upgrade configurations for your site, test the upgrade of the site database on a database copy, and download prerequisite files and language packs for the service pack version that you plan to install, you are ready to upgrade your Configuration Manager site.  
 
-When you upgrade a site in a hierarchy, you upgrade the top-level site of the hierarchy first. This top-level site is either a central administration site or a stand-alone primary site. After the upgrade of a central administration site is completed, you can upgrade child primary sites in any order that you want. After you upgrade a primary site, you can upgrade that site’s child secondary sites, or upgrade additional primary sites before you upgrade any secondary sites.  
+When you upgrade a site in a hierarchy, you upgrade the top-level site of the hierarchy first. This top-level site is either a central administration site or a stand-alone primary site. After the upgrade of a central administration site is completed, you can upgrade child primary sites in any order that you want. After you upgrade a primary site, you can upgrade that site's child secondary sites, or upgrade additional primary sites before you upgrade any secondary sites.  
 
 To upgrade a central administration site or primary site, you run Setup from the System Center Configuration Manager source media. However, you do not run Setup to upgrade secondary sites. Instead, you use the Configuration Manager console to upgrade a secondary site after you complete the upgrade of its primary parent site.  
 

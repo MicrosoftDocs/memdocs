@@ -56,7 +56,7 @@ System Center Configuration Manager clients us a process called **service locati
 
 -   When the client must locate a site system role that provides a required service  
 
-**When attempting to find servers that host site system roles**, the client uses service location to find a site system role that supports the client�s protocol (HTTP or HTTPS). By default, clients use the most secure method available to them:  
+**When attempting to find servers that host site system roles**, the client uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them:  
 
 -   To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
@@ -102,7 +102,7 @@ During installation of the client, the following rules are used to build the cli
 
 -   The initial list includes management points specified during client installation (when you use the **SMSMP**= or the **/MP** options).  
 
--   The client queries Active Directory Domain Services (AD DS) for published management points. In order to be identified from AD DS, the management point must be from the client�s assigned site, and be of the same product version as the client.  
+-   The client queries Active Directory Domain Services (AD DS) for published management points. In order to be identified from AD DS, the management point must be from the client's assigned site, and be of the same product version as the client.  
 
 -   If no management point was specified during client installation, and when the Active Directory schema is not extended, the client checks DNS and WINS for published management points.  
 
@@ -113,20 +113,20 @@ Clients organize their list of management points using the following classificat
 
 -   **Proxy**: A proxy management point is a management point at a secondary site.  
 
--   **Local**: Any management point that is associated with the client�s current network location as defined by site boundaries.  
+-   **Local**: Any management point that is associated with the client's current network location as defined by site boundaries.  
 
     -   When a client belongs to more than one boundary group, the list of local management points is determined from the union of all boundaries that include the current network location of the client.  
 
     -   Typically, **Local** management points are a subset of a clients **Assigned** management points unless the client is on a network location associated with another site with management points servicing its boundary groups.  
 
--   **Assigned**: Any management point that is a site system for the client�s assigned site.  
+-   **Assigned**: Any management point that is a site system for the client's assigned site.  
 
-     You can use preferred management points. Preferred management points are management points from a client�s assigned site that are associated to a boundary group that the client is using to find site system servers.  
+     You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated to a boundary group that the client is using to find site system servers.  
 
-     Management points at a site that are not associated with a boundary group, or that are not in a boundary group associated with a client�s current network location, are not considered preferred, and will be used when the client cannot identify an available preferred management point.  
+     Management points at a site that are not associated with a boundary group, or that are not in a boundary group associated with a client's current network location, are not considered preferred, and will be used when the client cannot identify an available preferred management point.  
 
 ### Selecting a management point to use  
-For typical communications, a client attempts to use a use a management point from the classifications in the following order, based on the client�s network location:  
+For typical communications, a client attempts to use a use a management point from the classifications in the following order, based on the client's network location:  
 
 1.  Proxy  
 
@@ -192,7 +192,7 @@ When a site publishes service location records for management points to DNS:
 
 -   Publishing adds a service location resource record (SRV RR) in the DNS zone of the management point computer. There must be a corresponding host entry in DNS for that computer.  
 
-By default, domain joined clients search DNS for management point records from the client�s local domain. You can configure a client property that specifies a domain suffix for a domain that does have management point information published to DNS.  
+By default, domain joined clients search DNS for management point records from the client's local domain. You can configure a client property that specifies a domain suffix for a domain that does have management point information published to DNS.  
 
 For more information about how to configure the DNS suffix client property, see [How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager](../../../core/clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 

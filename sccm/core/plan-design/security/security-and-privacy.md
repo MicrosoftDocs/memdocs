@@ -52,7 +52,7 @@ This topic includes resources for Security and Privacy for System Center Configu
 > [!TIP]  
 >  In addition to this information, you can also use the Security Configuration Wizard (SCW) for System Center 2012 Configuration Manager. Run this wizard to help you reduce the attack surface for site system servers that run Windows Server 2008 R2. The wizard determines the minimum functionality required for the selected site system roles, and can disable functionality that is not required. The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center:  
 >   
->  -   [System Center 2012 Service Pack 1 – Configuration Manager Component Add-ons and Extensions](http://www.microsoft.com/download/details.aspx?id=36213)  
+>  -   [System Center 2012 Service Pack 1 - Configuration Manager Component Add-ons and Extensions](http://www.microsoft.com/download/details.aspx?id=36213)  
 
  **Security and Privacy topics:**  
 

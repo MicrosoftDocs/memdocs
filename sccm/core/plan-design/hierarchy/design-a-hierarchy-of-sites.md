@@ -99,7 +99,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 ##  <a name="BKMK_ChooseSecondary"></a> Determine when to use a secondary site  
  Use secondary sites to manage the transfer of deployment content and client data across low-bandwidth networks.  
 
- You manage a secondary site from a central administration site or the secondary site’s direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
+ You manage a secondary site from a central administration site or the secondary site's direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
 
  Consider installing a secondary site if any of the following conditions apply:  
 
