@@ -23,7 +23,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 ## Provision Windows To Go  
  Windows To Go is an operating system stored on a USB-connected external drive. You can provision the Windows To Go drive much like you provision other operating system deployments. However, because Windows To Go is designed to be a user-centric and highly mobile solution, you must take a slightly different approach to provisioning these drives.  
   
- At a high level, Windows To Go is a two-phased deployment that allows you to configure the Windows To Go device and prestage content for the operating system deployment. You can achieve this with minimal impact to the user and limit downtime for the user’s computer. After you prestage the computer, you must complete the provisioning process to ensure the computer is ready for the user. The provisioning process is similar to the current operating system deployment process. The following lists the general workflow to prestage content and provision Windows To Go:  
+ At a high level, Windows To Go is a two-phased deployment that allows you to configure the Windows To Go device and prestage content for the operating system deployment. You can achieve this with minimal impact to the user and limit downtime for the user's computer. After you prestage the computer, you must complete the provisioning process to ensure the computer is ready for the user. The provisioning process is similar to the current operating system deployment process. The following lists the general workflow to prestage content and provision Windows To Go:  
   
 1.  [Prerequisites to provision Windows To Go](#BKMK_Prereqs)  
   
@@ -310,11 +310,11 @@ This topic provides the steps to provision Windows To Go in System Center Config
   
          Parameters:  
   
-        -   /pwd:<None&#124;AD> – Specify the BitLocker password recovery mode. This parameter is required you use the /Enable parameter is in the command-line.  
+        -   /pwd:<None&#124;AD> - Specify the BitLocker password recovery mode. This parameter is required you use the /Enable parameter is in the command-line.  
   
              Select **AD** to configure BitLocker Drive Encryption to back up recovery information for BitLocker-protected drives to Active Directory Domain Services (AD DS). Backing up recovery passwords for a BitLocker-protected drive allows administrative users to recover the drive if it is locked. This ensures that encrypted data belonging to the enterprise can always be accessed by authorized users. When you specify **None**, the user is responsible for keeping a copy of the recovery password or recovery key. If the user loses that information or neglects to decrypt the drive before leaving the organization, administrative users cannot easily access to the drive.  
   
-        -   /wait:<TRUE&#124;FALSE> – Specify whether the task sequence waits for encryption to complete before it completes.  
+        -   /wait:<TRUE&#124;FALSE> - Specify whether the task sequence waits for encryption to complete before it completes.  
   
     3.  Select **Package**, and then specify the package that you created at the start of this procedure.  
   

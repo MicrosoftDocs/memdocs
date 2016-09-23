@@ -85,7 +85,7 @@ The followingare required configurations for using migration and migration opera
 
     When gathering data, the following network protocols and ports are used:  
 
-    -   NetBIOS/SMB – 445 (TCP)  
+    -   NetBIOS/SMB - 445 (TCP)  
 
     -   RPC (WMI) - 135 (TCP)  
 

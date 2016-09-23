@@ -25,7 +25,7 @@ This topic provides an example scenario for how you can implement Endpoint Prote
   
 -   Use Configuration Manager software updates to download malware definitions to computers. If software updates are not available, for example if the computer is not connected to the corporate network, computers must download definition updates from Microsoft Update.  
   
--   Users’ computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
+-   Users' computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
   
 -   Send an email alert whenever any one of the following events occurs:  
   

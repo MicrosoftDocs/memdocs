@@ -45,7 +45,7 @@ Deploying clients across your site takes time and some installations are not suc
 
 -   Review the charts of client deployment status and client deployment failure.  
 
--   If you want to change the scope of the report, click **Browse…** and choose a different collection.  
+-   If you want to change the scope of the report, click **Browse...** and choose a different collection.  
 
  To learn more about pre-production client deployments, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 

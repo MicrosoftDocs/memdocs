@@ -24,7 +24,7 @@ Use Resource Explorer in System Center Configuration Manager to view information
 
 -   **Hardware** - Contains the most recent hardware inventory collected from the specified Configuration Manager client device. You can review the inventory item **Workstation Status** to discover the time and date when the device last performed a hardware inventory.  
 
--   **Hardware History** – Contains a history of inventoried items that have changed since the last hardware inventory was performed. Each item in the list contains a **Current** node and one or more *<date\>* nodes. You can compare the information in the current node to one of the historical nodes to discover items that have changed in the client computers hardware inventory.  
+-   **Hardware History** - Contains a history of inventoried items that have changed since the last hardware inventory was performed. Each item in the list contains a **Current** node and one or more *<date\>* nodes. You can compare the information in the current node to one of the historical nodes to discover items that have changed in the client computers hardware inventory.  
 
     > [!NOTE]  
     >  Configuration Manager retains hardware inventory history for the number of days you specify in the **Delete Aged Inventory History** site maintenance task  

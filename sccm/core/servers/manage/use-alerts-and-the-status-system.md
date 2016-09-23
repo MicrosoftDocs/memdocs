@@ -63,7 +63,7 @@ Because the status system maintains separate configurations for each site you mu
 
 5.  Use the following steps after you open property pages for the Component Status Summarizer:  
 
-    1.  On the **General** tab of the summarizers’ properties page configure the replication and threshold period values.  
+    1.  On the **General** tab of the summarizers' properties page configure the replication and threshold period values.  
 
     2.  On the **Thresholds** tab, select the **Message type** you want to configure, and then click the name of a component in the **Thresholds** list.  
 
@@ -75,7 +75,7 @@ Because the status system maintains separate configurations for each site you mu
 
 6.  Use the following steps after you open the property pages for the Site System Status Summarizer:  
 
-    1.  On the **General** tab of the summarizers’ properties page configure the replication and schedule values.  
+    1.  On the **General** tab of the summarizers' properties page configure the replication and schedule values.  
 
     2.  On the **Thresholds** tab, specify values for the **Default thresholds** to configure default thresholds for critical and warning status displays.  
 
@@ -156,7 +156,7 @@ Because the status system maintains separate configurations for each site you mu
 |Node|More information|  
 |----------|----------------------|  
 |Site Status|Use this node to view a rollup of the status of each site system to review the health of each site system server. Site system health is determined by thresholds that you configure for each site in the **Site System Status Summarizer**.<br /><br /> You can view status messages for each site system, set thresholds for status messages, and manage the operation of the components on site systems by using the **Configuration Manager Service Manager**.|  
-|Component Status|Use this node to view a rollup of the status of each Configuration Manager component to review the component’s operational health. Component health is determined by thresholds that you configure for each site in the **Component Status Summarizer**.<br /><br /> You can view status messages for each component, set thresholds for status messages, and manage the operation of components by using the **Configuration Manager Service Manager**.|  
+|Component Status|Use this node to view a rollup of the status of each Configuration Manager component to review the component's operational health. Component health is determined by thresholds that you configure for each site in the **Component Status Summarizer**.<br /><br /> You can view status messages for each component, set thresholds for status messages, and manage the operation of components by using the **Configuration Manager Service Manager**.|  
 |Conflicting Records|Use this node to view status messages about clients that might have conflicting records.<br /><br /> Configuration Manager uses the hardware ID to attempt to identify clients that might be duplicates and alert you to the conflicting records. For example, if you have to reinstall a computer, the hardware ID would be the same, but the GUID that Configuration Manager uses might be changed.|  
 |Status Message Queries|Use this node to query status messages for specific events and related details. You can use status message queries to find the status messages related to specific events.<br /><br /> You can often use status message queries to identify when a specific component, operation, or Configuration Manager object was modified, and the account that was used to make the modification. For example, you can run the built-in query for **Collections Created, Modified, or Deleted** to identify when a specific collection was created, and the user account used to create the collection.|  
 
@@ -231,11 +231,11 @@ Because the status system maintains separate configurations for each site you mu
 
 5.  In the **Conditions** list of the **Alerts** tab, select each client status alert and then specify the following information.  
 
-    -   **Alert Name** – Accept the default name or enter a new name for the alert.  
+    -   **Alert Name** - Accept the default name or enter a new name for the alert.  
 
-    -   **Alert Severity** – From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
+    -   **Alert Severity** - From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
 
-    -   **Raise alert** – Specify the threshold percentage for the alert.  
+    -   **Raise alert** - Specify the threshold percentage for the alert.  
 
 6.  Click **OK** to close the *&lt;Collection Name*\>**Properties** dialog box.  
 

@@ -198,7 +198,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Obsolete Client Discovery Data** - Use this task to delete obsolete client records from the database. A record that is marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the client’s current record. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Delete Obsolete Client Discovery Data** - Use this task to delete obsolete client records from the database. A record that is marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the client's current record. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 > [!IMPORTANT]  
 >  When enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This enables the client to send a Heartbeat Discovery record that sets the obsolete status correctly.  

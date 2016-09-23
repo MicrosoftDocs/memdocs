@@ -26,7 +26,7 @@ Use the information in this topic with the information in the following articles
 
 
 
-## Windows Server 2012 R2 (x64) – Standard, Datacenter  
+## Windows Server 2012 R2 (x64) - Standard, Datacenter  
 **Site servers:**  
 
 -   Central administration site  
@@ -71,7 +71,7 @@ Use the information in this topic with the information in the following articles
 
 -   State migration point  
 
-## Windows Server 2012 (x64) – Standard, Datacenter  
+## Windows Server 2012 (x64) - Standard, Datacenter  
 **Site servers:**  
 
 -   Central administration site  
@@ -116,7 +116,7 @@ Use the information in this topic with the information in the following articles
 
 -   State migration point  
 
-## Windows Server 2008 R2 with SP1 (x64)   – Standard, Enterprise, Datacenter  
+## Windows Server 2008 R2 with SP1 (x64)   - Standard, Enterprise, Datacenter  
  Windows Server 2008 R2 is now in extended support and no longer in maintstream support, as detailed by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Site servers:**  
@@ -163,7 +163,7 @@ Use the information in this topic with the information in the following articles
 
 -   State migration point  
 
-## Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter  
+## Windows Server 2008 with SP2 (x86, x64) - Standard, Enterprise, Datacenter  
  Windows Server 2008 is now in extended support and no longer in maintstream support, as detailed  by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Site servers:**  
@@ -214,7 +214,7 @@ Use the information in this topic with the information in the following articles
 
 -   State migration point  
 
-## Windows 10 (x86, x64) – Pro, Enterprise  
+## Windows 10 (x86, x64) - Pro, Enterprise  
 **Site system servers:**  
 
 -   Distribution point  
@@ -225,7 +225,7 @@ Use the information in this topic with the information in the following articles
 
     -   Distribution points support several different configurations that each have different requirements and in some cases support installation not only on servers, but on client operating systems. For more information about the options available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## Windows 8.1 (x86, x64) – Professional, Enterprise  
+## Windows 8.1 (x86, x64) - Professional, Enterprise  
 **Site system servers:**  
 
 -   Distribution point  
@@ -236,7 +236,7 @@ Use the information in this topic with the information in the following articles
 
     -   Distribution points support several different configurations that each have different requirements and in some cases support installation not only on servers, but on client operating systems. For more information about the options available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## Windows 8 (x86, x64) – Professional, Enterprise Distribution point  
+## Windows 8 (x86, x64) - Professional, Enterprise Distribution point  
 **Site system servers:**  
 
 -   Distribution point  
@@ -247,7 +247,7 @@ Use the information in this topic with the information in the following articles
 
     -   Distribution points support several different configurations that each have different requirements and in some cases support installation not only on servers, but on client operating systems. For more information about the options available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate  
+## Windows 7 with SP1 (x86, x64) - Professional, Enterprise, Ultimate  
 **Site system servers:**  
 
 -   Distribution point  

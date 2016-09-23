@@ -57,10 +57,10 @@ This topic describes features, products, and operating systems that are removed 
 |Windows Server 2003|7/10/2015|?|  
 |Windows Server 2003 R2|7/10/2015|?|  
 |Windows Vista|7/10/2015|?|  
-|Mac OS X  10.6 – 10.8|7/10/2015|?|  
-|Windows Mobile 6.0 – 6.5|7/10/2015|?|  
+|Mac OS X  10.6 - 10.8|7/10/2015|?|  
+|Windows Mobile 6.0 - 6.5|7/10/2015|?|  
 |Nokia Symbian Belle|7/10/2015|?|  
-|Windows CE 5.0 – 6.0|7/10/2015|?|  
+|Windows CE 5.0 - 6.0|7/10/2015|?|  
 
  **Deprecated support for SQL Server versions as a site database:**  
 

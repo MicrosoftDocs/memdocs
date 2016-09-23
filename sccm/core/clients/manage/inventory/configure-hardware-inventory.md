@@ -39,7 +39,7 @@ Use the following steps to configure System Center Configuration Manager hardwar
 
     -   **Enable hardware inventory on clients** - From the drop-down list, select **True**.  
 
-    -   **Hardware inventory schedule** – Specify the interval at which clients collect hardware inventory. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
+    -   **Hardware inventory schedule** - Specify the interval at which clients collect hardware inventory. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
 
 7.  Configure any other client settings that you require. For a list of hardware inventory client settings that you can configure, see the [Hardware Inventory](../../../../core/clients/deploy/about-client-settings.md#BKMK_HardwareInventoryDeviceSettings) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
 

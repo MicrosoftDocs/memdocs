@@ -71,7 +71,7 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
- The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
+ The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
 
 > [!IMPORTANT]  
 >  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  

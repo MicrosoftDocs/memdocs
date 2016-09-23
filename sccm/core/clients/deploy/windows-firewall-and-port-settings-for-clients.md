@@ -162,4 +162,4 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 
  If the HTTP port is 80, the HTTPS port must be 443.  
 
- If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531.
+ If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.
