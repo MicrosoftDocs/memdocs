@@ -1,5 +1,5 @@
 ---
-title: "Get started with application management | System Center Configuration Manager"
+title: "Introduction to application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -14,7 +14,7 @@ caps.latest.revision: 18
 author: robstackmsft
 
 ---
-# Get started with application management in System Center Configuration Manager
+# Introduction to application management in System Center Configuration Manager
 In this topic, you'll learn the basics you need to know before you start working with System Center Configuration Manager applications.  
   
 > [!TIP]  
@@ -95,5 +95,3 @@ In this topic, you'll learn the basics you need to know before you start working
   
  For more information, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)
