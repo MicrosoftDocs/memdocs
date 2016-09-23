@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 7b6e680a-ab8f-4144-bce3-bc36618b256c
 caps.latest.revision: 5
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to enable CRL checking for software updates in System Center Configuration Manager
 By default, the certificate revocation list (CRL) is not checked when verifying the signature on System Center Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  

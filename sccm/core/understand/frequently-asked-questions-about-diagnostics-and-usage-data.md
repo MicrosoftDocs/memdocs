@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 caps.latest.revision: 6
 author: Brenduns
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Frequently asked questions about diagnostics and usage data for System Center Configuration Manager
 The following are frequently asked questions about diagnostic and usage data for System Center Configuration Manager:  

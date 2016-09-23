@@ -13,25 +13,7 @@ ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Associate users with a destination computer in System Center Configuration Manager
 When you use System Center Configuration Manager to deploy operating system you can associate users with the destination computer where the operating system is deployed. This configuration includes the following:  

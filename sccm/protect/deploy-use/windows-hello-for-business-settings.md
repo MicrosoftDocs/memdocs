@@ -12,44 +12,24 @@ ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 caps.latest.revision: 17
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Windows Hello for Business settings in System Center Configuration Manager
-System Center Configuration Manager lets you integrate with Windows Hello for Business, which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
+System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
   
 Hello for Business lets you use a **user gesture** to login, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.  
   
  Configuration Manager integrates with Windows Hello for Business in two ways:  
   
--   You can use Configuration Manager to control which gestures users can and cannot use to login  
+-   You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
   
 -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
  
 <!-- [cmshort](../../apps/deploy-use/includes/cmshort_md.md)] for domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#BKMK_Dom), below.!-->
 <!-- When you are using Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.-->    
 
-
-  
-  
-## To configure Windows Hello for Business settings (hybrid)  
+ 
+## Configure Windows Hello for Business settings (hybrid)  
   
 1.  In the Configuration Manager console, click **Administration**.  
   
@@ -176,5 +156,5 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 ### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
  
- [Manage identity verification using Microsoft Passport](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
+ [Manage identity verification using Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
  

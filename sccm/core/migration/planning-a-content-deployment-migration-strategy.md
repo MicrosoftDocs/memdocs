@@ -13,25 +13,7 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Planning a content deployment migration strategy in System Center Configuration Manager
 While you are actively migrating data to a System Center Configuration Manager destination hierarchy, Configuration Manager clients in both the source and destination hierarchies can maintain access to content that you deployed in the source hierarchy. Additionally, you can use migration to upgrade or reassign distribution points from the source hierarchy to become distribution points in the destination hierarchy. When you share and upgrade or reassign distribution points, this strategy can help you avoid having to redeploy content to new servers in the destination hierarchy for the clients that you migrate.  

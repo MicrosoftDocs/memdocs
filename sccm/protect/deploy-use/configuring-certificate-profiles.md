@@ -13,25 +13,7 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configuring certificate profiles in System Center Configuration Manager
 Before you can use System Center Configuration Manager to enroll certificates on devices and for users, you must perform the configuration steps that this topic describes.  
@@ -76,7 +58,7 @@ Before you can use System Center Configuration Manager to enroll certificates on
     > [!NOTE]  
     >  These are the default security permissions that will be appropriate for most environments. However, you can use an alternative security configuration. For more information, see [Planning for certificate template permissions for certificate profiles in System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
   
-3.  Deploy to this server a PKI certificate that supports client authentication. You might already have a suitable certificate installed on the computer that you can use, or you might have to (or prefer to) deploy a certificate specifically for this purpose. For more information about the requirements for this certificate, refer to the details for â€œServers running the Configuration Manager Policy Module with the Network Device Enrollment Service role serviceâ€ in the [PKI Certificates for Servers](../../core/plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers) section in the [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md) topic.  
+3.  Deploy to this server a PKI certificate that supports client authentication. You might already have a suitable certificate installed on the computer that you can use, or you might have to (or prefer to) deploy a certificate specifically for this purpose. For more information about the requirements for this certificate, refer to the details for “Servers running the Configuration Manager Policy Module with the Network Device Enrollment Service role service” in the [PKI Certificates for Servers](../../core/plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers) section in the [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md) topic.  
   
     > [!TIP]  
     >  If you need help deploying this certificate, you can use the instructions for [Deploying the Client Certificate for Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clientdistributionpoint2008_cm2012) in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic, because the certificate requirements are the same with one exception:  
@@ -158,7 +140,7 @@ Before you can use System Center Configuration Manager to enroll certificates on
   
     -   On the site system server, use the *<ConfigMgr Installation Path\>*\Logs\crpsetup.log file and *<ConfigMgr Installation Path\>*\Logs\crpmsi.log file. A successful installation will return an exit code of 0.  
   
-    -   By using a browser, verify that you can connect to the URL of the certificate registration pointâ€”for example, https://server1.contoso.com/CMCertificateRegistration. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
+    -   By using a browser, verify that you can connect to the URL of the certificate registration point—for example, https://server1.contoso.com/CMCertificateRegistration. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
   
 11. Locate the exported certificate file for the root CA that the certificate registration point automatically created in the following folder on the primary site server computer: *<ConfigMgr Installation Path\>*\inboxes\certmgr.box. Save this file to a secured location that you can securely access when you later install the System Center Configuration Manager Policy Module on the server that is running the Network Device Enrollment Service.  
   

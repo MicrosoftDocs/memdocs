@@ -13,25 +13,7 @@ ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for Wi-Fi profiles in System Center Configuration Manager
 This topic contains security and privacy information for Wi-Fi profiles in System Center Configuration Manager.  

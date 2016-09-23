@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 caps.latest.revision: 11
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use the Service Connection Tool for System Center Configuration Manager
 Use the **service connection tool** when your Configuration Manager  site system servers are not connected to the Internet but you still would like to keep yourself up-to-date with the latest updates to Configuration Manager.  

@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 caps.latest.revision: 13
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Checklist for installing update 1602 for System Center Configuration Manager
 Before updating from System Center Configuration Manager version 1511 to  version 1602, review the following information and checklist for actions to take before starting the update.  

@@ -13,25 +13,7 @@ ms.assetid: 78c1f344-4d72-4718-aad9-3a3834b64dbd
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Reporting in System Center Configuration Manager
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of Microsoft SQL Server Reporting Services in the Configuration Manager console.  

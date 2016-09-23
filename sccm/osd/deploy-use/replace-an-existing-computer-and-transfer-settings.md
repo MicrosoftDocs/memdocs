@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 caps.latest.revision: 6
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Replace an existing computer and transfer settings with System Center Configuration Manager
 This topic provides the general steps in System Center Configuration Manager to replace an existing computer with a new computer. For this scenario, you can choose from many different deployment methods, such as bootable media, multicast, or Software Center. You can also  choose to install a state migration point to store settings and then restore them to the new operating system after it is installed. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems with System Center Configuration Manager](../../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).  

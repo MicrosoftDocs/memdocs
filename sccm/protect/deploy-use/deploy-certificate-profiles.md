@@ -13,25 +13,7 @@ ms.assetid: 1ecfe2c6-45bc-4d8a-a7f6-53525c958e0f
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to deploy certificate profiles in System Center Configuration Manager
 To deploy certificates to users or devices in System Center Configuration Manager, you must deploy certificate profiles to one or more collections of users or devices.  
@@ -68,7 +50,7 @@ To deploy certificates to users or devices in System Center Configuration Manage
   
     -   **Generate an alert**: Enable this option to configure an alert that is generated if the certificate profile compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to Microsoft System Center Operations Manager.  
   
-    -   **Random delay (hours)**: (For certificate profiles that contain Simple Certificate Enrollment Protocol settings only) â€“ Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is **64** hours.  
+    -   **Random delay (hours)**: (For certificate profiles that contain Simple Certificate Enrollment Protocol settings only) – Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is **64** hours.  
   
     -   **Specify the compliance evaluation schedule for this certificate profile**: Specifies the schedule by which the deployed certificate profile is evaluated on client computers. This can be either a simple schedule or a custom schedule.  
   

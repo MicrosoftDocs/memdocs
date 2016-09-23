@@ -13,25 +13,7 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 caps.latest.revision: 8
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Ports used in System Center Configuration Manager
 System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, and IPsec.  
@@ -560,20 +542,20 @@ The following sections detail the ports used for communication in Configuration 
 
     -   If the HTTP port is 80, the HTTPS port must be 443.  
 
-    -   If the HTTP port is anything else, the HTTPS port must be 1 higherâ€”for example, 8530 and 8531.  
+    -   If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531.  
 
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 
 4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of the Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol defined by the following RFCs:  
 
-    -   RFC 350â€”TFTP  
+    -   RFC 350—TFTP  
 
-    -   RFC 2347â€”Option extension  
+    -   RFC 2347—Option extension  
 
-    -   RFC 2348â€”Block size option  
+    -   RFC 2348—Block size option  
 
-    -   RFC 2349â€”Time-out interval, and transfer size options  
+    -   RFC 2349—Time-out interval, and transfer size options  
 
      Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port will allow the TFTP service to receive incoming TFTP requests but will not allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
 

@@ -13,25 +13,7 @@ ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
 caps.latest.revision: 12
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Add site system roles for System Center Configuration Manager
 Each System Center Configuration Manager site supports multiple site system roles which each extend the functionality and capacity of your site to provide services to, and to  manage devices and users. Each site system role on a site system server must be from the same site.   

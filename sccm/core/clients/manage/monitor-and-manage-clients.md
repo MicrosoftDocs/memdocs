@@ -1,5 +1,5 @@
 ---
-title: "Monitor and manage clients in System Center Configuration Manager"
+title: "Monitor clients | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Monitor and manage clients in System Center Configuration Manager
 System Center Configuration Manager provides several ways to monitor and manage the client software once it's been deployed to computers and devices in your organization.  You can monitor clients to check their status, and in some cases, Configuration Manager can perform automatic remediation (or fixes) based on the problem detected. The  Configuration Manager console also provides ways to manage clients for individual devices or device collections.  

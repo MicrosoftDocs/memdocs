@@ -13,25 +13,7 @@ ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 caps.latest.revision: 18
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prerequisites for software updates in System Center Configuration Manager
 This topic lists the prerequisites for software updates in System Center Configuration Manager. For each of these, the external dependencies and internal dependencies are listed in separate tables.  
@@ -95,7 +77,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting in System Center Configuration Manager](../../core/servers/manage/configuring-reporting.md) .  
   
 ##  <a name="BKMK_RecoverUpgrades"></a> Recover from synchronizing the Upgrades category before you install KB 3095113  
- You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS will see the Windows 10 build 1511 feature upgrade even if it can‚Äôt properly download and deploy the associated packages. If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you will populate the WSUS database (SUSDB) with unusable data that must be cleared before upgrades can be properly deployed.  Use the following procedure to recover from this issue.  
+ You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS will see the Windows 10 build 1511 feature upgrade even if it canít properly download and deploy the associated packages. If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you will populate the WSUS database (SUSDB) with unusable data that must be cleared before upgrades can be properly deployed.  Use the following procedure to recover from this issue.  
   
 #### To recover from synchronizing the Upgrades classification before you install KB 3095113  
   
@@ -104,7 +86,7 @@ This topic lists the prerequisites for software updates in System Center Configu
     ```  
     $Server = Get-WSUSServer  
     $Config = $Server.GetConfiguration()  
-    $Update10563 = ‚Äúdf4e45a3-946d-4467-b3fd-8621174bb666‚Äù  
+    $Update10563 = ìdf4e45a3-946d-4467-b3fd-8621174bb666î  
     $UpdateGUID = New-Object Guid($Update10563)  
     $Server.DeleteUpdate($UpdateGUID)  
     ```  

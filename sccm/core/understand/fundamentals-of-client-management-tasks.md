@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 caps.latest.revision: 4
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager
 After you have installed System Center Configuration Manager clients, there are several tasks you can run to manage the clients.  Some you  start from the Configuration Manager console while other can be started or viewed on a  client from the clients Configuration Manager app in the Windows control panel.  

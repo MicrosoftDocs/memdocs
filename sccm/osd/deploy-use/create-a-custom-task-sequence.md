@@ -13,25 +13,7 @@ ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Create a custom task sequence with System Center Configuration Manager
 When you create a custom task sequence in System Center Configuration Manager, it contains no task sequence steps. After you create the task sequence, you must edit it and add the task sequence steps you need.  

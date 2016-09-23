@@ -1,5 +1,5 @@
 ---
-title: "Operations for Asset Intelligence in System Center Configuration Manager"
+title: "Use Asset Intelligence | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,52 +13,10 @@ ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
-# Operations for Asset Intelligence in System Center Configuration Manager
-Use the following sections in this topic to help you manage typical Asset Intelligence operations in your System Center Configuration Manager hierarchy:  
-
--   [View Asset Intelligence information](#BKMK_ViewInformation)  
-
-    -   [Asset Intelligence home page](#BKMK_AssetIntelligenceHomePage)  
-
-    -   [Asset Intelligence reports](#BKMK_AssetIntelligenceReports)  
-
--   [Synchronize the Asset Intelligence catalog](#BKMK_SynchronizeTheCatalog)  
-
--   [Customize the Asset Intelligence catalog](#BKMK_CustomizeCatalog)  
-
-    -   [Software categories](#BKMK_SoftwareCategories)  
-
-    -   [Software families](#BKMK_SoftwareFamilies)  
-
-    -   [Software labels](#BKMK_SoftwareLabels)  
-
-    -   [Hardware requirements](#BKMK_HardwareRequirements)  
-
--   [Modify categorization information for inventoried software](#BKMK_ModifyCategorization)  
-
--   [Request a catalog update for uncategorized software titles](#BKMK_RequestCatalogUpdate)  
-
--   [Resolve software details conflicts](#BKMK_ResolveSoftwareDetails)  
+# How to use Asset Intelligence in System Center Configuration Manager
+This topic contains information to help you manage typical Asset Intelligence tasks in your System Center Configuration Manager hierarchy:  
 
 ##  <a name="BKMK_ViewInformation"></a> View Asset Intelligence information  
  You can view Asset Intelligence information on the **Asset Intelligence** home page and in Asset Intelligence reports.  

@@ -13,25 +13,7 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prerequisites for migration in System Center Configuration Manager
 To migrate from a supported source hierarchy, you must have access to each applicable Configuration Manager source site, and permissions within the System Center Configuration Manager destination site to configure and run migration operations.  
@@ -103,7 +85,7 @@ The followingare required configurations for using migration and migration opera
 
     When gathering data, the following network protocols and ports are used:  
 
-    -   NetBIOS/SMB â€“ 445 (TCP)  
+    -   NetBIOS/SMB – 445 (TCP)  
 
     -   RPC (WMI) - 135 (TCP)  
 

@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 caps.latest.revision: 11
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority
 This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), contains procedures to guide you through the process of creating and deploying the public key infrastructure (PKI) certificates that System Center Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
@@ -387,7 +369,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
   
 5.  In the **Group Policy Management Editor**, expand **Policies** under **Computer Configuration**, and then navigate to **Windows Settings** / **Security Settings** / **Public Key Policies**.  
   
-6.  Right-click the object type named **Certificate Services Client â€“ Auto-enrollment**, and then click **Properties**.  
+6.  Right-click the object type named **Certificate Services Client – Auto-enrollment**, and then click **Properties**.  
   
 7.  From the **Configuration Model** drop-down list, select **Enabled**, select **Renew expired certificates, update pending certificates, and remove revoked certificates**, select **Update certificates that use certificate templates**, and then click **OK**.  
   
@@ -588,7 +570,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 -   Creating and Issuing the Client Authentication Certificates for 802.1X AMT-Based Computers  
   
 ###  <a name="BKMK_AMTprovisioning2008"></a> Creating, Issuing, and Installing the AMT Provisioning Certificate  
- Create the provisioning certificate with your internal CA when the AMT-based computers are configured with the certificate thumbprint of your internal root CA. When this is not the case and you must use an external certification authority, use the instructions from the company issuing the AMT provisioning certificate, which will often involve requesting the certificate from the companyâ€™s public Web site. You might also find detailed instructions for your chosen external CA on the Intel vPro Expert Center: Microsoft vPro Manageability Web site ([http://go.microsoft.com/fwlink/?LinkId=132001](http://go.microsoft.com/fwlink/?LinkId=132001)).  
+ Create the provisioning certificate with your internal CA when the AMT-based computers are configured with the certificate thumbprint of your internal root CA. When this is not the case and you must use an external certification authority, use the instructions from the company issuing the AMT provisioning certificate, which will often involve requesting the certificate from the company’s public Web site. You might also find detailed instructions for your chosen external CA on the Intel vPro Expert Center: Microsoft vPro Manageability Web site ([http://go.microsoft.com/fwlink/?LinkId=132001](http://go.microsoft.com/fwlink/?LinkId=132001)).  
   
 > [!IMPORTANT]  
 >  External CAs might not support the Intel AMT provisioning object identifier. When this is the case, use the alternative method of supplying the OU attribute of **Intel(R) Client Setup Certificate**.  
@@ -733,7 +715,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
   
 7.  Select the following **Allow** permissions for this security group: **Read** and **Enroll**.  
   
-8.  Click **OK**, and close the **Certificate Templates** management console, **certtmpl â€“ [Certificate Templates]**.  
+8.  Click **OK**, and close the **Certificate Templates** management console, **certtmpl – [Certificate Templates]**.  
   
 9. In the **Certification Authority** management console, right-click **Certificate Templates**, click **New**, and then click **Certificate Template to Issue**.  
   

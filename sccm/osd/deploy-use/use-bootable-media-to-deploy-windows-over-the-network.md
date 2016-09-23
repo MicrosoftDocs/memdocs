@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 caps.latest.revision: 5
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use bootable media to deploy Windows over the network with System Center Configuration Manager
 Bootable media deployments in System Center Configuration Manager let you deploy the operating system when the destination computer starts. When the destination computer starts, it retrieves the task sequence, the operating system image, and any other required content from the network. Because that content is not included on the media, you can update the content without having to re-create the media.  
