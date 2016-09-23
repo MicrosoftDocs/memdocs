@@ -40,9 +40,7 @@ Use the information in this topic to help you implement the necessary dependenci
 |Security permissions for application management|You must have the following security permissions to manage applications.<br /><br /> The **Application Author** security role includes the preceding listed permissions that are required to create, modify and retire applications in Configuration Manager.<br /><br /> **To deploy applications:**<br /><br /> The **Application Deployment Manager** security role includes the preceding listed permissions that are required to deploy applications in Configuration Manager.<br /><br /> The **Application Administrator** security role contains all of the permissions from both the **Application Author** and the **Application Deployment Manager** security roles.<br /><br /> For more information, see  [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).|  
   
 ##  Configure Software Center and the Application Catalog (Windows PCs only)  
- This section describes the steps to configure the Application Catalog and Software Center in System Center Configuration Manager.  
-  
-### Introduction  
+ 
  In System Center Configuration Manager, you now have two options for how users change settings, browse for, and install applications:  
   
 -   **The new Software Center** - The new Software Center has a new, modern look and apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center under the **Applications** tab. The Application Catalog can still be accessed using the link under the **Installation Status** tab of Software Center.  
@@ -59,7 +57,7 @@ Use the information in this topic to help you implement the necessary dependenci
 > [!TIP]  
 >  The version of  Software Center that users see is based on Configuration Manager client settings. This gives you the flexibility to control which version is used based on custom client settings you deploy to collection.  
   
-### Steps to install and configure the Application Catalog and Software Center  
+## Steps to install and configure the Application Catalog and Software Center  
   
 > [!IMPORTANT]  
 >  Before you perform these steps, make sure that you have met all of the prerequisites listed above.  
@@ -72,10 +70,10 @@ Use the information in this topic to help you implement the necessary dependenci
 |**Step 4:** Configure client settings for the Application Catalog and Software Center.|Configure the default client settings if you want all users to have the same setting. Otherwise, configure custom client settings for specific collections.|For more information about client settings, see [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).<br /><br /> For information about how to configure these client settings, see the following procedure in this topic: [Step 4: Configuring the client settings for the Application Catalog and Software Center](#BKMK_ConfigureClientSettingApplicationCatalog).|  
 |**Step 5:** Verify that the Application Catalog is operational.|You can access the Application Catalog directly from a browser or from Software Center.|See the following procedure in this topic: [Step 5: Verify that the Application Catalog is operational](#BKMK_VerifyingApplicationCatalog).|  
   
-### Supplemental procedures to install and configure the Application Catalog and Software Center  
+## Supplemental procedures to install and configure the Application Catalog and Software Center  
  Use the following information when the steps in the preceding table require supplemental procedures.  
   
-####  Step 3: Installing and configuring the Application Catalog site system roles  
+###  Step 3: Installing and configuring the Application Catalog site system roles  
  These procedures configure the site system roles for the Application Catalog. Choose one of these procedures depending on whether you will install a new site system server or use an existing site system server:  
   
 -   [To install and configure the Application Catalog site systems: New site system server](#BKMK_HowtoInstallApplicationCatalogSiteSystems_new)  
@@ -85,7 +83,7 @@ Use the information in this topic to help you implement the necessary dependenci
 > [!NOTE]  
 >  The Application Catalog cannot be installed on a secondary site or on a central administration site.  
   
-#####  To install and configure the Application Catalog site systems: New site system server  
+####  To install and configure the Application Catalog site systems: New site system server  
   
 1.  In the Configuration Manager console, click **Administration**.  
   
@@ -102,7 +100,7 @@ Use the information in this topic to help you implement the necessary dependenci
   
 6.  Complete the wizard.  
   
-#####  To install and configure the Application Catalog site systems: Existing site system server  
+####  To install and configure the Application Catalog site systems: Existing site system server  
   
 1.  In the Configuration Manager console, click **Administration**.  
   
@@ -129,10 +127,10 @@ Use the information in this topic to help you implement the necessary dependenci
   
      For more detailed information, search for the log files **awebsvcMSI.log** and **portlwebMSI.log**.  
   
-####  Step 4: Configuring the client settings for the Application Catalog and Software Center  
+###  Step 4: Configuring the client settings for the Application Catalog and Software Center  
  This procedure configures the default client settings for the Application Catalog and Software Center that will apply to all devices in the hierarchy. If you want these settings to apply to only some devices, you can create a custom client setting and deploy it to a collection that contains the devices that will have the specific settings. For more information about how to create a custom device setting, see the [How to Create and Deploy Custom Client Settings](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings) section in the [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) topic.  
   
-###### To configure the default client settings for Application Catalog and Software Center  
+##### To configure the default client settings for Application Catalog and Software Center  
   
 1.  In the Configuration Manager console, click **Administration**.  
   
@@ -178,7 +176,7 @@ Use the information in this topic to help you implement the necessary dependenci
   
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../core/clients/manage/manage-clients.md).  
   
-####  Step 5: Verify that the Application Catalog is operational  
+###  Step 5: Verify that the Application Catalog is operational  
  Use the following procedures to verify that the Application Catalog is operational. You can access the Application Catalog directly from a browser or from Software Center.  
   
 > [!NOTE]  
@@ -190,7 +188,7 @@ Use the information in this topic to help you implement the necessary dependenci
 > [!NOTE]  
 >  If you are logged in using a Domain Administrator account, notification messages from the Configuration Manager client (e.g., messages indicating that new software is available) will not be displayed.  
   
-#### To access the Application Catalog directly from a browser  
+### To access the Application Catalog directly from a browser  
   
 -   In a browser, type the address of the Application Catalog website and confirm that the web page displays with the three tabs: **Application Catalog**, **My Application Requests**, and **My Devices**.  
   
@@ -204,7 +202,7 @@ Use the information in this topic to help you implement the necessary dependenci
   
     -   HTTP client connections and custom site system role settings: **http://<server\>:<port\>/<web application name\>**  
   
-#### To access the Application Catalog from Software Center (does not apply to the new version of Software Center)  
+### To access the Application Catalog from Software Center (does not apply to the new version of Software Center)  
   
 1.  On a client computer, click **Start** > **All Programs** > **Microsoft System Center 2012** > **Configuration Manager** > **Software Center**.  
   
