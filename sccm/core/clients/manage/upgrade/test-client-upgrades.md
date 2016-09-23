@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to test client upgrades in a preproduction collection in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -66,3 +66,4 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 2.  In the dialog box, review the client versions in production and pre-production, make sure the correct the pre-production collection is specified, and then  click **Promote**. In the confirmation box, click **Yes**.  
 
 3.  After dialog box closes, the updated client version will replace the current client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
+

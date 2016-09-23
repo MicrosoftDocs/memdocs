@@ -1,4 +1,4 @@
-# [Understand and explore](understand/software-updates-introduction.md)
+﻿# [Understand and explore](understand/software-updates-introduction.md)
 ## [Introduction to software updates](understand/software-updates-introduction.md)
 ## [Icons used for software updates](understand/software-updates-icons.md)
 
@@ -37,3 +37,4 @@
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 
 ## [Example scenario to deploy and monitor the security software updates released monthly by Microsoft](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
+

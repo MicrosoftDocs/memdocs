@@ -1,7 +1,7 @@
----
+﻿---
 title: "About the service connection point in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-27
+ms.date: 06/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -97,3 +97,4 @@ To enable operation, the computer that hosts the service connection point and an
 -   download.microsoft.com  
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
+

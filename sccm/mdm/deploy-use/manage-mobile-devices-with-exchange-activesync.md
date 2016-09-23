@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage mobile devices with System Center Configuration Manager and Exchange"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -128,3 +128,4 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
   
 ## See Also  
  [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md)
+

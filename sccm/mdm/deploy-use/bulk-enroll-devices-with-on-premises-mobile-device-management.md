@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -154,3 +154,4 @@ Bulk enrollment in System Center Configuration Manager On\-premises Mobile Devic
   
 ## See Also  
  [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-for-on-premises-mobile-device-management.md)
+

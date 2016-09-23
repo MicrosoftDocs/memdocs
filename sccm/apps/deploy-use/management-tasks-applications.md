@@ -1,7 +1,7 @@
----
+﻿---
 title: "Management tasks for System Center Configuration Manager applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -59,3 +59,4 @@ Use the information in the following sections to help you manage System Center C
 |Delete|Deletes the selected deployment type.<br /><br /> You cannot delete a deployment type if it is referenced by a deployment type in another application. To delete a deployment type, you must remove any dependencies to the deployment type that are contained in other deployment types. Additionally, you must also remove previous revisions of any application that contains a deployment type that references the deployment type that you want to delete.|  
 |**Update Content**|Refreshes the content for the selected deployment type.<br /><br /> When you start this wizard for a deployment type that contains a virtual application, the **Update Content Wizard** is started. This wizard allows you to modify publishing options and requirement rules for the selected virtual application. For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).<br /><br /> When you refresh the content of a deployment type, a new revision of the application is created. This might cause client devices to be updated with the new application.|  
   
+

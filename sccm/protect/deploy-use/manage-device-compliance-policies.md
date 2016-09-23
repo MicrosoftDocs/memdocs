@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage device compliance policies | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-07
+ms.date: 04/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -158,3 +158,4 @@ robots: noindex
 
 ### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
+

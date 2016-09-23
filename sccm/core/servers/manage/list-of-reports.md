@@ -1,7 +1,7 @@
----
+﻿---
 title: "List of reports in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-06
+ms.date: 06/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -783,3 +783,4 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
   
 ## See Also  
  [Technical reference for reporting in System Center Configuration Manager](../Topic/Technical%20reference%20for%20reporting%20in%20System%20Center%20Configuration%20Manager.md)
+

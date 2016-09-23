@@ -1,7 +1,7 @@
----
+﻿---
 title: "Deploy applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -121,3 +121,4 @@ author: robstackmsft
   
 ## See Also  
  [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

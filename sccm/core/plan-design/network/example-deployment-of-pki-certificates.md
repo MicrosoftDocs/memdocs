@@ -1,7 +1,7 @@
----
+﻿---
 title: "Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority"
 ms.custom: na
-ms.date: 2016-04-04
+ms.date: 04/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -772,3 +772,4 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 13. If you do not have to create and issue any more certificates, close **Certification Authority**.  
   
  The Mac client certificate template is now ready to be selected when you configure client settings for enrollment.
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Email profile prerequisites| System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,3 +30,4 @@ Email profiles in System Center Configuration Manager have dependencies both ext
 |Dependency|More information|  
 |----------------|----------------------|  
 |Mail attribute in active directory|If you want to generate the users email address in an email profile by using the user's primary SMTP address, this address must exist in the **mail** attribute in Active Directory.<br /><br /> For more information, see your Windows Server documentation.|
+

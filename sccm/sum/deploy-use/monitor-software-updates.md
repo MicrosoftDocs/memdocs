@@ -1,7 +1,7 @@
----
+﻿---
 title: "Monitor software updates in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -118,3 +118,4 @@ To help you to monitor software updates objects, processes, and compliance infor
   
 ## See Also  
  [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+

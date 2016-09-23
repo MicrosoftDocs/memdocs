@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -358,3 +358,4 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
         -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
+

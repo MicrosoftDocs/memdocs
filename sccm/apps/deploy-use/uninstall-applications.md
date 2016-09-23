@@ -1,7 +1,7 @@
----
+﻿---
 title: "Uninstall applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -60,3 +60,4 @@ Perform the following steps to uninstall an application by using System Center C
     > [!NOTE]  
     >  When you select a deployment action of **Uninstall**, the deployment purpose is automatically configured as **Required**.  
   
+

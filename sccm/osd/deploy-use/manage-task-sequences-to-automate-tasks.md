@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage task sequences to automate tasks in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -368,3 +368,4 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 ## See Also  
  [Automate tasks in System Center Configuration Manager](../Topic/Automate%20tasks%20in%20System%20Center%20Configuration%20Manager.md)
+

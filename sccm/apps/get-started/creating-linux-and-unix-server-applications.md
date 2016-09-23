@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create Linux and UNIX server applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -154,3 +154,4 @@ In addition to the other System Center Configuration Manager requirements and pr
 > [!TIP]  
 >  If the software that you want to deploy is located on a Network File System (NFS) share that the Linux or UNIX server can access, you do not need to use a distribution point to download the package. Instead, when you create the package, do not select the check box for **This package contains source files**. Then, when you configure the program, specify the appropriate command line to directly access the package on the NFS mount point.  
   
+

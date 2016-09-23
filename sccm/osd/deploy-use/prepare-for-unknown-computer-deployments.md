@@ -1,7 +1,7 @@
----
+﻿---
 title: "Prepare for unknown computer deployments in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -77,3 +77,4 @@ Use the information in this topic to deploy operating systems to unknown compute
 
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

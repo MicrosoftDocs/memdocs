@@ -1,7 +1,7 @@
----
+﻿---
 title: "Security and privacy for application management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -104,3 +104,4 @@ author: robstackmsft
 -  Information that is sent to and from the Application Catalog is not sent to Microsoft.  
 -  The Application Catalog is not installed by default. This installation requires several configuration steps.  
   
+

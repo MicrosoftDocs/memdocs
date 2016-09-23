@@ -1,7 +1,7 @@
----
+﻿---
 title: "Upgrade to System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -391,3 +391,4 @@ The secondary site upgrade progresses in the background. After the upgrade is co
 
 ##  <a name="BKMK_PostUpgrade"></a> Perform post-upgrade tasks  
 After you upgrade a site to a new service pack, you might have to complete additional tasks to finish the upgrade or reconfigure the site. These tasks can include the upgrade of Configuration Manager clients or Configuration Manager consoles, re-enabling database replicas for management points, or restoring settings for Configuration Manager functionality that you use and that does not persist after the service pack upgrade.  
+

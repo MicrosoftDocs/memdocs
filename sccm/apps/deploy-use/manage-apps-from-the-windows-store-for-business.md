@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -107,3 +107,4 @@ For each store app you manage, you can view information about the app including 
 
 ## See Also  
  [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
+

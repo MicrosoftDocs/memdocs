@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-22
+ms.date: 06/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -345,3 +345,4 @@ Windows Information Protection (WIP) helps to protect against this potential dat
   
 For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
+

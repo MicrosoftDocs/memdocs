@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to use Resource Explorer to view software inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,3 +47,4 @@ Use Resource Explorer in System Center Configuration Manager to view information
 4.  You can right-click any item in the right-pane of the Resource Explorer window and then click **Properties** to open the *<item name\>***Properties** dialog box which can help you to view the collected inventory information in a more readable format.  
 
 5.  When you are finished, close the **Resource Explorer** window.  
+

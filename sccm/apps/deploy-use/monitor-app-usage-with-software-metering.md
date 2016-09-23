@@ -1,7 +1,7 @@
----
+﻿---
 title: "Monitor app usage with software metering | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -173,3 +173,4 @@ Software metering has no external dependencies, only dependencies within the pro
   
  As a result of this course of action, IT support and licensing costs are reduced by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.  
   
+

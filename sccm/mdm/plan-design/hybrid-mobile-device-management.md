@@ -1,7 +1,7 @@
----
+﻿---
 title: "Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-05-10
+ms.date: 05/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -210,3 +210,4 @@ This walkthrough shows you how to configure System Center Configuration Manager 
   
 ## See Also  
  [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md)
+

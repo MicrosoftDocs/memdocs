@@ -1,7 +1,7 @@
----
+﻿---
 title: "Introduction to reporting in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -123,3 +123,4 @@ Reporting in System Center Configuration Manager provides a set of tools and res
   
 ## See Also  
  [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage access to O365 services for managed PCs | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-16
+ms.date: 08/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -145,3 +145,4 @@ author: karthikaraman
   
 ### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
+

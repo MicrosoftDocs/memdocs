@@ -1,7 +1,7 @@
----
+﻿---
 title: "Update and retire applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-26
+ms.date: 05/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,3 +29,4 @@ Eventually, you will likely want to make changes to an application, uninstall it
   
      For more information, see [How to uninstall applications](../../apps/deploy-use/uninstall-applications.md).  
   
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "System Center Configuration Manager privacy statement - Mobile device addendum"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,3 +26,4 @@ This privacy statement should be read in conjunction with the [System Center Con
 
 ### Choice/Control:  
  It is your choice to use Enterprise Enrollment; during enrollment you can stop the process at any time before you enter your password and agree to continue with the process. After that you remain enrolled until you reset your device back to the manufacturer's defaults. If your device becomes unenrolled by your corporate administrator, your device may be wiped of all personal settings and data and be reset back to the manufacturer's defaults.  
+

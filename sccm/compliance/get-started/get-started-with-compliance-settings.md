@@ -1,7 +1,7 @@
----
+﻿---
 title: "Get started with compliance settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,3 +71,4 @@ Before you start to create System Center Configuration Manager configuration ite
   
 ## See Also  
  [Ensure device compliance with System Center Configuration Manager](../../compliance/understand/ensure-device-compliance.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -427,3 +427,4 @@ Beginning in Release 1606, you can adjust the size of the client cache folder wi
     -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
 
 5.  Click **OK** in the **Windows Script Host** dialog box.  
+

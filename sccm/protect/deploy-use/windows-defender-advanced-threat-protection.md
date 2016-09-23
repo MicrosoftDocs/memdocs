@@ -1,7 +1,7 @@
----
+﻿---
 title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-25
+ms.date: 07/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,3 +72,4 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
         -   **Agent state** - The system service for the agent in Windows isn't running  
   
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
+

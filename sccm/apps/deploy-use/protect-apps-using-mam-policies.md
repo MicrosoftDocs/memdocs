@@ -1,7 +1,7 @@
----
+﻿---
 title: "Protect apps using mobile application management policies | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -192,3 +192,4 @@ System Center Configuration Manager application management policies let you modi
   
 ## See Also  
  [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
+

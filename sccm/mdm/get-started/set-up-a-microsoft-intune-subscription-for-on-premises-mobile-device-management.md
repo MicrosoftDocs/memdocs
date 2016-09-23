@@ -1,7 +1,7 @@
----
+﻿---
 title: "Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,3 +64,4 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
 ## See Also  
  [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
+

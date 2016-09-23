@@ -1,7 +1,7 @@
----
+﻿---
 title: "Security and privacy for reporting in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,3 +24,4 @@ This topic contains security best practices and privacy information for reportin
   
 ## See Also  
  [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Reference for System Center Configuration Manager Setup"
 ms.custom: na
-ms.date: 2016-01-25
+ms.date: 01/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -86,3 +86,4 @@ The three levels of data collection include:
 For more information including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 [System Center Configuration Manager Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=626527)
+

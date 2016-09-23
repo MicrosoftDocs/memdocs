@@ -1,7 +1,7 @@
----
+﻿---
 title: "Collections security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,3 +35,4 @@ This topic contains security best practices and privacy information for collecti
 -   If you use collection variables, local administrators can read potentially sensitive information.  
 
      Collection variables can be used when you deploy an operating system.  
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1606 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-22
+ms.date: 06/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -246,3 +246,4 @@ With Technical Preview 1606 several changes have been introduced that apply to U
 -   **Renamed option for pre-production:**
 
     In the Updates and Servicing node, the button what was named **Client options** is now renamed to **Promote Pre-production Client**.
+

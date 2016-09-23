@@ -1,7 +1,7 @@
----
+﻿---
 title: "iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-02
+ms.date: 06/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -112,3 +112,4 @@ Companies can purchase iOS devices through Apple's device enrollment program and
   
 4.  **Distribute devices to users**   
     You can now give your corporate-owned devices to users. When an iOS device is turned on it will be enrolled for management by Intune.
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Install in-console updates for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -354,3 +354,4 @@ On a site server you can configure service windows to control when infrastructur
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
     See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
+

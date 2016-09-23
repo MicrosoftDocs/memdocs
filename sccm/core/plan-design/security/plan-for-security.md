@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for security in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -302,3 +302,4 @@ You can remove the trusted root key from a client by using the Client.msi proper
 
 ##  <a name="BKMK_PlanningForRBA"></a> Planning for role-based administration  
  For this information, see [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md).  
+

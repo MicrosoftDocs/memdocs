@@ -1,7 +1,7 @@
----
+﻿---
 title: "Deploy Windows to Go with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -458,3 +458,4 @@ This topic provides the steps to provision Windows To Go in System Center Config
   
 ## See Also  
  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+

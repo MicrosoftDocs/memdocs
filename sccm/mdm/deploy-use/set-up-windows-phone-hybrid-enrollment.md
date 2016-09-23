@@ -1,7 +1,7 @@
----
+﻿---
 title: "Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -121,3 +121,4 @@ Before you can manage Windows Phone 8.1 and later mobile devices with Configurat
     >  Do not create a deployment for this application - the deployment will be automatically created when you complete the Microsoft Intune Subscription Wizard.  
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://technet.microsoft.com/library/dn948527.aspx). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+

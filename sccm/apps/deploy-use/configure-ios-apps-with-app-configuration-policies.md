@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-03
+ms.date: 04/03/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -118,3 +118,4 @@ When you create a mobile app configuration file, you can specify one or more of 
   <string>{{udidlast4digits}}</string>
 </dict>
 ```
+

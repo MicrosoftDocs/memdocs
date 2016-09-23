@@ -1,7 +1,7 @@
----
+﻿---
 title: "Language Packs in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -83,3 +83,4 @@ You can identify the language packs that are installed on a computer that runs t
 -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
 You can use hardware inventory to collect this information, and then build a custom report to view the language details. For information about collecting custom hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). For information on creating reports, see the [Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) section in the [Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md) topic.  
+
