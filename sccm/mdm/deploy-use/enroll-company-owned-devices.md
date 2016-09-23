@@ -1,7 +1,7 @@
----
+﻿---
 title: "Enroll company-owned devices for hybrid deployments with Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,3 +38,4 @@ You can identify corporate-owned devices by importing their international statio
   
 ## See Also  
  [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md)
+

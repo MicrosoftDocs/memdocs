@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create remote connection profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -179,3 +179,4 @@ Deploy a remote connection profile
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
+

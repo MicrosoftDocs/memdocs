@@ -1,7 +1,7 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1601 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -205,3 +205,4 @@ A client is online if it is currently connected to a Configuration Manager manag
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
  For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+

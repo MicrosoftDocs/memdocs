@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Deploy software updates | Configuration Manager
@@ -46,3 +46,4 @@ There are two main scenarios for deploying software updates: manual deployment a
 [Automatically deploy software updates](automatically-deploy-software-updates.md)
     
  <!--- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  --->
+

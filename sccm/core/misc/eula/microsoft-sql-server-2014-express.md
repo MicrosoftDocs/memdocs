@@ -1,4 +1,4 @@
----
+ï»¿---
 title: "MICROSOFT SQL SERVER 2014 EXPRESS"
 ms.custom: na
 ms.date: 08/23/2016
@@ -40,7 +40,7 @@ robots: noindex,nofollow
 
         1.  **Right to Use and Distribute.  If you comply with the terms below:**  
 
-            -   You may copy and distribute the object code form of the software (“**Distributable Code**”) in programs you develop;  
+            -   You may copy and distribute the object code form of the software ("**Distributable Code**") in programs you develop;  
 
             -   You may combine the object code form of the Distributable Code with your programs to develop a unified web solution and permit others via online methods to access and use that unified web solution, provided that the Distributable Code is only used as part of and in conjunction with your programs; and  
 
@@ -58,13 +58,13 @@ robots: noindex,nofollow
 
             -   display your valid copyright notice on your programs; and  
 
-            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.  
+            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
 
         3.  **Distribution Restrictions. You may not**  
 
             -   alter any copyright, trademark or patent notice in the Distributable Code;  
 
-            -   use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;  
+            -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
 
             -   distribute Distributable Code to run on a platform other than the Windows platform;  
 
@@ -78,7 +78,7 @@ robots: noindex,nofollow
 
 3.  **SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not  
 
-    -   disclose the results of any benchmark tests of the software to any third party without Microsoft’s prior written approval;  
+    -   disclose the results of any benchmark tests of the software to any third party without Microsoft's prior written approval;  
 
     -   work around any technical limitations in the software;  
 
@@ -102,7 +102,7 @@ robots: noindex,nofollow
 
 8.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
 
-9. **SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.  
+9. **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 
 10. **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
 
@@ -114,7 +114,7 @@ robots: noindex,nofollow
 
 12. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-13. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR**   
+13. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR**   
     **CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL**   
     **LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER**   
     **YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF**   
@@ -131,3 +131,4 @@ robots: noindex,nofollow
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
  It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

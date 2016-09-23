@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Site system roles for clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -62,7 +62,7 @@ Use the information in this article to help you determine the site systems that 
  Configuration Manager requires the enrollment point and the enrollment proxy point to enroll mobile devices and to enroll certificates for Mac computers. These site system roles are not required if you will manage mobile devices by using the Exchange Server connector, or if you install the mobile device legacy client (for example, for Windows CE), or if you request and install the client certificate on Mac computers independently from Configuration Manager.  
 
 ##  <a name="BKMK_Determine_DP"></a> Determine Whether You Require a Distribution Point  
- Although you don’t require a distribution point to install Configuration Manager clients on Windows computers, by default, Configuration Manager uses a distribution point to install the client source files on Windows computers but can fall back to downloading these files from a management point. Distribution points are not used to install mobile device clients that are enrolled by Configuration Manager but are used if you install the mobile device legacy client. If you install the Configuration Manager client as part of an operating system deployment, the operating system image is stored and retrieved from a distribution point.  
+ Although you don't require a distribution point to install Configuration Manager clients on Windows computers, by default, Configuration Manager uses a distribution point to install the client source files on Windows computers but can fall back to downloading these files from a management point. Distribution points are not used to install mobile device clients that are enrolled by Configuration Manager but are used if you install the mobile device legacy client. If you install the Configuration Manager client as part of an operating system deployment, the operating system image is stored and retrieved from a distribution point.  
 
  Although you might not require distribution points to install most Configuration Manager clients, you will require distribution points to install software such as applications and software updates on the clients.  
 
@@ -74,3 +74,4 @@ Use the information in this article to help you determine the site systems that 
 -   Search for and install applications from the Application Catalog.  
 
 -   Deploy applications to users and devices with a deployment purpose of **Available**.  
+

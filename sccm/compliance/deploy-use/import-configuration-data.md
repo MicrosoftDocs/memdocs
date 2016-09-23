@@ -1,7 +1,7 @@
----
+﻿---
 title: "Import configuration data | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -50,3 +50,4 @@ Other scenarios where the import process might fail include the following:
   
 The imported configuration data displays in the **Compliance Settings** node in the **Assets and Compliance** workspace.  
   
+

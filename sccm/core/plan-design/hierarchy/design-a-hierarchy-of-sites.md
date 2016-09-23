@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Design a hierarchy of sites for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-15
+ms.date: 03/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -99,7 +99,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 ##  <a name="BKMK_ChooseSecondary"></a> Determine when to use a secondary site  
  Use secondary sites to manage the transfer of deployment content and client data across low-bandwidth networks.  
 
- You manage a secondary site from a central administration site or the secondary site’s direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
+ You manage a secondary site from a central administration site or the secondary site's direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
 
  Consider installing a secondary site if any of the following conditions apply:  
 
@@ -172,3 +172,4 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 -   To manage network bandwidth between sites in a hierarchy, see [Data transfers between sites in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md)  
+

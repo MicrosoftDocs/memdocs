@@ -1,7 +1,7 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1511 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -193,3 +193,4 @@ Try to complete the following task and then use the feedback information near th
 1.  [Deploy software updates](https://technet.microsoft.com/library/gg712304.aspx) to the server cluster collection.  
 
 2.  [Monitor the software update deployment](https://technet.microsoft.com/library/gg712304.aspx).  
+

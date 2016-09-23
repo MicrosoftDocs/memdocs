@@ -1,4 +1,4 @@
-# [Understand and explore](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+﻿# [Understand and explore](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 ## [Hybrid and on-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 ## [Choose Intune or hybrid MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [Hybrid MDM](understand/hybrid-mobile-device-management.md)
@@ -29,3 +29,4 @@
 ## [Terms and Conditions](deploy-use/terms-and-conditions.md)
 ## [Retire, lock and reset](deploy-use/wipe-lock-reset-devices.md)
 ## [EAS device management](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
+

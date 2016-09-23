@@ -4,7 +4,7 @@ ms.custom: na
 ms.date: 2016-07-22
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -21,8 +21,8 @@ You can identify corporate-owned devices by importing their international statio
 2.	Specify how you want to add device information:
      -	Upload a .csv file containing IMEI numbers and details
      -	Manually add IMEI numbers and details. To manually enter information, type the IMEI number or iOS serial number and details for the devices.
-    
-      For uploaded files, Browse to the .csv file containing information to predeclare corporate-owned devices. The file must have the following format, excluding the top row which provided for guidance only. Each row must contain either an IMEI number or iOS serial number. Only the serial numbers of iOS devices can be predeclared; use IMEI number for other device platforms. This table contains sample data: 
+
+      For uploaded files, Browse to the .csv file containing information to predeclare corporate-owned devices. The file must have the following format, excluding the top row which provided for guidance only. Each row must contain either an IMEI number or iOS serial number. Only the serial numbers of iOS devices can be predeclared; use IMEI number for other device platforms. This table contains sample data:
       | IMEI #  | iOS Serial #  | OS | Details |
       | :------------ |:---------------|:-----|:-----|
       | 123456789012345    |   | WINDOWS | Company-owned Windows device|
@@ -30,9 +30,9 @@ You can identify corporate-owned devices by importing their international statio
       | 223456789012345 | E6D5C4B3A210 |   iOS | 	Another iOS device|
       | 323456789012345 |        |   iOS | 	A third iOS device|
       | 123456789012346 |         |   Android | 	Company-owned Android device|
-      
+
     Do not include a header row in your .csv file. The example above includes a header for clarification only.
-    
+
     **The columns accept the following values:**    
       -	Column 1: IMEI number without spaces
       -	Column 2: iOS serial number
@@ -41,12 +41,11 @@ You can identify corporate-owned devices by importing their international statio
          - WINDOWS – Includes Windows Phone, Window 10 Mobile, and Windows PCs
          - ANDROID – All Android devices
       -	Column 4: Details (optional) – Additional device information that appears in the Configuration Manager console. 1024 character limit.
-    
+
     Click **Next**.
-    
+
 3. Review the results of the file import. If a device number was preciously imported, Configuration Manager displays those devices and the replacement **Details**. Select the devices whose details you want to overwrite. Device details can only be modified by reimporting the device identification or serial number. Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.
 
 4. If your import includes iOS serial numbers, you must assign those devices to an enrollment profile. Select the **Enrollment Profile to Assign** from the list of available profiles, and then click **Next**.
 
 5. Click **Next** to view the Summary and then complete the wizard.
-

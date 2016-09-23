@@ -1,7 +1,7 @@
----
+﻿---
 title: "Security and privacy for compliance settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,3 +38,4 @@ This topic contains security and privacy information for compliance settings in 
   
 ## See Also  
  [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Wi-Fi profile security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -54,3 +54,4 @@ This topic contains security and privacy information for Wi-Fi profiles in Syste
 ## See Also  
 >>>>>>> 76634ce2588b0517996e149c878d4500040f98fa
  [Wi-Fi Profiles in System Center Configuration Manager](../Topic/Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

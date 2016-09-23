@@ -1,7 +1,7 @@
----
+﻿---
 title: "Planning to monitor migration activity in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,3 +29,4 @@ With System Center Configuration Manager, you can monitor migration in the Confi
     >  If a migration job fails, review the details in the migmctrl.log file as soon as possible. The migration log entries are continually added to the file and overwrite old details. If the entries are overwritten, you might not be able to identify whether any problems that you might encounter with the migrated objects relate to migration issues. Migration activity is logged at the top\-level site of the hierarchy regardless of the site your Configuration Manager console connects to when you configure migration.  
 
 -   Use Configuration Manager reporting. Configuration Manager provides several built\-in reports for migration, or you can edit those reports to fit your requirements. For more information about Configuration Manager reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+

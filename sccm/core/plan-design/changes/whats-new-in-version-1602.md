@@ -1,7 +1,7 @@
----
+﻿---
 title: "What&#39;s new in version 1602 of System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -208,3 +208,4 @@ If these settings are incorrectly entered by the user, this can increase the bur
 -   **Noncompliant** - Users have accepted a version of the terms and conditions, but not the latest version  
 
 -   **Unknown** -  Users have never accepted the terms and conditions, including those without an enrolled device  
+

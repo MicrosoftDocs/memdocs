@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for the SMS Provider for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ Each Configuration Manager console, Resource Explorer, tools, and custom scripts
  The SMS Provider helps enforce Configuration Manager security. It returns only the information that the administrative user who is running the Configuration Manager console is authorized to view.  
 
 > [!IMPORTANT]  
->  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site�s database.  
+>  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site's database.  
 
  For information about how to manage the SMS Provider, see [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) in [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md).  
 
@@ -188,3 +188,4 @@ The SMS Provider requires the following external dependency be installed on the 
 
 
 The Windows ADK installation can require up to 650 MB of free disk space on each computer that installs the SMS Provider. This high disk space requirement is necessary for Configuration Manager to install the Windows PE boot images.  
+

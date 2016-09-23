@@ -1,4 +1,4 @@
----
+﻿---
 title: "User affinity for hybrid managed devices in Configuration Manager"
 ms.custom: na
 ms.date: 07/26/2016
@@ -40,3 +40,4 @@ When configuring profiles for corporate-owned devices, the administrator can spe
   
 ##  <a name="BKMK_noUA"></a> Managed devices without user affinity  
  Devices configured with **no user affinity** do not support the Company Portal and should not install the app. The Company Portal is designed for users who have corporate credentials and require access to personalized corporate resources (e.g. email). Device enrolled with **no user affinity** are not intended to have a dedicated user sign in. Kiosk, point of sale (POS), or shared utility devices are typical use-cases for devices enrolled with no user affinity. If user affinity is required, be sure the device’s enrollment profile has **User Affinity** selected prior to enrolling the device. To change the affinity status on a device you must retirement and re-enroll the device.
+

@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Reference for System Center Configuration Manager Setup"
 ms.custom: na
-ms.date: 2016-01-25
+ms.date: 01/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -81,8 +81,9 @@ The three levels of data collection include:
 
 -   **Enhanced** includes the data in the Basic setting plus transmits data about the hierarchy, how each feature is used (frequency and duration), and enhanced diagnostic information like the memory state of your server when a system or app crash occurs. No personally identifiable data will be transmitted.  
 
--   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we won’t use that information to identify or contact you, or target advertising to you.  
+-   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we won't use that information to identify or contact you, or target advertising to you.  
 
 For more information including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 [System Center Configuration Manager Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=626527)
+

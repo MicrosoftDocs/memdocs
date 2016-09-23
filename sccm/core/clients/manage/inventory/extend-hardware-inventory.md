@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "How to extend hardware inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-22
+ms.date: 04/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,7 @@ System Center Configuration Manager hardware inventory reads information about d
  In Configuration Manager, you no longer edit the sms_def.mof file as you did in Configuration Manager 2007. Instead, you can enable and disable WMI classes, and add new classes to collect by hardware inventory by using client settings. Configuration Manager provides the following methods to extend hardware inventory.  
 
 > [!NOTE]  
->  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to the 1602 release. To keep using custom classes after you update, you must add these to the ‘Added extensions’ section of the Configuration.mof file after you update to 1602.  
+>  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to the 1602 release. To keep using custom classes after you update, you must add these to the "Added extensions" section of the Configuration.mof file after you update to 1602.  
 > However, you must not modify anything above this section, as these sections are reserved for  modification by Configuration Manager. A backup of your custom Configuration.mof can be found in:  
 > **<CM Install dir\>\data\hinvarchive\\**.  
 
@@ -94,9 +94,9 @@ System Center Configuration Manager hardware inventory reads information about d
 
 12. If you want to edit information about the selected WMI class, click **Edit**, and in the **Class qualifiers** dialog box, provide the following information:  
 
-    -   **Display name** – Specify a friendly name for the class that will be displayed in Resource Explorer.  
+    -   **Display name** - Specify a friendly name for the class that will be displayed in Resource Explorer.  
 
-    -   **Properties** – Specify the units in which each property of the WMI class will be displayed.  
+    -   **Properties** - Specify the units in which each property of the WMI class will be displayed.  
 
      You can also designate properties as a key property to help uniquely identify each instance of the class. If no key is defined for the class and multiple instances of the class are reported from the client, only the latest instance that is found is stored in the database.  
 
@@ -170,3 +170,4 @@ System Center Configuration Manager hardware inventory reads information about d
  IDMIF files can be used to add information about assets to the Configuration Manager database that could not normally be inventoried by Configuration Manager and is not associated with a particular client device. For example, you could use IDMIFS to collect information about projectors, DVD players, photocopiers, or other equipment that does not contain a Configuration Manager client. For information about creating IDMIF files, see the Configuration Manager SDK documentation.  
 
  After you create an IDMIF file, store this in the folder *%Windir%***\System32\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
+

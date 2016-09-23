@@ -1,7 +1,7 @@
----
+﻿---
 title: "Revise and supersede applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-26
+ms.date: 05/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -124,3 +124,4 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 5.  Review the list of applications that supersede the selected application, then click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
+

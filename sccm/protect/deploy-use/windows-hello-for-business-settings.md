@@ -1,7 +1,7 @@
----
+﻿---
 title: "Windows Hello for Business settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -158,3 +158,4 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
  
  [Manage identity verification using Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
  
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage operating system upgrade packages with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,3 +91,4 @@ An upgrade package in System Center Configuration Manager contains the Windows S
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

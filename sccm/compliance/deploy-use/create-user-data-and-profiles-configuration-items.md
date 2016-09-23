@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create user data and profiles configuration items | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -116,3 +116,4 @@ User data and profiles configuration items in System Center Configuration Manage
   
  For more information, see [How to monitor compliance settings in System Center Configuration Manager](../../compliance/deploy-use/monitor-compliance-settings.md).  
   
+

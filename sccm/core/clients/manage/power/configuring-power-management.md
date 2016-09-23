@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configuring power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -75,3 +75,4 @@ Before you can use power management in System Center Configuration Manager, you 
 4.  In the **Power Management** tab of the *<Collection Name\>***Properties** dialog box, select **Never apply power management settings to computers in this collection**.  
 
 5.  Click **OK** to close the *<Collection Name\>***Properties** dialog box and to save your settings.  
+

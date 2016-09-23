@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for and configure compliance settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,3 +48,4 @@ Before you start working with System Center Configuration Manager compliance set
   
  Client computers are configured with these settings the next time they download client policy.  
   
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Monitor compliance settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -108,3 +108,4 @@ After you have deployed System Center Configuration Manager configuration baseli
   
 6.  After you complete the wizard, the collection displays in the **User Collections** or the **Device Collections** node in the **Assets and Compliance** workspace.  
   
+

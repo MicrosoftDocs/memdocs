@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Download software updates | Configuration Manager
@@ -120,3 +120,4 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 9. On the Summary page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
 
 10. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**.  
+

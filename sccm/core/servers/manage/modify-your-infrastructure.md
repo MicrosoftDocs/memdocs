@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Modify your System Center Configuration Manager infrastructure"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -161,7 +161,7 @@ For example, consider a scenario where you install the Configuration Manager con
 
 -   **Configure access:** When you move the site database to a new computer, add the computer account of the site server to the **Local Administrators** group on the computer that runs SQL Server. If you use a SQL Server cluster for the site database, you must add the computer account to the **Local Administrators** group of each Windows Server cluster node computer.  
 
--   **Enable common language runtime (CLR) integration:**  When you move the database to a new instance on SQL Server, or to a new SQL Server computer, you must enable common language runtime (CLR) integration. To enable CLR, use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database and run the following stored procedure as a query: **sp_configure ‘clr enabled’,1; reconfigure**.  
+-   **Enable common language runtime (CLR) integration:**  When you move the database to a new instance on SQL Server, or to a new SQL Server computer, you must enable common language runtime (CLR) integration. To enable CLR, use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database and run the following stored procedure as a query: **sp_configure 'clr enabled',1; reconfigure**.  
 
 > [!IMPORTANT]  
 >  Before you move a database that has one or more database replicas for management points, you must first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information see [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
@@ -197,7 +197,7 @@ You can register an SPN for the SQL Server service account of the site database 
     > [!IMPORTANT]  
     >  When you create an SPN for a clustered SQL Server, you must specify the virtual name of the SQL Server Cluster as the SQL Server computer name.  
 
-    -   To create an SPN for the NetBIOS name of the SQL Server computer, type the following command: **setspn –A MSSQLSvc/&lt;SQL Server computer name\>:1433 &lt;Domain\Account>**  
+    -   To create an SPN for the NetBIOS name of the SQL Server computer, type the following command: **setspn -A MSSQLSvc/&lt;SQL Server computer name\>:1433 &lt;Domain\Account>**  
 
     -   To create an SPN for the FQDN of the SQL Server computer, type the following command: **setspn -A MSSQLSvc/&lt;SQL Server FQDN\>:1433 &lt;Domain\Account>**  
 
@@ -208,7 +208,7 @@ You can register an SPN for the SQL Server service account of the site database 
 
 1.  On the **Start** menu, click **Run**, and then enter **cmd** in the **Run** dialog box.  
 
-2.  At the command prompt, enter the following command: **setspn –L &lt;domain\SQL Service Account>**.  
+2.  At the command prompt, enter the following command: **setspn -L &lt;domain\SQL Service Account>**.  
 
 3.  Review the registered **ServicePrincipalName** to ensure that a valid SPN has been created for the SQL Server.  
 
@@ -351,8 +351,9 @@ For information about the client and server languages that are supported by Conf
 
 1.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
 
-2.  Select the site that you want to configure and open that site’s **Properties**.  
+2.  Select the site that you want to configure and open that site's **Properties**.  
 
-3.  In the site’s **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
+3.  In the site's **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
 
 4.  Click **OK** to close the site properties dialog box.  
+

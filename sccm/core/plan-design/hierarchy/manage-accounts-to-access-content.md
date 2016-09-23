@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage accounts to access content in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -106,3 +106,4 @@ If you create this account, create it as a low-rights, local account on the comp
 
 > [!IMPORTANT]  
 >  Do not grant this account interactive logon rights  
+

@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -75,7 +75,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
     > [!IMPORTANT]  
     >  You must use root credentials to install the client.  
 
-5.  Next, run the following command to install the Configuration Manager client: **./install –mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
+5.  Next, run the following command to install the Configuration Manager client: **./install -mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
 
      When you enter this command, use additional command-line properties you require.  For the list of command-line properties, see [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient)  
 
@@ -125,7 +125,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
 -   **-clean**  
 
-     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the client’s database and certificate store.  
+     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the client's database and certificate store.  
 
 -   **-keepdb**  
 
@@ -200,7 +200,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
      Optional. Specifies additional PKI certificates to import that are not part of a management points certification authority (CA) hierarchy. If you specify multiple certificates in the command line, they should be comma delimited.  
 
-     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the site’s certificate issuers list.  
+     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the site's certificate issuers list.  
 
      If you do not use this option, the Linux and UNIX client will verify the trust hierarchy using only the certificate in the **-UsePKICert** option.  
 
@@ -228,3 +228,4 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
  For more information about how clients locate management points, see [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
+

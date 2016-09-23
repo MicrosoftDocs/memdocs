@@ -1,4 +1,4 @@
-# [How to create applications with System Center Configuration Manager](apps/deploy-use/create-applications.md)
+﻿# [How to create applications with System Center Configuration Manager](apps/deploy-use/create-applications.md)
 # [Packages and programs in System Center Configuration Manager](apps/deploy-use/packages-and-programs.md)
 # [Management tasks for System Center Configuration Manager applications](apps/deploy-use/management-tasks-applications.md)
 # [How to create App-V virtual environments in System Center Configuration Manager](apps/deploy-use/create-app-v-virtual-environments.md)
@@ -493,3 +493,4 @@
 # [Best practices for software updates in System Center Configuration Manager](sum/plan-design/software-updates-best-practices.md)
 # [Introduction to software updates in System Center Configuration Manager](sum/understand/software-updates-introduction.md)
 # [Icons used for software updates in System Center Configuration Manager](sum/understand/software-updates-icons.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Client installation methods | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -137,3 +137,4 @@ You can use different methods to install the System Center Configuration Manager
 -   [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
 
 -   [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+

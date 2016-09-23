@@ -1,7 +1,7 @@
----
+﻿---
 title: "Asset Intelligence in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,3 +33,4 @@ Asset Intelligence in System Center Configuration Manager lets you retrieve inve
 
 -   [Technical reference for Asset Intelligence in System Center Configuration Manager](../Topic/Technical%20reference%20for%20Asset%20Intelligence%20in%20System%20Center%20Configuration%20Manager.md)  
   
+

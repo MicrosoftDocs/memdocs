@@ -1,4 +1,4 @@
----
+﻿---
 title: "Find a package family name (PFN) for per-app VPN | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/11/2016
@@ -74,3 +74,4 @@ In Edge, the information you want is displayed; in Internet Explorer, click **Op
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
+

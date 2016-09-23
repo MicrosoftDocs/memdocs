@@ -1,7 +1,7 @@
----
+﻿---
 title: "VPN profile security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,3 +34,4 @@ This topic contains security and privacy information for VPN profiles in System 
 ### See also  
 
  [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md)
+

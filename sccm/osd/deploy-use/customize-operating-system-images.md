@@ -1,7 +1,7 @@
----
+﻿---
 title: "Customize operating system images with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -142,3 +142,4 @@ Operating system images in System Center Configuration Manager are WIM files and
   
 ## See Also  
  [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md)
+

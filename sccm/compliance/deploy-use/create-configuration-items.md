@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to create configuration items | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-15
+ms.date: 04/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,3 +24,4 @@ Compliance settings in System Center Configuration Manager lets you create and d
   
 -   [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
   
+

@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Removed and deprecated features for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -57,10 +57,10 @@ This topic describes features, products, and operating systems that are removed 
 |Windows Server 2003|7/10/2015|?|  
 |Windows Server 2003 R2|7/10/2015|?|  
 |Windows Vista|7/10/2015|?|  
-|Mac OS X  10.6 – 10.8|7/10/2015|?|  
-|Windows Mobile 6.0 – 6.5|7/10/2015|?|  
+|Mac OS X  10.6 - 10.8|7/10/2015|?|  
+|Windows Mobile 6.0 - 6.5|7/10/2015|?|  
 |Nokia Symbian Belle|7/10/2015|?|  
-|Windows CE 5.0 – 6.0|7/10/2015|?|  
+|Windows CE 5.0 - 6.0|7/10/2015|?|  
 
  **Deprecated support for SQL Server versions as a site database:**  
 
@@ -85,3 +85,4 @@ This topic describes features, products, and operating systems that are removed 
  System Center Configuration Manager has removed support for  Network Access Protection. The feature has been deprecated in Windows Server 2012 R2 and is removed from Windows 10.  
 
  For network access protection alternatives, see the **Deprecated functionality** section of [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx).  
+

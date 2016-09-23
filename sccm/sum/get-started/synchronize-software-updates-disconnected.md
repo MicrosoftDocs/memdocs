@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Synchronize software updates from a disconnected software update point | Configuration Manager
@@ -104,3 +104,4 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
      **wsusutil.exe import export.cab import.log**  
 
      The format can be summarized as follows: WSUSutil.exe is followed by the import command, the name of package file (.cab) that is created during the export operation, the path to the package file if it is in a different folder, and the name of a log file. WSUSutil.exe imports the metadata from the export server and creates a log file of the operation.  
+

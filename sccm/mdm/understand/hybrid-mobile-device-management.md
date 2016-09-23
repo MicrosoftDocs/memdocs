@@ -1,7 +1,7 @@
----
+﻿---
 title: "Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-09-20
+ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -135,3 +135,4 @@ Configuration Manager hybrid MDM can manage the following device platforms:
  - [Prerequisites for device enrollment](prerequisites-for-enrollment.md)
  - [Manage corporate-owned devices](manage-corporate-owned-devices.md)
  - [Supported mobile  devices and computers](../get-started/supported-mobile-devices-and-computers.md)
+
