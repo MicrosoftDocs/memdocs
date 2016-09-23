@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage Skype for Business Online access | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-20
+ms.date: 04/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -101,3 +101,4 @@ If a condition is not met, the user is presented with one of the following messa
 ### See also  
 
  [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md)
+

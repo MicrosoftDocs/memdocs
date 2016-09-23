@@ -1,7 +1,7 @@
----
+﻿---
 title: "Checklist for installing update 1606 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -127,3 +127,4 @@ For more information, see **Step 3: Run the prerequisite checker before installi
 
  **Update sites:** You are now ready to start the update installation for your hierarchy.  
   We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations. For more information, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
+

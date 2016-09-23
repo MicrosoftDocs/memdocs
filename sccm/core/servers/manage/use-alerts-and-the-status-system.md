@@ -1,7 +1,7 @@
----
+﻿---
 title: "Use alerts and the status system for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -300,3 +300,4 @@ Because the status system maintains separate configurations for each site you mu
      You can postpone an alert only when it is active.  
 
 -   You can edit the **Comment** of an alert so that other administrative users can see that you are aware of the alert. For example, in the comment you can identify how to resolve the condition, provide information about the current status of the condition, or explain why you postponed the alert.  
+

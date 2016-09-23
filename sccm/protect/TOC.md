@@ -1,4 +1,4 @@
-# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+﻿# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
@@ -82,3 +82,4 @@
 ### [Monitor certificate profiles](deploy-use/monitor-certificate-profiles.md)
 ### [Monitor email profiles](deploy-use/monitor-email-profiles.md)
 ### [Monitor Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to upgrade clients for Windows computers in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -80,3 +80,4 @@ You can upgrade the client on Windows computers using client installation method
 8.  If you want the client installation package to be copied to distribution points that have been enabled for prestaged content, click **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
 
 9. Click **OK** to save the settings and close the **Hierarchy Settings Properties** dialog box. Clients receive these settings when they next download policy.  
+

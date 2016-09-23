@@ -1,7 +1,7 @@
----
+﻿---
 title: "Maintenance tasks for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -129,3 +129,4 @@ After you install a Configuration Manager site, review the available maintenance
 5.  To enable or disable the task without editing the task properties, click the **Enable** or **Disable** button. The button label changes depending on the current configuration of the task.  
 
 6.  When you are finished configuring the maintenance tasks, click **OK** to complete the procedure.
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Introduction to software inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,3 +49,4 @@ Use software inventory in System Center Configuration Manager to collect informa
 |Windows RT|Only managed apps|Only managed apps|  
 |iOS|Only managed apps|All apps installed on the device|  
 |Android|Only managed apps|All apps installed on the device|  
+

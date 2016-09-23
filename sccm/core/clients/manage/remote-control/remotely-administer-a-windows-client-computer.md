@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to remotely administer a Windows client computer by using System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -93,3 +93,4 @@ Use the following procedure to remotely administer a computer in System Center C
     > -   **/?** - Displays the command-line options for the remote control viewer.  
     >   
     >  **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
+

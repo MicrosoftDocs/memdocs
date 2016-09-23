@@ -1,7 +1,7 @@
----
+﻿---
 title: "Release notes for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-16
+ms.date: 08/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -237,3 +237,4 @@ This only happens when you add the same **User Collection** to the **Exempted Co
 This issue affects System Center Configuration Manager conditional access for **Exchange On-Premises** with update 1602, and is expected to be resolved in a future update.  
 
 **Workaround:** Add the **User Collection** to **Targeted Collections** page before selecting **User Collection** on the **Exempted Collection** page, or make sure you are not adding the same **User Collection** to both Targeted and Exempted Collections.
+

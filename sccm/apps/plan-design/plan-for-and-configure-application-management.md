@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for and configure application management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-10
+ms.date: 05/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -213,3 +213,4 @@ Use the information in this topic to help you implement the necessary dependenci
 > [!WARNING]  
 >  After you have installed the Application Catalog site system roles, you will not immediately see the Application Catalog when you click the **Find additional applications from the Application Catalog** link from Software Center. The Application Catalog becomes available from Software Center after the client next downloads its client policy or up to 25 hours after the Application Catalog site system roles are installed.  
  
+

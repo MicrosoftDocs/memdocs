@@ -1,7 +1,7 @@
----
+﻿---
 title: "Task sequence built-in variables in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -88,3 +88,4 @@ author: Dougeby
   
 ## See Also  
  [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)
+

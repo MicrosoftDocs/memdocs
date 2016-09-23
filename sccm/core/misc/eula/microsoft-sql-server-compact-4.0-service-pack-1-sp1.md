@@ -1,4 +1,4 @@
----
+﻿---
 title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)"
 ms.custom: na
 ms.date: 08/23/2016
@@ -141,3 +141,4 @@ robots: noindex,nofollow
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
    It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

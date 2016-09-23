@@ -1,7 +1,7 @@
----
+﻿---
 title: "Windows Firewall policies for Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -70,3 +70,4 @@ Firewall policies for Endpoint Protection in System Center 2012 Configuration Ma
   
     > [!IMPORTANT]  
     >  When you deploy a Windows Firewall policy to a collection, this policy is applied to computers in a random order over a 2 hour period to avoid flooding the network.
+

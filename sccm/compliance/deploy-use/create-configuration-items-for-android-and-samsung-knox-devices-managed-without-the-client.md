@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -152,3 +152,4 @@ author: robstackmsft
   
  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
+

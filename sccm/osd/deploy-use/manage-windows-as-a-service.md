@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage Windows as a service using System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-12
+ms.date: 08/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -230,3 +230,4 @@ Servicing plans use only the **Upgrades** software updates classification, not c
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](assetId:///c6b0ff4c-235a-4e4c-99c0-d14d202de478)
+

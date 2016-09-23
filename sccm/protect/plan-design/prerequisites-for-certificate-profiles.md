@@ -1,7 +1,7 @@
----
+﻿---
 title: "Certificate profile prerequisites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-31
+ms.date: 03/31/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -40,3 +40,4 @@ Certificate profiles in System Center Configuration Manager have external depend
 ## See also  
 
  [Planning for certificate profiles in System Center Configuration Manager](../Topic/Planning%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

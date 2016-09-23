@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create and deploy an application | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -210,3 +210,4 @@ If you are already familiar with Configuration Manager applications, you can ski
   
 ## See Also  
  [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)
+

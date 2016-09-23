@@ -1,7 +1,7 @@
----
+﻿---
 title: "Predeclare devices with IMEI or iOS serial numbers"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology: 
@@ -49,4 +49,5 @@ You can identify corporate-owned devices by importing their international statio
 4. If your import includes iOS serial numbers, you must assign those devices to an enrollment profile. Select the **Enrollment Profile to Assign** from the list of available profiles, and then click **Next**.
 
 5. Click **Next** to view the Summary and then complete the wizard.
+
 

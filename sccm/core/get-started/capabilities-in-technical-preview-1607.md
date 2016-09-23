@@ -1,7 +1,7 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1607 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-01
+ms.date: 08/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,3 +64,4 @@ For more information about this issue, see the [Configuration Manager OSD Suppor
 2. On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
 3. Go to the **Client Approval and Conflicting Records** tab.
 4. Click **Add** in the **Duplicate hardware identifiers** section to add new hardware identifiers.
+

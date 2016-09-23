@@ -1,4 +1,4 @@
-# [Configuration Manager docs](index.md)
+﻿# [Configuration Manager docs](index.md)
 ## [Core infrastructure guide](core/understand/introduction.md)
 ## [Application management guide](apps\understand\introduction-to-application-management.md)
 ## [Device compliance guide](compliance\understand\ensure-device-compliance.md)
@@ -6,3 +6,4 @@
 ## [Operating system deployment guide](osd\understand\introduction-to-operating-system-deployment.md)
 ## [Protect data and infrastructure guide](protect\understand\protect-data-and-site-infrastructure.md)
 ## [Software update management guide](sum\understand\software-updates-introduction.md)
+

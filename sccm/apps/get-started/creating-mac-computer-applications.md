@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create Mac computer applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -214,3 +214,4 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
   
+

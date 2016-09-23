@@ -1,7 +1,7 @@
----
+﻿---
 title: "System Center Configuration Manager privacy statement"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -339,3 +339,4 @@ The information we collect from you will be used by Microsoft and its controlled
 3.  Select the server that hosts the **service connection point**.  
 
 4.  In the **Site System Roles** details pane, select **service connection point** and then, on the **Site Role** tab, in the **Site Role** settings group, click **Remove Role**, and click **Yes** to confirm.  
+

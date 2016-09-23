@@ -1,7 +1,7 @@
----
+﻿---
 title: "Setup hybrid MDM with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-09-20
+ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -274,3 +274,4 @@ Hybrid setup is now complete. Devices can be enrolled in Configuration Manager i
 6.  In the **Site System Roles** list, select **Service connection point** and then click **Remove Role** in the ribbon. Confirm you want to remove the role. The service connection point is deleted.
 
 7.  You can now create a new service connection point, add a new Intune subscription to Configuration Manager, and set Configuration Manager as the MDM Authority.
+

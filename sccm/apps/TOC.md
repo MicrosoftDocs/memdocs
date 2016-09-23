@@ -1,4 +1,4 @@
-# [Understand and explore](understand/introduction-to-application-management.md)
+﻿# [Understand and explore](understand/introduction-to-application-management.md)
 # [Get started with application management](get-started/create-and-deploy-an-application.md)
 ## [Create and deploy an application](get-started/create-and-deploy-an-application.md)
 # [Plan and design](plan-design/plan-for-and-configure-application-management.md)
@@ -32,4 +32,5 @@
 ### [Protect apps using mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
 ### [Manage Internet access using managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ## [Packages and programs](deploy-use/packages-and-programs.md)
+
 

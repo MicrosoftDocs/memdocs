@@ -1,7 +1,7 @@
----
+﻿---
 title: "How diagnostics and usage data is used for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,3 +43,4 @@ Microsoft uses available data to improve to the product. The following are a few
 -   **Improved prerequisite checks:**  
 
      Based on the usage data, we have improved the prerequisite checks for installing an update to remove obsolete rules, account for additional cases, and in some cases to auto-remediate some issues.  
+

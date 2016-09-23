@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configuring source hierarchies and source sites for migration to System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -94,3 +94,4 @@ Use the following procedure to configure additional source sites for Configurati
 7.  Click **OK** to save the configuration. This opens the **Data Gathering Status** dialog box, and data gathering starts automatically.  
 
 8.  When data gathering finishes, click **Close** to complete the configuration.  
+

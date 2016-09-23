@@ -1,7 +1,7 @@
----
+﻿---
 title: "Site system roles for clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -74,3 +74,4 @@ Use the information in this article to help you determine the site systems that 
 -   Search for and install applications from the Application Catalog.  
 
 -   Deploy applications to users and devices with a deployment purpose of **Available**.  
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Protect data and site infrastructure | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,3 +32,4 @@ You want your users to be able to securely access your organization's resources,
   
 -   Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Work) which is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card. Learn more in [Windows Hello for Business settings in System Center Configuration Manager](../../protect/deploy-use/windows-hello-for-business-settings.md).  
   
+

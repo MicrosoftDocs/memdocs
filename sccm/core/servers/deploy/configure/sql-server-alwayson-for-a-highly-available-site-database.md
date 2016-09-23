@@ -1,7 +1,7 @@
----
+﻿---
 title: "SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-04
+ms.date: 08/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -258,3 +258,4 @@ author: Brenduns
 9. After you provide the information for the new database location, complete Setup with your normal process and configurations. When Setup completes, the site restarts and begins to use the new database location.  
 
 10. To clean up the servers that were members of the availability group, follow the guidance in [Remove an Availability Group](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) in the SQL Server documentation.
+

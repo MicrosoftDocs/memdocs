@@ -1,4 +1,4 @@
-
+﻿
 
 #   [Understand and explore](understand/introduction.md)
 ##  [Introduction to Configuration Manager](understand/introduction.md)
@@ -273,3 +273,4 @@
 ###  [How to upgrade clients for Windows computers](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [How to upgrade clients for Linux and UNIX servers](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [How to upgrade clients on Mac computers](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+

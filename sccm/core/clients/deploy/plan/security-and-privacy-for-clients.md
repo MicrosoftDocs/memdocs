@@ -1,7 +1,7 @@
----
+﻿---
 title: "Client security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -295,3 +295,4 @@ This article contains security and privacy information for clients in System Cen
  The mobile device information is not sent to Microsoft. The mobile device information is stored in the Configuration Manager database. Information is retained in the database until it is deleted by the site maintenance tasks **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval.  
 
  Before you install and configure the Exchange Server connector, consider your privacy requirements.  
+

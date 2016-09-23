@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage email access | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -331,3 +331,4 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
 ### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
+

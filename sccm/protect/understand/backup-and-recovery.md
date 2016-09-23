@@ -1,7 +1,7 @@
----
+﻿---
 title: "Backup and recovery | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-13
+ms.date: 04/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -903,3 +903,4 @@ Use the following sections to help you create your Configuration Manager backup 
   
 ### See also  
  [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)
+

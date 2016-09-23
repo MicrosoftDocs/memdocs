@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configure Asset Intelligence | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -247,3 +247,4 @@ You must complete a number of configuration steps before you can use Asset Intel
 
     > [!NOTE]  
     >  If a task fails to run on the first attempt, Configuration Manager attempts to rerun the task until either the task runs successfully or until the time period in which the task can run has passed.  
+

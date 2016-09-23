@@ -1,7 +1,7 @@
----
+﻿---
 title: "Communications between endpoints in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -248,3 +248,4 @@ To publish site information to another Active Directory forest, you must:
 
 ###  <a name="bkmk_xchange"></a> Put the Exchange Server connector in a remote forest  
 To support this scenario, ensure that name resolution works between the forests (for example, configure DNS forwards), and when you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -297,3 +297,4 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
+

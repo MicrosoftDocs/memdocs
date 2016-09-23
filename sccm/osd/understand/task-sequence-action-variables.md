@@ -1,7 +1,7 @@
----
+﻿---
 title: "Task sequence action variables in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-06
+ms.date: 06/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -339,3 +339,4 @@ Task sequence action variables specify configuration settings that are used by a
 
 ## See Also  
  [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)
+

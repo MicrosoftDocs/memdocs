@@ -1,7 +1,7 @@
----
+﻿---
 title: "Packages and programs | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-08
+ms.date: 04/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -403,3 +403,4 @@ Packages can use some new features of Configuration Manager, including distribut
   
 -   **Disabled**: Specifies whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
   
+

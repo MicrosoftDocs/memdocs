@@ -1,7 +1,7 @@
----
+﻿---
 title: "Extend the Active Directory schema for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -101,3 +101,4 @@ Extending the schema for Configuration Manager requires you to:
  After the container is configured and permissions are granted, and you have installed a Configuration Manager primary site, you can configure that site to publish data to Active Directory.  
 
  For information about publishing, see [Publish site data for System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md).  
+

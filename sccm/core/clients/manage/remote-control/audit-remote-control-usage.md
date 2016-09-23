@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to audit remote control usage in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -51,3 +51,4 @@ You can use System Center Configuration Manager reports to view audit informatio
 4.  Select the report **Remote Control - All remote control information**, and then, on the **Home** tab, in the **Report Group**, click **Run** to open the **Remote Control - All remote control information** window.  
 
 5.  When you have finished viewing data in the report, close the report window.  
+

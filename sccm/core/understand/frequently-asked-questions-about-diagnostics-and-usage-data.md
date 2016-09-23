@@ -1,7 +1,7 @@
----
+﻿---
 title: "Frequently asked questions about diagnostics and usage data for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -40,3 +40,4 @@ The following are frequently asked questions about diagnostic and usage data for
   
 ## See Also  
  [Diagnostics and usage data for System Center Configuration Manager](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
+

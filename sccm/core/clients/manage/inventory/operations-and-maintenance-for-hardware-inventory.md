@@ -1,7 +1,7 @@
----
+﻿---
 title: "Operations and maintenance for hardware inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,3 +19,4 @@ Use the information in this section to find out more about operations and mainte
 
 ## In this section  
  [How to use Resource Explorer to view hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)  
+

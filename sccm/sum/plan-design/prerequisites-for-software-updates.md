@@ -1,7 +1,7 @@
----
+﻿---
 title: "Prerequisites for software updates in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -104,3 +104,4 @@ This topic lists the prerequisites for software updates in System Center Configu
 
 ## See Also  
  [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Fundamentals of managing devices with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -74,3 +74,4 @@ In addition to managing devices with or without the Configuration Manager client
  A link in Software Center lets users connect to the **Application Catalog**, where they can browse for, install, and request software. In addition,  the Application Catalog lets users configure some preference settings,  wipe their mobile devices, and (when you allow this configuration) specify their own primary devices for user device affinity. (Other methods of configuring the user device affinity information include importing the information from a file and automatic generation from usage data.)  
 
  Because Application Catalog is a website that is hosted in IIS, users can also access the Application Catalog directly from a browser, from the intranet, or from the Internet.  
+

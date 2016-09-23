@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for software updates | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -344,3 +344,4 @@ In previous versions of Configuration Manager, when a restart is pending for Win
 
 ## See Also  
  [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+

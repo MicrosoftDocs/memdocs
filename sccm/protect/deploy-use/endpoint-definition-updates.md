@@ -1,8 +1,8 @@
----
+﻿---
 
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -62,3 +62,4 @@ author: NathBarn
 -   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.
 
 -   [Updates from UNC file shares](endpoint-definitions-network.md) - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
+

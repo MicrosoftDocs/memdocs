@@ -1,7 +1,7 @@
----
+﻿---
 title: "Planning considerations for automating tasks in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-06
+ms.date: 06/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -350,3 +350,4 @@ You can create task sequences to automate tasks in your System Center Configurat
   
 ## See Also  
  [Automate tasks in System Center Configuration Manager](../Topic/Automate%20tasks%20in%20System%20Center%20Configuration%20Manager.md)
+

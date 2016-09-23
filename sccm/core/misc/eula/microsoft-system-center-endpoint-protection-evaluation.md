@@ -1,4 +1,4 @@
----
+﻿---
 title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION"
 ms.custom: na
 ms.date: 08/25/2016
@@ -120,3 +120,4 @@ for this software, unless other terms accompany those items. If so, those terms 
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
    It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

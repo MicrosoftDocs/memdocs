@@ -1,4 +1,4 @@
-# [Understand and explore](understand/ensure-device-compliance.md)
+﻿# [Understand and explore](understand/ensure-device-compliance.md)
 ## [Ensure device compliance](understand/ensure-device-compliance.md)
 # [Get started](get-started/get-started-with-compliance-settings.md)
 # [Plan and design](plan-design/plan-for-and-configure-compliance-settings.md)
@@ -26,3 +26,4 @@
 ## [How to import configuration data](deploy-use/import-configuration-data.md)
 ## [How to create user data and profiles configuration items](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [How to create remote connection profiles](deploy-use/create-remote-connection-profiles.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-10
+ms.date: 03/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -81,3 +81,4 @@ Enabling users to enroll their devices for System Center Configuration Manager O
 
 ## See Also  
  [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
+

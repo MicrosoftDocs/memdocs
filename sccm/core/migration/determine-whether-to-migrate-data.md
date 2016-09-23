@@ -1,7 +1,7 @@
----
+﻿---
 title: "Determine whether to migrate data to System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -173,3 +173,4 @@ With the exception of the distribution point site system role and the computers 
     -   Security roles  
 
     -   Security scopes  
+

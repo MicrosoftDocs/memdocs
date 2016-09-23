@@ -1,7 +1,7 @@
----
+﻿---
 title: "Troubleshooting Windows Defender or Endpoint Protection client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-05
+ms.date: 02/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -314,3 +314,4 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)
+

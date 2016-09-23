@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-09
+ms.date: 05/09/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -482,3 +482,4 @@ A System Center Configuration Manager application contains the files and informa
 |**Mac OS X**|Creates a deployment type for Mac computers from a .cmmac file that you have created by using the CMAppUtil tool.<br /><br /> Applies to Mac computers running the Configuration Manager client only.|  
 |**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br><br>- You can only upload a single file with the extension .msi.<br /><br /> - The file's product code and product version are used for app detection.<br /><br /> - The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - App updates are supported when the MSI product code of each version is the same.|  
+

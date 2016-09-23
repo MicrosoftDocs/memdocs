@@ -1,7 +1,7 @@
----
+﻿---
 title: "Database replicas for management points for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-26
+ms.date: 04/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -500,3 +500,4 @@ To support client notification with a database replica for a management point, y
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 
 5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.  
+

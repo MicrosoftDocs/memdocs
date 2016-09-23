@@ -1,7 +1,7 @@
----
+﻿---
 title: "Example scenario - deploy Windows Embedded clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -169,3 +169,4 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
     -   The interactive presentation software is installed and runs automatically, ready for visitors.  
 
 14. After this initial setup, any restarts that might be required for updates occur only when the visitor center is closed.  
+
