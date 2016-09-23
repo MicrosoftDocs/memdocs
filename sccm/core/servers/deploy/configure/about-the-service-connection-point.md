@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "About the service connection point in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-27
+ms.date: 06/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,11 +18,11 @@ author: Brenduns
 # About the service connection point in System Center Configuration Manager
 The System Center Configuration Manager service connection point is a site system role that serves several important functions for the hierarchy. Before configuring the service connection point, understand and plan for its range of uses which might affect how you configure this site system role:  
 
--   **Manage mobile devices with Microsoft Intune** – This role replaces the Windows Intune connector  used by previous versions of Configuration Manager, and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/plan-design/hybrid-mobile-device-management.md)  
+-   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector  used by previous versions of Configuration Manager, and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/plan-design/hybrid-mobile-device-management.md)  
 
--   **Manage mobile devices with on-premises MDM** – This role provides support for on-premises devices you manage that do not connect to the Internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
+-   **Manage mobile devices with on-premises MDM** - This role provides support for on-premises devices you manage that do not connect to the Internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
 
--   **Upload usage data from your Configuration Manager infrastructure** – You can control the level or amount of detail you upload. Uploaded data helps us:  
+-   **Upload usage data from your Configuration Manager infrastructure** - You can control the level or amount of detail you upload. Uploaded data helps us:  
 
     -   Proactively identify and troubleshoot problems  
 
@@ -32,7 +32,7 @@ The System Center Configuration Manager service connection point is a site syste
 
      See [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
--   **Download updates that apply to your Configuration Manager infrastructure** – Only relevant updates for your infrastructure are made available, based on usage data you upload.  
+-   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available, based on usage data you upload.  
 
  **Each hierarchy supports a single instance of this role:**  
 
@@ -97,3 +97,4 @@ To enable operation, the computer that hosts the service connection point and an
 -   download.microsoft.com  
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
+

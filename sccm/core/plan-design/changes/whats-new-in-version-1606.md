@@ -1,7 +1,7 @@
----
+﻿---
 title: "What&#39;s new in version 1606 of System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-02
+ms.date: 08/02/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -207,3 +207,4 @@ For details, see [Health attestation for System Center Configuration Manager](..
 
 ## Remote Control
 Allow your end-users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. End-users will only need to grant permission once per session, and the viewer will not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace, then navigating to **Client Settings**, then opening the **Remote Tools** panel in **Default Settings**.
+

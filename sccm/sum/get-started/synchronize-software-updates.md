@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Manage software updates synchronization | Configuration Manager
@@ -78,3 +78,4 @@ After you initiate the synchronization process, you can use the Configuration Ma
   2.  In the **Monitoring** workspace, click **Software Update Point Synchronization Status**.  
 
     The software update points in your Configuration Manager hierarchy are displayed in the results pane. From this view, you can monitor the synchronization status for all software update points. When you want more detailed information about the synchronization process, you can review the wsyncmgr.log file that is located in <*ConfigMgrInstallationPath*>\Logs on each site server.  
+

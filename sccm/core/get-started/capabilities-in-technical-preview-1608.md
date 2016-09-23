@@ -1,7 +1,7 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1608 for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-22
+ms.date: 08/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -45,3 +45,4 @@ The display now shows only the parent software items, or software that has no de
 In the past, Configuration Manager transmitted the key position from the viewer’s location to the sharer’s location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an “A”, but the sharer’s French keyboard would provide a “Q”. We are changing the default behavior so that the character itself is transmitted from the viewer’s keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
 
 This behavior can be turned off by the viewer if they prefer to type according to the sharer’s keyboard arrangement. To change the behavior, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
+

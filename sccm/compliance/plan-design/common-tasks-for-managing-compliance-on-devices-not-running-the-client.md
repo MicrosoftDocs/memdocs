@@ -1,7 +1,7 @@
----
+﻿---
 title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -124,3 +124,4 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 ## See Also  
  [Common tasks for managing compliance with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-managing-compliance.md)
+

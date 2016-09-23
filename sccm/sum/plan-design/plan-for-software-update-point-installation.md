@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Plan for software update point installation | Configuration Manager
@@ -105,3 +105,4 @@ ms.assetid: d6284c33-59b4-4f85-bed8-a956af91f707
 -   http://<*FQDN for software update point on parent site*>  
 
 -   https://<*FQDN for software update point on parent site*>  
+

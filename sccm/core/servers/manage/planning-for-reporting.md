@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Planning for reporting in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,9 +31,9 @@ Reporting in System Center Configuration Manager provides a set of tools and res
   
  Consider the following factors to help you determine where to install your reporting services points:  
   
--   A reporting services point with the central administration site database as its reporting data source has access to all global and site data in the Configuration Manager hierarchy. If you require reports that contain site data for multiple sites in a hierarchy, consider installing the reporting services point on a site system at the central administration site and use the central administration site’s database as the reporting data source.  
+-   A reporting services point with the central administration site database as its reporting data source has access to all global and site data in the Configuration Manager hierarchy. If you require reports that contain site data for multiple sites in a hierarchy, consider installing the reporting services point on a site system at the central administration site and use the central administration site's database as the reporting data source.  
   
--   A reporting services point with the child primary site database as its reporting data source has access to global data and site data for only the local primary site and any child secondary sites. Site data for other primary sites in the Configuration Manager hierarchy is not replicated to the primary site, and therefore Reporting Services cannot access it. If you require reports that contain site data for a specific primary site or global data, but you do not want the report user to have access to site data from other primary sites, install a reporting services point on a site system at the primary site and use the primary site’s database as the reporting data source.  
+-   A reporting services point with the child primary site database as its reporting data source has access to global data and site data for only the local primary site and any child secondary sites. Site data for other primary sites in the Configuration Manager hierarchy is not replicated to the primary site, and therefore Reporting Services cannot access it. If you require reports that contain site data for a specific primary site or global data, but you do not want the report user to have access to site data from other primary sites, install a reporting services point on a site system at the primary site and use the primary site's database as the reporting data source.  
   
 ###  <a name="BKMK_NetworkBandwidth"></a> Network bandwidth considerations  
  Site system servers in the same site communicate with each other by using server message block (SMB), HTTP, or HTTPS, depending on how you configure the site. Because these communications are unmanaged and can occur at any time without network bandwidth control, review your available network bandwidth before you install the reporting services point role on a site system.  
@@ -61,3 +61,4 @@ Reporting in System Center Configuration Manager provides a set of tools and res
   
 ## See Also  
  [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)
+

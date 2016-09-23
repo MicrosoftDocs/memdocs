@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "How to remotely administer a Windows client computer by using System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,34 +48,34 @@ Use the following procedure to remotely administer a computer in System Center C
     > [!NOTE]  
     >  If the computer that you connect to has multiple monitors, the display from all these monitors is shown in the remote control window.  
 
-    -   **File - Connect** – Connect to another computer. This option is unavailable when a remote control session is active.  
+    -   **File - Connect** - Connect to another computer. This option is unavailable when a remote control session is active.  
 
-    -   **File - Disconnect** – Disconnects the active remote control session but does not close the **Configuration Manager Remote Control** window.  
+    -   **File - Disconnect** - Disconnects the active remote control session but does not close the **Configuration Manager Remote Control** window.  
 
-    -   **File - Exit** – Disconnects the active remote control session and closes the **Configuration Manager Remote Control** window.  
+    -   **File - Exit** - Disconnects the active remote control session and closes the **Configuration Manager Remote Control** window.  
 
         > [!NOTE]  
         >  When you disconnect a remote control session, the contents of the Windows Clipboard on the computer that you are viewing is deleted.  
 
-    -   **View - Full Screen** – Maximizes the **Configuration Manager Remote Control** window to fill all the available display space.  
+    -   **View - Full Screen** - Maximizes the **Configuration Manager Remote Control** window to fill all the available display space.  
 
         > [!NOTE]  
         >  To exit full screen mode, press Ctrl+Alt+Break.  
 
-    -   **View - Scale to Fit** – Scales the display of the remote computer to fit the size of the **Configuration Manager Remote Control** window.  
+    -   **View - Scale to Fit** - Scales the display of the remote computer to fit the size of the **Configuration Manager Remote Control** window.  
 
-    -   **View - Status Bar** – Toggles the display of the **Configuration Manager Remote Control** window status bar.  
+    -   **View - Status Bar** - Toggles the display of the **Configuration Manager Remote Control** window status bar.  
 
-    -   **Action - Send Ctrl+Alt+Del Key** – Sends a Ctrl+Alt+Del key combination to the remote computer.  
+    -   **Action - Send Ctrl+Alt+Del Key** - Sends a Ctrl+Alt+Del key combination to the remote computer.  
 
-    -   **Action - Enable Clipboard Sharing** – Lets you copy and paste items to and from the remote computer. If you change this value, you must restart the remote control session for the change to take effect.  
+    -   **Action - Enable Clipboard Sharing** - Lets you copy and paste items to and from the remote computer. If you change this value, you must restart the remote control session for the change to take effect.  
 
         > [!NOTE]  
         >  If you do not want clipboard sharing to be enabled in the Configuration Manager console, on the computer running the console, set the value of the registry key, **HKEY_CURRENT_USER\Software\Microsoft\ConfigMgr10\Remote Control\Clipboard Sharing** to **0**.  
 
-    -   **Action - Lock Remote Keyboard and Mouse** – Locks the remote keyboard and mouse to prevent the user from operating the remote computer.  
+    -   **Action - Lock Remote Keyboard and Mouse** - Locks the remote keyboard and mouse to prevent the user from operating the remote computer.  
 
-    -   **Help - About Remote Control** – Displays information about the current version of the remote control viewer.  
+    -   **Help - About Remote Control** - Displays information about the current version of the remote control viewer.  
 
 5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager**Remote Control** icon in the Windows notification area or the icon on the remote control session bar.  
 
@@ -90,6 +90,7 @@ Use the following procedure to remotely administer a computer in System Center C
     >   
     >  -   *<Address\>* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.  
     > -   *<Site Server Name\>* - Specifies the name of the System Center 2012 Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
-    > -   **/?** – Displays the command-line options for the remote control viewer.  
+    > -   **/?** - Displays the command-line options for the remote control viewer.  
     >   
     >  **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
+

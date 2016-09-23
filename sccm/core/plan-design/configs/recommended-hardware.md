@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Recommended hardware for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -131,7 +131,7 @@ For best performance, use RAID 10 configurations for all data drives and 1Gbps E
 
 |Requirement|Details|  
 |-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computer’s operating system.|  
+|Processor and memory|Refer to the processor and RAM requirements for the computer's operating system.|  
 |Disk space|500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
 |Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
 
@@ -172,3 +172,4 @@ You can install PowerShell before or after the Configuration Manager console ins
 |Site and database server|2 - 4|7 - 12|100|  
 |Site system server|1 - 4|2 - 4|50|  
 |Client|1 - 2|1 - 3|30|  
+

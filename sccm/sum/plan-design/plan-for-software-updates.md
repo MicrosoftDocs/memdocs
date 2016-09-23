@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Plan for software updates | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,7 +71,7 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
- The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
+ The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
 
 > [!IMPORTANT]  
 >  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  
@@ -344,3 +344,4 @@ In previous versions of Configuration Manager, when a restart is pending for Win
 
 ## See Also  
  [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+

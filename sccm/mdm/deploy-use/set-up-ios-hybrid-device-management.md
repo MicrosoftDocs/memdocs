@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,7 +41,7 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
   
     1.  In a browser, go to the [Apple Push Certificates Portal](http://go.microsoft.com/fwlink/?LinkId=269844) and sign in with your company Apple ID. This Apple ID must be used in future to renew your APNs certificate.  
   
-    2.  Complete the wizard using the certificate signing request (.csr) file. Download the APNs certificate and save the .pem file locally. This APNs certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune’s mobile device management authority.  
+    2.  Complete the wizard using the certificate signing request (.csr) file. Download the APNs certificate and save the .pem file locally. This APNs certificate (.pem) file is used to establish a trust relationship between the Apple Push Notification server and Intune's mobile device management authority.  
   
 4.  **Enable enrollment and upload the APNs certificate** - To enable iOS enrollment, upload the APNs certificate.  
   
@@ -57,3 +57,4 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
     4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.  
   
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://technet.microsoft.com/library/dn948527.aspx). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+

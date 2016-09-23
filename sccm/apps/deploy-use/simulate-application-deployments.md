@@ -1,7 +1,7 @@
----
+﻿---
 title: "Simulate application deployments | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,3 +49,4 @@ Use simulated deployments if you want to test the applicability of an applicatio
   
 5.  Simulated applications appear in the **Deployments** node of the **Monitoring** workspace with a purpose of **Simulate**. For more information about how to monitor application deployments, see [Monitor applications from the System Center Configuration Manager console](../../apps/deploy-use/monitor-applications-from-the-console.md).  
   
+

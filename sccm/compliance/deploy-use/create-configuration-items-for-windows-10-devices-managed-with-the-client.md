@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-27
+ms.date: 06/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -125,3 +125,4 @@ Windows Information Protection (WIP) helps to protect against this potential dat
   
 For information about how to configure Windows Information Protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
+

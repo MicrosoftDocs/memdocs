@@ -1,7 +1,7 @@
----
+﻿---
 title: "Support for Windows features and networks in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -121,3 +121,4 @@ Configuration Manager supports the DirectAccess feature in Windows Server 2008 R
      Additionally, the cache of a Configuration Manager client is not supported on a SIS-enabled volume.  
 
 -   **Removable Disk Drive**: Configuration Manager does not support install of Configuration Manager site system or clients on a removable disk drive.  
+

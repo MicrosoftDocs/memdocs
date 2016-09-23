@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Language Packs in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -42,7 +42,7 @@ This topic provides technical details about language support in System Center Co
 |Portuguese - Brazil|0416|PTB|  
 |Portuguese - Portugal|0816|PTG|  
 |Russian|0419|RUS|  
-|Spanish – Spain|0c0a|ESN|  
+|Spanish - Spain|0c0a|ESN|  
 |Swedish|041d|SVE|  
 |Turkish|041f|TRK|  
 
@@ -78,8 +78,9 @@ This topic provides technical details about language support in System Center Co
  When you add support for mobile device languages, all mobile device client languages are included. You cannot select individual language packs for mobile device support. For information about supported languages for devices you manage with on-premises mobile device management,  see the [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS) section in the [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md) topic.  
 
 ### How to Identify Installed Language Packs  
-You can identify the language packs that are installed on a computer that runs the Configuration Manager client by viewing the locale ID (LCID) of the installed language packs in the computer’s registry. This information is available in the following location:  
+You can identify the language packs that are installed on a computer that runs the Configuration Manager client by viewing the locale ID (LCID) of the installed language packs in the computer's registry. This information is available in the following location:  
 
 -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
 You can use hardware inventory to collect this information, and then build a custom report to view the language details. For information about collecting custom hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). For information on creating reports, see the [Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) section in the [Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md) topic.  
+

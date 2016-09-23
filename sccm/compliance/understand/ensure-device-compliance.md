@@ -1,7 +1,7 @@
----
+﻿---
 title: "Ensure device compliance | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-16
+ms.date: 02/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -62,3 +62,4 @@ Compliance settings in System Center Configuration Manager gives you the tools a
   
  [Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager](../Topic/Upgrade%20Windows%20devices%20with%20the%20edition%20upgrade%20policy%20in%20System%20Center%20Configuration%20Manager.md)  
   
+

@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Prerequisites for migration in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -85,7 +85,7 @@ The followingare required configurations for using migration and migration opera
 
     When gathering data, the following network protocols and ports are used:  
 
-    -   NetBIOS/SMB – 445 (TCP)  
+    -   NetBIOS/SMB - 445 (TCP)  
 
     -   RPC (WMI) - 135 (TCP)  
 
@@ -120,3 +120,4 @@ The followingare required configurations for using migration and migration opera
     -   To reassign a System Center 2012 Configuration Manager or System Center Configuration Manager distribution point, the account must have **Modify** permission to the **Site** object on the source site. You grant this permission to the account by using role-based administration. For information about how to use role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
      To successfully upgrade or reassign a distribution point to a new hierarchy, the ports that are configured for client requests at the site that manages the distribution point in the source hierarchy must match the ports that are configured for client requests at the destination site that will manage the distribution point. For information about client request ports, see [How to configure client communication ports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md).  
+

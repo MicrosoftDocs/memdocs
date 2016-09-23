@@ -1,7 +1,7 @@
----
+﻿---
 title: "Introduction to application management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -95,3 +95,4 @@ In this topic, you'll learn the basics you need to know before you start working
   
  For more information, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
   
+

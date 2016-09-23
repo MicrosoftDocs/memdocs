@@ -1,7 +1,7 @@
----
+﻿---
 title: "Supported operating systems for clients and devices for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-19
+ms.date: 08/19/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -328,3 +328,4 @@ author: Mtillman
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)** - This includes Business Productivity Online Standard Suite  
+

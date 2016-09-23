@@ -1,7 +1,7 @@
----
+﻿---
 title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -45,3 +45,4 @@ You can use Configuration Manager with  Intune to manage desktops, laptops, and 
 4.  On the **General** tab, select **Enable Windows enrollment**.  
   
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://technet.microsoft.com/library/dn948527.aspx). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Assign clients to a site | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-21
+ms.date: 04/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -151,3 +151,4 @@ After a System Center Configuration Manager client is installed, it must join a 
  These client computers that roam to other sites (all primary sites and all secondary sites) can always use management points in other sites for content location requests. Management points in the current site can give clients a list of distribution points that have the content that clients request.  
 
  For client computers that are configured for Internet-only client management, and for Mac computers and mobile devices that are enrolled by Configuration Manager, these clients only communicate with management points in their assigned site. These clients never communicate with management points in secondary sites or with management points in other primary sites.  
+

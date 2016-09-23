@@ -1,4 +1,4 @@
----
+﻿---
 title: "Capabilities in Technical Preview 1609 for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/25/2016
@@ -48,3 +48,4 @@ For more information about Office 365 ProPlus updates, see [Manage Office 365 Pr
 
 ## See Also
 [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)
+

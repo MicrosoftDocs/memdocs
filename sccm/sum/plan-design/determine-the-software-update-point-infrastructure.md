@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Determine the software update point infrastructure | Configuration Manager
@@ -94,3 +94,4 @@ Enable this option on a device collection or on a set of selected devices. Once 
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
  The software update point is optional on a secondary site. When you install a software update point on a secondary site, the WSUS database is configured as a replica of the default software update point at the parent primary site. You can install only one software update point at a secondary site. The devices that are assigned to a secondary site are configured to use a software update point at the parent site when a software update point is not installed at the secondary site. Typically, you will install a software update point at a secondary site when there is limited network bandwidth between the devices that are assigned to the secondary site and the software update points at the parent primary site, or when the software update point approaches the capacity limit. After a software update point is successfully installed and configured at the secondary site, a site-wide policy is updated for client computers that are assigned to the site, and they will start to use the new software update point.  
+

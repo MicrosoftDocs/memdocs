@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configuration items for devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,3 +26,4 @@ This topic list the System Center Configuration Manager configuration item types
   
 -   [How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)  
   
+

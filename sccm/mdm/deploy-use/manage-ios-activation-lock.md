@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage iOS Activation Lock | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -96,3 +96,4 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 	- The **Remote Device Actions Information** section in the **Summary** tab of the details pane (when a device is selected).
   
  
+

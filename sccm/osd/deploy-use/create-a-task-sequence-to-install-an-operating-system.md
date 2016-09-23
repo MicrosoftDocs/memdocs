@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create a task sequence to install an operating system in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -147,3 +147,4 @@ Use task sequences   in System Center Configuration Manager to automatically ins
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

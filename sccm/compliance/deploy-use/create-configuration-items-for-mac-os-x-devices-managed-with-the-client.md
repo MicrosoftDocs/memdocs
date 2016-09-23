@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -163,3 +163,4 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
  If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
+

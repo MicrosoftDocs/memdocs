@@ -1,4 +1,4 @@
----
+﻿---
 title: "Third Party Notices"
 ms.custom: na
 ms.date: 08/23/2016
@@ -438,3 +438,4 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
  **END OF Active Directory Authentication Library (ADAL) for .NET NOTICES AND INFORMATION**
+

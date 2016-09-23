@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Overview of the software updates lifecycle | Configuration Manager
@@ -146,3 +146,4 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this topic to install the software update point on child sites.
 
 Once you have your software update points installed, go to [synchronize software updates](syncrhonize-software-updates.md).
+

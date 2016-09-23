@@ -1,7 +1,7 @@
----
+﻿---
 title: "Use maintenance windows | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -67,3 +67,4 @@ Maintenance windows in System Center Configuration Manager provide a means by wh
 8.  Click **OK** to close the **&lt;new\> Schedule** dialog box and create the new maintenance window.  
 
 9. Close the **&lt;collection name\> Properties** dialog box.  
+

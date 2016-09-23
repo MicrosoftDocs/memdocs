@@ -1,7 +1,7 @@
----
+﻿---
 title: "Icons used for software updates in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-29
+ms.date: 06/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -120,3 +120,4 @@ Synchronized software updates are displayed in the Configuration Manager console
 
 ## See Also  
  [Introduction to software updates](software-updates-introduction)
+

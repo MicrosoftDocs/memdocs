@@ -1,7 +1,7 @@
----
+﻿---
 title: "Administrator checklist for power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -70,3 +70,4 @@ This administrator checklist provides the recommended steps for using System Cen
 |----------|-------------|  
 |If computers in your hierarchy have not entered sleep or hibernate, run the report **Insomnia Report** to display possible causes.|The **Insomnia Report** displays a list of common causes that prevented computers from entering sleep or hibernate and the number of computers affected by each cause for a specified time period. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
 |If multiple power plans are applied to one computer, then the least restrictive power plan is applied. Run the report **Computers with Multiple Power Plans** to see computers with multiple power plans applied.|See **Computers with Multiple Power Plans** in [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+

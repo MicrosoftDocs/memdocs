@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create child configuration items | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,3 +34,4 @@ The usual purpose for creating and editing a child configuration item is to refi
   
 5.  Complete the wizard. The new child configuration item displays in the **Configuration Items** list.  
   
+

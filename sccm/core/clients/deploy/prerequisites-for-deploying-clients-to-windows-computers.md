@@ -1,7 +1,7 @@
----
+﻿---
 title: "Windows client deployment prerequisites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -225,3 +225,4 @@ Deploying Configuration Manager clients in your environment has the following ex
 -   Between the enrollment proxy point and the enrollment point: HTTPS (by default, TCP 443)  
 
  If you use a proxy web server, it must be configured for SSL tunneling; SSL bridging is not supported for mobile devices.  
+

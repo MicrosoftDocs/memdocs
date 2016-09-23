@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create certificate profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-01
+ms.date: 08/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -218,3 +218,4 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
 ### See also  
 
  [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

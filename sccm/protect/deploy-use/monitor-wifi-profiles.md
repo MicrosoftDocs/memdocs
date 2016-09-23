@@ -1,7 +1,7 @@
----
+﻿---
 title: "Monitor Email, Wi-Fi and VPN profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-09-21
+ms.date: 09/21/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,4 +64,5 @@ After you have deployed System Center Configuration Manager Email, Wi-Fi or VPN 
  [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
 
  [Operations and maintenance for email profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+
 
