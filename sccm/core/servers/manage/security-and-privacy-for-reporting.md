@@ -13,25 +13,7 @@ ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for reporting in System Center Configuration Manager
 This topic contains security best practices and privacy information for reporting in System Center Configuration Manager.  

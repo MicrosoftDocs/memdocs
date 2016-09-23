@@ -13,25 +13,7 @@ ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Planning to monitor migration activity in System Center Configuration Manager
 With System Center Configuration Manager, you can monitor migration in the Configuration Manager console that connects to the destination hierarchy. In the Configuration Manager console in the **Administration** workspace, you can use the **Migration** node to monitor the progress and success of migration jobs. You can view summary information for each migration job that identifies objects that have migrated, those objects that have not yet migrated, and the number of objects that are excluded from a migration job. You will also see details about any migration problems.  
@@ -41,7 +23,7 @@ With System Center Configuration Manager, you can monitor migration in the Confi
 
 -   In the **Administration** workspace of the Configuration Manager console, expand the **Migration Jobs** node, select a migration job, and then select the **Objects in Job** tab.  
 
--   Use the Configuration Manager log files to review the migration progress or to identify any problems. Migration Manager is the Configuration Manager process that tracks migration actions and records these in the migmctrl.log file in the **\<InstallationPath\>\\LOGS** folder on the site server.  
+-   Use the Configuration Manager log files to review the migration progress or to identify any problems. Migration Manager is the Configuration Manager process that tracks migration actions and records these in the migmctrl.log file in the **\&lt;InstallationPath\>\\LOGS** folder on the site server.  
 
     > [!NOTE]  
     >  If a migration job fails, review the details in the migmctrl.log file as soon as possible. The migration log entries are continually added to the file and overwrite old details. If the entries are overwritten, you might not be able to identify whether any problems that you might encounter with the migrated objects relate to migration issues. Migration activity is logged at the top\-level site of the hierarchy regardless of the site your Configuration Manager console connects to when you configure migration.  

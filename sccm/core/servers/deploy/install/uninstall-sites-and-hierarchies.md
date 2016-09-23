@@ -13,25 +13,7 @@ ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Uninstall sites and hierarchies in System Center Configuration Manager
 Use the following details as a guide when you must uninstall a System Center Configuration Manager sites.  

@@ -1,5 +1,5 @@
 ---
-title: "Configure iOS apps with app configuration policies in System Center Configuration Manager"
+title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-03
 ms.prod: configuration-manager
@@ -11,24 +11,7 @@ ms.assetid: 74d5d776-e37d-45de-bdba-43541b03d12c
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configure iOS apps with app configuration policies in System Center Configuration Manager
 

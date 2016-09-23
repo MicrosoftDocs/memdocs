@@ -13,25 +13,7 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to test client upgrades in a preproduction collection in System Center Configuration Manager
 For upgrading the Configuration Manager client on Windows PCs and devices, you can test a new client version in a preproduction collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the preproduction collection upgraded to the new client. Once you've had a chance to test the client in this preproduction collection, you can promote the client, which makes the new version of the client software available to the rest of the site.  

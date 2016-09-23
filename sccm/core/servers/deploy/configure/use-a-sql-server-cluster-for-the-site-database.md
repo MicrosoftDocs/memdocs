@@ -13,25 +13,7 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Use a SQL Server cluster for the System Center Configuration Manager site database
 
@@ -66,7 +48,7 @@ translation.priority.ht:
 
 -   To support Kerberos authentication, **TCP/IP** network communication protocol must be enabled for the network connection of each SQL Server cluster node. **Named pipes** is not required, but can be used to troubleshoot Kerberos authentication issues. The network protocol settings are configured in **SQL Server Configuration Manager** under **SQL Server Network Configuration**.  
 
--   If you use a PKI, see <PKI Certificate Requirements for Configuration Manager> for specific certificate requirements when you use a SQL Server cluster for the site database.  
+-   If you use a PKI, see &lt;PKI Certificate Requirements for Configuration Manager> for specific certificate requirements when you use a SQL Server cluster for the site database.  
 
 **Limitations to consider:**  
 

@@ -1,5 +1,5 @@
 ---
-title: "Get started with compliance settings in System Center Configuration Manager"
+title: "Get started with compliance settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 caps.latest.revision: 11
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Get started with compliance settings in System Center Configuration Manager
 Before you start to create System Center Configuration Manager configuration items, you should review this topic to understand how compliance settings work, and to learn about the core concepts you'll need to know.  

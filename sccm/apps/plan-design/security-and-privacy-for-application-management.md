@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for application management in System Center Configuration Manager"
+title: "Security and privacy for application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -11,29 +11,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 caps.latest.revision: 8
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Security and privacy for application management in System Center Configuration Manager
-This topic contains information about security and privacy for application management in System Center Configuration Manager. This topic also includes the Application Catalog and Software Center.  
   
 ##  Security best practices for application management  
   
@@ -49,14 +30,13 @@ This topic contains information about security and privacy for application manag
 |For mobile devices, deploy only applications that are signed|Deploy mobile device applications only if they are code signed by a certification authority (CA) that is trusted by the mobile device. For example:<br /><br /> - An application from a vendor, which is signed by a well-known CA, such as VeriSign.<br /><br /> - An internal application that you sign independently from Configuration Manager, by using your internal CA.<br /><br /> - An internal application that you sign by using Configuration Manager when you create the application type and use a signing certificate.|  
 |If you sign mobile device applications by using the **Create Application Wizard** in Configuration Manager, secure the location of the signing certificate file, and secure the communication channel.|To help protect against elevation of privileges and against man-in-the-middle attacks, store the signing certificate file in a secured folder and use IPsec or SMB between the following computers:<br /><br /> - The computer that runs the Configuration Manager console.<br /><br /> - The computer that stores the certificate signing file.<br /><br /> - The computer that stores the application source files.<br /><br /> Alternatively, sign the application independently from Configuration Manager and before you run the **Create Application Wizard**.|  
 |Implement access controls to protect reference computers.|When an administrative user configures the detection method in a deployment type by browsing to a reference computer, make sure that the computer has not been compromised.|  
-|Restrict and monitor the administrative users who are granted the role-based security roles that are related to application management:<br /><br /> - **Application Administrator**<br /><br /> - **Application Author**<br /><br /> - **Application Deployment Manager**|Even when you configure role-based administration, administrative users who create and deploy applications might have more permissions than you realize. For example, when administrative users create or modify an application, they can select dependent applications that are not in their security scope.|  
+|Restrict and monitor the administrative users who are granted the role-based security roles that are related to application management:<br /><br /> - **Application Administrator**<br>- **Application Author**<br>- **Application Deployment Manager**|Even when you configure role-based administration, administrative users who create and deploy applications might have more permissions than you realize. For example, when administrative users create or modify an application, they can select dependent applications that are not in their security scope.|  
 |When you configure Microsoft Application Virtualization (App-V) virtual environments, select applications in the virtual environment that have the same trust level.|Because applications in an App-V virtual environment can share resources, such as the clipboard, configure the virtual environment such that the selected applications have the same trust level.<br /><br /> For more information, see [How to create App-V virtual environments in System Center Configuration Manager](../../apps/deploy-use/create-app-v-virtual-environments.md).|  
 |If you deploy applications for Mac computers, make sure that the source files are from a trustworthy source.|The CMAppUtil tool does not validate the signature of the source package, so make sure that it comes from a source that you trust. The CMAppUtil tool is not able to detect whether the files have been tampered with.|  
 |If you deploy applications for Mac computers, secure the location of the **.cmmac** file and secure the communication channel when you import this file into Configuration Manager.|Because the **.cmmac** file that the CMAppUtil tool generates and that you import into Configuration Manager is not signed or validated, to help prevent tampering of this file, store it  in a secured folder and use IPsec or SMB between the following computers:<br /><br /> - The computer that runs the Configuration Manager console.<br /><br /> - The computer that stores the **.cmmac** file.|  
 |If you configure a web application deployment type, use HTTPS rather than HTTP to secure the connection|If you deploy a web application by using an HTTP link rather than an HTTPS link, the device could be redirected to a rogue server and data transferred between the device and server could be tampered with.|  
   
 ##  Security issues for application management  
- Application management has the following security issues:  
   
 -   Low-rights users can copy files from the client cache on the client computer.  
   
@@ -95,9 +75,9 @@ This topic contains information about security and privacy for application manag
   
  Configuration Manager maintains status information about the software deployment process. Software deployment status information is not encrypted during transmission unless the client communicates by using HTTPS. The status information is not stored in encrypted form in the database.  
   
- The use of Configuration Manager software installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software, and is separate from the Software License Terms for System Center 2012 Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
+ The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software, and is separate from the Software License Terms for System Center Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
   
- Software deployment does not happen by default and requires several configuration steps.  
+ Application deployment does not happen by default and requires several configuration steps.  
   
  Two optional features that help efficient software deployment are user device affinity and the Application Catalog:  
   
@@ -110,26 +90,17 @@ This topic contains information about security and privacy for application manag
  Before you configure application management, consider your privacy requirements.  
   
 ##  User device affinity  
- Configuration Manager might transmit information between clients and management point site systems that identify the computer and logon account and the summarized usage for logon accounts.  
-  
- The information that is transmitted between the client and server is not encrypted unless the management point is configured to require clients communicate by using HTTPS.  
-  
- The computer and logon account usage information that is used to map a user to a device is stored on client computers, sent to management points, and then stored in the Configuration Manager database. The old information is deleted from the database by default after 90 days. The deletion behavior is configurable by setting the **Delete Aged User Device Affinity Data** site maintenance task.  
-  
- Configuration Manager maintains status information about user device affinity. Status information is not encrypted during transmission unless clients are configured to communicate with management points by using HTTPS. Status information is not stored in encrypted form in the database.  
-  
- Computer, logon account usage information, and status information is not sent to Microsoft.  
-  
- Computer and logon usage information that is used to establish user and device affinity is always enabled. In addition, users and administrative users can supply user device affinity information.  
+-  Configuration Manager might transmit information between clients and management point site systems that identify the computer and logon account and the summarized usage for logon accounts.  
+-  The information that is transmitted between the client and server is not encrypted unless the management point is configured to require clients communicate by using HTTPS.  
+-  The computer and logon account usage information that is used to map a user to a device is stored on client computers, sent to management points, and then stored in the Configuration Manager database. The old information is deleted from the database by default after 90 days. The deletion behavior is configurable by setting the **Delete Aged User Device Affinity Data** site maintenance task.
+-  Configuration Manager maintains status information about user device affinity. Status information is not encrypted during transmission unless clients are configured to communicate with management points by using HTTPS. Status information is not stored in encrypted form in the database.  
+-  Computer, logon account usage information, and status information is not sent to Microsoft.  
+-  Computer and logon usage information that is used to establish user and device affinity is always enabled. In addition, users and administrative users can supply user device affinity information.  
   
 ##  Application Catalog  
- The Application Catalog allows the Configuration Manager administrator to publish any application or program or script for users to run. Configuration Manager has no control over what types of programs or scripts are published in the catalog, or what type of information they transmit.  
-  
- Configuration Manager might transmit information between clients and the Application Catalog site system roles that identify the computer and logon accounts. The information that is transmitted between the client and servers is not encrypted unless these site system roles are configured to require that clients connect by using HTTPS.  
-  
- The information about the application approval request is stored in the Configuration Manager database. The requests that are canceled or denied are deleted by default after 30 days, along with the corresponding request history entries. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. The application approval requests that are in approved and pending states are never deleted.  
-  
- Information that is sent to and from the Application Catalog is not sent to Microsoft.  
-  
- The Application Catalog is not installed by default. This installation requires several configuration steps.  
+-  The Application Catalog allows the Configuration Manager administrator to publish any application or program or script for users to run. Configuration Manager has no control over what types of programs or scripts are published in the catalog, or what type of information they transmit.    
+-  Configuration Manager might transmit information between clients and the Application Catalog site system roles that identify the computer and logon accounts. The information that is transmitted between the client and servers is not encrypted unless these site system roles are configured to require that clients connect by using HTTPS.  
+-  The information about the application approval request is stored in the Configuration Manager database. The requests that are canceled or denied are deleted by default after 30 days, along with the corresponding request history entries. The deletion behavior is configurable by setting the **Delete Aged Application Request Data** site maintenance task. The application approval requests that are in approved and pending states are never deleted.  
+-  Information that is sent to and from the Application Catalog is not sent to Microsoft.  
+-  The Application Catalog is not installed by default. This installation requires several configuration steps.  
   

@@ -421,7 +421,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** <*SiteCode*>  
+    -   **Values:** &lt;*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
 
@@ -429,7 +429,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** <*SiteName*>  
+    -   **Values:** &lt;*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -661,7 +661,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** <*Timeout*>  
+    -   **Values:** &lt;*Timeout*>  
 
          A value of 0 to 100  
 
@@ -1046,7 +1046,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
-    -   **Values:** <*PathToSiteDatabaseBackupSet*>  
+    -   **Values:** &lt;*PathToSiteDatabaseBackupSet*>  
 
     -   **Details:** Specifies the path to the site database backup set.  
 

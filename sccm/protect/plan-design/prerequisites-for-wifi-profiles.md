@@ -13,25 +13,7 @@ ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Prerequisites for Wi-Fi Profiles in System Center Configuration Manager
 Wi-Fi profiles in System Center Configuration Manager have dependencies only within the product.  

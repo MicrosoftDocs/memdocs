@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for power management in System Center Configuration Manager"
+title: "Security and privacy for power management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for power management in System Center Configuration Manager
 This section contains security and privacy information for power management in System Center Configuration Manager.  

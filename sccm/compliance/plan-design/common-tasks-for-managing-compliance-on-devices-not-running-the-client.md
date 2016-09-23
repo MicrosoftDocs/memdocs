@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client"
+title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 116cca2a-0a98-43fd-ac9e-e3daeddefce3
 caps.latest.revision: 5
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Common tasks for managing compliance on devices not running the System Center Configuration Manager client
 The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  

@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
 author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Configuring Endpoint Protection in System Center Configuration Manager
@@ -139,23 +121,23 @@ Use one of the following procedures depending on whether you want to install a n
   
 7.  In the  **Conditions** list of the **Alerts** tab, select each Endpoint Protection alert, and then specify the following information:  
 
-    -   **Alert Name** â€“ Accept the default name or enter a new name for the alert.  
+    -   **Alert Name** – Accept the default name or enter a new name for the alert.  
 
-    -   **Alert Severity** â€“ In the list, select the alert level to display in the Configuration Manager console.  
+    -   **Alert Severity** – In the list, select the alert level to display in the Configuration Manager console.  
 
 8.  Depending on the alert that you select, specify the following additional information:  
 
     -   **Malware detection** - This alert is generated if malware is detected on any computer in the collection that you monitor. The **Malware detection threshold** specifies the malware detection levels at which this alert is generated:  
 
-        -   **High â€“ All detections** - The alert is generated when there are one or more computers in the specified collection on which any malware is detected, regardless of what action the Endpoint Protection client takes.  
+        -   **High – All detections** - The alert is generated when there are one or more computers in the specified collection on which any malware is detected, regardless of what action the Endpoint Protection client takes.  
 
-        -   **Medium â€“ Detected, pending action** - The alert is generated when there is one or more computers in the specified collection on which malware is detected, and you must manually remove the malware.  
+        -   **Medium – Detected, pending action** - The alert is generated when there is one or more computers in the specified collection on which malware is detected, and you must manually remove the malware.  
 
-        -   **Low â€“ Detected, still active** - The alert is generated when there are one or more computers in the specified collection on which malware is detected and is still active.  
+        -   **Low – Detected, still active** - The alert is generated when there are one or more computers in the specified collection on which malware is detected and is still active.  
 
     -   **Malware outbreak** - This alert is generated if specified malware is detected on a specified percentage of computers in the collection that you monitor.  
   
-        -   **Percentage of computers with malware detected** â€“ Specify a percentage from **1** through **99**.  
+        -   **Percentage of computers with malware detected** – Specify a percentage from **1** through **99**.  
   
             > [!NOTE]  
             >  The percentage value is based on the number of computers in the collection, but excludes computers that do not have a Configuration Manager client installed. It includes computers that do not yet have the Endpoint Protection client installed.  
@@ -178,15 +160,15 @@ Use one of the following procedures depending on whether you want to install a n
  You can choose any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy:  
   
 
--   Updates distributed from Configuration Manager â€“ This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
+-   Updates distributed from Configuration Manager – This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
 
--   Updates distributed from Windows Server Update Services (WSUS) â€“ This method uses your WSUS infrastructure to deliver definition and engine updates to computers.  
+-   Updates distributed from Windows Server Update Services (WSUS) – This method uses your WSUS infrastructure to deliver definition and engine updates to computers.  
 
--   Updates distributed from Microsoft Update â€“ This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.  
+-   Updates distributed from Microsoft Update – This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.  
 
--   Updates distributed from Microsoft Malware Protection Center â€“ This method will download definition updates from the Microsoft Malware Protection Center.  
+-   Updates distributed from Microsoft Malware Protection Center – This method will download definition updates from the Microsoft Malware Protection Center.  
   
--   Updates from UNC file shares â€“ With this method, you can save the latest definition and engine updates to a share on the network. Clients can install the updates from the share.  
+-   Updates from UNC file shares – With this method, you can save the latest definition and engine updates to a share on the network. Clients can install the updates from the share.  
   
  You can configure multiple definition update sources and control the order in which they are assessed and applied. This is done in the **Configure Definition Update Sources** dialog box when you create an antimalware policy.  
 
@@ -522,11 +504,11 @@ First, obtain the installation file **scepinstall.exe**. You can also install th
 3.  Open an elevated command prompt, navigate to the folder in which you installed PsTools, and then type the following command  
 
     ```  
-    Psexec.exe â€“s â€“i regedit.exe  
+    Psexec.exe –s –i regedit.exe  
     ```  
 
     > [!IMPORTANT]  
-    >  Use caution while you are running the Registry Editor in this manner; the â€“s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.  
+    >  Use caution while you are running the Registry Editor in this manner; the –s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.  
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.  
 

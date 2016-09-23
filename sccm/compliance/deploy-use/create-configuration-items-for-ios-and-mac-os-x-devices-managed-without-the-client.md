@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client"
+title: "How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: c378e0f7-be49-4b96-a46b-7c5d9638bd96
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client
 Use the System Center Configuration Manager**iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
@@ -80,9 +62,9 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_Setref"></a> iOS and Mac OS X configuration item settings reference  
+##  iOS and Mac OS X configuration item settings reference  
   
-###  <a name="BKMK_Password"></a> Password  
+###  Password  
   
 |Setting name|Details|  
 |------------------|-------------|  
@@ -90,10 +72,10 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Minimum password length (characters)**|The minimum length for the password.|  
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
-|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br /><br /> (iOS only)|  
-|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
+|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br>(iOS only)|  
+|**Password complexity**|Choose whether you can specify a PIN such as '1234', or whether you must supply a strong password.|  
   
-###  <a name="BKMK_Device"></a> Device  
+###  Device  
  These settings apply to both iOS and Mac OS X devices.  
   
 |Setting name|Details|  
@@ -108,7 +90,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Personal wallet software while locked**|Allows use of personal wallet software like Passbook.|  
 |**Diagnostic data submission**|Allow submission of app log files.|  
   
-###  <a name="BKMK_Store"></a> Store  
+###  Store  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -117,7 +99,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Enter a password to access the application store**|Users must enter a password to access the app store.|  
 |**In-app purchases**|Allows users to make in-app purchases.|  
   
-###  <a name="BKMK_Browser"></a> Browser  
+###  Browser  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -129,7 +111,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Cookies**|Allow cookies to be saved on the device.|  
 |**Fraud warning**|Enable or disable warnings of potential fraudulent websites.|  
   
-###  <a name="BKMK_Rating"></a> Content rating  
+###  Content rating  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -143,7 +125,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 > [!NOTE]  
 >  The ratings you can select will vary depending on the **Ratings region** you selected.  
   
-###  <a name="BKMK_Cloud"></a> Cloud  
+###  Cloud  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -153,14 +135,14 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Document synchronization**|Allow document synchronization to a cloud service.|  
 |**Photo synchronization**|Allow photo synchronization to a cloud service.|  
   
-###  <a name="BKMK_Security"></a> Security  
+###  Security  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
 |------------------|-------------|  
 |**Camera**|Allow use of the device camera.|  
   
-###  <a name="BKMK_Roamin"></a> Roaming  
+###  Roaming  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -169,7 +151,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Automatic synchronization while roaming**|Allows the device t automatically synchronize when roaming.|  
 |**Data roaming**|Allow roaming between networks when accessing data.|  
   
-###  <a name="BKMK_SysSecurity"></a> System security  
+###  System security  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -181,7 +163,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Lock screen today view**|Controls whether the Today view can be seen when the device is locked.|  
 |**Fingerprint for unlocking**|Allow the use of the fingerprint sensor to unlock the device.|  
   
-###  <a name="BKMK_Dataprot"></a> Data protection  
+###  Data protection  
  These settings apply to iOS devices only.  
   
 |Setting name|Details|  
@@ -189,12 +171,12 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |**Open documents in managed apps in other unmanaged apps**|For use with apps managed by Configuration Manager application management policies.|  
 |**Open documents in unmanaged apps in other managed apps**|For use with apps managed by Configuration Manager application management policies.|  
   
-###  <a name="BKMK_CompiOS"></a> Compliant and noncompliant apps (iOS)  
- Let’s you specify a list of iOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+###  Compliant and noncompliant apps (iOS)  
+ Lets you specify a list of iOS apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
-##### To specify the compliant or noncompliant apps list  
+#### To specify the compliant or noncompliant apps list  
   
 1.  On the **Compliant and Noncompliant Apps (iOS)** page, specify the following information:  
   
@@ -210,7 +192,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
          **Example:** Search the store for the **Microsoft Word for iPad** app. The URL you use will be **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**.  
   
-    -   **Edit** - Let’s you edit the name, publisher and URL of the selected app.  
+    -   **Edit** - Lets you edit the name, publisher and URL of the selected app.  
   
     -   **Remove** - Deletes the selected app from the list.  
   
@@ -226,12 +208,12 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-###  <a name="BKMK_CompiOS1"></a> Compliant and noncompliant apps (Mac OS X)  
- Let’s you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
+###  Compliant and noncompliant apps (Mac OS X)  
+ Lets you specify a list of Mac OS X  apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
-##### To specify the compliant or noncompliant apps list  
+#### To specify the compliant or noncompliant apps list  
   
 1.  On the **Compliant and Noncompliant Apps (Mac OS X)** page, specify the following information:  
   
@@ -251,7 +233,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
         >   
         >  The format for Bundle ID is **com.contoso.appname**  
   
-    -   **Edit** - Let’s you edit the name, publisher and bundle ID of the selected app.  
+    -   **Edit** - Lets you edit the name, publisher and bundle ID of the selected app.  
   
     -   **Remove** - Deletes the selected app from the list.  
   
@@ -267,13 +249,13 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
  For information about how to use reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-### iOS and Mac OS X custom profile settings  
+## iOS and Mac OS X custom profile settings  
  Use **iOS and Mac OS X Custom Profiles** to deploy settings that you created using the [Apple Configurator tool](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to iOS and Mac OS X devices. This tool lets you create many settings that control the operation of these devices and export them to a configuration profile. You can then import this configuration profile into an iOS and Mac OS X custom profile and deploy the settings to users and devices in your organization.  
   
 > [!NOTE]  
 >  Ensure that the settings you export from the Apple Configurator tool are compatible with the version of iOS or Mac OS X on the devices to which you deploy the profile. For information about how incompatible settings are resolved, search for Configuration Profile Reference and Mobile Device Management Protocol Reference on the [Apple Developer](https://developer.apple.com/) web site.  
   
-##### To create an iOS and Mac OS X custom profile  
+### To create an iOS and Mac OS X custom profile  
   
 1.  On the **Configure iOS and Mac OS X custom profile settings** page of the **Create Configuration Item Wizard**, specify the following information:  
   
@@ -302,17 +284,17 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
         -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
-#### How to create a configuration profile file  
+## How to create a configuration profile file  
  You can create the configuration profile file used by the custom policy in two ways:  
   
 -   Export the file (with the extension **.mobileconfig**) from the Apple Configurator tool.  
   
 -   Author the file yourself using the appropriate schema from the [Apple Configuration Profile Key Reference](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html).  
   
-###  <a name="BKMK_KioskiOS"></a> Kiosk mode (iOS)  
+###  Kiosk mode (iOS)  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device.  
   
-##### To configure kiosk mode for iOS devices  
+#### To configure kiosk mode for iOS devices  
   
 1.  On the **Configure Kiosk Mode Settings for iOS Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
   
@@ -376,5 +358,3 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
         -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
-## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

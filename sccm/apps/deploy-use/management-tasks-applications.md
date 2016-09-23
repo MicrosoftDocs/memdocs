@@ -1,5 +1,5 @@
 ---
-title: "Management tasks for System Center Configuration Manager applications"
+title: "Management tasks for System Center Configuration Manager applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 caps.latest.revision: 8
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Management tasks for System Center Configuration Manager applications
 Use the information in the following sections to help you manage System Center Configuration Manager applications and deployment types.  
@@ -39,13 +21,13 @@ Use the information in the following sections to help you manage System Center C
   
 -   [How to manage deployment types](#BKMK_DeplType)  
   
- For information about how to create applications and deployment types, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
   
 > [!IMPORTANT]  
 >  Depending on the type of application or deployment type, some of the management options might not be available.  
   
-##  <a name="BKMK_Applicat"></a> How to manage applications  
- In the **Software Library** workspace, expand **Application Management**, select **Applications**, select the application to manage, and then select a management task.  
+##  Manage applications  
+ In the **Software Library** workspace, expand **Application Management** > **Applications**, select the application to manage, and then select a management task.  
   
  Use the following table for more information about the management tasks that might require some information before you select them.  
   
@@ -65,7 +47,7 @@ Use the information in the following sections to help you manage System Center C
 |**Distribute Content**|Opens the **Distribute Content Wizard** where you can copy the content for the selected application to distribution points in your hierarchy.<br /><br /> See [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**View Relationships**|Displays a graphical diagram showing the relationships of the selected applications to other applications. Choose from one of the following:<br /><br /> - <br />                    **Dependency** – Displays the applications that are dependent on, and the applications that the selected application depends on.<br /><br /> - <br />                    **Supersedence** – Displays the applications that are superseded, and applications that the selected item is superseded by.<br /><br /> - <br />                    **Global Conditions** – Displays the global conditions that are referenced by this application.<br /><br /> See [How to revise and supersede applications in System Center Configuration Manager](../../apps/deploy-use/revise-and-supersede-applications.md) and [How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md).|  
   
-##  <a name="BKMK_DeplType"></a> How to manage deployment types  
+##  Manage deployment types  
  In the **Software Library** workspace, expand **Application Management**, select **Applications**, select the application that contains the deployment type that you want to manage, in the details pane, click the **Deployment Types** tab, select the deployment type that you want to manage and then select a management task.  
   
  Use the following table for more information about the management tasks that might require some information before you select them.  
@@ -77,5 +59,3 @@ Use the information in the following sections to help you manage System Center C
 |Delete|Deletes the selected deployment type.<br /><br /> You cannot delete a deployment type if it is referenced by a deployment type in another application. To delete a deployment type, you must remove any dependencies to the deployment type that are contained in other deployment types. Additionally, you must also remove previous revisions of any application that contains a deployment type that references the deployment type that you want to delete.|  
 |**Update Content**|Refreshes the content for the selected deployment type.<br /><br /> When you start this wizard for a deployment type that contains a virtual application, the **Update Content Wizard** is started. This wizard allows you to modify publishing options and requirement rules for the selected virtual application. For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).<br /><br /> When you refresh the content of a deployment type, a new revision of the application is created. This might cause client devices to be updated with the new application.|  
   
-## See Also  
- [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)

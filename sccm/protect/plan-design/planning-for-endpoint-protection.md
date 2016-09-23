@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 caps.latest.revision: 16
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Planning for Endpoint Protection in System Center Configuration Manager
 Use the following topics in this section to help you plan to use Endpoint Protection in System Center 2012 Configuration Manager.  

@@ -13,25 +13,7 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Planning considerations for automating tasks in System Center Configuration Manager
 You can create task sequences to automate tasks in your System Center Configuration Manager environment. These tasks range from capturing an operating system on a reference computer to deploying the operating system to one or more destination computers. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level in the Local System context without requiring user intervention.  
@@ -126,7 +108,7 @@ You can create task sequences to automate tasks in your System Center Configurat
   
 -   Provide values for custom scripts used in a task sequence  
   
- For example, you might have a task sequence that includes a **Join Domain or Workgroup** task sequence step. The task sequence might be deployed to different collections, where the membership of the collection is determined by domain membership. In that case, you can specify a per-collection task sequence variable for each collectionâ€™s domain name and then use that task sequence variable to supply the appropriate domain name in the task sequence.  
+ For example, you might have a task sequence that includes a **Join Domain or Workgroup** task sequence step. The task sequence might be deployed to different collections, where the membership of the collection is determined by domain membership. In that case, you can specify a per-collection task sequence variable for each collection’s domain name and then use that task sequence variable to supply the appropriate domain name in the task sequence.  
   
 ###  <a name="BKMK_TSCreateVariables"></a> Create task sequence variables  
  You can add new task sequence variables to customize and control the steps in a task sequence. For example, you can create a task sequence variable to override a setting for a built-in task sequence step. You can also create a custom task sequence variable to use with conditions, command lines, or custom steps in the task sequence. When you create a task sequence variable, the task sequence variable and the associated value is preserved within the task sequence environment, even when the sequence restarts the destination computer. The variable and its value can be used within the task sequence across different operating system environments. For example, it can be used in a full Windows operating system and in the Windows PE environment.  

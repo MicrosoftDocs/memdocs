@@ -1,5 +1,5 @@
 ---
-title: "How to configure client settings in System Center Configuration Manager"
+title: "Configure client settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,25 +12,6 @@ ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: 5
 author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # How to configure client settings in System Center Configuration Manager
 You manage all client settings in System Center Configuration Manager from the **Client Settings** node in the **Administration** workspace of the Configuration Manager console. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy these to collections.  
@@ -38,15 +19,8 @@ You manage all client settings in System Center Configuration Manager from the *
 > [!NOTE]  
 >  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
- Use one of the following procedures to configure client settings:  
-
--   [How to Configure the Default Client Settings](#BKMK_DefaultClientSettings)  
-
--   [How to Create and Deploy Custom Client Settings](#BKMK_CustomClientSettings)  
-
--   [How to View Resultant Client Settings](#BKMK_ResultantClientSettings)  
-
 ##  <a name="BKMK_DefaultClientSettings"></a> How to Configure the Default Client Settings  
+
  Use the following procedure to configure the default client settings for all clients in the hierarchy.  
 
 #### To configure the default client settings  

@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client"
+title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-27
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 caps.latest.revision: 17
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  
@@ -43,9 +25,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 ### To create a Windows 10 configuration item  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -85,7 +65,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
+##  Windows 10 configuration item settings reference  
   
 ### Password  
   
@@ -135,18 +115,13 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Virus protection**|Requires that antivirus software must be installed and configured.|  
 |**Virus protection signatures are up to date**|Requires that the signature files for the antivirus software on the device must be up to date.|  
   
-### Enterprise Data Protection
+### Windows Information Protection (formerly Enterprise Data Protection)
 
-With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+With the increase of employee-owned devices in the enterprise, there's also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise's control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
 
-Enterprise data protection (EDP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. EDP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
+Windows Information Protection (WIP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
 
- Configuration Manager EDP configuration items manage the list of apps protected by EDP, enterprise network locations, protection level, and encryption settings.
+ Configuration Manager WIP configuration items manage the list of apps protected by WIP, enterprise network locations, protection level, and encryption settings.
   
-> [!NOTE]  
->  Enterprise data protection is currently being tested with a number of enterprise customers, and will become available to Windows Insiders soon. To opt-in to receive preview builds of Windows, consider joining the [Windows Insider Program](https://insider.windows.com/).
-
-For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using enterprise data protection (EDP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp).
+For information about how to configure Windows Information Protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
   
-## See Also  
- [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)

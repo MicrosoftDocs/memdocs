@@ -1,5 +1,5 @@
 ---
-title: "How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client"
+title: "Create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 caps.latest.revision: 9
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  

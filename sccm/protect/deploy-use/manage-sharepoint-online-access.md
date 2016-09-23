@@ -13,27 +13,10 @@ ms.assetid: c1b3fb75-f3ab-4886-9421-d81da7ef589d
 caps.latest.revision: 11
 caps.handback.revision: 0
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage SharePoint Online access in System Center Configuration Manager
+
 Use the System Center Configuration Manager **SharePoint Online** conditional access policy to manage access to OneDrive for Business files located on SharePoint online, based on conditions you specify.  
   
 > [!IMPORTANT]  
@@ -102,9 +85,9 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
   
  You can specify two group types in a SharePoint Online policy:  
   
--   **Targeted groups** – Contains groups of users to which the policy will apply  
+-   **Targeted groups** â€“ Contains groups of users to which the policy will apply  
   
--   **Exempted groups** – Contains groups of users that are exempt from the policy (optional)  
+-   **Exempted groups** â€“ Contains groups of users that are exempt from the policy (optional)  
   
  If a user is in both groups, they will be exempt from the policy.  
   
@@ -150,9 +133,9 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 
 4.  Under **Browser access** to SharePoint Online and OneDrive for Business, you can choose to allow access to Exchange Online only through the supported browsers: Safari (iOS), and Chrome (Android). Access from other browsers will be blocked.  The same platform restrictions you selected for Application access for OneDrive also apply here.
 
-    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the “Enable Browser Access” option on the enrolled device as follows:
+    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the â€œEnable Browser Accessâ€ option on the enrolled device as follows:
     1.  Launch the **Company Portal app**.
-    2.  Go to the **Settings** page from the triple dots (…) or the hardware menu button.
+    2.  Go to the **Settings** page from the triple dots (â€¦) or the hardware menu button.
     3.  Press the **Enable Browser Access** button.
     4.  In the Chrome browser, sign out of Office 365 and restart Chrome.
 
@@ -184,5 +167,6 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
   
  See [Manage SharePoint Online access with Microsoft Intune](https://technet.microsoft.com/library/dn705844.aspx) for information about how you can monitor the policy from the Intune console.  
   
-## See Also  
+### See also  
+
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)

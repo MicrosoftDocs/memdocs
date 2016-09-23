@@ -13,25 +13,7 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 caps.latest.revision: 16
 caps.handback.revision: 0
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Reference for maintenance tasks for System Center Configuration Manager
 This topic lists details for each of the System Center Configuration Manager site maintenance tasks, and at which site types the task is available. Each entry also indicates if the task is enabled by default, or not enabled by default.   For information about planning for and configuring sites to run maintenance tasks, see   [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md)  
@@ -216,7 +198,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Obsolete Client Discovery Data** - Use this task to delete obsolete client records from the database. A record that is marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the clientâ€™s current record. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
+**Delete Obsolete Client Discovery Data** - Use this task to delete obsolete client records from the database. A record that is marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the client’s current record. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 > [!IMPORTANT]  
 >  When enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This enables the client to send a Heartbeat Discovery record that sets the obsolete status correctly.  

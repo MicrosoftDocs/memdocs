@@ -1,5 +1,5 @@
 ---
-title: "Deploy App-V virtual applications with System Center Configuration Manager"
+title: "Deploy App-V virtual applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy virtual applications.  
@@ -225,5 +207,3 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   Windows Vista, Windows 7, and Windows 8: **C:\ProgramData\Microsoft\Application Virtualization Client**  
   
-## See Also  
- [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md)

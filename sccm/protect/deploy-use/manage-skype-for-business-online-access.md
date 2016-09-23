@@ -12,26 +12,10 @@ ms.topic: article
 ms.assetid: e3ad36c2-51d4-4467-8bdc-fde18485583e
 caps.latest.revision: 6
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage Skype for Business Online access
+
 Use conditional access policy for  **Skype for Business Online** to manage access to Skype for Business Online, based on conditions you specify.  
   
   
@@ -65,9 +49,9 @@ If a condition is not met, the user is presented with one of the following messa
   
  You can specify two group types to use for the Skype for Business policy:  
   
--   Targeted groups – Contains groups of users to which the policy will apply  
+-   Targeted groups â€“ Contains groups of users to which the policy will apply  
   
--   Exempted groups – Contains groups of users that are exempt from the policy (optional)  
+-   Exempted groups â€“ Contains groups of users that are exempt from the policy (optional)  
     If a user is in both groups, they will be exempt from the policy.  
   
 ### Step 2: Configure and deploy a compliance policy  
@@ -108,11 +92,12 @@ If a condition is not met, the user is presented with one of the following messa
   
  Select any mobile device group and then, on the **Devices** tab, select one of the following **Filters**:  
   
--   **Devices that are not registered with AAD** – These devices are blocked from Skype for Business Online.  
+-   **Devices that are not registered with AAD** â€“ These devices are blocked from Skype for Business Online.  
   
--   **Devices that are not compliant** – These devices are blocked from Skype for Business Online.  
+-   **Devices that are not compliant** â€“ These devices are blocked from Skype for Business Online.  
   
--   **Devices that are registered with AAD and compliant** – These devices can access Skype for Business Online.  
+-   **Devices that are registered with AAD and compliant** â€“ These devices can access Skype for Business Online.  
   
-## See Also  
+### See also  
+
  [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md)

@@ -12,26 +12,10 @@ ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 caps.latest.revision: 6
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Endpoint Protection Client Help
+
 This version of Endpoint Protection includes the following new features and enhancements to better help protect your computer from threats:  
   
 -   **Windows Firewall integration.** Endpoint Protection setup enables you to turn on or off Windows Firewall.  
@@ -51,6 +35,8 @@ This version of Endpoint Protection includes the following new features and enha
 ## Award-winning protection engine  
  Under the hood of Endpoint Protection is its award-winning protection engine that is updated regularly. The engine is backed by a team of antimalware researchers from the Microsoft Malware Protection Center, providing responses to the latest malware threats 24 hours a day.  
   
-## See Also  
+### See also  
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
+
+
  [Troubleshooting Windows Defender or Endpoint Protection client](../../protect/deploy-use/troubleshoot-windows-defender-endpoint-protection-client.md)

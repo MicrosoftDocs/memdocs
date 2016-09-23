@@ -1,5 +1,5 @@
 ---
-title: "Create Windows Phone applications with System Center Configuration Manager"
+title: "Create Windows Phone applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 866113ff-efd0-40d2-ac3a-2edd49732a24
 caps.latest.revision: 10
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Create Windows Phone applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows Phone devices.  
@@ -62,5 +44,3 @@ In addition to the other System Center Configuration Manager requirements and pr
 |**Step 6:** Create a new deployment of the application and check **Automatically upgrade any superceded versions of this application** on the **Deployment Settings** page of the **Deploy Software Wizard**.|Create a new deployment with supersedence using the application you created with the supersedence relationship.|  
 |**Step 7 (Optional):** The superseding apps would install on devices after 7 days by default. To deploy the company portal app sooner to previously enrolled devices, you can change the **schedule re-evaluation for deployments** setting to a lower value.<br /><br /> If you sett this value to a lower value than the default, it might negatively affect the performance of your network and client computers.|For more information, see [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md).|  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)

@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for collections in System Center Configuration Manager"
+title: "Collections security and privacy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for collections in System Center Configuration Manager
 This topic contains security best practices and privacy information for collections in System Center Configuration Manager.  

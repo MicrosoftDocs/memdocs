@@ -1,5 +1,5 @@
 ---
-title: "Administrator checklist for power management in System Center Configuration Manager"
+title: "Administrator checklist for power management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Administrator checklist for power management in System Center Configuration Manager
 This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  

@@ -1,5 +1,5 @@
 ---
-title: "Create and deploy an application with System Center Configuration Manager"
+title: "Create and deploy an application | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 caps.latest.revision: 15
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Create and deploy an application with System Center Configuration Manager
 In this topic, you'll jump right in and create an application with System Center Configuration Manager. In this example, you'll create and deploy an application that contains a line of business app for Windows PCs called **Contoso.msi** which must be installed on all PCs running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to help you manage applications effectively.  

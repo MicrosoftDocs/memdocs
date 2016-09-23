@@ -1,5 +1,5 @@
 ---
-title: "Introduction to queries in System Center Configuration Manager"
+title: "Introduction to queries | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Introduction to queries in System Center Configuration Manager
 You can create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria. These objects include items such as specific types of computers or user groups. Queries can return most types of Configuration Manager objects, which include sites, collections, applications, and inventory data.  

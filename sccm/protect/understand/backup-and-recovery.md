@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 caps.latest.revision: 22
 author: Brenduns
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Backup and recovery for System Center Configuration Manager
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.  
@@ -844,7 +826,7 @@ Use the following sections to help you create your Configuration Manager backup 
     5.  Click **OK** to save the password changes, and then click **OK**.  
   
 #### Re-enter sideloading keys  
- After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, letâ€™s say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
+ After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, let’s say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
   
 #### Recreate the Microsoft Intune subscription  
  If you recover a Configuration Manager site server after the site server computer is  re-imaged, the Microsoft Intune subscription is not restored. You must recreate the subscription after you recover the site. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub).  
@@ -919,5 +901,5 @@ Use the following sections to help you create your Configuration Manager backup 
 ### Volume Shadow Copy service  
  The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information about VSS, see the [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/p/?LinkId=241968) topic in the Windows Server TechCenter.  
   
-## See Also  
+### See also  
  [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

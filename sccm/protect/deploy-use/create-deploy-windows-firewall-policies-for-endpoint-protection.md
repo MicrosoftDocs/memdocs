@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
 caps.latest.revision: 5
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager
 Firewall policies for Endpoint Protection in System Center 2012 Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. You can use Windows Firewall policies to perform the following tasks:  

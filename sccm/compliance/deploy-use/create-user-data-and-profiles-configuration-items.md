@@ -1,5 +1,5 @@
 ---
-title: "How to create user data and profiles configuration items in System Center Configuration Manager"
+title: "Create user data and profiles configuration items | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 
 # Create user data and profiles configuration items in System Center Configuration Manager

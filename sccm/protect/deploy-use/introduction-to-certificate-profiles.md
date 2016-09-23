@@ -12,27 +12,10 @@ ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Introduction to certificate profiles in System Center Configuration Manager
+
 Certificate profiles in System Center Configuration Manager works with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.  
   
  Certificate profiles in System Center Configuration Manager provide the following management capabilities:  
@@ -91,7 +74,7 @@ Certificate profiles in System Center Configuration Manager works with Active Di
  You can specify a variety of settings in a SCEP certificate profile to request customized certificates for different environments or connectivity requirements. The **Create Certificate Profile Wizard** contains two pages for enrollment parameters. The first, **SCEP Enrollment**, contains settings for the enrollment request and where to install the certificate. The second, **Certificate Properties**, describes the requested certificate itself.  
   
 ## Deploying Certificate Profiles  
- When you deploy a certificate profile, the certificate files within the profile are installed on client devices. Any SCEP parameters will also be deployed, and the SCEP requests will be processed on the client device. You can deploy certificate profiles to user collections or device collections and specify the destination store for each certificate. Applicability rules determine whether the certificates can be installed on the device. When certificate profiles are deployed to user collections, user device affinity determines which of the users’ devices will install the certificates. When certificate profiles that contain user certificates are deployed to device collections, by default, the certificates will be installed on each of the users’ primary devices. You can modify this behavior to install the certificate on any of the users’ devices on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. In addition, user certificates will not be deployed to devices if they are workgroup computers.  
+ When you deploy a certificate profile, the certificate files within the profile are installed on client devices. Any SCEP parameters will also be deployed, and the SCEP requests will be processed on the client device. You can deploy certificate profiles to user collections or device collections and specify the destination store for each certificate. Applicability rules determine whether the certificates can be installed on the device. When certificate profiles are deployed to user collections, user device affinity determines which of the usersâ€™ devices will install the certificates. When certificate profiles that contain user certificates are deployed to device collections, by default, the certificates will be installed on each of the usersâ€™ primary devices. You can modify this behavior to install the certificate on any of the usersâ€™ devices on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. In addition, user certificates will not be deployed to devices if they are workgroup computers.  
   
 ## Monitoring Certificate Profiles  
  You can monitor certificate profile deployments from the **Deployments** node of the **Monitoring** workspace in the System Center Configuration Manager console.  
@@ -115,5 +98,6 @@ Certificate profiles in System Center Configuration Manager works with Active Di
   
  To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  
   
-## See Also  
+### See also  
+
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

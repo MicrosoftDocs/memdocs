@@ -13,25 +13,7 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: 26
 caps.handback.revision: 0
 author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Task sequence steps in System Center Configuration Manager
 The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
@@ -137,13 +119,13 @@ The following task sequence steps can be added to a Configuration Manager task s
  **Destination**  
  Specifies an existing formatted partition and hard disk, specific logical drive letter, or the name of a task sequence variable that contains the logical drive letter.  
   
--   **Next available partition** â€“ Use the next sequential partition that has not been previously targeted by an Apply Operating System or Apply Data Image action in this task sequence.  
+-   **Next available partition** – Use the next sequential partition that has not been previously targeted by an Apply Operating System or Apply Data Image action in this task sequence.  
   
--   **Specific disk and partition** â€“ Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
+-   **Specific disk and partition** – Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
   
--   **Specific logical drive letter** â€“ Specify the **Drive Letter** assigned to the partition by Windows PE. Note that this drive letter can be different from the drive letter that the newly deployed operating system will assign.  
+-   **Specific logical drive letter** – Specify the **Drive Letter** assigned to the partition by Windows PE. Note that this drive letter can be different from the drive letter that the newly deployed operating system will assign.  
   
--   **Logical drive letter stored in a variable** â€“ Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable would typically be set in Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
+-   **Logical drive letter stored in a variable** – Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable would typically be set in Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
   
  **Delete all content on the partition before applying the image**  
  Specifies that all files on the target partition will be deleted before the image is installed. By not deleting the content of the partition, this step can be used to apply additional content to a previously targeted partition.  
@@ -300,13 +282,13 @@ The following task sequence steps can be added to a Configuration Manager task s
  **Destination**  
  Specifies an existing formatted partition and hard disk, specific logical drive letter, or the name of a task sequence variable that contains the logical drive letter.  
   
--   **Next available partition** â€“ Use the next sequential partition that has not been previously targeted by an Apply Operating System or Apply Data Image action in this task sequence.  
+-   **Next available partition** – Use the next sequential partition that has not been previously targeted by an Apply Operating System or Apply Data Image action in this task sequence.  
   
--   **Specific disk and partition** â€“ Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
+-   **Specific disk and partition** – Select the **Disk** number (starting with 0) and the **Partition** number (starting with 1).  
   
--   **Specific logical drive letter** â€“ Specify the **Drive Letter** assigned to the partition by Windows PE. Note that this drive letter can be different from the drive letter that the newly deployed operating system will assign.  
+-   **Specific logical drive letter** – Specify the **Drive Letter** assigned to the partition by Windows PE. Note that this drive letter can be different from the drive letter that the newly deployed operating system will assign.  
   
--   **Logical drive letter stored in a variable** â€“ Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable would typically be set in Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
+-   **Logical drive letter stored in a variable** – Specify the task sequence variable containing the drive letter assigned to the partition by Windows PE. This variable would typically be set in Advanced section of the **Partition Properties** dialog box for the **Format and Partition Disk** task sequence action.  
   
 ##  <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
  Use the **Apply Windows Settings** task sequence step to configure the Windows settings for the destination computer. The specified values are stored in the appropriate answer file format for use by Windows Setup when the **Setup Windows and ConfigMgr** task sequence step is run.  
@@ -846,9 +828,9 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
  **Disk Type**  
  The type of the disk that is formatted. There are two options to select from the drop-down list:  
   
--   Standard(MBR) â€“ Master Boot Record.  
+-   Standard(MBR) – Master Boot Record.  
   
--   GPT â€“ GUID Partition Table  
+-   GPT – GUID Partition Table  
   
 > [!NOTE]  
 >  If you change the disk type from **Standard (MBR)** to **GPT**, and the partition layout contains an extended partition, all extended and logical partitions will be removed from the layout. You will be prompted to confirm this action before changing the disk type.  
@@ -919,7 +901,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
  **Install applications according to dynamic variable list**  
  This setting specifies the base name for a set of task sequence variables that are defined for a collection or for a computer. These variables specify the applications that will be installed for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 01. The value for each variable must contain the name of the application and nothing else.  
   
- For applications to be installed by using a dynamic variable list, the following setting must be enabled on the **General** tab of the applicationâ€™s **Properties** dialog box: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually**  
+ For applications to be installed by using a dynamic variable list, the following setting must be enabled on the **General** tab of the application’s **Properties** dialog box: **Allow this application to be installed from the Install Application task sequence action instead of deploying manually**  
   
 > [!NOTE]  
 >  You cannot install applications by using a dynamic variable list for stand-alone media deployments.  
@@ -991,7 +973,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 > [!NOTE]  
 >  The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. When you create stand-alone media for a task sequence at the central administration site, and the task sequence includes an **Install Package** step, the following error might appear in the CreateTsMedia.log file:  
 >   
->  `â€œWMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)â€`  
+>  `“WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)”`  
 >   
 >  For stand-alone media that includes an Install Package step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a **Run Command Line** step after the **Setup Windows and ConfigMgr** step and before the first **Install Package** step. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:  
 >   
@@ -1024,7 +1006,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
  **Install software packages according to dynamic variable list**  
  This setting specifies the base name for a set of task sequence variables that are defined for a collection or for a computer. These variables specify the packages that will be installed for that collection or computer. Each variable name consists of its common base name plus a numerical suffix starting at 001. The value for each variable must contain a package ID and the name of the software separated by a colon.  
   
- For software to be installed by using a dynamic variable list, the following setting must be enabled on the **Advanced** tab of the packageâ€™s **Properties** dialog box: **Allow this program to be installed from the Install Package task sequence without being deployed**  
+ For software to be installed by using a dynamic variable list, the following setting must be enabled on the **Advanced** tab of the package’s **Properties** dialog box: **Allow this program to be installed from the Install Package task sequence without being deployed**  
   
 > [!NOTE]  
 >  You cannot install software packages by using a dynamic variable list for stand-alone media deployments.  
@@ -1411,7 +1393,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
  Specifies more detailed information about the command line that is run.  
   
  **Command line**  
- Specifies the command line that is run. This field is required. Including file name extensions are a best practiceâ€”for example, .vbs and .exe. Include all required settings files, command-line options, or switches.  
+ Specifies the command line that is run. This field is required. Including file name extensions are a best practice—for example, .vbs and .exe. Include all required settings files, command-line options, or switches.  
   
  If the file name does not have a file name extension specified, Configuration Manager tries .com, .exe, and .bat. If the file name has an extension that is not an executable, Configuration Manager tries to apply a local association. For example, if the command line is readme.gif, Configuration Manager starts the application specified on the destination computer for opening .gif files.  
   
@@ -1422,7 +1404,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
  **cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat**  
   
 > [!NOTE]  
->  Command-line actions, such as output redirection, piping, or copyâ€”as in the preceding exampleâ€”must be preceded by the **cmd.exe /c** command to run successfully.  
+>  Command-line actions, such as output redirection, piping, or copy—as in the preceding example—must be preceded by the **cmd.exe /c** command to run successfully.  
   
  **Disable 64-bit file system redirection**  
  By default, when running on a 64-bit operating system, the executable in the command line is located and run using the WOW64 file system redirector so that 32-bit versions of operating system executables and DLLs are found.  Selecting this option disables the use of the WOW64 file system redirector so that native 64-bit versions of operating system executables and DLLs can be found.  Selecting this option has no effect when running on a 32-bit operating system.  
@@ -1503,7 +1485,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 >   
 >  **-MyParameter1 MyValue1 -MyParameter2 MyValue2**  
 >   
->  The following example contains invalid parameters. The bold items are Windows PowerShell command-line parameters (-nologo and â€“executionpolicy unrestricted) and not consumed by the script.  
+>  The following example contains invalid parameters. The bold items are Windows PowerShell command-line parameters (-nologo and –executionpolicy unrestricted) and not consumed by the script.  
 >   
 >  **-nologo-executionpolicy unrestricted-File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2**  
   
@@ -1616,13 +1598,13 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Setup Windows and ConfigMgr  
  Use the **Setup Windows and ConfigMgr** task sequence step to perform the transition from Windows PE to the new operating system. This task sequence step is a required part of any operating system deployment. It installs the Configuration Manager client into the new operating system and prepares for the task sequence to continue execution in the new operating system.  
   
- This step runs only in WindowsÂ°PE. It does not run in a standard operating system. For more information about task sequence variables for this task sequence action, see [Setup Windows and ConfigMgr Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_SetupWindows).  
+ This step runs only in Windows°PE. It does not run in a standard operating system. For more information about task sequence variables for this task sequence action, see [Setup Windows and ConfigMgr Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_SetupWindows).  
   
- The **Setup Windows and ConfigMgr** task sequence action replaces sysprep.inf or unattend.xml directory variables, such as %WINDIR% and %ProgramFiles%, with the WindowsÂ°PE installation directory X:\Windows. Task sequence variables specified by using these environment variables will be ignored.  
+ The **Setup Windows and ConfigMgr** task sequence action replaces sysprep.inf or unattend.xml directory variables, such as %WINDIR% and %ProgramFiles%, with the Windows°PE installation directory X:\Windows. Task sequence variables specified by using these environment variables will be ignored.  
   
  Use this task sequence step to perform the following actions:  
   
-1.  Preliminaries: WindowsÂ°PE  
+1.  Preliminaries: Windows°PE  
   
     1.  Performs task sequence variable substitution in the unattend.xml file.  
   

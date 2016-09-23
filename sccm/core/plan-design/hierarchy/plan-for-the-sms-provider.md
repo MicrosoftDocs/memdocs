@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 caps.latest.revision: 8
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Plan for the SMS Provider for System Center Configuration Manager
 To manage System Center Configuration Manager, you use a Configuration Manager console which connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on a central administration site  or primary site, when the site installs.  
@@ -51,7 +33,7 @@ Each Configuration Manager console, Resource Explorer, tools, and custom scripts
  The SMS Provider helps enforce Configuration Manager security. It returns only the information that the administrative user who is running the Configuration Manager console is authorized to view.  
 
 > [!IMPORTANT]  
->  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site’s database.  
+>  When each computer that holds an SMS Provider for a site is offline, Configuration Manager consoles cannot connect to that site�s database.  
 
  For information about how to manage the SMS Provider, see [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) in [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md).  
 
@@ -185,7 +167,7 @@ The structure of the SMS Provider is defined by the WMI schema. Schema namespace
 
 |Namespace|Description|  
 |---------------|-----------------|  
-|Root\SMS\site_*<site code\>*|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
+|Root\SMS\site_*&lt;site code\>*|The SMS Provider, which is extensively used by the Configuration Manager console, Resource Explorer, Configuration Manager tools, and scripts.|  
 |Root\SMS\SMS_ProviderLocation|Provides the location of the SMS Provider computers for a site.|  
 |Root\CIMv2|Location inventoried for WMI namespace information during hardware and software inventory.|  
 |Root\CCM|Configuration Manager client configuration policies and client data.|  

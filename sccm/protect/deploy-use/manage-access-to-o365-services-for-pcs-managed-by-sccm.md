@@ -12,24 +12,7 @@ ms.topic: article
 ms.assetid: ccdb424a-b603-4ccc-af36-558924248022
 caps.latest.revision: 15
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage access to O365 services for PCs managed by System Center Configuration Manager
   
@@ -91,9 +74,9 @@ translation.priority.ht:
 ### Step 1. Configure compliance policy  
  In the Configuration Manager Console, create a compliance policy with the following rules:  
   
--   Require registration in Azure Active Directory: This rule checks if the userâ€™s device is work-place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more details, see [Automatic device registration with Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+-   Require registration in Azure Active Directory: This rule checks if the user’s device is work-place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more details, see [Automatic device registration with Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
   
--   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see if the userâ€™s device has all required updates (specified in the Required automatic updates rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
+-   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see if the user’s device has all required updates (specified in the Required automatic updates rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
   
 -   **Require BitLocker drive encryption:** This is a check to see if the primary drive (e.g. C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device access to email and SharePoint services is blocked.  
   
@@ -111,9 +94,9 @@ translation.priority.ht:
   
  You can specify two group types in each policy:  
   
--   **Targeted groups** â€“ User groups  to which the policy is applied  
+-   **Targeted groups** – User groups  to which the policy is applied  
   
--   **Exempted groups** â€“ User groups that are exempt from the policy (optional)  
+-   **Exempted groups** – User groups that are exempt from the policy (optional)  
     If a user is in both, they will be exempt from the policy.  
   
      Only the groups, which are targeted by the conditional access policy, are evaluated.  
@@ -150,7 +133,7 @@ translation.priority.ht:
 ##  <a name="bkmk_KnownIssues"></a> Known issues  
  You may see the following issues when using this feature:  
   
--   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-userâ€™s device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
+-   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user’s device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
   
 -   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
   
@@ -160,5 +143,5 @@ translation.priority.ht:
 >  Conditional access for PCs is not currently available to all Intune customers. If you are already using conditional access for PCs with **Intune**, you do not need to take any action. You can continue to use it.  
 > If you have not created conditional access policies for PCs you will need to submit a request for access. You can find out more information about known issues as well as how to get access to this feature at the [connect site](http://go.microsoft.com/fwlink/?LinkId=761472).  
   
-## See Also  
+### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)

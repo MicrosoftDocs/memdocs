@@ -1,5 +1,5 @@
 ---
-title: "How to create global conditions in System Center Configuration Manager"
+title: "Create global conditions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,29 +12,11 @@ ms.topic: article
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # How to create global conditions in System Center Configuration Manager
-In System Center Configuration Manager, global conditions are rules that represent business or technical conditions that you can use to specify how an application is provided and deployed to client devices. You can create global conditions from the **Global Conditions** node of the Configuration Manager console or from within the Create Deployment Type Wizard. Global conditions are accessed from the **Requirements** page of the Create Deployment Type Wizard.  
+In System Center Configuration Manager, global conditions are rules that represent business or technical conditions that you can use to specify how an application is provided and deployed to client devices. Global conditions are accessed from the **Requirements** page of the Create Deployment Type Wizard.  
   
 > [!NOTE]  
 >  You can only edit global conditions from the site where they were created.  
@@ -44,17 +26,13 @@ In System Center Configuration Manager, global conditions are rules that represe
 ## Provide basic information about the global condition  
  Several different types of global conditions are available. Different options are associated with the different global condition types. When you select a specific global condition type, Configuration Manager displays the options that apply to your selection.  
   
-#### To provide basic information about the global condition  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Global Conditions**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Global Conditions**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Global Condition**.  
   
 4.  In the **Create Global Condition** dialog box, provide a name and an optional description for the global condition.  
   
-5.  In the **Device type** drop-down list, choose whether the global condition is for a **Windows** computer, **Windows Mobile** device, or a **Nokia** device.  
+5.  In the **Device type** drop-down list, choose whether the global condition is for a **Windows** computer or a **Windows Mobile** device.  
   
 6.  In the **Condition Type** drop-down list, choose one of the following options:  
   

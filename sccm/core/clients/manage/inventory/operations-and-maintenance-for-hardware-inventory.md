@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 8863ee69-0d45-4203-b012-3928ff0848a0
 caps.latest.revision: 5
 author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Operations and maintenance for hardware inventory in System Center Configuration Manager
 Use the information in this section to find out more about operations and maintenance for hardware inventory in System Center Configuration Manager.  

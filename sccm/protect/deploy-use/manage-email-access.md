@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Manage email access in System Center Configuration Manager
 Use System Center Configuration Manager conditional access to manage access to Exchange email based on conditions you specify.  
@@ -62,7 +44,7 @@ You can manage access to:
   
  If a conditional access condition is not met, the user is presented with one of the following messages when they log in:  
   
--   If the device is not enrolled with Intune, or is not registered in Azure Active Directory, a message is displayed with instructions about how to install the company portal app, enroll the device, and (for Android and iOS devices), activate email, which associates the deviceâ€™s Exchange ActiveSync ID with the device record in Azure Active Directory.  
+-   If the device is not enrolled with Intune, or is not registered in Azure Active Directory, a message is displayed with instructions about how to install the company portal app, enroll the device, and (for Android and iOS devices), activate email, which associates the device’s Exchange ActiveSync ID with the device record in Azure Active Directory.  
   
 -   If the device is not compliant, a message is displayed that directs the user to the Intune web portal where they can find information about the problem and how to remediate it.  
 
@@ -112,13 +94,13 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
   
  After you run the report, examine these four columns to determine whether a user will be blocked:  
   
--   **Management Channel** â€“ Indicates whether the device is managed by Intune, Exchange ActiveSync, or both.  
+-   **Management Channel** – Indicates whether the device is managed by Intune, Exchange ActiveSync, or both.  
   
--   **Registered with AAD** â€“ Indicates whether the device is registered with Azure Active Directory (known as Workplace Join).  
+-   **Registered with AAD** – Indicates whether the device is registered with Azure Active Directory (known as Workplace Join).  
   
--   **Compliant** â€“ Indicates whether the device is compliant with any compliance policies you deployed.  
+-   **Compliant** – Indicates whether the device is compliant with any compliance policies you deployed.  
   
--   **EAS Activated** â€“ iOS and Android devices are required to have their Exchange ActiveSync ID associated with the device registration record in Azure Active Directory. This happens when the user clicks the **Activate Email** link in the quarantine email.  
+-   **EAS Activated** – iOS and Android devices are required to have their Exchange ActiveSync ID associated with the device registration record in Azure Active Directory. This happens when the user clicks the **Activate Email** link in the quarantine email.  
   
     > [!NOTE]  
     >  Windows Phone devices always display a value in this column.  
@@ -135,15 +117,15 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 ## Step 2: Configure user groups or collections for the conditional access policy  
  You target conditional access policies to different groups or collections of users depending on the policy types. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access email.  
   
--   **For the Exchange Online policy** â€“ to Azure Active Directory security user groups. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**.  
+-   **For the Exchange Online policy** – to Azure Active Directory security user groups. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**.  
   
--   **For the Exchange On-premises policy** â€“ to Configuration Manager user collections. You can configure these in the **Assets and Compliance** workspace.  
+-   **For the Exchange On-premises policy** – to Configuration Manager user collections. You can configure these in the **Assets and Compliance** workspace.  
   
  You can specify two group types in each policy:  
   
--   **Targeted groups** â€“ User groups or collections to which the policy is applied  
+-   **Targeted groups** – User groups or collections to which the policy is applied  
   
--   **Exempted groups** â€“ User groups or collections that are exempt from the policy (optional)  
+-   **Exempted groups** – User groups or collections that are exempt from the policy (optional)  
   
  If a user is in both, they will be exempt from the policy.  
   
@@ -176,7 +158,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
   
      For domain joined PCs, you must  set it up to [automatically register the device](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.  
   
--   Have activated email, which associates the deviceâ€™s Exchange ActiveSync ID with the device record in Azure Active Directory (applies to iOS and Android devices only).  
+-   Have activated email, which associates the device’s Exchange ActiveSync ID with the device record in Azure Active Directory (applies to iOS and Android devices only).  
   
 -   Be compliant with any deployed compliance policies  
   
@@ -243,9 +225,9 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
     
 7.  Under **Outlook web access (OWA)**, you can choose to allow access to Exchange Online only through the supported browsers: Safari (iOS), and Chrome (Android). Access from other browsers will be blocked. The same platform restrictions you selected for Application access for Outlook also apply here.
 
-    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the â€œEnable Browser Accessâ€ option on the enrolled device as follows:
+    On **Android** devices, users must enable the browser access.  To do this the end-user must enable the “Enable Browser Access” option on the enrolled device as follows:
      1. Launch the **Company Portal app**.
-     2. Go to the **Settings** page from the triple dots (â€¦) or the hardware menu button.
+     2. Go to the **Settings** page from the triple dots (…) or the hardware menu button.
       3.    Press the **Enable Browser Access** button.
       4.    In the Chrome browser, sign out of Office 365 and restart Chrome.
 
@@ -328,7 +310,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
      ![HybridCondAccessWiz4](../../protect/deploy-use/media/HybridCondAccessWiz4.PNG "HybridCondAccessWiz4")  
   
     > [!NOTE]  
-    >  Because the Intune notification email containing remediation instructions is delivered to the userâ€™s Exchange mailbox, in the event that the userâ€™s device gets blocked before they receive the email message, they can use an unblocked device or other method to access Exchange and view the message.  
+    >  Because the Intune notification email containing remediation instructions is delivered to the user’s Exchange mailbox, in the event that the user’s device gets blocked before they receive the email message, they can use an unblocked device or other method to access Exchange and view the message.  
   
     > [!NOTE]  
     >  In order for Exchange to be able to send the notification email, you must configure the account that will be used to send the notification email. You do this when you configure the properties of the Exchange Server connector.  
@@ -347,5 +329,5 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
   
 -   If the user un-enrolls from Intune it might take from 1-3 hours for the device to be blocked.  
   
-## See Also  
+### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)

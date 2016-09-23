@@ -1,5 +1,5 @@
 ---
-title: "Levels of diagnostic usage data collection for System Center Configuration Manager"
+title: "Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-03-11
 ms.prod: configuration-manager
@@ -31,8 +31,8 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for System Center Configuration Manager
-System Center Configuration Manager collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.  
+# Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager
+System Center Configuration Manager version 1511 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.  
 
 > [!IMPORTANT]  
 >  Configuration Manager does not collect site codes or sites names, IP addresses, user or computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful (potentially included in advanced diagnostic information like log files or memory snapshots) and will not be used by Microsoft to identify you, contact you, or for advertising purposes.  
@@ -45,8 +45,6 @@ System Center Configuration Manager collects three levels of diagnostics and usa
 
  Beginning with System Center Configuration Manager version 1511, this level includes the following:  
 
-> [!NOTE]  
->  System Center Configuration Manager version 1602 introduces a few changes to the data that is collected for this level. This topic will update with these details as soon as they are available.  
 
 -   Setup Information (build, install type, language packs, features you enabled, update pack deployment status and errors)  
 

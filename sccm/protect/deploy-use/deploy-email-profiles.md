@@ -13,27 +13,10 @@ ms.assetid: c976916e-2f0d-471d-ae19-721de9bbacfa
 caps.latest.revision: 4
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to deploy email profiles in System Center Configuration Manager
+
 Email profiles in System Center Configuration Manager must be deployed to one or more collections of users or devices before they can be used.  
   
  Use the **Deploy Exchange ActiveSync Profile** dialog box to configure the deployment of email profiles. As part of the configuration, you define the collection to which the email profile is to be deployed and specify how often the email profile is evaluated for compliance.  
@@ -69,5 +52,6 @@ Email profiles in System Center Configuration Manager must be deployed to one or
   
 5.  Click **OK** to close the **Deploy Exchange ActiveSync Profile** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor email profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-email-profiles.md).  
   
-## See Also  
+### See also  
+
  [Operations and maintenance for email profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

@@ -1,5 +1,5 @@
 ---
-title: "Manage access to services | System Center Configuration Manager"
+title: "Conditional access to services | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-06-20
 ms.prod: configuration-manager
@@ -12,26 +12,10 @@ ms.topic: article
 ms.assetid: 76d86613-b87f-4fe5-9236-a573e00b613a
 caps.latest.revision: 26
 author: karthikaraman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
-# Manage access to services in System Center Configuration Manager
+
+# Conditional access to services in System Center Configuration Manager
 Use **conditional access** in System Center Configuration Manager to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  
   
  For information about conditional access on PCs that are managed with System Center Configuration Manager and evaluated for compliance, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
@@ -139,5 +123,6 @@ Use **conditional access** in System Center Configuration Manager to help secure
   
 -   [Manage Skype for Business Online access](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
   
-## See Also  
+### See also  
+
  [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md)

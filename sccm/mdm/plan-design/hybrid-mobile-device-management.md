@@ -13,25 +13,7 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
 author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
 This walkthrough shows you how to configure System Center Configuration Manager to manage iOS, Android (including Samsung KNOX), Windows Phone, and Windows devices with the Microsoft Intune online service over the Internet. Although you use the Intune service, management tasks are done using the service connection point site system role in the Configuration Manager console.  
@@ -94,7 +76,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
   
      For more information, see [Directory integration](http://go.microsoft.com/fwlink/?LinkID=271120) in the Active Directory documentation library.  
   
-4.  Optional, not recommended: If you are not using Active Directory Federation Services, reset usersâ€™ Microsoft Online passwords.  
+4.  Optional, not recommended: If you are not using Active Directory Federation Services, reset users’ Microsoft Online passwords.  
   
      If you are not using AD FS, you must set a Microsoft Online password for each user.  
   
@@ -134,7 +116,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
     -   **Collection**: Specify a user collection that contains users who will enroll their mobile devices.  
   
         > [!NOTE]  
-        >  If a user is removed from the collection, the userâ€™s device will continue to be managed for up to 24 hours when the user record is removed from the user database.  
+        >  If a user is removed from the collection, the user’s device will continue to be managed for up to 24 hours when the user record is removed from the user database.  
   
     -   **Company name**: Specify your company name.  
   

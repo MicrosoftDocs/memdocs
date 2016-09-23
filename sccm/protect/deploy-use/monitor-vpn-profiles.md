@@ -13,25 +13,7 @@ ms.assetid: a0b91f15-7e42-44ba-9baf-c2cdb068554a
 caps.latest.revision: 6
 caps.handback.revision: 0
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # How to monitor VPN profiles in System Center Configuration Manager
 After you have deployed System Center Configuration Manager VPN profiles to devices in your hierarchy, you can use the following procedures to monitor the compliance status of the VPN profile:  

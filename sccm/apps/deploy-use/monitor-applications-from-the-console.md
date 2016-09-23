@@ -1,5 +1,5 @@
 ---
-title: "Monitor applications from the System Center Configuration Manager console"
+title: "Monitor applications from the System Center Configuration Manager console | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 caps.latest.revision: 5
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
 # Monitor applications from the System Center Configuration Manager console
 In System Center Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  

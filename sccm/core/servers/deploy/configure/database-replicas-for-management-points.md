@@ -12,25 +12,7 @@ ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 caps.latest.revision: 9
 author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Database replicas for management points for System Center Configuration Manager
 System Center Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
@@ -170,10 +152,10 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(.…)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+    6.  On the **Distribution Agent Security** page, click the properties button **(.�)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
-        >  The properties button, **(….)**, is in the fourth column of the display box.  
+        >  The properties button, **(�.)**, is in the fourth column of the display box.  
 
         **Security settings:**  
 
@@ -391,7 +373,7 @@ In addition to configuring the management point to use the database replica serv
 
 ##### To configure remote management points to use the self-signed certificate of the database replica server  
 
-1.  Perform the following steps on the database replica server to export the server’s self-signed certificate:  
+1.  Perform the following steps on the database replica server to export the server�s self-signed certificate:  
 
     1.  Click **Start**, click **Run**, and type **mmc.exe**. In the empty console, click **File**, and then click **Add/Remove Snap-in**.  
 
@@ -433,31 +415,31 @@ To support client notification with a database replica for a management point, y
 
 ##### To configure the service broker for a database replica  
 
-1.  Use **SQL Server Management Studio** to connect to database replica server database, and then run the following query to enable the Service Broker on the database replica server: **ALTER DATABASE \<Replica Database Name\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
+1.  Use **SQL Server Management Studio** to connect to database replica server database, and then run the following query to enable the Service Broker on the database replica server: **ALTER DATABASE &lt;Replica Database Name\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
 
 2.  Next, on the database replica server, configure the Service Broker for client notification and export the Service Broker certificate. To do this, run a SQL Server stored procedure that configures the Service Broker and exports the certificate as a single action. When you run the stored procedure, you must specify the FQDN of the database replica server, the name of the database replicas database, and specify a location for the export of the certificate file.  
 
-     Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: **EXEC sp_BgbConfigSSBForReplicaDB '\<Replica SQL Server FQDN\>', '\<Replica Database Name\>', '\<Certificate Backup File Path\>'**  
+     Run the following query to configure the required details on the database replica server, and to export the certificate for the database replica server: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>', '&lt;Certificate Backup File Path\>'**  
 
     > [!NOTE]  
-    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **\<Replica Database Name\>** with **\<Instance name\\Replica Database Name\>**.  
+    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **&lt;Instance name\\Replica Database Name\>**.  
 
      After you export the certificate from the database replica server, place a copy of the certificate on the primary sites database server.  
 
 3.  Use **SQL Server Management Studio** to connect to the primary site database. After you connect to the primary sites database, run a query to import the certificate and specify the Service Broker port that is in use on the database replica server, the FQDN of the database replica server, and name of the database replicas database. This configures the primary sites database to use the Service Broker to communicate to the database of the database replica server.  
 
-     Run the following query to import the certificate from the database replica server and specify the required details: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '\<SQL Service Broker Port\>', '\<Certificate File Path\>', '\<Replica SQL Server FQDN\>', '\<Replica Database Name\>'**  
+     Run the following query to import the certificate from the database replica server and specify the required details: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>', '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>'**  
 
     > [!NOTE]  
-    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **\<Replica Database Name\>** with **\Instance name\\Replica Database Name\>**.  
+    >  When the database replica server is not on the default instance of SQL Server, for this step you must specify the instance name in addition to the replica database name. To do so, replace **&lt;Replica Database Name\>** with **\Instance name\\Replica Database Name\>**.  
 
-4.  Next, on the site database server, run the following command to export the certificate for the site database server: **EXEC sp_BgbCreateAndBackupSQLCert '\<Certificate Backup File Path\>'**  
+4.  Next, on the site database server, run the following command to export the certificate for the site database server: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;Certificate Backup File Path\>'**  
 
      After you export the certificate from the site database server, place a copy of the certificate on the database replica server.  
 
 5.  Use **SQL Server Management Studio** to connect to the database replica server database. After you connect to the database replica server database, run a query to import the certificate and specify the site code of the primary site and the Service Broker port that is in use on the site database server. This configures the database replica server to use the Service Broker to communicate to the database of the primary site.  
 
-     Run the following query to import the certificate from the site database server: **EXEC sp_BgbConfigSSBForRemoteService '\<Site Code\>', '\<SQL Service Broker Port\>', '<Certificate File Path\>'**  
+     Run the following query to import the certificate from the site database server: **EXEC sp_BgbConfigSSBForRemoteService '&lt;Site Code\>', '&lt;SQL Service Broker Port\>', '&lt;Certificate File Path\>'**  
 
  A few minutes after you complete the configuration of the site database and the database replica database, the notification manager at the primary site sets up the Service Broker conversation for client notification from the primary site database to the database replica.  
 

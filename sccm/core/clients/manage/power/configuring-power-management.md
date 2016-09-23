@@ -1,5 +1,5 @@
 ---
-title: "Configuring power management in System Center Configuration Manager"
+title: "Configuring power management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -13,25 +13,7 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Configuring power management in System Center Configuration Manager
 Before you can use power management in System Center Configuration Manager, you must perform the following configuration steps.  

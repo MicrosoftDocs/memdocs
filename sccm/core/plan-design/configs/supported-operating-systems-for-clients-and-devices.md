@@ -193,95 +193,95 @@ author: Mtillman
 
 |||  
 |-|-|  
-|Version 5.3 (Power)|ccm-Aix53ppc.<build\>.tar|  
-|Version 6.1 (Power)|ccm-Aix61ppc.<build\>.tar|  
-|Version 7.1 (Power)|ccm-Aix71ppc.<build\>.tar|  
+|Version 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
+|Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
+|Version 7.1 (Power)|ccm-Aix71ppc.&lt;build\>.tar|  
 
 ### CentOS  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Debian  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x86|ccm-Universalx86.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
-|Version 8 x86|ccm-Universalx86.<build\>.tar|  
-|Version 8 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 8 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 8 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### HP-UX  
 
 |||  
 |-|-|  
-|Version 11iv2 IA64|ccm-HpuxB.11.23i64.<build\>.tar|  
-|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.<build\>.tar|  
-|Version 11iv3 IA64|ccm-HpuxB.11.31i64.<build\>.tar|  
-|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.<build\>.tar|  
+|Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
+|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
+|Version 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;build\>.tar|  
+|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;build\>.tar|  
 
 ### Oracle Linux  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Red Hat Enterprise Linux (RHEL)  
 
 |||  
 |-|-|  
-|Version 4 x86|ccm-RHEL4x86.<build\>.tar|  
-|Version 4 x64|ccm-RHEL4x64.<build\>.tar|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
+|Version 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Solaris  
 
 |||  
 |-|-|  
-|Version 9 SPARC|ccm-Sol9sparc.<build\>.tar|  
-|Version 10 x86|ccm-Sol10x86.<build\>.tar|  
-|Version 10 SPARC|ccm-Sol10sparc.<build\>.tar|  
-|Version 11 x86|ccm-Sol11x86.<build\>.tar|  
-|Version 11 SPARC|ccm-Sol11sparc.<build\>.tar|  
+|Version 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
+|Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
+|Version 10 SPARC|ccm-Sol10sparc.&lt;build\>.tar|  
+|Version 11 x86|ccm-Sol11x86.&lt;build\>.tar|  
+|Version 11 SPARC|ccm-Sol11sparc.&lt;build\>.tar|  
 
 ### SUSE Linux Enterprise Server (SLES)  
 
 |||  
 |-|-|  
-|Version 9 x86|ccm-SLES9x86.<build\>.tar|  
-|Version 10 SP1 x86|ccm-Universalx86.<build\>.tar|  
-|Version 10 SP1 x64|ccm-Universalx64.<build\>.tar|  
-|Version 11 SP1 x86|ccm-Universalx86.<build\>.tar|  
-|Version 11 SP1 x64|ccm-Universalx64.<build\>.tar|  
-|Version 12 x64|ccm-Universalx64.<build\>.tar|  
+|Version 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
+|Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 10 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 11 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 11 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 12 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Ubuntu  
 
 |||  
 |-|-|  
-|Version 10.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 10.04 LTS x64|ccm-Universalx64.<build\>.tar|  
-|Version 12.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 12.04 LTS x64|ccm-Universalx64.<build\>.tar|  
-|Version 14.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 14.04 LTS x64|ccm-Universalx64.<build\>.tar|  
+|Version 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 12.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ##  <a name="bkmk_IntuneOS"></a> Mobile devices enrolled by Microsoft Intune  
  For details about the computers and devices you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  

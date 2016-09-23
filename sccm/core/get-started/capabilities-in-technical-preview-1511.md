@@ -12,9 +12,9 @@ caps.latest.revision: 5
 author: Brenduns
 ---
 # Capabilities in Technical Preview 1511 for System Center Configuration Manager
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
- The following are new features you can try out with this version.  
+The following are new features you can try out with this version.  
 
 ##  <a name="BKMK_WUfB"></a> Integration with Windows Update for Business in Windows 10  
  Configuration Manager now has the ability to differentiate a Windows 10 computer that is directly connected via Windows Update for Business (WUfB) versus the ones connected to WSUS for getting Windows 10 updates and upgrades.  For computers connected via WUfB, the updates and upgrades can be managed at the cadence set by an administrative user via Group Policies or MDM policies and these updates/upgrades can be installed directly from WUfB.    
@@ -121,7 +121,7 @@ To install a site that uses a SQL Server availability group:
 
 1.  Substitute the following when prompted by Configuration Manager Setup:  
 
-    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **<endpointServer\>.fabrikam.com**.  
+    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;endpointServer\>.fabrikam.com**.  
 
     -   **Instance**:  This value should remain blank. There is no instance in this configuration.  
 

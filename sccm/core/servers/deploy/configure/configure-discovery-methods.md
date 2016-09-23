@@ -26,7 +26,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 2.  Select the discovery method for the site where you want to enable discovery.  
 
-3.  On the **Home** tab, in the **Properties** group, click **Properties**, and then on the **General** tab, select the **Enable<discovery method\>** check box.  
+3.  On the **Home** tab, in the **Properties** group, click **Properties**, and then on the **General** tab, select the **Enable&lt;discovery method\>** check box.  
 
      If this check box is already selected, you can disable the discovery method by clearing the check box.  
 

@@ -249,5 +249,5 @@ Options that support high availability:
   
 -   Uninstall the role from the current server, and install the role on a new server. Because clients are assigned the fallback status point during client installation, you will need to modify existing clients to use the new site system server.  
   
-## See Also  
+### See also  
  [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)

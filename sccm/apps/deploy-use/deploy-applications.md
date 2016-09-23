@@ -1,5 +1,5 @@
 ---
-title: "How to deploy applications with System Center Configuration Manager"
+title: "Deploy applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-03-11
 ms.prod: configuration-manager
@@ -12,31 +12,11 @@ ms.topic: article
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsft
+
 ---
-# How to deploy applications with System Center Configuration Manager
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+# Deploy applications with System Center Configuration Manager
+ 
   
  Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
   

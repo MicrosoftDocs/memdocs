@@ -12,25 +12,7 @@ ms.topic: article
 ms.assetid: dc78c1a4-d34e-4c7c-9abe-72c5adf073e5
 caps.latest.revision: 5
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Security and privacy for VPN profiles in System Center Configuration Manager
 This topic contains security and privacy information for VPN profiles in System Center Configuration Manager.  
@@ -49,5 +31,6 @@ This topic contains security and privacy information for VPN profiles in System 
   
  Before you configure VPN profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
+
  [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md)

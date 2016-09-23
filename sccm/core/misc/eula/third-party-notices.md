@@ -175,7 +175,7 @@ copied and put under another distribution licence
 This product includes material developed by Andy Polyakov for a Camellia assembler implementation.   
 (http://www.openssl.org/~appro/camellia/).  
 
- Copyright (c) 2008 Andy Polyakov <appro@openssl.org\>  
+ Copyright (c) 2008 Andy Polyakov &lt;appro@openssl.org\>  
 
  Redistribution and use in source and binary forms, with or without  
 modification, are permitted provided that the following conditions  

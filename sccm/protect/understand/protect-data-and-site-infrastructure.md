@@ -12,27 +12,10 @@ ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
 author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Protect data and site infrastructure with System Center Configuration Manager
+
 You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack. The information in these topics describes how to enable that access and how to help protect your organization's resources.  
   
 -   You can minimize your users' efforts to connect to corporate resources by enabling VPN connectivity using VPN profiles. Learn more in [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
@@ -49,5 +32,3 @@ You want your users to be able to securely access your organization's resources,
   
 -   Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Work) which is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card. Learn more in [Windows Hello for Business settings in System Center Configuration Manager](../../protect/deploy-use/windows-hello-for-business-settings.md).  
   
-## See Also  
- [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md)
