@@ -96,7 +96,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
     3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the **Next** arrow.  
 
-    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**. The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://<yourdomain\>/sccm**.  
+    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**. The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://&lt;yourdomain>/sccm**.  
 
     5.  Complete the wizard.  
 
@@ -229,7 +229,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
     2.  Run **set-executionPolicy RemoteSigned**  
 
-    3.  From the folder **<SCCM installation directory\>\cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
+    3.  From the folder **&lt;SCCM installation directory\>\cd.latest\SMSSETUP\TOOLS\MDM** run **.\ConfigurationScript.ps1**  
 
      The configuration script does the following:  
 

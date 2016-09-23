@@ -1,5 +1,5 @@
 ---
-title: "How to simulate application deployments with System Center Configuration Manager"
+title: "Simulate application deployments | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: robstackmsft
 
 ---
 # How to simulate application deployments with System Center Configuration Manager

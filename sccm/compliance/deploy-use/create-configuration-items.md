@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items in System Center Configuration Manager"
+title: "How to create configuration items | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-04-15
 ms.prod: configuration-manager

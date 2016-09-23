@@ -30,7 +30,7 @@ If you are installing a central administration site as part of a site expansion 
 
 ### <a name="bkmk_installpri"></a>   To install a primary or central administration site
 
-1.  On the computer where you want to install the site, run **<InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** to start the **System Center Configuration Manager Setup Wizard**.  
+1.  On the computer where you want to install the site, run **&lt;InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** to start the **System Center Configuration Manager Setup Wizard**.  
 
     > [!NOTE]  
     >  When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, you must use installation media (source files) that matches the version of the existing site or sites.  If you have installed in-console updates that have changed the version of the previously installed sites, do not use the original install media and instead use source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of an updated site.  Configuration Manager requires you to use source files that match the version of the existing site your new site will connect to.  
@@ -126,7 +126,7 @@ If you are installing a central administration site as part of a site expansion 
 
     -   **Instance name:** By default, this is blank which will use the default instance of SQL on the site server computer.  
 
-    -   **Database name:** By default, this is set to CM_<Sitecode\>. You are free to use a different name you specify.  
+    -   **Database name:** By default, this is set to CM_&lt;Sitecode\>. You are free to use a different name you specify.  
 
     -   **Service Broker Port:** By default, this is set to use the default SQL Server Service Broker (SSB) port of 4022, and is used by SQL to communicate directly to the site database at other sites.  
 

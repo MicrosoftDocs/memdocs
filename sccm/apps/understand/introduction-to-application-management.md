@@ -1,5 +1,5 @@
 ---
-title: "Get started with application management in System Center Configuration Manager"
+title: "Introduction to application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -14,14 +14,14 @@ caps.latest.revision: 18
 author: robstackmsft
 
 ---
-# Get started with application management in System Center Configuration Manager
+# Introduction to application management in System Center Configuration Manager
 In this topic, you'll learn the basics you need to know before you start working with System Center Configuration Manager applications.  
   
 > [!TIP]  
 >  If you are already familiar with how to manage applications in Configuration Manager, you can feel free to skip this topic and move straight on to creating a sample application. See [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md).  
   
 ## What is an application?  
- Although ëapplicationí is a widely used term in computing, in Configuration Manager, it means something different. Think of an application like a box. This box contains one or more sets of installation files for a software package  (known as a **deployment type**) plus instructions on how to deploy the software.  
+ Although ‚Äòapplication‚Äô is a widely used term in computing, in Configuration Manager, it means something different. Think of an application like a box. This box contains one or more sets of installation files for a software package  (known as a **deployment type**) plus instructions on how to deploy the software.  
   
  When the application is deployed to devices, **requirements** decide which deployment type is installed on the device.  
   
@@ -39,7 +39,7 @@ In this topic, you'll learn the basics you need to know before you start working
 |**Detection method**|Detection methods are used to discover whether a deployed application is already installed. If the detection method indicates the application is installed, Configuration Manager does not attempt to install it again.<br /><br /> For details, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).|  
 |**Dependencies**|Dependencies define one or more deployment types from another application that must be installed before a deployment type is installed. You can configure the dependent deployment types to be installed automatically before a deployment type is installed.<br /><br /> For details, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).|  
 |**Supersedence**|Configuration Manager lets you  upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also configure whether to upgrade or uninstall the superseded application before the superseding application is installed.<br /><br /> For details, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).|  
-|**User-centric management**|Configuration Manager applications support user-centric management letting you can associate specific users with specific devices. Instead of having to remember the name of a userís device, you can deploy apps to the user and to the device. This functionality can help you make sure that the most important apps are always available on each device that a specific user accesses. If a user acquires a new computer, you can automatically install the userís apps on the device before they log on.<br /><br /> For details, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
+|**User-centric management**|Configuration Manager applications support user-centric management letting you can associate specific users with specific devices. Instead of having to remember the name of a user‚Äôs device, you can deploy apps to the user and to the device. This functionality can help you make sure that the most important apps are always available on each device that a specific user accesses. If a user acquires a new computer, you can automatically install the user‚Äôs apps on the device before they log on.<br /><br /> For details, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
   
 ## What application types can you deploy?  
  Configuration Manager supports deploying the following types of software:  
@@ -89,11 +89,9 @@ In this topic, you'll learn the basics you need to know before you start working
   
 -   Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive  
   
--   ìOne-offî scripts that do not need to be continually monitored  
+-   ‚ÄúOne-off‚Äù scripts that do not need to be continually monitored  
   
 -   Scripts that run on a recurring schedule and cannot use global evaluation  
   
  For more information, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)

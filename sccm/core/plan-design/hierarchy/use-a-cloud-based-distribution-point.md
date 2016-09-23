@@ -115,7 +115,7 @@ A cloud-based distribution point has the following limitations:
 
 -   **Alerts**: You can configure Configuration Manager to raise alerts about data transfers to and from each cloud-based distribution point, based on the data transfer thresholds that you specify. These alerts help you monitor data transfers, and can help you decide when to stop the cloud service to prevent its use, adjust the content that you store on the distribution point, or modify which clients can use cloud-based distribution points.  
 
-     In an hourly cycle, the primary site that monitors the cloud-based distribution point downloads transaction data from Windows Azure and stores it in the CloudDP-<ServiceName\>.log on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud-based distribution point. When the transfer of data reaches or exceeds the specified volume for either warning or critical alerts, Configuration Manager generates the appropriate alert.  
+     In an hourly cycle, the primary site that monitors the cloud-based distribution point downloads transaction data from Windows Azure and stores it in the CloudDP-&lt;ServiceName\>.log on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud-based distribution point. When the transfer of data reaches or exceeds the specified volume for either warning or critical alerts, Configuration Manager generates the appropriate alert.  
 
     > [!WARNING]  
     >  Because information about data transfers is downloaded from Windows Azure hourly, that data usage might exceed a warning or critical threshold before Configuration Manager can access the data and raise an alert.  

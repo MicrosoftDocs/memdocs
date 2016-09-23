@@ -63,7 +63,7 @@ You will need to test the customized settings in your environment to determine w
 
      **Type**: REG_DWORD  
 
-     **Value**: <customized window size\>  
+     **Value**: &lt;customized window size\>  
 
  The default value is 1 (1 data block fills the window)  
 
@@ -76,7 +76,6 @@ You will need to test the customized settings in your environment to determine w
 
      **Type**: REG_DWORD  
 
-     **Value**: <customized block size\>  
+     **Value**: &lt;customized block size\>  
 
  The default value is 4096 (4k).  
-  

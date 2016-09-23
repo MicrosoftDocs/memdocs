@@ -1,5 +1,5 @@
 ---
-title: "Monitor applications from the System Center Configuration Manager console"
+title: "Monitor applications from the System Center Configuration Manager console | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -21,15 +21,15 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
  An application deployment state has one of the following compliance states:  
   
--   **Success** – The application deployment succeeded or was found to be already installed.  
+-   **Success** â€“ The application deployment succeeded or was found to be already installed.  
   
--   **In Progress** – The application deployment is in progress.  
+-   **In Progress** â€“ The application deployment is in progress.  
   
--   **Unknown** – The state of the application deployment could not be determined. This state is not applicable for deployments with a purpose of **Available**. This state is typically displayed when state messages from the client are not yet received.  
+-   **Unknown** â€“ The state of the application deployment could not be determined. This state is not applicable for deployments with a purpose of **Available**. This state is typically displayed when state messages from the client are not yet received.  
   
--   **Requirements Not Met** – The application was not deployed because it was not compliant with a dependency or a requirement rule, or because the operating system to which it was deployed was not applicable.  
+-   **Requirements Not Met** â€“ The application was not deployed because it was not compliant with a dependency or a requirement rule, or because the operating system to which it was deployed was not applicable.  
   
--   **Error** – The application failed to deploy because of an error.  
+-   **Error** â€“ The application failed to deploy because of an error.  
   
  You can view additional information for each compliance state, which includes subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
   
@@ -49,7 +49,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
  Use these subcategories to help you to quickly identify any important issues with an application deployment. You can also view additional information about the devices that fall into a particular subcategory of a compliance state.  
   
- Application management in Configuration Manager includes a number of built-in reports that allow you to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**.  
+ Application management in Configuration Manager includes a number of built-in reports that allow you to monitor information about applications and deployments. These reports have the report category of **Software Distribution â€“ Application Monitoring**.  
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
@@ -64,7 +64,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
     > [!NOTE]  
     >  The number of items that can be displayed in the **Deployment Status** pane is limited to 20,000. If you need to see more items, use Configuration Manager reports to view application status data.  
     >   
-    >  The status of deployment types is aggregated in the **Deployment Status** pane. To view more detailed information about the deployment types, use the report **Application Infrastructure Errors** in the report category **Software Distribution – Application Monitoring**.  
+    >  The status of deployment types is aggregated in the **Deployment Status** pane. To view more detailed information about the deployment types, use the report **Application Infrastructure Errors** in the report category **Software Distribution â€“ Application Monitoring**.  
   
 4.  To review general status information about an application deployment, select a deployment, and then click the **Summary** tab in the **Selected Deployment** window.  
   

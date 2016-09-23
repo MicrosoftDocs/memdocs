@@ -1,5 +1,5 @@
 ---
-title: "How to create applications with System Center Configuration Manager"
+title: "Create applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-05-09
 ms.prod: configuration-manager
@@ -12,10 +12,10 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: barlanmsft
+author: robstackmsft
 
 ---
-# How to create applications with System Center Configuration Manager
+# Create applications with System Center Configuration Manager
 A System Center Configuration Manager application contains the files and information that are required to deploy software to a device. An application contains one or more deployment types that comprise the installation files and information that are required to install software. A deployment type also contains rules that specify when and how the software is deployed.  
   
  You can create applications by using the following methods:  
@@ -32,8 +32,6 @@ A System Center Configuration Manager application contains the files and informa
  Use the following steps to learn how to create a Configuration Manager application.  
   
 ### Start the create application wizard  
-  
-##### To start the create application wizard  
   
 1.  In the Configuration Manager console, click **Software Library**.  
   
@@ -194,7 +192,7 @@ A System Center Configuration Manager application contains the files and informa
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
   
-    -   **Persist content in the client cache** - Select this option to specify whether the content should be retained in the cache on the client computer indefinitely, even if it has already been run. Although this option can be useful with some deployments, such as Windows Installer–based software that requires a local source copy to be available for applying updates, it will reduce the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache does not have sufficient available space.  
+    -   **Persist content in the client cache** - Select this option to specify whether the content should be retained in the cache on the client computer indefinitely, even if it has already been run. Although this option can be useful with some deployments, such as Windows Installerâ€“based software that requires a local source copy to be available for applying updates, it will reduce the available cache space. If you select this option, it might cause a large deployment to fail at a later point if the cache does not have sufficient available space.  
   
     -   **Allow clients to share content with other clients on the same subnet** - Select this option to reduce load on the network by allowing clients to download content from other local clients on the network that have already downloaded and cached the content. This option utilizes Windows BranchCache technology.  
   
@@ -482,8 +480,5 @@ A System Center Configuration Manager application contains the files and informa
 |**App Package for Android (\*.apk file)**|Creates a deployment type from an Android app package file.|  
 |**App Package for Android on Google Play**|Creates a deployment type by specifying a link to the app on Google Play.|  
 |**Mac OS X**|Creates a deployment type for Mac computers from a .cmmac file that you have created by using the CMAppUtil tool.<br /><br /> Applies to Mac computers running the Configuration Manager client only.|  
-|**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
-|**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br /><br /> - You can only upload a single file with the extension .msi.<br /><br /> - <br />The file's product code and product version are used for app detection.<br /><br /> - <br />The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - <br />Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - <br />App updates are supported when the MSI product code of each version is the same.|  
-  
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+|**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the userâ€™s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
+|**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br><br>- You can only upload a single file with the extension .msi.<br /><br /> - The file's product code and product version are used for app detection.<br /><br /> - The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - App updates are supported when the MSI product code of each version is the same.|  

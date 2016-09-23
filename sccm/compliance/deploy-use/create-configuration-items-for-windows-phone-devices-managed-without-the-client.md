@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client"
+title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -20,9 +20,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 ### To create a Windows Phone configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -62,7 +60,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
-##  <a name="BKMK_Setref"></a> Windows Phone configuration item settings reference  
+##  Windows Phone configuration item settings reference  
   
 ### Password  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
@@ -74,7 +72,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
-|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
+|**Password complexity**|Choose whether you can specify a PIN such as â€˜1234â€™, or whether you must supply a strong password.|  
 |**Send password recovery PIN to Exchange Server**||  
   
 ### Device  
@@ -192,13 +190,13 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Require email encryption**|Require emails to be encrypted before they are sent.|  
 |**Encryption algorithm**|Select the algorithm used to encrypt emails.|  
   
-###  <a name="BKMK_WiFI"></a> Wireless communications  
+###  Wireless communications  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
   
 |Setting name|Details|  
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
-|**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
+|**Wi-Fi tethering**|Letâ€™s users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**||  
 |**Wi-Fi hotspot reporting**||  
   
@@ -222,14 +220,14 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 3.  When you are finished, click **OK**.  
   
-###  <a name="BKMK_Certs"></a> Certificates  
- Let’s you import certificates to install on mobile devices.  
+###  Certificates  
+ Letâ€™s you import certificates to install on mobile devices.  
   
  Click **Import**, and then specify the following values:  
   
--   **Certificate file** – Click **Browse** and then select the certificate file with the extension **.cer** that you want to import.  
+-   **Certificate file** â€“ Click **Browse** and then select the certificate file with the extension **.cer** that you want to import.  
   
--   **Destination store** – Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
+-   **Destination store** â€“ Choose one or more destination stores where the imported certificate will be added on the mobile device from:  
   
     -   **Root**  
   
@@ -243,7 +241,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
     -   **Peer**  
   
--   **Role** – If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
+-   **Role** â€“ If **SPC** (Software Publisher Certificate) is selected as the destination store, choose the role that will be associated with the certificate from:  
   
     -   **Mobile Operator**  
   
@@ -278,7 +276,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Work Folders URL**|Configures the location of a Windows Server work folder that users can connect to from their device.|  
   
 ### Windows Phone allowed and blocked apps list (Windows Phone 8.1 only)  
- Let’s you specify a list of Windows Phone apps that are compliant, or not compliant in your company. Apps that you specify as blocked cannot be installed by users. If you specify a list of allowed apps, users can only install apps in the list.  
+ Letâ€™s you specify a list of Windows Phone apps that are compliant, or not compliant in your company. Apps that you specify as blocked cannot be installed by users. If you specify a list of allowed apps, users can only install apps in the list.  
   
  You cannot specify both allowed and blocked apps in the same configuration item.  
   
@@ -295,9 +293,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
     |**Blocked apps list**|Select this option if you want to specify a list of apps that users will not be allowed to install.|  
     |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install.|  
     |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Phone Store page, search for the app you want to use.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> For the company portal app, or line of business apps, you do not have to specify a full URL, only the app GUID.|  
-    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
+    |**Edit**|Letâ€™s you edit the name, publisher and URL of the selected app.|  
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
-## See Also  
- [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

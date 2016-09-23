@@ -148,7 +148,7 @@ Use the following sections to prestage content.
     > [!NOTE]  
     >  **For Applications:** On the **Home** tab, in the **Application** group, click **Create Prestaged Content File**.  
     >   
-    >  **For Packages:** On the **Home** tab, in the <*PackageName*> group, click **Create Prestaged Content File**.  
+    >  **For Packages:** On the **Home** tab, in the &lt;*PackageName*> group, click **Create Prestaged Content File**.  
 
 4.  On the **General** page, click **Browse**, choose the location for the prestaged content file, specify a name for the file, and then click **Save**. You use this prestaged content file on primary site servers, secondary site servers, or distribution points to import the content and metadata.  
 
@@ -245,16 +245,16 @@ Use the following sections to prestage content.
 
 1.  Copy the prestaged content file to the computer from which you want to extract the content.  
 
-2.  Copy the Extract Content command-line tool from <*ConfigMgrInstallationPath*>\bin\\<*platform*> to the computer from which you want to extract the prestaged content file.  
+2.  Copy the Extract Content command-line tool from &lt;*ConfigMgrInstallationPath*>\bin\\&lt;*platform*> to the computer from which you want to extract the prestaged content file.  
 
 3.  Open the command prompt and navigate to the folder location of the prestaged content file and Extract Content tool.  
 
     > [!NOTE]  
     >  You can extract one or more prestaged content files on a site server, secondary site server, or distribution point.  
 
-4.  Type **extractcontent /P:**<*PrestagedFileLocation*>**\\**<*PrestagedFileName*> **/S** to import a single file.  
+4.  Type **extractcontent /P:**&lt;*PrestagedFileLocation*>**\\**&lt;*PrestagedFileName*> **/S** to import a single file.  
 
-     Type **extractcontent /P:**<*PrestagedFileLocation*> **/S** to import all prestaged files in the specified folder.  
+     Type **extractcontent /P:**&lt;*PrestagedFileLocation*> **/S** to import all prestaged files in the specified folder.  
 
      For example, type **extractcontent /P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S** where `D:\PrestagedFiles\` is the PrestagedFileLocation, `MyPrestagedFile.pkgx` is the prestaged file name, and `/S` informs Configuration Manager to extract only content files that are newer than what is currently on the distribution point.  
 

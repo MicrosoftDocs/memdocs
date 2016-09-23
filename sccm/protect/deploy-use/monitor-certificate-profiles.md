@@ -16,6 +16,7 @@ author: Nbigman
 
 ---
 # How to monitor certificate profiles in System Center Configuration Manager
+
 After you deploy System Center Configuration Manager certificate profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the certificate profile:  
   
 -   [How to View Compliance Results in the Configuration Manager Console](#BKMK_console)  
@@ -77,5 +78,6 @@ After you deploy System Center Configuration Manager certificate profiles to use
   
  For more information about how to configure reporting in System Center Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-## See Also  
+### See also  
+
  [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

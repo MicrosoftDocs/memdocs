@@ -1,5 +1,5 @@
 ---
-title: "How to monitor and plan for power management in System Center Configuration Manager"
+title: "Monitor and plan for power management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -38,11 +38,11 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Activity"></a> Computer Activity report  
  The **Computer Activity** report displays a graph showing the following activity for a specified collection over a specified period:  
 
--   **Computer On** – The computer has been turned on.  
+-   **Computer On** â€“ The computer has been turned on.  
 
--   **Monitor On** – The monitor has been turned on.  
+-   **Monitor On** â€“ The monitor has been turned on.  
 
--   **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer  
+-   **User Active** â€“ Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer  
 
  This report is used during the monitoring and planning and enforcement stages to help you understand the alignment between computer activity, monitor activity and user activity over a 24 hour period. If you run the report over a number of days then the data is aggregated over this period. This report can help you to determine typical business (peak) and nonbusiness (non-peak) hours for a selected collection to help you decide when to apply configured power management plans.  
 
@@ -73,11 +73,11 @@ Use the following information to help you monitor and plan for power management 
 ###  <a name="BKMK_Comp_Activity_by_computer"></a> Computer Activity by Computer report  
  The **Computer Activity by Computer** report displays a graph showing the following activity for a specified computer on a specified date:  
 
--   **Computer On** – The computer has been turned on.  
+-   **Computer On** â€“ The computer has been turned on.  
 
--   **Monitor On** – The monitor has been turned on.  
+-   **Monitor On** â€“ The monitor has been turned on.  
 
--   **User Active** – Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer.  
+-   **User Active** â€“ Activity has been detected from the computer mouse, computer keyboard, or from a Remote Desktop connection to the computer.  
 
  This report can be run independently or called by the **Computer Activity Details** report.  
 
@@ -531,11 +531,11 @@ Use the following information to help you monitor and plan for power management 
 
 -   **Sleep Capable** - Indicates whether the computer has the capability to enter sleep if it is configured to do so.  
 
--   **Hibernate Capable** – Indicates whether the computer can enter hibernate if it is configured to do so.  
+-   **Hibernate Capable** â€“ Indicates whether the computer can enter hibernate if it is configured to do so.  
 
--   **Wake from Sleep** – Indicates whether the computer can wake from sleep if it is configured to do so.  
+-   **Wake from Sleep** â€“ Indicates whether the computer can wake from sleep if it is configured to do so.  
 
--   **Wake from Hibernate** – Indicates whether the computer can wake from hibernate if it is configured to do so.  
+-   **Wake from Hibernate** â€“ Indicates whether the computer can wake from hibernate if it is configured to do so.  
 
  The values reported by the **Power Capabilities** report indicate the sleep and hibernate capabilities of computers as reported by Windows. However, the reported values do not reflect cases where Windows or BIOS settings prevent these functions from working.  
 

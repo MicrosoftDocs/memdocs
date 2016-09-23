@@ -62,11 +62,11 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers require to install:  
 
-    -   **Use client push installation**. Before you use client installation method, make sure that all prerequisites are met. For more information, see the section “Installation Method Dependencies” in Prerequisites for Computer Clients.  
+    -   **Use client push installation**. Before you use client installation method, make sure that all prerequisites are met. For more information, see the section 'Installation Method Dependencies' in Prerequisites for Computer Clients.  
 
     -   **Install clients manually** and provide client installation properties by using CCMSetup installation command-line properties. This must include the following:  
 
-        -   Specify a management point or source path from which the computer can download the installation files by using the CCMSetup property **/mp:=<management point name computer name\>** or **/source:<path to client source files\>** on the CCMSetup command line during client installation.  
+        -   Specify a management point or source path from which the computer can download the installation files by using the CCMSetup property **/mp:=&lt;management point name computer name\>** or **/source:&lt;path to client source files\>** on the CCMSetup command line during client installation.  
 
         -   Specify a list of initial management points for the client to use so that it can assign to the site and then download client policy and site settings. Use the CCMSetup Client.msi property SMSMP to do this.  
 
@@ -80,7 +80,7 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
     -   **Deploy a custom script to clients that updates the port information**. If clients cannot communicate with a site because of a port change, you cannot use Configuration Manager to  deploy this script. For example, you could use Group Policy.  
 
-**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a site’s public key is made available to all sites in the hierarchy.  
+**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a site's public key is made available to all sites in the hierarchy.  
 
 -   **Workaround:** If you do not extend the schema, use the hierarchy maintenance tool, **preinst.exe**, to exchange the secure key information between sites.  
 

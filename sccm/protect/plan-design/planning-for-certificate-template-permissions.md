@@ -16,6 +16,7 @@ author: Nbigman
 
 ---
 # Planning for certificate template permissions for certificate profiles in System Center Configuration Manager
+
 The following information can help you plan for how to configure permissions for the certificate templates that System Center Configuration Manager uses when you deploy certificate profiles.  
   
 ## Default Security Permissions and Considerations  
@@ -34,7 +35,7 @@ The following information can help you plan for how to configure permissions for
 ## Adding Read and Enroll Permissions for Users and Computers  
  Adding Read and Enroll permissions for users and computers might be appropriate if a separate team manages your certification authority (CA) infrastructure team, and that separate team wants System Center Configuration Manager to verify that users have a valid Active Directory Domain Services account before sending them a certificate profile to request a user certificate. For this configuration, you must specify one or more security groups that contain the users, and then grant those groups Read and Enroll permissions on the certificate templates. In this scenario, the CA administrator manages the security control.  
   
- You can similarly specify one or more security groups that contain computer accounts and grant these groups Read and Enroll permissions on the certificate templates. If you deploy a computer certificate profile to a computer that is a domain member, the computer account of that computer must be granted Read and Enroll permissions. These permissions are not required if the computer is not a domain member�for example, if it is a workgroup computer or personal mobile device.  
+ You can similarly specify one or more security groups that contain computer accounts and grant these groups Read and Enroll permissions on the certificate templates. If you deploy a computer certificate profile to a computer that is a domain member, the computer account of that computer must be granted Read and Enroll permissions. These permissions are not required if the computer is not a domain memberâ€”for example, if it is a workgroup computer or personal mobile device.  
   
  Although this configuration uses an additional security control, we do not recommend it as a best practice. The reason is that the specified users or owners of the devices might request certificates independently from System Center Configuration Manager and supply values for the certificate Subject that might be used to impersonate another user or device.  
   
@@ -52,5 +53,6 @@ The following information can help you plan for how to configure permissions for
   
 3.  On the issuing CA, on the **Security** tab in the properties for the certificate template, add one or more security groups to grant the user or device accounts Read and Enroll permissions.  
   
-## See Also  
+### See also  
+
  [Planning for certificate profiles in System Center Configuration Manager](../Topic/Planning%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

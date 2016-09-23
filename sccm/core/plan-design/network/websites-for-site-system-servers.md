@@ -42,7 +42,7 @@ Several Configuration Manager site system roles require the use of Microsoft Int
 
 -   Configure the custom website to respond to the same port that you configure for Configuration Manager client communication (client request port).  
 
--   For each custom or default website that uses a custom folder, place a copy of the default document type that you use into the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer with default configurations, **iisstart.htm** is one of several default document types available. You can find this file in the root of the default website, and then place a copy of this file (or a copy of the default document type you use) into the root folder that hosts the SMSWEB custom website. For more information about default document types, see [Default Document <defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   For each custom or default website that uses a custom folder, place a copy of the default document type that you use into the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer with default configurations, **iisstart.htm** is one of several default document types available. You can find this file in the root of the default website, and then place a copy of this file (or a copy of the default document type you use) into the root folder that hosts the SMSWEB custom website. For more information about default document types, see [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
 
 **About IIS requirements:**
 **The following site system roles require IIS and a website to host the site system services:**  

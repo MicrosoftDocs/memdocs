@@ -1,5 +1,5 @@
 ---
-title: "Monitor app usage with software metering in System Center Configuration Manager"
+title: "Monitor app usage with software metering | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 caps.latest.revision: 8
-author: barlanmsft
+author: robstackmsft
 
 ---
 
@@ -28,7 +28,7 @@ Software metering has no external dependencies, only dependencies within the pro
   
 |Dependency|More information|  
 |----------------|----------------------|  
-|Client settings for software metering.|To use software metering, the client setting **Enable software metering on clients** must be enabled and deployed to computers. You can deploy software metering settings to all computers in the hierarchy, or you can deploy custom settings to groups of computers. For more information, see [Configure software metering](#BKMK_Config).|  
+|Client settings for software metering.|To use software metering, the client setting **Enable software metering on clients** must be enabled and deployed to computers. You can deploy software metering settings to all computers in the hierarchy, or you can deploy custom settings to groups of computers. See **Configure software metering** in this topic.|  
 |The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).|  
   
 ##  Configure software metering  
@@ -86,7 +86,7 @@ Software metering has no external dependencies, only dependencies within the pro
   
     -   **Description** - An optional description for the software metering rule.  
   
-    -   **Apply this software metering rule to the following clients** – Select whether you want to apply the software metering rule to all clients in the hierarchy or to the clients that are assigned to the site specified in the **Site** list.  
+    -   **Apply this software metering rule to the following clients** â€“ Select whether you want to apply the software metering rule to all clients in the hierarchy or to the clients that are assigned to the site specified in the **Site** list.  
   
 5.  To continue, click **Next**.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Manage apps from the Windows Store for Business with System Center Configuration Manager"
+title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-08-05
 ms.prod: configuration-manager

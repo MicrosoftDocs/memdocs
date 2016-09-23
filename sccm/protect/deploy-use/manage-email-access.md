@@ -329,5 +329,5 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
   
 -   If the user un-enrolls from Intune it might take from 1-3 hours for the device to be blocked.  
   
-## See Also  
+### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)

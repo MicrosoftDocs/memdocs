@@ -1,5 +1,5 @@
 ---
-title: "How to deploy configuration baselines in System Center Configuration Manager"
+title: "Deploy configuration baselines | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2015-12-08
 ms.prod: configuration-manager
@@ -35,11 +35,11 @@ Configuration baselines in System Center Configuration Manager must be deployed 
   
 5.  Specify the following additional information:  
   
-    -   **Remediate noncompliant rules when supported** – Enable this option to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.  
+    -   **Remediate noncompliant rules when supported** â€“ Enable this option to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.  
   
-    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** â€“ If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
   
-6.  **Generate an alert** – Enable this option to configure an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
+6.  **Generate an alert** â€“ Enable this option to configure an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
 7.  **Collection** - Click **Browse** to select the collection where you want to deploy the configuration baseline.  
   
