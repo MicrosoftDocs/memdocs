@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -32,9 +32,9 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Mac OS X versions that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page, select the specific Mac OS X versions that will evaluate the configuration item.  
   
-8.  On the **Settings** page of the wizard, you'll add new settings that will be evaluated for compliance on Mac computers. Click **New** to open the **Create Setting** dialog box.  
+8.  On the **Settings** page, you'll add new settings that will be evaluated for compliance on Mac computers. Click **New** to open the **Create Setting** dialog box.  
   
 9. In the **Create Setting** dialog box, enter a unique name and a description for the setting.  
   
@@ -72,7 +72,7 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
 12. Click **OK** to save the setting and close the **Create Setting** dialog box, then continue to add as many settings as you require.  
   
-13. On the **Compliance Rules** page of the wizard, you'll specify the conditions that define the compliance of a configuration item. Before a setting can be evaluated to compliance, it must have at least one compliance rule. Click **New** to add a new rule.  
+13. On the **Compliance Rules** page, you'll specify the conditions that define the compliance of a configuration item. Before a setting can be evaluated to compliance, it must have at least one compliance rule. Click **New** to add a new rule.  
   
 14. In the **Create Rule** dialog box, provide the following information:  
   

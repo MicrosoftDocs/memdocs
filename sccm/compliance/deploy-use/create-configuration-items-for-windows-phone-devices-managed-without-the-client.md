@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -30,9 +30,9 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows Phone platforms that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page, select the specific Windows Phone platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -51,7 +51,7 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
     -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
-11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
+11. On the **Platform Applicability** page, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  

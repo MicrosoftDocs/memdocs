@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create Mac computer applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -187,11 +187,11 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 18. On the **Summary** page of the **Create Deployment Type Wizard**, review the actions for the wizard to take.  If necessary, click **Previous** to go back and change deployment type settings. Click **Next** to create the deployment type.  
   
-19. After the **Progress** page of the Wizard completes, review the actions that have been taken, and then click **Close** to complete the **Create Deployment Type Wizard**.  
+19. After the **Progress** page finishes, review the actions that have been taken, and then click **Close** to complete the **Create Deployment Type Wizard**.  
   
-20. If you started this wizard from the **Create Application Wizard**, you will return to the **Deployment Types** page of the wizard.  
+20. If you started this wizard from the **Create Application Wizard**, you will return to the **Deployment Types** page.  
   
-###  <a name="BKMK_Step4"></a> Step 4: Deploy the Mac application  
+###  Deploy the Mac application  
  The steps to deploy an application to Mac computers are the same as those used to deploy an application to Windows computers, except for the following differences:  
   
 -   The deployment of applications to users is not supported.  

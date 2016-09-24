@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Introduction to application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -42,27 +42,31 @@ In this topic, you'll learn the basics you need to know before you start working
 |**User-centric management**|Configuration Manager applications support user-centric management letting you can associate specific users with specific devices. Instead of having to remember the name of a user’s device, you can deploy apps to the user and to the device. This functionality can help you make sure that the most important apps are always available on each device that a specific user accesses. If a user acquires a new computer, you can automatically install the user’s apps on the device before they log on.<br /><br /> For details, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
   
 ## What application types can you deploy?  
- Configuration Manager supports deploying the following types of software:  
-  
-|Type|Device must be enrolled with Intune|  
-|----------|------------------------------------------------|  
-|Windows Installer (*.msi file)|No|  
-|Windows app package (*.appx, \*.appxbundle)|No|  
-|Windows app package (in the Windows Store)|No|  
-|Microsoft Application Virtualization 4|No|  
-|Microsoft Application Virtualization  5|No|  
-|Windows Phone app package (*.xap file)|Yes|  
-|Windows Phone app package (in the Windows Phone Store)|Yes|  
-|Windows Mobile Cabinet|No|  
-|App Package for iOS (*.ipa file)|Yes|  
-|App Package for Android (*.apk file)|Yes|  
-|App Package for Android on Google Play|Yes|  
-|Mac OS X|No|  
-|Web Application|Only when deploying to iOS, Android, Windows Phone, and enrolled Windows PCs|  
-|Windows Installer through MDM|Yes|  
+ Configuration Manager lets you deploy the following app types:  
+
+- Windows Installer (*.msi file)
+- Windows app package (*.appx, \*.appxbundle)
+- Windows app package (in the Windows Store)
+- Microsoft Application Virtualization 4
+- Microsoft Application Virtualization  5
+- Windows Mobile Cabinet
+- Mac OS X  
+ 
+
+Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these further app types:
+
+- Windows Phone app package (*.xap file)
+- App Package for iOS (*.ipa file)
+- App Package for Android (*.apk file)
+- App Package for Android on Google Play
+- Windows Phone app package (in the Windows Phone Store)
+- Windows Installer through MDM
+- Web Application
+
+
   
 ## State-based applications  
- Applications in Configuration Manager support state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+ Configuration Manager applications use state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
   
  Application deployments are regularly re-evaluated by Configuration Manager. For example:  
   
@@ -75,7 +79,7 @@ In this topic, you'll learn the basics you need to know before you start working
 ## Get started creating an application  
  If you want to jump right in and start to create an application, you'll find a walkthrough for creating a simple application in the [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md) topic.  
   
- If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md).  
+ If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Create applications with System Center Configuration Manager](/sccm/apps/deploy-use/create-applications.md).  
   
 ## Software Center and the Application Catalog  
  In previous versions of Configuration Manager, Software Center was used to install and schedule software installations, configure remote control settings, and configure power management settings. Users could connect to the Application Catalog to browse for, and request software, configure some preference settings, and remotely wipe their mobile devices.  

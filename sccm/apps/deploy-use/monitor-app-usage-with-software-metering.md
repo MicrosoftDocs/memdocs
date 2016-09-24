@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor app usage with software metering | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -17,14 +17,12 @@ author: robstackmsft
 
 # Software metering in System Center Configuration Manager
 This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering. For an example scenario about how to use software metering, see [Monitor app usage with software metering in System Center Configuration Manager](../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
-  
-##  Prerequisites for software metering  
-Software metering has no external dependencies, only dependencies within the product.  
-  
+
 > [!IMPORTANT]  
 >  Software metering is used to monitor Windows PC desktop apps with a filename ending in **.exe**. Software metering does not monitor modern Windows apps (such as those used by Windows 8).  
   
-### Configuration Manager dependencies  
+##  Prerequisites for software metering  
+Software metering has no external dependencies, only dependencies within the product.  
   
 |Dependency|More information|  
 |----------------|----------------------|  
@@ -128,9 +126,9 @@ Software metering has no external dependencies, only dependencies within the pro
   
  Additionally, you can create queries and collections based on the data stored in the Configuration Manager database by software metering.  
   
- For more information about collections in Configuration Manager, see [Collections technical reference for System Center Configuration Manager](../../core/clients/manage/collections/collections-technical-reference.md).  
+ For more information about collections in Configuration Manager, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
   
- For more information about queries in Configuration Manager, see [Queries technical reference for System Center Configuration Manager](../../core/servers/manage/queries-technical-reference.md).  
+ For more information about queries in Configuration Manager, see [Introduction to queries ](/sccm/core/servers/manage/introduction-to-queries).  
   
 ##  Security and privacy for software metering  
   

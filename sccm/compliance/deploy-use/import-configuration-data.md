@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import configuration data | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -46,7 +46,7 @@ Other scenarios where the import process might fail include the following:
 2.  In the **Home** tab, in the **Create** group, click **Import Configuration Data**.  
 3.  On the **Select Files** page of the **Import Configuration Data Wizard**, click **Add**, and then in the **Open** dialog box, select the .cab files you want to import.  
 4.  Select the **Create a new copy of the imported configuration baselines and configuration items** check box if you want the imported configuration data to be editable in the Configuration Manager console.  
-5.  On the **Summary** page of the wizard, review the actions that will be taken, and then complete the wizard.  
+5.  On the **Summary** page, review the actions that will be taken, and then complete the wizard.  
   
 The imported configuration data displays in the **Compliance Settings** node in the **Assets and Compliance** workspace.  
   
