@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -43,7 +43,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows 8.1 and Windows 10** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select all of the Windows 10 platforms.  
+2.  On the **Supported Platforms** page, select all of the Windows 10 platforms.  
   
 3.  On the **Device Settings** page, select **Store**, then click **Next**.  
   
@@ -64,7 +64,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows Phone** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select **All Windows Phone 8.1** platforms.  
+2.  On the **Supported Platforms** page, select **All Windows Phone 8.1** platforms.  
   
 3.  On the **Device Settings** page, select **Device**, then click **Next**.  
   
@@ -85,7 +85,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **iOS and Mac OS X** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select all iPhone and all iPad device platforms.  
+2.  On the **Supported Platforms** page, select all iPhone and all iPad device platforms.  
   
 3.  On the **Device Settings** page, select **Security**, then click **Next**.  
   
@@ -106,7 +106,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Android and Samsung KNOX** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select only **Android 5** (to ensure that the settings only get applied to that platform).  
+2.  On the **Supported Platforms** page, select only **Android 5** (to ensure that the settings only get applied to that platform).  
   
 3.  On the **Device Settings** page, select **Password**, then click **Next**.  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/27/2016
@@ -15,7 +15,7 @@ caps.handback.revision: 0
 author: robstackmsft
 
 ---
-# How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
+# Create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  
   
 > [!IMPORTANT]  
@@ -23,7 +23,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 >   
 >  As a workaround, when you create a setting for these devices, ensure that **Remediate noncompliant settings** is selected on the settings pages of the Create Configuration Item wizard. In addition, when you deploy a configuration baseline containing a Windows 10 configuration item containing password settings, select **Remediate noncompliant rules when supported** in the Deploy Configuration Baselines dialog box. By using this workaround, the setting will be monitored, and remediated if it is found to be noncompliant. After remediation, the setting will be correctly reported as **Compliant** (unless a problem is encountered in which case it will report **Error**).  
   
-### To create a Windows 10 configuration item  
+## Create a Windows 10 configuration item  
   
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
   
@@ -35,9 +35,9 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows 10 platforms that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page, select the specific Windows 10 platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](#BKMK_Ref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](#BKMK_Ref) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -56,7 +56,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
     -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
   
-11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
+11. On the **Platform Applicability** page, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  
