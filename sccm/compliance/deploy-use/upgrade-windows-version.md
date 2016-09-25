@@ -33,7 +33,7 @@ The devices must be enrolled in Microsoft Intune. This feature is not currently 
   
 -   A licence file from Microsoft which contains the licensing information to install the new version of Windows on all devices you target with the policy (for Windows 10 Mobile and Windows 10 Holographic).
 
-- To create and deploy this policy type, you must have been assigned the [!INCLUDE[cmshort](../Token/cmshort_md.md)] **Full Administrator** security role.
+- To create and deploy this policy type, you must have been assigned the Configuration Manager **Full Administrator** security role.
   
 ## Configure the edition upgrade policy  
   
