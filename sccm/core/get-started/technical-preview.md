@@ -1,6 +1,6 @@
 ﻿---
 title: "Technical Preview for System Center Configuration Manager"
-description: "Learn about the preview release that introduces new functionality and capabilities in System Center Configuration Manager."
+description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/22/2016
 ms.prod: configuration-manager
