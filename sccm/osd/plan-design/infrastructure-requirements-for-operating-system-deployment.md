@@ -1,7 +1,7 @@
----
+﻿---
 title: "Infrastructure requirements for operating system deployment in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -237,3 +237,4 @@ You must install the following WSUS 4.0 hotfixes:
   
 ## See Also  
  [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
+

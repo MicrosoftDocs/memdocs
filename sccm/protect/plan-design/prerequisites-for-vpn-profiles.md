@@ -1,7 +1,7 @@
----
+﻿---
 title: "VPN profile prerequisites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-31
+ms.date: 03/31/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,3 +38,4 @@ You must have the following security permissions to manage company resource acce
 -   To create and manage Wi-Fi profiles: **Author Policy**, **Modify Report**, **Read**, and **Run Report** permissions for the **Wi-Fi Profile** object.  
   
  The **Company Resource Access Manager** security role includes these permissions that are required to manage VPN profiles in System Center Configuration Manager. For more information, see  [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
+

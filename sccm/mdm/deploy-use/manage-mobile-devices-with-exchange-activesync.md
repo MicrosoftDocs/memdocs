@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Manage mobile devices with System Center Configuration Manager and Exchange"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,7 +30,7 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
   
  You can also configure the Exchange Server connector to manage the Exchange access rules and allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console, and users can remotely wipe their mobile devices by using the Application Catalog.  
   
- A user’s mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the user’s mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
+ A user's mobile device appears in the Application Catalog automatically when the Exchange Server connector manages it and the Exchange Server is on-premises. When you configure the Exchange Server connector for Microsoft Exchange Online, you must manually configure user device affinity for the user's mobile device to appear in the Application Catalog. For more information about how to manually configure user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
   
 > [!TIP]  
 >  If you manage a mobile device by using the Exchange Server connector and the mobile device is transferred to another user, delete the mobile device from the Configuration Manager console before the new owner of the mobile device configures his or her Exchange account on this transferred mobile device.  
@@ -128,3 +128,4 @@ Use the Exchange Server connector in System Center Configuration Manager when yo
   
 ## See Also  
  [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md)
+

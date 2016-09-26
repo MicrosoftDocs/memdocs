@@ -1,7 +1,7 @@
 ---
 title: "Create remote connection profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,7 +91,7 @@ Use the following steps to create a remote connection profile by using the Syste
   
 4.  On the **General** page of the **Create Remote Connection Profile Wizard**, specify a name and optional description for the profile using a maximum of 256 characters for each.  
   
-5.  On the **Profile** settings page of the wizard, specify the following settings for the remote connection profile:  
+5.  On the **Profile** settings page, specify the following settings for the remote connection profile:  
   
     -   **Full name and port of the Remote Desktop Gateway server (optional)** - Specify the name of the Remote Desktop Gateway Server to be used for connections.  
   
@@ -113,7 +113,7 @@ Use the following steps to create a remote connection profile by using the Syste
     > [!IMPORTANT]  
     >  All three settings must be the same before you can proceed past this page of the wizard.  
   
-7.  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard.  
+7.  On the **Summary** page, review the actions to be taken, and then complete the wizard.  
   
  The new remote connection profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.  
   
@@ -179,3 +179,4 @@ Deploy a remote connection profile
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Diagnostics and usage data for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,3 +41,4 @@ System Center Configuration Manager collects diagnostics and usage data about it
 
 ## See Also  
  [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Supported operating systems for System Center Configuration Manager consoles"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,3 +30,4 @@ author: Brenduns
 -   **Windows 8** (x86, x64) – Professional, Enterprise  
 
 -   **Windows 7 with SP1** (x86, x64) – Professional, Enterprise, Ultimate  
+

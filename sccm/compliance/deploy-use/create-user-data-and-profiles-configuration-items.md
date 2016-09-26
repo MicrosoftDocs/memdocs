@@ -1,7 +1,7 @@
 ---
 title: "Create user data and profiles configuration items | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,11 +33,7 @@ User data and profiles configuration items in System Center Configuration Manage
 ## Enable user data and profiles for compliance settings  
  Use the following procedure to configure the default client setting for user data and profiles compliance settings which will apply to all computers in your hierarchy. If you want this setting to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers for which you want to use user data and profiles compliance settings. For more information about how to create custom device settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, click **Client Settings**.  
-  
-3.  Click **Default Settings**.  
+1.  In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Settings**.  
   
 4.  On the **Home** tab, in the **Properties** group, click **Properties**.  
   
@@ -51,7 +47,7 @@ User data and profiles configuration items in System Center Configuration Manage
   
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
   
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **User Data and Profiles**.  
+2.  In the **Assets and Compliance** workspace, expand **Compliance Settings** > **User Data and Profiles**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create User Data and Profiles Configuration Item**.  
   
@@ -70,17 +66,17 @@ User data and profiles configuration items in System Center Configuration Manage
 5.  On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user’s primary devices. For more information about folder redirection, see your Windows Server documentation.  
   
     > [!NOTE]  
-    >  This page of the wizard appears only if you checked the box **Folder redirection** on the **General** page of the wizard.  
+    >  This page only appears if you checked **Folder redirection** on the **General** page of the wizard.  
   
 6.  On the **Offline Files** page of the **Create User Data and Profiles Configuration Item Wizard**, you can enable or disable the use of offline files for users that receive this configuration item and configure settings for the behavior of the offline files. You can also specify offline files that will always be available on any computer that the user logs on to. For more information about offline files, see your Windows Server documentation.  
   
     > [!NOTE]  
-    >  This page of the wizard appears only if you checked the box **Offline files** on the **General** page of the wizard.  
+    >  This page only appears if you checked the box **Offline files** on the **General** page of the wizard.  
   
 7.  On the **Roaming Profiles** page of the **Create User Data and Profiles Configuration Item Wizard**, you can configure whether roaming profiles are available on computers that the user logs onto and also configure further information about how these profiles behave. For more information about roaming profiles, see your Windows Server documentation.  
   
     > [!NOTE]  
-    >  This page of the wizard appears only if you checked the box **Roaming user profiles** on the **General** page of the wizard.  
+    >  This page only appears if you checked the box **Roaming user profiles** on the **General** page of the wizard.  
   
 8.  Complete the wizard.  
   
@@ -88,9 +84,7 @@ User data and profiles configuration items in System Center Configuration Manage
   
 ## Deploy a user data and profiles configuration item  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **User Data and Profiles**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **User Data and Profiles**.  
   
 3.  Select the user data and profiles configuration item you want to deploy and then, in the **Home** tab, in the **Deployment** group, click **Deploy**.  
   
@@ -116,3 +110,4 @@ User data and profiles configuration items in System Center Configuration Manage
   
  For more information, see [How to monitor compliance settings in System Center Configuration Manager](../../compliance/deploy-use/monitor-compliance-settings.md).  
   
+

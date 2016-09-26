@@ -1,7 +1,7 @@
 ---
 title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-03
+ms.date: 04/03/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,7 +41,7 @@ For more information about app installation types, see [Get started with applica
 	- **Name**: Specify a unique name for the policy.
 	- **Description**: Optionally, specify a description for the policy that helps you to identify it.
 	- **Assigned categories to improve searching and filtering**: Optionally, click **Categories** to create and assign categories to the policy. This makes it easier for you to sort and find items in the Configuration Manager console.
-5. On the **iOS Policy** page of the wizard, choose how you will specify the configuration policy information:
+5. On the **iOS Policy** page, choose how you will specify the configuration policy information:
 	- **Specify name and value pairs**: You can use this option for property list files that do not use nesting.
 	To specify name and value pairs
 		- To add a new pair, click **New**.
@@ -118,3 +118,4 @@ When you create a mobile app configuration file, you can specify one or more of 
   <string>{{udidlast4digits}}</string>
 </dict>
 ```
+

@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for compliance settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,6 @@ author: robstackmsft
 
 ---
 # Security and privacy for compliance settings in System Center Configuration Manager
-This topic contains security and privacy information for compliance settings in System Center Configuration Manager.  
   
 ## Security best practices for compliance settings  
   
@@ -33,8 +32,7 @@ This topic contains security and privacy information for compliance settings in 
  You can use compliance settings to evaluate whether your client devices are compliant with configuration items that you deploy in configuration baselines. Some settings can be automatically remediated if they out of compliance. Compliance information is sent to the site server by the management point and stored in the site database. The information is encrypted when devices send it to the management point, but it is not stored in encrypted format in the site database. Information is retained in the database until the site maintenance task **Delete Aged Configuration Management Data** deletes it every 90 days. You can configure the deletion interval. Compliance information is not sent to Microsoft.  
   
  By default, devices do not evaluate compliance settings. In addition, you must configure the configuration items and configuration baselines, and then deploy them to devices.  
+ 
   
- Before you configure compliance settings, consider your privacy requirements.  
-  
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)
+
+

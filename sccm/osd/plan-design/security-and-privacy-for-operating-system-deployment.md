@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Security and privacy for operating system deployment in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -184,7 +184,7 @@ This topic contains security and privacy information for operating system deploy
      Although collection variables offer a flexible method to deploy operating systems, this might result in information disclosure.  
   
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for operating system deployment  
- In addition to deploying operating systems to computers with no operating system, Configuration Manager can be used to migrate users’ files and settings from one computer to another. The administrator configures which information to transfer, including personal data files, configuration settings, and browser cookies.  
+ In addition to deploying operating systems to computers with no operating system, Configuration Manager can be used to migrate users' files and settings from one computer to another. The administrator configures which information to transfer, including personal data files, configuration settings, and browser cookies.  
   
  The information is stored on a state migration point and is encrypted during transmission and storage. The information is allowed to be retrieved by the new computer associated with the state information. If the new computer loses the key to retrieve the information, a Configuration Manager administrator with the View Recovery Information right on computer association instance objects can access the information and associate it with a new computer. After the new computer restores the state information, it deletes the data after one day by default. You can configure when the state migration point removes data marked for deletion. The state migration information is not stored in the site database and is not sent to Microsoft.  
   
@@ -200,3 +200,4 @@ This topic contains security and privacy information for operating system deploy
   
 ## See Also  
  [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
+

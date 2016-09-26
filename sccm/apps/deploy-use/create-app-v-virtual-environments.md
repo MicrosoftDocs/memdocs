@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create App-V virtual environments | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -50,3 +50,4 @@ Microsoft Application Virtualization (App-V) virtual environments in System Cent
     > [!NOTE]  
     >  The virtual environment will be added or modified on client PCs when the application is installed or when the client next evaluates installed applications.  
   
+

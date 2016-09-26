@@ -1,7 +1,7 @@
 ---
 title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,26 +24,24 @@ The scenarios in this topic give you an introduction to using System Center Conf
 ## General information for each scenario  
  In each scenario, you'll create a configuration item that performs a specific task. open the Create Configuration Item Wizard, use the following steps:  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
 4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
   
-     ![Shows general page of the create configuration item wizard.](../../compliance/plan-design/media/Compliance-Settings-Wizard---1.png "Compliance)  
+     ![Shows general page of the create configuration item wizard.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
   
 ## Scenarios for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client  
   
 ### Scenario: Restrict access to the app store on all Windows PCs  
  In this scenario, you are the IT admin for a company that deals with highly sensitive information. Because of this, you restrict the apps that users can install. You want to stop users of all Windows 10 PCs from downloading apps from the Windows Store, so you take the following actions.  
   
-##### Steps  
+#### Steps  
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows 8.1 and Windows 10** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select all of the Windows 10 platforms.  
+2.  On the **Supported Platforms** page, select all of the Windows 10 platforms.  
   
 3.  On the **Device Settings** page, select **Store**, then click **Next**.  
   
@@ -64,7 +62,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows Phone** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select **All Windows Phone 8.1** platforms.  
+2.  On the **Supported Platforms** page, select **All Windows Phone 8.1** platforms.  
   
 3.  On the **Device Settings** page, select **Device**, then click **Next**.  
   
@@ -85,7 +83,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **iOS and Mac OS X** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select all iPhone and all iPad device platforms.  
+2.  On the **Supported Platforms** page, select all iPhone and all iPad device platforms.  
   
 3.  On the **Device Settings** page, select **Security**, then click **Next**.  
   
@@ -106,7 +104,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Android and Samsung KNOX** configuration item type, then click **Next**.  
   
-2.  On the **Supported Platforms** page of the wizard, select only **Android 5** (to ensure that the settings only get applied to that platform).  
+2.  On the **Supported Platforms** page, select only **Android 5** (to ensure that the settings only get applied to that platform).  
   
 3.  On the **Device Settings** page, select **Password**, then click **Next**.  
   
@@ -124,3 +122,4 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 ## See Also  
  [Common tasks for managing compliance with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-managing-compliance.md)
+

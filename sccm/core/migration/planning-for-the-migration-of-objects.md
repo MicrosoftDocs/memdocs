@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "Planning for the migration of Configuration Manager objects to System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-22
+ms.date: 03/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -138,7 +138,7 @@ You can migrate the following operating system deployment objects from a support
 You can migrate configuration items and configuration baselines.  
 
 > [!NOTE]  
->  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see the “Uninterpreted Configuration Item” section in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
+>  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see the "Uninterpreted Configuration Item" section in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
 
 You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the Configuration Pack to be compatible with System Center Configuration Manager.  
 
@@ -176,3 +176,4 @@ For more information about reporting, see [Reporting in System Center Configurat
  There are no significant changes to software metering between Configuration Manager 2007 and System Center Configuration Manager. You can migrate your software metering rules from a supported source hierarchy to a destination hierarchy.  
 
  By default, software metering rules that you migrate to a destination hierarchy are not associated with a specific site in the destination hierarchy and instead apply to all clients in the hierarchy. To apply a software metering rule to clients at a specific site, you must edit the metering rule after it migrates.  
+

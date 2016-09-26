@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage queries | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,3 +34,4 @@ Use the information in this topic to help you manage queries in System Center Co
   
 ## See Also  
  [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+

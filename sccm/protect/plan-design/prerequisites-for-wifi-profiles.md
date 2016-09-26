@@ -1,4 +1,4 @@
----
+﻿---
 title: "Wi-Fi profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 0201-03-31
@@ -41,3 +41,4 @@ Wi-Fi profiles in System Center Configuration Manager have dependencies only wit
 -   To create and manage Wi-Fi profiles: **Author Policy**, **Modify Report**, **Read**, and **Run Report** for the **Wi-Fi Profile** object.  
   
  The **Company Resource Access Manager** security role includes these permissions that are required to manage Wi-Fi profiles in System Center Configuration Manager. For more information, see [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md).
+

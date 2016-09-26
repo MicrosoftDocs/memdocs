@@ -1,7 +1,7 @@
----
+﻿---
 title: "How to enable CRL checking for software updates in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,3 +27,4 @@ By default, the certificate revocation list (CRL) is not checked when verifying 
   
 ## See Also  
  [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)
+

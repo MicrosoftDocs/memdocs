@@ -1,7 +1,7 @@
----
+﻿---
 title: "Planning certificate template permissions | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -56,3 +56,4 @@ The following information can help you plan for how to configure permissions for
 ### See also  
 
  [Planning for certificate profiles in System Center Configuration Manager](../Topic/Planning%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

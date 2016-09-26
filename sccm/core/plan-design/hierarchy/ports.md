@@ -1,7 +1,7 @@
----
+﻿---
 title: "Ports used in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-10
+ms.date: 02/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -542,20 +542,20 @@ The following sections detail the ports used for communication in Configuration 
 
     -   If the HTTP port is 80, the HTTPS port must be 443.  
 
-    -   If the HTTP port is anything else, the HTTPS port must be 1 higher�for example, 8530 and 8531.  
+    -   If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.  
 
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 
 4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of the Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol defined by the following RFCs:  
 
-    -   RFC 350�TFTP  
+    -   RFC 350 - TFTP  
 
-    -   RFC 2347�Option extension  
+    -   RFC 2347 - Option extension  
 
-    -   RFC 2348�Block size option  
+    -   RFC 2348 - Block size option  
 
-    -   RFC 2349�Time-out interval, and transfer size options  
+    -   RFC 2349 - Time-out interval, and transfer size options  
 
      Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port will allow the TFTP service to receive incoming TFTP requests but will not allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
 
@@ -676,3 +676,4 @@ The site server that runs Migration uses several ports to connect to applicable 
 |NetBIOS Name Resolution|137|--|  
 |NetBIOS Datagram Service|138|--|  
 |NetBIOS Session Service|--|139|  
+

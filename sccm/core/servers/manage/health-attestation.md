@@ -1,7 +1,7 @@
----
+﻿---
 title: "Health attestation for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-10
+ms.date: 08/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -76,3 +76,4 @@ Begining with System Center Configuration Manager current branch version 1602, a
   
 ## See Also  
  [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)
+

@@ -1,7 +1,7 @@
-# [Understand and explore](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+﻿# [Understand and explore](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 ## [Hybrid and on-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 ## [Choose Intune or hybrid MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
-## [Hybride MDM](understand/hybrid-mobile-device-management.md)
+## [Hybrid MDM](understand/hybrid-mobile-device-management.md)
 ## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [What's new in on-premises MDM](understand/TBD.md)
 # [Plan and design](plan-design/hybrid-mobile-device-management.md)
@@ -14,7 +14,7 @@
 ### [Install on-premises role](get-started/install-site-system-roles-for-on-premises-mobile-device-management.md)
 ### [Certificate setup](get-started/set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management.md)
 ### [Prepare on-premises enrollment](get-started/preparation-steps-for-on-premises-mobile-device-management.md)
-# [Deploy and use](deploy-use/hybrid-mobile-device-management.md)
+# [Deploy and use](deploy-use/deploy-use-mdm.md)
 ## [Hybrid MDM setup](deploy-use/setup-hybrid-mdm.md)
 ## [Enroll company-owned devices](deploy-use/enroll-company-owned-devices.md)
 ### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
@@ -29,3 +29,4 @@
 ## [Terms and Conditions](deploy-use/terms-and-conditions.md)
 ## [Retire, lock and reset](deploy-use/wipe-lock-reset-devices.md)
 ## [EAS device management](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
+

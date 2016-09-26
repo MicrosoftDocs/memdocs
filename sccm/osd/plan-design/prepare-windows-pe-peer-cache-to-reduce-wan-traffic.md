@@ -1,7 +1,7 @@
----
+﻿---
 title: "Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -148,3 +148,4 @@ When you deploy a new operating system in System Center Configuration Manager, c
   
 ## See Also  
  [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
+

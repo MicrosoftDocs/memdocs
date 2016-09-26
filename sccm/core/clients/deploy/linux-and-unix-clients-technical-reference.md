@@ -1,7 +1,7 @@
----
+ï»¿---
 title: "UNIX/Linux client component services and commands | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,7 +29,8 @@ author: Mtillman
 |----------------------|--------------|  
 |Universal Agent<br /><br /> RHEL 4 and SLES 9|Start: **/etc/init d/ccmexecd start**<br /><br /> Stop: **/etc/init d/ccmexecd stop**<br /><br /> Restart: **/etc/init d/ccmexecd restart**|  
 |Solaris 9|Start: **/etc/init d/ccmexecd start**<br /><br /> Stop: **/etc/init d/ccmexecd stop**<br /><br /> Restart: **/etc/init d/ccmexecd restart**|  
-|Solaris 10|Start:<br /><br /> **svcadm enable –s svc:/application/management/omiserver**<br /><br /> **svcadm enable –s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable –s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable –s svc:/application/management/omiserver**|  
-|Solaris 11|Start:<br /><br /> **svcadm enable –s svc:/application/management/omiserver**<br /><br /> **svcadm enable –s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable –s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable –s svc:/application/management/omiserver**|  
-|AIX|Start:<br /><br /> **startsrc –s omiserver**<br /><br /> **startsrc –s ccmexec**<br /><br /> Stop:<br /><br /> **stopsrc –s ccmexec**<br /><br /> **stopsrc –s omiserver**|  
+|Solaris 10|Start:<br /><br /> **svcadm enable -s svc:/application/management/omiserver**<br /><br /> **svcadm enable -s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable -s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable -s svc:/application/management/omiserver**|  
+|Solaris 11|Start:<br /><br /> **svcadm enable -s svc:/application/management/omiserver**<br /><br /> **svcadm enable -s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable -s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable -s svc:/application/management/omiserver**|  
+|AIX|Start:<br /><br /> **startsrc -s omiserver**<br /><br /> **startsrc -s ccmexec**<br /><br /> Stop:<br /><br /> **stopsrc -s ccmexec**<br /><br /> **stopsrc -s omiserver**|  
 |HP-UX|Start: **/sbin/init.d/ccmexecd start**<br /><br /> Stop: **/sbin/init.d/ccmexecd stop**<br /><br /> Restart: **/sbin/init.d/ccmexecd restart**|  
+

@@ -1,7 +1,7 @@
 ---
 title: "Create and deploy an application | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,9 +64,9 @@ If you are already familiar with Configuration Manager applications, you can ski
   
          ![App management wizard general page](../../apps/get-started/media/App-management-wizard-general-page.png "App)  
   
-5.  Click **Next**. On the **Import Information** page of the wizard, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, click **Next** again.  
+5.  Click **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, click **Next** again.  
   
-6.  On the **General Information** page of the wizard, you can supply further information about the application to help you sort and locate it in the Configuration Manager console.  
+6.  On the **General Information** page, you can supply further information about the application to help you sort and locate it in the Configuration Manager console.  
   
      Additionally, the Installation program field lets you specify the full command line that will be used to install the application on PCs. You can edit this to add your own properties (for example **/q** for an unattended install).  
   
@@ -77,7 +77,7 @@ If you are already familiar with Configuration Manager applications, you can ski
   
      ![App management wizard general information page](../../apps/get-started/media/App-management-wizard-general-information-page.png "App)  
   
-7.  Click **Next**. On the Summary page of the wizard, you can confirm your application settings, then complete the wizard.  
+7.  Click **Next**. On the Summary page, you can confirm your application settings, then complete the wizard.  
   
  You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then click **Applications**. For this example, you'll see:  
   
@@ -162,16 +162,16 @@ If you are already familiar with Configuration Manager applications, you can ski
   
 4.  On the **General** page of the **Deploy Software Wizard**, click **Browse** to select the **All Systems** device collection.  
   
-5.  On the **Content** page of the wizard, check that the distribution point from which you want PCs to install the application is selected.  
+5.  On the **Content** page, check that the distribution point from which you want PCs to install the application is selected.  
   
-6.  On the **Deployment Settings** page of the wizard, ensure that the deployment action is set to **Install**, and the deployment purpose is set to **Required**.  
+6.  On the **Deployment Settings** page, ensure that the deployment action is set to **Install**, and the deployment purpose is set to **Required**.  
   
     > [!TIP]  
     >  By setting the deployment purpose to **Required**, you ensure that the application is installed on PCs that meet the requirements you set. If you set this value to **Available**, then users can install the application on demand from Software Center.  
   
 7.  On the **Scheduling** page, you can configure when the application will be installed. For this example, select **As soon as possible after the available time**.  
   
-8.  On the **User Experience** page of the wizard, click **Next** to accept the default values.  
+8.  On the **User Experience** page, click **Next** to accept the default values.  
   
 9. Complete the wizard.  
   
@@ -210,3 +210,4 @@ If you are already familiar with Configuration Manager applications, you can ski
   
 ## See Also  
  [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)
+

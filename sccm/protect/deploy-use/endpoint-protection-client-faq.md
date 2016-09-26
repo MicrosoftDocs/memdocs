@@ -1,7 +1,7 @@
----
+﻿---
 title: "Endpoint Protection client frequently asked questions | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-02
+ms.date: 06/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -258,3 +258,4 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
  [Troubleshooting Windows Defender or Endpoint Protection client](../../protect/deploy-use/troubleshoot-windows-defender-endpoint-protection-client.md)   
 
  [Endpoint Protection Client Help](../../protect/deploy-use/endpoint-protection-client-help.md)
+

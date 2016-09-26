@@ -1,7 +1,7 @@
----
+﻿---
 title: "Preprovision BitLocker in Windows PE with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -53,3 +53,4 @@ The **Pre-provision BitLocker** task sequence step in System Center Configuratio
   
 ## See Also  
  [Operating system deployment technical reference for System Center Configuration Manager](../Topic/Operating%20system%20deployment%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

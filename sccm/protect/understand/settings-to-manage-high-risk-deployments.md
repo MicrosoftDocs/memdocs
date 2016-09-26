@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage high-risk deployments | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,3 +49,4 @@ With System Center Configuration Manager you can configure site settings that wi
   
 ### See also  
  [Configure sites and hierarchies for System Center Configuration Manager](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
+

@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -352,3 +352,4 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
 ## Complete the wizard  
  On the **Summary** page of the Wizard, review the actions that will be taken, and then complete the wizard. The new configuration item is displayed in the **Configuration Items** node in the **Assets and Compliance** workspace.  
   
+

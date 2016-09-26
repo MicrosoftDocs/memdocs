@@ -1,7 +1,7 @@
----
+﻿---
 title: "Online Documentation for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-01-13
+ms.date: 01/13/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -96,3 +96,4 @@ you can view the on-line documentation  in the following guides on TechNet:
 **Accessibility:** See the online topic, [Accessibility Features of Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=258586), for information about the features, products, and services that make Configuration Manager more accessible for people with disabilities.  
 
 **Downloadable documentation:** You can download a [copy of this technical documentation from the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=253643). Use the on-line TechNet library for the most up-to-date information.
+

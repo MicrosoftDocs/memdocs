@@ -1,7 +1,7 @@
----
+﻿---
 title: "Schema extensions for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -137,3 +137,4 @@ When you extend the schema for System Center Configuration Manager, the followin
 > -   Class: cn=MS-SMS-Server-Locator-Point  
 
 You can ensure the preceding lists are current by viewing the **ConfigMgr_ad_schema.LDF** file from the **\SMSSETUP\BIN\x64** folder of the System Center Configuration Manager installation media.  
+

@@ -1,7 +1,7 @@
 ---
 title: "Revise and supersede applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-26
+ms.date: 05/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,9 +23,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 ### To display an application revision history  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, click **Applications**, and then click the application that you want.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**, and then click the application that you want.  
   
 3.  On the **Home** tab, in the **Application** group, click **Revision History** to open the **Application Revision History** dialog box.  
   
@@ -91,11 +89,9 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 ### Specify a supersedence relationship  
   
-1.  In the Configuration Manager console, click **Software Library**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**, and then click the application that will supersede another application.  
   
-2.  In the **Software Library** workspace, expand **Application Management**, click **Applications**, and then click the application that will supersede another application.  
-  
-3.  On the **Home** tab, in the **Properties** group, click **Properties** to open the *<Application Name\>***Properties** dialog box.  
+3.  On the **Home** tab, in the **Properties** group, click **Properties** to open the application name **Properties** dialog box.  
   
 4.  On the **Supersedence** tab of the *<Application Name\>***Properties** dialog box, click **Add**.  
   
@@ -124,3 +120,4 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 5.  Review the list of applications that supersede the selected application, then click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
+

@@ -1,7 +1,7 @@
- ---
+﻿ ---
 title: "Configuring certificate profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-07
+ms.date: 04/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -189,3 +189,4 @@ Before you can use System Center Configuration Manager to enroll certificates on
 ### See also  
 
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

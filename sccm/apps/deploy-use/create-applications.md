@@ -1,7 +1,7 @@
 ---
 title: "Create applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-09
+ms.date: 05/09/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -397,7 +397,7 @@ A System Center Configuration Manager application contains the files and informa
   
 1.  On the **Summary** page of the Create Deployment Type Wizard, review the actions that the wizard will take. Click **Next** to create the deployment type, or click **Previous** to go back and change the settings for the deployment type.  
   
-2.  After the **Progress** page of the wizard finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
+2.  After the **Progress** page finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
   
 3.  If you started the Create Deployment Type Wizard from the Create Application Wizard, you will return to the **Deployment Types** page of the Create Application Wizard.  
   
@@ -453,9 +453,9 @@ A System Center Configuration Manager application contains the files and informa
   
 4.  On the **General** page of the **Import Application Wizard**, click **Browse** and then specify a UNC path to the zip file that contains the application you want to import.  
   
-5.  On the **File Content** page of the wizard, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
+5.  On the **File Content** page, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
   
-6.  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard.  
+6.  On the **Summary** page, review the actions to be taken, and then complete the wizard.  
   
  The new application appears in the **Applications** node.  
   
@@ -482,3 +482,4 @@ A System Center Configuration Manager application contains the files and informa
 |**Mac OS X**|Creates a deployment type for Mac computers from a .cmmac file that you have created by using the CMAppUtil tool.<br /><br /> Applies to Mac computers running the Configuration Manager client only.|  
 |**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br><br>- You can only upload a single file with the extension .msi.<br /><br /> - The file's product code and product version are used for app detection.<br /><br /> - The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - App updates are supported when the MSI product code of each version is the same.|  
+

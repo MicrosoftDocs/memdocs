@@ -1,7 +1,7 @@
 ---
 title: "Windows Hello for Business settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
   
 -   You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
   
--   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+-   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).  
  
 <!-- [cmshort](../../apps/deploy-use/includes/cmshort_md.md)] for domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#BKMK_Dom), below.!-->
 <!-- When you are using Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.-->    
@@ -31,9 +31,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
  
 ## Configure Windows Hello for Business settings (hybrid)  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, expand **Cloud Services**, and then click **Microsoft Intune Subscriptions**.  
+1.  In the Configuration Manager console, click **Administration** > **Cloud Services** > **Microsoft Intune Subscriptions**.  
   
 3.  From the list, select your Microsoft Intune subscription and then, in the **Home** tab, in the **Subscription** group, click **Configure Platforms** > **Windows (MDM)**.  
   
@@ -107,7 +105,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 
 <!--In the admin console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  -->
 
-<!-- ![Hello for Business settings](../../protect/deploy-use/media/Hello-for-Business-settings.png)  -->
+<!-- ![Windows Hello for Business settings](../../protect/deploy-use/media/Hello-for-Business-settings.png)  -->
    
 <!-- ### Configure Windows Hello for Business with Group Policy in Active Directory  -->
 
@@ -151,10 +149,11 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
   
 -   In the certificate profile, select a template that uses Smart Card logon EKU.  
   
- For more information, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+ For more information, see [Certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).  
   
 ### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)
  
  [Manage identity verification using Windows Hello for Business](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport).  
  
+

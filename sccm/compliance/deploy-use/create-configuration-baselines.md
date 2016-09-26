@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create configuration baselines | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -62,3 +62,4 @@ Configuration baselines in System Center Configuration Manager contain predefine
   
 9. Click **OK** to close the **Create Configuration Baseline** dialog box and to create the configuration baseline.  
   
+

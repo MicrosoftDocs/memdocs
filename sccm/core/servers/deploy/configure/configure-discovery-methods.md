@@ -1,7 +1,7 @@
----
+﻿---
 title: "Configure discovery methods for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-28
+ms.date: 04/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -434,3 +434,4 @@ You configure discovery methods to run at a  System Center Configuration Manager
     -   Description: **This component started**  
 
      This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+

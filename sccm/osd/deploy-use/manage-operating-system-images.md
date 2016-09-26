@@ -1,7 +1,7 @@
----
+﻿---
 title: "Manage operating system images with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-21
+ms.date: 04/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -141,3 +141,4 @@ For the steps to create a customized operating system image, see [Customize oper
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

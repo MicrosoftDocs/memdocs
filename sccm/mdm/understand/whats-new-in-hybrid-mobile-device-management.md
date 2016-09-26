@@ -1,7 +1,7 @@
----
+﻿---
 title: "What&#39;s new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
-ms.date: 2016-08-10
+ms.date: 08/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -344,3 +344,4 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
   
 ## See Also  
  [What's new for MDM in System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
+

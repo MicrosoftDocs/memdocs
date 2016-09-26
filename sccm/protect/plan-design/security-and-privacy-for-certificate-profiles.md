@@ -1,7 +1,7 @@
----
+﻿---
 title: "Certificate profile security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-07
+ms.date: 04/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,3 +43,4 @@ This topic contains security and privacy information for certificate profiles in
 ### See also  
 
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

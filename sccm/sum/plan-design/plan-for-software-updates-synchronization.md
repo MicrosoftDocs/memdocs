@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Plan for software updates synchronization | Configuration Manager
@@ -133,3 +133,4 @@ To successfully complete the synchronization, the software update point must hav
 
 > [!IMPORTANT]  
 >  It is important that you select all of the summary details languages that you will need in your Configuration Manager hierarchy. When the software update point on top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that is retrieved. If you modify the summary details languages after synchronization ran at least one time, the software updates metadata is retrieved for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized are not updated with new metadata for the modified languages unless there is a change to the software update on the synchronization source.  
+

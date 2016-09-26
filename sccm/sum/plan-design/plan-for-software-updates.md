@@ -1,7 +1,7 @@
----
+﻿---
 title: "Plan for software updates | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -80,6 +80,11 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 
 
+<<<<<<< HEAD
+=======
+##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
+ The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
+>>>>>>> 072572c758b15aae9981f7e913acf6802867e3b4
 
 
 ##  <a name="BKMK_Settings"></a> Plan for settings associated with software updates  
@@ -101,3 +106,27 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 ###  <a name="BKMK_ClientCache"></a> Client cache setting  
  The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually initiates the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  
+<<<<<<< HEAD
+=======
+
+##  <a name="BKMK_MaintenanceWindow"></a> Plan for a Software Updates Maintenance Window  
+ You can add a maintenance window dedicated for software updates installation. This lets you configure a general maintenance window and a different maintenance window for software updates. When a general maintenance window and software updates maintenance window are both configured, clients install software updates only during the software updates maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+
+##  <a name="BKMK_RestartOptions"></a> Restart options for Windows 10 clients after software update installation
+When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed.
+
+Beginning in Configuration Manager version 1606, the option to **Update and Restart**, and **Update and Shutdown** is available on Windows 10 computers in the Windows Power options whenever there is a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog will not display after the computer restarts.
+
+In previous versions of Configuration Manager, when a restart is pending for Windows 8 and later computers, and when you shut down or restart the computer using the Windows Power options (instead of from the restart dialog), the restart dialog remains after the computer restarts and the computer will still need to restart at the configured deadline.
+
+## Supplemental Topics for Planning Software Updates  
+ Use the following topics to plan for software updates in Configuration Manager.  
+
+-   [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md)  
+
+-   [Best practices for software updates in System Center Configuration Manager](../../sum/plan-design/software-updates-best-practices.md)  
+
+## See Also  
+ [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+
+>>>>>>> 072572c758b15aae9981f7e913acf6802867e3b4

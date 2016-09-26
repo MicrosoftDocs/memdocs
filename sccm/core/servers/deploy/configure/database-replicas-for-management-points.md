@@ -1,7 +1,7 @@
----
+﻿---
 title: "Database replicas for management points for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-26
+ms.date: 04/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -152,10 +152,10 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(.�)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+    6.  On the **Distribution Agent Security** page, click the properties button **(...)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
-        >  The properties button, **(�.)**, is in the fourth column of the display box.  
+        >  The properties button, **(...)**, is in the fourth column of the display box.  
 
         **Security settings:**  
 
@@ -373,7 +373,7 @@ In addition to configuring the management point to use the database replica serv
 
 ##### To configure remote management points to use the self-signed certificate of the database replica server  
 
-1.  Perform the following steps on the database replica server to export the server�s self-signed certificate:  
+1.  Perform the following steps on the database replica server to export the server's self-signed certificate:  
 
     1.  Click **Start**, click **Run**, and type **mmc.exe**. In the empty console, click **File**, and then click **Add/Remove Snap-in**.  
 
@@ -500,3 +500,4 @@ To support client notification with a database replica for a management point, y
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 
 5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.  
+

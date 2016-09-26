@@ -1,7 +1,7 @@
----
+﻿---
 title: "Reporting in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,3 +35,4 @@ Reporting in System Center Configuration Manager provides a set of tools and res
   
 ## See Also  
  [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)
+

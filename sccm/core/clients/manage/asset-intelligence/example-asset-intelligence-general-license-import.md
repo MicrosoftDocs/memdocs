@@ -1,7 +1,7 @@
----
+﻿---
 title: "Example Asset Intelligence general license import file | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,3 +30,4 @@ The example information in this topic can be used to create a sample general sof
 |Software title 8|Software publisher|1.08|English|1|Purchase number|Reseller name|10/10/2010|0|10/10/2012|Comment|  
 |Software title 9|Software publisher|1.09|English|1|Purchase number|Reseller name|10/10/2010|0|10/10/2012|Comment|  
 |Software title 10|Software publisher|1.10|English|1|Purchase number|Reseller name|10/10/2010|0|10/10/2012|Comment|  
+

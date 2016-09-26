@@ -1,7 +1,7 @@
 ---
 title: "Manage Internet access using managed browser policies | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,9 +34,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
   
 ## Create a managed browser policy  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Application Management Policies**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Application Management Policies**.  
   
 3.  In the **Home** tab, in the **Create** group, click **Create Application Management Policy**.  
   
@@ -145,3 +143,4 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
   
 ## See Also  
  [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
+

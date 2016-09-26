@@ -1,7 +1,7 @@
----
+﻿---
 title: "Link users and devices with user device affinity | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -134,3 +134,4 @@ User device affinity in System Center Configuration Manager associates a user wi
   
 4.  In the **Manage User Device Affinity Requests** dialog box, select an affinity request, then click **Approve** or **Reject**.  
   
+

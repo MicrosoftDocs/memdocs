@@ -1,7 +1,7 @@
----
+﻿---
 title: "Create a task sequence for non-operating system deployments with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -45,3 +45,4 @@ Task sequences in System Center Configuration Manager are used to automate a var
   
 ## See Also  
  [Create a custom task sequence with System Center Configuration Manager](../../osd/deploy-use/create-a-custom-task-sequence.md)
+

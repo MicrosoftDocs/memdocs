@@ -1,4 +1,4 @@
----
+﻿---
 # required metadata
 
 title: Deploy software updates | Configuration Manager
@@ -75,3 +75,4 @@ After you create an ADR, you can add additional deployments to the rule. This ca
 For detailed steps, see [Automatically deploy software updates](automatically-deploy-software-updates.md)
 
  <!--- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  --->
+
