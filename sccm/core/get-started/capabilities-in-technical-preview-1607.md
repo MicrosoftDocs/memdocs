@@ -1,6 +1,6 @@
 ﻿---
 title: "Capabilities in Technical Preview 1607 for System Center Configuration Manager"
-description: "This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1607."
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1607."
 ms.custom: na
 ms.date: 08/01/2016
 ms.prod: configuration-manager
