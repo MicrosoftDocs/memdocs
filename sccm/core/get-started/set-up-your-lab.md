@@ -1,6 +1,6 @@
 ﻿---
 title: "Set up your System Center Configuration Manager lab"
-description: "This article describes how to set up a lab for evaluating Configuration Manager with simulated real-life activities."
+description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
