@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Packages and programs | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/08/2016
@@ -71,7 +71,7 @@ Packages can use some new features of Configuration Manager, including distribut
   
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Standard Program**, and then click **Next**.  
   
-    2.  On the **Standard Program** page of the Wizard, specify the following information:  
+    2.  On the **Standard Program** page, specify the following information:  
   
         -   **Name:** Specify a name for the program with a maximum of 50 characters.  
   
@@ -138,9 +138,9 @@ Packages can use some new features of Configuration Manager, including distribut
   
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then click **Next**.  
   
-    2.  On the **Program for Device** page of the Wizard, specify the following information:  
+    2.  On the **Program for Device** page, specify the following:  
   
-        -   **Name** - Specify a name for the program with a maximum of 50 characters.  
+        -   **Name** - Specify a name for the program; maximum 50 characters.  
   
             > [!NOTE]  
             >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
@@ -155,7 +155,7 @@ Packages can use some new features of Configuration Manager, including distribut
   
         -   **Run command line from this folder** – Select this option to specify a different folder from which to run the program.  
   
-    3.  On the **Requirements** page of the wizard, specify the following information:  
+    3.  On the **Requirements** page, specify the following:  
   
         -   **Estimated disk space** - Specify the amount of disk space required for the software. This will be displayed to users of mobile devices before they install the program.  
   
@@ -165,7 +165,7 @@ Packages can use some new features of Configuration Manager, including distribut
   
     4.  Click **Next**.  
   
-7.  On the **Summary** page of the wizard, review the actions that will be taken, then complete the wizard.  
+7.  On the **Summary** page, review the actions that will be taken, then complete the wizard.  
   
  Verify that the new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
   
@@ -177,11 +177,11 @@ Packages can use some new features of Configuration Manager, including distribut
   
 4.  On the **Package Definition** page of the Create Package from Definition Wizard, choose an existing package definition file, or click **Browse** to open a new package definition file. After you have specified a new package definition file, select it from the **Package definition** list, and then click **Next**.  
   
-5.  On the **Source Files** page of the wizard, specify information about any required source files for the package and program, and then click **Next**.  
+5.  On the **Source Files** page, specify information about any required source files for the package and program, and then click **Next**.  
   
-6.  If the package requires source files, on the **Source Folder** page of the wizard, specify the location from which the source files are to be obtained, and then click **Next**.  
+6.  If the package requires source files, on the **Source Folder** page, specify the location from which the source files are to be obtained, and then click **Next**.  
   
-7.  On the **Summary** page of the wizard, review the actions that will be taken and then complete the wizard. The new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
+7.  On the **Summary** page, review the actions that will be taken and then complete the wizard. The new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
   
  For more information about package definition files, see [Information about the package definition file format](#BKMK_PDF) in this topic.  
   
@@ -195,9 +195,9 @@ Packages can use some new features of Configuration Manager, including distribut
   
      Select **Use default distribution point groups associated to this collection** if you want to store the package content on the collections default distribution point group. If you did not associate the selected collection with a distribution point group, this option will be unavailable.  
   
-5.  On the **Content** page of the wizard, click **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
+5.  On the **Content** page, click **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
   
-6.  On the **Deployment Settings** page of the Wizard, choose a purpose for this deployment, and specify options for wake-up packets, and metered connections:  
+6.  On the **Deployment Settings** page, choose a purpose for this deployment, and specify options for wake-up packets, and metered connections:  
   
     -   **Purpose** - Choose from:  
   
@@ -212,7 +212,7 @@ Packages can use some new features of Configuration Manager, including distribut
     > [!NOTE]  
     >  The **Pre-deploy software to the user's primary device** option is not available when you deploy a package and program.  
   
-7.  On the **Scheduling** page of the wizard, configure when this package and program will be deployed or made available to client devices.  
+7.  On the **Scheduling** page, configure when this package and program will be deployed or made available to client devices.  
   
      The options on this page will vary depending on whether the deployment action is set to **Available** or **Required**.  
   
@@ -225,7 +225,7 @@ Packages can use some new features of Configuration Manager, including distribut
     |Rerun if failed previous attempt|The program will be rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
     |Rerun if succeeded on previous attempt|The program will be rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
   
-9. On the **User Experience** page of the wizard, specify the following information:  
+9. On the **User Experience** page, specify the following information:  
   
     -   **Allow users to run the program independently of assignments** – If enabled, users can install this software from Software Center regardless of any scheduled installation time.  
   
@@ -238,7 +238,7 @@ Packages can use some new features of Configuration Manager, including distribut
         > [!NOTE]  
         >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications with System Center Configuration Manager](../../apps/get-started/creating-windows-embedded-applications.md).  
   
-10. On the **Distribution Points** page of the wizard, specify the following information:  
+10. On the **Distribution Points** page, specify the following information:  
   
     -   **Deployment options** – Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  
   
@@ -246,7 +246,7 @@ Packages can use some new features of Configuration Manager, including distribut
   
     -   **Allow clients to use a fallback source location for content** – If enabled, clients can search other distribution points in the hierarchy for required content if this is not available on the specified distribution point or distribution point groups.  
   
-11. On the **Summary** page of the wizard, review the actions that will be taken and then complete the wizard.  
+11. On the **Summary** page, review the actions that will be taken and then complete the wizard.  
   
      You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [How to monitor packages and programs](#BKMK_Monitor) in this topic.  
   

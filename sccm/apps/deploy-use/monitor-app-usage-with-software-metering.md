@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor app usage with software metering | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -16,15 +16,13 @@ author: robstackmsft
 ---
 
 # Software metering in System Center Configuration Manager
-This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering. For an example scenario about how to use software metering, see [Monitor app usage with software metering in System Center Configuration Manager](../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
-  
-##  Prerequisites for software metering  
-Software metering has no external dependencies, only dependencies within the product.  
-  
+This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering.
+
 > [!IMPORTANT]  
 >  Software metering is used to monitor Windows PC desktop apps with a filename ending in **.exe**. Software metering does not monitor modern Windows apps (such as those used by Windows 8).  
   
-### Configuration Manager dependencies  
+##  Prerequisites for software metering  
+Software metering has no external dependencies, only dependencies within the product.  
   
 |Dependency|More information|  
 |----------------|----------------------|  
@@ -128,9 +126,9 @@ Software metering has no external dependencies, only dependencies within the pro
   
  Additionally, you can create queries and collections based on the data stored in the Configuration Manager database by software metering.  
   
- For more information about collections in Configuration Manager, see [Collections technical reference for System Center Configuration Manager](../../core/clients/manage/collections/collections-technical-reference.md).  
+ For more information about collections in Configuration Manager, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
   
- For more information about queries in Configuration Manager, see [Queries technical reference for System Center Configuration Manager](../../core/servers/manage/queries-technical-reference.md).  
+ For more information about queries in Configuration Manager, see [Introduction to queries ](/sccm/core/servers/manage/introduction-to-queries).  
   
 ##  Security and privacy for software metering  
   
@@ -159,17 +157,15 @@ Software metering has no external dependencies, only dependencies within the pro
   
  Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify which users use the legacy application.  
   
- John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the actions in the following table:  
-  
-|Process|Details|  
-|-------------|-------------|  
-|John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.|[Prerequisites for software metering](../../apps/deploy-use/software-metering.md#BKMK_Pre)|  
-|John configures the default client settings for software metering:<br /><br /> He enables software metering and uses the default data collection schedule of once every seven days.<br /><br /> He configures software inventory to inventory files that have the extension .exe by configuring the software inventory client setting **Inventory these file types**.<br /><br /> He adds a new software metering rule, named **woodgrove.exe**, to monitor the legacy application.|[Configure software metering](../../apps/deploy-use/software-metering.md#BKMK_Config)<br /><br /> [Create software metering rules](../../apps/deploy-use/software-metering.md#BKMK_Create)|  
-|John waits for seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.||  
-|John uses the Configuration Manager report **Install base for all metered software programs** to see which computers have the application **woodgrove.exe** loaded.|[Monitor software metering](../../apps/deploy-use/software-metering.md#BKMK_Monitor)|  
-|After six months, John runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.|[Monitor software metering](../../apps/deploy-use/software-metering.md#BKMK_Monitor)|  
-|John makes some further checks to confirm that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br /><br /> John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.|No additional information.|  
-|John continues to check the software metering reports weekly and takes remedial action if necessary.|[Monitor software metering](../../apps/deploy-use/software-metering.md#BKMK_Monitor)|  
+ John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
+
+- John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
+- John configures the default client settings for software metering:<br>He enables software metering and uses the default data collection schedule of once every seven days.<br>He configures software inventory to inventory files that have the extension .exe by configuring the software inventory client setting **Inventory these file types**.<br>He adds a new software metering rule, named **woodgrove.exe**, to monitor the legacy application.  
+- John waits for seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.
+- John uses the Configuration Manager report **Install base for all metered software programs** to see which computers have the application **woodgrove.exe** loaded.
+- After six months, John runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.
+- John makes some further checks to confirm that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
+- John continues to check the software metering reports weekly and takes remedial action if necessary.  
   
  As a result of this course of action, IT support and licensing costs are reduced by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.  
   

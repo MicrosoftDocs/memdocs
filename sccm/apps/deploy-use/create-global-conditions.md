@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create global conditions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -43,7 +43,7 @@ In System Center Configuration Manager, global conditions are rules that represe
 ## Configure rules for the global condition  
  The procedure for defining the global condition rules is different depending on whether you are configuring a setting or an expression. Use the applicable procedure here to configure a setting or an expression for the global condition.  
   
-#### To configure a setting for the global condition  
+### To configure a setting for the global condition  
   
 1.  In the **Condition Type** drop-down list, choose **Setting**.  
   
@@ -186,7 +186,7 @@ In System Center Configuration Manager, global conditions are rules that represe
   
 5.  Click **OK** to save the rule and to close the **Create Global Condition** dialog box.  
   
-#### To configure an expression for the global condition  
+### Configure an expression for the global condition  
   
 1.  In the **Condition Type** drop-down list, choose **Expression**.  
   
@@ -204,6 +204,4 @@ In System Center Configuration Manager, global conditions are rules that represe
   
 8.  When you have finished adding clauses to the global condition, click **OK** to close the **Create Global Condition** dialog box and to save the global condition.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
 

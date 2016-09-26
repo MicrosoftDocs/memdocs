@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create Linux and UNIX server applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -52,9 +52,9 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  When the Configuration Manager client for Linux and UNIX receives and runs a deployment, it generates status messages. You can view these status messages in the Configuration Manager console, or by using reports to monitor the deployment status.  
   
- For information about how to use packages and programs, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
+ For information about how to use packages and programs, see [Packages and programs](../../apps/deploy-use/packages-and-programs.md).  
   
-##  Configuring packages, programs, and deployments for Linux and UNIX servers  
+##  Configure packages, programs, and deployments for Linux and UNIX servers  
  You can create and deploy packages and programs by using the options that are available by default in the Configuration Manager console. The client does not require any unique configurations.  
   
  Use the information in the following sections to configure packages and programs as well as deployments.  
@@ -115,7 +115,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  For more information about content location, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
   
- For more information about how to create a deployment, see [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
+ For more information about how to create a deployment, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
   
 ##  Manage network bandwidth for software downloads from distribution points  
  The Linux and UNIX client supports network bandwidth controls when downloading software from a distribution point.  

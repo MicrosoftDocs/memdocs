@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage iOS Activation Lock | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
@@ -62,10 +62,10 @@ The business benefits of this for corporate-owned devices are:
 
 You use Configuration Manager compliance settings to create and deploy a configuration item of the type **iOS and Mac OS X** to enable Activation Lock on supervised devices:
 
-1. Use the information in the topic [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](https://technet.microsoft.com/library/mt629339.aspx) to create a configuration item of the type **iOS and Mac OS X**.
+1. Use the information in the topic [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md) to create a configuration item of the type **iOS and Mac OS X**.
 2. On the **System Security** page of the Create Configuration Item Wizard, configure the setting **Allow Activation Lock (supervised mode only)** to **Allowed**.
-3. [Add the configuration item to a configuration baseline](https://technet.microsoft.com/library/mt629337.aspx).
-4. [Deploy this configuration baseline](https://technet.microsoft.com/library/mt629332.aspx) to a collection containing the iOS devices for which you want to enable Activation Lock.
+3. [Add the configuration item to a configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines).
+4. [Deploy this configuration baseline](/sccm/compliance/deploy-use/deploy-configuration-baselines) to a collection containing the iOS devices for which you want to enable Activation Lock.
 
 > [!IMPORTANT]
 > Ensure you are in physical possession of the device before you follow this procedure. If you do not, the Activation Lock will be bypassed and whoever is in possession of the device will have full access to it, allowing them to turn off Find My iPhone, erase the device, or reactivate it.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Common tasks for managing compliance on devices with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -24,22 +24,20 @@ The scenarios in this topic give you an introduction to using System Center Conf
 ## General information for each scenario  
  In each scenario, you'll create a configuration item that performs a specific task. open the Create Configuration Item Wizard, use the following steps:  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
 4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
   
-     ![Shows general page of the create configuration item wizard.](../../compliance/plan-design/media/Compliance-Settings-Wizard---1.png "Compliance)  
+     ![Shows general page of the create configuration item wizard.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png "Compliance)  
   
 ## Scenarios for Windows 10 devices managed with the Configuration Manager client  
   
 ### Scenario: Disable the use of Bluetooth on Windows 10 devices  
  In this scenario, your security department have identified the Bluetooth capability on devices as a means that could be used to transmit sensitive corporate information outside the company. You have recently upgraded all of your PCs to Windows 10 and decide to disable the Bluetooth capability on these devices.  
   
-##### Steps  
+#### Steps  
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows 10** configuration item type, then click **Next**.  
   
@@ -68,8 +66,6 @@ The scenarios in this topic give you an introduction to using System Center Conf
  In this scenario, you discover that an important line of business app is not running correctly on some computers you manage that run Windows 8.1. After investigation, you discover that this is because a registry key named **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** is set to a value of **0** on some computers. For the line of business app to run successfully, this value must be set to **1**.  
   
  In this procedure, you'll create a configuration item that monitors for, and automatically remediates any incorrect registry key values found.  
-  
-##### Steps  
   
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows Desktops and Servers (custom)** configuration item type, then click **Next**.  
   
@@ -107,6 +103,4 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
  You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
   
-## See Also  
- [Common tasks for managing compliance with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-managing-compliance.md)
 

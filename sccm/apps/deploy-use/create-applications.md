@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/09/2016
@@ -397,7 +397,7 @@ A System Center Configuration Manager application contains the files and informa
   
 1.  On the **Summary** page of the Create Deployment Type Wizard, review the actions that the wizard will take. Click **Next** to create the deployment type, or click **Previous** to go back and change the settings for the deployment type.  
   
-2.  After the **Progress** page of the wizard finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
+2.  After the **Progress** page finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
   
 3.  If you started the Create Deployment Type Wizard from the Create Application Wizard, you will return to the **Deployment Types** page of the Create Application Wizard.  
   
@@ -453,9 +453,9 @@ A System Center Configuration Manager application contains the files and informa
   
 4.  On the **General** page of the **Import Application Wizard**, click **Browse** and then specify a UNC path to the zip file that contains the application you want to import.  
   
-5.  On the **File Content** page of the wizard, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
+5.  On the **File Content** page, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
   
-6.  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard.  
+6.  On the **Summary** page, review the actions to be taken, and then complete the wizard.  
   
  The new application appears in the **Applications** node.  
   
