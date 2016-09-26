@@ -1,5 +1,6 @@
 ---
 title: "Planning a source hierarchy strategy in System Center Configuration Manager"
+description: ""
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -103,4 +104,3 @@ For more information about configuring a source hierarchy, see [Configuring sour
  To stop gathering data from each source site, you must perform the **Stop Gathering Data** action on the bottom-tier source sites, and then repeat the process at each parent site. The top-level site of the source hierarchy must be the last site on which you stop gathering data. You must stop data gathering at each child site before performing this action at a parent site. Typically, you only stop gathering data when you are ready to complete the migration process.  
 
  After you stop gathering data for a source site, information previously gathered about object and collections from that site remain available to use when you configure new migration jobs. However, you do not see any new objects or collections, or see changes that were made to existing objects. If you reconfigure the source site and begin gathering data again, you will see information and status about previously migrated objects.  
-

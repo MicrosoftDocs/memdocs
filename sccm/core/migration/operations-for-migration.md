@@ -1,5 +1,6 @@
 ---
 title: "Operations for migrating to System Center Configuration Manager"
+description: "Create and run jobs to migrate data and clients, and then to complete the migration process."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -233,5 +234,3 @@ For migration in System Center Configuration Manager, after you successfully gat
 8.  On the **Clean Up Migration Data** dialog box, from the **Source hierarchy** drop-down list, select the site code and site server of the top-level site of the source hierarchy, and then click **OK**.  
 
 9. Click **Yes** to complete the migration process for the source hierarchy.  
-  
-
