@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
 ms.date: 09/20/2016

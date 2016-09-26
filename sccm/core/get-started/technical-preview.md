@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Technical Preview for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/22/2016

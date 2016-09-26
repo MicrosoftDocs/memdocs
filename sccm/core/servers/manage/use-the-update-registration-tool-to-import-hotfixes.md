@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use the Update Registration Tool to import hotfixes to System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016

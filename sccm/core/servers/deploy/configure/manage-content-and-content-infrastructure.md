@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage content and content infrastructure for System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/02/2016

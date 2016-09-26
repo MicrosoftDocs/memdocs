@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Scenarios to deploy enterprise operating systems with System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

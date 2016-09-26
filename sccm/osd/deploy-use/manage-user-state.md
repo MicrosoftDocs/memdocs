@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage user state in System Center Configuration Manager"
 ms.custom: na
 ms.date: 02/02/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Wi-Fi profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 0201-03-31

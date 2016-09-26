@@ -1,4 +1,4 @@
-﻿---
+---
 title: "User affinity for hybrid managed devices in Configuration Manager"
 ms.custom: na
 ms.date: 07/26/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Custom locations for System Center Configuration Manager site database files"
 ms.custom: na
 ms.date: 07/22/2016

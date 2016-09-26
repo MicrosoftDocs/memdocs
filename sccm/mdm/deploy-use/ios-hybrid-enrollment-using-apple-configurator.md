@@ -1,4 +1,4 @@
-﻿---
+---
 title: "iOS hybrid enrollment using Apple Configurator with Configuration Manager"
 ms.custom: na
 ms.date: 06/07/2016

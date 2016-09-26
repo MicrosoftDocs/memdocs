@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Plan for and configure application management | System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/10/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Supported operating systems for clients and devices for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/19/2016

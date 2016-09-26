@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Service a server group"
 ms.custom: na
 ms.date: 07/22/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Design a hierarchy of sites for System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/15/2016

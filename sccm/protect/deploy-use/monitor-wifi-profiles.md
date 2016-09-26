@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor Email, Wi-Fi and VPN profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 09/21/2015

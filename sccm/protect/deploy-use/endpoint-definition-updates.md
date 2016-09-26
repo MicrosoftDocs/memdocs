@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 ms.custom: na

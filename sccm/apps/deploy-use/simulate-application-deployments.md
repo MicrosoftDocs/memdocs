@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Simulate application deployments | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

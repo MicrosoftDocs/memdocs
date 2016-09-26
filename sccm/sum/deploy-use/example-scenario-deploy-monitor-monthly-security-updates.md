@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft"
 ms.custom: na
 ms.date: 05/24/2016

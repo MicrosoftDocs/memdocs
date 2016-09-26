@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What’s new in System Center Configuration Manager incremental versions"
 ms.custom: na
 ms.date: 07/22/2016

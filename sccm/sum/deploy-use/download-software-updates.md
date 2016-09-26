@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Download software updates | Configuration Manager

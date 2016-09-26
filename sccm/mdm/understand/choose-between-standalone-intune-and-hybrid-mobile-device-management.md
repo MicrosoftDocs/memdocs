@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/01/2016

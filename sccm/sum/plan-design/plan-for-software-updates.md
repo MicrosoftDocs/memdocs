@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Plan for software updates | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/11/2016

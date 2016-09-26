@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use a task sequence to manage virtual hard disks in System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

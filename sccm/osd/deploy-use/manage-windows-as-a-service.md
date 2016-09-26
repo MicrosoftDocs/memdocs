@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage Windows as a service using System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016

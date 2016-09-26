@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Scenario: Using System Center Endpoint Protection to protect computers from malware | System Center Configuration Manager"
 ms.custom: na
 ms.date: 01/29/2016

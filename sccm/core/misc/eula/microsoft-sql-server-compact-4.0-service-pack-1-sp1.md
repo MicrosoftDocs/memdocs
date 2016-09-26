@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)"
 ms.custom: na
 ms.date: 08/23/2016

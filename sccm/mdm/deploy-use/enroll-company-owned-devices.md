@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Enroll company-owned devices for hybrid deployments with Configuration Manager"
 ms.custom: na
 ms.date: 07/27/2016

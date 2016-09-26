@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Set up your System Center Configuration Manager lab"
 ms.custom: na
 ms.date: 06/20/2016

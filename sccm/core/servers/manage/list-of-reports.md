@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List of reports in System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/06/2016

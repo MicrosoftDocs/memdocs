@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fundamental concepts for content management in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

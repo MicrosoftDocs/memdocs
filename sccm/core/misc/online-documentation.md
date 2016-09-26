@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Online Documentation for System Center Configuration Manager"
 ms.custom: na
 ms.date: 01/13/2016

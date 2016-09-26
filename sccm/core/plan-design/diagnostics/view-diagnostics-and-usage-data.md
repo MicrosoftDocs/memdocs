@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to view diagnostics and usage data for System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/25/2016

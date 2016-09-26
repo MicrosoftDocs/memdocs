@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Icons used for software updates in System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/29/2016

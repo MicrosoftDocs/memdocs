@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to remotely administer a Windows client computer by using System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "System Center Configuration Manager privacy statement"
 ms.custom: na
 ms.date: 12/08/2015

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Integration with Windows Update for Business in Windows 10 | Configuration Manager
 description:
 keywords:

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library"
 ms.custom: na
 ms.date: 09/19/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/27/2016

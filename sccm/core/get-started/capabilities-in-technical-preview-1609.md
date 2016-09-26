@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Capabilities in Technical Preview 1609 for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/25/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Supported operating systems for System Center Configuration Manager  site system servers"
 ms.custom: na
 ms.date: 07/22/2016

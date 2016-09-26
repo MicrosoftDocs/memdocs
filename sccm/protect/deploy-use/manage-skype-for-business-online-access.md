@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage Skype for Business Online access | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/20/2016

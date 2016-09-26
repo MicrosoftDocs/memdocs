@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Task sequence built-in variables in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

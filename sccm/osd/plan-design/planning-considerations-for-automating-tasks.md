@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Planning considerations for automating tasks in System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/06/2016

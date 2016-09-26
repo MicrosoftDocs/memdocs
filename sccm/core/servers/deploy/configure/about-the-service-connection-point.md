@@ -1,4 +1,4 @@
-﻿---
+---
 title: "About the service connection point in System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/27/2016

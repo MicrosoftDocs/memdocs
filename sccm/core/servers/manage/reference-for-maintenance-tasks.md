@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Reference for maintenance tasks for System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/29/2016

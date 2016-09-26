@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configure clients find management points DNS publishing | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
