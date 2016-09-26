@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What&#39;s new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
 ms.date: 08/10/2016

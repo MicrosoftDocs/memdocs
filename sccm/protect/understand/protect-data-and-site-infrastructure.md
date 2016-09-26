@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Protect data and site infrastructure | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

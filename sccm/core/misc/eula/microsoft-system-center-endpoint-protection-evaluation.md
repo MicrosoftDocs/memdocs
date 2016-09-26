@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION"
 ms.custom: na
 ms.date: 08/25/2016

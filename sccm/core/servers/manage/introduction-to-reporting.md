@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Introduction to reporting in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/27/2016

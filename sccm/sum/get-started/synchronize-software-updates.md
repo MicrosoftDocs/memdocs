@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Manage software updates synchronization | Configuration Manager

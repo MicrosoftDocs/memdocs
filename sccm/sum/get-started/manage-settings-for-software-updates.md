@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Overview of the software updates lifecycle | Configuration Manager

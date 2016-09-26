@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Support for System Center Configuration Manager current branch versions"
 ms.custom: na
 ms.date: 07/22/2016

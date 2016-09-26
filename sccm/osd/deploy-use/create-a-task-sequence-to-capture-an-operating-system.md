@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a task sequence to capture an operating system in System Center Configuration Manager"
 ms.custom: na
 ms.date: 01/28/2016

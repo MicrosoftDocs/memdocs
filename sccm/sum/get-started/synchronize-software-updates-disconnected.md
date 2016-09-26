@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Synchronize software updates from a disconnected software update point | Configuration Manager

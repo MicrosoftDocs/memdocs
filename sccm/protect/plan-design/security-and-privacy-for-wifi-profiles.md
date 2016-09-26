@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Wi-Fi profile security and privacy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

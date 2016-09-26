@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Evaluate System Center Configuration Manager by building your own lab environment"
 ms.custom: na
 ms.date: 06/20/2016

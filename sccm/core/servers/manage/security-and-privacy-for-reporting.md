@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Security and privacy for reporting in System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

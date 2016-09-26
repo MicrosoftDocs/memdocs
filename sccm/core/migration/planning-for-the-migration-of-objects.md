@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Planning for the migration of Configuration Manager objects to System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/22/2016

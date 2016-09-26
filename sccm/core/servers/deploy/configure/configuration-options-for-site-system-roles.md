@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configuration options for site system roles for System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/25/2016

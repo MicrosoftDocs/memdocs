@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Health attestation for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/10/2016

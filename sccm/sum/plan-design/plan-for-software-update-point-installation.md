@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Plan for software update point installation | Configuration Manager

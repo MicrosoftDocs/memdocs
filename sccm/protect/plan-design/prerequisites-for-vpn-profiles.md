@@ -1,4 +1,4 @@
-﻿---
+---
 title: "VPN profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/31/2016

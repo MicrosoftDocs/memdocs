@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Endpoint Protection client frequently asked questions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/02/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use a command line to install System Center Configuration Manager sites"
 ms.custom: na
 ms.date: 07/22/2016

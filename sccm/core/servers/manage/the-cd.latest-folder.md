@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The CD.Latest folder for System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

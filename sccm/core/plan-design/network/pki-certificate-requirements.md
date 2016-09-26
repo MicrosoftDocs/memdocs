@@ -1,4 +1,4 @@
-﻿---
+---
 title: "PKI certificate requirements for System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/04/2016

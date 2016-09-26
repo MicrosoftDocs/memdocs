@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Enroll devices with device enrollment manager with Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016

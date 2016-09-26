@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Manually deploy software updates | Configuration Manager

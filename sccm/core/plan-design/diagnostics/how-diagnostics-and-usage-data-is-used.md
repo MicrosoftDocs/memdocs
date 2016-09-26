@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How diagnostics and usage data is used for System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016

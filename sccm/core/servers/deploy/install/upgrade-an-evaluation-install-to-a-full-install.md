@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Upgrade an Evaluation install of System Center Configuration Manager to a Full install"
 ms.custom: na
 ms.date: 07/22/2016

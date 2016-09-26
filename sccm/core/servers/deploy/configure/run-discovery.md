@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Run discovery for System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/28/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MICROSOFT SQL SERVER 2012 NATIVE CLIENT"
 ms.custom: na
 ms.date: 08/23/2016

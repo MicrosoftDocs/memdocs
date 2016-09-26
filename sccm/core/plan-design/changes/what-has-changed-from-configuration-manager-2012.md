@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

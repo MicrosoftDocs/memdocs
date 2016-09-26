@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

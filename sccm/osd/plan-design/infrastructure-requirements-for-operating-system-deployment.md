@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Infrastructure requirements for operating system deployment in System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/11/2016

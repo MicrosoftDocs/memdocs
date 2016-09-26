@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use the Hotfix Installer to install updates for System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016

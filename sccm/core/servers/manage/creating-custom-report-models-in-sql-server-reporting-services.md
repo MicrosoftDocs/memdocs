@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services"
 ms.custom: na
 ms.date: 12/08/2015

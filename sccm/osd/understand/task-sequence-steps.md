@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Task sequence steps in System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016

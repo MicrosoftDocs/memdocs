@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage accounts to access content in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

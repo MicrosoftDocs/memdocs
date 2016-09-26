@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Branded Components included with System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Client installation properties in Active Directory Domain Services | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

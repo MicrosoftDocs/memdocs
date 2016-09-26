@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Prestart commands for task sequence media in System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/24/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage mobile devices with System Center Configuration Manager and Exchange"
 ms.custom: na
 ms.date: 12/08/2015

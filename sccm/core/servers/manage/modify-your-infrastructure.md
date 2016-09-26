@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Modify your System Center Configuration Manager infrastructure"
 ms.custom: na
 ms.date: 12/08/2015

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "System Center Configuration Manager privacy statement - Mobile device addendum"
 ms.custom: na
 ms.date: 12/08/2015

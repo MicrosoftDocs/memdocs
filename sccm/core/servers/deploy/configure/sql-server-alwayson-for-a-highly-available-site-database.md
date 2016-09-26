@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/04/2016

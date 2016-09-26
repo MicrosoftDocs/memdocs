@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fundamentals of sites and hierarchies for System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/18/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Upgrade clients in System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/08/2016

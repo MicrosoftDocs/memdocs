@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use the Setup Wizard to install System Center Configuration Manager sites"
 ms.custom: na
 ms.date: 07/22/2016

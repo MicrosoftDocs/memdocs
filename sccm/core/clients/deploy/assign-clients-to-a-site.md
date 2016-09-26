@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Assign clients to a site | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/21/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Determine the software update point infrastructure | Configuration Manager
