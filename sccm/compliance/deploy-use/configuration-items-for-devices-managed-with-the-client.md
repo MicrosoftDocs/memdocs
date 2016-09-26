@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configuration items for devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -17,8 +17,6 @@ author: robstackmsft
 ---
 # Configuration items for devices managed with the System Center Configuration Manager client
 This topic list the System Center Configuration Manager configuration item types available for devices that are managed by the Configuration Manager client, for example, for example Windows PCs and Mac computers.  
-  
-## In this section  
   
 -   [How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)  
   

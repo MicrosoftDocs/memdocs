@@ -26,5 +26,5 @@
 ## [Import configuration data](deploy-use/import-configuration-data.md)
 ## [Create user data and profiles configuration items](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [Create remote connection profiles](deploy-use/create-remote-connection-profiles.md)
-## [Upgrade Windows device to the latest version](deploy-use/upgrade-windows-version.md)
+## [Upgrade Windows devices to a newer version](deploy-use/upgrade-windows-version.md)
 

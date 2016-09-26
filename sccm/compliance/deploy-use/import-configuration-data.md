@@ -16,13 +16,13 @@ author: robstackmsft
 
 ---
 # Import configuration data with System Center Configuration Manager
-In addition to creating configuration baselines and configuration items in the System Center Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported SML schema. You can import configuration data from the following sources:  
+In addition to creating configuration baselines and configuration items in the System Center Configuration Manager console, you can import configuration data if it is contained in a cabinet (.cab) file format and adheres to the supported Service Modeling Language (SML) schema. You can import configuration data from:  
   
 -   Best practice configuration data (Configuration Packs) that has been downloaded from Microsoft or from other software vendor sites.  
   
 -   Configuration data that has been exported from System Center 2012 Configuration Manager and later.  
   
--   Configuration data that was externally authored and that conforms to the Service Modeling Language (SML) schema.  
+-   Configuration data that was externally authored and that conforms to the SML schema.  
   
  For an example Configuration Pack that helps you manage compliance for System Center 2012 Configuration Manager site server roles, see [System Center 2012 Configuration Manager Configuration Pack](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
   
@@ -48,6 +48,6 @@ Other scenarios where the import process might fail include the following:
 4.  Select the **Create a new copy of the imported configuration baselines and configuration items** check box if you want the imported configuration data to be editable in the Configuration Manager console.  
 5.  On the **Summary** page, review the actions that will be taken, and then complete the wizard.  
   
-The imported configuration data displays in the **Compliance Settings** node in the **Assets and Compliance** workspace.  
+The imported configuration data displays in the **Compliance Settings** node of the **Assets and Compliance** workspace.  
   
 

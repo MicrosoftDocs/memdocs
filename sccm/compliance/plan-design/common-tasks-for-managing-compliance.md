@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Common tasks for managing compliance | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -26,6 +26,5 @@ In this section, you'll find some common scenarios that will help you learn to u
 ## Scenarios for creating and deploying configuration baselines  
  [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)  
   
-## See Also  
- [Ensure device compliance with System Center Configuration Manager](../../compliance/understand/ensure-device-compliance.md)
+
 

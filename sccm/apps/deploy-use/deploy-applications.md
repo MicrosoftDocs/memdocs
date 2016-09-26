@@ -18,14 +18,14 @@ author: robstackmsft
 # Deploy applications with System Center Configuration Manager
  
   
- Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [Create applications ](../../apps/deploy-use/create-applications.md).  
   
 > [!IMPORTANT]  
 >  You can deploy (install/uninstall) required applications, but not packages or software updates. Mobile devices also do not support simulated deployments.  
 >   
 >  Additionally, mobile devices do not support user experience and scheduling settings in the Deploy Software Wizard.  
   
- You can also simulate an application deployment. This type of deployment tests the applicability of an application deployment to computers without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements and dependencies for a deployment type, and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [How to simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md).  
+ You can also simulate an application deployment. This type of deployment tests the applicability of an application deployment to computers without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements and dependencies for a deployment type, and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments ](../../apps/deploy-use/simulate-application-deployments.md).  
   
 ## Deploy an application  
   
@@ -70,7 +70,7 @@ author: robstackmsft
             > [!NOTE]  
             >  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
   
-    -   Deploy automatically according to schedule whether or not a user is logged on – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
+    -   **Deploy automatically according to schedule whether or not a user is logged on** – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
   
     -   **Send wake-up packets** – If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
   
@@ -99,7 +99,7 @@ author: robstackmsft
   
 11. On the **Alerts** page of the Deploy Software Wizard, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure thresholds for reporting alerts and turn off reporting for the duration of the deployment.  
   
-12. (for iOS apps only) - On the **App Configuration Policies** page, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
+12. (for iOS apps only) - On the **App Configuration Policies** page, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
   
 13. On the **Summary** page of the Deploy Software Wizard, review the actions that will be taken by this deployment, and then click **Next** to complete the wizard.  
   
