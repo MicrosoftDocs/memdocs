@@ -30,7 +30,7 @@ The scenarios in this topic give you an introduction to using System Center Conf
   
 4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
   
-     ![Shows general page of the create configuration item wizard.](../../compliance/plan-design/media/Compliance-Settings-Wizard---1.png "Compliance)  
+     ![Shows general page of the create configuration item wizard.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png "Compliance)  
   
 ## Scenarios for Windows 10 devices managed with the Configuration Manager client  
   

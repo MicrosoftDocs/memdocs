@@ -1,4 +1,4 @@
-﻿
+
 
 #   [Understand and explore](understand/introduction.md)
 ##  [Introduction to Configuration Manager](understand/introduction.md)
@@ -256,7 +256,7 @@
 ###  [Security and privacy for remote control](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
 ###  [Technical reference for remote control](clients/manage/remote-control/technical-reference-for-remote-control.md)
 
-##   [Power management](clients/manage/power/power-management-technical-reference.md)
+##   [Power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Introduction to power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Planning for power management](clients/manage/power/planning-for-power-management.md)
 #### [Prerequisites for power management](clients/manage/power/prerequisites-for-power-management.md)
