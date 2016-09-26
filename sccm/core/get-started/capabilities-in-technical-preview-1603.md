@@ -1,5 +1,6 @@
 ---
 title: "Capabilities in Technical Preview 1603 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1603."
 ms.custom: na
 ms.date: 05/05/2016
 ms.prod: configuration-manager
@@ -79,4 +80,3 @@ You will need to test the customized settings in your environment to determine w
      **Value**: &lt;customized block size\>  
 
  The default value is 4096 (4k).  
-

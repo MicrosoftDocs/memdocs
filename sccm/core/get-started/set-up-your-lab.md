@@ -1,5 +1,6 @@
 ---
 title: "Set up your System Center Configuration Manager lab"
+description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -388,4 +389,3 @@ Each Configuration Manager site publishes its own site-specific information to t
 3.  In the **Administration** workspace, click **Active Directory Forests**.  
 
 4.  On the **Publishing** tab of the site properties, select your connected forest, then click **Ok** to save the configuration.
-
