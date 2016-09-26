@@ -1,5 +1,6 @@
 ﻿---
 title: "Capabilities in Technical Preview 1605 for System Center Configuration Manager"
+description: "This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1605."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -457,4 +458,3 @@ In this technical preview, if the Company Portal is open for more than 15 minute
      Click **Next**.  
 
 4.  Review the results of the file import. Previously imported IMEI or serial numbers will have their details updated with new details.  Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.  
-

@@ -1,5 +1,6 @@
 ﻿---
 title: "Capabilities in Technical Preview 1604 for System Center Configuration Manager"
+description: "This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1604."
 ms.custom: na
 ms.date: 05/05/2016
 ms.prod: configuration-manager
@@ -167,4 +168,3 @@ Passport lets you use a user gesture to login, instead of a password. A user ges
  A new setting,    
                 **Allow SmartLock and other trust agents** has been added to the   
                 **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  
-
