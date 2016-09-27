@@ -20,7 +20,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   Server Discovery is an automatic discovery method that finds computers you use as site systems, and is not a method you can configure, or disable.  
 
- **To enable any configurable  discovery method:**  
+**To enable any configurable  discovery method:**  
 
 1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration**, and click **Discovery Methods**.  
 
@@ -218,7 +218,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   Limiting Network Discovery on the network  
 
- For more information, see the section [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
+For more information, see the section [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
 
  The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, you must plan for the interactions that can affect the discovery results.  
 
@@ -434,4 +434,3 @@ You configure discovery methods to run at a  System Center Configuration Manager
     -   Description: **This component started**  
 
      This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
-

@@ -13,6 +13,7 @@ caps.latest.revision: 3
 author: Brenduns
 ---
 # What&#39;s new in version 1602 of System Center Configuration Manager
+
 Update 1602 for System Center Configuration Manager is an update that is only available in-console for previously installed sites that run version 1511.  Version 1511 is the initial baseline version you use to install new Configuration Manager sites.  
 
 > [!TIP]  
@@ -85,7 +86,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Microsoft Outlook  
 
- You will find these apps in the **Applications** node of the Configuration Manager console.  
+You will find these apps in the **Applications** node of the Configuration Manager console.  
 
  For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md)  
 
@@ -160,7 +161,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Code Integrity  
 
- For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
+For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
 ### Improvements to Endpoint Protection antimalware settings  
  1602 adds the following new settings in Endpoint Protection antimalware policy for Windows Defender:  
@@ -177,9 +178,9 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
     -   Advanced: Allow users to modify auto sample file submission settings  
 
-     Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions.  
+    Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions.  
 
- For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).  
+For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).  
 
 ## Mobile device management  
 
@@ -192,7 +193,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Reactivate the device  
 
- Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
+Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
 
  For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](../Topic/Help%20protect%20iOS%20devices%20with%20Activation%20Lock%20bypass%20in%20System%20Center%20Configuration%20Manager.md).  
 
@@ -208,4 +209,3 @@ If these settings are incorrectly entered by the user, this can increase the bur
 -   **Noncompliant** - Users have accepted a version of the terms and conditions, but not the latest version  
 
 -   **Unknown** -  Users have never accepted the terms and conditions, including those without an enrolled device  
-
