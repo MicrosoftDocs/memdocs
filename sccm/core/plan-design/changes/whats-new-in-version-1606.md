@@ -42,7 +42,7 @@ The following are changes to Updates and Servicing in the Configuration Manager 
     - **Prerequisites Check**
     - **Installation**
 
-    Additionally, there is now more detailed information for each step, including in which log file you can view for more information.  
+  Additionally, there is now more detailed information for each step, including in which log file you can view for more information.  
 -   **New option to retry prerequisite failures:**
 
     In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the Ribbon named **Ignore prerequisite warnings**.

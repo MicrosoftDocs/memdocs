@@ -70,7 +70,7 @@ When a client first assigns to a primary site, it selects a default management p
     > [!NOTE]  
     >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.  
 
-  -   You can use preferred management points. A preferred management point is a management point that is associated to a boundary group as site system server, similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
+-   You can use preferred management points. A preferred management point is a management point that is associated to a boundary group as site system server, similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
 
 -   You can also use the information in the following blog on TechNet.com to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and enables the client to use one or more specific management points: [management point affinity](http://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)  
 

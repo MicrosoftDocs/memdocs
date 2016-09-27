@@ -27,9 +27,9 @@ Use System Center Configuration Manager remote connection profiles to allow your
   
 -   Devices that run Android  
   
- Remote connection profiles let you deploy Remote Desktop Connection settings to users in your Configuration Manager hierarchy. Users can then use the company portal to access any of their primary work computers through Remote Desktop by using the Remote Desktop Connection settings provided by the company portal.  
+Remote connection profiles let you deploy Remote Desktop Connection settings to users in your Configuration Manager hierarchy. Users can then use the company portal to access any of their primary work computers through Remote Desktop by using the Remote Desktop Connection settings provided by the company portal.  
   
- Microsoft Intune is required if you want users to connect to their work PCs by using the company portal. If you are not using Intune, users can still use the information from the remote connection profile to connect to their work PCs by using Remote Desktop over a VPN connection.  
+Microsoft Intune is required if you want users to connect to their work PCs by using the company portal. If you are not using Intune, users can still use the information from the remote connection profile to connect to their work PCs by using Remote Desktop over a VPN connection.  
   
 > [!IMPORTANT]  
 >  When you specify remote connection profile settings by using the Configuration Manager console, the settings are stored in the local policy of the client computer. These settings might override Remote Desktop settings configured by another application. Additionally, if you use Windows Group Policy to configure Remote Desktop settings, the settings specified in the Group Policy will override those configured by using Configuration Manager.  
@@ -57,8 +57,8 @@ Use System Center Configuration Manager remote connection profiles to allow your
 |Dependency|More information|  
 |----------------|----------------------|  
 |Configuration Manager must be connected to Microsoft Intune (known as a hybrid configuration).|For more information about connecting Configuration Manager to Microsoft Intune, see Manage Mobile Devices with Configuration Manager and Microsoft Intune.|  
-|In order for a user to connect to a work computer on the company network, that computer must be a primary device of the user.|For more information about user device affinity, see [Link users and devices with user device affinity in System Center Configuration Manager](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
-|Specific security permissions must have been granted to manage remote connection profiles.|The **Compliance Settings Manager** security role includes the permissions required to manage remote connection profiles. For more information, see <br />[Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).|  
+|In order for a user to connect to a work computer on the company network, that computer must be a primary device of the user.|For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
+|Specific security permissions must have been granted to manage remote connection profiles.|The **Compliance Settings Manager** security role includes the permissions required to manage remote connection profiles. For more information, see <br />[Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration.md).|  
   
 ## Security and privacy considerations for remote connection profiles  
   
@@ -81,9 +81,6 @@ Use System Center Configuration Manager remote connection profiles to allow your
 
 
 ## Create a remote connection profile
-Use the following steps to create a remote connection profile by using the System Center Configuration Manager**Create Remote Connection Profile Wizard**.  
-  
- Before you use this procedure, ensure you have read the introductory information and prerequisites in [Working with remote connection profiles in System Center Configuration Manager](../../compliance/plan-design/working-with-remote-connection-profiles.md).  
   
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Remote Connection Profiles**.  
   
@@ -129,7 +126,7 @@ Deploy a remote connection profile
   
     -   **Remediate noncompliant rules when supported** - Enable this to automatically remediate the remote connection profile when it is found to be noncompliant on a device, for example, when it is not present.  
   
-    -   **Allow remediation outside the maintenance window** - If a maintenance window has been configured for the collection to which you deploy the remote connection profile, enable this option to let Configuration Manager remediate the remote connection profile outside the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** - If a maintenance window has been configured for the collection to which you deploy the remote connection profile, enable this option to let Configuration Manager remediate the remote connection profile outside the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows.md).  
   
     -   **Generate an alert** - Enable this option to configure an alert that is generated if the remote connection profile compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
@@ -148,9 +145,7 @@ Deploy a remote connection profile
   
 ### View compliance results in the Configuration Manager console  
   
-1.  In the Configuration Manager console, click **Monitoring**.  
-  
-2.  In the **Monitoring** workspace, click **Deployments**.  
+1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.  
   
 3.  In the **Deployments** list, select the remote connection profile deployment for which you want to review compliance information.  
   
@@ -177,6 +172,6 @@ Deploy a remote connection profile
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
   
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting.md).  
   
 
