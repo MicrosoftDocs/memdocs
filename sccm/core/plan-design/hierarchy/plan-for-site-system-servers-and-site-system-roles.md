@@ -72,6 +72,7 @@ After a site installs, you can move the  location of some site system roles from
 
 -   **Enrollment point** - A site system role that uses PKI certificates for Configuration Manager to enroll mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
+
      If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the user's forest so that the user can be authenticated.  
 
 -   **Enrollment proxy point** - A site system role that manages Configuration Manager enrollment requests from mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
@@ -134,8 +135,6 @@ The following are site system roles that can use a proxy server:
     > [!TIP]  
     >  A proxy server must be configured on the site system server that hosts the software update point before you can select either option. The proxy server is only used for the specific options you select.  
 
-
-     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
+ For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
 
 -   **Service connection point** - When configured to be online (not offline), this site system role connects to Microsoft Intune and the Microsoft cloud service.  
-
