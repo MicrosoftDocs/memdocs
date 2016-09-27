@@ -46,7 +46,7 @@ The following are the primary management capabilities of System Center Configura
 
 -   **Asset Intelligence**: Provides tools to collect inventory data and to monitor software license usage in your enterprise. See [Introduction to Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)  
 
- **Mobile device management with Microsoft Intune**  
+**Mobile device management with Microsoft Intune**  
 
  You can use Configuration Manager to manage iOS, Android (including Samsung KNOX), Windows Phone and Windows devices using the Microsoft Intune service over the Internet.
 
