@@ -544,7 +544,6 @@ The following sections detail the ports used for communication in Configuration 
 
     -   If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.  
 
-
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 

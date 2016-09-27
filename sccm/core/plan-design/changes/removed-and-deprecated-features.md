@@ -62,6 +62,7 @@ This topic describes features, products, and operating systems that are removed 
 |Nokia Symbian Belle|7/10/2015|√|  
 |Windows CE 5.0 - 6.0|7/10/2015|√|  
 
+
  **Deprecated support for SQL Server versions as a site database:**  
 
 |**SQL Server versions**|**Deprecation first announced**|**Support removed**|   

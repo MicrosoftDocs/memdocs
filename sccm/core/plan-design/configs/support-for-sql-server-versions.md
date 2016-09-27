@@ -72,6 +72,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   Secondary site  
 
 
+
 ### SQL Server 2014 SP1 - Standard, Enterprise  
 
 Supported for version 1511 and later.  

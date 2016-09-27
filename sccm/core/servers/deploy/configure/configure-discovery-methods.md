@@ -434,4 +434,8 @@ Because Network Discovery does not create messages to alert you when discovery h
 
     -   Description: **This component started**  
 
+<<<<<<< HEAD
+     This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+=======
     This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+>>>>>>> 5e8e486ea74f66a92696c65e3367aec2e592b001
