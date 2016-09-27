@@ -1,5 +1,11 @@
 ---
+<<<<<<< HEAD
+# required metadata
+
+title: Introduction to software updates | Configuration Manager
+=======
 title: "Introduction to software updates in System Center Configuration Manager"
+>>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -276,4 +282,3 @@ For an example scenario that shows how you might deploy software updates in your
 
 ## See Also  
  [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
-

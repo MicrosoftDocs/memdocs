@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: Brenduns
 ---
 # Configure discovery methods for System Center Configuration Manager
+
 You configure discovery methods to run at a  System Center Configuration Manager site  to find resources you can manage from your network infrastructure and Active Directory. This requires  you to enable and then configure each method you want to use to search your environment. (You can also disable a method by using the same procedure you use to enable it.)  The only exceptions to this are Heartbeat Discovery and Server Discovery:  
 
 -   By default, Heartbeat Discovery is already enabled when you install a Configuration Manager primary site, and configured to run on a basic schedule. You should keep Heartbeat Discovery enabled as this method ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)  
@@ -398,7 +399,7 @@ For more information, see the section [About Network Discovery](../../../../core
 
 -   The type of discovery that is being run  
 
- Because Network Discovery does not create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
+Because Network Discovery does not create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
 
 ##### To verify that Network Discovery has finished  
 
@@ -423,7 +424,7 @@ For more information, see the section [About Network Discovery](../../../../core
 
     -   Description: **This component stopped**  
 
-     If this status message is not present, Network Discovery has not finished.  
+    If this status message is not present, Network Discovery has not finished.  
 
 7.  To validate when Network Discovery started, search for a status message that has the following details:  
 
@@ -433,4 +434,8 @@ For more information, see the section [About Network Discovery](../../../../core
 
     -   Description: **This component started**  
 
+<<<<<<< HEAD
      This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+=======
+    This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+>>>>>>> 5e8e486ea74f66a92696c65e3367aec2e592b001

@@ -152,7 +152,6 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-
     6.  On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
