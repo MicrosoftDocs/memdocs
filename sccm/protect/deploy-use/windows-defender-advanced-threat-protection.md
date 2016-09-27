@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/25/2016

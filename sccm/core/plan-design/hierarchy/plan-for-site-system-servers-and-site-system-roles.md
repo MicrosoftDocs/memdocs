@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Plan for site system servers and site system roles for System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

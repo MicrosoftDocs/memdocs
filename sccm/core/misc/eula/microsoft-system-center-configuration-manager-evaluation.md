@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION"
 ms.custom: na
 ms.date: 08/23/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Backup and recovery | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/13/2016

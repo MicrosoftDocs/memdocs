@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Support for Active Directory domains for System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/25/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Scenarios to streamline your installation of System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/13/2016

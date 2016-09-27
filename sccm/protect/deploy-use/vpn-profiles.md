@@ -1,4 +1,4 @@
-﻿---
+---
 title: "VPN profiles in System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/29/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Content source location scenarios in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

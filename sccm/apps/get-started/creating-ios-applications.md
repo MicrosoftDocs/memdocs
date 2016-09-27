@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create iOS applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/16/2016

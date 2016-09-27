@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Install System Center Configuration Manager consoles"
 ms.custom: na
 ms.date: 07/22/2016

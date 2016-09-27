@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use a cloud-based distribution point with System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

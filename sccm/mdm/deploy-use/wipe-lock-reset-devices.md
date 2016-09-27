@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016

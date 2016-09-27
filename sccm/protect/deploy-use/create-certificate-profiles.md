@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create certificate profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/01/2016

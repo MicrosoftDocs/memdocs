@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Checklist for installing update 1602 for System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

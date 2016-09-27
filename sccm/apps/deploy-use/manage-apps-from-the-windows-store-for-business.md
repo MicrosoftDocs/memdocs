@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/05/2016

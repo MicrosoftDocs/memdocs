@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Associate users with a destination computer in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/28/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create task sequence media with System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/27/2016

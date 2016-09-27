@@ -1,7 +1,11 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Security and privacy for software updates | Configuration Manager
+=======
+title: "Security and privacy for software updates in System Center Configuration Manager"
+>>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

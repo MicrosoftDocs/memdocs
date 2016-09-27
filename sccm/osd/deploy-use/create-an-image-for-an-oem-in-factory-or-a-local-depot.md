@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create an image for an OEM in factory or a local depot with System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/14/2016

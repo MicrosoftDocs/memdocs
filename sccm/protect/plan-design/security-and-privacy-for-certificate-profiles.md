@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Certificate profile security and privacy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/07/2016

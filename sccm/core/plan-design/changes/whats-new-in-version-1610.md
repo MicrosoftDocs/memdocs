@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What&#39;s new in version 1610 of System Center Configuration Manager"
 ms.custom: na
 ms.date:  

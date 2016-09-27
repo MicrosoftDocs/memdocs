@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use a SQL Server cluster for the System Center Configuration Manager site database"
 ms.custom: na
 ms.date: 07/22/2016

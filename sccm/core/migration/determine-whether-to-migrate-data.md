@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Determine whether to migrate data to System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

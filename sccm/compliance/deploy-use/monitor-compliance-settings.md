@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Monitor compliance settings | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -15,8 +15,8 @@ caps.handback.revision: 0
 author: robstackmsft
 
 ---
-# How to monitor compliance settings in System Center Configuration Manager
-After you have deployed System Center Configuration Manager configuration baselines to computers in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
+# Monitor compliance settings in System Center Configuration Manager
+After you have deployed System Center Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
   
 > [!NOTE]  
 >  The validation criteria fields in compliance settings reports (the equivalent on the client-side report is **Constraints**) display the underlying Service Modeling Language (SML). This can make it difficult for administrators who have authored the configuration item in the Configuration Manager console to understand what the validation criteria is if they do not have knowledge of SML. In this case, use the **Monitoring** workspace in the Configuration Manager console to view the properties of the configuration item and its validation criteria.  
@@ -24,11 +24,9 @@ After you have deployed System Center Configuration Manager configuration baseli
 ##  View compliance results in the Configuration Manager console  
  Use this procedure to view details about the compliance of deployed configuration baselines in the Configuration Manager console.  
   
-#### View compliance results in the Configuration Manager console  
+### View compliance results in the Configuration Manager console  
   
-1.  In the Configuration Manager console, click **Monitoring**.  
-  
-2.  In the **Monitoring** workspace, click **Deployments**.  
+1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.  
   
 3.  In the **Deployments** list, select the configuration baseline deployment for which you want to review compliance information.  
   
@@ -39,7 +37,7 @@ After you have deployed System Center Configuration Manager configuration baseli
     -   **Compliant**: Displays the compliance of the configuration baseline based on the number of assets affected. You can click a rule to create a temporary node under the **Users** or **Devices** node that are in the **Assets and Compliance** workspace, which contains all users or devices that are compliant with this rule. The **Asset Details** pane displays the users or devices that are compliant with the configuration baseline. Double-click a user or device in the list to display additional information.  
   
         > [!IMPORTANT]  
-        >  A configuration item rule is not evaluated if it is not detected or not applicable on a client computer; however, the rule is returned as compliant.  
+        >  A configuration item rule is not evaluated if it is not detected or not applicable on a client device; however, the rule is returned as compliant.  
   
     -   **Error**: Displays a list of all errors for the selected configuration baseline deployment based on number of assets affected. You can click a rule to create a temporary node under the **Users** or **Devices** node of the **Assets and Compliance** workspace, which contains all users or devices that generated errors with this rule. When you select a user or device, the **Asset Details** pane displays the users or devices that are affected by the selected issue. Double-click a user or device in the list to display additional information about the issue.  
   
@@ -57,13 +55,10 @@ After you have deployed System Center Configuration Manager configuration baseli
   
  For more information about how to configure Reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md)  
   
-##  View compliance results on a Configuration Manager Windows client  
- Use this procedure to view details about the compliance of deployed configuration baselines on the Configuration Manager client.  
+##  View compliance results on a Configuration Manager Windows client computer 
   
 > [!NOTE]  
->  You cannot view information on the Configuration Manager Windows client if you are logged on with a domain Guest account.  
-  
-#### View compliance results on a Configuration Manager Windows client  
+>  You cannot view information on the Configuration Manager Windows client if you are logged on with a domain Guest account.    
   
 1.  Navigate to **Configuration Manager** in Control Panel of the client computer, and double-click it to open its properties.  
   
@@ -96,9 +91,7 @@ After you have deployed System Center Configuration Manager configuration baseli
   
 -   **Unknown**  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Baselines**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Baselines**.  
   
 3.  In the **Configuration Baselines** list, select the configuration baseline from which you want to create a collection.  
   

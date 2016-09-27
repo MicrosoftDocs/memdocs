@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority"
 ms.custom: na
 ms.date: 04/04/2016

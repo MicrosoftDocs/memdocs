@@ -1,7 +1,11 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Configure software updates | System Center Configuration Manager
+=======
+title: "Configure software updates in System Center Configuration Manager"
+>>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
 ms.custom: na
 ms.date: 09/27/2016
 ms.prod: configuration-manager

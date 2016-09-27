@@ -1,5 +1,6 @@
-﻿---
+---
 title: "Evaluate System Center Configuration Manager by building your own lab environment"
+description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -57,4 +58,3 @@ Learn how to create a lab environment to evaluate System Center Configuration Ma
 -   Understanding these [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts) can provide you with specific concepts relating to content management  
 
 -   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) to successfully support daily operations throughout your deployment  
-

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "What&#39;s new in version 1602 of System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

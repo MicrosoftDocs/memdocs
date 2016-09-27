@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Uninstall sites and hierarchies in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

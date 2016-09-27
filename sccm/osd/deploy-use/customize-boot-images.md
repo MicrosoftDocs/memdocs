@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Customize boot images with System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/08/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager"
 ms.custom: na
 ms.date: 06/02/2016

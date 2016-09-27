@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Reference for System Center Configuration Manager Setup"
 ms.custom: na
 ms.date: 01/25/2016

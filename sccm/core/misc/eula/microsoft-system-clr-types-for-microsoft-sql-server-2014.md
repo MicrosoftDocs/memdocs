@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014"
 ms.custom: na
 ms.date: 08/23/2016

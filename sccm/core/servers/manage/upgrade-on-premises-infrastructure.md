@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Upgrade on-premises infrastructure that supports System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
