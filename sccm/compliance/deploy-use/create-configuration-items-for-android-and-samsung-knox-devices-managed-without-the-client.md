@@ -36,7 +36,7 @@ author: robstackmsft
   
 7.  On the **Supported Platforms** page, select the specific Android or Samsung KNOX platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX configuration item settings reference](#BKMK_setref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  

@@ -40,7 +40,7 @@ If you are already familiar with Configuration Manager applications, you can ski
  Use the information in the following sections to create, deploy, and monitor the **Contoso.msi** application for all Windows 10 PCs in your site.  
   
 ### Before you start  
- Ensure you have reviewed the information in [Get started with application management in System Center Configuration Manager](../../apps/understand/get-started-with-application-management.md) so that you have prepared your site to install applications and you understand the terminology used in this topic.  
+ Ensure you have reviewed the information in [Introduction to application management](/sccm/apps/understand/introduction-to-application-management) so that you have prepared your site to install applications and you understand the terminology used in this topic.  
   
  Also, ensure that the installation files for the **Contoso.msi** app are in an accessible location on your network.  
   
@@ -126,7 +126,7 @@ If you are already familiar with Configuration Manager applications, you can ski
  To successfully deploy the application to PCs, you must next ensure that the application content is copied to a distribution point. PCs will access the distribution point to install the application.  
   
 > [!TIP]  
->  To find out more about distribution points and content management in Configuration Manager, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+>  To find out more about distribution points and content management in Configuration Manager, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
   
 ##### To copy the application content to a distribution point  
   
@@ -203,11 +203,10 @@ If you are already familiar with Configuration Manager applications, you can ski
     -   **Unknown** - Configuration Manager was unable to report the status of the deployment. Check back again later.  
   
 > [!TIP]  
->  There are a few ways you can monitor application deployments. For full details, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+>  There are a few ways you can monitor application deployments. For full details, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
   
 ### End user experience  
  Users who have PCs running Windows 10 managed by Configuration Manager will shortly see a message telling them that they must install the Contoso application. Once they accept the installation, the application will be installed.  
   
-## See Also  
- [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)
+
 
