@@ -41,6 +41,7 @@
 ###  [Plan for site system servers](plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)
 ###  [Fundamental concepts for content management](plan-design/hierarchy/fundamental-concepts-for-content-management.md)
 #### [Use a cloud-based distribution point](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+#### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)

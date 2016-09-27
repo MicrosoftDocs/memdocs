@@ -524,7 +524,7 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site  
 
-**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the Microsoft Intune Connector site system role is not installed on the stand-alone primary site that you are expanding.  
+**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the 'Microsoft Intune Connector' site system role is not installed on the stand-alone primary site that you are expanding.  
 
 -   **Severity:** Error  
 
@@ -747,4 +747,3 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site    
     -   Primary site  
-

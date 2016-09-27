@@ -34,7 +34,7 @@ author: Brenduns
 > [!IMPORTANT]  
 >  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the Preview software. Additionally, the Preview software may have reduced or different security, privacy, accessibility, availability and reliability standards relative to commercially provided software.  
 
- For most product prerequisites, use the information in the [!INCLUDE[cm6long] (../Token/cm6long_md.md)] [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
+ For most product prerequisites, use the information in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
 
 -   Each install remains active for 90 days before it becomes inactive.  
 

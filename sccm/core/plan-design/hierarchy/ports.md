@@ -676,4 +676,3 @@ The site server that runs Migration uses several ports to connect to applicable 
 |NetBIOS Name Resolution|137|--|  
 |NetBIOS Datagram Service|138|--|  
 |NetBIOS Session Service|--|139|  
-

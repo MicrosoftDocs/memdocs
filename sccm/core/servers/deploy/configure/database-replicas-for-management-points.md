@@ -152,10 +152,11 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(...)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+
+    6.  On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
-        >  The properties button, **(...)**, is in the fourth column of the display box.  
+        >  The properties button, **(....)**, is in the fourth column of the display box.  
 
         **Security settings:**  
 
@@ -500,4 +501,3 @@ To support client notification with a database replica for a management point, y
 4.  Recreate the publication for the database replica on the site database server. For more information, see [Step 1 - Configure the site database server to Publish the database replica](#BKMK_DBReplica_ConfigSiteDB) in this topic.  
 
 5.  Recreate the subscriptions for the database replica on each database replica server. For more information, see [Step 2 - Configuring the database replica server](#BKMK_DBReplica_ConfigSrv) in this topic.  
-

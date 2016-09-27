@@ -83,7 +83,7 @@ Configuration Manager supports the DirectAccess feature in Windows Server 2008 R
 
 -   For server-initiated actions, such as remote control and client push installation, the initiating computer (such as the site server) must be running IPv6, and this protocol must be supported on all intervening networking devices.  
 
- Configuration Manager does not support the following over DirectAccess:  
+Configuration Manager does not support the following over DirectAccess:  
 
 -   Deploying operating systems  
 
