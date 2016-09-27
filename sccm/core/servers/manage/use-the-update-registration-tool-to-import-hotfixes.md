@@ -1,5 +1,5 @@
 ---
-title: "Use the Update Registration Tool to import hotfixes to System Center Configuration Manager"
+title: "Update Registration Tool | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -60,4 +60,3 @@ When you must install an out-of-band release, and the update or hotfix file name
      After the update is registered, you can close the update registration tool.  
 
 3.  Open the Configuration Manager console and navigate to **Administration** > **Cloud Services** > **Updates and Servicing**. Hotfixes that were imported are now available to install. For information about installing updates, see [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)  
-

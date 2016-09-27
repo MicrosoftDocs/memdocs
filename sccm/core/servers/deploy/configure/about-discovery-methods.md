@@ -1,5 +1,5 @@
 ---
-title: "About discovery methods for System Center Configuration Manager"
+title: "Discovery methods | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
@@ -489,4 +489,3 @@ You configure filtering on the **Option** tab in both **Active Directory System 
 Each discovery method supports a unique list of Active Directory attributes that can be discovered.  
 
 You can view and configure the list of  customized attributes on the **Active Directory Attributes** tab in both the **Active Directory System Discovery Properties** and **Active Directory User Discovery Properties** dialog boxes.  
-

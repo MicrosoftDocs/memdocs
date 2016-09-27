@@ -1,5 +1,5 @@
 ---
-title: "List of Prerequisite Checks for System Center Configuration Manager"
+title: "Prerequisite checks | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

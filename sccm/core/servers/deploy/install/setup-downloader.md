@@ -1,5 +1,5 @@
 ---
-title: "Setup Downloader for System Center Configuration Manager"
+title: "Setup Downloader | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -85,4 +85,3 @@ There are two options to run Setup Downloader:
         -   Setup Downloader starts, and then you must specify the path to the download folder. Next, after you click Verify, Setup Downloader verifies the files in the download folder  
 
 3.  View the **ConfigMgrSetup.log** file in the root of the drive C to review the download results  
-

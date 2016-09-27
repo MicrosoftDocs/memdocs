@@ -1,5 +1,5 @@
 ---
-title: "Prerequisite checker for System Center Configuration Manager"
+title: "Prerequisite checker | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -203,4 +203,3 @@ For more information about the prerequisite checks that prerequisite checker per
     -   You must resolve all items in the list that have an **Error** status before you install the site server, site system, or Configuration Manager console.  
 
     -   You can also open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file can contain additional information that are not displayed in the user interface.  
-

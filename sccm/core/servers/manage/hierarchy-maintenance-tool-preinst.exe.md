@@ -1,5 +1,5 @@
 ---
-title: "Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager"
+title: "Hierarchy Maintenance Tool | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -114,4 +114,3 @@ You can use the Hierarchy Maintenance tool to export the public keys for each si
 3.  The /keyforchild option places the public key of the parent site in the **&lt;site code\>.CT5** file located at the root of the system drive.  
 
 4.  Move the **&lt;site code\>.CT5** file to the **&lt;install directory\>\inboxes\hman.box** directory on the child site.  
-

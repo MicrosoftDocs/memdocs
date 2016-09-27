@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of security for System Center Configuration Manager"
+title: "Fundamentals of security | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -60,4 +60,3 @@ The remainder of this topic discusses aspects of security related to Configurati
  Although enterprise management products offer many advantages because they can effectively manage lots of clients, you must also be aware of how this software might affect the privacy of users in your organization. System Center Configuration Manager includes many tools to collect data and monitor devices, some of which could raise privacy concerns.  
 
  For example, when you install the Configuration Manager client, many management settings are enabled by default. This results in the client software sending information to the Configuration Manager site. Client information is stored in the Configuration Manager database and the information is not sent to Microsoft. Before you implement System Center Configuration Manager, consider your privacy requirements.  
-

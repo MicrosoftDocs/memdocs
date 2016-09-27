@@ -1,5 +1,5 @@
 ---
-title: "Configure discovery methods for System Center Configuration Manager"
+title: "Configure discovery | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
