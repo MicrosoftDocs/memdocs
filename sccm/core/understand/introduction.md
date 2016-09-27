@@ -1,5 +1,5 @@
 ---
-title: "Introduction to System Center Configuration Manager"
+title: "Introduction | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -210,4 +210,3 @@ Configuration Manager also uses:
 -   For a high-level technical overview of System Center Configuration Manager, see [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md).  
 
  When you are familiar with the basic concepts, use the System Center Configuration Manager documentation to help you successfully deploy and use Configuration Manager.  
-

@@ -1,5 +1,5 @@
 ---
-title: "Site components for System Center Configuration Manager"
+title: "Site components | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -104,4 +104,3 @@ A Configuration Manager service runs when there is something for it to do (typic
 6.  After the status of the component is updated, use one of the four action-based options on the **Component** menu to modify the components operation. After you request an action, you must query the component to display the new status of the component.  
 
 7.  Close the Configuration Manager Service Manager when you are finished modifying the operational status of components.  
-

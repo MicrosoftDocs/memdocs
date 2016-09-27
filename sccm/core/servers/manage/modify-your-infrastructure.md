@@ -1,5 +1,5 @@
 ---
-title: "Modify your System Center Configuration Manager infrastructure"
+title: "Modify infrastructure | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -356,4 +356,3 @@ For information about the client and server languages that are supported by Conf
 3.  In the site's **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
 
 4.  Click **OK** to close the site properties dialog box.  
-

@@ -1,5 +1,5 @@
 ---
-title: "Support for System Center Configuration Manager current branch versions"
+title: "Current Branch versions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -34,4 +34,3 @@ Figure 1. Example of current branch servicing support.
 |1511|12/8/2015|12/8/2016|  
 |1602|3/11/2016|3/11/2017|
 |1606|7/22/2016|7/22/2017|
-

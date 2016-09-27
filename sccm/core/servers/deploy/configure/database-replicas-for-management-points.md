@@ -1,5 +1,5 @@
 ---
-title: "Database replicas for management points for System Center Configuration Manager"
+title: "Management point database replicas | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/26/2016
 ms.prod: configuration-manager

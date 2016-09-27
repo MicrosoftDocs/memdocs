@@ -1,5 +1,5 @@
 ---
-title: "Use cloud services with System Center Configuration Manager"
+title: "Use cloud services | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -93,4 +93,3 @@ These additional capabilities do not require you to have an Azure subscription, 
 -   [Get Past the Security Crossroads in Your Cloud Migration](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
 -   [Data Security in Azure Part 1 of 2](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
-

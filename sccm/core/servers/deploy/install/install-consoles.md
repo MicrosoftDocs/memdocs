@@ -1,5 +1,5 @@
 ---
-title: "Install System Center Configuration Manager consoles"
+title: "Install consoles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -86,4 +86,3 @@ Administrative users use the System Center Configuration Manager console to mana
   -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /uninstall /q**  
-

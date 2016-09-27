@@ -1,5 +1,5 @@
 ---
-title: "Monitor hierarchy and replication infrastructure in System Center Configuration Manager"
+title: "Monitor replication | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -232,4 +232,3 @@ Successful and unsuccessful investigation and remediation actions are logged to 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
 2.  In the **Monitoring** workspace, click **Database Replication**, and then select the replication link for the link that you want to monitor. Then, in the workspace, select the appropriate tab to view different details about the replication status for that link.  
-

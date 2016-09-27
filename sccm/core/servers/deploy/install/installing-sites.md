@@ -1,5 +1,5 @@
 ---
-title: "Installing System Center Configuration Manager sites"
+title: "Installing sites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

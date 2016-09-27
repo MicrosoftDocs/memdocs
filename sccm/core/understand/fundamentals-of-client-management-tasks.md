@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of client management tasks for System Center Configuration Manager"
+title: "Client management Fundamentals | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -53,4 +53,3 @@ To monitor these operations in near real-time, you use the Configuration Manager
 -   Configure settings for Internet-based client management.  
 
 -   View configuration baselines that were deployed to the client, initiate compliance evaluation, and view compliance reports.  
-
