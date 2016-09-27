@@ -152,10 +152,10 @@ Use the following procedure as an example of how to configure a database replica
 
     5.  Click **Next** to continue.  
 
-    6.  On the **Distribution Agent Security** page, click the properties button **(.�)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
+    6.  On the **Distribution Agent Security** page, click the properties button **(....)** in the Subscriber Connection row of the dialog box, and then configure the security settings for the connection.  
 
         > [!TIP]  
-        >  The properties button, **(�.)**, is in the fourth column of the display box.  
+        >  The properties button, **(....)**, is in the fourth column of the display box.  
 
         **Security settings:**  
 
@@ -373,7 +373,7 @@ In addition to configuring the management point to use the database replica serv
 
 ##### To configure remote management points to use the self-signed certificate of the database replica server  
 
-1.  Perform the following steps on the database replica server to export the server�s self-signed certificate:  
+1.  Perform the following steps on the database replica server to export the server's self-signed certificate:  
 
     1.  Click **Start**, click **Run**, and type **mmc.exe**. In the empty console, click **File**, and then click **Add/Remove Snap-in**.  
 

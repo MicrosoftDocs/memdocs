@@ -106,7 +106,7 @@ author: Brenduns
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure �max text repl size (B)�, 2147483647
+    >     Exec sp_configure 'max text repl size (B)', 2147483647
     >     reconfigure
 
 
