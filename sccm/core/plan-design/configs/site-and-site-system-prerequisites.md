@@ -1,5 +1,5 @@
 ---
-title: "Site and site system prerequisites for System Center Configuration Manager"
+title: "Site prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -765,4 +765,3 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
 **IIS configuration:** Requires the default IIS configuration.  
-

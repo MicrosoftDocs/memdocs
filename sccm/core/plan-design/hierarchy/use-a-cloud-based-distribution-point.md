@@ -1,5 +1,5 @@
 ---
-title: "Use a cloud-based distribution point with System Center Configuration Manager"
+title: "Cloud-based distribution point | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -202,4 +202,3 @@ A cloud-based distribution point has the following limitations:
 -   **Uninstall a cloud-based distribution point** : To uninstall a cloud-based distribution point, select the distribution point in the Configuration Manager console, and then select **Delete**.  
 
     When you delete a cloud-based distribution point from a hierarchy, Configuration Manager removes the content from the cloud service in Windows Azure.  
-
