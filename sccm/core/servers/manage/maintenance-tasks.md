@@ -1,7 +1,7 @@
 ---
 title: "Maintenance tasks for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -101,7 +101,7 @@ Some tasks do not have to be performed during daily or weekly maintenance, but a
 > [!IMPORTANT]  
 >  When you plan the schedule of any task that deletes data, consider the use of that data across the hierarchy. When a task that deletes data runs at a site, the information is removed from the Configuration Manager database, and this change replicates to all sites in the hierarchy. This can affect other tasks that rely on that data. For example, at the central administration site, you might configure Discovery to run one time per month to identify non-client computers, and plan to install the Configuration Manager client to these computers within two weeks of their discovery. However, at one site in the hierarchy, an administrator configures the Delete Aged Discovery Data task to run every seven days with a result that seven days after non-client computers are discovered, they are deleted from the Configuration Manager database. Back at the central administration site, you prepare to push install the Configuration Manager client to these new computers on day 10. However, because the Delete Aged Discovery Data task has recently run and deleted data that is seven days or older, the recently discovered computers are no longer available in the database.  
 
-After you install a Configuration Manager site, review the available maintenance tasks and enable those tasks that your operations require. Review the default schedule of each task, and when necessary, modify the schedule to fine-tune the maintenance task to fit your hierarchy and environment. Although the default schedule of each task should suit most environments, monitor the performance of your sites and database and expect to fine-tune tasks to increase your deployments’ efficiency. Plan to periodically review the site and database performance and to reconfigure maintenance tasks and their schedules to maintain that efficiency.  
+After you install a Configuration Manager site, review the available maintenance tasks and enable those tasks that your operations require. Review the default schedule of each task, and when necessary, modify the schedule to fine-tune the maintenance task to fit your hierarchy and environment. Although the default schedule of each task should suit most environments, monitor the performance of your sites and database and expect to fine-tune tasks to increase your deployments' efficiency. Plan to periodically review the site and database performance and to reconfigure maintenance tasks and their schedules to maintain that efficiency.  
 
 #### Configure Maintenance Tasks  
  Each Configuration Manager site supports maintenance tasks that help maintain the operational efficiency of the site database. By default, several maintenance tasks are enabled in each site, and all tasks support independent schedules. Maintenance tasks are configured individually for each site and apply to the database at that site; however, some tasks, such as **Delete Aged Discovery Data**, affect the information available in all sites in a hierarchy.  
@@ -129,3 +129,4 @@ After you install a Configuration Manager site, review the available maintenance
 5.  To enable or disable the task without editing the task properties, click the **Enable** or **Disable** button. The button label changes depending on the current configuration of the task.  
 
 6.  When you are finished configuring the maintenance tasks, click **OK** to complete the procedure.
+

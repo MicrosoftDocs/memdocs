@@ -1,7 +1,7 @@
 ---
 title: "Prestart commands for task sequence media in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-24
+ms.date: 05/24/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,3 +71,4 @@ env("MyCustomVariable") = "varname"
   
 ## See Also  
  [Operating system deployment technical reference for System Center Configuration Manager](../Topic/Operating%20system%20deployment%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

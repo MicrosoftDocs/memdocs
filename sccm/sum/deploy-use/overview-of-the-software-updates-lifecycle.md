@@ -34,3 +34,4 @@ The overall process for software updates in System Center Configuration Manager 
 
 > [!IMPORTANT]  
 >  Before software update compliance assessment data is displayed in the Configuration Manager console and before you can deploy the software updates to clients, you must carefully plan for the software updates in your hierarchy and configure the software update dependencies to meet the needs of your environment. For more information about planning for software updates, see [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md). For more information about configuring software updates, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md).  
+

@@ -1,7 +1,7 @@
 ---
 title: "Example scenario - deploy Windows Embedded clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,7 +19,7 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
 
  Coho Vineyard & Winery is opening a visitor center and is interested in kiosks that run Windows Embedded to run interactive presentations. The building for the new visitor center is not close to the IT department, so it is important that the kiosks can be managed remotely. In addition to installing the software that runs the interactive presentations, these devices must run up-to-date antimalware protection software to comply with the company security policies. To make sure that the interactive presentations are always available for visitors, the kiosks must run 7 days a week, with no downtime while the visitor center is open.  
 
- Coho Vineyard & Winery already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks that are in the company’s reception lobby. If the pilot is successful in remotely managing these devices, the purchase order for the visitor center kiosks can be approved.  
+ Coho Vineyard & Winery already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks that are in the company's reception lobby. If the pilot is successful in remotely managing these devices, the purchase order for the visitor center kiosks can be approved.  
 
  To manage these Windows Embedded devices that are write-filter-enabled, Jane performs the following steps to install the Configuration Manager client, protect the client by using Endpoint Protection, and install the interactive presentation software.  
 
@@ -169,3 +169,4 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
     -   The interactive presentation software is installed and runs automatically, ready for visitors.  
 
 14. After this initial setup, any restarts that might be required for updates occur only when the visitor center is closed.  
+

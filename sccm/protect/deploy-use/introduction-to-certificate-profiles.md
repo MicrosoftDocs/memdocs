@@ -1,7 +1,7 @@
 ---
 title: "Introduction to certificate profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -101,3 +101,4 @@ Certificate profiles in System Center Configuration Manager works with Active Di
 ### See also  
 
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Example validation state transitions for Asset Intelligence | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,3 +71,4 @@ Asset Intelligence validation states in System Center Configuration Manager are 
 
 > [!NOTE]  
 >  Because categorization information obtained from System Center Online is stored in the database and cannot be deleted, you can revert back to the System Center Online categorization later.  
+

@@ -57,7 +57,7 @@ robots: noindex,nofollow
 
     1.  **Distributable Code.** The software contains code that you are permitted to distribute in programs you develop if you comply with the terms below.  
 
-        1.  **Right to Use and Distribute. The code and text files listed below are “Distributable Code.”**  
+        1.  **Right to Use and Distribute. The code and text files listed below are "Distributable Code."**  
 
             -   **REDIST.TXT Files.** You may copy and distribute the object code form of code listed in REDIST.TXT files.  
 
@@ -75,13 +75,13 @@ robots: noindex,nofollow
 
             -   display your valid copyright notice on your programs; and  
 
-            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.  
+            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
 
         3.  **Distribution Restrictions. You may not**  
 
             -   alter any copyright, trademark or patent notice in the Distributable Code;  
 
-            -   use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;  
+            -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
 
             -   distribute Distributable Code to run on a platform other than the Windows platform;  
 
@@ -113,7 +113,7 @@ robots: noindex,nofollow
 
 6.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
 
-7.  **SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.  
+7.  **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 
 8.  **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
 
@@ -125,7 +125,7 @@ robots: noindex,nofollow
 
 10. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT.**   
+11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT.**   
     **MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE**   
     **ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT**   
     **CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE**   
@@ -141,3 +141,4 @@ robots: noindex,nofollow
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
    It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

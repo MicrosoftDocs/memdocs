@@ -1,7 +1,7 @@
 ---
 title: "Manage user state in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-02
+ms.date: 02/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -134,3 +134,4 @@ You can use System Center Configuration Manager task sequences to capture and re
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

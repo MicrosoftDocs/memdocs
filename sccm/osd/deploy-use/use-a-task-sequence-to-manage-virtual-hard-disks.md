@@ -1,7 +1,7 @@
 ---
 title: "Use a task sequence to manage virtual hard disks in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -337,3 +337,4 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

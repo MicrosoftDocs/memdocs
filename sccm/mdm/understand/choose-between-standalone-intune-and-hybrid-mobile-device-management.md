@@ -1,7 +1,7 @@
 ---
 title: "Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-01
+ms.date: 06/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -86,3 +86,4 @@ One of the most commonly asked questions regarding mobile device management (MDM
 |![hybrid&#45;7](../../mdm/understand/media/hybrid-7.png)|**Do you want to manage on-premises infrastructure?**<br /><br /> A certain level of management overhead and complexity comes with any on-premises infrastructure. Configuration Manager is a product that requires significant knowledge, experience, and investment to manage and maintain its infrastructure.<br /><br /> At a minimum, hybrid MDM requires a single Configuration Manager primary site, with the database role, reporting services role, and the service connection point role. If traditional PC management is required, the management point, distribution point, software update point, and application catalog roles may also be required. Advanced functions, such as certificate deployment, Mac management, and Endpoint Protection add even more roles and complexity.<br /><br /> The Configuration Manager hierarchy requires significant management and maintenance to ensure it’s healthy and functioning as required.<br /><br /> If the overhead of a Configuration Manager hierarchy is not desired, an Intune standalone deployment is your best option.|  
 |![hybrid&#45;8](../../mdm/understand/media/hybrid-8.png)|**Do you require external tooling?**<br /><br /> Configuration Manager is a mature, enterprise grade product and includes many ways to interact with the service without using the console. A hybrid MDM deployment allows admins to use the Configuration Manager SDK or PowerShell to programmatically manage mobile devices. It also allows admins to utilize tools such as System Center Orchestrator, PowerBI , and various third party add-ins.<br /><br /> In an Intune standalone deployment, all administration must be performed via the Silverlight console and no external tooling is available.|  
 |![hybrid&#45;9](../../mdm/understand/media/hybrid-9.png)|**Do you want rapid MDM feature updates?**<br /><br /> Even though Configuration Manager (current branch) offers rapid servicing of updates and features, the development of cloud services, such as  Intune, lends itself well to even faster production deployment.<br /><br /> Intune standalone will likely receive new features before a hybrid MDM deployment.<br /><br /> If your organization likes to be cutting edge, Intune standalone will offer the newest MDM features in the timeliest manner.|
+

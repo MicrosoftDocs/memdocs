@@ -1,7 +1,7 @@
 ---
 title: "Create an image for an OEM in factory or a local depot with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-14
+ms.date: 06/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,3 +48,4 @@ This method of deployment can reduce network traffic because the boot image and 
   
 ## See Also  
  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+

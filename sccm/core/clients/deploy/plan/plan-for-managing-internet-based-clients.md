@@ -1,7 +1,7 @@
 ---
 title: "Internet-based clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -61,7 +61,7 @@ Internet-based client management lets you manage System Center Configuration Man
 -   Software update point  
 
  **About internet facing site systems:**   
-Although there is no requirement to have a trust between a client’s forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
  For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
@@ -186,3 +186,4 @@ Although there is no requirement to have a trust between a client’s forest and t
      For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
 
      For similar communication requirements when you use the software update point for client connections from the Internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
+

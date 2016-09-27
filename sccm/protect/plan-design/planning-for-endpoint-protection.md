@@ -1,7 +1,7 @@
 ---
 title: "Planning for Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -108,3 +108,4 @@ Use the following topics in this section to help you plan to use Endpoint Protec
   
 ### Distributing definition updates by using software updates  
  If you are using Configuration Manager software updates to distribute definition updates, consider placing definition updates in a package that does not contain other software updates. This keeps the size of the definition update package smaller which allows it to replicate to distribution points more quickly.
+

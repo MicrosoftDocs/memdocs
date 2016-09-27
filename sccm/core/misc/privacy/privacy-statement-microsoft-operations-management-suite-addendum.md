@@ -1,7 +1,7 @@
 ---
 title: "System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -23,3 +23,4 @@ During configuration, a list of collections within System Center Configuration M
 
 ### Choice/control: 
 It is your choice to use the Microsoft Operations Management Suite Connector. This feature is not enabled by default, and requires the use of Microsoft web-based services. Additionally, the administrator is able to select which collections are synced, and can be terminated at any time. This will remove all synced data from Microsoft Operations Management Suite. 
+

@@ -1,7 +1,7 @@
 ---
 title: "Size and scale numbers for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -177,3 +177,4 @@ Each management can support the following number of devices:
         -   10,000 devices managed using On-Premises MDM  
 
         -   10,000 devices that run Mac and Windows CE 7.0  
+

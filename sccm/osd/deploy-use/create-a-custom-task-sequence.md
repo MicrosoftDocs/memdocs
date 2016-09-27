@@ -1,7 +1,7 @@
 ---
 title: "Create a custom task sequence with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,3 +43,4 @@ When you create a custom task sequence in System Center Configuration Manager, i
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

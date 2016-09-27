@@ -62,7 +62,7 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 
  Use the following procedure to create an ADR.  
 
-### To create an ADR  
+##### To create an ADR  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -226,10 +226,10 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 
  After you have completed the wizard, the ADR will run. It will add the software updates that meet the specified criteria to a software update group, download the software updates to the content library on the site server, distribute the software updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
 
-###  <a name="BKMK_AddDeploymentToADR"></a> Add a new deployment to an existing ADR  
+##  <a name="BKMK_AddDeploymentToADR"></a> Add a new deployment to an existing ADR  
  After you create an ADR, you can add additional deployments to the rule. This can help you manage the complexity of deploying different updates to different collections. Each new deployment has the full range of functionality and deployment monitoring experience.  
 
-#### To add a new deployment to an existing ADR  
+##### To add a new deployment to an existing ADR  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -320,3 +320,4 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
     >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
 
 For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+

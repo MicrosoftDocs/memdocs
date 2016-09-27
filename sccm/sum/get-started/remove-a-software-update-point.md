@@ -41,3 +41,4 @@ ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
 3.  Select the site system server with the software update point to remove, and then in **Site System Roles**, select **Software update point**.  
 
 4.  On the **Site Role** tab, in the **Site Role** group, click **Remove Role**. Confirm that you want to remove the software update point or select a new synchronization source for the other software update points at the site.  
+

@@ -1,7 +1,7 @@
 ---
 title: "Planning for power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,3 +25,4 @@ Use the following topics in this section to help you plan for power management i
 -   [Best practices for power management in System Center Configuration Manager](../../../../core/clients/manage/power/best-practices-for-power-management.md)  
 
 -   [Administrator checklist for power management in System Center Configuration Manager](../../../../core/clients/manage/power/administrator-checklist-for-power-management.md)  
+

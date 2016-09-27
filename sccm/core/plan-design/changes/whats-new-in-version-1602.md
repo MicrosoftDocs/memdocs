@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s new in version 1602 of System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -13,6 +13,7 @@ caps.latest.revision: 3
 author: Brenduns
 ---
 # What&#39;s new in version 1602 of System Center Configuration Manager
+
 Update 1602 for System Center Configuration Manager is an update that is only available in-console for previously installed sites that run version 1511.  Version 1511 is the initial baseline version you use to install new Configuration Manager sites.  
 
 > [!TIP]  

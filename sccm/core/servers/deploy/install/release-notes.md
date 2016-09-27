@@ -1,7 +1,7 @@
 ---
 title: "Release notes for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-16
+ms.date: 08/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -216,7 +216,8 @@ Performing full wipe on Windows 10 RTM devices (versions earlier than version 15
 **Workaround**: Ensure Windows 10 RTM PCs have at least 4 GB of RAM available before performing a full wipe on the device. To view the version number of Windows 10 devices, enter 'winver' at a command prompt. If the device has already been wiped and is no longer responsive, use a bootable Windows 10 USB drive to start and recover access to the device.
 
 ### When a user belongs to two or more user collections that a terms and conditions policy is deployed to, the user sees multiple sets of the same terms  
-When an administrator deploys a set of terms to multiple user collections, and a user is a member of more than one of these collections, that user will be presented multiple copies of identical terms when opening Company Portal.  For example, if a user named "SampleUser" is a member of two different user collections, one called "CompanyEmployeesFTE" and "CompanyEmployeesNA," and the terms and conditions called "CompanyTerms" is deployed to both CompanyEmployeesFTE and CompanyEmployeesNA, SampleUser will see two identical sets of CompanyTerms on the terms acceptance page. Since the users can only accept all or decline all of the terms, there is no danger of being in an ambiguous acceptance state (where the user has both accepted and rejected the terms). The Terms and Conditions acceptance report will include only one row for each set of terms for each user, so there is no error in the report. The only effect is that the user will see two sets of terms on the acceptance page.  
+
+When an administrator deploys a set of terms to multiple user collections, and a user is a member of more than one of these collections, that user will be presented multiple copies of identical terms when opening Company Portal.  For example, if a user named "SampleUser" is a member of two different user collections, one called "CompanyEmployeesFTE" and "CompanyEmployeesNA,"" and the terms and conditions called "CompanyTerms" is deployed to both CompanyEmployeesFTE and CompanyEmployeesNA, SampleUser will see two identical sets of CompanyTerms on the terms acceptance page. Since the users can only accept all or decline all of the terms, there is no danger of being in an ambiguous acceptance state (where the user has both accepted and rejected the terms). The Terms and Conditions acceptance report will include only one row for each set of terms for each user, so there is no error in the report. The only effect is that the user will see two sets of terms on the acceptance page.  
 
 **Workaround**: Make sure each user is only included in one collection to which the terms are deployed.  
 

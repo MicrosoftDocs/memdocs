@@ -1,7 +1,7 @@
 ---
 title: "Use Software Center to deploy Windows over the network with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,3 +35,4 @@ The task sequence to install an operating system in System Center Configuration 
   
 ## See Also  
  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+

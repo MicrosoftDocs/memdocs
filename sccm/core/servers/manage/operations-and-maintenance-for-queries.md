@@ -1,7 +1,7 @@
 ---
 title: "Operations and maintenance for queries | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,3 +26,4 @@ Use the following topics in this section for operations and maintenance informat
   
 ## See Also  
  [Queries technical reference for System Center Configuration Manager](../../../core/servers/manage/queries-technical-reference.md)
+

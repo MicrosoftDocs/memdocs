@@ -1,7 +1,7 @@
 ---
 title: "Create applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-09
+ms.date: 05/09/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,26 +26,21 @@ A System Center Configuration Manager application contains the files and informa
   
 -   Import an application from a file.  
   
- Use the steps in this section to create applications and deployment types using Configuration Manager.  
+ Use the following steps to create Configuration Manager applications and deployment types.  
   
-## Steps to create an application  
- Use the following steps to learn how to create a Configuration Manager application.  
+## Start the create application wizard  
   
-### Start the create application wizard  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
   
-### Specify whether you want to automatically detect application information or manually define the information  
+## Specify whether you want to automatically detect application information or manually define the information  
   
 -   **Automatically detect application information** when you want to create a simple application that has a single deployment type, such as a Windows Installer file that has no dependencies or requirements. After you create an application by using this procedure, you can edit it as needed to add or change deployment types and add detection methods, dependencies, or requirements.  
   
 -   **Manually specify application information** to create more complex applications that have multiple deployment types, dependencies, detection methods, or requirements.  
   
-##### To automatically detect application information  
+### Automatically detect application information  
   
 1.  On the **General** page of the Create Application Wizard, select the **Automatically detect information about this application from installation files** check box.  
   
@@ -84,7 +79,7 @@ A System Center Configuration Manager application contains the files and informa
   
  The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](#BKMK_Dept1) in this topic.  
   
-##### To manually specify application information  
+### Manually specify application information  
   
 1.  On the **General** page of the Create Application Wizard, select **Manually specify the application information**, and then click **Next**.  
   
@@ -122,24 +117,22 @@ A System Center Configuration Manager application contains the files and informa
   
  The new application appears in the **Applications** node of the Configuration Manager console.  
   
-##  <a name="BKMK_Dept1"></a> Create deployment types for the application  
+##  Create deployment types for the application  
  If you select the **Automatically identify information about this deployment type from installation files** check box on the **General** page of the Create Deployment Type Wizard, you might not need to complete some of the steps in the following procedures.  
   
-### Start the create deployment type wizard  
+## Start the create deployment type wizard  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the Software Library workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  Select an application and then, on the **Home** tab, in the **Application** group, click **Create Deployment Type**.  
   
 > [!TIP]  
 >  You can also start the Create Deployment Type Wizard from the Create Application Wizard and from the **Deployment Types** tab of the *<application name\>***Properties** dialog box.  
   
-### Specify whether you want to automatically detect deployment type information or manually configure the Information  
+## Specify whether you want to automatically detect deployment type information or manually configure the Information  
  Use one of the following procedures to automatically detect or manually configure deployment type information.  
   
-##### To automatically detect the deployment type information  
+### Automatically detect the deployment type information  
   
 1.  On the **General** page of the Create Deployment Type Wizard, select the **Automatically identify information about this deployment type from installation files** check box.  
   
@@ -171,7 +164,7 @@ A System Center Configuration Manager application contains the files and informa
   
 6.  Click **Next**, and then continue to [Specify content options for the deployment type](#BKMK_Content).  
   
-##### To manually configure the deployment type information  
+### Manually configure the deployment type information  
   
 1.  On the **General** page of the Create Deployment Type Wizard, select **Manually specify the deployment type information**.  
   
@@ -181,9 +174,7 @@ A System Center Configuration Manager application contains the files and informa
   
 4.  Continue to [Specify content options for the deployment type](#BKMK_Content).  
   
-###  <a name="BKMK_Content"></a> Specify content options for the deployment type  
-  
-##### To specify content options for the deployment type  
+##  Specify content options for the deployment type  
   
 1.  On the **Content** page of the Create Deployment Type Wizard, specify the following information:  
   
@@ -208,10 +199,8 @@ A System Center Configuration Manager application contains the files and informa
   
 2.  Click **Next**.  
   
-### Configure detection methods to indicate the presence of the deployment type (Windows PCs only)  
+## Configure detection methods to indicate the presence of the deployment type (Windows PCs only)  
  This procedure configures  a detection method that indicates whether the deployment type is already installed.  
-  
-##### To configure a detection method  
   
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select **Configure rules to detect the presence of this deployment type**, and then click **Add Clause**.  
   
@@ -240,7 +229,7 @@ A System Center Configuration Manager application contains the files and informa
   
 5.  Click **Next** to close the **Detection Rule** dialog box.  
   
-####  <a name="BKMK_Script"></a> To use a custom script to determine the presence of a deployment type  
+###  To use a custom script to determine the presence of a deployment type  
   
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select the **Use a custom script to detect the presence of this deployment type** check box, and then click **Edit**.  
   
@@ -277,10 +266,8 @@ A System Center Configuration Manager application contains the files and informa
   
 4.  Click **OK** to close the **Script Editor** dialog box.  
   
-### Specify user experience options for the deployment type  
+## Specify user experience options for the deployment type  
  These settings specify how the application will be installed on devices and what the user will see.  
-  
-##### To specify user experience options  
   
 1.  On the **User Experience** page of the Create Deployment Type Wizard, specify the following information:  
   
@@ -331,9 +318,7 @@ A System Center Configuration Manager application contains the files and informa
   
 2.  **Estimated installation time (minutes)** - Specify the estimated time that installation of the deployment type will take. This is displayed to users of Software Center.  
   
-### Specify requirements for the deployment type  
-  
-##### To specify requirements  
+## Specify requirements for the deployment type  
   
 1.  On the **Requirements** page of the Create Deployment Type Wizard, click **Add** to open the **Create Requirement** dialog box, and add a new requirement.  
   
@@ -358,13 +343,11 @@ A System Center Configuration Manager application contains the files and informa
   
 6.  Click **OK** to save the requirement and close the **Create Requirement** dialog box.  
   
-### Specify dependencies for the deployment type  
+## Specify dependencies for the deployment type  
  Dependencies define one or more deployment types from another application that must be installed before a deployment type is installed. You can configure the dependent deployment types to be installed automatically before a deployment type is installed.  
   
 > [!IMPORTANT]  
 >  In some cases, a deployment type is dependent on a deployment type that also contains dependencies. In this scenario, where a chain of dependencies exists, the maximum number of supported dependencies in the chain is **five**.  
-  
-##### To specify deployment type dependencies  
   
 1.  On the **Dependencies** page of the Create Deployment Type Wizard, click **Add** if you want to specify the deployment types that must be installed before this deployment type can be installed.  
   
@@ -391,24 +374,20 @@ A System Center Configuration Manager application contains the files and informa
   
 8.  Click **OK** to close the **Add Dependency** dialog box.  
   
-### Confirm the deployment type settings and complete the wizard  
-  
-##### To complete the wizard  
+## Confirm the deployment type settings and complete the wizard  
   
 1.  On the **Summary** page of the Create Deployment Type Wizard, review the actions that the wizard will take. Click **Next** to create the deployment type, or click **Previous** to go back and change the settings for the deployment type.  
   
-2.  After the **Progress** page of the wizard finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
+2.  After the **Progress** page finishes, review the actions that the wizard took, and then click **Close** to complete the wizard.  
   
 3.  If you started the Create Deployment Type Wizard from the Create Application Wizard, you will return to the **Deployment Types** page of the Create Application Wizard.  
   
-### Configure additional options for deployment types that contain virtual applications  
+## Configure additional options for deployment types that contain virtual applications  
  Use the following procedures to configure additional options for deployment types that contain virtual applications.  
   
-##### To configure content options for Application Virtualization (App-V) deployment types  
+### Configure content options for Application Virtualization (App-V) deployment types  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Applications**.  
   
 3.  In the **Applications** list, select an application that contains an App-V deployment type. Then, on the **Home** tab, in the **Properties** group, click **Properties**.  
   
@@ -424,11 +403,9 @@ A System Center Configuration Manager application contains the files and informa
   
 7.  Click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-##### To configure publishing options for App-V deployment types  
+### Configure publishing options for App-V deployment types  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Applications**.  
   
 3.  In the **Applications** list, select an application that contains an App-V deployment type. Then, on the **Home** tab, in the **Properties** group, click **Properties**.  
   
@@ -440,29 +417,25 @@ A System Center Configuration Manager application contains the files and informa
   
 7.  Click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-## How to import an application  
+## Import an application  
  Use the following procedure to import an application into Configuration Manager. For information about how to export an application, see [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
   
-#### To import an application  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Import Application**.  
   
 4.  On the **General** page of the **Import Application Wizard**, click **Browse** and then specify a UNC path to the zip file that contains the application you want to import.  
   
-5.  On the **File Content** page of the wizard, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
+5.  On the **File Content** page, select the action that will be taken if the application that you are trying to import is a duplicate of an existing application. You can specify to create a new application or to ignore the duplicate and add a new revision to the existing application.  
   
-6.  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard.  
+6.  On the **Summary** page, review the actions to be taken, and then complete the wizard.  
   
  The new application appears in the **Applications** node.  
   
 > [!TIP]  
 >  The Windows PowerShell cmdlet **Import-CMApplication** performs the same function as this procedure. For more information, see [Import-CMApplication](https://technet.microsoft.com/library/jj821738.aspx) in the Microsoft System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
   
-##  <a name="BKMK_Dtypes"></a> Deployment types supported by Configuration Manager  
+##  Deployment types supported by Configuration Manager  
   
 |Deployment type name|More information|  
 |--------------------------|----------------------|  
@@ -482,3 +455,4 @@ A System Center Configuration Manager application contains the files and informa
 |**Mac OS X**|Creates a deployment type for Mac computers from a .cmmac file that you have created by using the CMAppUtil tool.<br /><br /> Applies to Mac computers running the Configuration Manager client only.|  
 |**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br><br>- You can only upload a single file with the extension .msi.<br /><br /> - The file's product code and product version are used for app detection.<br /><br /> - The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - App updates are supported when the MSI product code of each version is the same.|  
+

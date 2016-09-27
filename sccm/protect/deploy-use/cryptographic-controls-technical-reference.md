@@ -1,7 +1,7 @@
 ---
 title: "Cryptographic controls technical reference | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -287,3 +287,4 @@ System Center Configuration Manager uses signing and encryption to help protect 
 ### See also  
 
  [Technical reference for System Center Configuration Manager](../Topic/Technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

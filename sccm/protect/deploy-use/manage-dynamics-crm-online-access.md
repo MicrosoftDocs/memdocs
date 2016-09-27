@@ -1,7 +1,7 @@
 ---
 title: "Manage Dynamics CRM Online access | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.reviewer: na
 ms.service: microsoft-intune
 ms.suite: na
@@ -90,3 +90,4 @@ Select any mobile device group and then, on the **Devices** tab, select one of t
 
 
   
+

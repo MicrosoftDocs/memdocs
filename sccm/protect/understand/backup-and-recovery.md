@@ -1,7 +1,7 @@
 ---
 title: "Backup and recovery | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-13
+ms.date: 04/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -826,7 +826,7 @@ Use the following sections to help you create your Configuration Manager backup 
     5.  Click **OK** to save the password changes, and then click **OK**.  
   
 #### Re-enter sideloading keys  
- After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, let’s say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
+ After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, let's say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
   
 #### Recreate the Microsoft Intune subscription  
  If you recover a Configuration Manager site server after the site server computer is  re-imaged, the Microsoft Intune subscription is not restored. You must recreate the subscription after you recover the site. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub).  
@@ -903,3 +903,4 @@ Use the following sections to help you create your Configuration Manager backup 
   
 ### See also  
  [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)
+

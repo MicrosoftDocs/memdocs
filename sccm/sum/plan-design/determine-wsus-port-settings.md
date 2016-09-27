@@ -1,7 +1,7 @@
 ---
 title: "How to determine the port settings used by WSUS in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,3 +25,4 @@ When you install and configure a software update point in System Center Configur
   
 ## See Also  
  [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)
+

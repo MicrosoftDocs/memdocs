@@ -1,7 +1,7 @@
 ---
 title: "iOS hybrid enrollment using Apple Configurator with Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-07
+ms.date: 06/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -130,3 +130,4 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
   
 7.  **Distribute devices**   
     The devices are now ready for corporate enrollment. Power down the devices and distribute them to users. When the device is turned on, the setup assistant will start and prompt the user for their work or school account.
+

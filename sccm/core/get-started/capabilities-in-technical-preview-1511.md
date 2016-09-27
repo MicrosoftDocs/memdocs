@@ -1,7 +1,8 @@
 ---
 title: "Capabilities in Technical Preview 1511 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1511."
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

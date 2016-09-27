@@ -1,7 +1,7 @@
 ---
 title: "Deploy Wi-Fi profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,3 +72,4 @@ Wi-Fi profiles in System Center Configuration Manager must be deployed to one or
 ### See also  
 
  [Operations and maintenance for Wi-Fi Profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

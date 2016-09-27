@@ -1,7 +1,7 @@
 ---
 title: "Plan for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -121,3 +121,4 @@ Consider the following requirements before preparing the Configuration Manager i
   
 ## See Also  
  [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+

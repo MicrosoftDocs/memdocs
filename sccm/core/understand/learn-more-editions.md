@@ -1,7 +1,7 @@
 ---
 title: "Fundamentals of System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -63,3 +63,4 @@ If a customer's software assurance has expired, they must renew SA to continue u
 If SA is not renewed, but was current as of October 1st, 2016, customers are eligible to use the LTSB installation option. The LTSB has these limitations (link to LTSB doc page, where it documents that  pre-release features, ATP, Cloud Distribution Point, Intune, and Asset Intelligence are the Features limited in LTSB). It will also have the following Support lifecycle (link to page where it states 3yrs support (Oct 2016-Oct 2019), from time of release).
 
 The LTSB option must be installed with a fresh install (or link to support page, if other option). Customers can later upgrade from LTSB, back to current branch. This can be done via a Licensing setting in the Hierarchy Settings. LTSB will not be eligible to upgrade to a future LTSB version. While running LTSB, only critical software updates will be offered via Updates and Servicing. Current Branch software updates will be grayed out. No new features will be offered to LTSB, beyond what was initially installed.
+

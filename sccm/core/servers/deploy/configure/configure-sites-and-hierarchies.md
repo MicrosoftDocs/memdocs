@@ -1,7 +1,7 @@
 ---
 title: "Configure sites and hierarchies for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -42,3 +42,4 @@ After you install your first System Center Configuration Manager site or add add
 |Configure database replicas for management points|Configure a database replica to reduce the CPU load placed on the site database server by management points as they service requests from clients. See [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)|  
 |Configure a SQL Server AlwaysOn Availability Group to host the site database|Beginning with version 1602, you can configure availability groups as a high-availability and disaster-recovery solution for hosting the site database at primary sites and the central administration site. See [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)|  
 |Modify replication between sites|See [Data transfers between sites in System Center Configuration Manager](../../../../core/servers/manage/data-transfers-between-sites.md) to learn about the following subjects:<br /><br /> Configure [File-based replication](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute) between secondary sites<br /><br /> Configure [Database replication links](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> Configure [Distributed views](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
+

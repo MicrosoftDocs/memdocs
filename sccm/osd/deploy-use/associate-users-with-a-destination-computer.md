@@ -1,7 +1,7 @@
 ---
 title: "Associate users with a destination computer in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-28
+ms.date: 07/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -37,3 +37,4 @@ When you use System Center Configuration Manager to deploy operating system you 
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Monitor applications from the System Center Configuration Manager console | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -79,3 +79,4 @@ In System Center Configuration Manager, you can monitor the deployment of all so
     > -   In the **Status Summarizers** dialog box, click **Application Deployment Summarizer**, and then click **Edit**.  
     > -   In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals and then click **OK**.  
   
+

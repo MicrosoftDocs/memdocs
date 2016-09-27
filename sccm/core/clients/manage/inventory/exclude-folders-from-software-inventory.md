@@ -1,7 +1,7 @@
 ---
 title: "How to exclude folders from software inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,12 +34,13 @@ Use the following steps to configure System Center Configuration Manager softwar
 
 6.  In the **Device Settings** list, configure the following values:  
 
-    -   **Enable software inventory on clients** – From the drop-down list, select **True**.  
+    -   **Enable software inventory on clients** - From the drop-down list, select **True**.  
 
-    -   **Schedule software inventory and file collection schedule** – Configures the interval at which clients collect software inventory and files. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
+    -   **Schedule software inventory and file collection schedule** - Configures the interval at which clients collect software inventory and files. Use the default value of **7 days** or click **Schedule** to configure a custom interval.  
 
 7.  Configure the client settings that you require. For a list of software inventory client settings that you can configure, see the [Software Inventory](../../../../core/clients/deploy/about-client-settings.md#BKMK_SoftInventoryDeviceSettings) section in the [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic.  
 
 8.  Click **OK** to close the **Configure Client Setting** dialog box.  
 
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
+

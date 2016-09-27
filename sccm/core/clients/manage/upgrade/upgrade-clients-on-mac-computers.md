@@ -1,7 +1,7 @@
 ---
 title: "How to upgrade clients on Mac computers in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -92,3 +92,4 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 -   Add the configuration item to a configuration baseline, and then deploy the configuration baseline to all Mac computers that install a certificate independently from Configuration Manager.  
 
  For more information about how to create and deploy configuration items for Mac computers, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
+

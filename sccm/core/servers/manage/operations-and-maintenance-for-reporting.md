@@ -1,7 +1,7 @@
 ---
 title: "Operations and maintenance for reporting in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -50,7 +50,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 >  To run reports, you must have **Read** rights for the **Site** permission and the **Run Report** permission that is configured for specific objects.  
 
 > [!NOTE]  
->  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](http://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server�2008 Books Online.  
+>  Report Manager is a web\-based report access and management tool that you use to administer a single report server instance on a remote location over an HTTP connection. You can use Report Manager for operational tasks, for example, to view reports, modify report properties, and manage associated report subscriptions. This topic provides the steps to view a report and modify report properties in Report Manager, but for more information about the other options that Report Manager provides, see [Report Manager](http://go.microsoft.com/fwlink/p/?LinkId=224916) in SQL Server 2008 Books Online.  
 
  Use the following procedures to run a Configuration Manager report.  
 
@@ -253,7 +253,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
         -   **Acrobat \(PDF\) file**: Saves the report in Acrobat Portable Document Format.  
 
-        -   **HTML 4.0**: Saves the report as a webpage viewable only in browsers that support HTML 4.0. Internet Explorer�5 and later versions support HTML 4.0.  
+        -   **HTML 4.0**: Saves the report as a webpage viewable only in browsers that support HTML 4.0. Internet Explorer 5 and later versions support HTML 4.0.  
 
             > [!NOTE]  
             >  If you have images in your report, the HTML 4.0 format does not include them in the file.  
@@ -371,3 +371,4 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 ## See Also  
  [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)
+

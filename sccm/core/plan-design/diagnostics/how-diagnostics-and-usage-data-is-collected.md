@@ -1,7 +1,7 @@
 ---
 title: "How diagnostics and usage data is collected by System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,3 +24,4 @@ At the top-level site of a hierarchy, the service connection point site system r
 -   **In offline mode:** Diagnostics and usage data is transferred manually by using the service connection tool. For more information, see [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md).  
 
 For more information, see [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+

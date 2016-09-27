@@ -44,3 +44,4 @@ ms.assetid: bec30e2e-a599-4b27-aaf0-eeae44b7346a
      You must limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule, specify a criteria that limits the number of software updates that are returned. The automatic deployment rule fails when the criteria that you specify returns more than 1000 software updates. You can check the status of the automatic deployment rule from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, do not select more than 1000 updates to deploy.  
 
      You must also limit the number of software updates to 1000 in a configuration baseline. For more information, see [How to create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).
+

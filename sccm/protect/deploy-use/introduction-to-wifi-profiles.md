@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Wi-Fi Profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -44,3 +44,4 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
   
 ## See Also  
  [Wi-Fi Profiles in System Center Configuration Manager](../Topic/Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

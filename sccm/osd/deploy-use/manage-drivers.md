@@ -1,7 +1,7 @@
 ---
 title: "Manage drivers in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -290,3 +290,4 @@ System Center Configuration Manager provides a driver catalog that you can use t
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

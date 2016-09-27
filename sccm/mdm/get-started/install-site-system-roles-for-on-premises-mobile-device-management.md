@@ -1,7 +1,7 @@
 ---
 title: "Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-04
+ms.date: 02/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,3 +64,4 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
 ## See Also  
  [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
+

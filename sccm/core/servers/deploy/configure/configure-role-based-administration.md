@@ -1,7 +1,7 @@
 ---
 title: "Configure role-based administration for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -288,3 +288,4 @@ The current configuration for the securable object behavior changes the process 
 
     > [!CAUTION]  
     >  When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.  
+

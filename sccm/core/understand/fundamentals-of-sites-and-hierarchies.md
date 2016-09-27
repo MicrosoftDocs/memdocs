@@ -1,7 +1,7 @@
 ---
 title: "Fundamentals of sites and hierarchies for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -56,3 +56,4 @@ When you install System Center Configuration Manager for the first time, the fir
  **Extending the Active Directory schema** is done only one time per forest and can be done before or after you install Configuration Manager.   When you  extend the schema, you must create a new Active Directory container named **System Management** in each domain that contains a Configuration Manager site that will publish data for clients to find. For more information, see [Extend the Active Directory schema for System Center Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
  **Publishing site data** improves the security of your Configuration Manager hierarchy and reduces administrative overhead, but  is not required for basic Configuration Manager functionality.  
+

@@ -1,7 +1,7 @@
 ---
 title: "Waking up clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-10
+ms.date: 06/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -86,3 +86,4 @@ You must also decide whether to use subnet-directed broadcast packets, or unicas
 
 > [!WARNING]  
 >  There are security risks associated with subnet-directed broadcasts: An attacker could send continuous streams of Internet Control Message Protocol (ICMP) echo requests from a falsified source address to the directed broadcast address, which cause all the hosts to reply to that source address. This type of denial of service attack is commonly called a smurf attack and is typically mitigated by not enabling subnet-directed broadcasts.
+

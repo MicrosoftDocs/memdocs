@@ -1,7 +1,7 @@
 ---
 title: "Upgrade on-premises infrastructure that supports System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,3 +91,4 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
 
 > [!NOTE]  
 >  When you change the SQL Server edition in use at the central administration site from a Standard edition to either a Datacenter or Enterprise edition, the database partition that limits the number of clients the hierarchy supports does not change.
+

@@ -1,7 +1,7 @@
 ---
 title: "Support for SQL Server versions for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-23
+ms.date: 08/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,7 +52,7 @@ The following instances are supported:
 > [!IMPORTANT]  
 >  Use of SQL Server Standard for the database at the central administration site limits the total number of clients a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
-### SQL Server 2016 � Standard, Enterprise  
+### SQL Server 2016 - Standard, Enterprise  
 
 Supported for use with version 1606.   
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
@@ -61,7 +61,8 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   Primary site  
 -   Secondary site  
 
-### SQL Server 2014 SP2 � Standard, Enterprise  
+
+### SQL Server 2014 SP2 - Standard, Enterprise  
 
 Supported for version 1511 and later.  
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
@@ -71,7 +72,8 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   Secondary site  
 
 
-### SQL Server 2014 SP1 � Standard, Enterprise  
+### SQL Server 2014 SP1 - Standard, Enterprise  
+
 Supported for version 1511 and later.  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
@@ -79,7 +81,9 @@ Supported for version 1511 and later.
 -   Primary site  
 -   Secondary site  
 
-### SQL Server 2012 SP3 � Standard, Enterprise  
+
+### SQL Server 2012 SP3 - Standard, Enterprise  
+
 Supported for version 1511 and later.  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
@@ -87,7 +91,9 @@ Supported for version 1511 and later.
 -   Primary site  
 -   Secondary site  
 
-### SQL Server 2012 SP2 � Standard, Enterprise  
+
+### SQL Server 2012 SP2 - Standard, Enterprise  
+
 Supported for version 1511 and later.  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
@@ -95,7 +101,9 @@ Supported for version 1511 and later.
 -   Primary site  
 -   Secondary site  
 
-### SQL Server 2008 R2 SP3 � Standard, Enterprise, Datacenter  
+
+### SQL Server 2008 R2 SP3 - Standard, Enterprise, Datacenter  
+
 Supported for version 1511 and later.    
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 

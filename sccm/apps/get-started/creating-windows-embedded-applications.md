@@ -1,7 +1,7 @@
 ---
 title: "Create Windows Embedded applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -41,3 +41,4 @@ In addition to the other System Center Configuration Manager requirements and pr
 ### Do not deploy applications to Windows Embedded devices that have write filters enabled if the applications require the user to accept the license terms  
  When writer filters are disabled so that Configuration Manager can install software on embedded devices, low-rights users cannot log on to the device. If the installation requires the user to accept the license terms, this will not be possible and the installation will fail. Make sure that you do not deploy software to Windows Embedded devices if the installation requires user interaction. You can use the Applicable Platforms list to filter these operating systems.  
   
+

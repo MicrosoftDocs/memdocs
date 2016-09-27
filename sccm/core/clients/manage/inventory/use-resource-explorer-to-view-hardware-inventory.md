@@ -1,7 +1,7 @@
 ---
 title: "How to use Resource Explorer to view hardware inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-15
+ms.date: 04/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,7 +24,7 @@ Use Resource Explorer in System Center Configuration Manager to view information
 
 -   **Hardware** - Contains the most recent hardware inventory collected from the specified Configuration Manager client device. You can review the inventory item **Workstation Status** to discover the time and date when the device last performed a hardware inventory.  
 
--   **Hardware History** – Contains a history of inventoried items that have changed since the last hardware inventory was performed. Each item in the list contains a **Current** node and one or more *<date\>* nodes. You can compare the information in the current node to one of the historical nodes to discover items that have changed in the client computers hardware inventory.  
+-   **Hardware History** - Contains a history of inventoried items that have changed since the last hardware inventory was performed. Each item in the list contains a **Current** node and one or more *<date\>* nodes. You can compare the information in the current node to one of the historical nodes to discover items that have changed in the client computers hardware inventory.  
 
     > [!NOTE]  
     >  Configuration Manager retains hardware inventory history for the number of days you specify in the **Delete Aged Inventory History** site maintenance task  
@@ -43,3 +43,4 @@ Use Resource Explorer in System Center Configuration Manager to view information
 4.  You can right-click any item in the right-pane of the **Resource Explorer** window and then click **Properties** to open the *<item name\>***Properties** dialog box which can help you to view the collected inventory information in a more readable format.  
 
 5.  When you are finished, close the **Resource Explorer** window.  
+

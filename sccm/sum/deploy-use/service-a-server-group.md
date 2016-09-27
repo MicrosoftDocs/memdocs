@@ -1,7 +1,7 @@
 ---
 title: "Service a server group"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -74,3 +74,4 @@ When a computer fails to release a deployment lock, you can manually release all
 1.  In the **Assets and Compliance** workspace, click **Device Collections**, and click the collection to clear deployment locks.  
   
 2.  On the **Home** tab, in the **Deployment** group, click **Clear Server Group Deployment Locks**. When clients have failed to install the software updates and are preventing other clients from installing their software updates, the deployment locks can be manually cleared.  
+

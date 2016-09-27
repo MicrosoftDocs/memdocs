@@ -1,7 +1,7 @@
 ---
 title: "Use a SQL Server cluster for the System Center Configuration Manager site database"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -87,3 +87,4 @@ author: Brenduns
 
     > [!IMPORTANT]  
     >  When you enter the name of the virtual SQL Server cluster instance, do not enter the virtual Windows Server name created by the Windows Server cluster. If you use the virtual Windows Server name the site database installs on the local hard drive of the active Windows Server cluster node. This prevents successful failover if that node fails.  
+

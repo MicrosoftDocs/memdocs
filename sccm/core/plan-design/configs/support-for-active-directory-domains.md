@@ -1,7 +1,7 @@
 ---
 title: "Support for Active Directory domains for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-25
+ms.date: 05/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -69,3 +69,4 @@ The following table identifies the supported scenarios for a disjoint namespace.
      **For example:** The single label domain of Contoso is configured to have a disjoint namespace in DNS of contoso.com. Therefore, when you specify the DNS suffix in Configuration Manager for a computer in the Contoso domain, you specify Contoso.com and not Contoso.  
 
 -   DCOM connections between site servers in the system context must be successful by using Kerberos authentication.  
+

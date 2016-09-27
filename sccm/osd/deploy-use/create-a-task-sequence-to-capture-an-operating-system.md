@@ -1,7 +1,7 @@
 ---
 title: "Create a task sequence to capture an operating system in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-01-28
+ms.date: 01/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -232,3 +232,4 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

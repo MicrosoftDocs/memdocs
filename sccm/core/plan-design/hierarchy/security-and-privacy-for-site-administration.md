@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for site administration in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -352,3 +352,4 @@ Identify and follow the best practices for your version of IIS Server. However, 
  Discovery information is not sent to Microsoft. Discovery information is stored in the Configuration Manager database. Information is retained in the database until it is deleted by the site maintenance task **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval.  
 
  Before you configure additional discovery methods or extend Active Directory discovery, consider your privacy requirements.  
+

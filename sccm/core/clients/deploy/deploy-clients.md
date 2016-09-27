@@ -1,7 +1,7 @@
 ---
 title: "Deploy clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,3 +32,4 @@ The most common and robust way to manage computers and servers in System Center 
 -   [Client deployment tasks for System Center Configuration Manager](../../../core/clients/deploy/client-deployment-tasks.md)  
 
      Learn about the detailed procedures that deploy the Configuration Manager clients based on the target computer platforms you want to manage.  
+

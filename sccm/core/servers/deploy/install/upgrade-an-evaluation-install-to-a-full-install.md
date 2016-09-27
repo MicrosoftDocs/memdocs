@@ -1,7 +1,7 @@
 ---
 title: "Upgrade an Evaluation install of System Center Configuration Manager to a Full install"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -51,3 +51,4 @@ Because secondary sites are not treated as evaluation installations, you do not 
 
     > [!NOTE]  
     >  The title bar of Configuration Manager consoles that remain  connected to the site that you  upgrade might indicate that the site is still an evaluation version until you reconnect the console to the site.  
+

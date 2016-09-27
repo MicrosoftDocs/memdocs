@@ -1,7 +1,7 @@
 ---
 title: "Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -265,3 +265,4 @@ Beginning with System Center Configuration Manager version 1511, this level incl
 -   Software update scan success percentages  
 
 -   Minimum/maximum/average number of hours since last software update scan  
+

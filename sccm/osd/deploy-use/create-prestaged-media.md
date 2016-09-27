@@ -1,7 +1,7 @@
 ---
 title: "Create prestaged media with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -133,3 +133,4 @@ Prestaged media contains the boot image used to start the destination computer a
   
 ## See Also  
  [Create task sequence media with System Center Configuration Manager](../../osd/deploy-use/create-task-sequence-media.md)
+

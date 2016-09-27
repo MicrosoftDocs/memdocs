@@ -1,7 +1,7 @@
 ---
 title: "Manage mobile devices with on-premises infrastructure in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,3 +43,4 @@ System Center Configuration Manager On\-premises Mobile Device Management is a d
   
 ## See Also  
  [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Database replicas for management points for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-26
+ms.date: 04/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

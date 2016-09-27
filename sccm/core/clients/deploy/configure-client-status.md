@@ -1,7 +1,7 @@
 ---
 title: "Configure client status | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -76,11 +76,11 @@ Before you can monitor System Center Configuration Manager client status and rem
 
 6.  In the **Conditions** list of the **Alerts** tab, select each client status alert and then specify the following information.  
 
-    -   **Alert Name** – Accept the default name or enter a new name for the alert.  
+    -   **Alert Name** - Accept the default name or enter a new name for the alert.  
 
-    -   **Alert Severity** – From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
+    -   **Alert Severity** - From the drop-down list, choose the alert level that will be displayed in the Configuration Manager console.  
 
-    -   **Raise alert** – Specify the threshold percentage for the alert.  
+    -   **Raise alert** - Specify the threshold percentage for the alert.  
 
 7.  Click **OK** to close the *&lt;collection Name\>***Properties** dialog box.  
 
@@ -95,10 +95,11 @@ Before you can monitor System Center Configuration Manager client status and rem
 
 3.  Enter one of the following values for this registry key:  
 
-    -   **True** – The client computer will not automatically remediate any problems that are found. However, you will still be alerted in the **Monitoring** workspace about any problems with this client.  
+    -   **True** - The client computer will not automatically remediate any problems that are found. However, you will still be alerted in the **Monitoring** workspace about any problems with this client.  
 
-    -   **False** – The client computer will automatically remediate problems when they are found and you will be alerted in the **Monitoring** workspace. This is the default setting.  
+    -   **False** - The client computer will automatically remediate problems when they are found and you will be alerted in the **Monitoring** workspace. This is the default setting.  
 
 4.  Close the registry editor.  
 
  You can also install clients using the CCMSetup **NotifyOnly** installation property to exclude them from automatic remediation. For more information about this client installation property, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
+

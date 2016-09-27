@@ -1,7 +1,7 @@
 ---
 title: "Configure Endpoint Protection Client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -136,11 +136,11 @@ For more information about operating system deployment in Configuration Manager,
 3.  Open an elevated command prompt, navigate to the folder in which you installed PsTools, and then type the following command
 
    ```
-   Psexec.exe –s –i regedit.exe
+   Psexec.exe -s -i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  Use caution while you are running the Registry Editor in this manner; the –s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
+   >  Use caution while you are running the Registry Editor in this manner; the -s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.
 
@@ -162,3 +162,4 @@ For more information about operating system deployment in Configuration Manager,
 After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).
 
 When an image that contains the Endpoint Protection client software is deployed, the Endpoint Protection client will automatically report information to the Configuration Manager site to which the computer is assigned, and policy applicable to the client computer is downloaded and applied.
+

@@ -1,7 +1,7 @@
 ---
 title: "Manage volume-purchased iOS apps | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-14
+ms.date: 08/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -100,3 +100,4 @@ A Configuration Manager application is created containing the Windows Store for 
  This report displays the name of each application together with the total number of licenses you purchased, the number of licenses available and more.  
   
  For help with running Configuration Manager reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+

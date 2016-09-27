@@ -1,7 +1,7 @@
 ---
 title: "Create queries | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -65,7 +65,7 @@ Use the following sections in this topic to help you create or import queries in
 
     |Join type|Description|  
     |---------------|-----------------|  
-    |Inner|Displays only matching results � always used by joins that are created automatically.|  
+    |Inner|Displays only matching results - always used by joins that are created automatically.|  
     |Left|Displays all results for the base attribute and only the matching results for the join attribute.|  
     |Right|Displays all the results for the join attribute and only the matching results for the base attribute.|  
     |Full|Displays all the results for both the base attribute and the join attribute.|  
@@ -177,3 +177,4 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 
 ## See Also  
  [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+

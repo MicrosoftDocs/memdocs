@@ -1,7 +1,7 @@
 ---
 title: "Planning for operating system deployment interoperability in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -64,3 +64,4 @@ When different System Center Configuration Manager sites in a single hierarchy u
   
 ## See Also  
  [Planning for operating system deployment interoperability in System Center Configuration Manager](../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)
+

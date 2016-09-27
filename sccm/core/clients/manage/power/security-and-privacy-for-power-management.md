@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,3 +27,4 @@ This section contains security and privacy information for power management in S
  The power usage information is stored in the Configuration Manager database and is not sent to Microsoft. Detailed information is retained in the database for 31 days and summarized information is retained for 13 months. You cannot configure the deletion interval.  
 
  Before you configure power management, consider your privacy requirements.  
+

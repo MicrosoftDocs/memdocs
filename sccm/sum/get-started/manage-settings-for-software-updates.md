@@ -134,3 +134,4 @@ ms.assetid: a2ee97a8-8797-4e77-b6a9-4fb701ee8b43
 
 ### Self Update  
  When Automatic Updates is enabled on client computers, the WUA automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates is not configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.  
+

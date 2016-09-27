@@ -1,7 +1,7 @@
 ---
 title: "Package Transfer Manager  in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -76,3 +76,4 @@ The following information describes how Package Transfer Manager manages the tra
     -   **Standard distribution point:** After the Package Transfer Manager is done transferring files to each designated remote distribution point, it verifies the hash of the content on the distribution point, and notifies Distribution Manager that the distribution is complete.  
 
     -   **Pull-distribution point:** After the pull-distribution point completes the content download, the distribution point verifies the hash of the content, and then submits a status message to the sites management point to indicate success. However, if after 60 minutes, this status is not received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm if the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
+

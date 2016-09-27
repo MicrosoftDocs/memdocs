@@ -1,7 +1,8 @@
 ---
 title: "Evaluate System Center Configuration Manager by building your own lab environment"
+description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

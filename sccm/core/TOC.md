@@ -257,7 +257,7 @@
 ###  [Security and privacy for remote control](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
 ###  [Technical reference for remote control](clients/manage/remote-control/technical-reference-for-remote-control.md)
 
-##   [Power management](clients/manage/power/power-management-technical-reference.md)
+##   [Power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Introduction to power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Planning for power management](clients/manage/power/planning-for-power-management.md)
 #### [Prerequisites for power management](clients/manage/power/prerequisites-for-power-management.md)
@@ -274,3 +274,4 @@
 ###  [How to upgrade clients for Windows computers](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [How to upgrade clients for Linux and UNIX servers](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [How to upgrade clients on Mac computers](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+

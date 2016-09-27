@@ -1,7 +1,7 @@
 ---
 title: "Uninstall sites and hierarchies in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -160,3 +160,4 @@ Use the following procedure to uninstall a primary site.
     >  When there is a primary site attached to the central administration site, you must uninstall the primary site before you can uninstall the central administration site.  
 
 6.  Click **Yes** to confirm to uninstall the Configuration Manager central administration site.  
+

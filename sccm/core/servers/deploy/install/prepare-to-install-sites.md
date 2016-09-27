@@ -1,7 +1,7 @@
 ---
 title: "Prepare to install System Center Configuration Manager sites"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -136,3 +136,4 @@ When the computer where you will run Setup is not connected to the Internet, or 
  -  By default, site systems and clients use pre-defined ports to communicate.
  -  During Setup, you can configure alternate ports.
  -  For more information, see [Ports used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/ports.md)
+

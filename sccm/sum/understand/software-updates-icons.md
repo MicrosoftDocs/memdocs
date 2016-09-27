@@ -1,7 +1,7 @@
 ---
 title: "Icons used for software updates in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-29
+ms.date: 06/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  Synchronized software updates are represented by one of the following icons.  
 
 ### Normal Icon  
- ![icon](../media/9b5d6102-2394-4f72-969c-67586023a6e0.jpg "9b5d6102-2394-4f72-969c-67586023a6e0") The icon with the green arrow represents a normal software update.  
+ ![icon](../media/Normal.jpg "Normal icon") The icon with the green arrow represents a normal software update.  
 
  **Description:**  
 
@@ -32,7 +32,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  There are no operational concerns.  
 
 ### Expired Icon  
- ![icon](../media/4261d66b-3ffc-474a-8c55-f7233e10770d.jpg "4261d66b-3ffc-474a-8c55-f7233e10770d") The icon with the black X represents an expired software update. You can also identify expired software updates by viewing the **Expired** column for the software update when it displays in the Configuration Manager console.  
+ ![icon](../media/Expired.jpg "Expired icon") The icon with the black X represents an expired software update. You can also identify expired software updates by viewing the **Expired** column for the software update when it displays in the Configuration Manager console.  
 
  **Description:**  
 
@@ -43,7 +43,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  There are no operational concerns.
 
 ### Superseded Icon  
- ![icon](../media/5daefc57-9475-493b-b953-cf8ff76f7595.jpg "5daefc57-9475-493b-b953-cf8ff76f7595") The icon with the yellow star represents a superseded software update. You can also identify superseded software updates by viewing the **Superseded** column for the software update when it displays in the Configuration Manager console.  
+ ![icon](../media/Superseded.jpg "Superseded icon") The icon with the yellow star represents a superseded software update. You can also identify superseded software updates by viewing the **Superseded** column for the software update when it displays in the Configuration Manager console.  
 
  **Description:**  
 
@@ -62,7 +62,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  When possible, deploy the superseding software update to client computers instead of the superseded software update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
 
 ### Invalid Icon  
- ![icon](../media/fc330e6d-9e87-47a6-b51b-1affa8503450.jpg "fc330e6d-9e87-47a6-b51b-1affa8503450") The icon with the red X represents an invalid software update.  
+ ![icon](../media/Invalid.jpg "Invalid icon") The icon with the red X represents an invalid software update.  
 
  **Description:**  
 
@@ -120,3 +120,4 @@ Synchronized software updates are displayed in the Configuration Manager console
 
 ## See Also  
  [Introduction to software updates](software-updates-introduction)
+

@@ -1,7 +1,7 @@
 ---
 title: "Migrate data between hierarchies in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -99,3 +99,4 @@ After you migrate data from a Configuration Manager source hierarchy that you wi
 
 ## See Also  
  [Start using System Center Configuration Manager](../../core/servers/deploy/start-using.md)
+

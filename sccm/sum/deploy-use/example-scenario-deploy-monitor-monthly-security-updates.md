@@ -1,7 +1,7 @@
 ---
 title: "Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft"
 ms.custom: na
-ms.date: 2016-05-24
+ms.date: 05/24/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -99,3 +99,4 @@ This topic provides an example scenario of how you can use software updates in S
   
 ## See Also  
  [Software updates technical reference for System Center Configuration Manager](../Topic/Software%20updates%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

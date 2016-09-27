@@ -1,7 +1,7 @@
 ---
 title: "Manage SharePoint Online access | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -170,3 +170,4 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 ### See also  
 
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
+

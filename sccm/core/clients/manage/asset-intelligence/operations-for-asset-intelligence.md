@@ -1,7 +1,7 @@
 ---
 title: "Use Asset Intelligence | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -326,3 +326,4 @@ This topic contains information to help you manage typical Asset Intelligence ta
     -   **Overwrite the locally edited catalog information value with the downloaded System Center Online value**: Resolves the software details conflict by overwriting the existing Asset Intelligence catalog software categorization information with new information obtained from System Center Online. When you select this setting, the software title state changes from **Updatable** to **Validated**.  
 
      Click **OK** to save the conflict resolution.  
+

@@ -1,7 +1,7 @@
 ---
 title: "Create iOS applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-16
+ms.date: 08/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,3 +33,4 @@ In addition to the other System Center Configuration Manager requirements and pr
 > [!IMPORTANT]  
 >  Currently, end-users cannot install corporate apps from the Microsoft Intune Company Portal app for iOS. This is due to restrictions placed on apps that are published in the iOS App Store (see App Store Review Guidelines, Section 2). Users can install corporate apps (including managed App Store apps and line-of-business app packages) by browsing to the Intune Web Portal on their device (portal.manage.microsoft.com). For more information about the mobile management capabilities enabled by the Intune Company Portal app, see [Mobile device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx).  
   
+

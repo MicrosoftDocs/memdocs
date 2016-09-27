@@ -1,7 +1,7 @@
 ---
 title: "Customize boot images with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-08
+ms.date: 08/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -293,3 +293,4 @@ Each version of Configuration Manager supports a specific version of the Windows
   
 ## See Also  
  [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md)
+

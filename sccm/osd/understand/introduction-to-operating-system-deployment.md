@@ -1,7 +1,7 @@
 ---
 title: "Introduction to operating system deployment in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -149,3 +149,4 @@ The following sections explain some of the concepts that are used to deploy oper
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](assetId:///c6b0ff4c-235a-4e4c-99c0-d14d202de478)
+

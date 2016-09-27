@@ -1,7 +1,8 @@
 ---
 title: "Capabilities in Technical Preview 1602 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1602."
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -46,4 +47,3 @@ This article introduces the features that are available in the Technical Preview
 -   Available Windows 10 upgrades now only display in the **Windows 10 Servicing** \ **All Windows 10 Updates** node of the Configuration Manager console. These updates no longer display in the **Software Updates** \ **All Software Updates** node.  
 
 -   End-users that start a Windows 10 Upgrade package will be prompted with a dialog that lets them know they will be upgrading their operating system.  
-  

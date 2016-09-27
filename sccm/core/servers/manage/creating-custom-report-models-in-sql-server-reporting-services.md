@@ -1,7 +1,7 @@
 ---
 title: "Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -415,3 +415,4 @@ Sample report models are included in System Center Configuration Manager, but yo
 
 ## See Also  
  [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Supported configurations for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -60,3 +60,4 @@ Configuration Manager supports several Windows technologies like BranchCache and
 
 -  [Support for Virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
 Information to help you use supported virtual machine technologies.
+

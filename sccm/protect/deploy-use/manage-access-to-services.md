@@ -1,7 +1,7 @@
 ---
 title: "Conditional access to services | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -126,3 +126,4 @@ Use **conditional access** in System Center Configuration Manager to help secure
 ### See also  
 
  [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md)
+

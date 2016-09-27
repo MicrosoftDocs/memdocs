@@ -1,7 +1,7 @@
 ---
 title: "Keyboard shortcuts for the remote control viewer in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -28,3 +28,4 @@ When you use the System Center Configuration Manager remote control viewer, you 
 |Alt+Delete|Displays the Windows menu.|  
 |Ctrl+Alt+Minus Sign (on the numeric keypad)|Copies the active window of the local computer to the remote computer Clipboard.|  
 |Ctrl+Alt+Plus Sign (on the numeric keypad)|Copies the entire local computer's window area to the remote computer Clipboard.|  
+

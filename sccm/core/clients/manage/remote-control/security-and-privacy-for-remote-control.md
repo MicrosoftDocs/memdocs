@@ -1,7 +1,7 @@
 ---
 title: "Security and privacy for remote control in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -52,3 +52,4 @@ This topic contains security and privacy information for remote control in Syste
  By default, Configuration Manager grants the local Administrators group Remote Control permissions.  
 
  Before you configure remote control, consider your privacy requirements.  
+

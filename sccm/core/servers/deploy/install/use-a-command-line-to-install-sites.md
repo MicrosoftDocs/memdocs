@@ -1,7 +1,7 @@
 ---
 title: "Use a command line to install System Center Configuration Manager sites"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -116,3 +116,4 @@ When Setup starts the actual site installation, the automatically created script
     -   When you reference the Setup script file at the command prompt, you must provide the full path to the file. For example, if your Setup initialization file is named Setup.ini, and it is stored in the C:\Setup folder, at the command prompt, type:  **setup /script c:\setup\setup.ini**  
 
 -   The account that runs setup must have administrative credentials on computer. When you run Setup with the unattended script, start the command prompt by using **Run as administrator**  
+

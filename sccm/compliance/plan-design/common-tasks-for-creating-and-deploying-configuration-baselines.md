@@ -1,7 +1,7 @@
 ---
 title: "Common tasks for creating and deploying configuration baselines with System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -91,3 +91,4 @@ This topic contains common scenarios to help you learn about how to create and d
   
 ## See Also  
  [Common tasks for managing compliance with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-managing-compliance.md)
+

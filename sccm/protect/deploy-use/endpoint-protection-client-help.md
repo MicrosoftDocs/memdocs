@@ -1,7 +1,7 @@
 ---
 title: "Endpoint Protection Client Help | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-05
+ms.date: 02/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -40,3 +40,4 @@ This version of Endpoint Protection includes the following new features and enha
 
 
  [Troubleshooting Windows Defender or Endpoint Protection client](../../protect/deploy-use/troubleshoot-windows-defender-endpoint-protection-client.md)
+

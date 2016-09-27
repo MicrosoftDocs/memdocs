@@ -1,7 +1,7 @@
 ---
 title: "Client security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -59,7 +59,7 @@ This article contains security and privacy information for clients in System Cen
 
  In addition, wherever possible, select a client installation method that requires the least security permissions in Configuration Manager, and restrict the administrative users that are assigned security roles that include permissions that can be used for purposes other than client deployment. For example, automatic client upgrade requires the **Full Administrator** security role, which grants an administrative user all security permissions.  
 
- For more information about the dependencies and security permissions required for each client installation method, see “Installation Method Dependencies” in [Prerequisites for Computer Clients](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers).  
+ For more information about the dependencies and security permissions required for each client installation method, see "Installation Method Dependencies" in [Prerequisites for Computer Clients](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers).  
 
  **If you must use client push installation, take additional steps to secure the Client Push Installation Account**  
 
@@ -108,7 +108,7 @@ This article contains security and privacy information for clients in System Cen
  Because publishing to WINS is less secure than the other publishing methods, configure client computers to not fall back to using WINS by specifying SMSDIRECTORYLOOKUP=NoWINS. If you must use WINS for service location, use SMSDIRECTORYLOOKUP=WINSSECURE (the default setting), which uses the Configuration Manager trusted root key to validate the self-signed certificate of the management point.  
 
 > [!NOTE]  
->  When the client is configured for SMSDIRECTORYLOOKUP=WINSSECURE and finds a management point from WINS, the client checks its copy of the Configuration Manager trusted root key that is in WMI. If the signature on the management point certificate matches the client’s copy of the trusted root key, the certificate is validated, and the client communicates with the management point that it found by using WINS. If the signature on the management point certificate does not match the client’s copy of the trusted root key, the certificate is not valid and the client will not communicate with the management point that it found by using WINS.  
+>  When the client is configured for SMSDIRECTORYLOOKUP=WINSSECURE and finds a management point from WINS, the client checks its copy of the Configuration Manager trusted root key that is in WMI. If the signature on the management point certificate matches the client's copy of the trusted root key, the certificate is validated, and the client communicates with the management point that it found by using WINS. If the signature on the management point certificate does not match the client's copy of the trusted root key, the certificate is not valid and the client will not communicate with the management point that it found by using WINS.  
 
  **Make sure that maintenance windows are large enough to deploy critical software updates**  
 
@@ -126,7 +126,7 @@ This article contains security and privacy information for clients in System Cen
 
  If you install a later version of the client on the site, for example, you upgrade the site, the software update for client deployment that is published to the software update point is not automatically updated. You must republish the Configuration Manager client to the software update point and click **Yes** to update the version number.  
 
- For more information, see the procedure “To publish the Configuration Manager client to the software update point“ in [How to Install Configuration Manager Clients by Using Software Update-Based Installation](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
+ For more information, see the procedure "To publish the Configuration Manager client to the software update point" in [How to Install Configuration Manager Clients by Using Software Update-Based Installation](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
 
  **Configure the Computer Agent client device setting Suspend BitLocker PIN entry on restart to be Always only for computers that you trust and that have restricted physical access**  
 
@@ -204,7 +204,7 @@ This article contains security and privacy information for clients in System Cen
 
  When you enroll Mac computers, a user certificate to manage the Configuration Manager client is automatically installed, together with the trusted root certificate that the user certificate chains to. If you want to restrict the trust of this root certificate to the SSL protocol only, you can use the following procedure.  
 
- After you complete this procedure, the root certificate would not be trusted to validate protocols other than SSL – for example, Secure Mail (S/MIME), Extensible Authentication (EAP), or code signing.  
+ After you complete this procedure, the root certificate would not be trusted to validate protocols other than SSL - for example, Secure Mail (S/MIME), Extensible Authentication (EAP), or code signing.  
 
 > [!NOTE]  
 >  You can also use this procedure if you installed the client certificate independently from Configuration Manager.  
@@ -225,7 +225,7 @@ This article contains security and privacy information for clients in System Cen
 
     2.  For the **Secure Sockets Layer (SSL)** setting, change the **no value specified** to **Always Trust**.  
 
-6.  Close the dialog box, and when prompted, enter the administrator’s password, and then click **Update Settings**.  
+6.  Close the dialog box, and when prompted, enter the administrator's password, and then click **Update Settings**.  
 
 ##  <a name="BKMK_SecurityIssues_Clients"></a> Security issues for Configuration Manager clients  
  The following security issues have no mitigation:  
@@ -295,3 +295,4 @@ This article contains security and privacy information for clients in System Cen
  The mobile device information is not sent to Microsoft. The mobile device information is stored in the Configuration Manager database. Information is retained in the database until it is deleted by the site maintenance tasks **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval.  
 
  Before you install and configure the Exchange Server connector, consider your privacy requirements.  
+

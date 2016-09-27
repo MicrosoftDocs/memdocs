@@ -1,7 +1,7 @@
 ---
 title: "Operations and maintenance for collections in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,3 +27,4 @@ Use the following topics in this section to help you create and manage collectio
 -   [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md)  
 
 -   [How to automatically categorize devices into collections with System Center Configuration Manager](../../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md)
+

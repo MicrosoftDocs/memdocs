@@ -1,7 +1,7 @@
 ---
 title: "Monitor content you have distributed with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-02
+ms.date: 05/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -160,3 +160,4 @@ Use the following procedure to view distribution point configuration status.
 3.  Select the distribution point in which you want distribution point status information.  
 
 4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
+

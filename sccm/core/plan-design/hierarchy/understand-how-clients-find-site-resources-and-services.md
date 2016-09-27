@@ -1,7 +1,7 @@
 ---
 title: "Understand how clients find site resources and services for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -292,3 +292,4 @@ When other service location mechanisms fail, clients can find an initial managem
 By default, a primary site publishes to WINS the first management point at the site that is configured for HTTP and the first management point configured for HTTPS.  
 
 If you do not want clients to find an HTTP management point in WINS, configure clients with the CCMSetup.exe Client.msi property **SMSDIRECTORYLOOKUP=NOWINS**.  
+

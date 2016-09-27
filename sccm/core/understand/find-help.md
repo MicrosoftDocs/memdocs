@@ -1,7 +1,7 @@
 ---
 title: "Find help for using System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -67,3 +67,4 @@ Use the following resources for additional information about System Center Confi
 -   [Configuration Manager Community Page](http://go.microsoft.com/fwlink/p/?LinkId=243065)  
 
 -   [Configuration Manager Forums Page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
+
