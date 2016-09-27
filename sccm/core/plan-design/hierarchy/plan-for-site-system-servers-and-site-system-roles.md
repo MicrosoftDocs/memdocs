@@ -1,5 +1,5 @@
 ---
-title: "Plan for site system servers and site system roles for System Center Configuration Manager"
+title: "Plan site system roles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

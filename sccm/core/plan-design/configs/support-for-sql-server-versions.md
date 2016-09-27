@@ -1,5 +1,5 @@
 ---
-title: "Support for SQL Server versions for System Center Configuration Manager"
+title: "Support for SQL Server | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/23/2016
 ms.prod: configuration-manager

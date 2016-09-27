@@ -1,5 +1,5 @@
 ---
-title: "Ports used in System Center Configuration Manager"
+title: "Ports | System Center Configuration Manager"
 ms.custom: na
 ms.date: 02/10/2016
 ms.prod: configuration-manager

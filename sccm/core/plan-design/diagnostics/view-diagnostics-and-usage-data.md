@@ -1,5 +1,5 @@
 ---
-title: "How to view diagnostics and usage data for System Center Configuration Manager"
+title: "View diagnostics data | System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/25/2016
 ms.prod: configuration-manager
@@ -56,4 +56,3 @@ When viewing the raw data, a common hashed value will appear in each row of data
     $result = [Convert]::ToBase64String($hashedBytes)    
     return $result   
     ```  
-

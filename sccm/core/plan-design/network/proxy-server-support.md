@@ -1,5 +1,5 @@
 ---
-title: "Proxy server support in System Center Configuration Manager"
+title: "Proxy server support | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -76,4 +76,3 @@ Configure the proxy server settings on the Active Software Update Point page of 
 3.  In Site system Properties, select the Proxy tab, and then configure the proxy settings for this primary site server.  
 
 4.  Click OK to save the new proxy server configuration.  
-

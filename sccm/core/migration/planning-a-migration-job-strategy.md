@@ -1,5 +1,5 @@
 ---
-title: "Planning a migration job strategy in System Center Configuration Manager"
+title: "Migration job planning | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -309,4 +309,3 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 
 > [!NOTE]  
 >  This migration job can identify objects that are automatically updated by the source hierarchy and objects that an administrative user updates.  
-

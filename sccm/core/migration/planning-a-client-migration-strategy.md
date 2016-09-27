@@ -1,5 +1,5 @@
 ---
-title: "Planning a client migration strategy in System Center Configuration Manager"
+title: "Plan client migration | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -33,7 +33,7 @@ To migrate clients from the source hierarchy to a System Center Configuration Ma
 -   **A System Center 2012 Configuration Manager or later source hierarchy:** When you migrate clients between hierarchies that are of the same product version, the client software does not change or upgrade. Instead, the client reassigns from the source hierarchy to a site in the destination hierarchy.  
 
     > [!NOTE]  
-    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see the [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) section in the [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md) topic.  
+    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see the [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions) section in the [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md) topic.  
 
 Use the following information to help you plan the client migration:  
 
@@ -92,4 +92,3 @@ Additionally, you might have to reinstall some applications.
 Client inventory and compliance data is not saved when you migrate a client to the destination hierarchy. Instead, this information is recreated in the destination hierarchy when a client first sends its information to its assigned site. To help reduce the resulting network bandwidth requirements and server processing, consider migrating a small number of clients in phases rather than migrating a large number of clients at a single time.  
 
  Additionally, you cannot migrate customizations for hardware inventory from a source hierarchy. You must introduce these to the destination hierarchy independently from migration. For information about how to extend hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-

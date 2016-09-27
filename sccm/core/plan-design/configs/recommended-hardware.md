@@ -1,5 +1,5 @@
 ---
-title: "Recommended hardware for System Center Configuration Manager"
+title: "Recommended hardware | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -172,4 +172,3 @@ You can install PowerShell before or after the Configuration Manager console ins
 |Site and database server|2 - 4|7 - 12|100|  
 |Site system server|1 - 4|2 - 4|50|  
 |Client|1 - 2|1 - 3|30|  
-

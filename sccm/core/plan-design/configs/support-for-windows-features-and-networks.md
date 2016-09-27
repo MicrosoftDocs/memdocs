@@ -1,5 +1,5 @@
 ---
-title: "Support for Windows features and networks in System Center Configuration Manager"
+title: "Support for Windows features | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -121,4 +121,3 @@ Configuration Manager does not support the following over DirectAccess:
      Additionally, the cache of a Configuration Manager client is not supported on a SIS-enabled volume.  
 
 -   **Removable Disk Drive**: Configuration Manager does not support install of Configuration Manager site system or clients on a removable disk drive.  
-

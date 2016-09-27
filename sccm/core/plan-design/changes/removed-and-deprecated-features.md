@@ -1,5 +1,5 @@
 ---
-title: "Removed and deprecated features for System Center Configuration Manager"
+title: "Deprecated features | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
