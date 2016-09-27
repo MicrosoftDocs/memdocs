@@ -1,5 +1,7 @@
-﻿---
-title: "Best practices for software updates in System Center Configuration Manager"
+---
+# required metadata
+
+title: Best practices for software updates | Configuration Manager
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -48,4 +50,3 @@ This topic includes best practices for software updates in System Center Configu
 
 ## See Also  
  [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)
-

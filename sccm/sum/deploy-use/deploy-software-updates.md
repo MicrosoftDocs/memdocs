@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Deploy software updates | Configuration Manager
@@ -24,7 +24,6 @@ ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 #ms.custom:
 
 ---
-
 #  <a name="BKMK_SUMDeploy"></a> Deploy software updates  
  The software update deployment phase is the process of deploying the software updates. Typically, you add software updates to a software update group and then deploy the software update group to clients. When you create the deployment, the software update policy is sent to client computers, the software update content files are downloaded from a distribution point to the local cache on the client computer, and then the software updates are available for installation on the client. Clients on the Internet download content from Microsoft Update.  
 
@@ -74,5 +73,8 @@ After you create an ADR, you can add additional deployments to the rule. This ca
 
 For detailed steps, see [Automatically deploy software updates](automatically-deploy-software-updates.md)
 
- <!--- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  --->
+<!-- ###  <a name="BKMK_ClientCache"></a> Client cache setting  
+The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits to download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually starts the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  -->
 
+
+ <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->
