@@ -85,9 +85,7 @@ Use the information in this topic to help you implement the necessary dependenci
   
 ####  To install and configure the Application Catalog site systems: New site system server  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, expand **Site Configuration**, and click **Servers and Site System Roles**.  
+1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Servers and Site System Roles**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Site System Server**.  
   
@@ -102,9 +100,7 @@ Use the information in this topic to help you implement the necessary dependenci
   
 ####  To install and configure the Application Catalog site systems: Existing site system server  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, expand **Site Configuration**, select **Servers and Site System Roles**, and then select the server to use for the Application Catalog.  
+1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then select the server to use for the Application Catalog.  
   
 3.  On the **Home** tab, in the **Create** group, click **Add Site System Roles**.  
   
@@ -130,11 +126,7 @@ Use the information in this topic to help you implement the necessary dependenci
 ###  Step 4: Configuring the client settings for the Application Catalog and Software Center  
  This procedure configures the default client settings for the Application Catalog and Software Center that will apply to all devices in the hierarchy. If you want these settings to apply to only some devices, you can create a custom client setting and deploy it to a collection that contains the devices that will have the specific settings. For more information about how to create a custom device setting, see the [How to Create and Deploy Custom Client Settings](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings) section in the [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) topic.  
   
-##### To configure the default client settings for Application Catalog and Software Center  
-  
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, click **Client Settings** > **Default Client Settings**.  
+1.  In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Client Settings**.  
   
 3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
   
