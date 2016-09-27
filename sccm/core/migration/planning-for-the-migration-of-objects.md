@@ -1,6 +1,6 @@
 ---
 title: "Planning for the migration of Configuration Manager objects to System Center Configuration Manager"
-description: ""
+description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 03/22/2016
 ms.prod: configuration-manager

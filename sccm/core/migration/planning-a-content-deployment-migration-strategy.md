@@ -1,6 +1,6 @@
 ---
 title: "Planning a content deployment migration strategy in System Center Configuration Manager"
-description: ""
+description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

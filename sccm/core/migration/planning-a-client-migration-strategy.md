@@ -1,6 +1,6 @@
 ---
 title: "Planning a client migration strategy in System Center Configuration Manager"
-description: ""
+description: "Learn about the tasks that migrate clients from a source hierarchy to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

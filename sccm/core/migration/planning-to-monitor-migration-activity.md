@@ -1,6 +1,6 @@
 ---
 title: "Planning to monitor migration activity in System Center Configuration Manager"
-description: ""
+description: "Learn how to use the Configuration Manager console to monitor the progress and success of migration jobs."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

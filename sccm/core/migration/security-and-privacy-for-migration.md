@@ -1,6 +1,6 @@
 ---
 title: "Security and privacy for migration to System Center Configuration Manager"
-description: ""
+description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
