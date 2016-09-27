@@ -18,13 +18,11 @@ author: robstackmsft
 # How to deploy configuration baselines in System Center Configuration Manager
 Configuration baselines in System Center Configuration Manager must be deployed to one or more collections of users or devices before client devices in those collections can assess their compliance with the configuration baseline.  
   
- Use the **Deploy Configuration Baselines** dialog box to define configuration baseline deployments, which includes adding or removing configuration baselines from deployments in addition to specifying the evaluation schedule.  
+Use the **Deploy Configuration Baselines** dialog box to define configuration baseline deployments, which includes adding or removing configuration baselines from deployments in addition to specifying the evaluation schedule.  
   
-### To deploy a configuration baseline  
+## Deploy a configuration baseline  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Baselines**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Configuration Baselines**.  
   
 3.  In the **Configuration Baselines** list, select the configuration baseline that you want to deploy, and then in the **Home** tab, in the **Deployment** group, click **Deploy**.  
   
@@ -35,19 +33,19 @@ Configuration baselines in System Center Configuration Manager must be deployed 
   
 5.  Specify the following additional information:  
   
-    -   **Remediate noncompliant rules when supported** – Enable this option to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.  
+    -   **Remediate noncompliant rules when supported** – Automatically remediates any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.  
   
-    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows.md).  
   
-6.  **Generate an alert** – Enable this option to configure an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
+6.  **Generate an alert** – Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
 7.  **Collection** - Click **Browse** to select the collection where you want to deploy the configuration baseline.  
   
-8.  **Specify the compliance evaluation schedule for this configuration baseline:** Specifies the schedule by which the deployed configuration baseline is evaluated on client computers. This can be either a simple or a custom schedule.  
+8.  **Specify the compliance evaluation schedule for this configuration baseline** Specifies the schedule by which the deployed configuration baseline is evaluated on client computers. This can be either a simple or a custom schedule.  
   
     > [!NOTE]  
     >  If the configuration baseline is deployed to a computer, it is evaluated for compliance within two hours of the start time that you schedule. If it is deployed to a user, it is evaluated for compliance when the user logs on.  
   
-9. Click **OK** to close the **Deploy Configuration Baselines** dialog box and to create the deployment. For more information about how to monitor the deployment, see [How to monitor compliance settings in System Center Configuration Manager](../../compliance/deploy-use/monitor-compliance-settings.md).  
+9. Click **OK** to close the **Deploy Configuration Baselines** dialog box and to create the deployment. For more information about how to monitor the deployment, see [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings.md).  
   
 
