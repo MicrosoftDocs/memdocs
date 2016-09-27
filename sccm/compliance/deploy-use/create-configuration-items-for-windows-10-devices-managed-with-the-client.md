@@ -37,7 +37,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
   
 7.  On the **Supported Platforms** page, select the specific Windows 10 platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](#BKMK_Ref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 10 configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client#windows-10-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  

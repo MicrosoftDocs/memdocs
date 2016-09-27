@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a task sequence to upgrade an operating system in System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/12/2016

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create certificate profiles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/01/2016
@@ -17,36 +17,14 @@ author: Nbigman
 ---
 # How to create certificate profiles in System Center Configuration Manager
 
-Certificate profiles in System Center Configuration Manager integrate with Active Directory Certificate Services and the Network Device Enrollment Service role to provision managed devices with authentication certificates so that users can access company resources by using certificates. The information in this topic can help you create certificate profiles in System Center Configuration Manager.  
+Use certificate profiles to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md).  
+
+This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
   
-> [!IMPORTANT]  
->  You must perform configuration before you can create certificate profiles. For more information, see [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md).  
   
-## Steps to Create a Certificate Profile  
- Use the following required steps to create a certificate profile by using the Create Certificate Profile Wizard.  
-  
-|Step|Details|More information|  
-|----------|-------------|----------------------|  
-|**Step 1:** Start the Create Certificate Profile Wizard|Start the wizard from the **Assets and Compliance** workspace, in the **Compliance Settings** node.|See the [Step 1: Start the Create Certificate Profile Wizard](#BKMK_Step1) section in this topic.|  
-|**Step 2:** Provide general information about the certificate profile|Provide general information, such as the name and description of the certificate profile, and the type of certificate profile that you want to create.|See the [Step 2: Provide General Information About the Certificate Profile](#BKMK_Step2) section in this topic.|  
-|**Step 3:** Provide information about the certificate profile|Provide configuration information for the certificate profile.|See the [Step 3: Provide Information About the Certificate Profile](#BKMK_Step3) section in this topic.|  
-|**Step 4:** Configure supported platforms for the certificate profile|Specify the operating systems where you will install the certificate profile.|See the [Step 4: Configure Supported Platforms for the Certificate Profile](#BKMK_Step4) section in this topic.|  
-|**Step 5:** Complete the wizard|Complete the wizard to create the new certificate profile.|See the [Step 5: Complete the Wizard](#BKMK_Step5) section in this topic.|  
-  
-> [!CAUTION]  
->  If you have already deployed a certificate by using a Simple Certificate Enrollment Protocol (SCEP) certificate profile, changing some configuration options will result in requesting a new certificate that has the new values. If the number of certificate request renewals is high because of these changes, those renewals can cause high CPU processing on the server that is running the Network Device Enrollment Service.  
->   
->  When the certificate request is for a client on the intranet (for example, Windows 8.1), the original certificate is deleted when a new certificate that has the new values is requested. However, when the certificate request is for a client that is managed by using the Microsoft Intune connector, the original certificate is not deleted from the device and remains installed.  
->   
->  The following sections note the settings that will result in a certificate renewal request.  
-  
-## Supplemental Procedures to Create a New Certificate Profile  
- Use the following information when the steps in the preceding table require supplemental procedures.  
-  
-###  <a name="BKMK_Step1"></a> Step 1: Start the Create Certificate Profile Wizard  
- Use this procedure to start the Create Certificate Profile Wizard.  
-  
-##### To start the Create Certificate Profile Wizard  
+## Create a New Certificate Profile  
+   
+### Start the Create Certificate Profile izard  
   
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
   
@@ -54,10 +32,7 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
   
 3.  On the **Home** tab, in the **Create** group, click **Create Certificate Profile**.  
   
-###  <a name="BKMK_Step2"></a> Step 2: Provide General Information About the Certificate Profile  
- Use this procedure to provide general information about the certificate profile.  
-  
-##### To provide general information about the certificate profile  
+### Provide general information about the certificate profile  
   
 1.  On the **General** page of the Create Certificate Profile Wizard, specify the following information:  
   
@@ -69,15 +44,27 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
   
         -   **Trusted CA certificate**: Select this certificate profile type if you want to deploy a trusted root certification authority (CA) or intermediate CA certificate to form a certificate chain of trust when the user or device must authenticate another device. For example, the device might be a Remote Authentication Dial-In User Service (RADIUS) server or a virtual private network (VPN) server. You must also configure a trusted CA certificate profile before you can create a SCEP certificate profile. In this case, the trusted CA certificate must be the trusted root certificate for the CA that will issue the certificate to the user or device.  
   
-        -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.  
+        -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
+        -   
+        -   **Personal Information Exchange PKCS #12 (PFX) settings import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
   
-###  <a name="BKMK_Step3"></a> Step 3: Provide Information About the Certificate Profile  
- Use one of the following procedures to configure certificate profile information for trusted CA certificates and SCEP certificates in the certificate profile.  
-  
+ 
+ 
+### Configure a trusted CA certificate  
+
 > [!IMPORTANT]  
->  You must configure at least one trusted CA certificate profile before you can create a SCEP certificate profile.  
-  
-##### To configure a trusted CA certificate  
+>  You must configure at least one trusted CA certificate profile before you can create a SCEP certificate profile.    
+>  If you change any of these values after the certificate is deployed, the old certificate is deleted and a new one is requested:
+>  -  Key Storage Provide
+>  -  Certificate template name
+>  -  Certificate type 
+>  -  Subject name format
+>  -  Subject alternative name
+>  -  Certificate validity period
+>  -  Key usage
+>  -  Key size
+>  -  Extended key usage
+>  -  Root CA certificate
   
 1.  On the **Trusted CA Certificate** page of the Create Certificate Profile Wizard, specify the following information:  
   
@@ -89,12 +76,13 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
   
  Continue to [Step 4: Configure Supported Platforms for the Certificate Profile](#BKMK_Step4).  
   
-##### To configure SCEP certificate information  
+### Configure SCEP certificate information (only for SCEP certificates)  
   
 1.  On the **SCEP Servers** page of the Create Certificate Profile Wizard, specify the URLs for the NDES Servers that will issue certificates via SCEP. You can choose to automatically assign an NDES URL based on the configuration of the Certificate Registration Point site system server, or add URLs manually.  
   
-2.  On the **SCEP Enrollment** page of the Create Certificate Profile Wizard, specify the following information:  
-  
+2.  Complete the **SCEP Enrollment** page of the Create Certificate Profile Wizard using the guidelines below.
+ 
+		  
     -   **Retries**: Specify the number of times that the device automatically retries the certificate request to the server that is running the Network Device Enrollment Service. This setting supports the scenario where a CA manager must approve a certificate request before it is accepted. This setting is typically used for high-security environments or if you have a stand-alone issuing CA rather than an enterprise CA. You might also use this setting for testing purposes so that you can inspect the certificate request options before the issuing CA processes the certificate request. Use this setting with the **Retry delay (minutes)** setting.  
   
     -   **Retry delay (minutes)**: Specify the interval, in minutes, between each enrollment attempt when you use CA manager approval before the issuing CA processes the certificate request. If you use manager approval for testing purposes, you will probably want to specify a low value so that you are not waiting a long time for the device to retry the certificate request after you approve the request. However, if you use manager approval on a production network, you will probably want to specify a higher value to allow sufficient time for the CA administrator to check and approve or deny pending approvals.  
@@ -112,9 +100,6 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
         > When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for. This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if Passport is used as the Key Storage Provider in a certificate profile.  
   
         -   **Install to Software Key Storage Provider**: Installs the key to the storage provider for the software key.  
-  
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
   
     -   **Devices for certificate enrollment**: If the certificate profile is deployed to a user collection, select whether to allow certificate enrollment on only the user's primary device or on all devices that the user logs on to. If the certificate profile is deployed to a device collection, select whether to allow certificate enrollment for only the primary user of the device or for all users that log on to the device.  
   
@@ -138,36 +123,20 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
             >   
             >  When you type the name of the certificate template that is specified for the **GeneralPurposeTemplate** value, you must select the **Key encipherment** and the **Digital signature** options for this certificate profile. However, if you want to enable only the **Key encipherment** option in this certificate profile, specify the certificate template name for the **EncryptionTemplate** key. Similarly, if you want to enable only the **Digital signature** option in this certificate profile, specify the certificate template name for the **SignatureTemplate** key.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
-  
+      
     -   **Certificate type**: Select whether the certificate will be deployed to a device or a user.  
-  
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
+    
   
     -   **Subject name format**: From the list, select how System Center Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
-  
-    -   **Subject alternative name**: Specify how System Center Configuration Manager automatically creates the values for the subject alternative name (SAN) in the certificate request. For example, if you selected a user certificate type, you can include the user principal name (UPN) in the subject alternative name.  
-  
-        > [!TIP]  
-        >  If the client certificate will be used to authenticate to a Network Policy Server, you must set the subject alternative name to the UPN.  
+    -   **Subject alternative name**: Specify how System Center Configuration Manager automatically creates the values for the subject alternative name (SAN) in the certificate request. For example, if you selected a user certificate type, you can include the user principal name (UPN) in the subject alternative name.  If the client certificate will be used to authenticate to a Network Policy Server, you must set the subject alternative name to the UPN.  
   
         > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
-  
-        > [!IMPORTANT]  
-        >  iOS devices support limited subject name formats and subject alternative names in SCEP certificates. If you specify a format that is not supported, certificates will not be enrolled on iOS devices. When you configure a SCEP certificate profile to be deployed to iOS devices, use the **Common name** for the **Subject name format**, and **DNS name**, **Email address** or **UPN** for the **Subject alternative name**.  
+        >  - iOS devices support limited subject name formats and subject alternative names in SCEP certificates. If you specify a format that is not supported, certificates will not be enrolled on iOS devices. When you configure a SCEP certificate profile to be deployed to iOS devices, use the **Common name** for the **Subject name format**, and **DNS name**, **Email address** or **UPN** for the **Subject alternative name**.  
   
     -   **Certificate validity period**: If you have run the certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE command on the issuing CA, which allows a custom validity period, you can specify the amount of remaining time before the certificate expires. For more information about this command, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../../protect/deploy-use/configuring-certificate-profiles.md#BKMK_Step1) in the [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md) topic.  
   
          You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CAâ€™s certificate.  
-  
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
   
     -   **Key usage**: Specify key usage options for the certificate. You can choose from the following options:  
   
@@ -179,18 +148,11 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
   
          The certificate template you selected must be configured with one or both of the two key usage options above. If it is not, you will see the message **Key usage in CSR and challenge do not match** in the certificate registration point log file, **Crp.log**.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
   
     -   **Key size (bits)**: Select the size of the key in bits.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
-  
     -   **Extended key usage**: Click **Select** to add values for the certificateâ€™s intended purpose. In most cases, the certificate will require **Client Authentication** so that the user or device can authenticate to a server. However, you can add any other key usages as required.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
   
     -   **Hash algorithm**: Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.  
   
@@ -202,18 +164,11 @@ Certificate profiles in System Center Configuration Manager integrate with Activ
         > [!IMPORTANT]  
         >  If you specify a root CA certificate that is not deployed to the user or device, System Center Configuration Manager will not initiate the certificate request that you are configuring in this certificate profile.  
   
-        > [!NOTE]  
-        >  If you change this value after the certificate is deployed, the old certificate is deleted and a new certificate is requested.  
+        
+###  Specify supported platforms for the certificate profile  
   
-###  <a name="BKMK_Step4"></a> Step 4: Configure Supported Platforms for the Certificate Profile  
- Use the following procedure to specify the operating systems where you will install the certificate profile.  
-  
-##### To specify supported platforms for the certificate profile  
-  
--   On the **Supported Platforms** page of the Create Certificate Profile Wizard, select the operating systems where you want to install the certificate profile. Or, click **Select all** to install the certificate profile to all available operating systems.  
-  
-###  <a name="BKMK_Step5"></a> Step 5: Complete the Wizard  
- On the **Summary** page of the wizard, review the actions that will be taken, and then complete the wizard. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices. For more information, see [How to deploy certificate profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-certificate-profiles.md).  
+1. On the **Supported Platforms** page of the Create Certificate Profile Wizard, select the operating systems where you want to install the certificate profile. Or, click **Select all** to install the certificate profile to all available operating systems.
+2. Review the **Summary** page of the wizard and choose **Finish**. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices as described in [How to deploy certificate profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-certificate-profiles.md).  
   
 ### See also  
 

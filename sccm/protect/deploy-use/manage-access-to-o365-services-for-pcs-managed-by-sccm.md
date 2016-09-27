@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage access to O365 services for managed PCs | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/16/2016

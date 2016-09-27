@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
 ms.date: 03/08/2016

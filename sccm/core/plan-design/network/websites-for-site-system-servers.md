@@ -1,5 +1,5 @@
-﻿---
-title: "Websites for site system servers in System Center Configuration Manager"
+---
+title: "Websites for site systems | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -122,4 +122,3 @@ Because the steps to create a custom website vary for different operating system
     2.  Start the **SMSWEB** website  
 
     3.  Restart the **SMS_SITE_COMPONENT_MANAGER** service on the site server of the site.  
-

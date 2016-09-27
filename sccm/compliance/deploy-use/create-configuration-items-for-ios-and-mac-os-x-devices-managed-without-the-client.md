@@ -34,7 +34,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
   
 7.  On the **Supported Platforms** page, select the specific iOS, or Mac OS X platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [iOS and Mac OS X configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client#ios-and-mac-os-x-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  

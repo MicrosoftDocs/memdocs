@@ -1,4 +1,4 @@
-﻿---
+---
 title: Manage Office 365 ProPlus updates |  Configuration Manager
 description:
 keywords:

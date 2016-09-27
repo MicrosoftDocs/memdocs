@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configuring Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/05/2016

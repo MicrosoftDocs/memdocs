@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune"
 ms.custom: na
 ms.date: 06/29/2016

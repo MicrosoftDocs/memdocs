@@ -1,5 +1,5 @@
-﻿---
-title: "Publish site data for System Center Configuration Manager"
+---
+title: "Publish site data | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -63,4 +63,3 @@ For information about how clients find a management point see [Understand how cl
     >  If you enable sites to publish to a forest, you must extend the Active Directory schema of that forest for Configuration Manager, and the Active Directory Forest Account must have Full Control permissions to the System container in that forest.  
 
 5.  When you complete the configuration of this forest for use with Active Directory Forest Discovery, click **OK** to save the configuration.  
-

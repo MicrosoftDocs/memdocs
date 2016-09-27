@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create Windows Phone applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -42,6 +42,6 @@ In addition to the other System Center Configuration Manager requirements and pr
 |**Step 4:** Add the application to the Microsoft Intune Subscription Wizard.|Add the application Windows Phone 8 page of the Microsoft Intune Subscription Wizard. For more information, see [Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune](../../mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md).|  
 |**Step 5:** Delete the deployment that is automatically created when you added the company portal app to the Microsoft Intune Subscription Wizard.|The Microsoft Intune subscription has created an automatic deployment of this app, as this deployment will not support supersedence.|  
 |**Step 6:** Create a new deployment of the application and check **Automatically upgrade any superceded versions of this application** on the **Deployment Settings** page of the **Deploy Software Wizard**.|Create a new deployment with supersedence using the application you created with the supersedence relationship.|  
-|**Step 7 (Optional):** The superseding apps would install on devices after 7 days by default. To deploy the company portal app sooner to previously enrolled devices, you can change the **schedule re-evaluation for deployments** setting to a lower value.<br /><br /> If you sett this value to a lower value than the default, it might negatively affect the performance of your network and client computers.|For more information, see [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md).|  
+|**Step 7 (Optional):** The superseding apps would install on devices after 7 days by default. To deploy the company portal app sooner to previously enrolled devices, you can change the **schedule re-evaluation for deployments** setting to a lower value.<br /><br /> If you set this value to a lower value than the default, it might negatively affect the performance of your network and client computers.|No additional information.|  
   
 

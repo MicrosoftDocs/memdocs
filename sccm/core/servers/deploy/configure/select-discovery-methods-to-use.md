@@ -1,5 +1,5 @@
-﻿---
-title: "Select discovery methods to use for System Center Configuration Manager"
+---
+title: "Select discovery methods | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
@@ -112,4 +112,3 @@ There are two methods that you can use to discover network infrastructure, Activ
  **Run Active Directory Forest Discovery at  only one site when you plan to automatically create boundaries from the discovery data:**  
 
  If you run Active Directory Forest Discovery at more than one site in a hierarchy, it is recommended to only enable options to automatically create boundaries at a single site. This is because when Active Directory Forest Discovery runs at each site and creates boundaries, Configuration Manager cannot merge those boundaries into a single boundary object. When you configure Active Directory Forest Discovery to automatically create boundaries at multiple sites, the result can be duplicated boundary objects in the Configuration Manager console.  
-

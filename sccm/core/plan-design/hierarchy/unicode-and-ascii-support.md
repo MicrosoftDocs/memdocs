@@ -1,5 +1,5 @@
-﻿---
-title: "Unicode and ASCII Support in System Center Configuration Manager"
+---
+title: "Unicode and ASCII Support | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -134,4 +134,3 @@ System Center Configuration Manager creates most objects by using Unicode charac
  The Configuration Manager database supports Unicode for most objects that it stores, and when possible, it displays this information in the operating system language that matches the locale of a computer. For the client interface or Configuration Manager console to display information in the computer's operating system language, the computer's locale must match a client or server language that you install at a site.  
 
  However, several Configuration Manager objects do not support Unicode, and they are stored in the database by using ASCII, or they have additional language limitations. This information is always displayed by using the ASCII character set or in the language that was in use when the object was created.  
-

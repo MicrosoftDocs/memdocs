@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Conditional access to services | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/20/2016

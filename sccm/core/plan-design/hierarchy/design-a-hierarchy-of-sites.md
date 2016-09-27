@@ -1,5 +1,5 @@
-﻿---
-title: "Design a hierarchy of sites for System Center Configuration Manager"
+---
+title: "Design a hierarchy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/15/2016
 ms.prod: configuration-manager
@@ -172,4 +172,3 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 -   To manage network bandwidth between sites in a hierarchy, see [Data transfers between sites in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md)  
-

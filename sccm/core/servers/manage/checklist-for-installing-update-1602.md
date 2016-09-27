@@ -1,5 +1,5 @@
-﻿---
-title: "Checklist for installing update 1602 for System Center Configuration Manager"
+---
+title: "Checklist for 1602 | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -122,4 +122,3 @@ For more information, see **Step 3: Run the prerequisite checker before installi
 
 ## See Also  
  [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)
-

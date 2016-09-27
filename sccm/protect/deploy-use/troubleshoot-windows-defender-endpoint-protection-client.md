@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Troubleshooting Windows Defender or Endpoint Protection client | System Center Configuration Manager"
 ms.custom: na
 ms.date: 02/05/2016

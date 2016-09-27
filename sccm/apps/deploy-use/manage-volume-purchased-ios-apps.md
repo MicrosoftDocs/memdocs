@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage volume-purchased iOS apps | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/14/2016

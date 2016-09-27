@@ -1,5 +1,5 @@
-﻿---
-title: "Reference for maintenance tasks for System Center Configuration Manager"
+---
+title: "Reference for maintenance tasks | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: configuration-manager
@@ -266,4 +266,3 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
-

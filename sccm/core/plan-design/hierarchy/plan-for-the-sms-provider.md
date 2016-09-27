@@ -1,5 +1,5 @@
-﻿---
-title: "Plan for the SMS Provider for System Center Configuration Manager"
+---
+title: "Plan the SMS Provider | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -188,4 +188,3 @@ The SMS Provider requires the following external dependency be installed on the 
 
 
 The Windows ADK installation can require up to 650 MB of free disk space on each computer that installs the SMS Provider. This high disk space requirement is necessary for Configuration Manager to install the Windows PE boot images.  
-

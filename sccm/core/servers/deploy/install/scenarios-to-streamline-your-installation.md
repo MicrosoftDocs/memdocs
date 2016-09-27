@@ -1,5 +1,5 @@
-﻿---
-title: "Scenarios to streamline your installation of System Center Configuration Manager"
+---
+title: "Install scenarios | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/13/2016
 ms.prod: configuration-manager
@@ -135,4 +135,3 @@ In this example scenario, you upgrade your Microsoft System Center 2012 Configur
     -   This upgrades clients directly from Microsoft System Center 2012 Configuration Manager to the update version you installed at the primary site.  
 
     After this step, clients are upgraded to version 1602 without first upgrading to version 1511.
-

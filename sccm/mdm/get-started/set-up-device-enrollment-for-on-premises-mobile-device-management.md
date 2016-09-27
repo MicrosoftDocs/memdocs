@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/10/2016

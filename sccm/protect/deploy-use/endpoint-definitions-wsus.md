@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Endpoint Protection malware definitions from WSUS | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/05/2016

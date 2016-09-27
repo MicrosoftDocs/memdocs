@@ -1,5 +1,5 @@
-﻿---
-title: "The CD.Latest folder for System Center Configuration Manager"
+---
+title: "The CD.Latest folder | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -48,4 +48,3 @@ The source files from the CD.Latest folder are supported for the following:
 >   
 >  -   Installing a new site for a new hierarchy  
 >  -   Upgrading a Microsoft System Center 2012 Configuration Manager site to System Center Configuration Manager
-

@@ -1,5 +1,5 @@
-﻿---
-title: "Use the Service Connection Tool for System Center Configuration Manager"
+---
+title: "Service Connection Tool | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -141,4 +141,3 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> If you use a version of Configuration Manager prior to 1606, you must specify the name of the .cab file, and cannot use the options for a proxy server.  The supported command parameters are: <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |This command connects to the Configuration Manager cloud service to Upload the usage data .cab files from the specified location, and to download available update packs and console content. The options for proxy servers are optional.<br /><br /> Run this command as a **local administrator** on a computer that can connect to the Internet.<br /><br /> Example for connecting without a proxy server: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Example for connecting when you use a proxy server: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> If you use a version prior to 1606, you must specify a file name for the .cab file, and you cannot specify a proxy server. Use the following example command line: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [drive:][path]**|This command imports the update packs and console content you previously downloaded into your Configuration Manager console.<br /><br /> Run this command as a **local administrator** on the server that hosts the service connection point.<br /><br /> Example:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [drive:][path][filename.csv]**|This command exports usage data to a .csv file, which you can then view.<br /><br /> Run this command as a **local administrator** on the server that hosts the service connection point.<br /><br /> Example: **-export -dest D:\USB\usagedata.csv**|  
-

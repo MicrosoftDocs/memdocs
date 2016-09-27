@@ -1,5 +1,5 @@
-﻿---
-title: "Run discovery for System Center Configuration Manager"
+---
+title: "Run discovery | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
@@ -77,4 +77,3 @@ The following subjects can build a foundation that will help you use Discovery m
 -   [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
 Then, when you understand the methods you want to use, find guidance to configure each method in [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
-

@@ -1,7 +1,7 @@
-﻿---
+---
 # required metadata
 
-title: Overview of the software updates lifecycle | Configuration Manager
+title: Install a software update point | Configuration Manager
 description:
 keywords:
 author: dougeby
@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service:
 ms.technology:
-ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
+ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 ---
 
 
-# <a name="BKMK_InstallSUP"></a> Install a software update point  
+# Install a software update point  
 
 > [!IMPORTANT]  
 >  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates in System Center Configuration Manager](../plan-design/plan-for-software-updates.md).  
@@ -55,13 +55,19 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 > [!IMPORTANT]  
 >  By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account does not have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account does not have Internet access.  
 
+
 ## WSUS settings  
  You must configure WSUS settings on different pages of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** depending on the version of Configuration Manager that you use, and in some cases, only in the properties for the software update point, also known as Software Update Point Component Properties. Use the information in the following sections to configure the WSUS settings.  
 
-### WSUS port settings  
- You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point.  
+### <a name="BKMK_wsusport"></a>WSUS port settings  
+ You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point. Use the following procedure to determine the port settings used by WSUS.  
 
- To determine the website and port configurations in WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../plan-design/determine-wsus-port-settings.md).  
+#### To determine the port settings used in IIS  
+
+ 1.  On the WSUS server, open Internet Information Services (IIS) Manager.  
+
+ 2.  Expand **Sites**, right-click the Web site for the WSUS server, and then click **Edit Bindings**. In the Site Bindings dialog, the HTTP and HTTPS port values are displayed in the **Port** column.
+
 
 ### Configure SSL communications to WSUS  
  You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
@@ -146,4 +152,3 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this topic to install the software update point on child sites.
 
 Once you have your software update points installed, go to [synchronize software updates](syncrhonize-software-updates.md).
-

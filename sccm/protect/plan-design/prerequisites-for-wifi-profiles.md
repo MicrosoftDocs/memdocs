@@ -1,5 +1,5 @@
-﻿---
-title: "Wi-Fi profile prerequisites | System Center Configuration Manager"
+---
+title: "Wi-Fi and VPN profile prerequisites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 0201-03-31
 ms.prod: configuration-manager
@@ -15,12 +15,12 @@ caps.handback.revision: 0
 author: Nbigman
 
 ---
-# Prerequisites for Wi-Fi Profiles in System Center Configuration Manager
-Wi-Fi profiles in System Center Configuration Manager have dependencies only within the product.  
+# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
+Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  
   
  You must have the following security permissions to manage company resource access settings, such as certificate profiles, Wi-Fi profiles, and VPN profiles:  
   
--   To view and manage alerts and reports for Wi-Fi profiles: **Create**, **Delete**, **Modify**, **Modify Report**, **Read**, and **Run Report** for the **Alerts** object.  
+-   To view and manage alerts and reports for Wi-Fi and profiles: **Create**, **Delete**, **Modify**, **Modify Report**, **Read**, and **Run Report** for the **Alerts** object.  
   
 -   To create and manage certificate profiles: **Author Policy**, **Modify Report**, **Read**, and **Run Report** for the **Certificate Profile** object.  
   
@@ -28,11 +28,11 @@ Wi-Fi profiles in System Center Configuration Manager have dependencies only wit
   
 -   To manage all configuration policies: **Create**, **Delete**, **Modify**, **Read**, and **Set Security Scope** for the **Configuration Policy** object.  
   
--   To run queries that are related to Wi-Fi profiles: **Read** permission for the **Query** object.  
+-   To run queries that are related to Wi-Fi and VPN profiles: **Read** permission for the **Query** object.  
   
--   To view Wi-Fi profiles information in the System Center Configuration Manager console: **Read** permission for the **Site** object.  
+-   To view Wi-Fi and VPN profiles information in the System Center Configuration Manager console: **Read** permission for the **Site** object.  
   
--   To view status messages for Wi-Fi profiles: **Read** permission for the **Status Messages** object.  
+-   To view status messages for Wi-Fi and VPN profiles: **Read** permission for the **Status Messages** object.  
   
 -   To create and modify the Trusted CA certificate profile: **Author Policy**, **Modify Report**, **Read**, and **Run Report** for the **Trusted CA Certificate Profile** object.  
   

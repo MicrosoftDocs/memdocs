@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/05/2016
@@ -24,7 +24,7 @@ The Windows Store for Business supports two types of app:
 - **Online** - This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory domain-joined.
 - **Offline** - Organizations can cache apps and licenses to deploy directly within their on-premises network, without connecting to the store or having a connection to the Internet.
 
-[Read more](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396) about the Windows Store for Business.
+[Read more](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview) about the Windows Store for Business.
 
 Configuration Manager supports managing Windows Store for Business apps on both Windows 10 devices running the Configuration Manager client, and also Windows 10 devices that are enrolled with Microsoft Intune (known as a hybrid configuration). Configuration Manager offers the following capabilities for online and offline apps.
 
@@ -105,6 +105,5 @@ In the **Software Library** workspace, expand **Application Management**, then c
 
 For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
 
-## See Also  
- [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
+
 

@@ -1,5 +1,5 @@
-﻿---
-title: "What’s new in System Center Configuration Manager incremental versions"
+---
+title: "Incremental versions | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
@@ -30,4 +30,3 @@ author: Brenduns
 
 
  Each update version is supported for a year after its release. We recommend you stay current with the most recent update version whenever possible. For more information, see [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md).  
-

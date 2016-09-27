@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: [ARTICLE TITLE | SERVICE NAME]

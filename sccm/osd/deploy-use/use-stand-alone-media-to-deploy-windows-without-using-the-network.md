@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

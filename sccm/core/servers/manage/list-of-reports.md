@@ -1,11 +1,11 @@
-﻿---
-title: "List of reports in System Center Configuration Manager"
+---
+title: "List of reports | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -17,13 +17,13 @@ author: Dougeby
 ---
 # List of reports in System Center Configuration Manager
 Many built-in reports are supplied with System Center Configuration Manager, covering many of the reporting tasks that you might want to perform. You can also use the SQL statements in these reports to help you to write your own reports. Use the information in this topic to learn about the reports that are supplied with Configuration Manager.  
-  
+
 ## List of built-in Configuration Manager reports  
  The following reports are included with Configuration Manager. The reports appear in various categories.  
-  
+
 ### Administrative Security  
  The following reports are listed under the **Administrative Security** category.  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Administration activity log**|Displays a record of administrative changes made for administrative users, security roles, security scopes and collections.|  
@@ -32,16 +32,16 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Security for a specific or multiple Configuration Manager objects**|Displays securable objects, the security scopes associated with the objects, and which administrative users have rights to the objects.|  
 |**Security roles summary**|Displays security roles and the Configuration Manager administrators associated with each role.|  
 |**Security scopes summary**|Displays security scopes and the Configuration Manager administrative users and security groups associated with each scope.|  
-  
+
 ### Alerts  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Alert scorecard**|Displays a summary of all postponed alerts that were generated between the specified start and finish date.|  
 |**Alerts Generated Most Often**|Displays a summary of the alerts that were generated most often from today back to the specified date for the specified feature area.|  
-  
+
 ### Asset Intelligence  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Hardware 01A - Summary of computers in a specific collection**|Displays an Asset Intelligence summary view of computers in a collection you specify.|  
@@ -106,18 +106,18 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Software 14A - Search for software identification tag enabled software**|Displays a count of installed software with a software identification tag enabled.|  
 |**Software 14B - Computers with specific software identification tag enabled software installed**|Displays all computers that have installed software with a specified software identification tag enabled.|  
 |**Software 14C - Installed software identification tag enabled software on a specific computer**|Displays all installed software with a specified software identification tag enabled on a specified computer.|  
-  
+
 ### Client Push  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Client push installation status details**|Displays information about the client push installation process for all sites.|  
 |**Client push installation status details for a specified site**|Displays information about the client push installation process for a specified site.|  
 |**Client push installation status summary**|Displays a summary view of the client push installation status for all sites.|  
 |**Client push installation status summary for a specified site**|Displays a summary view of the client push installation status for a specified site.|  
-  
+
 ### Client Status  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Client remediation details**|Displays details of client remediation actions for a collection you specify.|  
@@ -127,17 +127,17 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Client time to request policy**|Displays the percentage of clients which have requested policy at least once in the last 30 days. Each day represents a percentage of total clients which have requested policy since the first day in the cycle.|  
 |**Clients with failed client check details**|Displays details about clients that client check failed for a specified collection.|  
 |**Inactive clients details**|Displays a detailed list of inactive clients for a given collection.|  
-  
+
 ### Company Resource Access  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Certificate issuance history**|Displays the history of certificates that were issued by the certificate registration point to users and devices for the specified date range.|  
 |**List of assets by certificate issuance status**|Displays the devices or users in a specified certificate issuance state following the evaluation of a specified certificate profile.|  
 |**List of assets with certificates nearing expiry**|Displays the devices or users with certificates that expire on or before the specified date.|  
-  
+
 ### Compliance and Settings Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Compliance history of a configuration baseline**|Displays the history of the changes in compliance of a configuration baseline for the specified date range.|  
@@ -160,9 +160,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**List of noncompliant Apps and Devices for a specified user**|Displays information about users and devices that have apps installed that are not compliant with a policy you specified.|  
 |**Summary of Users who have Noncompliant Apps**|Displays information about users that have apps installed that are not compliant with a policy you specified.|  
 |**Terms and Conditions acceptance**|Displays Terms and Conditions items and which version each user has accepted.|  
-  
+
 ### Device Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All mobile device clients**|Displays information about all mobile device clients. Devices that are managed by the Exchange Server connector are not included.|  
@@ -200,9 +200,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Settings summary for mobile devices that are managed by the Exchange Server connector**|Displays the number of mobile devices that apply the settings for each Default Exchange ActiveSync mailbox policy that is managed by the Exchange Server connector.|  
 |**Windows RT Sideloading Keys Detailed Status**|Displays detailed status information for a specified Windows RT sideloading key.|  
 |**Windows RT Sideloading Keys Summary**|Displays the status of Windows RT sideloading keys.|  
-  
+
 ### Driver Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All drivers**|Displays a list of all drivers.|  
@@ -218,9 +218,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Driver catalog matching report for computers in a specific collection with a specific device**|Displays driver catalog matching report for computers in a specified collection with a specified device.|  
 |**Drivers that failed to install on a specific computer**|Displays drivers that failed to install on a specified computer.|  
 |**Supported platforms for a specific Driver**|Displays supported platforms for a specified driver.|  
-  
+
 ### Endpoint Protection  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Antimalware activity report**|Displays an overview of antimalware activity.|  
@@ -229,18 +229,18 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Infected computers**|Displays a list of computers with a specified threat detected.|  
 |**Top users by threats**|Displays the list of users with the most number of detected threats.|  
 |**User threat list**|Displays the list of threats found for a specified user account.|  
-  
+
 ### Hardware - CD-ROM  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**CD-ROM information for a specific computer**|Displays information about the CD-ROM drives on a specified computer.|  
 |**Computers for a specific CD-ROM manufacturer**|Displays a list of computers that contain a CD-ROM drive made by a manufacturer you specify.|  
 |**Count CD-ROM drives per manufacturer**|Displays the number of CD-ROM drives inventoried per manufacturer.|  
 |**History - CD-ROM history for a specific computer**|Displays the inventory history for CD-ROM drives on a specified computer.|  
-  
+
 ### Hardware - Disk  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with a specific hard disk size**|Displays a list of computers that have hard disks of a specified size.|  
@@ -251,18 +251,18 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Disk information for a specific computer - Partitions**|Displays summary information about the disk partitions on a specified computer.|  
 |**Disk information for a specific computer - Physical disks**|Displays summary information about the physical disks on a specified computer.|  
 |**History - Logical disk space history for a specific computer**|Displays the inventory history for logical disk drives on a specified computer.|  
-  
+
 ### Hardware - General  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computer information for a specific computer**|Displays summary information for a specified computer.|  
 |**Computers in a specific workgroup or domain**|Displays a list of computers in a specified Workgroup or domain.|  
 |**Inventory classes assigned to a specific collection**|Displays the inventory classes that are assigned to a specified collection.|  
 |**Inventory classes enabled on a specific computer**|Displays the inventory classes that are enabled on a specified computer.|  
-  
+
 ### Hardware - Memory  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers where physical memory has changed**|Displays a list of computers where the amount of RAM has changed since the last inventory cycle.|  
@@ -270,25 +270,25 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Computers with low memory (less than or equal to specified MB)**|Displays a list of computers that are low on memory. The amount of memory to check for is specified in MB.|  
 |**Count memory configurations**|Displays the number of computers inventoried by amount of RAM.|  
 |**Memory information for a specific computer**|Displays summary information about the memory on a specified computer.|  
-  
+
 ### Hardware - Modem  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers for a specific modem manufacturer**|Displays a list of computers that have a modem made by a specified manufacturer.|  
 |**Count modems by manufacturer**|Displays the number of modems inventoried for each modem manufacturer.|  
 |**Modem information for a specific computer**|Displays summary information about the modem on a specified computer.|  
-  
+
 ### Hardware - Network Adapter  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with a specific network adapter**|Displays a list of computers that have a specified network adapter.|  
 |**Count network adapters by type**|Displays the number of inventoried network adapters cards of each type.|  
 |**Network adapter information for a specific computer**|Displays information about the network adapters installed on a specified computer.|  
-  
+
 ### Hardware - Processor  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers for a specific processor speed**|Displays a list of computers that have a processor of a specified speed.|  
@@ -296,33 +296,33 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Computers with slow processors (less than or equal to a specified clock speed)**|Displays a list of computers that have processors that run at or slower than a specified clock speed.|  
 |**Count processor speeds**|Displays the number of computers inventoried by processor speed.|  
 |**Processor information for a specific computer**|Displays information about the processors installed on a specified computer.|  
-  
+
 ### Hardware - SCSI  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with a specific SCSI card type**|Displays a list of computers that have a specified SCSI card installed.|  
 |**Count SCSI card types**|Displays the number of inventoried SCSI cards by card type.|  
 |**SCSI card information for a specific computer**|Displays information about the SCSI cards installed on a specified computer.|  
-  
+
 ### Hardware - Sound Card  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with a specific sound card**|Displays a list of computers that have a specified sound card.|  
 |**Count sound cards**|Displays the number of computers inventoried by each sound card type.|  
 |**Sound card information for a specific computer**|Displays summary information about the sound cards on a specified computer.|  
-  
+
 ### Hardware - Video Card  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with a specific video card**|Displays a list of computers that have a specified video card.|  
 |**Count video cards by type**|Displays a list of all of the video cards installed on computers along with the number of each type of video card.|  
 |**Video card information for a specific computer**|Displays summary information about the video cards installed on a specified computer.|  
-  
+
 ### Migration  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Clients in exclusion list**|Displays clients that are excluded from migration.|  
@@ -330,9 +330,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Migration job properties**|This report shows the contents of the specified migration job.|  
 |**Migration jobs**|This report shows the list of migration jobs.|  
 |**Objects that failed to migrate**|Displays a list of objects that failed to migrate during the last attempt.|  
-  
+
 ### Network  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Count IP addresses by subnet**|Displays the number of IP addresses inventoried for each IP subnet.|  
@@ -341,9 +341,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**IP - Information for a specific computer**|Displays summary information about IP on a specified computer.|  
 |**IP - Information for a specific IP address**|Displays summary information about a specified IP address.|  
 |**MAC - Computers for a specific MAC address**|Displays the computer name and IP address of computers that have the specified MAC address.|  
-  
+
 ### Network Access Protection  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Comparison of software updates installed by software update deployments and NAP remediation.**|Displays a comparison summary of software updates installed by software update deployments and NAP remediation.|  
@@ -359,9 +359,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**List of software updates installed through remediation**|Displays the software updates installed through remediation for a specified period.|  
 |**Summary of non-compliant computers in remediation from last polling interval**|Displays a summary of non-compliant computers in remediation from last polling interval.|  
 |**Summary of non-compliant computers in remediation within a specified period**|Displays a summary of noncompliant computers in remediation within a specified time period.|  
-  
+
 ### Operating System  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computer operating system version history**|Displays the inventory history for the operating system on a specified computer.|  
@@ -373,17 +373,17 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Services - Computers running Remote Access Server**|Displays a list of computers running Remote Access Server.|  
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|  
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|  
-  
+
 ### Out of Band Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers with out of band management controllers**|Displays a list of computers that have out of band management controllers.|  
 |**Out of band management console activity**|Displays a list of status messages identifying out of band management console activity.|  
 |**Status of client out of band management provisioning**|Displays a list of computers that have been provisioned for out of band management.|  
-  
+
 ### Power Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Power Management - Computer activity**|Displays a graph showing monitor, computer and user activity for a specified collection over a specified time period.|  
@@ -404,9 +404,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Power Management - Power capabilities**|Displays the power management capabilities of computers in the specified collection.|  
 |**Power Management - Power settings**|Displays an aggregated list of power settings used by computers in a specified collection.|  
 |**Power Management - Power settings details**|Used to display further information about computers that were specified in the **Power Management - Power settings** report.|  
-  
+
 ### Replication Traffic  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Global Data Replication Traffic Per Link (line chart)**|Displays total global data replication traffic on a specified link for a specified number of days.|  
@@ -419,9 +419,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Site Data Replication Traffic Per Link (pie chart)**|Displays total site data replication traffic on a specified link for a specified number of days.|  
 |**Total Hierarchy Replication Traffic (line chart)**|Displays hierarchy aggregate global and site data replication for each direction of every link for a specified number of days.|  
 |**Total Hierarchy Replication Traffic (pie chart)**|Displays hierarchy aggregate global and site data replication for each direction of every link for a specified number of days.|  
-  
+
 ### Site - Client Information  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Client assignment detailed status report**|Displays detailed information about client assignment status.|  
@@ -443,9 +443,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Problem details reported to the fallback status point for a specified site**|Displays detailed information about issues reported by clients in a specified site if they have been assigned a fallback status point.|  
 |**Summary of problems reported to the fallback status point**|Displays information about all the issues reported by clients if they have been assigned a fallback status point.|  
 |**Summary of problems reported to the fallback status point for a specific collection**|Displays summary information for issues reported by clients in a specified collection if they have been assigned a fallback status point.|  
-  
+
 ### Site - Discovery and Inventory Information  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Clients that have not reported recently (in a specified number of days)**|Displays a list of clients that have not reported discovery data, hardware inventory, or software inventory in a specified number of days.|  
@@ -458,23 +458,23 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Count computers in resource domains or workgroups**|Displays the number of computers in each resource domain or workgroup.|  
 |**Discovery information for a specific computer**|Displays a list of the agents and sites that discovered a specified computer.|  
 |**Inventory dates for a specific computer**|Displays the date and time inventory was last run on a specified computer.|  
-  
+
 ### Site - General  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers in a specific site**|Displays a list of client computers in a specified site.|  
 |**Site status for the hierarchy**|Displays the list of sites in the hierarchy with site version and site status information.|  
 |**Status of Configuration Manager update within hierarchy**|Displays information about Configuration Manager site updates for the  hierarchy.|  
-  
+
 ### Site - Server Information  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Site system roles and site system servers for a specific site**|Displays a list of site system server and their site system roles for a specified site.|  
-  
+
 ### Software - Companies and Products  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All inventoried products for a specific software company**|Displays a list of the inventoried software products and versions from a specified software company.|  
@@ -491,9 +491,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Products on a specific computer**|Displays a summary of the inventoried software products and their manufacturers on a specified computer.|  
 |**Software registered in Add Remove Programs on a specific computer**|Displays a summary of the software installed on a specified computer that is registered in Add Remove Programs or Programs and Features.|  
 |**Windows apps installed to the specified user**|Displays all Windows apps installed to the specified user|  
-  
+
 ### Software - Files  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All inventoried files for a specific product**|Display a summary of the files inventoried that are associated with a specified software product.|  
@@ -501,9 +501,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Compare software inventory on two computers**|Displays the differences between the software inventories reported for two specified computers.|  
 |**Computers with a specific file**|Displays a list of computers that have collected software inventory for a specified file name. A computer might appear more than once in the list if it contains multiple copies of the file.|  
 |**Count computers with a specific file name**|Displays the number of computers that have collected software inventory for a specified file.|  
-  
+
 ### Software Distribution - Application Monitoring  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All application deployments (advanced)**|Displays detailed summary information for all application deployments.|  
@@ -516,17 +516,17 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Task sequence deployments containing application**|Displays task sequence deployments that install a specified application.|  
 |**User Requests for Android Application**|Displays users that requested to install an Android application.|  
 |**iOS apps with failed deployments (app already installed)**|Displays compliance information for the selected iOS app you deployed as an 'App package for iOS from App Store' which was associated with a mobile application management policy. This report is used to display users and devices for which the app failed to install because it had already been manually installed by the user.|  
-  
+
 ### Software Distribution - Collections  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All collections**|Displays all the collections in the hierarchy.|  
 |**All resources in a specific collection**|Displays all the resources in a specified collection.|  
 |**Maintenance windows available to a specified client**|Displays all maintenance windows that are applicable to the specified client.|  
-  
+
 ### Software Distribution - Content  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All active content distributions**|Displays all distributions points on which content is currently being installed or removed.|  
@@ -542,9 +542,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Distribution status of specified package**|Displays the distribution status for specified package content on each distribution point.|  
 |**Packages targeted to distribution point group**|Displays information about packages that target a specified distribution point group.|  
 |**Packages that are out of synchronization on a specified distribution point group**|Displays packages for which associated content files have not been updated with the latest version on a specified distribution point group.|  
-  
+
 ### Software Distribution - Package and Program Deployment  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All deployments for a specified package and program**|Displays information about all deployments of a specified package and program.|  
@@ -552,9 +552,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**All package and program deployments to a specified collection**|Displays all of the package and program deployments to a specified collection.|  
 |**All package and program deployments to a specified computer**|Displays all of the package and program deployments that apply to a specified computer.|  
 |**All package and program deployments to a specified user**|Displays all of the package and program deployments to a specified user.|  
-  
+
 ### Software Distribution - Package and Program Deployment Status  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All system resource package and program deployments with status**|Displays all package and program deployments for the site with a summary status of each deployment.|  
@@ -562,9 +562,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Chart - Hourly package and program deployment completion status**|Displays the percentage of computers that have successfully installed the package for every hour since the package and program deployment was created. It can be used to track the average time for a package and program deployment.|  
 |**Package and program deployment status for a specified client and deployment**|Displays the status messages reported for a specified computer and package and program deployment.|  
 |**Status of a specified package and program deployment**|Displays the status summary for a specified package and program deployment.|  
-  
+
 ### Software Metering  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All software metering rules applied to this site**|Displays a list of all software metering rules at the site.|  
@@ -580,9 +580,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Total usage trend analysis for a specific metered software program**|Displays the number of users who ran programs matching the specified software metering rule locally or using Terminal Services during each month for the past year.|  
 |**Total usage trend analysis for a specific metered software program on Windows Terminal Servers**|Displays the number of users who ran programs matching the specified software metering rule using Terminal Services during each month for the past year.|  
 |**Users that have run a specific metered software program**|Displays a list of users who have run programs matching the specified software metering rule within the specified month and year.|  
-  
+
 ### Software Updates - A Compliance  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Compliance 1 - Overall compliance**|Displays the overall compliance data for a software update group.|  
@@ -593,9 +593,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Compliance 6 - Specific software update states (secondary)**|Displays the count and percentage of computers in each compliance state for the specified software update.|  
 |**Compliance 7 - Computers in a specific compliance state for an update group (secondary)**|Displays all computers in a collection that have a specified overall compliance state against a software update group.|  
 |**Compliance 8 - Computers in a specific compliance state for an update (secondary)**|Displays all computers in a collection that have a specified compliance state for a software update.|  
-  
+
 ### Software Updates - B Deployment Management  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Management 1 - Deployments of an update group**|Displays all deployments that contain all of the software updates defined in a specified software update group.|  
@@ -606,9 +606,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Management 6 - Deployments that contain a specific update**|Displays all deployments that contain a specified software update and the associated target collection for the deployment.|  
 |**Management 7 - Updates in a deployment missing content**|Displays the software updates in a specified deployment that do not have all of the associated content retrieved, preventing clients from installing the update and achieving 100% compliance for the deployment.|  
 |**Management 8 - Computers missing content (secondary)**|Displays all computers that require a specified software update contained in a specified deployment that is not provisioned on a distribution point.|  
-  
+
 ### Software Updates - C Deployment States  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**States 1 - Enforcement states for a deployment**|Displays the enforcement states for a specified software update deployment, which is typically the second phase of a deployment assessment.|  
@@ -617,35 +617,35 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**States 4 - Computers in a specific state for a deployment (secondary)**|Displays all computers in a specified state for a software update deployment.|  
 |**States 5 - States for an update in a deployment (secondary)**|Displays a summary of states for a specified software update targeted by a specified deployment.|  
 |**States 6 - Computers in a specific enforcement state for an update (secondary)**|Displays all computers in a specified enforcement state for a specified software update.|  
-  
+
 ### Software Updates - D Scan  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Scan 1 - Last scan states by collection**|Displays the count of computers for a specified collection in each compliance scan state returned by clients during the last compliance scan.|  
 |**Scan 2 - Last scan states by site**|Displays the count of computers assigned to a specified site in each compliance scan state returned by clients during the last compliance scan.|  
 |**Scan 3 - Clients of a collection reporting a specific state (secondary)**|Displays all computers for a specified collection and a specified compliance scan state during their last compliance scan.|  
 |**Scan 4 - Clients of a site reporting a specific state (secondary)**|Displays all computers assigned to a specified site with a specified compliance scan state during their last compliance scan.|  
-  
+
 ### Software Updates - E Troubleshooting  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Troubleshooting 1 - Scan errors**|Displays scan errors at the site and a count of computers that are experiencing each error.|  
 |**Troubleshooting 2 - Deployment errors**|Displays the deployment errors at the site and a count of computers that are experiencing each error.|  
 |**Troubleshooting 3 - Computers failing with a specific scan error (secondary)**|Displays a list of the computers that failed a scan because of a specified error.|  
 |**Troubleshooting 4 - Computers failing with a specific deployment error (secondary)**|Displays a list of the computers on which the deployment of update is failing because of a specified error.|  
-  
+
 ### State Migration  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**State migration information for a specific source computer**|Displays state migration information for a specified computer.|  
 |**State migration information for a specific state migration point**|Displays state migration information for a specified state migration point.|  
 |**State migration points for a specific site**|Displays the state migration points for a specified site.|  
-  
+
 ### Status Messages  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All messages for a specific message ID**|Displays a list of status messages that have a specified message ID.|  
@@ -660,17 +660,17 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Last 1000 messages for a specific computer (Errors Warnings and Information)**|Displays a summary of the last 1000 error, warning, and informational component status messages for a specified computer.|  
 |**Last 1000 messages for a specific computer (Errors)**|Displays a summary of the last 1000 error server component status messages for a specified computer.|  
 |**Last 1000 messages for a specific server component**|Displays a summary of the most recent 1000 status messages for a specified server component.|  
-  
+
 ### Status Messages - Audit  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All audit messages for a specific user**|Displays a summary of all audit status messages for a specified user. Audit messages describe actions taken in the Configuration Manager console that add, modify, or delete objects in Configuration Manager.|  
 |**Remote Control - All computers remote controlled by a specific user**|Displays a summary of status messages indicating remote control of client computers by a specified user.|  
 |**Remote Control - All remote control information**|Displays a summary of status messages related to the remote control of client computers.|  
-  
+
 ### Task Sequence - Deployment Status  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All system resources for a task sequence deployment in a specific state**|Displays a list of the destination computers for the specified task sequence deployment in a specified deployment state.|  
@@ -684,9 +684,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Status of a task sequence deployment on an unknown destination computer**|Displays the status of the specified task sequence deployment on the specified unknown destination computer.|  
 |**Status summary of a specific task sequence deployment**|Displays a status summary of all resources that have been targeted by a deployment.|  
 |**Status summary of a specific task sequence deployment available to unknown computers**|Displays the status summary of all resources that have been targeted by a specified deployment that is available to a collection containing unknown computers.|  
-  
+
 ### Task Sequence - Deployments  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All system resources currently in a specific group or phase of a specific task sequence deployment**|Displays a list of computers that are currently running in a specified group or phase of a specified task sequence deployment.|  
@@ -700,9 +700,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Progress of a running task sequence deployment**|Displays the summary information for the specified task sequence deployment.|  
 |**Progress of all deployments for a specific task sequence**|Displays the progress of all deployments for the specified task sequence.|  
 |**Summary report for a task sequence deployment**|Displays the summary information for the specified task sequence deployment.|  
-  
+
 ### Task Sequence - Progress  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Chart - Weekly progress of a task sequence**|Displays the weekly progress of a task sequence, starting from the deployment date.|  
@@ -710,15 +710,15 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Progress of all task sequences**|Displays a summary of the progress of all task sequences.|  
 |**Progress of task sequences for operating system deployments**|Displays the progress of all task sequences that deploy operating systems.|  
 |**Status of all unknown computers**|Displays a list of computers that were unknown at the time they ran a task sequence deployment and whether they are now known computers.|  
-  
+
 ### Task Sequences - References  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Content referenced by a specific task sequence**|Displays content that is referenced by a specified task sequence.|  
-  
+
 ### Upgrade Assessment  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Application status for a specific computer**|Displays the compatibility of applications that are installed on a computer for a specified operating system.|  
@@ -732,33 +732,33 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Operating system hardware requirements**|Displays the minimum and recommended hardware criteria for operating systems.|  
 |**Operating system requirement status for computers in a specific collection**|Displays the status of operating system requirements for the specified operating system for computers in a specified collection. Use this report to determine if a computer meets the specified operating system requirements for CPU processor speed, memory size, and hard disk space.|  
 |**Upgrade assessment summary**|Displays the upgrade assessment summary. You can use this report to assess the overall status for upgrade compatibility.|  
-  
+
 ### User - Device Affinity  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Pending user device affinity associations by collection**|This report shows all pending user device affinity assignments based on usage data, for members of a collection.|  
 |**User device affinity associations per collection**|Displays all user device associations for the specified collection, and groups the results by collection type (e.g. user or device).|  
-  
+
 ### User Data and Profiles Health  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Folder Redirection Health Report - Details**|Displays the details of health state for folder redirection per each of the redirected folders for a given user.|  
 |**Roaming User Profiles Health Report - Details**|Displays details of the health state for roaming user profile for a specified user.|  
 |**User Data and Profiles Health Report - Details**|Displays the details of either error or warning for folder redirection or roaming user profile when drilled down into the count from summary report.|  
 |**User Data and Profiles Health Report - Summary**|Displays the summary of health states for folder redirection and roaming user profiles.|  
-  
+
 ### Users  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**Computers for a specific user name**|Displays a list of the computers that were used by a specified user.|  
 |**Count users by domain**|Displays the number of users in each domain.|  
 |**Users in a specific domain**|Displays a list of users and their computers in a specified domain.|  
-  
+
 ### Virtual Applications  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**App-V Virtual Environment Results**|Displays information about a specified virtual environment that is in a specified state for a specified collection.|  
@@ -768,9 +768,9 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**Computers with a specific virtual application package**|Displays a summary of computers which have the specified App-V application package.|  
 |**Count of all instances of virtual application packages**|Display a count of detected App-V application packages.|  
 |**Count of all instances of virtual applications**|Display a count of detected App-V applications.|  
-  
+
 ### Wake On LAN  
-  
+
 |Report name|Description|  
 |-----------------|-----------------|  
 |**All computers targeted for Wake On LAN activity**|Displays a list of computers that have been targeted for Wake on LAN activity during a deployment of the type you specify.|  
@@ -780,7 +780,6 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**History of Wake On LAN activity**|Displays a history of the wakeup activity that has occurred since a certain period.|  
 |**Wake-Up Proxy Deployment State Details**|Displays information about the deployment status of Wake-Up Proxy for each device in a specified collection.|  
 |**Wake-Up Proxy Deployment State Summary**|Displays a summary of the deployment status of wake-up proxy for a specified collection.|  
-  
+
 ## See Also  
  [Technical reference for reporting in System Center Configuration Manager](../Topic/Technical%20reference%20for%20reporting%20in%20System%20Center%20Configuration%20Manager.md)
-

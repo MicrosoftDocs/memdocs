@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create Android applications | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
@@ -20,15 +20,13 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 Configuration Manager supports deploying the following app types for Android:
 
-|||
-|-|-|
 |Device Type|Supported Files|
+|-|-|
 |Android|*.apk|
 
 The following deployment actions are supported:
 
-|||
-|-|-|
 |Device type|Supported actions|
+|-|-|
 |Android|**Available**, **Required** (though user must consent to the install), **Uninstall** (again, consent required).|
 

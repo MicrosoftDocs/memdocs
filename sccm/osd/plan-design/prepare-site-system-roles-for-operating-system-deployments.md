@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Prepare site system roles for operating system deployments with System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016

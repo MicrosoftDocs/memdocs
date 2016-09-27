@@ -1,5 +1,5 @@
-﻿---
-title: "Installing System Center Configuration Manager sites"
+---
+title: "Installing sites | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -39,4 +39,3 @@ This topic provides guidance on how to install a Configuration Manager console o
 
 [Upgrade an Eval installation to a Full installation](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)   
 Read this topic when you're ready to upgrade your evaluation site to a fully licensed Configuration Manager site.
-

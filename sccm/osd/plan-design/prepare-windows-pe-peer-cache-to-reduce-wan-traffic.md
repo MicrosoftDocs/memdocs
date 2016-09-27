@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/27/2016

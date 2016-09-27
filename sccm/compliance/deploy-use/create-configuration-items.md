@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to create configuration items | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/15/2016

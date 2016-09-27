@@ -26,30 +26,25 @@ A System Center Configuration Manager application contains the files and informa
   
 -   Import an application from a file.  
   
- Use the steps in this section to create applications and deployment types using Configuration Manager.  
+ Use the following steps to create Configuration Manager applications and deployment types.  
   
-## Steps to create an application  
- Use the following steps to learn how to create a Configuration Manager application.  
+## Start the create application wizard  
   
-### Start the create application wizard  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
   
-### Specify whether you want to automatically detect application information or manually define the information  
+## Specify whether you want to automatically detect application information or manually define the information  
   
 -   **Automatically detect application information** when you want to create a simple application that has a single deployment type, such as a Windows Installer file that has no dependencies or requirements. After you create an application by using this procedure, you can edit it as needed to add or change deployment types and add detection methods, dependencies, or requirements.  
   
 -   **Manually specify application information** to create more complex applications that have multiple deployment types, dependencies, detection methods, or requirements.  
   
-##### To automatically detect application information  
+### Automatically detect application information  
   
 1.  On the **General** page of the Create Application Wizard, select the **Automatically detect information about this application from installation files** check box.  
   
-2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](#BKMK_Dtypes) in this topic.  
+2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
   
 3.  In the **Location** field, specify the UNC path in the form *\\\\<server\>\\<share\>\\<filename\>* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
   
@@ -82,9 +77,9 @@ A System Center Configuration Manager application contains the files and informa
   
 6.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
   
- The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](#BKMK_Dept1) in this topic.  
+ The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
   
-##### To manually specify application information  
+### Manually specify application information  
   
 1.  On the **General** page of the Create Application Wizard, select **Manually specify the application information**, and then click **Next**.  
   
@@ -116,30 +111,28 @@ A System Center Configuration Manager application contains the files and informa
     -   **Display this as a featured app and highlight it in the company portal** - Select this option to display the app prominently in the company portal.  
   
 4.  On the **Deployment Types** page of the Create Application Wizard, click **Add** to create a new deployment type.  
-    For more information, see [Create deployment types for the application](#BKMK_Dept1) in this topic.  
+For more information, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
   
 5.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
   
  The new application appears in the **Applications** node of the Configuration Manager console.  
   
-##  <a name="BKMK_Dept1"></a> Create deployment types for the application  
+##  Create deployment types for the application  
  If you select the **Automatically identify information about this deployment type from installation files** check box on the **General** page of the Create Deployment Type Wizard, you might not need to complete some of the steps in the following procedures.  
   
-### Start the create deployment type wizard  
+## Start the create deployment type wizard  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the Software Library workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  Select an application and then, on the **Home** tab, in the **Application** group, click **Create Deployment Type**.  
   
 > [!TIP]  
 >  You can also start the Create Deployment Type Wizard from the Create Application Wizard and from the **Deployment Types** tab of the *<application name\>***Properties** dialog box.  
   
-### Specify whether you want to automatically detect deployment type information or manually configure the Information  
+## Specify whether you want to automatically detect deployment type information or manually configure the Information  
  Use one of the following procedures to automatically detect or manually configure deployment type information.  
   
-##### To automatically detect the deployment type information  
+### Automatically detect the deployment type information  
   
 1.  On the **General** page of the Create Deployment Type Wizard, select the **Automatically identify information about this deployment type from installation files** check box.  
   
@@ -169,9 +162,9 @@ A System Center Configuration Manager application contains the files and informa
   
          For more information about VPN profiles, see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
   
-6.  Click **Next**, and then continue to [Specify content options for the deployment type](#BKMK_Content).  
+6.  Click **Next**, and then continue to [Specify content options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-content-options-for-the-deployment-type).  
   
-##### To manually configure the deployment type information  
+### Manually configure the deployment type information  
   
 1.  On the **General** page of the Create Deployment Type Wizard, select **Manually specify the deployment type information**.  
   
@@ -179,11 +172,9 @@ A System Center Configuration Manager application contains the files and informa
   
 3.  On the **General Information** page of the Create Deployment Type Wizard, specify a name for the deployment type, an optional description, and the languages in which you want to make this deployment type available, and then click **Next**.  
   
-4.  Continue to [Specify content options for the deployment type](#BKMK_Content).  
+4.  Continue to [Specify content options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-content-options-for-the-deployment-type).  
   
-###  <a name="BKMK_Content"></a> Specify content options for the deployment type  
-  
-##### To specify content options for the deployment type  
+##  Specify content options for the deployment type  
   
 1.  On the **Content** page of the Create Deployment Type Wizard, specify the following information:  
   
@@ -208,15 +199,13 @@ A System Center Configuration Manager application contains the files and informa
   
 2.  Click **Next**.  
   
-### Configure detection methods to indicate the presence of the deployment type (Windows PCs only)  
+## Configure detection methods to indicate the presence of the deployment type (Windows PCs only)  
  This procedure configures  a detection method that indicates whether the deployment type is already installed.  
-  
-##### To configure a detection method  
   
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select **Configure rules to detect the presence of this deployment type**, and then click **Add Clause**.  
   
     > [!NOTE]  
-    >  You can also select **Use a custom script to detect the presence of this deployment type**. For more information, see the [To use a custom script to determine the presence of a deployment type](#BKMK_Script) section in this topic.  
+    >  You can also select **Use a custom script to detect the presence of this deployment type**. For more information, see the Use a custom script to determine the presence of a deployment type section in this topic.  
   
 2.  In the **Detection Rule** dialog box, in the **Setting type** drop-down list, select the method that you want to use to detect the presence of the deployment type. You can choose from the following available methods:  
   
@@ -240,7 +229,7 @@ A System Center Configuration Manager application contains the files and informa
   
 5.  Click **Next** to close the **Detection Rule** dialog box.  
   
-####  <a name="BKMK_Script"></a> To use a custom script to determine the presence of a deployment type  
+###  Use a custom script to determine the presence of a deployment type  
   
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select the **Use a custom script to detect the presence of this deployment type** check box, and then click **Edit**.  
   
@@ -248,39 +237,36 @@ A System Center Configuration Manager application contains the files and informa
   
 3.  In the **Script contents** field, enter the script that you want to use. You can also paste the contents of an existing script in this field, or click **Open** to browse to an existing saved script. Configuration Manager determines the results from the script by reading the values that are written to the Standard Out (STDOUT) output stream, the Standard Error (STDERR) output stream, and the exit code from the script. If the exit code is a nonzero value, the script has failed and the application detection status is unknown. If the exit code is zero and STDOUT contains data, the application detection status is Installed.  
   
-     Use the following table to determine how you can use the output from a script to determine whether an application is installed.  
+Use the following table to determine how you can use the output from a script to determine whether an application is installed.  
   
-    |||  
-    |-|-|  
-    |Script exit code|Details|  
-    |0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Not installed|  
-    |0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
-    |0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
-    |Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Script exit code|Details|
+|-|-|
+|0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Not installed|  
+|0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
+|0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
+|Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
   
-     The following table contains Microsoft Visual Basic (VB) sample scripts that you can use to write your own application detection scripts.  
+The following table contains Microsoft Visual Basic (VB) sample scripts that you can use to write your own application detection scripts.  
   
-    |Visual Basic sample script|Description|  
-    |--------------------------------|-----------------|  
-    |**WScript.Quit(1)**|The script returns an exit code that is not zero, which indicates that it failed to run successfully. In this case, the application detection state is unknown.|  
-    |**WScript.StdErr.Write "Script failed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, but the value of STDERR is not empty, which indicates that the script failed to run successfully. In this case, the application detection state is unknown.|  
-    |**WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. However, the value for STDOUT is empty, which indicates that the application is not installed.|  
-    |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
-    |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
+|Visual Basic sample script|Description|  
+|--------------------------------|-----------------|  
+|**WScript.Quit(1)**|The script returns an exit code that is not zero, which indicates that it failed to run successfully. In this case, the application detection state is unknown.|  
+|**WScript.StdErr.Write "Script failed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, but the value of STDERR is not empty, which indicates that the script failed to run successfully. In this case, the application detection state is unknown.|  
+|**WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. However, the value for STDOUT is empty, which indicates that the application is not installed.|  
+|**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
+|**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
   
     > [!NOTE]  
     >  The maximum size that you can use for a script is 32 kilobytes (KB).  
   
 4.  Click **OK** to close the **Script Editor** dialog box.  
   
-### Specify user experience options for the deployment type  
+## Specify user experience options for the deployment type  
  These settings specify how the application will be installed on devices and what the user will see.  
-  
-##### To specify user experience options  
   
 1.  On the **User Experience** page of the Create Deployment Type Wizard, specify the following information:  
   
@@ -331,9 +317,7 @@ A System Center Configuration Manager application contains the files and informa
   
 2.  **Estimated installation time (minutes)** - Specify the estimated time that installation of the deployment type will take. This is displayed to users of Software Center.  
   
-### Specify requirements for the deployment type  
-  
-##### To specify requirements  
+## Specify requirements for the deployment type  
   
 1.  On the **Requirements** page of the Create Deployment Type Wizard, click **Add** to open the **Create Requirement** dialog box, and add a new requirement.  
   
@@ -358,13 +342,11 @@ A System Center Configuration Manager application contains the files and informa
   
 6.  Click **OK** to save the requirement and close the **Create Requirement** dialog box.  
   
-### Specify dependencies for the deployment type  
+## Specify dependencies for the deployment type  
  Dependencies define one or more deployment types from another application that must be installed before a deployment type is installed. You can configure the dependent deployment types to be installed automatically before a deployment type is installed.  
   
 > [!IMPORTANT]  
 >  In some cases, a deployment type is dependent on a deployment type that also contains dependencies. In this scenario, where a chain of dependencies exists, the maximum number of supported dependencies in the chain is **five**.  
-  
-##### To specify deployment type dependencies  
   
 1.  On the **Dependencies** page of the Create Deployment Type Wizard, click **Add** if you want to specify the deployment types that must be installed before this deployment type can be installed.  
   
@@ -391,9 +373,7 @@ A System Center Configuration Manager application contains the files and informa
   
 8.  Click **OK** to close the **Add Dependency** dialog box.  
   
-### Confirm the deployment type settings and complete the wizard  
-  
-##### To complete the wizard  
+## Confirm the deployment type settings and complete the wizard  
   
 1.  On the **Summary** page of the Create Deployment Type Wizard, review the actions that the wizard will take. Click **Next** to create the deployment type, or click **Previous** to go back and change the settings for the deployment type.  
   
@@ -401,14 +381,12 @@ A System Center Configuration Manager application contains the files and informa
   
 3.  If you started the Create Deployment Type Wizard from the Create Application Wizard, you will return to the **Deployment Types** page of the Create Application Wizard.  
   
-### Configure additional options for deployment types that contain virtual applications  
+## Configure additional options for deployment types that contain virtual applications  
  Use the following procedures to configure additional options for deployment types that contain virtual applications.  
   
-##### To configure content options for Application Virtualization (App-V) deployment types  
+### Configure content options for Application Virtualization (App-V) deployment types  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Applications**.  
   
 3.  In the **Applications** list, select an application that contains an App-V deployment type. Then, on the **Home** tab, in the **Properties** group, click **Properties**.  
   
@@ -424,11 +402,9 @@ A System Center Configuration Manager application contains the files and informa
   
 7.  Click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-##### To configure publishing options for App-V deployment types  
+### Configure publishing options for App-V deployment types  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Applications**.  
   
 3.  In the **Applications** list, select an application that contains an App-V deployment type. Then, on the **Home** tab, in the **Properties** group, click **Properties**.  
   
@@ -440,14 +416,10 @@ A System Center Configuration Manager application contains the files and informa
   
 7.  Click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-## How to import an application  
+## Import an application  
  Use the following procedure to import an application into Configuration Manager. For information about how to export an application, see [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
   
-#### To import an application  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Import Application**.  
   
@@ -462,7 +434,7 @@ A System Center Configuration Manager application contains the files and informa
 > [!TIP]  
 >  The Windows PowerShell cmdlet **Import-CMApplication** performs the same function as this procedure. For more information, see [Import-CMApplication](https://technet.microsoft.com/library/jj821738.aspx) in the Microsoft System Center 2012 Configuration Manager SP1 Cmdlet Reference documentation.  
   
-##  <a name="BKMK_Dtypes"></a> Deployment types supported by Configuration Manager  
+##  Deployment types supported by Configuration Manager  
   
 |Deployment type name|More information|  
 |--------------------------|----------------------|  

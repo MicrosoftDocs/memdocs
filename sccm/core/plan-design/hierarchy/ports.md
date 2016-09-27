@@ -1,5 +1,5 @@
-﻿---
-title: "Ports used in System Center Configuration Manager"
+---
+title: "Ports | System Center Configuration Manager"
 ms.custom: na
 ms.date: 02/10/2016
 ms.prod: configuration-manager
@@ -676,4 +676,3 @@ The site server that runs Migration uses several ports to connect to applicable 
 |NetBIOS Name Resolution|137|--|  
 |NetBIOS Datagram Service|138|--|  
 |NetBIOS Session Service|--|139|  
-

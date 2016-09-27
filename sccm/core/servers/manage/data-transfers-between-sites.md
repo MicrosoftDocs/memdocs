@@ -1,5 +1,5 @@
-﻿---
-title: "Data transfers between sites in System Center Configuration Manager"
+---
+title: "Data transfers | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/21/2016
 ms.prod: configuration-manager
@@ -217,4 +217,3 @@ To configure the replication controls for a site database, you edit the properti
 
 > [!TIP]  
 >  You can configure database replication controls from the **Database Replication** node in either workspace. However, when you use the **Database Replication** node in the **Monitoring** workspace you can also view the status of database replication for a replication link, and access the Replication Link Analyzer tool to help you investigate problems with replication.  
-

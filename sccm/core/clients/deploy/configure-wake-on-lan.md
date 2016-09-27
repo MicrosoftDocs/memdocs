@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configure Wake on LAN | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/29/2016

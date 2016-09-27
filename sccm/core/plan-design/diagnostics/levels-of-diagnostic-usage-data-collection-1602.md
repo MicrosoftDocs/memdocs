@@ -1,5 +1,5 @@
-﻿---
-title: "Levels of diagnostic usage data collection for version 1602 of System Center Configuration Manager"
+---
+title: "Diagnostic data for 1602 | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -301,4 +301,3 @@ Beginning with System Center Configuration Manager version 1602, this level incl
 -   ***[New]*** Compliance Settings: SCEP, VPN, Wifi and Compliance Policy template configuration details
 
 -   ***[New]*** Type of EAS Conditional Access policies (block or quarantine) for Intune-managed devices
-

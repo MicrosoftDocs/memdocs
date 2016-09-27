@@ -1,5 +1,5 @@
-﻿---
-title: "Accessibility features in System Center Configuration Manager"
+---
+title: "Accessibility | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
@@ -97,4 +97,3 @@ author: Brenduns
 
     > [!NOTE]  
     >  If you change the font of the Help topics in the Help window, the change also affects the font for webpages in Windows Internet Explorer.  
-

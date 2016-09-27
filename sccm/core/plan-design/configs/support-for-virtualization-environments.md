@@ -1,5 +1,5 @@
-﻿---
-title: "Support for Virtualization Environments for System Center Configuration Manager"
+---
+title: "Support for Virtualization | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -51,4 +51,3 @@ The same System Center Configuration Manager requirements for networks, supporte
 
 > [!IMPORTANT]  
 >  Configuration Manager sites and clients that run in Azure virtual machines are subject to the same license requirements as on-premises installations.  
-

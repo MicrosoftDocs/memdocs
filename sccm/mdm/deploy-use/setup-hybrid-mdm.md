@@ -36,7 +36,9 @@ Looking for Intune without Configuration Manager?
 [View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## Step 1: Create an MDM collection
-You will need a Configuration Manager user collection to specify users who can enroll devices into management. Only user collections can be targeted because Intune licenses are assigned to users. For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
+You will need a Configuration Manager user collection to specify users who can enroll devices into management. Only user collections can be targeted because Intune licenses are assigned to users. For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
+
+![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
 ## Step 2: Domain name and Active Directory requirements
 
@@ -94,6 +96,8 @@ If necessary, take the following steps to satisfy any dependencies external to C
 
 3.  In the **Administration** workspace, expand **Cloud Services**, and click **Microsoft Intune Subscriptions**. On the **Home** tab, click **Add Microsoft Intune Subscription**.
 
+![Create an Intune subscription](../media/mdm-set-intune.png)
+
 4.  On the **Introduction** page of the Create Microsoft Intune Subscription Wizard, review the text and click **Next**.
 
 5.  On the **Subscription** page, click **Sign in** and sign in by using your work or school account. In the **Set the Mobile Device Management Authority** dialog, select the check box to only manage mobile devices by using Configuration Manager through the Configuration Manager console. To continue with your subscription, you must select this option.
@@ -128,7 +132,7 @@ If necessary, take the following steps to satisfy any dependencies external to C
 10. Complete the wizard.
 
 ## Step 4: Add terms and conditions for enrollment
- Once you've configured Intune management for mobile devices, you can create **Terms and Conditions**. Use terms and conditions to explain to users what happens when they enroll their devices. Users must accept the terms and conditions before they can enroll a device. See [Terms and Conditions in System Center Configuration Manager](terms-and-conditions.md).
+ Once you've configured Intune management for mobile devices, you can create **Terms and Conditions**. Use terms and conditions to explain to users what happens when they enroll their devices. Users must accept the terms and conditions before they can enroll a device. In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Terms and Conditions**, and then click **Create Terms and Conditions**. See [Terms and Conditions in System Center Configuration Manager](terms-and-conditions.md).
 
 ##  Step 5: Create service connection point site system role
 When you have created your subscription, you can then install the service connection point site system role that lets you connect to the Intune service. This site system role will push settings and applications to the Intune service.
@@ -152,6 +156,8 @@ When you have created your subscription, you can then install the service connec
     -   Existing site system server: Click the server on which you want to install the service connection point role. Then, on the **Home** tab, in the **Server** group, click **Add Site System Roles** to start the Add Site system Roles Wizard.
 
 4.  On the **System Role Selection** page, select **Service connection point**, and click **Next**.
+
+![Create a service connection point](../media/mdm-service-connection-point.png)
 
 5.  Complete the wizard.
 
@@ -218,6 +224,38 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
   - **Windows PCs:** On the **Home** tab, click **Configure Platforms**, and then click **Windows**. On the **General** tab, select **Enable Windows enrollment**.  
   - **Windows 10 Mobile and Windows Phone:** On the **Home** tab, click **Configure Platforms**, and then click **Windows Phone**.  On the **General** tab, choose  **Windows Phone 8.1 and Windows 10 Mobile**.
 
+#### Azure Active Directory enrollment
+
+  Automatic enrollment lets users enroll either company-owned or personal Windows 10 PCs and Windows 10 Mobile devices in Intune by adding a work or school account and agreeing to be managed. Simple as that. In the background, the user's device registers and joins Azure Active Directory. Once registered, the device is managed with Intune.
+
+  **Prerequisites**
+  - Azure Active Directory Premium subscription ([trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845))
+  - Microsoft Intune subscription
+
+  1. In the [Azure management portal](https://manage.windowsazure.com) (https://manage.windowsazure.com), navigate to the **Active Directory** node and select your directory.
+
+  2. Click the **Applications** tab and you should see **Microsoft Intune** in the list of applications.
+
+      ![Azure AD apps with Microsoft Intune](../media/aad-intune-app.png)
+
+  3. Click on the arrow for **Microsoft Intune** and you should see a page that enables you to configure Microsoft Intune.
+
+  4. Click **Configure** to start configuring automatic MDM enrollment with Microsoft Intune.
+
+  5. Specify the URLs for Intune:
+
+    - **MDM Enrollment URL** – Use `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` for the MDM Enrollment URL.
+    - **MDM Terms of Use URL** – Use the default value. This URL displays terms of use for users when enrolling devices.
+    - **MDM Compliance URL** – Use the default value. If a device is found to be out of compliance, an **Access denied** message is displayed with this URL. The URL points to a page that helps users understand why their device is not compliant with policy and how they can bring it back into compliance.
+
+  6.  Specify which users’ devices should be managed by Microsoft Intune. These users’ Windows 10 devices will be automatically enrolled for management with Microsoft Intune.
+
+    - **All**
+    - **Groups**
+    - **None**
+
+  7. Choose **Save**.
+
 ## Step 7: Set up additional management
 (Optional) You can set up additional management before devices are enrolled. These management solutions can be created and deployed after devices are enrolled, although many organizations prefer to deploy them as devices are brought into management.
 
@@ -274,4 +312,3 @@ Hybrid setup is now complete. Devices can be enrolled in Configuration Manager i
 6.  In the **Site System Roles** list, select **Service connection point** and then click **Remove Role** in the ribbon. Confirm you want to remove the role. The service connection point is deleted.
 
 7.  You can now create a new service connection point, add a new Intune subscription to Configuration Manager, and set Configuration Manager as the MDM Authority.
-

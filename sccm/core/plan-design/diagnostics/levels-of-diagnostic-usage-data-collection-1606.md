@@ -1,5 +1,5 @@
-﻿---
-title: "Levels of diagnostic usage data collection for version 1606 of System Center Configuration Manager"
+---
+title: "Diagnostic data for 1606 | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -408,4 +408,3 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 -   ***[New]*** ATP Health Summary
 
 -   ***[New]*** Detailed Client deployment installation errors
-

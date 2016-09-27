@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Use Software Center to deploy Windows over the network with System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015

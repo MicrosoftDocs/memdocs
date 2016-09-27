@@ -1,5 +1,5 @@
 # [Understand and explore](understand/introduction-to-application-management.md)
-# [Get started with application management](get-started/create-and-deploy-an-application.md)
+# [Get started](get-started/create-and-deploy-an-application.md)
 ## [Create and deploy an application](get-started/create-and-deploy-an-application.md)
 # [Plan and design](plan-design/plan-for-and-configure-application-management.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-application-management.md)

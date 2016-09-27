@@ -1,4 +1,4 @@
-﻿---
+---
 title: "How to Create VPN profiles in System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/01/2016

@@ -1,5 +1,5 @@
-﻿---
-title: "Install in-console updates for System Center Configuration Manager"
+---
+title: "In-console updates | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -158,7 +158,7 @@ Later, when you install  an update, you have the option to configure the update 
 -   When you use a Configuration Manager console after the site updates, you are prompted to update the console.  
 
 -  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat to this is for distribution points:
-  - Due to changes introduced with update 1606, when installing an update to a site that already runs version 1606 or later, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients. 
+  - Due to changes introduced with update 1606, when installing an update to a site that already runs version 1606 or later, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
 
 
 ###  <a name="bkmk_overview"></a> Overview of in-console update installation  
@@ -354,4 +354,3 @@ On a site server you can configure service windows to control when infrastructur
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
     See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
-

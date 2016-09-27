@@ -1,5 +1,6 @@
-﻿---
-title: "Security and privacy for migration to System Center Configuration Manager"
+---
+title: "Migration security and privacy | System Center Configuration Manager"
+description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -54,4 +55,3 @@ You can migrate some or all of the supported data from a source site to a destin
 Migration is not enabled by default and requires several configuration steps. Migration information is not sent to Microsoft.  
 
 Before you migrate data from a source hierarchy, consider your privacy requirements.  
-

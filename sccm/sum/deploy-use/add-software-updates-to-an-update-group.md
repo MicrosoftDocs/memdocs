@@ -1,4 +1,4 @@
-﻿---
+---
 # required metadata
 
 title: Add software updates to an update group | Configuration Manager

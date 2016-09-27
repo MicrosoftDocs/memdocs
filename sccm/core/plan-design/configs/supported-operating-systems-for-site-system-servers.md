@@ -1,5 +1,5 @@
-﻿---
-title: "Supported operating systems for System Center Configuration Manager  site system servers"
+---
+title: "Supported site system servers | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -271,4 +271,3 @@ Use the information in this topic with the information in the following articles
 -   Only x64 is supported  
 
 -   Distribution points on this operating system does not support PXE or Multicast  
-

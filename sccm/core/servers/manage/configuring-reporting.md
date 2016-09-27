@@ -1,5 +1,5 @@
-﻿---
-title: "Configuring reporting in System Center Configuration Manager"
+---
+title: "Configure reporting | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -282,4 +282,3 @@ Before you can create, modify, and run reports in the System Center Configuratio
 3.  On the **Home** tab, in the **Settings** group, click **Report Options**.  
 
 4.  Select the default report server in the list, and then click **OK**. If no reporting services points are listed in the list, verify that you have a reporting services point successfully installed and configured in the site.  
-

@@ -1,5 +1,5 @@
-﻿---
-title: "Package Transfer Manager  in System Center Configuration Manager"
+---
+title: "Package Transfer Manager | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
@@ -12,7 +12,7 @@ ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 caps.latest.revision: 3
 author: Brenduns
 ---
-# Package Transfer Manager  in System Center Configuration Manager
+# Package Transfer Manager in System Center Configuration Manager
 In a System Center Configuration Manager site, the Package Transfer Manager is a  component of the SMS_Executive that manages the transfer of content from a site server computer to remote distribution points in a site. (A remote distribution point is one that is not located on the site server computer.) The Package Transfer Manager does not support configurations by the Adminsitrator, but understanding how it operates can help you plan your content management infrastructure, and help you resolve problems with content distribution.
 
 
@@ -76,4 +76,3 @@ The following information describes how Package Transfer Manager manages the tra
     -   **Standard distribution point:** After the Package Transfer Manager is done transferring files to each designated remote distribution point, it verifies the hash of the content on the distribution point, and notifies Distribution Manager that the distribution is complete.  
 
     -   **Pull-distribution point:** After the pull-distribution point completes the content download, the distribution point verifies the hash of the content, and then submits a status message to the sites management point to indicate success. However, if after 60 minutes, this status is not received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm if the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
-

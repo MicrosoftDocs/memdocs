@@ -1,5 +1,5 @@
-﻿---
-title: "Start using System Center Configuration Manager"
+---
+title: "Start using System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/13/2016
 ms.prod: configuration-manager
@@ -27,4 +27,3 @@ After you plan out your System Center Configuration Manager site and hierarchy  
 -   [Configure sites and hierarchies for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)  
 
 -   [Migrate data between hierarchies in System Center Configuration Manager](../../../core/migration/migrate-data-between-hierarchies.md)  
-
