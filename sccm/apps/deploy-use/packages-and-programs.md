@@ -183,7 +183,7 @@ Packages can use some new features of Configuration Manager, including distribut
   
 7.  On the **Summary** page, review the actions that will be taken and then complete the wizard. The new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
   
- For more information about package definition files, see [Information about the package definition file format](#BKMK_PDF) in this topic.  
+ For more information about package definition files, see [About the package definition file format](/sccm/apps/deploy-use/packages-and-programs#about-the-package-definition-file-format) in this topic.  
   
 ##  Deploy packages and programs  
   
@@ -248,13 +248,13 @@ Packages can use some new features of Configuration Manager, including distribut
   
 11. On the **Summary** page, review the actions that will be taken and then complete the wizard.  
   
-     You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [How to monitor packages and programs](#BKMK_Monitor) in this topic.  
+     You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [Monitor packages and programs](/sccm/apps/deploy-use/packages-and-programs#monitor-packages-and-programs) in this topic.  
   
 > [!IMPORTANT]  
 >  If you configured the option **Run program from distribution point** on the **Distribution Points** page of the Deploy Software Wizard, do not clear the option **Copy the content in this package to a package share on distribution points**, because this will make the package unavailable to run from distribution points.  
   
 ##  Monitor packages and programs  
- To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+ To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
   
  Packages and programs also includes a number of built-in reports, which allow you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
   
@@ -267,8 +267,8 @@ Packages can use some new features of Configuration Manager, including distribut
 |----------|----------------------|  
 |**Create Prestage Content File**|Opens the Create Prestaged Content File Wizard that allows you to create a file that contains the package content that can be manually imported to another site. This is useful in situations where you have low network bandwidth between the site server and the distribution point.|  
 |**Create Program**|Opens the Create Program Wizard that allows you to create a new program for this package.|  
-|**Export**|Opens the Export Package Wizard that allows you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see [How to create packages and programs](#BKMK_create) in this topic.|  
-|**Deploy**|Opens the Deploy Software Wizard that allows you to deploy the selected package and program to a collection. For more information, see [How to deploy packages and programs](#BKMK_Deploy) in this topic.|  
+|**Export**|Opens the Export Package Wizard that allows you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see Create packages and programs in this topic.|  
+|**Deploy**|Opens the Deploy Software Wizard that allows you to deploy the selected package and program to a collection. For more information, see [Deploy packages and programs](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) in this topic.|  
 |**Distribute Content**|Opens the Distribute Content Wizard that allows you to send the content that is associated with the package and program to selected distribution points or distribution point groups.|  
 |**Update Distribution Points**|Updates distribution points with the latest content for the selected package and program.|  
   
