@@ -33,11 +33,12 @@ Certificate profiles in System Center Configuration Manager works with Active Di
  **Example:** You have a PKI in place and want to move to a more flexible, secure method of provisioning certificates that lets users access company resources from their personal devices without compromising security. To accomplish this, you can configure certificate profiles with settings and protocols that are supported for the specific device platform. The devices can then automatically request these certificates from an Internet-facing enrollment server. You can then configure VPN profiles to use these certificates so that the device can access company resources.  
   
 ## Types of Certificate Profile  
- You can create two types of certificate profiles in System Center Configuration Manager:  
+ You can create three types of certificate profiles in System Center Configuration Manager:  
   
 -   **Trusted CA certificate** - Allows you to deploy a trusted root CA or intermediate CA certificate to form a certificate chain of trust when the device must authenticate a server.  
   
--   **Simple Certificate Enrollment Protocol (SCEP) settings** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2.  
+-   **Simple Certificate Enrollment Protocol (SCEP)** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2. 
+-   -   **Personal information exchange (.pfx)** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2. 
   
     > [!NOTE]  
     >  You must create a certificate profile of the type **Trusted CA certificate** before you can create a certificate profile of the type **Simple Certificate Enrollment Protocol (SCEP) settings**.  
