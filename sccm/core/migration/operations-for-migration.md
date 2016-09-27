@@ -1,5 +1,5 @@
 ---
-title: "Operations for migrating to System Center Configuration Manager"
+title: "Migration operations | System Center Configuration Manager"
 description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

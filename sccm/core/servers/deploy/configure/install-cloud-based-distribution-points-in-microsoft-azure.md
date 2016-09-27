@@ -1,5 +1,5 @@
 ---
-title: "Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager"
+title: "Install cloud-based distribution points | System Center Configuration Manager"
 ms.custom: na
 ms.date: 06/27/2016
 ms.prod: configuration-manager
@@ -120,4 +120,3 @@ To map the service name that you provided with the Configuration Manager cloud-b
 4.  In **Site System Properties**, select the **Proxy** tab, and then configure the proxy settings for this primary site server.  
 
 5.  Click **OK** to save the new proxy server configuration.  
-

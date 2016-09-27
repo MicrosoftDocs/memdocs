@@ -1,5 +1,5 @@
 ---
-title: "Migrate data between hierarchies in System Center Configuration Manager"
+title: "Migrate data | System Center Configuration Manager"
 description: "Learn how to transfer data from a source hierarchy to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 07/22/2016

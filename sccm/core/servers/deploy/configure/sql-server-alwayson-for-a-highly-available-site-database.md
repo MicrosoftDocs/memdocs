@@ -1,5 +1,5 @@
 ---
-title: "SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager"
+title: "SQL Server AlwaysOn | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/04/2016
 ms.prod: configuration-manager
@@ -106,7 +106,7 @@ author: Brenduns
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure'max text repl size (B)', 2147483647
+    >     Exec sp_configure 'max text repl size (B)', 2147483647
     >     reconfigure
 
 

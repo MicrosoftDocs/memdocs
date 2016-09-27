@@ -1,5 +1,5 @@
 ---
-title: "Removed and deprecated features for System Center Configuration Manager"
+title: "Deprecated features | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -61,6 +61,7 @@ This topic describes features, products, and operating systems that are removed 
 |Windows Mobile 6.0 - 6.5|7/10/2015|√|  
 |Nokia Symbian Belle|7/10/2015|√|  
 |Windows CE 5.0 - 6.0|7/10/2015|√|  
+
 
  **Deprecated support for SQL Server versions as a site database:**  
 

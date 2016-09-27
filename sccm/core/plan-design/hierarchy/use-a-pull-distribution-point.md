@@ -1,5 +1,5 @@
 ---
-title: "Use a cloud-based distribution point with System Center Configuration Manager"
+title: "Pull-distribution point | System Center Configuration Manager"
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager

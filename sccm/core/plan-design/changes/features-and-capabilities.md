@@ -1,5 +1,5 @@
 ---
-title: "Features and capabilities of System Center Configuration Manager"
+title: "Features and capabilities | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -91,4 +91,3 @@ The following are the primary management capabilities of System Center Configura
  **Software updates**  
 
  Provides a set of tools and resources that can help you manage, deploy, and monitor software updates in the enterprise. See [Introduction to software updates in System Center Configuration Manager](../../../sup/understand/software-updates-introduction.md)  
-

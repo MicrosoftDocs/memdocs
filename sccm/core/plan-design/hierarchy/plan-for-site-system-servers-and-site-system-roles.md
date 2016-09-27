@@ -1,5 +1,5 @@
 ---
-title: "Plan for site system servers and site system roles for System Center Configuration Manager"
+title: "Plan site system roles | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -71,7 +71,6 @@ After a site installs, you can move the  location of some site system roles from
 -   **Endpoint Protection point** - A site system role that Configuration Manager uses to accept the Endpoint Protection license terms and to configure the default membership for Microsoft Active Protection Service. A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site. For more information, see  [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
 -   **Enrollment point** - A site system role that uses PKI certificates for Configuration Manager to enroll mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
-
 
      If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the user's forest so that the user can be authenticated.  
 

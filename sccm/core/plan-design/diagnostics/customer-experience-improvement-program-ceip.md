@@ -1,5 +1,5 @@
 ---
-title: "Customer Experience Improvement Program (CEIP) for System Center Configuration Manager"
+title: "CEIP | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -24,4 +24,3 @@ During installation of the System Center Configuration Manager console, you have
 -   Read the [CEIP privacy statement](http://www.microsoft.com/products/ceip/privacypolicy.mspx?mkt=en-us) online.  
 
 You can change the CEIP settings per console install. In the console, go to the consoles backstage tab (the upper left tab with the drop down arrow)  and select **Customer Experience Improvement Program** to change the settings.  
-

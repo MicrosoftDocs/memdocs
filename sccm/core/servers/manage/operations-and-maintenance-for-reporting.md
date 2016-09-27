@@ -1,5 +1,5 @@
 ---
-title: "Operations and maintenance for reporting in System Center Configuration Manager"
+title: "Operations and maintenance for reporting | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -371,4 +371,3 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 ## See Also  
  [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)
-

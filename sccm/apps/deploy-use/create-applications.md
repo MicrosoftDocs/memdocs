@@ -44,7 +44,7 @@ A System Center Configuration Manager application contains the files and informa
   
 1.  On the **General** page of the Create Application Wizard, select the **Automatically detect information about this application from installation files** check box.  
   
-2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](#BKMK_Dtypes) in this topic.  
+2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
   
 3.  In the **Location** field, specify the UNC path in the form *\\\\<server\>\\<share\>\\<filename\>* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
   
@@ -77,7 +77,7 @@ A System Center Configuration Manager application contains the files and informa
   
 6.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
   
- The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](#BKMK_Dept1) in this topic.  
+ The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
   
 ### Manually specify application information  
   
@@ -111,7 +111,7 @@ A System Center Configuration Manager application contains the files and informa
     -   **Display this as a featured app and highlight it in the company portal** - Select this option to display the app prominently in the company portal.  
   
 4.  On the **Deployment Types** page of the Create Application Wizard, click **Add** to create a new deployment type.  
-    For more information, see [Create deployment types for the application](#BKMK_Dept1) in this topic.  
+For more information, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
   
 5.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
   
@@ -162,7 +162,7 @@ A System Center Configuration Manager application contains the files and informa
   
          For more information about VPN profiles, see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
   
-6.  Click **Next**, and then continue to [Specify content options for the deployment type](#BKMK_Content).  
+6.  Click **Next**, and then continue to [Specify content options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-content-options-for-the-deployment-type).  
   
 ### Manually configure the deployment type information  
   
@@ -172,7 +172,7 @@ A System Center Configuration Manager application contains the files and informa
   
 3.  On the **General Information** page of the Create Deployment Type Wizard, specify a name for the deployment type, an optional description, and the languages in which you want to make this deployment type available, and then click **Next**.  
   
-4.  Continue to [Specify content options for the deployment type](#BKMK_Content).  
+4.  Continue to [Specify content options for the deployment type](/sccm/apps/deploy-use/create-applications#specify-content-options-for-the-deployment-type).  
   
 ##  Specify content options for the deployment type  
   
@@ -205,7 +205,7 @@ A System Center Configuration Manager application contains the files and informa
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select **Configure rules to detect the presence of this deployment type**, and then click **Add Clause**.  
   
     > [!NOTE]  
-    >  You can also select **Use a custom script to detect the presence of this deployment type**. For more information, see the [To use a custom script to determine the presence of a deployment type](#BKMK_Script) section in this topic.  
+    >  You can also select **Use a custom script to detect the presence of this deployment type**. For more information, see the Use a custom script to determine the presence of a deployment type section in this topic.  
   
 2.  In the **Detection Rule** dialog box, in the **Setting type** drop-down list, select the method that you want to use to detect the presence of the deployment type. You can choose from the following available methods:  
   
@@ -229,7 +229,7 @@ A System Center Configuration Manager application contains the files and informa
   
 5.  Click **Next** to close the **Detection Rule** dialog box.  
   
-###  To use a custom script to determine the presence of a deployment type  
+###  Use a custom script to determine the presence of a deployment type  
   
 1.  On the **Detection Method** page of the Create Deployment Type Wizard, select the **Use a custom script to detect the presence of this deployment type** check box, and then click **Edit**.  
   
@@ -237,29 +237,28 @@ A System Center Configuration Manager application contains the files and informa
   
 3.  In the **Script contents** field, enter the script that you want to use. You can also paste the contents of an existing script in this field, or click **Open** to browse to an existing saved script. Configuration Manager determines the results from the script by reading the values that are written to the Standard Out (STDOUT) output stream, the Standard Error (STDERR) output stream, and the exit code from the script. If the exit code is a nonzero value, the script has failed and the application detection status is unknown. If the exit code is zero and STDOUT contains data, the application detection status is Installed.  
   
-     Use the following table to determine how you can use the output from a script to determine whether an application is installed.  
+Use the following table to determine how you can use the output from a script to determine whether an application is installed.  
   
-    |||  
-    |-|-|  
-    |Script exit code|Details|  
-    |0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Not installed|  
-    |0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
-    |0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
-    |Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
-    |Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Script exit code|Details|
+|-|-|
+|0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Not installed|  
+|0|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
+|0|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Success<br /><br /> **Application detection state** - Installed|  
+|Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
+|Non-zero value|**Data read from STDOUT** - Not empty<br /><br /> **Data read from STDERR** - Not empty<br /><br /> **Script result** - Failure<br /><br /> **Application detection state** - Unknown|  
   
-     The following table contains Microsoft Visual Basic (VB) sample scripts that you can use to write your own application detection scripts.  
+The following table contains Microsoft Visual Basic (VB) sample scripts that you can use to write your own application detection scripts.  
   
-    |Visual Basic sample script|Description|  
-    |--------------------------------|-----------------|  
-    |**WScript.Quit(1)**|The script returns an exit code that is not zero, which indicates that it failed to run successfully. In this case, the application detection state is unknown.|  
-    |**WScript.StdErr.Write "Script failed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, but the value of STDERR is not empty, which indicates that the script failed to run successfully. In this case, the application detection state is unknown.|  
-    |**WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. However, the value for STDOUT is empty, which indicates that the application is not installed.|  
-    |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
-    |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
+|Visual Basic sample script|Description|  
+|--------------------------------|-----------------|  
+|**WScript.Quit(1)**|The script returns an exit code that is not zero, which indicates that it failed to run successfully. In this case, the application detection state is unknown.|  
+|**WScript.StdErr.Write "Script failed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, but the value of STDERR is not empty, which indicates that the script failed to run successfully. In this case, the application detection state is unknown.|  
+|**WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. However, the value for STDOUT is empty, which indicates that the application is not installed.|  
+|**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
+|**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
   
     > [!NOTE]  
     >  The maximum size that you can use for a script is 32 kilobytes (KB).  
