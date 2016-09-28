@@ -11,6 +11,7 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
+	- configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 
 # optional metadata
