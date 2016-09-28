@@ -16,7 +16,8 @@ author: robstackmsft
 
 ---
 # Uninstall applications with System Center Configuration Manager
-Perform the following steps to uninstall an application by using System Center Configuration Manager:  
+
+## Introduction  
   
 -   Specify the command line to uninstall the deployment type content on the **Content** page of the **Create Deployment Type Wizard**.  
   
@@ -38,9 +39,9 @@ Perform the following steps to uninstall an application by using System Center C
 > [!IMPORTANT]  
 >  You must delete any existing deployments or simulated deployments of an application to a collection before you can deploy the application with a deployment action of **Uninstall**.  
   
- For more information about how to create a deployment type, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ For more information about how to create a deployment type, see [Create applications](../../apps/deploy-use/create-applications.md).  
   
- For more information about how to deploy an application, see [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
+ For more information about how to deploy an application, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
   
 ## Uninstall an application  
   

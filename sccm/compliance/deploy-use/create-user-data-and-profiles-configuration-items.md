@@ -45,9 +45,7 @@ User data and profiles configuration items in System Center Configuration Manage
   
 ## Create a user data and profiles configuration item  
   
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings** > **User Data and Profiles**.  
+1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **User Data and Profiles**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create User Data and Profiles Configuration Item**.  
   
@@ -97,7 +95,7 @@ User data and profiles configuration items in System Center Configuration Manage
   
     -   **Remediate noncompliant rules when supported** – Enable this option to automatically remediate any rules that are evaluated as noncompliant on client computers.  
   
-    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration item, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration item, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
   
     -   **Generate an alert** – Enable this option to configure an alert that is generated if the configuration item compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
@@ -106,8 +104,8 @@ User data and profiles configuration items in System Center Configuration Manage
 5.  Click **OK** to close the **Deploy User Data and Profiles Configuration Item** dialog box and to create the deployment.  
   
 ## Monitor a user data and profiles configuration item  
- You monitor this typ of configuration item in the same way that you monitor other compliance settings.  
+ You monitor this type of configuration item in the same way that you monitor other compliance settings.  
   
- For more information, see [How to monitor compliance settings in System Center Configuration Manager](../../compliance/deploy-use/monitor-compliance-settings.md).  
+ For more information, see [How to monitor compliance settings](../../compliance/deploy-use/monitor-compliance-settings.md).  
   
 

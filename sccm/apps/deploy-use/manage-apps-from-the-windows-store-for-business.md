@@ -41,7 +41,9 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 |Support available deployments to user or device collections|Yes<sup>3</sup>|No<sup>2</sup>|
 
 <sup>1</sup>Supports devices managed by Intune only. Although you are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, this will not work. The end user will be directed to the relevant page in the app store from where they must install the app manually.
+
 <sup>2</sup>Online apps can be deployed as available to user or device collections for devices managed by the Configuration Manager client only, but when the end user selects the app in Software Center, they will be taken to the Windows Store for Business, where they must install the app manually. Available deployments to devices enrolled with Microsoft Intune are not supported.
+
 <sup>3</sup>Not supported for devices managed by Intune.
 
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
 2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
+
 > [!IMPORTANT]
 > For devices enrolled with Intune, deployed apps are only available to the user who originally enrolled the device. No other users can access the app.
 
