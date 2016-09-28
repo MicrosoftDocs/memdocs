@@ -40,7 +40,7 @@ This procedure configures the default client settings for compliance settings an
 |-------------------------|----------------------|  
 |**Enable compliance evaluation on clients**|Set to **True** if you want to evaluate compliance on client devices.|  
 |**Schedule compliance evaluation**|Click **Schedule** if you want to modify the default compliance evaluation schedule on client devices.|  
-|**Enable User Data and Profiles**|Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles.md).|  
+|**Enable User Data and Profiles**|Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles).|  
 6.  Click **OK** to close the **Default Settings** dialog box.  
   
  Client computers are configured with these settings the next time they download client policy.  

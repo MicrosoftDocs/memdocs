@@ -86,7 +86,7 @@ The new app configuration policy is displayed in the **App Configuration Policie
 
 ## Associate an app configuration policy with a Configuration Manager application
 
-To associate an app configuration policy with the deployment of an iOS app, you deploy the application as you normally would using the procedure in the [How to deploy applications](/sccm/apps/deploy-use/deploy-applications) topic.
+To associate an app configuration policy with the deployment of an iOS app, you deploy the application as you normally would using the procedure in the [Deploy applications](/sccm/apps/deploy-use/deploy-applications) topic.
 On the **App Configuration Policies** page of the **Deploy Software Wizard**, click **New**. Then, in the **Select App Configuration Policy** dialog box, choose an application deployment type and an app configuration policy you want to associate it with.
 When the deployment type is installed the app configuration policy settings will be automatically applied.
 
