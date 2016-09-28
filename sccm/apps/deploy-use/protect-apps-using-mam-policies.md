@@ -39,16 +39,6 @@ System Center Configuration Manager application management policies let you modi
   
 ## Create and deploy an app with a mobile application management policy  
   
--   [Step 1: Obtain the link to a policy managed app, or create a wrapped app](#BKMK_Step1)  
-  
--   [Step 2: Create a Configuration Manager application that contains an app](#BKMK_Step2)  
-  
--   [Step 3: Create an application management policy](#bkmk_step3)  
-  
--   [Step 4: Associate the application management policy with a deployment type](#BKMK_Step4)  
-  
--   [Step 5: Monitor the app deployment](#BKMK_Step5)  
-  
 ##  Step 1: Obtain the link to a policy managed app, or create a wrapped app  
   
 -   **To obtain a link to a policy managed app** - From the app store, find, and note the URL of the policy managed app you want to deploy.  
@@ -78,11 +68,9 @@ System Center Configuration Manager application management policies let you modi
   
  The new application is displayed in the **Applications** node of the **Software Library** workspace.  
   
-### To create an application containing a link to a policy managed app  
+### Create an application containing a link to a policy managed app  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  In the **Home** tab, in the **Create** group, click **Create Application** to open the Create Application Wizard.  
   
@@ -105,9 +93,7 @@ System Center Configuration Manager application management policies let you modi
 ##  Step 3: Create an application management policy  
  Next, you create an application management policy that you will associate with the application. You can create a general or managed browser policy.  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Application Management Policies**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Application Management Policies**.  
   
 3.  In the **Home** tab, in the **Create** group, click **Create Application Management Policy**.  
   
@@ -140,14 +126,14 @@ System Center Configuration Manager application management policies let you modi
 7.  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, manage the URLs in the list, and then click **Next**.  
   
     > [!WARNING]  
-    >  For more information, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
+    >  For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
   
 8.  Complete the wizard.  
   
  The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
   
 ##  Step 4: Associate the application management policy with a deployment type  
- When a deployment type is created for an app that requires an application management policy, Configuration Manager will recognize that an app management policy must be linked to this deployment type when the associated app gets deployed and prompt you to associate an app management policy. For the Managed Browser, you will be required to associate both a General and Managed Browser policy. For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ When a deployment type is created for an app that requires an application management policy, Configuration Manager will recognize that an app management policy must be linked to this deployment type when the associated app gets deployed and prompt you to associate an app management policy. For the Managed Browser, you will be required to associate both a General and Managed Browser policy. For more information, see [Create applications](../../apps/deploy-use/create-applications.md).  
   
 > [!IMPORTANT]  
 >  If the application is already deployed, then the deployment for the new deployment type will fail until this association is made. You can make the association in **Properties** for the application, on the **Application Management** tab.  
@@ -160,9 +146,7 @@ System Center Configuration Manager application management policies let you modi
 ##  Step 5: Monitor the app deployment  
  Once you have created and deployed an app associated with a mobile application management policy, you can monitor the app and resolve any policy conflicts.  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Monitoring** workspace, expand **Overview**, and then click **Deployments**.  
+1.  In the Configuration Manager console, click **Software Library** > **Overview** > **Deployments**.  
   
 3.  Select the deployment and on the **Home** tab, click **Properties**.  
   
@@ -182,7 +166,7 @@ System Center Configuration Manager application management policies let you modi
 -   If no policy has already been deployed to the device, and two conflicting settings are deployed, the default setting built into the device is used.  
   
 ##  Available policy managed apps  
- For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
+ For a list of the policy managed apps that are available for iOS and Android devices, see [Microsoft Intune application partners](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  
   
 
 
