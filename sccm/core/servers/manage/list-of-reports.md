@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # List of reports in System Center Configuration Manager

@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Accessibility features in System Center Configuration Manager
 

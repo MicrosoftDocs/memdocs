@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Introduction to hardware inventory in System Center Configuration Manager

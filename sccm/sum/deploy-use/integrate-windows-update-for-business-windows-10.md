@@ -3,7 +3,6 @@ title: Integration with Windows Update for Business in Windows 10 | Configuratio
 description:
 keywords:
 author: dougeby
-manager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod:
@@ -11,7 +10,7 @@ ms.service:
 ms.technology:
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 caps.latest.revision: 11
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Integration with Windows Update for Business in Windows 10

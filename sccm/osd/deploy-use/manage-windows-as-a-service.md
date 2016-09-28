@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
 caps.latest.revision: 26
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Manage Windows as a service using System Center Configuration Manager

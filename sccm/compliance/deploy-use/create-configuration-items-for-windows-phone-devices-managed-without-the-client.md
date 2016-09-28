@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client

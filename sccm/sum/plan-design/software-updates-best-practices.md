@@ -17,7 +17,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Best practices for software updates in System Center Configuration Manager

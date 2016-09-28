@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 caps.latest.revision: 12
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to deploy clients to Macs in System Center Configuration Manager

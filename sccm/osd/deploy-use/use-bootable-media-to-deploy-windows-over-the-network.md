@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 caps.latest.revision: 5
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Use bootable media to deploy Windows over the network with System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Command-line options for Setup for System Center Configuration Manager
 

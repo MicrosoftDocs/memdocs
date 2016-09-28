@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Windows Firewall and port settings for clients in System Center Configuration Manager

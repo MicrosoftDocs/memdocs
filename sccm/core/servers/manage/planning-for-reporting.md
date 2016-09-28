@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Planning for reporting in System Center Configuration Manager

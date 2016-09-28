@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
 caps.latest.revision: 10
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Planning for operating system deployment interoperability in System Center Configuration Manager

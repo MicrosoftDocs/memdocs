@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client

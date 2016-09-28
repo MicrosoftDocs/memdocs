@@ -4,8 +4,8 @@
 title: Configure classifications and products to synchronize | System Center Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager

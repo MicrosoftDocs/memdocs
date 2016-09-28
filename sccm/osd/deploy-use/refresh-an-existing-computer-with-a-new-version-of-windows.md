@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 caps.latest.revision: 7
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Refresh an existing computer with a new version of Windows using System Center Configuration Manager

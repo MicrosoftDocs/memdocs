@@ -4,8 +4,8 @@
 title: Software updates maintenance | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod:

@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 caps.latest.revision: 8
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Ensure device compliance with System Center Configuration Manager

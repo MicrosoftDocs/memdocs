@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
+author: NathBarnmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

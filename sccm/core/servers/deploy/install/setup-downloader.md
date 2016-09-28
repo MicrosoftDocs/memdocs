@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Setup Downloader for System Center Configuration Manager
 Before you run Setup to install or upgrade a System Center Configuration Manager site, you can use this stand-alone application (**Setupdl.exe**) from the version of Configuration Manager that you want to install to download updated Setup files that are required by Setup.  

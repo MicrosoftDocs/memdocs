@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Install site system roles for System Center Configuration Manager
 The  System Center Configuration Manager console has two wizards you can use to install site system roles:  

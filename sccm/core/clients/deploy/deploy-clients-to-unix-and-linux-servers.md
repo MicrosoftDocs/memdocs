@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to deploy clients to UNIX and Linux servers in System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # How to configure Wake on LAN in System Center Configuration Manager
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.

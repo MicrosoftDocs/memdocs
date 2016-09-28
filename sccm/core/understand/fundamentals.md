@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Fundamentals of System Center Configuration Manager

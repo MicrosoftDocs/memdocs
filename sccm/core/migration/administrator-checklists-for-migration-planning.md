@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Administrator checklists for migration planning in System Center Configuration Manager

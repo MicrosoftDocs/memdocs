@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 caps.latest.revision: 8
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Manage mobile devices with System Center Configuration Manager and Exchange

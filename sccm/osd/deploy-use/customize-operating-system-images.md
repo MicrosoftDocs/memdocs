@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Customize operating system images with System Center Configuration Manager

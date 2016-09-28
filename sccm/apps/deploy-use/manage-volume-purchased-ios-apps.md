@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b5e7cead-e257-405b-a2aa-b0130e48dc40
 caps.latest.revision: 23
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Manage volume-purchased iOS apps with System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 caps.latest.revision: 9
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Update and retire applications with System Center Configuration Manager

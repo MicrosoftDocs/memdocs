@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft
