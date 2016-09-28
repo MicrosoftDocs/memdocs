@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
 ms.custom: na
 ms.date: 07/22/2016
@@ -16,14 +16,12 @@ caps.handback.revision: 0
 author: robstackmsftmanager: angrobe
 
 ---
-# How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client
-Use the System Center Configuration Manager**iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+# Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client
+Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
-### To create an iOS and Mac OS X configuration item  
+## To create an iOS and Mac OS X configuration item  
 
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
 
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
 
@@ -158,7 +156,7 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 |Setting name|Details|  
 |------------------|-------------|  
 |**User to accept untrusted TLS certificates**|If **Allowed**, lets the user accept these certificates. If **Prohibited**, automatically rejects untrusted certificates.|
-|**Allow Activation Lock (supervised mode only)**|Use this setting to enable iOS Activation Lock on **supervised** iOS devices that you manage. For more information about Activation Lock, see [Manage iOS Activation Lock with System Center Configuration Manager](../../mdm/deploy-use/manage-ios-activation-lock.md).
+|**Allow Activation Lock (supervised mode only)**|Use this setting to enable iOS Activation Lock on **supervised** iOS devices that you manage. For more information about Activation Lock, see [Manage iOS Activation Lock](../../mdm/deploy-use/manage-ios-activation-lock.md).
 |**Lock screen control center**|Controls whether the control center app can be accessed when the device is locked.|  
 |**Lock screen notification view**|Controls whether notifications can be viewed when the device is locked.|  
 |**Lock screen today view**|Controls whether the Today view can be seen when the device is locked.|  
@@ -347,14 +345,14 @@ Use the System Center Configuration Manager**iOS and Mac OS X** configuration it
 
     -   **Remediate noncompliant settings** - Select if you want to remediate noncompliant configuration settings (when supported).  
 
-    -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance policy is evaluated as noncompliant. The available severity levels are:  
+    -   **Noncompliance severity for reports** - Specify the severity level that is reported (in Configuration Manager reports) if this compliance policy is evaluated as noncompliant. The available severity levels are:  
 
-        -   **None** Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+        -   **None** Devices that fail this compliance rule do not report a failure severity.  
 
-        -   **Information** Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+        -   **Information** Devices that fail this compliance rule report a failure severity of **Information**.  
 
-        -   **Warning** Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+        -   **Warning** Devices that fail this compliance rule report a failure severity of **Warning**.  
 
-        -   **Critical** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+        -   **Critical** Devices that fail this compliance rule report a failure severity of **Critical**.  
 
-        -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+        -   **Critical with event** Devices that fail this compliance rule report a failure severity of **Critical**.  

@@ -313,7 +313,7 @@ Use the System Center Configuration Manager **custom Windows Desktops and Server
 
             -   **Critical** Computers that fail this compliance rule report a failure severity of **Critical**.  
 
-            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also be logged as a Windows event in the application event log.  
+            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also logged as a Windows event in the application event log.  
 
         -   For a rule type of **Existential**, specify the following information:  
 
@@ -326,24 +326,24 @@ Use the System Center Configuration Manager **custom Windows Desktops and Server
 
             -   **The setting occurs the following number of times:**  
 
-        -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
+        -   **Noncompliance severity for reports:** Specify the severity level that is reported (in Configuration Manager reports) if this compliance rule fails. The available severity levels are the following:  
 
-            -   **None** Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+            -   **None** Computers that fail this compliance rule do not report a failure severity.  
 
-            -   **Information** Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+            -   **Information** Computers that fail this compliance rule report a failure severity of **Information**.  
 
-            -   **Warning** Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+            -   **Warning** Computers that fail this compliance rule report a failure severity of **Warning**.  
 
-            -   **Critical** Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+            -   **Critical** Computers that fail this compliance rule report a failure severity of **Critical**.  
 
-            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also logged as a Windows event in the application event log.  
+            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also logged as a Windows event in the application event log.  
 
 3.  Click **OK** to close the **Create Rule** dialog box.  
 
 ##  Specify supported platforms  
  Supported platforms are the operating systems on which a configuration item is assessed for compliance.  
 
-1.  On the **Supported Platforms** page of the **Create Configuration Item Wizard**, in the list, select the Windows versions on which you want the configuration item to be assessed for compliance, or click **Select all**.  
+On the **Supported Platforms** page of the **Create Configuration Item Wizard**, in the list, select the Windows versions on which you want the configuration item to be assessed for compliance, or click **Select all**.  
 
 ## Complete the wizard  
  On the **Summary** page of the Wizard, review the actions that will be taken, and then complete the wizard. The new configuration item is displayed in the **Configuration Items** node in the **Assets and Compliance** workspace.  
