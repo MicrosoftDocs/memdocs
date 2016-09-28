@@ -8,7 +8,7 @@ author: dougebymanager: angrobe
 
 ms.date: 9/27/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
