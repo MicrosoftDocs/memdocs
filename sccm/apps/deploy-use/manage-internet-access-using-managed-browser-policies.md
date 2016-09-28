@@ -18,7 +18,7 @@ author: robstackmsft
 # Manage Internet access using managed browser policies with System Center Configuration Manager
 In System Center Configuration Manager, you can deploy the Intune Managed Browser, a web browsing application, and associate the application with a managed browser policy. The managed browser policy configures an allow list or a block list that restricts the web sites that users of the managed browser can visit.  
   
- Because this app is a managed app, you can also apply mobile application management policies to the app, such as controlling the use of cut, copy and paste, preventing screen captures, and also ensuring that links to content that users click only open in other managed apps. For details, see [Protect apps using mobile application management policies in System Center Configuration Manager](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+ Because this app is a managed app, you can also apply mobile application management policies to the app, such as controlling the use of cut, copy and paste, preventing screen captures, and also ensuring that links to content that users click only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
   
 > [!IMPORTANT]  
 >  If users install the managed browser themselves, it will not be managed by any policies you specify. To ensure that the browser is managed by Configuration Manager, they must uninstall the app before you can deploy it to them as a managed app.  
@@ -30,7 +30,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 -   Devices that run iOS 7 and later  
   
 > [!NOTE]  
->  For more information about the Intune Managed Browser app, see [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) for iOS and [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) for Android.  
+>  For more information and to download the Intune Managed Browser app, see [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) for iOS and [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) for Android.  
   
 ## Create a managed browser policy  
   
@@ -63,7 +63,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 ## Create a software deployment for the managed browser app  
  After you have created the managed browser policy, you can then create a software deployment type for the managed browser app. You must associate both a General and Managed Browser policy for the Managed Browser app.  
   
- For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ For more information, see [Create applications](../../apps/deploy-use/create-applications.md).  
   
 ## Security and privacy for the managed browser  
   
@@ -77,7 +77,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
   
 ## Reference information  
   
-###  <a name="BKMK_URLs"></a> URL format for allowed and blocked URLs  
+###  URL format for allowed and blocked URLs  
  Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
   
 -   You can use the wildcard symbol ‘**\***’ according to the rules in the permitted patterns list below.  
@@ -128,7 +128,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
     -   http://www.contoso.com: /*  
   
 > [!NOTE]  
->  *.microsoft.com is always allowed – it is always treated as allowed.  
+>  *.microsoft.com is always allowed.  
   
 ### How conflicts between the allow and block list are resolved  
  If multiple managed browser policies are deployed to a device and the settings conflict, both the mode (allow or block) and the URL lists are evaluated for conflicts. In case of a conflict, the following behavior applies:  
