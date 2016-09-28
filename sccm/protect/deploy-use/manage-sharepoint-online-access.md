@@ -98,7 +98,12 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
  When you are ready, continue to **Step 3**.  
 
 ###  <a name="BKMK_OneDrive"></a> Step 3: Configure the SharePoint Online policy  
- Next, configure the policy to require that only managed and compliant devices can access SharePoint Online. This policy will be will be stored in Azure Active Directory.  
+
+
+ Next, configure the policy to require that only managed and compliant devices can access SharePoint Online. This policy will be will be stored in Azure Active Directory.
+
+ >[!NOTE]
+ >You can also create conditional access policy in the Azure AD management console. Azure AD management console allows you to create the Intune device conditional access policies (referred to as the device-based conditional access policy in Azure AD) in addition to other conditional access policies like multi-factor authentication. You can also set conditional access policies for third-party Enterprise apps like Salesforce and Box that Azure AD supports. For more details, see [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).  
 
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
 
