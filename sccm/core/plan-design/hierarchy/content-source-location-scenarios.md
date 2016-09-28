@@ -1,5 +1,6 @@
 ---
 title: "Content source location | System Center Configuration Manager"
+description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na

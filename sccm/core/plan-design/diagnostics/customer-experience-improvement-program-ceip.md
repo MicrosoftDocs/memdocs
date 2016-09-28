@@ -1,5 +1,6 @@
 ---
 title: "CEIP | System Center Configuration Manager"
+description: "Learn about the Customer Experience Improvement Program settings for System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

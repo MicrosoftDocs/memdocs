@@ -1,5 +1,6 @@
 ---
 title: "Accounts to access content | System Center Configuration Manager"
+description: "Learn about the accounts where clients access System Center Configuration Manager content."
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na

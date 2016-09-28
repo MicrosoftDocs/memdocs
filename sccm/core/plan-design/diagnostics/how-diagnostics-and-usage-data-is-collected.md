@@ -1,5 +1,6 @@
 ---
 title: "Diagnostics data collection | System Center Configuration Manager"
+description: "Learn about how System Center Configuration Manager collects diagnostics and usage data about itself."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

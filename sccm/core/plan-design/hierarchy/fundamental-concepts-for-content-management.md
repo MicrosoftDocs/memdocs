@@ -1,5 +1,6 @@
 ---
 title: "Content management fundamentals | System Center Configuration Manager"
+description: "Use tools and options in System Center Configuration Manager to manage the content that you deploy."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
