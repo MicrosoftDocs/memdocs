@@ -42,17 +42,17 @@ This article contains information about [new functionality introduced in version
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
-10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
+10. For each settings group, you can also configure the severity that will be reported (in Configuration Manager reports) when a configuration item is found to be noncompliant from:  
   
-    -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+    -   **None** - Devices that fail this compliance rule do not report a failure severity.  
   
-    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information**.  
   
-    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning**.  
   
-    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical**.  
   
-    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical**. This severity level is also be logged as a Windows event in the application event log.  
   
 11. On the **Platform Applicability** page, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
