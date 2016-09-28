@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Install and configure distribution points for System Center Configuration Manager
 You install System Center Configuration Manager distribution points to host the content (files and software) you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  

@@ -4,8 +4,8 @@
 title: Deploy and use mobile device management | System Center Configuration Manager
 description:
 keywords:
-author: NathBarn
-manager: angrobe
+author: NathBarnmanager: angrobe
+
 ms.date: 09/23/2016
 ms.topic: article
 ms.prod:

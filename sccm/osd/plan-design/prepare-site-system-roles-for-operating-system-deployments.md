@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prepare site system roles for operating system deployments with System Center Configuration Manager

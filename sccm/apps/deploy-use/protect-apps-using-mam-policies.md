@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 309b7936-a5ca-45c5-8bef-10424eb2e091
 caps.latest.revision: 13
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Protect apps using mobile application management policies in System Center Configuration Manager

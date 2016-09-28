@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: c28d5ef5-3ea7-4ba2-af01-6600aa805d48
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
@@ -22,9 +22,7 @@ author: robstackmsft
   
 ## Create an Android and Samsung KNOX configuration item  
   
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -43,17 +41,17 @@ author: robstackmsft
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
-10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
+10. For each settings group, you can also configure the severity that will be reported (in Configuration Manager reports) when a configuration item is found to be noncompliant from:  
   
-    -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+    -   **None** - Devices that fail this compliance rule do not report a failure severity.  
   
-    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information**.  
   
-    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning**.  
   
-    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical**.  
   
-    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical**.   
   
 11. On the **Platform Applicability** page, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
@@ -114,22 +112,20 @@ author: robstackmsft
 ### Kiosk mode (Samsung KNOX only)  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device.  
   
-##### To configure kiosk mode for a Samsung KNOX device  
+#### To configure kiosk mode for a Samsung KNOX device  
   
-1.  On the **Configure Kiosk Mode Settings for Samsung KNOX Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
+On the **Configure Kiosk Mode Settings for Samsung KNOX Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
   
-    |Setting|More information|  
-    |-------------|----------------------|  
-    |**Select app**|Click **Browse** to select a Configuration Manager Android application (with the extension **.apk**) that will be allowed to run when the device is in kiosk mode. No other apps will be allowed to run on the device.|  
-    |**Volume buttons**|Enables or disables the use of the volume buttons on the device.|  
-    |**Screen sleep and wake button**|Enables or disables the screen sleep wake button on the device.|  
+- **Select app** - Click **Browse** to select a Configuration Manager Android application (with the extension **.apk**) that will be allowed to run when the device is in kiosk mode. No other apps will be allowed to run on the device.
+- **Volume buttons** - Enables or disables the use of the volume buttons on the device.
+- **Screen sleep and wake button** - Enables or disables the screen sleep wake button on the device.|  
   
 ###  Compliant and noncompliant apps (Android)  
  Lets you specify a list of Android apps that are compliant, or not compliant in your company. You can then use reports to display devices that have noncompliant apps installed, and the associated user.  
   
  You cannot specify both compliant and noncompliant apps in the same configuration item.  
   
-##### To specify the compliant or noncompliant apps list  
+#### To specify the compliant or noncompliant apps list  
   
 1.  On the **Compliant and Noncompliant Apps (Android)** page, specify the following information:  
   

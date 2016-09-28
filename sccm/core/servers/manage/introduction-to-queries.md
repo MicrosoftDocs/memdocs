@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Introduction to queries in System Center Configuration Manager

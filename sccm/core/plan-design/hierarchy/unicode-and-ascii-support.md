@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Unicode and ASCII Support in System Center Configuration Manager

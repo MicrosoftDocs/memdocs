@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Security and privacy for queries in System Center Configuration Manager

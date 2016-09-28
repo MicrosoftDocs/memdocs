@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to use Resource Explorer to view software inventory in System Center Configuration Manager

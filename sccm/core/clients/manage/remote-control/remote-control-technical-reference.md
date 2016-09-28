@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d7cbbb3-d92a-44e5-a208-fd28d68c99c7
 caps.latest.revision: 4
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Remote control technical reference for System Center Configuration Manager

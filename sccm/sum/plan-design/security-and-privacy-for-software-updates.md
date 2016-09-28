@@ -17,7 +17,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Security and privacy for software updates in System Center Configuration Manager

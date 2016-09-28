@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Planning to complete migration in System Center Configuration Manager

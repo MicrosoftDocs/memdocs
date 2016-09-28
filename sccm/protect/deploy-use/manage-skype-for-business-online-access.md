@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3ad36c2-51d4-4467-8bdc-fde18485583e
 caps.latest.revision: 6
-author: karthikaraman
+author: karthikaramanmanager: angrobe
 
 ---
 # Manage Skype for Business Online access

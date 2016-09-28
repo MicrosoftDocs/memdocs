@@ -12,15 +12,16 @@ ms.topic: article
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client
-Use the System Center Configuration Manager**custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  
-  
-1.  In the Configuration Manager console, click **Assets and compliance**.  
-  
-2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
+
+Use the System Center Configuration Manager **custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  
+
+## Start the create configuration item wizard
+
+1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Configuration Item**.  
   
@@ -77,8 +78,6 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
  Use this procedure to configure the settings in the configuration item.  
   
  Settings represent the business or technical conditions that are used to assess compliance on client devices. You can configure a new setting or browse to an existing setting on a reference computer.  
-  
-### To create a setting  
   
 1.  On the **Settings** page of the **Create Configuration Item Wizard**, click **New**.  
   
@@ -303,17 +302,17 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
         -   **Report noncompliance if this setting instance is not found** – The configuration item reports noncompliance if this setting is not found on client computers.  
   
-        -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
+        -   **Noncompliance severity for reports:** Specify the severity level that is reported (in Configuration Manager reports) if this compliance rule fails. The available severity levels are the following:  
   
-            -   **None** Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+            -   **None** Computers that fail this compliance rule do not report a failure severity.  
   
-            -   **Information** Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+            -   **Information** Computers that fail this compliance rule report a failure severity of **Information**.  
   
-            -   **Warning** Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+            -   **Warning** Computers that fail this compliance rule report a failure severity of **Warning**.  
   
-            -   **Critical** Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+            -   **Critical** Computers that fail this compliance rule report a failure severity of **Critical**.  
   
-            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+            -   **Critical with event** Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also be logged as a Windows event in the application event log.  
   
         -   For a rule type of **Existential**, specify the following information:  
   

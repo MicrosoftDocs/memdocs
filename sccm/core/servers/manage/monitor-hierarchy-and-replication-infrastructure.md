@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Monitor hierarchy and replication infrastructure in System Center Configuration Manager

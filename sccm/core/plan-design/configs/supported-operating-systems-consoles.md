@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Supported operating systems for System Center Configuration Manager consoles
 

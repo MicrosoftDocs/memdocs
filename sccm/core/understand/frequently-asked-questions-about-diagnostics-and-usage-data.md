@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Frequently asked questions about diagnostics and usage data for System Center Configuration Manager

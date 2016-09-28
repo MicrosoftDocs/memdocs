@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to extend hardware inventory in System Center Configuration Manager

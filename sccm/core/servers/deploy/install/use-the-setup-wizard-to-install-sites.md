@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Use the Setup Wizard to install System Center Configuration Manager sites
 

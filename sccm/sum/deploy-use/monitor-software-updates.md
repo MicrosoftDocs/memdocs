@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Monitor software updates in System Center Configuration Manager

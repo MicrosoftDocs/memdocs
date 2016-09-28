@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 caps.latest.revision: 8
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 # How to monitor Endpoint Protection in System Center Configuration Manager

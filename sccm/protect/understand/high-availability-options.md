@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # High availability options for System Center Configuration Manager
 

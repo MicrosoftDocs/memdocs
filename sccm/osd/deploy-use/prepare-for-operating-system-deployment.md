@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
 caps.latest.revision: 3
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prepare for operating system deployment in System Center Configuration Manager

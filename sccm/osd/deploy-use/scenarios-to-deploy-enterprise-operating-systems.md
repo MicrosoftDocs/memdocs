@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 caps.latest.revision: 11
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Scenarios to deploy enterprise operating systems with System Center Configuration Manager

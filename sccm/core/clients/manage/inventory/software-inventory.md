@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b40ecfc7-de38-479c-9f73-b66b2763d44e
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Software inventory in System Center Configuration Manager

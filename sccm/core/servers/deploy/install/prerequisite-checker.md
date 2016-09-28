@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Prerequisite checker for System Center Configuration Manager
 

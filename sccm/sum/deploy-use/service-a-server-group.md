@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 caps.latest.revision: 4
-author: Dougeby
+author: Dougebymanager: angrobe
 ---
 # Service a server group
 Starting in System Center Configuration Manager version 1606, you can configure server group settings for a collection to define how many, what percentage, or in what order computers in the collection will install software updates. You can also configure pre-deployment and post-deployment PowerShell scripts to run custom actions. 

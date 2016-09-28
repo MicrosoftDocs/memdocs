@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

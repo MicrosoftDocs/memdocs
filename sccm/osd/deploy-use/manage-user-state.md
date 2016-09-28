@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Manage user state in System Center Configuration Manager

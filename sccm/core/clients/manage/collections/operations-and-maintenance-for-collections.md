@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 839c7aef-4863-439b-8e56-9b5d4c3d9ac4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Operations and maintenance for collections in System Center Configuration Manager

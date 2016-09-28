@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
 caps.latest.revision: 4
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Queries technical reference for System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 866113ff-efd0-40d2-ac3a-2edd49732a24
 caps.latest.revision: 10
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create Windows Phone applications with System Center Configuration Manager
