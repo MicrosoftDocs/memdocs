@@ -97,7 +97,7 @@ Use **conditional access** in System Center Configuration Manager to help secure
 ## Before you start  
  Before you start using conditional access, ensure that you have the correct requirements in place:  
 
-### Exchange Online (using the shared multi-tenant environment)
+## Requirements for Exchange Online (using the shared multi-tenant environment)
 Conditional access to Exchange Online supports devices that run:
 -   Windows 8.1 and later (when enrolled with Intune)
 -   Windows 7.0 or Windows 8.1 (when domain joined)
@@ -115,7 +115,7 @@ Conditional access to Exchange Online supports devices that run:
 -   The optional **Exchange Server connector** is optional and connects Configuration Manager to Microsoft Exchange Online and helps you monitor device information through the Configuration Manager console (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)).
 You do not need to use the connector to use compliance policies or conditional access policies, but is required to run reports that help evaluate the impact of conditional access.
 
-### Exchange Online Dedicated
+## Requirements for Exchange Online Dedicated
 Conditional access to Exchange Online Dedicated supports devices that run:
 -   Windows 8 and later (when enrolled with Intune)
 -   Windows 7.0 or Windows 8.1 (when domain joined)
@@ -130,7 +130,7 @@ Conditional access to Exchange Online Dedicated supports devices that run:
 -   For tenants in the **new Exchange Online Dedicated environment**:     
   The optional **Exchange Server connector** connects Configuration Manager to Microsoft Exchange Online and helps you manage device information (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)). You do not need to use the connector to use compliance policies or conditional access policies, but is required to run reports that help evaluate the impact of conditional access.  
 
-### Exchange On-premises
+## Requirements for Exchange On-premises
 Conditional access to Exchange On-premises supports:
 -   Windows 8 and later (when enrolled with Intune)
 -   Windows Phone 8 and later
@@ -149,7 +149,8 @@ Conditional access to Exchange On-premises supports:
 
 - Exchange ActiveSync can be configured with certificate based authentication, or user credential entry
 
-### Skype for Business Online
+
+## Requirements for Skype for Business Online
 Conditional access to SharePoint Online supports devices that run:
  -   iOS 7.1 and later
  -   Android 4.0 and later
@@ -159,7 +160,7 @@ Conditional access to SharePoint Online supports devices that run:
 
 All your end-users must be using the Skype for Business Online. If you have a deployment with both Skype for Business Online and Skype for Business on-premises, conditional access policy will not be applied to end-users who are in the on-premises deployment.
 
-### SharePoint Online
+## Requirements for SharePoint Online
 Conditional access to SharePoint Online supports devices that run:
  -   Windows 8.1 and later (when enrolled with Intune)
  -   Windows 7.0 or Windows 8.1 (when domain joined)
