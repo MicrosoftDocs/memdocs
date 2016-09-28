@@ -61,7 +61,7 @@
 
 ## [Manage access to services](deploy-use/manage-access-to-services.md)
 ### [Device compliance policies](deploy-use/manage-device-compliance-policies.md)
-### [Create a device compliance policy](create-compliance-policy.md)
+### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
 ### [Manage email access](deploy-use/manage-email-access.md)
 ### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)
 ### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
