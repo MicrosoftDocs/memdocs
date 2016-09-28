@@ -75,7 +75,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  You can configure a conditional access policy for Exchange On-premises from the Configuration Manager console. When you configure a conditional access policy for Exchange Online, you can begin the process in the Configuration Manager console, which launches the Intune console where you can complete the process.  
 
-### Configure conditional access
+## Configure conditional access
 ### Step 1: Evaluate the effect of the conditional access policy  
  Once you have configured the **on-premises Exchange connector**, you can use the Configuration Manager**List of devices by Conditional Access State** report to identify devices that will be blocked from accessing Exchange after you configure the conditional access policy. This report also requires:  
 
