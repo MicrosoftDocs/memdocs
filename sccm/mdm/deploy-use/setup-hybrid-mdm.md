@@ -29,7 +29,7 @@ Before you can manage iOS, Windows, and Android devices with Configuration Manag
  |**Step 6:** [Enable platform enrollment](#step-6-enable-mobile-device-platform-enrollment)|MDM enrollment for [iOS](#ios-and-mac-enrollment-setup) and [Windows](#windows-enrollment-setup) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
  |**Step 7:** [Enable management](#step-7-set-up-additional-management)|(Optional) Set up configuration items and conditional access for enrolled devices|
  |**Step 8:** [Verify mobile device management configuration](#step-8-verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
- |**Step 9:** [Enroll devices](step-9-enroll-devices)|Either tell users how to enroll their devices or begin enrolling company-owned devices to meet your organization's needs|
+ |**Step 9:** [Enroll devices](#step-9-enroll-devices)|Either tell users how to enroll their devices or begin enrolling company-owned devices to meet your organization's needs|
 
 Looking for Intune without Configuration Manager?
 > [!div class="button"]
@@ -260,23 +260,23 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
 (Optional) You can set up additional management before devices are enrolled. These management solutions can be created and deployed after devices are enrolled, although many organizations prefer to deploy them as devices are brought into management.
 
 **Configuration items** let you manage settings such as requiring a PIN or requiring encryption on enrolled devices based on device platform:
-- [Windows 10 and Windows 8.1 devices](../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
-- [Windows Phone devices](../compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
-- [iOS and Mac devices](../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android and Samsung KNOX devices](../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
+- [Windows 10 and Windows 8.1 devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
+- [Windows Phone devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
+- [iOS and Mac devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
+- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
 
 **Applications** can be deployed to managed devices:
-- [iOS applications](../../apps/get-started/creating-ios-applications.md)
-- [Mac applications](,,/../apps/get-started/creating-ios-applications.md)
-- [Windows PC applications](../../apps/get-started/creating-windows-application.md)
-- [Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)
-- [Android applications](../../apps/get-started/creating-android-applications.md)
+- [iOS applications](/sccm/apps/get-started/creating-ios-applications)
+- [Mac applications](/sccm/apps/get-started/creating-ios-applications)
+- [Windows PC applications](/sccm/apps/get-started/creating-windows-application)
+- [Windows Phone applications](/sccm/apps/get-started/creating-windows-phone-applications)
+- [Android applications](/sccm/apps/get-started/creating-android-applications)
 
 **Conditional access** lets you manage access to company resources including:  
-- [Email access](../../protect/deploy-use/manage-email-access.md)
-- [SharePoint access](../../protect/deploy-use/manage-sharepoint-online-access.md)
-- [Skype for Business access](../../protect/deploy-use/manage-skype-for-business-online-access)
-- [Dynamic CRM Online](../../protect/deploy-use/manage-dynamics-crm-online-access.md)
+- [Email access](/sccm/protect/deploy-use/manage-email-access)
+- [SharePoint access](/sccm/protect/deploy-use/manage-sharepoint-online-access)
+- [Skype for Business access](/sccm/protect/deploy-use/manage-skype-for-business-online-access)
+- [Dynamic CRM Online](/sccm/protect/deploy-use/manage-dynamics-crm-online-access)
 
 ## Step 8: Verify mobile device management configuration
 
