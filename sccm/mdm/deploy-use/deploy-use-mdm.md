@@ -10,7 +10,7 @@ ms.date: 09/23/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology:
+ms.technology: configmgr-hybrid
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 
 # optional metadata

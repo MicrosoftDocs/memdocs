@@ -10,7 +10,7 @@ ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology:
+ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 
 # optional metadata
