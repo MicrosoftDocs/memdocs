@@ -1,5 +1,6 @@
 ---
 title: "Changes from Configuration Manager 2012 | System Center Configuration Manager "
+description: "Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
