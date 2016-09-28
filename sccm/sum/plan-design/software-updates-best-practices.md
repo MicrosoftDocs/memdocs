@@ -1,23 +1,18 @@
 ---
-<<<<<<< HEAD
 # required metadata
 
 title: Best practices for software updates | Configuration Manager
-=======
-title: "Best practices for software updates in System Center Configuration Manager"
->>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
-ms.custom: na
-ms.date: 12/08/2015
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 09/27/2016
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology:
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-caps.latest.revision: 6
-author: Dougebymanager: angrobe
+
 
 ---
 # Best practices for software updates in System Center Configuration Manager

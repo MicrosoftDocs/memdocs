@@ -1,16 +1,18 @@
 ---
+# required metadata
+
 title: Integration with Windows Update for Business in Windows 10 | Configuration Manager
 description:
 keywords:
 author: dougeby
+manager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-caps.latest.revision: 11
-author: Dougebymanager: angrobe
+
 
 ---
 # Integration with Windows Update for Business in Windows 10
@@ -60,4 +62,3 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 ## See Also  
  [Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md)
-
