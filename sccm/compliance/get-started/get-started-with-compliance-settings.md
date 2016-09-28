@@ -62,12 +62,12 @@ Before you start to create System Center Configuration Manager configuration ite
 ## User data and profiles configuration items  
  User data and profiles configuration items contain settings that control how users in your hierarchy manage folder redirection, offline files, and roaming profiles on computers that run Windows 8 and later. You can deploy them to collections of users and then monitor their compliance from the **Monitoring** node of the Configuration Manager console. Unlike other configuration items, you do not add these to configuration baselines before you deploy them. You can deploy them directly with the **Deploy User Data and Profiles Configuration Item** dialog box.  
   
- For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
+ For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items).  
   
 ## Remote connection profiles  
  Remote connection profiles provide a set of tools and resources to help you create, deploy, and monitor remote connection settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to their computers on the corporate network.  
   
- For details, see [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles.md).  
+ For details, see [Create remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles).  
   
 
 

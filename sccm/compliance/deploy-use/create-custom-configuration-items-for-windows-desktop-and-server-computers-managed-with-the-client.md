@@ -18,8 +18,6 @@ author: robstackmsft
 # How to create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client
 Use the System Center Configuration Manager**custom Windows Desktops and Servers** configuration item to manage settings  for Windows computers and servers that are managed by the Configuration Manager client.  
   
-## To create a custom Windows desktops and servers configuration item  
-  
 1.  In the Configuration Manager console, click **Assets and compliance**.  
   
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, and then click **Configuration Items**.  
@@ -35,7 +33,7 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-### Provide detection method information  
+## Provide detection method information  
  Use this procedure to provide detection method information for the configuration item.  
   
 > [!NOTE]  
@@ -344,8 +342,6 @@ Use the System Center Configuration Manager**custom Windows Desktops and Servers
   
 ##  Specify supported platforms  
  Supported platforms are the operating systems on which a configuration item is assessed for compliance.  
-  
-### To specify supported platforms for the configuration item  
   
 1.  On the **Supported Platforms** page of the **Create Configuration Item Wizard**, in the list, select the Windows versions on which you want the configuration item to be assessed for compliance, or click **Select all**.  
   

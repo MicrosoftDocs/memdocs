@@ -16,11 +16,9 @@ author: robstackmsft
 
 ---
 # Create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
-Use the System Center Configuration Manager**Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
+Use the System Center Configuration Manager **Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
   
  The Mac OS X operating system uses property list (or plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage Mac OS X settings by writing a Shell Script that returns a value that you can evaluate and remediate for compliance.  
-  
-## Create a custom Mac OS X configuration item  
   
 1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
@@ -120,17 +118,17 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
         -   **Report noncompliance if this setting instance is not found** – The configuration item reports noncompliance if this setting is not found on the Mac computer.  
   
-    -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
+    -   **Noncompliance severity for reports** - Specify the severity level that is reported if this compliance rule fails. The available severity levels (shown in Configuration Manager reports) are:  
   
-        -   **None** - Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+        -   **None** - Computers that fail this compliance rule do not report a failure severity.  
   
-        -   **Information** - Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+        -   **Information** - Computers that fail this compliance rule report a failure severity of **Information**.  
   
-        -   **Warning** - Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+        -   **Warning** - Computers that fail this compliance rule report a failure severity of **Warning**.  
   
-        -   **Critical** - Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+        -   **Critical** - Computers that fail this compliance rule report a failure severity of **Critical**.  
   
-        -   **Critical with event** - Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged by the Mac client computer.  
+        -   **Critical with event** - Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also be logged by the Mac client computer.  
   
     -   For a rule type of **Existential**, specify the following information:  
   
@@ -140,17 +138,17 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
             -   **The setting must not exist on client devices**  
   
-        -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels are the following:  
+        -   **Noncompliance severity for reports:** Specify the severity level that is reported if this compliance rule fails. The available severity levels (shown in Configuration Manager reports) are:  
   
-            -   **None** - Computers that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+            -   **None** - Computers that fail this compliance rule do not report a failure severity.  
   
-            -   **Information** - Computers that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+            -   **Information** - Computers that fail this compliance rule report a failure severity of **Information**.  
   
-            -   **Warning** - Computers that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+            -   **Warning** - Computers that fail this compliance rule report a failure severity of **Warning**.  
   
-            -   **Critical** - Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+            -   **Critical** - Computers that fail this compliance rule report a failure severity of **Critical**.  
   
-            -   **Critical with event** - Computers that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged by the Mac client computer.  
+            -   **Critical with event** - Computers that fail this compliance rule report a failure severity of **Critical**. This severity level is also be logged by the Mac client computer.  
   
         > [!NOTE]  
         >  The options shown might vary depending on the setting type you are configuring a rule for.  
@@ -159,8 +157,8 @@ Use the System Center Configuration Manager**Mac OS X (custom)** configuration i
   
 15. On the **Summary** page, confirm the settings for the new configuration item then, complete the wizard.  
   
- The new configuration item is displayed in the **Configuration Items** node of the **Assets and Compliance** workspace.  
+The new configuration item is displayed in the **Configuration Items** node of the **Assets and Compliance** workspace.  
   
- If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
+If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
   
 

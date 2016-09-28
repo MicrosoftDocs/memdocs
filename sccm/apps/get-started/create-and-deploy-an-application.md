@@ -48,9 +48,7 @@ If you are already familiar with Configuration Manager applications, you can ski
   
 ##### How to start the create application wizard and create the application  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
   
@@ -60,9 +58,9 @@ If you are already familiar with Configuration Manager applications, you can ski
   
     -   **Location** - Enter the location (or click **Browse** to select the location) of the installation file **Contoso.msi**. Note that the location must be specified in the form *\\\Server\Share\File* in order for Configuration Manager to locate the installation files.  
   
-         You'll end up with something looking like the following screenshot:  
+	You'll end up with something looking like the following screenshot:  
   
-         ![App management wizard general page](../../apps/get-started/media/App-management-wizard-general-page.png "App)  
+	![App management wizard general page](../media/App-management-wizard-general-page.png)  
   
 5.  Click **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, click **Next** again.  
   
@@ -75,13 +73,13 @@ If you are already familiar with Configuration Manager applications, you can ski
   
      You'll end up with a screen that looks similar to the screenshot below:  
   
-     ![App management wizard general information page](../../apps/get-started/media/App-management-wizard-general-information-page.png "App)  
+     ![App management wizard general information page](../media/App-management-wizard-general-information-page.png)  
   
 7.  Click **Next**. On the Summary page, you can confirm your application settings, then complete the wizard.  
   
  You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then click **Applications**. For this example, you'll see:  
   
- ![Final app graphic](../../apps/get-started/media/Final-app-graphic.png "Final)  
+ ![Final app graphic](../media/Final-app-graphic.png)  
   
 ### Examine the properties of the application and its deployment type  
  Now that you've created an application, you can refine the application settings if required. To look at the application properties, select the app, and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
@@ -90,7 +88,7 @@ If you are already familiar with Configuration Manager applications, you can ski
   
  Click the **Deployment Types** tab, select the **Contoso Application** deployment type, and then click **Edit**. You'll see a dialog box like this one:  
   
- ![App management app properties page](../../apps/get-started/media/App-management-app-properties-page.png "App)  
+ ![App management app properties page](../media/App-management-app-properties-page.png)  
   
 ### Add a requirement to the deployment type  
  Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements, or create your own. In this example, you will add a requirement that the application will only install on PCs running Windows 10.  

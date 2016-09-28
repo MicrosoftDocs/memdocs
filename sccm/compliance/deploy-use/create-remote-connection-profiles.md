@@ -57,8 +57,8 @@ Microsoft Intune is required if you want users to connect to their work PCs by u
 |Dependency|More information|  
 |----------------|----------------------|  
 |Configuration Manager must be connected to Microsoft Intune (known as a hybrid configuration).|For more information about connecting Configuration Manager to Microsoft Intune, see Manage Mobile Devices with Configuration Manager and Microsoft Intune.|  
-|In order for a user to connect to a work computer on the company network, that computer must be a primary device of the user.|For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
-|Specific security permissions must have been granted to manage remote connection profiles.|The **Compliance Settings Manager** security role includes the permissions required to manage remote connection profiles. For more information, see <br />[Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration.md).|  
+|In order for a user to connect to a work computer on the company network, that computer must be a primary device of the user.|For more information about user device affinity, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).|  
+|Specific security permissions must have been granted to manage remote connection profiles.|The **Compliance Settings Manager** security role includes the permissions required to manage remote connection profiles. For more information, see <br />[Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).|  
   
 ## Security and privacy considerations for remote connection profiles  
   
@@ -126,7 +126,7 @@ Deploy a remote connection profile
   
     -   **Remediate noncompliant rules when supported** - Enable this to automatically remediate the remote connection profile when it is found to be noncompliant on a device, for example, when it is not present.  
   
-    -   **Allow remediation outside the maintenance window** - If a maintenance window has been configured for the collection to which you deploy the remote connection profile, enable this option to let Configuration Manager remediate the remote connection profile outside the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Allow remediation outside the maintenance window** - If a maintenance window has been configured for the collection to which you deploy the remote connection profile, enable this option to let Configuration Manager remediate the remote connection profile outside the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
   
     -   **Generate an alert** - Enable this option to configure an alert that is generated if the remote connection profile compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
   
@@ -172,6 +172,6 @@ Deploy a remote connection profile
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
   
- For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting.md).  
+ For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](/sccm/core/servers/manage/reporting).  
   
 
