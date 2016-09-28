@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 caps.latest.revision: 6
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Hardware inventory for Linux and UNIX in System Center Configuration Manager

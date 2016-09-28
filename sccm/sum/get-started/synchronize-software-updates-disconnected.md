@@ -4,11 +4,11 @@
 title: Synchronize software updates from a disconnected software update point | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/15/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199

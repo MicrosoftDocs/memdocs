@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
 caps.latest.revision: 7
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to use Resource Explorer to view hardware inventory in System Center Configuration Manager

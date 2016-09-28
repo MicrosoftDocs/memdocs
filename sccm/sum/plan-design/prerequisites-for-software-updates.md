@@ -4,11 +4,10 @@
 title: Prerequisites for software updates | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1

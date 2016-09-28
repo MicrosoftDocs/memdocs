@@ -4,11 +4,11 @@
 title: Remove a software update point | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/15/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173

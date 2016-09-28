@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 caps.latest.revision: 17
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 # Health attestation for System Center Configuration Manager

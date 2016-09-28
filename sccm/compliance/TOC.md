@@ -1,6 +1,7 @@
 # [Understand and explore](understand/ensure-device-compliance.md)
 ## [Ensure device compliance](understand/ensure-device-compliance.md)
 # [Get started](get-started/get-started-with-compliance-settings.md)
+## [Get started with compliance settings](get-started/get-started-with-compliance-settings.md)
 # [Plan and design](plan-design/plan-for-and-configure-compliance-settings.md)
 ## [Common tasks for managing compliance](plan-design/common-tasks-for-managing-compliance.md)
 ## [Manage compliance on devices with the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md)

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Link users and devices with user device affinity in System Center Configuration Manager

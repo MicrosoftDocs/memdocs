@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

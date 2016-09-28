@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 caps.latest.revision: 11
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Get started with compliance settings in System Center Configuration Manager
@@ -39,7 +39,7 @@ Before you start to create System Center Configuration Manager configuration ite
 |Mac computers (with the Configuration Manager client)|Allows you to create custom configuration items that let you assess items such as Mac OS X preferences (property list) values, and the results returned by a script.|  
 |Mac computers (enrolled with Microsoft Intune)|Select the settings you want from a predefined list.|  
   
-## What's in a configuration item?  
+## What is a configuration item?  
  A configuration item can be thought of as a container that stores the following information (the information you configure will depend on the configuration item type:  
   
 -   **Detection method information** (for Windows configuration items that contain application settings only) - Lets you detect whether an application is installed by detecting the Windows installer file for the application, or by using a custom script.  

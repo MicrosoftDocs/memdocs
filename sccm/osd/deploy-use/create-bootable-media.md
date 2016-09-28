@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Create bootable media with System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 caps.latest.revision: 21
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 # Create an Endpoint Protection Point Site System Role

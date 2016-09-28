@@ -4,8 +4,7 @@
 title: Plan for software updates | System Center Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
 ms.date: 09/27/2016
 ms.topic: article
 ms.prod: configuration-manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to monitor clients for Linux and UNIX servers in System Center Configuration Manager

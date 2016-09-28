@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Methods to deploy enterprise operating systems using System Center Configuration Manager

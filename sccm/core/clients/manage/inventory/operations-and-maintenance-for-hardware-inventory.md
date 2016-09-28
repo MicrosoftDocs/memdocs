@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8863ee69-0d45-4203-b012-3928ff0848a0
 caps.latest.revision: 5
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Operations and maintenance for hardware inventory in System Center Configuration Manager

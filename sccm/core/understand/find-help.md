@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Find help for using System Center Configuration Manager

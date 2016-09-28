@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 caps.latest.revision: 7
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create Linux and UNIX server applications with System Center Configuration Manager

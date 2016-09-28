@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager

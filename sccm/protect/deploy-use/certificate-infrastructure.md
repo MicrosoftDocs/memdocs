@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Certificate infrastructure

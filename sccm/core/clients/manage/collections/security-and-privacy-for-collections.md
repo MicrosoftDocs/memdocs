@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Security and privacy for collections in System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Protect data and site infrastructure with System Center Configuration Manager

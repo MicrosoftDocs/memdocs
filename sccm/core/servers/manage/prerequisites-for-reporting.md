@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prerequisites for reporting in System Center Configuration Manager

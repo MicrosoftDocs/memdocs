@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 86725460-c2f3-49ed-90aa-6b2724d34d69
 caps.latest.revision: 8
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Introduction to Wi-Fi Profiles in System Center Configuration Manager

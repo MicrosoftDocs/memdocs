@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: cc226259-0e28-410a-94d3-223bdc948818
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to configure software inventory in System Center Configuration Manager

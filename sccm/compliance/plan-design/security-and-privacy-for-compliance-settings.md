@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Security and privacy for compliance settings in System Center Configuration Manager
