@@ -1,5 +1,5 @@
 ---
-title: "Log files in System Center Configuration Manager"
+title: "Log files | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -776,4 +776,3 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about the WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synchronized from the configured update source to the WSUS server database.|WSUS server|  
-

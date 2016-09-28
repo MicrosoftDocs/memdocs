@@ -1,5 +1,5 @@
 ---
-title: "Prepare Windows Servers to support System Center Configuration Manager"
+title: "Prepare Windows Servers | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -145,4 +145,3 @@ For example, you might have source files for a software deployment that include 
 > -   Edits you make to individual websites apply to only that website  
 >   
 >  The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
-

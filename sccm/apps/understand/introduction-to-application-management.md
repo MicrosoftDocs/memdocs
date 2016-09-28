@@ -28,9 +28,12 @@ In this topic, you'll learn the basics you need to know before you start working
 
  Of course, there are a lot more things you can do with an application, and you'll learn about these as you read through this guide. The following table introduces some concepts you'll need to know before you start to dig deeper. You won't need all of these in every application you create:  
 
+<<<<<<< HEAD
 |||  
+=======
+|Concept|Description|    
+>>>>>>> e48c3d6b8844806b39ddc5fd2454ad0386d9ae5c
 |-|-|  
-|Concept|Description|  
 |**Requirements**|In previous versions of Configuration Manager, you would often create a collection containing the devices you wanted to deploy an application to. Although you can still do this, requirements reduce that need by allowing you to specify much more granular criteria by which an application will be installed.<br /><br /> For example, you can specify that an application can only install on devices that run Windows 10. Then, you can deploy the application to all of your devices, but it will only install on devices that run Windows 10.<br /><br /> Configuration Manager evaluates requirements to determine whether an application and any of its deployment types will be installed. Then it determines the correct deployment type by which to install an application. Every seven days, by default, the requirement rules are reevaluated to ensure compliance according to the client setting **Schedule re-evaluation for deployments**.<br /><br /> For details, see [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md).|  
 |**Global conditions**|While requirements are used with a specific deployment type in a single application, you can also create global conditions which are a library of predefined requirements that you can use with any application and deployment type.<br /><br /> Configuration Manager contains a set of built-in global conditions and you can also create your own.<br /><br /> For details, see [How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md).|  
 |**Simulated deployment**|Evaluates the requirements, detection method, and dependencies for an application and reports the results without actually installing the application.<br /><br /> For details, see [How to simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md).|  

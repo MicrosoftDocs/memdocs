@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for content management for System Center Configuration Manager"
+title: "Content management security and privacy | System Center Configuration Manager"
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -83,4 +83,3 @@ Consider the folowing when planning for content management:
  Configuration Manager does not include any user data in content files, although an administrative user might choose to do this.  
 
  Before you configure content management, consider your privacy requirements.  
-

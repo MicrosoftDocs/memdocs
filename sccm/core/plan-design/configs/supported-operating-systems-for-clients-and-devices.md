@@ -1,5 +1,5 @@
 ---
-title: "Supported operating systems for clients and devices for System Center Configuration Manager"
+title: "Supported clients and devices | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/19/2016
 ms.prod: configuration-manager
@@ -28,7 +28,7 @@ author: Mtillman
 ##  <a name="bkmk_WinClientos"></a> Windows computers  
  You can manage Windows computers with the Configuration Manager client that is included with Configuration Manager. For more information see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
 
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter <sup>1</sup>    
 
@@ -72,7 +72,7 @@ author: Mtillman
 ##  <a name="bkmk_EmbeddedOS"></a> Windows Embedded  
  You can manage Windows Embedded devices by installing Configuration Manager client software on the device.  For more information see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
 -   All client features are supported on supported Windows Embedded systems that do not have write filters enabled.  
 
@@ -88,7 +88,7 @@ author: Mtillman
 
 -   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
 
 -   **Windows 10 Enterprise** (x86, x64)  
 
@@ -121,17 +121,17 @@ author: Mtillman
 ## Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
 
- **Requirements and limitations**  
+**Requirements and limitations**  
 
 -   The mobile device client requires 0.78 MB or storage space to install the client. Logging on the mobile device can require up to 256 KB of additional storage space.    
 
 -   Features for these mobile devices vary by platform and client type. For information about which management functions Configuration Manager supports for mobile device legacy client, see [Choose a device management solution for System Center Configuration Manager](../../../core/plan-design/choose-a-device-management-solution.md).  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
 
 -   Windows CE 7.0 (ARM and x86 processors)  
 
- **Supported languages include:**  
+**Supported languages include:**  
 
 -   Chinese (simplified and traditional)    
 
@@ -158,13 +158,13 @@ author: Mtillman
 
  The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
  You must use the Configuration Manager client for Mac (version  5.0.8333.1 or later), which must be separately downloaded. Unlike the Windows client, the Mac client is not included in the Configuration Manager software when you install it. To download the Mac client, go to [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
  For more information, see [How to deploy clients to Macs in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-macs.md).  
 
- **Supported versions:**  
+**Supported versions:**  
 
 -   **Mac OS X 10.9** (Mavericks)  
 
@@ -177,7 +177,7 @@ author: Mtillman
 
  The Linux and UNIX  client installation packages are  are not supplied with the Configuration Manager media. You can download them  as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
 -   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
@@ -187,7 +187,7 @@ author: Mtillman
 
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
- **Supported versions:** The following versions are supported by using the indicated .tar file.  
+**Supported versions:** The following versions are supported by using the indicated .tar file.  
 
 ### AIX  
 
@@ -319,7 +319,7 @@ author: Mtillman
 
 -   For more information about which management functions Configuration Manager supports for mobile devices that the Exchange Server connector manages, see Determine How to Manage Mobile Devices in Configuration Manager.  
 
- **Supported versions of Exchange Server:**  
+**Supported versions of Exchange Server:**  
 
 -   **Exchange Server 2010 SP1**  
 
@@ -328,4 +328,3 @@ author: Mtillman
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)** - This includes Business Productivity Online Standard Suite  
-

@@ -1,5 +1,5 @@
 ---
-title: "Use the Hotfix Installer to install updates for System Center Configuration Manager"
+title: "Hotfix Installer | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -256,4 +256,3 @@ For example, you can use the following command line to update a Configuration Ma
 >  To update a site database, deploy the update to the site server for that site.  
 
  For information about how to create collections, see [How to create collections in System Center Configuration Manager](../../../core/clients/manage/collections/create-collections.md).  
-

@@ -1,5 +1,6 @@
 ---
-title: "Planning for migration to System Center Configuration Manager"
+title: "Plan for migration | System Center Configuration Manager"
+description: "Learn about sites and hierarchies before you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -48,4 +49,3 @@ Before you migrate data to a System Center Configuration Manager destination hie
 -   [Planning to monitor migration activity in System Center Configuration Manager](../../core/migration/planning-to-monitor-migration-activity.md)  
 
 -   [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)  
-

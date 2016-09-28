@@ -30,7 +30,7 @@ App configuration policies are currently available only on devices running iOS 8
 - **App Package for iOS (*.ipa file)**
 - **App Package for iOS from App Store**
 
-For more information about app installation types, see [Get started with application management](/sccm/apps/understand/get-started-with-application-management).
+For more information about app installation types, see [Introduction to application management](/sccm/apps/understand/introduction-to-application-management).
 
 ## Create an app configuration policy
 

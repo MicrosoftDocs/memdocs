@@ -1,5 +1,5 @@
 ---
-title: "Install and configure distribution points for System Center Configuration Manager"
+title: "Manage distribution points | System Center Configuration Manager"
 ms.custom: na
 ms.date: 05/02/2016
 ms.prod: configuration-manager
@@ -364,4 +364,3 @@ Specify whether to configure rate limits to control the network bandwidth that i
 -   **Pulse mode**: Specifies the size of the data blocks that are sent to the distribution point. You can also specify a time delay between sending each data block. Use this option when you must send data across a very low bandwidth network connection to the distribution point. For example, you might have constraints to send 1 KB of data every five seconds, regardless of the speed of the link or its usage at a given time.  
 
 -   **Limited to specified maximum transfer rates by hour**: Specify this setting to have a site send data to a distribution point by using only the percentage of time that you configure. When you use this option, Configuration Manager does not identify the networks available bandwidth, but instead divides the time it can send data into slices of time. Then data is sent for a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to **50%**, Configuration Manager transmits data for a period of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.  
-

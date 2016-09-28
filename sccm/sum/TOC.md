@@ -4,14 +4,14 @@
 
 # [Plan and design](plan-design/plan-for-software-updates.md)
 ## [Plan for software updates](plan-design/plan-for-software-updates.md)
-### [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)
+## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)
 <!-- ### [Best practices for software updates](plan-design/software-updates-best-practices.md) -->
 <!-- ### [Determine the port settings used by WSUS](plan-design/determine-wsus-port-settings.md) -->
 <!-- ## [Enable CRL checking for software updates](plan-design/enable-crl-checking-for-software-updates.md) -->
-### [Plan for software update point capacity](plan-design/plan-for-software-update-point-capacity.md)
+<!-- ### [Plan for software update point capacity](plan-design/plan-for-software-update-point-capacity.md)
 ### [Determine the software update point infrastructure](plan-design/determine-the-software-update-point-infrastructure.md)
 ### [Plan for software update point installation](plan-design/plan-for-software-update-point-installation.md)
-### [Plan for software updates synchronization](plan-design/plan-for-software-updates-synchronization.md)
+### [Plan for software updates synchronization](plan-design/plan-for-software-updates-synchronization.md)-->
 <!-- ## [Plan for software updates maintenance windows](plan-design/plan-for-software-updates.md) -->
 ## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
 
@@ -37,4 +37,3 @@
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 
 ## [Example scenario to deploy and monitor the security software updates released monthly by Microsoft](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
-

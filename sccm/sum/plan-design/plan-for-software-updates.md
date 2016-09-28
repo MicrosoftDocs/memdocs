@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 # required metadata
 
 title: Plan for software updates | System Center Configuration Manager
@@ -7,17 +6,11 @@ description:
 keywords:
 author: dougeby
 manager: angrobe
-ms.date: 9/27/2016
+ms.date: 09/27/2016
 ms.topic: article
-=======
-title: "Plan for software updates | System Center Configuration Manager"
-ms.custom: na
-ms.date: 08/11/2016
->>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-  - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 
 # optional metadata

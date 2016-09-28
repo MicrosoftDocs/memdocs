@@ -1,5 +1,6 @@
 ---
-title: "Determine whether to migrate data to System Center Configuration Manager"
+title: "Choose what to migrate | System Center Configuration Manager"
+description: "Learn which data you can migrate and which data you can't migrate to System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -173,4 +174,3 @@ With the exception of the distribution point site system role and the computers 
     -   Security roles  
 
     -   Security scopes  
-

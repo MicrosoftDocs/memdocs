@@ -16,9 +16,8 @@ author: robstackmsft
 
 ---
 # Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+
+This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
   
  Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
@@ -36,7 +35,7 @@ author: robstackmsft
   
 7.  On the **Supported Platforms** page, select the specific Windows platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-81-and-windows-10-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
