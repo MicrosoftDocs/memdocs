@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 caps.latest.revision: 5
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Use a task sequence to manage virtual hard disks in System Center Configuration Manager

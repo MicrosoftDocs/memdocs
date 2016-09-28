@@ -4,8 +4,8 @@
 title: Prepare for software updates management | System Center Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager

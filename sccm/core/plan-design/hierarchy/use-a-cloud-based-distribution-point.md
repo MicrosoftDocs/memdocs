@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 caps.latest.revision: 9
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Use a cloud-based distribution point with System Center Configuration Manager

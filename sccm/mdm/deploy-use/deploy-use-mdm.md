@@ -4,13 +4,14 @@
 title: Deploy and use mobile device management | System Center Configuration Manager
 description:
 keywords:
-author: NathBarn
-manager: angrobe
+author: NathBarnmanager: angrobe
+
 ms.date: 09/23/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
-ms.technology:
+ms.technology: 
+	- configmgr-hybrid
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 
 # optional metadata

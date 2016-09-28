@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Prerequisites for certificate profiles in System Center Configuration Manager

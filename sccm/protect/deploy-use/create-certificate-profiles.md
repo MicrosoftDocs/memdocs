@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # How to create certificate profiles in System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Plan for security in System Center Configuration Manager

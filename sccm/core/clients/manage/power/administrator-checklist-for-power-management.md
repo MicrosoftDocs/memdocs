@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Administrator checklist for power management in System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Upgrade on-premises infrastructure that supports System Center Configuration Manager

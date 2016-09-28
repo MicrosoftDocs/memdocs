@@ -17,7 +17,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40380e25-f563-40f8-b5ad-01c9a9698754
 caps.latest.revision: 16
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Configure software updates in System Center Configuration Manager
