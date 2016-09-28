@@ -1,5 +1,6 @@
 ---
 title: "Introduction to reporting | System Center Configuration Manager"
+description: "Learn about the set of tools and resources available to you for managing reporting in Configuration Manager."
 ms.custom: na
 ms.date: 07/27/2016
 ms.prod: configuration-manager

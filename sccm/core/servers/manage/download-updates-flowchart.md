@@ -1,5 +1,6 @@
 ---
 title: "Flowchart - Download updates | System Center Configuration Manager"
+description:
 ms.custom: na
 ms.date: 03/23/2016
 ms.prod: configuration-manager

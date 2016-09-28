@@ -1,5 +1,6 @@
 ---
 title: "Upgrade on-premises infrastructure | System Center Configuration Manager"
+description:
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

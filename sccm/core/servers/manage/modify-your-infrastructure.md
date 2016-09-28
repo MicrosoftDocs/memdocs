@@ -1,5 +1,6 @@
 ---
 title: "Modify infrastructure | System Center Configuration Manager"
+description: "Learn how to make changes or take actions that affect the Configuration Manager infrastructure you have deployed."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

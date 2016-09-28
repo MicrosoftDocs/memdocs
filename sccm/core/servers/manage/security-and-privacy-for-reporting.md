@@ -1,5 +1,6 @@
 ---
 title: "Security and privacy for reporting | System Center Configuration Manager"
+description:
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

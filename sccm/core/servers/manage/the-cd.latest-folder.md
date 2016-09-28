@@ -1,5 +1,6 @@
 ---
 title: "The CD.Latest folder | System Center Configuration Manager"
+description:
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

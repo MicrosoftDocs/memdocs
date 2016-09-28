@@ -1,5 +1,6 @@
 ---
 title: "Flowchart - Update replication | System Center Configuration Manager"
+description:
 ms.custom: na
 ms.date: 05/26/2016
 ms.prod: configuration-manager

@@ -1,5 +1,6 @@
 ---
 title: "Create queries | System Center Configuration Manager"
+description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -177,4 +178,3 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 
 ## See Also  
  [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
-
