@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 caps.latest.revision: 13
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Plan for and configure application management in System Center Configuration Manager

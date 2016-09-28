@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 7daf71dc-3775-40d7-92e0-8679d7d90a78
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Configuration items for devices managed with the System Center Configuration Manager client

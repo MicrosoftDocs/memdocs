@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 caps.latest.revision: 11
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Get started with compliance settings in System Center Configuration Manager

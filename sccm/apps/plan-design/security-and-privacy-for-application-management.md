@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 caps.latest.revision: 8
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Security and privacy for application management in System Center Configuration Manager

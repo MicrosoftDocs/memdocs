@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 3e62ee23-9f27-4d92-99fe-6cbb2215f0f1
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Operations and maintenance for remote control in System Center Configuration Manager

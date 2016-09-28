@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 735c45b8-a545-4805-84e5-46204fabd1a6
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager

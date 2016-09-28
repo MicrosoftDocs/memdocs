@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70f66926-c067-404d-94f1-3ad1309566a6
 caps.latest.revision: 17
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Manage software updates in System Center Configuration Manager

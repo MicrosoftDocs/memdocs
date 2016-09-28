@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Fundamentals of managing devices with System Center Configuration Manager

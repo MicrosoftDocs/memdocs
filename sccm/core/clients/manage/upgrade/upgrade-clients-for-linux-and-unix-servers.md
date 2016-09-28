@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager

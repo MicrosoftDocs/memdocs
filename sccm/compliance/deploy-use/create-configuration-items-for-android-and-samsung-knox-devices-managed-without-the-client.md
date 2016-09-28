@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: c28d5ef5-3ea7-4ba2-af01-6600aa805d48
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client

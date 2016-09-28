@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Manage operating system images with System Center Configuration Manager

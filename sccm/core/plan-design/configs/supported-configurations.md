@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Supported configurations for System Center Configuration Manager

@@ -2,8 +2,8 @@
 title: Manage Office 365 ProPlus updates |  Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod:

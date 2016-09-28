@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 76d3187a-2a4e-406b-91a8-45d175068a40
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Technical reference for remote control in System Center Configuration Manager

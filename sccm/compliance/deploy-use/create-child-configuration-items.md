@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # How to create child configuration items in System Center Configuration Manager

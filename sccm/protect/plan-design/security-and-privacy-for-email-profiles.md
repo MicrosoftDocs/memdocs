@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 601e3a8d-e9e7-456f-a844-f19c3dae12a9
 caps.latest.revision: 3
 caps.handback.revision: 0
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # Security and privacy for email profiles in System Center Configuration Manager

@@ -17,7 +17,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 caps.latest.revision: 12
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Introduction to software updates in System Center Configuration Manager

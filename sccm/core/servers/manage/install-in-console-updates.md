@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Install in-console updates for System Center Configuration Manager

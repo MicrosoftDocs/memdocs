@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Introduction to power management in System Center Configuration Manager

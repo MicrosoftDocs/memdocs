@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Manage configuration data in System Center Configuration Manager

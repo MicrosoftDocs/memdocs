@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: c1b3fb75-f3ab-4886-9421-d81da7ef589d
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: karthikaraman
+author: karthikaramanmanager: angrobe
 
 ---
 # Manage SharePoint Online access in System Center Configuration Manager

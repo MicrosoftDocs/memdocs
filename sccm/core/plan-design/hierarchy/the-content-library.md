@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # The content library in System Center Configuration Manager
 The content library is a single-instance store of content that System Center Configuration Manager uses to reduce the overall size of the combined body of content you distribute. The content library stores all content files for software updates, applications, operating system deployment, and so on.

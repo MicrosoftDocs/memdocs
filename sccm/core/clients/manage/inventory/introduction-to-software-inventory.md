@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Introduction to software inventory in System Center Configuration Manager

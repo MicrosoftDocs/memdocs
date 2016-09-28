@@ -11,8 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 caps.latest.revision: 5
-author: NathBarn
-manager: jeffgilb
+author: NathBarnmanager: angrobe
+
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager
 Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. You can pre-enroll iOS devices by USB-connecting them to a Mac PC running Apple Configurator. Before enrolling, you must prepare an Intune corporate-enrolled device profile in the Intune admin console and export it to the Mac PC. The enrollment process will factory reset the device and go through the Setup Assistant process to configure the device. The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  

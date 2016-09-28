@@ -16,7 +16,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 caps.latest.revision: 15
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Icons used for software updates in System Center Configuration Manager
