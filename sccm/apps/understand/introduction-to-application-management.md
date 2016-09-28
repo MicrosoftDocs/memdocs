@@ -1,5 +1,6 @@
 ---
 title: "Introduction to application management | System Center Configuration Manager"
+description: "Discover the basic information you’ll need to manage and deploy System Center Configuration Manager applications."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
