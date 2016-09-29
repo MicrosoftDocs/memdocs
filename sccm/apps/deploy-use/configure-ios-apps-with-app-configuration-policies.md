@@ -1,5 +1,6 @@
 ---
 title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
+description: "Help eliminate configuration problems on devices running iOS 8 or later by deploying app configuration policies to users before they run apps."
 ms.custom: na
 ms.date: 04/03/2016
 ms.prod: configuration-manager
@@ -17,9 +18,9 @@ author: robstackmsft
 
 Use app configuration policies in System Center Configuration Manager to supply settings that might be required when the user runs an app. For example, an app might require the user to specify:
 - A custom port number
-- Language settings 
-- Security settings 
-- Branding settings such as a company logo 
+- Language settings
+- Security settings
+- Branding settings such as a company logo
 
 If these settings are incorrectly entered by the user, this can increase the burden on your help desk, and also slow the adoption of new apps.
 App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy before they run the app. The settings are then supplied automatically, and the user needs to take no action.
@@ -54,7 +55,7 @@ For more information about app installation types, see [Introduction to applicat
 			- In the **App configuration policy** field, enter the property list information in the correct XML format.
 			To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
 			The format of the XML property list will vary depending on the app you are configuring. Contact the supplier of the app for details about the exact format to use.
-			Intune supports the following data types in a property list: 
+			Intune supports the following data types in a property list:
 			```
 			<integer>
 			<real>
@@ -63,7 +64,7 @@ For more information about app installation types, see [Introduction to applicat
 			<dict>
 			<true /> or <false />
 			```
-			For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library. 
+			For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
 			Additionally, Intune supports the following token types in the property list:
 			```
 			{{userprincipalname}} - (Example: John@contoso.com)
@@ -118,4 +119,3 @@ When you create a mobile app configuration file, you can specify one or more of 
   <string>{{udidlast4digits}}</string>
 </dict>
 ```
-
