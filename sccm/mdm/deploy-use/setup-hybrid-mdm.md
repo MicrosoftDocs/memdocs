@@ -264,7 +264,7 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
 - [Windows 10 and Windows 8.1 devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS and Mac devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android and Samsung KNOX devices](/en-us/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **Applications** can be deployed to managed devices:
 - [iOS applications](/sccm/apps/get-started/creating-ios-applications)
@@ -289,7 +289,7 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
 
 ## Step 9: Enroll devices
 Hybrid setup is now complete. Devices can be enrolled in Configuration Manager in a number of ways:
-- User-owned (BYOD) devices: [Inform users how to enroll their devices](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) - Enrollment guidance is the same for Intune- and Hybrid-managed devices
+- User-owned (BYOD) devices: [Inform users how to enroll their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) - Enrollment guidance is the same for Intune- and Hybrid-managed devices
 - Company-owned (COD) devices: [Enroll company-owned devices](enroll-company-owned-devices.md) provides guidance on different platform-specific ways to enroll company owned devices.
 
 ### Managing Intune subscriptions associated with Configuration Manager
