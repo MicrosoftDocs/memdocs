@@ -3,6 +3,7 @@
 # [Get started](get-started/create-and-deploy-an-application.md)
 ## [Create and deploy an application](get-started/create-and-deploy-an-application.md)
 # [Plan and design](plan-design/plan-for-and-configure-application-management.md)
+## [Plan for, and configure application management](plan-design/plan-for-and-configure-application-management.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-application-management.md)
 # [Deploy and use](deploy-use/create-applications.md)
 ## [Create applications](deploy-use/create-applications.md)
