@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
 caps.latest.revision: 8
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Manage mobile devices with on-premises infrastructure in System Center Configuration Manager

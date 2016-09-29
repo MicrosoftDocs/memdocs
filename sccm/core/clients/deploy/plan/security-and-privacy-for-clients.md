@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Security and privacy for clients in System Center Configuration Manager

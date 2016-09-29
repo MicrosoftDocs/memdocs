@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: 16
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager

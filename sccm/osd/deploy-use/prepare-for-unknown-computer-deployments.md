@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prepare for unknown computer deployments in System Center Configuration Manager

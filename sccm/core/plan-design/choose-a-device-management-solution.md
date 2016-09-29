@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Choose a device management solution for System Center Configuration Manager

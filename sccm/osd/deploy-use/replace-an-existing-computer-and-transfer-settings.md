@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Replace an existing computer and transfer settings with System Center Configuration Manager

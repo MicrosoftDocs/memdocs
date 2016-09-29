@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Create capture media with System Center Configuration Manager

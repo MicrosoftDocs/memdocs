@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Packages and programs in System Center Configuration Manager
@@ -23,9 +23,15 @@ System Center Configuration Manager continues to support packages and programs t
 - Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive.  
 - “One-off” scripts that do not need to be continually monitored.  
 - Scripts that run on a recurring schedule and cannot use global evaluation.  
+<<<<<<< HEAD
 
  When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace. You can modify and deploy these packages in the same way as you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
 
+=======
+  
+When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace. You can modify and deploy these packages in the same way as you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 > [!NOTE]  
 >  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into Configuration Manager applications.  
 >   
@@ -67,9 +73,15 @@ Packages can use some new features of Configuration Manager, including distribut
     >  To create a new program for an existing package, select the package, and then, in the **Home** tab, in the **Package** group, click **Create Program** to open the Create Program Wizard.  
 
 6.  Use one of the following procedures to create a standard program or a device program.  
+<<<<<<< HEAD
 
     #### To create a standard program  
 
+=======
+  
+    #### Create a standard program  
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Standard Program**, and then click **Next**.  
 
     2.  On the **Standard Program** page, specify the following information:  
@@ -134,9 +146,15 @@ Packages can use some new features of Configuration Manager, including distribut
             >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager will stop the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected.  
 
     4.  Click **Next**.  
+<<<<<<< HEAD
 
     #### To create a device program  
 
+=======
+  
+    #### Create a device program  
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then click **Next**.  
 
     2.  On the **Program for Device** page, specify the following:  
@@ -237,8 +255,13 @@ Packages can use some new features of Configuration Manager, including distribut
     -   **Embedded Devices** - When you deploy packages and programs to Windows Embedded devices that are write filter enabled, you can specify to install the packages and programs on the temporary overlay and commit changes later, or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
 
         > [!NOTE]  
+<<<<<<< HEAD
         >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications with System Center Configuration Manager](../../apps/get-started/creating-windows-embedded-applications.md).  
 
+=======
+        >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 10. On the **Distribution Points** page, specify the following information:  
 
     -   **Deployment options** – Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  

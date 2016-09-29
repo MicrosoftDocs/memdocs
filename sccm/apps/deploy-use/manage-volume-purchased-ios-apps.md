@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: b5e7cead-e257-405b-a2aa-b0130e48dc40
 caps.latest.revision: 23
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Manage volume-purchased iOS apps with System Center Configuration Manager
@@ -54,11 +54,17 @@ author: robstackmsft
  Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to allow you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
 
 ## Step 1 - To get and upload an Apple VPP token  
+<<<<<<< HEAD
 
 1.  In the Configuration Manager console, click **Administration**.  
 
 2.  In the **Administration** workspace, expand **Cloud Services**, and then click **Apple Volume Purchase Program Tokens**.   
 
+=======
+  
+1.  In the Configuration Manager console, click **Administration** > **Cloud Services** > **Apple Volume Purchase Program Tokens**.   
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 3.  On the **Home** tab, in the **Apple Volume Purchase Program Tokens** group, click **Add Apple Volume Purchase Program Token**.  
 
 4.  On the **General** page of the **Add Apple Volume Purchase Program Token** wizard, configure the following:   
@@ -74,11 +80,19 @@ author: robstackmsft
     -   **Assigned categories to improve searching and filtering** - Optionally, you can assign categories to the VPP token to make it easier to search for in the Configuration Manager console.  
 
 5.  Click **Next**, and then complete the wizard.  
+<<<<<<< HEAD
 
  From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized.
 
  You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
 
+=======
+  
+From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
+  
+You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
+  
+>>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 ## Step 2 - Deploy a volume-purchased app  
 
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **License Information for Store Apps**.  

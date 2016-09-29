@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to create collections in System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 caps.latest.revision: 15
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Configure sites and hierarchies for System Center Configuration Manager

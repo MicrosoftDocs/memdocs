@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 caps.latest.revision: 23
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Manage boot images with System Center Configuration Manager

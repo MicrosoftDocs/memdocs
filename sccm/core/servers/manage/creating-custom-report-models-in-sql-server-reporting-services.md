@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services

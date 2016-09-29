@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Planning to monitor migration activity in System Center Configuration Manager

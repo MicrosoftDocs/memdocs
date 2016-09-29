@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 77419bd8-548c-4f0f-beed-1ea0f752a4c7
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Hardware inventory in System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Preprovision BitLocker in Windows PE with System Center Configuration Manager

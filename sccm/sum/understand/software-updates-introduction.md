@@ -1,23 +1,18 @@
 ---
-<<<<<<< HEAD
 # required metadata
 
 title: Introduction to software updates | Configuration Manager
-=======
-title: "Introduction to software updates in System Center Configuration Manager"
->>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
-ms.custom: na
-ms.date: 07/22/2016
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
+description:
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 9/14/2016
+ms.topic: article
+ms.prod:
+ms.service:
 ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-caps.latest.revision: 12
-author: Dougeby
+
 
 ---
 # Introduction to software updates in System Center Configuration Manager

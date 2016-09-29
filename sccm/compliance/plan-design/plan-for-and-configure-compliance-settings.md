@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
 caps.latest.revision: 8
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Plan for and configure compliance settings in System Center Configuration Manager
@@ -33,16 +33,14 @@ This procedure configures the default client settings for compliance settings an
 >  Other device types require no specific configuration to evaluate compliance settings.  
   
 1.  In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Settings**.  
-3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
-4.  In the **Default Settings** dialog box, click **Compliance Settings**.  
-5.  Configure the following client settings for compliance settings:  
-|Client setting name|More information|  
-|-------------------------|----------------------|  
-|**Enable compliance evaluation on clients**|Set to **True** if you want to evaluate compliance on client devices.|  
-|**Schedule compliance evaluation**|Click **Schedule** if you want to modify the default compliance evaluation schedule on client devices.|  
-|**Enable User Data and Profiles**|Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles.md).|  
-6.  Click **OK** to close the **Default Settings** dialog box.  
+2.  On the **Home** tab, in the **Properties** group, click **Properties**.  
+3.  In the **Default Settings** dialog box, click **Compliance Settings**.  
+4.  Configure the following client settings for compliance settings: 
+	- **Enable compliance evaluation on clients** - Set to **True** if you want to evaluate compliance on client devices.
+	- **Schedule compliance evaluation** - Click **Schedule** if you want to modify the default compliance evaluation schedule on client devices.
+	- **Enable User Data and Profiles** - Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles).
+5. Click **OK** to close the **Default Settings** dialog box.  
   
- Client computers are configured with these settings the next time they download client policy.  
+Client computers are configured with these settings the next time they download client policy.  
   
 

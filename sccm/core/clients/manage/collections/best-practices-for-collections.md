@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Best practices for collections in System Center Configuration Manager
