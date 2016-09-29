@@ -128,7 +128,7 @@ You can use different client deployment methods to install the System Center Con
  If a computer has the Configuration Manager client installed, Configuration Manager provides the client with the software update point server name and port from which to obtain software updates. This information is included in the client policy.  
 
 > [!IMPORTANT]  
->  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md).  
+>  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](..\..\sum\get-started\install-a-software-update-point.md).  
 
  If a computer does not have the Configuration Manager client installed, you must configure and assign a Group Policy Object (GPO) in Active Directory Domain Services to specify the software update point server name from which the computer will obtain software updates.  
 
@@ -506,4 +506,3 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 5.  Assign the Group Policy Object to the computers that you want to provision with Configuration Manager client installation properties.  
 
  For information about Windows Group Policy, refer to your Windows Server documentation.  
-

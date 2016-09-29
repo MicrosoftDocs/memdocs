@@ -49,7 +49,7 @@ Client installation and management for Mac computers in System Center Configurat
 ##  <a name="InstallSteps"></a> Steps to install and configure the client for Macs  
 
 > [!IMPORTANT]  
->  Before you perform these steps, make sure that your Mac computer meets the prerequisites. For more information, see [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS) in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+>  Before you perform these steps, make sure that your Mac computer meets the prerequisites. For more information, see [supported operating systems for Macs](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
 ### Step 1: Deploy a web server certificate to site system servers  
  These site systems might already have this certificate for other Configuration Manager clients. If not, deploy a web server certificate to the following computers that hold the following site system roles:  
@@ -67,7 +67,7 @@ Client installation and management for Mac computers in System Center Configurat
 >   
 >  This does not mean that the server must be accessible from the Internet to support Mac computers. If you do not require Internet-based client management, you can specify the intranet FQDN value for the Internet FQDN.  
 
- For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012).  
+ For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
 > [!IMPORTANT]  
 >  Make sure that you specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.  
@@ -79,9 +79,9 @@ Client installation and management for Mac computers in System Center Configurat
 
 -   Distribution point  
 
- For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_client2008_cm2012)  
+ For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
 
- For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clientdistributionpoint2008_cm2012).  
+ For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
 ### Step 3: Prepare the client certificate template for Macs  
 
@@ -90,7 +90,7 @@ Client installation and management for Mac computers in System Center Configurat
 
  The certificate template must have **Read** and **Enroll** permissions for the user account that will enroll the certificate on the Mac computer.  
 
- See [Deploying the Client Certificate for Mac Computers](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_MacClient_SP1).  
+ See [Deploying the Client Certificate for Mac Computers](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1).  
 
 ### Step 4: Configure the management point and distribution point  
  Configure management points for the following options:  
@@ -259,7 +259,7 @@ Client installation and management for Mac computers in System Center Configurat
 -   **CMEnroll**: Use this tool to request and install the client certificate for a Mac computer so that you can then install the Configuration Manager client.  
 
 > [!IMPORTANT]  
->  When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console. For the latest information, see [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS) in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+>  When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console.  
 
 ##### To download and install the Mac OS X client files  
 
@@ -654,4 +654,3 @@ Client installation and management for Mac computers in System Center Configurat
      For example: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
 
 17. Restart the Mac computer.  
-
