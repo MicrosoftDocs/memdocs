@@ -25,16 +25,16 @@
 ## [Remove a software update point](get-started/remove-a-software-update-point.md)
 
 # [Deploy and use](deploy-use/software-updates-lifecycle.md)
-## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md)
+<!-- ## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md) -->
+## [Deploy software updates](deploy-use/deploy-software-updates.md)
+### [Manually deploy software updates](deploy-use/manually-deploy-software-updates.md)
+### [Automatically deploy software updates](deploy-use/automatically-deploy-software-updates.md)
 ### [Download software updates](deploy-use/download-software-updates.md)
 ### [Add software updates to an update group](deploy-use/add-software-updates-to-an-update-group.md)
-### [Deploy software updates](deploy-use/deploy-software-updates.md)
-#### [Manually deploy software updates](deploy-use/manually-deploy-software-updates.md)
-#### [Automatically deploy software updates](deploy-use/automatically-deploy-software-updates.md)
-### [Monitor software updates](deploy-use/monitor-software-updates.md)
-### [Remove expired and superseded updates ](deploy-use/maintenance-for-software-updates.md)
+## [Monitor software updates](deploy-use/monitor-software-updates.md)
+## [Remove expired and superseded updates ](deploy-use/maintenance-for-software-updates.md)
 ## [Service a server group](deploy-use/service-a-server-group.md)
-## [Manage Office 365 ProPlus updates with Configuration Manager](deploy-use/manage-office-365-proplus-updates.md)
+## [Manage Office 365 ProPlus updates](deploy-use/manage-office-365-proplus-updates.md)
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 
 ## [Example scenario to deploy and monitor the security software updates released monthly by Microsoft](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
