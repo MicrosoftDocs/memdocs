@@ -13,7 +13,8 @@ ms.topic: article
 ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsft
+manager: angrobe
 
 ---
 # Simulate application deployments with System Center Configuration Manager
@@ -23,15 +24,9 @@ Use simulated deployments if you want to test the applicability of an applicatio
 >  You cannot use simulated deployments for collections of mobile devices.  
 >   
 >  You cannot deploy an application with a deployment purpose of **Uninstall** if a simulated deployment of the same application is active.  
-<<<<<<< HEAD
-
-## Simulate an application deployment  
-
-=======
   
 Use the following procedure to configure a simulated application deployment:
   
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 1.  In the Configuration Manager console, select one of the following:  
 
     -   A collection of users.  
