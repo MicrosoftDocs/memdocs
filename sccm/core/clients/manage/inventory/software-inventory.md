@@ -1,6 +1,6 @@
 ---
 title: "Software inventory in System Center Configuration Manager"
-description: "Get an overview of topics for software inventory in System Center Configuration Manager."
+description: "Get an overview of software inventory topics in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -13,7 +13,8 @@ ms.topic: article
 ms.assetid: b40ecfc7-de38-479c-9f73-b66b2763d44e
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsft
+manager: angrobe
 
 ---
 # Software inventory in System Center Configuration Manager
