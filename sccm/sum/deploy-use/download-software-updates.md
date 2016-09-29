@@ -35,7 +35,8 @@ There are several methods available to you for downloading software updates in C
 Use the following procedure to download software updates by using the Download Software Updates Wizard.  
 
 #### To download software updates  
-
+[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+<!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 
 3.  Choose the software update to download by using one of the following methods:  
@@ -116,4 +117,4 @@ Use the following procedure to download software updates by using the Download S
 
 9. On the **Summary** page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
 
-10. On the **Completion** page, verify that the software updates were successfully downloaded, and then click **Close**.  
+10. On the **Completion** page, verify that the software updates were successfully downloaded, and then click **Close**.  --->
