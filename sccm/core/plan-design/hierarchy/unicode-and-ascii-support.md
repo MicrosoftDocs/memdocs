@@ -1,5 +1,6 @@
 ---
 title: "Unicode and ASCII Support | System Center Configuration Manager"
+description: "Learn about support for Unicode and ASCII characters in System Center Configuration Manager objects."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
