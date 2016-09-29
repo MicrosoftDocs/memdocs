@@ -1,5 +1,6 @@
 ---
 title: "Internet-based clients | System Center Configuration Manager"
+description: "Create a plan to manage Internet-based clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -186,4 +187,3 @@ Although there is no requirement to have a trust between a client's forest and t
      For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
 
      For similar communication requirements when you use the software update point for client connections from the Internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
-
