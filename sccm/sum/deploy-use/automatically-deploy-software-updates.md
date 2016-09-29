@@ -5,13 +5,11 @@ title: Automatically deploy software updates | Configuration Manager
 description:
 keywords:
 author: dougebymanager: angrobe
-
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-	- configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 
 # optional metadata
@@ -27,17 +25,17 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ---
 
 #  <a name="BKMK_AutoDeploy"></a> Automatically deploy software updates  
- You can automatically deploy software updates by adding new software updates to an update group that has an active deployment or by using ADRs.  
+ You can automatically deploy software updates by adding new software updates to an update group associated with an active deployment or you can use an automatic deployment rule (ADR). Typically, you will use ADRs to deploy monthly software updates (generally known as Patch Tuesday updates) and for managing definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md)
 
 ##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Add software updates to a deployed update group  
- After you create and deploy a software update group, you can add software updates to the update group and they will also be automatically deployed.  
+After you create and deploy a software update group, you can add software updates to the update group and they will be automatically deployed.  
 
 > [!IMPORTANT]  
 >  When you add software updates to an existing software update group that has already been deployed, it might take several minutes before the additional software updates are added to the deployment.  
 
- Use the following procedure to add software updates to an existing update group.  
+Use the following procedure to add software updates to an existing update group.  
 
-### To add software updates to an existing software update group  
+#### To add software updates to an existing software update group  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -54,9 +52,7 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 7.  Click the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates in the group.  
 
 ##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Create an automatic deployment rule (ADR)  
- You can automatically approve and deploy software updates by using an ADR. This is a common method of deployment for monthly software updates ("Patch Tuesday") and for managing definition updates. When the ADR runs, software updates are removed from the software update group (if using an existing group), the software updates that meet a specified criteria are added to a software update group, the content files for the software updates are downloaded and copied to distribution points, and the software updates are deployed to client devices in the target collection. After you create an ADR, you can add additional deployments to the rule.  
-
- You can have the rule add software updates to a new software update group each time the rule runs or add software updates to an existing group. When a rule runs and adds software updates to an existing group, the rule removes all software updates from the group and then adds the software updates that meet the criteria that you define to the group. To run an ADR to find newly released software updates each day and deploy them to clients, for example, you must choose the option to create a new software update group instead of adding the software updates to an existing group.  
+You can automatically approve and deploy software updates by using an ADR. You can have the rule add software updates to a new software update group each time the rule runs or add software updates to an existing group. When a rule runs and adds software updates to an existing group, the rule removes all software updates from the group and then adds the software updates that meet the criteria that you define to the group. To run an ADR to find newly released software updates each day and deploy them to clients, for example, you must choose the option to create a new software update group instead of adding the software updates to an existing group.  
 
 > [!WARNING]  
 >  Before you create an ADR for the first time, verify that software updates synchronization has completed at the site. This is particularly important when you run Configuration Manager with a non-English language because software update classifications are displayed in English before the first synchronization, and then displayed in the localized language after software update synchronization completes. Rules that you create before you synchronize software updates might not work properly after synchronization because the text string might not match.  
@@ -321,4 +317,3 @@ ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
     >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
 
 For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
-
