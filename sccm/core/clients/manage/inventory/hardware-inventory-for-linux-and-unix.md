@@ -1,5 +1,6 @@
 ---
 title: "Hardware inventory for Linux and UNIX in System Center Configuration Manager"
+description: "Learn how use hardware inventory for Linux and UNIX in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -114,4 +115,3 @@ The System Center Configuration Manager client for Linux and UNIX supports hardw
  Before Configuration Manager can report on inventory that is reported by the new provider on Linux and UNIX computers, you must import the Managed Object Format (MOF) file that defines the schema of your custom provider.  
 
  To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-

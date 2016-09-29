@@ -1,5 +1,6 @@
 ---
 title: "Software inventory in System Center Configuration Manager"
+description: "Get an overview of topics for software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -30,4 +31,3 @@ Use System Center Configuration Manager software inventory to collect and report
  [Operations and maintenance for software inventory in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20software%20inventory%20in%20System%20Center%20Configuration%20Manager.md)  
 
  [Security and privacy for software inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
-
