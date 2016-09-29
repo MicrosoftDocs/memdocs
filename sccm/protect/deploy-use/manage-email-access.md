@@ -25,13 +25,7 @@ You can manage access to:
 
 -   Exchange Online Dedicated  
 
-> [!IMPORTANT]  
->  Conditional access for PCs and Windows 10 Mobile devices with apps using modern authentication is not currently available to all Intune customers. If you are already using these features, you do not need to take any action. You can continue to use them.  
->   
->  **This does not apply to PCs or Windows 10 Mobile devices for conditional access to Exchange On-premises.**  
->   
->  If you have not created conditional access policies for PCs or Windows 10 Mobile for apps using modern authentication, you will need to submit a request for access. You can find out more information about known issues as well as how to get access to this feature at the [connect site](http://go.microsoft.com/fwlink/?LinkId=761472).  
-
+## Device requirements
  If you configure conditional access, before a user can connect to their email, the device they use must:  
 
 -   Be enrolled with Intune or a domain joined PC.  
@@ -81,7 +75,8 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  You can configure a conditional access policy for Exchange On-premises from the Configuration Manager console. When you configure a conditional access policy for Exchange Online, you can begin the process in the Configuration Manager console, which launches the Intune console where you can complete the process.  
 
-## Step 1: Evaluate the effect of the conditional access policy  
+## Configure conditional access
+### Step 1: Evaluate the effect of the conditional access policy  
  Once you have configured the **on-premises Exchange connector**, you can use the Configuration Manager**List of devices by Conditional Access State** report to identify devices that will be blocked from accessing Exchange after you configure the conditional access policy. This report also requires:  
 
 -   A subscription to Intune  
@@ -114,7 +109,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  You can export the contents of the report and use the **Email Address** column to help you inform users that they will be blocked.  
 
-## Step 2: Configure user groups or collections for the conditional access policy  
+### Step 2: Configure user groups or collections for the conditional access policy  
  You target conditional access policies to different groups or collections of users depending on the policy types. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access email.  
 
 -   **For the Exchange Online policy** - to Azure Active Directory security user groups. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**.  
@@ -131,7 +126,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  Only the groups or collections which are targeted by the conditional access policy are evaluated for Exchange access.  
 
-## Step 3: Configure and deploy a compliance policy  
+### Step 3: Configure and deploy a compliance policy  
  Ensure that you have created and deployed a compliance policy to all devices that the Exchange conditional access policy will be targeted to.  
 
  For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md).  
@@ -141,9 +136,13 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  When you are ready, continue to **Step 4**.  
 
-## Step 4: Configure the conditional access policy  
+### Step 4: Configure the conditional access policy  
 
-### For Exchange Online (and tenants in the new Exchange Online Dedicated environment)  
+#### For Exchange Online (and tenants in the new Exchange Online Dedicated environment)
+
+>[!NOTE]
+>You can also create conditional access policy in the Azure AD management console. Azure AD management console allows you to create the Intune device conditional access policies (referred to as the device-based conditional access policy in Azure AD) in addition to other conditional access policies like multi-factor authentication. You can also set conditional access policies for third-party Enterprise apps like Salesforce and Box that Azure AD supports. For more details, see [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).
+
  The following flow is used by conditional access policies for Exchange Online to evaluate whether to allow or block devices.  
 
  ![ConditionalAccess8&#45;1](../../protect/deploy-use/media/ConditionalAccess8-1.png "ConditionalAccess8-1")  
@@ -331,4 +330,3 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
 ### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
-

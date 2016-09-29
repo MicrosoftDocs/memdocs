@@ -8,9 +8,10 @@ author: dougebymanager: angrobe
 
 ms.date: 9/15/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
+	- configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 
 # optional metadata

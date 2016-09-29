@@ -5,7 +5,7 @@
 ## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [What's new in on-premises MDM](understand/TBD.md)
 # [Plan and design](plan-design/hybrid-mobile-device-management.md)
-## [Plan for hybrid MDM](plan-design/hybrid-mobile-device-management.md)
+## [Plan for hybrid MDM](plan-design/plan-hybrid-mobile-device-management.md)
 ## [Plan for on-premises MDM](plan-design/plan-for-on-premises-mobile-device-management.md)
 # [Get started](get-started/set-up-device-enrollment-for-on-premises-mobile-device-management.md)
 ## [Hybrid MDM prerequisites](get-started/TBD.md)
@@ -29,4 +29,3 @@
 ## [Terms and Conditions](deploy-use/terms-and-conditions.md)
 ## [Retire, lock and reset](deploy-use/wipe-lock-reset-devices.md)
 ## [EAS device management](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
-

@@ -7,9 +7,10 @@ keywords:
 author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
-ms.technology:
+ms.technology: 
+	- configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 # optional metadata

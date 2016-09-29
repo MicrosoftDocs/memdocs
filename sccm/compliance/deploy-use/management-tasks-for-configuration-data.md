@@ -1,11 +1,12 @@
 ---
 title: "Manage configuration data | System Center Configuration Manager"
+description: "After you create configuration items and baselines in System Center Configuration Manager, you can use other commands to perform various actions."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -17,11 +18,11 @@ author: robstackmsftmanager: angrobe
 ---
 # Manage configuration data in System Center Configuration Manager
 After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  
-  
+
 ## Manage configuration items  
-  
+
 -   In the **Assets and Compliance** workspace, expand **Compliance Settings** > **Configuration Items**, select the configuration item to manage, and then select a management task.  
-  
+
 |Management task|Details|  
 |---------------------|-------------|  
 |**Create Child Configuration Item**|Opens the **Create Child Configuration Item Wizard** where you can create a child configuration item from the selected configuration item.<br /><br /> You cannot create a child configuration item from a mobile device configuration item.<br /><br /> For details, see [Create child configuration items](../../compliance/deploy-use/create-child-configuration-items.md).|  
@@ -30,12 +31,12 @@ After you have created configuration items and configuration baselines in System
 |**Export**|Exports a configuration item in a cabinet (.cab) file format, providing that it was created at that site. You can then import it to the same or a different Configuration Manager site. Configuration data is converted to DCM Digest.|  
 |**Copy**|Creates a copy of the selected configuration item with a name you specify. The new configuration item does not retain any relationship to the original configuration item. This means that the duplicate configuration item does not continue to inherit configuration information from the original configuration item.|  
 |**Delete**|Opens the **Delete Configuration Item** dialog box where you can review any references to this configuration item.<br /><br /> You must remove all references to a configuration item before you can delete the configuration item.|  
-  
+
 ## Manage configuration baselines  
-  
+
 -   In the **Assets and Compliance** workspace, expand **Compliance Settings** > **Configuration Baselines**, select the configuration baseline to manage, and then select a management task.  
-  
-  
+
+
 |Management task|Details|  
 |---------------------|-------------|  
 |**Show Members**|Displays all of the configuration items that are referenced by the configuration baseline.|  
@@ -48,5 +49,3 @@ After you have created configuration items and configuration baselines in System
 |**Copy**|Creates a copy of the selected configuration baseline with a name that you specify. The new configuration baseline does not retain any relationship to the original configuration baseline.|  
 |**Delete**|Opens the **Delete Configuration Baseline** dialog box where you can review any references to this configuration baseline.<br /><br /> You must remove all references to a configuration baseline before you can delete the configuration baseline.|  
 |**Deploy**|Opens the **Deploy Configuration Baseline** dialog box where you can deploy one or more configuration baselines to devices in your hierarchy.<br /><br /> For details, see [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md).|  
-  
-
