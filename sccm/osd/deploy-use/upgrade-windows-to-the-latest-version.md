@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Windows to the latest version with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 caps.latest.revision: 13
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Upgrade Windows to the latest version with System Center Configuration Manager
 This topic provides the steps in System Center Configuration Manager to upgrade an  operating system on a computer from Windows 7 or later to Windows 10. You can choose from different deployment methods, such as stand-alone media or Software Center. The Windows 10 in-place upgrade scenario:  
@@ -96,3 +78,4 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
   
 ## See Also  
  [Scenarios to deploy enterprise operating systems with System Center Configuration Manager](../../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+

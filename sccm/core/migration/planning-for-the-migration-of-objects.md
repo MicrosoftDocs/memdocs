@@ -1,7 +1,8 @@
 ---
-title: "Planning for the migration of Configuration Manager objects to System Center Configuration Manager"
+title: "Migrate objects | System Center Configuration Manager"
+description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 2016-03-22
+ms.date: 03/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +13,8 @@ ms.topic: article
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Planning for the migration of Configuration Manager objects to System Center Configuration Manager
 With System Center Configuration Manager, you can migrate many of the different objects that are associated with different features found at a source site. Use the following sections to help you plan for the migration of objects between hierarchies.  
@@ -156,7 +139,7 @@ You can migrate the following operating system deployment objects from a support
 You can migrate configuration items and configuration baselines.  
 
 > [!NOTE]  
->  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see the “Uninterpreted Configuration Item” section in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
+>  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see the "Uninterpreted Configuration Item" section in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
 
 You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the Configuration Pack to be compatible with System Center Configuration Manager.  
 

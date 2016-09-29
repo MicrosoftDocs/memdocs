@@ -1,7 +1,7 @@
 ---
 title: "Methods to deploy enterprise operating systems using System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
 caps.latest.revision: 6
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Methods to deploy enterprise operating systems using System Center Configuration Manager
 There are different methods that you can use to deploy an operating system in your System Center Configuration Manager environment.  
@@ -51,3 +33,4 @@ There are different methods that you can use to deploy an operating system in yo
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](../Topic/Manage%20enterprise%20operating%20systems%20with%20System%20Center%20Configuration%20Manager.md)
+

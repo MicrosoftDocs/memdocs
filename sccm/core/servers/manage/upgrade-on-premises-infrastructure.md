@@ -1,7 +1,7 @@
 ---
-title: "Upgrade on-premises infrastructure that supports System Center Configuration Manager"
+title: "Upgrade on-premises infrastructure | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Upgrade on-premises infrastructure that supports System Center Configuration Manager
 Use the following information to help you upgrade infrastructure that runs System Center Configuration Manager.  

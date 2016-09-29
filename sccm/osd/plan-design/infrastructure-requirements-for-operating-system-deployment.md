@@ -1,7 +1,7 @@
 ---
 title: "Infrastructure requirements for operating system deployment in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-11
+ms.date: 08/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Infrastructure requirements for operating system deployment in System Center Configuration Manager
 Operating system deployment in System Center 2012 Configuration Manager has external dependencies and dependencies within the product. Use the following sections to help you prepare for operating system deployment.  
@@ -255,3 +237,4 @@ You must install the following WSUS 4.0 hotfixes:
   
 ## See Also  
  [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
+

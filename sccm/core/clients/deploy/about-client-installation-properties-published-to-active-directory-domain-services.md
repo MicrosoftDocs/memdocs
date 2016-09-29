@@ -1,7 +1,7 @@
 ---
 title: "Client installation properties in Active Directory Domain Services | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # About client installation properties published to Active Directory Domain Services in System Center Configuration Manager
 When you extend the Active Directory schema for System Center Configuration Manager and the site is published to Active Directory Domain Services, many client installation properties are published to Active Directory Domain Services. If a computer can locate these client installation properties, it can use them during Configuration Manager client deployment.  
@@ -115,3 +115,4 @@ When you extend the Active Directory schema for System Center Configuration Mana
     -   The certificate issuers list that contains a list of trusted root CA certificates.  
 
 -   Client.msi installation properties that are specified in the **Client** tab of the **Client Push Installation Properties** dialog box.
+

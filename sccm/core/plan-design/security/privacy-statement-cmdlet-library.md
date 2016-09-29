@@ -1,7 +1,7 @@
 ---
 title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library
 This privacy statement should be read in conjunction with the [Microsoft System Center 2012 R2 Configuration Manager Privacy Statement](hhttp://www.microsoft.com/privacystatement/en-us/SystemCenter2012R2/Default.aspx). Provisions in that document are applicable. This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
@@ -79,3 +61,4 @@ The Update Check is enabled by default.  The System Center Configuration Manager
 -   `Set-CMCmdletUpdateCheck` configures the update check settings on a per-user or per-system basis. You must be running as an administrator to set system settings.  
 
  You can find more information about to configure the update check in the [System Center Configuration Manager Cmdlet Library documentation](https://technet.microsoft.com/en-us/library/dn958404.aspx).  
+

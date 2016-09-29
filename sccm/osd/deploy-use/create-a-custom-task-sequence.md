@@ -1,7 +1,7 @@
 ---
 title: "Create a custom task sequence with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Create a custom task sequence with System Center Configuration Manager
 When you create a custom task sequence in System Center Configuration Manager, it contains no task sequence steps. After you create the task sequence, you must edit it and add the task sequence steps you need.  
@@ -61,3 +43,4 @@ When you create a custom task sequence in System Center Configuration Manager, i
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

@@ -8,27 +8,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-hk
-  - zh-tw
+
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 **PLEASE NOTE:** Your use of this software is subject to the terms and conditions of the license agreement by which you (or your company) acquired the Microsoft server software or gained access to the online service from Microsoft. For instance, if you are:  
@@ -42,3 +24,4 @@ translation.priority.ht:
 -   an online service customer, use of this software is subject to the online subscription agreement.  
 
 You may not use this software if you have not validly acquired a license for the software or online service from Microsoft or its licensed distributors.
+

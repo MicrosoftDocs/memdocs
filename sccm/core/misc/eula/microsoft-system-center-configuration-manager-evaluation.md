@@ -8,26 +8,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d7b19db-a915-4bc8-9962-2d1515ddff6c
 caps.latest.revision: 7
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION
 **MICROSOFT EVALUATION SOFTWARE LICENSE TERMS**  
@@ -54,9 +37,9 @@ translation.priority.ht:
 
     1.  **Software.** The software includes  
 
-        -   “Server Software” which means System Center Configuration Manager; and  
+        -   "Server Software" which means System Center Configuration Manager; and  
 
-        -   “Additional Software” which includes but is not limited to, tools and System Center packs, that may only be used with the Server Software.  
+        -   "Additional Software" which includes but is not limited to, tools and System Center packs, that may only be used with the Server Software.  
 
     2.  **Evaluation Terms.**  
 
@@ -76,11 +59,11 @@ translation.priority.ht:
 
     1.  **SQL Server Branded Components.** The software contains Microsoft SQL Server branded components and the license terms that would apply to your use of these programs are at http://go.microsoft.com/fwlink/?LinkID=787077. If you do not agree to their license terms, you may not use these programs.  
 
-    2.  **Site Hierarchy – Geographical View.** The Server Software may include a feature that retrieves content such as maps, images and other data through the Bing Maps (or successor branded) application programming interface (the “Bing Maps API”). The purpose of this feature is to display site data on top of maps, aerial and hybrid imagery. You may use the feature to display the site data on your screen or print a written report including that display. This may be done only in conjunction with and through methods and means of access integrated in the software. You may not otherwise copy, store, archive, or create a database of the content available through the Bing Maps API. You may not use the following for any purpose even if they are available through the Bing Maps API:  
+    2.  **Site Hierarchy - Geographical View.** The Server Software may include a feature that retrieves content such as maps, images and other data through the Bing Maps (or successor branded) application programming interface (the "Bing Maps API"). The purpose of this feature is to display site data on top of maps, aerial and hybrid imagery. You may use the feature to display the site data on your screen or print a written report including that display. This may be done only in conjunction with and through methods and means of access integrated in the software. You may not otherwise copy, store, archive, or create a database of the content available through the Bing Maps API. You may not use the following for any purpose even if they are available through the Bing Maps API:  
 
         -   the Bing Maps API to provide sensor based guidance/routing,  
 
-        -   any Road Traffic Data or Bird’s Eye Imagery (or associated metadata).  
+        -   any Road Traffic Data or Bird's Eye Imagery (or associated metadata).  
 
         Your use of the Bing Maps API and associated content is also subject to the additional terms and conditions at http://go.microsoft.com/fwlink/?LinkID=223934.  
 
@@ -96,13 +79,13 @@ translation.priority.ht:
 
                 -   **Windows (or Microsoft) Update Services.** This feature provides recommended updates as they become available. If you opt into these Services, it will automatically install updates to the Microsoft software on your device. This can occur with or without further notice to you. These updates may apply to supporting software. Updates can include drivers and firmware supplied by device manufacturers, anti-malware definitions, software fixes, or security patches. You can switch off this feature at any time. You can switch off this feature by following the instructions in the Update Services Privacy Statement here: http://fe2.update.microsoft.com/windowsupdate/v6/vistadefault.aspx?ln=en-US.  
 
-            -   **Silverlight 5 and Silverlight 5 Software Development Kit.** Silverlight contains an Automatic Update feature that is on by default. You may turn off this feature while Silverlight 5 is running (“opt out”). Unless you expressly opt out of this feature, this feature will  
+            -   **Silverlight 5 and Silverlight 5 Software Development Kit.** Silverlight contains an Automatic Update feature that is on by default. You may turn off this feature while Silverlight 5 is running ("opt out"). Unless you expressly opt out of this feature, this feature will  
 
                 -   connect to Microsoft or service provider computer systems over the Internet,  
 
                 -   use Internet protocols to send to the appropriate systems standard computer information, such as  
 
-                -   your computer’s Internet protocol address,  
+                -   your computer's Internet protocol address,  
 
                 -   the type of operating system, browser and name and version of Silverlight you are using, and  
 
@@ -114,27 +97,27 @@ translation.priority.ht:
 
             -   **Customer Experience Improvement Program (CEIP).** This software uses CEIP. CEIP automatically sends Microsoft information about your hardware and how you use this software. We do not use this information to identify or contact you. To learn more about CEIP, see http://go.microsoft.com/fwlink/?LinkId=52097.  
 
-            -   **Usage Data.** Microsoft automatically collects usage data over the internet. Microsoft uses this data to: a) help improve your installation or upgrade experience, and b) improve the quality and security of Microsoft products and services. There are 3 levels of usage data (Basic, Enhanced and Full). This feature is set on the “Enhanced” level by default.  
+            -   **Usage Data.** Microsoft automatically collects usage data over the internet. Microsoft uses this data to: a) help improve your installation or upgrade experience, and b) improve the quality and security of Microsoft products and services. There are 3 levels of usage data (Basic, Enhanced and Full). This feature is set on the "Enhanced" level by default.  
 
-                -   **“Basic”** includes data about your hierarchy and is required to help improve your installation or upgrade experience, as well as help determine which System Center updates are applicable. Examples of data collected includes versions and types of sites in the hierarchy, database performance metrics (CPU count), and the features that are enabled.  
+                -   **"Basic"** includes data about your hierarchy and is required to help improve your installation or upgrade experience, as well as help determine which System Center updates are applicable. Examples of data collected includes versions and types of sites in the hierarchy, database performance metrics (CPU count), and the features that are enabled.  
 
-                -   **“Enhanced”** includes data collected in the “Basic” level as well as feature-specific data (frequency and duration of use), client settings, and information about software updates. This level is recommended because it provides Microsoft with the minimum data required to make useful improvements in future versions of products and services. This level does not collect object names (site names, users, or objects) or details of security-related objects or vulnerabilities like counts of systems requiring software updates.  
+                -   **"Enhanced"** includes data collected in the "Basic" level as well as feature-specific data (frequency and duration of use), client settings, and information about software updates. This level is recommended because it provides Microsoft with the minimum data required to make useful improvements in future versions of products and services. This level does not collect object names (site names, users, or objects) or details of security-related objects or vulnerabilities like counts of systems requiring software updates.  
 
-                -   **“Full”** includes all data collected in “Basic” and “Enhanced” levels as well as data about endpoint protection (number of devices in different EP states), update compliance percentages, and software updates. This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.  Microsoft will not use this information to identify you, contact you, or for advertising purposes.  
+                -   **"Full"** includes all data collected in "Basic" and "Enhanced" levels as well as data about endpoint protection (number of devices in different EP states), update compliance percentages, and software updates. This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.  Microsoft will not use this information to identify you, contact you, or for advertising purposes.  
 
-                Administrators can change the level of data collected in the “Usage Data” setting of the Configuration Manager console. For more information, see the “Learn More” article about Usage Data Levels and Settings at http://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at http://go.microsoft.com/fwlink/?LinkID=619434.  
+                Administrators can change the level of data collected in the Usage Data setting of the Configuration Manager console. For more information, see the "Learn More" article about Usage Data Levels and Settings at http://go.microsoft.com/fwlink/?LinkId=624310 and the Privacy Statement for System Center Configuration Manager at http://go.microsoft.com/fwlink/?LinkID=619434.  
 
             -   **Microsoft Error Reporting Service.** This feature helps Microsoft and Windows partners diagnose problems in the software and provide solutions. Not all problems will have a solution but when a solution is available, it will be offered as a step to solve a problem you have reported or as an update to install. As part of setup and installation, the Microsoft Error Reporting Service sends to Microsoft information about setup and installation failures in order to attempt to diagnose the problem. To help prevent problems and make the software more reliable, some solutions are also included in service packs and future versions of the software.  
 
     2.  **Use of Information.** We may use the computer information to improve our software and services. We may also share it with others, such as hardware and software vendors. They may use the information to improve how their products run with Microsoft software.  
 
-    3.  **Misuse of Internet-based Services.** You may not use these services in any way that could harm them or impair anyone else’s use of them. You may not use the services to try to gain unauthorized access to any service, data, account or network by any means.  
+    3.  **Misuse of Internet-based Services.** You may not use these services in any way that could harm them or impair anyone else's use of them. You may not use the services to try to gain unauthorized access to any service, data, account or network by any means.  
 
 4.  **TIME-SENSITIVE SOFTWARE.** The software will stop running one hundred eighty (180) days after you install it. You may not be able to access data used with the software when it stops running.  
 
 5.  **SCOPE OF LICENSE.** The software is licensed, not sold. This agreement only gives you some rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not  
 
-    -   disclose the results of any benchmark tests of the software, to any third party without Microsoft’s prior written approval;  
+    -   disclose the results of any benchmark tests of the software, to any third party without Microsoft's prior written approval;  
 
     -   work around any technical limitations in the software;  
 
@@ -166,7 +149,7 @@ translation.priority.ht:
 
 6.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.  
 
-7.  **SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.  
+7.  **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 
 8.  **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
 
@@ -178,9 +161,9 @@ translation.priority.ht:
 
 10. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
+11. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
 
-     **FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
+     **FOR AUSTRALIA - YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
 
 12. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
 
@@ -191,3 +174,4 @@ translation.priority.ht:
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
     It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

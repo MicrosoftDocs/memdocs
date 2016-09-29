@@ -1,7 +1,7 @@
 ---
 title: "How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 caps.latest.revision: 7
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager
 In System Center Configuration Manager, you can collect the hardware inventory on iOS, Android, and Windows devices by using the Microsoft Intune connector. For information about how to configure hardware inventory, see [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
@@ -146,3 +128,4 @@ In System Center Configuration Manager, you can collect the hardware inventory o
  <sup>1</sup> The phone number is masked with * except for the last 4 digits.  
 
  For inventory to collect the phone number, the device must have a SIM card inserted, and a phone number provisioned by the carrier to that SIM.  
+

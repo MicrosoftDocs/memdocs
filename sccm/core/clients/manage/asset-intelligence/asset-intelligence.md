@@ -1,7 +1,7 @@
 ---
 title: "Asset Intelligence in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 45969afe-f836-4c5e-b987-44585ba8ac2a
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Asset Intelligence in System Center Configuration Manager
 Asset Intelligence in System Center Configuration Manager lets you retrieve inventory data and manage software license usage throughout the enterprise by using the Asset Intelligence catalog.  
@@ -51,3 +33,4 @@ Asset Intelligence in System Center Configuration Manager lets you retrieve inve
 
 -   [Technical reference for Asset Intelligence in System Center Configuration Manager](../Topic/Technical%20reference%20for%20Asset%20Intelligence%20in%20System%20Center%20Configuration%20Manager.md)  
   
+

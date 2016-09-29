@@ -1,7 +1,7 @@
 ---
 title: "Configure client settings | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
 caps.latest.revision: 5
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # How to configure client settings in System Center Configuration Manager
 You manage all client settings in System Center Configuration Manager from the **Client Settings** node in the **Administration** workspace of the Configuration Manager console. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy these to collections.  
@@ -89,3 +89,4 @@ You manage all client settings in System Center Configuration Manager from the *
 
     > [!NOTE]  
     >  The displayed resultant settings are read only. To modify any settings, use the above procedures.  
+

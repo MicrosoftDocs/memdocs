@@ -1,7 +1,7 @@
 ---
-title: "How to manage clients in System Center Configuration Manager"
+title: "Manage clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,50 +11,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # How to manage clients in System Center Configuration Manager
-When a System Center Configuration Manager client is installed and successfully assigned to a Configuration Manager site, you will see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. When you select the device or collection that contains the device, you can select various management operations. However, there are also other ways to manage the client, which might involve other workspaces in the console, or tasks that don’t use the Configuration Manager console.  
+When a System Center Configuration Manager client is installed and successfully assigned to a Configuration Manager site, you will see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. When you select the device or collection that contains the device, you can select various management operations. However, there are also other ways to manage the client, which might involve other workspaces in the console, or tasks that don't use the Configuration Manager console.  
 
  Use this topic for overview information for the tasks that can manage a Configuration Manager client from the **Assets and Compliance** workspace, as well as more detailed information about additional tasks to help you manage the Configuration Manager client. For information about how to configure the client, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md)  
 
 > [!NOTE]  
->  A Configuration Manager client might be installed but not displayed in the Configuration Manager console. This scenario can happen if the client hasn’t yet successfully assigned to a site, or the console must be refreshed or a collection membership updated.  
+>  A Configuration Manager client might be installed but not displayed in the Configuration Manager console. This scenario can happen if the client hasn't yet successfully assigned to a site, or the console must be refreshed or a collection membership updated.  
 >   
 >  Additionally, a device can also display in the console when the Configuration Manager client is not installed. This scenario can happen if the device is discovered but the Configuration Manager client is not installed and assigned. Mobile devices that are managed by using the Exchange Server connector do not install the Configuration Manager client. Additionally, devices that are enrolled by Microsoft Intune do not install the Configuration Manager client.  
 >   
 >  Use the **Client** column in the Configuration Manager console to determine whether the Configuration Manager client is installed so that you can manage it from the Configuration Manager console.  
-
--   [Manage Clients from the Devices Node](#BKMK_ManagingClients_DevicesNode)  
-
--   [Manage Clients from the Device Collections Node](#BKMK_ManagingClients_DeviceCollectionsNode)  
-
--   [Configure the Client Cache for Configuration Manager Clients](#BKMK_ClientCache)  
-
--   [Uninstall the Configuration Manager Client](#BKMK_UninstalClient)  
-
--   [Manage Conflicting Records for Configuration Manager Clients](#BKMK_ConflictingRecords)  
-
--   [Initiate Policy Retrieval for a Configuration Manager Client](#BKMK_PolicyRetrieval)  
 
 ##  <a name="BKMK_ManagingClients_DevicesNode"></a> Manage Clients from the Devices Node  
  Use the following procedure and table to manage one or more devices from the **Devices** node in the **Assets and Compliance** workspace.  
@@ -156,7 +126,7 @@ When a System Center Configuration Manager client is installed and successfully 
          This action permanently removes all data on the mobile device, which includes personal settings and personal data. Typically, this action resets the mobile device back to factory defaults. Wipe a mobile device when the mobile device is no longer trusted; for example, it has been lost or stolen.  
 
         > [!TIP]  
-        >  Check the manufacturer’s documentation for more information about how the mobile device processes a remote wipe command.  
+        >  Check the manufacturer's documentation for more information about how the mobile device processes a remote wipe command.  
 
          When you send a wipe request, there is often a delay until the mobile device receives the wipe command:  
 
@@ -176,7 +146,7 @@ When a System Center Configuration Manager client is installed and successfully 
 
          You can change the ownership of devices to **Company** or **Personal** if a device is not domain-joined and does not have the Configuration Manager client installed.  
 
-         You can use this value in application requirements to control deployments and you can also use this configuration to control how much inventory is collected from users’ devices.  
+         You can use this value in application requirements to control deployments and you can also use this configuration to control how much inventory is collected from users' devices.  
 
         To see the ownership value in the devices list, you may need to add the column to the view by right-clicking any column heading and choosing **Device Owner**.
 
@@ -373,7 +343,7 @@ Beginning in Release 1606, you can adjust the size of the client cache folder wi
     -   **Block** to create a new record for the conflicting client record, but mark it as blocked.  
 
 ##  <a name="BKMK_PolicyRetrieval"></a> Initiate Policy Retrieval for a Configuration Manager Client  
- A Windows Configuration Manager client downloads its client policy on a schedule that you configure as a client setting. However, there might be occasions when you want to initiate ad-hoc policy retrieval from the client—for example, in a troubleshooting scenario or when you are testing.  
+ A Windows Configuration Manager client downloads its client policy on a schedule that you configure as a client setting. However, there might be occasions when you want to initiate ad-hoc policy retrieval from the client; for example, in a troubleshooting scenario or when you are testing.  
 
  Use the following procedures to initiate ad-hoc policy retrieval from the client outside its scheduled polling interval, either by using the **Actions** tab on the Configuration Manager client or by running a script on the computer. You must be logged on to the client computer with local administrative rights to perform these procedures.  
 
@@ -454,6 +424,7 @@ Beginning in Release 1606, you can adjust the size of the client cache folder wi
 
     -   Navigate to the file by using Windows Explorer, and double-click the script file.  
 
-    -   Open a command prompt, and type: **cscript <path\filename.vbs>**.  
+    -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
 
 5.  Click **OK** in the **Windows Script Host** dialog box.  
+

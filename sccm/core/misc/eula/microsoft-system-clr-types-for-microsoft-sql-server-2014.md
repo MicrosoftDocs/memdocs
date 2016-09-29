@@ -8,19 +8,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0539a3d-c56b-40e2-b291-55fb8f74d714
 caps.latest.revision: 7
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
-translation.priority.ht:
-  - de-de
-  - es-es
-  - fr-fr
-  - it-it
-  - ja-jp
-  - ko-kr
-  - pt-br
-  - ru-ru
-  - zh-cn
-  - zh-tw
+
 ---
 # MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014
 **MICROSOFT SOFTWARE LICENSE TERMS**  
@@ -49,7 +39,7 @@ translation.priority.ht:
 
         1.  **Right to Use and Distribute. If you comply with the terms below:**  
 
-            -   You may copy and distribute the object code form of the software (“**Distributable Code**”) in programs you develop; and  
+            -   You may copy and distribute the object code form of the software ("**Distributable Code**") in programs you develop; and  
 
             -   You may permit distributors of your programs to copy and distribute the Distributable Code as part of those programs.  
 
@@ -65,13 +55,13 @@ translation.priority.ht:
 
             -   display your valid copyright notice on your programs; and  
 
-            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.  
+            -   indemnify, defend, and hold harmless Microsoft from any claims, including attorneys' fees, related to the distribution or use of your programs.  
 
         3.  **Distribution Restrictions. You may not**  
 
             -   alter any copyright, trademark or patent notice in the Distributable Code;  
 
-            -   use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;  
+            -   use Microsoft's trademarks in your programs' names or in a way that suggests your programs come from or are endorsed by Microsoft;  
 
             -   distribute Distributable Code to run on a platform other than the Windows platform;  
 
@@ -107,7 +97,7 @@ translation.priority.ht:
 
 7.  **EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see [www.microsoft.com/exporting](http://www.microsoft.com/exporting).  
 
-8.  **SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.  
+8.  **SUPPORT SERVICES.** Because this software is "as is," we may not provide support services for it.  
 
 9. **ENTIRE AGREEMENT.** This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.  
 
@@ -119,11 +109,11 @@ translation.priority.ht:
 
 11. **LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
 
-12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE**   
+12. **DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED "AS-IS." YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE**   
     **ADDITIONAL CONSUMER RIGHTS OR STATUTORY GUARANTEES UNDER YOUR LOCAL LAWS WHICH**   
     **THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.**  
 
-     **FOR AUSTRALIA – YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
+     **FOR AUSTRALIA - YOU HAVE STATUTORY GUARANTEES UNDER THE AUSTRALIAN CONSUMER LAW AND NOTHING IN THESE TERMS IS INTENDED TO AFFECT THOSE RIGHTS.**  
 
 13. **LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT**   
     **AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.**  
@@ -135,3 +125,4 @@ translation.priority.ht:
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
     It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+

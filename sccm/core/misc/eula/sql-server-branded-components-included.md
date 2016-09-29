@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Branded Components included with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 067675e6-bfae-44d9-ac86-3bf91e4fc600
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
 # SQL Server Branded Components included with System Center Configuration Manager
@@ -28,3 +28,4 @@ Applies to System Center Configuration Manager (current branch – version 1511 
 -   [MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)](http://go.microsoft.com/fwlink/?LinkID=787074)  
   
 -   [MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014](http://go.microsoft.com/fwlink/?LinkID=787075)
+

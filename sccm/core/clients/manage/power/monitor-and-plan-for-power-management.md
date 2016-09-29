@@ -1,7 +1,7 @@
 ---
-title: "How to monitor and plan for power management in System Center Configuration Manager"
+title: "Monitor and plan for power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # How to monitor and plan for power management in System Center Configuration Manager
 Use the following information to help you monitor and plan for power management in System Center Configuration Manager.  
@@ -632,3 +614,4 @@ Use the following information to help you monitor and plan for power management 
 |Report Name|Details|  
 |-----------------|-------------|  
 |**Computer Details**|Click a computer name to see the power capabilities, power settings, and applied power plans for the selected computer.<br /><br /> For more information, see [Computer Details Report](#BKMK_Computer_Details) in this topic.|  
+

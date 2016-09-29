@@ -1,7 +1,7 @@
 ---
 title: "Hardware inventory for Linux and UNIX in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 caps.latest.revision: 6
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Hardware inventory for Linux and UNIX in System Center Configuration Manager
 The System Center Configuration Manager client for Linux and UNIX supports hardware inventory. After you collect hardware inventory you can run view inventory in the resource explorer or Configuration Manager reports, and use this information to create queries and collections that enable the following operations:  
@@ -132,3 +114,4 @@ The System Center Configuration Manager client for Linux and UNIX supports hardw
  Before Configuration Manager can report on inventory that is reported by the new provider on Linux and UNIX computers, you must import the Managed Object Format (MOF) file that defines the schema of your custom provider.  
 
  To import a custom MOF file into Configuration Manager, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
+

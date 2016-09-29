@@ -1,7 +1,7 @@
 ---
-title: "How to deploy applications with System Center Configuration Manager"
+title: "Deploy applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,46 +12,24 @@ ms.topic: article
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
-# How to deploy applications with System Center Configuration Manager
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
+# Deploy applications with System Center Configuration Manager
+ 
   
- Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
+ Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [Create applications ](../../apps/deploy-use/create-applications.md).  
   
 > [!IMPORTANT]  
 >  You can deploy (install/uninstall) required applications, but not packages or software updates. Mobile devices also do not support simulated deployments.  
 >   
 >  Additionally, mobile devices do not support user experience and scheduling settings in the Deploy Software Wizard.  
   
- You can also simulate an application deployment. This type of deployment tests the applicability of an application deployment to computers without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements and dependencies for a deployment type, and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [How to simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md).  
+ You can also simulate an application deployment. This type of deployment tests the applicability of an application deployment to computers without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements and dependencies for a deployment type, and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments ](../../apps/deploy-use/simulate-application-deployments.md).  
   
-### To deploy an application  
+## Deploy an application  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  In the **Applications** list, select the application that you want to deploy. Then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
   
@@ -70,7 +48,7 @@ translation.priority.ht:
   
     -   **Comments (optional)** – Optionally, enter a description of this deployment.  
   
-5.  On the **Content** page of the wizard, click **Add** to add the content that is associated with this deployment to distribution points or distribution point groups. If you have selected Use default distribution points associated to this collection on the **General** page of the wizard, then this option will be automatically populated and can only be modified by a member of the **Application Administrator** security role.  
+5.  On the **Content** page, click **Add** to add the content that is associated with this deployment to distribution points or distribution point groups. If you have selected Use default distribution points associated to this collection on the **General** page, then this option will be automatically populated and can only be modified by a member of the **Application Administrator** security role.  
   
 6.  Click **Next**.  
   
@@ -92,7 +70,7 @@ translation.priority.ht:
             > [!NOTE]  
             >  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
   
-    -   Deploy automatically according to schedule whether or not a user is logged on – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
+    -   **Deploy automatically according to schedule whether or not a user is logged on** – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
   
     -   **Send wake-up packets** – If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
   
@@ -121,13 +99,13 @@ translation.priority.ht:
   
 11. On the **Alerts** page of the Deploy Software Wizard, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure thresholds for reporting alerts and turn off reporting for the duration of the deployment.  
   
-12. (for iOS apps only) - On the **App Configuration Policies** page of the wizard, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
+12. (for iOS apps only) - On the **App Configuration Policies** page, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
   
 13. On the **Summary** page of the Deploy Software Wizard, review the actions that will be taken by this deployment, and then click **Next** to complete the wizard.  
   
  The new deployment will be displayed in the **Deployments** list in the **Deployments** node of the **Monitoring** workspace. You can edit the properties of this deployment or delete the deployment from the **Deployments** tab of the application detail pane.  
   
-### To delete an application deployment  
+## Delete an application deployment  
   
 1.  In the Configuration Manager console, click **Software Library**.  
   
@@ -139,5 +117,5 @@ translation.priority.ht:
   
  When you delete an application deployment, any instances of the application that have already been installed are not removed. To remove these applications, you must deploy the application to computers with the action **Uninstall**. If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+
+

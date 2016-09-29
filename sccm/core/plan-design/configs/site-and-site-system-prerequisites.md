@@ -1,7 +1,7 @@
 ---
-title: "Site and site system prerequisites for System Center Configuration Manager"
+title: "Site prerequisites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-12
+ms.date: 08/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Site and site system prerequisites for System Center Configuration Manager
 

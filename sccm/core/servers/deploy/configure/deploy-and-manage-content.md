@@ -1,7 +1,7 @@
 ---
-title: "Deploy and manage content for System Center Configuration Manager"
+title: "Deploy content | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Deploy and manage content for System Center Configuration Manager
 After you install distribution points for System Center Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
@@ -148,7 +148,7 @@ Use the following sections to prestage content.
     > [!NOTE]  
     >  **For Applications:** On the **Home** tab, in the **Application** group, click **Create Prestaged Content File**.  
     >   
-    >  **For Packages:** On the **Home** tab, in the <*PackageName*> group, click **Create Prestaged Content File**.  
+    >  **For Packages:** On the **Home** tab, in the &lt;*PackageName*> group, click **Create Prestaged Content File**.  
 
 4.  On the **General** page, click **Browse**, choose the location for the prestaged content file, specify a name for the file, and then click **Save**. You use this prestaged content file on primary site servers, secondary site servers, or distribution points to import the content and metadata.  
 
@@ -245,16 +245,16 @@ Use the following sections to prestage content.
 
 1.  Copy the prestaged content file to the computer from which you want to extract the content.  
 
-2.  Copy the Extract Content command-line tool from <*ConfigMgrInstallationPath*>\bin\\<*platform*> to the computer from which you want to extract the prestaged content file.  
+2.  Copy the Extract Content command-line tool from &lt;*ConfigMgrInstallationPath*>\bin\\&lt;*platform*> to the computer from which you want to extract the prestaged content file.  
 
 3.  Open the command prompt and navigate to the folder location of the prestaged content file and Extract Content tool.  
 
     > [!NOTE]  
     >  You can extract one or more prestaged content files on a site server, secondary site server, or distribution point.  
 
-4.  Type **extractcontent /P:**<*PrestagedFileLocation*>**\\**<*PrestagedFileName*> **/S** to import a single file.  
+4.  Type **extractcontent /P:**&lt;*PrestagedFileLocation*>**\\**&lt;*PrestagedFileName*> **/S** to import a single file.  
 
-     Type **extractcontent /P:**<*PrestagedFileLocation*> **/S** to import all prestaged files in the specified folder.  
+     Type **extractcontent /P:**&lt;*PrestagedFileLocation*> **/S** to import all prestaged files in the specified folder.  
 
      For example, type **extractcontent /P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S** where `D:\PrestagedFiles\` is the PrestagedFileLocation, `MyPrestagedFile.pkgx` is the prestaged file name, and `/S` informs Configuration Manager to extract only content files that are newer than what is currently on the distribution point.  
 

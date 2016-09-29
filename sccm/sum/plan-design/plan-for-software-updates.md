@@ -1,100 +1,65 @@
 ---
-title: "Plan for software updates | System Center Configuration Manager"
-ms.custom: na
-ms.date: 2016-08-11
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Plan for software updates | System Center Configuration Manager
+description:
+keywords:
+author: dougebymanager: angrobe
+ms.date: 09/27/2016
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology: 
+	- configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-caps.latest.revision: 19
-author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+#ms.reviewer:
+#ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Plan for software updates in System Center Configuration Manager
-Before you implement software updates in a System Center 2012 Configuration Manager production environment, you must first plan for this implementation. Use the following sections in this topic to plan for software updates in your Configuration Manager hierarchy:  
+Before you use software updates in a System Center Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation.
 
--   [Capacity planning for the software update point](#BKMK_SUMCapacity)  
+## Capacity planning recommendations for software updates  
+ You can use the following recommendations as a baseline that can help you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations that are listed in this topic depending on the following criteria: your specific networking environment, the hardware that you use to host the software update point site system, the number of clients that are installed, and the site system roles that are installed on the server.  
 
--   [Determine the software update point infrastructure](#BKMK_SUPInfrastructure)  
+###  <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
+ The number of supported clients depends on the version of Windows Server Update Services (WSUS) that runs on the software update point, and it also depends on whether the software update point site system role co-exists with another site system role:  
 
-    -   [Software update points in Configuration Manager](#BKMK_SUP)  
+-   The software update point can support up to 25,000 clients when WSUS runs on the software update point computer and the software update point co-exists with another site system role.  
 
-        -   [Software update point list](#BKMK_SUPList)  
+-   The software update point can support up to 150,000 clients when the remote computer meets the WSUS requirements to support this number of clients.   
+    By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
 
-        -   [Software update point switching](#BKMK_SUPSwitching)  
+### Capacity planning for software updates objects  
+ Use the following capacity information to plan for software updates objects.  
 
-        -   [Manually switching clients to a new software update point](#BKMK_ManuallySwitchSUPs)
+-   **Limit of 1000 software updates in a deployment**  
 
-        -   [Software update points in an untrusted forest](#BKMK_SUP_CrossForest)  
+     You must limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule, specify a criteria that limits the number of software updates that are returned. The automatic deployment rule fails when the criteria that you specify returns more than 1000 software updates. You can check the status of the automatic deployment rule from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, do not select more than 1000 updates to deploy.  
 
-        -   [Use an existing WSUS server as the synchronization source at the Top-level site](#BKMK_WSUSSyncSource)  
-        -   [Software update point on a secondary site](#BKMK_SUPSecSite)  
-
--   [Planning for Software Update Point Installation](#BKMK_SUPInstallation)  
-
-    -   [Requirements for the software update point](#BKMK_SUPSystemRequirements)  
-
-    -   [Plan for WSUS installation](#BKMK_PlanningForWSUS)  
-
-    -   [Configure firewalls](#BKMK_ConfigureFirewalls)  
-
--   [Plan for synchronization settings](#BKMK_SyncSettings)  
-
-    -   [Synchronization source](#BKMK_SyncSource)  
-
-    -   [Synchronization schedule](#BKMK_SyncSchedule)  
-
-    -   [Update classifications](#BKMK_UpdateClassifications)  
-
-    -   [Products](#BKMK_UpdateProducts)  
-
-    -   [Supersedence rules](#BKMK_SupersedenceRules)  
-
-    -   [Languages](#BKMK_UpdateLanguages)  
-
--   [Plan for settings associated with software updates](#BKMK_Settings)  
-
-    -   [Client settings for software updates](#BKMK_ClientSettings)  
-
-    -   [Client cache setting](#BKMK_ClientCache)  
-
-    -   [Group policy settings for software updates](#BKMK_GroupPolicySettings)  
-
--   [Plan for a Software Updates Maintenance Window](#BKMK_MaintenanceWindow)  
-
--   [Restart options for Windows 10 clients after software update installation](#BKMK_RestartOptions)
-
-
+     You must also limit the number of software updates to 1000 in a configuration baseline. For more information, see [How to create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
  The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
 
 > [!IMPORTANT]  
->  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  
+>  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates in System Center Configuration Manager](../../sup/plan-design/prerequisites-for-software-updates.md).  
 
+###  <a name="BKMK_SUP"></a> Software update points in Configuration Manager  
+ You can add multiple software update points at a Configuration Manager primary site. The ability to have multiple software update points at a site provides fault tolerance without requiring the complexity of NLB. However, the failover that you receive with multiple software update points is not as robust as NLB for pure load balancing, but it is rather designed for fault-tolerance. Also, the failover design of the software update point is different than the pure randomization model that is used in the design for management points. Unlike in the design of management points, in the software update points there are client and network performance costs that are associated with switching to a new software update point. When the client switches to a new WSUS server to scan for software updates, the result is an increase in the catalog size and associated client-side and network performance demands. Therefore, the client preserves affinity with the last software update point for which it successfully scanned.  
 
+ The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you added your software update points and initiated software updates synchronization, you can view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
+
+ When a software update point fails, and that software update point is configured as the synchronization source for the other software update points at the site, you must manually remove the failed software update point and select a new software update point to use as the synchronization source. For more information about how to remove a software update point, see the [Remove the software update point site system role](../../sup/deploy-use/configure-software-updates.md#BKMK_RemoveSUP) section in the [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md) topic.  
 
 ####  <a name="BKMK_SUPList"></a> Software update point list  
  Configuration Manager provides the client with a software update point list in the following scenarios: when a new client receives the policy to enable software updates, or when a client cannot contact its software update point and needs to switch to another software update point. The client randomly selects a software update point from the list, and it prioritizes the software update points that are in the same forest. Configuration Manager provides clients with a different list depending on the type of client.  
@@ -122,7 +87,7 @@ Before you implement software updates in a System Center 2012 Configuration Mana
 
 -   If the scan process started, but the client was powered down before the scan completed, it is not considered a scan failure and it does not count as one of the four retries.  
 
-####  <a name="BKMK_ManuallySwitchSUPs"></a>Manually switching clients to a new software update point
+####  <a name="BKMK_ManuallySwitchSUPs"></a>Manually switch clients to a new software update point
 Beginning in Configuration Manager version 1606, you can enable the option for Configuration Manager clients to switch to a new software update point when there are issues with the active software update point. This option results in changes only when a client receives multiple software update points from a management point.  
 
 Enable this option on a device collection or on a set of selected devices. Once enabled, the clients will look for another software update point at the next scan. Depending on your WSUS configuration settings (update classifications, products, whether the software update points share a WSUS database, etc.), the switch to a new software update point will generate additional network traffic. Therefore, you should only use this option when necessary.  
@@ -152,7 +117,7 @@ Enable this option on a device collection or on a set of selected devices. Once 
 ####  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
  The software update point is optional on a secondary site. When you install a software update point on a secondary site, the WSUS database is configured as a replica of the default software update point at the parent primary site. You can install only one software update point at a secondary site. The devices that are assigned to a secondary site are configured to use a software update point at the parent site when a software update point is not installed at the secondary site. Typically, you will install a software update point at a secondary site when there is limited network bandwidth between the devices that are assigned to the secondary site and the software update points at the parent primary site, or when the software update point approaches the capacity limit. After a software update point is successfully installed and configured at the secondary site, a site-wide policy is updated for client computers that are assigned to the site, and they will start to use the new software update point.  
 
-##  <a name="BKMK_SUPInstallation"></a> Planning for Software Update Point Installation  
+##  <a name="BKMK_SUPInstallation"></a> Plan for Software Update Point Installation  
  Before you create a software update point site system role in Configuration Manager, there are several requirements that you must consider depending on your Configuration Manager infrastructure. When you configure the software update point to communicate by using SSL, this section is especially important to review because you must take additional steps for the software update points in your hierarchy will work properly. This section provides information about the steps that you must take to successfully plan and prepare for the software update point installation.  
 
 ###  <a name="BKMK_SUPSystemRequirements"></a> Requirements for the software update point  
@@ -194,7 +159,7 @@ Enable this option on a device collection or on a set of selected devices. Once 
 ###  <a name="BKMK_ConfigureFirewalls"></a> Configure firewalls  
  Software updates on a Configuration Manager central administration site communicate with the WSUS that runs on the software update point, which in turn communicates with the synchronization source to synchronize software updates metadata. Software update points on a child site communicate with the software update point at the parent site. When there is more than one software update point at a primary site, the additional software update points must communicate with the first software update point that is installed at the site, which is the default software update point.  
 
- The firewall might need to be configured to accept the HTTP or HTTPS ports that are used by WSUS in following scenarios: when you have a corporate firewall between the Configuration Manager software update point and the Internet; when you have a software update point and its upstream synchronization source; or when you have the additional software update points. The connection to Microsoft Update is always configured to use port 80 for HTTP and port 443 for HTTPS. You can use a custom port for the connection from WSUS that runs on the software update point at a child site to WSUS that runs on the software update point at the parent site. When your security policy does not allow the  connection, you must use the export and import synchronization method. For more information, see the [Synchronization source](#BKMK_SyncSource) section in this topic. For more information about the ports that are used by WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../sum/plan-design/determine-wsus-port-settings.md).  
+ The firewall might need to be configured to accept the HTTP or HTTPS ports that are used by WSUS in following scenarios: when you have a corporate firewall between the Configuration Manager software update point and the Internet; when you have a software update point and its upstream synchronization source; or when you have the additional software update points. The connection to Microsoft Update is always configured to use port 80 for HTTP and port 443 for HTTPS. You can use a custom port for the connection from WSUS that runs on the software update point at a child site to WSUS that runs on the software update point at the parent site. When your security policy does not allow the  connection, you must use the export and import synchronization method. For more information, see the [Synchronization source](#BKMK_SyncSource) section in this topic. For more information about the ports that are used by WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../sup/plan-design/determine-wsus-port-settings.md).  
 
 #### Restrict Access to Specific Domains  
  If your organization does not allow the ports and protocols to be open to all addresses on the firewall between the active software update point and the Internet, you can restrict access to the following domains, so that WSUS and Automatic Updates can communicate with Microsoft Update:  
@@ -244,7 +209,7 @@ Enable this option on a device collection or on a set of selected devices. Once 
     > [!NOTE]  
     >  The first software update point that you install at a primary site, which is the default software update point, synchronizes with the central administration site. Additional software update points at the primary site synchronize with the default software update point at the primary site.  
 
-     When a software update point is disconnected from Microsoft Update or from the upstream update server, you can configure the synchronization source not to synchronize with a configured synchronization source, but instead to use the export and import function of the WSUSUtil tool to synchronize software updates. For more information, see [Synchronize software updates from a disconnected software update point](../../sum/deploy-use/configure-software-updates.md#BKMK_SyncDisconnected).  
+     When a software update point is disconnected from Microsoft Update or from the upstream update server, you can configure the synchronization source not to synchronize with a configured synchronization source, but instead to use the export and import function of the WSUSUtil tool to synchronize software updates. For more information, see [Synchronize software updates from a disconnected software update point](../deploy-use/configure-software-updates.md#BKMK_SyncDisconnected).  
 
 -   **WSUS reporting events:** The Windows Update Agent on client computers can create event messages that are used for WSUS reporting. These events are not used by software update in Configuration Manager, and therefore, the **Do not create WSUS reporting events** option is selected by default. When these events are not created, the only time that the client computer should connect to the WSUS server is during software update evaluation and compliance scans. If these events are needed for reporting outside of software updates in Configuration Manager, you will need to modify this setting to create WSUS reporting events.  
 
@@ -323,26 +288,6 @@ Enable this option on a device collection or on a set of selected devices. Once 
 > [!IMPORTANT]  
 >  It is important that you select all of the summary details languages that you will need in your Configuration Manager hierarchy. When the software update point on top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that is retrieved. If you modify the summary details languages after synchronization ran at least one time, the software updates metadata is retrieved for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized are not updated with new metadata for the modified languages unless there is a change to the software update on the synchronization source.  
 
-##  <a name="BKMK_Settings"></a> Plan for settings associated with software updates  
- The software updates client settings in Configuration Manager are site-wide and are configured with default values. There are software updates client settings that affect when software updates are scanned for compliance, and how and when software updates are installed on client computers. There are also Group Policy settings on the client computer that might need to be configured depending on your environment. For more information about how to configure settings that are associated with software updates, see the [Step 4: Verify software updates client settings and group policy configurations](../../sum/deploy-use/configure-software-updates.md#BKMK_AssociatedSettings) section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
-
-###  <a name="BKMK_ClientSettings"></a> Client settings for software updates  
- After you install the software update point, the software updates client agent is enabled by default and you are not required to configure specific client settings, but you should review the settings to ensure that the default values meet your needs. You configure software updates and NAP client settings in **Client Settings** in the **Administration** workspace. For more information about how to configure the settings that are associated with software updates, see the [Client settings for software updates](../../sum/deploy-use/configure-software-updates.md#BKMK_ClientSettings) section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
-
-> [!IMPORTANT]  
->  The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from client.  
-
-###  <a name="BKMK_GroupPolicySettings"></a> Group policy settings for software updates  
- There are specific Group Policy settings that are used by Windows Update Agent (WUA) on client computers to connect to the WSUS that runs on the active software updates point, successfully scan for software update compliance, and automatically update the software updates and the WUA.  
-
-> [!WARNING]  
->  If you have an Active Directory Group Policy object assigned to clients that specify a WSUS server that is not a Configuration Manager software update point, it will override the local Group Policy setting that is configured by Configuration Manager. Before you can assess software updates compliance and manage software update deployments on these clients, you must reconfigure the Active Directory Group Policy setting, or move client computers to an organizational unit (OU) that does not have this Group Policy setting applied.  
-
- For more information about how to configure the settings that are associated with software updates, see the  [Group policy settings for software updates](../../sum/deploy-use/configure-software-updates.md#BKMK_GroupPolicy) section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
-
-###  <a name="BKMK_ClientCache"></a> Client cache setting  
- The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually initiates the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  
-
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a Software Updates Maintenance Window  
  You can add a maintenance window dedicated for software updates installation. This lets you configure a general maintenance window and a different maintenance window for software updates. When a general maintenance window and software updates maintenance window are both configured, clients install software updates only during the software updates maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
@@ -353,12 +298,5 @@ Beginning in Configuration Manager version 1606, the option to **Update and Rest
 
 In previous versions of Configuration Manager, when a restart is pending for Windows 8 and later computers, and when you shut down or restart the computer using the Windows Power options (instead of from the restart dialog), the restart dialog remains after the computer restarts and the computer will still need to restart at the configured deadline.
 
-## Supplemental Topics for Planning Software Updates  
- Use the following topics to plan for software updates in Configuration Manager.  
-
--   [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md)  
-
--   [Best practices for software updates in System Center Configuration Manager](../../sum/plan-design/software-updates-best-practices.md)  
-
-## See Also  
- [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+## Next steps
+Once you plan for software updates, see [Prepare for software updates management](prepare-for-software-updates-management.md).

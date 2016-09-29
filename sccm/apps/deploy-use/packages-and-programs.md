@@ -1,7 +1,7 @@
 ---
-title: "Packages and programs in System Center Configuration Manager"
+title: "Packages and programs | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-08
+ms.date: 04/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,68 +12,32 @@ ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Packages and programs in System Center Configuration Manager
 System Center Configuration Manager continues to support packages and programs that were used in Configuration Manager 2007. A deployment that uses packages and programs might be more suitable than a deployment that uses an application when you deploy any of the following:  
   
- Packages and programs can be used to deploy applications to Windows PCs and Linux and UNIX servers.  
+- You want to deploy applications to Linux and UNIX servers.  
+- Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive.  
+- “One-off” scripts that do not need to be continually monitored.  
+- Scripts that run on a recurring schedule and cannot use global evaluation.  
   
--   Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive.  
-  
--   “One-off” scripts that do not need to be continually monitored.  
-  
--   Scripts that run on a recurring schedule and cannot use global evaluation.  
-  
-> [!TIP]  
->  You must use Configuration Manager packages and programs to deploy software to clients that run Linux and UNIX. For more information, see [Creating Linux and UNIX server applications with System Center Configuration Manager](../../apps/get-started/creating-linux-and-unix-server-applications.md).  
-  
- When you migrate packages from an earlier version of Configuration Manager, you can migrate existing packages and deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace. You can modify and deploy these packages in the same way as you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
+When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace. You can modify and deploy these packages in the same way as you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
   
 > [!NOTE]  
 >  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into Configuration Manager applications.  
 >   
 >  For more information, see [Configuration Manager Package Conversion Manager](https://technet.microsoft.com/library/hh531519.aspx).  
   
- Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. Microsoft Application Virtualization (App-V) applications cannot be distributed by using packages and programs in Configuration Manager. To distribute virtual applications, you must create these as Configuration Manager applications.  
+Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. Microsoft Application Virtualization (App-V) applications cannot be distributed by using packages and programs in Configuration Manager. To distribute virtual applications, you must create these as Configuration Manager applications.  
   
- Visit one of the following sections for help creating, deploying, monitoring, and managing Configuration Manager packages and programs:  
-  
--   [How to create packages and programs](#BKMK_create)  
-  
--   [How to deploy packages and programs](#BKMK_Deploy)  
-  
--   [How to monitor packages and programs](#BKMK_Monitor)  
-  
--   [How to manage packages and programs](#BKMK_Manage)  
-  
-##  <a name="BKMK_create"></a> How to create packages and programs  
+##  Create a package and program  
  Use one of these procedures to help you create, or import packages and programs.  
   
-#### Create a package and program using the Create Package and Program wizard  
+### Create a package and program using the Create Package and Program wizard  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Packages**.  
   
 3.  In the **Home** tab, in the **Create** group, click **Create Package**.  
   
@@ -103,11 +67,11 @@ System Center Configuration Manager continues to support packages and programs t
   
 6.  Use one of the following procedures to create a standard program or a device program.  
   
-    ###### To create a standard program  
+    #### Create a standard program  
   
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Standard Program**, and then click **Next**.  
   
-    2.  On the **Standard Program** page of the Wizard, specify the following information:  
+    2.  On the **Standard Program** page, specify the following information:  
   
         -   **Name:** Specify a name for the program with a maximum of 50 characters.  
   
@@ -170,13 +134,13 @@ System Center Configuration Manager continues to support packages and programs t
   
     4.  Click **Next**.  
   
-    ###### To create a device program  
+    #### Create a device program  
   
     1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then click **Next**.  
   
-    2.  On the **Program for Device** page of the Wizard, specify the following information:  
+    2.  On the **Program for Device** page, specify the following:  
   
-        -   **Name** - Specify a name for the program with a maximum of 50 characters.  
+        -   **Name** - Specify a name for the program; maximum 50 characters.  
   
             > [!NOTE]  
             >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
@@ -191,7 +155,7 @@ System Center Configuration Manager continues to support packages and programs t
   
         -   **Run command line from this folder** – Select this option to specify a different folder from which to run the program.  
   
-    3.  On the **Requirements** page of the wizard, specify the following information:  
+    3.  On the **Requirements** page, specify the following:  
   
         -   **Estimated disk space** - Specify the amount of disk space required for the software. This will be displayed to users of mobile devices before they install the program.  
   
@@ -201,35 +165,29 @@ System Center Configuration Manager continues to support packages and programs t
   
     4.  Click **Next**.  
   
-7.  On the **Summary** page of the wizard, review the actions that will be taken, then complete the wizard.  
+7.  On the **Summary** page, review the actions that will be taken, then complete the wizard.  
   
  Verify that the new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
   
-#### Create a package and program from a package definition file  
+## Create a package and program from a package definition file  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Packages**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Package from Definition**.  
   
 4.  On the **Package Definition** page of the Create Package from Definition Wizard, choose an existing package definition file, or click **Browse** to open a new package definition file. After you have specified a new package definition file, select it from the **Package definition** list, and then click **Next**.  
   
-5.  On the **Source Files** page of the wizard, specify information about any required source files for the package and program, and then click **Next**.  
+5.  On the **Source Files** page, specify information about any required source files for the package and program, and then click **Next**.  
   
-6.  If the package requires source files, on the **Source Folder** page of the wizard, specify the location from which the source files are to be obtained, and then click **Next**.  
+6.  If the package requires source files, on the **Source Folder** page, specify the location from which the source files are to be obtained, and then click **Next**.  
   
-7.  On the **Summary** page of the wizard, review the actions that will be taken and then complete the wizard. The new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
+7.  On the **Summary** page, review the actions that will be taken and then complete the wizard. The new package and program is displayed in the **Packages** node of the **Software Library** workspace.  
   
- For more information about package definition files, see [Information about the package definition file format](#BKMK_PDF) in this topic.  
+ For more information about package definition files, see [About the package definition file format](/sccm/apps/deploy-use/packages-and-programs#about-the-package-definition-file-format) in this topic.  
   
-##  <a name="BKMK_Deploy"></a> How to deploy packages and programs  
+##  Deploy packages and programs  
   
-#### To deploy a package and program  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Packages**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Packages**.  
   
 3.  Select the package that you want to deploy, and then in the **Home** tab in the **Deployment** group, click **Deploy**.  
   
@@ -237,9 +195,9 @@ System Center Configuration Manager continues to support packages and programs t
   
      Select **Use default distribution point groups associated to this collection** if you want to store the package content on the collections default distribution point group. If you did not associate the selected collection with a distribution point group, this option will be unavailable.  
   
-5.  On the **Content** page of the wizard, click **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
+5.  On the **Content** page, click **Add**, and then select the distribution points or distribution point groups to which you want to deploy the content that is associated with this package and program.  
   
-6.  On the **Deployment Settings** page of the Wizard, choose a purpose for this deployment, and specify options for wake-up packets, and metered connections:  
+6.  On the **Deployment Settings** page, choose a purpose for this deployment, and specify options for wake-up packets, and metered connections:  
   
     -   **Purpose** - Choose from:  
   
@@ -254,7 +212,7 @@ System Center Configuration Manager continues to support packages and programs t
     > [!NOTE]  
     >  The **Pre-deploy software to the user's primary device** option is not available when you deploy a package and program.  
   
-7.  On the **Scheduling** page of the wizard, configure when this package and program will be deployed or made available to client devices.  
+7.  On the **Scheduling** page, configure when this package and program will be deployed or made available to client devices.  
   
      The options on this page will vary depending on whether the deployment action is set to **Available** or **Required**.  
   
@@ -267,7 +225,7 @@ System Center Configuration Manager continues to support packages and programs t
     |Rerun if failed previous attempt|The program will be rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
     |Rerun if succeeded on previous attempt|The program will be rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
   
-9. On the **User Experience** page of the wizard, specify the following information:  
+9. On the **User Experience** page, specify the following information:  
   
     -   **Allow users to run the program independently of assignments** – If enabled, users can install this software from Software Center regardless of any scheduled installation time.  
   
@@ -278,9 +236,9 @@ System Center Configuration Manager continues to support packages and programs t
     -   **Embedded Devices** - When you deploy packages and programs to Windows Embedded devices that are write filter enabled, you can specify to install the packages and programs on the temporary overlay and commit changes later, or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
   
         > [!NOTE]  
-        >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications with System Center Configuration Manager](../../apps/get-started/creating-windows-embedded-applications.md).  
+        >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
   
-10. On the **Distribution Points** page of the wizard, specify the following information:  
+10. On the **Distribution Points** page, specify the following information:  
   
     -   **Deployment options** – Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  
   
@@ -288,33 +246,33 @@ System Center Configuration Manager continues to support packages and programs t
   
     -   **Allow clients to use a fallback source location for content** – If enabled, clients can search other distribution points in the hierarchy for required content if this is not available on the specified distribution point or distribution point groups.  
   
-11. On the **Summary** page of the wizard, review the actions that will be taken and then complete the wizard.  
+11. On the **Summary** page, review the actions that will be taken and then complete the wizard.  
   
-     You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [How to monitor packages and programs](#BKMK_Monitor) in this topic.  
+     You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [Monitor packages and programs](/sccm/apps/deploy-use/packages-and-programs#monitor-packages-and-programs) in this topic.  
   
 > [!IMPORTANT]  
 >  If you configured the option **Run program from distribution point** on the **Distribution Points** page of the Deploy Software Wizard, do not clear the option **Copy the content in this package to a package share on distribution points**, because this will make the package unavailable to run from distribution points.  
   
-##  <a name="BKMK_Monitor"></a> How to monitor packages and programs  
- To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+##  Monitor packages and programs  
+ To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
   
  Packages and programs also includes a number of built-in reports, which allow you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-##  <a name="BKMK_Manage"></a> How to manage packages and programs  
+##  Manage packages and programs  
  In the **Software Library** workspace, expand **Application Management**, click **Packages**, select the package that you want to manage, and then select a management task from the following table:  
   
 |Task|More information|  
 |----------|----------------------|  
 |**Create Prestage Content File**|Opens the Create Prestaged Content File Wizard that allows you to create a file that contains the package content that can be manually imported to another site. This is useful in situations where you have low network bandwidth between the site server and the distribution point.|  
 |**Create Program**|Opens the Create Program Wizard that allows you to create a new program for this package.|  
-|**Export**|Opens the Export Package Wizard that allows you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see [How to create packages and programs](#BKMK_create) in this topic.|  
-|**Deploy**|Opens the Deploy Software Wizard that allows you to deploy the selected package and program to a collection. For more information, see [How to deploy packages and programs](#BKMK_Deploy) in this topic.|  
+|**Export**|Opens the Export Package Wizard that allows you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see Create packages and programs in this topic.|  
+|**Deploy**|Opens the Deploy Software Wizard that allows you to deploy the selected package and program to a collection. For more information, see [Deploy packages and programs](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) in this topic.|  
 |**Distribute Content**|Opens the Distribute Content Wizard that allows you to send the content that is associated with the package and program to selected distribution points or distribution point groups.|  
 |**Update Distribution Points**|Updates distribution points with the latest content for the selected package and program.|  
   
-##  <a name="BKMK_PDF"></a> Information about the package definition file format  
+##  About the package definition file format  
  Package definition files are scripts that you can use to help automate package and program creation with Configuration Manager. They provide all of the information that Configuration Manager needs in order to create a package and program, except for the location of package source files. Each package definition file is an ASCII or UTF-8 text file following the .ini file format and containing the following described sections:  
   
 -   [[PDF]](#BKMK_Address)  
@@ -445,5 +403,4 @@ System Center Configuration Manager continues to support packages and programs t
   
 -   **Disabled**: Specifies whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

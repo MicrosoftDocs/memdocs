@@ -1,7 +1,7 @@
 ---
 title: "Manage operating system upgrade packages with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Manage operating system upgrade packages with System Center Configuration Manager
 An upgrade package in System Center Configuration Manager contains the Windows Setup source files that are used to upgrade an existing operating system on a computer. Use the following  sections manage operating system upgrade packages in Configuration Manager:  
@@ -109,3 +91,4 @@ An upgrade package in System Center Configuration Manager contains the Windows S
   
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+

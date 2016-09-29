@@ -1,7 +1,7 @@
 ---
 title: "Configure security in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 caps.latest.revision: 5
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Configure security in System Center Configuration Manager
 Use the information in this topic to help you configure the following security-related options for System Center Configuration Manager:  
@@ -143,3 +125,4 @@ Use the following procedure to view which accounts are configured for different 
     >  The password that you specify must match the password that is specified for the account in Active Directory Users and Computers.  
 
 6.  Click **OK** to complete the procedure.  
+

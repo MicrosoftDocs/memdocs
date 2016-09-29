@@ -1,7 +1,7 @@
 ---
-title: "Support for Windows features and networks in System Center Configuration Manager"
+title: "Support for Windows features | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Support for Windows features and networks in System Center Configuration Manager
 This topic identifies System Center Configuration Manager support for common Windows and networking features.  
@@ -101,7 +83,7 @@ Configuration Manager supports the DirectAccess feature in Windows Server 2008 R
 
 -   For server-initiated actions, such as remote control and client push installation, the initiating computer (such as the site server) must be running IPv6, and this protocol must be supported on all intervening networking devices.  
 
- Configuration Manager does not support the following over DirectAccess:  
+Configuration Manager does not support the following over DirectAccess:  
 
 -   Deploying operating systems  
 

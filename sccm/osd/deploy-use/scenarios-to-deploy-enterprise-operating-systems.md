@@ -1,7 +1,7 @@
 ---
 title: "Scenarios to deploy enterprise operating systems with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 caps.latest.revision: 11
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Scenarios to deploy enterprise operating systems with System Center Configuration Manager
 There following operating system deployment scenarios are available in System Center Configuration Manager:  
@@ -75,3 +57,4 @@ There following operating system deployment scenarios are available in System Ce
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](../Topic/Manage%20enterprise%20operating%20systems%20with%20System%20Center%20Configuration%20Manager.md)
+

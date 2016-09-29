@@ -1,7 +1,7 @@
 ---
 title: "Configure clients find management points DNS publishing | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager
 Clients in System Center Configuration Manager must locate a management point to complete site assignment and as an on-going process to remain managed. Active Directory Domain Services provides the most secure method for clients on the intranet to find management points. However, if clients cannot use this service location method (for example, you have not extended the Active Directory schema, or clients are from a workgroup), use DNS publishing as the preferred alternative service location method.  
@@ -42,7 +24,7 @@ Clients in System Center Configuration Manager must locate a management point to
 
  For more information about DNS publishing as a service location method for Configuration Manager clients, see [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
- By default, clients search DNS for management points in their DNS domain. However, if there are no management points published in the clients’ domain, you must manually configure clients with a management point DNS suffix. You can configure this DNS suffix on clients either during or after client installation:  
+ By default, clients search DNS for management points in their DNS domain. However, if there are no management points published in the clients' domain, you must manually configure clients with a management point DNS suffix. You can configure this DNS suffix on clients either during or after client installation:  
 
 -   To configure clients for a management point suffix during client installation, configure the CCMSetup Client.msi properties.  
 
@@ -65,3 +47,4 @@ Clients in System Center Configuration Manager must locate a management point to
 2.  On the **Site** tab, specify the DNS suffix of a management point, and then click **OK**.  
 
      If the site has more than one management point and they are in more than one domain, specify just one domain. When clients connect to a management point in this domain, they download a list of available management points, which will include the management points from the other domains.
+

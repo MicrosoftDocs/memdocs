@@ -1,7 +1,7 @@
 ---
-title: "Security and privacy for queries in System Center Configuration Manager"
+title: "Security and privacy for queries | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Security and privacy for queries in System Center Configuration Manager
 Queries in System Center Configuration Manager let you retrieve information from the site database based on the criteria that you specify. Configuration Manager collects the site database information during standard operation. For example, by using information that has been collected from discovery or inventory, you can configure a query to identify devices that meet specified criteria.  
@@ -47,3 +29,4 @@ Queries in System Center Configuration Manager let you retrieve information from
   
 ## See Also  
  [Queries technical reference for System Center Configuration Manager](../../../core/servers/manage/queries-technical-reference.md)
+

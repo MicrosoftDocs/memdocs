@@ -1,7 +1,7 @@
 ---
-title: "Best practices for collections in System Center Configuration Manager"
+title: "Collections best practices | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Best practices for collections in System Center Configuration Manager
 Use the following best practices for collections in System Center Configuration Manager.  
@@ -49,3 +31,4 @@ Use the following best practices for collections in System Center Configuration 
 
 ## Make sure that maintenance windows are large enough to deploy critical software updates  
  You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the attack that is mitigated by the software update.  
+

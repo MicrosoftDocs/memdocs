@@ -1,7 +1,7 @@
 ---
 title: "Monitor Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 caps.latest.revision: 8
-author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnmanager: angrobe
+
 ---
 # How to monitor Endpoint Protection in System Center Configuration Manager
 You can monitor Endpoint Protection in your Microsoft System Center 2012 Configuration Manager hierarchy by using the **Endpoint Protection Status** node in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
@@ -89,3 +71,4 @@ You can monitor Endpoint Protection in your Microsoft System Center 2012 Configu
 |**Allowed**|An administrative user selected to allow the software that contains the malware to run.|  
 |**No Action**|Endpoint Protection took no action on the malware. This might occur if the computer is restarted after malware is detected and the malware is no longer detected; for instance, if a mapped network drive on which malware is detected is not reconnected when the computer restarts.|  
 |**Blocked**|Endpoint Protection blocked the malware from running. This might occur if a process on the computer is found to contain malware.|
+

@@ -4,13 +4,14 @@
 title: Add software updates to an update group | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
+
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
+	- configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 
 # optional metadata
@@ -62,3 +63,4 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 6.  Click the **Software Update Groups** node to display the software update group.  
 
 7.  Select the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates that are included in the software update group.  
+

@@ -1,7 +1,7 @@
 ---
 title: "Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-02-04
+ms.date: 02/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 caps.latest.revision: 9
-author: Mtillman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager
 System Center Configuration Manager On\-premises Mobile Device Management requires the following site system roles in your Configuration Manager site infrastructure:  
@@ -82,3 +64,4 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
   
 ## See Also  
  [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
+

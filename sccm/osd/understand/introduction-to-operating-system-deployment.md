@@ -1,7 +1,7 @@
 ---
 title: "Introduction to operating system deployment in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: 12
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Introduction to operating system deployment in System Center Configuration Manager
 The following sections explain some of the concepts that are used to deploy operating systems in your Configuration Manager environment:  
@@ -167,3 +149,4 @@ The following sections explain some of the concepts that are used to deploy oper
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](assetId:///c6b0ff4c-235a-4e4c-99c0-d14d202de478)
+

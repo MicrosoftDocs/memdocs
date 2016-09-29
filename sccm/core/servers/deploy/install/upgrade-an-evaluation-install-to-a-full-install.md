@@ -1,7 +1,7 @@
 ---
-title: "Upgrade an Evaluation install of System Center Configuration Manager to a Full install"
+title: "Upgrade Evaluation installs | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Upgrade an Evaluation install of System Center Configuration Manager to a Full install
 

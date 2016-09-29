@@ -1,7 +1,7 @@
 ---
-title: "Configuring reporting in System Center Configuration Manager"
+title: "Configure reporting | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 caps.latest.revision: 6
-author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Configuring reporting in System Center Configuration Manager
 Before you can create, modify, and run reports in the System Center Configuration Manager console, you must carry out a number of configuration tasks. Use the following sections in this topic to help you configure reporting in your Configuration Manager hierarchy:  
@@ -205,9 +187,9 @@ Before you can create, modify, and run reports in the System Center Configuratio
 
 5.  Specify a date and time for a period before you installed the reporting services point, and then click **OK**.  
 
-6.  Verify that status message ID 1015 is listed, which indicates that the reporting services point was successfully installed. Alternatively, you can open the Srsrp.log file, located in <*ConfigMgr Installation Path*>\Logs, and look for **Installation was successful**.  
+6.  Verify that status message ID 1015 is listed, which indicates that the reporting services point was successfully installed. Alternatively, you can open the Srsrp.log file, located in &lt;*ConfigMgr Installation Path*>\Logs, and look for **Installation was successful**.  
 
-     In Windows Explorer, navigate to <*ConfigMgr Installation Path*>\Logs.  
+     In Windows Explorer, navigate to &lt;*ConfigMgr Installation Path*>\Logs.  
 
 7.  Open Srsrp.log and step through the log file starting from the time that the reporting services point was successfully installed. Verify that the report folders were created, the reports were deployed, and the security policy on each folder was confirmed. Look for **Successfully checked that the SRS web service is healthy on server** after the last line of security policy confirmations.  
 

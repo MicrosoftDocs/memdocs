@@ -1,7 +1,7 @@
 ---
-title: "Security and privacy for Asset Intelligence in System Center Configuration Manager"
+title: "Asset Intelligence security privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Security and privacy for Asset Intelligence in System Center Configuration Manager
 This topic contains security and privacy information for Asset Intelligence in System Center Configuration Manager.  
@@ -66,3 +48,4 @@ This topic contains security and privacy information for Asset Intelligence in S
 -   Uploaded data cannot be recalled.  
 
  Before you configure Asset Intelligence data collection and decide whether to submit information to System Center Online, consider the privacy requirements of your organization.  
+

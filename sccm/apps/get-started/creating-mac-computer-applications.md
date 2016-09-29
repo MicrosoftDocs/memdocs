@@ -1,7 +1,7 @@
 ---
-title: "Create Mac computer applications with System Center Configuration Manager"
+title: "Create Mac computer applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 caps.latest.revision: 9
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Create Mac computer applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Mac computers.  
@@ -39,7 +21,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 >  The procedures in this topic cover information about deploying applications to Mac computer on which you installed the Configuration Manager client. Mac computers that you enrolled with Microsoft Intune do not support application deployment.  
   
 ## General considerations  
- You can use Microsoft System Center 2012 Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to those that are used to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
+ You can use System Center Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to those that are used to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
   
 -   Before you can deploy Mac application packages to Mac computers, you must use the **CMAppUtil** tool on a Mac computer to convert these applications into a format that can be read by Configuration Manager.  
   
@@ -60,16 +42,16 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 |Step|Details|  
 |----------|-------------|  
-|[Step 1: Prepare Mac applications for Configuration Manager](#BKMK_Step1)|Before you can create Configuration Manager applications from Mac software packages, you must use the **CMAppUtil** tool on a Mac computer to convert the Mac software into a Configuration Manager**.cmmac** file.|  
-|[Step 2: Create a Configuration Manager application that contains the Mac software](#BKMK_Step2)|Use the Create Application Wizard to create an application for the Mac software.|  
-|[Step 3: Create a deployment type for the Mac application](#BKMK_Step3)|This step is required only if you did not automatically import this information from the application.|  
-|[Step 4: Deploy the Mac application](#BKMK_Step4)|Use the Deploy Software Wizard to deploy the application to Mac computers.|  
-|[Step 5: Monitor the Deployment of the Mac Application](#BKMK_Step5)|Monitor the success of application deployments to Mac computers.|  
+|Step 1: Prepare Mac applications for Configuration Manager|Before you can create Configuration Manager applications from Mac software packages, you must use the **CMAppUtil** tool on a Mac computer to convert the Mac software into a Configuration Manager**.cmmac** file.|  
+|Step 2: Create a Configuration Manager application that contains the Mac software|Use the Create Application Wizard to create an application for the Mac software.|  
+|Step 3: Create a deployment type for the Mac application|This step is required only if you did not automatically import this information from the application.|  
+|Step 4: Deploy the Mac application|Use the Deploy Software Wizard to deploy the application to Mac computers.|  
+|Step 5: Monitor the Deployment of the Mac Application|Monitor the success of application deployments to Mac computers.|  
   
 ## Supplemental procedures to create and deploy applications for Mac computers  
  Use the following procedures to create and deploy applications for Mac computers that are managed by Configuration Manager.  
   
-###  <a name="BKMK_Step1"></a> Step 1: Prepare Mac applications for Configuration Manager  
+###  Step 1: Prepare Mac applications for Configuration Manager  
  The required process to create and deploy Configuration Manager applications to Mac computers is similar to the deployment process for Windows computers. However, before you create Configuration Manager applications that contain Mac deployment types, you must prepare the applications by using the **CMAppUtil** tool. This tool is downloaded with the Mac client installation files. The **CMAppUtil** tool can gather information about the application, which includes detection data from the following Mac packages:  
   
 -   Apple Disk Image (.dmg)  
@@ -80,9 +62,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 -   Mac OS X Application (.app)  
   
- After it gathers application information, the **CMAppUtil** then creates a file with the extension **.cmmac**. This file contains the installation files for the Mac software and information about detection methods that can be used to evaluate whether the application is already installed. **CMAppUtil** can also process **.dmg** files that contain multiple Mac applications and create different deployment types for each application.  
-  
-##### To prepare Mac software to be deployed by Configuration Manager  
+After it gathers application information, the **CMAppUtil** then creates a file with the extension **.cmmac**. This file contains the installation files for the Mac software and information about detection methods that can be used to evaluate whether the application is already installed. **CMAppUtil** can also process **.dmg** files that contain multiple Mac applications and create different deployment types for each application.  
   
 1.  Copy the Mac software installation package to the folder on the Mac computer where you extracted the contents of the **macclient.dmg** file that you downloaded from the Microsoft Download Center.  
   
@@ -113,14 +93,10 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 4.  Ensure that the **.cmmac** file has been created in the output folder that you specified.  
   
-###  <a name="BKMK_Step2"></a> Step 2: Create a Configuration Manager application that contains the Mac software  
+###  Create a Configuration Manager application that contains the Mac software  
  Use the following procedure to help you create an application for Mac computers that are managed by Configuration Manager.  
   
-##### To create an application for a Mac computer  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
   
@@ -149,17 +125,13 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 11. The new application is displayed in the **Applications** node of the Configuration Manager console.  
   
-###  <a name="BKMK_Step3"></a> Step 3: Create a deployment type for the Mac application  
+###  Step 3: Create a deployment type for the Mac application  
  Use the following procedure to help you create a deployment type for Mac computers that are managed by Configuration Manager.  
   
 > [!NOTE]  
 >  If you automatically imported information about the application in the Create Application Wizard, a deployment type for the application might already have been created.  
   
-##### To create a deployment type for a Mac computer  
-  
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
   
 3.  Select an application and then, on the **Home** tab, in the **Application** group, click **Create Deployment Type** to create a new deployment type for this application.  
   
@@ -205,11 +177,11 @@ In addition to the other System Center Configuration Manager requirements and pr
   
 18. On the **Summary** page of the **Create Deployment Type Wizard**, review the actions for the wizard to take.  If necessary, click **Previous** to go back and change deployment type settings. Click **Next** to create the deployment type.  
   
-19. After the **Progress** page of the Wizard completes, review the actions that have been taken, and then click **Close** to complete the **Create Deployment Type Wizard**.  
+19. After the **Progress** page finishes, review the actions that have been taken, and then click **Close** to complete the **Create Deployment Type Wizard**.  
   
-20. If you started this wizard from the **Create Application Wizard**, you will return to the **Deployment Types** page of the wizard.  
+20. If you started this wizard from the **Create Application Wizard**, you will return to the **Deployment Types** page.  
   
-###  <a name="BKMK_Step4"></a> Step 4: Deploy the Mac application  
+###  Deploy the Mac application  
  The steps to deploy an application to Mac computers are the same as those used to deploy an application to Windows computers, except for the following differences:  
   
 -   The deployment of applications to users is not supported.  
@@ -223,14 +195,13 @@ In addition to the other System Center Configuration Manager requirements and pr
 -   The option to send wake-up packets when you deploy software is not supported for Mac computers.  
   
 > [!NOTE]  
->  You can build a collection containing only Mac computers. To do so, create a collection that uses a query rule and use the example WQL query in the [How to create queries in System Center Configuration Manager](../../core/servers/manage/create-queries.md) topic.  
+>  You can build a collection containing only Mac computers. To do so, create a collection that uses a query rule and use the example WQL query in the [How to create queries](../../core/servers/manage/create-queries.md) topic.  
   
- For more information, see [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
+ For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
   
-###  <a name="BKMK_Step5"></a> Step 5: Monitor the Deployment of the Mac Application  
+###  Step 5: Monitor the Deployment of the Mac Application  
  You can use the same process to monitor application deployments to Mac computers as you would use for application deployments to Windows computers.  
   
- For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+ For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
   
-## See Also  
- [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md)
+

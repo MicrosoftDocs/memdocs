@@ -4,13 +4,13 @@
 title: Manually deploy software updates | Configuration Manager
 description:
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
-ms.technology:
+ms.technology: 
+	- configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 # optional metadata
@@ -309,4 +309,9 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
  After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
+<<<<<<< HEAD
+For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+=======
 For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+
+>>>>>>> 072572c758b15aae9981f7e913acf6802867e3b4

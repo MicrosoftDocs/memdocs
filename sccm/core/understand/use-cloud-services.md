@@ -1,7 +1,7 @@
 ---
-title: "Use cloud services with System Center Configuration Manager"
+title: "Use cloud services | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: get-started-article
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Use cloud services with System Center Configuration Manager
 System Center Configuration Manager supports several cloud-based options that supplement your on-premises infrastructure and can help solve business problems like:  

@@ -1,7 +1,7 @@
 ---
-title: "How to manage queries in System Center Configuration Manager"
+title: "Manage queries | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # How to manage queries in System Center Configuration Manager
 Use the information in this topic to help you manage queries in System Center Configuration Manager.  
@@ -52,3 +34,4 @@ Use the information in this topic to help you manage queries in System Center Co
   
 ## See Also  
  [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
+

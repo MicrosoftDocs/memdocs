@@ -1,7 +1,7 @@
 ---
-title: "Custom locations for System Center Configuration Manager site database files"
+title: "Custom database file locations | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Custom locations for System Center Configuration Manager site database files
  System Center Configuration Manager supports custom locations for SQL Server database files.  

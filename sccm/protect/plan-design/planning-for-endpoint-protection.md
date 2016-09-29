@@ -1,7 +1,7 @@
 ---
 title: "Planning for Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 caps.latest.revision: 16
-author: NathBarn
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnmanager: angrobe
+
 ---
 # Planning for Endpoint Protection in System Center Configuration Manager
 Use the following topics in this section to help you plan to use Endpoint Protection in System Center 2012 Configuration Manager.  
@@ -126,3 +108,4 @@ Use the following topics in this section to help you plan to use Endpoint Protec
   
 ### Distributing definition updates by using software updates  
  If you are using Configuration Manager software updates to distribute definition updates, consider placing definition updates in a package that does not contain other software updates. This keeps the size of the definition update package smaller which allows it to replicate to distribution points more quickly.
+

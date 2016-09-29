@@ -1,7 +1,7 @@
 ---
-title: "Monitor content you have distributed with System Center Configuration Manager"
+title: "Monitor content | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-02
+ms.date: 05/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Monitor content you have distributed with System Center Configuration Manager
 Use the System Center Configuration Manager console to monitor distributed content,  including:  

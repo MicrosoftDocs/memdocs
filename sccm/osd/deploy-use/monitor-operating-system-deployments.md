@@ -1,7 +1,7 @@
 ---
 title: "Monitor operating system deployments in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Monitor operating system deployments in System Center Configuration Manager
 To help you to monitor operating system deployment objects, the Configuration Manager console provides the following:  
@@ -119,3 +101,4 @@ To help you to monitor operating system deployment objects, the Configuration Ma
   
 ## See Also  
  [Manage enterprise operating systems with System Center Configuration Manager](../Topic/Manage%20enterprise%20operating%20systems%20with%20System%20Center%20Configuration%20Manager.md)
+

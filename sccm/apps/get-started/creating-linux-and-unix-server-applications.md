@@ -1,7 +1,7 @@
 ---
-title: "Create Linux and UNIX server applications with System Center Configuration Manager"
+title: "Create Linux and UNIX server applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 caps.latest.revision: 7
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Create Linux and UNIX server applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for computers that run Linux and UNIX.  
@@ -70,9 +52,9 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  When the Configuration Manager client for Linux and UNIX receives and runs a deployment, it generates status messages. You can view these status messages in the Configuration Manager console, or by using reports to monitor the deployment status.  
   
- For information about how to use packages and programs, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
+ For information about how to use packages and programs, see [Packages and programs](../../apps/deploy-use/packages-and-programs.md).  
   
-##  <a name="BKMK_ConfigDeploymentsforLnU"></a> Configuring packages, programs, and deployments for Linux and UNIX servers  
+##  Configure packages, programs, and deployments for Linux and UNIX servers  
  You can create and deploy packages and programs by using the options that are available by default in the Configuration Manager console. The client does not require any unique configurations.  
   
  Use the information in the following sections to configure packages and programs as well as deployments.  
@@ -133,9 +115,9 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  For more information about content location, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
   
- For more information about how to create a deployment, see [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
+ For more information about how to create a deployment, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
   
-##  <a name="BKMK_LinuxSoftwareDownloadBandwidth"></a> Manage network bandwidth for software downloads from distribution points  
+##  Manage network bandwidth for software downloads from distribution points  
  The Linux and UNIX client supports network bandwidth controls when downloading software from a distribution point.  
   
  The client uses the BITS settings that you configure as client settings in Configuration Manager, but does not implement BITS. Instead, to throttle the use of network bandwidth, the client controls the HTTP request chunk size and inter-chunk delay for the software download.  
@@ -160,7 +142,7 @@ In addition to the other System Center Configuration Manager requirements and pr
   
  If the download of software to the client from a distribution point is interrupted, the client for Linux and UNIX does not resume the download and instead restarts the download of the entire software package.  
   
-##  <a name="BKMK_OpsforDeploymentsforLnU"></a> Operations for software deployments  
+##  Operations for software deployments  
  Similar to the Windows client, the Configuration Manager client for Linux and UNIX discovers new software deployments when it polls and checks for new policy. The frequency at which the client checks for new policy depends on client settings. You can configure maintenance windows to control when software deployments occur.  
   
  You can configure software deployments to Linux and UNIX servers by using package properties, program properties, and deployment properties.  
@@ -172,5 +154,4 @@ In addition to the other System Center Configuration Manager requirements and pr
 > [!TIP]  
 >  If the software that you want to deploy is located on a Network File System (NFS) share that the Linux or UNIX server can access, you do not need to use a distribution point to download the package. Instead, when you create the package, do not select the check box for **This package contains source files**. Then, when you configure the program, specify the appropriate command line to directly access the package on the NFS mount point.  
   
-## See Also  
- [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md)
+

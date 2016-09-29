@@ -1,7 +1,7 @@
 ---
-title: "Prerequisites for deploying clients to Windows computers in System Center Configuration Manager"
+title: "Windows client deployment prerequisites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,37 +12,13 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
- Use the following sections to determine the prerequisites to install the Configuration Manager client on computers and mobile devices:  
-
--   [Prerequisites for Computer Clients](#BKMK_prereqs_computers)  
-
--   [Prerequisites for Mobile Device Clients](#BKMK_prereqs_mobiledevices)  
-
- Make sure that you also review [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) to confirm that devices meet the minimum hardware and operating system requirements for the Configuration Manager client.  
+  Make sure that you also review [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) to confirm that devices meet the minimum hardware and operating system requirements for the Configuration Manager client.  
 
  For information about the prerequisites for the Configuration Manager client for Linux and UNIX, see  [Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md).  
 
@@ -249,3 +225,4 @@ Deploying Configuration Manager clients in your environment has the following ex
 -   Between the enrollment proxy point and the enrollment point: HTTPS (by default, TCP 443)  
 
  If you use a proxy web server, it must be configured for SSL tunneling; SSL bridging is not supported for mobile devices.  
+

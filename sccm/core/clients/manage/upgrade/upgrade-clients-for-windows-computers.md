@@ -1,7 +1,7 @@
 ---
 title: "How to upgrade clients for Windows computers in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # How to upgrade clients for Windows computers in System Center Configuration Manager
 You can upgrade the client on Windows computers using client installation methods or the automatic client upgrade features in Configuration Manager. The following client installation methods are valid ways to upgrade client software on Windows computers:  
@@ -63,7 +45,7 @@ You can upgrade the client on Windows computers using client installation method
 -   One or more of the client installation files are a different version.  
 
 > [!NOTE]  
->  You can run the report **Count of Configuration Manager clients by client versions** in the report folder **Site – Client Information** to identify the different versions of the Configuration Manager client in your hierarchy.  
+>  You can run the report **Count of Configuration Manager clients by client versions** in the report folder **Site - Client Information** to identify the different versions of the Configuration Manager client in your hierarchy.  
 
  Configuration Manager creates an upgrade package by default that is automatically sent to all distribution points in the hierarchy. If you make changes to the client package on the central administration site, for example, add a client language pack, Configuration Manager automatically updates the package, and distributes it to all distribution points in the hierarchy. If automatic client upgrade is enabled, every client will install the new client language package automatically.  
 
@@ -98,3 +80,4 @@ You can upgrade the client on Windows computers using client installation method
 8.  If you want the client installation package to be copied to distribution points that have been enabled for prestaged content, click **Automatically distribute client installation package to distribution points that are enabled for prestaged content**.  
 
 9. Click **OK** to save the settings and close the **Hierarchy Settings Properties** dialog box. Clients receive these settings when they next download policy.  
+

@@ -1,7 +1,7 @@
 ---
-title: "Scenarios to streamline your installation of System Center Configuration Manager"
+title: "Install scenarios | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-13
+ms.date: 04/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,25 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 caps.latest.revision: 6
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager
 With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  

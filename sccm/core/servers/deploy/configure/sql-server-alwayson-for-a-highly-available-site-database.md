@@ -1,7 +1,7 @@
 ---
-title: "SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager"
+title: "SQL Server AlwaysOn | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-04
+ms.date: 08/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,25 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: 16
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager
 
@@ -123,7 +106,7 @@ translation.priority.ht:
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure ‘max text repl size (B)’, 2147483647
+    >     Exec sp_configure 'max text repl size (B)', 2147483647
     >     reconfigure
 
 
@@ -176,7 +159,7 @@ translation.priority.ht:
 
         -   **Replicas**: Specify the servers that will host secondary replicas  
 
-        -   **Listener**: Specify the **Listener DNS Name** as a full DNS name, like **<Listener_Server>.fabrikam.com**. This is used when you configure Configuration Manager to use the database in the availability group.
+        -   **Listener**: Specify the **Listener DNS Name** as a full DNS name, like **&lt;Listener_Server>.fabrikam.com**. This is used when you configure Configuration Manager to use the database in the availability group.
 
     -   On the **Select Initial Data Synchronization** page, select **Full**. After the wizard creates the availability group, the wizard will backup the primary database and transaction log, and restore them on each server that hosts a secondary replica. If you do not use this step, you will need to restore a copy of the site database to each server that hosts a secondary replica, and manually join that database to the group.  
 
@@ -203,7 +186,7 @@ translation.priority.ht:
 
 #### To move a site database to an availability group  
 
-1.  Run **Configuration Manager Setup** from **<Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
+1.  Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
 
 2.  On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**.  
 
@@ -211,7 +194,7 @@ translation.priority.ht:
 
 4.  Reconfigure the following for the site database:  
 
-    -   **SQL Server name:** Enter the virtual name for the availability group listener that you configured when creating the availability group. The virtual name should be a full DNS name, like **<endpointServer\>.fabrikam.com**  
+    -   **SQL Server name:** Enter the virtual name for the availability group listener that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;endpointServer\>.fabrikam.com**  
 
     -   **Instance:** This value must be blank to specify the default instance for the availability group listener of the availability group.  If the current site database is installed on a named instance, the named instance will be listed and must be cleared  
 
@@ -258,7 +241,7 @@ translation.priority.ht:
 
 4.  On the restored site database, change the backup model for the site database from **FULL** to **SIMPLE**.  See [View or Change the Recovery Model of a Database](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in the SQL Server documentation.  
 
-5.  Run **Configuration Manager Setup** from **<Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
+5.  Run **Configuration Manager Setup** from **&lt;Configuration Manager site installation folder\>\BIN\X64\setup.exe**.  
 
 6.  On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then click **Next**.  
 

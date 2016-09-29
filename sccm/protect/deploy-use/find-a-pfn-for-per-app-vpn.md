@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 caps.latest.revision: 3
-author: Nbigman
+author: Nbigmanmanager: angrobe
 ---
 # Find a package family name (PFN) for per-app VPN
 
@@ -74,3 +74,4 @@ In Edge, the information you want is displayed; in Internet Explorer, click **Op
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
+

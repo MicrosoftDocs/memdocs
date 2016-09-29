@@ -1,7 +1,7 @@
 ---
 title: "Introduction to software inventory in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,31 +12,13 @@ ms.topic: get-started-article
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Introduction to software inventory in System Center Configuration Manager
 Use software inventory in System Center Configuration Manager to collect information about files that are contained on client devices in your organization. Additionally, software inventory can collect files from client devices and store these on the site server. Software inventory is collected when the **Enable software inventory on clients** setting is enabled in client settings.  
 
- After software inventory is enabled and the clients run a software inventory cycle, the client sends the inventory information to a management point in the client’s site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Software inventory runs on clients according to the schedule that you specify in client settings.  
+ After software inventory is enabled and the clients run a software inventory cycle, the client sends the inventory information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Software inventory runs on clients according to the schedule that you specify in client settings.  
 
  You can use a number of methods to view the software inventory data that Configuration Manager collects. These include the following:  
 
@@ -67,3 +49,4 @@ Use software inventory in System Center Configuration Manager to collect informa
 |Windows RT|Only managed apps|Only managed apps|  
 |iOS|Only managed apps|All apps installed on the device|  
 |Android|Only managed apps|All apps installed on the device|  
+

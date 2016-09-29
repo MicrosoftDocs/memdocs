@@ -1,7 +1,7 @@
 ---
 title: "Introduction to certificate profiles | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,28 +11,11 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Nbigmanmanager: angrobe
+
 ---
 # Introduction to certificate profiles in System Center Configuration Manager
+
 Certificate profiles in System Center Configuration Manager works with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.  
   
  Certificate profiles in System Center Configuration Manager provide the following management capabilities:  
@@ -50,11 +33,12 @@ Certificate profiles in System Center Configuration Manager works with Active Di
  **Example:** You have a PKI in place and want to move to a more flexible, secure method of provisioning certificates that lets users access company resources from their personal devices without compromising security. To accomplish this, you can configure certificate profiles with settings and protocols that are supported for the specific device platform. The devices can then automatically request these certificates from an Internet-facing enrollment server. You can then configure VPN profiles to use these certificates so that the device can access company resources.  
   
 ## Types of Certificate Profile  
- You can create two types of certificate profiles in System Center Configuration Manager:  
+ You can create three types of certificate profiles in System Center Configuration Manager:  
   
 -   **Trusted CA certificate** - Allows you to deploy a trusted root CA or intermediate CA certificate to form a certificate chain of trust when the device must authenticate a server.  
   
--   **Simple Certificate Enrollment Protocol (SCEP) settings** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2.  
+-   **Simple Certificate Enrollment Protocol (SCEP)** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2. 
+-   -   **Personal information exchange (.pfx)** - Allows you to request a certificate for a device or user, by using the SCEP protocol and the Network Device Enrollment Service on a server running Windows Server 2012 R2. 
   
     > [!NOTE]  
     >  You must create a certificate profile of the type **Trusted CA certificate** before you can create a certificate profile of the type **Simple Certificate Enrollment Protocol (SCEP) settings**.  
@@ -91,7 +75,7 @@ Certificate profiles in System Center Configuration Manager works with Active Di
  You can specify a variety of settings in a SCEP certificate profile to request customized certificates for different environments or connectivity requirements. The **Create Certificate Profile Wizard** contains two pages for enrollment parameters. The first, **SCEP Enrollment**, contains settings for the enrollment request and where to install the certificate. The second, **Certificate Properties**, describes the requested certificate itself.  
   
 ## Deploying Certificate Profiles  
- When you deploy a certificate profile, the certificate files within the profile are installed on client devices. Any SCEP parameters will also be deployed, and the SCEP requests will be processed on the client device. You can deploy certificate profiles to user collections or device collections and specify the destination store for each certificate. Applicability rules determine whether the certificates can be installed on the device. When certificate profiles are deployed to user collections, user device affinity determines which of the users’ devices will install the certificates. When certificate profiles that contain user certificates are deployed to device collections, by default, the certificates will be installed on each of the users’ primary devices. You can modify this behavior to install the certificate on any of the users’ devices on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. In addition, user certificates will not be deployed to devices if they are workgroup computers.  
+ When you deploy a certificate profile, the certificate files within the profile are installed on client devices. Any SCEP parameters will also be deployed, and the SCEP requests will be processed on the client device. You can deploy certificate profiles to user collections or device collections and specify the destination store for each certificate. Applicability rules determine whether the certificates can be installed on the device. When certificate profiles are deployed to user collections, user device affinity determines which of the usersâ€™ devices will install the certificates. When certificate profiles that contain user certificates are deployed to device collections, by default, the certificates will be installed on each of the usersâ€™ primary devices. You can modify this behavior to install the certificate on any of the usersâ€™ devices on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. In addition, user certificates will not be deployed to devices if they are workgroup computers.  
   
 ## Monitoring Certificate Profiles  
  You can monitor certificate profile deployments from the **Deployments** node of the **Monitoring** workspace in the System Center Configuration Manager console.  
@@ -115,5 +99,7 @@ Certificate profiles in System Center Configuration Manager works with Active Di
   
  To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  
   
-## See Also  
+### See also  
+
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

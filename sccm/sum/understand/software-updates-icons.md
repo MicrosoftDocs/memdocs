@@ -1,36 +1,17 @@
 ---
-title: "Icons used for software updates in System Center Configuration Manager"
-ms.custom: na
-ms.date: 2016-06-29
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
+# required metadata
+title: Icons used for software updates | Configuration Manager
+description:
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 09/27/2016
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology:
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-caps.latest.revision: 15
-author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
 ---
 # Icons used for software updates in System Center Configuration Manager
 Synchronized software updates are displayed in the Configuration Manager console, and the first column for each software update contains an icon that indicates a specific state. Software update groups are also represented with an icon that provides information about the state of the software updates contained in the group. This section provides information about the software update icons and what each icon represents.  
@@ -39,7 +20,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  Synchronized software updates are represented by one of the following icons.  
 
 ### Normal Icon  
- ![icon](../media/9b5d6102-2394-4f72-969c-67586023a6e0.jpg "9b5d6102-2394-4f72-969c-67586023a6e0") The icon with the green arrow represents a normal software update.  
+ ![icon](../media/Normal.jpg "Normal icon") The icon with the green arrow represents a normal software update.  
 
  **Description:**  
 
@@ -50,7 +31,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  There are no operational concerns.  
 
 ### Expired Icon  
- ![icon](../media/4261d66b-3ffc-474a-8c55-f7233e10770d.jpg "4261d66b-3ffc-474a-8c55-f7233e10770d") The icon with the black X represents an expired software update. You can also identify expired software updates by viewing the **Expired** column for the software update when it displays in the Configuration Manager console.  
+ ![icon](../media/Expired.jpg "Expired icon") The icon with the black X represents an expired software update. You can also identify expired software updates by viewing the **Expired** column for the software update when it displays in the Configuration Manager console.  
 
  **Description:**  
 
@@ -61,7 +42,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  There are no operational concerns.
 
 ### Superseded Icon  
- ![icon](../media/5daefc57-9475-493b-b953-cf8ff76f7595.jpg "5daefc57-9475-493b-b953-cf8ff76f7595") The icon with the yellow star represents a superseded software update. You can also identify superseded software updates by viewing the **Superseded** column for the software update when it displays in the Configuration Manager console.  
+ ![icon](../media/Superseded.jpg "Superseded icon") The icon with the yellow star represents a superseded software update. You can also identify superseded software updates by viewing the **Superseded** column for the software update when it displays in the Configuration Manager console.  
 
  **Description:**  
 
@@ -80,7 +61,7 @@ Synchronized software updates are displayed in the Configuration Manager console
  When possible, deploy the superseding software update to client computers instead of the superseded software update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
 
 ### Invalid Icon  
- ![icon](../media/fc330e6d-9e87-47a6-b51b-1affa8503450.jpg "fc330e6d-9e87-47a6-b51b-1affa8503450") The icon with the red X represents an invalid software update.  
+ ![icon](../media/Invalid.jpg "Invalid icon") The icon with the red X represents an invalid software update.  
 
  **Description:**  
 
@@ -94,8 +75,8 @@ Synchronized software updates are displayed in the Configuration Manager console
 
  When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update must be replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
-### Metadata-Only Icon  
- ![icon](../media/6e309e6c-44b6-4304-b20d-5d67caa3c3e5.gif "Metadata-only icon") The icon with the blue arrow represents a metadata-only software update.  
+### Metadata-Only Icon
+ ![icon](../media/MetadataOnly.png "Metadata-only icon") The icon with the blue arrow represents a metadata-only software update.
 
  **Description:**  
 
@@ -109,32 +90,29 @@ Synchronized software updates are displayed in the Configuration Manager console
  Software update groups are represented by one of the following icons.  
 
 ### Normal Icon  
- ![icon](../media/9b5d6102-2394-4f72-969c-67586023a6e0.jpg "9b5d6102-2394-4f72-969c-67586023a6e0") The icon with the green arrow represents a software update group that contains only normal software updates.  
+ ![icon](../media/Normal.jpg "Normal icon") The icon with the green arrow represents a software update group that contains only normal software updates.  
 
  **Operational Concerns:**  
 
  There are no operational concerns.  
 
 ### Expired Icon  
- ![icon](../media/4261d66b-3ffc-474a-8c55-f7233e10770d.jpg "4261d66b-3ffc-474a-8c55-f7233e10770d") The icon with the black X represents a software update group that contains one or more expired software updates.  
+ ![icon](../media/Expired.jpg "Expired icon") The icon with the black X represents a software update group that contains one or more expired software updates.  
 
  **Operational Concerns:**  
 
  Remove or replace expired software updates in the software update group when possible.  
 
 ### Superseded Icon  
- ![icon](../media/5daefc57-9475-493b-b953-cf8ff76f7595.jpg "5daefc57-9475-493b-b953-cf8ff76f7595") The icon with the yellow star represents a software update group that contains one or more superseded software updates.  
+ ![icon](../media/Superseded.jpg "Superseded icon") The icon with the yellow star represents a software update group that contains one or more superseded software updates.  
 
  **Operational Concerns:**  
 
  Replace the superseded software update in the software update group with the superseding software update when possible.  
 
 ### Invalid Icon  
- ![icon](../media/fc330e6d-9e87-47a6-b51b-1affa8503450.jpg "fc330e6d-9e87-47a6-b51b-1affa8503450") The icon with the red X represents a software update group that contains one or more invalid software updates.  
+ ![icon](../media/Invalid.jpg "Invalid icon") The icon with the red X represents a software update group that contains one or more invalid software updates.  
 
  **Operational Concerns:**  
 
  When the content is missing for a software update, clients are unable to install the software update until the content becomes available on a distribution point. You can redistribute the content to distribution points by using the **Redistribute** action. When content is missing for a software update in a deployment created at a parent site, the software update needs to replicated or redistributed to the child site. For more information about content redistribution, see [Manage the content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
-
-## See Also  
- [Introduction to software updates](software-updates-introduction)

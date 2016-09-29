@@ -1,7 +1,7 @@
 ---
 title: "Prerequisites for remote control in System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # Prerequisites for remote control in System Center Configuration Manager
 Remote control in System Center Configuration Manager has external dependencies and dependencies in the product.  
@@ -73,3 +55,4 @@ Remote control in System Center Configuration Manager has external dependencies 
 |Remote control must be enabled for clients|By default, remote control is not enabled when you install Configuration Manager. For information about how to enable and configure remote control, see [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).|  
 |Reporting services point|The reporting services point site system role must be installed before you can run reports for remote control. For more information, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
 |Security permissions to manage remote control|To access collection resources and to initiate a remote control session from the Configuration Manager console: **Control AMT**, **Read**, **Read Resource**, and **Remote Control** permission for the **Collection** object.<br /><br /> The **Remote Tools Operator** security role includes these permissions that are required to manage remote control in Configuration Manager.<br /><br /> For more information, see [Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md).<br /><br /> Additionally, you must add users whom you want to give permission to use remote control and remote assistance to the remote control permitted views list by using the option **Permitted viewers of Remote Control and Remote Assistance** in the **Remote Tools** client settings.|  
+

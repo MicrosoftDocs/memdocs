@@ -1,36 +1,19 @@
 ---
-title: "Introduction to software updates in System Center Configuration Manager"
-ms.custom: na
-ms.date: 2016-07-22
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
+# required metadata
+
+title: Introduction to software updates | Configuration Manager
+description:
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 9/14/2016
+ms.topic: article
+ms.prod:
+ms.service:
 ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-caps.latest.revision: 12
-author: Dougeby
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+
+
 ---
 # Introduction to software updates in System Center Configuration Manager
 Software updates in System Center Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  

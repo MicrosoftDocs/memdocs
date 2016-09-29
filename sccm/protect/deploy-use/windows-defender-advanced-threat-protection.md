@@ -1,7 +1,7 @@
 ---
 title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-25
+ms.date: 07/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 caps.latest.revision: 5
-author: NathBarn
+author: NathBarnmanager: angrobe
 ---
 # Windows Defender Advanced Threat Protection
 Starting with the 1606 release of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP. Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks.  Learn more about [Windows Defender ATP](http://aka.ms/technet-wdatp). Configuration Manager policies can help you onboard and monitor managed Windows 10, version 1607 (build 14328) or later.
@@ -72,3 +72,4 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
         -   **Agent state** - The system service for the agent in Windows isn't running  
   
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
+

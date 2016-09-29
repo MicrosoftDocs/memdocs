@@ -1,7 +1,7 @@
 ---
-title: "Command-line options for Setup for System Center Configuration Manager"
+title: "Setup command-line options | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Command-line options for Setup for System Center Configuration Manager
 
@@ -19,34 +19,27 @@ author: Brenduns
 
 ##  <a name="bkmk_setup"></a> Command-line options for Setup  
  **/DEINSTALL**  
-
  Uninstalls the site. You must run Setup from the site server computer.  
 
  **/DONTSTARTSITECOMP**  
-
  Install a site, but prevent the Site Component Manager service from starting. Until the Site Component Manager service starts, the site is not active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and additional processes at the site. After the site install is completed, when you start the Site Component Manager service, it will then install the SMS_Executive and additional processes necessary for the site to operate.  
 
  **/HIDDEN**  
-
  Hides the user interface during setup. This option must be used in conjunction with the **/SCRIPT** option, and the unattended script file must provide all required options, or Setup fails.  
 
  **/NOUSERINPUT**  
-
  Disables user input during Setup, but display the **Setup Wizard** interface. This option must be used in conjunction with the **/SCRIPT** option, and the unattended script file must provide all required options, or Setup fails.  
 
  **/RESETSITE**  
-
  Performs a site reset that resets the database and service accounts for the site. You must run Setup from **&lt;ConfigMgrInstallationPath\>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in the [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) topic.  
 
  **/TESTDBUPGRADE &lt;*InstanceName\DatabaseName*>**  
-
  Performs a test on a backup of the site database to ensure that it is capable of an upgrade. You must provide the instance name and database name for the site database. If you specify only the database name, Setup uses the default instance name.  
 
 > [!IMPORTANT]  
 >  It is not supported to run this command-line option on your production site database. Doing so upgrades the site database and could render your site inoperable.  
 
  **/UPGRADE**  
-
  Runs an unattended upgrade of a site. When you use /UPGRADE, you must also specify the product key, including the dashes (-). Additionally, you must specify the path to the previously downloaded Setup prerequisite files.  
 
  Example: **setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx &lt;path to external component files\>**  
@@ -54,19 +47,15 @@ author: Brenduns
  For more information about Setup prerequisite files, see  [Setup Downloader](#bkmk_SetupDownloader) in this topic.  
 
  **/SCRIPT &lt;*SetupScriptPath*>**  
-
  Performs unattended installations. A Setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run Setup unattended, see  [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST &lt;*FQDN*>**  
-
  Installs the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer. For more information about the SMS Provider, see the [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
  **/SDKDEINST &lt;*FQDN*>**  
-
  Uninstalls the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer.  
 
  **/MANAGELANGS &lt;*LanguageScriptPath*>**  
-
  Manages the languages that are installed at a previously installed site. To use this option, you must run Setup from **&lt;ConfigMgrInstallationPath\>\BIN\X64** on the site server and provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see [Command line options to manage languages](#bkmk_Lang) in this topic.  
 
 ##  <a name="bkmk_Lang"></a> Command line options to manage languages  
@@ -421,7 +410,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** <*SiteCode*>  
+    -   **Values:** &lt;*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
 
@@ -429,7 +418,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** <*SiteName*>  
+    -   **Values:** &lt;*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -661,7 +650,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** <*Timeout*>  
+    -   **Values:** &lt;*Timeout*>  
 
          A value of 0 to 100  
 
@@ -1046,7 +1035,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
-    -   **Values:** <*PathToSiteDatabaseBackupSet*>  
+    -   **Values:** &lt;*PathToSiteDatabaseBackupSet*>  
 
     -   **Details:** Specifies the path to the site database backup set.  
 

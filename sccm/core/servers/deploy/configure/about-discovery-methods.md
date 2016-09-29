@@ -1,7 +1,7 @@
 ---
-title: "About discovery methods for System Center Configuration Manager"
+title: "Discovery methods | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-28
+ms.date: 04/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # About discovery methods for System Center Configuration Manager
 Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from your Active Directory. To efficiently use a discovery method you should understand its available configurations and limitations.  

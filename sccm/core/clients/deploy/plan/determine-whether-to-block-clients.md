@@ -1,7 +1,7 @@
 ---
 title: "Blocking clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Determine whether to block clients in System Center Configuration Manager
 If a client computer or client mobile device is no longer trusted, you can block the client in the System Center 2012 Configuration Manager console. Blocked clients are rejected by the Configuration Manager infrastructure so that they cannot communicate with site systems to download policy, upload inventory data, or send state or status messages.  
@@ -79,3 +61,4 @@ If a client computer or client mobile device is no longer trusted, you can block
 
     > [!NOTE]  
     >  You can further protect site systems that run IIS from unknown clients by configuring a certificate trust list (CTL) in IIS.  
+

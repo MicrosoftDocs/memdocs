@@ -2,7 +2,7 @@
 
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 caps.latest.revision: 21
-author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnmanager: angrobe
+
 ---
 
 #  Configure Definition Updates for Endpoint Protection  
@@ -39,15 +21,15 @@ translation.priority.ht:
 
  To update antimalware definitions, you can use one or more of the following methods:
 
--   Updates distributed from Configuration Manager – This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
+-   Updates distributed from Configuration Manager - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
 
--   Updates distributed from Windows Server Update Services (WSUS) – This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
+-   Updates distributed from Windows Server Update Services (WSUS) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
 
--   Updates distributed from Microsoft Update – This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
+-   Updates distributed from Microsoft Update - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
 
--   Updates distributed from Microsoft Malware Protection Center – This method will download definition updates from the Microsoft Malware Protection Center.
+-   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.
 
--   Updates from UNC file shares – With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
+-   Updates from UNC file shares - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
 
  You can configure multiple definition update sources and control the order in which they are assessed and applied. This is done in the **Configure Definition Update Sources** dialog box when you create an antimalware policy.
 
@@ -71,12 +53,13 @@ translation.priority.ht:
 
 ## Configure Endpoint Protection definitions
 
--   [Updates distributed from Configuration Manager](endpoint-definitions-configmgr.md) – This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
+-   [Updates distributed from Configuration Manager](endpoint-definitions-configmgr.md) - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
 
--   [Updates distributed from Windows Server Update Services (WSUS)](endpoint-definitions-wsus.md) – This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
+-   [Updates distributed from Windows Server Update Services (WSUS)](endpoint-definitions-wsus.md) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
 
--   [Updates distributed from Microsoft Update](endpoint-definitions-microsoft-updates.md) – This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
+-   [Updates distributed from Microsoft Update](endpoint-definitions-microsoft-updates.md) - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
 
--   Updates distributed from Microsoft Malware Protection Center – This method will download definition updates from the Microsoft Malware Protection Center.
+-   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.
 
--   [Updates from UNC file shares](endpoint-definitions-network.md) – With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
+-   [Updates from UNC file shares](endpoint-definitions-network.md) - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
+

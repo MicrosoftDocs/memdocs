@@ -1,7 +1,7 @@
 ---
 title: "Client deployment best practices | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Best practices for client deployment in System Center Configuration Manager
 Use the following best practices information to help you deploy clients on computers in System Center Configuration Manager.  
@@ -90,3 +72,4 @@ Use the following best practices information to help you deploy clients on compu
  When you have a choice of which type of write filter to enable, choose File-Based Write Filters and configure exceptions to persist client state and inventory data between device restarts for network and CPU efficiency on the Configuration Manager client. For more information about write filters, see   [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
  For more information about the maximum number of Windows Embedded clients that a primary site can support, see [Supported operating sysetms for clients and devices](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).  
+

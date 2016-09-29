@@ -1,7 +1,7 @@
 ---
-title: "How to use maintenance windows in System Center Configuration Manager"
+title: "Use maintenance windows | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: barlanmsftmanager: angrobe
+
 ---
 # How to use maintenance windows in System Center Configuration Manager
 Maintenance windows in System Center Configuration Manager provide a means by which administrative users can define a time period when various Configuration Manager operations can be carried out on members of a device collection. You can use maintenance windows to help ensure that client configuration changes occur during periods that do not affect the productivity of the organization.  
@@ -73,16 +55,16 @@ Maintenance windows in System Center Configuration Manager provide a means by wh
 
 4.  On the **Home** tab, in the **Properties** group, click **Properties**.  
 
-5.  In the **Maintenance Windows** tab of the *<collection name\>***Properties** dialog box, click the **New** icon.  
+5.  In the **Maintenance Windows** tab of the **&lt;collection name\> Properties** dialog box, click the **New** icon.  
 
     > [!NOTE]  
     >  You cannot create maintenance windows for the **All Systems** collection.  
 
-6.  In the **<new\> Schedule** dialog box, specify a name, a schedule, and a recurrence pattern for the maintenance window. You can also enable the option to apply the schedule to only task sequences.  
+6.  In the **&lt;new\> Schedule** dialog box, specify a name, a schedule, and a recurrence pattern for the maintenance window. You can also enable the option to apply the schedule to only task sequences.  
 
 7.  From the **Apply this schedule to** drop-down list, select whether this maintenance window applies to all deployments, only software updates, or only task sequences.  
 
-8.  Click **OK** to close the **<new\> Schedule** dialog box and create the new maintenance window.  
+8.  Click **OK** to close the **&lt;new\> Schedule** dialog box and create the new maintenance window.  
 
-9. Close the *<collection name\>***Properties** dialog box.  
-  
+9. Close the **&lt;collection name\> Properties** dialog box.  
+

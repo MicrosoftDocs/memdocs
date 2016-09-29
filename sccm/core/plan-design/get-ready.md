@@ -1,7 +1,7 @@
 ---
 title: "Get ready for System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Get ready for System Center Configuration Manager
 Use the information in the following topics when you're ready to start planning your System Center Configuration Manager deployment:  
@@ -49,3 +31,4 @@ Use the information in the following topics when you're ready to start planning 
 -   [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)  
 
 -   [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)  
+

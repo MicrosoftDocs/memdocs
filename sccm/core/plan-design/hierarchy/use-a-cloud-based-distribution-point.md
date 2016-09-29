@@ -1,7 +1,7 @@
 ---
-title: "Use a cloud-based distribution point with System Center Configuration Manager"
+title: "Cloud-based distribution point | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 caps.latest.revision: 9
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Use a cloud-based distribution point with System Center Configuration Manager
 A cloud-based distribution point is a System Center Configuration Manager distribution point that is hosted in Microsoft Azure. The following information is intended to help you learn about configurations and limitations for using a cloud-based distribution point.
@@ -128,12 +110,11 @@ A cloud-based distribution point has the following limitations:
         > [!IMPORTANT]  
         >  Configuration Manager monitors the transfer of data, but does not stop the transfer of data beyond the specified transfer alert threshold.  
 
-
-    You can specify thresholds for each cloud-based distribution point during the installation of the distribution point, or you can edit the properties of each cloud-based distribution point after it is installed.  
+ You can specify thresholds for each cloud-based distribution point during the installation of the distribution point, or you can edit the properties of each cloud-based distribution point after it is installed.  
 
 -   **Alerts**: You can configure Configuration Manager to raise alerts about data transfers to and from each cloud-based distribution point, based on the data transfer thresholds that you specify. These alerts help you monitor data transfers, and can help you decide when to stop the cloud service to prevent its use, adjust the content that you store on the distribution point, or modify which clients can use cloud-based distribution points.  
 
-     In an hourly cycle, the primary site that monitors the cloud-based distribution point downloads transaction data from Windows Azure and stores it in the CloudDP-<ServiceName\>.log on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud-based distribution point. When the transfer of data reaches or exceeds the specified volume for either warning or critical alerts, Configuration Manager generates the appropriate alert.  
+     In an hourly cycle, the primary site that monitors the cloud-based distribution point downloads transaction data from Windows Azure and stores it in the CloudDP-&lt;ServiceName\>.log on the site server. Configuration Manager then evaluates this information against the storage and transfer quotas for each cloud-based distribution point. When the transfer of data reaches or exceeds the specified volume for either warning or critical alerts, Configuration Manager generates the appropriate alert.  
 
     > [!WARNING]  
     >  Because information about data transfers is downloaded from Windows Azure hourly, that data usage might exceed a warning or critical threshold before Configuration Manager can access the data and raise an alert.  
@@ -159,7 +140,6 @@ A cloud-based distribution point has the following limitations:
 
     -   Provide the .pfx file of the management certificate to Configuration Manager when you install the cloud-based distribution point. The .pfx file contains the private key for the management certificate. Configuration Manager stores this certificate in the site database. Because the .pfx file contains the private key, you must provide the password to import this certificate file into the Configuration Manager database.  
 
-
     If you create a self-signed certificate, you must first export the certificate as a .cer file, and then export it again as a .pfx file.  
 
     Optionally, you can specify a version 1 **.publishsettings** file from the Microsoft Azure SDK 1.7. For information about .publishsettings files, refer to the Microsoft Azure documentation.  
@@ -171,8 +151,7 @@ A cloud-based distribution point has the following limitations:
     > [!IMPORTANT]  
     >  The common name in the certificate subject box of the service certificate must be unique in your domain and not match any domain-joined device.  
 
-
-     For an example deployment of this certificate, see the [Deploying the Service Certificate for Cloud-Based Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clouddp2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+   For an example deployment of this certificate, see the [Deploying the Service Certificate for Cloud-Based Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clouddp2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
 
 ##  <a name="bkmk_Tasks"></a> Common management tasks for cloud-based distribution points  
 
@@ -198,7 +177,7 @@ A cloud-based distribution point has the following limitations:
         >  Clients on the Internet that receive both an Internet-based distribution point and a cloud-based distribution point as content locations for a deployment, only attempt to retrieve content from the Internet-based distribution point. If the client on the Internet fails to retrieve content from the Internet-based distribution point, the client does not then attempt to access the cloud-based distribution point.  
 
 
-    When a client uses a cloud-based distribution point as a content location, the client authenticates itself to the cloud-based distribution point by using a Configuration Manager access token. If the client trusts the Configuration Manager cloud-based distribution point certificate, the client can then download the requested content.  
+  When a client uses a cloud-based distribution point as a content location, the client authenticates itself to the cloud-based distribution point by using a Configuration Manager access token. If the client trusts the Configuration Manager cloud-based distribution point certificate, the client can then download the requested content.  
 
 -   **Monitor cloud-based distribution points**: You can monitor the content that you deploy to each cloud-based distribution point, and you can monitor the cloud service that hosts the distribution point.  
 

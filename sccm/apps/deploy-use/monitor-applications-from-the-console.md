@@ -1,7 +1,7 @@
 ---
-title: "Monitor applications from the System Center Configuration Manager console"
+title: "Monitor applications from the System Center Configuration Manager console | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,28 +11,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 caps.latest.revision: 5
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Monitor applications from the System Center Configuration Manager console
+
+## Introduction
+
 In System Center Configuration Manager, you can monitor the deployment of all software, including software updates, compliance settings, applications, task sequences, and packages and programs. You can monitor deployments by using the **Monitoring** workspace in the Configuration Manager console or by using reports.  
   
  Applications in Configuration Manager support state-based monitoring, which allows you to track the last application deployment state for users and devices. These state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console.  
@@ -49,7 +34,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
 -   **Error** – The application failed to deploy because of an error.  
   
- You can view additional information for each compliance state, which includes subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
+You can view additional information for each compliance state, which includes subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
   
 -   Error evaluating requirements  
   
@@ -63,7 +48,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
 -   If an application is deployed to all users that log on to a computer, you will receive multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.  
   
- The deployment state for package and program deployments is not aggregated.  
+The deployment state for package and program deployments is not aggregated.  
   
  Use these subcategories to help you to quickly identify any important issues with an application deployment. You can also view additional information about the devices that fall into a particular subcategory of a compliance state.  
   
@@ -71,11 +56,9 @@ In System Center Configuration Manager, you can monitor the deployment of all so
   
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
   
-## To monitor the state of an application in the Configuration Manager console  
+## Monitor the state of an application in the Configuration Manager console  
   
-1.  In the Configuration Manager console, click **Monitoring**.  
-  
-2.  In the **Monitoring** workspace, click **Deployments**.  
+1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.  
   
 3.  To review deployment details for each compliance state and the devices in that state, select a deployment, and then, on the **Home** tab, in the **Deployment** group, click **View Status** to open the **Deployment Status** pane. In this pane, you can view the assets with each compliance state. Click any asset to view more detailed information about the deployment status to that asset.  
   
@@ -97,3 +80,4 @@ In System Center Configuration Manager, you can monitor the deployment of all so
     > -   In the **Status Summarizers** dialog box, click **Application Deployment Summarizer**, and then click **Edit**.  
     > -   In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals and then click **OK**.  
   
+

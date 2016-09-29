@@ -1,7 +1,7 @@
 ---
 title: "Endpoint Protection malware definitions | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 caps.latest.revision: 21
-author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnmanager: angrobe
+
 ---
 
 #  Using Configuration Manager Software Updates to Deliver Definition Updates
@@ -125,3 +107,4 @@ translation.priority.ht:
 
 > [!div class="button"]
 [Back >](endpoint-configure-alerts.md)
+

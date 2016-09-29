@@ -1,7 +1,7 @@
 ---
 title: "Enroll devices with device enrollment manager with Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-12
+ms.date: 08/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,8 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: NathBarn
-manager: jeffgilb
+author: NathBarnmanager: angrobe
+
 ---
 # Enroll devices with device enrollment manager with Configuration Manager
 Organizations can use System Center Configuration Manager and Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* account is a special Intune account with permission to enroll more than five devices.  
@@ -79,3 +79,4 @@ A restaurant wants point-of-sale tablets for its wait staff and order-monitors f
 -   The deleted device enrollment manager account credentials still cannot wipe or retire devices  
   
 -   The deleted device enrollment manager account’s relationship to enrolled devices remains but no additional devices can be enrolled
+

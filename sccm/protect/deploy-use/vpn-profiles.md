@@ -1,7 +1,7 @@
 ---
 title: "VPN profiles in System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-29
+ms.date: 05/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,28 +12,11 @@ ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Nbigmanmanager: angrobe
+
 ---
 # VPN profiles in System Center Configuration Manager
+
 Use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
   
  For example, you want to provision all devices that run the iOS operating system with the settings required to connect to a file share on the corporate network. You can create a VPN profile containing the settings necessary to connect to the corporate network and then deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the VPN connection in the list of available networks and can connect to this network with the minimum of effort.  
@@ -74,7 +57,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 |PPTP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
 |L2TP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
   
-## Next steps  
+### Next steps  
  Use the following topics to help you plan for, configure, operate, and maintain VPN profiles in Configuration Manager.  
   
 -   [Prerequisites for VPN profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-vpn-profiles.md)  
@@ -82,3 +65,4 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 -   [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)  
   
 -   [Security and privacy for VPN profiles in System Center Configuration Manager](../../protect/plan-design/security-and-privacy-for-vpn-profiles.md)
+

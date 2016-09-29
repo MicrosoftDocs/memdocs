@@ -1,7 +1,7 @@
 ---
-title: "Manage volume-purchased iOS apps with System Center Configuration Manager"
+title: "Manage volume-purchased iOS apps | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-14
+ms.date: 08/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,25 +12,8 @@ ms.topic: article
 ms.assetid: b5e7cead-e257-405b-a2aa-b0130e48dc40
 caps.latest.revision: 23
 caps.handback.revision: 0
-author: robstackmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Manage volume-purchased iOS apps with System Center Configuration Manager
 
@@ -71,9 +54,7 @@ translation.priority.ht:
   
 ## Step 1 - To get and upload an Apple VPP token  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, expand **Cloud Services**, and then click **Apple Volume Purchase Program Tokens**.   
+1.  In the Configuration Manager console, click **Administration** > **Cloud Services** > **Apple Volume Purchase Program Tokens**.   
   
 3.  On the **Home** tab, in the **Apple Volume Purchase Program Tokens** group, click **Add Apple Volume Purchase Program Token**.  
   
@@ -91,15 +72,13 @@ translation.priority.ht:
   
 5.  Click **Next**, and then complete the wizard.  
   
- From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
+From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
   
- You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
+You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
   
 ## Step 2 - Deploy a volume-purchased app  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **License Information for Store Apps**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **License Information for Store Apps**.  
   
 3.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
@@ -119,3 +98,4 @@ A Configuration Manager application is created containing the Windows Store for 
  This report displays the name of each application together with the total number of licenses you purchased, the number of licenses available and more.  
   
  For help with running Configuration Manager reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+

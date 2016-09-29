@@ -1,7 +1,7 @@
 ---
-title: "How to revise and supersede applications in System Center Configuration Manager"
+title: "Revise and supersede applications | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-05-26
+ms.date: 05/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,42 +12,22 @@ ms.topic: article
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # How to revise and supersede applications in System Center Configuration Manager
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
   
-##  <a name="BKMK_Rev"></a> Application revisions  
+##  Application revisions  
  When you make revisions to an application or to a deployment type that is contained in an application, Configuration Manager creates a new revision of the application. You can display the history of each application revision. You can also view its properties, restore a previous revision of an application, or delete an old revision.  
   
-#### To display an application revision history  
+### To display an application revision history  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, click **Applications**, and then click the application that you want.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**, and then click the application that you want.  
   
 3.  On the **Home** tab, in the **Application** group, click **Revision History** to open the **Application Revision History** dialog box.  
   
-#### To view an application revision  
+### To view an application revision  
   
 1.  In the **Application Revision History** dialog box, select an application revision, and then click **View**.  
   
@@ -58,13 +38,13 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 3.  Close the **Properties** dialog box.  
   
-#### To restore an application revision  
+### To restore an application revision  
   
 1.  In the **Application Revision History** dialog box, select an application revision, and then click **Restore**.  
   
 2.  In the **Confirm Revision Restore** dialog box, click **Yes** to restore the selected application revision.  
   
-#### To delete an application revision  
+### To delete an application revision  
   
 1.  In the **Application Revision History** dialog box, select an application revision, and then click **Delete**.  
   
@@ -73,7 +53,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 > [!IMPORTANT]  
 >  You can only delete the current application revision if the application is retired and contains no references.  
   
-##  <a name="BKMK_Super"></a> Application supersedence  
+##  Application supersedence  
  Application management in Configuration Manager allows you to upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also configure whether to upgrade or uninstall the superseded application before the superseding application is installed.  
   
 > [!IMPORTANT]  
@@ -99,7 +79,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
  The end result is that all deployments of the master application will use the new dependent application.  
   
-#### Further considerations  
+### Further considerations  
   
 -   You can specify multiple supersedence relationships for dependent applications. The highest dependent application in the supersedence chain gets installed.  
   
@@ -107,15 +87,11 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 -   For new installations of the master application, when you have multiple dependencies, the dependency order determines which version of the dependent application gets installed.  
   
-### How to specify a supersedence relationship  
+### Specify a supersedence relationship  
   
-##### To specify a supersedence relationship  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**, and then click the application that will supersede another application.  
   
-1.  In the Configuration Manager console, click **Software Library**.  
-  
-2.  In the **Software Library** workspace, expand **Application Management**, click **Applications**, and then click the application that will supersede another application.  
-  
-3.  On the **Home** tab, in the **Properties** group, click **Properties** to open the *<Application Name\>***Properties** dialog box.  
+3.  On the **Home** tab, in the **Properties** group, click **Properties** to open the application name **Properties** dialog box.  
   
 4.  On the **Supersedence** tab of the *<Application Name\>***Properties** dialog box, click **Add**.  
   
@@ -132,7 +108,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 9. Click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-##### To display applications that supersede the current application  
+### To display applications that supersede the current application  
   
 1.  In the Configuration Manager console, click **Software Library**.  
   
@@ -144,5 +120,4 @@ In this topic, you'll learn how to work with System Center Configuration Manager
   
 5.  Review the list of applications that supersede the selected application, then click **OK** to close the *<Application Name\>***Properties** dialog box.  
   
-## See Also  
- [Application management technical reference for System Center Configuration Manager](../Topic/Application%20management%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
+

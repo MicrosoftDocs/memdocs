@@ -1,7 +1,7 @@
 ---
-title: "Fundamentals of managing devices with System Center Configuration Manager"
+title: "Fundamentals of managing devices | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,25 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Fundamentals of managing devices with System Center Configuration Manager
 System Center Configuration Manager can manage two broad categories of devices.
@@ -76,7 +59,7 @@ In addition to managing devices with or without the Configuration Manager client
 ## User-centric management  
  In addition to the collections for devices, there are also user collections that contain users from Active Directory Domain Services. When you use a user collection, you can install software on all computers that members of the collection log into, and configure **user device affinity** so that the software you deploy  installs on only the devices that are specified as a users main device. These main devices are called primary devices. A user can have one or more primary devices.  
 
- One of the ways in which users can control their software deployment experience is by using the computer client interface, **Software Center**. Software Center is automatically installed on client computers and accessed from the users’ Start menu. The Software Center lets users manage their own software, as well as perform the following:  
+ One of the ways in which users can control their software deployment experience is by using the computer client interface, **Software Center**. Software Center is automatically installed on client computers and accessed from the users' Start menu. The Software Center lets users manage their own software, as well as perform the following:  
 
 -   Install software  
 

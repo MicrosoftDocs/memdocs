@@ -1,7 +1,7 @@
 ---
 title: "Configure Wake on LAN | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-29
+ms.date: 06/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # How to configure Wake on LAN in System Center Configuration Manager
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
@@ -47,3 +47,4 @@ You can use the following Wake On LAN reports to monitor the installation and co
 
 > [!TIP]
 > To test whether wake-up proxy is working, test a connection to a sleeping computer. For example, connect to a shared folder on that computer, or try connecting to the computer using Remote Desktop. If you use Direct Access, check that the IPv6 prefixes work by trying the same tests for a sleeping computer that is currently on the Internet.
+

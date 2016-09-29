@@ -1,7 +1,7 @@
 ---
-title: "Removed and deprecated features for System Center Configuration Manager"
+title: "Deprecated features | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Removed and deprecated features for System Center Configuration Manager
 This topic describes features, products, and operating systems that are removed from support with System Center Configuration Manager or will be removed in a future update (Deprecated). This is intended to provide early warning about future changes that might affect your use of Configuration Manager.  
@@ -75,10 +57,11 @@ This topic describes features, products, and operating systems that are removed 
 |Windows Server 2003|7/10/2015|√|  
 |Windows Server 2003 R2|7/10/2015|√|  
 |Windows Vista|7/10/2015|√|  
-|Mac OS X  10.6 – 10.8|7/10/2015|√|  
-|Windows Mobile 6.0 – 6.5|7/10/2015|√|  
+|Mac OS X  10.6 - 10.8|7/10/2015|√|  
+|Windows Mobile 6.0 - 6.5|7/10/2015|√|  
 |Nokia Symbian Belle|7/10/2015|√|  
-|Windows CE 5.0 – 6.0|7/10/2015|√|  
+|Windows CE 5.0 - 6.0|7/10/2015|√|  
+
 
  **Deprecated support for SQL Server versions as a site database:**  
 

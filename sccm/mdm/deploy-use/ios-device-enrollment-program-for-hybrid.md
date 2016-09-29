@@ -1,7 +1,7 @@
 ---
 title: "iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-02
+ms.date: 06/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: NathBarn
+author: NathBarnmanager: angrobe
 ---
 # iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager
 Companies can purchase iOS devices through Apple's device enrollment program and then manage them using Microsoft Intune. To manage corporate-owned iOS devices with the Apple Device Enrollment Program (DEP), companies must complete the steps with Apple to participate in the program and acquire devices through that program. Details of that process are available at:  [https://deploy.apple.com](https://deploy.apple.com). Advantages of the program include hands-free set up of devices without USB-connecting each device to a computer.  
@@ -112,3 +112,4 @@ Companies can purchase iOS devices through Apple's device enrollment program and
   
 4.  **Distribute devices to users**   
     You can now give your corporate-owned devices to users. When an iOS device is turned on it will be enrolled for management by Intune.
+

@@ -1,7 +1,7 @@
 ---
 title: "Create a task sequence for non-operating system deployments with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 caps.latest.revision: 6
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Create a task sequence for non-operating system deployments with System Center Configuration Manager
 Task sequences in System Center Configuration Manager are used to automate a variety of tasks within your environment. These tasks are primarily designed and tested for deploying operating systems.  Configuration Manager has many other features that should be the primary technology that you use for scenarios such as [application installation](http://technet.microsoft.com/library/mt627959\(TechNet.10\).aspx), [software updates installation](http://technet.microsoft.com/library/mt634340\(TechNet.10\).aspx), [setting configuration](http://technet.microsoft.com/library/mt629310\(TechNet.10\).aspx), or custom automation. There are other Microsoft System Center automation technologies, such as [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) and [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) that you should also consider.  
@@ -63,3 +45,4 @@ Task sequences in System Center Configuration Manager are used to automate a var
   
 ## See Also  
  [Create a custom task sequence with System Center Configuration Manager](../../osd/deploy-use/create-a-custom-task-sequence.md)
+

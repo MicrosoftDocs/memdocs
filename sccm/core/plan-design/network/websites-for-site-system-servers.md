@@ -1,7 +1,7 @@
 ---
-title: "Websites for site system servers in System Center Configuration Manager"
+title: "Websites for site systems | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: get-started-article
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Websites for site system servers in System Center Configuration Manager
 Several Configuration Manager site system roles require the use of Microsoft Internet Information Services (IIS) and use the default IIS website to host site system services. When you must run other web applications on the same server and settings are not compatible with Configuration Manager, consider using a custom website for Configuration Manager.  
@@ -60,7 +42,7 @@ Several Configuration Manager site system roles require the use of Microsoft Int
 
 -   Configure the custom website to respond to the same port that you configure for Configuration Manager client communication (client request port).  
 
--   For each custom or default website that uses a custom folder, place a copy of the default document type that you use into the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer with default configurations, **iisstart.htm** is one of several default document types available. You can find this file in the root of the default website, and then place a copy of this file (or a copy of the default document type you use) into the root folder that hosts the SMSWEB custom website. For more information about default document types, see [Default Document <defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   For each custom or default website that uses a custom folder, place a copy of the default document type that you use into the root folder that hosts the website. For example, on a Windows Server 2008 R2 computer with default configurations, **iisstart.htm** is one of several default document types available. You can find this file in the root of the default website, and then place a copy of this file (or a copy of the default document type you use) into the root folder that hosts the SMSWEB custom website. For more information about default document types, see [Default Document &lt;defaultDocument\> for IIS](http://www.iis.net/configreference/system.webserver/defaultdocument).  
 
 **About IIS requirements:**
 **The following site system roles require IIS and a website to host the site system services:**  

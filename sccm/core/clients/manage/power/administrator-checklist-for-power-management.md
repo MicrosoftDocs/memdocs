@@ -1,7 +1,7 @@
 ---
-title: "Administrator checklist for power management in System Center Configuration Manager"
+title: "Administrator checklist for power management | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: robstackmsftmanager: angrobe
+
 ---
 # Administrator checklist for power management in System Center Configuration Manager
 This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  
@@ -44,24 +26,24 @@ This administrator checklist provides the recommended steps for using System Cen
 
 |Task|Details|  
 |----------|-------------|  
-|Review the power management concepts in the Configuration Manager documentation library.|See [Introduction to power management in System Center Configuration Manager](../../../../core/clients/manage/power/introduction-to-power-management.md).|  
-|Review the power management prerequisites in the Configuration Manager documentation library.|See [Prerequisites for power management in System Center Configuration Manager](../../../../core/clients/manage/power/prerequisites-for-power-management.md).|  
-|Review the best practices information for power management.|See [Best practices for power management in System Center Configuration Manager](../../../../core/clients/manage/power/best-practices-for-power-management.md).|  
+|Review the power management concepts in the Configuration Manager documentation library.|See [Introduction to power management](/sccm/core/clients/manage/power/introduction-to-power-management).|  
+|Review the power management prerequisites in the Configuration Manager documentation library.|See [Prerequisites for power management](/sccm/core/clients/manage/power/prerequisites-for-power-management.md).|  
+|Review the best practices information for power management.|See [Best practices for power management](/sccm/core/clients/manage/power/best-practices-for-power-management.md).|  
 |Configure your collections to manage power consumption from computers within your environment.|Use the **Collection for reporting of baseline data**, **Collection for reporting of baseline data**,   **Collection of computers incapable of power management**, **Collections of computers to which power plans will be applied**, **Collections of computers to which power plans will be applied**, and **Collections of computers that are running Windows Server** to help you manage power settings for computers in your hierarchy. You can create multiple collections and apply different power plans to each collection.|  
-|Enable power management.|Before you can begin to use power management, you must enable it and configure the required client settings. For more information, see [Configuring power management in System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).|  
+|Enable power management.|Before you can begin to use power management, you must enable it and configure the required client settings. For more information, see [Configuring power management](/sccm/core/clients/manage/power/configuring-power-management.md).|  
 |Collect power management information from client computers.|Power management data is reported by clients through Configuration Manager hardware inventory. Depending on the hardware inventory schedule that you have configured, it might take some time to retrieve inventory from all client computers.|  
 
 ## Monitoring and planning phase  
 
 |Task|Details|  
 |----------|-------------|  
-|Run the report **Computer Activity**.|The **Computer Activity** report displays a graph showing monitor, computer, and user activity for a specified collection over a specified time period. This report links to the **Computer Activity Details** report which displays the sleep and wake capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Energy Consumption** or **Energy Consumption by Day**.|The **Energy Consumption** and **Energy Consumption by Day** reports display the total monthly power consumption in kilowatt per hour (kWh) for a specified collection over a specified time period. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Environmental Impact** or  **Environmental Impact by Day**.|The **Environmental Impact** and **Environmental Impact by Day** reports display a graph showing carbon dioxide (CO2) emissions saved by a specified collection of computers for a specified period of time. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Energy Cost** or **Energy Cost by Day**.|The **Energy Cost** and **Energy Cost by Day** reports display the total power consumption cost for a specified period of time. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Power Capabilities**.|The **Power Capabilities** report displays the power management capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Power Settings**.|The **Power Settings** report displays an aggregated list of the current power settings used by computers in a specified collection. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Exclude any required collections of computers from power management.|See [Configuring power management in System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).|  
+|Run the report **Computer Activity**.|The **Computer Activity** report displays a graph showing monitor, computer, and user activity for a specified collection over a specified time period. This report links to the **Computer Activity Details** report which displays the sleep and wake capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Energy Consumption** or **Energy Consumption by Day**.|The **Energy Consumption** and **Energy Consumption by Day** reports display the total monthly power consumption in kilowatt per hour (kWh) for a specified collection over a specified time period. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Environmental Impact** or  **Environmental Impact by Day**.|The **Environmental Impact** and **Environmental Impact by Day** reports display a graph showing carbon dioxide (CO2) emissions saved by a specified collection of computers for a specified period of time. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Energy Cost** or **Energy Cost by Day**.|The **Energy Cost** and **Energy Cost by Day** reports display the total power consumption cost for a specified period of time. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Power Capabilities**.|The **Power Capabilities** report displays the power management capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Power Settings**.|The **Power Settings** report displays an aggregated list of the current power settings used by computers in a specified collection. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Exclude any required collections of computers from power management.|See [Configuring power management](/sccm/core/clients/manage/power/configuring-power-management.md).|  
 
 > [!IMPORTANT]  
 >  Ensure that you save the information from power management reports generated during the monitoring and planning phase. You can compare this data to power management information generated during the enforcement and compliance phases to help you evaluate, the power usage, power cost and environmental impact savings from applying a power plan to computers in your hierarchy.  
@@ -70,21 +52,22 @@ This administrator checklist provides the recommended steps for using System Cen
 
 |Task|Details|  
 |----------|-------------|  
-|Select existing power plans or create new power plans for collections of computers in your organization.|See [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).|  
-|Apply these power plans to computers.|See [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md).|  
+|Select existing power plans or create new power plans for collections of computers in your organization.|See [How to create and apply power plans](/sccm/core/clients/manage/power/create-and-apply-power-plans.md).|  
+|Apply these power plans to computers.|See [How to create and apply power plans](/sccm/core/clients/manage/power/create-and-apply-power-plans.md).|  
 
 ## Compliance phase  
 
 |Task|Details|  
 |----------|-------------|  
-|Run the report **Computer Activity**.|The **Computer Activity** report displays a graph showing monitor, computer, and user activity for a specified collection over a specified time period. This report links to the **Power Computer Activity Details** report which displays the sleep and wake capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Energy Consumption** or **Energy Consumption by Day**.|The **Energy Consumption** and **Energy Consumption by Day** reports display the total monthly power consumption in kilowatt per hour (kWh) for a specified collection over a specified time period. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Environmental Impact** or **Environmental Impact by Day**.|The **Environmental Impact** and **Environmental Impact by Day** reports display a graph showing carbon dioxide (CO2) emissions saved by a specified collection of computers for a specified period of time. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|Run the report **Energy Cost** or **Energy Cost by Day**.|The **Energy Cost** and **Energy Cost by Day** reports display the total power consumption cost for a specified period of time. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Computer Activity**.|The **Computer Activity** report displays a graph showing monitor, computer, and user activity for a specified collection over a specified time period. This report links to the **Power Computer Activity Details** report which displays the sleep and wake capabilities of computers in the specified collection. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Energy Consumption** or **Energy Consumption by Day**.|The **Energy Consumption** and **Energy Consumption by Day** reports display the total monthly power consumption in kilowatt per hour (kWh) for a specified collection over a specified time period. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Environmental Impact** or **Environmental Impact by Day**.|The **Environmental Impact** and **Environmental Impact by Day** reports display a graph showing carbon dioxide (CO2) emissions saved by a specified collection of computers for a specified period of time. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|Run the report **Energy Cost** or **Energy Cost by Day**.|The **Energy Cost** and **Energy Cost by Day** reports display the total power consumption cost for a specified period of time. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
 
 ## Troubleshooting  
 
 |Task|Details|  
 |----------|-------------|  
-|If computers in your hierarchy have not entered sleep or hibernate, run the report **Insomnia Report** to display possible causes.|The **Insomnia Report** displays a list of common causes that prevented computers from entering sleep or hibernate and the number of computers affected by each cause for a specified time period. For more information, see [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
-|If multiple power plans are applied to one computer, then the least restrictive power plan is applied. Run the report **Computers with Multiple Power Plans** to see computers with multiple power plans applied.|See **Computers with Multiple Power Plans** in [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|If computers in your hierarchy have not entered sleep or hibernate, run the report **Insomnia Report** to display possible causes.|The **Insomnia Report** displays a list of common causes that prevented computers from entering sleep or hibernate and the number of computers affected by each cause for a specified time period. For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+|If multiple power plans are applied to one computer, then the least restrictive power plan is applied. Run the report **Computers with Multiple Power Plans** to see computers with multiple power plans applied.|See **Computers with Multiple Power Plans** in [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management.md).|  
+

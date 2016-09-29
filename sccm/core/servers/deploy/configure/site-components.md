@@ -1,7 +1,7 @@
 ---
-title: "Site components for System Center Configuration Manager"
+title: "Site components | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 caps.latest.revision: 9
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Site components for System Center Configuration Manager
 At each System Center Configuration Manager site you can configure site components to modify the behavior of site system roles and site status reporting. Site component configurations apply to a site, and to each instance of an applicable site system role at the  site.  
@@ -54,7 +36,7 @@ At each System Center Configuration Manager site you can configure site componen
 
      Configuration Manager clients use management points for service location,  to find site information such as boundary group membership and PKI certificate selection options, and to find other management points in the site and distribution points from which to download software. Clients also use management points to complete site assignment and download client policy and upload their client information.  
 
-     Because the most secure method for clients to find management points is to publish them in Active Directory Domain Services, you will typically always select all functioning management points to publish to Active Directory Domain Services. However, this service location method requires that the schema is extended for Configuration Manager, there is a **System Management** container with appropriate security permissions for the site server to publish to this container, that the Configuration Manager site is configured to publish to Active Directory Domain Services, and that clients belong to the same Active Directory forest as the site server’s forest.  
+     Because the most secure method for clients to find management points is to publish them in Active Directory Domain Services, you will typically always select all functioning management points to publish to Active Directory Domain Services. However, this service location method requires that the schema is extended for Configuration Manager, there is a **System Management** container with appropriate security permissions for the site server to publish to this container, that the Configuration Manager site is configured to publish to Active Directory Domain Services, and that clients belong to the same Active Directory forest as the site server's forest.  
 
      When clients on the intranet cannot use Active Directory Domain Services to find management points, use [DNS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) publishing.  
 

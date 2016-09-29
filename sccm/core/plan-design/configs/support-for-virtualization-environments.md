@@ -1,7 +1,7 @@
 ---
-title: "Support for Virtualization Environments for System Center Configuration Manager"
+title: "Support for Virtualization | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 caps.latest.revision: 6
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Support for Virtualization Environments for System Center Configuration Manager
 Configuration Manager supports installing the client and site system roles on supported operating systems that run as a virtual machine in the following virtualization environments. This support exists even when the virtual machine host (virtualization environment) is not supported as a client or site server.  

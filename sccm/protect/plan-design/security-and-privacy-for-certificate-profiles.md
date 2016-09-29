@@ -1,7 +1,7 @@
 ---
 title: "Certificate profile security and privacy | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-07
+ms.date: 04/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Nbigmanmanager: angrobe
+
 ---
 # Security and privacy for certificate profiles in System Center Configuration Manager
 This topic contains security and privacy information for certificate profiles in System Center Configuration Manager.  
@@ -58,5 +40,7 @@ This topic contains security and privacy information for certificate profiles in
   
  Before you configure certificate profiles, consider your privacy requirements.  
   
-## See Also  
+### See also  
+
  [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+

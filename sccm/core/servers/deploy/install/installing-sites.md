@@ -1,7 +1,7 @@
 ---
-title: "Installing System Center Configuration Manager sites"
+title: "Installing sites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: get-started-article
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
 caps.latest.revision: 31
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Installing System Center Configuration Manager sites
 
@@ -56,4 +38,4 @@ Learn how to get a site installation script and how to use it for unattended sit
 This topic provides guidance on how to install a Configuration Manager console on a computer where you are not installing a site.
 
 [Upgrade an Eval installation to a Full installation](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)   
-Read this topic when you’re ready to upgrade your evaluation site to a fully licensed Configuration Manager site.
+Read this topic when you're ready to upgrade your evaluation site to a fully licensed Configuration Manager site.

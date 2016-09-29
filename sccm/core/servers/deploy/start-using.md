@@ -1,7 +1,7 @@
 ---
-title: "Start using System Center Configuration Manager"
+title: "Start using System Center Configuration Manager | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-04-13
+ms.date: 04/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Start using System Center Configuration Manager
 After you plan out your System Center Configuration Manager site and hierarchy  topology and are ready to get sites installed or upgraded, use the information in the following topics:  

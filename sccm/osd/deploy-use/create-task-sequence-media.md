@@ -1,7 +1,7 @@
 ---
 title: "Create task sequence media with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-27
+ms.date: 07/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Dougeby
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Dougebymanager: angrobe
+
 ---
 # Create task sequence media with System Center Configuration Manager
 You can use media to capture an operating system image from a reference computer or to deploy an operating system to a destination computer in your System Center Configuration Manager environment. The media that you create can be a CD, DVD set, or a USB flash drive.  
@@ -80,3 +62,4 @@ You can use media to capture an operating system image from a reference computer
   
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+

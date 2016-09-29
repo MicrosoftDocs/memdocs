@@ -1,7 +1,7 @@
 ---
-title: "Prepare to install System Center Configuration Manager sites"
+title: "Prepare to install sites | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Prepare to install System Center Configuration Manager sites
 To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
@@ -82,7 +82,7 @@ You use the Configuration Manager console to install a secondary site as a child
 
 
 ## <a name="bkmk_sitecodes"></a>  About site names and site codes
-Site codes and site names are used to identify and manage the sites in a Configuration Manager hierarchy. In the Configuration Manager console, the site code and site name are displayed in the <site code\> - <site name\> format. Every site code that you use in your hierarchy must be unique. If the Active Directory schema is extended for Configuration Manager, and sites are publishing data, the site codes used within an Active Directory forest must be unique even if they are used in a different Configuration Manager hierarchy or if they have been used in previous Configuration Manager installations. Be sure to carefully plan your site codes and site names before you deploy your hierarchy.
+Site codes and site names are used to identify and manage the sites in a Configuration Manager hierarchy. In the Configuration Manager console, the site code and site name are displayed in the &lt;site code\> - &lt;site name\> format. Every site code that you use in your hierarchy must be unique. If the Active Directory schema is extended for Configuration Manager, and sites are publishing data, the site codes used within an Active Directory forest must be unique even if they are used in a different Configuration Manager hierarchy or if they have been used in previous Configuration Manager installations. Be sure to carefully plan your site codes and site names before you deploy your hierarchy.
 
 ### specify a site code and site name
 During Configuration Manager Setup, you are prompted for a site code and site name for the central administration site, and each primary and secondary site installation. The site code must uniquely identify each site in the hierarchy. Because the site code is used in folder names, never use the following names for the site code, which include Configuration Manager reserved names and Windows-reserved names:

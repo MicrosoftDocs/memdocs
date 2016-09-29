@@ -1,7 +1,7 @@
 ---
 title: "Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-06-01
+ms.date: 06/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 caps.latest.revision: 10
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager
 One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I deploy hybrid MDM with Intune and Configuration Manager or run Intune standalone in the cloud only configuration?" It’s an important decision, and one that is not easily changed after implementation.  
@@ -75,7 +75,7 @@ One of the most commonly asked questions regarding mobile device management (MDM
 ##  <a name="DecsionTree"></a> Planning decisions  
  ![hybrid&#45;decisions](../../mdm/understand/media/hybrid-decisions.png)  
 
-|||  
+
 |-|-|  
 |<img src="media/hybrid-1.png" style="min-width:32px">|**How many devices are you planning to manage?**<br /><br /> Intune standalone supports up to 50,000 devices. Hybrid MDM  supports up to 300,000 devices.<br /><br /> For any deployment of significant size – standalone or hybrid MDM – we suggest you contact your Microsoft accounts team. Your Microsoft accounts team can put you in contact with Intune specialists who can discuss scale and limitations further.|  
 |![hybrid&#45;2](../../mdm/understand/media/hybrid-2.png)|**Is fine-grained access control required? (RBAC)**<br /><br /> Role Based Access Control (RBAC)  was added to System Center 2012 Configuration Manager. RBAC allows Configuration Manager administrators to design and deploy complex permission-sets, to restrict admin access to Configuration Manager objects and functions.<br /><br /> Intune standalone provides only two administrator roles: Full Access and Read-only Access.<br /><br /> If your organization needs to scope certain admins to certain users, devices, functions, or objects, Configuration Manager with RBAC is required.<br /><br /> If your organization has a small administrative team, and you don’t need the complexity of fine-grained access control, Intune with built-in security roles is the best fit.|  

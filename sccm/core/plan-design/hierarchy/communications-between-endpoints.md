@@ -1,7 +1,7 @@
 ---
-title: "Communications between endpoints in System Center Configuration Manager"
+title: "Communications between endpoints | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 caps.latest.revision: 10
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Communications between endpoints in System Center Configuration Manager
 
@@ -77,7 +59,7 @@ Clients initiate communication to site system roles, Active Directory Domain Ser
 
 -   **Various domain services**  
 
-Before a client can communicate with a site system role, the client uses service location to find a site system role that supports the client’s protocol (HTTP or HTTPS). By default, clients use the most secure method available to them:  
+Before a client can communicate with a site system role, the client uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them:  
 
 -   To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
@@ -105,7 +87,7 @@ The following site system roles installed at primary sites support connections f
 -   Software update point  
 
 **About internet facing site systems:**   
-Although there is no requirement to have a trust between a client’s forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
 For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
@@ -133,16 +115,16 @@ System Center Configuration Manager supports sites and hierarchies that span Act
 
 Configuration Manager also supports domain computers that are not in the same Active Directory forest as the site server, and computers that are in workgroups:  
 
--   **To support domain computers in a forest that is not trusted by your site server’s forest**, you can:  
+-   **To support domain computers in a forest that is not trusted by your site server's forest**, you can:  
 
     -   Install site system roles in that untrusted forest, with the option to publish site information to that Active Directory forest  
 
     -   Manage these computers as if they are workgroup computers.  
 
-  When you install site system servers  an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client’s forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest rather than downloading this information from their assigned management point.  
+  When you install site system servers  an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest rather than downloading this information from their assigned management point.  
 
   > [!NOTE]  
-  >  If you want to manage devices that are on the Internet, you can install Internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario does not require a two-way trust between the perimeter network and the site server’s forest.  
+  >  If you want to manage devices that are on the Internet, you can install Internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario does not require a two-way trust between the perimeter network and the site server's forest.  
 
 -   **To support computers in a workgroup**, you must:  
 
@@ -180,7 +162,7 @@ After the site successfully installs and initiates file-based transfers and data
 
 By default, when you install a new site as a child of another site, Configuration Manager configures the following:  
 
--   An intersite file-based replication route at each site that uses the site server computer account. Configuration Manager adds the computer account of each computer to the **SMS_SiteToSiteConnection_<sitecode\>** group on the destination computer.  
+-   An intersite file-based replication route at each site that uses the site server computer account. Configuration Manager adds the computer account of each computer to the **SMS_SiteToSiteConnection_&lt;sitecode\>** group on the destination computer.  
 
 -   Database replication between the SQL Server at each site.  
 
@@ -246,7 +228,7 @@ Consider the following additional information when you plan for site system role
 -   When the Internet-based management point trusts the forest that contains the user accounts, user policies are supported. When no trust exists, only computer policies are supported.  
 
 #### Communication between clients and site system roles when the clients are not in the same Active Directory forest as their site server  
-Configuration Manager supports the following scenarios for clients that are not in the same forest as their site’s site server:  
+Configuration Manager supports the following scenarios for clients that are not in the same forest as their site's site server:  
 
 -   There is a two-way forest trust between the forest of the client and the forest of the site server  
 
@@ -262,7 +244,7 @@ To publish site information to another Active Directory forest, you must:
 
 -   Specify the forest and then enable publishing to that forest in the **Active Directory Forests** node of the **Administration** workspace.  
 
--   Configure each site to publish its data to Active Directory Domain Services. This configuration enables clients in that forest to retrieve site information and find management points. For clients that cannot use Active Directory Domain Services for service location, you can use DNS, WINS, or the client’s assigned management point.  
+-   Configure each site to publish its data to Active Directory Domain Services. This configuration enables clients in that forest to retrieve site information and find management points. For clients that cannot use Active Directory Domain Services for service location, you can use DNS, WINS, or the client's assigned management point.  
 
 ###  <a name="bkmk_xchange"></a> Put the Exchange Server connector in a remote forest  
 To support this scenario, ensure that name resolution works between the forests (for example, configure DNS forwards), and when you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  

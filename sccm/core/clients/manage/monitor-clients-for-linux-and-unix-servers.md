@@ -1,7 +1,7 @@
 ---
-title: "How to monitor clients for Linux and UNIX servers in System Center Configuration Manager"
+title: "Monitor Linux and UNIX clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # How to monitor clients for Linux and UNIX servers in System Center Configuration Manager
 You can view information from Linux and UNIX servers in the System Center Configuration Manager console using the same methods you use to view information from Windows-based clients.  
@@ -62,3 +44,4 @@ You can view information from Linux and UNIX servers in the System Center Config
  It is also possible to create custom reports that are specific to Linux and UNIX server data. The **Caption** property of the hardware inventory class **Operating System** is a useful attribute that you can use to identify specific Operating Systems in the report query.  
 
  For information about reports in Configuration Manager, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
+

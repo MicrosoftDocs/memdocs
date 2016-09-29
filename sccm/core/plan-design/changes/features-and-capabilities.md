@@ -1,7 +1,7 @@
 ---
-title: "Features and capabilities of System Center Configuration Manager"
+title: "Features and capabilities | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: article
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: Brenduns
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Brendunsmanager: angrobe
+
 ---
 # Features and capabilities of System Center Configuration Manager
 The following are the primary management capabilities of System Center Configuration Manager. Each capability has its own prerequisites, and the capabilities that you want to use might influence the design and implementation of your Configuration Manager hierarchy. For example, if you want to deploy software to devices in your hierarchy, you must install the distribution point site system role.  
@@ -64,7 +46,7 @@ The following are the primary management capabilities of System Center Configura
 
 -   **Asset Intelligence**: Provides tools to collect inventory data and to monitor software license usage in your enterprise. See [Introduction to Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)  
 
- **Mobile device management with Microsoft Intune**  
+**Mobile device management with Microsoft Intune**  
 
  You can use Configuration Manager to manage iOS, Android (including Samsung KNOX), Windows Phone and Windows devices using the Microsoft Intune service over the Internet.
 

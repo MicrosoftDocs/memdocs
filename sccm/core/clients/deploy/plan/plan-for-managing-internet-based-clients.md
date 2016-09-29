@@ -1,7 +1,7 @@
 ---
 title: "Internet-based clients | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,8 @@ ms.topic: get-started-article
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: Mtillmanmanager: angrobe
+
 ---
 # Plan for managing Internet-based clients in System Center Configuration Manager
 Internet-based client management lets you manage System Center Configuration Manager clients when they are not connected to your company network but have a standard Internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
@@ -79,7 +61,7 @@ Internet-based client management lets you manage System Center Configuration Man
 -   Software update point  
 
  **About internet facing site systems:**   
-Although there is no requirement to have a trust between a client’s forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
  For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
@@ -204,3 +186,4 @@ Although there is no requirement to have a trust between a client’s forest and
      For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
 
      For similar communication requirements when you use the software update point for client connections from the Internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](http://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
+

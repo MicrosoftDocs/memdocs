@@ -1,7 +1,7 @@
 ---
-title: "Support for System Center Configuration Manager current branch versions"
+title: "Current Branch versions | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
 # Support for System Center Configuration Manager current branch versions

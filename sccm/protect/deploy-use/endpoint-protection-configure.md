@@ -1,7 +1,7 @@
 ---
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,26 +11,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnmanager: angrobe
+
 ---
 
 # Configure Endpoint Protection in System Center Configuration Manager
@@ -52,3 +34,4 @@ Before you can use Endpoint Protection to manage security and malware on Configu
 |**Step 3:** Configure definition update sources for Endpoint Protection clients.|Endpoint Protection can be configured to use various sources to download definition updates. See [Step 3: Configure Definition Updates for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_EPdefs).|  
 |**Step 4:** Configure the default antimalware policy and create any custom antimalware policies.|The default antimalware policy is applied when the Endpoint Protection client is installed. Any custom policies you have deployed are applied by default, within 60 minutes of deploying the client. Ensure that you have configured antimalware policies before you deploy the Endpoint Protection client.See [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).|  
 |**Step 5:** Configure custom client settings for Endpoint Protection.|Use custom client settings to configure Endpoint Protection settings for collections of computers in your hierarchy.<br /><br /> Note: Do not configure the default Endpoint Protection client settings unless you are sure that you want these settings applied to all computers in your hierarchy. See [Step 5: Configure Custom Client Settings for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md#BKMK_EPclient) in this topic.|  
+

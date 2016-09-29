@@ -1,7 +1,7 @@
 ---
-title: "Manage apps from the Windows Store for Business with System Center Configuration Manager"
+title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 caps.latest.revision: 11
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 ---
 # Manage apps from the Windows Store for Business with System Center Configuration Manager
 The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase Windows apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
@@ -24,7 +24,7 @@ The Windows Store for Business supports two types of app:
 - **Online** - This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory domain-joined.
 - **Offline** - Organizations can cache apps and licenses to deploy directly within their on-premises network, without connecting to the store or having a connection to the Internet.
 
-[Read more](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396) about the Windows Store for Business.
+[Read more](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview) about the Windows Store for Business.
 
 Configuration Manager supports managing Windows Store for Business apps on both Windows 10 devices running the Configuration Manager client, and also Windows 10 devices that are enrolled with Microsoft Intune (known as a hybrid configuration). Configuration Manager offers the following capabilities for online and offline apps.
 
@@ -41,7 +41,9 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 |Support available deployments to user or device collections|Yes<sup>3</sup>|No<sup>2</sup>|
 
 <sup>1</sup>Supports devices managed by Intune only. Although you are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, this will not work. The end user will be directed to the relevant page in the app store from where they must install the app manually.
+
 <sup>2</sup>Online apps can be deployed as available to user or device collections for devices managed by the Configuration Manager client only, but when the end user selects the app in Software Center, they will be taken to the Windows Store for Business, where they must install the app manually. Available deployments to devices enrolled with Microsoft Intune are not supported.
+
 <sup>3</sup>Not supported for devices managed by Intune.
 
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
 2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
+
 > [!IMPORTANT]
 > For devices enrolled with Intune, deployed apps are only available to the user who originally enrolled the device. No other users can access the app.
 
@@ -105,5 +108,5 @@ In the **Software Library** workspace, expand **Application Management**, then c
 
 For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
 
-## See Also  
- [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
+
+
