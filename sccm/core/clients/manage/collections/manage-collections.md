@@ -1,5 +1,6 @@
 ---
 title: "Manage collections | System Center Configuration Manager"
+description: "Do common collections management tasks in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

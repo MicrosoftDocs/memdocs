@@ -1,6 +1,6 @@
 ---
 title: "Hardware inventory in System Center Configuration Manager"
-description: "Get an overview of hardware inventory topics in System Center Configuration Manager."
+description: "Get an overview of hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -33,3 +33,4 @@ Use System Center Configuration Manager hardware inventory to collect detailed i
  [Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)  
 
  [Security and privacy for hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
+=======

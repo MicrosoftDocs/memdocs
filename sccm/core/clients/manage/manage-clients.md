@@ -140,7 +140,7 @@ When a System Center Configuration Manager client is installed and successfully 
 
          The **Retire** option is supported only by mobile devices that are enrolled by Intune or by On\-premises Mobile Device Management.  
 
-         For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../Topic/Help%20protect%20your%20data%20with%20remote%20wipe,%20remote%20lock,%20or%20passcode%20reset%20using%20System%20Center%20Configuration%20Manager.md).  
+         For more information, see [Help protect your data with remote wipe, remote lock, or passcode reset using System Center Configuration Manager](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
     -   **Change the ownership of a device**  
 
@@ -171,13 +171,13 @@ When a System Center Configuration Manager client is installed and successfully 
 
     -   **Scan computers for malware and download antimalware definition files.**  
 
-         See [Operations and maintenance for Endpoint Protection in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Endpoint%20Protection%20in%20System%20Center%20Configuration%20Manager.md).  
+         See [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
     -   **Deploy software, configuration baselines, and task sequences.**  
 
          For more information about deploying software and configuration baselines, see the following:  
 
-        -   [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md)  
+        -   [Deploy software updates in System Center Configuration Manager](../../../sum/deploy-use/deploy-software-updates.md)  
 
         -   [Plan for and configure compliance settings in System Center Configuration Manager](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
@@ -427,4 +427,3 @@ Beginning in Release 1606, you can adjust the size of the client cache folder wi
     -   Open a command prompt, and type: **cscript &lt;path\filename.vbs>**.  
 
 5.  Click **OK** in the **Windows Script Host** dialog box.  
-
