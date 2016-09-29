@@ -1,5 +1,6 @@
 ---
 title: "Deploy Windows clients| System Center Configuration Manager"
+description: "Learn how to deploy clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -506,4 +507,3 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 5.  Assign the Group Policy Object to the computers that you want to provision with Configuration Manager client installation properties.  
 
  For information about Windows Group Policy, refer to your Windows Server documentation.  
-

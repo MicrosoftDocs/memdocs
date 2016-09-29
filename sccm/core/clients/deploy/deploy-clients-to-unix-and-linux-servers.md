@@ -1,5 +1,6 @@
 ---
 title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
+description: "Learn how to deploy a client to a UNIX or Linux server in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -228,4 +229,3 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
  For more information about how clients locate management points, see [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
-

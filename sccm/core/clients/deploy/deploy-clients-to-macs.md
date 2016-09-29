@@ -1,5 +1,6 @@
 ---
 title: "Deploy Mac clients | System Center Configuration Manager"
+description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -654,4 +655,3 @@ Client installation and management for Mac computers in System Center Configurat
      For example: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
 
 17. Restart the Mac computer.  
-
