@@ -46,7 +46,7 @@ A System Center Configuration Manager application contains the files and informa
   
 2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
   
-3.  In the **Location** field, specify the UNC path in the form *\\\\<server\>\\<share\>\\<filename\>* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
+3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
   
     > [!IMPORTANT]  
     >  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that only the files that are necessary to install the application are in the folder that you specify. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application contains more files, consider creating multiple applications that have a smaller number of files.  
@@ -73,7 +73,7 @@ A System Center Configuration Manager application contains the files and informa
   
          On Windows Phone 8.1 devices, automatic VPN connections are not supported if more than one VPN profile has been deployed to the device.  
   
-         For more information about VPN profiles, see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+         For more information about VPN profiles, see [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
   
 6.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
   
@@ -138,7 +138,7 @@ For more information, see [Create deployment types for the application](/sccm/ap
   
 2.  In the **Type** field, select the application installation file type that you want to use to detect the deployment type information.  
   
-3.  In the **Location** field, specify the UNC path in the form *\\\\<server\>\\<share\>\\<file_name>* or the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also click **Browse** to locate the installation file.  
+3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\filename* or the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also click **Browse** to locate the installation file.  
   
     > [!NOTE]  
     >  You must have access to the UNC path that contains the application and any subfolders that contain the application content.  
@@ -178,7 +178,7 @@ For more information, see [Create deployment types for the application](/sccm/ap
   
 1.  On the **Content** page of the Create Deployment Type Wizard, specify the following information:  
   
-    -   Content location - Specify the location of the content for this deployment type, or click Browse to choose the deployment type content folder.  
+    -   Content location - Specify the location of the content for this deployment type, or click **Browse** to choose the deployment type content folder.  
   
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
@@ -323,7 +323,7 @@ The maximum size that you can use for a script is 32 kilobytes (KB).
     > [!NOTE]  
     >  You can also add new requirements on the **Requirements** tab of the *<deployment type name\>***Properties** dialog box.  
   
-2.  In the **Category** drop-down list, select whether this requirement is for a device or a user, or select **Custom** to use a previously created global condition. When you select **Custom**, you can also click **Create** to create a new global condition. For more information about global conditions, see [How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md).  
+2.  In the **Category** drop-down list, select whether this requirement is for a device or a user, or select **Custom** to use a previously created global condition. When you select **Custom**, you can also click **Create** to create a new global condition. For more information about global conditions, see [How to create global conditions](../../apps/deploy-use/create-global-conditions.md).  
   
     > [!IMPORTANT]  
     >  If you create a requirement of the category **User** and the condition **Primary Device**, and then deploy the application to a device collection, the requirement will be ignored.  
@@ -451,6 +451,6 @@ The maximum size that you can use for a script is 32 kilobytes (KB).
 |**App Package for Android (\*.apk file)**|Creates a deployment type from an Android app package file.|  
 |**App Package for Android on Google Play**|Creates a deployment type by specifying a link to the app on Google Play.|  
 |**Mac OS X**|Creates a deployment type for Mac computers from a .cmmac file that you have created by using the CMAppUtil tool.<br /><br /> Applies to Mac computers running the Configuration Manager client only.|  
-|**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies with System Center Configuration Manager](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
+|**Web Application**|Creates a deployment type that specifies a link to a web application. The deployment type installs a shortcut to the web application on the user’s device.<br /><br /> If you have installed the Intune managed browser on iOS or Android devices that you manage, you can ensure that users can only use the managed browser to open the app. To do this, use one of the following formats when you specify a link to the app by replacing **http:** with **http-intunemam:** or **https:** with **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> You can use Configuration Manager application requirements to ensure that apps you want to associate with the managed browser are only installed to iOS and Android devices.<br />aspx).<br /><br /> For more information about the Intune managed browser, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).|  
 |**Windows Installer through MDM (\*.msi)**|This installer type lets you create and deploy Windows Installer-based apps to PCs that run Windows 10.<br /><br /> The following considerations apply when you use this installer type:<br><br>- You can only upload a single file with the extension .msi.<br /><br /> - The file's product code and product version are used for app detection.<br /><br /> - The default restart behavior of the app will be used. Configuration Manager does not control this.<br /><br /> - Per user MSI packages will be installed for a single user.<br /><br /> - Per machine MSI packages will be installed for all users on the device.<br /><br /> - Dual mode MSI packages currently only install for all users on the device.<br /><br /> - App updates are supported when the MSI product code of each version is the same.|  
 

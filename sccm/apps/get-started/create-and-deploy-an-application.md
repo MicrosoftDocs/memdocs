@@ -23,16 +23,14 @@ In this topic, you'll jump right in and create an application with System Center
  For specific details relevant to each platform, see one of the following topics:  
   
 -   [Create Windows applications](../../apps/get-started/creating-windows-applications.md)  
-  
 -   [Create iOS applications](../../apps/get-started/creating-ios-applications.md)  
-  
 -   [Create Android applications](../../apps/get-started/creating-android-applications.md)  
-  
 -   [Create Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)  
-  
 -   [Create Mac computer applications](../../apps/get-started/creating-mac-computer-applications.md)  
-  
--   [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md)  
+-   [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md) 
+-   [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md) 
+
+
   
 If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [Create applications](../../apps/deploy-use/create-applications.md) to learn about all the options available when you create and deploy applications.  
   
@@ -57,7 +55,7 @@ If you are already familiar with Configuration Manager applications, you can ski
   
 	You'll end up with something looking like the following screenshot:  
   
-	![App management wizard general page](../media/App-management-wizard-general-page.png)  
+	![App management wizard general page](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
   
 5.  Click **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, click **Next** again.  
   
@@ -70,7 +68,7 @@ If you are already familiar with Configuration Manager applications, you can ski
   
      You'll end up with a screen that looks similar to the screenshot below:  
   
-     ![App management wizard general information page](../media/App-management-wizard-general-information-page.png)  
+     ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
   
 7.  Click **Next**. On the Summary page, you can confirm your application settings, then complete the wizard.  
   
