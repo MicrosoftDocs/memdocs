@@ -1,5 +1,6 @@
 ---
 title: "Client settings | System Center Configuration Manager"
+description: "Select client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/25/2016
 ms.prod: configuration-manager
@@ -627,4 +628,3 @@ All client settings in System Center Configuration Manager are managed in the Co
 -   **Allow user to define their primary devices**  
 
      Specify whether users are allowed to identify their own primary devices from the Application Catalog, **My Devices** tab.  
-

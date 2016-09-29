@@ -1,5 +1,6 @@
 ---
 title: "Client deployment planning | System Center Configuration Manager"
+description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -32,4 +33,3 @@ Before installing clients on PCs, servers, and other devices in System Center Co
 -   [Planning for client deployment to Mac computers in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)  
 
 -   [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)  
-

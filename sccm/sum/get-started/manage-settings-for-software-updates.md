@@ -10,7 +10,7 @@ ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: 
+ms.technology:
 	- configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 
@@ -66,20 +66,18 @@ Automatic Updates allows security updates and other important downloads to be re
 
 
 ## Software updates properties
-  The software update properties provide information about software updates and associated content. You can also use these properties to configure settings for software updates. When you open the properties for multiple software updates, only the **Maximum Run Time** and **Custom Severity** tabs are displayed.   
+The software update properties provide information about software updates and associated content. You can also use these properties to configure settings for software updates. When you open the properties for multiple software updates, only the **Maximum Run Time** and **Custom Severity** tabs are displayed.   
 
-  Use the following procedure to open software update properties.  
+Use the following procedure to open software update properties.  
 
- ##### To open software update properties  
+#### To open software update properties  
 
- 1.  In the Configuration Manager console, click **Software Library**.  
+1.  In the Configuration Manager console, click **Software Library**.  
+2.  In the Software Library workspace, expand **Software Updates**, and click **All Software Updates**.  
+3.  Select one or more software updates, and then, on the **Home** tab, click **Properties** in the **Properties** group.  
 
- 2.  In the Software Library workspace, expand **Software Updates**, and click **All Software Updates**.  
-
- 3.  Select one or more software updates, and then, on the **Home** tab, click **Properties** in the **Properties** group.  
-
-     > [!NOTE]  
-     >  On the **All Software Updates** node, Configuration Manager displays only the software updates that have a **Critical** and **Security** classification and that have been released in the last 30 days.  
+   > [!NOTE]  
+   >  On the **All Software Updates** node, Configuration Manager displays only the software updates that have a **Critical** and **Security** classification and that have been released in the last 30 days.  
 
 ###  <a name="BKMK_SoftwareUpdatesInformation"></a> Review software updates information  
 In software update properties, you can review detailed information about a software update. The detailed information is not displayed when you select more than one software update. The following sections describe the information that is available for a selected software update.  
@@ -87,37 +85,37 @@ In software update properties, you can review detailed information about a softw
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Software update details  
 In the **Update Details** tab, you can view the following summary information about the selected software update:  
 
- - **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID at the [Microsoft Security Bulletin Search](http://go.microsoft.com/fwlink/p/?LinkId=58313) Web page.  
+- **Bulletin ID**: Specifies the bulletin ID that is associated with security software updates. You can find security bulletin details by searching on the bulletin ID at the [Microsoft Security Bulletin Search](http://go.microsoft.com/fwlink/p/?LinkId=58313) Web page.  
 
- - **Article ID**: Specifies the article ID for the software update. The referenced article provides more detailed information about the software update and the issue that the software update fixes or improves.  
+- **Article ID**: Specifies the article ID for the software update. The referenced article provides more detailed information about the software update and the issue that the software update fixes or improves.  
 
- - **Date revised**: Specifies the date that the software update was last modified.  
+- **Date revised**: Specifies the date that the software update was last modified.  
 
- - **Maximum severity rating**: Specifies the vendor-defined severity rating for the software update.  
+- **Maximum severity rating**: Specifies the vendor-defined severity rating for the software update.  
 
- - **Description**: Provides an overview of what condition the software update fixes or improves.  
+- **Description**: Provides an overview of what condition the software update fixes or improves.  
 
- - **Applicable languages**: Lists the languages for which the software update is applicable.  
+- **Applicable languages**: Lists the languages for which the software update is applicable.  
 
- - **Affected products**: Lists the products for which the software update is applicable.  
+- **Affected products**: Lists the products for which the software update is applicable.  
 
 ####  <a name="BKMK_ContentInformation"></a> Content information  
 In the **Content Information** tab, review the following information about the content that is associated with the selected software update:  
 
- -   **Content ID**: Specifies the content ID for the software update.  
+-   **Content ID**: Specifies the content ID for the software update.  
 
- -   **Downloaded**: Indicates whether Configuration Manager has downloaded the software update files.  
+-   **Downloaded**: Indicates whether Configuration Manager has downloaded the software update files.  
 
- -   **Language**: Specifies the languages for the software update.  
+-   **Language**: Specifies the languages for the software update.  
 
- -   **Source Path**: Specifies the path to the software update source files.  
+-   **Source Path**: Specifies the path to the software update source files.  
 
- -   **Size (MB)**: Specifies the size of the software update source files.  
+-   **Size (MB)**: Specifies the size of the software update source files.  
 
 ####  <a name="BKMK_CustomBundleInformation"></a> Custom bundle information  
 In the **Custom Bundle Information** tab, review the custom bundle information for the software update. When the selected software update contains bundled software updates that are contained in the software update file, they are displayed in the **Bundle information** section. This tab does not display bundled software updates that are displayed in the **Content Information** tab, such as update files for different languages.  
 
- ####  <a name="BKMK_SupersedenceInformation"></a> Supersedence information  
+####  <a name="BKMK_SupersedenceInformation"></a> Supersedence information  
 On the **Supersedence Information** tab, you can view the following information about the supersedence of the software update:  
 
 - **This update has been superseded by the following updates**: Specifies the software updates that supersede this update, which means that the updates listed are newer. In most cases, you will deploy one of the software updates that supersedes the software update. The software updates that are displayed in the list contain hyperlinks to webpages that provide more information about the software updates. When this update is not superseded, **None** is displayed.  
@@ -136,15 +134,15 @@ On the **Maximum Run Time** tab, you can view and configure the following settin
 
 - **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs and 5 minutes for all other software update types. Values can range from 5 to 9999 minutes.  
 
- > [!IMPORTANT]  
- >  Be sure to set the maximum run time value smaller than the configured maintenance window time. Otherwise, the software update installation will never initiate.  
+> [!IMPORTANT]  
+>  Be sure to set the maximum run time value smaller than the configured maintenance window time. Otherwise, the software update installation will never initiate.  
 
 ####  <a name="BKMK_SetCustomSeverity"></a> Set custom severity  
 In the properties for a software update, you can use the **Custom Severity** tab to configure custom severity values for the software updates. This may be necessary if the predefined severity values do not meet your needs. The custom values are listed in the **Custom Severity** column in the Configuration Manager console. You can sort the software updates by the defined custom severity values and can also create queries and reports that can filter on these values. You can configure this setting only on the central administration site or stand-alone primary site.  
 
 You can configure the following settings on the **Custom Severity** tab.  
 
- - **Custom severity**: Sets a custom severity value for the software updates. Select **Critical**, **Important**, **Moderate**, or **Low** from the list. By default, the custom severity value is empty.
+- **Custom severity**: Sets a custom severity value for the software updates. Select **Critical**, **Important**, **Moderate**, or **Low** from the list. By default, the custom severity value is empty.
 
 ## CRL checking for software updates
 By default, the certificate revocation list (CRL) is not checked when verifying the signature on System Center Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  

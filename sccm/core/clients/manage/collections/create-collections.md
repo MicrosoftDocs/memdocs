@@ -1,5 +1,6 @@
 ---
 title: "Create collections | System Center Configuration Manager"
+description: "Create collections in System Center Configuration Manager to more easily manage groups of users and devices."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -235,4 +236,3 @@ Create collections in System Center Configuration Manager to represent logical g
 
 > [!NOTE]  
 >  You must refresh or reload the Configuration Manager console to see the collection members for the newly imported collection.  
-
