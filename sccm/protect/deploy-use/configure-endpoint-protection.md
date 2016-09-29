@@ -157,14 +157,11 @@ Use one of the following procedures depending on whether you want to install a n
 ###  <a name="BKMK_EPdefs"></a> Step 3: Configure Definition Updates for Endpoint Protection  
  You can choose any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy:  
 
--   Updates distributed from Configuration Manager - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
-
--   Updates distributed from Windows Server Update Services (WSUS) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.  
-
+-   Updates distributed from Configuration Manager – This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
 
 -   Updates distributed from Microsoft Update - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.  
 
--   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.  
+-   Updates distributed from Microsoft Malware Protection Center – This method will download definition updates from the Microsoft Malware Protection Center.  
 
 -   Updates from UNC file shares - With this method, you can save the latest definition and engine updates to a share on the network. Clients can install the updates from the share.  
 
