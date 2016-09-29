@@ -80,7 +80,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Idle time before mobile device is locked**|Specifies how many minutes the device must be inactive before it is automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
 
-###  <a name="BKMK_Device"></a> Device  
+###  Device  
 
 |Setting name|Details|  
 |------------------|-------------|  

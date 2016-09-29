@@ -18,9 +18,7 @@ author: robstackmsftmanager: angrobe
 ---
 # Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client
 
-This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
-
- Use the System Center Configuration Manager**Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+Use the System Center Configuration Manager **Windows 8.1 and Windows 10** configuration item to manage settings  for Windows 8.1, and Windows 10 devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## Create a Windows 8.1 and Windows 10 configuration item  
 
@@ -152,12 +150,12 @@ This article contains information about [new functionality introduced in version
 ###  Cloud  
  These settings are for devices running Windows 8.1 and Windows 10.  
 
-|Setting name|Details|Windows 8.1|Windows 10|  
-|------------------|-------------|-----------------|----------------|  
-|**Settings synchronization**|Allows synchronization of settings between devices.|Yes|Yes|  
-|**Credentials synchronization**|Allows synchronization of credentials between devices.|Yes|Yes|  
-|**Microsoft Account**|Allow the use of a Microsoft account on the device.|Yes|Yes|  
-|**Settings synchronization over metered connections**|Allow settings to be synchronized when the Internet connection is metered.|Yes|Yes|  
+|Setting name|Details|  
+|------------------|-------------|  
+|**Settings synchronization**|Allows synchronization of settings between devices.|  
+|**Credentials synchronization**|Allows synchronization of credentials between devices.|  
+|**Microsoft Account**|Allow the use of a Microsoft account on the device.|  
+|**Settings synchronization over metered connections**|Allow settings to be synchronized when the Internet connection is metered.|  
 
 ###  Security  
 
@@ -214,7 +212,7 @@ This article contains information about [new functionality introduced in version
 |**Wi-Fi hotspot reporting**||  
 |**Manual Wi-Fi configuration**||  
 
-##### To configure a wireless network connection  
+#### To configure a wireless network connection  
 
 1.  On the **Configure mobile device wireless communication settings** page, click **Add**.  
 
@@ -224,13 +222,13 @@ This article contains information about [new functionality introduced in version
     |-------------|----------------------|  
     |**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
     |**Network connection**|Choose from **Internet** or **Work**.|  
-    |**Authentication**|Choose the authentication method for the wireless connection from:<br /><br /> - **Open**<br /><br /> - <br />                            **Shared**<br /><br /> - <br />                            **WPA**<br /><br /> - <br />                            **WPA-PSK**<br /><br /> - <br />                            **WPA2**<br /><br /> - <br />                            **WPA2-PSK**|  
-    |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br /><br /> - **Disabled**<br /><br /> - <br />                            **WEP**<br /><br /> - <br />                            **TKIP**<br /><br /> - <br />                            **AES**|  
+    |**Authentication**|Choose the authentication method for the wireless connection from:<br>- **Open**<br>-                             **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
+    |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
     |**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
     |**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
     |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
     |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
-    |**EAP type**|Choose the EAP type to use from:<br /><br /> - **PEAP**<br /><br /> - <br />                            **Smart card or certificate**|  
+    |**EAP type**|Choose the EAP type to use from:<br>- **PEAP**<br>- **Smart card or certificate**|  
 
 3.  When you are finished, click **OK**.  
 

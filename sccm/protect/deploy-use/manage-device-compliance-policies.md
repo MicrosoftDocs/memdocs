@@ -56,7 +56,7 @@ robots: noindex
 -   The company portal or web portal will notify the user about any compliance issues.  
 
 
-## Next Steps  
+### Next Steps  
 [Create and deploy a device compliance policy](create-compliance-policy.md)
 ### See also  
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
