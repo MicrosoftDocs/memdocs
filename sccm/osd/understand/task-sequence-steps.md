@@ -1,5 +1,6 @@
 ---
 title: "Task sequence steps in System Center Configuration Manager"
+description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -1743,4 +1744,3 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 
 ## See Also  
  [Operating system deployment technical reference for System Center Configuration Manager](../Topic/Operating%20system%20deployment%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)
-
