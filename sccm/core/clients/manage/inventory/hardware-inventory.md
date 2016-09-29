@@ -17,19 +17,3 @@ author: barlanmsftmanager: angrobe
 ---
 # Hardware inventory in System Center Configuration Manager
 Use System Center Configuration Manager hardware inventory to collect detailed information about the hardware of client devices in your enterprise.  
-
-## In this section  
- Use the following topics to help you plan, configure, operate and maintain, and troubleshoot hardware inventory in Configuration Manager.  
-
- [Introduction to hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md)  
-
- [Planning for hardware inventory in System Center Configuration Manager](../Topic/Planning%20for%20hardware%20inventory%20in%20System%20Center%20Configuration%20Manager.md)  
-
- [Configuring hardware inventory in System Center Configuration Manager](../Topic/Configuring%20hardware%20inventory%20in%20System%20Center%20Configuration%20Manager.md)  
-
- [Operations and maintenance for hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/operations-and-maintenance-for-hardware-inventory.md)  
-
- [Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)  
-
- [Security and privacy for hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
-

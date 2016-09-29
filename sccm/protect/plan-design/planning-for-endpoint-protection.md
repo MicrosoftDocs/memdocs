@@ -15,6 +15,7 @@ author: NathBarnmanager: angrobe
 
 ---
 # Planning for Endpoint Protection in System Center Configuration Manager
+<<<<<<< HEAD
 Endpoint Protection in System Center Configuration Manager lets you to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 
 > [!IMPORTANT]  
@@ -58,7 +59,7 @@ Endpoint Protection in Configuration Manager allows you to create antimalware po
 -   [Monitor Endpoint Protection in System Center Configuration Manager](../deploy-use/monitor-endpoint-protection.md) - Monitoring activity reports, infected client computers, and more.  
 
 -   [Manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](../deploy-use/endpoint-antimalware-firewall.md) - You can change policy priority for [antimalware](endpoint-antimalware-firewall.md#manage-antimalware-policies) or [firewall](endpoint-antimalware-firewall.md#manage-windows-firewall-policies), [remediate malware found on client computers](endpoint-antimalware-firewall.md#remediate-detected-malware), and other tasks
-  
+
 ## Managing Windows Firewall with Endpoint Protection  
  Endpoint Protection in Configuration Manager provides basic management of the Windows Firewall on client computers. For each network profile, you can configure the following settings:  
 

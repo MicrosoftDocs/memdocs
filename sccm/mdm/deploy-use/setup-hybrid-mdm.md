@@ -18,7 +18,7 @@ author: NathBarn
 
 # Setup hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
 
-Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Use the following steps to setup hybrid device enrollment with Configuration Manager using Intune.
+Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Use the following steps to setup hybrid device enrollment with Configuration Manager using Intune. By completing the following steps you will enable "bring your own device" (BYOD) enrollment for your users. These steps are also prerequisites for [enrolling company-owned devices](enroll-company-owned-devices.md).
 
  |Steps|Details|  
  |-----------|-------------|  
@@ -264,12 +264,12 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
 - [Windows 10 and Windows 8.1 devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS and Mac devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
+- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **Applications** can be deployed to managed devices:
 - [iOS applications](/sccm/apps/get-started/creating-ios-applications)
-- [Mac applications](/sccm/apps/get-started/creating-ios-applications)
-- [Windows PC applications](/sccm/apps/get-started/creating-windows-application)
+- [Mac applications](/sccm/apps/get-started/creating-mac-computer-applications)
+- [Windows PC applications](/sccm/apps/get-started/creating-windows-applications)
 - [Windows Phone applications](/sccm/apps/get-started/creating-windows-phone-applications)
 - [Android applications](/sccm/apps/get-started/creating-android-applications)
 
