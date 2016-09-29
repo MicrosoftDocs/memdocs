@@ -20,6 +20,7 @@
 ### [Install a software update point](get-started/install-a-software-update-point.md)
 ### [Synchronize software updates](get-started/synchronize-software-updates.md)
 #### [Synchronize software updates from a disconnected software update point](get-started/synchronize-software-updates-disconnected.md)
+### [Configure classifications and products](configure-classifications-and-products.md)
 ### [Manage settings for software updates](get-started/manage-settings-for-software-updates.md)
 ## [Remove a software update point](get-started/remove-a-software-update-point.md)
 

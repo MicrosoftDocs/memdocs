@@ -5,7 +5,7 @@ ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -18,32 +18,28 @@ author: karthikaramanmanager: angrobe
 # Manage SharePoint Online access in System Center Configuration Manager
 
 Use the System Center Configuration Manager **SharePoint Online** conditional access policy to manage access to OneDrive for Business files located on SharePoint online, based on conditions you specify.  
-  
-> [!IMPORTANT]  
->  Conditional access for PCs and Windows 10 Mobile devices with apps using modern authentication is not currently available to all Intune customers. If you are already using these features, you do not need to take any action. You can continue to use them.  
->   
->  If you have not created conditional access policies for PCs or Windows 10 Mobile for apps using modern authentication, you will need to submit a request for access. You can find out more information about known issues as well as how to get access to this feature at the [connect site](http://go.microsoft.com/fwlink/?LinkId=761472).  
-  
+
+
  When a targeted user attempts to connect to a file using a supported app such as OneDrive on their device, the following evaluation occurs:  
-  
+
  ![ConditionalAccess8&#45;6](../../protect/deploy-use/media/ConditionalAccess8-6.png "ConditionalAccess8-6")  
-  
+
  To connect to the required files, the device running OneDrive must:  
-  
+
 -   Be enrolled with Microsoft Intune or a domain joined PC.  
-  
+
 -   Register the device in Azure Active Directory (this happens automatically when the device is enrolled with Intune.  
-  
+
      For domain joined PCs, you must set it up to [automatically register](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) with Azure Active Directory.  
-  
+
 -   Be compliant with any deployed Configuration Manager compliance policies  
-  
+
  The device state is stored in Azure Active Directory which grants or blocks access to the files, based on the conditions you specify.  
-  
+
  If a condition is not met, the user is presented with one of the following messages when they log in:  
-  
+
 -   If the device is not enrolled with Intune, or is not registered in Azure Active Directory, a message is displayed with instructions about how to install the company portal app and enroll.  
-  
+
 -   If the device is not compliant, a message is displayed that directs the user to the Intune web portal where they can find information about the problem, and how to remediate it.  
 
 - For mobile devices:
@@ -55,66 +51,68 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 
   Unsupported browsers will be blocked.
 -   For a PC:  
-  
-    > [!IMPORTANT]  
-    >  Conditional access for PCs is not currently available to all Intune customers. If you are already using conditional access for PCs, you do not need to take any action. You can continue to use it.  
-    > If you have not created conditional access policies for PCs you will need to submit a request for access. You can find out more information about known issues as well as how to get access to this feature at the [connect site](http://go.microsoft.com/fwlink/?LinkId=761472).  
-  
+
+
     -   If the policy is set to require domain join, and the PC is not domain joined, a message is displayed to contact the IT admin.  
-  
+
     -   If the policy is set to require domain join or compliant, then the PC does not meet either requirement, a message is displayed with instructions about how to install the company portal app and enroll.  
-  
+
  You can block access to SharePoint Online from the following apps:  
-  
+
 -   Microsoft Office Mobile (Android)  
-  
+
 -   Microsoft OneDrive (Android and iOS)  
-  
+
 -   Microsoft Word (Android and iOS)  
-  
+
 -   Microsoft Excel (Android and iOS)  
-  
+
 -   Microsoft PowerPoint (Android and iOS)  
-  
+
 -   Microsoft OneNote (Android and iOS)  
-  
-## Steps to configure conditional access for SharePoint Online  
-  
+
+## Configure conditional access for SharePoint Online  
+
 ### Step 1: Configure Active Directory security groups  
  Before you start, configure Azure Active Directory security groups for the conditional access policy. You can configure these groups in the **Office 365 admin center**, or the **Intune account portal**. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to access resources.  
-  
+
  You can specify two group types in a SharePoint Online policy:  
-  
+
 -   **Targeted groups** â€“ Contains groups of users to which the policy will apply  
-  
+
 -   **Exempted groups** â€“ Contains groups of users that are exempt from the policy (optional)  
-  
+
  If a user is in both groups, they will be exempt from the policy.  
-  
+
 ### Step 2: Configure and deploy a compliance policy  
  Ensure that you create and deploy a compliance policy to all devices that the SharePoint Online policy will be targeted to.  
-  
+
 > [!NOTE]  
 >  While compliance policies are deployed to Intune groups, or Configuration Manager collections, conditional access policies are targeted to Azure Active Directory security groups.  
-  
+
  For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md).  
-  
+
 > [!IMPORTANT]  
 >  If you have not deployed a compliance policy and then enable the SharePoint Online policy, all targeted devices will be allowed access.  
-  
+
  When you are ready, continue to **Step 3**.  
-  
+
 ###  <a name="BKMK_OneDrive"></a> Step 3: Configure the SharePoint Online policy  
- Next, configure the policy to require that only managed and compliant devices can access SharePoint Online. This policy will be will be stored in Azure Active Directory.  
-  
+
+
+ Next, configure the policy to require that only managed and compliant devices can access SharePoint Online. This policy will be will be stored in Azure Active Directory.
+
+ >[!NOTE]
+ >You can also create conditional access policy in the Azure AD management console. Azure AD management console allows you to create the Intune device conditional access policies (referred to as the device-based conditional access policy in Azure AD) in addition to other conditional access policies like multi-factor authentication. You can also set conditional access policies for third-party Enterprise apps like Salesforce and Box that Azure AD supports. For more details, see [How to set Azure Active Directory device-based conditional access policy for access control to Azure Active Directory connected applications](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/).  
+
 1.  In the Configuration Manager console, click **Assets and Compliance**.  
-  
+
 2.  Select **Enable conditional access policy for SharePoint Online.**.  
-  
+
      ![IntuneSASharePointOnlineCAPolicy](../../protect/deploy-use/media/IntuneSASharePointOnlineCAPolicy.png "IntuneSASharePointOnlineCAPolicy")  
-  
+
 3.  Under **Application access** for Outlook and apps that use modern authentication, you can choose to restrict access to only devices that are compliant for each platform.  
-  
+
     > [!TIP]  
     >  **Modern authentication** brings Active Directory Authentication Library (ADAL)-based sign in to Office clients.  
     >   
@@ -122,13 +120,13 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
     > -   This new sign-in method enables new scenarios such as, conditional access, based on **device compliance** and whether **multi-factor authentication** was performed.  
     >   
     >  This [article](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517) has more detailed information on how modern authentication works.  
-  
+
      For windows PCs, the PC must either be domain joined, or enrolled with Intune and compliant. You can set the following requirements:  
-  
+
     -   **Devices must be domain joined or compliant.** This means that the PCs must either be domain joined or compliant with the policies set in Intune. If the PC does not meet either of these requirements, the user is prompted to enroll the device with Intune.  
-  
+
     -   **Devices must be domain joined.** This means that the PCs must be domain joined to access Exchange Online. If the PC is not domain joined access to email is blocked and the user is prompted to contact the IT admin.  
-  
+
     -   **Devices must be compliant.** This means that the PCs must be enrolled in Intune and compliant. If the PC is not enrolled, a message with instructions on how to enroll is displayed.  
 
 4.  Under **Browser access** to SharePoint Online and OneDrive for Business, you can choose to allow access to Exchange Online only through the supported browsers: Safari (iOS), and Chrome (Android). Access from other browsers will be blocked.  The same platform restrictions you selected for Application access for OneDrive also apply here.
@@ -148,26 +146,25 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
      **Android**
 
       ![screenshot of the certificate prompt on an Android device](../../protect/deploy-use/media/mdm-browser-ca-android-cert-prompt.png)
-  
+
 4.  On the **Home** tab, in the **Links** group, click **Configure Conditional Access Policy in the Intune Console**. You might need to supply the user name and password of the account used to connect Configuration Manager with Intune.  
-  
+
      The Intune admin console will open.  
-  
+
 5.  In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **SharePoint Online Policy**.  
-  
+
 6.  Select **Block apps from accessing SharePoint Online if the device is noncompliant**.  
-  
+
 7.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy will apply.  
-  
+
 8.  Under **Exempted Groups**, optionally, click **Modify** to select the Azure Active Directory security groups that are exempt from this policy.  
-  
+
 9. When you are done, click **Save**.  
-  
+
  You do not have to deploy the conditional access policy, it takes effect immediately.  
-  
+
  See [Manage SharePoint Online access with Microsoft Intune](https://technet.microsoft.com/library/dn705844.aspx) for information about how you can monitor the policy from the Intune console.  
-  
+
 ### See also  
 
  [Manage access to services in System Center Configuration Manager](../../protect/deploy-use/manage-access-to-services.md)
-

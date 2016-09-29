@@ -12,10 +12,12 @@ ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision:
 author: karthikaraman
-robots:
+manager: angrobe
+robots: noindex
+---
 
-----
 # Create and deploy a device compliance policy
+
 ## Create a compliance policy
 
 1.  In the Configuration Manager console, click **Assets and Compliance**.

@@ -5,13 +5,11 @@ title: Install a software update point | Configuration Manager
 description:
 keywords:
 author: dougebymanager: angrobe
-
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-	- configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
 # optional metadata
@@ -80,7 +78,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
  For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
 
-## Synchronization Source  
+## Synchronization source  
  You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource).  
 
  Use the following table for the available options when you configure the software update point at a site.  
