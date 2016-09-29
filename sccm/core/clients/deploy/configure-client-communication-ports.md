@@ -1,5 +1,6 @@
 ---
 title: "Configure client communication ports | System Center Configuration Manager"
+description: "Set client communication ports in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -65,4 +66,3 @@ You can change the request port numbers that System Center Configuration Manager
 7.  Click **OK** to close the properties dialog box for the site.  
 
  Repeat this procedure for all primary sites in the hierarchy.
-

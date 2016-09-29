@@ -1,5 +1,6 @@
 ---
 title: "Configure client settings | System Center Configuration Manager"
+description: "Select client settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -89,4 +90,3 @@ You manage all client settings in System Center Configuration Manager from the *
 
     > [!NOTE]  
     >  The displayed resultant settings are read only. To modify any settings, use the above procedures.  
-
