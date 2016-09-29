@@ -1,6 +1,6 @@
 ---
 title: "Security and privacy for queries | System Center Configuration Manager"
-description:
+description: "Understand best practices for security and privacy when you query for information from the site database."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

@@ -1,6 +1,6 @@
 ---
 title: "Flowchart - Update replication | System Center Configuration Manager"
-description:
+description: "See the process by which an in-console update you select to install replicates to additional sites."
 ms.custom: na
 ms.date: 05/26/2016
 ms.prod: configuration-manager
