@@ -1,6 +1,6 @@
 ---
 title: "Create a task sequence for non-operating system deployments with System Center Configuration Manager"
-description: "Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, edit user states, etc."
+description: "Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, editing user states, etc."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
