@@ -1,5 +1,6 @@
 ---
 title: "Prepare site system roles for operating system deployments with System Center Configuration Manager"
+description: "Configure the site system roles before you deploy operating systems in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -224,4 +225,3 @@ You will need to test the customized settings in your environment to determine w
 
 ## See Also  
  [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
-
