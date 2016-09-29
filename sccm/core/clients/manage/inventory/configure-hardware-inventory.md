@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to configure hardware inventory in System Center Configuration Manager

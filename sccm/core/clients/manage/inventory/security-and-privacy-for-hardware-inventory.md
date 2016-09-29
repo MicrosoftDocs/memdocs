@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 caps.latest.revision: 6
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Security and privacy for hardware inventory in System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)

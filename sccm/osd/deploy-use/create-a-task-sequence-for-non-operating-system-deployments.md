@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Create a task sequence for non-operating system deployments with System Center Configuration Manager

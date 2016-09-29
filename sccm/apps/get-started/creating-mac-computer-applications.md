@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 caps.latest.revision: 9
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create Mac computer applications with System Center Configuration Manager

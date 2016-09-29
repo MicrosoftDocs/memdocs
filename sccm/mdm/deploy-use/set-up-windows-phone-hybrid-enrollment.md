@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1973f960-19c3-4b85-be71-063375357a5b
 caps.latest.revision: 14
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 # Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune

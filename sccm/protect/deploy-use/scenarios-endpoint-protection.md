@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 caps.latest.revision: 8
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 # Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Manage accounts to access content in System Center Configuration Manager
 Before deploying content in System Center Configuration Manager, take time to consider how clients will access that content from distribution points.  
@@ -107,3 +107,4 @@ If you create this account, create it as a low-rights, local account on the comp
 
 > [!IMPORTANT]  
 >  Do not grant this account interactive logon rights  
+>>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

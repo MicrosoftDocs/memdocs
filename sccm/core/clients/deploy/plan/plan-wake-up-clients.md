@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # Plan how to wake up clients in System Center Configuration Manager
  Configuration Manager supports two wake on local area network (LAN) technologies to wake up computers in sleep mode when you want to install required software, such as software updates and applications: traditional wake-up packets and AMT power-on commands.  

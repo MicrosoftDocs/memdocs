@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Online Documentation for System Center Configuration Manager

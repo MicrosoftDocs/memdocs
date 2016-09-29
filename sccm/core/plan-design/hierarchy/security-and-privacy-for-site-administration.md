@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Security and privacy for site administration in System Center Configuration Manager

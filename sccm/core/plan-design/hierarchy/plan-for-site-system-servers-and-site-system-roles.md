@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 caps.latest.revision: 11
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Plan for site system servers and site system roles for System Center Configuration Manager
@@ -138,3 +138,4 @@ The following are site system roles that can use a proxy server:
  For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
 
 -   **Service connection point** - When configured to be online (not offline), this site system role connects to Microsoft Intune and the Microsoft cloud service.  
+>>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

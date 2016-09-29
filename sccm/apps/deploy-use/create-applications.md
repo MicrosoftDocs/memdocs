@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Create applications with System Center Configuration Manager
@@ -260,8 +260,7 @@ The following table contains Microsoft Visual Basic (VB) sample scripts that you
 |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
 |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
   
-    > [!NOTE]  
-    >  The maximum size that you can use for a script is 32 kilobytes (KB).  
+The maximum size that you can use for a script is 32 kilobytes (KB).  
   
 4.  Click **OK** to close the **Script Editor** dialog box.  
   

@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Plan for the site database for System Center Configuration Manager
@@ -54,3 +54,4 @@ Typically, a site system server supports site system roles from only a single Co
 **Prerequisites for the Site Database:**  
 
 -   To host the site database, the SQL Server must meet the requirements detailed in [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+>>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

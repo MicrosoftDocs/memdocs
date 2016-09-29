@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: bed310f7-83ad-47a6-aff9-df2516110eae
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Planning for collections in System Center Configuration Manager

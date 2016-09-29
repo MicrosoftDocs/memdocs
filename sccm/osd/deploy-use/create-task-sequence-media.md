@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Create task sequence media with System Center Configuration Manager

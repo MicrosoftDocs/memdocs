@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 caps.latest.revision: 51
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
