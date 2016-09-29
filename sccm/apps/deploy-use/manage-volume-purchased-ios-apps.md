@@ -54,9 +54,7 @@ author: robstackmsftmanager: angrobe
   
 ## Step 1 - To get and upload an Apple VPP token  
   
-1.  In the Configuration Manager console, click **Administration**.  
-  
-2.  In the **Administration** workspace, expand **Cloud Services**, and then click **Apple Volume Purchase Program Tokens**.   
+1.  In the Configuration Manager console, click **Administration** > **Cloud Services** > **Apple Volume Purchase Program Tokens**.   
   
 3.  On the **Home** tab, in the **Apple Volume Purchase Program Tokens** group, click **Add Apple Volume Purchase Program Token**.  
   
@@ -74,9 +72,9 @@ author: robstackmsftmanager: angrobe
   
 5.  Click **Next**, and then complete the wizard.  
   
- From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
+From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
   
- You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
+You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
   
 ## Step 2 - Deploy a volume-purchased app  
   
