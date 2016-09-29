@@ -1,5 +1,6 @@
 ---
 title: "Manage collections | System Center Configuration Manager"
+description: "Do common collections management tasks in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -75,4 +76,3 @@ Use the overview information in this topic to help you perform management tasks 
 |**Distribution Point Groups**|Lets you associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).|  
 |**Security**|Displays the administrative users who have permissions for the selected collection from associated roles and security scopes.|  
 |**Monitor**|Lets you configure when alerts are generated for client status and Endpoint Protection. For more information, see [How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md) and [How to monitor Endpoint Protection in System Center Configuration Manager](../../../../protect/deploy-use/monitor-endpoint-protection.md).|  
-
