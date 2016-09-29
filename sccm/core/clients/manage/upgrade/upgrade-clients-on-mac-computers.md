@@ -18,7 +18,7 @@ author: Mtillmanmanager: angrobe
 Follow the high-level steps described below  to upgrade the client for Mac computers by using a System Center Configuration Manager application. Alternatively, you can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer and then instruct users to run the installation manually.  
 
 > [!NOTE]  
->  Before you perform these steps, make sure that your Mac computer meets the prerequisites listed in the [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS) section in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+>  Before you perform these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
 ## Step 1: Download the latest Mac client installation file from the Microsoft Download Center  
  The Mac client for Configuration Manager is not supplied on the Configuration Manager installation media and must be downloaded from the Microsoft Download Center. The Mac client installation files are contained in a Windows Installer file named ConfigmgrMacClient.msi.  
@@ -92,4 +92,3 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 -   Add the configuration item to a configuration baseline, and then deploy the configuration baseline to all Mac computers that install a certificate independently from Configuration Manager.  
 
  For more information about how to create and deploy configuration items for Mac computers, see [How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) and [How to deploy configuration baselines in System Center Configuration Manager](../../../../compliance/deploy-use/deploy-configuration-baselines.md).  
-
