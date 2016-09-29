@@ -1,5 +1,6 @@
 ---
 title: "Introduction to hardware inventory in System Center Configuration Manager"
+description: "Get an introduction to hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -47,4 +48,3 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 |IDMIF files|Use IDMIF files to collect information about assets in your organization that are not associated with a Configuration Manager client, for example, projectors, photocopiers and network printers.|  
 
  For more information about using these methods to extend Configuration Manager hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md).  
-
