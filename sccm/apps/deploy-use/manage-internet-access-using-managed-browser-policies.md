@@ -13,20 +13,15 @@ ms.topic: article
 ms.assetid: 735c45b8-a545-4805-84e5-46204fabd1a6
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsft
+manager: angrobe
 
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager
 In System Center Configuration Manager, you can deploy the Intune Managed Browser, a web browsing application, and associate the application with a managed browser policy. The managed browser policy configures an allow list or a block list that restricts the web sites that users of the managed browser can visit.  
-<<<<<<< HEAD
-
- Because this app is a managed app, you can also apply mobile application management policies to the app, such as controlling the use of cut, copy and paste, preventing screen captures, and also ensuring that links to content that users click only open in other managed apps. For details, see [Protect apps using mobile application management policies in System Center Configuration Manager](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
-
-=======
   
  Because this app is a managed app, you can also apply mobile application management policies to the app, such as controlling the use of cut, copy and paste, preventing screen captures, and also ensuring that links to content that users click only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
   
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 > [!IMPORTANT]  
 >  If users install the managed browser themselves, it will not be managed by any policies you specify. To ensure that the browser is managed by Configuration Manager, they must uninstall the app before you can deploy it to them as a managed app.  
 
@@ -37,13 +32,8 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 -   Devices that run iOS 7 and later  
 
 > [!NOTE]  
-<<<<<<< HEAD
->  For more information about the Intune Managed Browser app, see [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) for iOS and [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) for Android.  
-
-=======
 >  For more information and to download the Intune Managed Browser app, see [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) for iOS and [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en) for Android.  
   
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 ## Create a managed browser policy  
 
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Application Management Policies**.  
@@ -74,15 +64,9 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 
 ## Create a software deployment for the managed browser app  
  After you have created the managed browser policy, you can then create a software deployment type for the managed browser app. You must associate both a General and Managed Browser policy for the Managed Browser app.  
-<<<<<<< HEAD
-
- For more information, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md).  
-
-=======
   
  For more information, see [Create applications](../../apps/deploy-use/create-applications.md).  
   
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 ## Security and privacy for the managed browser  
 
 -   On iOS devices, web sites that users visit that have an expired or untrusted certificate cannot be opened.  
@@ -94,14 +78,10 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 -   The managed browser can only block access to sites when they are accessed directly. It cannot block access when intermediate services (such as a translation service) are used to access the site.  
 
 ## Reference information  
-<<<<<<< HEAD
-
-###  <a name="BKMK_URLs"></a> URL format for allowed and blocked URLs  
-=======
   
 ###  URL format for allowed and blocked URLs  
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
- Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
+
+Use the following information to learn about the allowed formats and wildcards you can use when specifying URLs in the allowed and blocked lists.  
 
 -   You can use the wildcard symbol ‘**\***’ according to the rules in the permitted patterns list below.  
 
@@ -151,13 +131,8 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
     -   http://www.contoso.com: /*  
 
 > [!NOTE]  
-<<<<<<< HEAD
->  *.microsoft.com is always allowed – it is always treated as allowed.  
-
-=======
 >  *.microsoft.com is always allowed.  
   
->>>>>>> acc971a42f554274e05f665849fbd45a7148965d
 ### How conflicts between the allow and block list are resolved  
  If multiple managed browser policies are deployed to a device and the settings conflict, both the mode (allow or block) and the URL lists are evaluated for conflicts. In case of a conflict, the following behavior applies:  
 
