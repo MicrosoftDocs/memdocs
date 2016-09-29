@@ -38,7 +38,7 @@ When you configure a schedule for software updates synchronization, the top-leve
 
 Use the following procedures on the top-level site to schedule software updates synchronization.  
 
-##### To schedule software updates synchronization  
+#### To schedule software updates synchronization  
 
   1.  In the Configuration Manager console, click **Administration**.  
 
@@ -55,7 +55,7 @@ You can manually initiate software updates synchronization on the top-level site
 
 Use the following procedures on the top-level site to manually initiate software updates synchronization.  
 
-##### To manually start software updates synchronization  
+#### To manually start software updates synchronization  
 
   1.  In the Configuration Manager console that is connected to the central administration site or stand-alone primary site, click **Software Library**.  
 
@@ -69,7 +69,7 @@ Use the following procedures on the top-level site to manually initiate software
 ## Monitor software updates synchronization
 After you initiate the synchronization process, you can use the Configuration Manager console to monitor the process for all software update points in your hierarchy. Use the following procedure to monitor the software update synchronization process. For more information about monitoring software updates, including the synchronization process, see [Monitor software updates](../deploy-use/monitor-software-updates.md).
 
-##### To monitor the software updates synchronization process  
+#### To monitor the software updates synchronization process  
 
   1.  In the Configuration Manager console, click **Monitoring**.  
 
