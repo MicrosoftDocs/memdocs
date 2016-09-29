@@ -31,6 +31,11 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 
 ##  <a name="BKMK_config"></a> To configure automatic client upgrades to use a preproduction collection  
 
+1. Set up a collection that contains the computers you want to deploy the preproduction client to. For more information on how to do this step, see [How to create collections](..\collections\create-collections.md).
+
+> [!NOTE]
+> Do not include workgroup computers in preproduction collections. Workgroup computers cannot use the authentication required for the distribution point to access the preproduction client package.   
+
 1.  In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and click **Hierarchy Settings**.  
 
      On the **Client Upgrade** tab of the **Hierarchy Settings Properties**:  
@@ -66,4 +71,3 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 2.  In the dialog box, review the client versions in production and pre-production, make sure the correct the pre-production collection is specified, and then  click **Promote**. In the confirmation box, click **Yes**.  
 
 3.  After dialog box closes, the updated client version will replace the current client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
-
