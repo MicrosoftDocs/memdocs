@@ -1,5 +1,6 @@
 ---
 title: "Prepare for unknown computer deployments in System Center Configuration Manager"
+description: "Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 07/27/2016
 ms.prod: configuration-manager
@@ -77,4 +78,3 @@ Use the information in this topic to deploy operating systems to unknown compute
 
 ## See Also  
  [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
-
