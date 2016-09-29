@@ -79,9 +79,9 @@ Client installation and management for Mac computers in System Center Configurat
 
 -   Distribution point  
 
- For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
+ For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
 
- For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
+ For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
 ### Step 3: Prepare the client certificate template for Macs  
 
@@ -90,7 +90,7 @@ Client installation and management for Mac computers in System Center Configurat
 
  The certificate template must have **Read** and **Enroll** permissions for the user account that will enroll the certificate on the Mac computer.  
 
- See [Deploying the Client Certificate for Mac Computers](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1).  
+ See [Deploying the Client Certificate for Mac Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1).  
 
 ### Step 4: Configure the management point and distribution point  
  Configure management points for the following options:  

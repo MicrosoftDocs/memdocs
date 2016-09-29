@@ -28,11 +28,10 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  When you install a client, you can use the same process and command line properties regardless of the client installation package you use.  
 
- For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](..\..\plan-design\configs\supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
+ For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
 
 ##  <a name="BKMK_InstallLnUClient"></a> Install the Client on Linux and UNIX Servers  
- To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.  
-C:\Users\mtillman\sccmdocs-pr\sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md
+ To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.
  Each client installation package contains all the necessary files to complete the client installation and unlike Windows-based computers, does not download additional files from a management point or other source location.  
 
  After you install the Configuration Manager client for Linux and UNIX, you do not need to reboot the computer. As soon as the software installation is complete, the client is operational. If you reboot the computer, the Configuration Manager client restarts automatically.  
