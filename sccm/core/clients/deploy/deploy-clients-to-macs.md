@@ -67,7 +67,7 @@ Client installation and management for Mac computers in System Center Configurat
 >   
 >  This does not mean that the server must be accessible from the Internet to support Mac computers. If you do not require Internet-based client management, you can specify the intranet FQDN value for the Internet FQDN.  
 
- For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](..\..\plan-design\network\example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
+ For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
 > [!IMPORTANT]  
 >  Make sure that you specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point.  
