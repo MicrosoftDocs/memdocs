@@ -2,7 +2,7 @@
 # required metadata
 
 title: Prerequisites for software updates | Configuration Manager
-description:
+description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
 author: dougebymanager: angrobe
 ms.date: 9/14/2016
