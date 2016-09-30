@@ -16,7 +16,7 @@ author: robstackmsftmanager: angrobe
 
 ---
 # Common tasks for managing compliance on devices not running the System Center Configuration Manager client
-The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
+These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md) section.  
 
