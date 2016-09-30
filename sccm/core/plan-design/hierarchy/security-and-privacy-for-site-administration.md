@@ -1,5 +1,6 @@
 ---
 title: "Site administration security and privacy | System Center Configuration Manager"
+description: "Optimize security and privacy for site administration in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

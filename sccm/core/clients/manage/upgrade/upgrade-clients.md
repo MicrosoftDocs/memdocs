@@ -1,5 +1,6 @@
 ---
-title: "Upgrade clients in System Center Configuration Manager"
+title: "Upgrade clients | System Center Configuration Manager"
+description: "Get information about how to upgrade clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/08/2016
 ms.prod: configuration-manager
@@ -140,4 +141,3 @@ You can use different methods to upgrade the System Center Configuration Manager
 -   Can only be used to upgrade the client software and cannot be used to install a new client.  
 
  [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-

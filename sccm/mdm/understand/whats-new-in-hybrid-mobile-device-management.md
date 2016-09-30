@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune"
+title: "What&#39;s new hybrid MDM | Microsoft Intune | System Center Configuration Manager"
 ms.custom: na
 ms.date: 08/10/2016
 ms.prod: configuration-manager
@@ -342,5 +342,5 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   Beginning in version 1602 of Configuration Manager (current branch), you can manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. Activation Lock is enabled automatically when the Find My iPhone app is used on a device.  For details, see [Manage iOS Activation Lock bypass for System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock).  
 
-## See Also  
+### See Also  
  [What's new for MDM in System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
