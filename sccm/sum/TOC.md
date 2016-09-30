@@ -26,11 +26,11 @@
 
 # [Deploy and use](deploy-use/deploy-software-updates.md)
 <!-- ## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md) -->
+## [Download software updates](deploy-use/download-software-updates.md)
+## [Add software updates to an update group](deploy-use/add-software-updates-to-an-update-group.md)
 ## [Deploy software updates](deploy-use/deploy-software-updates.md)
 ### [Manually deploy software updates](deploy-use/manually-deploy-software-updates.md)
 ### [Automatically deploy software updates](deploy-use/automatically-deploy-software-updates.md)
-### [Download software updates](deploy-use/download-software-updates.md)
-### [Add software updates to an update group](deploy-use/add-software-updates-to-an-update-group.md)
 ## [Monitor software updates](deploy-use/monitor-software-updates.md)
 ## [Software updates maintenance](deploy-use/software-updates-maintenance.md)
 ## [Service a server group](deploy-use/service-a-server-group.md)
