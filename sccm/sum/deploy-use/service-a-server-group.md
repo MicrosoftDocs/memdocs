@@ -1,7 +1,7 @@
 ---
 title: Service a server group | Configuration Manager
-description:
-keywords:
+description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
+keywords: "In System Center Configuration Manager, create a collection for a server group, deploy software updates to the server group, and monitor the status."
 author: dougeby
 manager: angrobe
 ms.date: 09/27/2016

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Software updates lifecycle | Configuration Manager
-description:
+description: "Software update phases in Configuration Manager include synchronizing software updates, assessing compliance, deploying updates, and monitoring updates."
 keywords:
 author: dougebymanager: angrobe
 
