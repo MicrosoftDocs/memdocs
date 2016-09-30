@@ -5,13 +5,11 @@ title: Manage settings for software updates | Configuration Manager
 description:
 keywords:
 author: dougebymanager: angrobe
-
 ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-	- configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 
 # optional metadata
@@ -52,18 +50,7 @@ You must enable the **Allow signed content from intranet Microsoft update servic
 Automatic Updates allows security updates and other important downloads to be received on client computers. Automatic Updates is configured through the **Configure Automatic Updates** Group Policy setting or through the Control Panel on the local computer. When Automatic Updates is enabled, client computers will receive update notifications and, depending on the configured settings, the client computers will download and install the required updates. When Automatic Updates coexists with software updates, each client computer might display notification icons and popup display notifications for the same update. Also, when a restart is required, each client computer might display a restart dialog box for the same update.  
 
 ### Self Update  
- When Automatic Updates is enabled on client computers, the WUA automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates is not configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.  
-
- ###  <a name="BKMK_GroupPolicySettings"></a> Group policy settings for software updates  
-  There are specific Group Policy settings that are used by Windows Update Agent (WUA) on client computers to connect to the WSUS that runs on the active software updates point, successfully scan for software update compliance, and automatically update the software updates and the WUA.  
-
- > [!WARNING]  
- >  If you have an Active Directory Group Policy object assigned to clients that specify a WSUS server that is not a Configuration Manager software update point, it will override the local Group Policy setting that is configured by Configuration Manager. Before you can assess software updates compliance and manage software update deployments on these clients, you must reconfigure the Active Directory Group Policy setting, or move client computers to an organizational unit (OU) that does not have this Group Policy setting applied.  
-
-  For more information about how to configure the settings that are associated with software updates, see the  [Group policy settings for software updates](../../sup/deploy-use/configure-software-updates.md#BKMK_GroupPolicy) section in the [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md) topic.  
-
-
-
+When Automatic Updates is enabled on client computers, the WUA automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates is not configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.  
 
 ## Software updates properties
 The software update properties provide information about software updates and associated content. You can also use these properties to configure settings for software updates. When you open the properties for multiple software updates, only the **Maximum Run Time** and **Custom Severity** tabs are displayed.   

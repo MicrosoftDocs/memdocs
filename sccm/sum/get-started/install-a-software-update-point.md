@@ -113,18 +113,18 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 >  Schedule software updates synchronization to run by using a time-frame that is appropriate for your environment. One typical scenario is to set the software updates synchronization schedule to run shortly after the Microsoft regular security update release on the second Tuesday of each month, which is normally referred to as Patch Tuesday. Another typical scenario is to set the software updates synchronization schedule to run daily when you use software updates to deliver the Endpoint Protection definition and engine updates.  
 
 > [!NOTE]  
->  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](syncrhonize-software-updates.md).  
+>  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
 ## Supersedence rules  
  Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
 
- On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
+ On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#supersedence-rules).  
 
 > [!NOTE]  
 >  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
 
 ## Classifications  
- Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
+ Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../plan-design/plan-for-software-updates.md#update-classifications).  
 
 > [!NOTE]  
 >  The **Classifications** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
@@ -142,7 +142,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 >  When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
 
 ## Languages  
- Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
+ Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../plan-design/plan-for-software-updates.md#update-languages).  
 
 > [!NOTE]  
 >  The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  
@@ -150,4 +150,4 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ## Next steps
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this topic to install the software update point on child sites.
 
-Once you have your software update points installed, go to [synchronize software updates](syncrhonize-software-updates.md).
+Once you have your software update points installed, go to [synchronize software updates](synchronize-software-updates.md).

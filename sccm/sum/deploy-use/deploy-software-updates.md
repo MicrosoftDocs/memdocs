@@ -30,7 +30,7 @@ The software update deployment phase is the process of deploying the software up
 >  You can configure a client on the intranet to download software updates from Microsoft Update if a distribution point is not available.  
 
 > [!NOTE]  
->  Unlike other deployment types, software updates are all downloaded to the client cache regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the Client Cache for Configuration Manager Clients](../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
+>  Unlike other deployment types, software updates are all downloaded to the client cache regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#configure-the-client-cache-for-configuration-manager-clients).  
 
 If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
 

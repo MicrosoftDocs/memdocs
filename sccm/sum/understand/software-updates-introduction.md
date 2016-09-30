@@ -18,13 +18,13 @@ ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 # Introduction to software updates in System Center Configuration Manager
 Software updates in System Center Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  
 
-For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario for using System Center Configuration Manager to deploy and monitor the security software updates released monthly by Microsoft](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
+For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 
 ##  <a name="BKMK_Synchronization"></a> Software updates synchronization  
  Software updates synchronization in Configuration Manager uses Microsoft Update to retrieve software updates metadata. The top-level site (central administration site or stand-alone primary site) synchronizes with Microsoft Update on a schedule or when you manually start synchronization from the Configuration Manager console. When Configuration Manager finishes software updates synchronization at the top-level site, software updates synchronization starts at child sites, if they exist. When synchronization is complete at each primary site or secondary site, a site-wide policy is created that provides to client computers the location of the software update points.  
 
 > [!NOTE]  
->  Software updates are enabled by default in client settings. However, if you set the **Enable software updates on clients** client setting to **No** to disable software updates on a collection or in the default settings, the location for software update points are not sent to associated clients. For more information about the software updates client settings, see the [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting) section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
+>  Software updates are enabled by default in client settings. However, if you set the **Enable software updates on clients** client setting to **No** to disable software updates on a collection or in the default settings, the location for software update points are not sent to associated clients. For more information about the software updates client settings, see [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
 
  After the client receives the policy, the client starts a scan for software updates compliance and writes the information to Windows Management Instrumentation (WMI). The compliance information is then sent to the management point that then sends the information to the site server. For more information about compliance assessment, see the [Software updates compliance assessment](#BKMK_SUMCompliance) section in this topic.  
 
@@ -124,11 +124,11 @@ For an example scenario that shows how you might deploy software updates in your
 
  Including the scan schedule, the scan for software updates compliance can start in the following ways:  
 
--   **Software updates scan schedule**: The scan for software updates compliance starts at the configured scan schedule that is configured in the Software Updates Client Agent settings. For more information about how to configure the Software Updates client settings, see the [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting) section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
+-   **Software updates scan schedule**: The scan for software updates compliance starts at the configured scan schedule that is configured in the Software Updates Client Agent settings. For more information about how to configure the Software Updates client settings, see [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
 
 -   **Configuration Manager Properties action**: The user can start the **Software Updates Scan Cycle** or **Software Updates Deployment Evaluation Cycle** action on the **Action** tab in the **Configuration Manager Properties** dialog box on the client computer.  
 
--   **Deployment reevaluation schedule**: The deployment evaluation and scan for software updates compliance starts at the configured deployment reevaluation schedule, which is configured in the Software Updates Client Agent settings. For more information about the Software Updates client settings, see the  [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting) section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
+-   **Deployment reevaluation schedule**: The deployment evaluation and scan for software updates compliance starts at the configured deployment reevaluation schedule, which is configured in the Software Updates Client Agent settings. For more information about the Software Updates client settings, see [Software Updates](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting).  
 
 -   **Prior to downloading update files**: When a client computer receives an assignment policy for a new required deployment, the Software Updates Client Agent downloads the software update files to the local client cache. Before downloading the software update files, the client agent starts a scan to verify that the software update is still required.  
 
@@ -272,8 +272,5 @@ For an example scenario that shows how you might deploy software updates in your
 ##  <a name="BKMK_ExtendSoftwareUpdates"></a> Extend software updates in Configuration Manager  
  Use System Center Updates Publisher to manage software updates that are not available from Microsoft Update. After you publish the software updates to the update server and synchronize the software updates in Configuration Manager, you can deploy the software updates to Configuration Manager clients. For more information about Updates Publisher, see [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=252947).  
 
-
-
-
-## See Also  
- [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
+## Next steps
+[Plan for software updates](plan-for-software-updates.md)

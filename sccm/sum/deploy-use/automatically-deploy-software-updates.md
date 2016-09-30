@@ -140,7 +140,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8. On the User Experience page, configure the following settings:  
 
@@ -169,14 +169,14 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
-    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts).  
+    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
     -   Specify whether to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points.  
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
     > [!NOTE]  
-    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
+    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 11. On the Deployment Package page, select an existing deployment package or configure the following settings to create a new deployment package:  
 
@@ -272,7 +272,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 6.  On the User Experience page, configure the following settings:  
 
@@ -301,13 +301,16 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
-    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts).  
+    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
     -   Specify whether to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points.  
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
     > [!NOTE]  
-    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
+    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+
+## Next steps
+[Monitor software updates](monitor-software-updates.md)

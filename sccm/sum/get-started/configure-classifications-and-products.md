@@ -5,13 +5,11 @@ title: Configure classifications and products to synchronize | System Center Con
 description:
 keywords:
 author: dougebymanager: angrobe
-
 ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-  - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
 # optional metadata
@@ -69,4 +67,4 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
 
 ## Next steps
-Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md) 
+Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md).

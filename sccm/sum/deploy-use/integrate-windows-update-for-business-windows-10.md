@@ -11,7 +11,6 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-	- configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 
 
@@ -60,6 +59,3 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 4.  Create a  client agent setting to disable the software update workflow and deploy the setting to the collection of computers that are connected directly to WUfB.  
 
 5.  The computers that are managed via WUfB will display **Unknown** in the compliance status and won't be counted as part of the overall compliance percentage.  
-
-## See Also  
- [Manage software updates in System Center Configuration Manager](../../sum/deploy-use/manage-software-updates.md)

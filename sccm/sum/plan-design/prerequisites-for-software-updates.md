@@ -32,7 +32,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  The following sections  list the external dependencies for software updates.  
 
 ### Internet Information Services (IIS)  
- Internet Information Services (IIS) must be on site system servers in order to run the software update point, the management point, and the distribution point. For more information, see [Prerequisites for site system roles](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Prrequisites).  
+ Internet Information Services (IIS) must be on site system servers in order to run the software update point, the management point, and the distribution point. For more information, see [Prerequisites for site system roles](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ### Windows Server Update Services (WSUS)  
  WSUS is necessary for software updates synchronization and for the software updates compliance assessment scan on clients. The WSUS server must be installed before you create the software update point site system role. The following versions of WSUS are supported for a software update point:  
@@ -69,17 +69,17 @@ This topic lists the prerequisites for software updates in System Center Configu
  Management points transfer information between client computers and the Configuration Manager site. They are required for software updates.  
 
 ### Software update point  
- You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md)  
+ You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Install and configure a software update point](install-a-software-update-point.md).
 
 ### Distribution points  
- Distribution points are required to store the content for software updates. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+ Distribution points are required to store the content for software updates. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### Client settings for software updates  
  By default, software updates is enabled for clients. However there are other available settings that control how and when clients assess compliance for the software updates and control how the software updates are installed.  
 
  For more information, see the following:  
 
--   The Client Settings for Software Updates section in the [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md) topic.  
+-   The Client Settings for Software Updates section in [Manage settings for software updates](../../sum/get-started/manage-settings-for-software-updates).  
 
 -   The  Software Updates section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
 
@@ -106,11 +106,11 @@ This topic lists the prerequisites for software updates in System Center Configu
 
      To bulk delete software updates with the Upgrades classification, you can modify the PowerShell script to read multiple GUIDs from a txt file.  
 
-2.  Uncheck the **Upgrades** classification in the [Software Update Point component properties](https://technet.microsoft.com/library/mt612804.aspx) and then start a [software updates synchronization](https://technet.microsoft.com/library/mt612804.aspx).  
+2.  Uncheck the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md).  
 
 3.  Install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers.  
 
-4.  Select the **Upgrades** classification in the [Software Update Point component properties](https://technet.microsoft.com/library/mt612804.aspx) and then start a [software updates synchronization](https://technet.microsoft.com/library/mt612804.aspx).  
+4.  Select the **Upgrades** classification in the Software Update Point component properties (For details, see [Configure classifications and products](../get-started/configure-classifications-and-products.md)) and then start software updates synchronization (For details, see [Synchronize software updates](../get-started/synchronize-software-updates.md).  
 
-## See Also  
- [Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)
+## Next steps
+[Prepare for software updates management](../get-started/prepare-for-software-updates-management.md)
