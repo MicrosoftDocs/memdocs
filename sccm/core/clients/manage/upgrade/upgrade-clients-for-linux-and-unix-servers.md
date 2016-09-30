@@ -1,5 +1,5 @@
 ---
-title: "How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager"
+title: "Upgrade clients | Linux UNIX | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -51,4 +51,3 @@ You can upgrade the version of the client for Linux and UNIX on a computer to a 
      For example, use the following command line to run the script: **at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
  After the client successfully schedules the **upgrade.sh** script to run, the client submits a status message indicating the software deployment completed successfully. However, the actual client installation is then managed by the computer, after the delay. After the client upgrade completes, validate the install by reviewing the **/var/opt/microsoft/scxcm.log** file on the client computer. Additionally, you can confirm that the client is installed and communicating with the site by viewing details for the client in the **Devices** node of the **Assets and Compliance** workspace in the Configuration Manager console.  
-
