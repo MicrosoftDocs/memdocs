@@ -1,5 +1,6 @@
 ---
 title: "Cloud-based distribution point | System Center Configuration Manager"
+description: "Learn about configurations and limitations for using a cloud-based distribution point with System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

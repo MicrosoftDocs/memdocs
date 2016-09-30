@@ -1,5 +1,6 @@
 ---
 title: "PKI certificate requirements | System Center Configuration Manager"
+description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/04/2016
 ms.prod: configuration-manager

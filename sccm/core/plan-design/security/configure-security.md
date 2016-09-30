@@ -1,5 +1,6 @@
 ---
 title: "Configure security in System Center Configuration Manager"
+description: "Configure security-related options for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -125,4 +126,3 @@ Use the following procedure to view which accounts are configured for different 
     >  The password that you specify must match the password that is specified for the account in Active Directory Users and Computers.  
 
 6.  Click **OK** to complete the procedure.  
-

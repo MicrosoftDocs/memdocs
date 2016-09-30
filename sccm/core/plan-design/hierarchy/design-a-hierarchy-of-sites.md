@@ -1,5 +1,6 @@
 ---
 title: "Design a hierarchy | System Center Configuration Manager"
+description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
 ms.date: 03/15/2016
 ms.prod: configuration-manager
