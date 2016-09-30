@@ -25,6 +25,12 @@ The System Center Configuration Manager **Edition Upgrade Policy** lets you auto
 - Windows 10 Mobile
 - Windows 10 Holographic
 
+The following upgrade paths are supported:
+- From Windows 10 Pro to Windows 10 Enterprise
+- From Windows 10 Home to Windows 10 Education
+- From Windows 10 Mobile to Windows 10 Mobile Enterprise
+- From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise
+
 The devices must be enrolled in Microsoft Intune. This feature is not currently compatible with PCs that run the Configuration Manager client software, or PCs that are managed by on-premises MDM.
 
 ## Before you start  
