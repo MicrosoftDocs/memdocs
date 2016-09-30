@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure classifications and products to synchronize | System Center Configuration Manager
-description:
+description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
 keywords:
 author: dougebymanager: angrobe
 
@@ -69,4 +69,4 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
 
 ## Next steps
-Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md) 
+Start software updates synchronization to retrieve software updates based on the new criteria. For details, see [Synchronize software updates](synchronize-software-updates.md)

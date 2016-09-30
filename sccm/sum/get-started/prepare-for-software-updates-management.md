@@ -2,7 +2,7 @@
 # required metadata
 
 title: Prepare for software updates management | System Center Configuration Manager
-description:
+description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the System Center Configuration Manager console."
 keywords:
 author: dougebymanager: angrobe
 
