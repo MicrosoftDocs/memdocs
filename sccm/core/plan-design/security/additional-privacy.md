@@ -1,5 +1,6 @@
 ---
 title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library"
+description: "Learn about how Microsoft collects and uses data from a System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 09/19/2016
 ms.prod: configuration-manager
@@ -102,4 +103,3 @@ All communications with Microsoft Intune use HTTPS. To configure the Microsoft I
 In order to manage devices that are connected to Microsoft Intune, some information is sent to and received from Microsoft Intune. This information includes the User Principal Name (UPN) of all users that are assigned to the service and device inventory information for those devices that are managed by Microsoft Intune. Metadata, such as application name, publisher, and version, for content that is assigned to Manage.Microsoft.com distribution points is sent to Microsoft Intune. The actual binary content assigned to a Manage.Microsoft.com distribution point is encrypted before it is uploaded to Microsoft Intune.
 
 This feature is not configured by default. Administrators have control over what content is transferred to the Manage.Microsoft.com distribution point and which users are assigned to the service. The feature can be removed at any time.
-

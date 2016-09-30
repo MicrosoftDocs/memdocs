@@ -1,5 +1,6 @@
 ---
 title: "Remote control viewer keyboard shortcuts | System Center Configuration Manager"
+description: "Get keyboard shortcuts that you can use in the remote control viewer in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

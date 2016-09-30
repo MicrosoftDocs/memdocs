@@ -1,5 +1,6 @@
 ---
 title: "Prepare Windows Servers | System Center Configuration Manager"
+description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

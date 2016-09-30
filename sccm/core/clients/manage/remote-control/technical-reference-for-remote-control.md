@@ -1,5 +1,6 @@
 ---
 title: "Technical reference for remote control in System Center Configuration Manager"
+description: "Use this technical reference to learn more about remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -21,4 +22,3 @@ Use the following topics in this section for technical reference information for
 ## In this section  
 
 -   [Keyboard shortcuts for the remote control viewer in System Center Configuration Manager](../../../../core/clients/manage/remote-control/keyboard-shortcuts-for-the-remote-control-viewer.md)  
-
