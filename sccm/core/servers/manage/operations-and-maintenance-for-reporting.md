@@ -1,6 +1,6 @@
 ---
 title: "Operations and maintenance for reporting | System Center Configuration Manager"
-description:
+description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
