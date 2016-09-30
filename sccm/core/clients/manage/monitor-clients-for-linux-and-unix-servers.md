@@ -1,5 +1,5 @@
 ---
-title: "Monitor Linux and UNIX clients | System Center Configuration Manager"
+title: "Monitor clients | Linux UNIX |System Center Configuration Manager"
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

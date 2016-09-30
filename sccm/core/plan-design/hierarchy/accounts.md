@@ -1,5 +1,6 @@
 ---
 title: "Accounts | System Center Configuration Manager"
+description: "Identify and manage the Windows groups and the accounts in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

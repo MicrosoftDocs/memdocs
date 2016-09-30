@@ -1,5 +1,6 @@
 ---
 title: "Active Directory schema | System Center Configuration Manager"
+description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

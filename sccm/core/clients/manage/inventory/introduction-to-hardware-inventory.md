@@ -1,5 +1,5 @@
 ---
-title: "Introduction to hardware inventory in System Center Configuration Manager"
+title: "Hardware inventory | System Center Configuration Manager"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

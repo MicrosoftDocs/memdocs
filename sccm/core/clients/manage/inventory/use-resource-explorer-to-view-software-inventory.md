@@ -1,5 +1,5 @@
 ---
-title: "How to use Resource Explorer to view software inventory in System Center Configuration Manager"
+title: "View software inventory | Resource Explorer | System Center Configuration Manager"
 description: "Use Resource Explorer to view software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
