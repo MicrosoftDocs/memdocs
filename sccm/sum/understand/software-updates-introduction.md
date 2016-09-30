@@ -2,7 +2,7 @@
 # required metadata
 
 title: Introduction to software updates | Configuration Manager
-description:
+description: "Learn the basics of software updates in System Center Configuration Manager."
 keywords:
 author: dougeby
 manager: angrobe
