@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage settings for software updates | Configuration Manager
-description:
+description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
 keywords:
 author: dougebymanager: angrobe
 
