@@ -1,6 +1,6 @@
 ---
 title: "Deploy App-V virtual applications | System Center Configuration Manager"
-"See which considerations you must take into account when you create and deploy virtual applications."
+description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
