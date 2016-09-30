@@ -152,7 +152,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 11. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**. --->
 
-##### To monitor content status
+#### To monitor content status
 1. To monitor the content status for the software updates, click **Monitoring** in the Configuration Manager console.  
 
 2. In the Monitoring workspace, expand **Distribution Status**, and then click **Content Status**.  
@@ -229,7 +229,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
         > [!NOTE]  
         >  The actual installation deadline time is the specific time that you configure plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8.  On the User Experience page, configure the following settings:  
 
@@ -260,7 +260,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
     -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
-    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts).  
+    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
     -   Specify whether to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points.  
 
@@ -311,3 +311,6 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 17. Click **Next** to deploy the software update.  
 
  After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+
+## Next steps
+[Monitor software updates](monitor-software-updates.md)
