@@ -1,5 +1,6 @@
 ---
 title: "How to extend hardware inventory in System Center Configuration Manager"
+description: "Learn ways to extend hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/22/2016
 ms.prod: configuration-manager
@@ -170,4 +171,3 @@ System Center Configuration Manager hardware inventory reads information about d
  IDMIF files can be used to add information about assets to the Configuration Manager database that could not normally be inventoried by Configuration Manager and is not associated with a particular client device. For example, you could use IDMIFS to collect information about projectors, DVD players, photocopiers, or other equipment that does not contain a Configuration Manager client. For information about creating IDMIF files, see the Configuration Manager SDK documentation.  
 
  After you create an IDMIF file, store this in the folder *%Windir%***\System32\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
-

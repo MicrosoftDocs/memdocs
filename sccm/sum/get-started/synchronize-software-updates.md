@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage software updates synchronization | Configuration Manager
-description:
+description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
 keywords:
 author: dougebymanager: angrobe
 

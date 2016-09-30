@@ -5,7 +5,7 @@
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
 # [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
-## [Prerequisites for certificate profiles](plan-design/prerequisites-for-certificate-profiles.md)
+## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for SCEP](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for .PFX](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate template permissions for certificate profiles](plan-design/planning-for-certificate-template-permissions.md)
@@ -13,11 +13,9 @@
 
 ## [Plan for Endpoint Protection](plan-design/planning-for-endpoint-protection.md)
 
-## [Plan for email, Wi-Fi, and VPN profiles](plan-design/plan-email-wi-fi-vpn.md)
-
-### [Prerequisites for email profiles](plan-design/prerequisites-for-email-profiles.md)
-### [Prerequisites for Wi-Fi profiles](plan-design/prerequisites-for-wifi-profiles.md)
-### [Prerequisites for VPN profiles](plan-design/prerequisites-for-vpn-profiles.md)
+## [Plan for email, Wi-Fi, and VPN profiles](plan-design/prerequisites-for-email-profiles.md)
+### [Email profile prerequisites](plan-design/prerequisites-for-email-profiles.md)
+### [Wi-Fi and VPN profile prerequisites](plan-design/prerequisites-for-wifi-vpn-profiles.md)
 
 ## [Security and privacy for Wi-Fi profiles](plan-design/security-and-privacy-for-wifi-profiles.md)
 ## [Security and privacy for VPN profiles](plan-design/security-and-privacy-for-vpn-profiles.md)

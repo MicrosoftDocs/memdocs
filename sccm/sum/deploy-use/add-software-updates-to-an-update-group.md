@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add software updates to an update group | Configuration Manager
-description:
+description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
 author: dougebymanager: angrobe
 

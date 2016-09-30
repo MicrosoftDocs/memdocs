@@ -2,7 +2,7 @@
 # required metadata
 
 title: Plan for software updates | System Center Configuration Manager
-description:
+description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
 keywords:
 author: dougebymanager: angrobe
 ms.date: 09/27/2016

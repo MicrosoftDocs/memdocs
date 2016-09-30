@@ -1,17 +1,19 @@
 ---
 title: "Management tasks for System Center Configuration Manager applications | System Center Configuration Manager"
+description: "Manage System Center Configuration Manager applications and deployment types."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 caps.latest.revision: 8
-author: robstackmsftmanager: angrobe
+author: robstackmsft
+manager: angrobe
 
 ---
 # Management tasks for System Center Configuration Manager applications
@@ -21,7 +23,7 @@ For help creating applications and deployment types, see [Create applications](.
   
 > [!IMPORTANT]  
 >  Depending on the type of application or deployment type, some of the management options might not be available.  
-  
+
 ##  Manage applications  
  In the **Software Library** workspace, expand **Application Management** > **Applications**, select the application to manage, and then select a management task.  
   

@@ -1,6 +1,6 @@
 ---
 title: Service a server group | Configuration Manager
-description:
+description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
 author: dougeby
 manager: angrobe

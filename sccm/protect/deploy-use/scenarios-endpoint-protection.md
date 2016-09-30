@@ -1,11 +1,11 @@
 ---
-title: "Scenario: Using System Center Endpoint Protection to protect computers from malware | System Center Configuration Manager"
+title: Scenario: Endpoint Protection protects computers from malware | System Center Configuration Manager
 ms.custom: na
-ms.date: 01/29/2016
+ms.date: 09/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -16,33 +16,33 @@ author: NathBarnmanager: angrobe
 ---
 # Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager
 This topic provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in an organization from malware attacks.  
-  
+
  John is the Configuration Manager administrator at Woodgrove Bank. The bank currently uses Microsoft Forefront Endpoint Protection 2010 to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
-  
+
  John has been asked to upgrade the Woodgrove Bank antimalware software to System Center Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console. This implementation has the following requirements:  
-  
+
 -   Use Configuration Manager to manage the Windows Firewall settings that are currently managed by Group Policy.  
-  
+
 -   Use Configuration Manager software updates to download malware definitions to computers. If software updates are not available, for example if the computer is not connected to the corporate network, computers must download definition updates from Microsoft Update.  
-  
+
 -   Users' computers must perform a quick malware scan every day. Servers, however, must run a full scan every Saturday, outside business hours, at 1 A.M.  
-  
+
 -   Send an email alert whenever any one of the following events occurs:  
-  
+
     -   Malware is detected on any computer  
-  
+
     -   The same malware threat is detected on more than 5 percent of computers  
-  
+
     -   The same malware threat is detected more than 5 times in any 24 hour period  
-  
+
     -   More than 3 different types of malware are detected in any 24 hour period  
-  
+
 -   Uninstall the existing antimalware solution.  
-  
+
  John then performs the following steps to implement Endpoint Protection:  
-  
+
 ##  <a name="BKMK_Prepare"></a> Steps to implement Endpoint Protection  
-  
+
 |Process|Reference|  
 |-------------|---------------|  
 |John reviews the available information about the basic concepts for Endpoint Protection in Configuration Manager.|For overview information about Endpoint Protection, see [Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-protection.md).|  
@@ -63,6 +63,5 @@ This topic provides an example scenario for how you can implement Endpoint Prote
 |John deploys the new firewall policy to the collection **All Computers Protected by Endpoint Protection** that he created earlier.|See "To deploy a Windows Firewall policy" in the [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-deploy-windows-firewall-policies-for-endpoint-protection.md)|  
 |John uses the available management tasks for Endpoint Protection to manage antimalware and Windows Firewall policies, perform on-demand scans of computers when necessary, force computers to download the latest definitions, and to specify any further actions to take when malware is detected.|See [How to manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/antimalware-firewall-settings-for-endpoint-protection.md)|  
 |John uses the following methods to monitor the status of Endpoint Protection and the actions that are taken by Endpoint Protection:<br /><br /> 1) By using the **System Center 2012 Endpoint Protection Status** node in the **Monitoring** workspace.<br /><br /> 2) By using the **Endpoint Protection** node in the **Assets and Compliance** workspace.<br /><br /> 3) By using the built-in Configuration Manager reports.|See [How to monitor Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/monitor-endpoint-protection.md)|  
-  
- John reports a successful implementation of Endpoint Protection to his manager, and confirms that the computers at Woodgrove Bank are now protected from antimalware, according to the business requirements that he was given.
 
+ John reports a successful implementation of Endpoint Protection to his manager, and confirms that the computers at Woodgrove Bank are now protected from antimalware, according to the business requirements that he was given.

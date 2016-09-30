@@ -1,5 +1,6 @@
 ---
 title: "Windows client deployment prerequisites | System Center Configuration Manager"
+description: "Learn the prerequisites for deploying clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -142,7 +143,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 
     -   The client computer must be able to contact a distribution point or a management point to download the supporting files.  
 
-     For the security permissions required to upgrade the Configuration Manager client using application management, see [Get started with application management in System Center Configuration Manager](../../../apps/understand/get-started-with-application-management.md).  
+     For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](..\..\..\apps\plan-design\security-and-privacy-for-application-management.md).  
 
 -   Automatic client upgrades  
 
@@ -225,4 +226,3 @@ Deploying Configuration Manager clients in your environment has the following ex
 -   Between the enrollment proxy point and the enrollment point: HTTPS (by default, TCP 443)  
 
  If you use a proxy web server, it must be configured for SSL tunneling; SSL bridging is not supported for mobile devices.  
-

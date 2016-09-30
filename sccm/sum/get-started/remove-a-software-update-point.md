@@ -2,7 +2,7 @@
 # required metadata
 
 title: Remove a software update point | Configuration Manager
-description:
+description: "Follow this procedure to remove the software update point site system role at a site from the Configuration Manager console."
 keywords:
 author: dougebymanager: angrobe
 

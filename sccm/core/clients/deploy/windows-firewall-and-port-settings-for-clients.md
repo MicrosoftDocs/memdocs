@@ -1,5 +1,6 @@
 ---
 title: "Windows client firewall and port settings | System Center Configuration Manager"
+description: "Select Windows Firewall and port settings for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -163,4 +164,3 @@ Client computers in System Center Configuration Manager that run Windows Firewal
  If the HTTP port is 80, the HTTPS port must be 443.  
 
  If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.
-

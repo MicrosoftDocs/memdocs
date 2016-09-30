@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure classifications and products to synchronize | System Center Configuration Manager
-description:
+description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
 keywords:
 author: dougebymanager: angrobe
 ms.date: 9/27/2016

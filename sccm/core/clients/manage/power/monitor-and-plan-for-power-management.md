@@ -1,5 +1,6 @@
 ---
 title: "Monitor and plan for power management | System Center Configuration Manager"
+description: "Learn how to monitor and plan for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -614,4 +615,3 @@ Use the following information to help you monitor and plan for power management 
 |Report Name|Details|  
 |-----------------|-------------|  
 |**Computer Details**|Click a computer name to see the power capabilities, power settings, and applied power plans for the selected computer.<br /><br /> For more information, see [Computer Details Report](#BKMK_Computer_Details) in this topic.|  
-
