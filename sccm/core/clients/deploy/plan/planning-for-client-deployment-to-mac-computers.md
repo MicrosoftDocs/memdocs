@@ -1,5 +1,6 @@
 ---
 title: "Planning client deployment to Mac computers | System Center Configuration Manager"
+description: "Plan for client deployment to Mac computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -99,4 +100,3 @@ You can install the Configuration Manager client on Mac computers that run the M
 -   Client status client check and remediation  
 
  For more information about how to install and configure the Configuration Manager Mac client, see [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md).
-

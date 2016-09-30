@@ -1,5 +1,6 @@
 ---
 title: "Configure clients find management points DNS publishing | System Center Configuration Manager"
+description: "Set client computers to find management points by using DNS publishing in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -47,4 +48,3 @@ Clients in System Center Configuration Manager must locate a management point to
 2.  On the **Site** tab, specify the DNS suffix of a management point, and then click **OK**.  
 
      If the site has more than one management point and they are in more than one domain, specify just one domain. When clients connect to a management point in this domain, they download a list of available management points, which will include the management points from the other domains.
-

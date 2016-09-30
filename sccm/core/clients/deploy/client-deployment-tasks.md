@@ -1,5 +1,6 @@
 ---
 title: "Client deployment tasks for System Center Configuration Manager"
+description: "Learn how to deploy and configure clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -26,4 +27,3 @@ You can deploy  the System Center Configuration Manager client to PCs, servers, 
 -   [How to assign clients to a site in System Center Configuration Manager](../../../core/clients/deploy/assign-clients-to-a-site.md)  
 
 -   [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md)  
-

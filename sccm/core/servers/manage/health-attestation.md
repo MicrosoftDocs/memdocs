@@ -1,5 +1,6 @@
 ---
 title: "Health attestation | System Center Configuration Manager"
+description: "Learn about the Device Health Attestation functionality viewable in the Configuration Manager console."
 ms.custom: na
 ms.date: 08/10/2016
 ms.prod: configuration-manager

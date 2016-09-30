@@ -1,5 +1,6 @@
 ---
 title: "Configure client status | System Center Configuration Manager"
+description: "Select client status settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -102,4 +103,3 @@ Before you can monitor System Center Configuration Manager client status and rem
 4.  Close the registry editor.  
 
  You can also install clients using the CCMSetup **NotifyOnly** installation property to exclude them from automatic remediation. For more information about this client installation property, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
-

@@ -1,5 +1,6 @@
 ---
 title: "Operations and maintenance for power management | System Center Configuration Manager"
+description: "Learn about operations and maintenance for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -23,4 +24,3 @@ Use the information in this section to find out more about operations and mainte
 -   [How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)  
 
 -   [How to create and apply power plans in System Center Configuration Manager](../../../../core/clients/manage/power/create-and-apply-power-plans.md)  
-
