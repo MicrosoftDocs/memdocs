@@ -1,5 +1,5 @@
 ---
-title: "How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager"
+itle: "Upgrade clients | Linux UNIX | System Center Configuration Manager"
 description: "Upgrade a client on a Linux or UNIX server in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

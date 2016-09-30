@@ -1,5 +1,5 @@
 ---
-title: "How to configure hardware inventory in System Center Configuration Manager"
+title: "Configure hardware inventory | System Center Configuration Manager"
 description: "Set up hardware inventory for all clients or for a collection in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
