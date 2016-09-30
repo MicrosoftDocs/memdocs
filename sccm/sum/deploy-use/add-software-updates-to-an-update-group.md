@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add software updates to an update group | Configuration Manager
-description:
+description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
 author: dougebymanager: angrobe
 
@@ -63,4 +63,3 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 6.  Click the **Software Update Groups** node to display the software update group.  
 
 7.  Select the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates that are included in the software update group.  
-

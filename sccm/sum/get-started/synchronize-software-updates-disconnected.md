@@ -2,7 +2,7 @@
 # required metadata
 
 title: Synchronize software updates from a disconnected software update point | Configuration Manager
-description:
+description: "Follow these procedures to verify that software updates synchronization was successful on the export server, export updates, and import updates metadata."
 keywords:
 author: dougebymanager: angrobe
 ms.date: 9/15/2016

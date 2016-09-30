@@ -1,5 +1,6 @@
 ---
 title: "Update Registration Tool | System Center Configuration Manager"
+description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

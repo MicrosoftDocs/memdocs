@@ -2,7 +2,7 @@
 # required metadata
 
 title: Download software updates | Configuration Manager
-description:
+description: "Use the Download Software Updates Wizard to download software updates from the Software Library workspace."
 keywords:
 author: dougebymanager: angrobe
 ms.date: 9/14/2016
