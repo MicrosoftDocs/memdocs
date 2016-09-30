@@ -335,4 +335,3 @@ This account must be a local administrator on the computer where WSUS is install
 >  Limit the scope of the account. For example, create different Task Sequence Run As Accounts for each task sequence so that if one account is compromised, only the client computers to which that account has access are compromised.  
 >   
 >  If the command line requires administrative access on the computer, consider creating a local administrator account solely for the Task Sequence Run As Account on all computers that will run the task sequence, and delete the account as soon as it is no longer needed.  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

@@ -173,4 +173,3 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 -   To manage network bandwidth between sites in a hierarchy, see [Data transfers between sites in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md)  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

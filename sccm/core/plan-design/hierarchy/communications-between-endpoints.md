@@ -249,4 +249,3 @@ To publish site information to another Active Directory forest, you must:
 
 ###  <a name="bkmk_xchange"></a> Put the Exchange Server connector in a remote forest  
 To support this scenario, ensure that name resolution works between the forests (for example, configure DNS forwards), and when you configure the Exchange Server connector, specify the intranet FQDN of the Exchange Server. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

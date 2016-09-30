@@ -777,4 +777,3 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |Change.log|Records details about the WSUS server database information that has changed.|WSUS server|  
 |SoftwareDistribution.log|Records details about the software updates that are synchronized from the configured update source to the WSUS server database.|WSUS server|  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

@@ -54,4 +54,3 @@ Typically, a site system server supports site system roles from only a single Co
 **Prerequisites for the Site Database:**  
 
 -   To host the site database, the SQL Server must meet the requirements detailed in [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0

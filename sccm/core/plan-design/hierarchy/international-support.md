@@ -34,4 +34,3 @@ The following sections provide technical details to help you configure System Ce
     >  These database collations are an exception to the requirements noted in [Support for SQL Server versions for System Center Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 -   You must place a file with the name **GB18030.SMS** in the root folder of the system volume of each site server computer in the hierarchy. This file does not contain any data and can be an empty text file that is named to meet this requirement.  
->>>>>>> ce49567f396c5575aa275603a69aa350aaa73be0
