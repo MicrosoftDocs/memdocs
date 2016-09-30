@@ -15,23 +15,7 @@ ms.technology:ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 
 ---
 # Monitor software updates in System Center Configuration Manager
-To help you to monitor software updates objects, processes, and compliance information, the System Center Configuration Manager console provides the following:  
-
--   [Alerts for software updates](#BKMK_SUAlerts)  
-
--   [Software updates synchronization status](#BKMK_SUSyncStatus)  
-
--   [Software update deployment status](#BKMK_SUDeployStatus)  
-
--   [Software updates reports](#BKMK_SUReports)  
-
--   [Monitor content](#BKMK_MonitorContent)  
-
-    -   [Content status monitoring](#BKMK_ContentStatus)  
-
-    -   [Distribution point group status](#BKMK_DPGroupStatus)  
-
-    -   [Distribution point configuration status](#BKMK_DPConfigStatus)  
+System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates. 
 
 ##  <a name="BKMK_SUAlerts"></a> Alerts for software updates  
  You can configure alerts for software updates to notify administrative users when compliance levels for software update deployments are below the configured percentage. You can configure alerts for software update deployments in the following locations:  
