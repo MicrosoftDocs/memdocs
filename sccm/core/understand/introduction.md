@@ -1,5 +1,6 @@
 ---
 title: "Introduction | System Center Configuration Manager"
+description: "Get basic information as an introduction to System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

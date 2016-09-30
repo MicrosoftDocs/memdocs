@@ -1,5 +1,6 @@
 ---
 title: "Use cloud services | System Center Configuration Manager"
+description: "Learn about provisioning cloud resources to supplement your on-premises infrastructure."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic data FAQ | System Center Configuration Manager"
+description: "Find frequently asked questions about diagnostic and usage data for System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

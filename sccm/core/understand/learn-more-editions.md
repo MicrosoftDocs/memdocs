@@ -1,5 +1,6 @@
 ---
 title: "Learn More about Editions | System Center Configuration Manager"
+description: "Get more information about the editions of System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
