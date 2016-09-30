@@ -21,15 +21,15 @@ author: NathBarnmanager: angrobe
 
  To update antimalware definitions, you can use one or more of the following methods:
 
--   Updates distributed from Configuration Manager - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
+-   [Updates distributed from Configuration Manager](endpoint-definitions-configmgr.md) - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.
 
--   Updates distributed from Windows Server Update Services (WSUS) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
+-   [Updates distributed from Windows Server Update Services (WSUS)](endpoint-definitions-wsus.md) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.
 
--   Updates distributed from Microsoft Update - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
+-   [Updates distributed from Microsoft Update](endpoint-definitions-microsoft-updates.md) - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.
 
--   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.
+-   [Updates distributed from Microsoft Malware Protection Center](endpoint-definitions-protection-center.md) - This method will download definition updates from the Microsoft Malware Protection Center.
 
--   Updates from UNC file shares - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
+-   [Updates from UNC file shares](endpoint-definitions-network.md) - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
 
  You can configure multiple definition update sources and control the order in which they are assessed and applied. This is done in the **Configure Definition Update Sources** dialog box when you create an antimalware policy.
 
@@ -43,7 +43,7 @@ author: NathBarnmanager: angrobe
 
 2.  In the **Assets and Compliance** workspace, expand **Endpoint Protection**, and then click **Antimalware Policies**.
 
-3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](antimalware-policies-for-endpoint-protection.md).
+3.  Open the properties page of the **Default Antimalware Policy** or create a new antimalware policy. For more information about how to create antimalware policies, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 4.  In the **Definition updates** section of the antimalware properties dialog box, click **Set Source**.
 
@@ -62,4 +62,3 @@ author: NathBarnmanager: angrobe
 -   Updates distributed from Microsoft Malware Protection Center - This method will download definition updates from the Microsoft Malware Protection Center.
 
 -   [Updates from UNC file shares](endpoint-definitions-network.md) - With this method, you can save the latest definition and engine updates to a share on the network. Clients can then access the network to install the updates.
-
