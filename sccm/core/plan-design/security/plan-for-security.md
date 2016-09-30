@@ -1,6 +1,6 @@
 ---
 title: "Plan for security in System Center Configuration Manager"
-description: ""
+description: "Get best practices and other information about security in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
