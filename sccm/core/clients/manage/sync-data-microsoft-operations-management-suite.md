@@ -1,5 +1,6 @@
 ---
 title: "Sync data | Microsoft Operations Management Suite | System Center Configuration Manager"
+description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
 ms.date: 08/01/2016
 ms.prod: configuration-manager

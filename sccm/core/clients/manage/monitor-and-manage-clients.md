@@ -1,5 +1,6 @@
 ---
 title: "Monitor clients | System Center Configuration Manager"
+description: "Learn how to monitor and manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -26,4 +27,3 @@ System Center Configuration Manager provides several ways to monitor and manage 
 -   [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md)  
 
 -   [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)  
-
