@@ -1,8 +1,6 @@
-#### To download software updates  
-
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 
-3.  Choose the software update to download by using one of the following methods:  
+2.  Choose the software update to download by using one of the following methods:  
 
     -   Select one or more software update groups from **Software Update Groups**, and then, on the **Home** tab, in the **Update Group** group, click **Download**.  
 
@@ -16,7 +14,7 @@
 
          The **Download Software Updates Wizard** opens.  
 
-4.  On the **Deployment Package** page, configure the following settings:  
+3.  On the **Deployment Package** page, configure the following settings:  
 
     1.  **Select deployment package**: Choose this setting to select an existing deployment package for the software updates that are in the deployment.  
 
@@ -42,7 +40,7 @@
 
      Click **Next**.  
 
-5.  On the **Distribution Points** page, specify the distribution points or distribution point groups that will host the software update files, and then click **Next**. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
+4.  On the **Distribution Points** page, specify the distribution points or distribution point groups that will host the software update files, and then click **Next**. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
 
     > [!NOTE]  
     >  The Distribution Points page is available only when you create a new software update deployment package.  
@@ -65,7 +63,7 @@
 
      Click **Next**.  
 
-7.  On the **Download Location** page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
+6.  On the **Download Location** page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
 
     -   **Download software updates from the Internet**: Select this setting to download the software updates from the location on the Internet. This is the default setting.  
 
@@ -76,8 +74,8 @@
 
      Click **Next**.  
 
-8.  On the **Language Selection** page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
+7.  On the **Language Selection** page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
 
-9. On the **Summary** page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
+8. On the **Summary** page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
 
-10. On the **Completion** page, verify that the software updates were successfully downloaded, and then click **Close**.  
+9. On the **Completion** page, verify that the software updates were successfully downloaded, and then click **Close**.  

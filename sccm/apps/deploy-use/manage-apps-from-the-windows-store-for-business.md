@@ -1,11 +1,12 @@
 ---
 title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
+description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -62,7 +63,7 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 **Activate the Windows Store for Business capability**
 1. In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Features**.
 2. Select **Windows Store for Business Integration**, then, in the **Home** tab, in the **Features** group, click **Turn on**.
-3. Close, then re-open the Configuration Manager console. 
+3. Close, then re-open the Configuration Manager console.
 4. You'll now see the node **Windows Store for Business** in the **Administration** workspace under **Cloud Services**.
 
 ## Set up Windows Store for Business synchronization
@@ -89,7 +90,7 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 **Add the store account to Configuration Manager**
 
 1. Ensure you have purchased at least one app from the Windows Store for Business.In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, then click **Windows Store for Business**.
-2.  On the **Home** tab, in the **Windows Store for Business** group, click **Add Windows Store for Business Account**. 
+2.  On the **Home** tab, in the **Windows Store for Business** group, click **Add Windows Store for Business Account**.
 3.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.
 4. Once you are done, you will see the account you configured in the **Windows Store for Business** list in the Configuration Manager console.
 
@@ -107,6 +108,3 @@ A Configuration Manager application is created containing the Windows Store for 
 In the **Software Library** workspace, expand **Application Management**, then click **License Information for Store Apps**.
 
 For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
-
-
-
