@@ -15,9 +15,9 @@
 ### [Create Android applications](get-started/creating-android-applications.md)
 ### [Create Windows Embedded applications](get-started/creating-windows-embedded-applications.md)
 ### [Create global conditions](deploy-use/create-global-conditions.md)
-### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
-### [Windows Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [Packages and programs](deploy-use/packages-and-programs.md)
 ## [Deploy applications](deploy-use/deploy-applications.md)
+### [Deploy applications](deploy-use/deploy-applications.md)
 ### [Simulate application deployments](deploy-use/simulate-application-deployments.md)
 ### [Deploy App-V virtual applications](get-started/deploying-app-v-virtual-applications.md)
 ## [Monitor applications](deploy-use/monitor-applications-from-the-console.md)
@@ -28,12 +28,14 @@
 ### [App-V virtual environments](deploy-use/create-app-v-virtual-environments.md)
 ### [iOS app configuration policies](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
 ### [User device affinity](deploy-use/link-users-and-devices-with-user-device-affinity.md)
+### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
+### [Windows Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ## [Update and retire applications](deploy-use/update-and-retire-applications.md)
 ### [Revise and supersede applications](deploy-use/revise-and-supersede-applications.md)
 ### [Uninstall applications](deploy-use/uninstall-applications.md)
 ## [Protect apps](deploy-use/protect-apps-using-mam-policies.md)
 ### [Protect apps using mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
 ### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
-## [Packages and programs](deploy-use/packages-and-programs.md)
+
 
 

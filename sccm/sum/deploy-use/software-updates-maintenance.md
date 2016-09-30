@@ -2,16 +2,14 @@
 # required metadata
 
 title: Software updates maintenance | Configuration Manager
-description:
+description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
 keywords:
 author: dougebymanager: angrobe
-
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
-	- configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 
 # optional metadata

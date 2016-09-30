@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage software updates | Configuration Manager
-description:
+description: "Follow these procedures to complete the synchronization, compliance assessment, deployment, and monitoring processes for software updates."
 keywords:
 author: dougeby
 manager: angrobe

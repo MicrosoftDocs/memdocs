@@ -1,5 +1,6 @@
 ---
 title: "Task sequence action variables in System Center Configuration Manager"
+description: "Use sequence action variables, such as network setting variables, to specify configuration settings for a single step in a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 06/06/2016
 ms.prod: configuration-manager
@@ -339,4 +340,3 @@ Task sequence action variables specify configuration settings that are used by a
 
 ## See Also  
  [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)
-

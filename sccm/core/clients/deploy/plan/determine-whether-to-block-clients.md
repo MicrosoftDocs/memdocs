@@ -1,5 +1,6 @@
 ---
 title: "Blocking clients | System Center Configuration Manager"
+description: "Block client access for system security by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -61,4 +62,3 @@ If a client computer or client mobile device is no longer trusted, you can block
 
     > [!NOTE]  
     >  You can further protect site systems that run IIS from unknown clients by configuring a certificate trust list (CTL) in IIS.  
-

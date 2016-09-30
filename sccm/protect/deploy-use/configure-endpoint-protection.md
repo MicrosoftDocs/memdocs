@@ -15,7 +15,6 @@ caps.latest.revision: 21
 author: NathBarnmanager: angrobe
 
 ---
-
 # Configuring Endpoint Protection in System Center Configuration Manager
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, set it up using this topic.  
 
@@ -88,10 +87,10 @@ Use one of the following procedures depending on whether you want to install a n
     > [!NOTE]  
     >  This option configures the Microsoft Active Protection Service settings that are used by default. You can configure custom settings for each antimalware policy you create. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).  
 
-
 8.  Complete the wizard.  
 
 ###  <a name="BKMK_EPalerts"></a> Step 2: Configure Alerts for Endpoint Protection  
+
  You can configure Endpoint Protection alerts in Microsoft System Center 2012 Configuration Manager to notify administrators when specific security events occur in your hierarchy. Notifications display in the Endpoint Protection dashboard in the Configuration Manager console, and reports. You can also set them up to be emailed to specified recipients.  
 
  Use the following steps and the supplemental procedures in this topic to configure alerts for Endpoint Protection in Configuration Manager.  
@@ -106,7 +105,6 @@ Use one of the following procedures depending on whether you want to install a n
 2.  In the **Assets and Compliance** workspace, choose **Device Collections**.  
 
 3.  In the **Device Collections** list, select the collection for which you want to configure alerts, and then on the **Home** tab, in the **Properties** group, choose **Properties**.  
-
 
     > [!NOTE]  
     >  You cannot configure alerts for user collections.  
@@ -160,10 +158,7 @@ Use one of the following procedures depending on whether you want to install a n
 ###  <a name="BKMK_EPdefs"></a> Step 3: Configure Definition Updates for Endpoint Protection  
  You can choose any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy:  
 
-
--   Updates distributed from Configuration Manager - This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
-
--   Updates distributed from Windows Server Update Services (WSUS) - This method uses your WSUS infrastructure to deliver definition and engine updates to computers.  
+-   Updates distributed from Configuration Manager – This method uses Configuration Manager software updates to deliver definition and engine updates to computers in your hierarchy.  
 
 -   Updates distributed from Microsoft Update - This method allows computers to connect directly to Microsoft Update in order to download definition and engine updates. This method can be useful for computers that are not often connected to the business network.  
 
@@ -190,8 +185,8 @@ Use one of the following procedures depending on whether you want to install a n
 
 6.  Choose **OK** to close the **Configure Definition Update Sources** dialog box.  
 
-
 ####  <a name="BKMK_EPsup"></a> Using Configuration Manager Software Updates to Deliver Definition Updates  
+
  You can configure Configuration Manager software updates to deliver definition updates to client computers. This is done by configuring automatic deployment rules. Before you begin to create automatic deployment rules, make sure that you have configured Configuration Manager software updates. For more information, see [Introduction to software updates in System Center Configuration Manager](../../sup/understand/software-updates-introduction.md).  
 
 > [!NOTE]  
@@ -347,7 +342,6 @@ In addition to manual approval, you can  set an automatic approval rule for defi
 
 10. In the **Automatic Approvals** dialog box, select the check box for the newly created rule and then choose **Run rule**.  
 
-
 > [!NOTE]  
 >  To maximize performance on your WSUS server and client computers, decline old definition updates. To accomplish this task, you can configure automatic approval for revisions and automatic declining of expired updates. For more information, see [Microsoft Knowledge Base article 938947](http://go.microsoft.com/fwlink/p/?LinkId=204078).  
 
@@ -429,14 +423,12 @@ This procedure configures custom client settings for Endpoint Protection which c
     > [!NOTE]  
     >  The **Default Client Antimalware Policy** cannot be exported.  
 
-
 -   If you want to install the Endpoint Protection client with the latest definitions, you must download them from the [Microsoft Malware Protection Center](http://go.microsoft.com/fwlink/?LinkID=200965).  
 
 ### How to install the Endpoint Protection client software on the reference computer  
  You can install the Endpoint Protection client locally on the reference computer from a command prompt.
 
 First, obtain the installation file **scepinstall.exe**. You can also install the client with an preconfigured antimalware policy or with an antimalware policy that you previously exported.  
-
 
 1.  Copy **scepinstall.exe** from the **Client** folder on the System Center 2012 Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.  
 
