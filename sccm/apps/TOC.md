@@ -25,17 +25,19 @@
 ### [Monitor app usage with software metering](deploy-use/monitor-app-usage-with-software-metering.md)
 ## [Manage applications](deploy-use/management-tasks-applications.md)
 ### [Management tasks](deploy-use/management-tasks-applications.md)
-### [App-V virtual environments](deploy-use/create-app-v-virtual-environments.md)
-### [iOS app configuration policies](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
 ### [User device affinity](deploy-use/link-users-and-devices-with-user-device-affinity.md)
+### [iOS app configuration policies](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
 ### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [Windows Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [App-V virtual environments](deploy-use/create-app-v-virtual-environments.md)
+## [Protect apps](deploy-use/protect-apps-using-mam-policies.md)
+### [Mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
+### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ## [Update and retire applications](deploy-use/update-and-retire-applications.md)
+### [Update and retire applications](deploy-use/update-and-retire-applications.md)
 ### [Revise and supersede applications](deploy-use/revise-and-supersede-applications.md)
 ### [Uninstall applications](deploy-use/uninstall-applications.md)
-## [Protect apps](deploy-use/protect-apps-using-mam-policies.md)
-### [Protect apps using mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
-### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
+
 
 
 
