@@ -52,7 +52,7 @@ This topic contains security and privacy information for software updates in Sys
 
      When you install WSUS on the software update point, you have the option to use the existing IIS Default Web site or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website instead of sharing the same web site that is used by the other Configuration Manager site systems or other applications.  
 
-     For more information, see [Configure WSUS to use a custom web site](plan-for-software-updates.md#configure-wsus-to-use-a-custom-web-site).  
+     For more information, see [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for software updates  
  Software updates scans your client computers to determine which software updates you require, and then sends that information back to the site database. During the software updates process, Configuration Manager might transmit information between clients and servers that identify the computer and logon accounts.  

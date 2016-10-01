@@ -107,4 +107,4 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 ## Next steps
 After you synchronize software updates for the first time, or after there are new classifications or products available, you must [configure the new classifications and products](configure-classifications-and-products.md) to synchronize software updates with the new criteria.
 
-After you syncrhonize software updates, [manage settings for software updates](manage-settings-for-software-updates.md).  
+After you syncrhonize software updates with the criteria that you need, [manage settings for software updates](manage-settings-for-software-updates.md).  
