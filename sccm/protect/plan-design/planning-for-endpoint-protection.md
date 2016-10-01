@@ -5,8 +5,7 @@ ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-  - configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
@@ -47,7 +46,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
   In addition, Endpoint Protection in Configuration Manager lets you to manage Windows Firewall settings in the Configuration Manager console.  
 
- [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](../deploy-use/scenario-endpoint-protection.md) shows how you might configure and manage Endpoint Protection and the Windows Firewall.  
+ [Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager](../deploy-use/scenarios-endpoint-protection.md) shows how you might configure and manage Endpoint Protection and the Windows Firewall.  
 
 ## Managing Malware with Endpoint Protection  
 
