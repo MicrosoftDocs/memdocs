@@ -1,5 +1,6 @@
 ---
 title: "Configure Endpoint Protection Client | System Center Configuration Manager"
+description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
@@ -162,4 +163,3 @@ For more information about operating system deployment in Configuration Manager,
 After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).
 
 When an image that contains the Endpoint Protection client software is deployed, the Endpoint Protection client will automatically report information to the Configuration Manager site to which the computer is assigned, and policy applicable to the client computer is downloaded and applied.
-
