@@ -1,5 +1,6 @@
 ---
-title: "Monitor Linux and UNIX clients | System Center Configuration Manager"
+title: "Monitor clients | Linux UNIX |System Center Configuration Manager"
+description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -44,4 +45,3 @@ You can view information from Linux and UNIX servers in the System Center Config
  It is also possible to create custom reports that are specific to Linux and UNIX server data. The **Caption** property of the hardware inventory class **Operating System** is a useful attribute that you can use to identify specific Operating Systems in the report query.  
 
  For information about reports in Configuration Manager, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
-

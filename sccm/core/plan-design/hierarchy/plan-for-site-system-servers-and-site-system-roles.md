@@ -1,5 +1,6 @@
 ---
 title: "Plan site system roles | System Center Configuration Manager"
+description: "Consider site system servers and site system roles as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

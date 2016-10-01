@@ -1,6 +1,6 @@
 ---
 title: Service a server group | Configuration Manager
-description:
+description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
 author: dougeby
 manager: angrobe
@@ -20,9 +20,9 @@ When you deploy software updates to a collection that has server group settings 
 >[!IMPORTANT]
 >All of the computers in the collection must be assigned to the same site.
 
-### Create a collection for a server group  
+#### To create a collection for a server group  
 The server group settings are configured in the properties for a device collection. To service a server group, all members in the collection must be assigned to the same site. Use the following steps to create a collection and configure the server group settings:
-1.  [Create a device collection](https://technet.microsoft.com/library/gg712295.aspx) that contains the computers in the server group.  
+1.  [Create a device collection](../../core/clients/manage/collections/create-collections.md) that contains the computers in the server group.  
 
 2.  In the **Assets and Compliance** workspace, click **Device Collections**, right-click the collection that contains the computers in the server group, and then click **Properties**.  
 
@@ -61,14 +61,14 @@ The server group settings are configured in the properties for a device collecti
     >   
     >  `Out-File C:\temp\end.txt`  
 
-### Deploy software updates to the server group and monitor status  
+## Deploy software updates to the server group and monitor status  
 You deploy software updates to the server group collection by using the typical deployment process. After you deploy the software updates, you can monitor the software update deployment in the Configuration Manager console.
-1.  [Deploy software updates](https://technet.microsoft.com/library/gg712304.aspx) to the server group collection.   
+1.  [Deploy software updates](manually-deploy-software-updates.md) to the server group collection.   
 
-2.  [Monitor the software update deployment](https://technet.microsoft.com/library/gg712304.aspx). In addition to the standard monitoring views for software updates deployment, the **Waiting for lock** state is displayed when a client is waiting for its turn to install the software updates. You can review the UpdatesDeployment.log file for more information.
+2.  [Monitor the software update deployment](monitor-software-updates.md). In addition to the standard monitoring views for software updates deployment, the **Waiting for lock** state is displayed when a client is waiting for its turn to install the software updates. You can review the UpdatesDeployment.log file for more information.
 
 
-### Clear the deployment locks for computers in a server group  
+## Clear the deployment locks for computers in a server group  
 When a computer fails to release a deployment lock, you can manually release all server group deployment locks for the collection. Clear locks only when a deployment is stuck updating computers in the collection and there are computers that are still not compliant.  
 1.  In the **Assets and Compliance** workspace, click **Device Collections**, and click the collection to clear deployment locks.  
 

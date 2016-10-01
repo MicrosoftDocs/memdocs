@@ -1,5 +1,6 @@
 ---
 title: "Planning collections | System Center Configuration Manager"
+description: "Plan for using collections in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -23,4 +24,3 @@ Use the following topics in this section to help you plan for collections in Sys
 -   [Prerequisites for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/prerequisites-for-collections.md)  
 
 -   [Best practices for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/best-practices-for-collections.md)  
-

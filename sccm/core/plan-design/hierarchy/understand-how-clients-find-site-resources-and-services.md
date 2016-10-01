@@ -1,5 +1,6 @@
 ---
 title: "Find site resources | System Center Configuration Manager"
+description: "Understand how and when System Center Configuration Manager clients use service location to find site resources."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

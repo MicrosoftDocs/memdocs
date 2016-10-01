@@ -1,5 +1,6 @@
 ---
-title: "How to configure software inventory in System Center Configuration Manager"
+title: "Configure software inventory | System Center Configuration Manager"
+description: "Set up software inventory and an inventory exclusion folder in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -28,5 +29,3 @@ You can create a hidden file named **Skpswi.dat** and place it in the root of a 
 2.  Right click the **Skpswi.dat** file and click **Properties**. In the file properties for the Skpswi.dat file, select the **Hidden** attribute.  
 
 3.  Place the **Skpswi.dat** file at the root of each client hard drive or folder structure that you want to exclude from software inventory.  
-  
-

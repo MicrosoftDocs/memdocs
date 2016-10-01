@@ -1,5 +1,6 @@
 ---
 title: "Console support | System Center Configuration Manager consoles"
+description: "Learn which operating systems a System Center Configuration Manager console supports."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

@@ -1,5 +1,6 @@
 ---
-title: "How to test client upgrades in a preproduction collection in System Center Configuration Manager"
+title: "Test client upgrades preproduction collection | System Center Configuration Manager"
+description: "Test client upgrades in a preproduction collection in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -30,6 +31,11 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 >  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.  
 
 ##  <a name="BKMK_config"></a> To configure automatic client upgrades to use a preproduction collection  
+
+1. Set up a collection that contains the computers you want to deploy the preproduction client to. For more information on how to do this step, see [How to create collections](..\collections\create-collections.md).
+
+> [!NOTE]
+> Do not include workgroup computers in preproduction collections. Workgroup computers cannot use the authentication required for the distribution point to access the preproduction client package.   
 
 1.  In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and click **Hierarchy Settings**.  
 
@@ -66,4 +72,3 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 2.  In the dialog box, review the client versions in production and pre-production, make sure the correct the pre-production collection is specified, and then  click **Promote**. In the confirmation box, click **Yes**.  
 
 3.  After dialog box closes, the updated client version will replace the current client version in use in your hierarchy. You can then upgrade the clients for your whole site. See [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md) for more information.  
-

@@ -1,5 +1,6 @@
 ---
 title: "Automatically categorize devices into collections | System Center Configuration Manager"
+description: "Categorize devices into collections automatically with System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/01/2016
 ms.prod: configuration-manager
@@ -51,4 +52,3 @@ When you associate a collection with a device category, all devices in the categ
     >  If the **Device Category** column is not displayed, right-click the heading of one of the columns in the **Devices** list (like **Name**), then select **Device Category**.
 
 If you assign a device to a category, and subsequently delete the category, the report **List of Devices enrolled per user in Microsoft Intune** will display a GUID in the **Device Category** column, instead of a category name.
-

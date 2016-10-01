@@ -1,5 +1,6 @@
 ---
 title: "Security best practices and privacy information for System Center Configuration Manager"
+description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -60,4 +61,3 @@ Use the following information to find security best practices and privacy inform
 -   [Security and privacy for VPN profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-vpn-profiles.md)  
 
 -   [Security and privacy for Wi-Fi profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-profiles.md)  
-

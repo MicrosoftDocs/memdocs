@@ -1,5 +1,6 @@
 ---
 title: "Collections technical reference for System Center Configuration Manager"
+description: "A technical reference for using collections in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -27,4 +28,3 @@ Collections in System Center Configuration Manager provide a method of managing 
 -   [Operations and maintenance for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/operations-and-maintenance-for-collections.md)  
 
 -   [Security and privacy for collections in System Center Configuration Manager](../../../../core/clients/manage/collections/security-and-privacy-for-collections.md)  
-

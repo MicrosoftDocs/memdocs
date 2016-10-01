@@ -1,5 +1,6 @@
 ---
-title: "Security and privacy for hardware inventory in System Center Configuration Manager"
+title: "Hardware inventory security privacy | System Center Configuration Manager"
+description: "Get security and privacy information for hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -46,4 +47,3 @@ This topic contains security and privacy information for hardware inventory in S
  Inventory information is not sent to Microsoft. Inventory information is stored in the Configuration Manager database. When clients use HTTPS to connect to management points, the inventory data that they send to the site is encrypted during the transfer. If clients use HTTP to connect to management points, you have the option to enable inventory encryption. The inventory data is not stored in encrypted format in the database. Information is retained in the database until it is deleted by the site maintenance tasks **Delete Aged Inventory History** or **Delete Aged Collected Files** every 90 days. You can configure the deletion interval.  
 
  Before you configure hardware inventory, software inventory, file collection, or Asset Intelligence data collection, consider your privacy requirements.  
-

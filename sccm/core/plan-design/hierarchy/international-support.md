@@ -1,5 +1,6 @@
 ---
 title: "International support | System Center Configuration Manager"
+description: "Configure System Center Configuration Manager to comply with specific international requirements."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

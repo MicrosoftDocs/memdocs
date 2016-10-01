@@ -1,5 +1,6 @@
 ---
 title: "Alerts and the status system | System Center Configuration Manager"
+description: "Configure alerts, and use the status system to remain informed about the state of your Configuration Manager deployment."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

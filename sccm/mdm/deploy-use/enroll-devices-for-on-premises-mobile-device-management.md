@@ -1,6 +1,7 @@
 ---
-title: "Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager"
-description: "Describes methods to enroll devices for On-premises Mobile Device Management in System Center Configuration Manager."
+
+title: "Enroll devices | MDM System Center | Configuration Manager"
+description: "Learn about methods to enroll devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -34,5 +35,3 @@ To manage computers and devices with System Center Configuration Manager On\-pre
 > -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
-## See Also  
- [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)
