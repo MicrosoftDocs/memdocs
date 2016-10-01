@@ -48,14 +48,14 @@ This topic provides an example scenario of how you can use software updates in S
 
 |Process|Reference|  
 |-------------|---------------|  
-|John creates an automatic deployment rule with the following requirements:<br /><br /><ol><li>On the **General** tab, John configures the following:<br /> <ul><li>Specifies **Monthly Security Updates** for the name.</li><li>Selects a test collection with limited clients.</li><li>Selects **Create a new Software Update Group**.</li><li>Verifies that **Enable the deployment after this rule is run** is not selected.</li></ul></li><li>On the **Deployment Settings** tab, John selects the default settings.</li><li>On the **Software Updates** page, John configures the following property filters and search criteria:<br /><ul><li>Date Released or Revised **Last 1 month**.</li><li>Update Classification **Security Updates**.</li></ul></li><li>On the **Evaluation** page, John enables the rule to run on a schedule for the **second Thursday** of every **month**. John also verifies that his synchronization schedule is set to run on the **second Wednesday** of every **month**.</li><li>John uses the default settings on the Deployment Schedule, User Experience, Alerts, and Download Settings pages.</li><li>On the **Deployment Package** page, John specifies a new deployment package.</li><li>John uses the default settings on the Download Location and Language Selection pages.</li></ol>|[Automatically deploy software updates](manage-software-updates.md#BKMK_AutoDeploy)|  
+|John creates an automatic deployment rule with the following requirements:<br /><br /><ol><li>On the **General** tab, John configures the following:<br /> <ul><li>Specifies **Monthly Security Updates** for the name.</li><li>Selects a test collection with limited clients.</li><li>Selects **Create a new Software Update Group**.</li><li>Verifies that **Enable the deployment after this rule is run** is not selected.</li></ul></li><li>On the **Deployment Settings** tab, John selects the default settings.</li><li>On the **Software Updates** page, John configures the following property filters and search criteria:<br /><ul><li>Date Released or Revised **Last 1 month**.</li><li>Update Classification **Security Updates**.</li></ul></li><li>On the **Evaluation** page, John enables the rule to run on a schedule for the **second Thursday** of every **month**. John also verifies that his synchronization schedule is set to run on the **second Wednesday** of every **month**.</li><li>John uses the default settings on the Deployment Schedule, User Experience, Alerts, and Download Settings pages.</li><li>On the **Deployment Package** page, John specifies a new deployment package.</li><li>John uses the default settings on the Download Location and Language Selection pages.</li></ol>|[Automatically deploy software updates](automatically-deploy-software-updates.md)|  
 
 ##  <a name="BKMK_Step3"></a> Step 3: Verify that software updates are ready to deploy  
  On the second Thursday of every month, John verifies that the software updates are ready to deploy. He performs the following step.  
 
 |Process|Reference|  
 |-------------|---------------|  
-|John verifies that software updates synchronization completed successfully.|[Software updates synchronization status](../monitor-software-updates.md#BKMK_SUSyncStatus)|  
+|John verifies that software updates synchronization completed successfully.|[Software updates synchronization status](monitor-software-updates.md#BKMK_SUSyncStatus)|  
 
 ##  <a name="BKMK_Step4"></a> Step 4: Deploy the software update group  
  After John verifies that the software updates are ready to deploy, he deploys the software updates. He performs the steps in the following table.  
@@ -63,7 +63,7 @@ This topic provides an example scenario of how you can use software updates in S
 |Process|Reference|  
 |-------------|---------------|  
 |John creates two test deployments for the new software update group. He considers the following environments for each deployment:<br /><br /> **Workstation test deployment**: John considers the following for the workstation test deployment:<br /><br /><ul><li>Specifies a deployment collection that contains a subset of workstation clients to verify the deployment.</li><li>Configures the deployment settings that are appropriate for the workstation clients in his environment.</li></ul><br />**Server test deployment**: John considers the following for the server test deployment:<br /><br /><ul><li>Specifies a deployment collection that contains a subset of server clients to verify the deployment.</li><li>Configures the deployment settings that are appropriate for the server clients in his environment.</li></ul>|[Deploy software updates](deploy-software-updates.md)|  
-|John verifies that the test deployments have successfully deployed.|[Monitor software updates](monitor-software-updates.md)|  
+|John verifies that the test deployments have successfully deployed.|[Software updates deployment status](monitor-software-updates.md#BKMK_SUDeployStatus)|  
 |John updates the two deployments with new collections that include his production workstations and servers.|No additional information|  
 
 ##  <a name="BKMK_Step5"></a> Step 5: Monitor compliance for deployed software updates  
@@ -78,9 +78,9 @@ This topic provides an example scenario of how you can use software updates in S
 
 |Process|Reference|  
 |-------------|---------------|  
-|John selects the software updates from the monthly software update group and adds the software updates to the software updates group that he created for yearly compliance. He tracks the software update compliance and creates various reports for his management.|[Add software updates to a deployed update group](../add-software-updates-to-an-existing-update-group.md)|  
+|John selects the software updates from the monthly software update group and adds the software updates to the software updates group that he created for yearly compliance. He tracks the software update compliance and creates various reports for his management.|[Add software updates to a deployed update group](add-software-updates-to-an-update-group.md)|  
 
- John has successfully completed his monthly deployment for security software updates. He continues to monitor and report on software update compliance to ensure that the clients in his environment are within acceptable compliance levels.  
+John has successfully completed his monthly deployment for security software updates. He continues to monitor and report on software update compliance to ensure that the clients in his environment are within acceptable compliance levels.  
 
 ##  <a name="BKMK_MonthlyProcess"></a> Recurring monthly process to deploy software updates  
  After the first month that John deploys software updates, he performs steps three through six to deploy the monthly security software updates released by Microsoft.  
