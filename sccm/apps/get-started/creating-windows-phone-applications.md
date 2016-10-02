@@ -23,8 +23,8 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 |Device Type|Supported Files|  
 |-----------------|---------------------|  
-|Windows Phone 8|*.xap|  
-|Windows Phone 8.1|*.xap, \*.appx, \*.appxbundle|  
+|Windows Phone 8|.xap|  
+|Windows Phone 8.1|.xap, .appx, .appxbundle|  
 
  The following deployment actions are supported:  
 

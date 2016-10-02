@@ -82,7 +82,7 @@ Ensure you have reviewed the information in [Introduction to application managem
 
 Now that you've created an application, you can refine the application settings if required. To look at the application properties, select the app, and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
 
- In the **<Contoso\> Application Properties** dialog box, you'll see many items that you can configure to fine-tune the behavior of the application. For details about all the settings you can configure, see [How to create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md). For the purposes of this example, you'll just be changing some properties of the application's deployment type.  
+ In the **<Contoso\> Application Properties** dialog box, you'll see many items that you can configure to fine-tune the behavior of the application. For details about all the settings you can configure, see [Create applications](../../apps/deploy-use/create-applications.md). For the purposes of this example, you'll just be changing some properties of the application's deployment type.  
   
  Click the **Deployment Types** tab, select the **Contoso Application** deployment type, and then click **Edit**. 	
 You'll see a dialog box like this one:  
@@ -196,4 +196,4 @@ Next, deploy the application to a device collection in your hierarchy. For this 
   
 ## End user experience  
 
-Users who have PCs running Windows 10 managed by Configuration Manager will shortly see a message telling them that they must install the Contoso application. Once they accept the installation, the application will be installed.  
+Users who have PCs running Windows 10 managed by Configuration Manager will see a message telling them that they must install the Contoso application. Once they accept the installation, the application will be installed.  

@@ -7,7 +7,7 @@
 ## [Common tasks for managing compliance](plan-design/common-tasks-for-managing-compliance.md)
 ### [Devices with the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md)
 ### [Devices not running the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-not-running-the-client.md)
-## [Create and deploy configuration baselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
+### [Create and deploy configuration baselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-compliance-settings.md)
 # [Deploy and use](deploy-use/create-configuration-items.md)
 ## [Create configuration items](deploy-use/create-configuration-items.md)
