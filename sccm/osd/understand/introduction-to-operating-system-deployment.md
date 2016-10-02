@@ -1,5 +1,5 @@
 ---
-title: "Introduction to operating system deployment in System Center Configuration Manager"
+title: Introduction to operating system deployment | Configuration Manager
 description: "Understand the concepts before you deploy operating systems in your Configuration Manager environment."
 ms.custom: na
 ms.date: 12/08/2015
@@ -16,31 +16,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Introduction to operating system deployment in System Center Configuration Manager
-The following sections explain some of the concepts that are used to deploy operating systems in your Configuration Manager environment:  
-
--   [The operating system deployment process](#BKMK_OSDeploymentProcess)  
-
--   [Operating system deployment scenarios](#BKMK_OSDScenarios)  
-
--   [Methods to deploy operating systems](#BKMK_OSDMethods)  
-
--   [Boot images](#BKMK_BootImages)  
-
--   [Operating system images](#BKMK_OSImages)  
-
--   [Operating system upgrade packages](#BKMK_OSUpgradePackages)  
-
--   [Media to deploy operating systems](#BKMK_OSDMedia)  
-
--   [Device drivers](#BKMK_DeviceDrivers)  
-
--   [Save and restore user state](#BKMK_OSDUserState)  
-
--   [Deploy to unknown computers](#BKMK_UnknownComputer)  
-
--   [Associate users with a computer](#BKMK_UDA)  
-
--   [Use task sequences to automate steps](#BKMK_TaskSequences)  
+The following sections explain some of the concepts that are used to deploy operating systems in your Configuration Manager environment.  
 
 ##  <a name="BKMK_OSDeploymentProcess"></a> The operating system deployment process  
  Configuration Manager provides several methods that you can use to deploy an operating system. There are several actions that you must take regardless of the deployment method that you use:  
