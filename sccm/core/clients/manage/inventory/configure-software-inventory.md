@@ -1,5 +1,5 @@
 ---
-title: "How to configure software inventory in System Center Configuration Manager"
+title: "Configure software inventory | System Center Configuration Manager"
 description: "Set up software inventory and an inventory exclusion folder in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

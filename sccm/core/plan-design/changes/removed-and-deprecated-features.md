@@ -1,5 +1,6 @@
 ---
 title: "Deprecated features | System Center Configuration Manager"
+description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

@@ -1,5 +1,5 @@
 ---
-title: "How to configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager"
+title: "Configure hardware inventory | mobile devices | System Center Configuration Manager"
 description: "Configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015

@@ -1,5 +1,5 @@
 ---
-title: "Manage mobile devices with on-premises infrastructure in System Center Configuration Manager"
+title: "On-premises Mobile Device Management (MDM) | System Center Configuration Manager"
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: Mtillmanmanager: angrobe
 
 ---
-# Manage mobile devices with on-premises infrastructure in System Center Configuration Manager
+# On-premises Mobile Device Management (MDM) in System Center Configuration Manager
 System Center Configuration Manager On\-premises Mobile Device Management is a device management solution that relies on the built-in management capabilities of device operating systems (based on the Open Mobile Alliance Device Management  or OMA DM standard) while using an enterprise's Configuration Manager infrastructure to manage and maintain the devices. On\-premises Mobile Device Management requires Microsoft Intune to set up the management capability, but it's only needed for the subscription (and at times to help notify devices to check in for policy changes), but it's not used to manage devices or store data about them.  
 
  ![On\-premises conceptual](media/On-premises-conceptual.png)  

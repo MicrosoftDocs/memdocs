@@ -1,5 +1,6 @@
 ---
 title: "Operations and maintenance for remote control in System Center Configuration Manager"
+description: "Learn about operations and maintenance for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -23,4 +24,3 @@ Use the information in this section to find out more about operations and mainte
 -   [How to remotely administer a Windows client computer by using System Center Configuration Manager](../../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)  
 
 -   [How to audit remote control usage in System Center Configuration Manager](../../../../core/clients/manage/remote-control/audit-remote-control-usage.md)  
-
