@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Evaluation installs | System Center Configuration Manager"
+description: "Learn how to upgrade an evaluation installation to a full installation of System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

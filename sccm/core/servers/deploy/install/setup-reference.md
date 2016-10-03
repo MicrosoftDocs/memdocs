@@ -1,5 +1,6 @@
 ---
 title: "Setup reference | System Center Configuration Manager"
+description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
 ms.date: 01/25/2016
 ms.prod: configuration-manager

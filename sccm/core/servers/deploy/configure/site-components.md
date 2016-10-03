@@ -1,5 +1,6 @@
 ---
 title: "Site components | System Center Configuration Manager"
+description: "Learn how to configure site components to modify the behavior of site system roles and site status reporting."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

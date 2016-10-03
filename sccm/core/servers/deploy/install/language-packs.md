@@ -1,5 +1,6 @@
 ---
 title: "Language Packs | System Center Configuration Manager"
+description: "Learn about the language support available to you in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

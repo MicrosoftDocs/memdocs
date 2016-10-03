@@ -1,5 +1,6 @@
 ---
 title: "Define site boundaries | System Center Configuration Manager"
+description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

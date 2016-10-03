@@ -1,5 +1,6 @@
 ---
 title: "Install cloud-based distribution points | System Center Configuration Manager"
+description: "Learn what you need to do to start using cloud-based distribution points in Microsoft Azure."
 ms.custom: na
 ms.date: 06/27/2016
 ms.prod: configuration-manager

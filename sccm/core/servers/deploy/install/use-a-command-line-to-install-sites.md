@@ -1,5 +1,6 @@
 ---
 title: "Command line install | System Center Configuration Manager"
+description: "Learn how to run System Center Configuration Manager Setup from a command prompt for a variety of site installations."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
