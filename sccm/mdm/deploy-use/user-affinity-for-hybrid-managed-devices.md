@@ -9,7 +9,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 caps.latest.revision: 6
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 ---
 # User affinity for hybrid managed devices in Configuration Manager
 When configuring profiles for corporate-owned devices, the administrator can specify whether the managed devices can have *user affinity* which identifies a specific user with the device.  
