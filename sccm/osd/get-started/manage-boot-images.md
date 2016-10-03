@@ -1,5 +1,5 @@
 ---
-title: "Manage boot images with System Center Configuration Manager"
+title: Manage boot images | Configuration Manager
 description: "In Configuration Manager, learn to manage the Windows PE boot images that you use during an operating system deployment."
 ms.custom: na
 ms.date: 07/27/2016
@@ -17,21 +17,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Manage boot images with System Center Configuration Manager
-A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) image that is used  during an operating system deployment. Boot images are used to start a computer in WinPE, which is a minimal operating system with limited components and services that prepare the destination computer for Windows installation.  Use the following sections to manage boot images:  
-
--   [Default boot images](#BKMK_BootImageDefault)  
-
--   [Customize a boot image](#BKMK_BootImageCustom)  
-
--   [Add a boot image](#BKMK_AddBootImages)  
-
--   [Distribute boot images to a distribution point](#BKMK_DistributeBootImages)  
-
--   [Modify a boot image](#BKMK_ModifyBootImages)  
-
--   [Configure a boot image to deploy from a PXE-enabled distribution point](#BKMK_BootImagePXE)  
-
--   [Configure multiple languages for boot image deployment](#BKMK_BootImageLanguage)  
+A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) image that is used  during an operating system deployment. Boot images are used to start a computer in WinPE, which is a minimal operating system with limited components and services that prepare the destination computer for Windows installation.  Use the following sections to manage boot images.
 
 ##  <a name="BKMK_BootImageDefault"></a> Default boot images  
  Configuration Manager provides two default boot images: One to support x86 platforms and one to support x64 platforms. These images are stored in: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64 or i386*.  
@@ -43,7 +29,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 ##  <a name="BKMK_BootImageCustom"></a> Customize a boot image  
  You can customize a boot image, or [Modify a boot image](#BKMK_ModifyBootImages), from the Configuration Manager console when it is based on a Windows PE  version from the supported version of Windows ADK. When a site is upgraded with a new version and a new version of Windows ADK is installed, custom boot images (not in the default boot image location) are not updated with the new version of Windows ADK. When that happens, you will no longer be able to customize the boot images in the Configuration Manager console. However, they will continue to work as they did before the upgrade.  
 
- When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images  by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK. For more information, see [Customize boot images with System Center Configuration Manager](../../osd/deploy-use/customize-boot-images.md).  
+ When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images  by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK. For more information, see [Customize boot images with System Center Configuration Manager](../deploy-use/customize-boot-images.md).  
 
 ##  <a name="BKMK_AddBootImages"></a> Add a boot image  
 
@@ -65,7 +51,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 
      <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images with System Center Configuration Manager](../../osd/deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images](../../osd/deploy-use/manage-boot-images.md).  
+     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images with System Center Configuration Manager](../deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images](../deploy-use/manage-boot-images.md).  
 
  Use the following procedure to manually add a boot image.  
 
@@ -110,7 +96,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 > -   You must distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
 > -   Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
 >   
->  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+>  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
  For the steps to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
 
@@ -155,7 +141,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
         -   Make sure that the drivers that you add to the boot image  match the architecture of the boot image.  
 
         > [!NOTE]  
-        >  You must import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers in System Center Configuration Manager](../../osd/deploy-use/manage-drivers.md).  
+        >  You must import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers in System Center Configuration Manager](../deploy-use/manage-drivers.md).  
 
     -   On the **Customization** tab, select any of the following settings:  
 
@@ -186,7 +172,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
         -   Select **Deploy this boot image from the PXE-enabled distribution point** if the boot image is used in a PXE-enabled deployment.  
 
             > [!NOTE]  
-            >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+            >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
     -   On the **Data Access** tab, select any of the following settings:  
 
@@ -233,7 +219,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 5.  On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**.  
 
     > [!NOTE]  
-    >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+    >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 6.  After you have configured the properties, click **OK**.  
 
@@ -254,6 +240,3 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 1.  Verify that the appropriate task sequence resource file (tsres.dll) is in the corresponding language folder on site server before you update the boot image. For example, the English resource file is in the following location:  <*ConfigMgrInstallationFolder*>\OSD\bin\x64\00000409\tsres.dll.  
 
 2.  As part of your prestart command, set the SMSTSLanguageFolder environment variable to the appropriate language ID. The language ID must be specified by using decimal and not hexadecimal. For example, to set the language ID to English, you would specify a decimal value of 1033 instead of the hexadecimal value of 00000409 used for the folder name.  
-
-## See Also  
- [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)

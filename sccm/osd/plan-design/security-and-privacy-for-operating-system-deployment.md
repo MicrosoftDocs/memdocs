@@ -1,5 +1,5 @@
 ---
-title: "Security and privacy for operating system deployment in System Center Configuration Manager"
+title: Security and privacy for operating system deployment | Configuration Manager
 description: "Learn about security and privacy best practices for operating system deployment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/27/2016
@@ -198,6 +198,3 @@ This topic contains security and privacy information for operating system deploy
  Configuration Manager does not implement operating system deployment by default and requires several configuration steps before you collect user state information or create task sequences or boot images.  
 
  Before you configure operating system deployment, consider your privacy requirements.  
-
-## See Also  
- [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)

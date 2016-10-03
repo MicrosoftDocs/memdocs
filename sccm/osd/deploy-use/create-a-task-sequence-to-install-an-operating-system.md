@@ -1,5 +1,5 @@
 ---
-title: "Create a task sequence to install an operating system in System Center Configuration Manager"
+title: Create a task sequence to install an operating system | Configuration Manager
 description: "Use task sequences in System Center Configuration Manager to automatically install an operating system image and other content on a destination computer."
 ms.custom: na
 ms.date: 07/27/2016
@@ -47,14 +47,14 @@ Use task sequences   in System Center Configuration Manager to automatically ins
 
     -   **Description**: Specify a description of the task that is performed by the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images with System Center Configuration Manager](../deploy-use/manage-boot-images.md).  
 
         > [!IMPORTANT]  
         >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
 6.  On the **Install Windows** page, specify the following settings, and then click **Next**.  
 
-    -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).  
+    -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images with System Center Configuration Manager](../deploy-use/manage-operating-system-images.md).  
 
     -   **Image**: If the operating system image package has multiple images, specify the index of the operating system image to install.  
 
@@ -90,7 +90,7 @@ Use task sequences   in System Center Configuration Manager to automatically ins
 
 9. On the **State Migration** page, specify the following information, and then click **Next**.  
 
-    -   **Capture user settings**: Specify whether the task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state in System Center Configuration Manager](../../osd/deploy-use/manage-user-state.md).  
+    -   **Capture user settings**: Specify whether the task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
     -   **Capture network settings**: Specify whether the task sequence captures network settings from the destination computer. You can capture the membership of the domain or workgroup in addition to the network adapter settings.  
 
@@ -102,7 +102,7 @@ Use task sequences   in System Center Configuration Manager to automatically ins
 
 12. Complete the wizard.  
 
- You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ You can now deploy the task sequence to a collection of computers.  For more information, see [Deploy a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence to install an existing operating system image  
  Use the following table as a guide as you create a task sequence that deploys an operating system using an existing operating system image. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  
@@ -146,5 +146,5 @@ Use task sequences   in System Center Configuration Manager to automatically ins
 |Restore User Files and Settings|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore user state and settings to a destination computer.|  
 |Release User State Storage|Use this task sequence step to notify the state migration point that the user state data is no longer needed.|  
 
-## See Also  
- [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+## Next steps  
+ [Methods to deploy enterprise operating systems](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)

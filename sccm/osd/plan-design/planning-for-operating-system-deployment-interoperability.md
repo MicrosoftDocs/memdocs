@@ -1,5 +1,5 @@
 ---
-title: "Planning for operating system deployment interoperability in System Center Configuration Manager"
+title: Planning for operating system deployment interoperability | Configuration Manager
 description: "Understand interoperability issues when different System Center Configuration Manager sites in a single hierarchy use different versions."
 ms.custom: na
 ms.date: 12/08/2015
@@ -62,6 +62,3 @@ When different System Center Configuration Manager sites in a single hierarchy u
  When you have upgraded your central administration site to the latest version of Configuration Manager, you must take the following step to ensure that operating system deployment task sequences that you deploy to clients assigned to an older  Configuration Manager site (not yet upgraded to the latest version of Configuration Manager) do not leave those clients in an unmanaged state.  
 
 -   Create a task sequence that you will use to deploy to clients only in a Configuration Manager site. Likely, you will make a copy of a task sequence that you use to deploy to clients in the latest version of Configuration Manager site and then modify the task sequence so you can deploy it to clients in an older Configuration Manager site. Then, configure the task sequence to reference a custom client installation package that uses the older Configuration Manager client installation source. If you do not already have a custom client installation package that references the older Configuration Manager client installation source then you must manually create one.  
-
-## See Also  
- [Planning for operating system deployment interoperability in System Center Configuration Manager](../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)

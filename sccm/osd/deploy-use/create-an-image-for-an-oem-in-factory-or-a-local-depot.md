@@ -1,5 +1,5 @@
 ---
-title: "Create an image for an OEM in factory or a local depot with System Center Configuration Manager"
+title: Create an image for an OEM in factory or a local depot | Configuration Manager
 description: "Use prestaged media deployments to reduce network traffic while you deploy an operating system to a computer that is not fully provisioned."
 ms.custom: na
 ms.date: 06/14/2016
@@ -23,9 +23,9 @@ This method of deployment can reduce network traffic because the boot image and 
 
  You can use  prestaged media in the following operating system deployment scenarios:  
 
--   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](../../osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
+-   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](../deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Replace an existing computer and transfer settings with System Center Configuration Manager](../../osd/deploy-use/replace-an-existing-computer-and-transfer-settings.md)  
+-   [Replace an existing computer and transfer settings with System Center Configuration Manager](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)  
 
  Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the prestaged media.  
 
@@ -39,7 +39,7 @@ This method of deployment can reduce network traffic because the boot image and 
 -   **Only media and PXE (hidden)**  
 
 ## Create the prestaged media  
- Create the prestaged media file to send to the OEM or your local depot. For more information, see [Create prestaged media with System Center Configuration Manager](../../osd/deploy-use/create-prestaged-media.md).  
+ Create the prestaged media file to send to the OEM or your local depot. For more information, see [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
 
 ## Send the prestaged media file to the OEM or local depot  
  Send the media to the OEM or your local depot to prestage the computers. The prestaged media file is applied to a formatted hard disk on the computer.  
@@ -47,5 +47,5 @@ This method of deployment can reduce network traffic because the boot image and 
 ## Start the computer to install the operating system  
  The prestaged media file is applied to computers. When the computer is started for the first time, the operating system installation process starts.  
 
-## See Also  
- [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+## Next steps  
+ [Methods to deploy enterprise operating systems using System Center Configuration Manager](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)

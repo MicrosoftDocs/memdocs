@@ -1,5 +1,5 @@
 ---
-title: "Manage drivers in System Center Configuration Manager"
+title: Manage drivers | Configuration Manager
 description: "Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points."
 ms.custom: na
 ms.date: 04/18/2016
@@ -17,32 +17,10 @@ author: Dougebymanager: angrobe
 
 ---
 # Manage drivers in System Center Configuration Manager
-System Center Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. You can use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points where you can access them when you deploy an operating system. Device drivers can be used when you install the full operating system on the destination computer and when you install Windows PE by using a boot image. Windows device drivers consist of a Setup Information File (INF) file and any additional files that are required to support the device. When an operating system is deployed, Configuration Manager obtains the hardware and platform information for the device from its INF file. Use the following to manage drivers in your Configuration Manager environment:  
-
--   [Device Driver Categories](#BKMK_DriverCategories)  
-
--   [Driver packages](#BKMK_ManagingDriverPackages)  
-
-    -   [Create a driver package](#CreatingDriverPackages)  
-
-    -   [Additional actions for driver packages](#BKMK_PackageActions)  
-
--   [Device drivers](#BKMK_DeviceDrivers)  
-
-    -   [Import device drivers into the driver catalog](#BKMK_ImportDrivers)  
-
-    -   [Manage device drivers in a driver package](#BKMK_ModifyDriverPackage)  
-
-    -   [Manage device drivers in a boot image](#BKMK_ManageDriversBootImage)  
-
-    -   [Additional actions for device drivers](#BKMK_DriverActions)  
-
--   [Use task sequences to install device drivers](#BKMK_TSDrivers)  
-
--   [Driver management reports](#BKMK_DriverReports)  
+System Center Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. You can use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points where you can access them when you deploy an operating system. Device drivers can be used when you install the full operating system on the destination computer and when you install Windows PE by using a boot image. Windows device drivers consist of a Setup Information File (INF) file and any additional files that are required to support the device. When an operating system is deployed, Configuration Manager obtains the hardware and platform information for the device from its INF file. Use the following to manage drivers in your Configuration Manager environment.
 
 ##  <a name="BKMK_DriverCategories"></a> Device Driver Categories  
- When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, you can assign all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](../../osd/understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) step, you can specify a specific category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
+ When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, you can assign all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) step, you can specify a specific category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
 
 ##  <a name="BKMK_ManagingDriverPackages"></a> Driver packages  
  You can group similar device drivers in packages to help streamline operating system deployments. For example, you might decide to create a driver package for each computer manufacturer on your network. You can create a driver package while you are importing drivers into the driver catalog directly in the **Driver Packages** node. After the driver package is created, it must be distributed to distribution points from which Configuration Manager client computers can install the drivers as they are required. Consider the following:  
@@ -150,7 +128,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
         > [!IMPORTANT]  
         >  If a device driver is causing a problem or you want to suspend the installation of a device driver, you can disable the device driver by clearing the **Enable these drivers and allow computers to install them** check box. You can also disable drivers after they have been imported.  
 
-    -   To assign the device drivers to an administrative category for filtering purposes, such as "Desktops" or "Notebooks" categories, click **Categories** and select an existing category or create a new category. You can also use the category assignment to configure which device drivers that are applied to the deployment by the [Auto Apply Drivers](../../osd/understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) task sequence step.  
+    -   To assign the device drivers to an administrative category for filtering purposes, such as "Desktops" or "Notebooks" categories, click **Categories** and select an existing category or create a new category. You can also use the category assignment to configure which device drivers that are applied to the deployment by the [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) task sequence step.  
 
 6.  On the **Add Driver to Packages** page, choose whether to add the drivers to a package and then click **Next**. Consider the following to add the drivers to a package:  
 
@@ -256,11 +234,11 @@ System Center Configuration Manager provides a driver catalog that you can use t
 ##  <a name="BKMK_TSDrivers"></a> Use task sequences to install device drivers  
  Use task sequences to automate how the operating system is deployed. Each step in the task sequence can perform a specific action, such as installing a device driver. You can use the following two task sequence steps to install device drivers while you are deploying operating systems:  
 
--   [Auto Apply Drivers](../../osd/understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): This step lets you automatically match and install device drivers as part of an operating system deployment. You can configure the task sequence step to install only the best matched driver for each detected hardware device, or specify that the task sequence step installs all compatible drivers for each detected hardware device, and then let Windows Setup choose the best driver. In addition, you can specify a category of device drivers to limit the drivers that are available for this step.  
+-   [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): This step lets you automatically match and install device drivers as part of an operating system deployment. You can configure the task sequence step to install only the best matched driver for each detected hardware device, or specify that the task sequence step installs all compatible drivers for each detected hardware device, and then let Windows Setup choose the best driver. In addition, you can specify a category of device drivers to limit the drivers that are available for this step.  
 
--   [Apply Driver Package](../../osd/understand/task-sequence-steps.md#BKMK_ApplyDriverPackage): This step lets you make all device drivers in a specific driver package available for Windows Setup. In the specified driver packages, Windows Setup searches for the device drivers that are required. When you create stand-alone media, you must use this step to install device drivers.  
+-   [Apply Driver Package](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage): This step lets you make all device drivers in a specific driver package available for Windows Setup. In the specified driver packages, Windows Setup searches for the device drivers that are required. When you create stand-alone media, you must use this step to install device drivers.  
 
- When you use these task sequence steps, you can also specify how the device drivers are installed on the computer where you deploy the operating system. For more information, see [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).  
+ When you use these task sequence steps, you can also specify how the device drivers are installed on the computer where you deploy the operating system. For more information, see [Manage task sequences to automate tasks in System Center Configuration Manager](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
 ##  <a name="BKMK_InstallingDeviceDiriversTS"></a> Use task sequences to install device drivers on computers  
  Use the following procedure to install device drivers as part of the operating system deployment.  
@@ -284,10 +262,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
 6.  Click **OK** to save the task sequence.  
 
- For more information about creating a task sequence to install an operating system, see [Create a task sequence to install an operating system in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
+ For more information about creating a task sequence to install an operating system, see [Create a task sequence to install an operating system in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
 
 ##  <a name="BKMK_DriverReports"></a> Driver management reports  
  You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-## See Also  
- [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
