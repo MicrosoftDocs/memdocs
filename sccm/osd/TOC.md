@@ -7,7 +7,7 @@
 <!--- ### [Preprovision BitLocker in Windows PE with System Center Configuration Manager](deploy-use/preprovision-bitlocker-in-windows-pe.md) -->
 
 
-## [Understand task sequence action variables](/understand/task-sequence-action-variables.md)
+## [Understand task sequence action variables](understand/task-sequence-action-variables.md)
 ## [Understand task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Understand prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
 

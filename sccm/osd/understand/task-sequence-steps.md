@@ -17,7 +17,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Task sequence steps in System Center Configuration Manager
-The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](..deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
 <!--- -   [Apply Data Image Task Sequence Step](#BKMK_ApplyDataImage)  
 
