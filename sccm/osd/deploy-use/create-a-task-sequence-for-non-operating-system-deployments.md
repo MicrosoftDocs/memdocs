@@ -22,27 +22,27 @@ Task sequences in System Center Configuration Manager are used to automate a var
 
  The following steps can be used in a non-operating system deployment custom task sequence:  
 
--   [Check Readiness](../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness)  
+-   [Check Readiness](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
--   [Connect To Network Folder](../../osd/understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
+-   [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
 
--   [Download Package Content](../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
+-   [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
 
--   [Install Application](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication)  
+-   [Install Application](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
 
--   [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)  
+-   [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
 
--   [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+-   [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [Restart Computer](../../osd/understand/task-sequence-steps.md#BKMK_RestartComputer)  
+-   [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer)  
 
--   [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine)  
+-   [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
--   [Run PowerShell Script](../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
+-   [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
 
--   [Set Dynamic Variables](../../osd/understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
+-   [Set Dynamic Variables](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
--   [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+-   [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
-## See Also  
- [Create a custom task sequence with System Center Configuration Manager](../../osd/deploy-use/create-a-custom-task-sequence.md)
+## Next steps
+[Deploy the task sequence](manage-task-sequences-to-automate-tasks.md##BKMK_DeployTS)

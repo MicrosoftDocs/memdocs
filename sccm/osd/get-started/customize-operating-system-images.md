@@ -1,5 +1,5 @@
 ---
-title: "Customize operating system images with System Center Configuration Manager"
+title: Customize operating system images | Configuration Manager
 description: "Use capture-and-build task sequences, manual configuration, or a combination of both to customize an operating system image."
 ms.custom: na
 ms.date: 07/27/2016
@@ -17,19 +17,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Customize operating system images with System Center Configuration Manager
-Operating system images in System Center Configuration Manager are WIM files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. A custom operating system image is built and captured from a reference computer that you configure with all the required operating system files, support files, software updates, tools, and other software apps. The extent to which you manually configure the reference computer is up to you. You can completely automate the configuration of the reference computer by using a build and capture task sequence, you can manually configure certain aspects of the reference computer and then automate the rest by using task sequences, or you can manually configure the reference computer without using task sequences.  
-
- Use the following sections to customize an operating system:  
-
--   [Prepare for the reference computer](#BKMK_PrepareReferenceComputer)  
-
-    -   [Decide between an automated or manual configuration](#BKMK_RefComputerDecide)  
-
-    -   [Considerations for the reference computer](#BKMK_RefComputerConsiderations)  
-
--   [Manually build a reference computer](#BKMK_ManuallyBuildReference)  
-
--   [Use a task sequence to build a reference computer](#BKMK_UseTSToBuildReference)  
+Operating system images in System Center Configuration Manager are WIM files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. A custom operating system image is built and captured from a reference computer that you configure with all the required operating system files, support files, software updates, tools, and other software apps. The extent to which you manually configure the reference computer is up to you. You can completely automate the configuration of the reference computer by using a build and capture task sequence, you can manually configure certain aspects of the reference computer and then automate the rest by using task sequences, or you can manually configure the reference computer without using task sequences. Use the following sections to customize an operating system.
 
 ##  <a name="BKMK_PrepareReferenceComputer"></a> Prepare for the  reference computer  
  There are several things to think about before you use capture an operating system image from a reference computer.  
@@ -74,11 +62,11 @@ Operating system images in System Center Configuration Manager are WIM files and
 
 -   **Operating system to deploy**  
 
-     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 -   **Appropriate service pack**  
 
-     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 -   **Appropriate software updates**  
 
@@ -98,10 +86,10 @@ Operating system images in System Center Configuration Manager are WIM files and
 
      The /generalize option instructs Sysprep to remove system-specific data from the Windows installation. System-specific information includes event logs, unique security IDs (SIDs), and other unique information. After the unique system information is removed, the computer restarts.  
 
-     You can automate Sysprep by using the [Prepare Windows for Capture](../../osd/understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step or capture media.  
+     You can automate Sysprep by using the [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step or capture media.  
 
     > [!IMPORTANT]  
-    >  The [Prepare Windows for Capture](../../osd/understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step attempts to reset the local administrator password on the reference computer to a blank value before Sysprep runs. If the Local Security policy **Password must meet complexity requirements** is enabled, this task sequence step fails to reset the administrator password. In this scenario, disable this policy before you run the task sequence.  
+    >  The [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) task sequence step attempts to reset the local administrator password on the reference computer to a blank value before Sysprep runs. If the Local Security policy **Password must meet complexity requirements** is enabled, this task sequence step fails to reset the administrator password. In this scenario, disable this policy before you run the task sequence.  
 
      For more information about Sysprep, see [System Preparation (Sysprep) Technical Reference](http://go.microsoft.com/fwlink/?LinkId=280286).  
 
@@ -117,7 +105,7 @@ Operating system images in System Center Configuration Manager are WIM files and
  Use the following procedure to manually build a reference computer.  
 
 > [!NOTE]  
->  When you manually build the reference computer, you can capture the operating system image by using capture media. For more information, see [Create capture media with System Center Configuration Manager](../../osd/deploy-use/create-capture-media.md).  
+>  When you manually build the reference computer, you can capture the operating system image by using capture media. For more information, see [Create capture media with System Center Configuration Manager](../deploy-use/create-capture-media.md).  
 
 #### To manually build the reference computer  
 
@@ -134,12 +122,9 @@ Operating system images in System Center Configuration Manager are WIM files and
 
 5.  Run Sysprep by using the command:  **sysprep /quiet /generalize /reboot**. The /generalize option instructs Sysprep to remove system-specific data from the Windows installation. System-specific information includes event logs, unique security IDs (SIDs), and other unique information. After the unique system information is removed, the computer restarts.  
 
- After the reference computer is ready, use a task sequence to capture the operating system image from the reference computer.  For detailed steps, see [Capture an operating system image from an existing reference computer](../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
+ After the reference computer is ready, use a task sequence to capture the operating system image from the reference computer.  For detailed steps, see [Capture an operating system image from an existing reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
 ##  <a name="BKMK_UseTSToBuildReference"></a> Use a task sequence to build a reference computer  
  You can automate the process to create a reference computer by using a task sequence to deploy the operating system, drivers, applications, and so on.  Use the following steps to build the reference computer and then to capture the operating system image from the reference computer.  
 
--   Use a task sequence to build and capture the operating system image from the reference computer.  For detailed steps, see [Use a task sequence to build and capture a reference computer](../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
-
-## See Also  
- [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md)
+-   Use a task sequence to build and capture the operating system image from the reference computer.  For detailed steps, see [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  

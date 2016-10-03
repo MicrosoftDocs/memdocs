@@ -1,5 +1,5 @@
 ---
-title: "Planning considerations for automating tasks in System Center Configuration Manager"
+title: Planning considerations for automating tasks | Configuration Manager
 description: "Plan before you automate tasks in System Center Configuration Manager."
 ms.custom: na
 ms.date: 06/06/2016
@@ -17,41 +17,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Planning considerations for automating tasks in System Center Configuration Manager
-You can create task sequences to automate tasks in your System Center Configuration Manager environment. These tasks range from capturing an operating system on a reference computer to deploying the operating system to one or more destination computers. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level in the Local System context without requiring user intervention.  
-
- Use the following sections to help plan  to automate tasks in Configuration Manager:  
-
--   [Task sequence steps and actions](#BKMK_TSStepsActions)  
-
--   [Task sequence groups](#BKMK_TSGroups)  
-
--   [Task sequence variables](#BKMK_TSVariables)  
-
-    -   [Create task sequence variables](#BKMK_TSCreateVariables)  
-
-    -   [Access environment variables](#BKMK_TSEnvironmentVariables)  
-
-    -   [Computer and collection variables](#BKMK_ComputerCollectionVariables)  
-
-    -   [Task sequence media variables](#BKMK_TSMediaVariables)  
-
--   [Create a task sequence](#BKMK_TSCreate)  
-
--   [Edit a task sequence](#BKMK_TSEdit)  
-
--   [Deploy a task sequence](#BKMK_TSDeploy)  
-
--   [Export and import a task sequences](#BKMK_TSExportImport)  
-
--   [Run a task sequence](#BKMK_TSRun)  
-
-    -   [Run a program before the task sequence is run](#BKMK_RunProgram)  
-
--   [Use a maintenance window to specify when a task sequence can run](#BKMK_TSMaintenanceWindow)  
-
--   [Task sequences and the Network Access Account](#BKMK_TSNetworkAccessAccount)  
-
--   [Create media for task sequences](#BKMK_TSCreateMedia)  
+You can create task sequences to automate tasks in your System Center Configuration Manager environment. These tasks range from capturing an operating system on a reference computer to deploying the operating system to one or more destination computers. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level in the Local System context without requiring user intervention. Use the following sections to help plan  to automate tasks in Configuration Manager.
 
 ##  <a name="BKMK_TSStepsActions"></a> Task sequence steps and actions  
  Steps are the basic components of a task sequence. They can contain commands that configure and capture the operating system of a reference computer, or they can contain commands that install the operating system, drivers, the Configuration Manager client, and software on the destination computer. The commands of a task sequence step are defined by the actions of the step. There are two types of actions. An action that you define by using a command-line string is referred to as a custom action. An action that is predefined by Configuration Manager is referred to as a built-in action. A task sequence can perform any combination of custom and built-in actions.  
@@ -63,7 +29,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!IMPORTANT]  
 >  By default, a task sequence fails after one step or action fails. If you want the task sequence to continue even when a step fails, edit the task sequence, click the **Options** tab, and then select **Continue on error**.  
 
- For more information about the steps that can be added to a task sequence, see [Task sequence steps in System Center Configuration Manager](../../osd/understand/task-sequence-steps.md).  
+ For more information about the steps that can be added to a task sequence, see [Task sequence steps in System Center Configuration Manager](../understand/task-sequence-steps.md).  
 
 ##  <a name="BKMK_TSGroups"></a> Task sequence groups  
  **Groups** are multiple steps within a task sequence. A task sequence group consists of a name, an optional description, and any optional conditions that are evaluated as a unit before that task sequence continues with the next step. Groups can be nested within each other, and a group can contain a mixture of steps and subgroups. Groups are useful for combining multiple steps that share a common condition.  
@@ -118,13 +84,13 @@ You can create task sequences to automate tasks in your System Center Configurat
 
 |Create method|Usage|  
 |-------------------|-----------|  
-|Setting fields in task sequence steps by using the Task Sequence Editor|Specifies default values for the task sequence step. The variable and value are accessible only when the step runs in the task sequence. They are not part of the overall sequence environment, and they are not accessible by other task sequence steps in the task sequence.<br /><br /> For a list of the built-in variables and their associated actions, see [Task sequence action variables in System Center Configuration Manager](../../osd/understand/task-sequence-action-variables.md).|  
+|Setting fields in task sequence steps by using the Task Sequence Editor|Specifies default values for the task sequence step. The variable and value are accessible only when the step runs in the task sequence. They are not part of the overall sequence environment, and they are not accessible by other task sequence steps in the task sequence.<br /><br /> For a list of the built-in variables and their associated actions, see [Task sequence action variables in System Center Configuration Manager](../understand/task-sequence-action-variables.md).|  
 |Adding a set task sequence variable step in a task sequence|Specifies the task sequence variable and value in the task sequence environment when the task sequence step is run as part of a task sequence. All subsequent task sequence steps can access the environment variable and its value.|  
 |Defining a per-collection variable|Specifies task sequence variables and values for a collection of computers. All task sequences targeted to the collection can access the task sequence variables and their values.|  
 |Defining a per-computer variable|Specifies task sequence variables and values for a particular computer. All task sequences targeted to the computer can access the task sequence variables and their values.|  
 |Adding a task sequence variable on the **Customization** page of the Task Sequence Media Wizard|Specifies task sequence variables and values for the task sequence that is run from the media that can access the task sequence variable and its value.|  
 
- To override the default value for a built-in task sequence variable, you must define a task sequence variable with the same name as the built-in task sequence variable. For a list of built-in task sequence variables with the associated actions and usage, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).  
+ To override the default value for a built-in task sequence variable, you must define a task sequence variable with the same name as the built-in task sequence variable. For a list of built-in task sequence variables with the associated actions and usage, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md).  
 
  You can delete a task sequence variable from the task sequence environment by using the same methods as creating a task sequence variable. In this case, to delete a variable from the task sequence environment, you set the task sequence variable value to an empty string.  
 
@@ -195,7 +161,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!WARNING]  
 >  If you use the same variable name for both a per-collection and per-computer variable, the computer variable value takes precedence over the collection variable. Task sequence variables that you assign to collections take precedence over built-in task sequence variables.  
 
- For more information about how to create task sequence variables for computers and collections, see [Create task sequence variables for computers and collections](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTSVariables).  
+ For more information about how to create task sequence variables for computers and collections, see [Create task sequence variables for computers and collections](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTSVariables).  
 
 ###  <a name="BKMK_TSMediaVariables"></a> Task sequence media variables  
  You can specify task sequence variables for task sequences that are run from media. When using media to deploy the operating system you add the task sequence variables and specify their values when you create the media; the variables and their values are stored on the media.  
@@ -203,7 +169,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!NOTE]  
 >  Task sequences are stored on stand-alone media. However, all other types of media, such as prestaged media, retrieve the task sequence from a management point.  
 
- You can specify task sequence variables on the **Customization** page of the Task Sequence Media Wizard. For information about how to create media, see [Create task sequence media with System Center Configuration Manager](../../osd/deploy-use/create-task-sequence-media.md).  
+ You can specify task sequence variables on the **Customization** page of the Task Sequence Media Wizard. For information about how to create media, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md).  
 
 > [!TIP]  
 >  The task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
@@ -213,7 +179,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 
  For example, you can create task sequences that build and capture an operating system image of a reference computer, install an existing operating system image on a destination computer, or create a custom task sequence that performs a customized task. You can use custom task sequences to perform specialized operating system deployments.  
 
- For more information about how to create task sequences, see [Create task sequences](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTaskSequence).  
+ For more information about how to create task sequences, see [Create task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTaskSequence).  
 
 ##  <a name="BKMK_TSEdit"></a> Edit a task sequence  
  You edit the task sequence by using the **Task Sequence Editor**. The editor can make the following changes to the task sequence:  
@@ -231,7 +197,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!IMPORTANT]  
 >  If the task sequence has any unassociated references to a package or a program as a result of the edit, you must correct the reference, delete the unreferenced program from the task sequence, or temporarily disable the failed task sequence step until the broken reference is corrected or removed.  
 
- For more information about how to edit task sequences, see [Edit a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+ For more information about how to edit task sequences, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
 ##  <a name="BKMK_TSDeploy"></a> Deploy a task sequence  
  You can deploy a task sequence to destination computers that are in any Configuration Manager collection. This includes the **All Unknown Computers** collection that is used to deploy operating systems to unknown computers. However, you cannot deploy a task sequence to user collections.  
@@ -253,7 +219,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 >   
 >  If clients download task sequences outside of a maintenance window, the task sequence is downloaded twice. In this scenario clients will download the task sequence, disable the write filters, restart the computer, and then download the task sequence again because the task sequence was downloaded to the temporary overlay which is cleared when the device restarts.  
 
- For more information about how to deploy task sequences, see the [Deploy a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ For more information about how to deploy task sequences, see the [Deploy a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 ##  <a name="BKMK_TSExportImport"></a> Export and import a task sequences  
  Configuration Manager lets you export and import task sequences. When you export a task sequence, you can include the objects that are referenced by the task sequence. These include an operating system image, a boot image, a client agent package, a driver package, and applications that have dependencies.  
@@ -261,7 +227,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!NOTE]  
 >  The export and import process for task sequences is very similar to the export and import process for applications in Configuration Manager.  
 
- For more information about how to export and import task sequences, see [Export and import task sequences](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ExportImport).  
+ For more information about how to export and import task sequences, see [Export and import task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ExportImport).  
 
 ##  <a name="BKMK_TSRun"></a> Run a task sequence  
  By default, task sequences always run by using the Local System account. The task sequence command-line step provides the ability to run the task sequence as a different account. When the task sequence is run, the Configuration Manager client first checks for any referenced packages before it starts the steps of the task sequence. If a referenced package is not validated or is not available on a distribution point, the task sequence returns an error for the associated task sequence step.  
@@ -322,7 +288,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 
 -   **Capture media**. Capture media captures an operating system image that is configured and created outside the Configuration Manager infrastructure. Capture media can contain custom programs that can run before a task sequence runs. The custom program can interact with the desktop, prompt the user for input values, or create variables to be used by the task sequence.  
 
-     For more information, see [Create capture media with System Center Configuration Manager](../../osd/deploy-use/create-capture-media.md).  
+     For more information, see [Create capture media with System Center Configuration Manager](../deploy-use/create-capture-media.md).  
 
 -   **Stand-alone media**. Stand-alone media contains the task sequence and all associated objects that are necessary for the task sequence to run. Stand-alone media task sequences can run when Configuration Manager has limited or no connectivity to the network. Stand-alone media can be run in the following ways:  
 
@@ -333,21 +299,18 @@ You can create task sequences to automate tasks in your System Center Configurat
     > [!IMPORTANT]  
     >  The steps of a stand-alone media task sequence must be able to run without any retrieving any data from the network; otherwise, the task sequence step that tries to retrieve the data fails. For example, a task sequence step that requires a distribution point to obtain a package fails; however if the necessary package is contained on the stand-alone media, the task sequence step succeeds.  
 
-     For more information, see [Create stand-alone media with System Center Configuration Manager](../../osd/deploy-use/create-stand-alone-media.md).  
+     For more information, see [Create stand-alone media with System Center Configuration Manager](../deploy-use/create-stand-alone-media.md).  
 
 -   **Bootable media**. Bootable media contains the required files to start a destination computer so that it can connect to the Configuration Manager infrastructure to determine which task sequences to run based on its membership to a collection. The task sequence and dependent objects are not contained on the media; instead, they are obtained over the network from the Configuration Manager client. This method is useful for new computers or bare-metal deployments, or when no Configuration Manager client or operating system is on the destination computer.  
 
-     For more information, see [Create bootable media with System Center Configuration Manager](../../osd/deploy-use/create-bootable-media.md).  
+     For more information, see [Create bootable media with System Center Configuration Manager](../deploy-use/create-bootable-media.md).  
 
 -   **Prestaged media**. Prestaged media deploys an operating system image to a destination computer that is not provisioned. The prestaged media is stored as a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
 
-     For more information, see [Create prestaged media with System Center Configuration Manager](../../osd/deploy-use/create-prestaged-media.md).  
+     For more information, see [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
 
  When you create media, specify a password for the media to control access to the files that are contained on the media. If you specify a password, a user must be present to enter the password at the target computer when the task sequence is run.  
 
  When you run a task sequence by using media, the specified computer chip architecture contained on the media will not be recognized and the task sequence attempts to run even if the architecture specified does not match what is actually installed on the target computer. If the chip architecture contained on the media does not match the chip architecture installed on the target computer, the installation fails.  
 
- For more information about how to deploy operating systems by using media, see [Create task sequence media with System Center Configuration Manager](../../osd/deploy-use/create-task-sequence-media.md).  
-
-## See Also  
- [Automate tasks in System Center Configuration Manager](../Topic/Automate%20tasks%20in%20System%20Center%20Configuration%20Manager.md)
+ For more information about how to deploy operating systems by using media, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md).  

@@ -1,5 +1,5 @@
 ---
-title: "Task sequence built-in variables in System Center Configuration Manager"
+title: Task sequence built-in variables | Configuration Manager
 description: "Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence."
 ms.custom: na
 ms.date: 07/22/2016
@@ -86,6 +86,3 @@ author: Dougebymanager: angrobe
 |SMSTSSoftwareUpdateScanTimeout| Gives you the ability to control the timeout for the software updates scan during the [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step. For example, you might increase the default value if you have a lot of software updates to install. The default value is 30 minutes. |
 |SMSTSUDAUsers|Specifies the primary user of the destination computer. Specify the users by using the following format. Separate multiple users by using a comma (,).<br /><br /> Example:<br /><br /> **domain\user1, domain\user2, domain\user3**<br /><br /> For more information about associating users with the destination computer, see [Associate users with a destination computer in System Center Configuration Manager](../../osd/deploy-use/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|Beginning in Configuration Manager version 1602, this optional task sequence variable is available to help control client behavior when a software update installation requires two restarts. This variable must be set before the [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) step to prevent a task sequence from failing because of a second restart from software update installation.<br /><br /> Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses during the Install Software Updates step when the computer restarts to allow sufficient time in case there is a second restart. <br />For example, if you set SMSTSWaitForSecondReboot to 600, the task sequence is paused for 10 minutes after a restart before additional task sequence steps run. This is useful when hundreds of software updates are installed in a single Install Software Updates task sequence step.|  
-
-## See Also  
- [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)

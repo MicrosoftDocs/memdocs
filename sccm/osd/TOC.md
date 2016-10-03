@@ -1,4 +1,5 @@
-﻿# [Understand](understand/introduction-to-operating-system-deployment.md)
+
+# [Understand](understand/introduction-to-operating-system-deployment.md)
 ## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
 ## [Understand task sequence steps](understand/task-sequence-steps.md)
 
@@ -10,26 +11,26 @@
 ## [Understand task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Understand prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
 
-# [Get started](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+# [Plan and design](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [Infrastructure requirements for operating system deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
-## [Prepare site system roles for operating system deployments](plan-design/prepare-site-system-roles-for-operating-system-deployments.md)
-## [Prepare Windows PE peer cache to reduce WAN traffic](plan-design/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 ## [Planning considerations for automating tasks](plan-design/planning-considerations-for-automating-tasks.md)
 ## [Security and privacy for operating system deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
-# [Plan and design](deploy-use/prepare-for-operating-system-deployment.md)
-## [Prepare for operating system deployment](deploy-use/prepare-for-operating-system-deployment.md)
-### [Manage boot images](deploy-use/manage-boot-images.md)
-#### [Customize boot images](deploy-use/customize-boot-images.md)
+# [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 
-### [Manage operating system images](deploy-use/manage-operating-system-images.md)
-#### [Customize operating system images](deploy-use/customize-operating-system-images.md)
-### [Manage operating system upgrade packages](deploy-use/manage-operating-system-upgrade-packages.md)
-### [Manage drivers](deploy-use/manage-drivers.md)
-### [Manage user state](deploy-use/manage-user-state.md)
-### [Prepare for unknown computer deployments](deploy-use/prepare-for-unknown-computer-deployments.md)
-### [Associate users with a destination computer](deploy-use/associate-users-with-a-destination-computer.md)
+## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+## [Prepare for operating system deployment](get-started/prepare-for-operating-system-deployment.md)
+### [Manage boot images](get-started/manage-boot-images.md)
+#### [Customize boot images](get-started/customize-boot-images.md)
+### [Manage operating system images](get-started/manage-operating-system-images.md)
+#### [Customize operating system images](get-started/customize-operating-system-images.md)
+### [Manage operating system upgrade packages](get-started/manage-operating-system-upgrade-packages.md)
+### [Manage drivers](get-started/manage-drivers.md)
+### [Manage user state](get-started/manage-user-state.md)
+### [Prepare for unknown computer deployments](get-started/prepare-for-unknown-computer-deployments.md)
+### [Associate users with a destination computer](get-started/associate-users-with-a-destination-computer.md)
+## [Prepare Windows PE peer cache to reduce WAN traffic](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
 # [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ## [Scenarios to deploy enterprise operating systems](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
@@ -63,4 +64,3 @@
 ### [Create prestaged media](deploy-use/create-prestaged-media.md)
 ### [Create bootable media](deploy-use/create-bootable-media.md)
 ### [Create capture media](deploy-use/create-capture-media.md)
-
