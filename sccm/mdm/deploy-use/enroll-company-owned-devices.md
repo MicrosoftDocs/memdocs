@@ -1,5 +1,6 @@
 ---
 title: "Enroll company-owned devices for hybrid deployments with Configuration Manager"
+description: "Learn about different methods to enroll company-owned devices for hybrid deployments with Configuration Manager."
 ms.custom: na
 ms.date: 07/27/2016
 ms.prod: configuration-manager
