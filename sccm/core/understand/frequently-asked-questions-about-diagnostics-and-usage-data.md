@@ -31,7 +31,11 @@ The following are frequently asked questions about diagnostic and usage data for
  The SQL stored procedures run every seven days (from the date the site is installed). In online mode, the service connection point is configured to upload the data after the queries run. In offline mode, the administrator uses the service connection tool to upload the data. (Note: the data is not initially available for offline use until seven days after the site is installed.)  
 
 ###  <a name="bkmk_network"></a> Can the data be used to form a network map?  
- As shown in the description of [Levels of diagnostic usage data collection for System Center Configuration Manager](../../core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection.md), site details include timezone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details, such as IP addresses or more detailed geographical information, is collected.  
+ As shown in the description of the levels of diagnostic usage data collection for System Center Configuration, site details include timezone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details, such as IP addresses or more detailed geographical information, is collected.
+ - [Diagnostic data for 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
+ - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
+ - [Diagnostic data for 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+
 
 ###  <a name="bkmk_tables"></a> Can you see data in custom tables?  
  No. Diagnostics and usage data is collected via SQL stored procedures against default product tables in the database (all of which are prefixed with **TEL_** ). As part of the SQL schema detection query, all table names are hashed for comparison against the known defaults. This can determine that custom tables exist in the database (that the database schema is extended from the default) but not any of the data contained within those tables.  

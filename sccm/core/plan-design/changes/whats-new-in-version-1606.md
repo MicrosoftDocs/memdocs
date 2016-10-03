@@ -198,7 +198,7 @@ For details, see [How to automatically categorize devices into collections with 
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information. Imported information will set **Ownership** of the devices that enroll as “**Corporate**” in lists of devices. An Intune license is still required for each user that accesses the service.
 
-For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-imei-or-ios-serial-numbers.md).
+For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
 
 ### On-premises Health Attestation service communication
 

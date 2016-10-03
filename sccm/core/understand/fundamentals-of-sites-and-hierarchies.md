@@ -42,7 +42,7 @@ When you install System Center Configuration Manager for the first time, the fir
 
 -   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
--   [Install System Center Configuration Manager sites](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md)  
+-   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
 ## Site system servers and site system roles  
  Each Configuration Manager site installs **site system roles** that support  management operations.  Some roles are installed by default when you install a site, like the **site  server** role (which is assigned to the computer where you install the site), and site database server role (which is assigned to the SQL Server that hosts the site database). Other site system roles are optional and only used when you want to use the functionality that a site system role enables.  Any computer that hosts a site system role is referred to as a site system server.  

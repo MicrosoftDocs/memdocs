@@ -23,7 +23,7 @@ The following are the primary management capabilities of System Center Configura
 
  **Application management**  
 
- Provides a set of tools and resources that can help you create, manage, deploy, and monitor applications to a range of different devices that you manage. Additionally, Configuration Manager provides you with tools that help you protect your company data in apps in user's apps. See [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md)  
+ Provides a set of tools and resources that can help you create, manage, deploy, and monitor applications to a range of different devices that you manage. Additionally, Configuration Manager provides you with tools that help you protect your company data in apps in user's apps. See [Introduction to application management](/sccm/apps/understand/introduction-to-application-management)  
 
  **Company resource access**  
 
@@ -71,11 +71,11 @@ The following are the primary management capabilities of System Center Configura
 
  **Remote connection profiles**  
 
- Provides a set of tools and resources to help you to create, deploy and monitor remote connection settings to devices in your organization. By deploying these settings, you minimize the end-user effort required to connect to their computer on the corporate network. See [Working with remote connection profiles in System Center Configuration Manager](../../../compliance/plan-design/working-with-remote-connection-profiles.md)  
+ Provides a set of tools and resources to help you to create, deploy and monitor remote connection settings to devices in your organization. By deploying these settings, you minimize the end-user effort required to connect to their computer on the corporate network. See [Working with remote connection profiles in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
  **User data and profiles configuration items**  
 
- User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. See [Working with user data and profiles configuration items in System Center Configuration Manager](../../../compliance/plan-design/working-with-user-data-and-profiles-configuration-items.md)  
+ User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. See [Working with user data and profiles configuration items in System Center Configuration Manager](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)  
 
  **Remote control**  
 
@@ -91,4 +91,4 @@ The following are the primary management capabilities of System Center Configura
 
  **Software updates**  
 
- Provides a set of tools and resources that can help you manage, deploy, and monitor software updates in the enterprise. See [Introduction to software updates in System Center Configuration Manager](../../../sup/understand/software-updates-introduction.md)  
+ Provides a set of tools and resources that can help you manage, deploy, and monitor software updates in the enterprise. See [Introduction to software updates in System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction)  

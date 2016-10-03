@@ -98,7 +98,7 @@ After a site installs, you can move the  location of some site system roles from
 
     -   Consider installing a software update point in secondary sites when data transfer across the network is slow.  
 
-    For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md).  
+    For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
 -   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/deploy-use/manage-user-state.md).  
 
