@@ -17,7 +17,7 @@ author: Mtillmanmanager: angrobe
 
 ---
 # Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager
-To manage computers and devices with System Center Configuration Manager On\-premises Mobile Device Management, the devices need to be enrolled so that Configuration Manager can communicate with the devices for management tasks. Configuration Manager provides two methods for enrolling devices:  
+To manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management, the devices need to be enrolled so that Configuration Manager can communicate with the devices for management tasks. Configuration Manager provides two methods for enrolling devices:  
 
 -   **User enrollment** - In this method, users initiate the enrollment process on their devices. For user enrollment to be successful, the device must have a trusted root certificate installed on it, and the user must be provisioned for enrollment by Configuration Manager.  To enroll device, the user simply provides work credentials, and the device is enrolled to be managed.  
 

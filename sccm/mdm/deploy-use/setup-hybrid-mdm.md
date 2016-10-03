@@ -1,5 +1,6 @@
 ﻿---
 title: Setup hybrid MDM | System Center Configuration Manager and Microsoft Intune
+description: "Set up hybrid device enrollment with Configuration Manager and Intune."
 ms.custom: na
 ms.date: 09/20/2016
 ms.prod: configuration-manager

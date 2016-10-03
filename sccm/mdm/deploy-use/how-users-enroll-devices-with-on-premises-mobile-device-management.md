@@ -1,6 +1,6 @@
 ---
 title: "How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager"
-description: "Provides steps for users to enroll devices with On-premises Mobile Device Management in System Center Configuration Manager."
+description: "Understand how users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -17,7 +17,7 @@ author: Mtillmanmanager: angrobe
 
 ---
 # How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
-With System Center Configuration Manager On\-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-for-on-premises-mobile-device-management.md).  
+With System Center Configuration Manager On-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-for-on-premises-mobile-device-management.md).  
 
  > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
