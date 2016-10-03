@@ -1,5 +1,5 @@
 ---
-title: "Create capture media with System Center Configuration Manager"
+title: Create capture media | Configuration Manager
 description: "Use the Create Task Sequence Media Wizard to create capture media in Configuration Manager to capture an operating system image from a reference computer."
 ms.custom: na
 ms.date: 12/08/2015
@@ -19,7 +19,7 @@ author: Dougebymanager: angrobe
 # Create capture media with System Center Configuration Manager
 Capture media in Configuration Manager allows you to capture an operating system image from a reference computer. Use capture media for the following scenario:  
 
--   [Create a task sequence to capture an operating system in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)  
+-   [Create a task sequence to capture an operating system in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)  
 
 ##  <a name="BKMK_CreateCaptureMedia"></a> How to Create Capture Media  
  Use capture media to capture an operating system image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the operating system image. For more information about capture media, see the Capture Media for Operating System Images section in the Planning for Media Operating System Deployments in Configuration Manager topic.  
@@ -70,6 +70,3 @@ You create capture media by using the Create Task Sequence Media Wizard. Before 
         >  You must have Read access rights to the content library on the distribution point.  
 
 7.  Complete the wizard.  
-
-## See Also  
- [Create task sequence media with System Center Configuration Manager](../../osd/deploy-use/create-task-sequence-media.md)

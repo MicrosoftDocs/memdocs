@@ -28,5 +28,5 @@ Use the following best practices for reporting in System Center Configuration Ma
 ## Schedule report subscription processing to run outside standard office hours  
  Whenever possible, schedule report subscription processing to run outside normal office standard hours to minimize the CPU processing on the Configuration Manager site database server. This practice also improves availability for unpredicted report requests.  
 
-## See Also  
- [Planning for reporting in System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md)
+## Next steps
+[Configure reporting](configuring-reporting.md)

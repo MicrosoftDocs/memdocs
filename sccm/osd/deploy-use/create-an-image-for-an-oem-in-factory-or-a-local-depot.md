@@ -48,4 +48,4 @@ This method of deployment can reduce network traffic because the boot image and 
  The prestaged media file is applied to computers. When the computer is started for the first time, the operating system installation process starts.  
 
 ## Next steps  
- [Methods to deploy enterprise operating systems using System Center Configuration Manager](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+ [Methods to deploy enterprise operating systems](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)
