@@ -5,6 +5,7 @@ ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e

@@ -5,6 +5,7 @@ ms.custom: na
 ms.date: 2016-07-22
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-hybrid
 ms.tgt_pltfrm: na
