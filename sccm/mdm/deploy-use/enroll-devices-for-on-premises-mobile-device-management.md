@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: 6
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager

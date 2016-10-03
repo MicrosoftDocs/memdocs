@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Client installation methods in System Center Configuration Manager
