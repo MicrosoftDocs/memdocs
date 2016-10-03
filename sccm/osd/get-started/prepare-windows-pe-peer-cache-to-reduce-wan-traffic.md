@@ -1,5 +1,5 @@
 ---
-title: "Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager"
+title: Prepare Windows PE peer cache to reduce WAN traffic | Configuration Manager
 description: "The Windows PE Peer Cache works in the Windows PE to get content from a local peer and minimize WAN traffic when there's no local distribution point."
 ms.custom: na
 ms.date: 07/27/2016
@@ -24,21 +24,7 @@ When you deploy a new operating system in System Center Configuration Manager, c
 
 -   A **peer cache source** is a client that is configured for peer cache and that makes content available to other peer cache clients that request that content.  
 
- Use the following sections to manage Peer Cache:  
-
--   [Objects stored on a Peer Cache source](#BKMK_PeerCacheObjects)  
-
--   [How does Windows PE Peer Cache work?](#BKMK_PeerCacheWork)  
-
--   [Determine what clients will be part of the Windows PE Peer Cache source](#BKMK_PeerCacheDetermine)  
-
--   [Requirements for a client to use a Windows PE Peer Cache source](#BKMK_PeerCacheRequirements)  
-
--   [Configure Windows PE Peer Cache](#BKMK_PeerCacheConfigure)  
-
--   [Configure a task sequence for Windows PE Peer Cache](#BKMK_PeerCacheConfigureTS)  
-
--   [Validate the success of using Windows PE peer cache](#BKMK_PeerCacheValidate)  
+Use the following sections to manage Peer Cache.
 
 ##  <a name="BKMK_PeerCacheObjects"></a> Objects stored on a Peer Cache source  
  A task sequence configured to use Windows PE Peer Cache can get the following content objects while running in Windows PE:  
@@ -90,7 +76,7 @@ When you deploy a new operating system in System Center Configuration Manager, c
 
 -   A peer cache client can get content from another peer cache client (a peer cache source).  Because the client is configured for peer cache, when it runs a task sequence that is configured to preserve the cached content, the client becomes a peer cache source.  
 
--   A  client runs a task sequence that includes the optional step, [Download Package Content](../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
+-   A  client runs a task sequence that includes the optional step, [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent), which is used to prestage the relevant content that is included in the Windows PE Peer Cache task sequence. When you use this method:  
 
     -   The client does not need to install the image that is being deployed.  
 
@@ -138,7 +124,7 @@ When you deploy a new operating system in System Center Configuration Manager, c
 
      This flags the content in the task sequence to be retained in the Configuration Manager client cache after the deployment. This is different than using SMSTSPersisContent which only preserves the content for the duration of the task sequence and uses the task sequence cache, not the Configuration Manager client cache.  
 
- For more information, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).  
+ For more information, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Validate the success of using Windows PE peer cache  
  After you use Windows PE peer cache to deploy and install a task sequence, you can confirm that peer cache was successfully used in the process by viewing the **smsts.log** on the client that ran the task sequence.  
@@ -146,6 +132,3 @@ When you deploy a new operating system in System Center Configuration Manager, c
  In the log, locate an entry similar to the following where <*SourceServerName*> identifies the computer from which the client obtained the content. This computer should be a peer cache source, and not a distribution point server. Other details will vary based on your local environment and configurations.  
 
 -   *<![LOG[Downloaded file from http:// <SourceServerName\>:8003/SCCM_BranchCache$/SS10000C/sccm?/install.wim to C:\\_SMSTaskSequence\Packages\SS10000C\install.wim ]LOG]!><time="14:24:33.329+420" date="06-26-2015" component="ApplyOperatingSystem" context="" type="1" thread="1256" file="downloadcontent.cpp:1626">*  
-
-## See Also  
- [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)

@@ -22,7 +22,7 @@ author: NathBarnmanager: angrobe
 > [!NOTE]
 >  This procedure is only for the items that must be specifically configured for Endpoint Protection. For more information about the Create Automatic Deployment Rule Wizard, see [Manage software updates in System Center Configuration Manager](../../sup/deploy-use/manage-software-updates.md).
 
-###### To configure an automatic deployment rule to deliver definition updates
+## To configure an automatic deployment rule to deliver definition updates
 
 1.  In the Configuration Manager console, click **Software Library**.
 

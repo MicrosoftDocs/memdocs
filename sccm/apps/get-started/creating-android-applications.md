@@ -23,7 +23,7 @@ Configuration Manager supports deploying the following app types for Android:
 
 |Device Type|Supported Files|
 |-|-|
-|Android|*.apk|
+|Android|.apk|
 
 The following deployment actions are supported:
 

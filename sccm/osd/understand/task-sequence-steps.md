@@ -1,5 +1,5 @@
 ---
-title: "Task sequence steps in System Center Configuration Manager"
+title: Task sequence steps | Configuration Manager
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 08/12/2016
@@ -17,9 +17,9 @@ author: Dougebymanager: angrobe
 
 ---
 # Task sequence steps in System Center Configuration Manager
-The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](..deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
--   [Apply Data Image Task Sequence Step](#BKMK_ApplyDataImage)  
+<!--- -   [Apply Data Image Task Sequence Step](#BKMK_ApplyDataImage)  
 
 -   [Apply Driver Package](#BKMK_ApplyDriverPackage)  
 
@@ -87,7 +87,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 
 -   [Setup Windows and ConfigMgr](#BKMK_SetupWindowsandConfigMgr)  
 
--   [Upgrade Operating System](#BKMK_UpgradeOS)  
+-   [Upgrade Operating System](#BKMK_UpgradeOS)  --->
 
 ##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image Task Sequence Step  
  Use the **Apply Data Image** task sequence step to copy the data image to the specified destination partition.  
@@ -1741,6 +1741,3 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
  Specifies whether setup will perform Dynamic Update operations, such as search, download, and install updates (corresponds to the /DynamicUpdate command-line option). This setting is not compatible with Configuration Manager software updates, but it can be enabled when you handle updates by using WSUS (stand-alone) or Windows Update.  
 
  **Override policy and use default Microsoft Update**: Select this setting to temporarily override the local policy in realtime to run Dynamic Update operations and have the computer get updates from Windows Update.  
-
-## See Also  
- [Operating system deployment technical reference for System Center Configuration Manager](../Topic/Operating%20system%20deployment%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

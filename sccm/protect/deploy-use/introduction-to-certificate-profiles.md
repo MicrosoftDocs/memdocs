@@ -1,6 +1,6 @@
 ---
 title: "Introduction to certificate profiles | System Center Configuration Manager"
-description: ""Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
+description: "Learn how certificate profiles in System Center Configuration Manager work with Active Directory Certificate Services."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

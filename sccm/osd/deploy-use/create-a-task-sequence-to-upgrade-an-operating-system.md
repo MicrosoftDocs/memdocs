@@ -1,5 +1,5 @@
 ---
-title: "Create a task sequence to upgrade an operating system in System Center Configuration Manager"
+title: Create a task sequence to upgrade an operating system | Configuration Manager
 description: "Task sequences in System Center Configuration Manager can automatically upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
 ms.date: 08/12/2016
@@ -16,7 +16,7 @@ author: Dougebymanager: angrobe
 
 ---
 # Create a task sequence to upgrade an operating system in System Center Configuration Manager
-Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version with System Center Configuration Manager](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version with System Center Configuration Manager](../deploy-use/upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  
  To upgrade the operating system on computers to Windows 10, you can create a task sequence  and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard will add the steps to upgrade the operating system, apply software updates, and install applications. Before  you create the  task sequence, the following must be in place:  
@@ -49,7 +49,7 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 6.  On the **Upgrade the  Windows Operating System** page, specify the following settings, and then click **Next**.  
 
-    -   **Upgrade package**: Specify the upgrade package that contains the operating system upgrade source files. You can verify  that you have selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage operating system upgrade packages with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-upgrade-packages.md).  
+    -   **Upgrade package**: Specify the upgrade package that contains the operating system upgrade source files. You can verify  that you have selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage operating system upgrade packages with System Center Configuration Manager](../deploy-use/manage-operating-system-upgrade-packages.md).  
 
     -   **Edition index**: If there are multiple operating system edition indexes available in the package, select the desired edition index. By default, the first item is selected.  
 
@@ -62,7 +62,7 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 9. Complete the wizard.  
 
 ## Download Package Content task sequence step  
- The [Download Package Content](../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step can be used before the **Upgrade Operating System** step in the following scenarios :  
+ The [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step can be used before the **Upgrade Operating System** step in the following scenarios :  
 
 -   You use a single upgrade task sequence that can work with both x86 and x64 platforms. To do  this, include two **Download Package Content** steps in the **Prepare for Upgrade** group with conditions to detect the client architecture and download only the appropriate operating system upgrade package. Configure each **Download Package Content** step to use the same variable, and use the variable for the media path on the **Upgrade Operating System** step.  
 
@@ -83,5 +83,5 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 ## Folder and files removed after computer restart  
  When the task sequence to upgrade an operating system to Windows 10 and all other steps in the task sequence are complete, the post-processing and rollback scripts are not removed until the computer is restarted.  These script files do not contain sensitive information.  
 
-## See Also  
- [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+ ## Next steps  
+  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)

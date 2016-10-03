@@ -1,5 +1,5 @@
 ---
-title: "Create a task sequence to capture and restore user state in System Center Configuration Manager"
+title: Create a task sequence to capture and restore user state | Configuration Manager
 description: "Use System Center Configuration Manager task sequences to capture and restore the user-state data in operating system deployment scenarios."
 ms.custom: na
 ms.date: 12/08/2015
@@ -30,7 +30,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 -   **Release State Store**: This step is needed only if you store the user state on the state migration point. This step removes this data from the state migration point.  
 
- Use the following procedures to add the task sequence steps needed to capture the user state and restore the user state. For more information about creating a task sequences, see [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).  
+ Use the following procedures to add the task sequence steps needed to capture the user state and restore the user state. For more information about creating a task sequences, see [Manage task sequences to automate tasks in System Center Configuration Manager](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
 #### To add task sequence steps to capture the user state  
 
@@ -59,7 +59,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 3.  Add the **Capture User State** step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Capture User State**. Specify the following properties and options for the **Capture User State** step, and then click **OK**.  
 
     > [!IMPORTANT]  
-    >  When you add this step to your task sequence, also set the **OSDStateStorePath** task sequence variable to specify where the user state data is stored. If you store the user state locally, do not specify a root folder as that can cause the task sequence to fail. When you store the user data locally always use a folder or subfolder. For information about this variable, see [Capture User State Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_CaptureUserState).  
+    >  When you add this step to your task sequence, also set the **OSDStateStorePath** task sequence variable to specify where the user state data is stored. If you store the user state locally, do not specify a root folder as that can cause the task sequence to fail. When you store the user data locally always use a folder or subfolder. For information about this variable, see [Capture User State Task Sequence Action Variables](../understand/task-sequence-action-variables.md#BKMK_CaptureUserState).  
 
      On the **Properties** tab, specify the following options:  
 
@@ -93,7 +93,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Specify any conditions that must be met before the task sequence can continue if an error occurs.  
 
-4.  If you are using a state migration point to store the user state, add the [Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Release State Store**. Specify the following properties and options for the **Release State Store** step, and then click **OK**.  
+4.  If you are using a state migration point to store the user state, add the [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Release State Store**. Specify the following properties and options for the **Release State Store** step, and then click **OK**.  
 
     > [!IMPORTANT]  
     >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step is started.  
@@ -106,13 +106,13 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Specify any conditions that must be met before the task sequence can continue when an error occurs.  
 
- Deploy this task sequence to capture the user state on a destination computer. For information about how to deploy task sequences, see [Deploy a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ Deploy this task sequence to capture the user state on a destination computer. For information about how to deploy task sequences, see [Deploy a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 #### To add task sequence steps to restore the user state  
 
 1.  In the **Task Sequence** list, select a task sequence, and then click **Edit**.  
 
-2.  Add the [Restore User State](../../osd/understand/task-sequence-steps.md#BKMK_RestoreUserState) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point. Specify the following properties and options for the **Restore User State** step, and then click **OK**.  
+2.  Add the [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Restore User State**. This step establishes a connection to the state migration point. Specify the following properties and options for the **Restore User State** step, and then click **OK**.  
 
      On the **Properties** tab, specify the following properties:  
 
@@ -129,11 +129,11 @@ You can use System Center Configuration Manager task sequences to capture and re
     -   Select **Restore local computer user profiles** to provide a new password for the restored profiles. You cannot migrate passwords for local profiles.  
 
         > [!NOTE]  
-        >  When you have local user accounts, and you use the [Capture User State](../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState) step and select **Capture all user profiles with standard options**, you must select the **Restore local computer user profiles** setting in the [Restore User State](../../osd/understand/task-sequence-steps.md#BKMK_RestoreUserState) step or the task sequence will fail.  
+        >  When you have local user accounts, and you use the [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) step and select **Capture all user profiles with standard options**, you must select the **Restore local computer user profiles** setting in the [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) step or the task sequence will fail.  
 
     -   Select **Continue if some files cannot be restored** if you want the **Restore User State** step to continue if a file cannot be restored.  
 
-         If you store the user state by using local links and the restore is not successful, the administrative user can manually delete the hard-links that were created to store the data or the task sequence can run the USMTUtils tool. If you use USMTUtils to delete the hard-link, add a [Restart Computer](../../osd/understand/task-sequence-steps.md#BKMK_RestartComputer) step after you run USMTUtils.  
+         If you store the user state by using local links and the restore is not successful, the administrative user can manually delete the hard-links that were created to store the data or the task sequence can run the USMTUtils tool. If you use USMTUtils to delete the hard-link, add a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after you run USMTUtils.  
 
     -   Select **Enable verbose logging** to specify how much information to write to log files if an error occurs.  
 
@@ -143,7 +143,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Specify any conditions that must be met before the task sequence can continue if an error occurs.  
 
-3.  If you are using a state migration point to store the user state, add the [Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Release State Store**. Specify the following properties and options for the **Release State Store** step, and then click **OK**.  
+3.  If you are using a state migration point to store the user state, add the [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) step to the task sequence. In the **Task Sequence Editor** dialog box, click **Add**, point to **User State**, and then click **Release State Store**. Specify the following properties and options for the **Release State Store** step, and then click **OK**.  
 
     > [!IMPORTANT]  
     >  The task sequence action that runs before the **Release State Store** step must be successful before the **Release State Store** step is started.  
@@ -156,7 +156,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Specify any conditions that must be met before the task sequence can continue when an error occurs.  
 
- Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
-## See Also  
- [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+## Next steps
+[Monitor the task sequence deployment](monitor-operating-system-deployments.md#BKMK_TSDeployStatus)

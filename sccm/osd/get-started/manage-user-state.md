@@ -1,5 +1,5 @@
 ---
-title: "Manage user state in System Center Configuration Manager"
+title: Manage user state | Configuration Manager
 description: "System Center Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios."
 ms.custom: na
 ms.date: 02/02/2016
@@ -25,19 +25,8 @@ You can use System Center Configuration Manager task sequences to capture and re
 
  Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx).  
 
- For information to help you capture and restore user data:  
+ Use the folowing sections to help you capture and restore user data.
 
--   [Store user state data](#BKMK_StoringUserData)  
-
-    -   [Store user data on a state migration point](#BKMK_UserDataSMP)  
-
-    -   [Store user data locally](#BKMK_UserDataDestination)  
-
--   [Configure a state migration point](#BKMK_StateMigrationPoint)  
-
--   [Create a computer association](#BKMK_ComputerAssociation)  
-
--   [Restore user state data when an operating system deployment fails](#BKMK_MigrationFails)  
 
 ##  <a name="BKMK_StoringUserData"></a> Store user state data  
  When you capture user state, you can store the user state data on the destination computer or on a state migration point. To store the user state on a user state migration point, you must use a Configuration Manager site system server that hosts the state migration point site system role. To store the user state on the destination computer, you must configure your task sequence to store the data locally using links.  
@@ -63,24 +52,24 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 2.  [Create a computer association](#BKMK_ComputerAssociation) between the source computer and the destination computer. You must create this association before you capture the user state on the source computer.  
 
-3.  [Create a task sequence to capture and restore user state in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:  
+3.  [Create a task sequence to capture and restore user state in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer, store the user date on a state migration point, and restore the user data to a computer:  
 
-    -   [Request State Store](../../osd/understand/task-sequence-steps.md#BKMK_RequestStateStore) to request access to a state migration point when capturing state from a computer or restoring state to a computer.  
+    -   [Request State Store](../understand/task-sequence-steps.md#BKMK_RequestStateStore) to request access to a state migration point when capturing state from a computer or restoring state to a computer.  
 
-    -   [Capture User State](../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data on the state migration point.  
+    -   [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data on the state migration point.  
 
-    -   [Restore User State](../../osd/understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data from a user state migration point.  
+    -   [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data from a user state migration point.  
 
-    -   [Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore) to notify the state migration point that the capture or restore action is complete.  
+    -   [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) to notify the state migration point that the capture or restore action is complete.  
 
 ###  <a name="BKMK_UserDataDestination"></a> Store user data locally  
  To store the user state data locally, you must do the following:  
 
--   [Create a task sequence to capture and restore user state in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer and restore the user data to a computer by using hard-links,  
+-   [Create a task sequence to capture and restore user state in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer and restore the user data to a computer by using hard-links,  
 
-    -   [Capture User State](../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data to a local folder by using hard-links.  
+    -   [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data to a local folder by using hard-links.  
 
-    -   [Restore User State](../../osd/understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data by using hard-links.  
+    -   [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState) to restore the user state on the destination computer by retrieving the data by using hard-links.  
 
         > [!NOTE]  
         >  The user state data that the hard-links reference remains on the computer after the task sequence removes the old operating system. This is the data that is used to restore the user state when the new operating system is deployed.  
@@ -104,7 +93,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
 
- For more information about the state migration point and the steps to configure it, see [State migration point](../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+ For more information about the state migration point and the steps to configure it, see [State migration point](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Create a computer association to define a relationship between a source computer and a destination computer when you install an operating system on new hardware and want to capture and restore user data settings. The source computer is an existing computer that Configuration Manager manages. When you deploy the new operating system to the destination computer, the source computer contains the user state that is migrated to the destination computer.  
@@ -132,6 +121,3 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 ##  <a name="BKMK_MigrationFails"></a> Restore user state data when an operating system deployment fails  
  If the operating system deployment fails, use the USMT 10.0 LoadState feature to retrieve the user states data that was captured during the deployment process. This includes data that is stored on a state migration point or data that is saved locally on the destination computer. For more information on this USMT feature, see [LoadState Syntax](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx).  
-
-## See Also  
- [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)

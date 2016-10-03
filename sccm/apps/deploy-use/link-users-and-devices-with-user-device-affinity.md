@@ -78,13 +78,11 @@ User device affinity in System Center Configuration Manager associates a user wi
 
     > [!TIP]  
     >  **Example:** if **User device affinity threshold (minutes)** is specified as **60** minutes and **User device affinity threshold (days)** is specified at **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
-    >   
-    >  After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the configured thresholds, then the user device affinity will be removed. Configure **User device affinity threshold (days)** to a value of at least **7** days to avoid situations where an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
+   
+After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the configured thresholds, then the user device affinity will be removed. Configure **User device affinity threshold (days)** to a value of at least **7** days to avoid situations where an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
 
 ## Import user device affinities from a file  
  You can import a file that contains user device affinities to enable you to create many relationships at one time. For this procedure, the subject devices must have been discovered and exist as resources in the Configuration Manager database, otherwise this procedure will fail.  
-
-### Import a file containing user device affinities  
 
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Users** or **Devices**.  
 
@@ -105,14 +103,12 @@ User device affinity in System Center Configuration Manager associates a user wi
 
 ### Configure the site to allow user created user device affinity requests  
 
-1.  In the Configuration Manager console, click **Administration**.  
-
-2.  In the **Administration** workspace, click **Client Settings**.  
+1.  In the Configuration Manager console, click **Administration** > **Client Settings**.  
 
 3.  To modify the default client settings, select **Default Client Settings**, and then, in the **Home** tab, in the **Properties** group, click **Properties**. To create custom client agent settings, select the **Client Settings** node, and then, in the **Home** tab, in the **Create** group, click **Create Custom Client User Settings**.  
 
     > [!NOTE]  
-    >  If you modify the default client settings, they will be deployed to all computers in the hierarchy. For more information about configuring client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+    >  If you modify the default client settings, they will be deployed to all computers in the hierarchy. For more information about configuring client settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
 4.  Select the client setting **User and Device Affinity** and then, in the **Allow user to define their primary devices** drop-down list, select **True**.  
 

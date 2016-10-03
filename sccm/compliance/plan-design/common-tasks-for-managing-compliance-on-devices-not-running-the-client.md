@@ -20,7 +20,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md) section.  
 
- Before you start, read [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings in System Center Configuration Manager](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
+ Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) to learn some basics about compliance settings, and also read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites.  
 
 ## General information for each scenario  
  In each scenario, you'll create a configuration item that performs a specific task. open the Create Configuration Item Wizard, use the following steps:  
@@ -52,14 +52,12 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 6.  Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+ You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
 ## Scenarios for Windows Phone devices managed without the Configuration Manager client  
 
 ### Scenario: Disable the use of screen capture on a Windows Phone  
  In this scenario, you use Windows Phone 8.1 devices in your company. These devices run a sales app that contains sensitive information. To protect your company, you want to disable the use of screen capture on the device which could potentially be used to transmit sensitive information outside of your company.  
-
-##### Steps  
 
 1.  On the **General** page of the Create Configuration Item wizard, select the **Windows Phone** configuration item type, then click **Next**.  
 
@@ -80,8 +78,6 @@ These scenarios give you an introduction to using System Center Configuration Ma
 ### Scenario: Disable the camera on iOS devices  
  In this scenario, your company produces blueprints for new product designs. These contain sensitive information that must not be leaked. As your company issues iPhones or iPads to all employees, you want to disable the use of the camera on these devices to prevent them being used to photograph the blueprints.  
 
-##### Steps  
-
 1.  On the **General** page of the Create Configuration Item wizard, select the **iOS and Mac OS X** configuration item type, then click **Next**.  
 
 2.  On the **Supported Platforms** page, select all iPhone and all iPad device platforms.  
@@ -101,8 +97,6 @@ These scenarios give you an introduction to using System Center Configuration Ma
 ### Scenario: Require a password on all Android 5 devices  
  In this scenario, you'll create a configuration item for Android 5 devices only that requires users to configure a password of at least 6 characters on their devices. Additionally, if a user enters an incorrect password 5 times, then the device will be wiped.  
 
-##### Steps  
-
 1.  On the **General** page of the Create Configuration Item wizard, select the **Android and Samsung KNOX** configuration item type, then click **Next**.  
 
 2.  On the **Supported Platforms** page, select only **Android 5** (to ensure that the settings only get applied to that platform).  
@@ -119,7 +113,5 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 5.  Complete the wizard to create the configuration item.  
 
- You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
+ You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## See Also  
- [Common tasks for managing compliance with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-managing-compliance.md)

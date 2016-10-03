@@ -28,14 +28,14 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 # Install a software update point  
 
 > [!IMPORTANT]  
->  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates in System Center Configuration Manager](../plan-design/plan-for-software-updates.md).  
+>  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
 
  The software update point is required on the central administration site and on the primary sites in order to enable software updates compliance assessment and to deploy software updates to clients. The software update point is optional on secondary sites. The software update point site system role must be created on a server that has WSUS installed. The software update point interacts with the WSUS services to configure the software update settings and to request synchronization of software updates metadata. When you have a Configuration Manager hierarchy, install and configure the software update point on the central administration site first, then on child primary sites, and then optionally, on secondary sites. When you have a stand-alone primary site, not a central administration site, install and configure the software update point on the primary site first, and then optionally, on secondary sites. Some settings are only available when you configure the software update point on a top-level site. There are different options that you must consider depending on where you installed the software update point.  
 
 > [!IMPORTANT]  
 >  You can install more than one software update points on a site. The first software update point that you install is configured as the synchronization source, which synchronizes the updates from Microsoft Update or from the upstream synchronization source. The other software update points on the site are configured as replicas of the first software update point. Therefore, some settings are not available after you install and configure the initial software update point.  
 
- You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** , depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** , depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  Use the following sections for information about the software update point settings on a site.  
 
@@ -79,7 +79,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
  For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
 
 ## Synchronization source  
- You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource).  
+ You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site.  
 
  Use the following table for the available options when you configure the software update point at a site.  
 
@@ -118,7 +118,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ## Supersedence rules  
  Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
 
- On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#supersedence-rules).  
+ On this page, you can specify that the superseded software updates are immediately expired, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. Or, you can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
 > [!NOTE]  
 >  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  

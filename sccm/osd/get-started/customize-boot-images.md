@@ -1,5 +1,5 @@
 ---
-title: "Customize boot images with System Center Configuration Manager"
+title: Customize boot images | Configuration Manager
 description: "Learn several ways to use Configuration Manager or the Deployment Image Servicing and Management (DISM) command-line tool to customize a boot image."
 ms.custom: na
 ms.date: 08/08/2016
@@ -35,7 +35,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
      <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../../osd/deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images with System Center Configuration Manager](../deploy-use/manage-boot-images.md).  
 
  The procedures in this topic demonstrate how to add the optional components required by Configuration Manager to the boot image by using the following Windows PE packages:  
 
@@ -291,6 +291,3 @@ Each version of Configuration Manager supports a specific version of the Windows
     3.  Click the boot image identified in step 3.  
 
     4.  On the **Home** tab, in the **Deployment** group, click **Update Distribution Points**.  
-
-## See Also  
- [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md)

@@ -1,5 +1,5 @@
 ---
-title: "Task sequence action variables in System Center Configuration Manager"
+title: Task sequence action variables | Configuration Manager
 description: "Use sequence action variables, such as network setting variables, to specify configuration settings for a single step in a Configuration Manager task sequence."
 ms.custom: na
 ms.date: 06/06/2016
@@ -31,7 +31,7 @@ Task sequence action variables specify configuration settings that are used by a
 >  Not all task sequence actions are associated with a set of task sequence variables. For example, although there are variables associated with the Enable BitLocker action, there are no variables associated with the Disable BitLocker action.  
 
 ###  <a name="BKMK_ApplyDataImage"></a> Apply Data Image Task Sequence Action Variables  
- The variables for this action specify which image of a WIM file is applied to the destination computer and whether to delete the files on the destination partition. For more information about the task sequence step associated with these variables, see [Apply Data Image Task Sequence Step](../../osd/understand/task-sequence-steps.md#BKMK_ApplyDataImage).  
+ The variables for this action specify which image of a WIM file is applied to the destination computer and whether to delete the files on the destination partition. For more information about the task sequence step associated with these variables, see [Apply Data Image Task Sequence Step](../understand/task-sequence-steps.md#BKMK_ApplyDataImage).  
 
 #### Details  
 
@@ -41,7 +41,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDWipeDestinationPartition<br /><br /> (input)|Specifies whether to delete the files located on the destination partition.<br /><br /> Valid values:<br /><br /> **"true"** (default)<br /><br /> **"false"**|  
 
 ###  <a name="BKMK_ApplyDriverPackage"></a> Apply Driver Package Task Sequence Action Variables  
- The variables for this action specify information the installation of mass storage drivers and whether to install unsigned drivers. For more information about the task sequence step associated with these variables, see [Apply Driver Package](../../osd/understand/task-sequence-steps.md#BKMK_ApplyDriverPackage).  
+ The variables for this action specify information the installation of mass storage drivers and whether to install unsigned drivers. For more information about the task sequence step associated with these variables, see [Apply Driver Package](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage).  
 
 #### Details  
 
@@ -54,7 +54,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDAllowUnsignedDriver<br /><br /> (input)|Specifies whether to configure Windows to allow the installation of unsigned device drivers. This task sequence variable is not used when deploying the Windows Vista and later operating system.<br /><br /> Valid values:<br /><br /> **"true"**<br /><br /> **"false"** (default)|  
 
 ###  <a name="BKMK_ApplyNetworkSettings"></a> Apply Network Settings Task Sequence Action Variables  
- The variables for this action specify network settings for the destination computer, such as settings for the network adapters of the computer, domain settings and workgroup settings. For more information about the task sequence step associated with these variables, see [Apply Network Settings Step](../../osd/understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings).  
+ The variables for this action specify network settings for the destination computer, such as settings for the network adapters of the computer, domain settings and workgroup settings. For more information about the task sequence step associated with these variables, see [Apply Network Settings Step](../understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings).  
 
 #### Details  
 
@@ -73,7 +73,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDWorkgroupName<br /><br /> (input)|Specifies the name of the workgroup that the destination computer joins.<br /><br /> You must specify either this value or the **OSDDomainName** value. The workgroup name can be a maximum of 32 characters.<br /><br /> Example:<br /><br /> **"Accounting"**|  
 
 ###  <a name="BKMK_ApplyOperatingSystem"></a> Apply Operating System Image Task Sequence Action Variables  
- The variables for this action specify settings for the operating system that you want to install on the destination computer. For more information about the task sequence step associated with these variables, see [Apply Operating System Image](../../osd/understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).  
+ The variables for this action specify settings for the operating system that you want to install on the destination computer. For more information about the task sequence step associated with these variables, see [Apply Operating System Image](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).  
 
 #### Details  
 
@@ -85,7 +85,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDTargetSystemDrive (output)|Specifies the drive letter of the partition that contains the operating system files.|  
 
 ###  <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings Task Sequence Action Variables  
- The variables for this action specify Windows settings for the destination computer, such as the computer name, Windows product key, registered user and organization, and the local administrator password. For more information about the task sequence step associated with these variables, see [Apply Windows Settings](../../osd/understand/task-sequence-steps.md#BKMK_ApplyWindowsSettings).  
+ The variables for this action specify Windows settings for the destination computer, such as the computer name, Windows product key, registered user and organization, and the local administrator password. For more information about the task sequence step associated with these variables, see [Apply Windows Settings](../understand/task-sequence-steps.md#BKMK_ApplyWindowsSettings).  
 
 #### Details  
 
@@ -102,7 +102,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDLocalAdminPassword<br /><br /> (input)|Specifies the local administrator password. This value is ignored if the **Randomly generate the local administrator password and disable the account on all supported platforms** option is enabled. The specified value must be between 1 and 255 characters.|  
 
 ###  <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers Task Sequence Action Variables  
- The variables for this action specify which Windows drivers are installed on the destination computer and whether unsigned drivers are installed. For more information about the task sequence step associated with these variables, see [Auto Apply Drivers](../../osd/understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).  
+ The variables for this action specify which Windows drivers are installed on the destination computer and whether unsigned drivers are installed. For more information about the task sequence step associated with these variables, see [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).  
 
 #### Details  
 
@@ -113,7 +113,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDAutoApplyDriverBestMatch<br /><br /> (input)|Specifies what the task sequence action does if there are multiple device drivers in the driver catalog that are compatible with a hardware device. If set to **"true"**, only the best device driver will be installed.  If **false**, all compatible device drivers will be installed, and the operating system will choose the best driver to use.<br /><br /> Valid values:<br /><br /> **"true"** (default)<br /><br /> **"false"**|  
 
 ###  <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings Task Sequence Action Variables  
- The variables for this action specify whether the network adapter settings (TCP/IP, DNS, and WINS) configuration information is captured and whether the workgroup or domain membership information is migrated as part of the operating system deployment. For more information about the task sequence step associated with these variables, see [Capture Network Settings](../../osd/understand/task-sequence-steps.md#BKMK_CaptureNetworkSettings).  
+ The variables for this action specify whether the network adapter settings (TCP/IP, DNS, and WINS) configuration information is captured and whether the workgroup or domain membership information is migrated as part of the operating system deployment. For more information about the task sequence step associated with these variables, see [Capture Network Settings](../understand/task-sequence-steps.md#BKMK_CaptureNetworkSettings).  
 
 #### Details  
 
@@ -123,7 +123,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDMigrateNetworkMembership<br /><br /> (input)|Specifies whether the workgroup or domain membership information is migrated as part of the operating system deployment.<br /><br /> Examples:<br /><br /> **"true"** (default)<br /><br /> **"false"**|  
 
 ###  <a name="BKMK_CaptureOperatingSystemImage"></a> Capture Operating System Image Task Sequence Action Variables  
- The variables for this action specify information about the operating system image that is being captured, such as where the image is stored, who created the image, and a description of the image. For more information about the task sequence step associated with these variables, see [Capture Operating System Image](../../osd/understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  
+ The variables for this action specify information about the operating system image that is being captured, such as where the image is stored, who created the image, and a description of the image. For more information about the task sequence step associated with these variables, see [Capture Operating System Image](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage).  
 
 #### Details  
 
@@ -138,7 +138,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDTargetSystemRoot<br /><br /> (input)|Specifies the path to the Windows directory of the installed operating system on the reference computer. This operating system is verified as being a supported operating system for capture by Configuration Manager.|  
 
 ###  <a name="BKMK_CaptureUserState"></a> Capture User State Task Sequence Action Variables  
- The variables for this action specify information used by the User State Migration Tool (USMT), such as the folder where the user state is saved, command-line options for USMT, and the configuration files used to control the capture of the user profiles.  For more information about the task sequence step associated with these variables, see [Capture User State](../../osd/understand/task-sequence-steps.md#BKMK_CaptureUserState).  
+ The variables for this action specify information used by the User State Migration Tool (USMT), such as the folder where the user state is saved, command-line options for USMT, and the configuration files used to control the capture of the user profiles.  For more information about the task sequence step associated with these variables, see [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState).  
 
 #### Details  
 
@@ -154,7 +154,7 @@ Task sequence action variables specify configuration settings that are used by a
 |_OSDMigrateUsmtPackageID<br /><br /> (input)|Specifies the package ID of the Configuration Manager package that will contain the USMT files. This variable is required.|  
 
 ###  <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings Task Sequence Action Variables  
- The variables for this action specify whether specific Windows settings are migrated to the destination computer, such as the name of the computer, the register organization name, and time zone information. For more information about the task sequence step associated with these variables, see [Capture Windows Settings](../../osd/understand/task-sequence-steps.md#BKMK_CaptureWindowsSettings).  
+ The variables for this action specify whether specific Windows settings are migrated to the destination computer, such as the name of the computer, the register organization name, and time zone information. For more information about the task sequence step associated with these variables, see [Capture Windows Settings](../understand/task-sequence-steps.md#BKMK_CaptureWindowsSettings).  
 
 #### Details  
 
@@ -168,7 +168,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDTimeZone<br /><br /> (output)|Set to the time zone of the computer. The value is set only if the OSDMigrateTimeZone variable is set to "true."|  
 
 ###  <a name="BKMK_ConnecttoNetworkFolder"></a> Connect to Network Folder Task Sequence Action Variables  
- The variables for this action specify information about a folder on a network, such as the account used and password to connect to the network folder, the drive letter of the folder, and the path to the folder. For more information about the task sequence step associated with these variables, see [Connect To Network Folder](../../osd/understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder).  
+ The variables for this action specify information about a folder on a network, such as the account used and password to connect to the network folder, the drive letter of the folder, and the path to the folder. For more information about the task sequence step associated with these variables, see [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder).  
 
 #### Details  
 
@@ -180,7 +180,7 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSConnectNetworkFolderPath<br /><br /> (input)|Specifies the network path for the connection.<br /><br /> Example:<br /><br /> **"\\\servername\sharename"**|  
 
 ###  <a name="BKMK_ConvertDisk"></a> Convert Disk to Dynamic Task Sequence Action Variables  
- The variable for this action specifies the number of the physical disk to convert from a basic to dynamic disk. For more information about the task sequence step associated with these variables, see [Convert Disk to Dynamic](../../osd/understand/task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
+ The variable for this action specifies the number of the physical disk to convert from a basic to dynamic disk. For more information about the task sequence step associated with these variables, see [Convert Disk to Dynamic](../understand/task-sequence-steps.md#BKMK_ConvertDisktoDynamic).  
 
 #### Details  
 
@@ -189,7 +189,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDConvertDiskIndex<br /><br /> (input)|Specifies the physical disk number that is converted.|  
 
 ###  <a name="BKMK_EnableBitLocker"></a> Enable BitLocker Task Sequence Action Variables  
- The variables for this action specify the recovery password and startup key options used to enable BitLocker on the destination computer. For more information about the task sequence step associated with these variables, see [Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).  
+ The variables for this action specify the recovery password and startup key options used to enable BitLocker on the destination computer. For more information about the task sequence step associated with these variables, see [Enable BitLocker](../understand/task-sequence-steps.md#BKMK_EnableBitLocker).  
 
 #### Details  
 
@@ -199,7 +199,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDBitLockerStartupKey<br /><br /> (input)|Instead of generating a random startup key for the key management option **Startup Key on USB only,** the **Enable BitLocker** task sequence action uses the Trusted Platform Module (TPM) as the startup key. The value must be a valid, 256-bit Base64-encoded BitLocker startup key.|  
 
 ###  <a name="BKMK_FormatPartitionDisk"></a> Format and Partition Disk Task Sequence Action Variables  
- The variables for this action specify information for formatting and partitioning a physical disk, such as the disk number and an array of partition settings. For more information about the task sequence step associated with these variables, see [Format and Partition Disk](../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).  
+ The variables for this action specify information for formatting and partitioning a physical disk, such as the disk number and an array of partition settings. For more information about the task sequence step associated with these variables, see [Format and Partition Disk](../understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk).  
 
 #### Details  
 
@@ -212,7 +212,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDPartitionStyle<br /><br /> (input)|Specifies the partition style to use when partitioning the disk. "**MBR**" indicates the master boot record partition style, and "**GPT**" indicates the GUID Partition Table style.<br /><br /> Valid Values:<br /><br /> **"GPT"**<br /><br /> **"MBR"**|  
 
 ###  <a name="BKMK_InstallSoftwareUpdates"></a> Install Software Updates Task Sequence Action Variables  
- The variable for this action specifies whether to install all updates or only mandatory updates. For more information about the task sequence step associated with these variables, see [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).  
+ The variable for this action specifies whether to install all updates or only mandatory updates. For more information about the task sequence step associated with these variables, see [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).  
 
 #### Details  
 
@@ -221,7 +221,7 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSInstallUpdateTarget<br /><br /> (input)|Specifies whether to install all updates or only mandatory updates.<br /><br /> Valid values:<br /><br /> **"All"**<br /><br /> **"Mandatory"**|  
 
 ###  <a name="BKMK_JoinDomainWorkgroup"></a> Join Domain or Workgroup Task Sequence Action Variables  
- The variables for this action specify information needed to join the destination computer to a Windows domain or workgroup. For more information about the task sequence step associated with these variables, see [Join Domain or Workgroup](../../osd/understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup).  
+ The variables for this action specify information needed to join the destination computer to a Windows domain or workgroup. For more information about the task sequence step associated with these variables, see [Join Domain or Workgroup](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup).  
 
 #### Details  
 
@@ -236,7 +236,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDJoinWorkgroupName<br /><br /> (input)|Specifies the name of a workgroup that the destination computer joins. The length of the workgroup name must be between 1 and 32 characters.<br /><br /> Example:<br /><br /> **"Accounting"**|  
 
 ###  <a name="BKMK_PrepareWindowsCapture"></a> Prepare Windows for Capture Task Sequence Action Variables  
- The variables for this action specify information used to capture the Windows operating system from the target computer. For more information about the task sequence step associated with these variables, see [Prepare ConfigMgr Client for Capture](../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).  
+ The variables for this action specify information used to capture the Windows operating system from the target computer. For more information about the task sequence step associated with these variables, see [Prepare ConfigMgr Client for Capture](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).  
 
 #### Details  
 
@@ -247,7 +247,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDTargetSystemRoot<br /><br /> (output)|Specifies the path to the Windows directory of the installed operating system on the reference computer. This operating system is verified as being a supported operating system for capture by Configuration Manager.|  
 
 ###  <a name="BKMK_ReleaseStateStore"></a> Release State Store Sequence Action Variables  
- The variables for this action specify information used to release the stored user state. For more information about the task sequence step associated with these variables, see [Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore).  
+ The variables for this action specify information used to release the stored user state. For more information about the task sequence step associated with these variables, see [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore).  
 
 #### Details  
 
@@ -268,7 +268,7 @@ Task sequence action variables specify configuration settings that are used by a
 |OSDStateStorePath<br /><br /> (output)|The UNC path to the folder on the state migration point where the user state is stored.|  
 
 ###  <a name="BKMK_RestartComputer"></a> Restart Computer Task Sequence Action Variables  
- The variables for this action specify information used to restart the destination computer. For more information about the task sequence step associated with these variables, see [Restart Computer](../../osd/understand/task-sequence-steps.md#BKMK_RestartComputer).  
+ The variables for this action specify information used to restart the destination computer. For more information about the task sequence step associated with these variables, see [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer).  
 
 #### Details  
 
@@ -278,7 +278,7 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSRebootTimeout<br /><br /> (input)|Specifies the number of seconds that the warning is displayed to the user before the computer restarts. Specify zero seconds to indicate that no reboot message is displayed.<br /><br /> Examples:<br /><br /> **"0"** (default)<br /><br /> **"5"**<br /><br /> **"10"**|  
 
 ###  <a name="BKMK_RestoreUserState"></a> Restore User State Task Sequence Action Variables  
- The variables for this action specify information used to restore the user state of the destination computer, such as pathname of the folder from which the user state is restored and whether the local computer account is restored. For more information about the task sequence step associated with these variables, see [Restore User State](../../osd/understand/task-sequence-steps.md#BKMK_RestoreUserState).  
+ The variables for this action specify information used to restore the user state of the destination computer, such as pathname of the folder from which the user state is restored and whether the local computer account is restored. For more information about the task sequence step associated with these variables, see [Restore User State](../understand/task-sequence-steps.md#BKMK_RestoreUserState).  
 
 #### Details  
 
@@ -293,7 +293,7 @@ Task sequence action variables specify configuration settings that are used by a
 |_OSDMigrateUsmtRestorePackageID<br /><br /> (input)|Specifies the package ID of the Configuration Manager package that contains the USMT files. This variable is required.|  
 
 ###  <a name="BKMK_RunCommand"></a> Run Command Line Task Sequence Action Variables  
- The variables for this action specify information used to run a command from the command line, such as the working directory where the command is run. For more information about the task sequence step associated with these variables, see [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine).  
+ The variables for this action specify information used to run a command from the command line, such as the working directory where the command is run. For more information about the task sequence step associated with these variables, see [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine).  
 
 #### Details  
 
@@ -305,7 +305,7 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSTSRunCommandLinePassword<br /><br /> (input)|Specifies the password for the account specified by the SMSTSRunCommandLineUserName variable.|  
 
 ### Set Dynamic Variables  
- The variables for this action are automatically set when you add the Set Dynamic Variables task sequence step. For more information about the task sequence step associated with these variables, see [Set Dynamic Variables](../../osd/understand/task-sequence-steps.md#BKMK_SetDynamicVariables).  
+ The variables for this action are automatically set when you add the Set Dynamic Variables task sequence step. For more information about the task sequence step associated with these variables, see [Set Dynamic Variables](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables).  
 
 #### Details  
 
@@ -321,7 +321,7 @@ Task sequence action variables specify configuration settings that are used by a
 |_SMSTSDefaultGateways|Specifies the default gateways used by the computer.|  
 
 ###  <a name="BKMK_SetupWindows"></a> Setup Windows and ConfigMgr Task Sequence Action Variables  
- The variable for this action specifies the client installation properties that are used when installing the Configuration Manager client. For more information about the task sequence step associated with these variables, see [Setup Windows and ConfigMgr](../../osd/understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).  
+ The variable for this action specifies the client installation properties that are used when installing the Configuration Manager client. For more information about the task sequence step associated with these variables, see [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).  
 
 #### Details  
 
@@ -330,13 +330,10 @@ Task sequence action variables specify configuration settings that are used by a
 |SMSClientInstallProperties<br /><br /> (input)|Specifies the client installation properties that are used when installing the Configuration Manager client.|  
 
 ### Upgrade Operating System  
- The variable for this action specifies additional command-line options that are not available in the Configuration Manager console are added to Setup for a Windows 10 upgrade. For more information about the task sequence step associated with this variable, see [Upgrade Operating System](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+ The variable for this action specifies additional command-line options that are not available in the Configuration Manager console are added to Setup for a Windows 10 upgrade. For more information about the task sequence step associated with this variable, see [Upgrade Operating System](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
 
 #### Details  
 
 |Action Variable Name<br /><br /> (input)|Description|  
 |----------------------------------------|-----------------|  
 |OSDSetupAdditionalUpgradeOptions<br /><br /> (input)|Specifies the additional command-line options that are added to Setup during a Windows 10 upgrade. The command-line options are not verified. Therefore, check that the option you enter is accurate.<br /><br /> For more information, see [Windows Setup Command-Line Options](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx).|  
-
-## See Also  
- [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)

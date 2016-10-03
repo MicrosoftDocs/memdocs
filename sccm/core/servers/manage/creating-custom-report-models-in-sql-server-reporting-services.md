@@ -413,6 +413,3 @@ Sample report models are included in System Center Configuration Manager, but yo
 
     > [!IMPORTANT]  
     >  After copying the report model file to the Configuration Manager site server, you must exit and restart the Configuration Manager console before you can use the report model in the **Create Report Wizard**.  
-
-## See Also  
- [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md)

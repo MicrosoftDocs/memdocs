@@ -1,5 +1,5 @@
 ---
-title: "Prestart commands for task sequence media in System Center Configuration Manager"
+title: Prestart commands for task sequence media | Configuration Manager
 description: "Create a script to use for the prestart command, distribute the content associated with the prestart command, and configure the prestart command in media."
 ms.custom: na
 ms.date: 05/24/2016
@@ -69,6 +69,3 @@ env("MyCustomVariable") = "varname"
     -   Click **Browse** to select the distribution point that hosts the content for the prestart command.  
 
 7.  Complete the wizard.  
-
-## See Also  
- [Operating system deployment technical reference for System Center Configuration Manager](../Topic/Operating%20system%20deployment%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

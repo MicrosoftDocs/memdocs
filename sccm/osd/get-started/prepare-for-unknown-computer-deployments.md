@@ -1,5 +1,5 @@
 ---
-title: "Prepare for unknown computer deployments in System Center Configuration Manager"
+title: Prepare for unknown computer deployments | Configuration Manager
 description: "Learn how to deploy operating systems to computers that are not managed by Configuration Manager in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 07/27/2016
@@ -27,7 +27,7 @@ Use the information in this topic to deploy operating systems to unknown compute
 
  You can deploy operating systems to unknown computers with the following deployment methods:  
 
--   [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
+-   [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
 
 -   [Use bootable media to deploy an operating system](http://technet.microsoft.com/library/mt627921\(TechNet.10\).aspx)  
 
@@ -66,15 +66,12 @@ Use the information in this topic to deploy operating systems to unknown compute
 
 -   **PXE**  
 
-     Select the **Enable unknown computer support** check box on the **PXE** tab for a distribution point that is enabled for PXE. For more information, see [Configuring distribution points to accept PXE requests](../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint).  
+     Select the **Enable unknown computer support** check box on the **PXE** tab for a distribution point that is enabled for PXE. For more information, see [Configuring distribution points to accept PXE requests](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint).  
 
 -   **Bootable media**  
 
-     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Configuring distribution points to accept PXE requests](../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint) and [Use PXE to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Configuring distribution points to accept PXE requests](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint) and [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 -   **Prestaged media**  
 
-     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Create prestaged media with System Center Configuration Manager](../../osd/deploy-use/create-prestaged-media.md).  
-
-## See Also  
- [Prepare for operating system deployment in System Center Configuration Manager](../../osd/deploy-use/prepare-for-operating-system-deployment.md)
+     Select the **Enable unknown computer support** check box on the **Security** page of the Create Task Sequence Media Wizard. For more information, see [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
