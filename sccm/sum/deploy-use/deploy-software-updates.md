@@ -30,14 +30,13 @@ The software update deployment phase is the process of deploying the software up
 >  You can configure a client on the intranet to download software updates from Microsoft Update if a distribution point is not available.  
 
 > [!NOTE]  
->  Unlike other deployment types, software updates are all downloaded to the client cache regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#configure-the-client-cache-for-configuration-manager-clients).  
+>  Unlike other deployment types, software updates are all downloaded to the client cache regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
 If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
 
-## Choose how to deploy software updates
 There are two main scenarios for deploying software updates: manual deployment and automatic deployment. Typically, you will start by manually deploying software updates to create a baseline for your client computers, and then you will manage software updates on clients by using automatic deployment.  
 
-### <a name="BKMK_ManualDeployment"></a> Manually deploy software updates
+## <a name="BKMK_ManualDeployment"></a> Manually deploy software updates
 You can select software updates in the Configuration Manager console and manually start the deployment process. You typically use this method of deployment to get the client computers up-to-date with required software updates before you create automatic deployment rules that manage ongoing monthly software update deployments, and to deploy out of band software update requirements. The following list provides the general workflow for manual deployment of software updates:  
 
 1. Filter for software updates that use specific requirements. For example, you could provide criteria that retrieves all security or critical software updates that are required on more than 50 client computers.  
@@ -47,7 +46,7 @@ You can select software updates in the Configuration Manager console and manuall
 
 For detailed steps, see [Manually deploy software updates](manually-deploy-software-updates.md).
 
-### Automatically deploy software updates
+## Automatically deploy software updates
 Automatic software updates deployment is configured by using an automatic deployment rule (ADR). This is a common method of deployment for monthly software updates (typically known as "Patch Tuesday") and for managing definition updates. When the rule runs, software updates are removed from the software update group (if using an existing update group), the software updates that meet a specified criteria (for example, all security software updates released in the last month) are added to a software update group, the content files for the software updates are downloaded and copied to distribution points, and the software updates are deployed to clients in the target collection. The following list provides the general workflow to automatically deploy software updates:  
 
 1.  Create an ADR that specifies deployment settings.

@@ -160,4 +160,4 @@ Use the System Center Configuration Manager **Mac OS X (custom)** configuration 
 
 The new configuration item is displayed in the **Configuration Items** node of the **Assets and Compliance** workspace.  
 
-If you now want to add this configuration item to a configuration baseline, see [How to create configuration baselines in System Center Configuration Manager](../../compliance/deploy-use/create-configuration-baselines.md).  
+If you now want to add this configuration item to a configuration baseline, see [Create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).  

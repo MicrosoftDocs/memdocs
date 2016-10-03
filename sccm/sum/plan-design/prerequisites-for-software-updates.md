@@ -69,7 +69,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  Management points transfer information between client computers and the Configuration Manager site. They are required for software updates.  
 
 ### Software update point  
- You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Install and configure a software update point](install-a-software-update-point.md).
+ You must install a software update point on the WSUS server to be able to deploy software updates in Configuration Manager. For more information, see [Install and configure a software update point](../get-started/install-a-software-update-point.md).
 
 ### Distribution points  
  Distribution points are required to store the content for software updates. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
@@ -79,9 +79,9 @@ This topic lists the prerequisites for software updates in System Center Configu
 
  For more information, see the following:  
 
--   The Client Settings for Software Updates section in [Manage settings for software updates](../../sum/get-started/manage-settings-for-software-updates).  
+-   [Client Settings for Software Updates](../../sum/get-started/manage-settings-for-software-updates.md#client-settings-for-software-updates).  
 
--   The  Software Updates section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
+-   [Software Updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
 
 ### Reporting services point  
  The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting in System Center Configuration Manager](../../core/servers/manage/configuring-reporting.md) .  

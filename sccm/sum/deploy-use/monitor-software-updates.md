@@ -15,7 +15,7 @@ ms.technology:ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 
 ---
 # Monitor software updates in System Center Configuration Manager
-System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates. 
+System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
 
 ##  <a name="BKMK_SUAlerts"></a> Alerts for software updates  
  You can configure alerts for software updates to notify administrative users when compliance levels for software update deployments are below the configured percentage. You can configure alerts for software update deployments in the following locations:  
@@ -51,7 +51,7 @@ System Center Configuration Manager provides many ways to help you to monitor so
 3.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
- The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They are organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting in System Center Configuration Manager](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+ The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They are organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 ##  <a name="BKMK_MonitorContent"></a> Monitor content  
  You can monitor content in the Configuration Manager console to review the status for all package types in relation to the associated distribution points. This can include the content validation status for the content in the package, the status of content assigned to a specific distribution point group, the state of content assigned to a distribution point, and the status of optional features for each distribution point (content validation, PXE, and multicast).  

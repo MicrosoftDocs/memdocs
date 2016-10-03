@@ -73,11 +73,8 @@ The deployment state for package and program deployments is not aggregated.
 
 5.  To review information about the applications deployment type, select a deployment, and then click the **Deployment Types** tab in the **Selected Deployment** window.  
 
-    > [!IMPORTANT]  
-    >  The information shown in the **Deployment Status** pane after you click **View Status** is live data from the Configuration Manager database. The information shown in the **Summary** tab and the **Deployment Types** tab is summarized data. If the data that is shown in the **Summary** tab and the **Deployment Types** tab does not match the data that is shown in the **Deployment Status** pane, click **Run Summarization** to update the data in these tabs. You can configure the default application deployment summarization interval as follows:  
-    >   
-    >  -   In the Configuration Manager console, click **Administration**.  
-    > -   In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
-    > -   From the **Sites** list, select the site for which you want to configure the summarization interval, and then in the **Home** tab, in the **Settings** group, click **Status Summarizers**.  
-    > -   In the **Status Summarizers** dialog box, click **Application Deployment Summarizer**, and then click **Edit**.  
-    > -   In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals and then click **OK**.  
+The information shown in the **Deployment Status** pane after you click **View Status** is live data from the Configuration Manager database. The information shown in the **Summary** tab and the **Deployment Types** tab is summarized data. If the data that is shown in the **Summary** tab and the **Deployment Types** tab does not match the data that is shown in the **Deployment Status** pane, click **Run Summarization** to update the data in these tabs. You can configure the default application deployment summarization interval as follows:  
+1. In the Configuration Manager console, click **Administration** > **Site Configuration** > **Sites**.
+2. From the **Sites** list, select the site for which you want to configure the summarization interval, and then in the **Home** tab, in the **Settings** group, click **Status Summarizers**.
+3. In the **Status Summarizers** dialog box, click **Application Deployment Summarizer**, and then click **Edit**.  
+4. In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals and then click **OK**.  

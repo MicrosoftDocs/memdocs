@@ -26,7 +26,7 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 ---
 
 #  <a name="BKMK_SUMSync"></a> Synchronize software updates
- Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. This includes specific products, classifications, and languages. Typically, the software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update. Then, the top-level site will send a synchronization request to other sites. When a site receives the synchronization request from the parent site, the software update point for the site retrieves software updates metadata from its upstream [synchronization source](../plan-design/plan-for-software-updates-synchronization.md#BKMK_SyncSource). For more information about software update synchronization process, see [Software updates synchronization](../understand/software-updates-introduction.md#BKMK_Synchronization).
+ Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. This includes specific products, classifications, and languages. Typically, the software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update. Then, the top-level site will send a synchronization request to other sites. When a site receives the synchronization request from the parent site, the software update point for the site retrieves software updates metadata from its upstream [synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource). For more information about software update synchronization process, see [Software updates synchronization](../understand/software-updates-introduction.md#BKMK_Synchronization).
 
 You configure software update synchronization to run on a schedule in the properties for the software update point at the top-level site. After you configure the synchronization schedule you will typically not change the schedule as part of normal operations. However, you can manually initiate software update synchronization when it is necessary.
 
@@ -76,3 +76,8 @@ After you initiate the synchronization process, you can use the Configuration Ma
   2.  In the **Monitoring** workspace, click **Software Update Point Synchronization Status**.  
 
     The software update points in your Configuration Manager hierarchy are displayed in the results pane. From this view, you can monitor the synchronization status for all software update points. When you want more detailed information about the synchronization process, you can review the wsyncmgr.log file that is located in <*ConfigMgrInstallationPath*>\Logs on each site server.  
+
+## Next steps
+After you synchronize software updates for the first time, or after there are new classifications or products available, you must [configure the new classifications and products](configure-classifications-and-products.md) to synchronize software updates with the new criteria.
+
+After you synchronize software updates with the criteria that you need, [manage settings for software updates](manage-settings-for-software-updates.md).  

@@ -89,15 +89,11 @@ author: robstackmsftmanager: angrobe
 
 9. If the application you are deploying supersedes another application, you can configure the installation deadline when users will receive the new application. Do this by using the setting **Installation Deadline** to upgrade users with superseded application.  
 
-10. On the **User Experience** page of the Deploy Software Wizard, specify information about how users can interact with the application installation.  
-
-     When you deploy applications to Windows Embedded devices that are write-filter enabled, you can specify to install the application on the temporary overlay and commit changes later, or to commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
-
-    > [!NOTE]  
-    >  When you deploy an application to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy applications to Windows Embedded devices, see [Creating Windows Embedded applications with System Center Configuration Manager](../../apps/get-started/creating-windows-embedded-applications.md).  
-    >   
-    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.  
-
+10. On the **User Experience** page of the Deploy Software Wizard, specify information about how users can interact with the application installation.
+	When you deploy applications to Windows Embedded devices that are write-filter enabled, you can specify to install the application on the temporary overlay and commit changes later, or to commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
+   > [!NOTE]  
+   >  When you deploy an application to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy applications to Windows Embedded devices, see [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
+   >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.  
 11. On the **Alerts** page of the Deploy Software Wizard, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure thresholds for reporting alerts and turn off reporting for the duration of the deployment.  
 
 12. (for iOS apps only) - On the **App Configuration Policies** page, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
@@ -108,9 +104,7 @@ author: robstackmsftmanager: angrobe
 
 ## Delete an application deployment  
 
-1.  In the Configuration Manager console, click **Software Library**.  
-
-2.  In the **Software Library** workspace, expand **Application Management**, and then click **Applications**.  
+1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
 
 3.  In the **Applications** list, select the application that for which to delete the deployment.  
 
