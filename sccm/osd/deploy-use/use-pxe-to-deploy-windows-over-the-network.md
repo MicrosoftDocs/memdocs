@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Use PXE to deploy Windows over the network with System Center Configuration Manager

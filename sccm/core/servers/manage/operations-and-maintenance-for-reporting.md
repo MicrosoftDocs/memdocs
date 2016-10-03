@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 caps.latest.revision: 5
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Operations and maintenance for reporting in System Center Configuration Manager

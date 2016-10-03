@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: 12
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Introduction to operating system deployment in System Center Configuration Manager

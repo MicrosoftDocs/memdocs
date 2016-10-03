@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 caps.latest.revision: 5
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Use Software Center to deploy Windows over the network with System Center Configuration Manager

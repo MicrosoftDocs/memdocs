@@ -4,7 +4,7 @@
 title: Automatically deploy software updates | Configuration Manager
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager

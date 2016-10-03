@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Customize boot images with System Center Configuration Manager

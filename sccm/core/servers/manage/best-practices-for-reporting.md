@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Best practices for reporting in System Center Configuration Manager
