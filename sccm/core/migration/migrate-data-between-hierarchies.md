@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Migrate data between hierarchies in System Center Configuration Manager

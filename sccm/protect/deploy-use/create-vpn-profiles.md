@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to Create VPN profiles in System Center Configuration Manager

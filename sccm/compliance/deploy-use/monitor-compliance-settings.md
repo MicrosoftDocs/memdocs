@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Monitor compliance settings in System Center Configuration Manager

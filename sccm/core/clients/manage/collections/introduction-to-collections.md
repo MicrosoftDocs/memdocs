@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 caps.latest.revision: 8
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Introduction to collections in System Center Configuration Manager

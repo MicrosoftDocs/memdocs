@@ -4,7 +4,7 @@
 title: Manage software updates synchronization | Configuration Manager
 description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 
 ms.date: 9/14/2016
 ms.topic: article

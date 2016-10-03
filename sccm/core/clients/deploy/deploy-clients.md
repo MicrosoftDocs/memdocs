@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 2277aa0a-4fe8-49c0-99a6-879e0f0119f6
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Deploy clients in System Center Configuration Manager

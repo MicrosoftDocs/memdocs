@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager

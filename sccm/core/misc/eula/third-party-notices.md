@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
 # Third Party Notices

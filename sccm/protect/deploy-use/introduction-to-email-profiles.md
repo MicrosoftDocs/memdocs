@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: c4e2dc48-91c2-438f-9e1a-947b1125b0e2
 caps.latest.revision: 3
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Introduction to email profiles in System Center Configuration Manager

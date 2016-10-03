@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 caps.latest.revision: 17
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # PKI certificate requirements for System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 116cca2a-0a98-43fd-ac9e-e3daeddefce3
 caps.latest.revision: 5
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Common tasks for managing compliance on devices not running the System Center Configuration Manager client

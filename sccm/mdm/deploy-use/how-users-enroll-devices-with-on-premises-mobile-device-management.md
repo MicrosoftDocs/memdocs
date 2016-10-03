@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager

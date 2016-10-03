@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # How to manage collections in System Center Configuration Manager

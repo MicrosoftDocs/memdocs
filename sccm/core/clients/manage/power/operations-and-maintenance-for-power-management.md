@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 19a291d1-77b1-4604-a6ae-8b6d83000b56
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Operations and maintenance for power management in System Center Configuration Manager

@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5420109-6538-4430-9ca6-db352ee84c2e
 caps.latest.revision: 10
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Create iOS applications with System Center Configuration Manager

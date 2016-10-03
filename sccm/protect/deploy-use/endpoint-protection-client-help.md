@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 caps.latest.revision: 6
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 # Endpoint Protection Client Help
