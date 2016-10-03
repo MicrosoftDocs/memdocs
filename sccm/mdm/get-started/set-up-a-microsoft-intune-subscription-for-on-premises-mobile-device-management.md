@@ -1,5 +1,6 @@
 ---
 title: "Set up Intune subscription | On-premises | System Center Configuration Manager"
+description: "Set up an Intune subscription to track licensing for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
