@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Security and privacy for remote control in System Center Configuration Manager

@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # How to exclude folders from software inventory in System Center Configuration Manager
