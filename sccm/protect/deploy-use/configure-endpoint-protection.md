@@ -1,6 +1,6 @@
 ---
 title: "Configuring Endpoint Protection | System Center Configuration Manager"
-description: "Learn how to manage security and malware on Configuration Manager client computers in System Center Configuration Manager."
+description: "Learn how to manage security and malware on client computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
