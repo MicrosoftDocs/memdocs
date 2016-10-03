@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
@@ -143,7 +143,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 
     -   The client computer must be able to contact a distribution point or a management point to download the supporting files.  
 
-     For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](..\..\..\apps\plan-design\security-and-privacy-for-application-management.md).  
+     For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md).  
 
 -   Automatic client upgrades  
 

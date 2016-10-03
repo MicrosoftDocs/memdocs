@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Security and privacy for certificate profiles in System Center Configuration Manager

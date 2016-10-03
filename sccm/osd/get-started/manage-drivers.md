@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Manage drivers in System Center Configuration Manager

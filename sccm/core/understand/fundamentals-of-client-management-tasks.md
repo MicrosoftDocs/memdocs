@@ -1,5 +1,6 @@
 ---
 title: "Client management Fundamentals | System Center Configuration Manager"
+description: "Learn about tasks that you can run to manage System Center Configuration Manager clients."
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 caps.latest.revision: 4
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager

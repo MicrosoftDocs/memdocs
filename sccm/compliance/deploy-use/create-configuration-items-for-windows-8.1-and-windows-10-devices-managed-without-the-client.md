@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: c262291a-80fe-47f3-a6d0-a605fe8b1f06
 caps.latest.revision: 20
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client

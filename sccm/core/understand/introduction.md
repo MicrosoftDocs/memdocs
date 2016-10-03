@@ -1,5 +1,6 @@
 ---
 title: "Introduction | System Center Configuration Manager"
+description: "Get basic information as an introduction to System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 caps.latest.revision: 16
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Introduction to System Center Configuration Manager
@@ -60,7 +61,7 @@ Configuration Manager also uses:
 -   [Choose a device management solution for System Center Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md)  
 -   [What's changed in System Center Configuration Manager from System Center 2012 Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 -   [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md)  
--   [Evaluate System Center Configuration Manager by building your own lab environment](../../core/get-started/evaluate-with-lab-environment.md)  
+-   [Evaluate System Center Configuration Manager by building your own lab environment](/sccm/core/migration/get-started/set-up-your-lab)
 -   [Find help for using System Center Configuration Manager](../../core/understand/find-help.md)  
 -   [Removed and deprecated features for System Center Configuration Manager](../../core/plan-design/changes/removed-and-deprecated-features.md)  
 
@@ -89,7 +90,7 @@ Configuration Manager also uses:
 
  **The company portal** is an app or website that provides similar functions to the Application Catalog, but for mobile devices that are enrolled by Microsoft Intune  
 
- For more information, see the [Get started with application management in System Center Configuration Manager](../../apps/understand/get-started-with-application-management.md) topic.  
+ For more information, see the [Get started with application management in System Center Configuration Manager](../../apps/understand/introduction -to-application-management.md) topic.  
 
 ###  <a name="BKMK_Client"></a> Configuration Manager Properties (on Windows PCs)  
  When the Configuration Manager client is installed on Windows computers, Configuration Manager is installed in Control Panel. Typically, you do not have to configure this application because the client configuration is performed in the Configuration Manager console. This application helps administrative users and the help desk troubleshoot problems with individual clients.  

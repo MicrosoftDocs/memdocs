@@ -4,7 +4,7 @@
 title: Manually deploy software updates | Configuration Manager
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager

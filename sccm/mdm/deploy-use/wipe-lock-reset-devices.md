@@ -1,5 +1,6 @@
 ---
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
+description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager." 
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
+author: NathBarnms.author: nathbarn
 translation.priority.ht:
   - cs-cz
   - de-de

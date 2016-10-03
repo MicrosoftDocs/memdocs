@@ -4,7 +4,7 @@
 title: Add software updates to an update group | Configuration Manager
 description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 
 ms.date: 9/14/2016
 ms.topic: article

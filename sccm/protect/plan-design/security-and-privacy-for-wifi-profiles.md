@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Security and privacy for Wi-Fi profiles in System Center Configuration Manager

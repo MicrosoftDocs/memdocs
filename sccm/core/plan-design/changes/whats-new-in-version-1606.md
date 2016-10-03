@@ -5,13 +5,14 @@ ms.custom: na
 ms.date: 08/02/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 caps.latest.revision: 40
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # What&#39;s new in version 1606 of System Center Configuration Manager
 Update 1606 for System Center Configuration Manager is an update that is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
@@ -198,7 +199,7 @@ For details, see [How to automatically categorize devices into collections with 
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information. Imported information will set **Ownership** of the devices that enroll as “**Corporate**” in lists of devices. An Intune license is still required for each user that accesses the service.
 
-For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-imei-or-ios-serial-numbers.md).
+For more details, see [Predeclare devices with IMEI or iOS serial numbers](../../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
 
 ### On-premises Health Attestation service communication
 

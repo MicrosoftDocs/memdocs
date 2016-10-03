@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Set up your System Center Configuration Manager lab

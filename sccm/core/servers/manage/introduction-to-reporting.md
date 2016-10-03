@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 caps.latest.revision: 7
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Introduction to reporting in System Center Configuration Manager

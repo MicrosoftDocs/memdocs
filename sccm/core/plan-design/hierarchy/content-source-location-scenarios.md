@@ -5,13 +5,14 @@ ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
 caps.latest.revision: 3
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Content source location scenarios in System Center Configuration Manager
 System Center Configuration Manager supports several settings that combine to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and if they can successfully use a fallback lcoation when a prefered source for content is not avaialble.  

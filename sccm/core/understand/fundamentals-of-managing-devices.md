@@ -1,5 +1,6 @@
 ---
 title: "Fundamentals of managing devices | System Center Configuration Manager"
+description: "Learn how to use System Center Configuration Manager to manage devices."
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Fundamentals of managing devices with System Center Configuration Manager

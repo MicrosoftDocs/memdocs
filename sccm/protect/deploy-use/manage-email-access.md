@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaramanmanager: angrobe
+author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
 # Manage email access in System Center Configuration Manager

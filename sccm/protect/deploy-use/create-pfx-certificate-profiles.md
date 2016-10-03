@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 0185ab18-663d-468a-ba54-4f3f232fd4d2
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to create PFX certificate profiles in System Center Configuration Manager

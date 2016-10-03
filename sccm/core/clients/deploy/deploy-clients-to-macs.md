@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 caps.latest.revision: 12
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # How to deploy clients to Macs in System Center Configuration Manager
@@ -50,7 +50,7 @@ Client installation and management for Mac computers in System Center Configurat
 ##  <a name="InstallSteps"></a> Steps to install and configure the client for Macs  
 
 > [!IMPORTANT]  
->  Before you perform these steps, make sure that your Mac computer meets the prerequisites. For more information, see [supported operating systems for Macs](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
+>  Before you perform these steps, make sure that your Mac computer meets the prerequisites. For more information, see [Supported operating systems for Macs](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
 ### Step 1: Deploy a web server certificate to site system servers  
  These site systems might already have this certificate for other Configuration Manager clients. If not, deploy a web server certificate to the following computers that hold the following site system roles:  
@@ -241,7 +241,7 @@ Client installation and management for Mac computers in System Center Configurat
 
 -   **Hardware inventory**: Enable and configure this client setting if you want to collect hardware inventory from Mac and Windows client computers. For more information, see [How to extend hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
--   **Compliance settings**: Enable and configure this client setting if you want to evaluate and remediate settings on Mac and Windows client computers. For more information, see [Planning and configuring compliance settings in Configuration Manager](assetId:///9ea20b01-676a-4cc2-b328-0098a41b202e).  
+-   **Compliance settings**: Enable and configure this client setting if you want to evaluate and remediate settings on Mac and Windows client computers. For more information, see [Plan for and configure compliance settings](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
 > [!NOTE]  
 >  For more information about Configuration Manager client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  

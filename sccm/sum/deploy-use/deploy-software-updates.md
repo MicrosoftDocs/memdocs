@@ -4,7 +4,7 @@
 title: Deploy software updates | Configuration Manager
 description: "Choose software updates in the Configuration Manager console to manually start the deployment process or automatically deploy updates."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager

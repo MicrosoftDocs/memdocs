@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Introduction to Asset Intelligence in System Center Configuration Manager

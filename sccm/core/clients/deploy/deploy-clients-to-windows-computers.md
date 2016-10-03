@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # How to deploy clients to Windows computers in System Center Configuration Manager
@@ -129,7 +129,7 @@ You can use different client deployment methods to install the System Center Con
  If a computer has the Configuration Manager client installed, Configuration Manager provides the client with the software update point server name and port from which to obtain software updates. This information is included in the client policy.  
 
 > [!IMPORTANT]  
->  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](../../sum/get-started/install-a-software-update-point.md).  
+>  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](../../../sum/get-started/install-a-software-update-point.md).  
 
  If a computer does not have the Configuration Manager client installed, you must configure and assign a Group Policy Object (GPO) in Active Directory Domain Services to specify the software update point server name from which the computer will obtain software updates.  
 
@@ -157,7 +157,7 @@ You can use different client deployment methods to install the System Center Con
     -   If the Configuration Manager site system is not configured to use a fully qualified domain name (FQDN), specify the server name by using a short name format.  
 
     > [!NOTE]  
-    >  To determine the port number that is being used by the software update point, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../../sum/plan-design/determine-wsus-port-settings.md).  
+    >  To determine the port number that is being used by the software update point, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
      Example: **http://server1.contoso.com:8530**  
 

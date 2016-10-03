@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 # Troubleshooting Windows Defender or Endpoint Protection client

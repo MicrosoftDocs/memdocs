@@ -5,13 +5,14 @@ ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: 4
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Manage accounts to access content in System Center Configuration Manager
 Before deploying content in System Center Configuration Manager, take time to consider how clients will access that content from distribution points.  

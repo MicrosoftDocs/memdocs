@@ -4,11 +4,11 @@
 title: Manage software updates | Configuration Manager
 description: "Follow these procedures to complete the synchronization, compliance assessment, deployment, and monitoring processes for software updates."
 keywords:
-author: dougeby
+author: dougebyms.author: dougeby
 manager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 70f66926-c067-404d-94f1-3ad1309566a6
