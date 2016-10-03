@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 15f0fd50-e196-44e5-b435-234d7ff6a5cd
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 
