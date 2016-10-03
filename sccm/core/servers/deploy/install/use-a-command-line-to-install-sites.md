@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 caps.latest.revision: 3
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Use a command line to install System Center Configuration Manager sites
  If you choose, you can run System Center Configuration Manager Setup from a command prompt for a variety of site installation.
