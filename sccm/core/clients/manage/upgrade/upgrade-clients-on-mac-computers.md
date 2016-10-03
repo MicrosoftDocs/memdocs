@@ -19,7 +19,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 Follow the high-level steps described below  to upgrade the client for Mac computers by using a System Center Configuration Manager application. Alternatively, you can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer and then instruct users to run the installation manually.  
 
 > [!NOTE]  
->  Before you perform these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
+>  Before you perform these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../../Splan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
 
 ## Step 1: Download the latest Mac client installation file from the Microsoft Download Center  
  The Mac client for Configuration Manager is not supplied on the Configuration Manager installation media and must be downloaded from the Microsoft Download Center. The Mac client installation files are contained in a Windows Installer file named ConfigmgrMacClient.msi.  

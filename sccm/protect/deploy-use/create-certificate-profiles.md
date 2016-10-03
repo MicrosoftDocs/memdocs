@@ -45,7 +45,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
         -   **Trusted CA certificate**: Select this certificate profile type if you want to deploy a trusted root certification authority (CA) or intermediate CA certificate to form a certificate chain of trust when the user or device must authenticate another device. For example, the device might be a Remote Authentication Dial-In User Service (RADIUS) server or a virtual private network (VPN) server. You must also configure a trusted CA certificate profile before you can create a SCEP certificate profile. In this case, the trusted CA certificate must be the trusted root certificate for the CA that will issue the certificate to the user or device.  
   
         -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
-        -   
+         
         -   **Personal Information Exchange PKCS #12 (PFX) settings import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
   
  
