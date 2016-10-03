@@ -1,5 +1,5 @@
 ---
-title: "Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager"
+title: "Set up device enrollment | On-premises MDM | System Center Configuration Manager"
 ms.custom: na
 ms.date: 03/10/2016
 ms.prod: configuration-manager
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 caps.latest.revision: 10
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
@@ -78,7 +78,3 @@ Enabling users to enroll their devices for System Center Configuration Manager O
 6.  Click **Trusted Root Certification Authorities**, click **OK**, and then click **Next**.  
 
 7.  Click **Finish**.  
-
-## See Also  
- [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
-

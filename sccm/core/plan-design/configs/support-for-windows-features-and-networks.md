@@ -1,5 +1,6 @@
 ---
 title: "Support for Windows features | System Center Configuration Manager"
+description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Support for Windows features and networks in System Center Configuration Manager

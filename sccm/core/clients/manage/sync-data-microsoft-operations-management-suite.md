@@ -1,5 +1,6 @@
 ---
-title: "Sync data to Microsoft Operations Management Suite | System Center Configuration Manager"
+title: "Sync data | Microsoft Operations Management Suite | System Center Configuration Manager"
+description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
 ms.date: 08/01/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 ---
 # Sync data from Configuration Manager to the Microsoft Operations Management Suite
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS. This makes data from your Configuration Manager deployment visible in OMS.
@@ -42,4 +43,3 @@ After you have linked Configuration Manager to OMS, you can add or remove collec
 2.  Within this page there are two tabs:
   * The **Azure Active Directory** tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to **Verify** your **Client secret key** if it has expired.
   * The **OMS Connection Properties** tab shows your **Azure subscription**, **Azure resource group**, **Operations Management Suite Workspace**, and a list of **Device collections that Operations Management Suite can get data for**. Use the **Add** and **Remove** buttons to modify which collections are allowed.
-

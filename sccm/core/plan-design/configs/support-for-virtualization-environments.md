@@ -1,5 +1,6 @@
 ---
 title: "Support for Virtualization | System Center Configuration Manager"
+description: "Get requirements for installing System Center Configuration Manager client and site system roles in a virtualization environment."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Support for Virtualization Environments for System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "Use PXE to deploy Windows over the network with System Center Configuration Manager"
+description: "Use PXE-initiated operating system deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer."
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Use PXE to deploy Windows over the network with System Center Configuration Manager
@@ -95,4 +96,3 @@ When a client boots with PXE, Configuration Manager provides the client with a b
 
 ## See Also  
  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
-

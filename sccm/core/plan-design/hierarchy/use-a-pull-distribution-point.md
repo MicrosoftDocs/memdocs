@@ -1,5 +1,6 @@
 ---
 title: "Pull-distribution point | System Center Configuration Manager"
+description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
 ms.custom: na
 ms.date: 2016-07-22
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 caps.latest.revision: 9
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 

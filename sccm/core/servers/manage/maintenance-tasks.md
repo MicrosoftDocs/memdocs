@@ -1,5 +1,6 @@
 ---
 title: "Maintenance tasks | System Center Configuration Manager"
+description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies, and when to perform them."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Maintenance tasks for System Center Configuration Manager

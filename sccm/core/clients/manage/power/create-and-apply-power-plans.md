@@ -1,5 +1,6 @@
 ---
 title: "Create and apply power plans | System Center Configuration Manager"
+description: "Create and apply power plans in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # How to create and apply power plans in System Center Configuration Manager
@@ -102,4 +103,3 @@ Power management in System Center Configuration Manager enables you to apply pow
 |**Allow standby state when sleeping action**|Selecting the **On** or **Off** value enables the computer to be on standby, which still consumes some power, but enables the computer to wake faster. If this setting is set to **Off**, the computer can only hibernate or turn off.|  
 |**Required idleness to sleep (%)**|Specifies the percentage of idle time on the computer processor time required for the computer to enter sleep. For computers running Windows 7, this value is always set to **0**.|  
 |**Enable Windows wake up timer for desktop computers**|Selecting the **Enable** or **Disable** value can enable the built-in Windows timer to be used by power management to wake a desktop computer. When a desktop computer is woken by using the Windows wake up timer, it will remain awake for 10 minutes by default to allow time for the computer to install any updates or to receive policy.<br /><br /> Wakeup timers are not supported on portable computers to prevent scenarios in which they might wake when they are not plugged in.|  
-

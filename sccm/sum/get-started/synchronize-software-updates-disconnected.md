@@ -2,13 +2,12 @@
 # required metadata
 
 title: Synchronize software updates from a disconnected software update point | Configuration Manager
-description:
+description: "Follow these procedures to verify that software updates synchronization was successful on the export server, export updates, and import updates metadata."
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
 ms.date: 9/15/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
@@ -39,7 +38,7 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 
  Before you start the export process, verify that software updates synchronization is completed on the selected export server to ensure that the most recent software updates metadata is synchronized. To verify that software updates synchronization has completed successfully, use the following procedure.  
 
-##### To verify that software updates synchronization has completed successfully on the export server  
+#### To verify that software updates synchronization has completed successfully on the export server  
 
 1.  Open the WSUS Administration console and connect to the WSUS database on the export server.  
 
@@ -55,7 +54,7 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 
  Use the following procedure to copy the local license terms metadata to the disconnected software update point.  
 
-###### To copy local files from the export server to the disconnected software update point server  
+#### To copy local files from the export server to the disconnected software update point server  
 
 1.  On the export server, navigate to the folder where software updates and the license terms for software updates are stored. By default, the WSUS server stores the files at <*WSUSInstallationDrive*>\WSUS\WSUSContent\\, where *WSUSInstallationDrive* is the drive on which WSUS is installed.  
 
@@ -63,7 +62,7 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 
  Use the following procedure to export the software updates metadata from the WSUS database on the export server.  
 
-###### To export software updates metadata from the WSUS database on the export server  
+#### To export software updates metadata from the WSUS database on the export server  
 
 1.  At the command prompt on the export server, navigate to the folder that contains WSUSutil.exe. By default, the tool is located at %*ProgramFiles*%\Update Services\Tools. For example, if the tool is located in the default location, type **cd %ProgramFiles%\Update Services\Tools**.  
 
@@ -91,7 +90,7 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 > [!IMPORTANT]  
 >  Never import any exported data from a source that you do not trust. If you import content from a source that you do not trust, it might compromise the security of your WSUS server.  
 
-###### To import metadata to the database of the import server  
+#### To import metadata to the database of the import server  
 
 1.  At the command prompt on the import WSUS server, navigate to the folder that contains WSUSutil.exe. By default, the tool is located at %*ProgramFiles*%\Update Services\Tools.  
 
@@ -104,3 +103,8 @@ ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
      **wsusutil.exe import export.cab import.log**  
 
      The format can be summarized as follows: WSUSutil.exe is followed by the import command, the name of package file (.cab) that is created during the export operation, the path to the package file if it is in a different folder, and the name of a log file. WSUSutil.exe imports the metadata from the export server and creates a log file of the operation.  
+
+## Next steps
+After you synchronize software updates for the first time, or after there are new classifications or products available, you must [configure the new classifications and products](configure-classifications-and-products.md) to synchronize software updates with the new criteria.
+
+After you syncrhonize software updates with the criteria that you need, [manage settings for software updates](manage-settings-for-software-updates.md).  

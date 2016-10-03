@@ -1,5 +1,6 @@
 ---
 title: "Monitor client deployment status | System Center Configuration Manager"
+description: "Monitor client deployment status in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to monitor client deployment status in System Center Configuration Manager
@@ -55,4 +56,3 @@ Deploying clients across your site takes time and some installations are not suc
  To monitor the status of deployed clients, see [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)  
 
  You can use Configuration Manager reports to find out more information about the status of clients in your site. For more information about how to run reports, see [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md).  
-

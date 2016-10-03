@@ -1,5 +1,6 @@
 ---
 title: "Recommended hardware | System Center Configuration Manager"
+description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 caps.latest.revision: 26
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Recommended hardware for System Center Configuration Manager

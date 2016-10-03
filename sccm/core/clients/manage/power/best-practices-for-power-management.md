@@ -1,5 +1,6 @@
 ---
 title: "Best practices for power management | System Center Configuration Manager"
+description: "Get best practices for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Best practices for power management in System Center Configuration Manager
@@ -72,4 +73,3 @@ Use the following best practices for power management in System Center Configura
  Power management information used by monthly reports is retained in the Configuration Manager site database for 13 months.  
 
  When you run reports during the monitoring and planning and compliance phases of power management, save or export the results from any reports for which you want to retain the data for later comparison in case they are later removed by Configuration Manager.  
-

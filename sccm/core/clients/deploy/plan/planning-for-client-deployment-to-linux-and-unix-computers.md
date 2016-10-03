@@ -1,5 +1,6 @@
 ---
 title: "Planning client deployment to Linux and UNIX computers | System Center Configuration Manager"
+description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager
@@ -300,4 +301,3 @@ You can install the System Center Configuration Manager client on computers that
 
 > [!NOTE]  
 >  The command line option **ignoreSHA256validation** is ignored on computers that run a version of Linux and UNIX that released with versions of OpenSSL that support SHA-256.  
-

@@ -1,5 +1,6 @@
 ---
 title: "Plan the SMS Provider | System Center Configuration Manager"
+description: "Learn about how the SMS Provider helps you manage System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Plan for the SMS Provider for System Center Configuration Manager

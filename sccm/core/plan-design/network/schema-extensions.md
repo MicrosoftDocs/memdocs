@@ -1,5 +1,6 @@
 ---
 title: "Schema extensions | System Center Configuration Manager"
+description: "Extend the Active Directory schema to support System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex
 
 ---

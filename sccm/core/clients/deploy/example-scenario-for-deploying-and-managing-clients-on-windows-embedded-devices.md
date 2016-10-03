@@ -1,5 +1,6 @@
 ---
 title: "Example scenario - deploy Windows Embedded clients | System Center Configuration Manager"
+description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
@@ -169,4 +170,3 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
     -   The interactive presentation software is installed and runs automatically, ready for visitors.  
 
 14. After this initial setup, any restarts that might be required for updates occur only when the visitor center is closed.  
-

@@ -1,5 +1,6 @@
 ---
 title: "The CD.Latest folder | System Center Configuration Manager"
+description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # The CD.Latest folder for System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic data for 1606 | System Center Configuration Manager"
+description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1606 collects."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

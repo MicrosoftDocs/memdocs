@@ -1,5 +1,6 @@
 ---
 title: "Create stand-alone media with System Center Configuration Manager"
+description: "Use stand-alone media to deploy the operating system on a computer without a connection to a Configuration Manager site or the network."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 caps.latest.revision: 21
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Create stand-alone media with System Center Configuration Manager
@@ -124,4 +125,3 @@ Stand-alone media in Configuration Manager contains everything that is required 
 
 ## See Also  
  [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
-

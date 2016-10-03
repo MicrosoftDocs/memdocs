@@ -1,17 +1,18 @@
 ---
-title: "Manage software updates in System Center Configuration Manager"
-ms.custom: na
-ms.date: 07/27/2016
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
+# required metadata
+
+title: Manage software updates | Configuration Manager
+description: "Follow these procedures to complete the synchronization, compliance assessment, deployment, and monitoring processes for software updates."
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 9/14/2016
 ms.topic: article
+ms.prod:
+ms.service:
+ms.technology:
 ms.assetid: 70f66926-c067-404d-94f1-3ad1309566a6
-caps.latest.revision: 17
-author: Dougeby
+
 
 ---
 # Manage software updates in System Center Configuration Manager
@@ -914,4 +915,3 @@ You can manually run the WSUS cleanup task from in Software Update Point Compone
 
 ## See Also  
  [Deploy and manage software updates in System Center Configuration Manager](../Topic/Deploy%20and%20manage%20software%20updates%20in%20System%20Center%20Configuration%20Manager.md)
-

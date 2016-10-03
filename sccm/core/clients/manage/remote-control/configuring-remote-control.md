@@ -1,5 +1,6 @@
 ---
-title: "Configuring remote control in System Center Configuration Manager"
+title: "Configure remote control | System Center Configuration Manager"
+description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Configuring remote control in System Center Configuration Manager
@@ -44,4 +45,3 @@ Before you can use remote control in System Center Configuration Manager, you mu
 7.  Click **OK** to close the **Default Settings** dialog box.  
 
  Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
-

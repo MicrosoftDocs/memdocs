@@ -1,5 +1,6 @@
 ---
-title: "Prerequisites for reporting | System Center Configuration Manager"
+title: "Prerequisites for reporting | Configuration Manager"
+description: "Understand various dependencies that impact your use of reporting in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prerequisites for reporting in System Center Configuration Manager
@@ -50,5 +51,5 @@ Reporting in System Center Configuration Manager has external dependencies and d
 |SQL Server 2012 with SP1 and no minimum cumulative update<br /><br /> -   Standard<br />-   Enterprise|?|  
 |SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|?|  
 
-## See Also  
- [Planning for reporting in System Center Configuration Manager](../../../core/servers/manage/planning-for-reporting.md)
+## Next steps
+[Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md)

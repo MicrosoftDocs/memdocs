@@ -1,5 +1,6 @@
 ---
 title: "Deploy clients | System Center Configuration Manager"
+description: "Learn how to deploy clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 2277aa0a-4fe8-49c0-99a6-879e0f0119f6
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Deploy clients in System Center Configuration Manager
@@ -32,4 +33,3 @@ The most common and robust way to manage computers and servers in System Center 
 -   [Client deployment tasks for System Center Configuration Manager](../../../core/clients/deploy/client-deployment-tasks.md)  
 
      Learn about the detailed procedures that deploy the Configuration Manager clients based on the target computer platforms you want to manage.  
-

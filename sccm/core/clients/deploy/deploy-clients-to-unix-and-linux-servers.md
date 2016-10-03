@@ -1,5 +1,6 @@
 ---
 title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
+description: "Learn how to deploy a client to a UNIX or Linux server in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to deploy clients to UNIX and Linux servers in System Center Configuration Manager
@@ -28,11 +29,10 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  When you install a client, you can use the same process and command line properties regardless of the client installation package you use.  
 
- For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_LinuxOS) in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+ For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
 
 ##  <a name="BKMK_InstallLnUClient"></a> Install the Client on Linux and UNIX Servers  
- To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.  
-
+ To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.
  Each client installation package contains all the necessary files to complete the client installation and unlike Windows-based computers, does not download additional files from a management point or other source location.  
 
  After you install the Configuration Manager client for Linux and UNIX, you do not need to reboot the computer. As soon as the software installation is complete, the client is operational. If you reboot the computer, the Configuration Manager client restarts automatically.  
@@ -228,4 +228,3 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
  For more information about how clients locate management points, see [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
-

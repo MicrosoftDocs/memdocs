@@ -1,5 +1,6 @@
 ---
 title: "Service Connection Tool | System Center Configuration Manager"
+description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 caps.latest.revision: 11
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Use the Service Connection Tool for System Center Configuration Manager

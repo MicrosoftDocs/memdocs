@@ -1,5 +1,6 @@
 ---
 title: "Communications between endpoints | System Center Configuration Manager"
+description: "Learn about how System Center Configuration Manager site systems and components communicate across a network."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 caps.latest.revision: 10
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Communications between endpoints in System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "Reference for maintenance tasks | System Center Configuration Manager"
+description: "Read details for each of the System Center Configuration Manager site maintenance tasks, and whether these tasks are enabled by default."
 ms.custom: na
 ms.date: 07/29/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Reference for maintenance tasks for System Center Configuration Manager

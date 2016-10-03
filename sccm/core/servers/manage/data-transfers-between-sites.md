@@ -1,5 +1,6 @@
 ---
 title: "Data transfers | System Center Configuration Manager"
+description: "Learn how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network."
 ms.custom: na
 ms.date: 04/21/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 caps.latest.revision: 12
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Data transfers between sites in System Center Configuration Manager

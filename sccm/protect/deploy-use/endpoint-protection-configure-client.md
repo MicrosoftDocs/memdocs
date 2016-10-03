@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarn
+author: NathBarnmanager: angrobe
 
 ---
 
@@ -19,7 +19,7 @@ author: NathBarn
 This procedure configures custom client settings for Endpoint Protection which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]
->  Do not configure the default Endpoint Protection client settings unless you are sure that you want them applied to all computers in your hierarchy.
+>  Only configure the default Endpoint Protection client settings if you are sure that you want them applied to all computers in your hierarchy.
 
 ## To enable Endpoint Protection and configure custom client settings
 
@@ -52,9 +52,9 @@ Use the procedures in this topic to help you install and configure the Endpoint 
 ### Prerequisites for Installing the Endpoint Protection Client on the Reference Computer
 The following list contains the required prerequisites for installing the Endpoint Protection client software on a reference computer.
 
--   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center 2012 Configuration Manager installation folder on the site server.
+-   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server.
 
--   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](antimalware-policies-for-endpoint-protection.md).
+-   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
    > [!NOTE]
    >  The **Default Client Antimalware Policy** cannot be exported.
@@ -66,7 +66,7 @@ You can install the Endpoint Protection client locally on the reference computer
 
 ## To install the Endpoint Protection client from a command prompt
 
-1.  Copy **scepinstall.exe** from the **Client** folder on the System Center 2012 Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.
+1.  Copy **scepinstall.exe** from the **Client** folder on the System Center Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.
 
 2.  Open a command prompt with administrator privileges, navigate to the folder where **scepinstall.exe** is located, and then run the following command, adding any additional command line properties that you require:
 
@@ -162,4 +162,3 @@ For more information about operating system deployment in Configuration Manager,
 After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).
 
 When an image that contains the Endpoint Protection client software is deployed, the Endpoint Protection client will automatically report information to the Configuration Manager site to which the computer is assigned, and policy applicable to the client computer is downloaded and applied.
-

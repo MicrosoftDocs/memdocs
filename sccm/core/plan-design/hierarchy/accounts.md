@@ -1,5 +1,6 @@
 ---
 title: "Accounts | System Center Configuration Manager"
+description: "Identify and manage the Windows groups and the accounts in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Accounts used in System Center Configuration Manager

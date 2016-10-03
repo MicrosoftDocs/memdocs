@@ -1,5 +1,6 @@
 ---
 title: "PKI certificate requirements | System Center Configuration Manager"
+description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/04/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 caps.latest.revision: 17
-author: Nbigman
+author: Nbigmanmanager: angrobe
 
 ---
 # PKI certificate requirements for System Center Configuration Manager

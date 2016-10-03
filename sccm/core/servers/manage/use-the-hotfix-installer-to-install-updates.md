@@ -1,5 +1,6 @@
 ---
 title: "Hotfix Installer | System Center Configuration Manager"
+description: "Find out when and how to install updates via the Hotfix Installer for Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 caps.latest.revision: 9
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Use the Hotfix Installer to install updates for System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "UNIX/Linux client component services and commands | System Center Configuration Manager"
+description: "Learn about component services and commands on Linux and UNIX clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Linux and UNIX clients component services and commands for System Center Configuration Manager
@@ -33,4 +34,3 @@ author: Mtillman
 |Solaris 11|Start:<br /><br /> **svcadm enable -s svc:/application/management/omiserver**<br /><br /> **svcadm enable -s svc:/application/management/ccmexecd**<br /><br /> Stop:<br /><br /> **svcadm disable -s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable -s svc:/application/management/omiserver**|  
 |AIX|Start:<br /><br /> **startsrc -s omiserver**<br /><br /> **startsrc -s ccmexec**<br /><br /> Stop:<br /><br /> **stopsrc -s ccmexec**<br /><br /> **stopsrc -s omiserver**|  
 |HP-UX|Start: **/sbin/init.d/ccmexecd start**<br /><br /> Stop: **/sbin/init.d/ccmexecd stop**<br /><br /> Restart: **/sbin/init.d/ccmexecd restart**|  
-

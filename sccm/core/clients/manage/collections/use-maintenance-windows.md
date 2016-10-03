@@ -1,5 +1,6 @@
 ---
 title: "Use maintenance windows | System Center Configuration Manager"
+description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to use maintenance windows in System Center Configuration Manager
@@ -67,4 +68,3 @@ Maintenance windows in System Center Configuration Manager provide a means by wh
 8.  Click **OK** to close the **&lt;new\> Schedule** dialog box and create the new maintenance window.  
 
 9. Close the **&lt;collection name\> Properties** dialog box.  
-

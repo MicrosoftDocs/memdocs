@@ -1,5 +1,6 @@
 ---
 title: "Fundamentals of sites and hierarchies | System Center Configuration Manager"
+description: "Get basic information about System Center Configuration Manager sites and hierarchies."
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Fundamentals of sites and hierarchies for System Center Configuration Manager

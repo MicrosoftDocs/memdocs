@@ -1,5 +1,6 @@
 ---
 title: "Client settings | System Center Configuration Manager"
+description: "Select client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/25/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # About client settings in System Center Configuration Manager
 All client settings in System Center Configuration Manager are managed in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. A set of default settings is supplied with Configuration Manager. When you modify the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign these to collections. For information about how to configure client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
@@ -627,4 +628,3 @@ All client settings in System Center Configuration Manager are managed in the Co
 -   **Allow user to define their primary devices**  
 
      Specify whether users are allowed to identify their own primary devices from the Application Catalog, **My Devices** tab.  
-

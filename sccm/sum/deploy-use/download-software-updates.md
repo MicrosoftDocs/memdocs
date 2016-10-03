@@ -2,13 +2,12 @@
 # required metadata
 
 title: Download software updates | Configuration Manager
-description:
+description: "Use the Download Software Updates Wizard to download software updates from the Software Library workspace."
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
@@ -28,18 +27,17 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
 
 # Download software updates  
- There are several methods available to you for downloading software updates in Configuration Manager. When you create an automatic deployment rule (ADR) or manually deploy software updates, the software updates are downloaded to the content library on the site server. Then, the software updates are copied to the content library on the distribution points that are associated with the configured deployment package. If you want to download the software updates before you deploy them, you can use the Download Updates Wizard. Doing this will enable you to verify that the software updates are available on distribution points before you deploy the software updates to client computers.  
+There are several methods available to you for downloading software updates in Configuration Manager. When you create an automatic deployment rule (ADR) or manually deploy software updates, the software updates are downloaded to the content library on the site server. Then, the software updates are copied to the content library on the distribution points that are associated with the configured deployment package. If you want to download the software updates before you deploy them, you can use the Download Updates Wizard. Doing this will enable you to verify that the software updates are available on distribution points before you deploy the software updates to client computers.  
 
 > [!NOTE]  
 >  For information about monitoring content status, see the [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus).  
 
- Use the following procedure to download software updates by using the Download Software Updates Wizard.  
+Use the following procedure to download software updates by using the Download Software Updates Wizard.  
 
-##### To download software updates  
-
-1.  In the Configuration Manager console, click **Software Library**.  
-
-2.  In the Software Library workspace, click **Software Updates**.  
+#### To download software updates  
+[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+<!---
+1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 
 3.  Choose the software update to download by using one of the following methods:  
 
@@ -55,7 +53,7 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
          The **Download Software Updates Wizard** opens.  
 
-4.  On the Deployment Package page, configure the following settings:  
+4.  On the **Deployment Package** page, configure the following settings:  
 
     1.  **Select deployment package**: Choose this setting to select an existing deployment package for the software updates that are in the deployment.  
 
@@ -81,12 +79,12 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
      Click **Next**.  
 
-5.  On the Distribution Points page, specify the distribution points or distribution point groups that will host the software update files, and then click **Next**. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
+5.  On the **Distribution Points** page, specify the distribution points or distribution point groups that will host the software update files, and then click **Next**. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).  
 
     > [!NOTE]  
     >  The Distribution Points page is available only when you create a new software update deployment package.  
 
-6.  On the Distribution Settings page, specify the following settings:  
+6.  On the **Distribution Settings** page, specify the following settings:  
 
     -   **Distribution priority**: Use this setting to specify the distribution priority for the deployment package. The distribution priority applies when the deployment package is sent to distribution points at child sites. Deployment packages are sent in priority order: **High**, **Medium**, or **Low**. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority. By default, packages are sent using **Medium** priority.  
 
@@ -104,7 +102,7 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
      Click **Next**.  
 
-7.  On the Download Location page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
+7.  On the **Download Location** page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
 
     -   **Download software updates from the Internet**: Select this setting to download the software updates from the location on the Internet. This is the default setting.  
 
@@ -115,9 +113,8 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
      Click **Next**.  
 
-8.  On the Language Selection page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
+8.  On the **Language Selection** page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
 
-9. On the Summary page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
+9. On the **Summary** page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
 
-10. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**.  
-
+10. On the **Completion** page, verify that the software updates were successfully downloaded, and then click **Close**.  --->

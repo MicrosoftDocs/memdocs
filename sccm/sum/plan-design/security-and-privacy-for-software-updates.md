@@ -1,23 +1,18 @@
 ---
-<<<<<<< HEAD
 # required metadata
 
 title: Security and privacy for software updates | Configuration Manager
-=======
-title: "Security and privacy for software updates in System Center Configuration Manager"
->>>>>>> c44d17c87ba6af4ff1375d49ee170e2cd39b78ca
-ms.custom: na
-ms.date: 12/08/2015
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - configmgr-sum
-ms.tgt_pltfrm: na
+description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
+keywords:
+author: dougeby
+manager: angrobe
+ms.date: 09/27/2016
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology:
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
-caps.latest.revision: 6
-author: Dougeby
+
 
 ---
 # Security and privacy for software updates in System Center Configuration Manager
@@ -51,15 +46,15 @@ This topic contains security and privacy information for software updates in Sys
 
      By default, Configuration Manager does not check the certificate revocation list (CRL) to verify the signature on software updates before they are deployed to computers. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.  
 
-     For more information about how to enable CRL checking for software updates, see [How to enable CRL checking for software updates in System Center Configuration Manager](../../sum/plan-design/enable-crl-checking-for-software-updates.md).  
+     For more information about how to enable CRL checking for software updates, see [How to enable CRL checking for software updates in System Center Configuration Manager](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates).  
 
 -   Configure WSUS to use a custom website.  
 
      When you install WSUS on the software update point, you have the option to use the existing IIS Default Web site or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website instead of sharing the same web site that is used by the other Configuration Manager site systems or other applications.  
 
-     For more information, see [Configure WSUS to use a custom web site](../../sum/plan-design/plan-for-software-updates.md#BKMK_CustomWebSite).  
+     For more information, see [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for Software Updates  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Privacy information for software updates  
  Software updates scans your client computers to determine which software updates you require, and then sends that information back to the site database. During the software updates process, Configuration Manager might transmit information between clients and servers that identify the computer and logon accounts.  
 
  Configuration Manager maintains state information about the software deployment process. State information is not encrypted during transmission or storage. State information is stored in the Configuration Manager database and it is deleted by the database maintenance tasks. No state information is sent to Microsoft.  

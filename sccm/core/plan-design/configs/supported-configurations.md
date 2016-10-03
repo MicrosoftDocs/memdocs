@@ -1,5 +1,6 @@
 ---
 title: "Supported configurations | System Center Configuration Manager"
+description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional System Center Configuration Manager deployment."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Supported configurations for System Center Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "Hierarchy Maintenance Tool | System Center Configuration Manager"
+description: "Understand what the Hierarchy Maintenance Tool does, and why you might use it. Includes command-line options reference."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager

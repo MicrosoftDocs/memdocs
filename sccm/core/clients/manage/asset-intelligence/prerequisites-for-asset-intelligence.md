@@ -1,5 +1,6 @@
 ---
 title: "Asset Intelligence Prerequisites | System Center Configuration Manager"
+description: "Get the prerequisites for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Prerequisites for Asset Intelligence in System Center Configuration Manager
@@ -38,4 +39,3 @@ Asset Intelligence in System Center Configuration Manager has external dependenc
 |Software Metering Client Agent Dependencies|A number of Asset Intelligence software reports depend on the Software Metering Client Agent for data. For information about enabling the Software Metering Client Agent, see [Monitor app usage with software metering in System Center Configuration Manager](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).<br /><br /> The following Asset Intelligence reports depend on the Software Metering Client Agent to provide data:<br /><br /> -   Software 07A - Recently Used Executables by Number of Computers<br />-   Software 07B - Computers that Recently Used a Specified Executable<br />-   Software 07C - Recently Used Executables on a Specific Computer<br />-   Software 08A - Recently Used Executables by Number of Users<br />-   Software 08B - Users that Recently Used a Specified Executable<br />-   Software 08C - Recently Used Executables by a Specified User|  
 |Asset Intelligence Hardware Inventory Reporting Class Prerequisites|Asset Intelligence reports in Configuration Manager depend on specific hardware inventory reporting classes. Until the hardware inventory reporting classes are enabled and clients have reported hardware inventory based on these classes, the associated Asset Intelligence reports do not contain any data. You can enable the following hardware inventory reporting classes to support Asset Intelligence reporting requirements:<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> By default, the **SMS_SystemConsoleUsage** and **SMS_SystemConsoleUser** Asset Intelligence hardware inventory reporting classes are enabled.<br /><br /> You can edit the Asset Intelligence hardware inventory reporting classes in the Configuration Manager console, in the **Assets and Compliance** workspace, when you click the **Asset Intelligence** node. For more information, see the [Enable Asset Intelligence hardware inventory reporting classes](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence) section in the [Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md) topic.|  
 |Reporting services point|The reporting services point site system role must be installed before software updates reports can be displayed. For more information about creating a reporting services point, see [Configuring Reporting in Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=232661).|  
-

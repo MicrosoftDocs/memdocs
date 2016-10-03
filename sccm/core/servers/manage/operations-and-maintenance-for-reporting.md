@@ -1,5 +1,6 @@
 ---
-title: "Operations and maintenance for reporting | System Center Configuration Manager"
+title: "Operations and maintenance for reporting | Configuration Manager"
+description: "Learn the details of managing reports and report subscriptions in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,31 +12,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 caps.latest.revision: 5
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Operations and maintenance for reporting in System Center Configuration Manager
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
-
- Use the following sections in this topic to help you manage the operations for reports and report subscriptions in your Configuration Manager hierarchy:  
-
--   [Manage Configuration Manager reports](#BKMK_ManageReports)  
-
-    -   [Run a Configuration Manager report](#BKMK_RunReport)  
-
-    -   [Modify the properties for a Configuration Manager report](#BKMK_ModifyReportProperties)  
-
-    -   [Edit a Configuration Manager report](#BKMK_EditReport)  
-
-    -   [Create a model-based report](#BKMK_CreateModelBasedReport)  
-
-    -   [Create a SQL-based report](#BKMK_CreateSQLBasedReport)  
-
--   [Manage report subscriptions](#BKMK_ManageReportSubscriptions)  
-
-    -   [Create a report subscription to deliver a report to a file share](#BKMK_ReportSubscriptionFileShare)  
-
-    -   [Create a report subscription to deliver a report by email](#BKMK_ReportSubscriptionEmail)  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  
  Configuration Manager provides over 400 predefined reports that help you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. You can use the predefined reports as they are, or you can modify a report to meet your requirements. You can also create custom model\-based and SQL\-based reports to meet your requirements. Use the following sections to help you manage Configuration Manager reports.  
@@ -64,7 +45,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
     >  In this version of Configuration Manager, the **All content** reports only display packages, not applications.  
 
     > [!TIP]  
-    >  If no reports are listed, verify that the reporting services point is installed and configured. For more information, see [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).  
+    >  If no reports are listed, verify that the reporting services point is installed and configured. For more information, see [Configuring reporting](configuring-reporting.md).  
 
 3.  Select the report that you want to run, and then on the **Home** tab, in the **Report Group** section, click **Run** to open the report.  
 
@@ -77,7 +58,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 2.  In Report Manager, click the report folder for Configuration Manager, for example, **ConfigMgr\_CAS**.  
 
     > [!TIP]  
-    >  If no reports are listed, verify that the reporting services point is installed and configured. For more information, see [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).  
+    >  If no reports are listed, verify that the reporting services point is installed and configured. For more information, see [Configuring reporting](configuring-reporting.md).  
 
 3.  Click the report category for the report that you want to run, and then click the link for the report. The report opens in Report Manager.  
 
@@ -93,7 +74,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 2.  In Report Manager, click the report folder for Configuration Manager, for example, **ConfigMgr\_CAS**.  
 
     > [!TIP]  
-    >  If no reports are listed, verify that the Reporting Services point is installed and configured. For more information, see [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md)  
+    >  If no reports are listed, verify that the Reporting Services point is installed and configured. For more information, see [Configuring reporting](configuring-reporting.md)  
 
 3.  Click the report category for the report for which you want to modify properties, and then click the link for the report. The report opens in Report Manager.  
 
@@ -126,7 +107,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 4.  In Report Builder, modify the appropriate report settings, and then click **Save** to save the report to the report server.  
 
 ###  <a name="BKMK_CreateModelBasedReport"></a> Create a model\-based report  
- A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](../../../core/servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md).  
+ A model\-based report lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).  
 
 > [!IMPORTANT]  
 >  The user account must have **Site Modify** permission to create a new report. The user can only create a report in folders for which the user has **Modify Report** permissions.  
@@ -368,6 +349,3 @@ After the infrastructure is in place for reporting in System Center Configuratio
 -   On the **Summary** page, review the report subscription settings. Click **Previous** to change the settings or click **Next** to create the report subscription.  
 
 -   On the **Completion** page, click **Close** to exit the wizard. Verify that the report subscription was created successfully. You can view and modify report subscriptions in the **Subscriptions** node under **Reporting** in the **Monitoring** workspace.  
-
-## See Also  
- [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)

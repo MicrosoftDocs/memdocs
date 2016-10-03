@@ -1,5 +1,6 @@
 ---
 title: "New in 1606 | System Center Configuration Manager"
+description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/02/2016
 ms.reviewer: na
@@ -10,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 caps.latest.revision: 40
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # What&#39;s new in version 1606 of System Center Configuration Manager
 Update 1606 for System Center Configuration Manager is an update that is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.

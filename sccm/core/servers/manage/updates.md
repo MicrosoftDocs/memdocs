@@ -1,5 +1,6 @@
 ---
 title: "Updates | System Center Configuration Manager"
+description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 caps.latest.revision: 51
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Updates for System Center Configuration Manager

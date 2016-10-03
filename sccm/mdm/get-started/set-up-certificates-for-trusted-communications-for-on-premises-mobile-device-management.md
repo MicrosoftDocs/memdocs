@@ -1,5 +1,5 @@
 ---
-title: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager"
+title: "Set up certificates | On-premises MDM | System Center Configuration Manager"
 ms.custom: na
 ms.date: 04/01/2016
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 caps.latest.revision: 27
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
@@ -161,7 +161,3 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
      Click **Next**.  
 
 9. Review the settings, and click **Finish** .  
-
-## See Also  
- [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/preparation-steps-for-on-premises-mobile-device-management.md)
-

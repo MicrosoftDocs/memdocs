@@ -1,5 +1,6 @@
 ---
 title: "Size and scale | System Center Configuration Manager"
+description: "Identify the number of site system roles and sites you'll need to support the devices in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Size and scale numbers for System Center Configuration Manager
 

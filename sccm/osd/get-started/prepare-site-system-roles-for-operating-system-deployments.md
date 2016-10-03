@@ -1,5 +1,6 @@
 ---
-title: "Prepare site system roles for operating system deployments with System Center Configuration Manager"
+title: Prepare site system roles for operating system deployments | Configuration Manager
+description: "Configure the site system roles before you deploy operating systems in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,23 +13,11 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Prepare site system roles for operating system deployments with System Center Configuration Manager
-To deploy operating systems in System Center Configuration Manager, you must first prepare the following site system roles that require specific configurations and considerations:  
-
--   [Distribution points](#BKMK_DistributionPoints)  
-
-    -   [Additional planning considerations for distribution points](#BKMK_AdditionalPlanning)  
-
-    -   [Configuring distribution points to accept PXE requests](#BKMK_PXEDistributionPoint)  
-
-    -   [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points  ](#BKMK_RamDiskTFTP)
-
-    -   [Configure distribution points to support multicast](#BKMK_DPMulticast)  
-
--   [State migration point](#BKMK_StateMigrationPoints)  
+To deploy operating systems in System Center Configuration Manager, you must first prepare the following site system roles that require specific configurations and considerations.
 
 ##  <a name="BKMK_DistributionPoints"></a> Distribution points  
  The distribution point  site system role contains source files for clients to download, such as application content, software updates, operating system images,  and boot images. You can control content distribution by using bandwidth, throttling, and scheduling options.  
@@ -60,7 +49,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
  To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it will respond to PXE boot request and determine the appropriate deployment action to take.
 
 > [!IMPORTANT]  
->  [Windows Deployment Services](../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) must be installed on the all PXE-enabled distribution points.  
+>  [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) must be installed on the all PXE-enabled distribution points.  
 
  Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
 
@@ -75,7 +64,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 4.  Click **Yes** in the **Review Required Ports for PXE** dialog box to  confirm that you want to enable PXE. Configuration Manager automatically configures the default ports on a  Windows firewall. You must manually configure the ports if you use a different firewall.  
 
     > [!NOTE]  
-    >  If WDS and DHCP are installed on the same server, you must configure WDS to listen on a different port (since DHCP listens on the same port). For more information, see [Considerations when you have WDS and DHCP on the same server](../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).  
+    >  If WDS and DHCP are installed on the same server, you must configure WDS to listen on a different port (since DHCP listens on the same port). For more information, see [Considerations when you have WDS and DHCP on the same server](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP).  
 
 5.  Select **Allow this distribution point to respond to incoming PXE requests** to enable WDS so that it responds to incoming PXE service requests. You can use this setting to enable and disable the service without removing the PXE functionality from the distribution point.  
 
@@ -91,7 +80,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 
     -   Select **Allow user device affinity with automatic approval** to automatically associate users with the destination computer without waiting for approval.  
 
-     For more information, see [Associate users with a destination computer in System Center Configuration Manager](../../osd/deploy-use/associate-users-with-a-destination-computer.md).  
+     For more information, see [Associate users with a destination computer in System Center Configuration Manager](../deploy-use/associate-users-with-a-destination-computer.md).  
 
 9. Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If you choose to have the distribution point respond to a specific network interfaces, provide the MAC address for each network interface.  
 
@@ -136,7 +125,7 @@ You will need to test the customized settings in your environment to determine w
 
 
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
- Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
+ Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
  Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
 
@@ -221,7 +210,3 @@ You will need to test the customized settings in your environment to determine w
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
 
  For the steps to install a site system role, see [Add site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md).  
-
-## See Also  
- [Plan for operating system deployment in System Center Configuration Manager](../Topic/Plan%20for%20operating%20system%20deployment%20in%20System%20Center%20Configuration%20Manager.md)
-

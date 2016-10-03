@@ -1,5 +1,6 @@
 ---
 title: "Accounts to access content | System Center Configuration Manager"
+description: "Learn about the accounts where clients access System Center Configuration Manager content."
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
@@ -10,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Manage accounts to access content in System Center Configuration Manager
 Before deploying content in System Center Configuration Manager, take time to consider how clients will access that content from distribution points.  

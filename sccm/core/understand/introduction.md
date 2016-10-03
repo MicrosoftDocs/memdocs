@@ -1,5 +1,6 @@
 ---
 title: "Introduction | System Center Configuration Manager"
+description: "Get basic information as an introduction to System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 caps.latest.revision: 16
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Introduction to System Center Configuration Manager

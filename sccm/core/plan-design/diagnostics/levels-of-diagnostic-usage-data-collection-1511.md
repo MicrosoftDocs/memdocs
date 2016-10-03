@@ -1,5 +1,6 @@
 ---
 title: "Diagnostic data for 1511 | System Center Configuration Manager"
+description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1511 collects."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de

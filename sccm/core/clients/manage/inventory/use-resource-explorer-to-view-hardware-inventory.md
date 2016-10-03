@@ -1,5 +1,6 @@
 ---
-title: "How to use Resource Explorer to view hardware inventory in System Center Configuration Manager"
+title: "View hardware inventory | Resource Explorer | System Center Configuration Manager"
+description: "Use Resource Explorer to view hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 04/15/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
 caps.latest.revision: 7
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to use Resource Explorer to view hardware inventory in System Center Configuration Manager
@@ -43,4 +44,3 @@ Use Resource Explorer in System Center Configuration Manager to view information
 4.  You can right-click any item in the right-pane of the **Resource Explorer** window and then click **Properties** to open the *<item name\>***Properties** dialog box which can help you to view the collected inventory information in a more readable format.  
 
 5.  When you are finished, close the **Resource Explorer** window.  
-

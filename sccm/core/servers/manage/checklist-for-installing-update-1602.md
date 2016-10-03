@@ -1,5 +1,6 @@
 ---
 title: "Checklist for 1602 | System Center Configuration Manager"
+description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 caps.latest.revision: 13
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Checklist for installing update 1602 for System Center Configuration Manager

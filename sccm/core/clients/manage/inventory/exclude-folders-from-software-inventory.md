@@ -1,5 +1,6 @@
 ---
-title: "How to exclude folders from software inventory in System Center Configuration Manager"
+title: "Exclude folders from software inventory | System Center Configuration Manager"
+description: "Exclude folders from software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to exclude folders from software inventory in System Center Configuration Manager
@@ -43,4 +44,3 @@ Use the following steps to configure System Center Configuration Manager softwar
 8.  Click **OK** to close the **Configure Client Setting** dialog box.  
 
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md).  
-

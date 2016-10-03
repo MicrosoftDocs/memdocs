@@ -1,5 +1,6 @@
 ---
 title: "Manage Linux and UNIX clients | System Center Configuration Manager"
+description: "Manage clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager
@@ -73,4 +74,3 @@ When you manage Linux and UNIX servers with System Center Configuration Manager,
 |importPFX|Use this option to specify a certificate to replace the certificate that is currently used by a client.<br /><br /> When you use **-importPFX**, you must also use the **-password** command line parameter to  supply the password associated with the PKCS#12 file.<br /><br /> Use **-rootcerts** to specify any additional root certificate requirements.<br /><br /> Example:  **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
 |-importsitecert|Use this option to update the site server signing certificate that is on the management server.<br /><br /> Example: **certutil -importsitecert &lt;Path to the DER certificate\>**|  
 |-importcrl|Use this option to update the CRL on the client with one or more CRL file paths.<br /><br /> Example: **certutil -importcrl &lt;comma separated CRL file paths\>**|  
-

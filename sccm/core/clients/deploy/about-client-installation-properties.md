@@ -1,5 +1,6 @@
 ---
 title: "Client installation properties | System Center Configuration Manager"
+description: "Learn about client installation properties in System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: Mtillman
+author: Mtillmanmanager: angrobe
 ---
 # About client installation properties in System Center Configuration Manager
 Use the System Center Configuration Manager CCMSetup.exe command to manually install the Configuration Manager client software on computers in your enterprise.  
@@ -582,4 +583,3 @@ Use the System Center Configuration Manager CCMSetup.exe command to manually ins
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
 |2.5.29.17|(no value)|Subject Alternative Name|  
-

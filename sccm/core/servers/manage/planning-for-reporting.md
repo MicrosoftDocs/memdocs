@@ -1,5 +1,6 @@
 ---
 title: "Planning for reporting | System Center Configuration Manager"
+description: "From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Planning for reporting in System Center Configuration Manager
@@ -21,7 +22,7 @@ Reporting in System Center Configuration Manager provides a set of tools and res
  When you run Configuration Manager reports at a site, the reports have access to the information in the site database in which it connects. Use the following sections to help you determine where to install the reporting services point and what data source to use.  
 
 > [!NOTE]  
->  For more information about planning for site systems in Configuration Manager, see [Add site system roles for System Center Configuration Manager](../../../core/servers/deploy/configure/add-site-system-roles.md).  
+>  For more information about planning for site systems in Configuration Manager, see [Add site system roles](../deploy/configure/add-site-system-roles.md).  
 
 ###  <a name="BKMK_SupportedSiteServers"></a> Supported site system servers  
  You can install the reporting services point on a central administration site and primary sites, and on multiple site systems at a site and at other sites in the hierarchy. The reporting services point is not supported on secondary sites. The first reporting services point at a site is configured as the default report server. You can add more reporting services points at a site, but the default report server at each site is actively used for Configuration Manager reports. You can install the reporting services point on the site server or a remote site system. However, as a best practice for performance reasons, use Reporting Services on a remote site system server.  
@@ -39,7 +40,7 @@ Reporting in System Center Configuration Manager provides a set of tools and res
  Site system servers in the same site communicate with each other by using server message block (SMB), HTTP, or HTTPS, depending on how you configure the site. Because these communications are unmanaged and can occur at any time without network bandwidth control, review your available network bandwidth before you install the reporting services point role on a site system.  
 
 > [!NOTE]  
->  For more information about planning for site systems, see [Add site system roles for System Center Configuration Manager](../../../core/servers/deploy/configure/add-site-system-roles.md).  
+>  For more information about planning for site systems, see [Add site system roles](../deploy/configure/add-site-system-roles.md).  
 
 ##  <a name="BKMK_RoleBaseAdministration"></a> Planning for role-based administration for reports  
  Security for reporting is much like other objects in Configuration Manager where you can assign security roles and permissions to administrative users. Administrative users can only run and modify reports for which they have appropriate security rights. To run reports in the Configuration Manager console, you must have the **Read** right for the **Site** permission and the permissions configured for specific objects.  
@@ -48,16 +49,12 @@ Reporting in System Center Configuration Manager provides a set of tools and res
 
  Reports are fully enabled for role-based administration. The data for all reports included with Configuration Manager is filtered based on the permissions of the administrative user who runs the report. Administrative users with specific roles can only view information defined for their roles.  
 
- For more information about security rights for reporting, see [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).  
+ For more information about security rights for reporting, see [Configure reporting](configuring-reporting.md).  
 
- For more information about role-based administration in Configuration Manager, see [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md).  
+ For more information about role-based administration in Configuration Manager, see [Configure role-based administration](../deploy/configure/configure-role-based-administration.md).  
 
-## Supplemental planning topics for reporting  
+## Next steps  
  Use the following additional topics to help you plan for reporting in Configuration Manager:  
 
 -   [Prerequisites for reporting in System Center Configuration Manager](../../../core/servers/manage/prerequisites-for-reporting.md)  
-
 -   [Best practices for reporting in System Center Configuration Manager](../../../core/servers/manage/best-practices-for-reporting.md)  
-
-## See Also  
- [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md)

@@ -1,5 +1,6 @@
 ---
 title: "Security and privacy for System Center Configuration Manager"
+description: "Find resources about security and privacy for System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 caps.latest.revision: 9
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Security and privacy for System Center Configuration Manager
@@ -68,4 +69,3 @@ This topic includes resources for Security and Privacy for System Center Configu
 -   [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
 
 -   [Accounts used in System Center Configuration Manager](../../../core/plan-design/hierarchy/accounts.md)  
-

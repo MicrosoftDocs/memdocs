@@ -1,5 +1,6 @@
 ---
-title: "Planning for remote control in System Center Configuration Manager"
+title: "Plan remote control | System Center Configuration Manager"
+description: "Learn more about how to plan for remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 901303a8-4c03-4cc2-84dc-dd6364d103d2
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Planning for remote control in System Center Configuration Manager
@@ -21,4 +22,3 @@ Use the following topics in this section to help you plan for remote control in 
 ## In this section  
 
 -   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
-

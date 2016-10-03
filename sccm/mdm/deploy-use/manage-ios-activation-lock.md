@@ -1,21 +1,22 @@
 ---
 title: "Manage iOS Activation Lock | System Center Configuration Manager"
+description: "Manage iOS Activation Lock with System Center Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
 caps.latest.revision: 9
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Manage iOS Activation Lock with System Center Configuration Manager
-  
+
 System Center Configuration Manager can help you manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. When Activation Lock is enabled, the user's Apple ID and password must be entered before anyone can:
 
 - Turn off Find My iPhone
@@ -62,7 +63,7 @@ The business benefits of this for corporate-owned devices are:
 
 You use Configuration Manager compliance settings to create and deploy a configuration item of the type **iOS and Mac OS X** to enable Activation Lock on supervised devices:
 
-1. Use the information in the topic [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md) to create a configuration item of the type **iOS and Mac OS X**.
+1. Use the information in the topic [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client) to create a configuration item of the type **iOS and Mac OS X**.
 2. On the **System Security** page of the Create Configuration Item Wizard, configure the setting **Allow Activation Lock (supervised mode only)** to **Allowed**.
 3. [Add the configuration item to a configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines).
 4. [Deploy this configuration baseline](/sccm/compliance/deploy-use/deploy-configuration-baselines) to a collection containing the iOS devices for which you want to enable Activation Lock.
@@ -90,10 +91,7 @@ You can only bypass Activation Lock or retrieve the Activation Lock bypass code 
 3. On the **Home** tab, in the **Devices** group, click **Remote Device Actions** > **Bypass Activation Lock**.
 5. Read the messages in the warning dialog box, and click **Yes** when you are ready to proceed.
 6. You can examine the status of the unlock request from:
-	
+
 	- The discovery data for the device in the device properties dialog box.
 	- The **Activation Lock Bypass State** column in the **Devices** view (this column is hidden by default).
 	- The **Remote Device Actions Information** section in the **Summary** tab of the details pane (when a device is selected).
-  
- 
-

@@ -1,5 +1,6 @@
 ---
 title: "Firewalls and domains | System Center Configuration Manager"
+description: "Configure firewalls, ports, and domains to prepare for System Center Configuration Manager communications."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: d6993bba-f6bd-4639-adbf-efc1c638b2f3
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Configure firewalls, ports, and domains for System Center Configuration Manager

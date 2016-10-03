@@ -1,5 +1,6 @@
 ---
 title: "In-console updates | System Center Configuration Manager"
+description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Install in-console updates for System Center Configuration Manager

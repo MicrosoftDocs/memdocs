@@ -1,5 +1,6 @@
 ---
 title: "Monitor clients | System Center Configuration Manager"
+description: "Get detailed guidance on how to monitor clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # How to monitor clients in System Center Configuration Manager
@@ -99,4 +100,3 @@ author: Mtillman
 |Verify that the client WMI provider is healthy|Restart the Windows Management Instrumentation service|Remediation of this client check is only performed on computers that run Windows Server 2003, Windows XP (64-bit) or earlier.|  
 |Verify that the wake-up proxy service (ConfigMgr Wake-up Proxy) is running|Start the ConfigMgr Wakeup Proxy service|This client check is made only if the **Power Management**: **Enable wake-up proxy** client setting is set to **Yes** on supported client operating systems.|  
 |Verify that the wake-up proxy service (ConfigMgr Wake-up Proxy) startup type is automatic|Reset the ConfigMgr Wakeup Proxy service startup type to automatic|This client check is made only if the **Power Management**: **Enable wake-up proxy** client setting is set to **Yes** on supported client operating systems.|  
-

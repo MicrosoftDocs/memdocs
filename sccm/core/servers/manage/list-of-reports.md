@@ -1,5 +1,6 @@
 ---
 title: "List of reports | System Center Configuration Manager"
+description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
 ms.custom: na
 ms.date: 06/06/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # List of reports in System Center Configuration Manager

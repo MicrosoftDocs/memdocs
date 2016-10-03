@@ -1,5 +1,6 @@
 ---
 title: "Websites for site systems | System Center Configuration Manager"
+description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Websites for site system servers in System Center Configuration Manager

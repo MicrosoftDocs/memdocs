@@ -1,5 +1,6 @@
 ---
 title: "Use cloud services | System Center Configuration Manager"
+description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -13,6 +14,7 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 caps.latest.revision: 10
 caps.handback.revision: 0
 author: Brenduns
+manager: angrobe
 
 ---
 # Use cloud services with System Center Configuration Manager

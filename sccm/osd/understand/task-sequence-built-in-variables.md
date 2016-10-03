@@ -1,30 +1,28 @@
 ---
-title: "Task sequence built-in variables in System Center Configuration Manager"
+title: Task sequence built-in variables | Configuration Manager
+description: "Task sequence built-in variables provide information about the environment where the task sequence runs and are available during the whole task sequence."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Task sequence built-in variables in System Center Configuration Manager
-||  
-|-|  
-|This article contains information about [new functionality introduced in version 1602](https://technet.microsoft.com/library/mt622084.aspx) of System Center Configuration Manager \(current branch\). To use the new functionality, you must [install the 1602 update](https://technet.microsoft.com/library/mt607046.aspx). If you have not updated to the most recent version of Configuration Manager, you can [download the documentation for the version you use](https://gallery.technet.microsoft.com/Documentation-for-System-ea90eaf1) from the TechNet Gallery.|  
-  
+
  Task sequence built-in variables are provided by System Center Configuration Manager. Built-in variables provide information about the environment where the task sequence is running, and their values are available throughout the whole task sequence. Typically, built-in variables are initialized before steps are run in the task sequence. For example, the built-in variable **_SMSTSLogPath** is an environment variable that specifies the path that Configuration Manager components use to write log files while the task sequence runs; any task sequence step can access this environment variable. However, some variables, such as _SMSTSCurrentActionName, are evaluated before each step. The values of built-in variables are generally read-only. The values are read only for built-in variables with a name that begins with an underscore.  
-  
+
 ## Task Sequence Built-in Variable List  
  The following list describes the built-in variables that are available in Configuration Manager:  
-  
+
 |Built-in Variable Name|Description|  
 |-----------------------------|-----------------|  
 |_OSDDetectedWinDir|Beginning in Configuration Manager version 1602, the task sequence scans the computer's hard drives for a previous operating system installation when Windows PE starts. The Windows folder location is stored in this variable. You can configure your task sequence to retrieve this value from the environment and use it to specify the same Windows folder location to use for the new operating system installation.|  
@@ -85,7 +83,3 @@ author: Dougeby
 |SMSTSSoftwareUpdateScanTimeout| Gives you the ability to control the timeout for the software updates scan during the [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step. For example, you might increase the default value if you have a lot of software updates to install. The default value is 30 minutes. |
 |SMSTSUDAUsers|Specifies the primary user of the destination computer. Specify the users by using the following format. Separate multiple users by using a comma (,).<br /><br /> Example:<br /><br /> **domain\user1, domain\user2, domain\user3**<br /><br /> For more information about associating users with the destination computer, see [Associate users with a destination computer in System Center Configuration Manager](../../osd/deploy-use/associate-users-with-a-destination-computer.md).|  
 |SMSTSWaitForSecondReboot|Beginning in Configuration Manager version 1602, this optional task sequence variable is available to help control client behavior when a software update installation requires two restarts. This variable must be set before the [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) step to prevent a task sequence from failing because of a second restart from software update installation.<br /><br /> Set the SMSTSWaitForSecondReboot value in seconds to specify how long the task sequence pauses during the Install Software Updates step when the computer restarts to allow sufficient time in case there is a second restart. <br />For example, if you set SMSTSWaitForSecondReboot to 600, the task sequence is paused for 10 minutes after a restart before additional task sequence steps run. This is useful when hundreds of software updates are installed in a single Install Software Updates task sequence step.|  
-  
-## See Also  
- [Task sequence variables in System Center Configuration Manager](../Topic/Task%20sequence%20variables%20in%20System%20Center%20Configuration%20Manager.md)
-

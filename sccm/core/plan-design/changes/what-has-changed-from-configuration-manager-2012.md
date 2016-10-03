@@ -1,5 +1,6 @@
 ---
 title: "Changes from Configuration Manager 2012 | System Center Configuration Manager "
+description: "Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 caps.latest.revision: 51
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager

@@ -1,5 +1,6 @@
 ---
 title: "Use of diagnostics data | System Center Configuration Manager"
+description: "Learn about how Microsoft uses the diagnostics and usage data that System Center Configuration Manager collects."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # How diagnostics and usage data is used for System Center Configuration Manager

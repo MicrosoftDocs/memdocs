@@ -1,5 +1,6 @@
 ---
 title: "Current Branch versions | System Center Configuration Manager"
+description: "Review the version history of System Center Configuration Manager, and learn about the phases of service offered."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
 # Support for System Center Configuration Manager current branch versions

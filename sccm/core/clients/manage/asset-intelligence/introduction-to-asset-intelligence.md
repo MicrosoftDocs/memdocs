@@ -1,5 +1,6 @@
 ---
 title: "Asset Intelligence introduction | System Center Configuration Manager"
+description: "Get an introduction to Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # Introduction to Asset Intelligence in System Center Configuration Manager
@@ -196,4 +197,3 @@ Asset Intelligence in System Center Configuration Manager lets you inventory and
 >  After a categorization conflict is resolved, the item is not validated as conflicting again unless later categorization updates introduce new information about the item.  
 
  For examples of when a validation state might transition from one state to another, see [Example validation state transitions for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md).  
-

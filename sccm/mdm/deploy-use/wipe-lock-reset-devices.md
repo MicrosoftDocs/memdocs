@@ -1,5 +1,6 @@
 ---
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
+description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager." 
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -87,9 +88,8 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
  **Windows 10, Windows 8.1,  Windows RT 8.1, and Windows RT**  
 
-||||  
-|-|-|-|  
 |Content removed when retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|Windows RT|  
+|---------------------------------|-------------|-----------|
 |Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled and sideloading keys are removed. Apps using Windows Selective Wipe will have the encryption key revoked and data will no longer be accessible.|Sideloading keys are removed but apps remain installed.|  
 |VPN and Wi-Fi profiles|Removed.|Not applicable.|  
 |Certificates|Removed and revoked.|Not applicable.|  
@@ -99,9 +99,9 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
  **Windows 10 Mobile, Windows Phone 8.0 and Windows Phone 8.1**  
 
-|||  
-|-|-|  
-|Content removed when retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
+
+ |Content removed when retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
+|-|-|
 |Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled. Company app data is removed.|  
 |VPN and Wi-Fi profiles|Removed for Windows 10 Mobile and Windows Phone 8.1|  
 |Certificates|Removed for Windows Phone 8.1.|  
@@ -254,4 +254,3 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 ## See Also  
  [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
  [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md)
-

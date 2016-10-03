@@ -1,5 +1,6 @@
 ---
 title: "Use Asset Intelligence | System Center Configuration Manager"
+description: "Do common Asset Intelligence tasks in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: barlanmsftmanager: angrobe
 
 ---
 # How to use Asset Intelligence in System Center Configuration Manager
@@ -326,4 +327,3 @@ This topic contains information to help you manage typical Asset Intelligence ta
     -   **Overwrite the locally edited catalog information value with the downloaded System Center Online value**: Resolves the software details conflict by overwriting the existing Asset Intelligence catalog software categorization information with new information obtained from System Center Online. When you select this setting, the software title state changes from **Updatable** to **Validated**.  
 
      Click **OK** to save the conflict resolution.  
-

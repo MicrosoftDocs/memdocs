@@ -1,5 +1,6 @@
 ---
 title: "Accessibility | System Center Configuration Manager"
+description: "Learn about the features that make System Center Configuration Manager accessible for people with disabilities."
 ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
@@ -10,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsmanager: angrobe
 ---
 # Accessibility features in System Center Configuration Manager
 

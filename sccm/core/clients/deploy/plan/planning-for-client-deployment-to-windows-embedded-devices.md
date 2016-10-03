@@ -1,5 +1,6 @@
 ---
 title: "Planning client deployment to Windows Embedded devices | System Center Configuration Manager"
+description: "Plan for client deployment to Windows Embedded devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanmanager: angrobe
 
 ---
 # Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
@@ -99,4 +100,3 @@ author: Mtillman
 >   
 >      -   Windows Embedded Standard 7 (64-bit)  
 >     -   Windows Embedded POSReady 7 (64-bit)
-

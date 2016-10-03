@@ -1,18 +1,19 @@
 ---
 title: "Upgrade Windows devices to a new version | System Center Configuration Manager"
+description: "Upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a newer edition automatically."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 
@@ -24,54 +25,60 @@ The System Center Configuration Manager **Edition Upgrade Policy** lets you auto
 - Windows 10 Mobile
 - Windows 10 Holographic
 
+The following upgrade paths are supported:
+- From Windows 10 Pro to Windows 10 Enterprise
+- From Windows 10 Home to Windows 10 Education
+- From Windows 10 Mobile to Windows 10 Mobile Enterprise
+- From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise
+
 The devices must be enrolled in Microsoft Intune. This feature is not currently compatible with PCs that run the Configuration Manager client software, or PCs that are managed by on-premises MDM.
 
 ## Before you start  
  Before you begin to upgrade devices to the latest version, you will need one of the following:  
-  
+
 -   A product key which is valid to install the new version of Windows on all devices you target with the policy (for desktop operating systems)  
-  
+
 -   A licence file from Microsoft which contains the licensing information to install the new version of Windows on all devices you target with the policy (for Windows 10 Mobile and Windows 10 Holographic).
 
 - To create and deploy this policy type, you must have been assigned the Configuration Manager **Full Administrator** security role.
-  
+
 ## Configure the edition upgrade policy  
-  
+
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Windows 10 Edition Upgrade**.  
-  
+
 3.  On the **Home** tab, in the **Create** group, click **Create Edition Upgrade Policy**.  
-  
+
 4.  Click **Create Policy**.  
-  
+
 5.  On the **General** page of the **Create Edition Upgrade Policy Wizard**, specify the following information:  
-  
+
     -   **Name** - Enter a name for the edition upgrade policy.  
-  
+
     -   **Description** (optional) - Optionally, enter a description for the policy that helps you identify it in the Intune console.  
-  
+
     -   **SKU to upgrade device to** - From the drop-down list, select the version of Windows 10 Desktop, Windows 10 Holographic, or Windows 10 Mobile that you want to upgrade targeted devices to.  
-  
+
     -   **License information** - Select one of:  
-  
+
         -   **Product Key** - Enter a valid Windows 10 product key that will be used to upgrade devices you target that run Windows 10 Desktop operating systems.  
-  
+
             > [!NOTE]  
             >  After you create a policy containing a product key, you cannot edit the product key later. This is because the key is obscured for security reasons. To change the product key, you must re-enter the entire key.  
-  
+
         -   **License File** - Click **Browse** to select a valid license file in XML format that will be used to upgrade devices you target that run Windows 10 Holographic and Windows 10 Mobile operating systems.  
-  
+
 6.  Complete the wizard.  
-  
+
  The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **Assets and Compliance** workspace.  
-  
+
 ## Deploy the edition upgrade policy  
-  
+
 1.  In the Configuration Manager console, click **Assets and Compliance** > **Compliance Settings** > **Windows 10 Edition Upgrade**.  
-  
+
 3.  Select the Windows 10 edition upgrade policy you want to deploy and then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
-  
+
 4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the user or device collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**.  
-  
+
  You can monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace.  
-  
- Once the policy reaches a targeted Windows PC, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours. 
+
+ Once the policy reaches a targeted Windows PC, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.

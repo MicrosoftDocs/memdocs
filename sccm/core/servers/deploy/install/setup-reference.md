@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 caps.latest.revision: 22
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Reference for System Center Configuration Manager Setup

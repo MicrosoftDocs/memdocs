@@ -1,5 +1,6 @@
 ---
 title: "Prerequisites for power management | System Center Configuration Manager"
+description: "Get the prerequisites for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftmanager: angrobe
 
 ---
 # Prerequisites for power management in System Center Configuration Manager
@@ -32,4 +33,3 @@ Power management in System Center Configuration Manager has external dependencie
 |----------------|----------------------|  
 |Power management must be enabled before you can create and monitor power plans.|For information about how to enable and configure power management, see [Configuring power management in System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md).|  
 |Reporting services point|You must configure a reporting services point before you can view power management reports. For more information, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).|  
-

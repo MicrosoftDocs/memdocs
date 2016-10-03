@@ -1,5 +1,6 @@
 ---
 title: "Modify infrastructure | System Center Configuration Manager"
+description: "Learn how to make changes or take actions that affect the Configuration Manager infrastructure you have deployed."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsmanager: angrobe
 
 ---
 # Modify your System Center Configuration Manager infrastructure

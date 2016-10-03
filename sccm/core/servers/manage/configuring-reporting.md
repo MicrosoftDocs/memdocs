@@ -1,5 +1,6 @@
 ---
 title: "Configure reporting | System Center Configuration Manager"
+description: "Read about how to set up reporting in your Configuration Manager hierarchy, including information about SQL Server Reporting Services."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 caps.latest.revision: 6
-author: Dougeby
+author: Dougebymanager: angrobe
 
 ---
 # Configuring reporting in System Center Configuration Manager
@@ -64,7 +65,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 5.  Close the Windows Registry Editor.  
 
 ##  <a name="BKMK_InstallReportingServicesPoint"></a> Install a reporting services point  
- The reporting services point must be installed on a site to manage reports at the site. The reporting services point copies report folders and reports to SQL Server Reporting Services, applies the security policy for the reports and folders, and sets configuration settings in Reporting Services. You must configure a reporting services point before reports are displayed in the Configuration Manager console, and before you can manage the reports in Configuration Manager. The reporting services point is a site system role that must be configured on a server with Microsoft SQL Server Reporting Services installed and running. For more information about prerequisites, see [Prerequisites for reporting in System Center Configuration Manager](../../../core/servers/manage/prerequisites-for-reporting.md).  
+ The reporting services point must be installed on a site to manage reports at the site. The reporting services point copies report folders and reports to SQL Server Reporting Services, applies the security policy for the reports and folders, and sets configuration settings in Reporting Services. You must configure a reporting services point before reports are displayed in the Configuration Manager console, and before you can manage the reports in Configuration Manager. The reporting services point is a site system role that must be configured on a server with Microsoft SQL Server Reporting Services installed and running. For more information about prerequisites, see [Prerequisites for reporting](prerequisites-for-reporting.md).  
 
 > [!IMPORTANT]  
 >  When selecting a site to install the reporting services point, keep in mind that users who will access the reports must be in the same security scope as the site where the reporting services point is installed.  
@@ -86,7 +87,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
 3.  Add the reporting services point site system role to a new or existing site system server by using the associated step:  
 
     > [!NOTE]  
-    >  For more information about configuring site systems, see [Add site system roles for System Center Configuration Manager](../../../core/servers/deploy/configure/add-site-system-roles.md).  
+    >  For more information about configuring site systems, see [Add site system roles for System Center Configuration Manager](../deploy/configure/add-site-system-roles.md).  
 
     -   **New site system**: On the **Home** tab, in the **Create** group, click **Create Site System Server**. The **Create Site System Server Wizard** opens.  
 
@@ -130,7 +131,7 @@ Before you can create, modify, and run reports in the System Center Configuratio
      After the wizard is completed, report folders are created, and the Configuration Manager reports are copied to the specified report folders.  
 
     > [!NOTE]  
-    >  When report folders are created and reports are copied to the report server, Configuration Manager determines the appropriate language for the objects. If the associated language pack is installed on the site, Configuration Manager creates the objects in the same language as the operating system running on the report server on the site. If the language is not available, the reports are created and displayed in English. When you install a reporting services point on a site without language packs, the reports are installed in English. If you install a language pack after you install the reporting services point, you must uninstall and reinstall the reporting services point for the reports to be available in the appropriate language pack language. For more information about language packs, see [Language Packs in System Center Configuration Manager](../../../core/servers/deploy/install/language-packs.md).  
+    >  When report folders are created and reports are copied to the report server, Configuration Manager determines the appropriate language for the objects. If the associated language pack is installed on the site, Configuration Manager creates the objects in the same language as the operating system running on the report server on the site. If the language is not available, the reports are created and displayed in English. When you install a reporting services point on a site without language packs, the reports are installed in English. If you install a language pack after you install the reporting services point, you must uninstall and reinstall the reporting services point for the reports to be available in the appropriate language pack language. For more information about language packs, see [Language Packs in System Center Configuration Manager](../deploy/install/language-packs.md).  
 
 ###  <a name="BKMK_FileInstallationAndSecurity"></a> File installation and report folder security rights  
  Configuration Manager performs the following actions to install the reporting services point and to configure Reporting Services:  
@@ -282,3 +283,6 @@ Before you can create, modify, and run reports in the System Center Configuratio
 3.  On the **Home** tab, in the **Settings** group, click **Report Options**.  
 
 4.  Select the default report server in the list, and then click **OK**. If no reporting services points are listed in the list, verify that you have a reporting services point successfully installed and configured in the site.  
+
+## Next steps
+[Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md)
