@@ -46,6 +46,7 @@
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
+#### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [Security and privacy for content management](plan-design/hierarchy/security-and-privacy-for-content-management.md)
 ###  [How clients find resources and services](plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
 ###  [Security and privacy for site administration](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
@@ -274,4 +275,3 @@
 ###  [How to upgrade clients for Windows computers](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [How to upgrade clients for Linux and UNIX servers](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [How to upgrade clients on Mac computers](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
-

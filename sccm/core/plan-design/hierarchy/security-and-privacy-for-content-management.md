@@ -20,7 +20,7 @@ This topic contains security and privacy information for content management in S
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/deploy-use/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates in System Center Configuration Manager](/sccm/sum/plan-design/security-and-privacy-for-software-updates)  
 
 -   [Security and privacy for operating system deployment in System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -41,7 +41,7 @@ This topic contains security and privacy information for content management in S
 **Secure content at the package access level** -  The distribution point share allows Read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This does not apply to cloud-based distribution points,  which do not support package access accounts. For more information about the Package Access Account, see [Manage accounts to access content](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).
 
 
-**If Configuration Manager installs IIS when you add a distribution point site system role, remove HTTP Redirection and IIS Management Scripts and Tools when the distribution point installation is complete** - The distribution point does not require HTTP Redirection and IIS Management Scripts and Tools. To reduce the attack surface, remove these role services for the web server (IIS) role.  For more information about the role services for the web server (IIS) role for distribution points, see   [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+**If Configuration Manager installs IIS when you add a distribution point site system role, remove HTTP Redirection and IIS Management Scripts and Tools when the distribution point installation is complete** - The distribution point does not require HTTP Redirection and IIS Management Scripts and Tools. To reduce the attack surface, remove these role services for the web server (IIS) role.  For more information about the role services for the web server (IIS) role for distribution points, see [Site and site system prerequisites ](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
 
 **Set package access permissions when you create the package** -  Because changes to the access accounts on the package files become effective only when you redistribute the package, set the package access permissions carefully when you first create the package. This is particularly important when the package is large or distributed to many distribution points, and when the network bandwidth capacity for content distribution is limited.  
 

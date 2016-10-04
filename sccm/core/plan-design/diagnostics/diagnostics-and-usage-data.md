@@ -30,7 +30,11 @@ System Center Configuration Manager collects diagnostics and usage data about it
 
 -   [How diagnostics and usage data is used for System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
--   [Levels of diagnostic usage data collection for System Center Configuration Manager](../../../core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection.md)  
+-   Levels of diagnostic usage data collection:
+    - [Diagnostic data for 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
+    - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
+    - [Diagnostic data for 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)  
+    
 
 -   [How diagnostics and usage data is collected by System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
