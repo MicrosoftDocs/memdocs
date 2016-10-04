@@ -23,6 +23,7 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 #ms.custom:
 
 ---
+# Software updates maintenance
 You can schedule and run the WSUS clean up task from the Configuration Manager console or you can manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. By default, the WSUS cleanup job runs every 30 days.  
 
 #### To schedule and run the WSUS cleanup job  

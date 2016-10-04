@@ -107,7 +107,7 @@ You must install the following WSUS 4.0 hotfixes:
 ### Management point  
  Management points transfer information between client computers and the Configuration Manager site. The client uses a management point to run any task sequences that are required to complete the operating system deployment.  
 
- For more information about task sequences, see [Planning considerations for automating tasks in System Center Configuration Manager](../plan-design/planning-considerations-for-automating-tasks.md).  
+ For more information about task sequences, see [Planning considerations for automating tasks in System Center Configuration Manager](planning-considerations-for-automating-tasks.md).  
 
 ### Distribution point  
  Distribution points are used in most deployments to store the data that is used to deploy an operating system, such as the operating system image or device driver packages. Task sequences typically retrieve data from a distribution point to deploy the operating system.  
@@ -123,7 +123,7 @@ You must install the following WSUS 4.0 hotfixes:
 ### State migration point  
  When you capture and restore user state data for side-by-side and refresh deployments, you must configure a state migration point to store the user state data on another computer.  
 
- For more about how to configure the state migration point, see [State migration point](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+ For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
  For information about how to capture and restore user state, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
@@ -227,4 +227,4 @@ You must install the following WSUS 4.0 hotfixes:
 |Basic disk|Dynamic disk|  
 
 ## Next steps
-[ ]
+[Prepare for operating system deployment](../get-started/prepare-for-operating-system-deployment.md)
