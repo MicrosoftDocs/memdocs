@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 caps.latest.revision: 22
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Backup and recovery for System Center Configuration Manager
@@ -901,6 +901,3 @@ Use the following sections to help you create your Configuration Manager backup 
 
 ### Volume Shadow Copy service  
  The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information about VSS, see the [Volume Shadow Copy Service](http://go.microsoft.com/fwlink/p/?LinkId=241968) topic in the Windows Server TechCenter.  
-
-### See also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)

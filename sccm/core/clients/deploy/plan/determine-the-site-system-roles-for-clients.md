@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Determine the site system roles for System Center Configuration Manager clients

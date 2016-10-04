@@ -5,13 +5,14 @@ ms.custom: na
 ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 caps.latest.revision: 3
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # What&#39;s new in version 1602 of System Center Configuration Manager
 
@@ -95,7 +96,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ## Software updates  
 
 ### Manage Office 365 client updates  
- System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](../Topic/Manage%20Office%20365%20ProPlus%20updates%20with%20System%20Center%20Configuration%20Manager.md).  
+ System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](/sccm/sum/deploy-use/manage-ofice-365-proplus-updates).  
 
 ## Compliance settings  
 
@@ -182,7 +183,7 @@ For details, see [Health attestation for System Center Configuration Manager](..
 
     Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions.  
 
-For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).  
+For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 
 ## Mobile device management  
 
@@ -197,7 +198,7 @@ For details, see [How to create and deploy antimalware policies for Endpoint Pro
 
 Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
 
- For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](../Topic/Help%20protect%20iOS%20devices%20with%20Activation%20Lock%20bypass%20in%20System%20Center%20Configuration%20Manager.md).  
+ For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock).  
 
 ### Monitor terms and conditions deployments  
  You can monitor terms and conditions deployments in the Configuration Manager console.  

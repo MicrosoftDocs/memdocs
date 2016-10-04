@@ -12,11 +12,11 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 caps.latest.revision: 17
-author: Nbigmanmanager: angrobe
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # PKI certificate requirements for System Center Configuration Manager
-The public key infrastructure (PKI) certificates that you might require for System Center Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For step-by-step deployment guidance  see [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md). For more information about Active Directory Certificate Services, see the following documentation:  
+The public key infrastructure (PKI) certificates that you might require for System Center Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For step-by-step deployment guidance  see [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). For more information about Active Directory Certificate Services, see the following documentation:  
 
 -   For Windows Server 2012: [Active Directory Certificate Services Overview](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 

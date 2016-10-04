@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Security and privacy for reporting in System Center Configuration Manager

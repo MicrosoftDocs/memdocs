@@ -1,5 +1,6 @@
 ---
 title: "Deploy content | System Center Configuration Manager"
+description: "After you install distribution points for System Center Configuration Manager, here's how you can begin to deploy content to them."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 caps.latest.revision: 6
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Deploy and manage content for System Center Configuration Manager
 After you install distribution points for System Center Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
@@ -116,7 +117,7 @@ Use the following procedure to distribute content to distribution points.
 
 -   **When you prestage content for a package with a long package source path** (for example, more than 140 characters), the Extract Content command-line tool might fail to successfully extract the content for that package to the content library.  
 
-For information about when to prestage content files, see  [Prestaged content](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md#BKMK_PrestagingContent) in the [Manage network bandwidth for content management](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md) topic.  
+For information about when to prestage content files, see  *Prestaged content* in the [Manage network bandwidth for content management](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) topic.  
 
 Use the following sections to prestage content.  
 

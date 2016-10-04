@@ -1,5 +1,6 @@
 ---
 title: "Upgrade to System Center Configuration Manager | System Center Configuration Manager"
+description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: 21
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Upgrade to System Center Configuration Manager
@@ -129,13 +130,13 @@ For more information about site maintenance tasks, see:
 
 Before you upgrade a site, you can run the **Prerequisite Checker** independently from Setup to validate that your site meets the prerequisites. When you upgrade the site, Prerequisite Checker runs again.  
 
-For more information, see the [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) and [List of Prerequisite Checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md)  
+For more information, see the [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) and [List of Prerequisite Checks for System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)  
 
 **Download prerequisite files and redistributable files** for System Center Configuration Manager:  
 
 Use **Setup Downloader** to download prerequisite redistributable files, language packs, and the latest product updates for System Center Configuration Manager.  
 
-For information, see [Setup Downloader](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SetupDownloader)  
+For information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader)  
 
 **Plan to manage server and client languages**:  
 
@@ -348,7 +349,7 @@ Use the following procedures to upgrade Configuration Manager sites:
 
 8.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then click **Next**. Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
 
-9. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest prerequisite redistributable files, language packs, and the latest product updates from the Internet or use previously downloaded files, and then click **Next**. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For information about Setup Downloader, see the [Setup Downloader](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SetupDownloader) section in the [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md) topic.  
+9. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest prerequisite redistributable files, language packs, and the latest product updates from the Internet or use previously downloaded files, and then click **Next**. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
 
     > [!NOTE]  
     >  When you use previously downloaded files, verify that the path to the download folder contains the most recent version of the files.  
@@ -365,7 +366,7 @@ Use the following procedures to upgrade Configuration Manager sites:
 
 12. On the **Settings Summary** page, click **Next** to start Prerequisite Checker to verify server readiness for the upgrade of the site.  
 
-13. On the **Prerequisite Installation Check** page, if there are no problems listed, click **Next** to upgrade the site and site system roles. When Prerequisite Checker finds a problem, click an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that is not displayed in the user interface. For a complete list of installation prerequisite rules and descriptions, see  [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) in [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md).  
+13. On the **Prerequisite Installation Check** page, if there are no problems listed, click **Next** to upgrade the site and site system roles. When Prerequisite Checker finds a problem, click an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that is not displayed in the user interface. For a list of installation prerequisite rules and descriptions, see [Prerequisite Checker](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
 
 On the **Upgrade** page, Setup displays the overall progress status. When Setup completes the core site server and site system installation, you can close the wizard. Site configuration continues in the background.  
 

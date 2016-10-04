@@ -1,5 +1,6 @@
 ---
 title: "SQL Server cluster | System Center Configuration Manager"
+description: "Use a SQL Server cluster to host the System Center Configuration Manager site database. Includes information about supported options."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Use a SQL Server cluster for the System Center Configuration Manager site database

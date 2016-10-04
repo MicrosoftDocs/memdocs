@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Monitor operating system deployments in System Center Configuration Manager

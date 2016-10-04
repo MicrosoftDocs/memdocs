@@ -1,5 +1,6 @@
 ---
 title: "Publish site data | System Center Configuration Manager"
+description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 caps.latest.revision: 8
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Publish site data for System Center Configuration Manager

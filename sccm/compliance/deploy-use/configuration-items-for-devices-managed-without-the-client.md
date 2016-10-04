@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 5ab94b85-ac63-45b1-a4f6-17b0113920fd
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Configuration items for devices managed without the System Center Configuration Manager client

@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 caps.latest.revision: 28
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Fundamental concepts for content management in System Center Configuration Manager
@@ -39,7 +39,7 @@ For more information about these accounts, see [Manage accounts to access conten
 ## Bandwidth throttling and scheduling  
  Both throttling and scheduling are options that help you control when content is distributed from a site server to distribution points. This is similar to, but not directly related to bandwidth controls for site to site file-based replication.  
 
- For more information, see [Manage network bandwidth](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md)
+ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)
 
 ## Binary differential replication  
  A prerequisite for distribution points, binary differential replication (BDR) which is sometimes known as delta replication, is automatically used to reduce bandwidth use when distributing updates to content you previously deployed to other sites, or remote distribution point.  
@@ -110,7 +110,7 @@ Learn more about the [content library](../../../core/plan-design/hierarchy/the-c
 
  The basic (non-specialized)  distribution point is commonly referred to as a standard distribution point.  There are two  variations on the standard distribution point that receive special attention:  
 
--   **Pull-distribution point** -  A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point) similar to how clients download content from distribution points. Pull-distribution points  can help you avoid network bandwidth bottlenecks that can occur when the site server must directly distribute content to each distributin point.  [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
+-   **Pull-distribution point** -  A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point) similar to how clients download content from distribution points. Pull-distribution points  can help you avoid network bandwidth bottlenecks that can occur when the site server must directly distribute content to each distributin point.  [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
 
 -   **Cloud-based distribution point** - A variation of a distribution point installed in Microsoft Azure. [Use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
@@ -146,7 +146,7 @@ Standard distribution points support a range of configurations and features, lik
 >  Pull-distribution points also use a concept of priority to order the sequence of their source distribution points.  
 >   
 >  -   The distribution point priority for content transfers to the distribution point is distinct from the priority that pull-distribution points use when they search for content from a source distribution point  
-> -   For more information see [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
+> -   For more information see [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
 
 
 ## Fallback  
@@ -166,7 +166,7 @@ See [content source location scenarios](../../../core/plan-design/hierarchy/cont
 
 -   Use scheduling and throttling: Configurations that help you control when and how content is distributed to distribution points.  
 
-For more information, see [Manage network bandwidth](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md)
+For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)
 
 ## Network connection speed to content source  
  You can configure the network connection speed of each distribution point in a boundary group:  
@@ -213,4 +213,4 @@ See [content source location scenarios](../../../core/plan-design/hierarchy/cont
 ## Prestage content  
  A process of transferring content to a distribution point without relying on  Configuration Manager to distribute the content across the network.  
 
- For more information, see [Manage network bandwidth](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md)
+ For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)

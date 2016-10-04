@@ -1,5 +1,6 @@
 ---
 title: "Endpoint Protection Client Help | System Center Configuration Manager"
+description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
 ms.custom: na
 ms.date: 02/05/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 caps.latest.revision: 6
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 # Endpoint Protection Client Help
@@ -37,6 +38,5 @@ This version of Endpoint Protection includes the following features to help prot
 
 ### See also  
  [Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)   
-
 
  [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-windows-defender-endpoint-protection-client.md)

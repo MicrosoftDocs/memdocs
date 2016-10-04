@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 469ff35f-59a1-484d-902b-107dd6070baf
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Security and privacy for power management in System Center Configuration Manager

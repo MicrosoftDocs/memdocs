@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Supported configurations for System Center Configuration Manager
@@ -56,7 +56,7 @@ Guidelines that can help you identify the right hardware and configurations to h
 -  [Support for Active Directory domains](../../../core/plan-design/configs/support-for-active-directory-domains.md)  
 Learn about the supported Active Directory domain configurations Configuration Manager requires, and supports.
 
--  [Support for Widows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
+-  [Support for Windows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
 Configuration Manager supports several Windows technologies like BranchCache and data deduplication. Learn about supported technologies and limitations for their use with Configuration Manager.
 
 -  [Support for Virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  

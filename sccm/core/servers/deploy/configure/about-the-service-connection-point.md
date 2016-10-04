@@ -1,5 +1,6 @@
 ---
 title: "Service connection point | System Center Configuration Manager"
+description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
 ms.date: 06/27/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: article
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # About the service connection point in System Center Configuration Manager

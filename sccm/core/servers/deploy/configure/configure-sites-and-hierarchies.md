@@ -1,5 +1,6 @@
 ---
 title: "Configure sites | System Center Configuration Manager"
+description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 caps.latest.revision: 15
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Configure sites and hierarchies for System Center Configuration Manager

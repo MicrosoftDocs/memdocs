@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: c378e0f7-be49-4b96-a46b-7c5d9638bd96
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client

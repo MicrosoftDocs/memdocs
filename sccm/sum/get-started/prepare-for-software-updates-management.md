@@ -4,7 +4,7 @@
 title: Prepare for software updates management | Configuration Manager
 description: "To prepare to manage updates, complete these tasks to display compliance assessment data in the System Center Configuration Manager console."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/27/2016
 ms.topic: article
 ms.prod: configuration-manager

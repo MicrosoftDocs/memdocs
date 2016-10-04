@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Security and privacy for software inventory in System Center Configuration Manager

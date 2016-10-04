@@ -5,11 +5,12 @@ ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
 caps.latest.revision: 7
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Checklist for installing update 1606 for System Center Configuration Manager
 Version 1606 for System Center Configuration Manager current branch is an update which you can use to update from version 1511 or 1602.
@@ -79,7 +80,7 @@ For more information, see
  **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster.    
 
- For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md)  
+ For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:  
 
@@ -124,7 +125,7 @@ Prior to version 1606, service windows were called maintenance windows. For more
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) topic.  
 
 > [!IMPORTANT]  
->  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you must perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
+>  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you must perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
 
  **Update sites:** You are now ready to start the update installation for your hierarchy.  
   We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations. For more information, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  

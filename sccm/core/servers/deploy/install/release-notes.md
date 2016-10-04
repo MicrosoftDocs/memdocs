@@ -1,5 +1,6 @@
 ---
 title: "Release notes | System Center Configuration Manager"
+description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
 ms.date: 08/16/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: 41
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Release notes for System Center Configuration Manager

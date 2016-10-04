@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 caps.latest.revision: 18
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Introduction to application management in System Center Configuration Manager
@@ -29,7 +29,6 @@ In this topic, you'll learn the basics you need to know before you start working
  Of course, there are a lot more things you can do with an application, and you'll learn about these as you read through this guide. The following table introduces some concepts you'll need to know before you start to dig deeper. You won't need all of these in every application you create:  
 
 |Concept|Description|    
-
 |-|-|  
 |**Requirements**|In previous versions of Configuration Manager, you would often create a collection containing the devices you wanted to deploy an application to. Although you can still do this, requirements reduce that need by allowing you to specify much more granular criteria by which an application will be installed.<br /><br /> For example, you can specify that an application can only install on devices that run Windows 10. Then, you can deploy the application to all of your devices, but it will only install on devices that run Windows 10.<br /><br /> Configuration Manager evaluates requirements to determine whether an application and any of its deployment types will be installed. Then it determines the correct deployment type by which to install an application. Every seven days, by default, the requirement rules are reevaluated to ensure compliance according to the client setting **Schedule re-evaluation for deployments**.<br /><br /> For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).|  
 |**Global conditions**|While requirements are used with a specific deployment type in a single application, you can also create global conditions which are a library of predefined requirements that you can use with any application and deployment type.<br /><br /> Configuration Manager contains a set of built-in global conditions and you can also create your own.<br /><br /> For details, see [Create global conditions](../../apps/deploy-use/create-global-conditions.md).|  
@@ -67,7 +66,7 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 
 
 ## State-based applications  
- Configuration Manager applications use state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+ Configuration Manager applications use state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
 
  Application deployments are regularly re-evaluated by Configuration Manager. For example:  
 
@@ -75,19 +74,19 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 
 -   An application was not installed on a device because it failed to meet the requirements. Later, a change is made to the device and it now meets the requirements. Configuration Manager detects this change and the application is installed.  
 
- You can configure the re-evaluation interval for application deployments by using the **Schedule re-evaluation for deployments** client setting. For more information, see [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).  
+ You can configure the re-evaluation interval for application deployments by using the **Schedule re-evaluation for deployments** client setting. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md).  
 
 ## Get started creating an application  
- If you want to jump right in and start to create an application, you'll find a walkthrough for creating a simple application in the [Create and deploy an application with System Center Configuration Manager](../../apps/get-started/create-and-deploy-an-application.md) topic.  
+ If you want to jump right in and start to create an application, you'll find a walkthrough for creating a simple application in the [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md) topic.  
 
- If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Create applications with System Center Configuration Manager](/sccm/apps/deploy-use/create-applications.md).  
+ If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Create applications](/sccm/apps/deploy-use/create-applications.md).  
 
 ## Software Center and the Application Catalog  
  In previous versions of Configuration Manager, Software Center was used to install and schedule software installations, configure remote control settings, and configure power management settings. Users could connect to the Application Catalog to browse for, and request software, configure some preference settings, and remotely wipe their mobile devices.  
 
  While these settings are still available in System Center Configuration Manager, a new version of Software Center is now available that allows you to browse for applications without having to use  the Application Catalog, which requires  a Silverlight enabled web browser. However the Application Catalog website point and Application Catalog web service point site system roles are still required for user-available apps to appear in Software Center.  
 
- For more information, see [Plan for and configure application management in System Center Configuration Manager](../../apps/plan-design/plan-for-and-configure-application-management.md).  
+ For more information, see [Plan for and configure application management](../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
 ## Using Configuration Manager packages and programs  
  Configuration Manager continues to support packages and programs that were used in previous versions of the product. A deployment that uses packages and programs might be more suitable than a deployment that uses an application when you deploy any of the following:  
@@ -100,4 +99,3 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 
  For more information, see [Packages and programs](../../apps/deploy-use/packages-and-programs.md).  
 
- For more information, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  

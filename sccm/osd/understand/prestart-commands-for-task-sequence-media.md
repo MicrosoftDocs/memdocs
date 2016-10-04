@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Prestart commands for task sequence media in System Center Configuration Manager

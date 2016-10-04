@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 caps.latest.revision: 11
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager

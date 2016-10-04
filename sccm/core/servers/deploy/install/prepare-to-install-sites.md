@@ -1,5 +1,6 @@
 ---
 title: "Prepare to install sites | System Center Configuration Manager"
+description: "Read these details to save time during installation of multiple sites and prevent errors."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 caps.latest.revision: 5
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Prepare to install System Center Configuration Manager sites
 To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
@@ -73,7 +74,7 @@ You use the Configuration Manager console to install a secondary site as a child
 -   Install and configure SQL Server to host the site database (see    
     [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md))  
 
--   Prepare your network environment to support Configuration Manager (see [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md))  
+-   Prepare your network environment to support Configuration Manager (see [Configure firewalls, ports, and domains to prepare for Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains))  
 
 -   If you will use a PKI, prepare your infrastructure and certificates (see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md)
 

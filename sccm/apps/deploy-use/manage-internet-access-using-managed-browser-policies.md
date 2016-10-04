@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 735c45b8-a545-4805-84e5-46204fabd1a6
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
@@ -56,7 +56,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
      For more information about the URL formats you can specify, see [URL format for allowed and blocked URLs](#BKMK_URLs) in this topic.  
 
     > [!NOTE]  
-    >  The **General** policy type lets you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy and paste operations within a restricted app. For more information about the General policy type, see [Protect apps using mobile application management policies in System Center Configuration Manager](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+    >  The **General** policy type lets you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy and paste operations within a restricted app. For more information about the General policy type, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
 6.  Complete the wizard.  
 

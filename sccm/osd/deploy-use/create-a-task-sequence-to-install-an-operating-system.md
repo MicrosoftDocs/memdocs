@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 caps.latest.revision: 13
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Create a task sequence to install an operating system in System Center Configuration Manager

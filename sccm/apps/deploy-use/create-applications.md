@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
@@ -49,12 +49,9 @@ A System Center Configuration Manager application contains the files and informa
 2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
   
 3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
-  
-
-    > [!IMPORTANT]  
-    >  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that only the files that are necessary to install the application are in the folder that you specify. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application contains more files, consider creating multiple applications that have a smaller number of files.  
-    >   
-    >  You must have access to the UNC path that contains the application and any subfolders that contain application content.  
+	> [!IMPORTANT]  
+	>  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that only the files that are necessary to install the application are in the folder that you specify. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application contains more files, consider creating multiple applications that have a smaller number of files.  
+	>  You must have access to the UNC path that contains the application and any subfolders that contain application content.  
 
 4.  On the **Import Information** page of the Create Application Wizard, review the information that was imported, and then click **Next**. If necessary, you can click **Previous** to go back and correct any errors.  
 
@@ -142,8 +139,6 @@ For more information, see [Create deployment types for the application](/sccm/ap
 2.  In the **Type** field, select the application installation file type that you want to use to detect the deployment type information.  
   
 3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\filename* or the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also click **Browse** to locate the installation file.  
-  
-
     > [!NOTE]  
     >  You must have access to the UNC path that contains the application and any subfolders that contain the application content.  
 
@@ -183,8 +178,6 @@ For more information, see [Create deployment types for the application](/sccm/ap
 1.  On the **Content** page of the Create Deployment Type Wizard, specify the following information:  
   
     -   Content location - Specify the location of the content for this deployment type, or click **Browse** to choose the deployment type content folder.  
-  
-
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
 

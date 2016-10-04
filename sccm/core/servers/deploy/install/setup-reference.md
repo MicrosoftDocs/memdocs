@@ -1,5 +1,6 @@
 ---
 title: "Setup reference | System Center Configuration Manager"
+description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
 ms.date: 01/25/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 caps.latest.revision: 22
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Reference for System Center Configuration Manager Setup

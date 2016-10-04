@@ -1,5 +1,6 @@
 ---
 title: "Site system role options | System Center Configuration Manager"
+description: "Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory."
 ms.custom: na
 ms.date: 04/25/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 caps.latest.revision: 5
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Configuration options for site system roles for System Center Configuration Manager
 Most configuration options for System Center Configuration Manager site system roles are self-explanatory or are explained in the wizard or dialog boxes when you configure them.  The following sections contain details for  site system roles that have settings that require additional information.  
@@ -23,7 +24,7 @@ Most configuration options for System Center Configuration Manager site system r
 
  Select **HTTPS** to connect by using the more secure setting and to determine whether clients connect from the Internet. This option requires a PKI certificate on the server for server authentication to clients and for encryption of data over Secure Socket Layer (SSL). For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
- For an example deployment of the server certificate and information about how to configure it in Internet Information Services (IIS), see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+ For an example deployment of the server certificate and information about how to configure it in Internet Information Services (IIS), see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
  **Add Application Catalog website to trusted sites zone**  
 
@@ -42,10 +43,10 @@ Most configuration options for System Center Configuration Manager site system r
 
  Select **HTTPS** to authenticate the Application Catalog website points to this Application Catalog web service point.  This option requires a PKI certificate on the servers running the Application Catalog website point for server authentication and for encryption of data over SSL. For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
- For an example deployment of the server certificate and information about how to configure it in IIS, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+ For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_CertificateRegistrationPoint"></a> Certificate registration point  
- For information about how to configure the certificate registration point, see [Configuring certificate profiles in System Center Configuration Manager](../../../../protect/deploy-use/configuring-certificate-profiles.md).  
+ For information about how to configure the certificate registration point, see [Introduction to certificate profiles ](/sccm/protect/deploy-use/introcution-to-certificate-profiles).  
 
 ##  <a name="BKMK_Distribution_Point"></a> Distribution point  
  For information about how to configure the distribution point for content deployment, see [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
@@ -80,7 +81,7 @@ To import the certificate, browse to a Public-Key Cryptography Standards #12 (PK
 
 There are no specific requirements for the certificate Subject name or Subject Alternative Name (SAN), and you can use the same certificate for multiple distribution points.  
 
-For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md). For an example deployment of this certificate, see the Deploying the Client Certificate for Distribution Points section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md). For an example deployment of this certificate, see the *Deploying the Client Certificate for Distribution Points* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 **Enable this distribution point for prestaged content**  
 
@@ -101,7 +102,7 @@ Enrollment points are used to install Mac computers and enroll devices you manag
 
  The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point and the out of band service point, and for encryption of data over SSL. For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
- For an example deployment of the server certificate and information about how to configure it in IIS, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+ For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_Enrollment_Proxy_Point"></a> Enrollment proxy point  
 For information about how to configure an enrollment proxy point for mobile devices, see [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/how-users-enroll-devices-with-on-premises-mobile-device-management.md).  
@@ -110,7 +111,7 @@ For information about how to configure an enrollment proxy point for mobile devi
 
  The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to mobile devices and Mac computers enrolled by Configuration Manager, and for encryption of data over Secure Sockets Layer (SSL). For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
- For an example deployment of the server certificate and information about how to configure it in IIS, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+ For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_Fallback_Status_Point"></a> Fallback status point  
 **Number of state messages** and **Throttle interval (in seconds)**  

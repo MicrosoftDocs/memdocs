@@ -1,5 +1,6 @@
 ---
 title: "Installing sites | System Center Configuration Manager"
+description: "Review a list of topics that help you install your first System Center Configuration Manager, or add sites to your hierarchy."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
 caps.latest.revision: 31
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Installing System Center Configuration Manager sites

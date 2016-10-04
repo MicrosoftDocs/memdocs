@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 caps.latest.revision: 6
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Support for Virtualization Environments for System Center Configuration Manager
@@ -30,7 +30,7 @@ Configuration Manager supports installing the client and site system roles on su
 
  Each virtual computer that you use must meet or exceed the same hardware and software configuration that you would use for a physical Configuration Manager computer.  
 
- You can validate that your virtualization environment is supported for Configuration Manager by using the Server Virtualization Validation Program and its online Virtualization Program Support Policy Wizard. For more information about the Server Virtualization Validation Program, see [Windows Server Virtualization Validation Program](http://go.microsoft.com/fwlink/p/?LinkId=134672).  
+ You can validate that your virtualization environment is supported for Configuration Manager by using the Server Virtualization Validation Program and its online Virtualization Program Support Policy Wizard. For more information about the Server Virtualization Validation Program, see [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx).  
 
 > [!NOTE]  
 >  Configuration Manager does not support Virtual PC or Virtual Server guest operating systems that run on a Mac.  

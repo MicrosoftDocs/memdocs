@@ -1,5 +1,6 @@
 ---
 title: "Install cloud-based distribution points | System Center Configuration Manager"
+description: "Learn what you need to do to start using cloud-based distribution points in Microsoft Azure."
 ms.custom: na
 ms.date: 06/27/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 caps.latest.revision: 7
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager
 You can install System Center Configuration Manager cloud-based distribution points in Microsoft Azure. If your unfamiliar with cloud-based distribution points, see [Use a cloud-based distribution point](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) before continuing.
@@ -23,7 +24,7 @@ You can install System Center Configuration Manager cloud-based distribution poi
 -   A Configuration Manager cloud-based distribution point service certificate that is exported to a .pfx file.  
 
     > [!TIP]
-    >   For more information about these certificates, see the section for cloud-based distribution points in the [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md) topic. For an example deployment of the cloud-based distribution point service certificate, see the [Deploying the Service Certificate for Cloud-Based Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clouddp2008_cm2012) in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+    >   For more information about these certificates, see the section for cloud-based distribution points in the [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md) topic. For an example deployment of the cloud-based distribution point service certificate, see the *Deploying the Service Certificate for Cloud-Based Distribution Points* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 
  After you install the cloud-based distribution point, Microsoft Azure automatically generates a GUID for the service and appends this to the DNS suffix of **cloudapp.net**. Using this GUID, you must configure DNS with a DNS alias (CNAME record) to map the service name that you define in the Configuration Manager cloud-based distribution point service certificate to the automatically generated GUID.  

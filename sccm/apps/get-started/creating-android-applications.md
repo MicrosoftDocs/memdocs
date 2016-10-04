@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 379b4601-107a-4ea9-99be-1fc70b7bb377
 caps.latest.revision: 6
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 ---
 # Create Android applications with System Center Configuration Manager
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Android devices.  
@@ -23,7 +23,7 @@ Configuration Manager supports deploying the following app types for Android:
 
 |Device Type|Supported Files|
 |-|-|
-|Android|*.apk|
+|Android|.apk|
 
 The following deployment actions are supported:
 

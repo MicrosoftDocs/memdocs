@@ -1,5 +1,6 @@
 ---
 title: "Management point database replicas | System Center Configuration Manager"
+description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
 ms.custom: na
 ms.date: 04/26/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 caps.latest.revision: 9
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Database replicas for management points for System Center Configuration Manager

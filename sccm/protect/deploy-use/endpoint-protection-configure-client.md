@@ -1,5 +1,6 @@
 ---
 title: "Configure Endpoint Protection Client | System Center Configuration Manager"
+description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 

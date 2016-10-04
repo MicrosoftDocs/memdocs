@@ -4,11 +4,11 @@
 title: Introduction to software updates | Configuration Manager
 description: "Learn the basics of software updates in System Center Configuration Manager."
 keywords:
-author: dougeby
+author: dougebyms.author: dougeby
 manager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa

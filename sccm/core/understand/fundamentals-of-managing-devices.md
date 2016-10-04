@@ -1,5 +1,6 @@
 ---
 title: "Fundamentals of managing devices | System Center Configuration Manager"
+description: "Learn how to use System Center Configuration Manager to manage devices."
 ms.custom: na
 ms.date: 04/18/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Fundamentals of managing devices with System Center Configuration Manager
@@ -48,7 +49,7 @@ In addition to managing devices with or without the Configuration Manager client
 
  The following diagram shows an example of how you could create and apply custom client settings.  
 
- ![ClientSettings](../../core/understand/media/ClientSettings.gif "ClientSettings")  
+ ![Client settings](media/ClientSettings.gif)  
 
  To learn more about client settings, see  
                 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) and  [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).

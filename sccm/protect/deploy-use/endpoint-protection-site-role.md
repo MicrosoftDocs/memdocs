@@ -1,5 +1,8 @@
 ---
 title: "Configuring Endpoint Protection | System Center Configuration Manager"
+description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
+defintion: ""
+definition: ""
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
@@ -11,7 +14,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 caps.latest.revision: 21
-author: NathBarnmanager: angrobe
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 # Create an Endpoint Protection Point Site System Role
@@ -83,4 +86,3 @@ author: NathBarnmanager: angrobe
 
 > [!div class="button"]
 [Back >](endpoint-protection-configure.md)
-

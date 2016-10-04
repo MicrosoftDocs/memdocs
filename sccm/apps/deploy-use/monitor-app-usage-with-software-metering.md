@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 caps.latest.revision: 8
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 
@@ -32,7 +32,7 @@ Software metering has no external dependencies, only dependencies within the pro
 |The reporting services point.|You must configure a reporting services point before you can view software metering reports. For more information, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).|  
 
 ##  Configure software metering  
- This procedure configures the default client settings for software metering and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and deploy it to a collection that contains the computers on which you want to use software metering. For more information about how to create custom device settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).  
+ This procedure configures the default client settings for software metering and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and deploy it to a collection that contains the computers on which you want to use software metering. For more information about how to create custom device settings, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
 1.  In the Configuration Manager console, click **Administration** > **Client Settings** > **Default Client Settings**.  
 
@@ -48,7 +48,7 @@ Software metering has no external dependencies, only dependencies within the pro
 
 5.  Click **OK** to close the **Default Settings** dialog box.  
 
- Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients in System Center Configuration Manager](../../core/clients/manage/manage-clients.md).  
+ Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [Manage clients](../../core/clients/manage/manage-clients.md).  
 
 ##  Create software metering rules  
  Use the **Create Software Metering Rule Wizard** to create a new software metering rule for your Configuration Manager site.  
@@ -119,7 +119,7 @@ Software metering has no external dependencies, only dependencies within the pro
 
 |Management Task|Details|  
 |---------------------|-------------|  
-|**Enable**<br /><br /> **Disable**|Enables or disables a software metering rule. This setting is downloaded to client computers according to the **Client policy polling interval** in the **Client Policy** section of client settings (by default, every 60 minutes).<br /><br /> See [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) .|  
+|**Enable**<br /><br /> **Disable**|Enables or disables a software metering rule. This setting is downloaded to client computers according to the **Client policy polling interval** in the **Client Policy** section of client settings (by default, every 60 minutes).<br /><br /> See [Configure client settings](../../core/clients/deploy/configure-client-settings.md) .|  
 
 ##  Monitor software metering  
  Software metering in Configuration Manager includes a number of built-in reports which allow you to monitor information about software metering operations. These reports have the report category of **Software Metering**.  
@@ -130,7 +130,7 @@ Software metering has no external dependencies, only dependencies within the pro
 
  For more information about collections in Configuration Manager, see [Introduction to collections](/sccm/core/clients/manage/collections/introduction-to-collections).  
 
- For more information about queries in Configuration Manager, see [Introduction to queries ](/sccm/core/servers/manage/introduction-to-queries).  
+ For more information about queries in Configuration Manager, see [Introduction to queries](/sccm/core/servers/manage/introduction-to-queries).  
 
 ##  Security and privacy for software metering  
 

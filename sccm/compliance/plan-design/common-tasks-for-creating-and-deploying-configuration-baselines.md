@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
@@ -44,7 +44,7 @@ In the following procedure, you'll learn how to add this configuration item to a
 
 7.  Click OK to close the **Add Configuration Items** dialog box and return to the **Create Configuration Baseline** dialog box which should appear similar to this screenshot:  
 
-     ![Create Configuration Baseline dialog box](../media/Create-Configuration-Baseline.png)  
+     ![Create Configuration Baseline dialog box](/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png)  
 
 8.  Click **OK** to close the **Create Configuration Baseline** dialog box.  
 
@@ -74,7 +74,7 @@ In the following procedure, you'll learn how to add this configuration item to a
 
 6.  The dialog box will now look something like:  
 
-     ![Deploy configuration baselines dialog box](../media/Deploy-configuration-baselines.png)  
+     ![Deploy configuration baselines dialog box](/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png)  
 
 7.  Click **OK** to close the **Deploy Configuration Baselines** dialog box and create the deployment.  
 

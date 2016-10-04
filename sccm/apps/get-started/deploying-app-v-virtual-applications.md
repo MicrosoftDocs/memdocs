@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Deploy App-V virtual applications with System Center Configuration Manager
@@ -128,9 +128,9 @@ To deploy virtual applications to computers, you must have the Configuration Man
 
 3.  After the deployment is completed, create virtual environments that match the connection groups that are published in stand-alone App-V. The virtual environment must contain the same packages, specifically, App-V 5 deployment types, in the same order.  
 
-     For information about how to create an App-V virtual environment, see [How to create App-V virtual environments in System Center Configuration Manager](../../apps/deploy-use/create-app-v-virtual-environments.md).  
+For information about how to create an App-V virtual environment, see [How to create App-V virtual environments](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
- Alternatively, you can delete all connection groups from the App-V Client before you begin to deploy applications with Configuration Manager. However, any settings that users might have saved in App-V connection groups will be lost.  
+Alternatively, you can delete all connection groups from the App-V Client before you begin to deploy applications with Configuration Manager. However, any settings that users might have saved in App-V connection groups will be lost.  
 
 ##  Dynamic Suite Composition in App-V 4.6  
  Dynamic Suite Composition is a feature that provides the ability to define one virtual application package as having a dependency on another virtual application package. When the application is run, the App-V Client hosts the primary package and the dependent package in the same virtual environment for the application.  

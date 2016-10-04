@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 67762fb5-8da0-4df1-b3f1-6783849aa568
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Planning for power management in System Center Configuration Manager

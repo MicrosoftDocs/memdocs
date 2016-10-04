@@ -1,5 +1,6 @@
 ---
 title: "Conditional access to services | System Center Configuration Manager"
+description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76d86613-b87f-4fe5-9236-a573e00b613a
 caps.latest.revision: 26
-author: karthikaramanmanager: angrobe
+author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
 

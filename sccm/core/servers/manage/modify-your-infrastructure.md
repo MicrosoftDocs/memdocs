@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Modify your System Center Configuration Manager infrastructure
@@ -61,11 +61,11 @@ After you install one or more sites, you might have need to modify configuration
 
 -   **Modify the language that displays in the Configuration Manager console** - To modify the installed languages   see [Manage Configuration Manager console language](#BKMK_ManageConsoleLanguages) in this topic.  
 
--   **Install additional consoles** - To install additional consoles, see  [Install System Center Configuration Manager consoles](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md#bkmk_InstallConsole).  
+-   **Install additional consoles** - To install additional consoles, see  [Install System Center Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).  
 
 -   **Configure DCOM** - To configure DCOM permission to enable consoles that are remote from the site server to connect, see  [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) in this topic.  
 
--   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](servers\deploy\configure\configure-role-based-administration.md#BKMK_ModAdminUser).     
+-   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration.md#bkmk_modadminuser).     
 
 ###  <a name="BKMK_ManageConsoleLanguages"></a> Manage Configuration Manager console language  
  During site server installation, the Configuration Manager console installation files and supported language packs for the site are copied to the **&lt;ConfigMgrInstallationPath\>\Tools\ConsoleSetup** subfolder on the site server.  
@@ -278,7 +278,7 @@ The account that you use to perform a site reset must have the following permiss
     -   **Primary site**: The account that you use to run a site reset at this site must be a local administrator on the primary site server and must have privileges that are equivalent to the **Full Administrator** role-based administration security role. If the primary site is in a hierarchy with a central administration site, this account must also be a local administrator on the central administration site server.  
 
 **Limitations for a site reset**
-  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a preproduction collection](clients\manage\upgrade\test-client-upgrades.md).
+  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a preproduction collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 #### To perform a site reset  
 

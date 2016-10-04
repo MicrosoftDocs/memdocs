@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 45969afe-f836-4c5e-b987-44585ba8ac2a
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Asset Intelligence in System Center Configuration Manager

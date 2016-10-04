@@ -4,7 +4,7 @@
 title: Integration with Windows Update for Business in Windows 10 | Configuration Manager
 description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up to date for devices connected to the Windows Update service."
 keywords:
-author: dougeby
+author: dougebyms.author: dougeby
 manager: angrobe
 ms.date: 9/14/2016
 ms.topic: article

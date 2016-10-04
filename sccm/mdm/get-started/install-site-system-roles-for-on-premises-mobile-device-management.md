@@ -1,5 +1,6 @@
 ---
 title: "Install site system roles | On-premises MDM | System Center Configuration Manager"
+description: "Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 02/04/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 caps.latest.revision: 9
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager

@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 74d5d776-e37d-45de-bdba-43541b03d12c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Configure iOS apps with app configuration policies in System Center Configuration Manager
@@ -35,8 +35,7 @@ For more information about app installation types, see [Introduction to applicat
 
 ## Create an app configuration policy
 
-1. In the Configuration Manager console, click **Software Library**.
-2. In the **Software Library** workspace, expand **Application Management**, and then click **App Configuration Policies**.
+1. In the Configuration Manager console, click **Software Library** > **Application Management** > **App Configuration Policies**.
 3. On the **Home** tab, in the **App Configuration Policies** group, click **Create new Application Configuration Policy**.
 4. On the **General** page of the **Create App Configuration Policy Wizard**, specify the following information:
 	- **Name**: Specify a unique name for the policy.

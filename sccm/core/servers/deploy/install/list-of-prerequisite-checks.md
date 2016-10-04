@@ -1,5 +1,6 @@
 ---
 title: "Prerequisite checks | System Center Configuration Manager"
+description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 caps.latest.revision: 12
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # List of Prerequisite Checks for System Center Configuration Manager

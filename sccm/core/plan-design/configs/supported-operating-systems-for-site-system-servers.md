@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Supported operating systems for System Center Configuration Manager  site system servers
@@ -22,7 +22,7 @@ This article details the Windows versions that you can use to host a System Cent
 
 Use the information in this topic with the information in the following articles:
 -   [Recommended hardware for Configuration Manager](../../../core/plan-design/configs/recommended-hardware.md)
--   [Site and site system prerequisitesfor Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
+-   [Site and site system prerequisites for Configuration Manager](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [Size and scale numbers for Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md)
 
 

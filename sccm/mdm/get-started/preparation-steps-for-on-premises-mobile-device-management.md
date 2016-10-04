@@ -1,5 +1,6 @@
 ---
 title: "Preparation steps | On-premises MDM | System Center Configuration Manager"
+description: "Prepare to manage devices with On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
 caps.latest.revision: 4
-author: Mtillmanmanager: angrobe
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager

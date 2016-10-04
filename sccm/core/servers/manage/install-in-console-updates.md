@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Install in-console updates for System Center Configuration Manager
@@ -330,7 +330,7 @@ When your hierarchy runs version 1606 or later, and you then install an update t
  |Feature                    |Added as pre-release |Added as a full feature |  
 |----------------------------|---------------------|------------------------|
 | Microsoft Operations Management Suite (OMS) Connector  | [Release 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Servicing a cluster aware collection (Service a server group)| [Release 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#Service-a-server-group)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Servicing a cluster aware collection (Service a server group)| [Release 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |Conditional access for PCs managed by System Center Configuraiton Manager | [Release 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 

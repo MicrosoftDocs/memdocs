@@ -1,5 +1,6 @@
 ---
 title: "Run discovery | System Center Configuration Manager"
+description: "Read an overview of the discovery process and discovery data records."
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
@@ -12,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 caps.latest.revision: 20
 caps.handback.revision: 0
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Run discovery for System Center Configuration Manager

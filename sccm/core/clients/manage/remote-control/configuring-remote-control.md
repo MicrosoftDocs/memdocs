@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsftmanager: angrobe
+author: barlanmsftms.author: barlanmanager: angrobe
 
 ---
 # Configuring remote control in System Center Configuration Manager

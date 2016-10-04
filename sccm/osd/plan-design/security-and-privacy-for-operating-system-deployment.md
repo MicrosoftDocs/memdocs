@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Security and privacy for operating system deployment in System Center Configuration Manager

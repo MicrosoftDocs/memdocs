@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 866113ff-efd0-40d2-ac3a-2edd49732a24
 caps.latest.revision: 10
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Create Windows Phone applications with System Center Configuration Manager
@@ -23,8 +23,8 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 |Device Type|Supported Files|  
 |-----------------|---------------------|  
-|Windows Phone 8|*.xap|  
-|Windows Phone 8.1|*.xap, \*.appx, \*.appxbundle|  
+|Windows Phone 8|.xap|  
+|Windows Phone 8.1|.xap, .appx, .appxbundle|  
 
  The following deployment actions are supported:  
 

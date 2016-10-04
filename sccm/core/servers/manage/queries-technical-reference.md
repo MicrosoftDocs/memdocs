@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
 caps.latest.revision: 4
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---                     
 # Queries technical reference for System Center Configuration Manager
@@ -26,6 +26,3 @@ Queries in System Center Configuration Manager return information from the site 
 -   [Operations and maintenance for queries in System Center Configuration Manager](../../../core/servers/manage/operations-and-maintenance-for-queries.md)  
 
 -   [Security and privacy for queries in System Center Configuration Manager](../../../core/servers/manage/security-and-privacy-for-queries.md)  
-
-## See Also  
- [Technical reference for System Center Configuration Manager](../Topic/Technical%20reference%20for%20System%20Center%20Configuration%20Manager.md)

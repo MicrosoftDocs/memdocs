@@ -1,5 +1,6 @@
 ---
 title: "Configure discovery | System Center Configuration Manager"
+description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 caps.latest.revision: 5
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Configure discovery methods for System Center Configuration Manager
 

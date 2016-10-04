@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: e562e2a0-8df8-4952-952f-e8c38461c612
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # How to manage queries in System Center Configuration Manager
@@ -29,7 +29,7 @@ Use the information in this topic to help you manage queries in System Center Co
 |Management task|Details|More information|  
 |---------------------|-------------|----------------------|  
 |**Run**|Runs the selected query and displays the results in the Configuration Manager console.|No additional information.|  
-|**Install Client**|Opens the **Install Client Wizard** that lets you install the Configuration Manager client on computers returned by the selected query.<br /><br /> This option is not available for queries that return mobile devices, users, or user groups.|For more information about how to install Configuration Manager clients by using client push, see [Manage computer clients with System Center Configuration Manager](../Topic/Manage%20computer%20clients%20with%20System%20Center%20Configuration%20Manager.md).|  
+|**Install Client**|Opens the **Install Client Wizard** that lets you install the Configuration Manager client on computers returned by the selected query.<br /><br /> This option is not available for queries that return mobile devices, users, or user groups.|For more information about how to install Configuration Manager clients by using client push, see [Deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-cliens-to-windows-comuters).|  
 |**Export**|Opens the **Export Objects Wizard** that lets you export this query to a Managed Object Format (MOF) file that can then be imported at another site.|No additional information.|  
 |**Move**|Opens the **Move Selected Items** dialog box where you can move the selected query to a folder that you previously created under the **Queries** node.|No additional information.|  
 

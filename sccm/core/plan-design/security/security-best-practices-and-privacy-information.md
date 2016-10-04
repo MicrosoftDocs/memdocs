@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 caps.latest.revision: 10
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Security best practices and privacy information for System Center Configuration Manager
@@ -32,7 +32,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/deploy-use/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
 -   [Security and privacy for operating system deployment in System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -54,7 +54,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for compliance settings in System Center Configuration Manager](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   [Security and Privacy for Remote Connection Profiles in Configuration Manager](../Topic/Security%20and%20Privacy%20for%20Remote%20Connection%20Profiles%20in%20Configuration%20Manager.md)  
+-   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
 -   [Security and privacy for certificate profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 

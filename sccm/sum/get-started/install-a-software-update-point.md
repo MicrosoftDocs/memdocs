@@ -4,7 +4,7 @@
 title: Install and configure a software update point | Configuration Manager
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
 keywords:
-author: dougebymanager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
 ms.prod: configuration-manager

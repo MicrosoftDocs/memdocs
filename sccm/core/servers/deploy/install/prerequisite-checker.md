@@ -1,5 +1,6 @@
 ---
 title: "Prerequisite checker | System Center Configuration Manager"
+description: "Learn how to use the prerequisite checker to identify and fix problems that would block an actual site or site system role installation."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 caps.latest.revision: 3
-author: Brendunsmanager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Prerequisite checker for System Center Configuration Manager
 

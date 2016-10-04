@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsftmanager: angrobe
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # Create configuration baselines in System Center Configuration Manager

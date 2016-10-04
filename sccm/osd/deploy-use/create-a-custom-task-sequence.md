@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Dougebymanager: angrobe
+author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Create a custom task sequence with System Center Configuration Manager
