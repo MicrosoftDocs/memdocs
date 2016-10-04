@@ -1,5 +1,6 @@
 ---
 title: "Manage distribution points | System Center Configuration Manager"
+description: "Host the content (files and software) you deploy to devices and users by using distribution points. Here's how to install and configure them."
 ms.custom: na
 ms.date: 05/02/2016
 ms.prod: configuration-manager

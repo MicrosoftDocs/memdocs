@@ -1,5 +1,6 @@
 ---
 title: "Install consoles | System Center Configuration Manager"
+description: "Read about installing Configuration Manager consoles to connect to a central administration site or a primary site."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

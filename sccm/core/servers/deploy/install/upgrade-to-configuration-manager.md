@@ -1,5 +1,6 @@
 ---
 title: "Upgrade to System Center Configuration Manager | System Center Configuration Manager"
+description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 07/22/2016
 ms.prod: configuration-manager

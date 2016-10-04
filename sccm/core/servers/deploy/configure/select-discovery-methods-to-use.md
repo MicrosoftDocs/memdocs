@@ -1,5 +1,6 @@
 ---
 title: "Select discovery methods | System Center Configuration Manager"
+description: "Review considerations for which methods to use and at which sites to run them."
 ms.custom: na
 ms.date: 04/28/2016
 ms.prod: configuration-manager
