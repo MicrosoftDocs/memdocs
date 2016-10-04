@@ -84,7 +84,7 @@ Starting with the 1606 release of Configuration Manager (current branch), Endpoi
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
 
- ![Endpoint Protection Workflow](media/Endpoint-Protection-Workflow.gif)  
+ ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)  
 
 ## Endpoint Protection Client for Mac Computers and Linux Servers  
  System Center Endpoint Protection includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
