@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Prerequisites for Asset Intelligence in System Center Configuration Manager

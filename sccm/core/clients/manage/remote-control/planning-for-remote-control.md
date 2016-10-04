@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 901303a8-4c03-4cc2-84dc-dd6364d103d2
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Planning for remote control in System Center Configuration Manager
