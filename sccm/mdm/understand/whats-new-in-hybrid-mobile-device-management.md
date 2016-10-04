@@ -24,6 +24,95 @@ This article provides details on the new mobile device management (MDM) features
 |-|  
 |**New in Microsoft Intune** - In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.<br /><br /> **New in Configuration Manager Technical Preview** - All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **New in Configuration Manager (current branch)** - All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
 
+## New hybrid features in September 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in September 2016 work in hybrid deployments. You use these features the same way you would use them in the standalone Intune service. No changes or administration in Configuration Manager is required to use these features.
+
+- **Addition of "Notifications" to the Company Portal for Android**
+
+  A new Notifications icon has been added to the Company Portal for Android on the homepage. Tapping this icon accesses the Notifications page, which shows your end users all items that require attention in the Company Portal app, such as device noncompliance, enrollment update, and enrollment activation. The iOS Company Portal app already has this notifications experience. Having the new Notifications page means that user won’t see the Company Access Setup page every time they launch or resume the Company Portal as long as the device is already enrolled. If you create your own end-user guidance, you might want to update your documentation to reflect this change. Find updated screenshots [here](https://aka.ms/androidcpupdate).
+
+- **Changes in support for the iOS Company Portal app**
+
+  All users of the Microsoft Intune Company Portal app for iOS are now required to use its latest version. New users are able to download only the latest version, and current users are required to update to it. The latest version requires iOS 8.0 or later, so devices running older iOS versions cannot use the Company Portal or enroll until they update their device to iOS 8.0 or later, and then update the Company Portal app to the latest version. Enrolled devices running versions below iOS 8.0 will continue to be managed and listed in the Intune Admin Console.
+
+- **Feedback button added to Windows Phone 8.1 Company Portal app**
+
+  The Windows Phone 8.1 Company Portal app enables end users to send feedback about the app by using a new "send feedback" button. To find the button, users tap the “three dots” menu at the bottom right of the Company Portal app screen and then tap **send feedback**. The collected, anonymized feedback will help Microsoft improve the Company Portal app experience for users.
+
+### New in Configuration Manager Technical Preview 1609
+
+The following new hybrid features have been introduced in September 2016 for Configuration Manager Technical Preview 1609.
+
+- **Additional settings and improved experience for Configuration Item settings**
+
+  New settings have been added for Android, iOS, and Windows, and only settings that apply to the platforms you select on the Supported Platforms page are displayed in the wizard. For more information see [New compliance settings for configuration items in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#new-compliance-settings-for-configuration-items).
+
+- **Additional settings for DEP profiles**
+
+  TouchID, ApplePay, and Zoom have been added as configurable settings in DEP profiles for iOS devices.
+
+- **Paid Apps in Windows Store for Business**
+
+  You can now add both paid and free applications to Windows Store for Business and deploy them to users in your organization. For more information see [Enhancements to Windows Store for Business in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#enhancements-to-windows-store-for-business-integration-with-configuration-manager).
+
+- **Native connection types for Windows 10 VPN profiles**
+
+  You can now create Windows 10 VPN profiles for MDM with Microsoft Automatic, IKEv2, and PPTP connection types in the Configuration Manager console without using OMA-URI.
+
+- **Intune Compliance Charts**
+
+  You can get a quick view of overall device compliance and top reasons for non-compliance using new charts under the Monitoring workspace. For more information, see [Intune compliance charts in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#intune-compliance-charts).
+
+### New in Configuration Manager (current branch)
+
+The following new feature introduced in September 2016 is available for hybrid deployments with Microsoft Intune and Configuration Manager version 1606 (current branch).
+
+- **iOS 10 support**
+
+  If you have profiles or configuration items targeted to all iOS platforms, these will also be pushed to iOS 10. We’ve also released an update to Configuration Manager version 1606 that allows you to target profiles and configuration items to individual iOS platforms including iOS 10. You can install the update with the Configuration Manager admin console at **Administration > Overview > Cloud Services > Updates and Servicing**. You can find more information about the update at [http://support.microsoft.com/kb/3192616](http://support.microsoft.com/kb/3192616).
+
+## New hybrid features in August 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in August 2016 work in hybrid deployments. You use these features the same way you would use them in the standalone Intune service. No changes or administration in Configuration Manager is required to use these features.
+
+- **Android 7 support in the Company Portal app**
+
+  The Intune Company Portal app for Android provides “day 0” support for the forthcoming Android 7.0 operating system for mobile devices.
+
+- **Google removal of remote passcode reset capability on Android 7.0 devices**
+
+  Google is removing the ability of IT administrators and end users to remotely reset the passcode of Android 7.0 devices. Previously, IT administrators could remotely reset a user’s passcode, and end users could reset their passcodes from the Company Portal website.
+
+- **Allowed and blocked apps policy for Samsung KNOX devices**
+
+  You can now configure a custom policy for Samsung KNOX devices that lets you create one of the following:
+
+  - A list of apps that are blocked from running on the device. Even if installed, an app defined in the blocked list cannot be activated on the device.
+  - A list of apps that users of the device are allowed to install from the Google Play store. No other apps can be installed from the store.
+
+  These settings can only be used by devices that run Samsung KNOX. For details, see [Use custom policies to allow and block apps for Samsung KNOX devices](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
+
+- **Feedback link from the Company Portal to Microsoft**
+
+   The Company Portal website enables end users to tap a new "Feedback" link, at the bottom of the page, to send feedback to Microsoft about their experience with the site. The collected, anonymized feedback will help Microsoft improve the Company Portal website experience for users.
+
+- **Minimum iOS Managed Browser version updated to 8.0**
+
+  The Microsoft Intune Managed Browser app for iOS has been updated to support devices running iOS 8.0 or later. While iOS 7.1 devices can still use the existing Managed Browser app, encourage your users to update to iOS 8.0 or later to access and take full advantage of new Managed Browser features.
+
+### New in Configuration Manager Technical Preview
+
+No new hybrid features have been introduced in August 2016 for Configuration Manager Technical Preview.
+
+### New in Configuration Manager (current branch)
+
+No new hybrid features have been introduced in August 2016 for Configuration Manager (current branch).
+
 ## New hybrid features in July 2016
 
 ### New in Microsoft Intune
