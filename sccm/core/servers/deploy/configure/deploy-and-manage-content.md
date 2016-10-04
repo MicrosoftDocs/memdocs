@@ -116,7 +116,7 @@ Use the following procedure to distribute content to distribution points.
 
 -   **When you prestage content for a package with a long package source path** (for example, more than 140 characters), the Extract Content command-line tool might fail to successfully extract the content for that package to the content library.  
 
-For information about when to prestage content files, see  [Prestaged content](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md#BKMK_PrestagingContent) in the [Manage network bandwidth for content management](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md) topic.  
+For information about when to prestage content files, see  *Prestaged content* in the [Manage network bandwidth for content management](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) topic.  
 
 Use the following sections to prestage content.  
 

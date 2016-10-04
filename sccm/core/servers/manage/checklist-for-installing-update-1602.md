@@ -70,7 +70,7 @@ For more information, see
  **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster.    
 
- For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md)  
+ For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:  
 

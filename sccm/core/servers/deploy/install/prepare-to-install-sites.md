@@ -73,7 +73,7 @@ You use the Configuration Manager console to install a secondary site as a child
 -   Install and configure SQL Server to host the site database (see    
     [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md))  
 
--   Prepare your network environment to support Configuration Manager (see [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md))  
+-   Prepare your network environment to support Configuration Manager (see [Configure firewalls, ports, and domains to prepare for Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains))  
 
 -   If you will use a PKI, prepare your infrastructure and certificates (see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md)
 
