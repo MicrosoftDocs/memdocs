@@ -20,7 +20,7 @@ author: karthikaramanms.author: karamanmanager: angrobe
 Use conditional access policy for  **Skype for Business Online** to manage access to Skype for Business Online, based on conditions you specify.  
 
 
- When a targeted user attempts to use Skype for Business Online on their device, the following evaluation occurs:![ConditionalAccess&#95;SFBFlow](../../protect/deploy-use/media/ConditionalAccess_SFBFlow.png "ConditionalAccess_SFBFlow")  
+ When a targeted user attempts to use Skype for Business Online on their device, the following evaluation occurs:![ConditionalAccess&#95;SFBFlow](..//media/ConditionalAccess_SFBFlow.png)  
 
 ## Prerequisites  
 
@@ -70,7 +70,7 @@ If a condition is not met, the user is presented with one of the following messa
 
 1.  In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **Skype for Business Online Policy**.  
 
-     ![ConditionalAccess&#95;SFBPolicy](../../protect/deploy-use/media/ConditionalAccess_SFBPolicy.png "ConditionalAccess_SFBPolicy")  
+     ![ConditionalAccess&#95;SFBPolicy](../media/ConditionalAccess_SFBPolicy.png)  
 
 2.  Select **Enable conditional access policy**.  
 
