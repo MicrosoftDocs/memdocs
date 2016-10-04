@@ -1,5 +1,6 @@
 ---
 title: "Manage email access | System Center Configuration Manager"
+description: "Learn how to use System Center Configuration Manager conditional access to manage access to Exchange email."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -145,7 +146,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  The following flow is used by conditional access policies for Exchange Online to evaluate whether to allow or block devices.  
 
- ![ConditionalAccess8&#45;1](../../protect/deploy-use/media/ConditionalAccess8-1.png "ConditionalAccess8-1")  
+ ![ConditionalAccess8&#45;1](../media/ConditionalAccess8-1.png)  
 
  To access email, the device must:  
 
@@ -195,7 +196,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
 4.  In the [Microsoft Intune administration console](https://manage.microsoft.com), click **Policy** > **Conditional Access** > **Exchange Online Policy**.  
 
-     ![HybridOnlineSetupIntune](../../protect/deploy-use/media/HybridOnlineSetupIntune.png "HybridOnlineSetupIntune")  
+     ![HybridOnlineSetupIntune](../media/HybridOnlineSetupIntune.png)  
 
 5.  On the **Exchange Online Policy** page, select **Enable conditional access policy for Exchange Online**. If you check this, the device must be compliant. If this is not checked then conditional access is not applied.  
 
@@ -234,11 +235,11 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
      **iOS**
 
-     ![screenshot of the certificate prompt on an ipad](../../protect/deploy-use/media/mdm-browser-ca-ios-cert-prompt_v2.png)
+     ![screenshot of the certificate prompt on an ipad](../media/mdm-browser-ca-ios-cert-prompt_v2.png)
 
     **Android**
 
-    ![screenshot of the certificate prompt on an Android device](../../protect/deploy-use/media/mdm-browser-ca-android-cert-prompt.png)
+    ![screenshot of the certificate prompt on an Android device](../media/mdm-browser-ca-android-cert-prompt.png)
 
 7.  For**Exchange ActiveSync mail apps**, you can choose to block email from accessing Exchange Online if the device is noncompliant, and select whether to allow or block access to email when Intune cannot manage the device.  
 
@@ -267,7 +268,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 ### For Exchange on-premises (and tenants in the legacy Exchange Online Dedicated environment)  
  The following flow is used by conditional access policies for Exchange on-premises and tenants in the legacy Exchange Online Dedicated environment to evaluate whether to allow or block devices.  
 
- ![ConditionalAccess8&#45;2](../../protect/deploy-use/media/ConditionalAccess8-2.png "ConditionalAccess8-2")  
+ ![ConditionalAccess8&#45;2](../media/ConditionalAccess8-2.png)  
 
 ##### To enable the Exchange On-premises policy  
 
@@ -284,19 +285,19 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
      If you have not setup a notification email account when you set up the Exchange connector, you will see a warning on this page, and the **Next** button is disabled.  Before you can proceed, you must first configure the notification email settings in the Exchange Connector and then  come back to the **Configure Conditional Access Policy Wizard** to complete the process.  
 
-     ![HybridCondAccessWiz1](../../protect/deploy-use/media/HybridCondAccessWiz1.PNG "HybridCondAccessWiz1")  
+     ![HybridCondAccessWiz1](../media/HybridCondAccessWiz1.PNG)  
 
      Click **Next**.  
 
 5.  On the **Targeted Collections** page, add one or more user collections. In order to access Exchange, users in these collections must enroll their devices with Intune and also be compliant with any compliance policies you deployed.  
 
-     ![HybridCondAccessWiz2](../../protect/deploy-use/media/HybridCondAccessWiz2.PNG "HybridCondAccessWiz2")  
+     ![HybridCondAccessWiz2](../media/HybridCondAccessWiz2.PNG)  
 
      Click **Next**.  
 
 6.  On the **Exempted Collections** page, add any user collections that you want to be exempt from the conditional access policy. Users in these groups, do not need to enroll their devices with Intune and do not need to be compliant with any deployed compliance policies in order to access Exchange.  
 
-     ![HybridCondAccessWiz3](../../protect/deploy-use/media/HybridCondAccessWiz3.png "HybridCondAccessWiz3")  
+     ![HybridCondAccessWiz3](../media/HybridCondAccessWiz3.png)  
 
      If a user appears in both the targeted and exempted lists, they will be exempt from the conditional access policy.  
 
@@ -306,7 +307,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
      You can edit the default message and use HTML tags to format how the text appears. You can also send an email in advance to your employees notifying them of the upcoming changes and providing them with instructions about enrolling their devices.  
 
-     ![HybridCondAccessWiz4](../../protect/deploy-use/media/HybridCondAccessWiz4.PNG "HybridCondAccessWiz4")  
+     ![HybridCondAccessWiz4](../media/HybridCondAccessWiz4.PNG)  
 
     > [!NOTE]  
     >  Because the Intune notification email containing remediation instructions is delivered to the user's Exchange mailbox, in the event that the user's device gets blocked before they receive the email message, they can use an unblocked device or other method to access Exchange and view the message.  

@@ -1,5 +1,6 @@
 ---
 title: "Manage Dynamics CRM Online access | System Center Configuration Manager"
+description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
 ms.custom: na
 ms.date: 06/20/2016
 ms.reviewer: na
@@ -21,7 +22,7 @@ To learn more about how conditional access works, read the [Manage access to ser
 
 When a targeted user attempts to use the Dynamics CRM app on their device, the following evaluation occurs:
 
-![Diagram show the decision points used to determine whether a device is allowed access to a service or is blocked](../../protect/deploy-use/media/mdm-ca-dynamics-crm-flow-diagram.png)
+![Diagram show the decision points used to determine whether a device is allowed access to a service or is blocked](../media/mdm-ca-dynamics-crm-flow-diagram.png)
 
 The device that needs access to Dynamics CRM Online must:
 * Be an **Android** or **iOS** device.
@@ -60,7 +61,7 @@ Next, configure the policy to require that only managed and compliant devices ca
 
 1.  In the Microsoft Intune administration console, choose **Policy > Conditional Access > Dynamics CRM Online Policy**.
 
-     ![Screenshot of the Dynamics CRM Online conditional access policy page](../../protect/deploy-use/media/mdm-ca-dynamics-crm-policy-configuration.png)
+     ![Screenshot of the Dynamics CRM Online conditional access policy page](../media/mdm-ca-dynamics-crm-policy-configuration.png)
 
 2.  Select **Enable conditional access** policy.
 3.  Under **Application access**, you can choose to apply conditional access policy to:
@@ -86,8 +87,3 @@ Select any mobile device group and then, on the **Devices** tab, select one of t
 [Manage access to SharePoint Online](../../protect/deploy-use/manage-sharepoint-online-access.md)
 
 [Manage access to Skype for Business Online](../../protect/deploy-use/manage-skype-for-business-online-access.md)
-
-
-
-  
-

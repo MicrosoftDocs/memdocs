@@ -162,7 +162,7 @@ Enable this option on a device collection or on a set of selected devices. Once 
 #### Restrict Access to Specific Domains  
  If your organization does not allow the ports and protocols to be open to all addresses on the firewall between the active software update point and the Internet, you can restrict access to the following domains, so that WSUS and Automatic Updates can communicate with Microsoft Update:  
 
--   http://windowsupdate.microsoft.com  
+-   http://windowsupdate.microsoft.com
 
 -   http://*.windowsupdate.microsoft.com  
 

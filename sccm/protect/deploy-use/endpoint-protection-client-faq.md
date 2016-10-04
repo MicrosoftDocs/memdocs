@@ -1,5 +1,6 @@
 ---
 title: "Endpoint Protection client frequently asked questions | System Center Configuration Manager"
+description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 06/02/2016
 ms.prod: configuration-manager
@@ -55,6 +56,7 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 -   [How to set up Windows Defender or Endpoint Protection alerts?](#how-to-set-up-windows-defender-or-endpoint-protection-alerts)  
 
 ##  Why do I need antivirus and antispyware software?  
+
  It is critical to make sure that your computer is running software that protects against malicious software. Malicious software, which includes viruses, spyware, or other potentially unwanted software can try to install itself on your computer any time you connect to the Internet. It can also infect your computer when you install a program using a CD, DVD, or other removable media. Malicious software, can also be programmed to run at unexpected times, not just when it is installed.  
 
  Windows Defender or Endpoint Protection offers three ways to help keep malicious software from infecting your computer:  
@@ -62,10 +64,12 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 -   **Using real-time protection** - Real-time protection enables Windows Defender to monitor your computer all the time and alert you when malicious software, including viruses, spyware, or other potentially unwanted software attempts to install itself or run on your computer. Windows Defender then suspends the software and enables you to you to follow its recommendation on the software or take an alternative action.  
 
     |**Real-time protection option** |**Purpose** |
+
     |-|-|  
     |Scan all downloads|This option monitors files and programs that are downloaded, including files that are automatically downloaded via Windows Internet Explorer and Microsoft Outlook® Express, such as ActiveX® controls and software installation programs. These files can be downloaded, installed, or run by the browser itself. Malicious software, including viruses, spyware, and other potentially unwanted software, can be included with these files and installed without your knowledge.<br /><br /> Using the real-time protection option, Windows Defender monitors your computer all the time and checks for any malicious files or programs that you may have downloaded. This monitoring feature means that Windows Defender doesn't need to slow down your browsing or e-mail experience by requiring a check of any files or programs you may want to download.|  
     |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
     |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
+
     |Enable Network Inspection System|This option helps protect your computer against "zero day" exploits of known vulnerabilities, decreasing the window of time between the moment a vulnerability is discovered and an update is applied.|  
 
 -   **Scanning options** - You can use Windows Defender to scan for potential threats, such as viruses, spyware, and other malicious software that might put your computer at risk. You can also use it to schedule scans on a regular basis and to remove malicious software that is detected during a scan.  
@@ -73,6 +77,7 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 -   **Microsoft Active Protection Service community** - The online Microsoft Active Protection Service community helps you see how other people respond to software that has not yet been classified for risks. You can use this information to help you choose whether to allow this software on your computer. In turn, if you participate, your choices are added to the community ratings to help other people decide what to do.  
 
 ##  How can I tell if my computer is infected with malicious software?  
+
  You might have some form of malicious software, including viruses, spyware, or other potentially unwanted software, on your computer if:  
 
 -   You notice new toolbars, links, or favorites that you did not intentionally add to your Web browser.  
@@ -92,6 +97,7 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 There might be malicious software on your computer even if you don't see any symptoms. This type of software can collect information about you and your computer without your knowledge or consent. To help protect your privacy and your computer, you should run Windows Defender or Endpoint Protection at all times.  
 
 ##  What should I do if Windows Defender or Endpoint Protection detects malicious software on my computer?  
+
  If Windows Defender detects malicious software or potentially unwanted software on your computer (either when monitoring your computer using real-time protection or after running a scan), it notifies you about the detected item by displaying a notification message in the bottom right-hand corner of your screen.  
 
  The notification message includes a **Clean computer** button and a **Show details** link that lets you view additional information about the detected item. Click the **Show details** link to open the **Potential threat details** window to get additional information about the detected item. You can now choose which action to apply to the item, or click **Clean computer**. If you need help determining which action to apply to the detected item, use the alert level that Windows Defender assigned to the item as your guide (for more information see, Understanding alert levels).  
@@ -185,11 +191,13 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 2.  To check for new definitions manually, click the **Update** tab and then click **Update definitions**.  
 
 ##  How do I remove or restore items quarantined by Windows Defender or Endpoint Protection?  
+
  When Windows Defender or Endpoint Protection quarantines software, it moves the software to another location on your computer, and then it prevents the software from running until you choose to restore it or to remove it from your computer.  
 
  For all the steps mentioned in this procedure, if you're prompted for an administrator password or confirmation, type the password or provide confirmation.  
 
 ###  To remove or restore items quarantined by Windows Defender or Endpoint Protection
+
 
 1.  Click the **History** tab, select **Quarantined items**, and then select the **Quarantined items** option.  
 
@@ -198,6 +206,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 3.  Review each item, and then for each, click **Remove** or **Restore**. If you want to remove of the all quarantined items from your computer, click **Remove All**.  
 
 ##  What is real-time protection?  
+
  Real-time protection enables Windows Defender to monitor your computer all the time and alert you when potential threats, such as viruses and spyware, are trying to install themselves or run on your computer. Because this feature is an important element of the way that Windows Defender helps protect your computer, you should make sure real-time protection is always turned on. If real-time protection gets turned off, Windows Defender notifies you, and changes your computerâ€™s status to â€œAt riskâ€.  
 
  Whenever real-time protection detects a threat or potential threat, Windows Defender displays a notification. You can now choose from the following options:  
@@ -223,6 +232,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 2.  Clear the real-time protection options you want to turn off, and then click **Save changes**. If you're prompted for an administrator password or confirmation, type the password or confirm the action.  
 
 ##  How do I know that Windows Defender or Endpoint Protection is running on my computer?  
+
  After you install Windows Defender on your computer, you can close the main window and let Windows Defender run quietly in the background. Windows Defender will continue running on your computer, monitor it, and help protect it against threats.  
 
  Of course, you'll know that Windows Defender is running whenever it displays notification messages in the notification area. These notifications alert you to potential threats that Windows Defender has detected.  
@@ -230,7 +240,9 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
  You'll also receive other alert notifications, for example, if for some reason real-time protection has been turned off, if you haven't updated your virus and spyware definitions for a number of days, or when upgrades to the program become available. Windows Defender also briefly displays a notification to let you know that it's scanning your computer.  
 
 > [!TIP]  
->  If you don't see the Windows Defender icon in the notification area, click the arrow in the notification area to show hidden icons, including the Windows Defender icon.  
+
+>If you don't see the Windows Defender icon in the notification area, click the arrow in the notification area to show hidden icons, including the Windows Defender icon.  
+
 
  The icon color depends on your computer's current status:  
 

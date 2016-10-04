@@ -1,5 +1,6 @@
 ---
 title: "Conditional access to services | System Center Configuration Manager"
+description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
@@ -23,7 +24,7 @@ Use **conditional access** in System Center Configuration Manager to help secure
 
  A typical flow for conditional access might look as follows:  
 
- ![ConditionalAccess4](../../protect/deploy-use/media/ConditionalAccess4.png "ConditionalAccess4")  
+ ![ConditionalAccess4](../media/ConditionalAccess4.png)  
 
  Use conditional access to manage access to the following services:  
 
