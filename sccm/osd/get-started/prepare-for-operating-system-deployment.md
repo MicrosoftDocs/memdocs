@@ -18,16 +18,16 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Prepare for operating system deployment in System Center Configuration Manager
 There are several things you must do in Configuration Manager before you can deploy operating systems. Use the following topics to prepare for operating system deployment:  
 
--   [Manage boot images with System Center Configuration Manager](manage-boot-images.md)  
+-   [Manage boot images](manage-boot-images.md)  
 
--   [Manage operating system images with System Center Configuration Manager](manage-operating-system-images.md)  
+-   [Manage operating system images](manage-operating-system-images.md)  
 
--   [Manage operating system upgrade packages with System Center Configuration Manager](manage-operating-system-upgrade-packages.md)  
+-   [Manage operating system upgrade packages](manage-operating-system-upgrade-packages.md)  
 
--   [Manage drivers in System Center Configuration Manager](manage-drivers.md)  
+-   [Manage drivers](manage-drivers.md)  
 
--   [Manage user state in System Center Configuration Manager](manage-user-state.md)  
+-   [Manage user state](manage-user-state.md)  
 
--   [Prepare for unknown computer deployments in System Center Configuration Manager](prepare-for-unknown-computer-deployments.md)  
+-   [Prepare for unknown computer deployments](prepare-for-unknown-computer-deployments.md)  
 
--   [Associate users with a destination computer in System Center Configuration Manager](associate-users-with-a-destination-computer.md)  
+-   [Associate users with a destination computer](associate-users-with-a-destination-computer.md)  

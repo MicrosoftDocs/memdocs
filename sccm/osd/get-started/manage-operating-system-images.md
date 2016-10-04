@@ -36,7 +36,7 @@ Operating system images in Configuration Manager are stored in the Windows Imagi
  **Captured image**  
 
  To create a customized operating system image, you build a reference computer with the desired operating system, and install apps, configure settings, etc. Then, you capture the operating system image from the reference computer to create the WIM file. You can build the reference computer manually or use a task sequence to automate some or all of the build steps.   
-For the steps to create a customized operating system image, see [Customize operating system images with System Center Configuration Manager](customize-operating-system-images.md).  
+For the steps to create a customized operating system image, see [Customize operating system images](customize-operating-system-images.md).  
 
 -   **Advantages**  
 
@@ -107,7 +107,7 @@ For the steps to create a customized operating system image, see [Customize oper
 8.  On the **Completion** page, verify that the software updates were successfully applied to the operating system image.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Prepare the operating system image for multicast deployments  
- Use multicast deployments to allow multiple computers to simultaneously download an operating system image. The image is multicast to clients by  the distribution point, rather than having the distribution point send a copy of the image to each client over a separate connection. When you choose the [Use multicast to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) operating system deployment method, you must configure the operating system image package to support multicast before you distribute the operating system image to a multicast-enabled distribution point. Use the following procedure to set the multicast options for an existing operating system image package.  
+ Use multicast deployments to allow multiple computers to simultaneously download an operating system image. The image is multicast to clients by  the distribution point, rather than having the distribution point send a copy of the image to each client over a separate connection. When you choose the [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) operating system deployment method, you must configure the operating system image package to support multicast before you distribute the operating system image to a multicast-enabled distribution point. Use the following procedure to set the multicast options for an existing operating system image package.  
 
 #### To modify an operating system image package to use multicast  
 

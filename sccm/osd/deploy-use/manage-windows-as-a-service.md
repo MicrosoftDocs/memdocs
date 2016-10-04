@@ -28,7 +28,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 -   Windows 10 computers must use Configuration Manager software updates with  Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer will not be evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
--   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates in System Center Configuration Manager](../../sum/plan-design/prerequisites-for-software-updates.md).  
+-   WSUS 4.0 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) must be installed on your software update points and site servers. This adds the **Upgrades** software update classification. For more information, see [Prerequisites for software updates](../../sum/plan-design/prerequisites-for-software-updates.md).  
 
 -   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
 
@@ -41,7 +41,7 @@ author: Dougebyms.author: dougebymanager: angrobe
     -   **Operating System Build**: Specified the operating system build. For example, **10.0.10240** (RTM) or **10.0.10586** (version 1511)  
 
 -   The service connection point must be installed  and  configured for **Online, persistent connection** mode to see data on the Windows 10 servicing dashboard. When you are  in offline mode, you  will not  see data updates in the dashboard until you  get Configuration Manager servicing updates.   
-     For more information, see [About the service connection point in System Center Configuration Manager](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+     For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 -   Specify the group policy setting, **Defer Upgrades and Updates**, to determine whether a computer is CB or CBB.  
 
@@ -80,7 +80,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 -   **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the configured number of days.  
 
- When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates in System Center Configuration Manager](../../sum/deploy-use/monitor-software-updates.md).  
+ When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan.  You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).  
 
 ##  <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan  
  As you deploy Windows 10 CB, you can create one or more servicing plans to define the deployment rings that you want in your environment, and then monitor them in the Windows 10 servicing dashboard.   
@@ -92,7 +92,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
  You can create a basic servicing plan from the Windows 10 servicing dashboard. After you specify the name,  collection (only displays the top ten collections by size, smallest first), deployment package (only displays the top ten packages by most recently modified), and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings. Use the following procedure to create a servicing plan by using the Create Servicing Plan wizard.  
 
 > [!NOTE]  
->  Beginning in Configuration Manager version 1602, you can manage the behavior for high-risk deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys Windows 10 is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+>  Beginning in Configuration Manager version 1602, you can manage the behavior for high-risk deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys Windows 10 is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 #### To create a Windows 10 servicing plan  
 
@@ -113,7 +113,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
     -   **Target Collection**: Specifies the target collection to be used for the servicing plan. Members of the collection receive the Windows 10 upgrades that are defined in the servicing plan.  
 
     > [!NOTE]  
-    >  Beginning in Configuration Manager version 1602, when you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+    >  Beginning in Configuration Manager version 1602, when you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
     > The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership is not reevaluated for the high-risk deployment settings.  
     > For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window will only display collections that contain less than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window will display collections that contain less than 1000 clients.  
     > When you select a collection that contains a site role, the following applies:  
@@ -165,7 +165,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     -   **User notifications**: Specify whether to display notification of the updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers.  
 
-    -   **Deadline behavior**: Specify the behavior that is to occur when the deadline is reached for the update deployment. Specify whether to install the updates in the deployment. Also specify whether to perform a system restart after update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Deadline behavior**: Specify the behavior that is to occur when the deadline is reached for the update deployment. Specify whether to install the updates in the deployment. Also specify whether to perform a system restart after update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations after updates are installed and a system restart is required to complete the installation.  
 

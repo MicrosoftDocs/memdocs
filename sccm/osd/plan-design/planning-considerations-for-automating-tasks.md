@@ -29,7 +29,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!IMPORTANT]  
 >  By default, a task sequence fails after one step or action fails. If you want the task sequence to continue even when a step fails, edit the task sequence, click the **Options** tab, and then select **Continue on error**.  
 
- For more information about the steps that can be added to a task sequence, see [Task sequence steps in System Center Configuration Manager](../understand/task-sequence-steps.md).  
+ For more information about the steps that can be added to a task sequence, see [Task sequence steps](../understand/task-sequence-steps.md).  
 
 ##  <a name="BKMK_TSGroups"></a> Task sequence groups  
  **Groups** are multiple steps within a task sequence. A task sequence group consists of a name, an optional description, and any optional conditions that are evaluated as a unit before that task sequence continues with the next step. Groups can be nested within each other, and a group can contain a mixture of steps and subgroups. Groups are useful for combining multiple steps that share a common condition.  
@@ -90,7 +90,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 |Defining a per-computer variable|Specifies task sequence variables and values for a particular computer. All task sequences targeted to the computer can access the task sequence variables and their values.|  
 |Adding a task sequence variable on the **Customization** page of the Task Sequence Media Wizard|Specifies task sequence variables and values for the task sequence that is run from the media that can access the task sequence variable and its value.|  
 
- To override the default value for a built-in task sequence variable, you must define a task sequence variable with the same name as the built-in task sequence variable. For a list of built-in task sequence variables with the associated actions and usage, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md).  
+ To override the default value for a built-in task sequence variable, you must define a task sequence variable with the same name as the built-in task sequence variable. For a list of built-in task sequence variables with the associated actions and usage, see [Task sequence built-in variables](../understand/task-sequence-built-in-variables.md).  
 
  You can delete a task sequence variable from the task sequence environment by using the same methods as creating a task sequence variable. In this case, to delete a variable from the task sequence environment, you set the task sequence variable value to an empty string.  
 
@@ -169,7 +169,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 > [!NOTE]  
 >  Task sequences are stored on stand-alone media. However, all other types of media, such as prestaged media, retrieve the task sequence from a management point.  
 
- You can specify task sequence variables on the **Customization** page of the Task Sequence Media Wizard. For information about how to create media, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md).  
+ You can specify task sequence variables on the **Customization** page of the Task Sequence Media Wizard. For information about how to create media, see [Create task sequence media](../deploy-use/create-task-sequence-media.md).  
 
 > [!TIP]  
 >  The task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
@@ -203,7 +203,7 @@ You can create task sequences to automate tasks in your System Center Configurat
  You can deploy a task sequence to destination computers that are in any Configuration Manager collection. This includes the **All Unknown Computers** collection that is used to deploy operating systems to unknown computers. However, you cannot deploy a task sequence to user collections.  
 
 > [!IMPORTANT]  
->  Do not deploy task sequences that install operating systems to inappropriate collections, such as the **All Systems** collection. Be sure that the collection that you deploy the task sequence to contains only those computers where you want the operating system to be installed. To help prevent unwanted operating system deployment, you can manage deployment settings. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+>  Do not deploy task sequences that install operating systems to inappropriate collections, such as the **All Systems** collection. Be sure that the collection that you deploy the task sequence to contains only those computers where you want the operating system to be installed. To help prevent unwanted operating system deployment, you can manage deployment settings. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
  Each destination computer that receives the task sequence runs the task sequence according to the settings specified in the deployment. The task sequences itself does not contain associated files or programs. Any files that are referenced by a task sequence must already be present on the destination computer or reside on a distribution point that clients can access. In addition, the task sequence installs the packages that are referenced by programs, even if the program or package is already installed on the destination computer.  
 
@@ -266,7 +266,7 @@ You can create task sequences to automate tasks in your System Center Configurat
  If the selected program fails to run on a client, the task sequence is not run.  
 
 ##  <a name="BKMK_TSMaintenanceWindow"></a> Use a maintenance window to specify when a task sequence can run  
- You can specify when the task sequence can run by defining a maintenance window for the collection that contains your destination computers. Maintenance windows are configured with a start date, a start and finish time, and a recurrence pattern. In addition, when you set the schedule for the maintenance window you can specify that the maintenance window applies only to task sequences. For more information, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+ You can specify when the task sequence can run by defining a maintenance window for the collection that contains your destination computers. Maintenance windows are configured with a start date, a start and finish time, and a recurrence pattern. In addition, when you set the schedule for the maintenance window you can specify that the maintenance window applies only to task sequences. For more information, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 > [!IMPORTANT]  
 >  When you configure a maintenance window to run a task sequence, once the task sequences starts it continues to run even if the maintenance window closes. The task sequence will either complete successfully or fail.  
@@ -288,7 +288,7 @@ You can create task sequences to automate tasks in your System Center Configurat
 
 -   **Capture media**. Capture media captures an operating system image that is configured and created outside the Configuration Manager infrastructure. Capture media can contain custom programs that can run before a task sequence runs. The custom program can interact with the desktop, prompt the user for input values, or create variables to be used by the task sequence.  
 
-     For more information, see [Create capture media with System Center Configuration Manager](../deploy-use/create-capture-media.md).  
+     For more information, see [Create capture media](../deploy-use/create-capture-media.md).  
 
 -   **Stand-alone media**. Stand-alone media contains the task sequence and all associated objects that are necessary for the task sequence to run. Stand-alone media task sequences can run when Configuration Manager has limited or no connectivity to the network. Stand-alone media can be run in the following ways:  
 
@@ -299,18 +299,18 @@ You can create task sequences to automate tasks in your System Center Configurat
     > [!IMPORTANT]  
     >  The steps of a stand-alone media task sequence must be able to run without any retrieving any data from the network; otherwise, the task sequence step that tries to retrieve the data fails. For example, a task sequence step that requires a distribution point to obtain a package fails; however if the necessary package is contained on the stand-alone media, the task sequence step succeeds.  
 
-     For more information, see [Create stand-alone media with System Center Configuration Manager](../deploy-use/create-stand-alone-media.md).  
+     For more information, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
 
 -   **Bootable media**. Bootable media contains the required files to start a destination computer so that it can connect to the Configuration Manager infrastructure to determine which task sequences to run based on its membership to a collection. The task sequence and dependent objects are not contained on the media; instead, they are obtained over the network from the Configuration Manager client. This method is useful for new computers or bare-metal deployments, or when no Configuration Manager client or operating system is on the destination computer.  
 
-     For more information, see [Create bootable media with System Center Configuration Manager](../deploy-use/create-bootable-media.md).  
+     For more information, see [Create bootable media](../deploy-use/create-bootable-media.md).  
 
 -   **Prestaged media**. Prestaged media deploys an operating system image to a destination computer that is not provisioned. The prestaged media is stored as a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
 
-     For more information, see [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md).  
+     For more information, see [Create prestaged media](../deploy-use/create-prestaged-media.md).  
 
  When you create media, specify a password for the media to control access to the files that are contained on the media. If you specify a password, a user must be present to enter the password at the target computer when the task sequence is run.  
 
  When you run a task sequence by using media, the specified computer chip architecture contained on the media will not be recognized and the task sequence attempts to run even if the architecture specified does not match what is actually installed on the target computer. If the chip architecture contained on the media does not match the chip architecture installed on the target computer, the installation fails.  
 
- For more information about how to deploy operating systems by using media, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md).  
+ For more information about how to deploy operating systems by using media, see [Create task sequence media](../deploy-use/create-task-sequence-media.md).  

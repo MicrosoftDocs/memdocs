@@ -27,15 +27,15 @@ You can use media to capture an operating system image from a reference computer
 >  To create task sequence media, you must be an administrator on the computer from which you run  the Configuration Manager console. If you are not an administrator, you will be prompted for administrator  credentials  when you start the Create Task Sequence Media wizard.  
 
 ##  <a name="BKMK_PlanCaptureMedia"></a> Capture media for operating system images  
- Capture media allows you to capture an operating system image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the operating system image. For information about how to create capture media, see [Create capture media with System Center Configuration Manager](../../osd/deploy-use/create-capture-media.md).  
+ Capture media allows you to capture an operating system image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the operating system image. For information about how to create capture media, see [Create capture media with System Center Configuration Manager](create-capture-media.md).  
 
 ##  <a name="BKMK_PlanBootableMedia"></a> Bootable media operating system deployments  
- Bootable media contains only the boot image, optional [prestart commands](http://technet.microsoft.com/library/mt629385\(TechNet.10\).aspx) and their required files, and Configuration Manager binaries. When the destination computer starts, it connects to the network and retrieves the task sequence, the operating system image, and any other required content from the network. Because the task sequence is not on the media, you can change the task sequence or content without having to recreate the media.  
+ Bootable media contains only the boot image, optional [prestart commands](../understand/prestart-commands-for-task-sequence-media.md) and their required files, and Configuration Manager binaries. When the destination computer starts, it connects to the network and retrieves the task sequence, the operating system image, and any other required content from the network. Because the task sequence is not on the media, you can change the task sequence or content without having to recreate the media.  
 
 > [!IMPORTANT]  
 >  The packages on bootable media are not encrypted. The administrative user must take the appropriate security measures, such as adding a password to the media, to ensure that the package contents are secured from unauthorized users.  
 
- For information about how to create bootable media, [Create bootable media with System Center Configuration Manager](../../osd/deploy-use/create-bootable-media.md).  
+ For information about how to create bootable media, [Create bootable media](create-bootable-media.md).  
 
 ##  <a name="BKMK_PlanPrestagedMedia"></a> Prestaged media operating system deployments  
  Prestaged media allows you to prestage bootable media and an operating system image to a hard disk prior to the provisioning process. The prestaged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
@@ -47,12 +47,12 @@ You can use media to capture an operating system image from a reference computer
 > [!IMPORTANT]  
 >  The packages on prestaged media are not encrypted. The administrative user must take the appropriate security measures, such as adding a password to the media, to ensure that the package contents are secured from unauthorized users.  
 
- For information about how to create prestaged media, see [Create prestaged media with System Center Configuration Manager](../../osd/deploy-use/create-prestaged-media.md).  
+ For information about how to create prestaged media, see [Create prestaged media](create-prestaged-media.md).  
 
 ##  <a name="BKMK_PlanStandaloneMedia"></a> Stand-alone media operating system deployments  
  Stand-alone media contains everything that is required to deploy the operating system. This includes the task sequence and any other required content. Because everything that is required to deploy the operating system is stored on the stand-alone media, the disk space required for stand-alone media is significantly larger than the disk space required for other types of media.  
 
- For information about how to create stand-alone media, see [Create stand-alone media with System Center Configuration Manager](../../osd/deploy-use/create-stand-alone-media.md).  
+ For information about how to create stand-alone media, see [Create stand-alone media](create-stand-alone-media.md).  
 
 ## Media considerations when using site systems configured for HTTPS  
  When your management point and distribution points are configured to use HTTPS communication, you must create boot media and prestaged media at a primary site, not the central administration site. Also, consider the following to help you determine whether to configure the media as dynamic or site-based:  
@@ -60,6 +60,3 @@ You can use media to capture an operating system image from a reference computer
 -   To configure the media as dynamic media, all primary sites must have the root CA of the site from which you created the media. You can import the root CA to all primary sites in your hierarchy.  
 
 -   When primary sites in your Configuration Manager hierarchy use different root CAs, you must use site-based media at each site.  
-
-## See Also  
- [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
