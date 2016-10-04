@@ -125,7 +125,7 @@ Prior to version 1606, service windows were called maintenance windows. For more
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) topic.  
 
 > [!IMPORTANT]  
->  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you must perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
+>  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you must perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
 
  **Update sites:** You are now ready to start the update installation for your hierarchy.  
   We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations. For more information, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
