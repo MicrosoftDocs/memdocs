@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager

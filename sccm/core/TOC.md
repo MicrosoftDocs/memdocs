@@ -10,7 +10,6 @@
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
 ### [Fundamentals of role-based administration](understand/fundamentals-of-role-based-administration.md)
-##  [Learn about the editions of Configuration Manager](understand/learn-more-editions.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 

@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4074d4fd-7a9b-4b80-9a0d-f4bfc63914fa
 caps.latest.revision: 5
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Collections technical reference for System Center Configuration Manager

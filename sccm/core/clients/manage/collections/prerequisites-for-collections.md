@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Prerequisites for collections in System Center Configuration Manager
