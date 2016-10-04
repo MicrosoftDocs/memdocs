@@ -23,7 +23,7 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 
  When a targeted user attempts to connect to a file using a supported app such as OneDrive on their device, the following evaluation occurs:  
 
- ![ConditionalAccess8&#45;6](../../protect/deploy-use/media/ConditionalAccess8-6.png "ConditionalAccess8-6")  
+ ![ConditionalAccess8&#45;6](../media/ConditionalAccess8-6.png)  
 
  To connect to the required files, the device running OneDrive must:  
 
@@ -110,7 +110,7 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 
 2.  Select **Enable conditional access policy for SharePoint Online.**.  
 
-     ![IntuneSASharePointOnlineCAPolicy](../../protect/deploy-use/media/IntuneSASharePointOnlineCAPolicy.png "IntuneSASharePointOnlineCAPolicy")  
+     ![IntuneSASharePointOnlineCAPolicy](../media/IntuneSASharePointOnlineCAPolicy.png)  
 
 3.  Under **Application access** for Outlook and apps that use modern authentication, you can choose to restrict access to only devices that are compliant for each platform.  
 
@@ -142,11 +142,11 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 
      **iOS**
 
-     ![screenshot of the certificate prompt on an ipad](../../protect/deploy-use/media/mdm-browser-ca-ios-cert-prompt_v2.png)
+     ![screenshot of the certificate prompt on an ipad](../media/mdm-browser-ca-ios-cert-prompt_v2.png)
 
      **Android**
 
-      ![screenshot of the certificate prompt on an Android device](../../protect/deploy-use/media/mdm-browser-ca-android-cert-prompt.png)
+      ![screenshot of the certificate prompt on an Android device](../media/mdm-browser-ca-android-cert-prompt.png)
 
 4.  On the **Home** tab, in the **Links** group, click **Configure Conditional Access Policy in the Intune Console**. You might need to supply the user name and password of the account used to connect Configuration Manager with Intune.  
 
