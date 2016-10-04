@@ -130,7 +130,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     You can share distribution points between the two hierarchies to make content for objects that you migrate available to clients in the destination hierarchy. This ensures that the same content remains available for clients in both hierarchies and that you can maintain this content until you stop gathering data and complete the migration.  
 
-    For information about shared distribution points, see the [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#about_shared_dps_in_migration) section in the [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) topic.  
+    For information about shared distribution points, see the *Share Distribution Points Between Source and Destination Hierarchies* section in the [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) topic.  
 
 -   **Create and run migration jobs to migrate objects associated with the clients in the source hierarchy:**  
 

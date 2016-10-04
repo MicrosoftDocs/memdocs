@@ -99,7 +99,7 @@ When you migrate App-V packages from a supported Configuration Manager 2007 site
 >  If you migrate a previously migrated Configuration Manager 2007 App-V , the migration fails because virtual application packages do not support the overwrite migration behavior. In this scenario, you must delete the migrated virtual application package from the destination hierarchy, and then create a new migration job to migrate the virtual application.  
 
 > [!NOTE]  
->  After you migrate an App-V package, you can use the Update Content Wizard to change the source path for App-V deployment types. For information on how to update content for a deployment type, see the [How to manage deployment types](../../apps/deploy-use/management-tasks-applications.md#BKMK_DeplType) section in the [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) topic.  
+>  After you migrate an App-V package, you can use the Update Content Wizard to change the source path for App-V deployment types. For information on how to update content for a deployment type, see the *How to manage deployment types* section in the [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) topic.  
 
 When you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, in addition to App-V deployment types and applications, you can migrate objects for the e App-V virtual environment. For information about App-V environments, see [Deploying App-V virtual applications with System Center Configuration Manager](../../apps/get-started/deploying-app-v-virtual-applications.md).  
 

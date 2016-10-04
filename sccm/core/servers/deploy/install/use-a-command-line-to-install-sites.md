@@ -105,7 +105,7 @@ When Setup starts the actual site installation, the automatically created script
 -   When you provide values for keys, the name of the key must be followed by an equals sign (=) and the value for the key  
 
 > [!TIP]  
->  To view the full set of options, see  [Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_cmdtop).  
+>  To view the full set of options, see  [Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md).  
 
 ## To use the /SCRIPT Setup command-line option:
 

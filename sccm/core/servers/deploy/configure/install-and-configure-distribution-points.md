@@ -166,7 +166,7 @@ The following sections describe the  configurations you can select when installi
     > [!NOTE]  
     >  This option is only available when installing a new distribution point  
 
--   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see [Security best practices for content management](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#BKMK_Security_ContentManagement) in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
+-   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see *Security best practices for content management* in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 -   **Allow clients to connect anonymously:** This setting specifies whether the distribution point will allow anonymous connections from Configuration Manager clients to the content library.  
 
