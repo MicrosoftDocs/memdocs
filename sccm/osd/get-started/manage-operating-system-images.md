@@ -36,7 +36,7 @@ Operating system images in Configuration Manager are stored in the Windows Imagi
  **Captured image**  
 
  To create a customized operating system image, you build a reference computer with the desired operating system, and install apps, configure settings, etc. Then, you capture the operating system image from the reference computer to create the WIM file. You can build the reference computer manually or use a task sequence to automate some or all of the build steps.   
-For the steps to create a customized operating system image, see [Customize operating system images with System Center Configuration Manager](../deploy-use/customize-operating-system-images.md).  
+For the steps to create a customized operating system image, see [Customize operating system images with System Center Configuration Manager](customize-operating-system-images.md).  
 
 -   **Advantages**  
 

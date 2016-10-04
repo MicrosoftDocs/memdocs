@@ -92,7 +92,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 ##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image Task Sequence Step  
  Use the **Apply Data Image** task sequence step to copy the data image to the specified destination partition.  
 
- This step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Task sequence action variables in System Center Configuration Manager](../../osd/understand/task-sequence-action-variables.md).  
+ This step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Task sequence action variables in System Center Configuration Manager](task-sequence-action-variables.md).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -140,7 +140,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 
  This step is useful for stand-alone media and for administrators who want to install a specific set of drivers, including drivers for devices that would not be detected in a Plug-n-Play scan (for example, network printers).  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Driver Package Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ApplyDriverPackage).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Driver Package Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyDriverPackage).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -177,7 +177,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 ##  <a name="BKMK_ApplyNetworkSettings"></a> Apply Network Settings Step  
  Use the **Apply Network Settings** task sequence step to specify the network or workgroup configuration information for the destination computer. The specified values are stored in the appropriate answer file format for use by Windows Setup when the **Setup Windows and ConfigMgr** task sequence step is run.  
 
- This task sequence step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Apply Network Settings Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ApplyNetworkSettings).  
+ This task sequence step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -240,7 +240,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 > [!NOTE]  
 >  Actual installation of Windows is started by the **Setup Windows and ConfigMgr** task sequence step. After the **Apply Operating System** task sequence action has run, the OSDTargetSystemDrive task sequence variable is set to the drive letter of the partition containing the operating system files.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Operating System Image Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ApplyOperatingSystem).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyOperatingSystem).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -294,7 +294,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 ##  <a name="BKMK_ApplyWindowsSettings"></a> Apply Windows Settings  
  Use the **Apply Windows Settings** task sequence step to configure the Windows settings for the destination computer. The specified values are stored in the appropriate answer file format for use by Windows Setup when the **Setup Windows and ConfigMgr** task sequence step is run.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Windows Settings Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ApplyWindowsSettings).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -359,7 +359,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 > [!IMPORTANT]
 >  The **Auto Apply Drivers** task sequence step cannot be used with stand-alone media because Windows Setup will have no connection to the Configuration Manager site.
 
-This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Auto Apply Drivers Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_AutoApplyDrivers).  
+This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Auto Apply Drivers Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_AutoApplyDrivers).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -399,7 +399,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 ##  <a name="BKMK_CaptureNetworkSettings"></a> Capture Network Settings  
  Use the **Capture Network Settings** task sequence step to capture Microsoft network settings from the computer running the task sequence. The settings are saved in task sequence variables that will override the default settings you configure on the **Apply Network Settings** task sequence step.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Capture Network Settings Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_CaptureNetworkSettings).  
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -433,7 +433,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
  You must also enter a Windows account that has write permissions to the network share that you selected.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Capture Operating System Image Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_CaptureOperatingSystemImage).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Capture Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureOperatingSystemImage).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -470,13 +470,13 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 ##  <a name="BKMK_CaptureUserState"></a> Capture User State  
  Use the **Capture User State** task sequence step to use the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. With USMT 3.0.1 and later, this option always encrypts the USMT state store by using an encryption key generated and managed by Configuration Manager.  
 
- For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../../osd/deploy-use/manage-user-state.md).  
+ For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
  You can also use the **Capture User State** task sequence step with the **Request State Store** and **Release State Store** task sequence steps if you want to save the state settings to or restore settings from a state migration point in the Configuration Manager site.  
 
  The **Capture User State** task sequence step provides control over a limited subset of the most commonly used USMT options. Additional command-line options can be specified using the OSDMigrateAdditionalCaptureOptions task sequence variable.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Capture User State Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_CaptureUserState).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Capture User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureUserState).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -536,7 +536,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 ##  <a name="BKMK_CaptureWindowsSettings"></a> Capture Windows Settings  
  Use the **Capture Windows Settings** task sequence step to capture the Windows settings from the computer running the task sequence. The settings are saved in task sequence variables that will override the default settings you configure on the **Apply Windows Settings** task sequence step.  
 
- This task sequence step runs in either Windows PE or a standard operating system. For more information about the task sequence variables for this action, see [Capture Windows Settings Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_CaptureWindowsSettings).  
+ This task sequence step runs in either Windows PE or a standard operating system. For more information about the task sequence variables for this action, see [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -599,7 +599,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 ##  <a name="BKMK_ConnectToNetworkFolder"></a> Connect To Network Folder  
  Use the **Connect to Network Folder** task sequence action to create a connection to a shared network folder.  
 
- This task sequence step runs in a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Connect to Network Folder Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder).  
+ This task sequence step runs in a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -615,7 +615,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 ##  <a name="BKMK_ConvertDisktoDynamic"></a> Convert Disk to Dynamic  
  Use the **Convert Disk to Dynamic** task sequence step to convert a physical disk from a basic disk type to a dynamic disk type.  
 
- This step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Convert Disk to Dynamic Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ConvertDisk).  
+ This step runs in either a standard operating system or Windows PE. For more information about the task sequence variables for this action, see [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -714,7 +714,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   **Task sequence working directory**  
 
--   **Configuration Manager client cache**: You use this option to store the content in the clients cache. This allows the client to act as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](../../osd/plan-design/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+-   **Configuration Manager client cache**: You use this option to store the content in the clients cache. This allows the client to act as a peer cache source for other peer cache clients. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](../prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
 
 -   **Custom path**  
 
@@ -732,7 +732,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 > [!NOTE]  
 >  BitLocker drive encryption provides low-level encryption of the contents of a disk volume.  
 
- The **Enable BitLocker** step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_EnableBitLocker).  
+ The **Enable BitLocker** step runs only in a standard operating system. It does not run in Windows PE. For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
  The Trusted Platform Module (TPM) must be in the following state when you specify **TPM Only**, **TPM and Startup Key on USB** or **TPM and PIN**, before you can run the **Enable BitLocker** step:  
 
@@ -758,7 +758,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
  If the hard drive is already encrypted but BitLocker is disabled then Enable BitLocker re-enables the key protector or protectors and will be completed almost instantly. Re-encryption of the hard drive is not necessary in this case.  
 
- For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_EnableBitLocker).  
+ For more information about the task sequence variables for this action, see [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -804,7 +804,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 > [!IMPORTANT]  
 >  Every setting you specify for this task sequence step applies to a single specified disk. If you want to format and partition another disk on the destination computer, you must add an additional **Format and Partition Disk** task sequence step to the task sequence.  
 
- This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Format and Partition Disk Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_FormatPartitionDisk).  
+ This task sequence step runs only in Windows PE. It does not run in a standard operating system. For more information about the task sequence variables for this action, see [Format and Partition Disk Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_FormatPartitionDisk).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -981,7 +981,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 >   
 >  **Command Line**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 >   
->  For more information about creating stand-alone media, see [Create stand-alone media with System Center Configuration Manager](../../osd/deploy-use/create-stand-alone-media.md).  
+>  For more information about creating stand-alone media, see [Create stand-alone media with System Center Configuration Manager](../deploy-use/create-stand-alone-media.md).  
 
  This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
 
@@ -1045,10 +1045,10 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 >* For Windows 7, see [Knowledge base article 3161647](https://support.microsoft.com/kb/3161647).
 >* For Windows 8, see [Knowledge base article 3163023](https://support.microsoft.com/kb/3163023).
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Install Software Updates Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_InstallSoftwareUpdates).
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Install Software Updates Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_InstallSoftwareUpdates).
 
 > [!NOTE]
->On the options tab, you can configure this task sequence to retry if the computer unexpectedly restarts. For example, a software update installation that automatically restarts the computer. Beginning in Configuration Manager 1602, you can configure the SMSTSWaitForSecondReboot variable to  specify how long (in seconds) the task sequence should pause after the computer restarts when installing software updates. For more information, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).
+>On the options tab, you can configure this task sequence to retry if the computer unexpectedly restarts. For example, a software update installation that automatically restarts the computer. Beginning in Configuration Manager 1602, you can configure the SMSTSWaitForSecondReboot variable to  specify how long (in seconds) the task sequence should pause after the computer restarts when installing software updates. For more information, see [Task sequence built-in variables in System Center Configuration Manager](task-sequence-built-in-variables.md).
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1076,15 +1076,15 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
  Select this option to install all available software updates targeting the Configuration Manager collection that will receive the task sequence. All available software updates will be installed on the destination computers.  
 
  **Evaluate software updates from cached scan results**  
-Beginning in Configuration Manager version 1606, you have the option to do a full scan for software updates instead of using the cached scan results. By default, the task sequence uses cached results. You can clear the checkbox to have the client connect to the software update point to process and download the latest software updates catalog. You might chose this option when you use a task sequence to [capture and build an operating system image](../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md), where you know there will be a large number of software updates, especially many that have dependencies (need to install X before Y will appear as applicable). When you clear this setting and deploy the task sequence to a large number of clients, they will all connect to the software update point at at the same time. This might result in performance issues during the process and download of the catalog. In most cases, we recommend that you use the default setting.
+Beginning in Configuration Manager version 1606, you have the option to do a full scan for software updates instead of using the cached scan results. By default, the task sequence uses cached results. You can clear the checkbox to have the client connect to the software update point to process and download the latest software updates catalog. You might chose this option when you use a task sequence to [capture and build an operating system image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md), where you know there will be a large number of software updates, especially many that have dependencies (need to install X before Y will appear as applicable). When you clear this setting and deploy the task sequence to a large number of clients, they will all connect to the software update point at at the same time. This might result in performance issues during the process and download of the catalog. In most cases, we recommend that you use the default setting.
 
-A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in Configuration Manager version 1606 to give you the ability to control the timeout for the software updates scan during the Install software updates task sequence step. The default value is 30 minutes. For more information, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).
+A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in Configuration Manager version 1606 to give you the ability to control the timeout for the software updates scan during the Install software updates task sequence step. The default value is 30 minutes. For more information, see [Task sequence built-in variables in System Center Configuration Manager](task-sequence-built-in-variables.md).
 
 
 ##  <a name="BKMK_JoinDomainorWorkgroup"></a> Join Domain or Workgroup  
  Use the **Join Domain or Workgroup** task sequence step to add the destination computer to a workgroup or domain.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Join Domain or Workgroup Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup).  
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Join Domain or Workgroup Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1153,7 +1153,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_PrepareWindowsforCapture"></a> Prepare Windows for Capture  
  Use the **Prepare Windows for Capture** task sequence step to specify the Sysprep options to use when capturing an operating system image on the reference computer. This task sequence action runs Sysprep and then reboots the computer into Windows PE boot image specified for the task sequence. The reference computer must not be joined to a domain for this action to be completed successfully.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Prepare Windows for Capture Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_PrepareWindowsCapture).  
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Prepare Windows for Capture Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1210,7 +1210,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_ReleaseStateStore"></a> Release State Store  
  Use the **Release State Store** task sequence step to notify the state migration point that the capture or restore action is complete. This step is used in conjunction with the **Request State Store**, **Capture User State**, and **Restore User State** task sequence steps to migrate user state data using a state migration point and the User State Migration Tool (USMT).  
 
- For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../../osd/deploy-use/manage-user-state.md).  
+ For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
  If you requested access to a state migration point to capture user state in the **Request State Store**  task sequence step, this step notifies the state migration point that the capture process is complete and that the user state data is available to be restored. The state migration point sets the access control permissions for the captured state so that it can only be accessed (as read-only) by the restoring computer.  
 
@@ -1219,7 +1219,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 > [!IMPORTANT]  
 >  It is a best practice to set **Continue on Error** on any task sequence steps between the **Request State Store** step and **Release State Store** step so that every **Request State Store** task sequence action has a matching **Release State Store** task sequence action.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Release State Store Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_ReleaseStateStore).  
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Release State Store Sequence Action Variables](task-sequence-action-variables.md#BKMK_ReleaseStateStore).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1241,14 +1241,14 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_RequestStateStore"></a> Request State Store  
  Use the **Request State Store** task sequence step to request access to a state migration point when capturing state from a computer or restoring state to a computer.  
 
- For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../../osd/deploy-use/manage-user-state.md).  
+ For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
  You can use the **Request State Store** task sequence step in conjunction with the **Release State Store**, **Capture User State**, and **Restore User State** task sequence steps to migrate computer state using a state migration point and the User State Migration Tool (USMT).  
 
 > [!NOTE]  
 >  If you have just established a new state migration point site role (SMP), it can take up to one hour to be available for user state storage. To expedite the availability of the SMP you can adjust any state migration point property setting to trigger a site control file update.  
 
- This task sequence step runs in a standard operating system and in Windows PE for offline USMT. For information about the task sequence variables for this task sequence action, see [Request State Store Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_RequestState).  
+ This task sequence step runs in a standard operating system and in Windows PE for offline USMT. For information about the task sequence variables for this task sequence action, see [Request State Store Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RequestState).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1289,7 +1289,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_RestartComputer"></a> Restart Computer  
  Use the **Restart Computer** task sequence step to restart the computer running the task sequence. After the restart, the computer will automatically continue with the next step in the task sequence.  
 
- This step can be run in either a standard operating system or Windows PE. For more information about the task sequence variables for this task sequence action, see [Restart Computer Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_RestartComputer).  
+ This step can be run in either a standard operating system or Windows PE. For more information about the task sequence variables for this task sequence action, see [Restart Computer Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestartComputer).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1326,7 +1326,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_RestoreUserState"></a> Restore User State  
  Use the **Restore User State** task sequence step to initiate the User State Migration Tool (USMT) to restore user state and settings to the destination computer. This task sequence step is used in conjunction with the **Capture User State** task sequence step.  
 
- For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../../osd/deploy-use/manage-user-state.md).  
+ For more information about managing the user state when deploying operating systems, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
 
  You can also use the **Restore User State** task sequence step with the **Request State Store** and **Release State Store** task sequence steps if you want to save the state settings to or restore settings from a state migration point in the Configuration Manager site. With USMT 3.0 and above, this option always decrypts the USMT state store by using an encryption key generated and managed by Configuration Manager.  
 
@@ -1335,7 +1335,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 > [!IMPORTANT]  
 >  If you are using the **Restore User State** task sequence step for a purpose unrelated to an operating system deployment scenario, add the [Restart Computer](#BKMK_RestartComputer) task sequence step immediately following the **Restore User State** task sequence step.  
 
- This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about the task sequence variables for this task sequence action, see [Restore User State Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_RestoreUserState).  
+ This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about the task sequence variables for this task sequence action, see [Restore User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestoreUserState).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1375,7 +1375,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_RunCommandLine"></a> Run Command Line  
  Use the **Run Command Line** task sequence step to run a specified command line.  
 
- This step can be run in a standard operating system or Windows PE. For information about task sequence variables for this task sequence action, see [Run Command Line Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_RunCommand).  
+ This step can be run in a standard operating system or Windows PE. For information about task sequence variables for this task sequence action, see [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1449,7 +1449,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_RunPowerShellScript"></a> Run PowerShell Script  
  Use the **Run PowerShell Script** task sequence step to run a specified PowerShell script.  
 
- This step can be run in a standard operating system or Windows PE. To run this step in Windows PE, PowerShell must be enabled in the boot image. You can enable Windows PowerShell (WinPE-PowerShell) from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+ This step can be run in a standard operating system or Windows PE. To run this step in Windows PE, PowerShell must be enabled in the boot image. You can enable Windows PowerShell (WinPE-PowerShell) from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images with System Center Configuration Manager](../deploy-use/manage-boot-images.md).  
 
 > [!NOTE]  
 >  PowerShell is not enabled by default on Windows Embedded operating systems.  
@@ -1526,7 +1526,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 
 -   _SMSTSUUID  
 
- This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables in System Center Configuration Manager](../../osd/understand/task-sequence-action-variables.md).  
+ This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables in System Center Configuration Manager](task-sequence-action-variables.md).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1572,7 +1572,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable  
  Use the **Set Task Sequence Variable** task sequence step to set the value of a variable that is used with the task sequence.  
 
- This step can be run in either a standard operating system or Windows PE. Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables, see [Task sequence action variables in System Center Configuration Manager](../../osd/understand/task-sequence-action-variables.md).  
+ This step can be run in either a standard operating system or Windows PE. Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables, see [Task sequence action variables in System Center Configuration Manager](task-sequence-action-variables.md).  
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1600,7 +1600,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Setup Windows and ConfigMgr  
  Use the **Setup Windows and ConfigMgr** task sequence step to perform the transition from Windows PE to the new operating system. This task sequence step is a required part of any operating system deployment. It installs the Configuration Manager client into the new operating system and prepares for the task sequence to continue execution in the new operating system.  
 
- This step runs only in Windows PE. It does not run in a standard operating system. For more information about task sequence variables for this task sequence action, see [Setup Windows and ConfigMgr Task Sequence Action Variables](../../osd/understand/task-sequence-action-variables.md#BKMK_SetupWindows).  
+ This step runs only in Windows PE. It does not run in a standard operating system. For more information about task sequence variables for this task sequence action, see [Setup Windows and ConfigMgr Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_SetupWindows).  
 
  The **Setup Windows and ConfigMgr** task sequence action replaces sysprep.inf or unattend.xml directory variables, such as %WINDIR% and %ProgramFiles%, with the Windows PE installation directory X:\Windows. Task sequence variables specified by using these environment variables will be ignored.  
 
@@ -1716,7 +1716,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 
 -   **Driver package**: Click **Browse** and select an existing driver package from the list.  
 
--   **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, it must be specified earlier in the task sequence. For example,  by using the [Download Package Content](../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
+-   **Staged content**:  Select this option to specify the location for the driver package. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, it must be specified earlier in the task sequence. For example,  by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
 
  **Time-out (minutes)**  
  Specifies the number of minutes Setup has to run before Configuration Manager will fail the task sequence step.  
@@ -1724,7 +1724,7 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
  **Perform Windows Setup compatibility scan without starting upgrade**  
  Specifies to perform the Windows Setup compatibility scan without starting the upgrade process (corresponds to the /Compat ScanOnly command-line option). You must still deploy the entire installation source when you use this option. Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes.  
 
-|||  
+|Exit code|Details|  
 |-|-|  
 |MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|No compatibility issues ("success").|  
 |MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|Actionable compatibility  issues.|  

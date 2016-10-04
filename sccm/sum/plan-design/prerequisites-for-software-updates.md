@@ -79,7 +79,7 @@ This topic lists the prerequisites for software updates in System Center Configu
 
  For more information, see the following:  
 
--   [Client Settings for Software Updates](../../sum/get-started/manage-settings-for-software-updates.md#client-settings-for-software-updates).  
+-   [Client Settings for Software Updates](../get-started/manage-settings-for-software-updates.md#client-settings-for-software-updates).  
 
 -   [Software Updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
 

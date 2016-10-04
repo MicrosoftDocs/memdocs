@@ -96,8 +96,6 @@ Use the following checklist to help you plan a destination hierarchy before you 
 
     You must configure and synchronize software updates in the destination hierarchy before you can migrate software updates information from the source hierarchy.  
 
-    For more information, see [Configure software updates in System Center Configuration Manager](../../sup/deploy-use/configure-software-updates.md).  
-
 
 -   **Install and configure additional site system roles in the destination hierarchy:**  
 
@@ -113,8 +111,6 @@ Use the following checklist to help you plan a destination hierarchy before you 
 
     -   Verify that Configuration Manager clients you install to the destination hierarchy can communicate successfully with their assigned site.  
 
-> [!NOTE]  
->  For more information about how to plan a Configuration Manager hierarchy, see [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md).  
 
 ##  <a name="Checklisit_Migration"></a> Administrator checklist for migration  
 Use the following checklist to migrate data from the source hierarchy to the destination hierarchy.  

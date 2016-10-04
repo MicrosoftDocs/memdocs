@@ -1,5 +1,5 @@
 ---
-title: "Manage task sequences to automate tasks in System Center Configuration Manager"
+title: Manage task sequences to automate tasks | Configuration Manager
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 12/08/2015
@@ -16,41 +16,27 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Manage task sequences to automate tasks in System Center Configuration Manager
-Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks in System Center Configuration Manager](../../osd/plan-design/planning-considerations-for-automating-tasks.md).  
+Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](..plan-design/planning-considerations-for-automating-tasks.md).  
 
- Use the following sections to manage task sequences:  
-
--   [Create task sequences](#BKMK_CreateTaskSequence)  
-
--   [Edit a task sequence](#BKMK_ModifyTaskSequence)  
-
--   [Distribute content referenced by a task sequence](#BKMK_DistributeTS)  
-
--   [Deploy a task sequence](#BKMK_DeployTS)  
-
--   [Export and import task sequences](#BKMK_ExportImport)  
-
--   [Create task sequence variables for computers and collections](#BKMK_CreateTSVariables)  
-
--   [Additional actions to manage task sequences](#BKMK_AdditionalActionsTS)  
+ Use the following sections to manage task sequences.
 
 ##  <a name="BKMK_CreateTaskSequence"></a> Create task sequences  
  Create task sequences by using the Create Task Sequence Wizard. This wizard can create the following types of task sequences:  
 
 |Task sequence type|More information|  
 |------------------------|----------------------|  
-|[Task sequence to install an operating system](http://technet.microsoft.com/library/mt627927\(TechNet.10\).aspx)|This task sequence type creates the steps to install an operating system, as well as the option to migrate user data, include software updates, and install applications.|  
-|[Task sequence to upgrade an operating system](https://technet.microsoft.com/library/mt627927\(TechNet.10\).aspx)|This task sequence type creates the steps to upgrade an operating system, as well as the option to include software updates and install applications.|  
-|[Task sequence to capture an operating system](https://technet.microsoft.com/library/mt627941\(TechNet.10\).aspx)|This task sequence type creates the steps to build and capture an operating system from a reference computer. You can include software updates and install applications on the reference computer before the image is captured.|  
-|[Task sequence to capture and restore user state](http://technet.microsoft.com/library/mt627918\(TechNet.10\).aspx)|This task sequence provides the steps to add to an existing task sequence to capture and restore user state data.|  
-|[Task sequence to manage virtual hard disks](http://technet.microsoft.com/library/mt629297\(TechNet.10\).aspx)|This task sequence type contains the steps to create a VHD, which includes to install an operating system and applications, that you can publish to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.|  
-|[Custom task sequence](https://technet.microsoft.com/library/mt627950\(TechNet.10\).aspx)|This task sequence type does not add any steps to the task sequence. You must edit the task sequence and add steps to the task sequence after it is created.|  
+|[Task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md)|This task sequence type creates the steps to install an operating system, as well as the option to migrate user data, include software updates, and install applications.|  
+|[Task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md)|This task sequence type creates the steps to upgrade an operating system, as well as the option to include software updates and install applications.|  
+|[Task sequence to capture an operating system](create-a-task-sequence-to-capture-an-operating-system.md)|This task sequence type creates the steps to build and capture an operating system from a reference computer. You can include software updates and install applications on the reference computer before the image is captured.|  
+|[Task sequence to capture and restore user state](create-a-task-sequence-to-capture-and-restore-user-state.md)|This task sequence provides the steps to add to an existing task sequence to capture and restore user state data.|  
+|[Task sequence to manage virtual hard disks](use-a-task-sequence-to-manage-virtual-hard-disks.md)|This task sequence type contains the steps to create a VHD, which includes to install an operating system and applications, that you can publish to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.|  
+|[Custom task sequence](create-a-custom-task-sequence.md)|This task sequence type does not add any steps to the task sequence. You must edit the task sequence and add steps to the task sequence after it is created.|  
 
 ##  <a name="BKMK_ModifyTaskSequence"></a> Edit a task sequence  
  You can modify a task sequence by adding or removing task sequence steps, adding or removing task sequence groups, or by changing the order of the steps. Use the following procedure to modify an existing task sequence.  
 
 > [!IMPORTANT]  
->  When you edit a task sequence that was created by using the Create Task Sequence Wizard, the name of the step can be the action of the step or the type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their type, not necessarily by the name of the step that is displayed in the Editor.  
+>  When you edit a task sequence that was created by using the Create Task Sequence Wizard, the name of the step can be the action of the step or the type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](../understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their type, not necessarily by the name of the step that is displayed in the Editor.  
 
 #### To edit a task sequence  
 
@@ -74,7 +60,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 5.  Click **OK** to save the changes.  
 
- For a list of the available task sequence steps, see [Task sequence steps in System Center Configuration Manager](../../osd/understand/task-sequence-steps.md).  
+ For a list of the available task sequence steps, see [Task sequence steps in System Center Configuration Manager](../understand/task-sequence-steps.md).  
 
 ##  <a name="BKMK_DistributeTS"></a> Distribute content referenced by a task sequence  
  Before clients run a task sequence that references content, you must distribute that content to distribution points. At any time, you can select the task sequence and distribute its content to build a new list of reference packages for distribution. If you make changes to the task sequence with updated content, you must redistribute the content before it is available to clients. Use the following procedure to distribute the content that is referenced by a task sequence.  
@@ -168,7 +154,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
     -   **Make available to the following**: Specify whether the task sequence is available to Configuration Manager clients, media, or PXE.  
 
         > [!IMPORTANT]  
-        >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. Select **Allow unattended operating system deployment** and set the SMSTSPreferredAdvertID variable as part of the media to have the computer automatically boot to the deployment with no user interaction. For more information about task sequence variables, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md)  
+        >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. Select **Allow unattended operating system deployment** and set the SMSTSPreferredAdvertID variable as part of the media to have the computer automatically boot to the deployment with no user interaction. For more information about task sequence variables, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md)  
 
 7.  On the **Scheduling** page, specify the following information, and then click **Next**.  
 
@@ -240,7 +226,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
  Consider the following when you export and import task sequences.  
 
--   Passwords that are stored in the task sequence are not exported. If you export and import a task sequence that contains passwords, you must edit the imported task sequence and specify any passwords again. Ensure that you specify passwords for [Join Domain or Workgroup](../../osd/understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Connect To Network Folder](../../osd/understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder), and [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) actions.  
+-   Passwords that are stored in the task sequence are not exported. If you export and import a task sequence that contains passwords, you must edit the imported task sequence and specify any passwords again. Ensure that you specify passwords for [Join Domain or Workgroup](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder), and [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) actions.  
 
 -   As a best practice, when you have multiple primary sites, import task sequences at the central administration site.  
 
@@ -366,6 +352,3 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#BKMK_PrestageContent).|  
 |**Move**|Moves the selected task sequence to another folder.|  
 |**Properties**|Opens the **Properties** dialog box for the selected task sequence. Use this dialog box to change the behavior of the task sequence object. However, you cannot change the steps of the task sequence by using this dialog box.|  
-
-## See Also  
- [Automate tasks in System Center Configuration Manager](../Topic/Automate%20tasks%20in%20System%20Center%20Configuration%20Manager.md)
