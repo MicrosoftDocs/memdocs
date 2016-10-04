@@ -14,11 +14,13 @@ ms.assetid:
 ---
 # System Center Configuration Manager Documentation
 <article id="main">
+
     <section id="hero-content">
       <h1>System Center Configuration Manager (Current Branch) Documentation</h1>
       <h2>Learn how to design, deploy, and manage System Center Configuration Manager.</h2>
       <h3>Manage devices with Microsoft Intune? <a href="https://docs.microsoft.com/en-us/intune/" target="_blank">View Intune Documentation &rarr;</a></h3>
     </section>
+
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
@@ -28,21 +30,23 @@ ms.assetid:
           <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1606">What&#39;s new in version 1606 of System Center Configuration Manager</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Features and capabilities of System Center Configuration Manager/a></li>
-          <li><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager/a></li>
-          <li><a href="/sccm/core/plan-design/configs/supported-configurations">Supported configurations for System Center Configuration Manager/a></li>
+          <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Features and capabilities of System Center Configuration Manager</a></li>
+          <li><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager</a></li>
+          <li><a href="/sccm/core/plan-design/configs/supported-configurations">Supported configurations for System Center Configuration Manager</a></li>
         </ul>
       </div>
     </section>
+
     <div id="journeys">
       <section class="container">
         <!-- <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2> -->
         <ul class="journeys-list">
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/core/understand/introduction">
                 <div class="title column-third">
-                  <span class="step-number"></span>
+                  <span class="step-number">1</span>
                   <p>Core infrastructure guide</p>
                 </div>
                 <p class="description column-two-thirds">Something about the core infrastructure guide </p>
@@ -71,6 +75,7 @@ ms.assetid:
               </ul>
             </section>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/apps/understand/introduction-to-application-management">
@@ -105,13 +110,14 @@ ms.assetid:
               </ul>
             </section>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/compliance/understand/ensure-device-compliance">
                 <div class="title column-third">
-                  <span class="step-number">2</span>
+                  <span class="step-number">3</span>
                   <p>Device compliance guide</p>
-                </d
+                </div>
                 <p class="description column-two-thirds">Something about device compliance guide.
                 </p>
               </a>
@@ -140,11 +146,12 @@ ms.assetid:
             </section>
           </li>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
                 <div class="title column-third">
-                  <span class="step-number">2</span>
+                  <span class="step-number">4</span>
                   <p>Mobile device management guide</p>
                 </div>
                 <p class="description column-two-thirds">Something about mobile device management guide.
@@ -174,11 +181,12 @@ ms.assetid:
               </ul>
             </section>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
                 <div class="title column-third">
-                  <span class="step-number">2</span>
+                  <span class="step-number">5</span>
                   <p>Operating system deployment guide</p>
                 </div>
                 <p class="description column-two-thirds">Something about OSD guide.
@@ -208,11 +216,12 @@ ms.assetid:
               </ul>
             </section>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/protect/understand/protect-data-and-site-infrastructure">
                 <div class="title column-third">
-                  <span class="step-number">2</span>
+                  <span class="step-number">6</span>
                   <p>Protect data and infrastructure guide</p>
                 </div>
                 <p class="description column-two-thirds">Something about Protect guide.
@@ -242,11 +251,12 @@ ms.assetid:
               </ul>
             </section>
           </li>
+
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/sccm/sum/understand/software-updates-introduction">
                 <div class="title column-third">
-                  <span class="step-number">2</span>
+                  <span class="step-number">7</span>
                   <p>Software update management guide</p>
                 </div>
                 <p class="description column-two-thirds">Something about SUM guide.
@@ -283,12 +293,12 @@ ms.assetid:
       <h2 class="section-heading"><span class="icon icon-note"></span>Additional resources for Configuration Manager</h2>
       <div class="resource-list row">
           <ul class="column-half">
-          <li><a href="https://microsoftintune.uservoice.com/" target="_blank">Give feedback on Configuration Manager functionality</a></li>
-          <li><a href="https://microsoftintune.uservoice.com/forums/297408-issues/category/113871-documentation" target="_blank">Give feedback on Configuration Manager documentation</a></li>
+          <li><a href="https://configurationmanager.uservoice.com/" target="_blank">Give feedback on Configuration Manager functionality</a></li>
+          <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on Configuration Manager documentation</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc" target="_blank">Configuraton Manager TechNet forum</a></li>
-          <li><a href="https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/default.aspx" target="_blank">Configuration Manager product page</a></li>
+          <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet forums</a></li>
+          <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Configuration Manager product page</a></li>
           </ul>
       </div>
       </section>
@@ -296,8 +306,8 @@ ms.assetid:
     <aside class="alert alert-social">
       <p>Keep up-to-date on Intune</p>
       <ol class="action-list">
-        <li><a href="https://blogs.technet.com/b/microsoftintune/" target="_blank" class="button-bordered button-translucent">Enterprise Mobility and Security team blog</a></li>
-        <li><a href="https://twitter.com/msintune/" target="_blank" class="button-bordered button-translucent">@ConfigMgr on Twitter</a></li>
+        <li><a href="https://blogs.technet.microsoft.com/enterprisemobility/" target="_blank" class="button-bordered button-translucent">Enterprise Mobility and Security team blog</a></li>
+        <li><a href="https://twitter.com/hashtag/configmgr" target="_blank" class="button-bordered button-translucent">#ConfigMgr on Twitter</a></li>
       </ol>
     </aside>
 </article>
