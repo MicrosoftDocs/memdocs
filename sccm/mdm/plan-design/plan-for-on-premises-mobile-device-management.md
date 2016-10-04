@@ -1,5 +1,6 @@
 ---
 title: "Plan On-premises MDM | System Center Configuration Manager"
+description: "Plan for On-premises Mobile Device Management to manage mobile devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager
@@ -29,7 +30,7 @@ Consider the following requirements before preparing the Configuration Manager i
 -   [Enrollment considerations](#bkmk_enrollment)  
 
 ##  <a name="bkmk_devices"></a> Supported devices  
- On\-premises Mobile Device Management allows you to manage mobile devices using the management capabilities built into the device operating systems.  The management capability is based on the Open Mobile Alliance (OMA) Device Management (DM) standard, and many device platforms use this standard to allow the devices to be managed.  We call these **modern devices** (in the documentation and the Configuration Manager console user interface) to distinguish them from other devices that require the Configuration Manager client to manage them.  
+ On-premises Mobile Device Management allows you to manage mobile devices using the management capabilities built into the device operating systems.  The management capability is based on the Open Mobile Alliance (OMA) Device Management (DM) standard, and many device platforms use this standard to allow the devices to be managed.  We call these **modern devices** (in the documentation and the Configuration Manager console user interface) to distinguish them from other devices that require the Configuration Manager client to manage them.  
 
  > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  

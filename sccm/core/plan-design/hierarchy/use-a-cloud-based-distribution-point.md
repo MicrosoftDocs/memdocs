@@ -152,7 +152,7 @@ A cloud-based distribution point has the following limitations:
     > [!IMPORTANT]  
     >  The common name in the certificate subject box of the service certificate must be unique in your domain and not match any domain-joined device.  
 
-   For an example deployment of this certificate, see the [Deploying the Service Certificate for Cloud-Based Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clouddp2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+   For an example deployment of this certificate, see the *Deploying the Service Certificate for Cloud-Based Distribution Points* section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates.md#bkmk_clouddp2008_cm2012) topic.  
 
 ##  <a name="bkmk_Tasks"></a> Common management tasks for cloud-based distribution points  
 

@@ -1,5 +1,6 @@
 ---
 title: "Service connection point | System Center Configuration Manager"
+description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
 ms.date: 06/27/2016
 ms.prod: configuration-manager

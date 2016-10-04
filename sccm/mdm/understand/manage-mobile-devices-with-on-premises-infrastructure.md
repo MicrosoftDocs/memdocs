@@ -1,5 +1,6 @@
 ---
 title: "On-premises Mobile Device Management (MDM) | System Center Configuration Manager"
+description: "Learn about On-premises Mobile Device Management, a device management solution in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
 ms.prod: configuration-manager

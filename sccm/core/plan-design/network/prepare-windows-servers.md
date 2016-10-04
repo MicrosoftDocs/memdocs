@@ -23,7 +23,7 @@ Before you can use a Windows computer as a site system server for System Center 
 
 -   Because the method to enable Windows features and roles differs with different operating systems, refer to the documentation for your operating system for detailed information about configuring these for the operating systems you use.  
 
-The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see the [Prerequisites for site system roles](Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Prrequisites) in the [Supported operating systems for sites and clients](Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md) topic.
+The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see [Site and site system prerequisites ](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
 
 ##  <a name="BKMK_WinFeatures"></a> Windows features and roles  
  When you configure Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. Therefore, we recommend you identify which computers will host which site system roles in advance of installing a Configuration Manager site or site system server.

@@ -1,5 +1,6 @@
 ---
 title: "Prerequisite checks | System Center Configuration Manager"
+description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
 ms.date: 03/11/2016
 ms.prod: configuration-manager

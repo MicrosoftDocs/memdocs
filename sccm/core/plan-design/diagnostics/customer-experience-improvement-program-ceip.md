@@ -22,6 +22,6 @@ During installation of the System Center Configuration Manager console, you have
 
 -   CEIP is per console, collecting data such as the number of times each element is clicked in the user interface.  
 
--   Read the [CEIP privacy statement](http://www.microsoft.com/products/ceip/privacypolicy.mspx?mkt=en-us) online.  
+-   Read the [CEIP privacy statement](https://www.microsoft.com/products/ceip/en-us/privacypolicy.mspx) online.  
 
 You can change the CEIP settings per console install. In the console, go to the consoles backstage tab (the upper left tab with the drop down arrow)  and select **Customer Experience Improvement Program** to change the settings.  

@@ -26,7 +26,7 @@ This topic includes resources for Security and Privacy for System Center Configu
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sup/deploy-use/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
 -   [Security and privacy for compliance settings in System Center Configuration Manager](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 

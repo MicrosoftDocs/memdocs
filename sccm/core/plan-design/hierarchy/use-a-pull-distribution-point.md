@@ -101,5 +101,5 @@ When a pull-distribution point downloads content from a source distribution poin
 -   When the pull-distribution point transfers content, it transfers content by using **Background Intelligent Transfer Service** (BITS) and logs its operation in the **datatransferservice.log** and the **pulldp.log** on the distribution point computer.  
 
 ## See Also  
- [Fundamental concepts for content management in System Center Configuration Manager](../Topic/Fundamental%20concepts%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md)   
- [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)
+ [Fundamental concepts for content management in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
+ 
