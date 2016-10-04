@@ -38,7 +38,7 @@ Follow the high-level steps described below  to upgrade the client for Mac compu
 
 2.  Copy the new file **CMClient.pkg.cmmac** file to a location that is available to the computer that is running the Configuration Manager console.  
 
- For more information, see the [Step 1: Prepare Mac applications for Configuration Manager](../../../../apps/get-started/creating-mac-computer-applications.md#BKMK_Step1) section in [Creating Mac computer applications with System Center Configuration Manager](../../../../apps/get-started/creating-mac-computer-applications.md).  
+ For more information, see the [Supplemental procedures to create and deploy applications for Mac computers](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers).  
 
 ## **Step 5:** Create and deploy an application containing the Mac client files  
 
