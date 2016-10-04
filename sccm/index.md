@@ -304,7 +304,7 @@ ms.assetid:
       </section>
     </div>
     <aside class="alert alert-social">
-      <p>Keep up-to-date on Intune</p>
+      <p>Keep up-to-date on Configuration Manager</p>
       <ol class="action-list">
         <li><a href="https://blogs.technet.microsoft.com/enterprisemobility/" target="_blank" class="button-bordered button-translucent">Enterprise Mobility and Security team blog</a></li>
         <li><a href="https://twitter.com/hashtag/configmgr" target="_blank" class="button-bordered button-translucent">#ConfigMgr on Twitter</a></li>
