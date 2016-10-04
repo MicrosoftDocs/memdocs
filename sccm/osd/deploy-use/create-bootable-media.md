@@ -19,9 +19,9 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Create bootable media with System Center Configuration Manager
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following operating system deployment scenarios:  
 
--   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](../deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
+-   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Replace an existing computer and transfer settings with System Center Configuration Manager](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)  
+-   [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)  
 
 ##  <a name="BKMK_CreateBootableMedia"></a> Create bootable media  
  When you boot to the bootable media, the destination computer starts, connects to the network and retrieves the specified task sequence, operating system image, and any other required content from the network. Because the task sequence is not on the media, you can change the task sequence or content without having to recreate the media. The packages on bootable media are not encrypted. You must take the appropriate security measures, such as adding a password to the media, to ensure that the package contents are secured from unauthorized users.  
@@ -98,9 +98,9 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 
     -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
 
-         For more information about this client certificate that is used for boot images, see [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+         For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer in System Center Configuration Manager](../deploy-use/associate-users-with-a-destination-computer.md).  
+    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](associate-users-with-a-destination-computer.md).  
 
         -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
 
@@ -128,7 +128,7 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 
     -   Specify the variables that the task sequence uses to deploy the operating system.  
 
-    -   Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. For more information, see [Prestart commands for task sequence media in System Center Configuration Manager](../understand/prestart-commands-for-task-sequence-media.md).  
+    -   Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. For more information, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
         > [!TIP]  
         >  During task sequence media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
@@ -138,4 +138,4 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 10. Complete the wizard.  
 
 ## Next steps  
-[Use bootable media to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md)  
+[Use bootable media to deploy Windows over the network](use-bootable-media-to-deploy-windows-over-the-network.md)  

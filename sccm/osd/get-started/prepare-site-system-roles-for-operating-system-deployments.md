@@ -22,7 +22,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 ##  <a name="BKMK_DistributionPoints"></a> Distribution points  
  The distribution point  site system role contains source files for clients to download, such as application content, software updates, operating system images,  and boot images. You can control content distribution by using bandwidth, throttling, and scheduling options.  
 
- It is important that you have  enough distribution points to support the deployment of operating systems to computers. It's also important that you  and plan for the placement of these distribution points in your hierarchy. You will find most of this planning information in [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md). However, there are some additional planning considerations for distribution points specific to operating system deployment.  
+ It is important that you have  enough distribution points to support the deployment of operating systems to computers. It's also important that you  and plan for the placement of these distribution points in your hierarchy. You will find most of this planning information in [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md). However, there are some additional planning considerations for distribution points specific to operating system deployment.  
 
 ###  <a name="BKMK_AdditionalPlanning"></a> Additional planning considerations for distribution points  
  The following are additional planning things to consider for distribution points:  
@@ -31,7 +31,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 
      Configuration Manager does not distinguish site servers from other destination computers in a collection. If you deploy a required task sequence to a collection that contains a site server, the site server runs the task sequence in the same way that any other computer in the collection runs the task sequence. Ensure that your operating system deployment uses a collection that contains the clients that you intend to run the deployment.  
 
-     You can manage the behavior for high-risk task sequence deployments. A high-risk deployment automatically installs on a client and has the potential to cause unwanted results. For example, a task sequence with a purpose of Required that deploys an operating system. To reduce the risk of an unwanted high-risk deployment, you can configure deployment verification settings. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+     You can manage the behavior for high-risk task sequence deployments. A high-risk deployment automatically installs on a client and has the potential to cause unwanted results. For example, a task sequence with a purpose of Required that deploys an operating system. To reduce the risk of an unwanted high-risk deployment, you can configure deployment verification settings. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 -   **How many computers can receive an operating system image at one time from a single distribution point?**  
 
@@ -80,7 +80,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 
     -   Select **Allow user device affinity with automatic approval** to automatically associate users with the destination computer without waiting for approval.  
 
-     For more information, see [Associate users with a destination computer in System Center Configuration Manager](../deploy-use/associate-users-with-a-destination-computer.md).  
+     For more information, see [Associate users with a destination computer](../deploy-use/associate-users-with-a-destination-computer.md).  
 
 9. Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If you choose to have the distribution point respond to a specific network interfaces, provide the MAC address for each network interface.  
 
@@ -125,7 +125,7 @@ You will need to test the customized settings in your environment to determine w
 
 
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
- Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
+ Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
  Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
 
@@ -209,4 +209,4 @@ You will need to test the customized settings in your environment to determine w
 
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
 
- For the steps to install a site system role, see [Add site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md).  
+ For the steps to install a site system role, see [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md).  

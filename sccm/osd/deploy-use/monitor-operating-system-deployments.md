@@ -1,5 +1,5 @@
 ---
-title: "Monitor operating system deployments in System Center Configuration Manager"
+title: Monitor operating system deployments | Configuration Manager
 description: "To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators."
 ms.custom: na
 ms.date: 12/08/2015
@@ -43,7 +43,7 @@ The Configuration Manager console provides the following ways to help you monito
 4.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
 
 ##  <a name="BKMK_TSReports"></a> Operating system deployment reports  
- There are many predefined operating system deployment reports available. They are organized in several categories and can be used to report on specific information about state migration and task sequence deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting in System Center Configuration Manager](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+ There are many predefined operating system deployment reports available. They are organized in several categories and can be used to report on specific information about state migration and task sequence deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
 
 ##  <a name="BKMK_MonitorContent"></a> Monitor content  
  You can monitor content in the Configuration Manager console to review the status for all package types in relation to the associated distribution points. This can include the content validation status for the content in the package, the status of content assigned to a specific distribution point group, the state of content assigned to a distribution point, and the status of optional features for each distribution point (content validation, PXE, and multicast).  
@@ -51,7 +51,7 @@ The Configuration Manager console provides the following ways to help you monito
 ###  <a name="BKMK_ContentStatus"></a> Content status monitoring  
  The **Content Status** node in the **Monitoring** workspace provides information about content packages. You can review general information about the package, distribution status for the package, and detailed status information about the package. Use the following procedure to view content status.  
 
-##### To monitor content status  
+#### To monitor content status  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -64,7 +64,7 @@ The Configuration Manager console provides the following ways to help you monito
 ###  <a name="BKMK_DPGroupStatus"></a> Distribution point group status  
  The **Distribution Point Group Status** node in the **Monitoring** workspace provides information about distribution point groups. You can review general information about the distribution point group, such as distribution point group status and compliance rate, as well as detailed status information for the distribution point group. Use the following procedure to view distribution point group status.  
 
-##### To monitor distribution point group status  
+#### To monitor distribution point group status  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -77,7 +77,7 @@ The Configuration Manager console provides the following ways to help you monito
 ###  <a name="BKMK_DPConfigStatus"></a> Distribution point configuration status  
  The **Distribution Point Configuration Status** node in the **Monitoring** workspace provides information about the distribution point. You can review which attributes are enabled for the distribution point, such as the PXE, Multicast, and content validation. You can also view detailed status information for the distribution point. Use the following procedure to view distribution point configuration status.  
 
-##### To monitor distribution point configuration status  
+#### To monitor distribution point configuration status  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager"
+title: Use stand-alone media to deploy Windows without using the network | Configuration Manager
 description: "Use stand-alone media in Configuration Manager to deploy operating systems where bandwidth is limited or as an option to refresh, install, or upgrade computers."
 ms.custom: na
 ms.date: 12/08/2015
@@ -24,11 +24,11 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 
  You can use stand-alone media in the following operating system deployment scenarios:  
 
--   [Refresh an existing computer with a new version of Windows using System Center Configuration Manager](../../osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](../../osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
+-   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Upgrade Windows to the latest version with System Center Configuration Manager](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)  
+-   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md)  
 
  Complete the steps in one of the operating system deployment scenarios and then use the following sections to prepare for and create the stand-alone media.  
 
@@ -48,11 +48,11 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 -   Dynamic application installs via the Install Application task.  
 
 > [!NOTE]  
->  If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:  
+>  If your task sequence to deploy an operating system includes  the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:  
 >   
 >  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
 >   
->  For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../../osd/understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:  
+>  For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:  
 >   
 >  **Command Line**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 
@@ -66,10 +66,7 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 -   **Only media and PXE (hidden)**  
 
 ## Create the stand-alone media  
- You can specify whether the  stand-alone media is a USB flash drive or CD/DVD set. The computer that will start the media must support the option that you choose as  a bootable drive. For more information, see [Create stand-alone media with System Center Configuration Manager](../../osd/deploy-use/create-stand-alone-media.md).  
+ You can specify whether the  stand-alone media is a USB flash drive or CD/DVD set. The computer that will start the media must support the option that you choose as  a bootable drive. For more information, see [Create stand-alone media](create-stand-alone-media.md).  
 
 ## Install the operating system from stand-alone media  
  Insert the stand-alone media in a bootable drive on the computer, and then power it on to install the operating system.  
-
-## See Also  
- [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)

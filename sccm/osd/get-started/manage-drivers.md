@@ -238,7 +238,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
 -   [Apply Driver Package](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage): This step lets you make all device drivers in a specific driver package available for Windows Setup. In the specified driver packages, Windows Setup searches for the device drivers that are required. When you create stand-alone media, you must use this step to install device drivers.  
 
- When you use these task sequence steps, you can also specify how the device drivers are installed on the computer where you deploy the operating system. For more information, see [Manage task sequences to automate tasks in System Center Configuration Manager](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
+ When you use these task sequence steps, you can also specify how the device drivers are installed on the computer where you deploy the operating system. For more information, see [Manage task sequences to automate tasks](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
 ##  <a name="BKMK_InstallingDeviceDiriversTS"></a> Use task sequences to install device drivers on computers  
  Use the following procedure to install device drivers as part of the operating system deployment.  
@@ -262,7 +262,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
 6.  Click **OK** to save the task sequence.  
 
- For more information about creating a task sequence to install an operating system, see [Create a task sequence to install an operating system in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
+ For more information about creating a task sequence to install an operating system, see [Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
 
 ##  <a name="BKMK_DriverReports"></a> Driver management reports  
- You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](../../core/servers/manage/reporting.md).  

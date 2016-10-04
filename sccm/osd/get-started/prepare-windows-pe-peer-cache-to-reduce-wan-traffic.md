@@ -124,7 +124,7 @@ Use the following sections to manage Peer Cache.
 
      This flags the content in the task sequence to be retained in the Configuration Manager client cache after the deployment. This is different than using SMSTSPersisContent which only preserves the content for the duration of the task sequence and uses the task sequence cache, not the Configuration Manager client cache.  
 
- For more information, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md).  
+ For more information, see [Task sequence built-in variables](../understand/task-sequence-built-in-variables.md).  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Validate the success of using Windows PE peer cache  
  After you use Windows PE peer cache to deploy and install a task sequence, you can confirm that peer cache was successfully used in the process by viewing the **smsts.log** on the client that ran the task sequence.  

@@ -34,7 +34,7 @@ env("MyCustomVariable") = "varname"
 ## Create a Package for the Script File and Distribute the Content  
  After you create the script or executable for the prestart command, you must create a package source to host the files for the script or executable, create a package for the files (no program required), and then distribute the content to a distribution point.  
 
- For more information about creating a package, see [Packages and programs in System Center Configuration Manager](../../apps/deploy-use/packages-and-programs.md).  
+ For more information about creating a package, see [Packages and programs](../../apps/deploy-use/packages-and-programs.md).  
 
  For more information about distributing content, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
@@ -51,7 +51,7 @@ env("MyCustomVariable") = "varname"
 
 4.  On the **Select Media Type** page, select **Stand-alone media**, **Bootable media**, or **Prestaged media**, and then click **Next**.  
 
-5.  Navigate to the **Customization** page of the wizard. For more information about configuring the other pages in the wizard, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md).  
+5.  Navigate to the **Customization** page of the wizard. For more information about configuring the other pages in the wizard, see [Create task sequence media](../deploy-use/create-task-sequence-media.md).  
 
 6.  On the **Customization** page, specify the following information, and then click **Next**.  
 

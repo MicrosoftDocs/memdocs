@@ -27,17 +27,17 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 -   **Required**  
 
-    -   The [boot image](http://technet.microsoft.com/library/mt627946\(TechNet.10\).aspx) must be available in the Configuration Manager console.  
+    -   The [boot image](../get-started/manage-boot-images.md) must be available in the Configuration Manager console.  
 
-    -   An [operating system image](https://technet.microsoft.com/library/mt627939\(TechNet.10\).aspx) must be available in the Configuration Manager console.  
+    -   An [operating system image](../get-started/manage-operating-system-images.md) must be available in the Configuration Manager console.  
 
 -   **Required (if used)**  
 
-    -   [Driver packages](http://technet.microsoft.com/library/mt627934\(TechNet.10\).aspx) that contain the necessary Windows drivers to support hardware on the reference computer must be available in the Configuration Manager console. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](../deploy-use/manage-drivers.md#BKMK_TSDrivers).  
+    -   [Driver packages](../get-started/manage-drivers.md) that contain the necessary Windows drivers to support hardware on the reference computer must be available in the Configuration Manager console. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](../deploy-use/manage-drivers.md#BKMK_TSDrivers).  
 
-    -   [Software updates](https://technet.microsoft.com/library/mt612804\(TechNet.10\).aspx) must be synchronized in the Configuration Manager console.  
+    -   [Software updates](../../sum/get-started/synchronize-software-updates.md) must be synchronized in the Configuration Manager console.  
 
-    -   [Applications](https://technet.microsoft.com/library/mt595707\(TechNet.10\).aspx) must be added to the Configuration Manager console.  
+    -   [Applications](../../apps/deploy-use/create-applications.md) must be added to the Configuration Manager console.  
 
 ###  <a name="BKMK_CreateBuildCaptureTS"></a> Create a build and capture task sequence  
  Use the following procedure to use a task sequence to  build a reference computer and capture the operating system.  
@@ -97,7 +97,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 8.  On the **Install Configuration Manager** page, specify the Configuration Manager client package that contains the source files to install the Configuration Manager client, add any additional properties needed to install the client, and then click **Next**.  
 
-     For more information about properties that can be used to install a client, see [About client installation properties in System Center Configuration Manager](../../core/clients/deploy/about-client-installation-properties.md).  
+     For more information about properties that can be used to install a client, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
 
 9. On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates, and then click **Next**. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
 
@@ -125,16 +125,16 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 14. Complete the wizard.  
 
-15. To add additional steps to the task sequence, select the task sequence that you created and click **Edit**. For information about how to edit a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+15. To add additional steps to the task sequence, select the task sequence that you created and click **Edit**. For information about how to edit a task sequence, see [Edit a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
  Deploy the task sequence to a reference computer in one of the following ways:  
 
--   If the reference computer is a Configuration Manager client, you can deploy the build and capture task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
+-   If the reference computer is a Configuration Manager client, you can deploy the build and capture task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md).  
 
     > [!NOTE]  
     >  If the task sequence has a disk partitioning task sequence step, do not select the **Download Program** option when you deploy the task sequence.  
 
--   If the reference computer is not a Configuration Manager client or if you want to manually run the task sequence on the reference computer, run the **Create Task Sequence Media Wizard** to create bootable media. For information about how to create bootable media, see [Create bootable media with System Center Configuration Manager](../deploy-use/create-bootable-media.md).  
+-   If the reference computer is not a Configuration Manager client or if you want to manually run the task sequence on the reference computer, run the **Create Task Sequence Media Wizard** to create bootable media. For information about how to create bootable media, see [Create bootable media](create-bootable-media.md).  
 
 ##  <a name="BKMK_CaptureExistingRefComputer"></a> Capture an operating system image from an existing reference computer  
  When you already have a reference computer ready to capture, you can create a task sequence that captures the operating system from the reference computer. You will use the **Capture Operating System Image** task sequence step to capture one or more images from a reference computer and store them in a image file (.wim) on the specified network share. The reference computer is started in Windows PE by using a boot image, each hard drive on the reference computer is captured as a separate image within the .wim file. If the referenced computer has multiple drives, the resulting .wim file will contain a separate image for each volume. Only volumes that are formatted as NTFS or FAT32 are captured. Volumes with other formats and USB volumes are skipped.  
@@ -153,7 +153,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 5.  On the **Task Sequence Information** page, specify a name for the task sequence and a description of the task sequence.  
 
-6.  Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images with System Center Configuration Manager](../deploy-use/manage-boot-images.md).  
+6.  Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images](manage-boot-images.md).  
 
 7.  Complete the wizard.  
 
@@ -179,9 +179,9 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
  Deploy the task sequence to a reference computer in one of the following ways:  
 
--   If the reference computer is a Configuration Manager client, you can deploy the task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
+-   If the reference computer is a Configuration Manager client, you can deploy the task sequence to the collection that contains the reference computer. For information about how to deploy the operating system image, see [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md).  
 
--   If the reference computer is not a Configuration Manager client or if you want to manually run the task sequence on the reference computer, run the **Create Task Sequence Media Wizard** to create bootable media. For information about how to create bootable media, see [Create bootable media with System Center Configuration Manager](../deploy-use/create-bootable-media.md).  
+-   If the reference computer is not a Configuration Manager client or if you want to manually run the task sequence on the reference computer, run the **Create Task Sequence Media Wizard** to create bootable media. For information about how to create bootable media, see [Create bootable media](create-bootable-media.md).  
 
 ##  <a name="BKMK_BuildandCaptureTSExample"></a> Task sequence example to build and capture an operating system image  
  Use the following table as a guide as you create a task sequence that builds and captures an operating system image. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create may vary from this sample and can contain more or less task sequence steps and groups.  
@@ -222,4 +222,4 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
  After you have captured an image from a reference computer, do not capture another operating system image from the reference computer because registry entries are created during the initial configuration. Create a new reference computer each time that you capture the operating system image. If you plan to use the same reference computer to create future operating system images, first uninstall the Configuration Manager client, and then reinstall the Configuration Manager client.  
 
 ## Next steps  
-[Methods to deploy enterprise operating systems](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+[Methods to deploy enterprise operating systems](methods-to-deploy-enterprise-operating-systems.md)

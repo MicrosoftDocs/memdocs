@@ -62,11 +62,11 @@ Operating system images in System Center Configuration Manager are WIM files and
 
 -   **Operating system to deploy**  
 
-     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 -   **Appropriate service pack**  
 
-     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
 -   **Appropriate software updates**  
 
@@ -105,7 +105,7 @@ Operating system images in System Center Configuration Manager are WIM files and
  Use the following procedure to manually build a reference computer.  
 
 > [!NOTE]  
->  When you manually build the reference computer, you can capture the operating system image by using capture media. For more information, see [Create capture media with System Center Configuration Manager](../deploy-use/create-capture-media.md).  
+>  When you manually build the reference computer, you can capture the operating system image by using capture media. For more information, see [Create capture media](../deploy-use/create-capture-media.md).  
 
 #### To manually build the reference computer  
 

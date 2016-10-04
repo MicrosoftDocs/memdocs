@@ -29,7 +29,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 ##  <a name="BKMK_BootImageCustom"></a> Customize a boot image  
  You can customize a boot image, or [Modify a boot image](#BKMK_ModifyBootImages), from the Configuration Manager console when it is based on a Windows PE  version from the supported version of Windows ADK. When a site is upgraded with a new version and a new version of Windows ADK is installed, custom boot images (not in the default boot image location) are not updated with the new version of Windows ADK. When that happens, you will no longer be able to customize the boot images in the Configuration Manager console. However, they will continue to work as they did before the upgrade.  
 
- When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images  by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK. For more information, see [Customize boot images with System Center Configuration Manager](../deploy-use/customize-boot-images.md).  
+ When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images  by using another method, such as using the Deployment Image Servicing and Management (DISM) command-line tool that is part of the Windows AIK and Windows ADK. For more information, see [Customize boot images](customize-boot-images.md).  
 
 ##  <a name="BKMK_AddBootImages"></a> Add a boot image  
 
@@ -51,7 +51,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 
      <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images with System Center Configuration Manager](../deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images](../deploy-use/manage-boot-images.md).  
+     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](customize-boot-images.md).
 
  Use the following procedure to manually add a boot image.  
 
@@ -96,7 +96,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 > -   You must distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
 > -   Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
 >   
->  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+>  For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
  For the steps to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
 
@@ -127,8 +127,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 
     -   On the **Drivers** tab, add the Windows device drivers that are required to boot WinPE. Consider the following when you add device drivers:  
 
-        -   Select  
-                                    **Hide drivers that do not match the architecture of the boot image** to only display only drivers for the architecture of the boot image. The architecture is based on the architecture reported in the .INF from the manufacturer.  
+        -   Select **Hide drivers that do not match the architecture of the boot image** to only display only drivers for the architecture of the boot image. The architecture is based on the architecture reported in the .INF from the manufacturer.  
 
         -   Select **Hide drivers that are not in a storage or network class (for boot images)** to only display storage and network drivers, and hide other drivers that are not typically needed for boot images, such as a video driver or modem driver.  
 
@@ -141,7 +140,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
         -   Make sure that the drivers that you add to the boot image  match the architecture of the boot image.  
 
         > [!NOTE]  
-        >  You must import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers in System Center Configuration Manager](../deploy-use/manage-drivers.md).  
+        >  You must import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers](manage-drivers.md).  
 
     -   On the **Customization** tab, select any of the following settings:  
 
@@ -172,7 +171,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
         -   Select **Deploy this boot image from the PXE-enabled distribution point** if the boot image is used in a PXE-enabled deployment.  
 
             > [!NOTE]  
-            >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+            >  For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
     -   On the **Data Access** tab, select any of the following settings:  
 
@@ -219,7 +218,7 @@ A boot image in Configuration Manager is a [Windows PE (WinPE)](https://msdn.mic
 5.  On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**.  
 
     > [!NOTE]  
-    >  For more information, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+    >  For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 6.  After you have configured the properties, click **OK**.  
 
