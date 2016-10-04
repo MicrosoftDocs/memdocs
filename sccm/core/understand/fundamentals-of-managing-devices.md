@@ -49,7 +49,7 @@ In addition to managing devices with or without the Configuration Manager client
 
  The following diagram shows an example of how you could create and apply custom client settings.  
 
- ![ClientSettings](../../core/understand/media/ClientSettings.gif "ClientSettings")  
+ ![Client settings](media/ClientSettings.gif)  
 
  To learn more about client settings, see  
                 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) and  [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).
