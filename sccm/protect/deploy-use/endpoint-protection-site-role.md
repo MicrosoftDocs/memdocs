@@ -1,5 +1,8 @@
 ---
 title: "Configuring Endpoint Protection | System Center Configuration Manager"
+description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
+defintion: ""
+definition: ""
 ms.custom: na
 ms.date: 08/05/2016
 ms.prod: configuration-manager
@@ -83,4 +86,3 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 > [!div class="button"]
 [Back >](endpoint-protection-configure.md)
-

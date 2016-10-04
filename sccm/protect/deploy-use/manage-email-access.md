@@ -1,5 +1,6 @@
 ---
 title: "Manage email access | System Center Configuration Manager"
+description: "Learn how to use System Center Configuration Manager conditional access to manage access to Exchange email."
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager

@@ -1,5 +1,6 @@
 ---
 title: "Manage Dynamics CRM Online access | System Center Configuration Manager"
+description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
 ms.custom: na
 ms.date: 06/20/2016
 ms.reviewer: na
@@ -86,8 +87,3 @@ Select any mobile device group and then, on the **Devices** tab, select one of t
 [Manage access to SharePoint Online](../../protect/deploy-use/manage-sharepoint-online-access.md)
 
 [Manage access to Skype for Business Online](../../protect/deploy-use/manage-skype-for-business-online-access.md)
-
-
-
-  
-
