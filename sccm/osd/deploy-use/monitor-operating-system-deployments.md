@@ -17,21 +17,8 @@ author: Dougebymanager: angrobe
 
 ---
 # Monitor operating system deployments in System Center Configuration Manager
-To help you to monitor operating system deployment objects, the Configuration Manager console provides the following:  
+The Configuration Manager console provides the following ways to help you monitor operating system deployment objects.  
 
--   [Alerts for operating system deployments](#BKMK_OSDAlerts)  
-
--   [Task sequence deployment status](#BKMK_TSDeployStatus)  
-
--   [Operating system deployment reports](#BKMK_TSReports)  
-
--   [Monitor content](#BKMK_MonitorContent)  
-
-    -   [Content status monitoring](#BKMK_ContentStatus)  
-
-    -   [Distribution point group status](#BKMK_DPGroupStatus)  
-
-    -   [Distribution point configuration status](#BKMK_DPConfigStatus)  
 
 ##  <a name="BKMK_OSDAlerts"></a> Alerts for operating system deployments  
  You can configure an alert in the task sequence  deployment settings to notify administrative users when compliance levels for the  deployment is below the configured percentage.  
@@ -99,6 +86,3 @@ To help you to monitor operating system deployment objects, the Configuration Ma
 3.  Select the distribution point for which to view distribution point status information.  
 
 4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
-
-## See Also  
- [Manage enterprise operating systems with System Center Configuration Manager](../Topic/Manage%20enterprise%20operating%20systems%20with%20System%20Center%20Configuration%20Manager.md)

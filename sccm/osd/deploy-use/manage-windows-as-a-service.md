@@ -1,5 +1,5 @@
 ---
-title: "Manage Windows as a service using System Center Configuration Manager"
+title: Manage Windows as a service | Configuration Manager
 description: "Features in System Center Configuration Manager help you view the state of Windows as a Service in your environment so that you can keep it updated."
 ms.custom: na
 ms.date: 08/12/2016
@@ -21,15 +21,7 @@ author: Dougebymanager: angrobe
 
  For more information about Windows 10 servicing options, see  [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/library/mt598226\(v=vs.85\).aspx).  
 
- Use the following sections to manage Windows as a service:  
-
--   [Prerequisites](#BKMK_Prerequisites)  
-
--   [Windows 10 servicing dashboard](#BKMK_ServicingDashboard)  
-
--   [Windows 10 servicing plan](#BKMK_ServicingPlan)  
-
--   [Modify a servicing plan](#BKMK_ModifyServicingPlan)  
+ Use the following sections to manage Windows as a service.
 
 ##  <a name="BKMK_Prerequisites"></a> Prerequisites  
  To see data in the Windows 10 servicing dashboard, you must do the following:  
@@ -55,7 +47,7 @@ author: Dougebymanager: angrobe
 
 -   Internet Explorer 9 or later must be installed on the computer that runs the Configuration Manager console.  
 
--   Software updates must be configured and synchronized. You must select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades will be available in the Configuration Manager console. For more information, see [Configure software updates in System Center Configuration Manager](../../sum/deploy-use/configure-software-updates.md).  
+-   Software updates must be configured and synchronized. You must select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades will be available in the Configuration Manager console. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
 
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard  
  The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, active servicing plans, compliance information, and so on. The data in the Windows 10 servicing dashboard is dependent on having the Service Connection Point installed. The dashboard has the following tiles:  
@@ -228,6 +220,3 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 2.  In the Software Library workspace, expand **Windows 10 Servicing**,  click **Servicing Plans**, and then select the servicing plan that you want to modify.  
 
 3.  On the **Home** tab, click **Properties** to open properties for the selected servicing plan.  
-
-## See Also  
- [Manage enterprise operating systems with System Center Configuration Manager](assetId:///c6b0ff4c-235a-4e4c-99c0-d14d202de478)

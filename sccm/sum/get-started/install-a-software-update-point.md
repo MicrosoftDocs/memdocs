@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install a software update point | Configuration Manager
+title: Install and configure a software update point | Configuration Manager
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
 keywords:
 author: dougebymanager: angrobe
@@ -25,7 +25,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ---
 
 
-# Install a software update point  
+# Install and configure a software update point  
 
 > [!IMPORTANT]  
 >  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
@@ -124,7 +124,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 >  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
 
 ## Classifications  
- Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../plan-design/plan-for-software-updates.md#update-classifications).  
+ Configure the classifications settings on the **Classifications** page of the wizard, or the on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
 
 > [!NOTE]  
 >  The **Classifications** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
@@ -142,7 +142,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 >  When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
 
 ## Languages  
- Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../plan-design/plan-for-software-updates.md#update-languages).  
+ Configure the language settings on the **Languages** page of the wizard, or the on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
 
 > [!NOTE]  
 >  The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  

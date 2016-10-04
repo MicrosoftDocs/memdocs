@@ -781,6 +781,3 @@ Many built-in reports are supplied with System Center Configuration Manager, cov
 |**History of Wake On LAN activity**|Displays a history of the wakeup activity that has occurred since a certain period.|  
 |**Wake-Up Proxy Deployment State Details**|Displays information about the deployment status of Wake-Up Proxy for each device in a specified collection.|  
 |**Wake-Up Proxy Deployment State Summary**|Displays a summary of the deployment status of wake-up proxy for a specified collection.|  
-
-## See Also  
- [Technical reference for reporting in System Center Configuration Manager](../Topic/Technical%20reference%20for%20reporting%20in%20System%20Center%20Configuration%20Manager.md)
