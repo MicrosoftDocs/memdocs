@@ -115,17 +115,6 @@ Mobile devices that aren't enrolled but that connect to Exchange ActiveSync (EAS
 [Mobile device management with Exchange ActiveSync and Intune](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)
 
 
-## Manage Windows PCs with Intune client software  
-You can also manage Windows PCs using the Intune client software. PCs managed with the Intune client can:
-
-  - Report software and hardware inventories
-  - Install desktop applications (for example .exe and .msi files)
-  - Firewall settings
-
-PCs managed with the Intune client software cannot be wiped, and cannot take advantage of many Intune management features such as conditional access, VPN and Wi-Fi settings, or deployment of certificates and email configurations.
-
-[Manage Windows PCs with Intune software client](../includes/manage-windows-pcs-with-microsoft-intune.md)
-
 ##  Supported device platforms
 
 Configuration Manager hybrid MDM can manage the following device platforms:
@@ -133,6 +122,5 @@ Configuration Manager hybrid MDM can manage the following device platforms:
 [!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ## Next steps
- - [Prerequisites for device enrollment](prerequisites-for-enrollment.md)
- - [Manage corporate-owned devices](manage-corporate-owned-devices.md)
- - [Supported mobile  devices and computers](../get-started/supported-mobile-devices-and-computers.md)
+ - [Prerequisites for device enrollment](../deploy-use/prerequisites-for-enrollment.md)
+ - [Manage corporate-owned devices](../deploy-use/manage-corporate-owned-devices.md)

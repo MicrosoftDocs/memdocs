@@ -73,7 +73,7 @@ Begining with System Center Configuration Manager current branch version 1602, a
 
 2.  Device Health Attestation is displayed.  
 
- Client device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/manage-device-compliance-policies.md).  
+ Client device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](../protect/deploy-use/manage-device-compliance-policies.md).  
 
 ## See Also  
- [Monitor and maintain System Center Configuration Manager](../Topic/Monitor%20and%20maintain%20System%20Center%20Configuration%20Manager.md)
+ [Monitor and maintain System Center Configuration Manager](../core/servers/manage/maintenance-tasks.md)
