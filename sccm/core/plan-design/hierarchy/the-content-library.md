@@ -33,7 +33,7 @@ For more information about how to configure the drive settings for the distribut
 
 
 >  [!IMPORTANT]  
->  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer Tool** in the System Center 2012 Configuration Manager Service Pack 1 Toolkit. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
+>  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer Tool** in the System Center 2012 R2 Configuration Manager Toolkit. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
 
 ## About the content library on the Central Administration Site  
  By default, Configuration Manager creates a content library on the central administration site when the site installs. The content library is placed on the drive of the site server that has the most free disk space. Because you cannot install a distribution point on the central administration site, you cannot prioritize the drives for use for the content library. Similar to the content library on other site servers and on distribution points, when the drive that contains the content library runs out of available disk space, the content library automatically spans to the next available drive.  
@@ -51,4 +51,4 @@ For more information about how to configure the drive settings for the distribut
 
 -   To prevent the content library from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before the content library is created.  
 
--   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 Configuration Manager Service Pack 1 Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
+-   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 R2 Configuration Manager Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
