@@ -59,4 +59,3 @@ Use the following information to find security best practices and privacy inform
 -   [Security and privacy for certificate profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 
 -   [Wi-Fi and VPN profile security and privacy in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)  
-

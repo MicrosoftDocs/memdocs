@@ -100,7 +100,7 @@ After a site installs, you can move the  location of some site system roles from
 
     For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
--   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/deploy-use/manage-user-state.md).  
+-   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
 
 -   **System Health Validator point** - This site system role is no longer used with System Center Configuration Manager although it remains visible in the Configuration Manager console.  
 
