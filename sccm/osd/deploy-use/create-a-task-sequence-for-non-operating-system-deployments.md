@@ -45,4 +45,4 @@ Task sequences in System Center Configuration Manager are used to automate a var
 -   [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
 ## Next steps
-[Deploy the task sequence](manage-task-sequences-to-automate-tasks.md##BKMK_DeployTS)
+[Deploy the task sequence](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)

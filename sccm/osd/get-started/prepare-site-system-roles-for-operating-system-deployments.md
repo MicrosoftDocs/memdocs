@@ -51,7 +51,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 > [!IMPORTANT]  
 >  [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) must be installed on the all PXE-enabled distribution points.  
 
- Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
+ Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points).  
 
 #### To modify an existing distribution point to accept PXE requests  
 

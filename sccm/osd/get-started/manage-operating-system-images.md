@@ -73,7 +73,7 @@ For the steps to create a customized operating system image, see [Customize oper
  You can now distribute the operating system image to distribution points.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute operating system images to distribution points  
- Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
+ Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Apply software updates to an operating system image  
  Periodically, new software updates are released that are applicable to the operating system in your operating system image. Of course, before you can apply software updates to an image you must have your software updates infrastructure in place and have successfully synchronized software updates. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).  
