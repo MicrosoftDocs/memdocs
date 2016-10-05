@@ -29,7 +29,7 @@ At each System Center Configuration Manager site you can configure site componen
 
 **Software Update Point:**  
 
--   For information about  configuration options for the software update point component, see [Install a software update point](../../../../sup/get-started/install-a-software-upudate-point.md).  
+-   For information about  configuration options for the software update point component, see [Install a software update point](../../../../sum/get-started/install-a-software-upudate-point.md).  
 
 **Management  Point:**  
 
