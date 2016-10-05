@@ -4,6 +4,8 @@ description: "Help eliminate configuration problems on devices running iOS 8 or 
 ms.custom: na
 ms.date: 04/03/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-app
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

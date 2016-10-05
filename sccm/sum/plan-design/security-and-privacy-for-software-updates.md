@@ -11,6 +11,7 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.service:
 ms.technology:
+ - configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 
 

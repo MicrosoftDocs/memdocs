@@ -4,6 +4,8 @@ description: "Manage the configuration and compliance of devices in your organiz
 ms.custom: na
 ms.date: 02/16/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

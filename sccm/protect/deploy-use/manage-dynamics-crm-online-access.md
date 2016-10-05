@@ -4,7 +4,9 @@ description: "Learn how to control access to Microsoft Dynamics CRM Online from 
 ms.custom: na
 ms.date: 06/20/2016
 ms.reviewer: na
-ms.service: microsoft-intune
+ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
