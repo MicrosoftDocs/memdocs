@@ -53,7 +53,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
     > [!NOTE]  
     >  You cannot include both allowed and blocked URLs in the same managed browser policy.  
 
-     For more information about the URL formats you can specify, see [URL format for allowed and blocked URLs](#BKMK_URLs) in this topic.  
+     For more information about the URL formats you can specify, see **URL format for allowed and blocked URLs** in this topic.  
 
     > [!NOTE]  
     >  The **General** policy type lets you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy and paste operations within a restricted app. For more information about the General policy type, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
