@@ -125,9 +125,9 @@ A client is online if it is currently connected to a Configuration Manager manag
 
 |||  
 |-|-|  
-|![online status icon for clients](../../core/clients/manage/media/online-status-icon.png "online)|Client is online.|  
-|![offline status icon for clients](../../core/clients/manage/media/offline-status-icon.png "offline)|Client is offline.|  
-|![unknown status icon for clients](../../core/clients/manage/media/unknown-status-icon.png "unknown)|Client status is unknown.|  
+|![online status icon for clients](media/online-status-icon.png)|Client is online.|  
+|![offline status icon for clients](media/offline-status-icon.png)|Client is offline.|  
+|![unknown status icon for clients](media/unknown-status-icon.png)|Client status is unknown.|  
 
 ### Prerequisites  
  Client online status has no prerequisites. You can start using it as soon as Configuration Manager technical preview 1601 is installed.  
