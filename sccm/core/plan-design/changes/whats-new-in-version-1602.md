@@ -96,7 +96,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ## Software updates  
 
 ### Manage Office 365 client updates  
- System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](/sccm/sum/deploy-use/manage-ofice-365-proplus-updates).  
+ System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
 
 ## Compliance settings  
 

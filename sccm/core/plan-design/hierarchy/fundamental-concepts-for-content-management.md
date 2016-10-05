@@ -73,7 +73,7 @@ Applications always use binary differential replication. For packages, binary di
 ## Windows PE peer cache
 When you deploy a new operating system in System Center Configuration Manager, computers that run the task sequence can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point.
 
-For more information, see [Windows PE peer cache](../../../osd/plan-design/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
+For more information, see [Windows PE peer cache](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
 
 ## Client locations  
@@ -121,7 +121,7 @@ Standard distribution points support a range of configurations and features, lik
 
 -   You can also use other options including **prestaged content**, **pull-distribution points**, or leverage **BranchCache** to reduce the network bandwidth that is used when you deploy content.  
 
--   Distribution points support different configurations like **[PXE](../../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** for operating system deployments, or configurations to support **mobile devices**  
+-   Distribution points support different configurations like **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** for operating system deployments, or configurations to support **mobile devices**  
 
  Cloud-based and pull distribution points  support many of these same configurations, but do have limitations specific to each distribution point variation.  
 
