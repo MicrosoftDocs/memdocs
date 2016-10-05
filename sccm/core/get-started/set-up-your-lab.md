@@ -24,7 +24,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install System Center Configuration Manager.  
 
-     You can download an evaluation version of Windows Server 2012 R2 from the [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2012).  
+     You can download an evaluation version of Windows Server 2012 R2 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
      Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. Please review [Internet Explorer: Enhanced Security Configuration](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) for additional information.  
 
@@ -336,18 +336,18 @@ By default, IIS blocks several types of file extensions and locations from acces
 4.  Type **.msi** into the dialog box and click **OK**.  
 
 ###  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
-You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SiteSystemScale) of potential devices.  
+You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](/sccm/core/plan-design/changes/configs/size-and-scale-numbers) of potential devices.  
 During this process, you will also install the Configuration Manager console, which will be used to manage your evaluation devices going forward.  
 
-Before you begin the installation, launch the  [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
+Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
 
 ##### To download and install Configuration Manager:  
 
-1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
+1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
 
 2.  Decompress the download media into your predefined location.  
 
-3.  Follow the installation procedure listed at [Install a site using the System Center Configuration Manager Setup Wizard](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md#bkmk_InstallWizard). Within that procedure, you will input the following:  
+3.  Follow the installation procedure listed at [Install a site using the System Center Configuration Manager Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-insall-sites). Within that procedure, you will input the following:  
 
     |Step in site installation procedure|Selection|  
     |-----------------------------------------|---------------|  
