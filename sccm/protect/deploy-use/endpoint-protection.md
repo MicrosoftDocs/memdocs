@@ -74,7 +74,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 >  Endpoint Protection supports managing the Windows Firewall only.  
 
 
- For more information about how to create and deploy Windows Firewall policies for Endpoint Protection, see [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-deploy-windows-firewall-policies-for-endpoint-protection.md).  
+ For more information about how to create and deploy Windows Firewall policies for Endpoint Protection, see [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md).  
 
 
 ## Windows Defender Advanced Threat Protection
