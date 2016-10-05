@@ -51,7 +51,7 @@ An upgrade package in System Center Configuration Manager contains the Windows S
  You can now distribute the operating system installer to the distribution points that are accessed by your deployment task sequences.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute operating system images to a distribution point  
- Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
+ Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 ##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> Apply software updates to an operating system upgrade package  
  Beginning in Configuration Manager version 1602, you can apply new software updates to the operating system image in your operating system upgrade package. Of course, before you can apply software updates to an upgrade package you must have your software updates infrastructure in place and have successfully synchronized software updates. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).  

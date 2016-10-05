@@ -50,7 +50,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
      Before you create prestaged media, you must distribute the boot image to a distribution point.  
 
     > [!NOTE]  
-    >  Boot images are used to install the operating system on the destination computers in your Configuration Manager environment. They contain a version of Windows PE that installs the operating system, as well as any additional device drivers that are required. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. You can also create your own boot images. For more information, see [Manage boot images with System Center Configuration Manager](../get-started/manage-boot-images.md).  
+    >  Boot images are used to install the operating system on the destination computers in your Configuration Manager environment. They contain a version of Windows PE that installs the operating system, as well as any additional device drivers that are required. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. You can also create your own boot images. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 -   **Distribute the Windows 8 operating system image to a distribution point**  
 

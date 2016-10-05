@@ -44,7 +44,7 @@ This topic lists the prerequisites for software updates in System Center Configu
  When you have multiple software update points at a site, ensure that they are all running the same version of WSUS.  
 
 > [!WARNING]  
->  The **Upgrades** software updates classification is only supported beginning in WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service using System Center Configuration Manager](../../osd/deploy-use/manage-windows-as-a-service.md).  
+>  The **Upgrades** software updates classification is only supported beginning in WSUS 4.0. Before you synchronize this new classification and have the ability to evaluate Windows 10 computers in a Windows 10 servicing plan, it is critical that you install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers. This hotfix enables WSUS on a Windows Server 2012-based or a Windows Server 2012 R2-based server to sync and distribute feature upgrades for Windows 10. For more information, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).  
 >   
 >  If you synchronize software updates with the **Upgrades** classification before you install [hotfix 3095113](https://support.microsoft.com/kb/3095113), see [Recover from synchronizing the Upgrades category before you install KB 3095113](#BKMK_RecoverUpgrades).  
 
@@ -79,12 +79,12 @@ This topic lists the prerequisites for software updates in System Center Configu
 
  For more information, see the following:  
 
--   [Client Settings for Software Updates](../get-started/manage-settings-for-software-updates.md#client-settings-for-software-updates).  
+-   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates).  
 
--   [Software Updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
+-   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates) topic.  
 
 ### Reporting services point  
- The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting in System Center Configuration Manager](../../core/servers/manage/configuring-reporting.md) .  
+ The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md) .  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> Recover from synchronizing the Upgrades category before you install KB 3095113  
  You must install [hotfix 3095113](https://support.microsoft.com/kb/3095113) for WSUS  on your software update points and site servers before you synchronize the **Upgrades** classification. If the hotfix is not installed when the **Upgrades** classification is enabled, WSUS will see the Windows 10 build 1511 feature upgrade even if it can’t properly download and deploy the associated packages. If you synchronize any upgrades without having first installed [hotfix 3095113](https://support.microsoft.com/kb/3095113), you will populate the WSUS database (SUSDB) with unusable data that must be cleared before upgrades can be properly deployed.  Use the following procedure to recover from this issue.  

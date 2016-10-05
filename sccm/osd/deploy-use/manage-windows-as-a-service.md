@@ -32,7 +32,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 -   WSUS 4.0 with the [hotfix 3159706](https://support.microsoft.com/kb/3159706) must be installed on your software update points and site servers to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see the [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/).
 
--   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/run-discovery.md#BKMK_ConfigHBDisc).  
+-   Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#a-namebkmkconfighbdisca-configure-heartbeat-discovery).  
 
      The following Windows 10 branch and build information is discovered and stored in the following attributes:  
 
@@ -193,7 +193,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority.  
 
-11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/manage-accounts-to-access-content.md#bkmk_DBtable).  
+11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations).  
 
     > [!NOTE]  
     >  This page is available only when you create a new software update deployment package.  
