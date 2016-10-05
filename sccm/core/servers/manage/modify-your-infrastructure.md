@@ -65,7 +65,7 @@ After you install one or more sites, you might have need to modify configuration
 
 -   **Configure DCOM** - To configure DCOM permission to enable consoles that are remote from the site server to connect, see  [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) in this topic.  
 
--   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration.md#bkmk_modadminuser).     
+-   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser).     
 
 ###  <a name="BKMK_ManageConsoleLanguages"></a> Manage Configuration Manager console language  
  During site server installation, the Configuration Manager console installation files and supported language packs for the site are copied to the **&lt;ConfigMgrInstallationPath\>\Tools\ConsoleSetup** subfolder on the site server.  

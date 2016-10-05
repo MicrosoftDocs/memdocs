@@ -141,7 +141,7 @@ The following sections provide more information for completing these steps.
 
 #### Create a custom SSL certificate
 
-You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the [instructions for cloud-based distribution points](Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.xml#BKMK_clouddp2008_cm2012) but do the following things differently:
+You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
 
 * When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 
