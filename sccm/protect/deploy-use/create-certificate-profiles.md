@@ -18,7 +18,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # How to create certificate profiles in System Center Configuration Manager
 
-Use certificate profiles to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md).  
+Use certificate profiles to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
 
 This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
@@ -46,7 +46,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
         -   **Trusted CA certificate**: Select this certificate profile type if you want to deploy a trusted root certification authority (CA) or intermediate CA certificate to form a certificate chain of trust when the user or device must authenticate another device. For example, the device might be a Remote Authentication Dial-In User Service (RADIUS) server or a virtual private network (VPN) server. You must also configure a trusted CA certificate profile before you can create a SCEP certificate profile. In this case, the trusted CA certificate must be the trusted root certificate for the CA that will issue the certificate to the user or device.  
 
         -   **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this certificate profile type if you want to request a certificate for a user or device, by using the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service role service.
-         
+
         -   **Personal Information Exchange PKCS #12 (PFX) settings import**: Select this to import a PFX certificate. To learn more about PFX certificate creation see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
 
@@ -75,7 +75,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
 2.  Use the **Certificate thumbprint** value to verify that you have imported the correct certificate.  
 
- 
+
 ### Configure SCEP certificate information (only for SCEP certificates)  
 
 1.  On the **SCEP Servers** page of the Create Certificate Profile Wizard, specify the URLs for the NDES Servers that will issue certificates via SCEP. You can choose to automatically assign an NDES URL based on the configuration of the Certificate Registration Point site system server, or add URLs manually.  
@@ -96,6 +96,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
         -   **Install to Trusted Platform Module (TPM) otherwise fail**: Installs the key to the TPM. If the TPM module is not present, the installation will fail.  
 
         -   **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 Desktop and Mobile devices. It  enrolls the key to **Windows Hello for Business**, described in [Windows Hello for Business settings in System Center Configuration Manager](../../protect/deploy-use/windows-hello-for-business-settings.md). This option also enables you to **Require multi-factor authentication** during enrollment of devices before issuing certificates to those devices. See [Protect Windows devices with multi-factor authentication](https://technet.microsoft.com/library/dn889751.aspx) for more information.
+
         > [!NOTE]  
         > When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for. This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if Passport is used as the Key Storage Provider in a certificate profile.  
 
@@ -168,8 +169,4 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 ###  Specify supported platforms for the certificate profile  
 
 1. On the **Supported Platforms** page of the Create Certificate Profile Wizard, select the operating systems where you want to install the certificate profile. Or, click **Select all** to install the certificate profile to all available operating systems.
-2. Review the **Summary** page of the wizard and choose **Finish**. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices as described in [How to deploy certificate profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-certificate-profiles.md).  
-
-### See also  
-
- [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+2. Review the **Summary** page of the wizard and choose **Finish**. The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace and is ready to be deployed to users or devices as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

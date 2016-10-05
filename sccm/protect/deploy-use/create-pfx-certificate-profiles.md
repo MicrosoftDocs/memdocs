@@ -105,7 +105,3 @@ System Center Configuration Manager allows you to provision personal information
     -   $ProfileName = The name of the PFX profile  
 
     -   ComputerName = Name of host computer  
-
-### See also  
-
- [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
