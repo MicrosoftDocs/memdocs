@@ -16,7 +16,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
-Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below:  
+Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below.
 
 -   [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf)  
 

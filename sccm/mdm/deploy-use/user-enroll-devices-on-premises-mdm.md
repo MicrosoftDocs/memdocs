@@ -22,11 +22,13 @@ With System Center Configuration Manager On-premises Mobile Device Management, u
  > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
 >   
->  -   Windows 10 Enterprise  
+>  -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
 > -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise The following tasks explain how to enroll and verify enrollment of computers and devices for On\-premises Mobile Device Management:  
+> -   Windows 10 Mobile Enterprise
+
+The following tasks explain how to enroll and verify enrollment of computers and devices for On\-premises Mobile Device Management:  
 
 -   [Enroll a Windows 10 computer](#bkmk_enrollDesk)  
 

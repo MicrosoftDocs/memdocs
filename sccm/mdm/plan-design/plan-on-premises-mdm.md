@@ -17,17 +17,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Plan for On-premises Mobile Device Management in System Center Configuration Manager
-Consider the following requirements before preparing the Configuration Manager infrastructure to handle On\-premises Mobile Device Management:  
-
--   [Supported devices](#bkmk_devices)  
-
--   [Use of the Microsoft Intune subscription](#bkmk_intune)  
-
--   [Required site system roles](#bkmk_roles)  
-
--   [Required trusted communications](#bkmk_trustedComs)  
-
--   [Enrollment considerations](#bkmk_enrollment)  
+Consider the following requirements before preparing the Configuration Manager infrastructure to handle On\-premises Mobile Device Management.
 
 ##  <a name="bkmk_devices"></a> Supported devices  
  On-premises Mobile Device Management allows you to manage mobile devices using the management capabilities built into the device operating systems.  The management capability is based on the Open Mobile Alliance (OMA) Device Management (DM) standard, and many device platforms use this standard to allow the devices to be managed.  We call these **modern devices** (in the documentation and the Configuration Manager console user interface) to distinguish them from other devices that require the Configuration Manager client to manage them.  
