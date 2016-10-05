@@ -1,4 +1,4 @@
- ---
+---
 title: "Configuring certificate infrastructure | System Center Configuration Manager"
 description: "Learn how to configure certificate enrollment in System Center Configuration Manager."
 ms.custom: na
@@ -14,7 +14,6 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
-
 ---
 # Certificate infrastructure
 

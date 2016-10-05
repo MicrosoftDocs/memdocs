@@ -4,6 +4,8 @@ description: "Learn about features available in the Technical Preview for System
 ms.custom: na
 ms.date: 06/20/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

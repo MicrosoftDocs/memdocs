@@ -1,6 +1,6 @@
 ---
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
-description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager." 
+description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager."
 ms.custom: na
 ms.date: 08/12/2016
 ms.prod: configuration-manager
@@ -14,25 +14,7 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
 author: NathBarnms.author: nathbarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+manager: angrobe
 ---
 # Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager
 Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To protect devices you can issue:  
