@@ -275,18 +275,12 @@ Packages can use some new features of Configuration Manager, including distribut
 ##  About the package definition file format  
  Package definition files are scripts that you can use to help automate package and program creation with Configuration Manager. They provide all of the information that Configuration Manager needs in order to create a package and program, except for the location of package source files. Each package definition file is an ASCII or UTF-8 text file following the .ini file format and containing the following described sections:  
 
--   [[PDF]](#BKMK_Address)  
-
--   [[Package Definition]](#BKMK_Pack)  
-
--   [[Program]](#BKMK_Prog)  
-
-###  <a name="BKMK_Address"></a> [PDF]  
+###  [PDF]  
  This section identifies the file as a package definition file. It contains the following information:  
 
 -   **Version**: This specifies the version of the package definition file format that is used by the file. This corresponds to the version of System Management Server (SMS) or Configuration Manager for which it was written. This entry is required.  
 
-###  <a name="BKMK_Pack"></a> [Package Definition]  
+###  [Package Definition]  
  This section of the package definition file specifies the properties of the package and program. It provides the following information:  
 
 -   **Name**: The name of the package, up to 50 characters. This entry is required.  
@@ -317,7 +311,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **MIFPublisher**: The software publisher of the package (for MIF matching), up to 32 characters.  
 
-###  <a name="BKMK_Prog"></a> [Program]  
+###  [Program]  
  For each program specified in the **Programs** entry in the **[Package Definition]** section, the package definition file must include a [Program] section that defines that program. Each Program section provides the following information:  
 
 -   **Name**: The name of the program, up to 50 characters. This entry must be unique within a package. This name is used when defining advertisements. On client computers, the name of the program is shown in **Run Advertised Programs** in Control Panel. This entry is required.  
