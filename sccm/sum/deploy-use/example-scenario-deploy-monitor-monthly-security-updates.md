@@ -9,6 +9,8 @@ manager: angrobe
 ms.date: 09/27/2016
 ms.topic: article
 ms.prod: configuration-manager
+ms.technology:
+ - configmgr-sum
 ms.service:
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 

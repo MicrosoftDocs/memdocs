@@ -207,7 +207,7 @@
 # [Choose a device management solution for System Center Configuration Manager](core/plan-design/choose-a-device-management-solution.md)
 # [What's new in version 1606 of System Center Configuration Manager](core/plan-design/changes/whats-new-in-version-1606.md)
 # [Removed and deprecated features for System Center Configuration Manager](core/plan-design/changes/removed-and-deprecated-features.md)
-# [What’s new in System Center Configuration Manager incremental versions](core/plan-design/changes/what’s-new-incremental-versions.md)
+# [What’s new in System Center Configuration Manager incremental versions](core/plan-design/changes/whats-new-incremental-versions.md)
 # [Features and capabilities of System Center Configuration Manager](core/plan-design/changes/features-and-capabilities.md)
 # [What's new in version 1602 of System Center Configuration Manager](core/plan-design/changes/whats-new-in-version-1602.md)
 # [What's changed in System Center Configuration Manager from System Center 2012 Configuration Manager](core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)

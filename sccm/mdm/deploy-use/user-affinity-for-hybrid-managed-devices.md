@@ -6,6 +6,8 @@ ms.date: 07/26/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6

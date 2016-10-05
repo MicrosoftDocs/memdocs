@@ -75,8 +75,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
 2.  Use the **Certificate thumbprint** value to verify that you have imported the correct certificate.  
 
- Continue to [Step 4: Configure Supported Platforms for the Certificate Profile](#BKMK_Step4).  
-
+ 
 ### Configure SCEP certificate information (only for SCEP certificates)  
 
 1.  On the **SCEP Servers** page of the Create Certificate Profile Wizard, specify the URLs for the NDES Servers that will issue certificates via SCEP. You can choose to automatically assign an NDES URL based on the configuration of the Certificate Registration Point site system server, or add URLs manually.  
@@ -135,7 +134,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
         > [!NOTE]  
         >  - iOS devices support limited subject name formats and subject alternative names in SCEP certificates. If you specify a format that is not supported, certificates will not be enrolled on iOS devices. When you configure a SCEP certificate profile to be deployed to iOS devices, use the **Common name** for the **Subject name format**, and **DNS name**, **Email address** or **UPN** for the **Subject alternative name**.  
 
-    -   **Certificate validity period**: If you have run the certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE command on the issuing CA, which allows a custom validity period, you can specify the amount of remaining time before the certificate expires. For more information about this command, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../../protect/deploy-use/configuring-certificate-profiles.md#BKMK_Step1) in the [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md) topic.  
+    -   **Certificate validity period**: If you have run the certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE command on the issuing CA, which allows a custom validity period, you can specify the amount of remaining time before the certificate expires. For more information about this command, see [Certificate infrastructure in System Center Configuration Manager](../../protect/deploy-use/certificate-infrastructure.md) topic.  
 
          You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CAâ€™s certificate.  
 

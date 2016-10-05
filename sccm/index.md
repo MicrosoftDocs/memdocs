@@ -187,28 +187,27 @@ ms.assetid:
                   <span class="step-number">5</span>
                   <p>Operating system deployment</p>
                 </div>
-                <p class="description column-two-thirds">Something about OSD.
-                </p>
+                <p class="description column-two-thirds">Learn how to deploy enterprise operating systems and automate tasks.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 1</h3>
-                    <p>Something about OSD article 1</p>
+                  <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
+                    <h3>Introduction to operating system deployment</h3>
+                    <p>Learn the basics about deploying enterprise operating systems with Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 2</h3>
-                    <p>Something about OSD article 2</p>
+                  <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
+                    <h3>Scenarios to deploy operating systems</h3>
+                    <p>Read this section to learn how to deploy operating systems using one of many different operating system deployment scenarios.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 3</h3>
-                    <p>Something about OSD article 3</p>
+                  <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                    <h3>Manage Windows as a service</h3>
+                    <p>Learn how you can create servicing plans to form deployment rings and ensure that Windows 10 current branch computers are kept up to date when new builds are released.</p>
                   </a>
                 </li>
               </ul>
@@ -235,15 +234,15 @@ ms.assetid:
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Protect article 2</h3>
-                    <p>Something about Protect article 2</p>
+                  <a href="/sccm/protect/deploy-use/manage-access-to-services">
+                    <h3>Conditional access</h3>
+                    <p>Use conditional access to help secure email, Office 365 and other services.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Protect article 3</h3>
-                    <p>Something about Protect article 3</p>
+                  <a href="/sccm/protect/deploy-use/endpoint-protection">
+                    <h3>Endpoint Protection</h3>
+                    <p>Learn how to manage Windows Defender, Endpoint Protection, and Windows Firewall to help secure client computers. Windows Defender Advanced Threat Protection can also be managed with Configuration Manager.</p>
                   </a>
                 </li>
               </ul>
@@ -257,28 +256,27 @@ ms.assetid:
                   <span class="step-number">7</span>
                   <p>Software update management</p>
                 </div>
-                <p class="description column-two-thirds">Something about SUM.
-                </p>
+                <p class="description column-two-thirds">Learn how to manage software updates.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 1</h3>
-                    <p>Something about SUM article 1</p>
+                  <a href="/sccm/sum/understand/software-updates-introduction">
+                    <h3>Introduction to software updates management</h3>
+                    <p>Learn the basics about managing software updates with Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 2</h3>
-                    <p>Something about SUM article 2</p>
+                  <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                    <h3>Prepare for software updates management</h3>
+                    <p>Read this section to learn how to prepare your software updates infrastructure. This includes installing software update points, synchronizing software updates, and managing software updates settings.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 3</h3>
-                    <p>Something about SUM article 3</p>
+                  <a href="/sccm/apps/deploy-use/deploy-software-updates">
+                    <h3>Deploy software updates</h3>
+                    <p>After your software updates infrastructure is in place, read this section to learn about how to deploy software updates.</p>
                   </a>
                 </li>
               </ul>

@@ -59,7 +59,7 @@
 ### [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Manage access to services](deploy-use/manage-access-to-services.md)
-### [Device compliance policies](deploy-use/manage-device-compliance-policies.md)
+### [Device compliance policies](deploy-use/device-compliance-policies.md)
 ### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
 ### [Manage email access](deploy-use/manage-email-access.md)
 ### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)

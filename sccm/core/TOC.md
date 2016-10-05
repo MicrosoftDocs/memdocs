@@ -18,7 +18,7 @@
 ##   [Product changes](plan-design/changes/features-and-capabilities.md)
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
-###  [What’s new in incremental versions](plan-design/changes/what’s-new-incremental-versions.md)
+###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
