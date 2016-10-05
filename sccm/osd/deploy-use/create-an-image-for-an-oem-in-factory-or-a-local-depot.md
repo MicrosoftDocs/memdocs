@@ -46,6 +46,3 @@ This method of deployment can reduce network traffic because the boot image and 
 
 ## Start the computer to install the operating system  
  The prestaged media file is applied to computers. When the computer is started for the first time, the operating system installation process starts.  
-
-## Next steps  
- [Methods to deploy enterprise operating systems](methods-to-deploy-enterprise-operating-systems.md)

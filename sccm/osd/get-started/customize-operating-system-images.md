@@ -66,7 +66,7 @@ Operating system images in System Center Configuration Manager are WIM files and
 
 -   **Appropriate service pack**  
 
-     The reference computer must be installed with the operating system that you intend to deploy to your destination computers. For more information about the operating systems that you can deploy, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
+     The reference computer must be installed with the operating system that you intend to deploy to your destination computers.  
 
 -   **Appropriate software updates**  
 

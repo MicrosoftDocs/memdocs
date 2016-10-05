@@ -57,7 +57,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
      Before you create prestaged media, you must distribute the Windows 8 operating system image to a distribution point.  
 
     > [!NOTE]  
-    >  Operating system images are .WIM format files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images with System Center Configuration Manager](../get-started/manage-operating-system-images.md).  
+    >  Operating system images are .WIM format files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
 -   **Create a Task Sequence to Deploy Windows 8**  
 
@@ -127,7 +127,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
          For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](associate-users-with-a-destination-computer.md).  
+    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
         -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
 
@@ -147,7 +147,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the boot image. The wizard retrieves the boot image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
 
     -   If you selected **Site-based media** on the **Media Management** page of this wizard, in the **Management point** box, specify a management point from a primary site.  
 
@@ -162,7 +162,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the operating system image package. The wizard retrieves the operating system image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
 
 11. On the **Select Application** page, select application content to include in the media file, and then click **Next**.  
 
@@ -188,7 +188,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
             > [!WARNING]  
             >  After BitLocker is enabled for the passphrase, the user must enter the passphrase each time the computer boots to the Windows To Go drive.  
 
-        -   **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer](associate-users-with-a-destination-computer.md).  
+        -   **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
             > [!TIP]  
             >  To retrieve the username, you can create an input box as part of the prestart command, have the user enter their username, and then set the variable with the value. For example, you can add the following lines to the prestart command script file:  

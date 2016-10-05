@@ -39,7 +39,7 @@ env("MyCustomVariable") = "varname"
  For more information about distributing content, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 ## Configure the Prestart Command in Media  
- You can configure a prestart command in the Create Task Sequence Media Wizard for stand-alone media, bootable media, or prestaged media. For more information about the media types, see [Create task sequence media with System Center Configuration Manager](../deploy-use/create-task-sequence-media.md). Use the following procedure to create a prestart command in media.  
+ You can configure a prestart command in the Create Task Sequence Media Wizard for stand-alone media, bootable media, or prestaged media. For more information about the media types, see [Create task sequence media](../deploy-use/create-task-sequence-media.md). Use the following procedure to create a prestart command in media.  
 
 #### To create a prestart command in media  
 

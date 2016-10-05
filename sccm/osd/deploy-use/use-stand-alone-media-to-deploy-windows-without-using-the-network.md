@@ -22,7 +22,7 @@ Stand-alone media in System Center Configuration Manager contains everything tha
 
 -   In environments without network connectivity or low bandwidth network connectivity.  
 
- You can use stand-alone media in the following operating system deployment scenarios:  
+You can use stand-alone media in the following operating system deployment scenarios:  
 
 -   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 

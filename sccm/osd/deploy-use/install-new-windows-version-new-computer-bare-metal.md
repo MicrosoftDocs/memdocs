@@ -24,7 +24,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
 -   **Plan for and implement  infrastructure requirements**  
 
-     There are several infrastructure requirements that must be in place before you can deploy operating systems, such as Windows ADK, Windows Deployment Services (WDS), supported hard disk configurations, etc. For more information, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)  
+     There are several infrastructure requirements that must be in place before you can deploy operating systems, such as Windows ADK, Windows Deployment Services (WDS), supported hard disk configurations, etc. For more information, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)  
 
 ##  <a name="BKMK_Configure"></a> Configure  
 
@@ -36,15 +36,15 @@ This topic provides the general steps in System Center Configuration Manager to 
 
     -   For more information about how  to customize a boot image, see [Customize boot images](../get-started/customize-boot-images.md).  
 
-    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
+    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
 
 2.  **Prepare an operating system image**  
 
      The operating system image contains the files necessary to install the operating system on the destination computer. Use the following to prepare the operating system image:  
 
-    -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).  
+    -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).
 
-    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
+    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).
 
 3.  **Create a task sequence to deploy operating systems over the network**  
 
