@@ -24,7 +24,7 @@ System Center Configuration Manager uses signing and encryption to help protect 
  For most cryptographic operations for Windows-based operating systems, Configuration Manager uses SHA-2, 3DES and AES, and RSA algorithms from the Windows CryptoAPI library rsaenh.dll.  
 
 > [!IMPORTANT]  
->  See information about recommended changes in response to SSL vulnerabilities in [About SSL Vulnerabilities](#BKMK_About_SSL-Vulnerabilities).  
+>  See information about recommended changes in response to SSL vulnerabilities in [About SSL Vulnerabilities](#about-ssl-vulnerabilities).  
 
 ##  Cryptographic controls for Configuration Manager operations  
  Information in Configuration Manager can be signed and encrypted, whether or not you use PKI certificates with Configuration Manager.  
