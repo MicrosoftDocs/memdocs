@@ -150,7 +150,7 @@ For details, see [Task sequence built-in variables in System Center Configuratio
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error because the window size is too large. The RamDisk TFTP window size customization allow you to optimize TFTP traffic when using PXE to meet your specific network requirements.
 
-For details, see [Prepare site system roles for operating system deployments with System Center Configuration Manager](../../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
+For details, see [Prepare site system roles for operating system deployments with System Center Configuration Manager](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
 
 ## Compliance settings
 

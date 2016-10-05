@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Fundamentals of System Center Configuration Manager
-If you are new to System Center Configuration Manager, read the fundamental topics to learn about  basic concepts for Configuration Manager before you run setup to install your first site. If you are familiar with Configuration Manager, then you can dive right in and we recommend staring with [What's new in System Center Configuration Manager](sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
+If you are new to System Center Configuration Manager, read the fundamental topics to learn about  basic concepts for Configuration Manager before you run setup to install your first site. If you are familiar with Configuration Manager, then you can dive right in and we recommend staring with [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).  
 
  For information about supported operating systems and supported environments, hardware requirements, and capacity information, see [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md).  
 

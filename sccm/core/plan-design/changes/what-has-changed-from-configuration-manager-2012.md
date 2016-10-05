@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
 
- System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
+ System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/what's-new-incremental-versions).
 
 
 
@@ -90,7 +90,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
 -   A  new task sequence type is available in the Create Task Sequence Wizard,  **Upgrade an operating system from upgrade package**, that creates the steps to upgrade computers from Windows 7, Windows 8, or Windows 8.1 to Windows 10.  For more information, see [Upgrade Windows to the latest version with System Center Configuration Manager](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
 
--   Windows PE Peer Cache is now available when you deploy operating systems. Computers that run a task sequence to deploy an operating system can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](../../../osd/plan-design/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+-   Windows PE Peer Cache is now available when you deploy operating systems. Computers that run a task sequence to deploy an operating system can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic).  
 
 -   You can now view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch computers are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB). For more information, see [Manage Windows as a service using System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
