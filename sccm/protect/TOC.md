@@ -43,7 +43,7 @@
 ##### [ConfigMgr updates](deploy-use/endpoint-definitions-configmgr.md)
 ##### [WSUS updates](deploy-use/endpoint-definitions-wsus.md)
 ##### [Microsoft updates](deploy-use/endpoint-definitions-microsoft-updates.md)
-##### [Malware Protection Center](deploy-use/ndpoint-definitions-protection-center.md)
+##### [Malware Protection Center](deploy-use/endpoint-definitions-protection-center.md)
 ##### [Network share updates](deploy-use/endpoint-definitions-network.md)
 #### [Deploy policy](deploy-use/endpoint-antimalware-policies.md)
 #### [Configure client](deploy-use/endpoint-protection-configure-client.md)
@@ -70,7 +70,7 @@
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
-## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md.md)
+## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [Monitor Wi-Fi, email and VPN profiles](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [Monitor certificate profiles](deploy-use/monitor-certificate-profiles.md)
 ### [Monitor Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
