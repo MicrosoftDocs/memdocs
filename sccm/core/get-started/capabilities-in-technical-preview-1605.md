@@ -66,7 +66,7 @@ This article introduces the features that are available in the Technical Preview
  The experience for performing remote device actions from the Configuration Manager console has been improved.  
 Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and **Bypass Activation Lock** can now be found in the **Remote Device Actions** menu accessed from the **Assets and Compliance** workspace.  
 
- ![New Remote Device Actions screenshot](../../core/get-started/media/New-Remote-Device-Actions.png "New)  
+ ![New Remote Device Actions screenshot](media/New-Remote-Device-Actions.png)  
 
  You can find the status for each of these operations in the following places:  
 
@@ -76,7 +76,9 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 -   On the main page of the **Devices** node (not all columns might be visible by default).  
 
+
  For more information about iOS Activation Lock bypass, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock), in particular, the **Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview** section.  
+
 
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
  The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
@@ -272,7 +274,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
--   I can create a collection that represents a server group. For this test, you can configure your collect membership rules to have 2 machines in this collection.  
+-   I can create a collection that represents a server group. For this test, you can configure your collect membership rules to have 2 machines in this collection.   
 
 -   I can specify that computers in the server group install software updates in a specific order based on the server group  settings for the collection. Use the sample scripts in the procedure to specify the pre-deployment and post-deployment scripts.  
 
