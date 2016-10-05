@@ -6,6 +6,9 @@ ms.date: 08/25/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
+ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
 caps.latest.revision: 2
