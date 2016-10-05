@@ -39,4 +39,4 @@ This version of Endpoint Protection includes the following features to help prot
 ### See also  
  [Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)   
 
- [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-windows-defender-endpoint-protection-client.md)
+ [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md)

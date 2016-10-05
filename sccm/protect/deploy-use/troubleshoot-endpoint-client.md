@@ -20,17 +20,17 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
 
--   [Install the Endpoint Protection client](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Install)  
+-   [Install the Endpoint Protection client](#install-the-endpoint-protection-client)  
 
--   [Update Windows Defender or Endpoint Protection](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Update)  
+-   [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
 
--   [Starting Windows Defender or Endpoint Protection service](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Starting)  
+-   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpointd-protection-service)  
 
--   [Internet connection issues](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Internet)  
+-   [Internet connection issues](#internet-connection-issues)  
 
--   [Detected threat can't be remediated](https://technet.microsoft.com/library/mt679059.aspx#BKMK_Detected)  
+-   [Detected threat can't be remediated](#detected-threat-can-t-be-remediated)  
 
-##  <a name="BKMK_Install"></a> Install the Endpoint Protection client  
+##  Install the Endpoint Protection client  
 
 > [!NOTE]  
 >  Windows Defender is installed with the operating system on Windows 10 PC's.  
@@ -54,7 +54,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 > [!IMPORTANT]  
 >  You will need to restart your computer while resolving this issue. Bookmark this page (mark it as a Favorite) to make it easier to find this topic again or print it for easy reference.  
 
-##### Step 1: Remove any existing security programs  
+### Step 1: Remove any existing security programs  
 
 1.  Completely uninstall any existing Internet security programs.  
 
@@ -62,7 +62,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 3.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
 
-##### Step 2: Ensure that the Windows Installer service is running  
+### Step 2: Ensure that the Windows Installer service is running  
 
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
 
@@ -79,7 +79,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 6.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
 
-##### Step 3: Start Windows in Selective Startup mode  
+### Step 3: Start Windows in Selective Startup mode  
 
 1.  Click **Start** and search for **msconfig**, and then press **Enter**.  
 
@@ -91,7 +91,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 5.  Try to install Endpoint Protection again.  
 
-##  <a name="BKMK_Update"></a> Update Windows Defender or Endpoint Protection  
+##  Update Windows Defender or Endpoint Protection  
  Windows Defender or  
       Endpoint Protection works automatically with Microsoft Update to ensure that your virus and spyware definitions are kept up to date.  
 
@@ -114,7 +114,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 > [!IMPORTANT]  
 >  You have to exit Internet Explorer to complete these steps. Therefore, print them, write them down, or copy them to another file, and then bookmark this topic for future access.  
 
-#### Step 1: Reset your Internet Explorer settings  
+### Step 1: Reset your Internet Explorer settings  
 
 1.  Exit all open programs, including Internet Explorer.  
 
@@ -135,7 +135,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 8.  If the issue persists, proceed to the next step.  
 
-#### Step 2: Set Internet Explorer as the default browser  
+### Step 2: Set Internet Explorer as the default browser  
 
 1.  Exit all open programs, including Internet Explorer.  
 
@@ -152,7 +152,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 7.  If the issue persists, proceed to the next step.  
 
-#### Step 3: Ensure that the date and time are set correctly on your computer  
+### Step 3: Ensure that the date and time are set correctly on your computer  
 
 1.  Open Windows Defender or  
           Endpoint Protection.  
@@ -161,9 +161,9 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 3.  To reset your computer's date or time setting, follow the steps in [Fix broken desktop shortcuts and common system maintenance tasks](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579).  
 
-#### Step 4: Rename the Software Distribution folder on your computer  
+### Step 4: Rename the Software Distribution folder on your computer  
 
-1.  ###### Stop the Automatic Updates service  
+1. Stop the Automatic Updates service  
 
     1.  Click **Start** and search for **services.msc**, and then click **OK**.  
 
@@ -189,7 +189,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
     3.  Close the Services snap-in window.  
 
-#### Step 5: Reset the Microsoft antivirus update engine on your computer  
+### Step 5: Reset the Microsoft antivirus update engine on your computer  
 
 1.  Click **Start** and search for  **cmd**, and then click **OK**and then right-click **Command Prompt**, and then select **Run as administrator**.  
 
@@ -210,7 +210,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 5.  If the issue persists, proceed to the next step.  
 
-#### Step 6: Manually install the virus and spyware definition updates  
+### Step 6: Manually install the virus and spyware definition updates  
 
 -   If you are running a 32-bit Windows operating system, download the latest updates manually at [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342).  
 
@@ -218,14 +218,12 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 -   Click **Run**. The latest updates are manually installed on your computer.  
 
-> [!NOTE]  
->  If you were able to manually install virus and spyware definitions, the problem is most likely caused by a download issue. To learn how to resolve download issues, see [I can't download Microsoft Security Essentials](assetId:///d8b55cd0-c7cf-4d80-92af-897a438a4a87).  
 
-#### Step 7: Contact Support  
+### Step 7: Contact Support  
 
 -   If the steps did not resolve the issue, contact support. For more information, see [Customer Support](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174).  
 
-##  <a name="BKMK_Starting"></a> Starting Windows Defender or Endpoint Protection service  
+##  Starting Windows Defender or Endpoint Protection service  
  **Symptom**  
 
  You receive a message notifying you that â€œ**Windows Defender or**  
@@ -233,11 +231,11 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
  **Solution**  
 
-#### Step 1: Restart your computer.  
+### Step 1: Restart your computer.  
 
 -   Close all applications and restart your computer.  
 
-#### Step 2: Make sure the â€œWindows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
+### Step 2: Make sure the â€œWindows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
 
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
 
@@ -249,7 +247,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 5.  Make sure you note any errors that may appear during this process, submit a case online, and include the error information.  
 
-#### Step 3: Remove any existing Internet security programs  
+### Step 3: Remove any existing Internet security programs  
 
 1.  Click **Start** and search for **appwiz.cpl**, and then press **Enter**.  
 
@@ -266,7 +264,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 >       Endpoint Protection after you remove existing Internet security programs, contact Windows Defender or  
 >       Endpoint Protection support by submitting a case online (for more information, see [How to Submit a Case Online](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)).  
 
-#### Step 4: Uninstall/reinstall Endpoint Protection  
+### Step 4: Uninstall/reinstall Endpoint Protection  
 
 1.  Click **Start** and search for **appwiz.cpl**, and then press **Enter**.  
 
@@ -274,10 +272,10 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 3.  If prompted, restart your computer, and then try to install Endpoint Protection again.  
 
-##  <a name="BKMK_Internet"></a> Internet connection issues  
+##  Internet connection issues  
  In order to make sure that your computer receives the latest updates from Windows Update, you must be connected to the Internet.  
 
-#### Step 1: Verify that your computer is connected to the Internet  
+### Step 1: Verify that your computer is connected to the Internet  
 
 1.  Click **Start**and search for **ncpa.cpl**, and then press **Enter**.  
 
@@ -287,11 +285,11 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 4.  If your computer doesn't appear to be connected, right-click the connection name, and then click **Connect**, **Enable**, **Authenticate**, or **Repair**.  
 
-#### Step 3: Restart your computer  
+### Step 3: Restart your computer  
 
 -   Close any open programs and restart your computer.  
 
-#### Step 4: If you still can't connect to the Internet, check your connections  
+### Step 4: If you still can't connect to the Internet, check your connections  
 
 1.  If you use a dial-up connection, make sure the telephone cord connection in the wall jack and in your modem are firmly connected.  
 
@@ -299,11 +297,11 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 3.  If you use a cable modem or DSL router, make sure the connections to the router and to the computer are firmly connected. Try unplugging and turning off the router and modem. Wait a few minutes, plug in the modem in first, wait one minute, then plug in the router, and restart your computer.  
 
-##  <a name="BKMK_Detected"></a> Detected threat can't be remediated  
+##  Detected threat can't be remediated  
  When Windows Defender or  
       Endpoint Protection detects a potential threat that's hiding inside a compressed file with a .zip file name extension or within a network share, it tries to deal with the threat by quarantining or removing the threat.  
 
-#### Remove or scan the file  
+### Remove or scan the file  
 
 -   If the detected threat was in a .zip file, browse to the .zip file, and then either remove the file or scan it by right-clicking the file and selecting **Scan with Windows Defender** or **Scan with Endpoint Protection**. If Windows Defender or Endpoint Protection detects additional threats in the file, it notifies you about these threats and enables you to choose an appropriate action.  
 
