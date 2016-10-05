@@ -1,8 +1,8 @@
 ---
-title: "Conditional access to services | System Center Configuration Manager"
+title: "Conditional access | System Center Configuration Manager"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,12 @@ author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
 
-# Conditional access to services in System Center Configuration Manager
-Use **conditional access** in System Center Configuration Manager to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  
+# Manage access to services in System Center Configuration Manager
 
- For information about conditional access on PCs that are managed with System Center Configuration Manager and evaluated for compliance, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
+## Conditional access in System Center Configuration Manager
+Use **conditional access**  to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  
+
+ For information about **conditional access on PCs that are managed with System Center Configuration Manager** and evaluated for compliance, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).  
 
 
  A typical flow for conditional access might look as follows:  
@@ -40,39 +42,6 @@ Use **conditional access** in System Center Configuration Manager to help secure
 
 -   Dynamics CRM Online
 
- You can control access to Exchange Online and Exchange On-premises from the built-in email client on the following platforms:  
-
--   Android 4.0 and later, Samsung Knox Standard 4.0 and later  
-
--   iOS 7.1 and later  
-
--   Windows Phone 8.1 and later  
-
--   Mail application on Windows 8.1 and later  
-
- You can control access to SharePoint Online from the following apps for the listed platforms:  
-
--   Microsoft Office Mobile (Android)  
-
--   Microsoft OneDrive (Android and iOS)  
-
--   Microsoft Word (Android and iOS)  
-
--   Microsoft Excel (Android and iOS)  
-
--   Microsoft PowerPoint (Android and iOS)  
-
--   Microsoft OneNote (Android and iOS)  
-
- Office desktop applications can access Exchange Online and SharePoint Online on PCs running:  
-
--   Office desktop 2013 and later with [modern authentication](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) enabled.  
-
--   Windows 7.0 or Windows 8.1  
-
-> [!NOTE]  
->  PCs should be domain joined or be complaint with the policies set in Intune.  
-
  To implement conditional access, you configure two policy types in Configuration Manager:  
 
 -   **Compliance policies** are optional policies you can deploy to user collections and evaluate settings like:  
@@ -85,7 +54,7 @@ Use **conditional access** in System Center Configuration Manager to help secure
 
     -   Whether email on the device is managed by a Configuration Manager or Intune policy  
 
-     If no compliance policy is deployed to a device, then any applicable conditional access policies will treat the device as compliant.  
+     **If no compliance policy is deployed to a device, then any applicable conditional access policies will treat the device as compliant**.  
 
 -   **Conditional access policies** are configured for a particular service, and define rules such as which Azure Active Directory security user groups or Configuration Manager user collections will be targeted, or exempt.  
 
@@ -95,8 +64,7 @@ Use **conditional access** in System Center Configuration Manager to help secure
 
  When devices do not meet the conditions you configure, the user is guided though the process of enrolling the device and fixing the issue that prevents the device from being compliant.  
 
-## Before you start  
- Before you start using conditional access, ensure that you have the correct requirements in place:  
+**Before** you start using conditional access, ensure that you have the correct **requirements** in place:  
 
 ## Requirements for Exchange Online (using the shared multi-tenant environment)
 Conditional access to Exchange Online supports devices that run:
@@ -142,6 +110,7 @@ Conditional access to Exchange On-premises supports:
 **Additionally**:
 
 -  Exchange version must be Exchange 2010 or later. Exchange server Client Access Server (CAS) array is supported.
+
 > [!TIP]
 > If your Exchange environment is in a CAS server configuration, then you must configure the on-premises Exchange connector to point to one of the CAS servers.
 - You must use the **Exchange Server connector** which connects Configuration Manager to Microsoft Exchange On-premises. This lets you manage mobile devices  and enables conditional access (see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)).
@@ -192,7 +161,7 @@ Conditional access to SharePoint Online supports devices that run:
 ## Next Steps  
  Read the following topics to learn how to configure compliance policies and conditional access policies for your required scenario:  
 
--   [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md)  
+-   [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)  
 
 -   [Manage email access in System Center Configuration Manager](../../protect/deploy-use/manage-email-access.md)  
 
