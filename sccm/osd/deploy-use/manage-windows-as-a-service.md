@@ -193,7 +193,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority.  
 
-11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_DBtable).  
+11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/manage-accounts-to-access-content.md#bkmk_DBtable).  
 
     > [!NOTE]  
     >  This page is available only when you create a new software update deployment package.  

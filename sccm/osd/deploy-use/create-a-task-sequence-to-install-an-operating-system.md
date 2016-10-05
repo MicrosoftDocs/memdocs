@@ -49,14 +49,14 @@ Use task sequences in System Center Configuration Manager to automatically insta
 
     -   **Description**: Specify a description of the task that is performed by the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images](manage-boot-images.md).  
+    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. The boot image contains a contain a version of Windows PE that is used to install the operating system, as well as any additional device drivers that are required. For information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
         > [!IMPORTANT]  
         >  The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
 6.  On the **Install Windows** page, specify the following settings, and then click **Next**.  
 
-    -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images](manage-operating-system-images.md).  
+    -   **Image package**: Specify the package that contains the operating system image to install. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
     -   **Image**: If the operating system image package has multiple images, specify the index of the operating system image to install.  
 
@@ -92,7 +92,7 @@ Use task sequences in System Center Configuration Manager to automatically insta
 
 9. On the **State Migration** page, specify the following information, and then click **Next**.  
 
-    -   **Capture user settings**: Specify whether the task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](manage-user-state.md).  
+    -   **Capture user settings**: Specify whether the task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](../get-started/manage-user-state.md).  
 
     -   **Capture network settings**: Specify whether the task sequence captures network settings from the destination computer. You can capture the membership of the domain or workgroup in addition to the network adapter settings.  
 
@@ -147,6 +147,3 @@ Use task sequences in System Center Configuration Manager to automatically insta
 |Request User State Storage|Use this task sequence step to request access to a state migration point where the user state data is stored.|  
 |Restore User Files and Settings|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore user state and settings to a destination computer.|  
 |Release User State Storage|Use this task sequence step to notify the state migration point that the user state data is no longer needed.|  
-
-## Next steps  
- [Methods to deploy enterprise operating systems](methods-to-deploy-enterprise-operating-systems.md)

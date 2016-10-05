@@ -82,6 +82,3 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 ## Folder and files removed after computer restart  
  When the task sequence to upgrade an operating system to Windows 10 and all other steps in the task sequence are complete, the post-processing and rollback scripts are not removed until the computer is restarted.  These script files do not contain sensitive information.  
-
- ## Next steps  
-  [Methods to deploy enterprise operating systems](methods-to-deploy-enterprise-operating-systems.md)

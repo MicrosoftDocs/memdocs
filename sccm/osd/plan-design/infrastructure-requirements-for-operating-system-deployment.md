@@ -50,7 +50,7 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 -   [Common Migration Scenarios for USMT 10](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)  
 
--   [Manage user state](../deploy-use/manage-user-state.md)  
+-   [Manage user state](../get-started/manage-user-state.md)  
 
 ### Windows PE  
  Windows PE is used for boot images to start a computer. It is a Windows operating system with limited services that is used during the pre-installation and deployment of Windows operating systems. The following provides the version of Configuration Manager and the supported version of Windows ADK, the Windows PE version on which the boot image is based that can be customized from the Configuration Manager console, and the Windows PE versions on which the boot image is based that you can customize by using DISM and then add the image to the specified version of Configuration Manager.  
@@ -72,11 +72,11 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
      <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images](../deploy-use/manage-boot-images.md).  
+     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../get-started/customize-boot-images.md). For more information about boot images, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 ### Windows Server Update Services (WSUS)  
 You must install the following WSUS 4.0 hotfixes:
-  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) is necessary for Windows 10 servicing, which uses the software updates infrastructure to get Windows 10 feature upgrades. When you have WSUS 3.2, you must use task sequences to upgrade Windows 10. For more information, see [Manage Windows as a service using System Center Configuration Manager](../deploy-use/manage-windows-as-a-service.md).  
+  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) is necessary for Windows 10 servicing, which uses the software updates infrastructure to get Windows 10 feature upgrades. When you have WSUS 3.2, you must use task sequences to upgrade Windows 10. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).  
   - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) is necessary to use Windows 10 servicing to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).
 
 
@@ -93,16 +93,16 @@ You must install the following WSUS 4.0 hotfixes:
  For more information about the operating system versions and hard disk configurations that are supported by Configuration Manager when you deploy operating systems, see [Supported Operating Systems](#BKMK_SupportedOS) and [Supported Disk Configurations](#BKMK_SupportedDiskConfig).  
 
 ### Windows device drivers  
- Windows device drivers can be used when you install the operating system on the destination computer and when you run Windows PE by using a boot image. For more information about device drivers, see [Manage drivers](../deploy-use/manage-drivers.md).  
+ Windows device drivers can be used when you install the operating system on the destination computer and when you run Windows PE by using a boot image. For more information about device drivers, see [Manage drivers](../get-started/manage-drivers.md).  
 
 ##  <a name="BKMK_InternalDependencies"></a> Configuration Manager Dependencies  
  The following provides information about Configuration Manager operating system deployment prerequisites.  
 
 ### Operating system image  
- Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images](../deploy-use/manage-operating-system-images.md).  
+ Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
 ### Driver catalog  
- To deploy a device driver, you must import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](../deploy-use/manage-drivers.md).  
+ To deploy a device driver, you must import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](../get-started/manage-drivers.md).  
 
 ### Management point  
  Management points transfer information between client computers and the Configuration Manager site. The client uses a management point to run any task sequences that are required to complete the operating system deployment.  
@@ -125,7 +125,7 @@ You must install the following WSUS 4.0 hotfixes:
 
  For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
- For information about how to capture and restore user state, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
+ For information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).  
 
 ### Service connection point  
  When you use Windows as a Service (WaaS) to deploy Windows 10 Current Branch, you must have the  service connection point installed. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).  

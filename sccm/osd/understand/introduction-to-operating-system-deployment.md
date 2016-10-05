@@ -36,7 +36,7 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 -   Monitor the deployment.  
 
 ##  <a name="BKMK_OSDScenarios"></a> Operating system deployment scenarios  
- There are many operating system deployment scenarios in Configuration Manager that you can choose from depending on your environment and the purpose for the operating system installation.  For example, you can partition and format an existing computer with a new version of  Windows or   upgrade Windows to the latest version. To help you determine the deployment method that meets your needs, review [Scenarios to deploy enterprise operating systems ](../deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).  You can choose from the following operating system deployment scenarios:  
+ There are many operating system deployment scenarios in Configuration Manager that you can choose from depending on your environment and the purpose for the operating system installation.  For example, you can partition and format an existing computer with a new version of  Windows or   upgrade Windows to the latest version. To help you determine the deployment method that meets your needs, review [Scenarios to deploy enterprise operating systems](../deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).  You can choose from the following operating system deployment scenarios:  
 
 -   [Upgrade Windows to the latest version](../deploy-use/upgrade-windows-to-the-latest-version.md)  
 
@@ -70,13 +70,13 @@ You can use Configuration Manager to deploy operating systems in a number of dif
      Later in the Configuration Manager environment, the computer starts by using the boot image provided by the media, and then connects to the site management point for available task sequences that complete the download process. This method of deployment can reduce network traffic because the boot image and operating system image are already on the destination computer. You can specify applications, packages, and driver packages to include in the pre-staged media. For more information, see [Create prestaged media](../deploy-use/create-prestaged-media.md).  
 
 ##  <a name="BKMK_BootImages"></a> Boot images  
- A boot image in Configuration Manager is a Windows PE (WinPE) image that is used  during an operating system deployment. Boot images are used to start a computer in WinPE, which is a minimal operating system with limited components and services that prepare the destination computer for Windows installation. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. These are considered default boot images. Boot images that you create and add to Configuration Manager are considered custom images. Default boot images can be automatically replaced when you update Configuration Manager. For more information about boot images, see [Manage boot images](../deploy-use/manage-boot-images.md).  
+ A boot image in Configuration Manager is a Windows PE (WinPE) image that is used  during an operating system deployment. Boot images are used to start a computer in WinPE, which is a minimal operating system with limited components and services that prepare the destination computer for Windows installation. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. These are considered default boot images. Boot images that you create and add to Configuration Manager are considered custom images. Default boot images can be automatically replaced when you update Configuration Manager. For more information about boot images, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 ##  <a name="BKMK_OSImages"></a> Operating  system images  
- Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For all operating system deployment scenarios, you must select an operating system image. You can use the default operating system image or build the operating system image from a reference computer that you configure. For more information, see [Manage operating system images](../deploy-use/manage-operating-system-images.md).  
+ Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For all operating system deployment scenarios, you must select an operating system image. You can use the default operating system image or build the operating system image from a reference computer that you configure. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
 ##  <a name="BKMK_OSUpgradePackages"></a> Operating system upgrade packages  
- Operating system upgrade packages are used to upgrade an operating system and are setup-initiated operating system deployments. You import operating system upgrade packages to Configuration Manager from a DVD or mounted ISO file. For more information, see [Manage operating system upgrade packages](../deploy-use/manage-operating-system-upgrade-packages.md).  
+ Operating system upgrade packages are used to upgrade an operating system and are setup-initiated operating system deployments. You import operating system upgrade packages to Configuration Manager from a DVD or mounted ISO file. For more information, see [Manage operating system upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
 ##  <a name="BKMK_OSDMedia"></a> Media to deploy operating systems  
  You can create several kinds of media that can be used to deploy operating systems. This includes capture media that is used to capture operating system images and stand-alone, pre-staged, and bootable media that is used to deploy an operating system. By using media, you can deploy operating systems on computers that do not have a network connection or that have a low bandwidth connection to your Configuration Manager site. For more information about how to use media, see [Create task sequence media](../deploy-use/create-task-sequence-media.md).  
@@ -95,7 +95,7 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 
 -   You can specify hard links that can be used to restore the user data to its original location. In this scenario, the user state data remains on the drive when the old operating system is removed. Then, after the operating system is deployed, the Restore task sequence uses the hard links to restore the user state data to its original location.  
 
- For more information [Manage user state](../deploy-use/manage-user-state.md).  
+ For more information [Manage user state](../get-started/manage-user-state.md).  
 
 ##  <a name="BKMK_UnknownComputer"></a> Deploy to unknown computers  
  You can deploy an operating system to computers that are not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database. These computers are referred to as unknown computers. Unknown computers include the following:  
@@ -106,10 +106,10 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 
 -   A computer that is not discovered by Configuration Manager  
 
- For more information, see [Prepare for unknown computer deployments](../deploy-use/prepare-for-unknown-computer-deployments.md).  
+ For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).  
 
 ##  <a name="BKMK_UDA"></a> Associate users with a computer  
- When you deploy an operating system, you can associate users with the destination computer to support user device affinity actions. When you associate a user with the destination computer, the administrative user can later perform actions on whichever computer is associated with that user, such as deploying an application to the computer of a specific user. However, when you deploy an operating system, you cannot deploy the operating system to the computer of a specific user. For more information, see [Associate users with a destination computer](../deploy-use/associate-users-with-a-destination-computer.md).  
+ When you deploy an operating system, you can associate users with the destination computer to support user device affinity actions. When you associate a user with the destination computer, the administrative user can later perform actions on whichever computer is associated with that user, such as deploying an application to the computer of a specific user. However, when you deploy an operating system, you cannot deploy the operating system to the computer of a specific user. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
 ##  <a name="BKMK_TaskSequences"></a> Use task sequences to automate steps  
  You can create task sequences to perform a variety of tasks within your Configuration Manager environment. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level without requiring user intervention. You can use task sequences for the following:  

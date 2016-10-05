@@ -48,13 +48,13 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
 
 -   **Plan for and implement  infrastructure requirements**  
 
-     The only prerequisites for the upgrade scenario is that you have a distribution point available for the operating system upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
+     The only prerequisites for the upgrade scenario is that you have a distribution point available for the operating system upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_Iinstall).
 
 ##  <a name="BKMK_Configure"></a> Configure  
 
 1.  **Prepare the operating system upgrade package**  
 
-     The Windows 10 upgrade package contains the source files necessary to upgrade the operating system on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you will upgrade.  For more information, see [Manage operating system upgrade packages](manage-operating-system-upgrade-packages.md).  
+     The Windows 10 upgrade package contains the source files necessary to upgrade the operating system on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you will upgrade.  For more information, see [Manage operating system upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
 2.  **Create a task sequence to upgrade the operating system**  
 

@@ -44,7 +44,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
  Use the following procedure to create a driver package.  
 
-##### To create a driver package  
+#### To create a driver package  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -73,7 +73,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 |**Create Prestage Content file**|Creates files that can be used to manually import content and its associated metadata. Use prestaged content when you have low network bandwidth between the site server and the distribution points where the driver package is stored.|  
 |**Delete**|Removes the driver package from the **Driver Packages** node.|  
 |**Distribute Content**|Distributes the driver package to distribution points, distribution point groups, and distribution point groups that are associated with collections.|  
-|**Manage Access Accounts**|Adds, modifies, or removes access accounts for the driver package.<br /><br /> For more information about Package Access Accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).|  
+|**Manage Access Accounts**|Adds, modifies, or removes access accounts for the driver package.<br /><br /> For more information about Package Access Accounts, see [Accounts used in Configuration Manager](../../core/plan-design/hierarchy/accounts.md).|  
 |**Move**|Moves the driver package to another folder in the **Driver Packages** node.|  
 |**Update Distribution Points**|Updates the device driver package on all the distribution points where the package is stored. This action copies only the content that has changed after the last time it was distributed.|  
 |**Properties**|Opens the **Properties** dialog box where you can review and change the content and properties of the device driver. For example, you can change the name and description of the device driver, enable the device driver, and specify on which platforms the device driver can be run.|  
@@ -93,7 +93,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
  Use the following procedure to import Windows device drivers.  
 
-##### To import Windows device drivers into the driver catalog  
+#### To import Windows device drivers into the driver catalog  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -160,7 +160,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 ###  <a name="BKMK_ModifyDriverPackage"></a> Manage device drivers in a driver package  
  Use the following procedures to modify driver packages and boot images. To add or remove device drivers, locate the drivers in the **Drivers** node, and then edit the packages or boot images that the selected drivers are associated with.  
 
-##### To modify the device drivers in a driver package  
+#### To modify the device drivers in a driver package  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -189,7 +189,7 @@ System Center Configuration Manager provides a driver catalog that you can use t
 
  Use the following procedure to add or remove device drivers in a boot image.  
 
-##### To modify the  device drivers associated with a boot image  
+#### To modify the  device drivers associated with a boot image  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -265,4 +265,4 @@ System Center Configuration Manager provides a driver catalog that you can use t
  For more information about creating a task sequence to install an operating system, see [Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).  
 
 ##  <a name="BKMK_DriverReports"></a> Driver management reports  
- You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](../../core/servers/manage/reporting.md).  
+ You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Reporting](../../core/servers/manage/reporting.md).

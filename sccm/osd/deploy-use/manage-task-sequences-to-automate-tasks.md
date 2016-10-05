@@ -16,7 +16,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Manage task sequences to automate tasks in System Center Configuration Manager
-Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](..plan-design/planning-considerations-for-automating-tasks.md).  
+Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md).  
 
  Use the following sections to manage task sequences.
 
@@ -86,7 +86,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 8.  Complete the wizard.  
 
- You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#BKMK_PrestageContent).  
+ You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content#a-namebkmkprestagea-use-prestaged-content).  
 
 ##  <a name="BKMK_DeployTS"></a> Deploy a task sequence  
  Use the following procedure to deploy a task sequence to the computers in a collection.  
@@ -349,7 +349,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |**Copy**|Makes a copy of the selected task sequence. You might find this action useful when you want to create a new task sequence that is based on an existing task sequence.<br /><br /> When you make a copy of a task sequence in a folder, the copy is listed in that folder until you refresh the task sequence node.  After the refresh, the copy appears in the root folder.|  
 |**Disable**|Disables the task sequence so that it cannot run on computers. Disabled task sequences can be deployed to computers, but computers do not run the task sequence until it is enabled.|  
 |**Enable**|Enables the task sequence so that it can be run. You do not need to redeploy a deployed task sequence after it is enabled.|  
-|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#BKMK_PrestageContent).|  
+|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content#a-namebkmkprestagea-use-prestaged-content).|  
 |**Move**|Moves the selected task sequence to another folder.|  
 |**Properties**|Opens the **Properties** dialog box for the selected task sequence. Use this dialog box to change the behavior of the task sequence object. However, you cannot change the steps of the task sequence by using this dialog box.|  
 

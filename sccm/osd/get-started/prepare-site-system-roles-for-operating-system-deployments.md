@@ -53,7 +53,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 
  Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
 
-##### To modify an existing distribution point to accept PXE requests  
+#### To modify an existing distribution point to accept PXE requests  
 
 1.  In the Configuration Manager console, click **Administration**, expand **Overview** and click **Distribution points**.  
 
@@ -80,7 +80,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 
     -   Select **Allow user device affinity with automatic approval** to automatically associate users with the destination computer without waiting for approval.  
 
-     For more information, see [Associate users with a destination computer](../deploy-use/associate-users-with-a-destination-computer.md).  
+     For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
 9. Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If you choose to have the distribution point respond to a specific network interfaces, provide the MAC address for each network interface.  
 
@@ -127,9 +127,9 @@ You will need to test the customized settings in your environment to determine w
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
  Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
- Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
+ Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points).
 
-##### To enable multicast for a distribution point  
+#### To enable multicast for a distribution point  
 
 1.  In the Configuration Manager console, click **Administration**.  
 

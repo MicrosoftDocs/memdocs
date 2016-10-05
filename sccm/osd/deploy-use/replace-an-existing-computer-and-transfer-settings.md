@@ -28,7 +28,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
 -   **Install a state migration point (required only if you transfer settings)**  
 
-     When you are going to capture settings from the existing computer, and then restore the settings to the new operating system, you must install a state migration point. For more information, see [State migration point](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+     When you are going to capture settings from the existing computer, and then restore the settings to the new operating system, you must install a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
 ##  <a name="BKMK_Configure"></a> Configure  
 
@@ -40,7 +40,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
     -   For more information about how  to customize a boot image, see [Customize boot images](../get-started/customize-boot-images.md).  
 
-    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
+    -   Distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
 
 2.  **Prepare an operating system image**  
 
@@ -48,7 +48,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
     -   To learn more about how to create an operating system image, see  [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
-    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
+    -   Distribute the operating system image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
 
 3.  **Create a task sequence to deploy operating systems over the network**  
 

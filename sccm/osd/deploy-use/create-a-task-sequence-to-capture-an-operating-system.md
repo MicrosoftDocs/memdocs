@@ -33,7 +33,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 -   **Required (if used)**  
 
-    -   [Driver packages](../get-started/manage-drivers.md) that contain the necessary Windows drivers to support hardware on the reference computer must be available in the Configuration Manager console. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](../deploy-use/manage-drivers.md#BKMK_TSDrivers).  
+    -   [Driver packages](../get-started/manage-drivers.md) that contain the necessary Windows drivers to support hardware on the reference computer must be available in the Configuration Manager console. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).  
 
     -   [Software updates](../../sum/get-started/synchronize-software-updates.md) must be synchronized in the Configuration Manager console.  
 
@@ -153,7 +153,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 
 5.  On the **Task Sequence Information** page, specify a name for the task sequence and a description of the task sequence.  
 
-6.  Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images](manage-boot-images.md).  
+6.  Specify a boot image for the task sequence. This boot image is used to start the reference computer with Windows PE.  For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 7.  Complete the wizard.  
 

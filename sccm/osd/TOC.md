@@ -1,15 +1,15 @@
 
 # [Understand](understand/introduction-to-operating-system-deployment.md)
 ## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
-## [Understand task sequence steps](understand/task-sequence-steps.md)
+## [Task sequence steps](understand/task-sequence-steps.md)
 
 
 <!--- ### [Preprovision BitLocker in Windows PE with System Center Configuration Manager](deploy-use/preprovision-bitlocker-in-windows-pe.md) -->
 
 
-## [Understand task sequence action variables](understand/task-sequence-action-variables.md)
-## [Understand task sequence built-in variables](understand/task-sequence-built-in-variables.md)
-## [Understand prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
+## [Task sequence action variables](understand/task-sequence-action-variables.md)
+## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
+## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
 
 # [Plan and design](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [Infrastructure requirements for operating system deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
