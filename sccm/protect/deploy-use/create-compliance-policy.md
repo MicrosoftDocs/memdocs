@@ -91,7 +91,7 @@ robots: noindex
 
     -   **Unknown**: Displays a list of all users and devices that did not report compliance for the selected policy deployment together with the current client status of devices.
 
-#### To view a Health Attestation Report
+### To view a Health Attestation Report
 
 1.  **Beginning in version 1602 of Configuration Manager**, in the Configuration Manager console, click **Monitoring**.
 
@@ -100,21 +100,110 @@ robots: noindex
 3.  To view a report that lists all devices and all the health attestation attributes,   click **Security**. and then click **Health Attestation**.
 
 ## Compliance policy rules
+* **Require password settings on mobile devices:** Require users to enter a password before they can access their device.
 
-|Rule name|More information|Windows Phone 8+|Windows RT/8.1|Windows 8.1|Windows 10/Windows 10 Mobile|iOS 6+|Android 4.0+|Samsung KNOX Standard 4.0+|
-|-----|------|------|------|------|-----|-----|------|-----|
-    |**Require password settings on mobile devices**|Require users to enter a password before they can access their device.<br /><br /> (Enabled by default)|√||||√|√|√|
-    |**Require a password to unlock an idle device** (1602 update)|Require users to enter a password to access device that is locked.|√||||√|√|√|
-    |**Minutes of inactivity before password is required** (1602 update)|Specifies the idle time before the user must re-enter their password.<br /><br /> Set the value to one of the available options: 1 minute, 5 minutes, 15 minutes, 30 minutes, I hour.<br /><br /> This rule when must be used with the **Require a password to unlock an idle device**. The value set here determines when the device is considered idle and is locked, and  **Require a password to unlock an idle device** is set to **True**, will then require that the user enters a password in order to access the locked device.|√|√|||√|√|√|
-    |**Require automatic updates** (1602 update)|You can require devices with Windows 8.1 or later to automatically install updates, and specify the class of updates.<br /><br /> The value should be set to **None** to prevent automatic installation, to **Recommended** to automatically install all recommended updates, or to **Important** to only install updates classified as important.|√|||||||
-    |**Allow simple passwords**|**Let users create simple passwords such as "1234" or "1111"**.<br /><br /> (Disabled by default)|√||||√|||
-    |**Minimum password length** <sup>1</sup>|Specifies the minimum number of digits or characters that the user's password must contain.<br /><br /> (**6** by default)|√||√||√|√|√|
-    |**File encryption on mobile device**|Requires the device to be encrypted in order to connect to resources.<br /><br /> Devices that run Windows Phone 8 are automatically encrypted.<br /><br /> Devices that run iOS are encrypted when you configure the setting **Require password settings on mobile devices**.<br /><br /> (Enabled by default)|√||√|||√|√|
-    |**Device must not be jailbroken or rooted**|If enabled, jailbroken (iOS), or rooted (Android) devices will not be compliant.<br /><br /> (Disabled by default)|||||√|√|√|
-    |**Email profile must be managed by Intune**|When this option is set to Yes, the device must use the email profile deployed to the device.<br /><br /> The device is considered noncompliant if the email profile is not deployed to the same user group as the user group targeted by the compliance policy.<br /><br /> It is also noncompliant if the user has already set up an email account on the device that matches the Intune email profile that is deployed to the device. In this case, Intune cannot overwrite the user-provisioned profile and therefore cannot manage it. The user can bring the device into compliance by removing the existing email settings, which allows Intune to install the managed email profile.<br /><br /> For details about email profiles, see [Enable access to corporate email using email profiles with Microsoft Intune](https://technet.microsoft.com/library/dn800672.aspx).<br /><br /> (Disabled by default)|||||√|||
-    |**Email profile**|If **Email account must be managed by Intune** is selected, click **Select** to choose the email profile that devices must be managed by. The email profile must be present on the device.|||||√|||
-    |**Minimum OS required**|When  a device does not meet the minimum OS version requirement, it will be reported as non-compliant. A link with information on how to upgrade will be displayed. The end-user can choose to upgrade their device after which they will be able to access company resources.|√||√||√|√|√|
-    |**Maximum OS version allowed**|When a device is using an OS version later than the one specified in the rule, access to company resources is blocked and the user is asked to contact their IT admin. Until there is a change in rule to allow the OS version, this device cannot be used to access company resources.|√||√||√|√|√|
-    |**Require devices to be reported as healthy**(1602 update)|You can set a rule to require that Windows 10 devices must be reported as healthy in new or existing Compliance Policies. If this setting is enabled, Windows 10 devices will be evaluated via the Health Attestation Service (HAS) for the following data points:<br /><br /> - **BitLocker is enabled**<br /><br /> When Bitlocker is on, the device is able to protect data that is stored on the drive from unauthorized access, when the system is turned off or goes to hibernation. <br />Windows BitLocker Drive Encryption encrypts all data stored on the Windows operating system volume. BitLocker uses the TPM to help protect the Windows operating system and user data and helps to ensure that a computer is not tampered with, even if it is left unattended, lost, or stolen.<br />If the computer is equipped with a compatible TPM, BitLocker uses the TPM to lock the encryption keys that protect the data. As a result, the keys cannot be accessed until the TPM has verified the state of the computer.<br /><br /> **- Code integrity is enabled**<br /><br /> Code integrity is a feature that validates the integrity of a driver or system file each time it is loaded into memory. Code integrity detects whether an unsigned driver or system file is being loaded into the kernel, or whether a system file has been modified by malicious software that is being run by a user account with administrator privileges.<br /><br /> **- Secure boot is enabled**<br /><br /> When Secure Boot is enabled, the system is forced to boot to a factory trusted state. Also, when Secure Boot is enabled, the core components used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies this before it lets the machine start. If any files have been tampered with, breaking their signature, the system will not boot.<br /><br /> **- Early-launch antimalware is enabled (this setting only applies to PCs.)**<br /><br /> Early launch anti-malware (ELAM) provides protection for the computers in your network when they start up and before third-party drivers initialize.<br />This rule is turned off by default.<br /><br /> For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).||||√||||
+  **Supported on:**
+    * Windows Phone 8+
+    * iOS 6+
+    * Android 4.0+
+    * Samsung KNOX Standard 4.0+
+* **Require a password to unlock an idle device (1602 update):** Require users to enter a password to access device that is locked.
 
-  <sup>1</sup> For devices that run Windows and are secured with a Microsoft Account, the compliance policy will fail to evaluate correctly if **Minimum password length** is greater than 8 characters or if **Minimum number of character sets** is more than 2.
+  **Supported on:**
+  * Windows Phone 8+
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+
+* **Minutes of inactivity before password is required (1602 update):** Specifies the idle time before the user must re-enter their password.Set the value to one of the available options: **1 minute**, **5 minutes**, **15 minutes**, **30 minutes**, **1 hour**.
+
+  This rule when must be used with the **Require a password to unlock an idle device**. The value set here determines when the device is considered idle and is locked, and  **Require a password to unlock an idle device** is set to **True**, will then require that the user enters a password in order to access the locked device.
+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows RT/8.1
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+
+* **Require automatic updates (1602 update):** You can require devices with Windows 8.1 or later to automatically install updates, and specify the class of updates.
+
+  The value should be set to **None** to prevent automatic installation, to **Recommended** to automatically install all recommended updates, or to **Important** to only install updates classified as important.
+
+  **Supported on:**
+  * Windows Phone 8+
+
+* **Allow simple passwords:** Let users create simple passwords such as "1234" or "1111". This setting is **disabled by default**.
+
+  **Supported on:**
+  * Windows Phone 8+
+  * iOS 6+
+
+* **Minimum password length:** Specifies the minimum number of digits or characters that the user's password must contain(**6** by default).
+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+  >[!NOTE]
+  >For devices that run Windows and are secured with a Microsoft Account, the compliance policy will fail to evaluate correctly if **Minimum password length** is greater than 8 characters or if **Minimum number of character sets** is more than 2.
+
+* **File encryption on mobile device:** Requires the device to be encrypted in order to connect to resources.Devices that run **Windows Phone 8** are **automatically encrypted**. Devices that run **iOS** are encrypted when you configure the setting **Require password settings on mobile devices**  (Enabled by default).
+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+* **Device must not be jailbroken or rooted:** If enabled, jailbroken (iOS), or rooted (Android) devices will not be compliant(Disabled by default).
+
+  **Supported on:**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+* **Email profile must be managed by Intune:** When this option is set to Yes, the device must use the email profile deployed to the device. The device is considered noncompliant if the email profile is not deployed to the same user group as the user group targeted by the compliance policy.
+
+  It is also noncompliant if the user has already set up an email account on the device that matches the Intune email profile that is deployed to the device. In this case, Intune cannot overwrite the user-provisioned profile and therefore cannot manage it. The user can bring the device into compliance by removing the existing email settings, which allows Intune to install the managed email profile.
+
+  For details about email profiles, see [Enable access to corporate email using email profiles with Microsoft Intune](https://technet.microsoft.com/library/dn800672.aspx). This setting is disabled by default.
+
+  **Supported on:**
+  * iOS 6+
+
+* **Email profile:** If **Email account must be managed by Intune** is selected, click **Select** to choose the email profile that devices must be managed by. The email profile must be present on the device.
+
+  **Supported on:**
+  * iOS 6+
+
+* **Minimum OS required:** When  a device does not meet the minimum OS version requirement, it will be reported as non-compliant. A link with information on how to upgrade will be displayed. The end-user can choose to upgrade their device after which they will be able to access company resources.
+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+* **Maximum OS version allowed:** When a device is using an OS version later than the one specified in the rule, access to company resources is blocked and the user is asked to contact their IT admin. Until there is a change in rule to allow the OS version, this device cannot be used to access company resources.
+
+  **Supported on:**
+  * Windows Phone 8+
+  * Windows 8.1
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+* **Require devices to be reported as healthy (1602 update):** You can set a rule to require that Windows 10 devices must be reported as healthy in new or existing Compliance Policies. If this setting is enabled, Windows 10 devices will be evaluated via the Health Attestation Service (HAS) for the following data points:
+ - **BitLocker is enabled:** When Bitlocker is on, the device is able to protect data that is stored on the drive from unauthorized access, when the system is turned off or goes to hibernation.
+
+   Windows BitLocker Drive Encryption encrypts all data stored on the Windows operating system volume. BitLocker uses the TPM to help protect the Windows operating system and user data and helps to ensure that a computer is not tampered with, even if it is left unattended, lost, or stolen.<br />If the computer is equipped with a compatible TPM, BitLocker uses the TPM to lock the encryption keys that protect the data. As a result, the keys cannot be accessed until the TPM has verified the state of the computer.
+  - **Code integrity is enabled:** Code integrity is a feature that validates the integrity of a driver or system file each time it is loaded into memory. Code integrity detects whether an unsigned driver or system file is being loaded into the kernel, or whether a system file has been modified by malicious software that is being run by a user account with administrator privileges.
+  - **Secure boot is enabled:** When Secure Boot is enabled, the system is forced to boot to a factory trusted state. Also, when Secure Boot is enabled, the core components used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies this before it lets the machine start. If any files have been tampered with, breaking their signature, the system will not boot.
+  - **Early-launch antimalware is enabled (this setting only applies to PCs.):** Early launch anti-malware (ELAM) provides protection for the computers in your network when they start up and before third-party drivers initialize.<br />This rule is turned off by default.
+
+  For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).
+  **Supported on:**
+  * Windows 10 and Windows 10 Mobile
+
+  

@@ -2,9 +2,9 @@
 title: "Manage Dynamics CRM Online access | System Center Configuration Manager"
 description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/06/2016
 ms.reviewer: na
-ms.service: microsoft-intune
+ms.prod: configuration-manager
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -14,7 +14,7 @@ author: karthikaramanms.author: karamanmanager: angrobe
 ---
 # Manage Dynamics CRM Online access in System Center Configuration Manager
 You can control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access.  Intune conditional access has two components:
-* [Device compliance policy](../../protect/deploy-use/manage-device-compliance-policies.md) that the device must comply with in order to be considered compliant.
+* [Device compliance policy](../../protect/deploy-use/device-compliance-policies.md) that the device must comply with in order to be considered compliant.
 * [Conditional access policy](../../protect/deploy-use/manage-access-to-services.md) that where you specify the conditions that the device must meet in order to access the service.
 
 To learn more about how conditional access works, read the [Manage access to services](../../protect/deploy-use/manage-access-to-services.md) article.
@@ -47,7 +47,7 @@ You can specify two group types to use for the Dynamics CRM policy:
 If a user is in both groups, they will be exempt from the policy.
 
 ### Step 2: Configure and deploy a compliance policy
-[Create and deploy](../../protect/deploy-use/manage-device-compliance-policies.md) a compliance policy to all devices that will be affected by the policy. These would be all the devices that are used by the users in the Targeted groups.
+[Create and deploy](../../protect/deploy-use/device-compliance-policies.md) a compliance policy to all devices that will be affected by the policy. These would be all the devices that are used by the users in the Targeted groups.
 
 > [!NOTE]
 > While compliance policies are deployed to Microsoft Intune groups, conditional access policies are targeted to Azure Active Directory security groups.

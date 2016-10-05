@@ -2,7 +2,7 @@
 title: "Manage SharePoint Online access | System Center Configuration Manager"
 description: "Learn how to use the System Center Configuration Manager SharePoint Online conditional access policy to manage access to OneDrive."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,30 @@ author: karthikaramanms.author: karamanmanager: angrobe
 ---
 # Manage SharePoint Online access in System Center Configuration Manager
 
-Use the System Center Configuration Manager **SharePoint Online** conditional access policy to manage access to OneDrive for Business files located on SharePoint online, based on conditions you specify.  
+Use the System Center Configuration Manager **SharePoint Online** conditional access policy to manage access to OneDrive for Business files located on SharePoint online, based on conditions you specify.
+You can control access to SharePoint Online from the following apps for the listed platforms:  
+
+-   Microsoft Office Mobile (Android)  
+
+-   Microsoft OneDrive (Android and iOS)  
+
+-   Microsoft Word (Android and iOS)  
+
+-   Microsoft Excel (Android and iOS)  
+
+-   Microsoft PowerPoint (Android and iOS)  
+
+-   Microsoft OneNote (Android and iOS)
+
+Office desktop applications can access SharePoint Online on PCs running:  
+
+-   Office desktop 2013 and later with [modern authentication](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) enabled.  
+
+-   Windows 7.0 or Windows 8.1  
+
+> [!NOTE]  
+>  PCs should be domain joined or be complaint with the policies set in Intune.  
+
 
 
  When a targeted user attempts to connect to a file using a supported app such as OneDrive on their device, the following evaluation occurs:  
@@ -91,7 +114,7 @@ Use the System Center Configuration Manager **SharePoint Online** conditional ac
 > [!NOTE]  
 >  While compliance policies are deployed to Intune groups, or Configuration Manager collections, conditional access policies are targeted to Azure Active Directory security groups.  
 
- For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md).  
+ For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md).  
 
 > [!IMPORTANT]  
 >  If you have not deployed a compliance policy and then enable the SharePoint Online policy, all targeted devices will be allowed access.  
