@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: f660dde3-a3c5-45ef-a75b-fd915c12cad1
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Keyboard shortcuts for the remote control viewer in System Center Configuration Manager

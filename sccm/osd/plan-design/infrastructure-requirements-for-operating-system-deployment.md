@@ -50,7 +50,7 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
 -   [Common Migration Scenarios for USMT 10](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)  
 
--   [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md)  
+-   [Manage user state](../get-started/manage-user-state.md)  
 
 ### Windows PE  
  Windows PE is used for boot images to start a computer. It is a Windows operating system with limited services that is used during the pre-installation and deployment of Windows operating systems. The following provides the version of Configuration Manager and the supported version of Windows ADK, the Windows PE version on which the boot image is based that can be customized from the Configuration Manager console, and the Windows PE versions on which the boot image is based that you can customize by using DISM and then add the image to the specified version of Configuration Manager.  
@@ -72,47 +72,47 @@ Operating system deployment in System Center 2012 Configuration Manager has exte
 
      <sup>1</sup> You can only add a boot image to Configuration Manager when it is based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). You can download Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=5188).  
 
-     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images with System Center Configuration Manager](../deploy-use/customize-boot-images.md). For more information about boot images, see [Manage boot images with System Center Configuration Manager](../deploy-use/manage-boot-images.md).  
+     For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that is installed with Windows ADK for Windows 8. Then, you can add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../get-started/customize-boot-images.md). For more information about boot images, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 ### Windows Server Update Services (WSUS)  
 You must install the following WSUS 4.0 hotfixes:
-  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) is necessary for Windows 10 servicing, which uses the software updates infrastructure to get Windows 10 feature upgrades. When you have WSUS 3.2, you must use task sequences to upgrade Windows 10. For more information, see [Manage Windows as a service using System Center Configuration Manager](../deploy-use/manage-windows-as-a-service.md).  
-  - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) is necessary to use Windows 10 servicing to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see [Manage Windows as a service using System Center Configuration Manager](../deploy-use/manage-windows-as-a-service.md).
+  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) is necessary for Windows 10 servicing, which uses the software updates infrastructure to get Windows 10 feature upgrades. When you have WSUS 3.2, you must use task sequences to upgrade Windows 10. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).  
+  - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) is necessary to use Windows 10 servicing to upgrade computers to the Windows 10 Anniversary Update, as well as for subsequence versions. There are manual steps described in the support article that you must take to install this hotfix. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).
 
 
 ### Internet Information Services (IIS) on the site system servers  
- IIS is required for  the distribution point, state migration point, and management point. For more information about this requirement, see [Site and site system prerequisites for System Center Configuration Manager](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
+ IIS is required for  the distribution point, state migration point, and management point. For more information about this requirement, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 ### Windows Deployment Services (WDS)  
  WDS is needed for PXE deployments, when you use multicast to optimize bandwidth in your deployments, and for offline servicing of images. If the provider is installed on a remote server, you must install WDS on the site server and the remote provider. For more information, see [Windows Deployment Services](#BKMK_WDS) in this topic.  
 
 ### Dynamic Host Configuration Protocol (DHCP)  
- DHCP is required for PXE deployments. You must have a functioning DHCP server with an active host to deploy operating systems by using PXE. For more information about PXE deployments, see [Use PXE to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+ DHCP is required for PXE deployments. You must have a functioning DHCP server with an active host to deploy operating systems by using PXE. For more information about PXE deployments, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 ### Supported operating systems and hard disk configurations  
  For more information about the operating system versions and hard disk configurations that are supported by Configuration Manager when you deploy operating systems, see [Supported Operating Systems](#BKMK_SupportedOS) and [Supported Disk Configurations](#BKMK_SupportedDiskConfig).  
 
 ### Windows device drivers  
- Windows device drivers can be used when you install the operating system on the destination computer and when you run Windows PE by using a boot image. For more information about device drivers, see [Manage drivers in System Center Configuration Manager](../deploy-use/manage-drivers.md).  
+ Windows device drivers can be used when you install the operating system on the destination computer and when you run Windows PE by using a boot image. For more information about device drivers, see [Manage drivers](../get-started/manage-drivers.md).  
 
 ##  <a name="BKMK_InternalDependencies"></a> Configuration Manager Dependencies  
  The following provides information about Configuration Manager operating system deployment prerequisites.  
 
 ### Operating system image  
- Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images with System Center Configuration Manager](../deploy-use/manage-operating-system-images.md).  
+ Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
 ### Driver catalog  
- To deploy a device driver, you must import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers in System Center Configuration Manager](../deploy-use/manage-drivers.md).  
+ To deploy a device driver, you must import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](../get-started/manage-drivers.md).  
 
 ### Management point  
  Management points transfer information between client computers and the Configuration Manager site. The client uses a management point to run any task sequences that are required to complete the operating system deployment.  
 
- For more information about task sequences, see [Planning considerations for automating tasks in System Center Configuration Manager](planning-considerations-for-automating-tasks.md).  
+ For more information about task sequences, see [Planning considerations for automating tasks](planning-considerations-for-automating-tasks.md).  
 
 ### Distribution point  
  Distribution points are used in most deployments to store the data that is used to deploy an operating system, such as the operating system image or device driver packages. Task sequences typically retrieve data from a distribution point to deploy the operating system.  
 
- For more information about how to install distribution points and manage content, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+ For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### PXE-enabled distribution point  
  To deploy PXE-initiated deployments, you must configure a distribution point to accept PXE requests from clients. For more information about how to configure the distribution point, see [Distribution point configurations](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_DBtable) and find the PXE configuration category in the table.  
@@ -125,13 +125,13 @@ You must install the following WSUS 4.0 hotfixes:
 
  For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
- For information about how to capture and restore user state, see [Manage user state in System Center Configuration Manager](../deploy-use/manage-user-state.md).  
+ For information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).  
 
 ### Service connection point  
- When you use Windows as a Service (WaaS) to deploy Windows 10 Current Branch, you must have the  service connection point installed. For more information, see [Manage Windows as a service using System Center Configuration Manager](../deploy-use/manage-windows-as-a-service.md).  
+ When you use Windows as a Service (WaaS) to deploy Windows 10 Current Branch, you must have the  service connection point installed. For more information, see [Manage Windows as a service](../deploy-use/manage-windows-as-a-service.md).  
 
 ### Reporting services point  
- To use Configuration Manager reports for operating system deployments, you must install and configure a reporting services point. For more information, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
+ To use Configuration Manager reports for operating system deployments, you must install and configure a reporting services point. For more information, see [Reporting](../../core/servers/manage/reporting.md).  
 
 ### Security permissions for operating system deployments  
  The **Operating System Deployment Manager** security role is a built-in role that cannot be changed. However, you can copy the role, make changes, and then save these changes as a new custom security role. Here are some of the permissions that apply directly to operating system deployments:  
@@ -200,7 +200,7 @@ You must install the following WSUS 4.0 hotfixes:
     >  In addition, if DHCP authorization is required on the server, you need DHCP client port 68 to be open on the server.  
 
 ##  <a name="BKMK_SupportedOS"></a> Supported Operating Systems  
- All Windows operating systems listed as supported client operating systems in [Supported operating systems for clients and devices for System Center Configuration Manager](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for operating system deployments.  
+ All Windows operating systems listed as supported client operating systems in [Supported operating systems for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for operating system deployments.  
 
 ##  <a name="BKMK_SupportedDiskConfig"></a> Supported Disk Configurations  
  The hard disk configuration combinations on the reference and destination computers that are supported for Configuration Manager operating system deployment are shown in the following table.  

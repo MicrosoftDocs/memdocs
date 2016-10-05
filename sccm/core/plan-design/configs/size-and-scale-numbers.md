@@ -38,7 +38,7 @@ These support numbers in this article are based on using the recommended hardwar
 
 -   The number of secondary sites per primary site is based on continuously connected and reliable wide area network (WAN) connections. For locations that have fewer than 500 clients, consider a distribution point instead of a secondary site.  
 
- For information about the numbers of clients and devices a primary site can support, see [Client numbers for sites and hierarchies](#bkmk_ClientNumbers) in this topic.  
+ For information about the numbers of clients and devices a primary site can support, see [Client numbers for sites and hierarchies](#bkmk_clientnumbers) in this topic.  
 
 **Secondary site:**  
 
@@ -115,7 +115,7 @@ These support numbers in this article are based on using the recommended hardwar
 
 -   By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
 
-##  <a name="bkmk_ClientNumbers "></a> Client numbers for sites and hierarchies  
+##  <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies  
  Use the following information to determine how many clients, and of which types, you can support at a site or in a hierarchy.  
 
 ###  <a name="bkmk_cas"></a> Hierarchy with a central administration site  

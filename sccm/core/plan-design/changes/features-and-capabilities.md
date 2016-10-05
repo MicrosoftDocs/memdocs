@@ -75,7 +75,7 @@ The following are the primary management capabilities of System Center Configura
 
  **User data and profiles configuration items**  
 
- User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. See [Working with user data and profiles configuration items in System Center Configuration Manager](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)  
+ User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. See [Working with user data and profiles configuration items in System Center Configuration Manager](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
 
  **Remote control**  
 

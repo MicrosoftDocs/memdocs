@@ -30,7 +30,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 -   **Release State Store**: This step is needed only if you store the user state on the state migration point. This step removes this data from the state migration point.  
 
- Use the following procedures to add the task sequence steps needed to capture the user state and restore the user state. For more information about creating a task sequences, see [Manage task sequences to automate tasks in System Center Configuration Manager](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
+ Use the following procedures to add the task sequence steps needed to capture the user state and restore the user state. For more information about creating a task sequences, see [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md).  
 
 #### To add task sequence steps to capture the user state  
 
@@ -48,7 +48,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   In the **Retry delay (in seconds)** box, specify how many seconds that the task sequence waits before it retries to capture the data.  
 
-    -   Select the **If computer account fails to connect to state store, use the Network Access account** check box to specify whether to use the Configuration Manager[Network Access Account](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_NAA) to connect to the state store.  
+    -   Select the **If computer account fails to connect to state store, use the Network Access account** check box to specify whether to use the Configuration Manager [Network Access Account](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account) to connect to the state store.  
 
      On the **Options** tab, specify the following options:  
 
@@ -156,7 +156,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
     -   Specify any conditions that must be met before the task sequence can continue when an error occurs.  
 
- Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
+ Deploy this task sequence to restore the user state on a destination computer. For information about deploying task sequences, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
 
 ## Next steps
 [Monitor the task sequence deployment](monitor-operating-system-deployments.md#BKMK_TSDeployStatus)

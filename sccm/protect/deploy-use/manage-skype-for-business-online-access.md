@@ -2,7 +2,7 @@
 title: "Manage Skype for Business Online access | System Center Configuration Manager"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
-ms.date: 04/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -58,7 +58,7 @@ If a condition is not met, the user is presented with one of the following messa
 ### Step 2: Configure and deploy a compliance policy  
  Ensure that you create and deploy a compliance policy to all devices that the Skype for Business Online policy will be targeted to.  
 
- For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md).  
+ For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md).  
 
 > [!NOTE]  
 >  If you have not deployed a compliance policy and then enable the Skype for Business Online policy, all targeted devices will be allowed access if they are enrolled in Intune.  
@@ -101,4 +101,4 @@ If a condition is not met, the user is presented with one of the following messa
 
 ### See also  
 
- [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md)
+ [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/device-compliance-policies.md)

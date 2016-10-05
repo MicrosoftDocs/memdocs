@@ -18,13 +18,13 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Scenarios to deploy enterprise operating systems with System Center Configuration Manager
 There following operating system deployment scenarios are available in System Center Configuration Manager:  
 
--   [Upgrade Windows to the latest version with System Center Configuration Manager](upgrade-windows-to-the-latest-version.md): This scenario upgrades the operating system on computers that currently run Windows 7, Windows 8, Windows 8.1, or Windows 10. The upgrade process retains the applications, settings, and user data on the computer. There are no external dependencies, such as the Windows ADK and this process is faster and more resilient than traditional operating system deployments.  
+-   [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md): This scenario upgrades the operating system on computers that currently run Windows 7, Windows 8, Windows 8.1, or Windows 10. The upgrade process retains the applications, settings, and user data on the computer. There are no external dependencies, such as the Windows ADK and this process is faster and more resilient than traditional operating system deployments.  
 
--   [Refresh an existing computer with a new version of Windows using System Center Configuration Manager](refresh-an-existing-computer-with-a-new-version-of-windows.md): This scenario partitions and formats (wipes) an existing computer and installs a new operating system on the computer. You can migrate settings and user data after the operating system is installed.  
+-   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md): This scenario partitions and formats (wipes) an existing computer and installs a new operating system on the computer. You can migrate settings and user data after the operating system is installed.  
 
--   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](install-new-windows-version-new-computer-bare-metal.md): This scenario  installs an operating system on a new computer. This is a fresh installation of the operating system and does not include any settings or user data migration.  
+-   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md): This scenario  installs an operating system on a new computer. This is a fresh installation of the operating system and does not include any settings or user data migration.  
 
--   [Replace an existing computer and transfer settings with System Center Configuration Manager](replace-an-existing-computer-and-transfer-settings.md): This scenario installs an operating system on a new computer. Optionally, you can migrate settings and user data from the old computer to the new computer.  
+-   [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md): This scenario installs an operating system on a new computer. Optionally, you can migrate settings and user data from the old computer to the new computer.  
 
 ## Things to consider before you deploy operating system images  
  There are certain things that you should consider before you deploy an operating system.  

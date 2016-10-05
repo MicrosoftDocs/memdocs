@@ -2,7 +2,7 @@
 title: "Manage email access | System Center Configuration Manager"
 description: "Learn how to use System Center Configuration Manager conditional access to manage access to Exchange email."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/04/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,7 +24,27 @@ You can manage access to:
 
 -   Microsoft Exchange Online  
 
--   Exchange Online Dedicated  
+-   Exchange Online Dedicated
+
+You can control access to Exchange Online and Exchange On-premises from the built-in email client on the following platforms:  
+
+-   Android 4.0 and later, Samsung Knox Standard 4.0 and later  
+
+-   iOS 7.1 and later  
+
+-   Windows Phone 8.1 and later  
+
+-   Mail application on Windows 8.1 and later
+
+Office desktop applications can access Exchange Online on PCs running:  
+
+-   Office desktop 2013 and later with [modern authentication](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) enabled.  
+
+-   Windows 7.0 or Windows 8.1  
+
+> [!NOTE]  
+>  PCs should be domain joined or be complaint with the policies set in Intune.  
+
 
 ## Device requirements
  If you configure conditional access, before a user can connect to their email, the device they use must:  

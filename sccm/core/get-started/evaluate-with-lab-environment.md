@@ -45,7 +45,7 @@ Learn how to create a lab environment to evaluate System Center Configuration Ma
  When you build this lab, you will have a functional environment to work in. However, this environment will not be optimized for system performance, hard disk space management, SQL Server storage, etc.  
 
 ###  <a name="BKMK_EvalRec"></a> Recommended reading prior to beginning the lab  
- There is a wealth of content available in the [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md). A selection of topics from this library have been included below that are recommended for all administrators working on labs to read prior to beginning these exercises.  
+ There is a wealth of content available in the [Documentation for System Center Configuration Manager](http://docs.microsoft.com/sccm/). A selection of topics from this library have been included below that are recommended for all administrators working on labs to read prior to beginning these exercises.  
 
 -   Learn core concepts about the Configuration Manager console, end-user portals, and example scenarios in the [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)  
 

@@ -1,5 +1,5 @@
 ---
-title: "Use a task sequence to manage virtual hard disks in System Center Configuration Manager"
+title: Use a task sequence to manage virtual hard disks | Configuration Manager
 description: "Create and modify a VHD, add applications and software updates, and publish the VHD to System Center Virtual Machine Manager (VMM) from Configuration Manager."
 ms.custom: na
 ms.date: 12/08/2015
@@ -18,23 +18,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Use a task sequence to manage virtual hard disks in System Center Configuration Manager
 In System Center Configuration Manager, you can manage virtual hard disks (VHDs) and integrate the VHDs that you create into your datacenter from the Configuration Manager console. Specifically, you can create and modify a VHD, add applications and software updates to the VHD, and publish the VHD to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.  
 
- Use the following sections to manage VHDs in Configuration Manager:  
-
--   [Steps to Create a VHD](#BKMK_CreateVHDSteps)  
-
-    -   [Create a Task Sequence for the VHD](#BKMK_CreateTS)  
-
-    -   [Create a VHD](#BKMK_CreateVHD)  
-
--   [Steps to Modify an Existing VHD](#BKMK_ModifyVHDSteps)  
-
-    -   [Create a Task Sequence to Modify the VHD](#BKMK_ModifyTS)  
-
-    -   [Modify a VHD](#BKMK_ModifyVHD)  
-
--   [Apply Software Updates to a VHD](#BKMK_ApplyUpdates)  
-
--   [Import the VHD to System Center Virtual Machine Manager](#BKMK_ImportToVMM)  
+ Use the following sections to manage VHDs in Configuration Manager.
 
 ## Prerequisites  
  Verify the following prerequisites before you begin:  
@@ -78,7 +62,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
  Use the following procedure to create the task sequence to create the VHD:  
 
-##### To create the task sequence to create the VHD  
+#### To create the task sequence to create the VHD  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -94,7 +78,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
     -   **Description**: Specify a description of the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. For more information, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 6.  On the **Install Windows** page, specify the following settings, and then click **Next**.  
 
@@ -139,7 +123,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
  Use the following procedure to create a VHD.  
 
-##### To create a VHD  
+#### To create a VHD  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -197,7 +181,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
  Use the following procedure to create the task sequence to modify the VHD.  
 
-##### To create a custom task sequence to modify the VHD  
+#### To create a custom task sequence to modify the VHD  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -213,13 +197,13 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
     -   **Description**: Specify a description of the task sequence.  
 
-    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. For more information, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+    -   **Boot image**: Specify the boot image that installs the operating system on the destination computer. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 6.  Complete the wizard.  
 
  Use the following procedure to add task sequence steps to the custom task sequence.  
 
-##### To add task sequence steps to the custom task sequence  
+#### To add task sequence steps to the custom task sequence  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -236,7 +220,7 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
 
  Use the following procedure to modify a VHD.  
 
-##### To modify a VHD  
+#### To modify a VHD  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -335,6 +319,3 @@ In System Center Configuration Manager, you can manage virtual hard disks (VHDs)
     -   **Use unencrypted transfer**: Select this setting to transfer the VHD file to the VMM management server without the use of encryption.  
 
 5.  On the Summary page, verify the settings, and then complete the wizard. The time it takes to upload the VHD can vary depending on the size of the VHD file and the network bandwidth to the VMM management server.  
-
-## See Also  
- [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)

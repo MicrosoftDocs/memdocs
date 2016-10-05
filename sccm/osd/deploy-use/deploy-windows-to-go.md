@@ -19,7 +19,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Deploy Windows to Go with System Center Configuration Manager
 This topic provides the steps to provision Windows To Go in System Center Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
 
- For more information about Windows To Go, see the [Windows To Go feature overview](http://go.microsoft.com/fwlink/p/?LinkId=263433) topic in the [Windows 8 TechNet documentation library](http://go.microsoft.com/fwlink/p/?LinkId=263434).  
+ For more information about Windows To Go, see [Windows To Go feature overview](http://go.microsoft.com/fwlink/p/?LinkId=263433).  
 
 ## Provision Windows To Go  
  Windows To Go is an operating system stored on a USB-connected external drive. You can provision the Windows To Go drive much like you provision other operating system deployments. However, because Windows To Go is designed to be a user-centric and highly mobile solution, you must take a slightly different approach to provisioning these drives.  
@@ -50,18 +50,18 @@ This topic provides the steps to provision Windows To Go in System Center Config
      Before you create prestaged media, you must distribute the boot image to a distribution point.  
 
     > [!NOTE]  
-    >  Boot images are used to install the operating system on the destination computers in your Configuration Manager environment. They contain a version of Windows PE that installs the operating system, as well as any additional device drivers that are required. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. You can also create your own boot images. For more information, see [Manage boot images with System Center Configuration Manager](../../osd/deploy-use/manage-boot-images.md).  
+    >  Boot images are used to install the operating system on the destination computers in your Configuration Manager environment. They contain a version of Windows PE that installs the operating system, as well as any additional device drivers that are required. Configuration Manager provides two boot images: One to support x86 platforms and one to support x64 platforms. You can also create your own boot images. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 -   **Distribute the Windows 8 operating system image to a distribution point**  
 
      Before you create prestaged media, you must distribute the Windows 8 operating system image to a distribution point.  
 
     > [!NOTE]  
-    >  Operating system images are .WIM format files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).  
+    >  Operating system images are .WIM format files and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For more information, see [Manage operating system images](../get-started/manage-operating-system-images.md).  
 
 -   **Create a Task Sequence to Deploy Windows 8**  
 
-     You must create a task sequence for a Windows 8 deployment that you will reference when you create prestaged media. For more information, see [Manage task sequences to automate tasks in System Center Configuration Manager](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md).  
+     You must create a task sequence for a Windows 8 deployment that you will reference when you create prestaged media. For more information, see [Manage task sequences to automate tasks](manage-task-sequences-to-automate-tasks.md).  
 
 ###  <a name="BKMK_CreatePrestagedMedia"></a> Create prestaged media  
  Prestaged media contains the boot image used to start the destination computer and the operating system image that is applied to the destination computer. The computer that you provision with prestaged media can be started by using the boot image. The computer can then run an existing operating system deployment task sequence to install a complete operating system deployment. The task sequence that deploys the operating system is not included in the media.  
@@ -70,7 +70,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
  Use the following procedure to create the prestaged media.  
 
-##### To create prestaged media  
+#### To create prestaged media  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -125,9 +125,9 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
     -   For HTTPS communications, select **Import PKI certificate**, and then specify the certificate to import and its password.  
 
-         For more information about this client certificate that is used for boot images, see [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md).  
+         For more information about this client certificate that is used for boot images, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer in System Center Configuration Manager](../../osd/deploy-use/associate-users-with-a-destination-computer.md).  
+    -   **User Device Affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how operating system deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
         -   Specify **Allow user device affinity with auto-approval** if you want the media to automatically associate users with the destination computer. This functionality is based on the actions of the task sequence that deploys the operating system. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the operating system to the destination computer.  
 
@@ -147,7 +147,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the boot image. The wizard retrieves the boot image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the boot image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
 
     -   If you selected **Site-based media** on the **Media Management** page of this wizard, in the **Management point** box, specify a management point from a primary site.  
 
@@ -162,7 +162,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
     -   **Distribution point**: Specify the distribution point that hosts the operating system image package. The wizard retrieves the operating system image from the distribution point and writes it to the media.  
 
         > [!NOTE]  
-        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_accounts).  
+        >  The administrative user must have **Read** access rights to the operating system image content on the distribution point. For more information, see [Manage accounts to access content](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md).  
 
 11. On the **Select Application** page, select application content to include in the media file, and then click **Next**.  
 
@@ -188,7 +188,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
             > [!WARNING]  
             >  After BitLocker is enabled for the passphrase, the user must enter the passphrase each time the computer boots to the Windows To Go drive.  
 
-        -   **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer in System Center Configuration Manager](../../osd/deploy-use/associate-users-with-a-destination-computer.md).  
+        -   **SMSTSUDAUsers**: Specifies the primary user of the destination computer. Use this variable to collect the user name, which can then be used to associate the user and device. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
             > [!TIP]  
             >  To retrieve the username, you can create an input box as part of the prestart command, have the user enter their username, and then set the variable with the value. For example, you can add the following lines to the prestart command script file:  
@@ -197,7 +197,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
             >   
             >  `env("SMSTSUDAUsers") = UserID`  
 
-         For more information about how to create a script file to use as your prestart command, see [Prestart commands for task sequence media in System Center Configuration Manager](../../osd/understand/prestart-commands-for-task-sequence-media.md).  
+         For more information about how to create a script file to use as your prestart command, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
 16. Complete the wizard.  
 
@@ -207,7 +207,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 ###  <a name="BKMK_CreatePackage"></a> Create a Windows To Go Creator package  
  As part of the Windows To Go deployment, you must create a package to deploy the prestage media file. The package must include the tool that configures the Windows To Go drive and extracts the prestaged media to the drive. Use the following procedure to create the Windows To Go Creator package.  
 
-##### To create the Windows To Go Creator package  
+#### To create the Windows To Go Creator package  
 
 1.  On the server to host the Windows To Go Creator package files, create a source folder for the package source files.  
 
@@ -277,7 +277,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
  Use the following procedure to update the Windows 8 task sequence to enable BitLocker for Windows To Go.  
 
-##### To update the Windows 8 task sequence to enable BitLocker  
+#### To update the Windows 8 task sequence to enable BitLocker  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -335,7 +335,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 ###  <a name="BKMK_Deployments"></a> Deploy the Windows To Go Creator package and task sequence  
  Windows To Go is a hybrid deployment process. Therefore, you must deploy the Windows To Go Creator package and the Windows 8 task sequence. Use the following procedures to complete the deployment process.  
 
-##### To deploy the Windows To Go Creator package  
+#### To deploy the Windows To Go Creator package  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -385,7 +385,7 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 12. Complete the wizard.  
 
-##### To deploy the Windows 8 task sequence  
+#### To deploy the Windows 8 task sequence  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -456,6 +456,3 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
 ###  <a name="BKMK_UserLogsIn"></a> User logs in to Windows 8  
  After Configuration Manager completes the provisioning process and the Windows 8 lock screen is displayed, the user can login to the operating system.  
-
-## See Also  
- [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)

@@ -65,7 +65,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 ###  <a name="BKMK_UserDataDestination"></a> Store user data locally  
  To store the user state data locally, you must do the following:  
 
--   [Create a task sequence to capture and restore user state in System Center Configuration Manager](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer and restore the user data to a computer by using hard-links,  
+-   [Create a task sequence to capture and restore user state](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md). Specifically, you must add the following task sequence steps to capture user data from a computer and restore the user data to a computer by using hard-links,  
 
     -   [Capture User State](../understand/task-sequence-steps.md#BKMK_CaptureUserState) to capture and store the user state data to a local folder by using hard-links.  
 
@@ -93,7 +93,7 @@ You can use System Center Configuration Manager task sequences to capture and re
 
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you cannot use the state migration point to store user state data.  
 
- For more information about the state migration point and the steps to configure it, see [State migration point](../plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+ For more information about the state migration point and the steps to configure it, see [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  Create a computer association to define a relationship between a source computer and a destination computer when you install an operating system on new hardware and want to capture and restore user data settings. The source computer is an existing computer that Configuration Manager manages. When you deploy the new operating system to the destination computer, the source computer contains the user state that is migrated to the destination computer.  

@@ -47,9 +47,9 @@ ms.assetid:
               <a href="/sccm/core/understand/introduction">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Core infrastructure guide</p>
+                  <p>Core infrastructure</p>
                 </div>
-                <p class="description column-two-thirds">Something about the core infrastructure guide </p>
+                <p class="description column-two-thirds">Something about the core infrastructure</p>
               </a>
             </header>
             <section class="journey-step-elements content">
@@ -81,30 +81,29 @@ ms.assetid:
               <a href="/sccm/apps/understand/introduction-to-application-management">
                 <div class="title column-third">
                   <span class="step-number">2</span>
-                  <p>Application management guide</p>
+                  <p>Application management</p>
                 </div>
-                <p class="description column-two-thirds">Something about app management guide.
-                </p>
+                <p class="description column-two-thirds": Learn how to manage applications through their lifecycle.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>App mgmt article 1</h3>
-                    <p>Something about app mgmt article 1</p>
+                  <a href="/sccm/apps/understand/introduction-to-application-management">
+                    <h3>Introduction to application management</h3>
+                    <p>Learn the basics about managing applications with Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>App mgmt article 2</h3>
-                    <p>Something about app mgmt article 2</p>
+                  <a href="/sccm/apps/deploy-use/create-applications">
+                    <h3>Create applications</h3>
+                    <p>Learn everything you need to know to create applications in Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>App mgmt article 3</h3>
-                    <p>Something about app mgmt article 3</p>
+                  <a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">
+                    <h3>Monitor applications</h3>
+                    <p>After you’ve deployed an application, read this section to learn about how to monitor the progress of the deployment. You can also monitor the usage of some applications you manage.</p>
                   </a>
                 </li>
               </ul>
@@ -116,30 +115,29 @@ ms.assetid:
               <a href="/sccm/compliance/understand/ensure-device-compliance">
                 <div class="title column-third">
                   <span class="step-number">3</span>
-                  <p>Device compliance guide</p>
+                  <p>Device compliance</p>
                 </div>
-                <p class="description column-two-thirds">Something about device compliance guide.
-                </p>
+                <p class="description column-two-thirds">Learn how to configure settings and features on devices that you manage.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>Compliance article 1</h3>
-                    <p>Something about compliance article 1</p>
+                  <a href="/sccm/compliance/understand/ensure-device-compliance">
+                    <h3>Ensure device compliance</h3>
+                    <p>Learn the basics about configuring settings, and evaluating compliance on devices that you manage.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Compliance article 2</h3>
-                    <p>Something about compliance article 2</p>
+                  <a href="/sccm/compliance/deploy-use/create-configuration-items">
+                    <h3>How to create configuration items</h3>
+                    <p>Everything you need to know to create configuration items that ensure device compliance on a wide range of platforms.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Compliance article 3</h3>
-                    <p>Something about compliance article 3</p>
+                  <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
+                    <h3>Upgrade Windows devices with the edition upgrade policy</h3>
+                    <p>Easily upgrade your Windows 10 devices to a newer edition using your product key or license file.</p>
                   </a>
                 </li>
               </ul>
@@ -152,9 +150,9 @@ ms.assetid:
               <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Mobile device management guide</p>
+                  <p>Mobile device management</p>
                 </div>
-                <p class="description column-two-thirds">Something about mobile device management guide.
+                <p class="description column-two-thirds">Something about mobile device management.
                 </p>
               </a>
             </header>
@@ -187,30 +185,29 @@ ms.assetid:
               <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
                 <div class="title column-third">
                   <span class="step-number">5</span>
-                  <p>Operating system deployment guide</p>
+                  <p>Operating system deployment</p>
                 </div>
-                <p class="description column-two-thirds">Something about OSD guide.
-                </p>
+                <p class="description column-two-thirds">Learn how to deploy enterprise operating systems and automate tasks.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 1</h3>
-                    <p>Something about OSD article 1</p>
+                  <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
+                    <h3>Introduction to operating system deployment</h3>
+                    <p>Learn the basics about deploying enterprise operating systems with Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 2</h3>
-                    <p>Something about OSD article 2</p>
+                  <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
+                    <h3>Scenarios to deploy operating systems</h3>
+                    <p>Read this section to learn how to deploy operating systems using one of many different operating system deployment scenarios.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>OSD article 3</h3>
-                    <p>Something about OSD article 3</p>
+                  <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                    <h3>Manage Windows as a service</h3>
+                    <p>Learn how you can create servicing plans to form deployment rings and ensure that Windows 10 current branch computers are kept up to date when new builds are released.</p>
                   </a>
                 </li>
               </ul>
@@ -222,9 +219,9 @@ ms.assetid:
               <a href="/sccm/protect/understand/protect-data-and-site-infrastructure">
                 <div class="title column-third">
                   <span class="step-number">6</span>
-                  <p>Protect data and infrastructure guide</p>
+                  <p>Protect data and infrastructure</p>
                 </div>
-                <p class="description column-two-thirds">Something about Protect guide.
+                <p class="description column-two-thirds">Something about Protect.
                 </p>
               </a>
             </header>
@@ -237,15 +234,15 @@ ms.assetid:
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Protect article 2</h3>
-                    <p>Something about Protect article 2</p>
+                  <a href="/sccm/protect/deploy-use/manage-access-to-services">
+                    <h3>Conditional access</h3>
+                    <p>Use conditional access to help secure email, Office 365 and other services.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Protect article 3</h3>
-                    <p>Something about Protect article 3</p>
+                  <a href="/sccm/protect/deploy-use/endpoint-protection">
+                    <h3>Endpoint Protection</h3>
+                    <p>Learn how to manage Windows Defender, Endpoint Protection, and Windows Firewall to help secure client computers. Windows Defender Advanced Threat Protection can also be managed with Configuration Manager.</p>
                   </a>
                 </li>
               </ul>
@@ -257,30 +254,29 @@ ms.assetid:
               <a href="/sccm/sum/understand/software-updates-introduction">
                 <div class="title column-third">
                   <span class="step-number">7</span>
-                  <p>Software update management guide</p>
+                  <p>Software update management</p>
                 </div>
-                <p class="description column-two-thirds">Something about SUM guide.
-                </p>
+                <p class="description column-two-thirds">Learn how to manage software updates.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 1</h3>
-                    <p>Something about SUM article 1</p>
+                  <a href="/sccm/sum/understand/software-updates-introduction">
+                    <h3>Introduction to software updates management</h3>
+                    <p>Learn the basics about managing software updates with Configuration Manager.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 2</h3>
-                    <p>Something about SUM article 2</p>
+                  <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                    <h3>Prepare for software updates management</h3>
+                    <p>Read this section to learn how to prepare your software updates infrastructure. This includes installing software update points, synchronizing software updates, and managing software updates settings.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>SUM article 3</h3>
-                    <p>Something about SUM article 3</p>
+                  <a href="/sccm/apps/deploy-use/deploy-software-updates">
+                    <h3>Deploy software updates</h3>
+                    <p>After your software updates infrastructure is in place, read this section to learn about how to deploy software updates.</p>
                   </a>
                 </li>
               </ul>
@@ -293,8 +289,8 @@ ms.assetid:
       <h2 class="section-heading"><span class="icon icon-note"></span>Additional resources for Configuration Manager</h2>
       <div class="resource-list row">
           <ul class="column-half">
-          <li><a href="https://configurationmanager.uservoice.com/" target="_blank">Give feedback on Configuration Manager functionality</a></li>
-          <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on Configuration Manager documentation</a></li>
+          <li><a href="https://configurationmanager.uservoice.com/" target="_blank">Give feedback on Configuration Manager</a></li>
+          <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on the documentation</a></li>
           </ul>
           <ul class="column-half">
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet forums</a></li>

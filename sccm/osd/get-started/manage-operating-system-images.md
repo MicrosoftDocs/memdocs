@@ -36,7 +36,7 @@ Operating system images in Configuration Manager are stored in the Windows Imagi
  **Captured image**  
 
  To create a customized operating system image, you build a reference computer with the desired operating system, and install apps, configure settings, etc. Then, you capture the operating system image from the reference computer to create the WIM file. You can build the reference computer manually or use a task sequence to automate some or all of the build steps.   
-For the steps to create a customized operating system image, see [Customize operating system images with System Center Configuration Manager](customize-operating-system-images.md).  
+For the steps to create a customized operating system image, see [Customize operating system images](customize-operating-system-images.md).  
 
 -   **Advantages**  
 
@@ -73,10 +73,10 @@ For the steps to create a customized operating system image, see [Customize oper
  You can now distribute the operating system image to distribution points.  
 
 ##  <a name="BKMK_DistributeBootImages"></a> Distribute operating system images to distribution points  
- Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_dist).  
+ Operating system images are distributed to distribution points in the same way as you distribute other content. In most cases, you must distribute the operating system image to at least one distribution point before you deploy the operating system. For the steps to distribute an operating system image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> Apply software updates to an operating system image  
- Periodically, new software updates are released that are applicable to the operating system in your operating system image. Of course, before you can apply software updates to an image you must have your software updates infrastructure in place and have successfully synchronized software updates. For more information, see [Deploy and manage software updates](../../sum/deploy-use/deploy-software-updates.md).  
+ Periodically, new software updates are released that are applicable to the operating system in your operating system image. Of course, before you can apply software updates to an image you must have your software updates infrastructure in place and have successfully synchronized software updates. For more information, see [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md).  
 
  You can apply applicable software updates to an image on a specified schedule. On the schedule that you specify, Configuration Manager applies the software updates that you select to the operating system image, and then optionally distributes the updated image to distribution points. Information about the operating system image is stored in the site database, including the software updates that were applied at the time of the import. Software updates that have been applied to the image since it was initially added are also stored in the site database. When you start the wizard to apply software updates to the operating system image, the wizard retrieves a list of applicable software updates that have not yet been applied to the image for you to select. Configuration Manager copies the software updates from the content library on the site server and applies the software updates to the operating system image.  
 
@@ -107,7 +107,7 @@ For the steps to create a customized operating system image, see [Customize oper
 8.  On the **Completion** page, verify that the software updates were successfully applied to the operating system image.  
 
 ##  <a name="BKMK_OSImageMulticast"></a> Prepare the operating system image for multicast deployments  
- Use multicast deployments to allow multiple computers to simultaneously download an operating system image. The image is multicast to clients by  the distribution point, rather than having the distribution point send a copy of the image to each client over a separate connection. When you choose the [Use multicast to deploy Windows over the network with System Center Configuration Manager](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) operating system deployment method, you must configure the operating system image package to support multicast before you distribute the operating system image to a multicast-enabled distribution point. Use the following procedure to set the multicast options for an existing operating system image package.  
+ Use multicast deployments to allow multiple computers to simultaneously download an operating system image. The image is multicast to clients by  the distribution point, rather than having the distribution point send a copy of the image to each client over a separate connection. When you choose the [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) operating system deployment method, you must configure the operating system image package to support multicast before you distribute the operating system image to a multicast-enabled distribution point. Use the following procedure to set the multicast options for an existing operating system image package.  
 
 #### To modify an operating system image package to use multicast  
 

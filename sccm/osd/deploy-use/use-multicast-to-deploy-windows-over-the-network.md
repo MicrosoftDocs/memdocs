@@ -1,5 +1,5 @@
 ---
-title: "Use multicast to deploy Windows over the network with System Center Configuration Manager"
+title: Use multicast to deploy Windows over the network | Configuration Manager
 description: "Use multicast in your System Center Configuration Manager environment so that multiple computers can simultaneously download the operating system image."
 ms.custom: na
 ms.date: 12/08/2015
@@ -20,20 +20,17 @@ Multicast is a network optimization method that you can use in your System Cente
 
  You can deploy operating systems over the network by using multicast in the following operating system deployment scenarios:  
 
--   [Refresh an existing computer with a new version of Windows using System Center Configuration Manager](../../osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager](../../osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
+-   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
  Complete the steps in one of the operating system deployment scenarios and then use the following sections to support multicast.  
 
 ##  <a name="BKMK_Configure"></a> Configure a distribution point to support multicast  
- To use multicast when you   deploy operating systems, you must configure a distribution point to support multicast. For more information, see [Configure distribution points to support multicast](../../osd/plan-design/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast).  
+ To use multicast when you   deploy operating systems, you must configure a distribution point to support multicast. For more information, see [Configure distribution points to support multicast](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast).  
 
 ## Prepare an operating system image for multicast deployments  
- To configure the operating system image package to support multicast, see [Prepare the operating system image for multicast deployments](../../osd/deploy-use/manage-operating-system-images.md#BKMK_OSImageMulticast).  
+ To configure the operating system image package to support multicast, see [Prepare the operating system image for multicast deployments](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast).  
 
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence  
- Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  
-
-## See Also  
- [Methods to deploy enterprise operating systems using System Center Configuration Manager](../../osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+ Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS).  

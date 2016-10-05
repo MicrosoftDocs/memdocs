@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: barlanmsftms.author: barlanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Example Asset Intelligence general license import file in System Center Configuration Manager

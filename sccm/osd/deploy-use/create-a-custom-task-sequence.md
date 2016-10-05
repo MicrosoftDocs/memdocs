@@ -36,11 +36,11 @@ When you create a custom task sequence in System Center Configuration Manager, i
 
  After you complete the Create Task Sequence Wizard,  Configuration Manager adds the custom task sequence to the **Task Sequences** node. You can now edit this task sequence to add task sequence steps to it.  
 
- For a list of available task sequence steps, see [Task sequence steps in System Center Configuration Manager](../understand/task-sequence-steps.md).  
+ For a list of available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
 
- For more information about how to edit a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
+ For more information about how to edit a task sequence, see [Edit a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
- Most often you will use task sequences to automate tasks for operating system deployment, but you can create a custom task sequence to automate a variety of tasks. For more information, see [Create a task sequence for non-operating system deployments with System Center Configuration Manager](../deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md).  
+ Most often you will use task sequences to automate tasks for operating system deployment, but you can create a custom task sequence to automate a variety of tasks. For more information, see [Create a task sequence for non-operating system deployments](create-a-task-sequence-for-non-operating-system-deployments.md).  
 
  ## Next steps
- [Deploy the task sequence](manage-task-sequences-to-automate-tasks.md##BKMK_DeployTS)
+ [Deploy the task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

@@ -16,7 +16,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Manage task sequences to automate tasks in System Center Configuration Manager
-Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](..plan-design/planning-considerations-for-automating-tasks.md).  
+Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md).  
 
  Use the following sections to manage task sequences.
 
@@ -60,7 +60,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 5.  Click **OK** to save the changes.  
 
- For a list of the available task sequence steps, see [Task sequence steps in System Center Configuration Manager](../understand/task-sequence-steps.md).  
+ For a list of the available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
 
 ##  <a name="BKMK_DistributeTS"></a> Distribute content referenced by a task sequence  
  Before clients run a task sequence that references content, you must distribute that content to distribution points. At any time, you can select the task sequence and distribute its content to build a new list of reference packages for distribution. If you make changes to the task sequence with updated content, you must redistribute the content before it is available to clients. Use the following procedure to distribute the content that is referenced by a task sequence.  
@@ -86,13 +86,13 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 8.  Complete the wizard.  
 
- You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#BKMK_PrestageContent).  
+ You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
 
 ##  <a name="BKMK_DeployTS"></a> Deploy a task sequence  
  Use the following procedure to deploy a task sequence to the computers in a collection.  
 
 > [!WARNING]  
->  You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an operating system is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+>  You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an operating system is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
 
 > [!NOTE]  
 >  The status messages for the task sequence deployment are displayed in the Message window on a primary site, but they are not displayed on a central administration site.  
@@ -119,7 +119,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
          Do not deploy task sequences that install operating systems to inappropriate collections, such as the **All Systems** collection. Be sure that the collection that you select contains only those computers that you want to run the task sequence.  
 
         > [!NOTE]  
-        >  When you deploy a high-risk deployment, such as an operating system, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments for System Center Configuration Manager](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+        >  When you deploy a high-risk deployment, such as an operating system, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you cannot select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md).  
         >   
         >  The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, the collection membership is not reevaluated for the high-risk deployment settings.  
         >   
@@ -154,7 +154,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
     -   **Make available to the following**: Specify whether the task sequence is available to Configuration Manager clients, media, or PXE.  
 
         > [!IMPORTANT]  
-        >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. Select **Allow unattended operating system deployment** and set the SMSTSPreferredAdvertID variable as part of the media to have the computer automatically boot to the deployment with no user interaction. For more information about task sequence variables, see [Task sequence built-in variables in System Center Configuration Manager](../understand/task-sequence-built-in-variables.md)  
+        >  Use the **Only media and PXE (hidden)** setting for automated task sequence deployments. Select **Allow unattended operating system deployment** and set the SMSTSPreferredAdvertID variable as part of the media to have the computer automatically boot to the deployment with no user interaction. For more information about task sequence variables, see [Task sequence built-in variables](../understand/task-sequence-built-in-variables.md)  
 
 7.  On the **Scheduling** page, specify the following information, and then click **Next**.  
 
@@ -349,6 +349,9 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |**Copy**|Makes a copy of the selected task sequence. You might find this action useful when you want to create a new task sequence that is based on an existing task sequence.<br /><br /> When you make a copy of a task sequence in a folder, the copy is listed in that folder until you refresh the task sequence node.  After the refresh, the copy appears in the root folder.|  
 |**Disable**|Disables the task sequence so that it cannot run on computers. Disabled task sequences can be deployed to computers, but computers do not run the task sequence until it is enabled.|  
 |**Enable**|Enables the task sequence so that it can be run. You do not need to redeploy a deployed task sequence after it is enabled.|  
-|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#BKMK_PrestageContent).|  
+|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
 |**Move**|Moves the selected task sequence to another folder.|  
 |**Properties**|Opens the **Properties** dialog box for the selected task sequence. Use this dialog box to change the behavior of the task sequence object. However, you cannot change the steps of the task sequence by using this dialog box.|  
+
+## Next steps
+[Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md)

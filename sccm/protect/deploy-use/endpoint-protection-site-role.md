@@ -47,7 +47,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 7.  On the **Microsoft Active Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Microsoft Active Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Microsoft Active Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).
+    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Microsoft Active Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Microsoft Active Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 
@@ -77,7 +77,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 7.  On the **Microsoft Active Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).
+    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 

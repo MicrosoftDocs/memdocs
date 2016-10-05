@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Windows to the latest version with System Center Configuration Manager"
+title: Upgrade Windows to the latest version | Configuration Manager
 description: "Learn how to use stand-alone media or Software Center in Configuration Manager to upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
 ms.date: 12/08/2015
@@ -48,34 +48,31 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
 
 -   **Plan for and implement  infrastructure requirements**  
 
-     The only prerequisites for the upgrade scenario is that you have a distribution point available for the operating system upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_Iinstall).  
+     The only prerequisites for the upgrade scenario is that you have a distribution point available for the operating system upgrade package and any other packages that you include in the task sequence. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 ##  <a name="BKMK_Configure"></a> Configure  
 
 1.  **Prepare the operating system upgrade package**  
 
-     The Windows 10 upgrade package contains the source files necessary to upgrade the operating system on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you will upgrade.  For more information, see [Manage operating system upgrade packages with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-upgrade-packages.md).  
+     The Windows 10 upgrade package contains the source files necessary to upgrade the operating system on the destination computer. The upgrade package must be the same edition, architecture, and language as the clients that you will upgrade.  For more information, see [Manage operating system upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
 2.  **Create a task sequence to upgrade the operating system**  
 
-     Use the steps in [Create a task sequence to upgrade an operating system in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) to automate the upgrade of the operating system.  
+     Use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to automate the upgrade of the operating system.  
 
     > [!NOTE]  
-    >  Typically you will use the steps in [Create a task sequence to upgrade an operating system in System Center Configuration Manager](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) to create a task sequence to upgrade an operating system to Windows 10. The task sequence includes the Upgrade Operating System step, as well as additional  recommended steps and groups to handle the end-to-end upgrade process. However, you can create a custom task sequence and add the [Upgrade Operating System](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to upgrade the operating system. This is the only step required to upgrade the operating system to Windows 10. If you choose this method, also add the [Restart Computer](../../osd/understand/task-sequence-steps.md#BKMK_RestartComputer) step after the Upgrade Operating System step to complete the upgrade. Be sure to use the **The currently installed default operating system** setting to restart the computer  into the installed operating system and not Windows PE.  
+    >  Typically you will use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to create a task sequence to upgrade an operating system to Windows 10. The task sequence includes the Upgrade Operating System step, as well as additional recommended steps and groups to handle the end-to-end upgrade process. However, you can create a custom task sequence and add the [Upgrade Operating System](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to upgrade the operating system. This is the only step required to upgrade the operating system to Windows 10. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the Upgrade Operating System step to complete the upgrade. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed operating system and not Windows PE.  
 
 ##  <a name="BKMK_Deploy"></a> Deploy  
 
 -   Use one of the following deployment methods to deploy the operating system:  
 
-    -   [Use Software Center to deploy Windows over the network with System Center Configuration Manager](../../osd/deploy-use/use-software-center-to-deploy-windows-over-the-network.md)  
+    -   [Use Software Center to deploy Windows over the network](use-software-center-to-deploy-windows-over-the-network.md)  
 
-    -   [Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager](../../osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+    -   [Use stand-alone media to deploy Windows without using the network](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
 ## Monitor  
 
 -   **Monitor the task sequence deployment**  
 
-     To monitor the task sequence deployment  to upgrade the operating system, see [Monitor operating system deployments in System Center Configuration Manager](../../osd/deploy-use/monitor-operating-system-deployments.md).  
-
-## See Also  
- [Scenarios to deploy enterprise operating systems with System Center Configuration Manager](../../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+     To monitor the task sequence deployment  to upgrade the operating system, see [Monitor operating system deployments](monitor-operating-system-deployments.md).  

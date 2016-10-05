@@ -16,20 +16,20 @@ author: Dougebyms.author: dougebymanager: angrobe
 
 ---
 # Create a task sequence to upgrade an operating system in System Center Configuration Manager
-Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version with System Center Configuration Manager](../deploy-use/upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  
  To upgrade the operating system on computers to Windows 10, you can create a task sequence  and select **Upgrade an operating system from upgrade package** in the Create Task Sequence Wizard. The wizard will add the steps to upgrade the operating system, apply software updates, and install applications. Before  you create the  task sequence, the following must be in place:  
 
 -   **Required**  
 
-     The Windows 10 [operating system upgrade package](https://technet.microsoft.com/library/mt627916\(TechNet.10\).aspx) must be available in the Configuration Manager console.  
+     - The Windows 10 [operating system upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.  
 
 -   **Required (if used)**  
 
-     [Software updates](https://technet.microsoft.com/library/mt612804\(TechNet.10\).aspx) must be synchronized in the Configuration Manager console.  
+    -   [Software updates](../../sum/get-started/synchronize-software-updates.md) must be synchronized in the Configuration Manager console.  
 
-     [Applications](https://technet.microsoft.com/library/mt595707\(TechNet.10\).aspx) must be added to the Configuration Manager console.  
+    -   [Applications](../../apps/deploy-use/create-applications.md) must be added to the Configuration Manager console.  
 
 #### To create a task sequence that upgrades an operating system  
 
@@ -49,7 +49,7 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 6.  On the **Upgrade the  Windows Operating System** page, specify the following settings, and then click **Next**.  
 
-    -   **Upgrade package**: Specify the upgrade package that contains the operating system upgrade source files. You can verify  that you have selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage operating system upgrade packages with System Center Configuration Manager](../deploy-use/manage-operating-system-upgrade-packages.md).  
+    -   **Upgrade package**: Specify the upgrade package that contains the operating system upgrade source files. You can verify  that you have selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage operating system upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
     -   **Edition index**: If there are multiple operating system edition indexes available in the package, select the desired edition index. By default, the first item is selected.  
 
@@ -82,6 +82,3 @@ Use task sequences   in System Center Configuration Manager to automatically upg
 
 ## Folder and files removed after computer restart  
  When the task sequence to upgrade an operating system to Windows 10 and all other steps in the task sequence are complete, the post-processing and rollback scripts are not removed until the computer is restarted.  These script files do not contain sensitive information.  
-
- ## Next steps  
-  [Methods to deploy enterprise operating systems using System Center Configuration Manager](../deploy-use/methods-to-deploy-enterprise-operating-systems.md)

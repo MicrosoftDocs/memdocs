@@ -1,4 +1,4 @@
-﻿---
+---
 title: Setup hybrid MDM | System Center Configuration Manager and Microsoft Intune
 description: "Set up hybrid device enrollment with Configuration Manager and Intune."
 ms.custom: na
@@ -14,7 +14,7 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
 author: NathBarnms.author: nathbarn
-
+manager: angrobe
 ---
 
 # Setup hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
@@ -209,22 +209,23 @@ When you have created your subscription, you can then install the service connec
       4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.    
 
 ### Windows enrollment setup  
+You can use Configuration Manager with  Intune to manage desktops, laptops, and other devices running Windows as mobile devices.
+
 A DNS alias (CNAME record type) makes it easier for users to enroll their devices by automatically populating the server name during device enrollment. You can then enable enrollment for Windows PCs mobile devices.  
-1. (Optional) Create a DNS alias (CNAME record type) in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
+
+1. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscriptions**, then do the following:  
+  - **Windows PCs:** On the **Home** tab, click **Configure Platforms**, and then click **Windows**. On the **General** tab, select **Enable Windows enrollment**.  
+  - **Windows 10 Mobile and Windows Phone:** On the **Home** tab, click **Configure Platforms**, and then click **Windows Phone**.  On the **General** tab, choose  **Windows Phone 8.1 and Windows 10 Mobile**.
+
+2.  You can set up Azure Active Directory to allow automatic enrollment of Windows devices. To enalbe automatic enrollment for Windows devices including PCs and Windows Phones, see [Enable automatic enrollment](#azure-active-directory-enrollment).
+
+ You can also configure Configuration Manager to simplify enrollment using the Company Portal app.
+ (Optional) Create a DNS alias (CNAME record type) in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
 
   |Type|Host name|Points to|  
   |----------|---------------|---------------|  
   |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|  
   |CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|  
-
-2.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscriptions**.  
-
-   > [!WARNING]  
-   >  If other Configuration Manager dialog boxes are open, close them before continuing with this procedure.  
-
-3. In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscriptions**, then do the following:  
-  - **Windows PCs:** On the **Home** tab, click **Configure Platforms**, and then click **Windows**. On the **General** tab, select **Enable Windows enrollment**.  
-  - **Windows 10 Mobile and Windows Phone:** On the **Home** tab, click **Configure Platforms**, and then click **Windows Phone**.  On the **General** tab, choose  **Windows Phone 8.1 and Windows 10 Mobile**.
 
 #### Azure Active Directory enrollment
 

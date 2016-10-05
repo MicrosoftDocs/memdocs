@@ -10,7 +10,6 @@
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
 ### [Fundamentals of role-based administration](understand/fundamentals-of-role-based-administration.md)
-##  [Learn about the editions of Configuration Manager](understand/learn-more-editions.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
@@ -19,7 +18,7 @@
 ##   [Product changes](plan-design/changes/features-and-capabilities.md)
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
-###  [What’s new in incremental versions](plan-design/changes/what’s-new-incremental-versions.md)
+###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
