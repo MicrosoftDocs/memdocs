@@ -272,7 +272,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 ### Try it out!  
  Try to complete the following tasks and then let us know how it worked by using our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site:  
 
--   I can create a collection that represents a server group. For this test, you can configure your collect membership rules to have 2 machines in this collection.  
+-   I can create a collection that represents a server group. For this test, you can configure your collect membership rules to have 2 machines in this collection.   
 
 -   I can specify that computers in the server group install software updates in a specific order based on the server group  settings for the collection. Use the sample scripts in the procedure to specify the pre-deployment and post-deployment scripts.  
 

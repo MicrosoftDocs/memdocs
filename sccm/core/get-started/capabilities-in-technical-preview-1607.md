@@ -27,11 +27,11 @@ In this release, the following improvements have been made to this policy:
 * You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 * You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
-[Read more about the Windows 10 Edition Upgrade Policy](Upgrade%20Windows%20devices%20to%20the%20latest%20version%20with%20the%20edition%20upgrade%20policy%20in%20Configuration%20Manager_deleted.md)
+[Read more about the Windows 10 Edition Upgrade Policy](/sccm/compliance/deploy-use/upgrade-windows-versions)
 
 ### Try it out!
 
-1. Use the information in the [existing edition upgrade policy topic](Upgrade%20Windows%20devices%20to%20the%20latest%20version%20with%20the%20edition%20upgrade%20policy%20in%20Configuration%20Manager_deleted.md) to create an edition upgrade policy.
+1. Use the information in the [existing edition upgrade policy topic]((/sccm/compliance/deploy-use/upgrade-windows-versions) to create an edition upgrade policy.
 2. Deploy this policy to a Windows 10 PC running the Configuration Manager client.
 Once the policy reaches a targeted Windows PC, the PC will be restarted within two hours to apply the upgrade. You cannot currently suppress this restart. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
 
