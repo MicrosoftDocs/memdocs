@@ -86,7 +86,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 8.  Complete the wizard.  
 
- You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content#a-namebkmkprestagea-use-prestaged-content).  
+ You can prestage the content referenced in the task sequence. Configuration Manager creates a compressed, prestaged content file that contains the files, associated dependencies, and associated metadata for the content that you select. Then, you can then manually import the content at a site server, secondary site, or distribution point. For more information about how to prestage content files, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).  
 
 ##  <a name="BKMK_DeployTS"></a> Deploy a task sequence  
  Use the following procedure to deploy a task sequence to the computers in a collection.  
@@ -349,7 +349,7 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |**Copy**|Makes a copy of the selected task sequence. You might find this action useful when you want to create a new task sequence that is based on an existing task sequence.<br /><br /> When you make a copy of a task sequence in a folder, the copy is listed in that folder until you refresh the task sequence node.  After the refresh, the copy appears in the root folder.|  
 |**Disable**|Disables the task sequence so that it cannot run on computers. Disabled task sequences can be deployed to computers, but computers do not run the task sequence until it is enabled.|  
 |**Enable**|Enables the task sequence so that it can be run. You do not need to redeploy a deployed task sequence after it is enabled.|  
-|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content#a-namebkmkprestagea-use-prestaged-content).|  
+|**Create Prestaged Content File**|Starts the Create Prestaged Content File Wizard to prestage the task sequence content. For information about how to create a prestaged content file, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content).|  
 |**Move**|Moves the selected task sequence to another folder.|  
 |**Properties**|Opens the **Properties** dialog box for the selected task sequence. Use this dialog box to change the behavior of the task sequence object. However, you cannot change the steps of the task sequence by using this dialog box.|  
 
