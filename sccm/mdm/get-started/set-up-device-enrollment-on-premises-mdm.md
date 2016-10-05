@@ -64,7 +64,7 @@ Enabling users to enroll their devices for System Center Configuration Manager O
 
  The exported certificate file must be provided to the device for manual installation. This can be done using email, OneDrive, SD card, USB thumbdrive, or whatever method works best for your needs.  
 
- The root certificate you want to use on the devices is the one you exported in [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management.md#bkmk_exportCert).  
+ The root certificate you want to use on the devices is the one you exported in [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
 
 1.  On the device to be enrolled, locate the root certificate file and double-click it.  
 

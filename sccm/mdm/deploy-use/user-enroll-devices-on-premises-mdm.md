@@ -17,7 +17,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
-With System Center Configuration Manager On-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-for-on-premises-mobile-device-management.md).  
+With System Center Configuration Manager On-premises Mobile Device Management, users can enroll devices if they have been granted enrollment permission (by way of updated client settings), and their devices have the required root certificate installed to have trusted communications with the servers hosting the required site system roles. For more information on how to set up enrollment, see [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md).  
 
  > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
@@ -68,4 +68,4 @@ With System Center Configuration Manager On-premises Mobile Device Management, u
 2.  Click **Assets and Compliance** > **Overview** > **Devices**. The enrolled device appears in the list.  
 
 ## See Also  
- [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-for-on-premises-mobile-device-management.md)
+ [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)

@@ -51,7 +51,7 @@ Consider the following requirements before preparing the Configuration Manager i
 > [!TIP]  
 >  We recommend that you set up the Intune before you set up the required site system roles to minimize the time required for the site system roles to become functional.  
 
- For information on how to set up the Intune subscription, see [Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management.md).  
+ For information on how to set up the Intune subscription, see [Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md).  
 
 ##  <a name="bkmk_roles"></a> Required site system roles  
  On\-premises Mobile Device Management requires at least one of each of the following site system roles:  
@@ -70,7 +70,7 @@ Consider the following requirements before preparing the Configuration Manager i
 
  For more information on planning for site system roles, see [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- For more information on how to add the required site system roles, see [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mobile-device-management.md).  
+ For more information on how to add the required site system roles, see [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).  
 
 ##  <a name="bkmk_trustedComs"></a> Required trusted communications  
  On\-premises Mobile Device Management requires site system roles to be enabled for HTTPS communications. Depending on your needs, you can use your enterprise's certificate authority (CA) to establish the trusted connections between servers and devices or you could use a publicly available CA to be the trusted authority.  Either way, you will need a web server certificate to be configured with IIS on the site system servers hosting the required site system roles, and you will need the root certificate of that CA installed on the devices that need to connect to those servers.  
@@ -103,7 +103,7 @@ Consider the following requirements before preparing the Configuration Manager i
 
 -   Out of box experience (OOBE) provisioning package  
 
- For more information, see [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management.md)  
+ For more information, see [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
 ##  <a name="bkmk_enrollment"></a> Enrollment considerations  
  To enable device enrollment for On\-premises Mobile Device Management, users must be granted permission to enroll and their devices must be able to have trusted communications with the site system servers hosting the required site system roles.  
@@ -116,6 +116,6 @@ Consider the following requirements before preparing the Configuration Manager i
 
  For more information on how to set up and enroll devices, see  
 
--   [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-for-on-premises-mobile-device-management.md)  
+-   [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
--   [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-for-on-premises-mobile-device-management.md)  
+-   [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  

@@ -45,7 +45,7 @@ Bulk enrollment in System Center Configuration Manager On-premises Mobile Device
 ##  <a name="bkmk_createCert"></a> Create a certificate profile  
  The main component of the enrollment package is a certificate profile, which is used to automatically provision a trusted root certificate to the device being enrolled.  This root certificate is required for trusted communication between the devices and the site system roles needed for On\-premises Mobile Device Management. Without the root certificate, the device would not be trusted in HTTPS connections between it and the servers hosting the enrollment point, enrollment proxy point, distribution point, and device management point site system roles.  
 
- As part of preparing the system for On\-premises Mobile Device Management, you export a root certificate that you can use in the enrollment package's certificate profile. For instructions on how to get the trusted root certificate, see [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management.md#bkmk_exportCert).  
+ As part of preparing the system for On\-premises Mobile Device Management, you export a root certificate that you can use in the enrollment package's certificate profile. For instructions on how to get the trusted root certificate, see [Export the certificate with the same root as the web server certificate](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).  
 
  Use the exported root certificate to create a certificate profile. For instructions, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
 
