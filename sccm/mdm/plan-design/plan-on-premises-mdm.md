@@ -40,6 +40,7 @@ Consider the following requirements before preparing the Configuration Manager i
 > -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
+
 ##  <a name="bkmk_intune"></a> Use of the  Microsoft Intune subscription  
  To start using On\-premises Mobile Device Management, you will need a Microsoft Intune subscription. The subscription is only required to track licensing of the devices and is not used to manage or store management information for the devices. All management is handled in your organization's enterprise using the on-premises Configuration Manager infrastructure.  
 
