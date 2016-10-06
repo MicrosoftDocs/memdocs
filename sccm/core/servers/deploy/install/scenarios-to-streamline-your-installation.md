@@ -81,7 +81,7 @@ In this example scenario, you install the first site of a hierarchy using a base
 
     -   Because you did not install clients while primary sites were at version 1511, you do not need to upgrade clients from 1511 to 1602.  
 
-    -   Instead, you install new clients that run version 1602. See [Deploy clients in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients.md).  
+    -   Instead, you install new clients that run version 1602. See [Deploy clients in System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
 
     After this step, new clients are installed that run version 1602.  
 

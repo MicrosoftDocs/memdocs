@@ -272,7 +272,7 @@ ms.assetid:
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/sccm/apps/deploy-use/deploy-software-updates">
+                  <a href="/sccm/sum/deploy-use/deploy-software-updates">
                     <h3>Deploy software updates</h3>
                     <p>After your software updates infrastructure is in place, read this section to learn about how to deploy software updates.</p>
                   </a>
