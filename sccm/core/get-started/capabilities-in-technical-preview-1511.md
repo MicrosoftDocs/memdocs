@@ -6,7 +6,7 @@ ms.date: 05/05/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
-  ms.reviewer: na
+ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
