@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s new hybrid MDM | Microsoft Intune | System Center Configuration Manager"
+title: "What's new hybrid MDM | Microsoft Intune | System Center Configuration Manager"
 description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
 ms.date: 08/10/2016
@@ -14,10 +14,21 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 caps.latest.revision: 40
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# What&#39;s new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
+# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 
- ##  <a name="compat"></a> Compatibility with Configuration Manager versions  
+
+ In this article:
+
+*    [Compatibility with Configuration Manager versions](#compatibility-with-configuration-manager-versions)
+*    [New hybrid features in July 2016](#new-hybrid-features-in-july-2016)
+*    [New hybrid features in June 2016](#new-hybrid-features-in-june-2016)  
+*    [New hybrid features in May 2016](##new-hybrid-features-in-may-2016)   
+*    [New hybrid features in April 2016](##new-hybrid-features-in-april-2016)   
+*    [New hybrid features in March 2016](##new-hybrid-features-in-march-2016)  
+
+##  Compatibility with Configuration Manager versions  
+
  Each section of this article lists hybrid features under 3 different categories. Use the following guidance to determine compatibility of the features in each category  with different versions of Configuration Manager:  
 
 |Feature categories|
@@ -129,7 +140,7 @@ The following features introduced in July 2016 work in hybrid deployments exactl
 
  - **Full wipe now available for Windows 10 devices**
 
-    Windows 10 PCs and laptops enrolled as mobile devices can be wiped to reset the device to its factory settings. For more information, see [How to protect your devices with remote wipe](/sccm/mdm/deploy-use/wipe-lock-reset-devices).
+    Windows 10 PCs and laptops enrolled as mobile devices can be wiped to reset the device to its factory settings. For more information, see [How to protect your devices with remote wipe](/sccm/mdm/deploy-use/wipe-lock-reset).
 
 - **Changes to Device Enrollment Managers accounts in the iOS Company Portal app**
 
@@ -137,7 +148,7 @@ The following features introduced in July 2016 work in hybrid deployments exactl
 
   The DEM user may perform actions on the local device, but remote management of other enrolled devices can only be performed from the Intune admin console. Additionally, Intune is deprecating use of DEM accounts with either the Apple Device Enrollment Program or the Apple Configurator tool. Both these enrollment methods already support user-less enrollment for shared iOS devices.
 
-  Only use DEM accounts when user-less enrollment for shared devices is unavailable. For more information, see [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+  Only use DEM accounts when user-less enrollment for shared devices is unavailable. For more information, see [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](../deploy-use/enroll-devices-with-device-enrollment-manager).
 
 - **Changes to the Android Company Portal app**
 
@@ -157,14 +168,14 @@ No new hybrid features have been introduced in July 2016 for Configuration Manag
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606. These features require you to use the Configuration Manager console to configure and manage them.
 
 * Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#TP1604))
-* 	SmartLock setting for Android devices ([1604](#TP1604))
-*	App-triggered VPN for Windows 10 devices ([1605](#TP1605))
-*	New experience for remote device actions ([1605](#TP1605))
-*	Windows Store for Business apps ([1605](#TP1605))
-*	General improvements for volume-purchased apps ([1605](#TP1605))
-*	Windows Information Protection (WIP) ([1605](#TP1605))
-*	Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#TP1605))
-*	Automatically categorize devices into collections ([1606](#TP1606))
+* 	SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
+*	App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
+*	New experience for remote device actions ([1605](#new-in-1605-technical-preview))
+*	Windows Store for Business apps ([1605](#new-in-1605-technical-preview))
+*	General improvements for volume-purchased apps ([1605](#new-in-1605-technical-preview))
+*	Windows Information Protection (WIP) ([1605](#new-in-1605-technical-preview))
+*	Pre-declare corporate-owned devices with IMEI or iOS serial number ([1605](#new-in-1605-technical-preview))
+*	Automatically categorize devices into collections ([1606](#new-in-1606-technical-preview))
 
 For information on the new functionality, see the documentation for the specified Technical Preview release.
 
@@ -216,12 +227,13 @@ The following features introduced in June 2016 work in hybrid deployments exactl
   * When end users are installing line-of-business apps, they will now see an improved app installation experience. If the app installation is taking a long time, users can manually sync their device to force the sync process to resume. To review the end-user instructions, see Sync your iOS device manually.
   * The Microsoft Intune Company Portal app for iOS has been updated to support iOS version 8.0 and later. This update means that end users can install the Company Portal app and enroll new devices in Intune only if the device is running iOS version 8.0 or later. Users who have already enrolled devices that are running on an unsupported version of iOS can continue to use the Company Portal app that is on their device.
 
-### <a name="TP1606"></a> New in Configuration Manager Technical Preview 1606
+
+### New in 1604 Technical Preview
 The following new features introduced in June 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1606. These features require you to use the Configuration Manager console to configure and manage them.
 
 - **Automatically categorize devices into collections**
 
-  You can create device categories, which can be used to automatically place devices in device collections when you are using Configuration Manager with Intune. Users are then required to choose a device category when they enroll a device in Intune. You can additionally change the category of a device from the Configuration Manager console. For more information, see [Automatically categorize devices into collections](../../core/get-started/capabilities-in-technical-preview-1606.md#dmp_category) in [Capabilities in Technical Preview 1606 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1606.md).
+  You can create device categories, which can be used to automatically place devices in device collections when you are using Configuration Manager with Intune. Users are then required to choose a device category when they enroll a device in Intune. You can additionally change the category of a device from the Configuration Manager console. For more information, see [Automatically categorize devices into collections](/sccm/core/get-started/capabilities-in-technical-preview-1606.md#dmp_category) in [Capabilities in Technical Preview 1606 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1606.md).
 
   > [!IMPORTANT]
   > This capability works with the June 2016 release of Microsoft Intune. Ensure that you have been updated to this release before you try out these procedures.
@@ -254,12 +266,13 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   End users can now more easily identify the device they’ve selected when they are using the Company Portal website. If the wrong device is selected, they can select the correct device by tapping the **Tap here** link in the home page banner.  
 
-### <a name="TP1605"></a> New in Configuration Manager Technical Preview 1605
+
+### New in 1605 Technical Preview  
  The following new features introduced in May 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1605. These features require you to use the Configuration Manager console to configure and manage them.  
 
 - **App-triggered VPN for Windows 10 devices**
 
-  For Windows 10 devices managed using Configuration Manager with Intune, you can add a list of apps that automatically open a VPN connection that you have configured through the Configuration Manager admin console. For more information, see [App-triggered VPN for Windows 10 devices](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_PerAppVPN) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1605.md)  
+  For Windows 10 devices managed using Configuration Manager with Intune, you can add a list of apps that automatically open a VPN connection that you have configured through the Configuration Manager admin console. For more information, see [App-triggered VPN for Windows 10 devices](/sccm/core/get-started/capabilities-in-technical-preview-1605) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)  
 
 - **New experience for remote device actions**
 
@@ -267,19 +280,19 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and **Bypass Activation Lock** can now be found in the **Remote Device Actions** menu accessed from the **Assets and Compliance** workspace
 
-  For more information, see [New experience for remote device actions](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_Remote) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1605.md).  
+  For more information, see [New experience for remote device actions](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **Windows Store for Business apps**
 
-  The [Windows Store for Business](https://www.microsoft.com/en-us/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console. For more information, see [Windows Store for Business apps](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_WSFB) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1605.md).  
+  The [Windows Store for Business](https://www.microsoft.com/en-us/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console. For more information, see [Windows Store for Business apps](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#windows-store-for-business-apps) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **General improvements for volume-purchased apps**
 
-  Volume-purchased apps from the Windows Store for Business and the iOS app store have been consolidated into the same view, **License Information for Store Apps**. Also, the way in which you create volume-purchased apps for iOS has been improved. For more information, see[General improvements for volume-purchased apps](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_VPP2) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1605.md).  
+  Volume-purchased apps from the Windows Store for Business and the iOS app store have been consolidated into the same view, **License Information for Store Apps**. Also, the way in which you create volume-purchased apps for iOS has been improved. For more information, see[General improvements for volume-purchased apps](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#general-improvements-for-volume-purchased-apps) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **Pre-declare corporate-owned devices with IMEI or iOS serial number**
 
-  You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  For more information, see [Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](../../core/get-started/capabilities-in-technical-preview-1605.md).  
+  You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  For more information, see [Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#pre-declare-corporate-owned-devices-with-with-imei-or-ios-serial-number) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **Windows Information Protection (WIP)**
 
@@ -325,16 +338,17 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   When end users are installing line-of-business apps, they will now see an improved app installation experience. If the app installation is taking a long time, users can manually sync their device to force the sync process to resume. To review the end-user instructions, see [Sync your device manually to speed up app installations](/intune/enduser/using-your-windows-device-with-intune) in the Intune library.  
 
-### <a name="TP1604"></a> New in Configuration Manager Technical Preview 1604
+###  New in Configuration Manager Technical Preview 1604
  The following new features introduced in April 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1604. These features require you to use the Configuration Manager console to configure and manage them.  
 
 - **Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console**
 
-  Support for Windows Store for Business is available in Configuration Manager Technical Preview 1604 to help you find, manage, and distribute apps to the Windows 10 devices you’re managing. For details, see [Manage volume-purchased apps from the Windows Store for Business in Technical Preview 1604](../../core/get-started/capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP).  
+
+  Support for Windows Store for Business is available in Configuration Manager Technical Preview 1604 to help you find, manage, and distribute apps to the Windows 10 devices you’re managing. For details, see [Manage volume-purchased apps from the Windows Store for Business](/sccm/core/get-started/capabilities-in-technical-preview-1604#manage-volume-purchased-apps-from-the-windows-store-for-business) in [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604).  
 
 - **SmartLock setting for Android devices**
 
-  A new setting has been added to the Android and Samsung KNOX configuration item that lets you control the SmartLock feature on compatible Android devices.  You can use this setting to prevent end users from configuring SmartLock. See [SmartLock setting for Android devices in Technical Preview 1604](../../core/get-started/capabilities-in-technical-preview-1604.md#BKMK_Smart).  
+  A new setting has been added to the Android and Samsung KNOX configuration item that lets you control the SmartLock feature on compatible Android devices.  You can use this setting to prevent end users from configuring SmartLock. See [SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices) in [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604.md).  
 
 ### New in Configuration Manager (current branch)  
  No new hybrid features were introduced in April 2016 for Configuration Manager (current branch).  
@@ -396,11 +410,11 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
 - **iOS app configuration policies**
 
-  In version 1602 of Configuration Manager (current branch) you can use app configuration policies to supply settings that might be required when the user runs an iOS app. For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
+  In version 1602 of Configuration Manager (current branch) you can use app configuration policies to supply settings that might be required when the user runs an iOS app. For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies).  
 
 - **Manage volume-purchased iOS apps**
 
-  In version 1602 of Configuration Manager (current branch), you can deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP) by importing the license information from the app store and tracking how many of the licenses you have used. For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
+  In version 1602 of Configuration Manager (current branch), you can deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP) by importing the license information from the app store and tracking how many of the licenses you have used. For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](/sccm/apps/deploy-use/manage-volume-purchased-ios-apps).  
 
 - **Automatic creation of Office mobile apps**
 
@@ -417,7 +431,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
 - **Kiosk mode settings for Android Samsung KNOX devices**
 
-  Kiosk mode allows you to lock a device to only allow certain features to work.  Beginning in version 1602 of  Configuration Manager (current branch), you can now specify kiosk mode settings for Samsung KNOX devices. For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
+  Kiosk mode allows you to lock a device to only allow certain features to work.  Beginning in version 1602 of  Configuration Manager (current branch), you can now specify kiosk mode settings for Samsung KNOX devices. For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client).  
 
 - **iOS Activation Lock**
 
