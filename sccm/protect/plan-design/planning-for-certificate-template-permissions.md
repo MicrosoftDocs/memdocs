@@ -27,7 +27,7 @@ The following information can help you plan for how to configure permissions for
 
 -   Read for the account that runs the System Center Configuration Manager console  
 
- For more information about these security permissions, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../../protect/deploy-use/configuring-certificate-profiles.md#BKMK_Step1) in [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md).  
+ For more information about these security permissions, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../deploy-use/certificate-infrastructure.md#BKMK_Step1).  
 
  When you use this default configuration, users and devices cannot directly request certificates from the certificate templates and all requests must be initiated by the Network Device Enrollment Service. This is an important restriction, because these certificate templates must be configured with **Supply in the request** for the certificate Subject, which means that there is a risk of impersonation if a rogue user or a compromised device requests a certificate. In the default configuration, the Network Device Enrollment Service must initiate such a request. However, this risk of impersonation remains if the service that runs the Network Device Enrollment Service is compromised. To help avoid this risk, follow all security best practices for the Network Device Enrollment Service and the computer that runs this role service.  
 
@@ -53,7 +53,3 @@ The following information can help you plan for how to configure permissions for
     -   On the site system server that hosts the certificate registration point, create the following DWORD registry key to have a value of 1: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  On the issuing CA, on the **Security** tab in the properties for the certificate template, add one or more security groups to grant the user or device accounts Read and Enroll permissions.  
-
-### See also  
-
- [Planning for certificate profiles in System Center Configuration Manager](../Topic/Planning%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

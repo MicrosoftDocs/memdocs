@@ -22,7 +22,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  This topic contains information that applies to all versions of the Technical Preview, and also  lists each new capability (or feature) along with the  Technical Preview version in which the capability first appears, like version 1512 for December of 2015. The details for these capabilities are detailed in  separate topics dedicated to each preview version.  
 
- For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changs/what-has-changed-from-configuration-manager-2012).
+ For information about what's new in the current branch of Configuration Manager, see [What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
 
 > [!NOTE]  
 >  For information about what's in System Center Configuration Manager Technical Preview 4 (and earlier previews), see [Technical Previews for the pre-release of System Center Configuration Manager](https://technet.microsoft.com/library/dn965439.aspx)  
@@ -162,7 +162,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
  |New tabs for Updates and Operating Systems in Software Center|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_SW1)|[Release 1606 ](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |Service a server group |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|[Release 1606](/sccm/sum/deploy-use/service-a-server-group)|   
  |Support for Windows Defender Advanced Threat Protection service |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_ATP)|[Release 1606](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection)|  
- |New restart options for Windows 10 clients after software update installation|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_RestartOptions)|[Release 1606](/sccm/sum/plan-design#restart-options-for-Windows-10-clients-after-software-update-installation)|  
+ |New restart options for Windows 10 clients after software update installation|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_RestartOptions)|[Release 1606](/sccm/sum/plan-design/plan-for-software-updates#restart-options-for-Windows-10-clients-after-software-update-installation)|  
  |On-premises Device Health Attestation |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_DHA)|[Release 1606](/sccm/core/servers/manage/health-attestation)|  
  |Pre-declare corporate-owned devices with IMEI or iOS serial number|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_IMEI)|[Release 1606](/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id)|  
  |Manage volume-purchased apps from the Windows Store for Business| [Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP)|[Release 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  

@@ -33,7 +33,3 @@ This topic contains security and privacy information for Wi-Fi and VPN profiles 
  By default, devices do not evaluate Wi-Fi and VPN profiles. In addition, you must configure the profiles, and then deploy them to users.  
 
  Before you configure Wi-Fi or VPN profiles, consider your privacy requirements.  
-
-### See also  
-
- [Wi-Fi Profiles in System Center Configuration Manager](../Topic/Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)

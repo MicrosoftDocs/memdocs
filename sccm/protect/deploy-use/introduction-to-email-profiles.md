@@ -36,7 +36,4 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
-
-## See Also  
- [Email profiles in System Center Configuration Manager](../Topic/Email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  

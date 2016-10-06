@@ -34,7 +34,7 @@ Configuration Manager does not support site system roles for multiple sites on a
 
     When you want to use Microsoft Azure to host content you deploy to clients, the information in this topic will help you configure the required certificate files to enable Configuration Manager to communicate with and use your Microsoft Azure subscription. In addition, you  will need to configure name resolution to enable your clients to find your cloud-based distribution points.  
 
--   [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mobile-device-management.md)  
+-   [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
      This topic will help you successfully configure your site system roles to support managing modern devices using Configuration Manager on-premises MDM.  
 

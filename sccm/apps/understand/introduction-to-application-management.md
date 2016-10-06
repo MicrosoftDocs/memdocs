@@ -66,7 +66,7 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 
 
 ## State-based applications  
- Configuration Manager applications use state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
+ Configuration Manager applications use state-based monitoring, by which you can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if an application is deployed to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. You can monitor the deployment of all software by using the **Monitoring** workspace in the Configuration Manager console. Software deployments include software updates, compliance settings, applications, task sequences, and packages and programs. For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
  Application deployments are regularly re-evaluated by Configuration Manager. For example:  
 
@@ -79,7 +79,7 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 ## Get started creating an application  
  If you want to jump right in and start to create an application, you'll find a walkthrough for creating a simple application in the [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md) topic.  
 
- If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Create applications](/sccm/apps/deploy-use/create-applications.md).  
+ If you are familiar with the basics and looking for more detailed reference information about all the options available to you, start from [Create applications](/sccm/apps/deploy-use/create-applications).  
 
 ## Software Center and the Application Catalog  
  In previous versions of Configuration Manager, Software Center was used to install and schedule software installations, configure remote control settings, and configure power management settings. Users could connect to the Application Catalog to browse for, and request software, configure some preference settings, and remotely wipe their mobile devices.  
