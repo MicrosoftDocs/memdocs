@@ -49,27 +49,27 @@ ms.assetid:
                   <span class="step-number">1</span>
                   <p>Core infrastructure</p>
                 </div>
-                <p class="description column-two-thirds">Something about the core infrastructure</p>
+                <p class="description column-two-thirds">Learn about the capabilities of Configuration Manager and how to plan, deploy, and manage the servers and clients that comprise the core infrastructure of the system.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>Core article 1</h3>
-                    <p>Something about core article 1</p>
+                  <a href="/sccm/core/understand/introduction">
+                    <h3>Introduction to System Center Configuration Manager</h3>
+                    <p>Learn the basics about Configuration Manager features and capabilities.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Core article 2</h3>
-                    <p>Something about core article 2</p>
+                  <a href="/sccm/core/servers/manage/update">
+                    <h3>Updates for System Center Configuration Manager </h3>
+                    <p>Start here to learn how you keep Configuration Manager up to date, including what a baseline version or update version of Configuration Manager is, and how in-console updates and servicing finds new updates for your infrastructure.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>Core article 3</h3>
-                    <p>Something about core article 3</p>
+                  <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
+                    <h3>How to deploy clients to Windows computers</h3>
+                    <p>Learn how to use different installation methods to deploy the Configuration Manager client to Windows computers in your organization.</p>
                   </a>
                 </li>
               </ul>
@@ -83,7 +83,7 @@ ms.assetid:
                   <span class="step-number">2</span>
                   <p>Application management</p>
                 </div>
-                <p class="description column-two-thirds": Learn how to manage applications through their lifecycle.</p>
+                <p class="description column-two-thirds">Learn how to manage applications through their lifecycle.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
@@ -150,30 +150,29 @@ ms.assetid:
               <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
                 <div class="title column-third">
                   <span class="step-number">4</span>
-                  <p>Mobile device management</p>
+                  <p>Mobile device management (MDM)</p>
                 </div>
-                <p class="description column-two-thirds">Something about mobile device management.
-                </p>
+                <p class="description column-two-thirds">Learn about how to manage mobile devices with Intune or with the Configuration Manager on-premises infrastructure.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>MDM article 1</h3>
-                    <p>Something about MDM article 1</p>
+                  <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
+                    <h3>•	Understand hybrid mobile device management (MDM)/h3>
+                    <p>Learn how you can manage iOS, Windows, and Android devices with Configuration Manager. By using the Microsoft Intune service you users can enroll their personal devices or you can manage company owned devices in a variety of ways.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>MDM article 2</h3>
-                    <p>Something about MDM article 2</p>
+                  <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
+                    <h3>•	Set up hybrid MDM with Intune</h3>
+                    <p>Follow these steps to enable “bring your own device” (BYOD) scenarios and to meet the prerequisites for most company-owned device management strategies.</p>
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="">
-                    <h3>MDM article 3</h3>
-                    <p>Something about MDM article 3</p>
+                  <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
+                    <h3>Choose between Intune standalone and hybrid MDM with Configuration Manager</h3>
+                    <p>Learn about the differences between managing devices with Intune standalone or hybrid MDM, and why to choose one over the other.</p>
                   </a>
                 </li>
               </ul>
@@ -185,7 +184,7 @@ ms.assetid:
               <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
                 <div class="title column-third">
                   <span class="step-number">5</span>
-                  <p>Operating system deployment</p>
+                  <p>Operating system deployment (OSD)</p>
                 </div>
                 <p class="description column-two-thirds">Learn how to deploy enterprise operating systems and automate tasks.</p>
               </a>
@@ -221,16 +220,15 @@ ms.assetid:
                   <span class="step-number">6</span>
                   <p>Protect data and infrastructure</p>
                 </div>
-                <p class="description column-two-thirds">Something about Protect.
-                </p>
+                <p class="description column-two-thirds">Learn about protecting your Configuration Manager infrastructure and data using conditional access, System Center Endpoint Protection, and other capabilities.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="">
-                    <h3>Protect article 1</h3>
-                    <p>Something about protect article 1</p>
+                  <a href="/sccm/protect/understand/backup-and-recovery">
+                    <h3>Backup and recovery options</h3>
+                    <p>A backup and recovery plan can help you avoid data loss. Learn about backup and recovery approaches for sites and hierarchies.</p>
                   </a>
                 </li>
                 <li class="column-third">
@@ -254,7 +252,7 @@ ms.assetid:
               <a href="/sccm/sum/understand/software-updates-introduction">
                 <div class="title column-third">
                   <span class="step-number">7</span>
-                  <p>Software update management</p>
+                  <p>Software update management (SUM)</p>
                 </div>
                 <p class="description column-two-thirds">Learn how to manage software updates.</p>
               </a>
