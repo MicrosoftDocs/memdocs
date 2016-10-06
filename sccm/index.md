@@ -83,7 +83,7 @@ ms.assetid:
                   <span class="step-number">2</span>
                   <p>Application management</p>
                 </div>
-                <p class="description column-two-thirds": Learn how to manage applications through their lifecycle.</p>
+                <p class="description column-two-thirds">Learn how to manage applications through their lifecycle.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
