@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
 
- System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/what's-new-incremental-versions).
+ System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
 
 
@@ -111,7 +111,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 -   System Center Configuration Manager can now differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 -   You can now schedule and run the WSUS clean up task from the Configuration Manager console.  
-    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/manage-software-updates.md#BKMK_WSUSCleanUp).  
+    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance).  
 
 ## Compliance settings  
 
