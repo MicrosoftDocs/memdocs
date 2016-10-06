@@ -40,7 +40,3 @@ This topic contains security and privacy information for certificate profiles in
  By default, devices do not evaluate certificate profiles. In addition, you must configure the certificate profiles, and then deploy them to users or devices.  
 
  Before you configure certificate profiles, consider your privacy requirements.  
-
-### See also  
-
- [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

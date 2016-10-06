@@ -19,13 +19,6 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 # Choose a device management solution for System Center Configuration Manager
 System Center Configuration Manager offers different solutions for managing PCs, servers, and devices. You can choose the solution that's right for you based on the device platforms you need to manage and the management functionality you need.  
 
- In this article:  
-
--   [Overview of device management solutions](#bkmk_overview)  
-
--   [Compare device management solutions based on supported mobile device platforms](#bkmk_comp1)  
-
--   [Compare mobile device management solutions based on management functionality](#bkmk_comp2)  
 
 ##  <a name="bkmk_overview"></a> Overview of device management solutions  
  The following options are available to manage computers and  devices with Configuration Manager:  
@@ -34,7 +27,7 @@ System Center Configuration Manager offers different solutions for managing PCs,
 
      This option, which requires installation of the Configuration Manager client application on each device to be managed, provides the most features and functionality for managing PCs, servers, and other devices in your environment. This option is the traditional way Configuration Manager has provided device management over the history of the product.  
 
-     For more information about this solution, see [Manage computer clients with System Center Configuration Manager](../Topic/Manage%20computer%20clients%20with%20System%20Center%20Configuration%20Manager.md).  
+     For more information about this solution, see [Client installation methods in System Center Configuration Manager ](/sccm/core/client/deploy/plan/client-installation-methods).  
 
 -   **Managing mobile devices with on-premises Configuration Manager infrastructure**  
 
@@ -72,13 +65,7 @@ System Center Configuration Manager offers different solutions for managing PCs,
 |Windows Phone||Yes||Yes|  
 |Windows Server|Yes|||Yes|  
 
- For a complete list of support platforms, see the following sections in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md):  
-
--   [Supported operating systems for System Center Configuration Manager Clients](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_ClientOS)  
-
--   [Mobile devices enrolled by Microsoft Intune](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_IntuneOS)  
-
--   [On-premises mobile device management](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_OnpremOS)  
+ For a complete list of supported platforms, see [Supported operating systems for clients and devices for System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md).
 
 ##  <a name="bkmk_comp2"></a> Compare mobile device management solutions based on management functionality  
 
@@ -98,6 +85,3 @@ System Center Configuration Manager offers different solutions for managing PCs,
 |Block from Configuration Manager|Yes|Yes|Yes||  
 |Quarantine and block from Exchange Server (and Configuration Manager)||||Yes|  
 |Remote wipe|Yes|Yes|Yes|Yes|  
-
-## See Also  
- [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md)

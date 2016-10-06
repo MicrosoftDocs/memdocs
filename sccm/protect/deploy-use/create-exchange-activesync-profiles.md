@@ -37,7 +37,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
- When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).    
+ When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
 
 ## Steps to Create an Exchange ActiveSync Email Profile  
  Use the following required steps to create an email profile by using the **Create Exchange ActiveSync Email Profile Wizard**.  
@@ -118,7 +118,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
     -   **Identity certificate:** Click **Select** and then select a certificate to use for identity.  
 
         > [!NOTE]  
-        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+        >  Before you can select the identity certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
          This option is only available if you selected **Certificates** under **Authentication method**.  
 
@@ -127,14 +127,14 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
     -   **Encryption certificates:** Click **Select** and then select a certificate to use for encryption. This option is applicable to iOS devices only.  
 
         > [!NOTE]  
-        >  Before you can select the encryption certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+        >  Before you can select the encryption certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
          This option is only available if you selected **Use S/MIME**.  
 
     -   **Signing certificates:** Click **Select** and then select a certificate to use for signing. This option is applicable to iOS devices only.  
 
         > [!NOTE]  
-        >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+        >  Before you can select the signing certificate, you must first configure it as a Simple Certificate Enrollment Protocol (SCEP) certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
          This option is only available if you selected **Use S/MIME**.  
 
@@ -205,8 +205,4 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 ###  <a name="BKMK_Step6"></a> Step 6: Complete the Wizard.  
  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard. The new Exchange ActiveSync email profile is displayed in the **Email Profiles** node in the **Assets and Compliance** workspace.  
 
- For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy email profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-email-profiles.md).  
-
-### See also  
-
- [Operations and maintenance for email profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+ For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

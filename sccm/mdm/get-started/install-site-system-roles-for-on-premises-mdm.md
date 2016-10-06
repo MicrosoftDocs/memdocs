@@ -61,4 +61,4 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
 
      This effectively turns the management point into  a device management point.  
 
- Once the site system roles have been added and configured for managing modern devices, you then need to configure the servers hosting the roles as trusted endpoints for enrolling and communicating with managed devices. See [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management.md) for more information.  
+ Once the site system roles have been added and configured for managing modern devices, you then need to configure the servers hosting the roles as trusted endpoints for enrolling and communicating with managed devices. See [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md) for more information.  

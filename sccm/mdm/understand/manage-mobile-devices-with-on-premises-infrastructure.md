@@ -30,14 +30,14 @@ System Center Configuration Manager On\-premises Mobile Device Management is a d
 
  The following topics provides information you can use to plan, prepare, and enroll devices for On\-premises Mobile Device Management:  
 
--   [Plan for On-premises Mobile Device Management in System Center Configuration Manager](../plan-design/plan-for-on-premises-mobile-device-management.md)  
+-   [Plan for On-premises Mobile Device Management in System Center Configuration Manager](../plan-design/plan-on-premises-mdm.md)  
 
      Learn about what to consider when setting up the Configuration Manager infrastructure and planning for device enrollment in On\-premises Mobile Device Management.  
 
--   [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../get-started/preparation-steps-for-on-premises-mobile-device-management.md)  
+-   [Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager](../get-started/preparation-steps-for-on-premises-mdm.md)  
 
      Learn about how to get the Configuration Manager system ready for On\-premises Mobile Device Management by setting up the Microsoft Intune subscription, setting up certificates, installing site system roles, and setting up device enrollment.  
 
--   [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../deploy-use/enroll-devices-for-on-premises-mobile-device-management.md)  
+-   [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../deploy-use/enroll-devices-on-premises-mdm.md)  
 
      Learn about how enrollment occurs, how users can enroll their own devices, and how to bulk-enroll devices with an enrollment package.  

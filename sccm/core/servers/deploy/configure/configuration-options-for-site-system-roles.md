@@ -46,7 +46,7 @@ Most configuration options for System Center Configuration Manager site system r
  For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_CertificateRegistrationPoint"></a> Certificate registration point  
- For information about how to configure the certificate registration point, see [Introduction to certificate profiles ](/sccm/protect/deploy-use/introcution-to-certificate-profiles).  
+ For information about how to configure the certificate registration point, see [Introduction to certificate profiles ](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
 
 ##  <a name="BKMK_Distribution_Point"></a> Distribution point  
  For information about how to configure the distribution point for content deployment, see [Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
@@ -96,7 +96,7 @@ Enrollment points are used to install Mac computers and enroll devices you manag
 
 -   [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
 
--   [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/how-users-enroll-devices-with-on-premises-mobile-device-management.md)  
+-   [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 **Allowed connections**  
 
@@ -105,7 +105,7 @@ Enrollment points are used to install Mac computers and enroll devices you manag
  For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_Enrollment_Proxy_Point"></a> Enrollment proxy point  
-For information about how to configure an enrollment proxy point for mobile devices, see [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/how-users-enroll-devices-with-on-premises-mobile-device-management.md).  
+For information about how to configure an enrollment proxy point for mobile devices, see [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 **Client connections**  
 

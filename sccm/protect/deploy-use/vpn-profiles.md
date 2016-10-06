@@ -22,7 +22,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  For example, you want to provision all devices that run the iOS operating system with the settings required to connect to a file share on the corporate network. You can create a VPN profile containing the settings necessary to connect to the corporate network and then deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the VPN connection in the list of available networks and can connect to this network with the minimum of effort.  
 
- When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+ When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
  The sections below explain what devices you can configure with VPN profiles if you are using Configuration Manager, or Configuration Manager with Microsoft Intune.  
 
@@ -61,8 +61,6 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 ### Next steps  
  Use the following topics to help you plan for, configure, operate, and maintain VPN profiles in Configuration Manager.  
 
--   [Prerequisites for VPN profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-vpn-profiles.md)  
+-   [Prerequisites for VPN profiles in System Center Configuration Manager](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
--   [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)  
-
--   [Security and privacy for VPN profiles in System Center Configuration Manager](../../protect/plan-design/security-and-privacy-for-vpn-profiles.md)
+-   [Security and privacy for VPN profiles in System Center Configuration Manager](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)

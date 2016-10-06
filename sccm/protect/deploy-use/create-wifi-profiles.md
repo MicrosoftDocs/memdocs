@@ -43,7 +43,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 > [!IMPORTANT]  
 >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled in Microsoft Intune]. For information about how to get your devices enrolled, see [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
 
- When you create a Wi-Fi profile, you can include a wide range of security settings. These include certificates for server validation and client authentication that have been provisioned by using Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+ When you create a Wi-Fi profile, you can include a wide range of security settings. These include certificates for server validation and client authentication that have been provisioned by using Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
 ## Steps to Create a Wi-Fi Profile  
  Use the following required steps to create a Wi-Fi profile by using the **Create Wi-Fi Profile Wizard**.  
@@ -151,7 +151,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 -   **Select a client certificate for client authentication**: If the server or network device requires a client certificate to authenticate the connecting device, select the certificate profile that contains the client authentication certificate.  
 
 > [!NOTE]  
->  Before you can select the root certificate and client certificate, you must first configure and deploy them as a certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+>  Before you can select the root certificate and client certificate, you must first configure and deploy them as a certificate profile. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
 ##  <a name="BKMK_Step5"></a> Step 5: Configure Advanced Settings for the Wi-Fi Profile  
  On the **Advanced Settings** page of the Create Wi-Fi Profile Wizard, specify advanced settings for the Wi-Fi profile such as the authentication mode, single sign-on options, and Federal Information Processing Standards compliance. For more information about these options, see your Windows documentation.  
@@ -171,8 +171,4 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 ##  <a name="BKMK_Step8"></a> Step 8: Complete the Wizard  
  On the **Summary** page of the Wizard, review the actions that the wizard will take, and then complete the wizard. The new Wi-Fi profile appears in the **Wi-Fi Profiles** node in the **Assets and Compliance** workspace.  
 
- For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-wifii-profiles.md).  
-
-### See also  
-
- [Operations and maintenance for Wi-Fi Profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20Wi-Fi%20Profiles%20in%20System%20Center%20Configuration%20Manager.md)
+ For information about how to deploy the Wi-Fi profile, see [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

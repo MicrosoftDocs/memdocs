@@ -38,7 +38,7 @@ PXE-initiated operating system deployments in System Center Configuration Manage
 
 -   To enable PXE on a boot image, select  **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.  
 
--   If you change the properties for the boot image, re-distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_dist).  
+-   If you change the properties for the boot image, re-distribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content).  
 
 ##  <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments  
  When you use PXE to deploy operating systems, you can create an exclusion list on each distribution point to  ignore PXE boot requests from computers that are in the exclusion list. The exclusion list contains MAC addresses of the computers that you want the distribution point to ignore. These computers will not receive the deployment task sequences that Configuration Manager uses for PXE deployment.  
