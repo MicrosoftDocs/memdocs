@@ -126,7 +126,7 @@ After you install the Endpoint Protection client on your reference computer, ver
 ### How to Prepare the Endpoint Protection Client for Imaging
 After you verify that the Endpoint Protection client is installed correctly on the reference computer, you can prepare the computer for imaging. Perform the following steps to prepare the Endpoint Protection client for imaging.
 
-For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/deploy-use/manage-operating-system-images).
+For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 ### To prepare the Endpoint Protection client for imaging
 
@@ -160,6 +160,6 @@ For more information about operating system deployment in Configuration Manager,
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\RemovalTools\MRT\GUID**
 
-After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/osd/deploy-use/manage-operating-system-images).
+After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 When an image that contains the Endpoint Protection client software is deployed, the Endpoint Protection client will automatically report information to the Configuration Manager site to which the computer is assigned, and policy applicable to the client computer is downloaded and applied.

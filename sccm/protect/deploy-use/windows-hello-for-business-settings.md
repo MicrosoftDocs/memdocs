@@ -24,7 +24,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 
 -   You can use Configuration Manager to control which gestures users can and cannot use to sign in.  
 
--   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).  
+-   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
 <!-- [cmshort](../../apps/deploy-use/includes/cmshort_md.md)] for domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#BKMK_Dom), below.!-->
 <!-- When you are using Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.-->    
@@ -150,7 +150,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 
 -   In the certificate profile, select a template that uses Smart Card logon EKU.  
 
- For more information, see [Certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md).  
+ For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
 ### See also  
  [Protect data and site infrastructure with System Center Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)

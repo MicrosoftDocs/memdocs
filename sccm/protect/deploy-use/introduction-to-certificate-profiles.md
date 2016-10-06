@@ -63,9 +63,6 @@ Certificate profiles in System Center Configuration Manager works with Active Di
 
 -   Android  
 
-    > [!NOTE]  
-    >  For information about actions that end-users must take when installing a certificate on a device running Android, see [How to install certificates on Android devices in System Center Configuration Manager](../Topic/How%20to%20install%20certificates%20on%20Android%20devices%20in%20System%20Center%20Configuration%20Manager.md).  
-
 > [!IMPORTANT]  
 >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled into Microsoft Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
@@ -99,7 +96,3 @@ Certificate profiles in System Center Configuration Manager works with Active Di
 -   The device is blocked from the System Center Configuration Manager hierarchy.  
 
  To revoke the certificates, the site server sends a revocation command to the issuing certification authority. The reason for the revocation is **Cease of Operation**.  
-
-### See also  
-
- [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

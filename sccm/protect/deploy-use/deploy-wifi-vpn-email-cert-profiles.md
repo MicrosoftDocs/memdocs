@@ -13,25 +13,6 @@ ms.topic: article
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 caps.latest.revision: 5
 author: Nbigmanms.author: nbigmanmanager: angrobe
-translation.priority.ht: 
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
 ---
 # Deploy profiles in System Center Configuration Manager
 Profiles must be deployed to one or more collections before they can be used.  
@@ -46,8 +27,8 @@ Profiles must be deployed to one or more collections before they can be used.
 
 > -   Before you can deploy certificate profiles, you must first configure the infrastructure and create certificate profiles. For more information, see the following topics:  
 >   
->  -   [Configuring certificate profiles in System Center Configuration Manager](../../protect/deploy-use/configuring-certificate-profiles.md)  
-> -   [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md)    
+>  -   [Configuring certificate infrastructure in System Center Configuration Manager](certificate-infrastructure.md)  
+> -   [How to create certificate profiles in System Center Configuration Manager](create-certificate-profiles.md)    
 
 > [!IMPORTANT]  
 >  When a Wi-Fi profile deployment is removed, the Wi-Fi profile is not removed from client devices. If you want to remove the profile from devices, you must manually remove it.
@@ -79,6 +60,6 @@ Profiles must be deployed to one or more collections before they can be used.
 
 ### See also  
 
-[How to monitor Wi-Fi, VPN, and email profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-wifi-vpn-email-profiles.md)
+[How to monitor Wi-Fi, VPN, and email profiles in System Center Configuration Manager](monitor-wifi-email-vpn-profiles.md)
 
-[How to monitor certificate profiles in System Center Configuration Manager](../../protect/deploy-use/monitor-certificate-profiles.md)
+[How to monitor certificate profiles in System Center Configuration Manager](monitor-certificate-profiles.md)

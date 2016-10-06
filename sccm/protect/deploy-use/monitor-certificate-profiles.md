@@ -71,14 +71,11 @@ After you deploy System Center Configuration Manager certificate profiles to use
     |0x00000040|The status information has been skipped. This can occur if a  HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring.|  
     |0x00000100|Enrollment has been denied.|  
 
-##  <a name="BKMK_Reports"></a> How to View Compliance Results by Using Reports  
+##  <a name="BKMK_Reports"></a> How to View Compliance Results by Using Reports
+
  Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
  For more information about how to configure reporting in System Center Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-
-### See also  
-
- [Operations and maintenance for certificate profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md)

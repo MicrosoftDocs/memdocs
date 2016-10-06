@@ -130,7 +130,7 @@ Use the following links to learn about the steps to create VPN profiles in Syste
 
         -   **Remember the user credentials at each logon**: Select this option to ensure that the user credentials are remembered so that the user does not have to enter credentials each time a connection is established.  
 
-        -   **Select a client certificate for client authentication** - Select the client SCEP certificate that you previously created that will be used to authenticate the VPN connection. For more information about how to use certificate profiles in System Center Configuration Manager, see [Certificate profiles in System Center Configuration Manager](../Topic/Certificate%20profiles%20in%20System%20Center%20Configuration%20Manager.md).  
+        -   **Select a client certificate for client authentication** - Select the client SCEP certificate that you previously created that will be used to authenticate the VPN connection. For more information about how to use certificate profiles in System Center Configuration Manager, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
             > [!NOTE]  
             >  For iOS devices, the SCEP profile you select will be embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile is not installed if the certificate is not present, or not compliant.  
@@ -198,8 +198,4 @@ Use the following links to learn about the steps to create VPN profiles in Syste
 ##  <a name="BKMK_Step8"></a> Step 8: Complete the Wizard  
  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard. The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.  
 
- For information about how to deploy the VPN profile, see [How to deploy VPN profiles in System Center Configuration Manager](../../protect/deploy-use/deploy-vpn-profiles.md).  
-
-### See also  
-
- [Operations and maintenance for VPN profiles in System Center Configuration Manager](../Topic/Operations%20and%20maintenance%20for%20VPN%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
+ For information about how to deploy the VPN profile, see [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

@@ -30,7 +30,3 @@ This topic contains security and privacy information for email profiles in Syste
  By default, devices do not evaluate email profiles. In addition, you must configure the email profiles, and then deploy them to users.  
 
  Before you configure email profiles, consider your privacy requirements.  
-
-### See also  
-
- [Email profiles in System Center Configuration Manager](../Topic/Email%20profiles%20in%20System%20Center%20Configuration%20Manager.md)
