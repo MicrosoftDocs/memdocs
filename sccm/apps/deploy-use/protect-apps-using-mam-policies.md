@@ -168,4 +168,4 @@ System Center Configuration Manager application management policies let you modi
 -   If no policy has already been deployed to the device, and two conflicting settings are deployed, the default setting built into the device is used.  
 
 ##  Available policy managed apps  
- For a list of the policy managed apps that are available for iOS and Android devices, see [Microsoft Intune application partners](https://www.microsoft.com/cloud-platform/microsoft-intune-partners).  
+ For a list of the policy managed apps that are available for iOS and Android devices, see [Microsoft Intune application partners](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners).  

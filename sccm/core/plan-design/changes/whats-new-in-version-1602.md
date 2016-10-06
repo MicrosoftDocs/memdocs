@@ -125,6 +125,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### New compliance policy rules  
  New compliance policy rules  like  automatic updates, password to unlock devices, have been added to support better security requirements.  
 
+
  For more details, see [Device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### Make sure enrolled and compliant devices always have access to Exchange On-Premises  
