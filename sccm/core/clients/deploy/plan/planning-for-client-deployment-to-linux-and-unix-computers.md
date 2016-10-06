@@ -115,9 +115,8 @@ You can install the System Center Configuration Manager client on computers that
 
  **Solaris 11 x86**  
 
-||||  
-|-|-|-|  
 |Required package|Description|Minimum version|  
+|----------------|-----------|---------------|  
 |SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
 |SUNWlibmsr|Math & Microtasking Libraries (Root)|5.11, REV=2011.04.11|  
 |SUNWcslr|Core Solaris Libraries (Root)|11.11, REV=2009.11.11|  
