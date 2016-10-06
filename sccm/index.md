@@ -17,7 +17,7 @@ ms.assetid:
 
     <section id="hero-content">
       <h1>System Center Configuration Manager (Current Branch) Documentation</h1>
-      <h2>Learn how to design, deploy, and manage System Center Configuration Manager.</h2>
+      <h2>Learn how to manage and protect corporate computers, servers, and devices with Configuration Manager on-premises infrastructure.</h2>
       <h3>Manage devices with Microsoft Intune? <a href="https://docs.microsoft.com/en-us/intune/" target="_blank">View Intune Documentation &rarr;</a></h3>
     </section>
 
