@@ -30,7 +30,5 @@ Eventually, you will likely want to make changes to an application, uninstall it
 
 -   **Uninstall applications** - Configuration Manager makes uninstalling an application easy. This can be accomplished silently, without any intervention from the end user.  
   
-     For more information, see [Uninstall applications](../../apps/deploy-use/uninstall-applications.md).  
-  
-
-     For more information, see [How to uninstall applications](../../apps/deploy-use/uninstall-applications.md).  
+For more information, see [Uninstall applications](../../apps/deploy-use/uninstall-applications.md).  
+   
