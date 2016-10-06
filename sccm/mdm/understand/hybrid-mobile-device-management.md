@@ -104,5 +104,5 @@ Configuration Manager hybrid MDM can manage the following device platforms:
 [!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ## Next steps
- - [Prerequisites for device enrollment](../deploy-use/prerequisites-for-enrollment.md)
- - [Manage corporate-owned devices](../deploy-use/manage-corporate-owned-devices.md)
+ - [Prerequisites for device enrollment](../deploy-use/setup-hybrid-mdm.md)
+ - [Manage corporate-owned devices](../deploy-use/enroll-company-owned-devices.md)

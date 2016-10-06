@@ -125,7 +125,8 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### New compliance policy rules  
  New compliance policy rules  like  automatic updates, password to unlock devices, have been added to support better security requirements.  
 
- For more details, see [Manage device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
+
+ For more details, see [Device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### Make sure enrolled and compliant devices always have access to Exchange On-Premises  
  **Default rule override - Always allow Intune enrolled and compliant devices to access Exchange on-premises:** When you check this option, devices that are enrolled in Intune and compliant with the compliance policies are allowed to access Exchange on-premises. This rule overrides the Default Rule, which means that even if you set the Default Rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.  

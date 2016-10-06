@@ -34,7 +34,7 @@ Task sequences in System Center Configuration Manager are used to automate a var
 
 -   [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer)  
+-   [Restart Computer](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
 
 -   [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 

@@ -39,47 +39,20 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
  When you create an email profile, you can include a wide range of security settings, including certificates for identity, encryption and signing that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).    
 
-## Steps to Create an Exchange ActiveSync Email Profile  
- Use the following required steps to create an email profile by using the **Create Exchange ActiveSync Email Profile Wizard**.  
 
-|Step|Details|More information|  
-|----------|-------------|----------------------|  
-|**Step 1:** Start the **Create Exchange ActiveSync Email Profile Wizard**.|Start the wizard in the **Assets and Compliance** workspace in the **Compliance Settings** node.|See the [Step 1: Start the Create Exchange ActiveSync Email Profile Wizard.](#BKMK_Step1) section in this topic.|  
-|**Step 2:** Provide general information about the Exchange ActiveSync email profile.|Provide a name and description for the Exchange ActiveSync email profile.|See the [Step 2: Provide General Information about the Exchange ActiveSync Email Profile.](#BKMK_Step2) section in this topic.|  
-|**Step 3:** Configure Exchange ActiveSync settings for the Exchange ActiveSync email profile.|Configure settings that the device will use to connect to Exchange ActiveSync such as the host name and email account details.|See the [Step 3: Configure Exchange ActiveSync Settings for the Exchange ActiveSync Email Profile.](#BKMK_Step3) section in this topic.|  
-|**Step 4:** Configure synchronization settings for the Exchange ActiveSync email profile.|Configure synchronization settings such as the number of days of email to synchronize and the content types that will be synchronized.|See the [Step 4: Configure Synchronization Settings for the Exchange ActiveSync Email Profile.](#BKMK_Step4) section in this topic.|  
-|**Step 5:** Specify supported platforms for the Exchange ActiveSync email profile.|Supported platforms are the operating systems where you will install the Exchange ActiveSync email profile.|See the [Step 5: Specify Supported Platforms for the Exchange ActiveSync Email Profile.](#BKMK_Step5) section in this topic.|  
-|**Step 6:** Complete the wizard.|Complete the wizard to create the new Exchange ActiveSync email profile.|See the [Step 6: Complete the Wizard.](#BKMK_Step6) section in this topic.|  
+## Create a New Exchange ActiveSync Email Profile  
 
-## Supplemental Procedures to Create a New Exchange ActiveSync Email Profile  
- Use the following information when the steps in the preceding table require supplemental procedures.  
-
-###  <a name="BKMK_Step1"></a> Step 1: Start the Create Exchange ActiveSync Email Profile Wizard.  
- Use this procedure to start the Create Exchange ActiveSync Email Profile Wizard.  
-
-##### To start the Create Exchange ActiveSync Email Profile Wizard  
+Start the Create Exchange ActiveSync Email Profile Wizard  
 
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
 
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**.  
+3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**. 
 
-###  <a name="BKMK_Step2"></a> Step 2: Provide General Information about the Exchange ActiveSync Email Profile.  
- Use this procedure to provide general information about the Exchange ActiveSync email profile.  
+4.  Follow the wizard instructions   
 
-##### To provide general information about the Exchange ActiveSync email profile  
-
-1.  On the **General** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
-
-    -   **Name:** Enter a unique name for the Exchange ActiveSync email profile. You can use a maximum of 256 characters.  
-
-    -   **Description:** Provide a description that gives an overview of the Exchange ActiveSync email profile and other relevant information that helps to identify it in the System Center Configuration Manager console. You can use a maximum of 256 characters.  
-
-###  <a name="BKMK_Step3"></a> Step 3: Configure Exchange ActiveSync Settings for the Exchange ActiveSync Email Profile.  
- Use this procedure to configure Exchange ActiveSync settings for the Exchange ActiveSync email profile.  
-
-##### To configure Exchange ActiveSync settings for the Exchange ActiveSync email profile  
+### To configure Exchange ActiveSync settings for the Exchange ActiveSync email profile  
 
 1.  On the **Exchange ActiveSync** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
@@ -138,10 +111,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
          This option is only available if you selected **Use S/MIME**.  
 
-###  <a name="BKMK_Step4"></a> Step 4: Configure Synchronization Settings for the Exchange ActiveSync Email Profile.  
- Use this procedure to provide general information about the Exchange ActiveSync email profile.  
-
-##### To configure synchronization settings for the Exchange ActiveSync email profile  
+###   Configure Synchronization Settings for the Exchange ActiveSync Email Profile.  
 
 1.  On the **Configure synchronization settings** page of the Create Exchange ActiveSync Email Profile Wizard, specify the following information:  
 
@@ -193,16 +163,10 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 
         -   **Tasks**  
 
-###  <a name="BKMK_Step5"></a> Step 5: Specify Supported Platforms for the Exchange ActiveSync Email Profile.  
- Use the following procedure to specify the supported platforms for the Exchange ActiveSync email profile.  
-
- Supported platforms are the operating systems on which the Exchange ActiveSync email profile will be installed.  
-
-##### To specify supported platforms for the Exchange ActiveSync email profile  
-
+###  Specify Supported Platforms for the Exchange ActiveSync Email Profile.  
+ 
 1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, select the operating systems on which the email profile will be installed, or click **Select all** to install the email profile on all available operating systems.  
 
-###  <a name="BKMK_Step6"></a> Step 6: Complete the Wizard.  
- On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard. The new Exchange ActiveSync email profile is displayed in the **Email Profiles** node in the **Assets and Compliance** workspace.  
+2.  Complete the wizard.
 
- For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
+For information about how to deploy the Exchange ActiveSync email profiles, see [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

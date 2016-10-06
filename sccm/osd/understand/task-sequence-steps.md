@@ -19,75 +19,6 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Task sequence steps in System Center Configuration Manager
 The following task sequence steps can be added to a Configuration Manager task sequence. For information about editing a task sequence, see [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence).  
 
-<!--- -   [Apply Data Image Task Sequence Step](#BKMK_ApplyDataImage)  
-
--   [Apply Driver Package](#BKMK_ApplyDriverPackage)  
-
--   [Apply Network Settings Step](#BKMK_ApplyNetworkSettings)  
-
--   [Apply Operating System Image](#BKMK_ApplyOperatingSystemImage)  
-
--   [Apply Windows Settings](#BKMK_ApplyWindowsSettings)  
-
--   [Auto Apply Drivers](#BKMK_AutoApplyDrivers)  
-
--   [Capture Network Settings](#BKMK_CaptureNetworkSettings)  
-
--   [Capture Operating System Image](#BKMK_CaptureOperatingSystemImage)  
-
--   [Capture User State](#BKMK_CaptureUserState)  
-
--   [Capture Windows Settings](#BKMK_CaptureWindowsSettings)  
-
--   [Check Readiness](#BKMK_CheckReadiness)  
-
--   [Connect To Network Folder](#BKMK_ConnectToNetworkFolder)  
-
--   [Convert Disk to Dynamic](#BKMK_ConvertDisktoDynamic)  
-
--   [Disable BitLocker](#BKMK_DisableBitLocker)  
-
--   [Download Package Content](#BKMK_DownloadPackageContent)  
-
--   [Enable BitLocker](#BKMK_EnableBitLocker)  
-
--   [Format and Partition Disk](#BKMK_FormatandPartitionDisk)  
-
--   [Install Application](#BKMK_InstallApplication)  
-
--   [Install Deployment Tools](#BKMK_InstallDeploymentTools)  
-
--   [Install Package](#BKMK_InstallPackage)  
-
--   [Install Software Updates](#BKMK_InstallSoftwareUpdates)  
-
--   [Join Domain or Workgroup](#BKMK_JoinDomainorWorkgroup)  
-
--   [Prepare ConfigMgr Client for Capture](#BKMK_PrepareConfigMgrClientforCapture)  
-
--   [Prepare Windows for Capture](#BKMK_PrepareWindowsforCapture)  
-
--   [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker)  
-
--   [Release State Store](#BKMK_ReleaseStateStore)  
-
--   [Request State Store](#BKMK_RequestStateStore)  
-
--   [Restart Computer](#BKMK_RestartComputer)  
-
--   [Restore User State](#BKMK_RestoreUserState)  
-
--   [Run Command Line](#BKMK_RunCommandLine)  
-
--   [Run PowerShell Script](#BKMK_RunPowerShellScript)  
-
--   [Set Dynamic Variables](#BKMK_SetDynamicVariables)  
-
--   [Set Task Sequence Variable](#BKMK_SetTaskSequenceVariable)  
-
--   [Setup Windows and ConfigMgr](#BKMK_SetupWindowsandConfigMgr)  
-
--   [Upgrade Operating System](#BKMK_UpgradeOS)  --->
 
 ##  <a name="BKMK_ApplyDataImage"></a> Apply Data Image Task Sequence Step  
  Use the **Apply Data Image** task sequence step to copy the data image to the specified destination partition.  

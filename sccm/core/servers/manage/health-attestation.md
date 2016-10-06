@@ -28,7 +28,7 @@ Begining with System Center Configuration Manager current branch version 1602, a
 
 
 
-##  <a name="bkmk_devicehealth"></a> Device Health Attestation  
+##  Device Health Attestation  
  Configuration Manager Device Health Attestation displays the following:  
 
 -   **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states  

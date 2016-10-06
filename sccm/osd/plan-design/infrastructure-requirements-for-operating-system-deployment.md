@@ -115,10 +115,10 @@ You must install the following WSUS 4.0 hotfixes:
  For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### PXE-enabled distribution point  
- To deploy PXE-initiated deployments, you must configure a distribution point to accept PXE requests from clients. For more information about how to configure the distribution point, see [Distribution point configurations](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_DBtable) and find the PXE configuration category in the table.  
+ To deploy PXE-initiated deployments, you must configure a distribution point to accept PXE requests from clients. For more information about how to configure the distribution point, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) and find the PXE configuration category in the table.  
 
 ### Multicast-enabled distribution point  
- To optimize your operating system deployments by using multicast, you must configure a distribution point to support multicast. For more information about how to configure the distribution point, see [Distribution point configurations](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md#bkmk_DBtable) and find the Multicast configuration category in the table.  
+ To optimize your operating system deployments by using multicast, you must configure a distribution point to support multicast. For more information about how to configure the distribution point, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) and find the Multicast configuration category in the table.  
 
 ### State migration point  
  When you capture and restore user state data for side-by-side and refresh deployments, you must configure a state migration point to store the user state data on another computer.  
