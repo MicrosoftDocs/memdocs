@@ -61,7 +61,7 @@ ms.assetid:
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/sccm/core/servers/manage/update">
+                  <a href="/sccm/core/servers/manage/updates">
                     <h3>Updates for System Center Configuration Manager </h3>
                     <p>Start here to learn how you keep Configuration Manager up to date, including what a baseline version or update version of Configuration Manager is, and how in-console updates and servicing finds new updates for your infrastructure.</p>
                   </a>
@@ -159,13 +159,13 @@ ms.assetid:
               <ul class="row">
                 <li class="column-third">
                   <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
-                    <h3>•	Understand hybrid mobile device management (MDM)/h3>
+                    <h3>Understand hybrid mobile device management (MDM)</h3>
                     <p>Learn how you can manage iOS, Windows, and Android devices with Configuration Manager. By using the Microsoft Intune service you users can enroll their personal devices or you can manage company owned devices in a variety of ways.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
-                    <h3>•	Set up hybrid MDM with Intune</h3>
+                    <h3>Set up hybrid MDM with Intune</h3>
                     <p>Follow these steps to enable “bring your own device” (BYOD) scenarios and to meet the prerequisites for most company-owned device management strategies.</p>
                   </a>
                 </li>
@@ -200,7 +200,7 @@ ms.assetid:
                 <li class="column-third">
                   <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
                     <h3>Scenarios to deploy operating systems</h3>
-                    <p>Read this section to learn how to deploy operating systems using one of many different operating system deployment scenarios.</p>
+                    <p>Read this section to learn how to deploy operating systems using one of many operating system deployment scenarios.</p>
                   </a>
                 </li>
                 <li class="column-third">
