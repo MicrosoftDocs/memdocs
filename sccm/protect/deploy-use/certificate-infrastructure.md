@@ -17,20 +17,20 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # Certificate infrastructure
 
- Use the following table for the steps, details, and more information about how to configure certificate enrollment in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
+ Here are the steps, details, and more information about how to configure certificate enrollment in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 
  After you complete these steps and verify the installation, you can configure and deploy certificate profiles. For more information, see [How to create certificate profiles in System Center Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
 
-|Steps|Details|More information|  
-|-----------|-------------|----------------------|  
-|**Step 1:** Install and configure the Network Device Enrollment Service and dependencies|The Network Device Enrollment Service role service for Active Directory Certificate Services (AD CS) must be running on the Windows Server 2012 R2 operating system.<br /><br /> **Important:** You must complete additional configuration steps before you can use the Network Device Enrollment Service with System Center Configuration Manager.|See [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](#BKMK_Step1) in this topic.|  
-|**Step 2:** Install and configure the certificate registration point|You must install at least one certificate registration point. This registration point can be in a central administration site or a primary site.|See [Step 2: Install and Configure the Certificate Registration Point](#BKMK_Step2) in this topic.|  
-|**Step 3:** Install the System Center Configuration Manager Policy Module|Install the Policy Module on the server that is running the Network Device Enrollment Service.|See [Step 3: Install the Configuration Manager Policy Module](#BKMK_Step3) in this topic.|  
+
+**Step 1:** Install and configure the Network Device Enrollment Service and dependencies. The Network Device Enrollment Service role service for Active Directory Certificate Services (AD CS) must be running on the Windows Server 2012 R2 operating system.
+	 **Important:** You must complete additional configuration steps before you can use the Network Device Enrollment Service with System Center Configuration Manager.
+**Step 2:** Install and configure the certificate registration point. You must install at least one certificate registration point. This registration point can be in a central administration site or a primary site. 
+**Step 3:** Install the System Center Configuration Manager Policy Module. Install the Policy Module on the server that is running the Network Device Enrollment Service. 
 
 ## Supplemental Procedures to Configure Certificate Enrollment in Configuration Manager  
  Use the following information when the steps in the preceding table require supplemental procedures.  
 
-###  <a name="BKMK_Step1"></a> Step 1: Install and Configure the Network Device Enrollment Service and Dependencies  
+###  Step 1: Install and Configure the Network Device Enrollment Service and Dependencies  
  You must install and configure the Network Device Enrollment Service role service for Active Directory Certificate Services (AD CS), change the security permissions on the certificate templates, deploy a public key infrastructure (PKI) client authentication certificate, and edit the registry to increase the Internet Information Services (IIS) default URL size limit. If necessary, you must also configure the issuing certification authority (CA) to allow a custom validity period.  
 
 > [!IMPORTANT]  
@@ -56,10 +56,10 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
     > [!NOTE]  
     >  These are the default security permissions that will be appropriate for most environments. However, you can use an alternative security configuration. For more information, see [Planning for certificate template permissions for certificate profiles in System Center Configuration Manager](../../protect/plan-design/planning-for-certificate-template-permissions.md).  
 
-3.  Deploy to this server a PKI certificate that supports client authentication. You might already have a suitable certificate installed on the computer that you can use, or you might have to (or prefer to) deploy a certificate specifically for this purpose. For more information about the requirements for this certificate, refer to the details for â€œServers running the Configuration Manager Policy Module with the Network Device Enrollment Service role serviceâ€ in the [PKI Certificates for Servers](../../core/plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers) section in the [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md) topic.  
+3.  Deploy to this server a PKI certificate that supports client authentication. You might already have a suitable certificate installed on the computer that you can use, or you might have to (or prefer to) deploy a certificate specifically for this purpose. For more information about the requirements for this certificate, refer to the details for Servers running the Configuration Manager Policy Module with the Network Device Enrollment Service role service in the** PKI Certificates for Servers** section in the [PKI certificate requirements for System Center Configuration Manager](../../core/plan-design/network/pki-certificate-requirements.md) topic.  
 
     > [!TIP]  
-    >  If you need help deploying this certificate, you can use the instructions for [Deploying the Client Certificate for Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clientdistributionpoint2008_cm2012) in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic, because the certificate requirements are the same with one exception:  
+    >  If you need help deploying this certificate, you can use the instructions for [Deploying the Client Certificate for Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#clientdistributionpoint2008_cm2012) in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic, because the certificate requirements are the same with one exception:  
     >   
     >  -   Do not select the **Allow private key to be exported** check box on the **Request Handling** tab of the properties for the certificate template.  
     >   
@@ -99,7 +99,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 
  Now that the Network Device Enrollment Service and dependencies are configured, you are ready to install and configure the certificate registration point.  
 
-###  <a name="BKMK_Step2"></a> Step 2: Install and Configure the Certificate Registration Point  
+###  Step 2: Install and Configure the Certificate Registration Point  
  You must install and configure at least one certificate registration point in the System Center Configuration Manager hierarchy, and you can install this site system role in the central administration site or in a primary site.  
 
 > [!IMPORTANT]  
@@ -147,7 +147,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 
  Now that the certificate registration point is installed and configured, you are ready to install the System Center Configuration Manager Policy Module for the Network Device Enrollment Service.  
 
-###  <a name="BKMK_Step3"></a> Step 3: Install the Configuration Manager Policy Module  
+###  Step 3: Install the Configuration Manager Policy Module  
  You must install and configure the System Center Configuration Manager Policy Module on each server that you specified in **Step 2: Install and configure the certificate registration point** as **URL for the Network Device Enrollment Service** in the properties for the certificate registration point.  
 
 ##### To install the Policy Module  
