@@ -23,17 +23,14 @@ System Center Configuration Manager application management policies let you modi
 
 -   Devices that run iOS 7 and later.  
 
-> [!TIP]  
->  In addition to managed devices, you can use mobile app management policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies for apps connecting to Office 365 services. This is not supported for apps connecting to on-premises Exchange or SharePoint.  
->   
->  To use this new capability, you must use the Azure preview portal. The following topics can help you get started:  
->   
->  -   [Get started with mobile app management policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
-> -   [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
+In addition to managed devices, you can use mobile app management policies to protect apps on devices that are not managed by Intune. Using this new capability, you can apply mobile app management policies for apps connecting to Office 365 services. This is not supported for apps connecting to on-premises Exchange or SharePoint.  
+To use this new capability, you must use the Azure preview portal. The following topics can help you get started:  
+-   [Get started with mobile app management policies in the Azure portal](https://technet.microsoft.com/library/mt627830.aspx)  
+-   [Create and deploy mobile app management policies with Microsoft Intune](https://technet.microsoft.com/library/mt627829.aspx)  
 
- Unlike configuration items and baselines in Configuration Manager, you do not deploy an application management policy directly. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify will take effect.  
+Unlike configuration items and baselines in Configuration Manager, you do not deploy an application management policy directly. Instead, you associate the policy with the application deployment type that you want to restrict. When the app deployment type is deployed and installed on devices, the settings you specify will take effect.  
 
- To apply restrictions to an app, the app must incorporate the Microsoft Intune App Software Development Kit (SDK). There are two methods of obtaining this type of app:  
+To apply restrictions to an app, the app must incorporate the Microsoft Intune App Software Development Kit (SDK). There are two methods of obtaining this type of app:  
 
 -   **Use a policy managed app** (Android and iOS): Has the App SDK built-in. To add this type of app, you specify a link to the app from an app store such as the iTunes store or Google Play. No further processing is required for this type of app. For a list of the policy managed apps that are available for iOS and Android devices, see [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx).  
 
