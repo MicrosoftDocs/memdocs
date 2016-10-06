@@ -73,10 +73,9 @@ Configuration Manager also uses:
 -   **Resource Explorer**, to view hardware and software inventory information.  
 -   **Remote control**, to remotely connect to a client computer to perform troubleshooting tasks.  
 
- You can install the Configuration Manager console on additional computers, and restrict access and limit what administrative users can see in the console by using   
-                Configuration Manager role-based administration.  
+ You can install the Configuration Manager console on additional computers, and restrict access and limit what administrative users can see in the console by using Configuration Manager role-based administration.  
 
- For more information, see [Install System Center Configuration Manager consoles](../../core/servers/deploy/install/install-consoles.md)
+ For more information, see [Install System Center Configuration Manager consoles](../../core/servers/deploy/install/install-consoles.md).
 
 ##  <a name="BKMK_ApplicationCatalog"></a> The Application Catalog, Software Center, and the Company Portal  
  The **Application Catalog** is a website where users can browse for and request software for their Windows-based PCs. To use the Application Catalog, you must install the Application Catalog web service point and the Application Catalog website point for the site.  

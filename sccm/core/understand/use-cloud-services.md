@@ -35,7 +35,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For more information about Windows Azure, see [Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
-### Microsoft Azure virtual machines<br />(for cloud-based infrastructure)  
+### Microsoft Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
 
 -   **Scenario 1:** You can run Configuration Manager in a virtual machine and use it to manage clients installed in other virtual machines.  
@@ -63,7 +63,7 @@ Additionally, Configuration Manager sites and clients that run in Azure virtual 
 
 Using Azure to hosts distribution points requires you to have an Azure subscription and you incur charges based on the amount of data that transfers to and from the service.  
 
-### Microsoft Intune <br />(for mobile device management)  
+### Microsoft Intune (for mobile device management)  
  You can integrate your Microsoft Intune subscription with Configuration Manager to enable management of devices using the Intune service. This integration:  
 
 -   Is called a hybrid configuration and extends Configuration Manager, (or Intune depending on your perspective) to support a large variety of devices.  
