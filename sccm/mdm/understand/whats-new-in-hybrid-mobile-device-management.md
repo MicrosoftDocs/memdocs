@@ -17,16 +17,6 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 # What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 
-
- In this article:
-
-*    [Compatibility with Configuration Manager versions](#compatibility-with-configuration-manager-versions)
-*    [New hybrid features in July 2016](#new-hybrid-features-in-july-2016)
-*    [New hybrid features in June 2016](#new-hybrid-features-in-june-2016)  
-*    [New hybrid features in May 2016](##new-hybrid-features-in-may-2016)   
-*    [New hybrid features in April 2016](##new-hybrid-features-in-april-2016)   
-*    [New hybrid features in March 2016](##new-hybrid-features-in-march-2016)  
-
 ##  Compatibility with Configuration Manager versions  
 
  Each section of this article lists hybrid features under 3 different categories. Use the following guidance to determine compatibility of the features in each category  with different versions of Configuration Manager:  
@@ -167,7 +157,7 @@ No new hybrid features have been introduced in July 2016 for Configuration Manag
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606. These features require you to use the Configuration Manager console to configure and manage them.
 
-* Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#TP1604))
+* Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#new-in-1604-technical-preview))
 * 	SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
 *	App-triggered VPN for Windows 10 devices ([1605](#new-in-1605-technical-preview))
 *	New experience for remote device actions ([1605](#new-in-1605-technical-preview))
@@ -228,7 +218,7 @@ The following features introduced in June 2016 work in hybrid deployments exactl
   * The Microsoft Intune Company Portal app for iOS has been updated to support iOS version 8.0 and later. This update means that end users can install the Company Portal app and enroll new devices in Intune only if the device is running iOS version 8.0 or later. Users who have already enrolled devices that are running on an unsupported version of iOS can continue to use the Company Portal app that is on their device.
 
 
-### New in 1604 Technical Preview
+### New in 1606 Technical Preview
 The following new features introduced in June 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1606. These features require you to use the Configuration Manager console to configure and manage them.
 
 - **Automatically categorize devices into collections**
@@ -338,7 +328,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   When end users are installing line-of-business apps, they will now see an improved app installation experience. If the app installation is taking a long time, users can manually sync their device to force the sync process to resume. To review the end-user instructions, see [Sync your device manually to speed up app installations](/intune/enduser/using-your-windows-device-with-intune) in the Intune library.  
 
-###  New in Configuration Manager Technical Preview 1604
+###  New in 1604 Technical Preview
  The following new features introduced in April 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1604. These features require you to use the Configuration Manager console to configure and manage them.  
 
 - **Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console**
