@@ -24,11 +24,11 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 -   [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
 
--   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpointd-protection-service)  
+-   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpoint-protection-service)  
 
 -   [Internet connection issues](#internet-connection-issues)  
 
--   [Detected threat can't be remediated](#detected-threat-can-t-be-remediated)  
+-   [Detected threat can't be remediated](#detected-threat-cant-be-remediated)  
 
 ##  Install the Endpoint Protection client  
 
