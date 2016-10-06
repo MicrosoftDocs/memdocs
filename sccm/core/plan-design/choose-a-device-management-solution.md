@@ -27,7 +27,7 @@ System Center Configuration Manager offers different solutions for managing PCs,
 
      This option, which requires installation of the Configuration Manager client application on each device to be managed, provides the most features and functionality for managing PCs, servers, and other devices in your environment. This option is the traditional way Configuration Manager has provided device management over the history of the product.  
 
-     For more information about this solution, see [Client installation methods in System Center Configuration Manager ](../deploy/plan/client-installation-methods.md).  
+     For more information about this solution, see [Client installation methods in System Center Configuration Manager ](/sccm/core/client/deploy/plan/client-installation-methods).  
 
 -   **Managing mobile devices with on-premises Configuration Manager infrastructure**  
 
