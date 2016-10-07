@@ -41,10 +41,10 @@ For example, the 1602 update is only available from within the Configuration Man
 Periodically, an update version will also be released as a new baseline version (like update 1606) which can be used to install a new hierarchy without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 
 
- For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)  
+ For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
 
 ##  <a name="bkmk_servicepoint"></a> Service connection point replaces Microsoft Intune connector  
- The **Microsoft Intune connecter** is replaced by a new site system role that enables additional functionality, the **service connection point**. The service connection point:  
+ The **Microsoft Intune connector** is replaced by a new site system role that enables additional functionality, the **service connection point**. The service connection point:  
 
 -   Replaces the Microsoft Intune connector when you integrate Intune with System Center Configuration Manager On\-premises Mobile Device Management  
 
@@ -77,14 +77,14 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 ##  <a name="bkmk_out"></a> Deprecated functionality  
  With System Center Configuration Manager, some capabilities, like native [Support for Intel Active Management Technology (AMT)](#bkmk_AMT) based-computers is removed from the Configuration Manager console, while other capabilities like Network Access Protection are removed entirely. Additionally, some older Microsoft products like Windows Vista,  Windows Server 2008, and SQL Server 2008, are no longer supported.  
 
- For a list of deprecated features, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md)  
+ For a list of deprecated features, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
- For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)  
+ For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## Client deployment  
  System Center Configuration Manager introduces a new capability for testing new versions of  the Configuration Manager client before upgrading the rest of site with the new software.  This new capability gives you the opportunity to set up a preproduction collection in which to pilot a new client. Once you are satisfied with the new client software in preproduction, you can promote the client to automatically upgrade the rest of the site with the new version.  
 
- For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 ## Operating system deployment  
 
@@ -154,4 +154,4 @@ For more information about mobile device management capabilities with Configurat
 ## On-premises Mobile Device Management  
  With System Center Configuration Manager, you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
 
- To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
+ To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md). 

@@ -18,7 +18,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 
 
- System Center Configuration Manager uses an in-console [Updates and Servicing](http://technet.microsoft.com/library/mt607046.aspx) process that makes it easy to discover and install Configuration Manager updates. This means no more service packs or cumulative update versions to track, or searching for the download of the most recent release or updates.
+ System Center Configuration Manager uses an in-console [Updates and Servicing](/sccm/core/servers/manage/updates) process that makes it easy to discover and install Configuration Manager updates. This means no more service packs or cumulative update versions to track, or searching for the download of the most recent release or updates.
 
  Instead, to update the product to a new version of the  current branch you use the Configuration Manager console to find and then [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md). A few times each year new versions release that include product updates. Each release can also introduce new features.  
 

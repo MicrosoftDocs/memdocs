@@ -106,7 +106,7 @@ This article introduces the features that are available in the Technical Preview
 
 -   The second new setting lets you **manage the size of the cache** on clients. You can set the cache to have a maximum size in megabytes and  a maximum size as a percentage of the clients drive space.  The client enforces the setting that is reached first.  
 
- To help you understand the use of client Peer Cache, you can view the **Client Data Sources** dashboard. In the console go to **Monitoring > Client Status > Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
+To help you understand the use of client Peer Cache, you can view the **Client Data Sources** dashboard. In the console go to **Monitoring > Client Status > Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
 
  You can also use a new report, **Client Data Sources - Summarization**, to view a summarization of the client data sources for each boundary group.   
 **Requirements to use Peer Cache:**  
@@ -145,28 +145,18 @@ Passport lets you use a user gesture to login, instead of a password. A user ges
 
 -   You can store authentication certificates in the Passport for Work key storage provider (KSP).  
 
- When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for.  This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if  Passport is used as the Key Storage Provider in a certificate profile.  
+When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for.  This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if  Passport is used as the Key Storage Provider in a certificate profile.  
 
 ##  <a name="bkmk_onpremdha"></a> On-premises Device Health Attestation  
- Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure.  Administrators can specify whether reporting is done via the cloud or on-premises resources.  If   
-                **on-premises** is selected for health attestation reporting, then a URI can be specified for the service. This enables client PCs without internet access to use enable and manage devices using health attestation.  
+ Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure.  Administrators can specify whether reporting is done via the cloud or on-premises resources.  If **on-premises** is selected for health attestation reporting, then a URI can be specified for the service. This enables client PCs without internet access to use enable and manage devices using health attestation.  
 
 #### Enable health attestation for on-premises devices  
 
-1.  In the Configuration Manager console, navigate   
-                                    **Administration** >   
-                                    **Overview** >   
-                                    **Client settings**, and then  set   
-                                    **Use on-premises Healthy Attestation Service** to   
-                                    **Yes**.  
+1.  In the Configuration Manager console, navigate **Administration** > **Overview** > **Client settings**, and then set **Use on-premises Healthy Attestation Service** to **Yes**.  
 
-2.  Specify the   
-                                    **On-premise Health Attestation Service URL**, and then click   
-                                    **OK**.  
+2.  Specify the **On-premise Health Attestation Service URL**, and then click **OK**.  
 
- To try it out, configure on-premises Health Attestation Service using client agent settings.  
+To try it out, configure on-premises Health Attestation Service using client agent settings.  
 
 ##  <a name="BKMK_Smart"></a> SmartLock setting for Android devices  
- A new setting,    
-                **Allow SmartLock and other trust agents** has been added to the   
-                **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  
+ A new setting, **Allow SmartLock and other trust agents** has been added to the **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  

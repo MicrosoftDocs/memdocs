@@ -70,9 +70,9 @@ A cloud-based distribution point has the following limitations:
 ##  <a name="BKMK_PrereqsCloudDP"></a> Prerequisites for cloud-based distribution points  
  A cloud-based distribution point requires the following prerequisites for its use:  
 
--   A subscription to Microsoft Azure.  (See, [About subscrioptions and certificates](#BKMK_CloudDPCerts) in this topic)
+-   A subscription to Microsoft Azure.  (See, [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic)
 
--   A self-signed or PKI management certificate for communication from a Configuration Manager primary site server to the cloud service in Microsoft Azure.  (See, [About subscrioptions and certificates](#BKMK_CloudDPCerts) in this topic)
+-   A self-signed or PKI management certificate for communication from a Configuration Manager primary site server to the cloud service in Microsoft Azure.  (See, [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic)
 
 -   A service certificate (PKI) that Configuration Manager clients use to connect to cloud-based distribution points and download content from them by using HTTPS.  
 

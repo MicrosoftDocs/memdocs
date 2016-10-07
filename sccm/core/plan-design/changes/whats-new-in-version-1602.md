@@ -22,8 +22,8 @@ Update 1602 for System Center Configuration Manager is an update that is only av
 > [!TIP]  
 >  Learn more about:  
 >   
-> -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)
-> -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602)  
+>   -   [Installing new sites](/sccm/core/servers/deploy/install) (using a baseline version like 1511)  
+>   -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
 
  The following sections provide details about changes and new capabilities introduced in version 1602 of Configuration Manager.  
 
@@ -67,12 +67,12 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
  App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy before they run the app. The settings are then supplied automatically, and the user needs to take no action.  
 
- For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md)  
+ For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
 
 ### Manage volume-purchased iOS apps  
  Configuration Manager can help you deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP) by importing the license information from the app store and tracking how many of the licenses you have used.  
 
- For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md)  
+ For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
 
 ### Automatic creation of Office mobile apps  
  When you update to the 1602 release from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
@@ -91,7 +91,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 You will find these apps in the **Applications** node of the Configuration Manager console.  
 
- For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md)  
+ For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
 
 ## Software updates  
 
@@ -103,12 +103,12 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ### Compliance settings for devices running Windows 10 team  
  New settings have been added to the **Windows 8.1 and Windows 10** configuration item to help you control devices running Windows 10 Team, such as a Surface Hub device.  
 
- For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
+ For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Kiosk mode settings for Android Samsung KNOX devices  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX devices.  
 
- For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+ For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## Conditional access  
 
