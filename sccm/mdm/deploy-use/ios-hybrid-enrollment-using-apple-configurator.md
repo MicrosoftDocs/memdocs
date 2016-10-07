@@ -52,24 +52,21 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
     3.  Review the Summary and then click net.  
 
-2.  **Add iOS devices to enroll with Setup assistant**   
+2.  **Add iOS devices to enroll with Setup Assistant**   
     In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and click **Device Information**. and then click **Add devices**. You can add devices in two ways:  
 
-    -   **Upload a CSV file containing serial numbers** – Create a comma-separated value (.csv) list of two columns without a header, limited to 5000 devices or 5MB per csv file.  
+    - You can **Upload a CSV file containing serial numbers** – Create a comma-separated value (.csv) list of two columns without a header, limited to 5000 devices or 5MB per csv file. For each row, the first cell is the device serial number, the second cell are device details (optional).
 
-|&lt;Serial #1>|&lt;Device #1 Details>|  
-|&lt;Serial#2>|&lt;Device #2 Details>|  
+  This .csv file when viewed in a text editor appears as:  
 
- This .csv file when viewed in a text editor appears as:  
+    ```  
+    0000000,PO 1234  
+    111111111,PO 1234  
+    ```  
 
-        ```  
-        0000000,PO 1234  
-        111111111,PO 1234  
-        ```  
+    - You can also, **Manually add serial numbers and details** - Enter the serial number and device details of up to five devices  
 
-    -   **Manually add serial numbers and details** - Enter the serial number and device details of up to five devices  
-
-     And then click **Next**.  
+    And then click **Next**.  
 
 3.  **Select devices to enroll**   
     Confirm the devices to enroll. Serial numbers already enrolled or enrolled by other means cannot be imported. Click **Next** to continue.  
