@@ -6,4 +6,3 @@
 ## [Operating system deployment guide](osd\understand\introduction-to-operating-system-deployment.md)
 ## [Protect data and infrastructure guide](protect\understand\protect-data-and-site-infrastructure.md)
 ## [Software update management guide](sum\understand\software-updates-introduction.md)
-
