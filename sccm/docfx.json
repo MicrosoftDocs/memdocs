@@ -33,7 +33,7 @@
       },
     "fileMetadata": {},
     "template": [
-      null
+      "docs.html"
     ],
     "dest": "sccm"
   }
