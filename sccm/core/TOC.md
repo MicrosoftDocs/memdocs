@@ -66,7 +66,7 @@
 ###  [Plan for security](plan-design/security/plan-for-security.md)
 ###  [Security best practices and privacy information](plan-design/security/security-best-practices-and-privacy-information.md)
 ###  [Privacy statement - Configuration Manager Cmdlet Library](plan-design/security/privacy-statement-cmdlet-library.md)
-###  [Additional privacy information](plan-design/security/additional-privacy)
+###  [Additional privacy information](plan-design/security/additional-privacy.md)
 ###  [Configure security](plan-design/security/configure-security.md)
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)

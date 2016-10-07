@@ -174,7 +174,7 @@ You must install the following WSUS 4.0 hotfixes:
 
 -   DHCP and Windows Deployment Services both require port number 67. If you co-host Windows Deployment Services and DHCP, you can move DHCP or the distribution point that is configured for PXE to a separate server. Or, you can use the following procedure to configure the Windows Deployment Services server to listen on a different port.  
 
-    ##### To configure the Windows Deployment Services server to listen on a different port  
+    #### To configure the Windows Deployment Services server to listen on a different port  
 
     1.  Modify the following registry key:  
 

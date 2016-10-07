@@ -153,7 +153,7 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
 
     -   [How to monitor Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/monitor-endpoint-protection.md)  
 
-    -   [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md)  
+    -   [Monitor applications with System Center Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
 
 13. Jane monitors the kiosks and reports the successful management of them to her manager. As a result, 20 kiosks are ordered for the visitor center.  
 
