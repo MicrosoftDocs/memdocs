@@ -1,4 +1,7 @@
 ---
+asset_id: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
+layout: HubPage
+
 title: System Center Configuration Manager Documentation | Microsoft Docs
 description: "Documentation for System Center Configuration Manager"
 keywords:
@@ -8,8 +11,8 @@ manager: angrobe
 ms.date: 10/06/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
-ms.suite:
-ms.assetid:
+ms.suite: ems
+ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 
 ---
 # System Center Configuration Manager Documentation
