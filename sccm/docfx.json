@@ -3,7 +3,7 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md", "**/**.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -15,7 +15,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif"
         ],
         "exclude": [
           "**/obj/**",
@@ -25,7 +26,11 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/enterprise-mobility-security/toc.json",
+      "ms.locale": "en-us"
+      },
     "fileMetadata": {},
     "template": [
       null

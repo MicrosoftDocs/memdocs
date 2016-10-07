@@ -4,3 +4,4 @@ _site/
 .optemp/
 
 .openpublishing.buildcore.ps1
+_themes
