@@ -31,7 +31,7 @@ System Center Configuration Manager Setup provides links to several topics where
 
 -   [Fundamentals of System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
 
--   [Plan for System Center Configuration Manager infrastructure](../../plan-design/network/configure-firewalls-ports-domains.md)  
+-   [Plan for System Center Configuration Manager infrastructure](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 
 -   [Prepare to install System Center Configuration Manager sites](prepare-to-install-sites.md)  
 
