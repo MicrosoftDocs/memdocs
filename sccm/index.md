@@ -1,6 +1,6 @@
 ---
 title: System Center Configuration Manager Documentation | Microsoft Docs
-description: "Documentation for System Center Configuration Manager (Current Branch)"
+description: "Documentation for System Center Configuration Manager"
 keywords:
 layout: HubPage
 author: mtillman
@@ -16,7 +16,7 @@ ms.assetid:
 <article id="main">
 
     <section id="hero-content">
-      <h1>System Center Configuration Manager (Current Branch) Documentation</h1>
+      <h1>System Center Configuration Manager Documentation</h1>
       <h2>Learn how to manage and protect corporate computers, servers, and devices with Configuration Manager on-premises infrastructure.</h2>
       <h3>Manage devices with Microsoft Intune? <a href="https://docs.microsoft.com/en-us/intune/" target="_blank">View Intune Documentation &rarr;</a></h3>
     </section>
@@ -291,6 +291,7 @@ ms.assetid:
           <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on the documentation</a></li>
           </ul>
           <ul class="column-half">
+          <li><a href="https://technet.microsoft.com/en-us/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager documentation</a></li>
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet forums</a></li>
           <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Configuration Manager product page</a></li>
           </ul>

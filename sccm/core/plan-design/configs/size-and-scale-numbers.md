@@ -21,7 +21,7 @@ Each System Center Configuration Manager deployment will have a maximum number o
 
 Use the information in this topic with the information in the following articles:
 -   [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)
--   [Supported operating systems for site system serveres](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
+-   [Supported operating systems for site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
 -   [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 -   [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
