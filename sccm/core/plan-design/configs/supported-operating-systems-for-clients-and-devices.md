@@ -157,7 +157,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 ## Mac computers  
  You can manage Mac OS X computers with the Configuration Manager client for Mac.  
 
- The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)  
+ The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
 **Requirements and limitations:**  
 
@@ -182,7 +182,7 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 
 -   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
--   For an overview of the management capabilities supported for computers that run Linux or UNIX, see[How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
+-   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.  
 
@@ -287,8 +287,8 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 ##  <a name="bkmk_IntuneOS"></a> Mobile devices enrolled by Microsoft Intune  
  For details about the computers and devices you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  
 
--   [Mobile device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx)  
--   [Windows PC management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn646975.aspx)  
+-   [Mobile device management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
+-   [Windows PC management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
 
 ##  <a name="bkmk_OnpremOS"></a> On-premises mobile device management  
  Configuration manager has built-in capabilities to manage devices that are on-premises without installing client software.  For more information see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  

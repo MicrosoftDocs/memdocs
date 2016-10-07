@@ -61,7 +61,7 @@ Use the following information to help you plan for shared distribution points:
 
 -   Clients in the destination hierarchy can receive content location information for packages that are distributed to distribution points that are shared from the source hierarchy. For distribution points from a Configuration Manager 2007 source hierarchy, this includes branch distribution points, distribution points on server shares, and standard distribution points.  
 
-    > [!CAUTION]  
+    > [!WARNING]  
     >  If you change the source hierarchy, shared distribution points from the original source hierarchy are no longer available and cannot be offered as content locations to clients in the destination hierarchy. If you reconfigure migration to use the original source hierarchy, the previously shared distribution points are restored as valid content location servers.  
 
 -   When you migrate a package that is hosted on a shared distribution point, the package version must remain the same in the source and destination hierarchies. When a package version is not the same in the source and destination hierarchy, clients in the destination hierarchy cannot retrieve that content from the shared distribution point. Therefore, if you update a package in the source hierarchy, you must re-migrate the package data before clients in the destination hierarchy can retrieve that content from a shared distribution point.  
@@ -150,7 +150,7 @@ If you decide not to upgrade a shared distribution point, you can still install 
 
  Before you upgrade a shared distribution point, review the distribution point configuration in Configuration Manager 2007 to avoid upgrading a distribution point on a secondary site that you still want to use with Configuration Manager 2007. This is because after you upgrade a shared distribution point that is on a secondary site server, the site system server is removed from the Configuration Manager 2007 hierarchy and is no longer available for use with that hierarchy. When the secondary site is removed, any remaining distribution points at that secondary site are orphaned. This means they become unmanaged from Configuration Manager 2007 and are no longer shared or eligible for upgrade.  
 
-> [!CAUTION]  
+> [! WARNING]  
 >  When you view shared distribution points in the Configuration Manager console, there is no visible indication that a shared distribution point is on a remote site system server or whether it is located on the secondary site server.  
 
  Consider upgrading secondary sites that have a shared distribution point when you have a secondary site in a remote network location that is used primarily to control the deployment of content to that remote location. Because you can configure bandwidth control for when you distribute content to a System Center Configuration Manager distribution point, you can often upgrade a secondary site to a distribution point, configure the distribution point for bandwidth controls, and avoid installing a secondary site in that network location in the destination hierarchy.  

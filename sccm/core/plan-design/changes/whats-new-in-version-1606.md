@@ -19,8 +19,8 @@ Update 1606 for System Center Configuration Manager is an update that is availab
 > [!TIP]  
 >  Learn more about:  
 >   
->  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)  
->  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
+>  -   [Installing new sites](/sccm/core/servers/deploy/install) (using a baseline version like 1511)  
+>  -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602 or 1606)  
 
  The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
 
