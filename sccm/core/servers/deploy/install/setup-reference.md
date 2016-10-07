@@ -31,9 +31,9 @@ System Center Configuration Manager Setup provides links to several topics where
 
 -   [Fundamentals of System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
 
--   [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)  
+-   [Plan for System Center Configuration Manager infrastructure](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 
--   [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)  
+-   [Prepare to install System Center Configuration Manager sites](prepare-to-install-sites.md)  
 
 ##  <a name="bkmk_assess"></a> Assess server readiness  
  Before beginning the installation of a new site, ensure the site server and remote site system servers you plan to use for the site (like the server that host the site database) meet all  prerequisite configurations. The following topics in the documentation library can help:  

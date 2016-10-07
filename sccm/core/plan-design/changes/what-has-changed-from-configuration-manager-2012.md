@@ -111,7 +111,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 -   System Center Configuration Manager can now differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 -   You can now schedule and run the WSUS clean up task from the Configuration Manager console.  
-    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance).  
+    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance.md).  
 
 ## Compliance settings  
 
@@ -154,4 +154,4 @@ For more information about mobile device management capabilities with Configurat
 ## On-premises Mobile Device Management  
  With System Center Configuration Manager, you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
 
- To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md). 
+ To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
