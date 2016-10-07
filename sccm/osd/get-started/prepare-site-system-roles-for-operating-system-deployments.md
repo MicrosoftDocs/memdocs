@@ -51,7 +51,7 @@ To deploy operating systems in System Center Configuration Manager, you must fir
 > [!IMPORTANT]  
 >  [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) must be installed on the all PXE-enabled distribution points.  
 
- Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points).  
+ Use the following procedure to modify an existing distribution point so that it can accept PXE requests. For information about how to install a new distribution point, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).  
 
 #### To modify an existing distribution point to accept PXE requests  
 
@@ -127,7 +127,7 @@ You will need to test the customized settings in your environment to determine w
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
  Multicast is a network optimization method that you can use on distribution points when multiple clients are likely to download the same operating system image at the same time. When multicast is used, multiple computers can simultaneously download the operating system image as it is multicast by the distribution point, rather than having the distribution point send a copy of the data to each client over a separate connection. You must configure at least one distribution point to  support multicast. For more information, see [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
- Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points).
+ Before you deploy the operating system, you must configure a distribution point to support multicast. Use the following procedure to modify an existing distribution point to support multicast. For information about how to install a new distribution point, see [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 #### To enable multicast for a distribution point  
 
