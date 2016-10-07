@@ -24,6 +24,7 @@
     "live"
   ],
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -31,6 +32,5 @@
       "branch": "master",
       "branch_mapping": {}
     }
-  ],
-  "need_preview_pull_request": "true"
+  ]
 }
