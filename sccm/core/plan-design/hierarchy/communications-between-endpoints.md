@@ -34,7 +34,7 @@ To help you manage the transfer of content from the site server to distribution 
 
 -   You can install a distribution point as a prestaged distribution point. A prestaged distribution point lets you use content that is manually put on the distribution point server and removes the requirement to transfer content files across the network.  
 
-For more information see [Manage network bandwidth for content management](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md).
+For more information see [Manage network bandwidth for content management](manage-network-bandwidth.md).
 
 
 ##  <a name="Planning_Client_to_Site_System"></a> Communications from clients to site systems and services  

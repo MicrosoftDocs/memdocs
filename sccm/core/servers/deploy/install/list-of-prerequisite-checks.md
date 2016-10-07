@@ -19,7 +19,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 The following sections detail the available prerequisite checks.  
 
 
- For  information about using the Prerequisite Checker, see the [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) section of the [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md) topic.  
+ For  information about using the Prerequisite Checker, see the [Prerequisite Checker](prerequisite-checker.md).  
 
 ##  <a name="BKMK_Security"></a> Prerequisite Checks for Security Rights  
  The followingare prerequisite checks that Prerequisite Checker performs for security rights.  
