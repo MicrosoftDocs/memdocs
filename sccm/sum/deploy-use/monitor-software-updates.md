@@ -24,7 +24,7 @@ System Center Configuration Manager provides many ways to help you to monitor so
 
 -   Deployment setting: You can configure the alerts settings in the Deploy Software Updates Wizard and in deployment properties.  
 
- After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review software update alerts at the following locations:  
+After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review software update alerts at the following locations:  
 
 1.  Review recent alerts in the **Software Updates** node in the **Software Library** workspace.  
 
