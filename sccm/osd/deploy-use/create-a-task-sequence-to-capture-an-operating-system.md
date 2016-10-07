@@ -42,7 +42,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 ###  <a name="BKMK_CreateBuildCaptureTS"></a> Create a build and capture task sequence  
  Use the following procedure to use a task sequence to  build a reference computer and capture the operating system.  
 
-##### To create a task sequence that builds and captures an operating system image  
+#### To create a task sequence that builds and captures an operating system image  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
