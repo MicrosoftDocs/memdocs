@@ -16,7 +16,6 @@
 ### [Supported Configurations for the Long-Term Servicing Branch](understand/supported-configurations-for-ltsb.md)
 ### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
 ### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch)
-### [Use the Long-Term Servicing Branch client with a Current Branch site](understand/use-the-ltsb-client.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
