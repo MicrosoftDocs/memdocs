@@ -17,8 +17,11 @@ ms.author: brenduns
 manager: angrobe
 
 ---
-# Install and upgrade with the version 1606 baseline media for System Center Configuration Manager*Applies to:  System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)* 
-Use this topic to learn about running Configuration Manager Setup when you use the version 1606 baseline media from Microsoft System Center 2016. You can use this media to install a new site, or upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. During Setup, you can choose to install the Current Branch or Long-Term Servicing Branch (LTSB).
+# Install and upgrade with the version 1606 baseline media for System Center Configuration Manager
+
+*Applies to:  System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
+
+Use this topic to learn about running Configuration Manager Setup when you use the version 1606 baseline media from Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use this media to install a new site, or upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. During Setup, you can choose to install the Current Branch or Long-Term Servicing Branch (LTSB).
 
 When you use the version 1606 baseline media, the site you install (or upgrade to) is:
 - **A Current Branch site** that is equivalent to a site that was first installed using the 1511 baseline media, and then updated to version 1606 plus the 1606 hotfix rollup - KB3186654.

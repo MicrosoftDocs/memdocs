@@ -15,22 +15,23 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 Robots: NOINDEX,NOFOLLOW
 ---
-# Use the client software from the version 1606 baseline media with a Current Branch site*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*  
-You can use the System Center Configuration Manager client software from the version 1606 baseline media DVD that you get with System Center 2016 (the extended interoperability client), to manage devices that belong to a Current Branch site.   
+# Use the client software from the version 1606 baseline media for extended interoperability with future versions of a Current Branch site
+
+*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*  
+
+You can use the Configuration Manager client software for Windows computers (client.msi) from the version 1606 baseline media DVD that you get with System Center 2016 or from a or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release to manage devices that belong to a Current Branch site. This client is called the extended interoperability client.
 
 ## How this scenario works:
 Typically, when you install a new in-console update for the Current Branch, clients automatically update their client software so they can use those new features.
 
-With this scenario, you use the Current Branch and receive the new features and updates. Most clients run the client software from the Current Branch and can update that client software with each version update you install. However, on a subset of critical systems that you do not want to receive client software updates, you install the extended interoperability client. These clients will not install new client software until you explicitly deploy a new version off the client software to them.
+With this scenario, you use the Current Branch and receive the new features and updates. Most clients run the client software from the Current Branch and can update that client software with each version update you install. However, on a subset of critical systems that you do not want to receive client software updates, you install the extended interoperability client. These clients will not install new client software until you explicitly deploy a new version of the client software to them.
 
 More information on how to prevent Current Branch clients from automatically updating when you install a new version of Configuration Manager will be available with Current Branch version 1610.
 
 The Current Branch site must run version 1606 or later.
 
 ## The extended interoperability client software
-The Configuration Manager client software (client.msi) for Windows computers that is included with the version 1606 baseline media from System Center 2016 is supported for the full lifecycle of the LTSB release when used with the LTSB release.
-
-When you use the extended interoperability client with the Current Branch, the client is supported for two years after the general availability of the LTSB, which is October 12th, 2016.  
+When you use the extended interoperability client from the System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release with a Current Branch site, the client is supported for two years after the general availability of the release which is October 12th, 2016.
 
 Plan to update the extended interoperability client on devices that you manage with the Current Branch before support for the client expires. To do so you download a new version of the client from Microsoft and then deploy that updated client software to your devices that use the current extended interoperability client.
 
