@@ -1,5 +1,5 @@
-
-# [Understand](understand/introduction-to-operating-system-deployment.md)## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
+# [Understand](understand/introduction-to-operating-system-deployment.md)
+## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
 ## [Task sequence steps](understand/task-sequence-steps.md)
 ## [Task sequence action variables](understand/task-sequence-action-variables.md)
 ## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
