@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
-
+Robots: NOINDEX,NOFOLLOW
 ---
 # Use the client software from the version 1606 baseline media with a Current Branch site
 
