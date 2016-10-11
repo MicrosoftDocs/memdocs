@@ -3,10 +3,11 @@
 ## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 
-# [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)## [Plan for hybrid MDM](plan-design/plan-hybrid-mobile-device-management.md)
+# [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
+## [Plan for hybrid MDM](plan-design/plan-hybrid-mobile-device-management.md)
 ## [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
-# [Deploy and use](deploy-use/setup-hybrid-mdm.md)
+# [Deploy and use](deploy-use/setup-hybrid-mdm.md)
 ## [Set up hybrid MDM](deploy-use/setup-hybrid-mdm.md)
 ### [Windows setup](deploy-use/set-up-hybrid-windows.md)
 ### [Terms and Conditions](deploy-use/terms-and-conditions.md)
@@ -17,7 +18,6 @@
 ### [Predeclare hardware ID](deploy-use/predeclare-devices-with-hardware-id.md)
 ### [Manage iOS Activation Lock](deploy-use/manage-ios-activation-lock.md)
 ### [User affinity](deploy-use/user-affinity-for-hybrid-managed-devices.md)
-
 ## [Set up on-premises MDM](get-started/preparation-steps-for-on-premises-mdm.md)
 ### [Set up Intune](get-started/set-up-intune-subscription-on-premises-mdm.md)
 ### [Install on-premises roles](get-started/install-site-system-roles-for-on-premises-mdm.md)
@@ -26,6 +26,5 @@
 ## [Enroll devices for on-premises MDM](deploy-use/enroll-devices-on-premises-mdm.md)
 ### [User enrollment](deploy-use/user-enroll-devices-on-premises-mdm.md)
 ### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
-
 ## [Retire, lock and reset devices](deploy-use/wipe-lock-reset-devices.md)
 ## [Manage devices with Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)

@@ -1,11 +1,7 @@
 
 # [Understand](understand/introduction-to-operating-system-deployment.md)## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
 ## [Task sequence steps](understand/task-sequence-steps.md)
-
-
 <!--- ### [Preprovision BitLocker in Windows PE with System Center Configuration Manager](deploy-use/preprovision-bitlocker-in-windows-pe.md) -->
-
-
 ## [Task sequence action variables](understand/task-sequence-action-variables.md)
 ## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
@@ -15,8 +11,7 @@
 ## [Security and privacy for operating system deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
-# [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+# [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 ## [Prepare for operating system deployment](get-started/prepare-for-operating-system-deployment.md)
 ### [Manage boot images](get-started/manage-boot-images.md)
 #### [Customize boot images](get-started/customize-boot-images.md)
