@@ -16,9 +16,6 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Introduction to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-
-*Applies to: System Configuration Manager (Current Branch)*
-
 A member of the Microsoft System Center suite of management solutions, System Center Configuration Manager can help you manage devices and users both on-premises and in the cloud.  
 
 **Configuration Manager can help you:**   
