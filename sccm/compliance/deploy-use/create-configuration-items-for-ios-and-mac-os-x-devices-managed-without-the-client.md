@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client
+# Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 Use the System Center Configuration Manager **iOS and Mac OS X** configuration item to manage settings  for iOS and Mac OS X devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## To create an iOS and Mac OS X configuration item  

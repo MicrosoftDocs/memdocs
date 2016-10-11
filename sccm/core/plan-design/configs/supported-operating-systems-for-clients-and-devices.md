@@ -14,7 +14,7 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# Supported operating systems for clients and devices for System Center Configuration Manager
+# Supported operating systems for clients and devices for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 

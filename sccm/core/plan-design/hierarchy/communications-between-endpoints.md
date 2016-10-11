@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Communications between endpoints in System Center Configuration Manager
+# Communications between endpoints in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ##  <a name="Planning_Intra-site_Com"></a> Communications between site systems in a site  
  When Configuration Manager site systems or components communicate across the network to other site systems or Configuration Manager components in the site, they use one of the following which depends on how you configure the site:  
@@ -34,7 +34,7 @@ To help you manage the transfer of content from the site server to distribution 
 
 -   You can install a distribution point as a prestaged distribution point. A prestaged distribution point lets you use content that is manually put on the distribution point server and removes the requirement to transfer content files across the network.  
 
-For more information see [Manage network bandwidth for content management](Manage%20network%20bandwidth%20for%20content%20management%20in%20System%20Center%20Configuration%20Manager.md).
+For more information see [Manage network bandwidth for content management](manage-network-bandwidth.md).
 
 
 ##  <a name="Planning_Client_to_Site_System"></a> Communications from clients to site systems and services  

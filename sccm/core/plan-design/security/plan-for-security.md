@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Plan for security in System Center Configuration Manager
+# Plan for security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this topic to help you plan for security in System Center Configuration Manager.  
 
    For additional information about how Configuration Manager uses certificates and cryptographic controls, see [Cryptographic controls technical reference for System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  

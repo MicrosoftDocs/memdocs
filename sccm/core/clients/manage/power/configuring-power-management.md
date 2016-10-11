@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Configuring power management in System Center Configuration Manager
+# Configuring power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can use power management in System Center Configuration Manager, you must perform the following configuration steps.  
 
 ## Enable and configure power management client settings  

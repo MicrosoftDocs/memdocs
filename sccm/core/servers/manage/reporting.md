@@ -15,7 +15,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Reporting in System Center Configuration Manager
+# Reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of Microsoft SQL Server Reporting Services in the Configuration Manager console.  
 
 ## Reporting topics  

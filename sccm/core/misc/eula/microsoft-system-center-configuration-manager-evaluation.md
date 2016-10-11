@@ -12,7 +12,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION
+# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER EVALUATION*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT EVALUATION SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER**  

@@ -16,7 +16,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Configure Custom Client Settings for Endpoint Protection
+# Configure Custom Client Settings for Endpoint Protection*Applies to: System Center Configuration Manager (Current Branch)*
 This procedure configures custom client settings for Endpoint Protection which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]

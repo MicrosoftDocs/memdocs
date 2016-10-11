@@ -2,7 +2,7 @@
 
 
 
-# [Not in Toc]
+Not in Toc
 **plan-design**
 -  [Ports used in System Center Configuration Manager](plan-design/hierarchy/ports.md)
 -  [Log files in System Center Configuration Manager](plan-design/hierarchy/log-files.md)

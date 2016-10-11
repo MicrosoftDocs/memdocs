@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Accounts used in System Center Configuration Manager
+# Accounts used in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to identify the Windows groups and the accounts that are used in System Center Configuration Manager, how they are used, and any requirements.  
 
 ## Windows groups that Configuration Manager creates and uses  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to software inventory in System Center Configuration Manager
+# Introduction to software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use software inventory in System Center Configuration Manager to collect information about files that are contained on client devices in your organization. Additionally, software inventory can collect files from client devices and store these on the site server. Software inventory is collected when the **Enable software inventory on clients** setting is enabled in client settings.  
 
  After software inventory is enabled and the clients run a software inventory cycle, the client sends the inventory information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the inventory information in the site database. Software inventory runs on clients according to the schedule that you specify in client settings.  

@@ -17,7 +17,7 @@ caps.latest.revision: 21
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Create an Endpoint Protection Point Site System Role
+# Create an Endpoint Protection Point Site System Role*Applies to: System Center Configuration Manager (Current Branch)*
  The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
 
  Use one of the following procedures depending on whether you want to install a new site system server for Endpoint Protection or use an existing site system server:

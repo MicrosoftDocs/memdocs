@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Windows Hello for Business settings in System Center Configuration Manager
+# Windows Hello for Business settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Windows), which is an alternative sign-in method for Windows 10 devices. Hello for Business uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
 
 Hello for Business lets you use a **user gesture** to login, instead of a password. A user gesture might be a simple PIN, biometric authentication, or an external device such as a fingerprint reader.  

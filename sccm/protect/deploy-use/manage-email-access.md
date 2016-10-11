@@ -15,7 +15,7 @@ caps.latest.revision: 24
 author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
-# Manage email access in System Center Configuration Manager
+# Manage email access in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use System Center Configuration Manager conditional access to manage access to Exchange email based on conditions you specify.  
 
 You can manage access to:  
@@ -150,7 +150,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 ### Step 3: Configure and deploy a compliance policy  
  Ensure that you have created and deployed a compliance policy to all devices that the Exchange conditional access policy will be targeted to.  
 
- For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](../../protect/deploy-use/manage-device-compliance-policies.md).  
+ For details about how to configure the compliance policy, see [Manage device compliance policies in System Center Configuration Manager](device-compliance-policies.md).  
 
 > [!IMPORTANT]  
 >  If you have not deployed a compliance policy and then enable an Exchange conditional access policy, all targeted devices will be allowed access.  

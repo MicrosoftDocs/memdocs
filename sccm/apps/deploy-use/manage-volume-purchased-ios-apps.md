@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Manage volume-purchased iOS apps with System Center Configuration Manager
+# Manage volume-purchased iOS apps with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  The iOS app store give you the ability to purchase multiple licenses for an app you want to run in your company. This helps you reduce the administrative overhead of tracking multiple purchased copies of apps.  

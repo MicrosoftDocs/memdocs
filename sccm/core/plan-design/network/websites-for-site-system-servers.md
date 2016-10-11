@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Websites for site system servers in System Center Configuration Manager
+# Websites for site system servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Several Configuration Manager site system roles require the use of Microsoft Internet Information Services (IIS) and use the default IIS website to host site system services. When you must run other web applications on the same server and settings are not compatible with Configuration Manager, consider using a custom website for Configuration Manager.  
 
 > [!TIP]  

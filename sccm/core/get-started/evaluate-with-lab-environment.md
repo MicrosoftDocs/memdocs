@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Evaluate System Center Configuration Manager by building your own lab environment
+# Evaluate System Center Configuration Manager by building your own lab environment*Applies to: System Center Configuration Manager (Current Branch)*
 Learn how to create a lab environment to evaluate System Center Configuration Manager for use in your organization.  
 
 ## Evaluate System Center Configuration Manager by Building Your Own Lab Environment  

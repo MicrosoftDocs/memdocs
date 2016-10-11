@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Operations and maintenance for collections in System Center Configuration Manager
+# Operations and maintenance for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section to help you create and manage collections in the System Center Configuration Manager hierarchy.  
 
 ## In this section  

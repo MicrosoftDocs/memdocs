@@ -17,5 +17,5 @@ author: nbigmanms.author: nbigman
 manager: angrobe
 
 ---
-# Software inventory in System Center Configuration Manager
+# Software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use System Center Configuration Manager software inventory to collect and report information about the files stored on client computers in your organization. You can also use software inventory to collect files from client computers and store them in a folder on the site server.  

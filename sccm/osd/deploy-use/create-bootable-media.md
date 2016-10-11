@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create bootable media with System Center Configuration Manager
+# Create bootable media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following operating system deployment scenarios:  
 
 -   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
@@ -32,7 +32,7 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 |----------|-----------------|  
 |Boot image|Consider the following about the boot image that you will use in the task sequence to deploy the operating system:<br /><br /> -   The architecture of the boot image must be appropriate for the architecture of the destination computer. For example, an x64 destination computer can boot and run an x86 or x64 boot image. However, an x86 destination computer can boot and run only an x86 boot image.<br />-   Ensure that the boot image contains the network and mass storage drivers that are required to provision the destination computer.|  
 |Create a task sequence to deploy an operating system|As part of the bootable media, you must specify the task sequence to deploy the operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md).|  
-|Distribute all content associated with the task sequence|You must distribute to at least one distribution point all content that is required by the task sequence. This includes the boot image and other associated prestart files. The wizard gathers the information from the distribution point when it creates the bootable media. You must have **Read** access rights to the content library on that distribution point.  For details, see [About the content library](../../core/plan-design/hierarchy/the-content-library).|  
+|Distribute all content associated with the task sequence|You must distribute to at least one distribution point all content that is required by the task sequence. This includes the boot image and other associated prestart files. The wizard gathers the information from the distribution point when it creates the bootable media. You must have **Read** access rights to the content library on that distribution point.  For details, see [About the content library](../../core/plan-design/hierarchy/the-content-library.md).|  
 |Prepare the removable USB drive|For a removable USB drive:<br /><br /> If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.|  
 |Create an output folder|For a CD/DVD set:<br /><br /> Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.|  
 

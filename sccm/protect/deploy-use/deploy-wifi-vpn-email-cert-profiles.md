@@ -14,7 +14,7 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 caps.latest.revision: 5
 author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
-# Deploy profiles in System Center Configuration Manager
+# Deploy profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Profiles must be deployed to one or more collections before they can be used.  
 
  Use the **Deploy Wi-Fi Profile**, **Deploy VPN Profile**, **Deploy Exchange ActiveSync Profile**, or **Deploy Certificate Profile** dialog box to configure the deployment of these profiles. As part of the configuration, you define the collection to which the  profile is to be deployed and specify how often the profile is evaluated for compliance.  

@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# How diagnostics and usage data is used for System Center Configuration Manager
+# How diagnostics and usage data is used for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Diagnostic and usage data collected for System Center Configuration Manager provides Microsoft nearly immediate feedback on how the product is working (or not working), and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
 
 -   The Windows server versions that are used by site servers  

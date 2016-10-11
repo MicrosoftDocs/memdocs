@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to create PFX certificate profiles in System Center Configuration Manager
+# How to create PFX certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange. PFX certificates can be created within Configuration Manager or imported. With System Center Configuration Manager, imported or new PFX certificates can be deployed to iOS, Android, and Windows 10 devices. These files can then be deployed to multiple devices to support user-based PKI communication.  
 

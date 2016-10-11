@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Create applications with System Center Configuration Manager
+# Create applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 A System Center Configuration Manager application contains the files and information that are required to deploy software to a device. An application contains one or more deployment types that comprise the installation files and information that are required to install software. A deployment type also contains rules that specify when and how the software is deployed.  
 
  You can create applications by using the following methods:  

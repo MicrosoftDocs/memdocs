@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Updates for System Center Configuration Manager
+# Updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and then install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
 
  **The following topics can help you understand how to find and install the different update types for System Center Configuration Manager:**  

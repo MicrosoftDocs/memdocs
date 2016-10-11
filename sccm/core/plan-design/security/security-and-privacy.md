@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for System Center Configuration Manager
+# Security and privacy for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic includes resources for Security and Privacy for System Center Configuration Manager.  
 
  Before preceding, ensure  you understand the [Fundamentals of System Center Configuration Manager](../../../core/understand/fundamentals.md). If you have already installed System Center Configuration Manager, identify the design decisions for your implementation. You might find the Configuration Manager planning and deployment content helpful.  

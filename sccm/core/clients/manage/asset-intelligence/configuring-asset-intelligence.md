@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Configure Asset Intelligence in System Center Configuration Manager
+# Configure Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You must complete a number of configuration steps before you can use Asset Intelligence in System Center Configuration Manager to inventory and manage software license usage throughout your enterprise.  
 
 ## Steps to configure Asset Intelligence  

@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Use the Hotfix Installer to install updates for System Center Configuration Manager
+# Use the Hotfix Installer to install updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Some updates for System Center Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
 When you must install an update (or hotfix) that you receive from Microsoft, and that update has a file name that ends with the extension **.exe** (not **update.exe**), you use the hotfix installer that is included with that hotfix download to install the update directly to the Configuration Manager site server.  
 

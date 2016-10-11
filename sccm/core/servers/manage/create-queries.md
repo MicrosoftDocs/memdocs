@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to create queries in System Center Configuration Manager
+# How to create queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following sections in this topic to help you create or import queries in System Center Configuration Manager.  
 
 -   [How to Create Queries](#BKMK_Create)  

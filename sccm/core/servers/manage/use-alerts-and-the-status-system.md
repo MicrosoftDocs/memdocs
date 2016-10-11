@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Use alerts and the status system for System Center Configuration Manager
+# Use alerts and the status system for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Configure Alerts, and use the built-in Status System to remain informed about the state of your System Center Configuration Manager deployment.  
 
 

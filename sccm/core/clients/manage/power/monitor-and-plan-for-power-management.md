@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to monitor and plan for power management in System Center Configuration Manager
+# How to monitor and plan for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to help you monitor and plan for power management in System Center Configuration Manager.  
 
 ##  <a name="BKMK_How_to_use_reports"></a> How to use reports for power management  

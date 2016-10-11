@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex
 
 ---
-# Schema extensions for System Center Configuration Manager
+# Schema extensions for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can extend the Active Directory schema to support Configuration Manager. This edits a forests Active Directory schema  to add a new container and several attributes that are used by Configuration Manager sites to publish key information in Active Directory where clients can securely access it.  This information can simplify the deployment and configuration of clients, and helps clients locate site resources like servers with deployed content or that provide various services to clients.  
 
 -   Extending the Active Directory schema is not required, but is recommended.  

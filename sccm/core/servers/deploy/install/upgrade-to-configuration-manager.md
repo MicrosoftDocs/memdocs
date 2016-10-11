@@ -15,7 +15,7 @@ caps.latest.revision: 21
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager
+# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  

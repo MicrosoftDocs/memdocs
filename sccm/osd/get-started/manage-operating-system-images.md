@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage operating system images with System Center Configuration Manager
+# Manage operating system images with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Operating system images in Configuration Manager are stored in the Windows Imaging (WIM) file format and represent a compressed collection of reference files and folders that are required to successfully install and configure an operating system on a computer. For all operating system deployment scenarios, you must select an operating system image.   You can use the default operating system image or  build the operating system image from a reference computer that you configure. When you build the reference computer, you can add operating system files, drivers, support files, software updates, tools, and other software applications to the operating system before you capture it to create the image file. The following provides information about each method.  
 
  **Default image**  

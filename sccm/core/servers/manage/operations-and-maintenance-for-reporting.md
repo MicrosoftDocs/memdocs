@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Operations and maintenance for reporting in System Center Configuration Manager
+# Operations and maintenance for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  
@@ -51,7 +51,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
 4.  When there are required parameters, specify the parameters, and then click **View Report**.  
 
-##### To run a report in a web browser  
+#### To run a report in a web browser  
 
 1.  In your web browser, enter the Report Manager URL, for example, **http:\/\/Server1\/Reports**. You can determine the Report Manager URL on the **Report Manager URL** page in Reporting Services Configuration Manager.  
 
@@ -67,7 +67,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 ###  <a name="BKMK_ModifyReportProperties"></a> Modify the properties for a Configuration Manager report  
  In the Configuration Manager console, you can view the properties for a report, such as the report name and description, but to change the properties, use Report Manager. Use the following procedure to modify the properties for a Configuration Manager report.  
 
-##### To modify report properties in Report Manager  
+#### To modify report properties in Report Manager  
 
 1.  In your web browser, enter the Report Manager URL, for example, **http:\/\/Server1\/Reports**. You can determine the Report Manager URL on the **Report Manager URL** page in Reporting Services Configuration Manager.  
 
@@ -96,7 +96,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
  Use the following procedure to edit the properties for a Configuration Manager report.  
 
-##### To edit report properties  
+#### To edit report properties  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -114,7 +114,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
  Use the following procedure to create a model\-based Configuration Manager report.  
 
-##### To create a model\-based report  
+#### To create a model\-based report  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -159,7 +159,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
  Use the following procedure to create a SQL\-based Configuration Manager report.  
 
-##### To create a SQL\-based report  
+#### To create a SQL\-based report  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -205,7 +205,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
  Use the following procedure to create a report subscription to deliver a report to a file share.  
 
-##### To create a report subscription to deliver a report to a file share  
+#### To create a report subscription to deliver a report to a file share  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
@@ -287,7 +287,7 @@ After the infrastructure is in place for reporting in System Center Configuratio
 
  Use the following procedure to create a report subscription to deliver a report by using email.  
 
-##### To create a report subscription to deliver a report by email  
+#### To create a report subscription to deliver a report by email  
 
 -   In the Configuration Manager console, click **Monitoring**.  
 

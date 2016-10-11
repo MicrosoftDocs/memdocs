@@ -17,6 +17,7 @@ Robots: NOINDEX,NOFOLLOW
 ---
 # Use the client software from the version 1606 baseline media for extended interoperability with future versions of a Current Branch site
 
+*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*  
 
 You can use the Configuration Manager client software for Windows computers (client.msi) from the version 1606 baseline media DVD that you get with System Center 2016 or from a or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release to manage devices that belong to a Current Branch site. This client is called the extended interoperability client.
 

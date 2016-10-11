@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Security and privacy for Wi-Fi profiles in System Center Configuration Manager
+# Security and privacy for Wi-Fi profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 This topic contains security and privacy information for Wi-Fi and VPN profiles in System Center Configuration Manager.  
 

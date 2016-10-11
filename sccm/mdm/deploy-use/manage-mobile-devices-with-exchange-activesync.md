@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Manage mobile devices with System Center Configuration Manager and Exchange
+# Manage mobile devices with System Center Configuration Manager and Exchange*Applies to: System Center Configuration Manager (Current Branch)*
 Use the Exchange Server connector in System Center Configuration Manager when you want to manage mobile devices that connect to Exchange Server (on-premises or online) by using the Microsoft Exchange ActiveSync protocol, and you cannot enroll them by using Configuration Manager. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
 
  ![configmgr&#45;with&#45;exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  

@@ -14,7 +14,7 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Monitor content you have distributed with System Center Configuration Manager
+# Monitor content you have distributed with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the System Center Configuration Manager console to monitor distributed content,  including:  
 
 -   The status for all package types in relation to the associated distribution points  

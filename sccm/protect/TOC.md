@@ -1,10 +1,11 @@
-# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
-# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
+
+# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for SCEP](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for .PFX](plan-design/prerequisites-for-certificate-profiles.md)
@@ -18,10 +19,13 @@
 ### [Wi-Fi and VPN profile prerequisites](plan-design/prerequisites-for-wifi-vpn-profiles.md)
 
 ## [Security and privacy for Wi-Fi and VPN profiles](plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+
 ## [Security and privacy for email profiles](plan-design/security-and-privacy-for-email-profiles.md)
+
 ## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
-# [Deploy and use](deploy-use/vpn-profiles.md)
+
+# [Deploy and use](deploy-use/vpn-profiles.md)
 ## [VPN profiles](deploy-use/vpn-profiles.md)
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
@@ -68,6 +72,7 @@
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
+
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
 ## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)

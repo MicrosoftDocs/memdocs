@@ -16,7 +16,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Monitor applications from the System Center Configuration Manager console
+# Monitor applications from the System Center Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Introduction
 

@@ -15,7 +15,7 @@ caps.latest.revision: 24
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Infrastructure requirements for operating system deployment in System Center Configuration Manager
+# Infrastructure requirements for operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Operating system deployment in System Center 2012 Configuration Manager has external dependencies and dependencies within the product. Use the following sections to help you prepare for operating system deployment.  
 
 ##  <a name="BKMK_ExternalDependencies"></a> Dependencies External to Configuration Manager  
@@ -174,7 +174,7 @@ You must install the following WSUS 4.0 hotfixes:
 
 -   DHCP and Windows Deployment Services both require port number 67. If you co-host Windows Deployment Services and DHCP, you can move DHCP or the distribution point that is configured for PXE to a separate server. Or, you can use the following procedure to configure the Windows Deployment Services server to listen on a different port.  
 
-    ##### To configure the Windows Deployment Services server to listen on a different port  
+    #### To configure the Windows Deployment Services server to listen on a different port  
 
     1.  Modify the following registry key:  
 

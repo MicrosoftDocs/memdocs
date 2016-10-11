@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to Wi-Fi Profiles in System Center Configuration Manager
+# Introduction to Wi-Fi Profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to the wireless network.  
 
  For example, you installed a new Wi-Fi network named **Contoso Wi-Fi**. You now want to provision all devices that run the iOS operating system with the settings required to connect to this network. You can create a Wi-Fi profile containing the settings necessary to connect to the **Contoso Wi-Fi** wireless network. Then, you can deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the company network in the list of wireless networks and can readily connect to this network.  

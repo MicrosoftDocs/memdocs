@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 You can use Configuration Manager with  Intune to manage desktops, laptops, and other devices running Windows as mobile devices. You can set up Azure Active Directory to allow automatic enrollment of Windows PCs. You can also configure Configuration Manager to simplify enrollment using the Company Portal app.
 
 - [Enable automatic enrollment](#azure-active-directory-enrollment)

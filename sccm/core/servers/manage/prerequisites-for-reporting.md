@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Prerequisites for reporting in System Center Configuration Manager
+# Prerequisites for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Reporting in System Center Configuration Manager has external dependencies and dependencies within the product.  
 
 ## Dependencies external to Configuration Manager  

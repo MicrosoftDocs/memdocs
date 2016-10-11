@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Monitor software updates | Configuration Manager
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
@@ -14,7 +13,7 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ---
-# Monitor software updates in System Center Configuration Manager
+# Monitor software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
 
 ##  <a name="BKMK_SUAlerts"></a> Alerts for software updates  
@@ -24,7 +23,7 @@ System Center Configuration Manager provides many ways to help you to monitor so
 
 -   Deployment setting: You can configure the alerts settings in the Deploy Software Updates Wizard and in deployment properties.  
 
- After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review software update alerts at the following locations:  
+After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review software update alerts at the following locations:  
 
 1.  Review recent alerts in the **Software Updates** node in the **Software Library** workspace.  
 

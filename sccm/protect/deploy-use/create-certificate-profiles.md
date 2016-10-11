@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to create certificate profiles in System Center Configuration Manager
+# How to create certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use certificate profiles to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
 

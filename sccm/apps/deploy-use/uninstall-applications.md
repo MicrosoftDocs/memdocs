@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Uninstall applications with System Center Configuration Manager
+# Uninstall applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Introduction  
   

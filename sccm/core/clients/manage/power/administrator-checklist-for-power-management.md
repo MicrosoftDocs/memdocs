@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Administrator checklist for power management in System Center Configuration Manager
+# Administrator checklist for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  
 
 ## Configuring power management  
@@ -28,7 +28,7 @@ This administrator checklist provides the recommended steps for using System Cen
 
 |Task|Details|  
 |----------|-------------|  
-|Review the power management concepts in the Configuration Manager documentation library.|See [Introduction to power management](introduction-to-power-management).|  
+|Review the power management concepts in the Configuration Manager documentation library.|See [Introduction to power management](introduction-to-power-management.md).|  
 |Review the power management prerequisites in the Configuration Manager documentation library.|See [Prerequisites for power management](prerequisites-for-power-management.md).|  
 |Review the best practices information for power management.|See [Best practices for power management](best-practices-for-power-management.md).|  
 |Configure your collections to manage power consumption from computers within your environment.|Use the **Collection for reporting of baseline data**, **Collection for reporting of baseline data**,   **Collection of computers incapable of power management**, **Collections of computers to which power plans will be applied**, **Collections of computers to which power plans will be applied**, and **Collections of computers that are running Windows Server** to help you manage power settings for computers in your hierarchy. You can create multiple collections and apply different power plans to each collection.|  

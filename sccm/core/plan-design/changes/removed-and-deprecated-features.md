@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Removed and deprecated features for System Center Configuration Manager
+# Removed and deprecated features for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic describes features, products, and operating systems that are removed from support with System Center Configuration Manager or will be removed in a future update (Deprecated). This is intended to provide early warning about future changes that might affect your use of Configuration Manager.  
 
  This information is subject to change with future releases and might not include each deprecated feature, product, or operating system.  

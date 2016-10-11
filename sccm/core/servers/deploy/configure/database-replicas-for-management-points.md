@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Database replicas for management points for System Center Configuration Manager
+# Database replicas for management points for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager primary sites can use a database replica to reduce the CPU load placed on the site database  server by management points as they service requests from clients.  
 
 -   When a management point uses a database replica, that management point requests data from the SQL Server computer that hosts the database replica instead of from the site database server.  

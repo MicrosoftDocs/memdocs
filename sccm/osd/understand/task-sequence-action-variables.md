@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Task sequence action variables in System Center Configuration Manager
+# Task sequence action variables in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Task sequence action variables specify configuration settings that are used by a single step in a System Center Configuration Manager task sequence. By default, the settings used by a task sequence step are initialized before the step is run and available only while the associated task sequence step is run. In other words, the task sequence variable setting is added to the task sequence environment before the task sequence step is run, and the value is removed from the task sequence environment after the task sequence step has run.  
 
 ## Action Variable Example  

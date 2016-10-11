@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Monitor hierarchy and replication infrastructure in System Center Configuration Manager
+# Monitor hierarchy and replication infrastructure in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To monitor infrastructure and operations in System Center Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 
 > [!NOTE]  
@@ -61,7 +61,7 @@ To minimize the risk of a site failure, if monitoring tasks reveal any signs of 
    For general information about monitoring content, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 For information about monitoring specific types of content deployment:
--   To monitor Applications, see [Monitor applications with System Center Configuration Manager](sccm/apps/deploy-use/monitor-aplications-from-the-console).  
+-   To monitor Applications, see [Monitor applications with System Center Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
 -   To monitor Packages and Programs, see How to manage packages and programs   in [Packages and programs in System Center Configuration Manager](../../../apps/deploy-use/packages-and-programs.md).  
 
@@ -75,7 +75,7 @@ For information about monitoring specific types of content deployment:
 See [Monitor app usage with software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 **Monitor Software Updates**  
- See [Manage software updates in System Center Configuration Manager](../../../sum/deploy-use/manage-software-updates.md).  
+ See [Monitor software updates in System Center Configuration Manager](../../../sum/deploy-use/monitor-software-updates.md).  
 
 
 ##  <a name="BKMK_MonitorInfrastructure"></a> Monitor hierarchy infrastructure for Configuration Manager  

@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Fundamentals of managing devices with System Center Configuration Manager
+# Fundamentals of managing devices with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager can manage two broad categories of devices.
 
 The first, **clients** are devices such as workstations, laptops, servers, and mobile devices that have the Configuration Manager client software installed so that you can manage them.   

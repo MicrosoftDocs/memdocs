@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security best practices and privacy information for System Center Configuration Manager
+# Security best practices and privacy information for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to find security best practices and privacy information for System Center Configuration Manager.  
 
 ## Security and Privacy content:  

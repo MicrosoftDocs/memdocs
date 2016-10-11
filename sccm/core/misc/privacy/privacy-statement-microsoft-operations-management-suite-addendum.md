@@ -10,7 +10,7 @@ ms.assetid: aa91afee-45b5-46eb-ad8a-e9c7d3122b38
 caps.latest.revision: 4
 author: nbigmanms.author: nbigmanmanager: angrobe
 ---
-# System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum
+# System Center Configuration Manager privacy statement - Microsoft Operations Management Suite addendum*Applies to: System Center Configuration Manager (Current Branch)*
 This privacy statement should be read in conjunction with the [System Center Configuration Manager privacy statement](https://www.microsoft.com/en-us/privacystatement/SystemCenterConfigurationManager/Default.aspx) as the provisions in that document are applicable. This privacy statement covers the features for the Microsoft Operations Management Suite Connector within System Center Configuration Manager. This disclosure focuses on high-level aspects of the Connector, and is not intended to be an exhaustive list.
 
 ### **What this feature does:**

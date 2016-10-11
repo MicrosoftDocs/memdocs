@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create a task sequence to upgrade an operating system in System Center Configuration Manager
+# Create a task sequence to upgrade an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use task sequences   in System Center Configuration Manager to automatically upgrade  an operating system from Windows 7 or later to Windows 10 on a destination computer. You create a task sequence that references the operating system image that you want to install on the destination computer and any other additional content, such as applications or software updates that you want to install. The task sequence to upgrade an operating system is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 ##  <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an operating system  

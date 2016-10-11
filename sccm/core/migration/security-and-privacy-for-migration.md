@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for migration to System Center Configuration Manager
+# Security and privacy for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security best practices and privacy information for migration to your System Center Configuration Manager environment.  
 
 ## Security Best Practices for Migration  

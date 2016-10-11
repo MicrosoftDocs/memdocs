@@ -14,7 +14,7 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 caps.latest.revision: 40
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
+# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 
 ##  Compatibility with Configuration Manager versions  
@@ -138,7 +138,7 @@ The following features introduced in July 2016 work in hybrid deployments exactl
 
   The DEM user may perform actions on the local device, but remote management of other enrolled devices can only be performed from the Intune admin console. Additionally, Intune is deprecating use of DEM accounts with either the Apple Device Enrollment Program or the Apple Configurator tool. Both these enrollment methods already support user-less enrollment for shared iOS devices.
 
-  Only use DEM accounts when user-less enrollment for shared devices is unavailable. For more information, see [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](../deploy-use/enroll-devices-with-device-enrollment-manager).
+  Only use DEM accounts when user-less enrollment for shared devices is unavailable. For more information, see [Enroll corporate-owned devices with the Device Enrollment Manager in Microsoft Intune](../deploy-use/enroll-devices-with-device-enrollment-manager.md).
 
 - **Changes to the Android Company Portal app**
 

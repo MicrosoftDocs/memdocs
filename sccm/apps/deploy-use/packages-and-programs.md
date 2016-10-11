@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Packages and programs in System Center Configuration Manager
+# Packages and programs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager continues to support packages and programs that were used in Configuration Manager 2007. A deployment that uses packages and programs might be more suitable than a deployment that uses an application when you deploy any of the following:  
 
 - You want to deploy applications to Linux and UNIX servers.  

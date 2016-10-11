@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Integration with Windows Update for Business in Windows 10 | Configuration Manager
 description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up to date for devices connected to the Windows Update service."
@@ -14,9 +13,8 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 
-
 ---
-# Integration with Windows Update for Business in Windows 10
+# Integration with Windows Update for Business in Windows 10*Applies to: System Center Configuration Manager (Current Branch)*
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up to date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager has the ability to differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates .  
 
  Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  

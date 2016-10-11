@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Plan for managing Internet-based clients in System Center Configuration Manager
+# Plan for managing Internet-based clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Internet-based client management lets you manage System Center Configuration Manager clients when they are not connected to your company network but have a standard Internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
 
  Because of the higher security requirements of managing client computers on a public network, Internet-based client management requires that clients and the site system servers that the clients connect to use PKI certificates. This ensures that connections are authenticated by an independent authority, and that data to and from these site systems are encrypted by using Secure Sockets Layer (SSL).  

@@ -16,9 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 
 
-# Upgrade the Long-Term Servicing Branch to the Current Branch
-
-
+# Upgrade the Long-Term Servicing Branch to the Current Branch*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)* 
 Use this topic to learn how to upgrade (convert) a site and hierarchy that runs the Long-Term Servicing Branch (LTSB) of Configuration Manager to the Current Branch.
 
 When you have a current Software Assurance agreement (or similar licensing rights) that grants you rights to use the Current Branch, you can convert your installation from the LTSB to the Current Branch.  This is a one-way conversion as there is no support to convert a Current Branch site to the LTSB.

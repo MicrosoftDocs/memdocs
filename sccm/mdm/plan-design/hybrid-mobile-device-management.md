@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+# Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 This walkthrough shows you how to configure System Center Configuration Manager to manage iOS, Android (including Samsung KNOX), Windows Phone, and Windows devices with the Microsoft Intune online service over the Internet. Although you use the Intune service, management tasks are done using the service connection point site system role in the Configuration Manager console.  
 
  You can configure Configuration Manager to let users access company resources on their devices in a secure, managed way. By using device management, you protect company data while letting users enroll their personal or company-owned mobile devices and giving them access to company data. When you use Configuration Manager with Intune, you have the following management capabilities on devices:  

@@ -16,7 +16,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Protect apps using mobile application management policies in System Center Configuration Manager
+# Protect apps using mobile application management policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager application management policies let you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all web links inside a managed browser. App management policies support:  
 
 -   Devices that run Android 4 and later.  

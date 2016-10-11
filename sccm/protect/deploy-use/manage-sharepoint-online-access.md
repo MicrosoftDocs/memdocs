@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
-# Manage SharePoint Online access in System Center Configuration Manager
+# Manage SharePoint Online access in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use the System Center Configuration Manager **SharePoint Online** conditional access policy to manage access to OneDrive for Business files located on SharePoint online, based on conditions you specify.
 You can control access to SharePoint Online from the following apps for the listed platforms:  

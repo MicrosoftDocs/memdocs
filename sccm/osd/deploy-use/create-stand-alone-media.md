@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create stand-alone media with System Center Configuration Manager
+# Create stand-alone media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Stand-alone media in Configuration Manager contains everything that is required to deploy the operating system on a computer without a connection to a Configuration Manager site or using the network. Use stand-alone media with the following operating system deployment scenarios:  
 
 -   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  

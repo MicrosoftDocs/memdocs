@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create a task sequence to capture an operating system in System Center Configuration Manager
+# Create a task sequence to capture an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you use a task sequence to deploy an operating system to a computer  in System Center Configuration Manager, the  computer installs the operating system image that you specify in the task sequence. To customize the operating system image so it includes specific drivers, applications, software updates, etc., you use a build and capture task sequence to build a reference computer and then capture the operating system image from that reference computer. If you already have a reference computer available to capture, you can create a custom task sequence to capture the operating system. Use the following sections to capture a custom operating system.  
 
 ##  <a name="BKMK_BuildCaptureTS"></a> Use a task sequence to build and capture a reference computer  
@@ -42,7 +42,7 @@ When you use a task sequence to deploy an operating system to a computer  in Sys
 ###  <a name="BKMK_CreateBuildCaptureTS"></a> Create a build and capture task sequence  
  Use the following procedure to use a task sequence to  build a reference computer and capture the operating system.  
 
-##### To create a task sequence that builds and captures an operating system image  
+#### To create a task sequence that builds and captures an operating system image  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 

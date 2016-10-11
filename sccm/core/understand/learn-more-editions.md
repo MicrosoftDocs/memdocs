@@ -18,9 +18,7 @@ ms.author: brenduns
 manager: angrobe
 ---
 
-# Licensing and branches for System Center Configuration Manager
-
-
+# Licensing and branches for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)* 
 Use this topic to learn about the licensing requirements for the installation options available with the October 2016 release of System Center Configuration Manager version 1606, which include the Current Branch version 1606, Long-Term Servicing Branch (LTSB), and Evaluation installation of the Current Branch version 1606.
 
 **Licensing overview:**   

@@ -14,7 +14,7 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Site and site system prerequisites for System Center Configuration Manager
+# Site and site system prerequisites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Windows computers require specific configurations to support use as a System Center Configuration Manager site system server.  
 

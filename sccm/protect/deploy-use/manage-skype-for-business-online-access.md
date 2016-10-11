@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
-# Manage Skype for Business Online access
+# Manage Skype for Business Online access*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use conditional access policy for  **Skype for Business Online** to manage access to Skype for Business Online, based on conditions you specify.  
 

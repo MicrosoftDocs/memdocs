@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Reference for maintenance tasks for System Center Configuration Manager
+# Reference for maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic lists details for each of the System Center Configuration Manager site maintenance tasks, and at which site types the task is available. Each entry also indicates if the task is enabled by default, or not enabled by default.   For information about planning for and configuring sites to run maintenance tasks, see   [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md)  
 
 **Backup Site Server** - Use this task to prepare for recovery of critical data by creating a backup of the critical information that you have to restore a site and the Configuration Manager database. For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)  
@@ -37,7 +37,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Not enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Application Request Data** - Use this task to delete aged application requests from the database. For more information about application requests, see [Get started with application management in System Center Configuration Manager](../../../apps/understand/get-started-with-application-management.md).  
+**Delete Aged Application Request Data** - Use this task to delete aged application requests from the database. For more information about application requests, see [Create and deploy an application with System Center Configuration Manager](/sccm/apps/get-started/create-and-deploy-an-application).  
 
 -   Central administration site - Not available
 -   **Primary site** - Enabled    
@@ -55,13 +55,13 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Collected Files** -  Use this task to delete aged information about collected files from the database. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Planning for software inventory in System Center Configuration Manager](../Topic/Planning%20for%20software%20inventory%20in%20System%20Center%20Configuration%20Manager.md).  
+**Delete Aged Collected Files** -  Use this task to delete aged information about collected files from the database. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory in System Center Configuration Manager](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Computer Association Data** - Use this task to delete aged Operating System Deployment computer association data from the database. This information is used as part of completing user state restores. For more information about computer associations, see [Manage user state in System Center Configuration Manager](../../../osd/deploy-use/manage-user-state.md).  
+**Delete Aged Computer Association Data** - Use this task to delete aged Operating System Deployment computer association data from the database. This information is used as part of completing user state restores. For more information about computer associations, see [Manage user state in System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
@@ -73,7 +73,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Device Wipe Record** - Use this task to delete aged data about mobile device wipe actions from the database. For information about managing mobile devices, see  [Determine How to Manage Mobile Devices in Configuration Manager](../Topic/Determine%20How%20to%20Manage%20Mobile%20Devices%20in%20Configuration%20Manager.md).  
+**Delete Aged Device Wipe Record** - Use this task to delete aged data about mobile device wipe actions from the database. For information about wiping mobile devices, see  [Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager](/sccm/mdm/deploy-use/wipe-lock-reset-devices).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
@@ -148,13 +148,13 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   **Secondary site** - Enabled  
 
-**Delete Aged Software Metering Data** - Use this task to delete aged data for software metering that has been stored longer than a specified time from the database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/software-metering.md).  
+**Delete Aged Software Metering Data** - Use this task to delete aged data for software metering that has been stored longer than a specified time from the database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Software Metering Summary Data** - Use this task to delete aged summary data for software metering that has been stored longer than a specified time from the database.  For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/software-metering.md).  
+**Delete Aged Software Metering Summary Data** - Use this task to delete aged summary data for software metering that has been stored longer than a specified time from the database.  For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
@@ -172,7 +172,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Delete Aged Unknown Computers** - Use this task to delete information about unknown computers from the site database when it has not been updated for a specified time. For more information, see [Prepare for unknown computer deployments in System Center Configuration Manager](../../../osd/deploy-use/prepare-for-unknown-computer-deployments.md).  
+**Delete Aged Unknown Computers** - Use this task to delete information about unknown computers from the site database when it has not been updated for a specified time. For more information, see [Prepare for unknown computer deployments in System Center Configuration Manager](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
@@ -238,19 +238,19 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site** - Not enabled    
 -   **Secondary site**- Not enabled  
 
-**Summarize Installed Software Data** - Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. For more information, see [Planning for software inventory in System Center Configuration Manager](../Topic/Planning%20for%20software%20inventory%20in%20System%20Center%20Configuration%20Manager.md).  
+**Summarize Installed Software Data** - Use this task to summarize the data for installed software from multiple records into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. For more information, see [Introduction to software inventory in System Center Configuration Manager](../../clients/manage/inventory\introduction-to-software-inventory.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Summarize Software Metering File Usage Data** - Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering Monthly Usage Data** task to summarize software metering data, and to conserve disk space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/software-metering.md).  
+**Summarize Software Metering File Usage Data** - Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering Monthly Usage Data** task to summarize software metering data, and to conserve disk space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    
 -   Secondary site - Not available  
 
-**Summarize Software Metering Monthly Usage Data** - Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering File Usage Data** task to summarize software metering data, and to conserve space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/software-metering.md).  
+**Summarize Software Metering Monthly Usage Data** - Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering File Usage Data** task to summarize software metering data, and to conserve space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site - Not available    
 -   **Primary site** - Enabled    

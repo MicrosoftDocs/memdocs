@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to configure client status in System Center Configuration Manager
+# How to configure client status in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can monitor System Center Configuration Manager client status and remediate problems that are found, you must configure your site to specify the parameters that are used to mark clients as inactive and configure options to alert you if client activity falls below a specified threshold. You can also disable computers from automatically remediating any problems that client status finds.  
 
 ##  <a name="BKMK_1"></a> To Configure Client Status  

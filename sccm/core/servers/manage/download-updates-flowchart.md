@@ -15,7 +15,7 @@ caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Flowchart - Download updates for System Center Configuration Manager
+# Flowchart - Download updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This data flow displays the process by which a site with an on-line  service connection point downloads in-console updates.  
 
  ![Flowchart - Download updates](media/Flowchart---Download-updates.png)  

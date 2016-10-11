@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Set up your System Center Configuration Manager lab
+# Set up your System Center Configuration Manager lab*Applies to: System Center Configuration Manager (Current Branch)*
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 ##  <a name="BKMK_LabCore"></a> Core components  

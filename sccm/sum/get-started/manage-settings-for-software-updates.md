@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Manage settings for software updates | Configuration Manager
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
@@ -13,19 +12,9 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-#  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  
+#  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  *Applies to: System Center Configuration Manager (Current Branch)*
 After you synchronize software updates in Configuration Manager, configure and verify the settings in the following sections.
 
 ##  <a name="BKMK_ClientSettings"></a> Client settings for software updates  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Supported configurations for System Center Configuration Manager
+# Supported configurations for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 As an on-premises solution, System Center Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server and Azure.
 
 The information in this and the following topics is essential to identifying key configurations and requirements, or limitations, so you can plan, deploy, and maintain a functional Configuration Manager deployment.  This information is specific to the infrastructure for Configuration Manager sites, hierarchies and managed devices. When a Configuration Manager feature or capability requires more specific configurations, that information will be included with the feature specific documentation, and is supplemental to these more general supported configuration details.  

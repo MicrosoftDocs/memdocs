@@ -4,15 +4,17 @@ description: "Documentation for System Center Configuration Manager"
 keywords:
 layout: HubPage
 author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
-ms.suite:
-ms.assetid:
-
+ms.technology:
+  - configmgr-other
+ms.suite: ems
+ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 ---
-# System Center Configuration Manager Documentation
+# System Center Configuration Manager Documentation*Applies to: System Center Configuration Manager (Current Branch)*
 <article id="main">
 
     <section id="hero-content">

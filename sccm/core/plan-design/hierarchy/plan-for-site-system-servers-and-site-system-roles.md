@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Plan for site system servers and site system roles for System Center Configuration Manager
+# Plan for site system servers and site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager site you install includes a  a site server which is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server.   Site system servers (the site server or a remote site system server) support **site system roles**.
 
 
@@ -58,7 +58,7 @@ After a site installs, you can move the  location of some site system roles from
 
      When the Application Catalog supports client computers on the Internet, as a security best practice, install the Application Catalog website point in a perimeter network and the Application Catalog web service point on the intranet.  
 
--   **Asset Intelligence synchronization point** - A site system role that connects to Microsoft to download information for the Asset Intelligence catalog and to upload uncategorized titles so that they can be considered for future inclusion in the catalog.  A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.   For more information, see [Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/asset-intelligence.md).  
+-   **Asset Intelligence synchronization point** - A site system role that connects to Microsoft to download information for the Asset Intelligence catalog and to upload uncategorized titles so that they can be considered for future inclusion in the catalog.  A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.   For more information, see [Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 -   **Certificate registration point** - A site system role that communicates with a server that runs the Network Device Enrollment Service to manage device certificate requests that use the Simple Certificate Enrollment Protocol (SCEP).  This role is supported only at primary sites and the central administration site.   Although a single certificate registration point can provide functionality to an entire hierarchy, to help load balance certificate requests you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. When multiple instances exist in a hierarchy, clients are randomly assigned to one of the certificate registration points.  
 
