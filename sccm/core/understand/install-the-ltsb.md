@@ -40,7 +40,7 @@ For more information see [Licensing and branches for System Center Configuration
 ## Software Assurance expiration
 During Setup, you have the option to enter the **Software Assurance expiration date**. This is an optional value you can specify as a convenient reminder.
 
-> ![NOTE]
+> [!NOTE]
 > Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered online and your software assurance license status should be current to be eligible to use these additional updates.    
 
 - You can specify the value on the **Product Key** page of the Setup Wizard when you run Setup from the System Center Configuration Manager version 1606 baseline media
@@ -90,12 +90,8 @@ For example, to install a licensed Current Branch edition you would use:
    -	**SSActive = 1**
    - **CurrentBranch = 0**
 
-Important:
-SABranchOptions  only works with Setup from the baseline media. It does not apply when you run Setup from the CD.Latest folder of a site you previously installed using the version 1606 baseline media.
-SABranchOptions does not apply to scripted upgrades from System Center 2012 Configuration Manager and always results in the Current Branch.
- For more information, see Use a command line to install System Center Configuration Manager sites
 
-> ![IMPORTANT]  
+> [!IMPORTANT]  
 > **SABranchOptions** only works with Setup from the baseline media. It does not apply when you run Setup from the CD.Latest folder of a site you previously installed using the version 1606 baseline media.
 >
 > **SABranchOptions** does not apply to scripted upgrades from System Center 2012 Configuration Manager and always results in the Current Branch.
@@ -104,7 +100,7 @@ For more information, see [Use a command line to install System Center Configura
 
 
 ## Install a new site
-When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing System Center Configuration Manager sites](/sccm/core/servers/deploy/install) topic with the addition of the following considerations for Setup:
+When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites) topic with the addition of the following considerations for Setup:
 
 - During Setup you must choose the branch of Configuration Manager that you want to install, and you can specify details for your Software Assurance agreement.
 -	New scripted install options
@@ -114,7 +110,7 @@ You can expand a stand-alone primary site that runs the LTSB.  The process is no
 
 - When installing the new central administration site you must use Setup from the original source media you used to install the LTSB site. (It is not supported to run Setup from the CD.Latest folder for this scenario).
 
-For more information about expanding a site, see *Expand a stand-alone primary site* in [Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-site).
+For more information about expanding a site, see *Expand a stand-alone primary site* in [Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
 
 ## Upgrade from System Center 2012 Configuration Manager
 When you upgrade from System Center 2012 Configuration Manager use the site planning, preparation, and procedures as documented in the [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) topic, but with the following changes:

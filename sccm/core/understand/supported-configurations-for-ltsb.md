@@ -273,7 +273,7 @@ The following versions are supported by using the indicated .tar file.
 -   **Exchange Server 2010 SP2**  
 -   **Exchange Server 2013**  
 
-> ![NOTE]
+> [!NOTE]
 > The LTSB does not support managing devices that connect thorough an online service, like Exchange Online (Office 365).
 
 
@@ -322,6 +322,6 @@ The information in the following Current Branch topics apply to the LTSB:
 - [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)
 - [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [High availability options](/sccm/protect/understand/high-availability-options)
-- [Recommended hardware](sccm/core/plan-design/configs/recommended-hardware)
+- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
 - [Support for Windows features and networks](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
 - [Support for Virtualization Environments](/sccm/core/plan-design/configs/support-for-virtualization-environments)

@@ -80,7 +80,7 @@ The LTSB is based on the Current Branch version 1606 and has the following limit
 - Does not receive updates for new features.
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
   -	Intune in a hybrid MDM configuration
-	- On-premises MDM
+ - On-premises MDM
 -	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch and CBB
 -	No support for Asset Intelligence
 -	No support for cloud-based distribution points
