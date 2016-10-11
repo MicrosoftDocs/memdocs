@@ -10,6 +10,12 @@
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
 ### [Fundamentals of role-based administration](understand/fundamentals-of-role-based-administration.md)
+##  [Introduction to the Long-Term Servicing Branch](understand/introduction-to-the-ltsb.md)
+### [Licensing for System Center Configuration Manager](understand/learn-more-editions.md)
+### [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
+### [Supported Configurations for the Long-Term Servicing Branch](understand/supported-configurations-for-ltsb.md)
+### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
+### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
