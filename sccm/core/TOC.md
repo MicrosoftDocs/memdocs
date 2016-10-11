@@ -1,6 +1,5 @@
-
-
-#   [Understand and explore](understand/introduction.md)##  [Introduction to Configuration Manager](understand/introduction.md)
+#   [Understand and explore](understand/introduction.md)
+##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
@@ -18,8 +17,8 @@
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
-
-#    [Plan and design](plan-design/get-ready.md)##   [Product changes](plan-design/changes/features-and-capabilities.md)
+#    [Plan and design](plan-design/get-ready.md)
+##   [Product changes](plan-design/changes/features-and-capabilities.md)
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
@@ -72,6 +71,8 @@
 ###  [Privacy statement - Configuration Manager Cmdlet Library](plan-design/security/privacy-statement-cmdlet-library.md)
 ###  [Additional privacy information](plan-design/security/additional-privacy.md)
 ###  [Configure security](plan-design/security/configure-security.md)
+
+#    [Get started](get-started/evaluate-with-lab-environment.md)
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 ##   [Technical Preview](get-started/technical-preview.md)
@@ -102,8 +103,8 @@
 ###  [Operations for migrating](migration/operations-for-migration.md)
 ###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
-
-#    [Deploy servers and roles](servers/deploy/start-using.md)##   [Install infrastructure](servers/deploy/install/setup-downloader.md)
+#    [Deploy servers and roles](servers/deploy/start-using.md)
+##   [Install infrastructure](servers/deploy/install/setup-downloader.md)
 ###  [Before you run Setup](servers/deploy/install/setup-downloader.md)
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
@@ -139,7 +140,8 @@
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
 
-#    [Manage infrastructure](servers/manage/maintenance-tasks.md)##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
+#    [Manage infrastructure](servers/manage/maintenance-tasks.md)
+##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
 ###  [The CD.Latest folder](servers/manage/the-cd.latest-folder.md)
 ##   [Upgrade on-premises infrastructure](servers/manage/upgrade-on-premises-infrastructure.md)
@@ -175,8 +177,8 @@
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 
-
-#    [Deploy clients](clients/deploy/plan/client-installation-methods.md)##   [Planning for client deployment](clients/deploy/plan/client-installation-methods.md)
+#    [Deploy clients](clients/deploy/plan/client-installation-methods.md)
+##   [Planning for client deployment](clients/deploy/plan/client-installation-methods.md)
 ###  [Client installation methods](clients/deploy/plan/client-installation-methods.md)
 ###  [Prerequisites for deploying clients to Windows computers](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 ###  [Determine the site system roles for clients](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
@@ -202,7 +204,8 @@
 ###  [How to configure client status](clients/deploy/configure-client-status.md)
 ###  [How to monitor client deployment status](clients/deploy/monitor-client-deployment-status.md)
 
-#    [Manage clients](clients/manage/monitor-and-manage-clients.md)
+#    [Manage clients](clients/manage/monitor-and-manage-clients.md)
+
 ##   [Monitor and manage clients](clients/manage/monitor-clients.md)
 ###  [How to monitor clients](clients/manage/monitor-clients.md)
 ###  [How to monitor Linux and UNIX clients](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
