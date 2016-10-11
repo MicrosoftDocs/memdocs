@@ -48,7 +48,8 @@ When compared to the Current Branch, the LTSB has the following support limitati
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
   -	Intune in a hybrid MDM configuration
   - On-premises MDM
--	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch and CBB
+-	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch (CB) and Current Branch for Business (CBB)
+- Does not support future releases of Windows 10 LTSB and Windows Server
 -	No support for Asset Intelligence
 -	No support for cloud-based distribution points
 -	No support for Support for Exchange Online as an Exchange Connector
