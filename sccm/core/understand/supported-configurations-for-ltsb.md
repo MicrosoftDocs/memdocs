@@ -15,9 +15,7 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-
-
+# Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
 Use the information in this topic to understand what operating systems and product dependencies are supported by the Long-Term Servicing Branch (LTSB) of Configuration Manager.
 If not stated otherwise in this or the LTSB specific topics, the same configurations and limitations that apply to the Current Branch version 1606 apply to the LTSB.  When conflicts occur, use the information that applies to the edition you are using. Typically, the LTSB is more limited than the Current Branch.
 

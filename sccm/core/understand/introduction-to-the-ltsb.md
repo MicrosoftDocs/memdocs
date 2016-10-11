@@ -15,9 +15,7 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Introduction to the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-
-
+# Introduction to the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
 Use this topic to learn about the  Long-Term Servicing Branch (LTSB) of Configuration Manager and understand the documentation for this branch.
 
 

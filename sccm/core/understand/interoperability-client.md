@@ -15,10 +15,7 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 Robots: NOINDEX,NOFOLLOW
 ---
-# Use the client software from the version 1606 baseline media with a Current Branch site*Applies to: System Center Configuration Manager (Current Branch)*
-
-
-
+# Use the client software from the version 1606 baseline media with a Current Branch site*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*  
 You can use the System Center Configuration Manager client software from the version 1606 baseline media DVD that you get with System Center 2016 (the extended interoperability client), to manage devices that belong to a Current Branch site.   
 
 ## How this scenario works:

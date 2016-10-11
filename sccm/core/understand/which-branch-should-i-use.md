@@ -15,8 +15,7 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Which branch of Configuration Manager should I use?*Applies to: System Center Configuration Manager (Current Branch)*
-
+# Which branch of Configuration Manager should I use?*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch), (Technical Preview)*
 
 Beginning in October of 2016, there are three branches of System Center Configuration Manager available. Use this topic to help you choose the right branch for you.
 
