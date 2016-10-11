@@ -23,7 +23,8 @@
 ### [Associate users with a destination computer](get-started/associate-users-with-a-destination-computer.md)
 ## [Prepare Windows PE peer cache to reduce WAN traffic](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
-# [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)## [Scenarios to deploy enterprise operating systems](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+# [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+## [Scenarios to deploy enterprise operating systems](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ### [Upgrade Windows to the latest version](deploy-use/upgrade-windows-to-the-latest-version.md)
 ### [Refresh an existing computer with a new version of Windows](deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
 ### [Install a new version of Windows on a new computer (bare metal)](deploy-use/install-new-windows-version-new-computer-bare-metal.md)

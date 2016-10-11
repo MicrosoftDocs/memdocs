@@ -13,8 +13,7 @@
 ### [Manage settings for software updates](get-started/manage-settings-for-software-updates.md)
 ## [Remove a software update point](get-started/remove-a-software-update-point.md)
 
-# [Deploy and use](deploy-use/deploy-software-updates.md)<!-- ## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md) -->
-## [Download software updates](deploy-use/download-software-updates.md)
+# [Deploy and use](deploy-use/deploy-software-updates.md)## [Download software updates](deploy-use/download-software-updates.md)
 ## [Add software updates to an update group](deploy-use/add-software-updates-to-an-update-group.md)
 ## [Deploy software updates](deploy-use/deploy-software-updates.md)
 ### [Manually deploy software updates](deploy-use/manually-deploy-software-updates.md)
