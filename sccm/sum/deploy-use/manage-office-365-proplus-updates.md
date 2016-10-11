@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Manage Office 365 ProPlus updates |  Configuration Manager
 description: "Configuration Manager synchronizes Office 365 client updates from the WSUS catalog to the site server to make updates available to deploy to clients."
@@ -12,16 +11,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

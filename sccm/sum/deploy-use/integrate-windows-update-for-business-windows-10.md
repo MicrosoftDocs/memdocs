@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Integration with Windows Update for Business in Windows 10 | Configuration Manager
 description: "Use Windows Update for Business to keep Windows 10-based devices in your organization up to date for devices connected to the Windows Update service."
@@ -13,7 +12,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-
 
 ---
 # Integration with Windows Update for Business in Windows 10

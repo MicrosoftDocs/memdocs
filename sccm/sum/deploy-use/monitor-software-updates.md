@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Monitor software updates | Configuration Manager
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."

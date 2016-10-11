@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Add software updates to an update group | Configuration Manager
 description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
@@ -13,17 +11,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Add software updates to an update group  

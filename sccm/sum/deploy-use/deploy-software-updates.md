@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deploy software updates | Configuration Manager
 description: "Choose software updates in the Configuration Manager console to manually start the deployment process or automatically deploy updates."
 keywords:
@@ -12,18 +10,8 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
+
 #  <a name="BKMK_SUMDeploy"></a> Deploy software updates  
 The software update deployment phase is the process of deploying the software updates. Regardless of how you deploy software updates, the updates are typically added to a software update group, the software updates are downloaded to distribution points, and the update group is deployed to clients. When you create the deployment, an associated software update policy is sent to client computers, the software update content files are downloaded from a distribution point to the local cache on client computers, and then the software updates are available for installation from the client. Clients on the Internet download content from Microsoft Update.  
 

@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Best practices for software updates | Configuration Manager
 description: "Use these best practices for software updates in System Center Configuration Manager."

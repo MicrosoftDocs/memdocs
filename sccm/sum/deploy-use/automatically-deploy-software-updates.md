@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Automatically deploy software updates | Configuration Manager
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
@@ -12,17 +10,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 #  <a name="BKMK_AutoDeploy"></a> Automatically deploy software updates  

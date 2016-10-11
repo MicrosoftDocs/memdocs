@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Synchronize software updates from a disconnected software update point | Configuration Manager
 description: "Follow these procedures to verify that software updates synchronization was successful on the export server, export updates, and import updates metadata."
@@ -13,15 +12,6 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

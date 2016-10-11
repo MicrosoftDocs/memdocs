@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Configure classifications and products to synchronize | System Center Configuration Manager
 description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
@@ -13,15 +12,6 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 #  Configure classifications and products to synchronize  

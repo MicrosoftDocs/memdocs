@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Icons used for software updates | Configuration Manager
 description: "The Configuration Manager console contains icons that indicate a state for the synchronized update or software update group."
 keywords:

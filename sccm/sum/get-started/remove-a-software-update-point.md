@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Remove a software update point | Configuration Manager
 description: "Follow this procedure to remove the software update point site system role at a site from the Configuration Manager console."
@@ -13,16 +12,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 #  <a name="BKMK_RemoveSUP"></a> Remove the software update point site system role  

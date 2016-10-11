@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Install and configure a software update point | Configuration Manager
 description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
@@ -13,15 +12,6 @@ ms.technology:
  - configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

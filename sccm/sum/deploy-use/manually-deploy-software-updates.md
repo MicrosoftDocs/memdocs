@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Manually deploy software updates | Configuration Manager
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
@@ -12,16 +11,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

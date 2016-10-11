@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Prerequisites for software updates | Configuration Manager
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
@@ -12,16 +10,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Download software updates | Configuration Manager
 description: "Use the Download Software Updates Wizard to download software updates from the Software Library workspace."
 keywords:
@@ -13,15 +11,6 @@ ms.technology:
  - configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 

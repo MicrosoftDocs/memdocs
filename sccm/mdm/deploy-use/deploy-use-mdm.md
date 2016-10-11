@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deploy and use mobile device management | System Center Configuration Manager
 description: "Learn about different ways to manage mobile devices with System Center Configuration Manager."
 keywords:
@@ -12,17 +10,6 @@ ms.service:
 ms.technology:
 - configmgr-hybrid
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Deploy and use mobile device management in Configuration Manager

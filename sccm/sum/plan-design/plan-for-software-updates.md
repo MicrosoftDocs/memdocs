@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Plan for software updates | System Center Configuration Manager
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
@@ -12,16 +11,6 @@ ms.service:
 ms.technology:
  - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
