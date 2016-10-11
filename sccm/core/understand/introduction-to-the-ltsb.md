@@ -33,7 +33,7 @@ Customers that have perpetual rights to System Center Configuration Manager, or 
 - For information about Software Assurance and license requirements for System Center Configuration Manager, see [System Center Configuration Manager licensing and branches](learn-more-editions.md).
 -	For information about the differences between the different branches, see [Which branch of Configuration Manager should I use](which-branch-should-i-use.md).
 
-To install a new site or upgrade from a supported System Center 2012 Configuration Manager site to the LTSB, you use the version 1606 baseline media. This baseline media is availalbe on DVD as part of Microsoft System Center 2016. Baseline media that can install the LTSB can also be used to install the Current Branch version 1606 of Configuration Manager. To learn about baseline media, see [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions).
+To install a new site or upgrade from a supported System Center 2012 Configuration Manager site to the LTSB, you use the version 1606 baseline media. This baseline media is availalbe on DVD as part of Microsoft System Center 2016 or from System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. Baseline media that can install the LTSB can also be used to install the Current Branch version 1606 of Configuration Manager. To learn about baseline media, see [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions).
 
 For information on how to install a LTSB site, see [Install and Upgrade for the Long-Term Servicing Branch](install-the-ltsb.md). See the [System Center 2016 documentation](https:\technet.microsoft.com\system-center-docs\System-Center-2016) for information on how to get System Center 2016.
 
@@ -109,7 +109,7 @@ The LTSB supports the use of the Hotfix Installer and Update Registration tool, 
 For general information about updates and servicing, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
 
 ### Changes for site expansion and the CD.Latest folder
-When you run the LTSB and are expanding a stand-alone primary site by installing a new central administration site, you must use Setup and the source files from the version 1606 baseline media from the System Center 2016 suite.  (For the Current Branch, you run Setup and use source files from the CD.Latest folder.)
+When you run the LTSB and are expanding a stand-alone primary site by installing a new central administration site, you must use Setup and the source files from the version 1606 baseline media.  (For the Current Branch, you run Setup and use source files from the CD.Latest folder.)
 
 Although you do not run Setup for site expansion from the CD.Latest folder, you continue to use the CD.Latest folder for site recovery, and to install a new child primary site when your first LTSB site was a central administration site.
 
