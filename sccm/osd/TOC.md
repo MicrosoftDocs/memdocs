@@ -5,7 +5,8 @@
 ## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
 
-# [Plan and design](plan-design/infrastructure-requirements-for-operating-system-deployment.md)## [Infrastructure requirements for operating system deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+# [Plan and design](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+## [Infrastructure requirements for operating system deployment](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [Planning considerations for automating tasks](plan-design/planning-considerations-for-automating-tasks.md)
 ## [Security and privacy for operating system deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
