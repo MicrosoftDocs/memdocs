@@ -1,16 +1,8 @@
-﻿# [Understand and explore](understand/software-updates-introduction.md)## [Introduction to software updates](understand/software-updates-introduction.md)
+# [Understand and explore](understand/software-updates-introduction.md)## [Introduction to software updates](understand/software-updates-introduction.md)
 ## [Icons used for software updates](understand/software-updates-icons.md)
 
 # [Plan and design](plan-design/plan-for-software-updates.md)## [Plan for software updates](plan-design/plan-for-software-updates.md)
 ## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)
-<!-- ### [Best practices for software updates](plan-design/software-updates-best-practices.md) -->
-<!-- ### [Determine the port settings used by WSUS](plan-design/determine-wsus-port-settings.md) -->
-<!-- ## [Enable CRL checking for software updates](plan-design/enable-crl-checking-for-software-updates.md) -->
-<!-- ### [Plan for software update point capacity](plan-design/plan-for-software-update-point-capacity.md)
-### [Determine the software update point infrastructure](plan-design/determine-the-software-update-point-infrastructure.md)
-### [Plan for software update point installation](plan-design/plan-for-software-update-point-installation.md)
-### [Plan for software updates synchronization](plan-design/plan-for-software-updates-synchronization.md)-->
-<!-- ## [Plan for software updates maintenance windows](plan-design/plan-for-software-updates.md) -->
 ## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
 
 # [Get started](get-started/prepare-for-software-updates-management.md)## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
