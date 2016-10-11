@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 
-# Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager
+# Upgrade Windows devices with the edition upgrade policy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 The System Center Configuration Manager **Edition Upgrade Policy** lets you automatically upgrade devices that run one of the following Windows 10 versions to a newer edition:
 

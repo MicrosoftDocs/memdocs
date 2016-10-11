@@ -1,9 +1,7 @@
-﻿# [Understand and explore](understand/software-updates-introduction.md)
-## [Introduction to software updates](understand/software-updates-introduction.md)
+﻿# [Understand and explore](understand/software-updates-introduction.md)## [Introduction to software updates](understand/software-updates-introduction.md)
 ## [Icons used for software updates](understand/software-updates-icons.md)
 
-# [Plan and design](plan-design/plan-for-software-updates.md)
-## [Plan for software updates](plan-design/plan-for-software-updates.md)
+# [Plan and design](plan-design/plan-for-software-updates.md)## [Plan for software updates](plan-design/plan-for-software-updates.md)
 ## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)
 <!-- ### [Best practices for software updates](plan-design/software-updates-best-practices.md) -->
 <!-- ### [Determine the port settings used by WSUS](plan-design/determine-wsus-port-settings.md) -->
@@ -15,8 +13,7 @@
 <!-- ## [Plan for software updates maintenance windows](plan-design/plan-for-software-updates.md) -->
 ## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
 
-# [Get started](get-started/prepare-for-software-updates-management.md)
-## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
+# [Get started](get-started/prepare-for-software-updates-management.md)## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
 ### [Install a software update point](get-started/install-a-software-update-point.md)
 ### [Synchronize software updates](get-started/synchronize-software-updates.md)
 #### [Synchronize software updates from a disconnected software update point](get-started/synchronize-software-updates-disconnected.md)
@@ -24,8 +21,7 @@
 ### [Manage settings for software updates](get-started/manage-settings-for-software-updates.md)
 ## [Remove a software update point](get-started/remove-a-software-update-point.md)
 
-# [Deploy and use](deploy-use/deploy-software-updates.md)
-<!-- ## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md) -->
+# [Deploy and use](deploy-use/deploy-software-updates.md)<!-- ## [Software updates deployment lifecycle](deploy-use/software-updates-lifecycle.md) -->
 ## [Download software updates](deploy-use/download-software-updates.md)
 ## [Add software updates to an update group](deploy-use/add-software-updates-to-an-update-group.md)
 ## [Deploy software updates](deploy-use/deploy-software-updates.md)

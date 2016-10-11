@@ -12,7 +12,7 @@ ms.technology:
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 ---
 
-#  <a name="BKMK_SUMDeploy"></a> Deploy software updates  
+#  <a name="BKMK_SUMDeploy"></a> Deploy software updates  *Applies to: System Center Configuration Manager (Current Branch)*
 The software update deployment phase is the process of deploying the software updates. Regardless of how you deploy software updates, the updates are typically added to a software update group, the software updates are downloaded to distribution points, and the update group is deployed to clients. When you create the deployment, an associated software update policy is sent to client computers, the software update content files are downloaded from a distribution point to the local cache on client computers, and then the software updates are available for installation from the client. Clients on the Internet download content from Microsoft Update.  
 
 > [!NOTE]  

@@ -14,7 +14,7 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Custom locations for System Center Configuration Manager site database files
+# Custom locations for System Center Configuration Manager site database files*Applies to: System Center Configuration Manager (Current Branch)*
  System Center Configuration Manager supports custom locations for SQL Server database files.  
 
 > [!NOTE]  

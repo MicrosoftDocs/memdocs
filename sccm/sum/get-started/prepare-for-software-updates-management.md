@@ -14,7 +14,7 @@ ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 
 ---
 
-# Prepare for software updates management
+# Prepare for software updates management*Applies to: System Center Configuration Manager (Current Branch)*
 Before the compliance assessment data of the software update displays in the System Center Configuration Manager console and before you can deploy software updates to client computers, you must complete the steps in the following sections.
 
 ## Step 1: Install a software update point  

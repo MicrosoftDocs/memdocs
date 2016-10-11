@@ -12,7 +12,7 @@ ms.technology:
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 ---
 
-# Deploy and use mobile device management in Configuration Manager
+# Deploy and use mobile device management in Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 You can use System Center Configuration Manager to manage mobile devices in a variety of ways:
 - [Hybrid mobile device management with the Intune](setup-hybrid-mdm.md)

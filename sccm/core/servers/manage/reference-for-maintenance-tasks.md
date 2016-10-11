@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Reference for maintenance tasks for System Center Configuration Manager
+# Reference for maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic lists details for each of the System Center Configuration Manager site maintenance tasks, and at which site types the task is available. Each entry also indicates if the task is enabled by default, or not enabled by default.   For information about planning for and configuring sites to run maintenance tasks, see   [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md)  
 
 **Backup Site Server** - Use this task to prepare for recovery of critical data by creating a backup of the critical information that you have to restore a site and the Configuration Manager database. For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)  

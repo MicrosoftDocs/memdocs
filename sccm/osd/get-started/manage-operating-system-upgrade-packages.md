@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage operating system upgrade packages with System Center Configuration Manager
+# Manage operating system upgrade packages with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 An upgrade package in System Center Configuration Manager contains the Windows Setup source files that are used to upgrade an existing operating system on a computer. Use the following  sections manage operating system upgrade packages in Configuration Manager.
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> Add operating system upgrade packages to Configuration Manager  

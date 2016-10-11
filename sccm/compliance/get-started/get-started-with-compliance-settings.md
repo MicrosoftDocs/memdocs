@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Get started with compliance settings in System Center Configuration Manager
+# Get started with compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you start to create System Center Configuration Manager configuration items, you should review this topic to understand how compliance settings work, and to learn about the core concepts you'll need to know.  
 
 ## How compliance settings works  

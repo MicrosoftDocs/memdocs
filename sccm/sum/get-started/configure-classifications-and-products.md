@@ -14,7 +14,7 @@ ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 
 
 ---
-#  Configure classifications and products to synchronize  
+#  Configure classifications and products to synchronize  *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!NOTE]  
 >  Use the procedure from this section only on the top-level site.  

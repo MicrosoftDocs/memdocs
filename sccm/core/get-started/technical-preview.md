@@ -15,7 +15,7 @@ caps.latest.revision: 157
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Technical Preview for System Center Configuration Manager
+# Technical Preview for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 **Welcome to the System Center Configuration Manager Technical Preview**. This topic provides details about the evolving preview release that introduces new functionality and capabilities we are working on. With each version of the technical preview, new features are introduced that are not included in the current branch of System Center Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
 
  Because this is a technical preview, details and functionality are subject to change.  

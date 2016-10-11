@@ -14,7 +14,7 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# What’s new in System Center Configuration Manager incremental versions
+# What’s new in System Center Configuration Manager incremental versions*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 

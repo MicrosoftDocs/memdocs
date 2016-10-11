@@ -14,7 +14,7 @@ ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 
 ---
 
-# Plan for software updates in System Center Configuration Manager
+# Plan for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you use software updates in a System Center Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation.
 
 ## Capacity planning recommendations for software updates  

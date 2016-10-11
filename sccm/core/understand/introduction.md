@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Introduction to System Center Configuration Manager
+# Introduction to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 *Applies to: System Configuration Manager (Current Branch)*
 

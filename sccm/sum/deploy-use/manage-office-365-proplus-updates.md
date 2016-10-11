@@ -14,7 +14,7 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 
 ---
 
-# Manage Office 365 ProPlus updates with Configuration Manager
+# Manage Office 365 ProPlus updates with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Beginning in Configuration Manager version 1602, Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.
 
 #### To deploy Office 365 updates with Configuration Manager

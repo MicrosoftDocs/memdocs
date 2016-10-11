@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Configuring reporting in System Center Configuration Manager
+# Configuring reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can create, modify, and run reports in the System Center Configuration Manager console, you must carry out a number of configuration tasks. Use the following sections in this topic to help you configure reporting in your Configuration Manager hierarchy:  
 
  Before you proceed with installing and configuring Reporting Services in your hierarchy, review the following Configuration Manager reporting topics:  

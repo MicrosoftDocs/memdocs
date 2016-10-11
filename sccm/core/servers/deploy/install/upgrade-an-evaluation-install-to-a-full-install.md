@@ -14,7 +14,7 @@ ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Upgrade an Evaluation install of System Center Configuration Manager to a Full install
+# Upgrade an Evaluation install of System Center Configuration Manager to a Full install*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  If you installed System Center Configuration Manager as an evaluation version, after 180 days the Configuration Manager console becomes read-only until you activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180 day period, you have the option to upgrade an evaluation installation to a full installation.  

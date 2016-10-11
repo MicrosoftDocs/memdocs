@@ -15,7 +15,7 @@ caps.latest.revision: 51
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
+# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Manage content and content infrastructure for System Center Configuration Manager
+# Manage content and content infrastructure for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you are ready to deploy and then manage your content management infrastructure for System Center Configuration Manager,   use the following information in the following topics:  
 
 -   [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) - Before you can deploy content, you must install and configure distribution points. Then you can configure distribution point groups to help simplify management of content across your infrastructure. The information in this topic can help you complete these tasks, and details the deep and varied settings supported by individual distribution points.  

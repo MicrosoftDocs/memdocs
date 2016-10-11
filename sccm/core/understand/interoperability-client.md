@@ -15,7 +15,7 @@ caps.latest.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 Robots: NOINDEX,NOFOLLOW
 ---
-# Use the client software from the version 1606 baseline media with a Current Branch site
+# Use the client software from the version 1606 baseline media with a Current Branch site*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 

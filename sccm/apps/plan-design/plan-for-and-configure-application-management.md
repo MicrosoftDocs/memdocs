@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Plan for and configure application management in System Center Configuration Manager
+# Plan for and configure application management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this topic to help you implement the necessary dependencies for deploying applications in System Center Configuration Manager.  
 
 ## Dependencies external to Configuration Manager  

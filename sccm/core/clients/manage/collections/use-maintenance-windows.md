@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to use maintenance windows in System Center Configuration Manager
+# How to use maintenance windows in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Maintenance windows in System Center Configuration Manager provide a means by which administrative users can define a time period when various Configuration Manager operations can be carried out on members of a device collection. You can use maintenance windows to help ensure that client configuration changes occur during periods that do not affect the productivity of the organization.  
 
  The following Configuration Manager operations support maintenance windows:  

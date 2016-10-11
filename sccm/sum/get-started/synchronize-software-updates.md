@@ -16,7 +16,7 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 
 ---
 
-#  <a name="BKMK_SUMSync"></a> Synchronize software updates
+#  <a name="BKMK_SUMSync"></a> Synchronize software updates*Applies to: System Center Configuration Manager (Current Branch)*
  Software update synchronization in Configuration Manager is the process of retrieving the software update metadata that meets the criteria that you configure. This includes specific products, classifications, and languages. Typically, the software update point on the central administration site, or on a stand-alone primary site, retrieves the metadata from Microsoft Update. Then, the top-level site will send a synchronization request to other sites. When a site receives the synchronization request from the parent site, the software update point for the site retrieves software updates metadata from its upstream [synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource). For more information about software update synchronization process, see [Software updates synchronization](../understand/software-updates-introduction.md#BKMK_Synchronization).
 
 You configure software update synchronization to run on a schedule in the properties for the software update point at the top-level site. After you configure the synchronization schedule you will typically not change the schedule as part of normal operations. However, you can manually initiate software update synchronization when it is necessary.

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Proxy server support in System Center Configuration Manager
+# Proxy server support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Both System Center Configuration Manager site system servers and  clients can make use of a proxy server.  
 
 ## Site system servers  

@@ -13,7 +13,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER 2012 NATIVE CLIENT
+# MICROSOFT SQL SERVER 2012 NATIVE CLIENT*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER 2012 NATIVE CLIENT**  

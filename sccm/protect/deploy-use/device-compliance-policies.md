@@ -16,7 +16,7 @@ author: karthikaramanms.author: karaman
 manager: angrobe
 robots: noindex
 ---
-# Device compliance policies in System Center Configuration Manager
+# Device compliance policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 **Compliance policies** in System Center Configuration Manager define the rules and settings that a device must comply with in order to be considered compliant by conditional access polices. You can also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access.  
 
 

@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Best practices for client deployment in System Center Configuration Manager
+# Best practices for client deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices information to help you deploy clients on computers in System Center Configuration Manager.  
 
 ## Use software update-based client installation for Active Directory computers  

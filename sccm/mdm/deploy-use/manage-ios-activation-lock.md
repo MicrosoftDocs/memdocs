@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Manage iOS Activation Lock with System Center Configuration Manager
+# Manage iOS Activation Lock with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager can help you manage iOS Activation Lock, a feature of the Find My iPhone app for iOS 7.1 and later devices. When Activation Lock is enabled, the user's Apple ID and password must be entered before anyone can:
 

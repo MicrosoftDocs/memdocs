@@ -13,7 +13,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER 2014 EXPRESS
+# MICROSOFT SQL SERVER 2014 EXPRESS*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER 2014 EXPRESS**  

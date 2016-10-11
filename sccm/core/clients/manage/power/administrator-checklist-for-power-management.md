@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Administrator checklist for power management in System Center Configuration Manager
+# Administrator checklist for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This administrator checklist provides the recommended steps for using System Center Configuration Manager power management in your organization.  
 
 ## Configuring power management  

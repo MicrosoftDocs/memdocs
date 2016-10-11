@@ -12,7 +12,7 @@ ms.technology:
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ---
 
-#  <a name="BKMK_AutoDeploy"></a> Automatically deploy software updates  
+#  <a name="BKMK_AutoDeploy"></a> Automatically deploy software updates  *Applies to: System Center Configuration Manager (Current Branch)*
  You can automatically deploy software updates by adding new software updates to an update group associated with an active deployment or you can use an automatic deployment rule (ADR). Typically, you will use ADRs to deploy monthly software updates (generally known as Patch Tuesday updates) and for managing definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md)
 
 ##  <a name="BKMK_AddUpdatesToExistingGroup"></a> Add software updates to a deployed update group  

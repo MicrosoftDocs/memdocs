@@ -15,7 +15,7 @@ caps.latest.revision: 15
 caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# About client settings in System Center Configuration Manager
+# About client settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 All client settings in System Center Configuration Manager are managed in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. A set of default settings is supplied with Configuration Manager. When you modify the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign these to collections. For information about how to configure client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
  Many of the client settings are self-explanatory. Use the following sections for more information about the client settings that might require some information before you configure them.  

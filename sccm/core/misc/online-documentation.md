@@ -11,7 +11,7 @@ caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Online Documentation for System Center Configuration Manager
+# Online Documentation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Welcome to the System Center Configuration Manager documentation library.  
 
  Find the documentation library for the product version that you use:  

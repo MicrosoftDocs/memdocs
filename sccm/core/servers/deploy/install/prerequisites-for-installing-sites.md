@@ -14,7 +14,7 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Prerequisites for installing System Center Configuration Manager sites
+# Prerequisites for installing System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
 
 The following sections provide details about the different prerequisites that are required to install the different types of System Center Configuration Manager sites.
 

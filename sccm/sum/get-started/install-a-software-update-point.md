@@ -16,7 +16,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ---
 
 
-# Install and configure a software update point  
+# Install and configure a software update point  *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!IMPORTANT]  
 >  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  

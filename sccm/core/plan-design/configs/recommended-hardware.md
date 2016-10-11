@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Recommended hardware for System Center Configuration Manager
+# Recommended hardware for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following recommendations are guidelines  to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, sites systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
 
  Use this information in the following sections as a guide to help you plan for hardware that can meet the processing loads for clients and sites that use the available Configuration Manager features with the default configurations.  

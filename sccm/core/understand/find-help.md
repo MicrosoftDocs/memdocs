@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Find help for using System Center Configuration Manager
+# Find help for using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following resources for additional information about System Center Configuration Manager:  
 
 -   [Information and support](#bkmk_Info)  

@@ -15,7 +15,7 @@ caps.latest.revision: 24
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Infrastructure requirements for operating system deployment in System Center Configuration Manager
+# Infrastructure requirements for operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Operating system deployment in System Center 2012 Configuration Manager has external dependencies and dependencies within the product. Use the following sections to help you prepare for operating system deployment.  
 
 ##  <a name="BKMK_ExternalDependencies"></a> Dependencies External to Configuration Manager  

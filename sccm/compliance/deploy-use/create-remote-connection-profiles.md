@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 
-# Remote connection profiles in System Center Configuration Manager
+# Remote connection profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use System Center Configuration Manager remote connection profiles to allow your users to remotely connect to work computers when they are not connected to the domain or if their personal computers are connected over the Internet.  
 
  Users can connect to their work PC from the following device types:  

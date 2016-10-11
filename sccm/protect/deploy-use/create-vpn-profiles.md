@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to Create VPN profiles in System Center Configuration Manager
+# How to Create VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use the following links to learn about the steps to create VPN profiles in System Center Configuration Manager:  
 

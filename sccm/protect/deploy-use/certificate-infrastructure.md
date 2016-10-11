@@ -15,7 +15,7 @@ caps.latest.revision: 7
 caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
-# Certificate infrastructure
+# Certificate infrastructure*Applies to: System Center Configuration Manager (Current Branch)*
 
  Here are the steps, details, and more information about how to configure certificate enrollment in System Center Configuration Manager. Before you start, check for any prerequisites that are listed in [Prerequisites for certificate profiles in System Center Configuration Manager](../../protect/plan-design/prerequisites-for-certificate-profiles.md).  
 

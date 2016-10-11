@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Collections technical reference for System Center Configuration Manager
+# Collections technical reference for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Collections in System Center Configuration Manager provide a method of managing groups of computers, mobile devices, users, and other resources in your organization.  
 
 ## Collection topics  

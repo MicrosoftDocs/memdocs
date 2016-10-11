@@ -16,7 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 
 
-# Upgrade the Long-Term Servicing Branch to the Current Branch
+# Upgrade the Long-Term Servicing Branch to the Current Branch*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 Use this topic to learn how to upgrade (convert) a site and hierarchy that runs the Long-Term Servicing Branch (LTSB) of Configuration Manager to the Current Branch.

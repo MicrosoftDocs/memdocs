@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage user state in System Center Configuration Manager
+# Manage user state in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. For example:  
 
 -   Deployments where you want to capture the user state from one computer to restore it on another computer.  

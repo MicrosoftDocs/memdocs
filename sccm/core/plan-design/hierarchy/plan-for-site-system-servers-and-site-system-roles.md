@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Plan for site system servers and site system roles for System Center Configuration Manager
+# Plan for site system servers and site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager site you install includes a  a site server which is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server.   Site system servers (the site server or a remote site system server) support **site system roles**.
 
 

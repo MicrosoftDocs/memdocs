@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to create Wi-Fi profiles in System Center Configuration Manager
+# How to create Wi-Fi profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
 

@@ -16,7 +16,7 @@ author: karthikaramanms.author: karamanmanager: angrobe
 
 ---
 
-# Manage access to services in System Center Configuration Manager
+# Manage access to services in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Conditional access in System Center Configuration Manager
 Use **conditional access**  to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  

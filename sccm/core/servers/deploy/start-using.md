@@ -15,7 +15,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Start using System Center Configuration Manager
+# Start using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you plan out your System Center Configuration Manager site and hierarchy  topology and are ready to get sites installed or upgraded, use the information in the following topics:  
 
 -   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  

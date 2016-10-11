@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Configuring remote control in System Center Configuration Manager
+# Configuring remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can use remote control in System Center Configuration Manager, you must perform the following configuration steps.  
 
 ## How to enable remote control and configure client settings  

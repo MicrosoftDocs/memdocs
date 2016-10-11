@@ -15,7 +15,7 @@ caps.latest.revision: 22
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Reference for System Center Configuration Manager Setup
+# Reference for System Center Configuration Manager Setup*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager Setup provides links to several topics where are detailed in the following sections. The information in the following sections can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation:  
 
 -   [Before you begin](#bkmk_start)  

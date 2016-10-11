@@ -14,7 +14,7 @@ ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 caps.latest.revision: 6
 author: NathBarnms.author: nathbarnmanager: angrobe
 ---
-# User affinity for hybrid managed devices in Configuration Manager
+# User affinity for hybrid managed devices in Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When configuring profiles for corporate-owned devices, the administrator can specify whether the managed devices can have *user affinity* which identifies a specific user with the device.  
 
 ##  <a name="BKMK_iOSCP"></a> Managed devices with user affinity  

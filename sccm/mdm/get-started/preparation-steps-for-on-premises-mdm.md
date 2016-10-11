@@ -15,7 +15,7 @@ caps.latest.revision: 4
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager
+# Preparation steps for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Managing devices with System Center Configuration Manager On\-premises Mobile Device Management requires the Configuration Manager infrastructure to be set up so that the required site system roles (enrollment proxy point, enrollment point, device management point, and distribution point) can communicate across a trusted channel with the mobile devices to be managed.  
 
  The following high-level tasks are required to prepare the Configuration Manager system for On\-premises Mobile Device Management:  
