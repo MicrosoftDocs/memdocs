@@ -1,4 +1,5 @@
-# [Understand and explore](understand/software-updates-introduction.md)## [Introduction to software updates](understand/software-updates-introduction.md)
+# [Understand and explore](understand/software-updates-introduction.md)
+## [Introduction to software updates](understand/software-updates-introduction.md)
 ## [Icons used for software updates](understand/software-updates-icons.md)
 
 # [Plan and design](plan-design/plan-for-software-updates.md)
@@ -6,7 +7,8 @@
 ## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
 
 # [Get started](get-started/prepare-for-software-updates-management.md)
-## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)## [Install a software update point](get-started/install-a-software-update-point.md)
+## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
+## [Install a software update point](get-started/install-a-software-update-point.md)
 ## [Synchronize software updates](get-started/synchronize-software-updates.md)
 ## [Synchronize software updates from a disconnected software update point](get-started/synchronize-software-updates-disconnected.md)
 ## [Configure classifications and products](get-started/configure-classifications-and-products.md)
