@@ -1,4 +1,5 @@
-#  [Understand and explore](understand/hybrid-mobile-device-management.md)## [Hybrid MDM](understand/hybrid-mobile-device-management.md)
+#  [Understand and explore](understand/hybrid-mobile-device-management.md)
+## [Hybrid MDM](understand/hybrid-mobile-device-management.md)
 ## [Choose Intune or hybrid MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
