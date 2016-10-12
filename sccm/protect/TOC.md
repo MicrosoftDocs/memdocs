@@ -1,11 +1,10 @@
-# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
-
-# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
+# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for SCEP](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for .PFX](plan-design/prerequisites-for-certificate-profiles.md)
@@ -24,8 +23,7 @@
 
 ## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
-
-# [Deploy and use](deploy-use/vpn-profiles.md)
+# [Deploy and use](deploy-use/vpn-profiles.md)
 ## [VPN profiles](deploy-use/vpn-profiles.md)
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
@@ -49,8 +47,10 @@
 ##### [Microsoft updates](deploy-use/endpoint-definitions-microsoft-updates.md)
 ##### [Malware Protection Center](deploy-use/endpoint-definitions-protection-center.md)
 ##### [Network share updates](deploy-use/endpoint-definitions-network.md)
+
 #### [Deploy policy](deploy-use/endpoint-antimalware-policies.md)
 #### [Configure client](deploy-use/endpoint-protection-configure-client.md)
+
 ### [Windows Firewall policies](deploy-use/create-windows-firewall-policies.md)
 ### [Windows Defender Advanced Threat Protection](deploy-use/windows-defender-advanced-threat-protection.md)
 ### [Antimalware and firewall tasks](deploy-use/endpoint-antimalware-firewall.md)
