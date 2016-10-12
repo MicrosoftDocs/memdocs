@@ -16,7 +16,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Update and retire applications with System Center Configuration Manager
+# Update and retire applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Eventually, you will likely want to make changes to an application, uninstall it, or replace an already deployed application with a new application. System Center Configuration Manager includes these capabilities to help you with this:  
   

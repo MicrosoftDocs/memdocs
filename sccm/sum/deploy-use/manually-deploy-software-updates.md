@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Manually deploy software updates | Configuration Manager
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
@@ -13,19 +12,9 @@ ms.technology:
  - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  
+#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  *Applies to: System Center Configuration Manager (Current Branch)*
  A manual software update deployment is the process of selecting software updates from the Configuration Manager console and manually initiating the deployment process. Or, you can add selected software updates to an update group, and then manually deploy the update group. You will typically use manual deployment to get your client devices up-to-date with required software updates before you create ADRs that will manage ongoing monthly software update deployments. You will also use a manual method to deploy out-of-band software updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
  The following sections provide the steps to manually deploy software updates.  

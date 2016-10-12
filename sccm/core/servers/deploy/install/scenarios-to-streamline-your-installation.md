@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Scenarios to streamline your installation of System Center Configuration Manager
+# Scenarios to streamline your installation of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
 
 Supported scenarios include:  

@@ -12,7 +12,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)
+# MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)**  

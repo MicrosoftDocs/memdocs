@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to deploy clients to Macs in System Center Configuration Manager
+# How to deploy clients to Macs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Client installation and management for Mac computers in System Center Configuration Manager requires public key infrastructure (PKI) certificates. Configuration Manager can request and install a user client certificate by using Microsoft Certificate Services with an enterprise certification authority (CA) and the Configuration Manager enrollment point and enrollment proxy point site system roles. Or, you can request and install a computer certificate independently from Configuration Manager if the certificate meets the requirements for Configuration Manager. PKI certificates secure the communication between the Mac computers and the Configuration Manager site by using mutual authentication and encrypted data transfers.  
 
 > [!IMPORTANT]  

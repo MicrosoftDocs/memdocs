@@ -12,7 +12,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION
+# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT EVALUATION SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION**  

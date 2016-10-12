@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Determine whether to migrate data to System Center Configuration Manager
+# Determine whether to migrate data to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In System Center Configuration Manager migration provides a process to  transfer data and configurations you have made from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
 
 -   Combine multiple hierarchies into one  

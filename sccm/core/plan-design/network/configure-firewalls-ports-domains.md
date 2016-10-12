@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Configure firewalls, ports, and domains for System Center Configuration Manager
+# Configure firewalls, ports, and domains for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To prepare your network to support System Center Configuration Manager, plan to configure infrastructure like firewalls to pass the communications used by Configuration Manager.  
 
 |Consideration|Details|  

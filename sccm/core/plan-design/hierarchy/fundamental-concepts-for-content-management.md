@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Fundamental concepts for content management in System Center Configuration Manager
+# Fundamental concepts for content management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports a robust system of tools and options to manage the content you deploy as applications, packages, software updates, and operating system deployments.  
 
  The content you deploy is stored  on both site servers and on distribution point site system servers. This content can require a large amount of network bandwidth while transferring between locations.  To effectively plan and use content management infrastructure you should understand the available options and configurations, and then consider how to use them to best fit your networking environment and content deployment needs.  

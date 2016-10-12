@@ -14,7 +14,7 @@ ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
 caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Checklist for installing update 1606 for System Center Configuration Manager
+# Checklist for installing update 1606 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Version 1606 for System Center Configuration Manager current branch is an update which you can use to update from version 1511 or 1602.
 
 Before installing version 1606 as an update, review the following information and checklist for actions to take before starting the update.

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration baselines in System Center Configuration Manager
+# Create configuration baselines in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Configuration baselines in System Center Configuration Manager contain predefined configuration items and optionally, other configuration baselines. After a configuration baseline is created, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess their compliance with it.  
 

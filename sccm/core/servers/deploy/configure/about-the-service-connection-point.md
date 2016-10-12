@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# About the service connection point in System Center Configuration Manager
+# About the service connection point in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The System Center Configuration Manager service connection point is a site system role that serves several important functions for the hierarchy. Before configuring the service connection point, understand and plan for its range of uses which might affect how you configure this site system role:  
 
 -   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector  used by previous versions of Configuration Manager, and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/plan-design/hybrid-mobile-device-management.md)  

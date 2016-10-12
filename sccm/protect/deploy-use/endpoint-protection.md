@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Endpoint Protection in System Center Configuration Manager
+# Endpoint Protection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Endpoint Protection in System Center Configuration Manager lets you to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 
 > [!IMPORTANT]  

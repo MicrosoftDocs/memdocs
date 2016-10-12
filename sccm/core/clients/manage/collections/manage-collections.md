@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to manage collections in System Center Configuration Manager
+# How to manage collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the overview information in this topic to help you perform management tasks for collections in System Center Configuration Manager.  
 
 > [!NOTE]  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Planning to monitor migration activity in System Center Configuration Manager
+# Planning to monitor migration activity in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 With System Center Configuration Manager, you can monitor migration in the Configuration Manager console that connects to the destination hierarchy. In the Configuration Manager console in the **Administration** workspace, you can use the **Migration** node to monitor the progress and success of migration jobs. You can view summary information for each migration job that identifies objects that have migrated, those objects that have not yet migrated, and the number of objects that are excluded from a migration job. You will also see details about any migration problems.  
 
 ## View Migration Progress  

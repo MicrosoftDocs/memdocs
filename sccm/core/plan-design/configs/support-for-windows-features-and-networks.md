@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Support for Windows features and networks in System Center Configuration Manager
+# Support for Windows features and networks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic identifies System Center Configuration Manager support for common Windows and networking features.  
 
 

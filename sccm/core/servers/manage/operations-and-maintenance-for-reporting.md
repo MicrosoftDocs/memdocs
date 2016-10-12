@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Operations and maintenance for reporting in System Center Configuration Manager
+# Operations and maintenance for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After the infrastructure is in place for reporting in System Center Configuration Manager, there are a number of operations that you typically perform to manage reports and report subscriptions.  
 
 ##  <a name="BKMK_ManageReports"></a> Manage Configuration Manager reports  

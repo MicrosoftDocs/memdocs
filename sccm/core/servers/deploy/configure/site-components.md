@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Site components for System Center Configuration Manager
+# Site components for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 At each System Center Configuration Manager site you can configure site components to modify the behavior of site system roles and site status reporting. Site component configurations apply to a site, and to each instance of an applicable site system role at the  site.  
 
 ## About site components  

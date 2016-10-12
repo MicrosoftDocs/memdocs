@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 
-# Create user data and profiles configuration items in System Center Configuration Manager
+# Create user data and profiles configuration items in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 User data and profiles configuration items in System Center Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
 
 -   Redirect a user’s Documents folder to a network share.  

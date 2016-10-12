@@ -15,7 +15,7 @@ caps.latest.revision: 44
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Supported operating systems for System Center Configuration Manager  site system servers
+# Supported operating systems for System Center Configuration Manager  site system servers*Applies to: System Center Configuration Manager (Current Branch)*
 
 This article details the Windows versions that you can use to host a System Center Configuration Manager site or site system role.
 

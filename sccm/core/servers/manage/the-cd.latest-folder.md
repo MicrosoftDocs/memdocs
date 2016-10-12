@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# The CD.Latest folder for System Center Configuration Manager
+# The CD.Latest folder for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager introduces a new update process which delivers updates to the product from within the Configuration Manager console. To support this new method of updating Configuration Manager, a new folder is created named **CD.Latest** that contains a copy of the Configuration Manager installation files for the updated version of your site.  
 
 Beginning with update 1606, the CD.Latest folder contains a folder named **Redist** which contains the redistributable files that setup downloads and uses. These files are matched to the version of Configuration Manager files found in that CD.Latest folder. When you run Setup from a CD.Latest folder, you must use files that are matched to that version of Setup. To do so you can either direct Setup to download new and current files from Microsoft, or direct Setup to use the files from the Redist folder included in the CD.Latest folder.

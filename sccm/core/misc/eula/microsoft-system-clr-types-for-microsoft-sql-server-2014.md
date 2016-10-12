@@ -12,7 +12,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014
+# MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014**  

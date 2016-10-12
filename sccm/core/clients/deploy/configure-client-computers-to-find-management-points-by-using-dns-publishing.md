@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager
+# How to configure client computers to find management points by using DNS publishing in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Clients in System Center Configuration Manager must locate a management point to complete site assignment and as an on-going process to remain managed. Active Directory Domain Services provides the most secure method for clients on the intranet to find management points. However, if clients cannot use this service location method (for example, you have not extended the Active Directory schema, or clients are from a workgroup), use DNS publishing as the preferred alternative service location method.  
 
 > [!NOTE]  

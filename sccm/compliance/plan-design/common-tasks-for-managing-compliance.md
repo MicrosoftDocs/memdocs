@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Common tasks for managing compliance with System Center Configuration Manager
+# Common tasks for managing compliance with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this section, you'll find some common scenarios that will help you learn to use compliance settings in System Center Configuration Manager.  
 
 ## For devices that run the Configuration Manager client  

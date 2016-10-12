@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create a task sequence to install an operating system in System Center Configuration Manager
+# Create a task sequence to install an operating system in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use task sequences in System Center Configuration Manager to automatically install an operating system image on a destination computer. You create a task sequence that references a boot image used to start the destination computer, the operating system image that you want to install on the destination computer, and any other additional content, such as other applications or software updates, that you want to install. Then you deploy the task sequence to a collection that contains the destination computer.  
 
 ##  <a name="BKMK_InstallOS"></a> Create a task sequence to install an operating system  

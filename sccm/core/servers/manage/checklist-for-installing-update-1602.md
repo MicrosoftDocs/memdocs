@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Checklist for installing update 1602 for System Center Configuration Manager
+# Checklist for installing update 1602 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before updating from System Center Configuration Manager version 1511 to  version 1602, review the following information and checklist for actions to take before starting the update.  
 
  **About installing update 1602:**  

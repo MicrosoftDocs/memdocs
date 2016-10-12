@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Introduction to application management in System Center Configuration Manager
+# Introduction to application management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this topic, you'll learn the basics you need to know before you start working with System Center Configuration Manager applications.  
 
 > [!TIP]  

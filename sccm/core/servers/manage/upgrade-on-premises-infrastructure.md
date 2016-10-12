@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Upgrade on-premises infrastructure that supports System Center Configuration Manager
+# Upgrade on-premises infrastructure that supports System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to help you upgrade infrastructure that runs System Center Configuration Manager.  
 
 ##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade site operating system of site systems  

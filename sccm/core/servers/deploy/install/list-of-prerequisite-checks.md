@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# List of Prerequisite Checks for System Center Configuration Manager
+# List of Prerequisite Checks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following sections detail the available prerequisite checks.  
 
 

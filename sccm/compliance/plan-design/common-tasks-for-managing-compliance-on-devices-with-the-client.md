@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Common tasks for managing compliance on devices with the System Center Configuration Manager client
+# Common tasks for managing compliance on devices with the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 The scenarios in this topic give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md) section.  

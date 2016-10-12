@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Security and privacy for software updates | Configuration Manager
 description: "Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information."
@@ -16,7 +15,7 @@ ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 
 
 ---
-# Security and privacy for software updates in System Center Configuration Manager
+# Security and privacy for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for software updates in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for software updates  

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Protect data and site infrastructure with System Center Configuration Manager
+# Protect data and site infrastructure with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack. The information in these topics describes how to enable that access and how to help protect your organization's resources.  
 

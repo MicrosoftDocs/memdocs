@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Administrator checklists for migration planning in System Center Configuration Manager
+# Administrator checklists for migration planning in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following administrator checklists to help you plan your migration strategy to System Center Configuration Manager:  
 
 -   [Administrator checklist for migration planning](#Checklist_Migraiton_Planning)  

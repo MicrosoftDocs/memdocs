@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Windows Firewall and port settings for clients in System Center Configuration Manager
+# Windows Firewall and port settings for clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Client computers in System Center Configuration Manager that run Windows Firewall often require you to configure exceptions to allow communication with their site. The exceptions that you must configure depend on the management features that you use with the Configuration Manager client.  
 
  Use the following sections to identify these management features and for more information about how to configure Windows Firewall for these exceptions.  

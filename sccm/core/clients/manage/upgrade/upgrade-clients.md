@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Upgrade clients in System Center Configuration Manager
+# Upgrade clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use different methods to upgrade the System Center Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers in your enterprise. The following sections outlines the advantages and disadvantages of each client upgrade method to help you determine which will work best for your organization.  
 
 > [!TIP]  

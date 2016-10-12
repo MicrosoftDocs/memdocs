@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Operations and maintenance for hardware inventory in System Center Configuration Manager
+# Operations and maintenance for hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this section to find out more about operations and maintenance for hardware inventory in System Center Configuration Manager.  
 
 ## In this section  

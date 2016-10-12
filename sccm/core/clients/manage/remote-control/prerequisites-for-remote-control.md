@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for remote control in System Center Configuration Manager
+# Prerequisites for remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Remote control in System Center Configuration Manager has external dependencies and dependencies in the product.  
 
 ## Dependencies external to Configuration Manager  

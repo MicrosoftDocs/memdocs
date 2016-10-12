@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 With Configuration Manager and Intune, you can enable BYOD ("bring your own device") iOS and Mac OS X device enrollment to give access to company email and resources to iPhone, iPad and Mac users. Once users install the Intune company portal app, their devices can be targeted with policy. Before you can manage iOS and Mac devices, you must import an Apple Push Notification service (APNs) certificate from Apple. This certificate allows Intune to manage iOS and Mac devices and establishes an accredited and encrypted IP connection with the mobile device management authority services.  
 
  You can also enroll corporate-owned iOS devices.  See [Corporate-owned device (COD) management using Configuration Manager with Microsoft Intune](../Topic/Corporate-owned%20device%20\(COD\)%20management%20using%20Configuration%20Manager%20with%20Microsoft%20Intune.md).  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)
+# Considerations for managing System Center Configuration Manager clients  in a Virtual Desktop Infrastructure (VDI)*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports installing the Configuration Manager client on the following virtual desktop infrastructure (VDI) scenarios:  
 
 -   **Personal virtual machines** - Personal virtual machines are generally used when you want to make sure that user data and settings are maintained on the virtual machine between sessions.  

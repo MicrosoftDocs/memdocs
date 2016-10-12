@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to manage clients in System Center Configuration Manager
+# How to manage clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When a System Center Configuration Manager client is installed and successfully assigned to a Configuration Manager site, you will see the device in the **Assets and Compliance** workspace in the **Devices** node, and in one or more collections in the **Device Collections** node. When you select the device or collection that contains the device, you can select various management operations. However, there are also other ways to manage the client, which might involve other workspaces in the console, or tasks that don't use the Configuration Manager console.  
 
  Use this topic for overview information for the tasks that can manage a Configuration Manager client from the **Assets and Compliance** workspace, as well as more detailed information about additional tasks to help you manage the Configuration Manager client. For information about how to configure the client, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md)  

@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority
+# Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority*Applies to: System Center Configuration Manager (Current Branch)*
 This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), contains procedures to guide you through the process of creating and deploying the public key infrastructure (PKI) certificates that System Center Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
 
  Because there is no single method of deployment for the required certificates, you must consult your particular PKI deployment documentation for the required procedures and best practices to deploy the required certificates for a production environment. For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  

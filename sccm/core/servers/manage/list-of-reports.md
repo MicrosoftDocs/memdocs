@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# List of reports in System Center Configuration Manager
+# List of reports in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Many built-in reports are supplied with System Center Configuration Manager, covering many of the reporting tasks that you might want to perform. You can also use the SQL statements in these reports to help you to write your own reports. Use the information in this topic to learn about the reports that are supplied with Configuration Manager.  
 
 ## List of built-in Configuration Manager reports  

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Prerequisites for software updates | Configuration Manager
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
@@ -13,19 +11,9 @@ ms.technology:
  - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Prerequisites for software updates in System Center Configuration Manager
+# Prerequisites for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic lists the prerequisites for software updates in System Center Configuration Manager. For each of these, the external dependencies and internal dependencies are listed in separate tables.  
 
 ## Software Update Dependencies External to Configuration Manager  

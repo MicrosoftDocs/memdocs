@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Manage configuration data in System Center Configuration Manager
+# Manage configuration data in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you have created configuration items and configuration baselines in System Center Configuration Manager, further commands are available to help you perform various actions.  
 
 ## Manage configuration items  

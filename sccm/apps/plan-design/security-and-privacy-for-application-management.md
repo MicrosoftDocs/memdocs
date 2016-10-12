@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Security and privacy for application management in System Center Configuration Manager
+# Security and privacy for application management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ##  Security best practices for application management  
 

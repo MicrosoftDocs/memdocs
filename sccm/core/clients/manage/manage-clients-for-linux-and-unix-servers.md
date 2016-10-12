@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to manage clients for Linux and UNIX servers in System Center Configuration Manager
+# How to manage clients for Linux and UNIX servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you manage Linux and UNIX servers with System Center Configuration Manager, you can configure collections, maintenance windows, and client settings to help manage the servers. In addition, although the Configuration Manager client for Linux and UNIX does not have a user interface, you can force the client to manually poll for client policy.
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  

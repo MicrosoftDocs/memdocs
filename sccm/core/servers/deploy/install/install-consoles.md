@@ -14,7 +14,7 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Install System Center Configuration Manager consoles
+# Install System Center Configuration Manager consoles*Applies to: System Center Configuration Manager (Current Branch)*
 
 Administrative users use the System Center Configuration Manager console to manage the Configuration Manager environment. Each Configuration Manager console can connect to a central administration site or a primary site. You cannot connect a Configuration Manager console to a secondary site.
 

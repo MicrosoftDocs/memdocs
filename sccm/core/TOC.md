@@ -1,5 +1,3 @@
-
-
 #   [Understand and explore](understand/introduction.md)
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help Configuration Manager](understand/find-help.md)
@@ -10,9 +8,14 @@
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
 ### [Fundamentals of role-based administration](understand/fundamentals-of-role-based-administration.md)
+##  [Introduction to the Long-Term Servicing Branch](understand/introduction-to-the-ltsb.md)
+### [Licensing for System Center Configuration Manager](understand/learn-more-editions.md)
+### [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
+### [Supported Configurations for the Long-Term Servicing Branch](understand/supported-configurations-for-ltsb.md)
+### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
+### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
-
 
 #    [Plan and design](plan-design/get-ready.md)
 ##   [Product changes](plan-design/changes/features-and-capabilities.md)
@@ -68,6 +71,8 @@
 ###  [Privacy statement - Configuration Manager Cmdlet Library](plan-design/security/privacy-statement-cmdlet-library.md)
 ###  [Additional privacy information](plan-design/security/additional-privacy.md)
 ###  [Configure security](plan-design/security/configure-security.md)
+
+#    [Get started](get-started/evaluate-with-lab-environment.md)
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 ##   [Technical Preview](get-started/technical-preview.md)
@@ -97,7 +102,6 @@
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
 ###  [Operations for migrating](migration/operations-for-migration.md)
 ###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
-
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 ##   [Install infrastructure](servers/deploy/install/setup-downloader.md)
@@ -172,7 +176,6 @@
 #### [Operations and maintenance for reporting](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
-
 
 #    [Deploy clients](clients/deploy/plan/client-installation-methods.md)
 ##   [Planning for client deployment](clients/deploy/plan/client-installation-methods.md)

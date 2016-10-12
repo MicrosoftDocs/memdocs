@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
-# Support for System Center Configuration Manager current branch versions
+# Support for System Center Configuration Manager current branch versions*Applies to: System Center Configuration Manager (Current Branch)*
 Microsoft plans to release updates for System Center Configuration Manager current branch a few times per year with each update version  supported for twelve (12) months from its general availability (GA) release date. Technical support will be provided for the entire twelve (12) months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest current branch version.  
 
 -   Security and Critical Updates servicing phase - When running the latest current branch version of Configuration Manager, you will receive both Security and Critical updates.  

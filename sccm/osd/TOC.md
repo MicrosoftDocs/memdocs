@@ -1,12 +1,6 @@
-
 # [Understand](understand/introduction-to-operating-system-deployment.md)
 ## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
 ## [Task sequence steps](understand/task-sequence-steps.md)
-
-
-<!--- ### [Preprovision BitLocker in Windows PE with System Center Configuration Manager](deploy-use/preprovision-bitlocker-in-windows-pe.md) -->
-
-
 ## [Task sequence action variables](understand/task-sequence-action-variables.md)
 ## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
@@ -18,18 +12,20 @@
 ## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
 # [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-
 ## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 ## [Prepare for operating system deployment](get-started/prepare-for-operating-system-deployment.md)
 ### [Manage boot images](get-started/manage-boot-images.md)
 #### [Customize boot images](get-started/customize-boot-images.md)
+
 ### [Manage operating system images](get-started/manage-operating-system-images.md)
 #### [Customize operating system images](get-started/customize-operating-system-images.md)
+
 ### [Manage operating system upgrade packages](get-started/manage-operating-system-upgrade-packages.md)
 ### [Manage drivers](get-started/manage-drivers.md)
 ### [Manage user state](get-started/manage-user-state.md)
 ### [Prepare for unknown computer deployments](get-started/prepare-for-unknown-computer-deployments.md)
 ### [Associate users with a destination computer](get-started/associate-users-with-a-destination-computer.md)
+
 ## [Prepare Windows PE peer cache to reduce WAN traffic](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
 # [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
@@ -47,6 +43,7 @@
 ### [Use multicast to deploy Windows over the network](deploy-use/use-multicast-to-deploy-windows-over-the-network.md)
 ### [Create an image for an OEM in factory or a local depot](deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)
 ### [Deploy Windows to Go](deploy-use/deploy-windows-to-go.md)
+
 ## [Manage Windows as a service](deploy-use/manage-windows-as-a-service.md)
 ## [Monitor operating system deployments](deploy-use/monitor-operating-system-deployments.md)
 
@@ -56,6 +53,7 @@
 ### [Create a task sequence to capture an operating system](deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
 ### [Create a task sequence to capture and restore user state](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [Use a task sequence to manage virtual hard disks](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
+
 ## [Create a custom task sequence](deploy-use/create-a-custom-task-sequence.md)
 ### [Create a task sequence for non-operating system deployments](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 

@@ -17,7 +17,7 @@ author: Brendunsms.author: brenduns
 manager: angrobe
 
 ---
-# Use cloud services with System Center Configuration Manager
+# Use cloud services with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports several cloud-based options that supplement your on-premises infrastructure and can help solve business problems like:  
 
 -   Manage BYOD (by using Intune for mobile device management)  

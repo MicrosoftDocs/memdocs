@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Support for Virtualization Environments for System Center Configuration Manager
+# Support for Virtualization Environments for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Configuration Manager supports installing the client and site system roles on supported operating systems that run as a virtual machine in the following virtualization environments. This support exists even when the virtual machine host (virtualization environment) is not supported as a client or site server.  
 
  **For example**, if you use Microsoft Hyper-V Server 2012 to host a virtual machine that runs Windows Server 2012, you can install the client or site system roles on the virtual machine (Windows Server 2012), but not on the host, (Microsoft Hyper-V Server 2012).  

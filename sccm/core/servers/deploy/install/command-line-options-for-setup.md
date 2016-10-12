@@ -14,7 +14,7 @@ ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Command-line options for Setup for System Center Configuration Manager
+# Command-line options for Setup for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Use information in the following tables when configuring scripts or installing System Center Configuration Manager from a command line.  
 
