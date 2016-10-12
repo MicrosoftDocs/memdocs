@@ -6,7 +6,7 @@
 # [Plan and design](plan-design/plan-for-software-updates.md)
 ## [Plan for software updates](plan-design/plan-for-software-updates.md)
 
-## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
+## [Prerequisites for software updates](plan-design/prerequisites-for-software-updates.md)   ## [Security and privacy for software updates](plan-design/security-and-privacy-for-software-updates.md)
 
 # [Get started](get-started/prepare-for-software-updates-management.md)
 ## [Prepare for software updates management](get-started/prepare-for-software-updates-management.md)
