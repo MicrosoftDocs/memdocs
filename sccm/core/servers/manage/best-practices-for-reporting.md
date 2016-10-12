@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Best practices for reporting in System Center Configuration Manager
+# Best practices for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices for reporting in System Center Configuration Manager:  
 
 ## For best performance, install the reporting services point on a remote site system server  

@@ -1,12 +1,6 @@
-
 # [Understand](understand/introduction-to-operating-system-deployment.md)
 ## [Introduction to operating system deployment](understand/introduction-to-operating-system-deployment.md)
 ## [Task sequence steps](understand/task-sequence-steps.md)
-
-
-<!--- ### [Preprovision BitLocker in Windows PE with System Center Configuration Manager](deploy-use/preprovision-bitlocker-in-windows-pe.md) -->
-
-
 ## [Task sequence action variables](understand/task-sequence-action-variables.md)
 ## [Task sequence built-in variables](understand/task-sequence-built-in-variables.md)
 ## [Prestart commands for task sequence media](understand/prestart-commands-for-task-sequence-media.md)
@@ -17,9 +11,7 @@
 ## [Security and privacy for operating system deployment](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [Planning for operating system deployment interoperability](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
-# [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-
-## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+# [Get started](get-started/prepare-site-system-roles-for-operating-system-deployments.md)## [Prepare site system roles for operating system deployments](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 ## [Prepare for operating system deployment](get-started/prepare-for-operating-system-deployment.md)
 ### [Manage boot images](get-started/manage-boot-images.md)
 #### [Customize boot images](get-started/customize-boot-images.md)
@@ -32,7 +24,7 @@
 ### [Associate users with a destination computer](get-started/associate-users-with-a-destination-computer.md)
 ## [Prepare Windows PE peer cache to reduce WAN traffic](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
-# [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+# [Deploy and use](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ## [Scenarios to deploy enterprise operating systems](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ### [Upgrade Windows to the latest version](deploy-use/upgrade-windows-to-the-latest-version.md)
 ### [Refresh an existing computer with a new version of Windows](deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)

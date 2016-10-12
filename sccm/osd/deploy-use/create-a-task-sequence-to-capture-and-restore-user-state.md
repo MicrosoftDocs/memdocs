@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create a task sequence to capture and restore user state in System Center Configuration Manager
+# Create a task sequence to capture and restore user state in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use System Center Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. Depending on the type of task sequence you create, the capture and restore steps might be automatically added as part of the task sequence. In other scenarios, you might need to manually add the capture and restore steps to the task sequence. This topic provides the steps that you must add to an existing task sequence to capture and restore user state data.  
 
 ##  <a name="BKMK_CaptureRestoreUserState"></a> How to capture and restore user state data  

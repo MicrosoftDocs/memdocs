@@ -15,7 +15,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Using the Microsoft Malware Protection Center to Download Definitions
+# Using the Microsoft Malware Protection Center to Download Definitions*Applies to: System Center Configuration Manager (Current Branch)*
  You can configure clients to download definition updates from the Microsoft Malware Protection Center. This option is used by Endpoint Protection clients to download definition updates if they have not been able to download updates from another source. This update method can be useful if there is a problem with your Configuration Manager infrastructure that prevents the delivery of updates.
 
 > [!IMPORTANT]

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Troubleshooting Windows Defender or Endpoint Protection client
+# Troubleshooting Windows Defender or Endpoint Protection client*Applies to: System Center Configuration Manager (Current Branch)*
 
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
 

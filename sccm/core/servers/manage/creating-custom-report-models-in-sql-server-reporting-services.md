@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services
+# Creating custom report models for System Center Configuration Manager in SQL Server Reporting Services*Applies to: System Center Configuration Manager (Current Branch)*
 Sample report models are included in System Center Configuration Manager, but you can also define report models to meet your own business requirements, and then deploy the report model to Configuration Manager to use when you create new model-based reports. The following table provides the steps to create and deploy a basic report model.  
 
 > [!NOTE]  

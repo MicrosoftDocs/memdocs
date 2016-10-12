@@ -13,7 +13,7 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Use the Setup Wizard to install System Center Configuration Manager sites
+# Use the Setup Wizard to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
 
 To install a new System Center Configuration Manager site using a guided user interface, you use the Configuration Manager Setup Wizard (setup.exe). The Wizard supports install of a primary site or central administration site. You also use the Wizard to [upgrade an Evaluation install](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md) of Configuration Manager to a fully licensed installation.  When you do not want to use the Wizard you can instead use an [installation script](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md) and run an unattended command line installation.
 

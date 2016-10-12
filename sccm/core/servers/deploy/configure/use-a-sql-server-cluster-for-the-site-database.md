@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Use a SQL Server cluster for the System Center Configuration Manager site database
+# Use a SQL Server cluster for the System Center Configuration Manager site database*Applies to: System Center Configuration Manager (Current Branch)*
 
  You can use a SQL Server cluster to host the System Center Configuration Manager site database. The site database is the only site system role supported on a Server cluster.  
 

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Deploy App-V virtual applications with System Center Configuration Manager
+# Deploy App-V virtual applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy virtual applications.  
 
  When you use Configuration Manager to manage virtual applications, you gain the following benefits:  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Planning for the migration of Configuration Manager objects to System Center Configuration Manager
+# Planning for the migration of Configuration Manager objects to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 With System Center Configuration Manager, you can migrate many of the different objects that are associated with different features found at a source site. Use the following sections to help you plan for the migration of objects between hierarchies.  
 
 -   [Planning to migrate software updates](#Plan_migrate_Software_updates)  

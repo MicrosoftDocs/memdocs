@@ -17,7 +17,7 @@ author: NathBarnms.author: nathbarn
 manager: angrobe
 ---
 
-# Setup hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+# Setup hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 
 Before you can manage iOS, Windows, and Android devices with Configuration Manager, they must be enrolled with Intune. Use the following steps to setup hybrid device enrollment with Configuration Manager using Intune. By completing the following steps you will enable "bring your own device" (BYOD) enrollment for your users. These steps are also prerequisites for [enrolling company-owned devices](enroll-company-owned-devices.md).
 

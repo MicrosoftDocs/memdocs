@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Get ready for System Center Configuration Manager
+# Get ready for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in the following topics when you're ready to start planning your System Center Configuration Manager deployment:  
 
 

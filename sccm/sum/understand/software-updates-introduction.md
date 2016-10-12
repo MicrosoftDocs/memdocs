@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Introduction to software updates | Configuration Manager
 description: "Learn the basics of software updates in System Center Configuration Manager."
@@ -16,7 +15,7 @@ ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 
 
 ---
-# Introduction to software updates in System Center Configuration Manager
+# Introduction to software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Software updates in System Center Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  
 
 For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  

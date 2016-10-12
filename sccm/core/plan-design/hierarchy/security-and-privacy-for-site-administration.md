@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for site administration in System Center Configuration Manager
+# Security and privacy for site administration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
 ##  <a name="BKMK_Security_Sites"></a> Security Best Practices for Site Administration  

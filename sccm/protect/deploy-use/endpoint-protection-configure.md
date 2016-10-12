@@ -16,7 +16,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Configure Endpoint Protection in System Center Configuration Manager
+# Configure Endpoint Protection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, you must perform the configuration steps detailed in this topic.  
 
 ## How to Configure Endpoint Protection in Configuration Manager  

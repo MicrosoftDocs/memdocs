@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Prerequisites for deploying clients to Windows computers in System Center Configuration Manager
+# Prerequisites for deploying clients to Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
   Make sure that you also review [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) to confirm that devices meet the minimum hardware and operating system requirements for the Configuration Manager client.  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Operations and maintenance for queries in System Center Configuration Manager
+# Operations and maintenance for queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section for operations and maintenance information for queries in System Center Configuration Manager.  
 
 ## In this section  

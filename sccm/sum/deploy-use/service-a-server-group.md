@@ -13,7 +13,7 @@ ms.technology:
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 
 ---
-# Service a server group
+# Service a server group*Applies to: System Center Configuration Manager (Current Branch)*
 Starting in System Center Configuration Manager version 1606, you can configure server group settings for a collection to define how many, what percentage, or in what order computers in the collection will install software updates. You can also configure pre-deployment and post-deployment PowerShell scripts to run custom actions.
 
 When you deploy software updates to a collection that has server group settings configured, Configuration Manager determines how many computers in the collection can install the software updates at any given time and makes the same number of deployment locks available. Only computers that get a deployment lock will start software update installation. When a deployment lock is available, a computer gets the deployment lock, installs the software updates, and then releases the deployment lock when software updates installation successfully completes. Then, the deployment lock becomes available for other computers. If a computer is unable to release a deployment lock, you can manually release all server group deployment locks for the collection.

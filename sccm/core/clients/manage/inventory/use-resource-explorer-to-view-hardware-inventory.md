@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to use Resource Explorer to view hardware inventory in System Center Configuration Manager
+# How to use Resource Explorer to view hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use Resource Explorer in System Center Configuration Manager to view information about hardware inventory that has been collected from clients in your hierarchy.  
 
 > [!NOTE]  

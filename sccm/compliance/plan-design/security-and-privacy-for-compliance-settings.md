@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Security and privacy for compliance settings in System Center Configuration Manager
+# Security and privacy for compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Security best practices for compliance settings  
 

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Design a hierarchy of sites for System Center Configuration Manager
+# Design a hierarchy of sites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before installing the first site of a new System Center Configuration Manager hierarchy, you should understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of  management each site type provides. Then, after considering content management options that can reduce the number of sites you need to install, you can plan out a topology that efficiently serves your current business needs and can later expand to manage future growth.  
 
 ##  <a name="bkmk_topology"></a> Hierarchy topology  

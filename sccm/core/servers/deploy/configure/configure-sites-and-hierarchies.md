@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Configure sites and hierarchies for System Center Configuration Manager
+# Configure sites and hierarchies for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you install your first System Center Configuration Manager site or add additional sites to your hierarchy, use the following checklist to ensure you consider the most common configurations that affect both sites and hierarchies.  
 
 ## Checklist of common configurations for new and additional sites  

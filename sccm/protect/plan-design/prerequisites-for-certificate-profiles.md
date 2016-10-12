@@ -15,7 +15,7 @@ caps.latest.revision: 9
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for certificate profiles in System Center Configuration Manager
+# Prerequisites for certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Certificate profiles in System Center Configuration Manager have external dependencies and dependencies in the product.  
 

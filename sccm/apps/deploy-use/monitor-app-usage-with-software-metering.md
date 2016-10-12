@@ -17,7 +17,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 
-# Software metering in System Center Configuration Manager
+# Software metering in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains a reference for all of the operations you might perform when using System Center Configuration Manager software metering.
 
 > [!IMPORTANT]  

@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Fundamentals of security for System Center Configuration Manager
+# Fundamentals of security for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Security for System Center Configuration Manager consists of several layers. The first layer is provided by Windows security features for both the operating system and the network and include:  
 
 -   File sharing to transfer files between Configuration Manager components  

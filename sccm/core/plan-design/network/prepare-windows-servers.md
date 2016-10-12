@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Prepare Windows Servers to support System Center Configuration Manager
+# Prepare Windows Servers to support System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can use a Windows computer as a site system server for System Center Configuration Manager, you must ensure that the computer meets the prerequisites for its intended use as a site server or site system server.  
 
 -   These often include one or more Windows features or roles, which are enabled by using the computers Server Manager.  

@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune
+# Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can manage Windows Phone 8.1 and later mobile devices with Configuration Manager using Intune,  users must install the Company Portal app from the Windows Phone Store and then enroll it.  To enroll the Windows Phone 8.0 and to deploy company apps, including the Company Portal app, to Windows Phone 8.1 and later devices, you must get a Symantec Enterprise Mobile Code Signing certificate. You cannot use a certificate issued by your own certification authority because only the Symantec certificate is trusted by Windows Phone devices.  
 
 ## Set up Windows Phone device enrollment  

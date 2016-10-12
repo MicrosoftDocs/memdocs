@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to monitor certificate profiles in System Center Configuration Manager
+# How to monitor certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 After you deploy System Center Configuration Manager certificate profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the certificate profile:  
 

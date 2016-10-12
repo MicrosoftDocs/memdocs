@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Define site boundaries and boundary groups for System Center Configuration Manager
+# Define site boundaries and boundary groups for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Boundaries for System Center Configuration Manager define network locations on your intranet that can contain devices that you want to manage. Boundary groups are logical groups of  boundaries that you configure. Both boundary groups and boundaries are available throughout a  hierarchy and you do not configure them for individual sites.  
 
  A  hierarchy can include any number of boundary groups, and each boundary group can contain any combination of the following boundary types:  

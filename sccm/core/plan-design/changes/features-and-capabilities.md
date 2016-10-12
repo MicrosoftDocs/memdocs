@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Features and capabilities of System Center Configuration Manager
+# Features and capabilities of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following are the primary management capabilities of System Center Configuration Manager. Each capability has its own prerequisites, and the capabilities that you want to use might influence the design and implementation of your Configuration Manager hierarchy. For example, if you want to deploy software to devices in your hierarchy, you must install the distribution point site system role.  
 
  For more information about how to plan and install Configuration Manager to support these management capabilities in your environment, see [Get ready for System Center Configuration Manager](../../../core/plan-design/get-ready.md).  

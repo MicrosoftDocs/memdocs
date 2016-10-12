@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to remotely administer a Windows client computer by using System Center Configuration Manager
+# How to remotely administer a Windows client computer by using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following procedure to remotely administer a computer in System Center Configuration Manager.  
 
  Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  

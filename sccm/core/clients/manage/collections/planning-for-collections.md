@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Planning for collections in System Center Configuration Manager
+# Planning for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section to help you plan for collections in System Center Configuration Manager.  
 
 ## In this section  

@@ -14,7 +14,7 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Accessibility features in System Center Configuration Manager
+# Accessibility features in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  System Center Configuration Manager includes features to help make it accessible for people with disabilities.
 

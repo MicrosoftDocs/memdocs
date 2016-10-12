@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# International support in System Center Configuration Manager
+# International support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following sections provide technical details to help you configure System Center Configuration Manager to be compliant for specific international requirements.  
 
 ## GB18030 Requirements  

@@ -16,7 +16,7 @@ author: robstackmsftms.author: robstack
 manager: angrobe
 
 ---
-# Management tasks for System Center Configuration Manager applications
+# Management tasks for System Center Configuration Manager applications*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this topic to help you manage System Center Configuration Manager applications and deployment types.  
   
 For help creating applications and deployment types, see [Create applications](../../apps/deploy-use/create-applications.md).  

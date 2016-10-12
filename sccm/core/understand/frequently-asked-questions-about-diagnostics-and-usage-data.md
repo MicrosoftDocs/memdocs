@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Frequently asked questions about diagnostics and usage data for System Center Configuration Manager
+# Frequently asked questions about diagnostics and usage data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following are frequently asked questions about diagnostic and usage data for System Center Configuration Manager:  
 
 ###  <a name="bkmk_off"></a> How do I turn off telemetry?  

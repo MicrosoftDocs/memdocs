@@ -15,7 +15,7 @@ caps.latest.revision: 17
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Health attestation for System Center Configuration Manager
+# Health attestation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Begining with System Center Configuration Manager current branch version 1602, administrators can view the status of [Windows 10 Device Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) in the Configuration Manager console.  This functionality is available for PCs and on-premises resources managed by Configuration Manager and mobile devices managed with Microsoft Intune. Administrators can specify whether reporting is done via the cloud or on-premises infrastructure. This enables client PCs without internet access to enable and monitor devices using health attestation. Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  
 
 -   Early-launch antimalware - Early launch anti-malware (ELAM) protects your computer when it starts up and before third-party drivers initialize. [How to turn on ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  

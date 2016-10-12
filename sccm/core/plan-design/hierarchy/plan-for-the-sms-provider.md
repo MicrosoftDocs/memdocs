@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Plan for the SMS Provider for System Center Configuration Manager
+# Plan for the SMS Provider for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To manage System Center Configuration Manager, you use a Configuration Manager console which connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on a central administration site  or primary site, when the site installs.  
 
 

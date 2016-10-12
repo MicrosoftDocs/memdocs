@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to create configuration items in System Center Configuration Manager
+# How to create configuration items in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Compliance settings in System Center Configuration Manager lets you create and deploy configurations to both devices that are managed by Configuration Manager, and devices that were enrolled with Microsoft Intune.  
 
 ## In this section  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage drivers in System Center Configuration Manager
+# Manage drivers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager provides a driver catalog that you can use to manage the Windows device drivers in your Configuration Manager environment. You can use the driver catalog to import device drivers into Configuration Manager, to group them in packages, and to distribute those packages to distribution points where you can access them when you deploy an operating system. Device drivers can be used when you install the full operating system on the destination computer and when you install Windows PE by using a boot image. Windows device drivers consist of a Setup Information File (INF) file and any additional files that are required to support the device. When an operating system is deployed, Configuration Manager obtains the hardware and platform information for the device from its INF file. Use the following to manage drivers in your Configuration Manager environment.
 
 ##  <a name="BKMK_DriverCategories"></a> Device Driver Categories  

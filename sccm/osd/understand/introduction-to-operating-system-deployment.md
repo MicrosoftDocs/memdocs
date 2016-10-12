@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Introduction to operating system deployment in System Center Configuration Manager
+# Introduction to operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use Configuration Manager to deploy operating systems in a number of different ways. Use the information in this section to understand how to deploy operating systems and automate tasks.
 
 ##  <a name="BKMK_OSDeploymentProcess"></a> The operating system deployment process  

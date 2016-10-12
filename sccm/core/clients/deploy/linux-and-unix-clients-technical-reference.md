@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Linux and UNIX clients component services and commands for System Center Configuration Manager
+# Linux and UNIX clients component services and commands for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  The following table identifies the client component services of the Configuration Manager client for Linux and UNIX.  
 

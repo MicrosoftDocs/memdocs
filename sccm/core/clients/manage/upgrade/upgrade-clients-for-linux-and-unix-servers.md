@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager
+# How to upgrade clients for Linux and UNIX servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can upgrade the version of the client for Linux and UNIX on a computer to a newer client version without first uninstalling the current client. To do so, install the new client installation package on the computer while using the **-keepdb** command line property. When the client for Linux and UNIX installs, it overwrites existing client data with the new client files. However, the **-keepdb** command line property directs the install process to retain the clients unique identifier (GUID), local database of information, and certificate store. This information is then used by the new client installation.  
 
  For example, you have a RHEL5 x64 computer that runs the client from the original release of the Configuration Manager client for Linux and UNIX. To upgrade this client to the client version from cumulative update 1, you manually run the **install** script to install the applicable client package from cumulative update 1, with the addition of the **-keepdb** command line switch. The command line you use resembles the following: **./install -mp <hostname\> -sitecode <code\> -keepdb ccm-Universal-x64.<build\>.tar**  
