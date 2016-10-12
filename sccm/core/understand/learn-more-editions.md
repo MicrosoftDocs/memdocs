@@ -24,7 +24,7 @@ manager: angrobe
 Use this topic to learn about the licensing requirements for the installation options available with the October 2016 release of System Center Configuration Manager version 1606, which include the Current Branch version 1606, Long-Term Servicing Branch (LTSB), and Evaluation installation of the Current Branch version 1606.
 
 **Licensing overview:**   
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have next version rights to the October 2016 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have next version rights to use the October 2016 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
 
 
 **Licensing specifics:**  

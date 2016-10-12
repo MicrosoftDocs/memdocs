@@ -24,7 +24,7 @@ Use this topic to learn about the  Long-Term Servicing Branch (LTSB) of Configur
 The LTSB is a distinct branch of Configuration Manager that is based on version 1606 of the Current Branch. When compared to the Current Branch, the LTSB has [reduced functionality](#features-that-are-not-available-in-the-ltsb-of-configuration-manager). It is designed for customers who have [allowed their Software Assurance (SA) or equivalent subscription rights to lapse](/sccm/core/understand/learn-more-editions#software-assurance-and-the-ltsb).
 
 **Licensing overview:**   
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have next version rights to the October 2016 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have next version rights to use the October 2016 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
 
 **Licensing specifics:**  
 [Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](http://go.microsoft.com/fwlink/?LinkId=800052).
