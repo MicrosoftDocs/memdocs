@@ -28,13 +28,13 @@ Before you can manage iOS, Windows, and Android devices with Configuration Manag
  |Steps|Details|  
  |-----------|-------------|  
  |**Step 1:** [Create an MDM collection](#step-1-create-an-mdm-collection)|Create a Configuration Manager user collection with users whose devices can be enrolled|  
- |**Step 2:** [Domain name and Active Directory requirements](#step-2-domain-name-and-active-directory-requirements)|Confirm your organization's domain name service (DNS) and Active Directory user management meets MDM requirements|
- |**Step 3:** [Configure an Intune Subscription](#step-3-configure-microsoft-intune-subscription)|The Intune service lets you manage devices over the Internet.|  
- |**Step 4:** [Add terms and conditions for enrollment](#step-4-add-terms-and-conditions-for-enrollment)| Create terms and conditions to which users must agree before they can use the Company Portal app|
- |**Step 5:** [Configure service connection point site system role](#step-5-create-service-connection-point-site-system-role)|The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. |  
- |**Step 6:** [Enable platform enrollment](#step-6-enable-mobile-device-platform-enrollment)|MDM enrollment for [iOS](#ios-and-mac-enrollment-setup) and [Windows](#windows-enrollment-setup) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
- |**Step 7:** [Enable management](#step-7-set-up-additional-management)|(Optional) Set up configuration items and conditional access for enrolled devices|
- |**Step 8:** [Verify mobile device management configuration](#step-8-verify-mobile-device-management-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
+ |**Step 2:** [Domain name requirements](#step-2-domain-name-requirements)|Confirm your organization's domain name service (DNS) and Active Directory user management meets MDM requirements|
+ |**Step 3:** [Configure Intune Subscription](#step-3-configure-intune-subscription)|The Intune service lets you manage devices over the Internet.|  
+ |**Step 4:** [Add terms and conditions](#step-4-add-terms-and-conditions)| Create terms and conditions to which users must agree before they can use the Company Portal app|
+ |**Step 5:** [Create service connection point](#step-5-create-service-connection-point)|The service connection point sends settings and software deployment information to Configuration Manager and retrieves status and inventory messages from mobile devices. |  
+ |**Step 6:** [Enable platform enrollment](#step-6-enable-platform-enrollment)|MDM enrollment for [iOS](#ios-and-mac-enrollment-setup) and [Windows](#windows-enrollment-setup) devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
+ |**Step 7:** [Set up additional management](#step-7-set-up-additional-management)|(Optional) Set up configuration items and conditional access for enrolled devices|
+ |**Step 8:** [Verify MDM configuration](#step-8-verify-mdm-configuration)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
  |**Step 9:** [Enroll devices](#step-9-enroll-devices)|Either tell users how to enroll their devices or begin enrolling company-owned devices to meet your organization's needs|
 
 Looking for Intune without Configuration Manager?
@@ -256,7 +256,7 @@ For additional information, see [Android](enroll-hybrid-android.md).
 - [Skype for Business access](/sccm/protect/deploy-use/manage-skype-for-business-online-access)
 - [Dynamic CRM Online](/sccm/protect/deploy-use/manage-dynamics-crm-online-access)
 
-## Step 8: Verify mobile device management configuration
+## Step 8: Verify MDM configuration
 
  You can verify certain device management components by checking the following log files:
 
