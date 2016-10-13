@@ -2,7 +2,7 @@
 title: "Sync data | Microsoft Operations Management Suite | System Center Configuration Manager"
 description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 10/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: nbigman
+ms.author: nbigman
+manager: angrobe
 ---
 # Sync data from Configuration Manager to the Microsoft Operations Management Suite
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS. This makes data from your Configuration Manager deployment visible in OMS.
