@@ -85,7 +85,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
 -   All client features are supported on supported Windows Embedded systems that do not have write filters enabled.  
 
--   Clients that use one of the following are supported for all features expect power management:  
+-   Clients that use one of the following are supported for all features except power management:  
 
     -   Enhanced Write Filters (EWF)    
 
