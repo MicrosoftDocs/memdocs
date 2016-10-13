@@ -2,7 +2,7 @@
 title: "How to Create VPN profiles in System Center Configuration Manager"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 10/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,9 +13,8 @@ ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Nbigman
 ms.author: nbigman
-manager: angrobe
+ms.manager: angrobe
 
 ---
 # How to Create VPN profiles in System Center Configuration Manager
@@ -133,7 +132,7 @@ manager: angrobe
 2.  Specify details about your proxy server and its settings. For more information, see the Windows Server documentation.  
 
 > [!NOTE]  
->  On some Windows device, the VPN profile will not display the proxy information until you restart the device.  
+>  On Windows 8.1 computers, the VPN profile will not display the proxy information until you connect to the VPN with that computer.  
 
 
 ### Configure Further DNS Settings (if required)  
