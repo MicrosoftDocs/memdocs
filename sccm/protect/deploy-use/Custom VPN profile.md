@@ -4,8 +4,8 @@
 title: Create a custom VPN profile | System Center Configuration Manager
 description: Create VPN profiles for Windows 8 and later devices.
 keywords:
-author: nbigman
-manager: angerobe
+ms.author: nbigman
+ms.manager: angerobe
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: configuration-manager
