@@ -109,7 +109,7 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 
 5.  Run the following command to begin the upload of usage information and the download of updates for Configuration Manager:  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB\UsageData.cab -updatepackdest D:\USB\UpdatePacks**  
+    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks** 
 
     For more examples of this command line, see the [Command line options](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) section later in this topic.
 
