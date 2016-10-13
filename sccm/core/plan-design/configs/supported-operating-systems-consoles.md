@@ -18,6 +18,8 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  To support the System Center Configuration Manager console, the following operating system require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.  
 
+-   **Windows Server 2016**  – Standard, Datacenter  
+
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter  
 
 -   **Windows Server 2012** (x64) – Standard, Datacenter  

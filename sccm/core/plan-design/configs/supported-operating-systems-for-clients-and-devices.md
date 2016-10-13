@@ -31,6 +31,8 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 
 **Supported operating systems:**  
 
+-  **Windows Server 2016**  – Standard, Datacenter <sup>1</sup>
+
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter <sup>1</sup>    
 
 -   **Windows Storage Server 2012 R2** (x64)    

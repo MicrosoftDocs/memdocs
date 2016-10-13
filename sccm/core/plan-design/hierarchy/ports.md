@@ -324,6 +324,13 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, Alternate Port Available)|  
 
+###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service Connection Point -- > Microsoft Intune  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443|
+For more information see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) for the service connection point.
+
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site Server &lt; -- > Application Catalog Web Service Point  
 
 |Description|UDP|TCP|  
@@ -525,11 +532,7 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
 
-###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service Connection Point -- > Microsoft Intune  
 
-|Description|UDP|TCP|  
-|-----------------|---------|---------|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443|  
 
 ###  <a name="BKMY_PortNotes"></a> Notes for ports used by Configuration Manager clients and site systems  
 
