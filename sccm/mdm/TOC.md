@@ -11,9 +11,9 @@
 # [Deploy and use](deploy-use/setup-hybrid-mdm.md)
 
 ## [Set up hybrid MDM](deploy-use/setup-hybrid-mdm.md)
-### [iOS and Mac](enroll-hybrid-ios-mac.md)
-### [Windows](enroll-hybrid-windows.md)
-### [Android](enroll-hybrid-android.md)
+### [iOS and Mac](plan-design/enroll-hybrid-ios-mac.md)
+### [Windows](plan-design/enroll-hybrid-windows.md)
+### [Android](plan-design/enroll-hybrid-android.md)
 ### [Terms and Conditions](deploy-use/terms-and-conditions.md)
 ## [Enroll company-owned devices in hybrid MDM](deploy-use/enroll-company-owned-devices.md)
 ### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
