@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create a custom VPN profile | System Center Configuration Manager
-description:
+description: Create VPN profiles for Windows 8 and later devices.
 keywords:
 author: nbigman
 manager: angerobe
