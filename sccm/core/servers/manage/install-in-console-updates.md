@@ -325,6 +325,8 @@ When your hierarchy runs version 1606 or later, and you then install an update t
  > [!TIP]
  > When you are installing update 1606, pre-release features that are included with update 1606 are not visible in the Updates and Servicing Wizard and cannot be enabled at that time. After update 1606 installs you can view the pre-release features it includes in the Features node.
 
+If you gave concent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must then give concent again at the central administration site. 
+
 **The following pre-release features are avaialble:**
 
  |Feature                    |Added as pre-release |Added as a full feature |  

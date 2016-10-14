@@ -81,6 +81,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 >  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
 
  **Active baseline versions of the Technical Preview:**  
+ You can install a baseline version for up to 1 year after its release.
 
 -   **Technical Preview 1603** as part of the **System Center Technical Preview 5** -  The Configuration Manager Technical Preview 1603  is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is included with System Center Technical Preview 5.    Only the version included with System Center Technical Preview 5 can be used for a baseline install.  
 
@@ -89,8 +90,6 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   Both Setup and the Configuration Manager console list the version as the System Center Configuration Manager Technical Preview 1603.  
 
     -   This baseline version functions as does the Configuration Manager Technical Preview 1603, including support for in-console updates.  
-
-    -   You can install this baseline version for up to 9 months after the release of System Center Technical Preview 5.  
 
     -   You can run this baseline version for 90 days before you must update it to a later version. (Typically, versions of the Configuration Manager Technical Preview run for 60 days before you must update them to a later version.)  
 
