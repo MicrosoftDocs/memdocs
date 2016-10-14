@@ -38,7 +38,7 @@ When you run Setup, you are now presented with a Licensing page where you can se
 
 For more information see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
-## Software Assurance expiration
+### Software Assurance expiration
 During Setup, you have the option to enter the **Software Assurance expiration date**. This is an optional value you can specify as a convenient reminder.
 
 > [!NOTE]
@@ -49,17 +49,6 @@ During Setup, you have the option to enter the **Software Assurance expiration d
 
 For more information see *Software Assurance agreements* in [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
-### In-place upgrade paths for the 1606 baseline media
-You can use the 1606 baseline media to upgrade the following to a licensed edition of System Center Configuration Manager:
-- System Center 2012 Configuration Manager with Service Pack 2
-- System Center 2012 R2 Configuration Manager with Service Pack 1
-
-You can also use this media to upgrade a non-licensed Evaluation edition of Current Branch to a fully licensed version of the Current Branch.
-
-This media does not support upgrade of:
-- Other versions of System Center 2012 Configuration Manager
-- Configuration Manager 2007 or earlier
-- A release candidate install of System Center Configuration Manager
 
 ### Additional pre-upgrade configurations
 Prior to starting an upgrade of System Center 2012 Configuration Manager to the LTSB, you must take the following additional steps as part of pre-upgrade checklist.  
@@ -124,6 +113,18 @@ When you upgrade from System Center 2012 Configuration Manager use the site plan
 - Additional steps to following in the pre-upgrade check list
 - During Setup you must choose the LTSB, and you can specify details for your Software Assurance agreement
 - You can only upgrade a site that runs System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1
+
+### In-place upgrade paths for the 1606 baseline media
+You can use the 1606 baseline media to upgrade the following to a licensed edition of System Center Configuration Manager:
+- System Center 2012 Configuration Manager with Service Pack 2
+- System Center 2012 R2 Configuration Manager with Service Pack 1
+
+You can also use this media to upgrade a non-licensed Evaluation edition of Current Branch to a fully licensed version of the Current Branch.
+
+This media does not support upgrade of:
+- Other versions of System Center 2012 Configuration Manager
+- Configuration Manager 2007 or earlier
+- A release candidate install of System Center Configuration Manager
 
 ## About the CD.Latest folder and the LTSB
 The following are caveats to using the media that Configuration Manager creates in the CD.Latest folder on the site server. These apply to sites that run the LTSB:
