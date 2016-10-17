@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Monitor hierarchy and replication infrastructure in System Center Configuration Manager
+# Monitor hierarchy and replication infrastructure in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To monitor infrastructure and operations in System Center Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 
 > [!NOTE]  

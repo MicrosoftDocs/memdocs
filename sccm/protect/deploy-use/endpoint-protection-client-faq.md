@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Endpoint Protection client frequently asked questions
+# Endpoint Protection client frequently asked questions*Applies to: System Center Configuration Manager (Current Branch)*
 
 This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
 

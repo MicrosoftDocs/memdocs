@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Extend the Active Directory schema for System Center Configuration Manager
+# Extend the Active Directory schema for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you extend the Active Directory schema for System Center Configuration Manager you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
 
  We recommend that you use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and configuring clients, and enables clients to efficiently locate resources such as content servers and additional services provided by the various Configuration Manager site system roles.  

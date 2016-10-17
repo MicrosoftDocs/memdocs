@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Planning considerations for automating tasks in System Center Configuration Manager
+# Planning considerations for automating tasks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can create task sequences to automate tasks in your System Center Configuration Manager environment. These tasks range from capturing an operating system on a reference computer to deploying the operating system to one or more destination computers. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level in the Local System context without requiring user intervention. Use the following sections to help plan  to automate tasks in Configuration Manager.
 
 ##  <a name="BKMK_TSStepsActions"></a> Task sequence steps and actions  

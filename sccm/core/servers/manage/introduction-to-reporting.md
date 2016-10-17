@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Introduction to reporting in System Center Configuration Manager
+# Introduction to reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Reporting in System Center Configuration Manager provides a set of tools and resources that help you use the advanced reporting capabilities of SQL Server Reporting Services (SSRS) and the rich authoring experience that Reporting Services Report Builder provides. Reporting helps you gather, organize, and present information about users, hardware and software inventory, software updates, applications, site status, and other Configuration Manager operations in your organization. Reporting provides you with a number of predefined reports that you can use without changes, or that you can modify to meet your requirements, and you can create custom reports. Use the following sections to help you manage reporting in Configuration Manager.  
 
 ##  <a name="BKMK_SQLServerReportingServices"></a> SQL Server Reporting Services  

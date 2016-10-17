@@ -15,7 +15,7 @@ caps.latest.revision: 157
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Technical Preview for System Center Configuration Manager
+# Technical Preview for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 **Welcome to the System Center Configuration Manager Technical Preview**. This topic provides details about the evolving preview release that introduces new functionality and capabilities we are working on. With each version of the technical preview, new features are introduced that are not included in the current branch of System Center Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
 
  Because this is a technical preview, details and functionality are subject to change.  
@@ -81,6 +81,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 >  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
 
  **Active baseline versions of the Technical Preview:**  
+ You can install a baseline version for up to 1 year after its release.
 
 -   **Technical Preview 1603** as part of the **System Center Technical Preview 5** -  The Configuration Manager Technical Preview 1603  is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is included with System Center Technical Preview 5.    Only the version included with System Center Technical Preview 5 can be used for a baseline install.  
 
@@ -90,12 +91,10 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   This baseline version functions as does the Configuration Manager Technical Preview 1603, including support for in-console updates.  
 
-    -   You can install this baseline version for up to 9 months after the release of System Center Technical Preview 5.  
-
     -   You can run this baseline version for 90 days before you must update it to a later version. (Typically, versions of the Configuration Manager Technical Preview run for 60 days before you must update them to a later version.)  
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
- We would love to hear your feedback about our technical previews. To submit feedback about the capabilities in each preview, follow the link to our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback) page on the Microsoft Connect site.  
+ We would love to hear your feedback about our technical previews. To submit feedback about the capabilities in each preview, follow the link to our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/Feedback) page on the Microsoft Connect site.  
 
  And, if you have ideas about new features you would like to see, we want to know that as well. To submit new ideas and to vote on the ideas submitted by others, [visit our user voice page](http://configurationmanager.uservoice.com).  
 

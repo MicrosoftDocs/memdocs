@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Enroll company-owned devices for hybrid deployments with Configuration Manager
+# Enroll company-owned devices for hybrid deployments with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Organization or corporate-owned devices (COD) can be brought into management in a variety of ways depending upon the device and how it was purchased.  
 
 ## Enroll Device Enrollment Program iOS devices  

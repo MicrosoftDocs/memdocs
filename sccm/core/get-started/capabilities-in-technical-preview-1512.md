@@ -14,7 +14,7 @@ ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
 caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1512 for System Center Configuration Manager
+# Capabilities in Technical Preview 1512 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1512. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  The following are new features you can try out with this version.  

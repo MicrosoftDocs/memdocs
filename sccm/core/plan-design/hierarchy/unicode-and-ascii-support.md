@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Unicode and ASCII Support in System Center Configuration Manager
+# Unicode and ASCII Support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager creates most objects by using Unicode characters. However, several objects support ASCII characters only or they have other limitations.  
 
  The following sections list the objects that must use characters from the ASCII character set only, or that have additional limitations.  

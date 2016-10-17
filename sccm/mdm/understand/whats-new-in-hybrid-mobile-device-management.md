@@ -14,7 +14,7 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 caps.latest.revision: 40
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
+# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 
 ##  Compatibility with Configuration Manager versions  

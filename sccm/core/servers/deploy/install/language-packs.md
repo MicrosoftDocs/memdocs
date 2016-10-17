@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Language Packs in System Center Configuration Manager
+# Language Packs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides technical details about language support in System Center Configuration Manager.  
 
 ##  <a name="BKMK_SupLanguagePacks"></a> Supported Operating System Languages  

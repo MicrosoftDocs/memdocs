@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create bootable media with System Center Configuration Manager
+# Create bootable media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following operating system deployment scenarios:  
 
 -   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  

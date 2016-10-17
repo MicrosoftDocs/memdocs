@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Link users and devices with user device affinity in System Center Configuration Manager
+# Link users and devices with user device affinity in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 User device affinity in System Center Configuration Manager associates a user with one or more devices. This can eliminate the need to know the names of a user’s devices in order to deploy an application to that user. Instead of deploying the application to each of the user’s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
 
  You can define primary devices that are typically the devices that users use on a daily basis to perform their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Office Visio, you can install it on the user’s primary device by using a Windows Installer deployment. However, on a device that is not a primary device, you might deploy Microsoft Office Visio as a virtual application. You can also use user device affinity to predeploy software on a user’s device when they are not logged in so that when the user logs on, the app is already installed and ready to run.  

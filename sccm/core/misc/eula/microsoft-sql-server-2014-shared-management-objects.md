@@ -12,7 +12,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS
+# MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS*Applies to: System Center Configuration Manager (Current Branch)*
 **MICROSOFT SOFTWARE LICENSE TERMS**  
 
  **MICROSOFT SQL SERVER 2014 SHARED MANAGEMENT OBJECTS**  

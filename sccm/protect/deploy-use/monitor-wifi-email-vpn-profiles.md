@@ -16,7 +16,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 
-# Monitor Email, Wi-Fi and VPN profiles in System Center Configuration Manager
+# Monitor Email, Wi-Fi and VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you have deployed System Center Configuration Manager Email, Wi-Fi or VPN profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the profile:  
 
 -   [How to View Compliance Results in the Configuration Manager Console](#BKMK_console)  

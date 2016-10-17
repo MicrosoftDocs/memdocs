@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Removed and deprecated features for System Center Configuration Manager
+# Removed and deprecated features for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic describes features, products, and operating systems that are removed from support with System Center Configuration Manager or will be removed in a future update (Deprecated). This is intended to provide early warning about future changes that might affect your use of Configuration Manager.  
 
  This information is subject to change with future releases and might not include each deprecated feature, product, or operating system.  
@@ -41,7 +41,7 @@ This topic describes features, products, and operating systems that are removed 
 
 -   Note 1:   After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the distribution point site system role (including pull-distribution point) until deprecation of this support is announced or this operating system's extended support period expires.  
 
--   Note 2:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multi-cast) until deprecation of this support is announced or this operating system's extended support period expires.  Beginning with version 1602, you can in-place upgrade the operating system of a site server from Windows Sever 2008 R2 to Windows  Server 2012 R2.  
+-   Note 2:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multi-cast) until deprecation of this support is announced or this operating system's extended support period expires.  Beginning with version 1602, you can in-place upgrade the operating system of a site server from Windows Server 2008 R2 to Windows  Server 2012 R2.  
 
      For more information about in-place upgrade of a site servers operating system, see the [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS) section in [What's changed in System Center Configuration Manager](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 

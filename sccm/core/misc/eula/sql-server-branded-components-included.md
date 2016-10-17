@@ -12,7 +12,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
-# SQL Server Branded Components included with System Center Configuration Manager
+# SQL Server Branded Components included with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Applies to System Center Configuration Manager (current branch – version 1511 to 1606)  
   
  System Center Configuration Manager contains Microsoft SQL Server branded components.The license terms that govern your use of each component can be found below. If you do not agree to the license terms for the SQL Server branded component, you may not use these programs:

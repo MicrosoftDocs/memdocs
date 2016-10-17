@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Common tasks for creating and deploying configuration baselines with System Center Configuration Manager
+# Common tasks for creating and deploying configuration baselines with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains common scenarios to help you learn about how to create and deploy System Center Configuration Manager configuration baselines.  
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md) and [Deploy configuration baselines](../../compliance/deploy-use/deploy-configuration-baselines.md) topics.  

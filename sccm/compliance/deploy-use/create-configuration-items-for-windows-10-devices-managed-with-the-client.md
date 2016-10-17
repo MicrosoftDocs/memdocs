@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client
+# Create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client*Applies to: System Center Configuration Manager (Current Branch)*
 Use the System Center Configuration Manager **Windows 10** configuration item to manage settings  for Windows 10 computers that are managed by the Configuration Manager client.  
 
 > [!IMPORTANT]  

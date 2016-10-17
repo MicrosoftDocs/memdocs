@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to collections in System Center Configuration Manager
+# Introduction to collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Collections in System Center Configuration Manager provide you with the means to organize resources into manageable units, which then enable you to create an organized structure that logically represents the kinds of tasks that you want to perform. Collections are also used to perform Configuration Manager operations on multiple resources at one time. The following table shows some examples for how you might use collections in Configuration Manager:  
 
 |Operation|Example|  

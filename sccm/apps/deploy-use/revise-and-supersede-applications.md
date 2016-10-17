@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to revise and supersede applications in System Center Configuration Manager
+# How to revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
 
 ##  Application revisions  

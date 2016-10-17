@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to upgrade clients on Mac computers in System Center Configuration Manager
+# How to upgrade clients on Mac computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Follow the high-level steps described below  to upgrade the client for Mac computers by using a System Center Configuration Manager application. Alternatively, you can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer and then instruct users to run the installation manually.  
 
 > [!NOTE]  

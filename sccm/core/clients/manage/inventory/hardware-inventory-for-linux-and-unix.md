@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Hardware inventory for Linux and UNIX in System Center Configuration Manager
+# Hardware inventory for Linux and UNIX in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The System Center Configuration Manager client for Linux and UNIX supports hardware inventory. After you collect hardware inventory you can run view inventory in the resource explorer or Configuration Manager reports, and use this information to create queries and collections that enable the following operations:  
 
 -   Software deployment  

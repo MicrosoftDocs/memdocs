@@ -17,7 +17,7 @@ caps.latest.revision: 21
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Create an Endpoint Protection Point Site System Role
+# Create an Endpoint Protection Point Site System Role*Applies to: System Center Configuration Manager (Current Branch)*
  The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
 
  Use one of the following procedures depending on whether you want to install a new site system server for Endpoint Protection or use an existing site system server:
@@ -44,10 +44,10 @@ author: NathBarnms.author: nathbarnmanager: angrobe
     > [!IMPORTANT]
     >  You cannot use Endpoint Protection in Configuration Manager unless you accept the license terms.
 
-7.  On the **Microsoft Active Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
+7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Microsoft Active Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Microsoft Active Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service (formerly known as Microsoft Active Protection Service or MAPS) settings that are used by default. You can then configure custom settings for each antimalware policy you create. Join Cloud Protection Service, to help to keep your computers more secure by supplying Microsoft with malware samples that can help Microsoft to keep antimalware definitions more up-to-date. Additionally, when you join Cloud Protection Service, the Endpoint Protection client can use the dynamic signature service to download new definitions before they are published to Windows Update. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 
@@ -74,10 +74,10 @@ author: NathBarnms.author: nathbarnmanager: angrobe
     > [!IMPORTANT]
     >  You cannot use Endpoint Protection in Configuration Manager unless you accept the license terms.
 
-7.  On the **Microsoft Active Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
+7.  On the **Cloud Protection Service** page, select the level of information that you want to send to Microsoft to help develop new definitions, and then click **Next**.
 
     > [!NOTE]
-    >  This option configures the Microsoft Active Protection Service settings that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
+    >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
 

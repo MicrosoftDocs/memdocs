@@ -15,7 +15,7 @@ caps.latest.revision: 21
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager
+# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
@@ -24,17 +24,19 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
  **You can upgrade the following to a fully licensed  version of System Center Configuration Manager:**  
 
--   An evaluation install of System Center Configuration Manager  
-
+-   An evaluation install of System Center Configuration Manager version 1515
 -   A release candidate install of System Center Configuration Manager  
-
 -   System Center 2012 Configuration Manager with Service Pack 1  
-
 -   System Center 2012 Configuration Manager with Service Pack 2  
-
 -   System Center 2012 R2 Configuration Manager  
-
 -   System Center 2012 R2 Configuration Manager with Service Pack 1  
+
+**You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1606:**
+
+-   An evaluation install of System Center Configuration Manager version 1606
+-   System Center 2012 Configuration Manager with Service Pack 2
+-   System Center 2012 R2 Configuration Manager with Service Pack 1
+
 
 > [!TIP]  
 >  When you upgrade from a System Center 2012 Configuration Manager version might be able to streamline your upgrade process. For more information, see the following:  
@@ -392,3 +394,11 @@ The secondary site upgrade progresses in the background. After the upgrade is co
 
 ##  <a name="BKMK_PostUpgrade"></a> Perform post-upgrade tasks  
 After you upgrade a site to a new service pack, you might have to complete additional tasks to finish the upgrade or reconfigure the site. These tasks can include the upgrade of Configuration Manager clients or Configuration Manager consoles, re-enabling database replicas for management points, or restoring settings for Configuration Manager functionality that you use and that does not persist after the service pack upgrade.  
+
+**Known issues:**  
+Secondary sites:
+- When you upgrade to version 1511:  
+To ensure clients at secondary sites can find the management point from the secondary site (proxy management point), manually add the management point to boundary groups that also include the distribution points at the secondary site.
+
+- When you upgrade to version 1606 or later:  
+  Proxy management points are automatically added to boundary groups that include distribution points at the secondary site.

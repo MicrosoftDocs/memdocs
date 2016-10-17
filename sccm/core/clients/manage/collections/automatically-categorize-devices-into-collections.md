@@ -14,7 +14,7 @@ ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
 caps.latest.revision: 5
 author: robstackmsftms.author: robstackmanager: angrobe
 ---
-# Automatically categorize devices into collections with System Center Configuration Manager
+# Automatically categorize devices into collections with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can create device categories, which can be used to automatically place devices in device collections when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. You can additionally change the category of a device from the Configuration Manager console.
 
 > [!IMPORTANT]  

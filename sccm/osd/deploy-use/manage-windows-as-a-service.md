@@ -15,7 +15,7 @@ caps.latest.revision: 26
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage Windows as a service using System Center Configuration Manager
+# Manage Windows as a service using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  In System Center Configuration Manager, you can view the state of Windows as a Service  in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch systems are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB).  
 

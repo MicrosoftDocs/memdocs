@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Best practices for software updates | Configuration Manager
 description: "Use these best practices for software updates in System Center Configuration Manager."
@@ -16,7 +15,7 @@ ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 
 
 ---
-# Best practices for software updates in System Center Configuration Manager
+# Best practices for software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic includes best practices for software updates in System Center Configuration Manager. The information is sorted into best practices for initial installation and best practices for ongoing operations.  
 
 ## Installation best practices  

@@ -15,7 +15,7 @@ caps.latest.revision: 44
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Supported operating systems for System Center Configuration Manager  site system servers
+# Supported operating systems for System Center Configuration Manager  site system servers*Applies to: System Center Configuration Manager (Current Branch)*
 
 This article details the Windows versions that you can use to host a System Center Configuration Manager site or site system role.
 
@@ -26,6 +26,51 @@ Use the information in this topic with the information in the following articles
 -   [Size and scale numbers for Configuration Manager](../../../core/plan-design/configs/size-and-scale-numbers.md)
 
 
+
+## Windows Server 2016   - Standard, Datacenter
+**Site servers:**  
+
+-   Central administration site  
+
+-   Primary site  
+
+-   Secondary site  
+
+**Site system servers:**  
+
+-   Application Catalog web service point  
+
+-   Application Catalog website point  
+
+-   Asset Intelligence synchronization point  
+
+-   Certificate registration point  
+
+-   Distribution point  
+
+     Distribution points support several different configurations that each have different requirements and in some cases support installation not only on servers, but on client operating systems. For more information about the options available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+
+-   Endpoint Protection point  
+
+-   Enrollment point  
+
+-   Enrollment proxy point  
+
+-   Fallback status point  
+
+-   Reporting services point  
+
+-   Service connection point  
+
+-   Site database server  
+
+     Site database servers are not supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base. Additionally, secondary site servers are not supported on any domain controller.  
+
+-   SMS_Provider  
+
+-   Software Update point  
+
+-   State migration point
 
 ## Windows Server 2012 R2 (x64) - Standard, Datacenter  
 **Site servers:**  

@@ -17,7 +17,7 @@ manager: angrobe
 robots: noindex
 ---
 
-# Create and deploy a device compliance policy
+# Create and deploy a device compliance policy*Applies to: System Center Configuration Manager (Current Branch)*
 
 ## Create a compliance policy
 

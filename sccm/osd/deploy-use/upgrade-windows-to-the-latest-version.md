@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Upgrade Windows to the latest version with System Center Configuration Manager
+# Upgrade Windows to the latest version with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides the steps in System Center Configuration Manager to upgrade an  operating system on a computer from Windows 7 or later to Windows 10. You can choose from different deployment methods, such as stand-alone media or Software Center. The Windows 10 in-place upgrade scenario:  
 
 -   Upgrades the operating system on computers that currently run Windows 7, Windows 8, or Windows 8.1. You can also do build-to-build upgrades of Windows 10. For example, you can upgrade Windows 10 RTM to Windows 10, version 1511.  

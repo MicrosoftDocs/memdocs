@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to upgrade clients for Windows computers in System Center Configuration Manager
+# How to upgrade clients for Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can upgrade the client on Windows computers using client installation methods or the automatic client upgrade features in Configuration Manager. The following client installation methods are valid ways to upgrade client software on Windows computers:  
 
 -   Group policy installation  

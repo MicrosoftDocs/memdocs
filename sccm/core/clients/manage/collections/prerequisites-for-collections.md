@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for collections in System Center Configuration Manager
+# Prerequisites for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Collections in System Center Configuration Manager contain only dependencies within the product.  
 
 ## Configuration Manager dependencies  

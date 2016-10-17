@@ -16,7 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 
-# Use a pull-distribution point with System Center Configuration Manager
+# Use a pull-distribution point with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 A pull-distribution point for System Center Configuration Manager is a standard distribution point that obtains distributed content by downloading that from a source location like a client, instead of having the content pushed to it from the site server.  
 

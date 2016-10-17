@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Endpoint Protection Client Help
+# Endpoint Protection Client Help*Applies to: System Center Configuration Manager (Current Branch)*
 
 This version of Endpoint Protection includes the following features to help protect your computer from threats:  
 

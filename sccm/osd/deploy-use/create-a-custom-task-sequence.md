@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create a custom task sequence with System Center Configuration Manager
+# Create a custom task sequence with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you create a custom task sequence in System Center Configuration Manager, it contains no task sequence steps. After you create the task sequence, you must edit it and add the task sequence steps you need.  
 
 ##  <a name="BKMK_CustomTS"></a> Create a custom task sequence  

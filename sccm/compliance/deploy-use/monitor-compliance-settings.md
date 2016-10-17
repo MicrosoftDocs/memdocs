@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Monitor compliance settings in System Center Configuration Manager
+# Monitor compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you have deployed System Center Configuration Manager configuration baselines to devices in your hierarchy, you can use one or more of the procedures in this topic to display the compliance status of the configuration baseline:
 
 > [!NOTE]  

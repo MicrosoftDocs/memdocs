@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Updates for System Center Configuration Manager
+# Updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and then install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
 
  **The following topics can help you understand how to find and install the different update types for System Center Configuration Manager:**  
@@ -62,6 +62,8 @@ The following versions of Configuration Manager are available as a baseline, an 
 |**1511**<br /><br /> 5.00.8325.1000|12/8/2015|Yes|No|  
 |**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Yes|
 |**1606**<br /><br /> 5.00.8412.1000|7/22/2016|No|Yes|
+|**1606** with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016|Yes|No|
+*(Note 1)* This 1606 baseline media is available as part of Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
 

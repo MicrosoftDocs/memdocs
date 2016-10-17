@@ -14,7 +14,7 @@ ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1604 for System Center Configuration Manager
+# Capabilities in Technical Preview 1604 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1604. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  The following are new features you can try out with this version.  
@@ -102,7 +102,7 @@ This article introduces the features that are available in the Technical Preview
 
 -   First is **client Peer Cache**, a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache. For Peer Cache clients to share content, they must be members of the same boundary group. Peer Cache does not replace the use of other solutions like BracnchCache but instead works side-by-side to give you more options to extend traditional content deployment solutions like distribution points.  
 
-     After you deploy client settings that enable Peer Cache to a collection, members of that collection will prefer to get content from a peer source before getting content from a distribution point that is across a slow connection. After a client enabled for Peer Cache downloads content from any source, that client  then acts as a peer source for other clients that share the same boundary groups.  
+     After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in its boundary group.  The client that operates as a peer content source will submit a list of available content it has cached to its management point. Then, when the next client in that boundary group requests that content, the peer cache source is offered as a potential content source along with all distribution points that are configured to be fast. The client selects a random content source from this combined pool of content sources. Clients will only seek content from a distribution point that is configured to be slow when no fast distribution points or peer cache sources are present in the boundary group.  
 
 -   The second new setting lets you **manage the size of the cache** on clients. You can set the cache to have a maximum size in megabytes and  a maximum size as a percentage of the clients drive space.  The client enforces the setting that is reached first.  
 
