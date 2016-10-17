@@ -2,7 +2,7 @@
 title: "New in 1606 | System Center Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/02/2016
+ms.date: 10/09/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -167,6 +167,10 @@ For details, see [How to create configuration items for Android and Samsung KNOX
 
 * Microsoft Passport for Work is now known as **Windows Hello for Business**.
 * Enterprise data protection is now known as **Windows Information Protection**.
+
+### Deployment of Windows Hello for Business (Passport for Work)
+
+You can now deploy Windows Hello for Business policies to domain-joined Windows 10 devices managed by the Configuration Manager client.
 
 The Configuration Manager console has been updated to reflect these changes.
 

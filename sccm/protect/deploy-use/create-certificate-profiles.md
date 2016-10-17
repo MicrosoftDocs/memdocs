@@ -2,7 +2,7 @@
 title: "Create certificate profiles | System Center Configuration Manager"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/01/2016
+ms.date: 10/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,7 +25,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
 ## Create a New Certificate Profile  
 
-### Start the Create Certificate Profile izard  
+### Start the Create Certificate Profile Wizard  
 
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
 
@@ -55,7 +55,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
 > [!IMPORTANT]  
 >  You must configure at least one trusted CA certificate profile before you can create a SCEP certificate profile.    
->  If you change any of these values after the certificate is deployed, the old certificate is deleted and a new one is requested:
+>  If you change any of these values after the certificate is deployed a new certificate is requested:
 >  -  Key Storage Provide
 >  -  Certificate template name
 >  -  Certificate type
@@ -98,7 +98,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
         -   **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 Desktop and Mobile devices. It  enrolls the key to **Windows Hello for Business**, described in [Windows Hello for Business settings in System Center Configuration Manager](../../protect/deploy-use/windows-hello-for-business-settings.md). This option also enables you to **Require multi-factor authentication** during enrollment of devices before issuing certificates to those devices. See [Protect Windows devices with multi-factor authentication](https://technet.microsoft.com/library/dn889751.aspx) for more information.
 
         > [!NOTE]  
-        > When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for. This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if Passport is used as the Key Storage Provider in a certificate profile.  
+        > When a user creates a Windows Hello for Business PIN, Windows sends a notification which Configuration Manager listens for. This allows Configuration Manager to quickly become aware of which users have created a Windows Hello PIN. Configuration Manager can then also issue new certificates to those users if Windows Hello is used as the Key Storage Provider in a certificate profile.  
 
         -   **Install to Software Key Storage Provider**: Installs the key to the storage provider for the software key.  
 
@@ -137,7 +137,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
     -   **Certificate validity period**: If you have run the certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE command on the issuing CA, which allows a custom validity period, you can specify the amount of remaining time before the certificate expires. For more information about this command, see [Certificate infrastructure in System Center Configuration Manager](../../protect/deploy-use/certificate-infrastructure.md) topic.  
 
-         You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CAâ€™s certificate.  
+         You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA's certificate.  
 
     -   **Key usage**: Specify key usage options for the certificate. You can choose from the following options:  
 
@@ -152,7 +152,7 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
 
     -   **Key size (bits)**: Select the size of the key in bits.  
 
-    -   **Extended key usage**: Click **Select** to add values for the certificateâ€™s intended purpose. In most cases, the certificate will require **Client Authentication** so that the user or device can authenticate to a server. However, you can add any other key usages as required.  
+    -   **Extended key usage**: Click **Select** to add values for the certificate's intended purpose. In most cases, the certificate will require **Client Authentication** so that the user or device can authenticate to a server. However, you can add any other key usages as required.  
 
 
     -   **Hash algorithm**: Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.  

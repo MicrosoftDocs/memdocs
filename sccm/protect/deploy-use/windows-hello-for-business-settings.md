@@ -2,7 +2,7 @@
 title: "Windows Hello for Business settings | System Center Configuration Manager"
 description: "Learn how to integrate Windows Hello for Business with System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,9 +26,7 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 
 -   You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
-<!-- [cmshort](../../apps/deploy-use/includes/cmshort_md.md)] for domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#BKMK_Dom), below.!-->
-<!-- When you are using Configuration Manager with Microsoft Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.-->    
-
+- You can deploy Windows Hello for Business policies to domain-joined Windows 10 devices that run the Configuration Manager client. This configuration is described in [Configure Windows Hello for Business on domain-joined Windows 10 devices](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices), below. When you are using Configuration Manager with Intune (hybrid), you can configure these settings on Windows 10, and Windows 10 Mobile devices, but not on domain-joined devices that run the Configuration Manager client.   
 
 ## Configure Windows Hello for Business settings (hybrid)  
 
@@ -93,57 +91,57 @@ Hello for Business lets you use a **user gesture** to login, instead of a passwo
 5.  When you are finished, click **OK**.  
 
 
-<!-- ##  <a name="BKMK_Dom"></a> Configure Windows Hello for Business on domain-joined Windows 10 devices    -->
-<!--You can control Windows Hello for Business settings on domain-joined Windows 10 devices in three ways:  -->
+## Configure Windows Hello for Business on domain-joined Windows 10 devices
+You can control Windows Hello for Business settings on domain-joined Windows 10 devices in three ways:
 
-<!--- You can create and deploy a Windows Hello for Business Profile. This is the recommended approach.  -->
-<!--- You can use group policy.  -->
-<!--- You can use a PowerShell script.  -->
+- You can create and deploy a Windows Hello for Business Profile. This is the recommended approach. 
+- You can use group policy.  
+- You can use a PowerShell script. 
 
-<!--Note that in addition to this configuration, you must also deploy a certificate profile, as described in [Configure a certificate profile](#BKMK_step2).  -->
+Note that in addition to this configuration, you must also deploy a certificate profile, as described in [Configure a certificate profile](#configure-a-certificate-profile). 
 
-<!--### Recommended approach -  Configure a Windows Hello for Business profile  -->
+### Recommended approach -  Configure a Windows Hello for Business profile  
 
-<!--In the admin console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  -->
+In the admin console, under **Company Resource Access**, right-click **Windows Hello for Business Profiles** and choose **New** to start the profile wizard. Provide the settings requested by the wizard, review and confirm the settings on the last page, and click **Close**. Here's an example of what your settings might look like:  
 
-<!-- ![Windows Hello for Business settings](../../protect/deploy-use/media/Hello-for-Business-settings.png)  -->
+![Windows Hello for Business settings](../../protect/deploy-use/media/Hello-for-Business-settings.png) 
 
-<!-- ### Configure Windows Hello for Business with Group Policy in Active Directory  -->
+### Configure Windows Hello for Business with Group Policy in Active Directory  
 
-<!-- You can use an Active Directory Group Policy to configure your Windows 10 domain-joined devices to provision user Hello for Business credentials when a user logs to Windows:  -->  
+You can use an Active Directory Group Policy to configure your Windows 10 domain-joined devices to provision user Hello for Business credentials when a user logs to Windows: 
 
-<!--1.  On a Windows Server  computer, open Server Manager and navigate to **Tools** > **Group Policy Management**.    -->
+1.  On a Windows Server  computer, open Server Manager and navigate to **Tools** > **Group Policy Management**.    
 
-<!--2.  In the **Group Policy Management** dialog box, expand the  domain in which you want to enable Automatic Workplace Join.    -->
+2.  In the **Group Policy Management** dialog box, expand the  domain in which you want to enable Automatic Workplace Join.    
 
-<!--3.  Right-click **Group Policy Objects**, and then click **New**.  -->  
+3.  Right-click **Group Policy Objects**, and then click **New**.  
 
-<!--4.  In the **New GPO** dialog box, enter a name for the new Group Policy object, such as **Enable Windows Hello for Business**, and then click **OK**.  -->  
+4.  In the **New GPO** dialog box, enter a name for the new Group Policy object, such as **Enable Windows Hello for Business**, and then click **OK**.  
 
-<!--5.  In the **Group Policy Objects** node, right-click the object you just created, and then click **Edit**.    -->
+5.  In the **Group Policy Objects** node, right-click the object you just created, and then click **Edit**.  
 
-<!--6.  In the **Group Policy Management Editor** dialog box, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Hello for Business**.    -->
+6.  In the **Group Policy Management Editor** dialog box, navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Hello for Business**.  
 
-<!--7.  Right-click **Enable Windows Hello for Business** and then click **Edit**.  -->  
+7.  Right-click **Enable Windows Hello for Business** and then click **Edit**.   
 
-<!--8.  Select **Enabled**, click **Apply**, and then click **OK**.  -->  
+8.  Select **Enabled**, click **Apply**, and then click **OK**. 
 
-<!-- You can now link the Group Policy object you just created to a location of your choice. For example:    -->
+You can now link the Group Policy object you just created to a location of your choice. For example:    
 
-<!---   A specific Organizational Unit (OU) in AD where Windows 10 domain-joined computers will be located.    -->
+   A specific Organizational Unit (OU) in AD where Windows 10 domain-joined computers will be located.    
 
-<!---   A specific security group containing Windows 10 domain-joined computers that will be automatically registered with Azure AD.  -->  
+   A specific security group containing Windows 10 domain-joined computers that will be automatically registered with Azure AD.    
 
-<!--#### Configure Windows Hello for Business by deploying a PowerShell script with Configuration Manager    -->
-<!--You can create and deploy the following PowerShell script by using Configuration Manager application management.  -->  
+#### Configure Windows Hello for Business by deploying a PowerShell script with Configuration Manager    
+You can create and deploy the following PowerShell script by using Configuration Manager application management.    
 
-<!--```    -->
-<!--powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"   -->
-<!--```  -->  
+```    
+powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"  
+```  
 
-<!-- For more information about Configuration Manager application management, see [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md).  -->
+For more information about Configuration Manager application management, see [Deploy and manage applications with System Center Configuration Manager](../Topic/Deploy%20and%20manage%20applications%20with%20System%20Center%20Configuration%20Manager.md).  
 
-## <a name="BKMK_step2"></a>Configure a certificate profile to enroll the Windows Hello for Business enrollment certificate in Configuration Manager  
+## Configure a certificate profile to enroll the Windows Hello for Business enrollment certificate in Configuration Manager  
  If you want to use Windows Hello for Business certificate-based logon, or Microsoft Hello, then configure the following:  
 
 -   A Configuration Manager certificate profile.  
