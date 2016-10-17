@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Task sequence built-in variables in System Center Configuration Manager
+# Task sequence built-in variables in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Task sequence built-in variables are provided by System Center Configuration Manager. Built-in variables provide information about the environment where the task sequence is running, and their values are available throughout the whole task sequence. Typically, built-in variables are initialized before steps are run in the task sequence. For example, the built-in variable **_SMSTSLogPath** is an environment variable that specifies the path that Configuration Manager components use to write log files while the task sequence runs; any task sequence step can access this environment variable. However, some variables, such as _SMSTSCurrentActionName, are evaluated before each step. The values of built-in variables are generally read-only. The values are read only for built-in variables with a name that begins with an underscore.  
 

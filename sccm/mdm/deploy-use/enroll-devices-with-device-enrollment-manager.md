@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
-# Enroll devices with device enrollment manager with Configuration Manager
+# Enroll devices with device enrollment manager with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Organizations can use System Center Configuration Manager and Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* account is a special Intune account with permission to enroll more than five devices.  
 
 ## Enroll corporate-owned devices with the device enrollment manager  

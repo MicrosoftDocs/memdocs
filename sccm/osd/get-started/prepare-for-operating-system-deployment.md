@@ -15,7 +15,7 @@ caps.latest.revision: 3
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Prepare for operating system deployment in System Center Configuration Manager
+# Prepare for operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 There are several things you must do in Configuration Manager before you can deploy operating systems. Use the following topics to prepare for operating system deployment:  
 
 -   [Manage boot images](manage-boot-images.md)  

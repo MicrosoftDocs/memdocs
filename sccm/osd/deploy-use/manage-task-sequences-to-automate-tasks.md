@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Manage task sequences to automate tasks in System Center Configuration Manager
+# Manage task sequences to automate tasks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use task sequences to automate steps in your System Center Configuration Manager environment. These steps can deploy an operating system image to a destination computer, build and capture an operating system image from a set of operating system installation files, and capture and restore user state information. Task sequences are located in the Configuration Manager console at **Software Library** > **Operating Systems** > **Task Sequence**. The **Task Sequence** node, including subfolders that you create, is replicated throughout the Configuration Manager hierarchy. For planning information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md).  
 
  Use the following sections to manage task sequences.

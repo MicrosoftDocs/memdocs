@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Best practices for collections in System Center Configuration Manager
+# Best practices for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices for collections in System Center Configuration Manager.  
 
 ## Do not use incremental updates for a large number of collections  

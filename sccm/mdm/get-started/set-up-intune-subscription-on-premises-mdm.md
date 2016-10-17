@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager
+# Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager On\-premises Mobile Device Management requires a Microsoft Intune subscription to track licensing. The Intune service is not used to manage the devices or to store management information. For On\-premises Mobile Device Management, all device management is handled by the Configuration Manager infrastructure.  
 
 > [!IMPORTANT]  

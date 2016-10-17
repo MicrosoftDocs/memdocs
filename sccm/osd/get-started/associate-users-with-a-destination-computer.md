@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Associate users with a destination computer in System Center Configuration Manager
+# Associate users with a destination computer in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you use System Center Configuration Manager to deploy operating system you can associate users with the destination computer where the operating system is deployed. This configuration includes the following:  
 
 -   That a single user is the primary user of the destination computer.  

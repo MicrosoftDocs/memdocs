@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Ports used in System Center Configuration Manager
+# Ports used in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, and IPsec.  
 
 > [!NOTE]  
@@ -324,6 +324,13 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, Alternate Port Available)|  
 
+###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service Connection Point -- > Microsoft Intune  
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443|
+For more information see [Internet access requirements](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls) for the service connection point.
+
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> Site Server &lt; -- > Application Catalog Web Service Point  
 
 |Description|UDP|TCP|  
@@ -525,11 +532,7 @@ The following sections detail the ports used for communication in Configuration 
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
 
-###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service Connection Point -- > Microsoft Intune  
 
-|Description|UDP|TCP|  
-|-----------------|---------|---------|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443|  
 
 ###  <a name="BKMY_PortNotes"></a> Notes for ports used by Configuration Manager clients and site systems  
 
@@ -615,6 +618,25 @@ When a SQL Server hosts a database from more than one site, each database must u
 If you have a firewall enabled on the SQL Server computer, ensure that it is configured to allow the ports in use by your deployment, and at any locations on the network between computers that communicate with the SQL Server.  
 
 For an example of how to configure SQL Server to use a specific port, see [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) in the SQL Server TechNet library.  
+
+
+### <a name="bkmk_discovery"> </a> Discovery and publishing
+The following ports are used for Discovery and publishing of site information:
+ - Lightweight Directory Access Protocol (LDAP)  - 389
+ - LDAP (Secure Sockets Layer [SSL] connection)  - 636
+
+
+ - Global Catalog LDAP - 3268
+ - Global Catalog LDAP SSL -3269
+
+
+ - RPC Endpoint Mapper - 135
+ - RPC - Dynamically allocated high TCP ports
+
+
+ - TCP: 1024 - 5000
+ - TCP:  49152 - 65535
+
 
 ###  <a name="BKMK_External"></a> External connections made by Configuration Manager  
  Configuration Manager clients or site systems can make the following external connections:  

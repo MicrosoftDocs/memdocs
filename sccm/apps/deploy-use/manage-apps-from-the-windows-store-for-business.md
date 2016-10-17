@@ -14,7 +14,7 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 caps.latest.revision: 11
 author: robstackmsftms.author: robstackmanager: angrobe
 ---
-# Manage apps from the Windows Store for Business with System Center Configuration Manager
+# Manage apps from the Windows Store for Business with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase Windows apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can synchronize the list of apps you've purchased with Configuration Manager, view these in the Configuration Manager console, and deploy them like you would any other app.
 
 

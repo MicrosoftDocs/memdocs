@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create capture media with System Center Configuration Manager
+# Create capture media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Capture media in Configuration Manager allows you to capture an operating system image from a reference computer. Use capture media for the following scenario:  
 
 -   [Create a task sequence to capture an operating systems](create-a-task-sequence-to-capture-an-operating-system.md)  

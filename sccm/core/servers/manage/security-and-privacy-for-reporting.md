@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Security and privacy for reporting in System Center Configuration Manager
+# Security and privacy for reporting in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security best practices and privacy information for reporting in System Center Configuration Manager.  
 
  Configuration Manager reports display information that is collected during standard Configuration Manager management operations. For example, you can display a report of information that has been collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.  

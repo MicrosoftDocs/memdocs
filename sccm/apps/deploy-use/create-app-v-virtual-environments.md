@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create App-V virtual environments in System Center Configuration Manager
+# Create App-V virtual environments in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Microsoft Application Virtualization (App-V) virtual environments in System Center Configuration Manager enable deployed virtual applications to share the same file system and registry on client Windows PCs. This means that unlike standard virtual applications, these applications can share data with each other. Virtual environments are created or modified on client PCs when the application is installed or when clients next evaluate their installed applications. You can order these applications so that when multiple applications try to modify a file system or registry value, the application with the highest order takes priority.  
 
 > [!IMPORTANT]  

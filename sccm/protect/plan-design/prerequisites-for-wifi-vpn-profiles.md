@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager
+# Prerequisites for Wi-Fi and VPN Profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Wi-Fi and VPN profiles in System Center Configuration Manager have dependencies only within the product.  
 
  You must have the following security permissions to manage company resource access settings, such as certificate profiles, Wi-Fi profiles, and VPN profiles:  

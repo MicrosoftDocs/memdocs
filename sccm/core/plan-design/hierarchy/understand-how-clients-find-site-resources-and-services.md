@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Understand how clients find site resources and services for System Center Configuration Manager
+# Understand how clients find site resources and services for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager clients us a process called **service location** to locate site system servers that they can communicate with, and that  provide  services that clients are directed to use.   Understanding how and when clients use service location to find site resources can help you configure your sites to successfully support client operations.   These configurations can require the site to interact with domain and network configurations like Active Directory Domain Services (AD DS) and DNS, or for you to configure more complex alternatives.  
 
  Examples of site system roles that provide services include the core site system server for clients, the management point, and additional site system servers the client can communicate with, like distribution points and software update points.  

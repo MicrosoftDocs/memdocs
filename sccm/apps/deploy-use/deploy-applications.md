@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Deploy applications with System Center Configuration Manager
+# Deploy applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [Create applications ](../../apps/deploy-use/create-applications.md).  

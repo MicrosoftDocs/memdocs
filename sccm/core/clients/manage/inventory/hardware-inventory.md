@@ -17,5 +17,5 @@ author: nbigmanms.author: nbigman
 manager: angrobe
 
 ---
-# Hardware inventory in System Center Configuration Manager
+# Hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use System Center Configuration Manager hardware inventory to collect detailed information about the hardware of client devices in your enterprise.  

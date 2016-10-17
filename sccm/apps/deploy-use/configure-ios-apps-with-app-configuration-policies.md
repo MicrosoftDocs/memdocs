@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Configure iOS apps with app configuration policies in System Center Configuration Manager
+# Configure iOS apps with app configuration policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Use app configuration policies in System Center Configuration Manager to supply settings that might be required when the user runs an app. For example, an app might require the user to specify:
 - A custom port number

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Security and privacy for operating system deployment in System Center Configuration Manager
+# Security and privacy for operating system deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for operating system deployment in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for operating system deployment  

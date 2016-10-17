@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: NathBarnms.author: nathbarn
 manager: angrobe
 ---
-# Plan for hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+# Plan for hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 Mobile device management with Configuration Manager using Microsoft Intune supports the following mobile device platforms:
 
 

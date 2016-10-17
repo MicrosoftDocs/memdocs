@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Create prestaged media with System Center Configuration Manager
+# Create prestaged media with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Prestaged media in System Center Configuration Manager is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
 Prestaged media contains the boot image used to start the destination computer and the operating system image that is applied to the destination computer. You can also specify applications, packages, and driver packages to include as part of the prestaged media. The task sequence that deploys the operating system is not included in the media. Prestaged media is applied to the hard drive of a new computer before the computer is sent to the end user. Use prestaged media for the following operating system deployment scenarios:  
 

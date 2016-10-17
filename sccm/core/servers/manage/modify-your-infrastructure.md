@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Modify your System Center Configuration Manager infrastructure
+# Modify your System Center Configuration Manager infrastructure*Applies to: System Center Configuration Manager (Current Branch)*
 After you install one or more sites, you might have need to modify configurations or take actions that affect the infrastructure you have deployed.  
 
 

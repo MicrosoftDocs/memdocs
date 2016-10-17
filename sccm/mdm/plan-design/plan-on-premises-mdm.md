@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Plan for On-premises Mobile Device Management in System Center Configuration Manager
+# Plan for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle On\-premises Mobile Device Management.
 
 ##  <a name="bkmk_devices"></a> Supported devices  

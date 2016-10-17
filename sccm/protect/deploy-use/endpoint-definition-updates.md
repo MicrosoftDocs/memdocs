@@ -20,7 +20,7 @@ manager: angrobe
 
 ---
 
-#  Configure Definition Updates for Endpoint Protection  
+#  Configure Definition Updates for Endpoint Protection  *Applies to: System Center Configuration Manager (Current Branch)*
  With Endpoint Protection in System Center Configuration Manager, you can use any of several available methods to keep antimalware definitions up to date on client computers in your hierarchy. The information in this topic can help you to select and configure these methods.
 
  To update antimalware definitions, you can use one or more of the following methods:

@@ -14,7 +14,7 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# High availability options for System Center Configuration Manager
+# High availability options for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 You can deploy System Center Configuration Manager using options that maintain a high level of available service.   

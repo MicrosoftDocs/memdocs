@@ -18,7 +18,9 @@
 ### [Wi-Fi and VPN profile prerequisites](plan-design/prerequisites-for-wifi-vpn-profiles.md)
 
 ## [Security and privacy for Wi-Fi and VPN profiles](plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+
 ## [Security and privacy for email profiles](plan-design/security-and-privacy-for-email-profiles.md)
+
 ## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
 # [Deploy and use](deploy-use/vpn-profiles.md)
@@ -45,8 +47,10 @@
 ##### [Microsoft updates](deploy-use/endpoint-definitions-microsoft-updates.md)
 ##### [Malware Protection Center](deploy-use/endpoint-definitions-protection-center.md)
 ##### [Network share updates](deploy-use/endpoint-definitions-network.md)
+
 #### [Deploy policy](deploy-use/endpoint-antimalware-policies.md)
 #### [Configure client](deploy-use/endpoint-protection-configure-client.md)
+
 ### [Windows Firewall policies](deploy-use/create-windows-firewall-policies.md)
 ### [Windows Defender Advanced Threat Protection](deploy-use/windows-defender-advanced-threat-protection.md)
 ### [Antimalware and firewall tasks](deploy-use/endpoint-antimalware-firewall.md)
@@ -68,6 +72,7 @@
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
+
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
 ## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)

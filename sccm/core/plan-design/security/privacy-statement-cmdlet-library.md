@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library
+# System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library*Applies to: System Center Configuration Manager (Current Branch)*
 This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
 
 ## Usage Data  

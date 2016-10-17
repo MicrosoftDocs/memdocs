@@ -18,7 +18,7 @@ ms.author: nbigman
 manager: angrobe
 
 ---
-# How to extend hardware inventory in System Center Configuration Manager
+# How to extend hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager hardware inventory reads information about devices from Windows PCs by using Windows Management Instrumentation (WMI). WMI is the Microsoft implementation of web-based Enterprise Management (WBEM), which is an industry standard for accessing management information in an enterprise environment. In previous versions of Configuration Manager, you could extend hardware inventory by modifying the file sms_def.mof on the site server. This file contained a list of WMI classes that could be read by Configuration Manager hardware inventory. If you edited this file, you could enable and disable existing classes, and also create new classes to inventory.  
 
  The Configuration.mof file is used to define the data classes to be inventoried by hardware inventory on the client and is unchanged from Configuration Manager 2012. You can create data classes to inventory existing or custom WMI repository data classes or registry keys present on client systems.  

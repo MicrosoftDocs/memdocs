@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager
+# Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can install the System Center Configuration Manager client on computers that run Linux or UNIX. This client is designed for servers that operate as a workgroup computer, and the client does not support interaction with logged-on users. After you install the client software and the client establishes communication with the Configuration Manager site, you manage the client by using the Configuration Manager console and reports.  
 
 > [!NOTE]  

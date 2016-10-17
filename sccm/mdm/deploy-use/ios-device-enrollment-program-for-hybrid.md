@@ -14,7 +14,7 @@ ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
 author: NathBarnms.author: nathbarnmanager: angrobe
 ---
-# iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager
+# iOS Device Enrollment Program (DEP) enrollment for hybrid deployments with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Companies can purchase iOS devices through Apple's device enrollment program and then manage them using Microsoft Intune. To manage corporate-owned iOS devices with the Apple Device Enrollment Program (DEP), companies must complete the steps with Apple to participate in the program and acquire devices through that program. Details of that process are available at:  [https://deploy.apple.com](https://deploy.apple.com). Advantages of the program include hands-free set up of devices without USB-connecting each device to a computer.  
 
  Before you can enroll corporate-owned iOS devices with the DEP, you need a DEP token from Apple. This token allows Intune to sync information about DEP-participating devices owned by your corporation. It also lets Intune upload enrollment profiles to Apple and assign devices to those profiles.  
@@ -25,7 +25,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 ###  Enable DEP enrollment in Configuration Manager with Intune  
 
 1.  **Start managing iOS devices with Configuration Manager**   
-    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup). 
+    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup).
 
 2.  **Create a DEP token request**   
     In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration**, expand **Cloud Services**, and click **Windows Intune Subscriptions**. Click **Create DEP Token Request** on the **Home** tab, click **Browse** to specify the download location for the DEP token request, and then click **Download**. Save the DEP token request (.pem) file locally. The .pem file is used to request a trusted token (.p7m) from the Apple Device Enrollment Program portal.  
@@ -60,6 +60,9 @@ Companies can purchase iOS devices through Apple's device enrollment program and
         -   **User affinity** – Specifies how devices are enrolled. See [User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md).  
 
             -   **Prompt for user affinity**: The device must be affiliated with a user during initial setup and could then be permitted to access company data and email as that user.  User affinity should be configured for DEP-managed devices that belong to users and need to use the company portal (i.e. to install apps).  
+
+            > [!NOTE]
+            > DEP with user affinity requires ADFS WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user token.
 
             -   **No user affinity**: The device is not affiliated with a user. Use this affiliation for devices that perform tasks without accessing local user data. Apps requiring user affiliation won’t work.  
 

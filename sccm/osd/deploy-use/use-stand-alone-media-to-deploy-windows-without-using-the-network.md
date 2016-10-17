@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager
+# Use stand-alone media to deploy Windows without using the network in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Stand-alone media in System Center Configuration Manager contains everything that is required to deploy an  operating system on a computer. This includes the boot image, operating system image, and task sequence to install the operating system, including applications, drivers, and so on. Stand-alone media deployments let you deploy operating systems in the following conditions:  
 
 -   In environments where it is not practical to copy an operating system image or other large packages over the network.  

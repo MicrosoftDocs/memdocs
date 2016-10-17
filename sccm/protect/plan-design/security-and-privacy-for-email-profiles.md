@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Security and privacy for email profiles in System Center Configuration Manager
+# Security and privacy for email profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for email profiles in System Center Configuration Manager.  
 
 ## Security Best Practices for Email Profiles  

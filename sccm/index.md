@@ -14,8 +14,7 @@ ms.technology:
 ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 ---
-# System Center Configuration Manager Documentation
-<article id="main">
+# System Center Configuration Manager Documentation<article id="main">
 
     <section id="hero-content">
       <h1>System Center Configuration Manager Documentation</h1>

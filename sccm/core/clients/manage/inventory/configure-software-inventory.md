@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to configure software inventory in System Center Configuration Manager
+# How to configure software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can create a hidden file named **Skpswi.dat** and place it in the root of a client hard drive to exclude it from System Center Configuration Manager software inventory. You can also place this file in the root of any folder structure you want to exclude from software inventory. This procedure can be used to disable software inventory on a single workstation or server client, such as a large file server.  
 
 > [!NOTE]  

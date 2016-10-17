@@ -15,7 +15,7 @@ caps.latest.revision: 21
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Support for SQL Server versions for System Center Configuration Manager
+# Support for SQL Server versions for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  

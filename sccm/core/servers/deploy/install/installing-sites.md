@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Installing System Center Configuration Manager sites
+# Installing System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
 
 When you are ready to install your first System Center Configuration Manager, or add additional sites to your hierarchy, the following subjects can help you do so successfully.
 

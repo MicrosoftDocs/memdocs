@@ -13,7 +13,7 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# About discovery methods for System Center Configuration Manager
+# About discovery methods for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from your Active Directory. To efficiently use a discovery method you should understand its available configurations and limitations.  
 
 ##  <a name="bkmk_aboutForest"></a> Active Directory Forest Discovery  

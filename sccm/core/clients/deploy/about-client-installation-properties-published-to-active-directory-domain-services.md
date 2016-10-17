@@ -15,7 +15,7 @@ caps.latest.revision: 6
 caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# About client installation properties published to Active Directory Domain Services in System Center Configuration Manager
+# About client installation properties published to Active Directory Domain Services in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 When you extend the Active Directory schema for System Center Configuration Manager and the site is published to Active Directory Domain Services, many client installation properties are published to Active Directory Domain Services. If a computer can locate these client installation properties, it can use them during Configuration Manager client deployment.  
 
  The advantages of using Active Directory Domain Services to publish client installation properties include the following:  

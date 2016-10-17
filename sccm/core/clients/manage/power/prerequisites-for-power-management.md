@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Prerequisites for power management in System Center Configuration Manager
+# Prerequisites for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Power management in System Center Configuration Manager has external dependencies and dependencies within the product.  
 
 ## Dependencies external to Configuration Manager  

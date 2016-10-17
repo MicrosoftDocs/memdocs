@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Plan for and configure compliance settings in System Center Configuration Manager
+# Plan for and configure compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you start working with System Center Configuration Manager compliance settings, there are a few prerequisites you need to know about, and some configuration tasks you'll need to perform.  
 
 ## Prerequisites for compliance settings  

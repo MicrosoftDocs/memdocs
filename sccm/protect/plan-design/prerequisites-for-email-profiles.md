@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for email profiles in System Center Configuration Manager
+# Prerequisites for email profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Email profiles in System Center Configuration Manager have dependencies both externally, and within the product.  
 
 ## Configuration Manager Dependencies  

@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Best practices for power management in System Center Configuration Manager
+# Best practices for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following best practices for power management in System Center Configuration Manager.  
 
 ## Perform the monitoring phase at a representative time  

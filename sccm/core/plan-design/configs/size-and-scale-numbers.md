@@ -14,7 +14,7 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Size and scale numbers for System Center Configuration Manager
+# Size and scale numbers for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 Each System Center Configuration Manager deployment will have a maximum number of sites, site system roles, and devices that it can support. These numbers vary depending on your hierarchy structure (what types and numbers of sites you use) and the site system roles you deploy.  The information in the following subjects can help you identify the number of site system roles and sites you will need to support the devices you expect to manage with your environment.
@@ -57,7 +57,7 @@ These support numbers in this article are based on using the recommended hardwar
 
     -   Each instance of this site system role supports the maximum number of clients supported by the hierarchy.  
 
-# <a name="bkmk_roles"></a> Site system roles    
+## <a name="bkmk_roles"></a> Site system roles    
 
 **Application Catalog web service point:**  
 

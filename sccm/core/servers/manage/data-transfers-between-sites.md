@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Data transfers between sites in System Center Configuration Manager
+# Data transfers between sites in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager uses **file-based replication** and **database replication** to transfer different types of information between sites.  The subjects in this topic can help you understand how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network.  
 
 

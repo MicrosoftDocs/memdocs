@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Technical reference for remote control in System Center Configuration Manager
+# Technical reference for remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section for technical reference information for remote control in System Center Configuration Manager.  
 
 ## In this section  

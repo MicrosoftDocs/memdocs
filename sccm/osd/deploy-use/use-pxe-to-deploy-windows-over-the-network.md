@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Use PXE to deploy Windows over the network with System Center Configuration Manager
+# Use PXE to deploy Windows over the network with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 PXE-initiated operating system deployments in System Center Configuration Manager let client computers request and deploy operating systems over the network. In this operating system deployment scenario, the operating system image and both the x86 and x64 Windows PE boot images are sent to a distribution point that is configured to accept PXE boot requests.  
 
 > [!NOTE]  

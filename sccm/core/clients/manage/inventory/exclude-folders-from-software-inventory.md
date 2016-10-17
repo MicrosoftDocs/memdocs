@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to exclude folders from software inventory in System Center Configuration Manager
+# How to exclude folders from software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following steps to configure System Center Configuration Manager software inventory for your site.  
 
  This procedure configures the default client settings for software inventory and will apply to all the computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers that you want to use software inventory. For more information about how to create custom device settings, see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md).  

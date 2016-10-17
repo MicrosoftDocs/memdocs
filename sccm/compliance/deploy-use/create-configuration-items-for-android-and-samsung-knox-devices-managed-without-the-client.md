@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client
+# Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings  for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  

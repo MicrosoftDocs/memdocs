@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Run discovery for System Center Configuration Manager
+# Run discovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You use one or more discovery methods in    
       System Center Configuration Manager to find device and user resources that you can manage. You can also use Discovery to identify  network infrastructure in your environment.  There are several different Discovery methods you can use to discover different things, and each method has its own configurations and limitations.  
 

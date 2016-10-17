@@ -16,7 +16,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-#  Using Configuration Manager Software Updates to Deliver Definition Updates
+#  Using Configuration Manager Software Updates to Deliver Definition Updates*Applies to: System Center Configuration Manager (Current Branch)*
 
  You can configure Configuration Manager software updates to deliver definition updates to client computers. This is done by configuring automatic deployment rules. Before you begin to create automatic deployment rules, make sure that you have configured Configuration Manager software updates. For more information, see [Introduction to software updates in System Center Configuration Manager](/sccm/sum/understand/software-updates-introduction).
 

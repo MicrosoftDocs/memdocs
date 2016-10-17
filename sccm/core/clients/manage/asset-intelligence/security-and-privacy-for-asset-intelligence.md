@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Security and privacy for Asset Intelligence in System Center Configuration Manager
+# Security and privacy for Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for Asset Intelligence in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_AI"></a> Security best practices for Asset Intelligence  

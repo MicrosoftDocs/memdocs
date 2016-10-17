@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Determine the site system roles for System Center Configuration Manager clients
+# Determine the site system roles for System Center Configuration Manager clients*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this article to help you determine the site systems that you require to deploy Configuration Manager clients:  
 
  For more information about where to install required site system roles in the hierarchy, see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  

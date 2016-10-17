@@ -17,7 +17,7 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager
+# How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Bulk enrollment in System Center Configuration Manager On-premises Mobile Device Management is a more automated means for  enrolling devices, as compared to user enrollment, which requires users to enter their credentials to enroll the device.  Bulk enrollment uses an enrollment package to authenticate the device during enrollment. The package (a .ppkg file) contains a certificate profile and optionally a Wi-Fi profile if the device needs intranet connectivity to support enrollment.  
 

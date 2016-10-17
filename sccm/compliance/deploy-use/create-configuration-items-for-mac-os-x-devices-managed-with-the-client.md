@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration items for Mac OS X devices managed with the System Center Configuration Manager client
+# Create configuration items for Mac OS X devices managed with the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 Use the System Center Configuration Manager **Mac OS X (custom)** configuration item to manage settings  for Mac OS X devices that are managed by the Configuration Manager client.  
 
  The Mac OS X operating system uses property list (or plist) files to store application settings. Use compliance settings to evaluate and remediate settings in a property list file. You can also manage Mac OS X settings by writing a Shell Script that returns a value that you can evaluate and remediate for compliance.  

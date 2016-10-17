@@ -11,7 +11,7 @@ caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
-# Third Party Notices
+# Third Party Notices*Applies to: System Center Configuration Manager (Current Branch)*
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION  
 
 > [!NOTE]  

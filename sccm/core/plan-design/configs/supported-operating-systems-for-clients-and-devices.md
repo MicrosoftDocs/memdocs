@@ -14,7 +14,7 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
 author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# Supported operating systems for clients and devices for System Center Configuration Manager
+# Supported operating systems for clients and devices for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 
@@ -30,6 +30,8 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
  You can manage Windows computers with the Configuration Manager client that is included with Configuration Manager. For more information see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Supported operating systems:**  
+
+-  **Windows Server 2016**  – Standard, Datacenter <sup>1</sup>
 
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter <sup>1</sup>    
 

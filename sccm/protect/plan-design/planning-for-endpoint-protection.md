@@ -14,7 +14,7 @@ author: NathBarnms.author: nathbarn
 manager: angrobe
 
 ---
-# Planning for Endpoint Protection in System Center Configuration Manager
+# Planning for Endpoint Protection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 Endpoint Protection in System Center Configuration Manager lets you to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy.  
 
@@ -39,7 +39,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
 -   Network vulnerability detection through Network Inspection System  
 
--   Integration with Microsoft Active Protection Services to report malware to Microsoft. When you join this service, Windows Defender or the Endpoint Protection client can download the latest definitions from the Malware Protection Center when unidentified malware is detected on a computer.  
+-   Integration with Cloud Protection Service to report malware to Microsoft. When you join this service, Windows Defender or the Endpoint Protection client can download the latest definitions from the Malware Protection Center when unidentified malware is detected on a computer.  
 
 > [!NOTE]  
 >  The Endpoint Protection client can be installed on a server that runs Hyper-V and on guest virtual machines with supported operating systems. To prevent excessive CPU usage, Endpoint Protection actions have a built-in, randomized delay so that services do not run simultaneously.  

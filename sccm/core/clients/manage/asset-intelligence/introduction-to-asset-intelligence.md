@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to Asset Intelligence in System Center Configuration Manager
+# Introduction to Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Asset Intelligence in System Center Configuration Manager lets you inventory and manage software license usage throughout your enterprise by using the Asset Intelligence catalog. Many hardware inventory Windows Management Instrumentation (WMI) classes improve the breadth of information that is collected about hardware and software titles that are being used. Over 60 reports present this information in easy-to-use format. Many of these reports link to more specific reports, where you can query for general information and drill down to more detailed information. You can add custom information to the Asset Intelligence catalog, such as custom software categories, software families, software labels, and hardware requirements. You can also connect to System Center Online to dynamically update the Asset Intelligence catalog with the most current information available. Microsoft customers can reconcile enterprise software license usage with purchased software licenses that are being used by importing software license information into the Configuration Manager site database.  
 
 ##  <a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence catalog  

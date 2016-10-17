@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Security and privacy for power management in System Center Configuration Manager
+# Security and privacy for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This section contains security and privacy information for power management in System Center Configuration Manager.  
 
 ## Security best practices for power management  

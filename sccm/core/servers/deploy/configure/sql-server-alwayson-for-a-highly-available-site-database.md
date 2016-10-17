@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager
+# SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  Beginning with System Center Configuration Manager version 1602, you can use  SQL Server [AlwaysOn Availability Groups](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx) to host the site database at primary sites and the central administration site as a high-availability and disaster-recovery solution. The availability group can be hosted on-premises or in Microsoft Azure.  

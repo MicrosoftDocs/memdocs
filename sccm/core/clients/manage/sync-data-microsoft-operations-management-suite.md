@@ -2,7 +2,7 @@
 title: "Sync data | Microsoft Operations Management Suite | System Center Configuration Manager"
 description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
-ms.date: 08/01/2016
+ms.date: 10/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: nbigman
+ms.author: nbigman
+manager: angrobe
 ---
-# Sync data from Configuration Manager to the Microsoft Operations Management Suite
+# Sync data from Configuration Manager to the Microsoft Operations Management Suite*Applies to: System Center Configuration Manager (Current Branch)*
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS. This makes data from your Configuration Manager deployment visible in OMS.
 
 ## Add an OMS connection to Configuration Manager
-
 
 In order to add an OMS connection, your Configuration Manager environment must first configure a [service connection point](../../../core/servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/). When you add an OMS connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 1.  In the **Administration** workspace, select **OMS Connector**. In the ribbon, click on "Create connection to Operations Management Suite". This opens the **Connection to Operation Management Suite Wizard**. Select **Next**.
@@ -26,7 +27,7 @@ In order to add an OMS connection, your Configuration Manager environment must f
 
     * Registered Configuration Manager as a “Web Application and/or Web API” management tool, and that you have the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
     * Created a client key for the registered management tool in Azure Active Directory.
-    * [Specified Application Permission in Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/) to give Configuration Manager access to OMS.
+    * In the Azure Management Portal, provided the registered web app with permission to access OMS, as described in [Provide Configuration Manager with permissions to OMS](https://azure.microsoft.com/en-us/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms).
 
 3.  On the **Azure Active Directory** screen, configure your connection settings to OMS by providing your **Tenant**, **Client ID**, and **Client Secret Key**, then select **Next**.
 4.  On the **OMS Connection Configuration** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.

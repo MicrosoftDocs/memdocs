@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: Dougebyms.author: dougebymanager: angrobe
 
 ---
-# Use a task sequence to manage virtual hard disks in System Center Configuration Manager
+# Use a task sequence to manage virtual hard disks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In System Center Configuration Manager, you can manage virtual hard disks (VHDs) and integrate the VHDs that you create into your datacenter from the Configuration Manager console. Specifically, you can create and modify a VHD, add applications and software updates to the VHD, and publish the VHD to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.  
 
  Use the following sections to manage VHDs in Configuration Manager.

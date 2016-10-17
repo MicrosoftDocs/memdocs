@@ -14,7 +14,7 @@ ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Prerequisite checker for System Center Configuration Manager
+# Prerequisite checker for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. The use of prerequisite checker enables you to identify and fix problems that would block an actual site or site system role installation.  
 

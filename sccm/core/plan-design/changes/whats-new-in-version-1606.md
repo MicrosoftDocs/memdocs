@@ -2,7 +2,7 @@
 title: "New in 1606 | System Center Configuration Manager"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 08/02/2016
+ms.date: 10/09/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -14,7 +14,7 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 caps.latest.revision: 40
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# What&#39;s new in version 1606 of System Center Configuration Manager
+# What&#39;s new in version 1606 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Update 1606 for System Center Configuration Manager is an update that is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
 > [!TIP]  
 >  Learn more about:  
@@ -167,6 +167,10 @@ For details, see [How to create configuration items for Android and Samsung KNOX
 
 * Microsoft Passport for Work is now known as **Windows Hello for Business**.
 * Enterprise data protection is now known as **Windows Information Protection**.
+
+### Deployment of Windows Hello for Business (Passport for Work)
+
+You can now deploy Windows Hello for Business policies to domain-joined Windows 10 devices managed by the Configuration Manager client.
 
 The Configuration Manager console has been updated to reflect these changes.
 
