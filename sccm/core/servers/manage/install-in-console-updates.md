@@ -314,6 +314,7 @@ Pre-release features are included in the product for early testing in a producti
 To give consent, in the console navigate to **Administration** > **Site Configuration** > **Sites**, and then select **Hierarchy Settings**. On the **General** tab, select **Consent to use Pre-Release features**.
  -  Giving consent is a one-time action per hierarchy that cannot be undone  
  -  Until you give consent, you cannot enable new pre-release features included with update 1606 or later update versions
+
  > [!NOTE]
  > If you have enabled pre-release features from Update 1602 prior to installing update 1606, those features remain enabled for use after installing 1606 even if you do not give consent to use pre-release features.
 
@@ -321,11 +322,12 @@ When your hierarchy runs version 1606 or later, and you then install an update t
   - **If you have given consent:** You can enable pre-release features from within the Updates and Servicing Wizard when you are installing the update. To do so, select the pre-release features as you would any other feature.     
 
     Optionally, you can wait to enable a pre-release feature at a later time from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. To do so, in the Features node select the feature and then click **Turn on**. (This option is greyed out and unavailable until you give consent.)  
-  -   **If you have not given consent:** When installing an update, pre-release features are visible in the Updates and Servicing Wizard but are greyed out and cannot be enabled. After the update installs, you can view these features in the Features node, but not enable them until after you have given consent in the Hierarchy Settings.  
+  -   **If you have not given consent:** When installing an update, pre-release features are visible in the Updates and Servicing Wizard but are greyed out and cannot be enabled. After the update installs, you can view these features in the Features node, but not enable them until after you have given consent in the Hierarchy Settings.
+
  > [!TIP]
  > When you are installing update 1606, pre-release features that are included with update 1606 are not visible in the Updates and Servicing Wizard and cannot be enabled at that time. After update 1606 installs you can view the pre-release features it includes in the Features node.
 
-If you gave concent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must then give concent again at the central administration site. 
+If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must then give consent again at the central administration site.
 
 **The following pre-release features are avaialble:**
 
