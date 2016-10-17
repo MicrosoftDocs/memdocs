@@ -619,6 +619,25 @@ If you have a firewall enabled on the SQL Server computer, ensure that it is con
 
 For an example of how to configure SQL Server to use a specific port, see [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) in the SQL Server TechNet library.  
 
+
+### <a name="bkmk_discovery"> </a> Discovery and publishing
+The following ports are used for Discovery and publishing of site information:
+ - Lightweight Directory Access Protocol (LDAP)  - 389
+ - LDAP (Secure Sockets Layer [SSL] connection)  - 636
+
+
+ - Global Catalog LDAP - 3268
+ - Global Catalog LDAP SSL -3269
+
+
+ - RPC Endpoint Mapper - 135
+ - RPC - Dynamically allocated high TCP ports
+
+
+ - TCP: 1024 - 5000
+ - TCP:  49152 - 65535
+
+
 ###  <a name="BKMK_External"></a> External connections made by Configuration Manager  
  Configuration Manager clients or site systems can make the following external connections:  
 
