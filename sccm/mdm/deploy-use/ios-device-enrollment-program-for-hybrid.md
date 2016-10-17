@@ -25,7 +25,7 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 ###  Enable DEP enrollment in Configuration Manager with Intune  
 
 1.  **Start managing iOS devices with Configuration Manager**   
-    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup). 
+    Before you can enroll iOS Device Enrollment Program (DEP) devices, you must complete steps to [Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md) including [steps to support iOS enrollment](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup).
 
 2.  **Create a DEP token request**   
     In the Configuration Manager console, in the **Administration** workspace, expand **Hierarchy Configuration**, expand **Cloud Services**, and click **Windows Intune Subscriptions**. Click **Create DEP Token Request** on the **Home** tab, click **Browse** to specify the download location for the DEP token request, and then click **Download**. Save the DEP token request (.pem) file locally. The .pem file is used to request a trusted token (.p7m) from the Apple Device Enrollment Program portal.  
@@ -60,6 +60,9 @@ Companies can purchase iOS devices through Apple's device enrollment program and
         -   **User affinity** – Specifies how devices are enrolled. See [User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md).  
 
             -   **Prompt for user affinity**: The device must be affiliated with a user during initial setup and could then be permitted to access company data and email as that user.  User affinity should be configured for DEP-managed devices that belong to users and need to use the company portal (i.e. to install apps).  
+
+            > [!NOTE]
+            > DEP with user affinity requires ADFS WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user token.
 
             -   **No user affinity**: The device is not affiliated with a user. Use this affiliation for devices that perform tasks without accessing local user data. Apps requiring user affiliation won’t work.  
 
