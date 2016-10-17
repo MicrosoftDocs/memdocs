@@ -392,3 +392,11 @@ The secondary site upgrade progresses in the background. After the upgrade is co
 
 ##  <a name="BKMK_PostUpgrade"></a> Perform post-upgrade tasks  
 After you upgrade a site to a new service pack, you might have to complete additional tasks to finish the upgrade or reconfigure the site. These tasks can include the upgrade of Configuration Manager clients or Configuration Manager consoles, re-enabling database replicas for management points, or restoring settings for Configuration Manager functionality that you use and that does not persist after the service pack upgrade.  
+
+**Known issues:**  
+Secondary sites:
+- When you upgrade to version 1511:  
+To ensure clients at secondary sites can find the management point from the secondary site (proxy management point), manually add the management point to boundary groups that also include the distribution points at the secondary site.
+
+- When you upgrade to version 1606 or later:  
+  Proxy management points are automatically added to boundary groups that include distribution points at the secondary site.
