@@ -17,6 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Configuration Manager on Azure - Frequently Asked Questions*Applies to: System Center Configuration Manager (Current Branch)*
 The following questions and answers can help you understand when to use and how to configure Configuration Manager on Microsoft Azure.
 
+## General Questions
 ### My company is trying to move as many physical servers as possible to Microsoft Azure, can I move Configuration Manager servers to Azure?
 Certainly, this is a supported scenario.  See [Support for Virtualization Environments for System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
 
@@ -28,7 +29,7 @@ However, if you use a metered data plan and available bandwidth or cost is a con
 ### Is having Configuration Manager in Azure a SaaS scenario (Software as a Service)?
 No, it is an IaaS (Infrastructure as a Service) because you host your Configuration Manager infrastructure servers in Azure virtual machines.
 
-## What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
+### What areas should I pay attention to when considering a move of my Configuration Manager infrastructure to Azure?
 Great question, here are the areas that are most important when making this decision, each is explored in a separate section of this topic:
 1.	Networking
 2.	Availability
@@ -56,12 +57,12 @@ The options you select depend on the scenario you are implementing and how much 
 
 
 ## Availability
-## One of the reasons I am moving infrastructure to Azure is the promise of high availability. Can I take advantage of high availability options like Azure VM Availability sets for VMs that I will use for Configuration Manager?
+### One of the reasons I am moving infrastructure to Azure is the promise of high availability. Can I take advantage of high availability options like Azure VM Availability sets for VMs that I will use for Configuration Manager?
 Yes! Azure VM Availability sets can be used for redundant site system roles like distribution points or management points.
 
 You can also use them for the Configuration Manager site servers. For example, central administration sites and primary sites can all be in the same availability set which can help you ensure that they are not rebooted at the same time.
 
-## How can I make my database highly available? Can I use Azure SQL Database? Or do I have to use Microsoft SQL Server in a VM?
+### How can I make my database highly available? Can I use Azure SQL Database? Or do I have to use Microsoft SQL Server in a VM?
 You need to use Microsoft SQL Server in a VM. Configuration Manager does not support Azure SQL Server at this time. But you can use functionalities like AlwaysOn Availability Groups for your SQL server. [AlwaysOn Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) are recommended and are officially supported starting with version 1602 of Configuration Manager.
 
 ### Can I use Azure load balancers with site system roles like management points  or software update points?
@@ -69,10 +70,10 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 
 
 ## Performance
-## What factors affect performance in this scenario?
+### What factors affect performance in this scenario?
 [Azure VM size and type](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
 
-## So, tell me more about Azure virtual machines; what size VMs should I use?
+### So, tell me more about Azure virtual machines; what size VMs should I use?
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
 - For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
@@ -111,7 +112,7 @@ You will soon! With the Configuration Manager Technical Preview version 1606, we
 
 You can start testing the Cloud Service Proxy in your test environment and give us feedback to make this better.
 
-## I also heard that you have another new feature called Peer Cache in the Technical Preview version 1604. Is that different than BranchCache? Which one should I choose?
+### I also heard that you have another new feature called Peer Cache in the Technical Preview version 1604. Is that different than BranchCache? Which one should I choose?
 Yes, totally different. [Peer Cache](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
 
 You can configure any client to be a Peer Cache source. Then, when management points provide  clients information about content source locations, they provide details about both the distribution points and any Peer Cache sources that have the content that client requires.
