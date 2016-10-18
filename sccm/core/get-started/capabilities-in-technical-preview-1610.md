@@ -21,13 +21,18 @@ This article introduces the features that are available in the Technical Preview
 
 **Known Issues in this Technical Preview:**  
 *add known issues here*
-   
+
 
 
 **The following are new features you can try out with this version.**  
 
-## Feature 1
+## Filter by content size in automatic deployment rules
+You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
+#### Configure the Content Size field
+To configure the **Content Size** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizare when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
+
+![Content size field](media/contentsizefield.png)
 
 ## Feature 2
 
