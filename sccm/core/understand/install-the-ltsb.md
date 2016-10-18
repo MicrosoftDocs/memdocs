@@ -72,13 +72,13 @@ When using an unattended script to install a licensed branch, you must add the f
 
 - **CurrentBranch**
   - Values: 0 or 1  
-  - Details:  0 installs the Current Branch, and 1 installs the Long-Term Servicing Branch.  
+  - Details:  0 installs the Long-Term Servicing Branch, and 1 installs the Current Branch.  
 
 For example, to install a licensed Current Branch edition you would use:
 
   **Key Name: SABranchOptions**
    -	**SSActive = 1**
-   - **CurrentBranch = 0**
+   - **CurrentBranch = 1**
 
 
 > [!IMPORTANT]  
