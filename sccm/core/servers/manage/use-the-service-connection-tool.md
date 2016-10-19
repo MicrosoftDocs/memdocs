@@ -65,7 +65,7 @@ You can use the following optional parameters to specify a proxy server (More in
 
 
 ## Use the service connection tool  
- You can find the service connection tool (**serviceconnectiontool.exe**), in the Configuration Manager installation media in **%path%/smssetup/tools/ServiceConnectionTool** folder.  
+ You can find the service connection tool (**serviceconnectiontool.exe**), in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. You must use the version of the tool that matches the version of your hierarchy.
 
  In this procedure, the command-line examples use the following file names and folder locations (you do not need to use these paths and file names and instead can use alternatives that match your environment and preferences):  
 
@@ -79,7 +79,7 @@ On the computer that hosts the service connection point:
 
 -   Open a command prompt  with administrative privileges, and then change directories to the location that contains **serviceconnectiontool.exe**.  
 
-     By default, you can  find this tool in the Configuration Manager installation media in **%path%\smssetup/tools\ServiceConnectionTool** folder. All of the files in this folder must be in the same folder for the service connection tool to work.  
+     By default, you can  find this tool in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. All of the files in this folder must be in the same folder for the service connection tool to work.  
 
 When you run the following command, the tool prepares a .cab file that contains usage information and to copies it  to a location you specify. The data in the .cab file is based on the level of diagnostic usage data your site is configured to collect. (see [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Run the following command to create the .cab file:  
 
