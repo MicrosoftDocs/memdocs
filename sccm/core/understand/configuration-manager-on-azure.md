@@ -22,7 +22,7 @@ The following questions and answers can help you understand when to use and how 
 Certainly, this is a supported scenario.  See [Support for Virtualization Environments for System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
 
 ### Great! My environment requires multiple sites. Should all child primary sites be located in Azure with the central administration site or on-premises? What about secondary sites?
-Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
+Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option. 
 
 However, if you use a metered data plan and available bandwidth or cost is a concern, or the network connection between Azure and your intranet is not fast or can be unreliable, then consider placing specific sites (and site systems) on-premises and then use the bandwidth controls built into Configuration Manager.
 
