@@ -65,7 +65,9 @@ You can use the following optional parameters to specify a proxy server (More in
 
 
 ## Use the service connection tool  
+
  You can find the service connection tool (**serviceconnectiontool.exe**), in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. Always use the service connection tool that matches the version of Configuration Manager that you use.
+
 
  In this procedure, the command-line examples use the following file names and folder locations (you do not need to use these paths and file names and instead can use alternatives that match your environment and preferences):  
 
