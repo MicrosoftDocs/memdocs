@@ -79,12 +79,17 @@ In general, your compute power (CPU and Memory) need to meet the [recommended ha
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
 - If you don’t use more disks than a lower level Azure VM supports, you have some flexibility to ramp down or up (for more or less processor, memory, and IOPS) as needed. For example, if you start with a DS14 and 4 disks, but the VM seems to never be overloaded you can downsize to a DS13 with the same 4 disks and see if the lower CPU, Memory, and IOPS are sufficient for your load.
 
-The following table lists the initial suggested disk count to utilize for various size installations:
+The following table lists the initial suggested disk counts to utilize at primary and central administration sits for various size installations:
 
-|Number of users| 0 - 5k | 5k - 10k | 20k - 60k | 60k - 100k |
-|------------|--------|-------|-------|------|
-| **VM size**| DS11	  | DS12	| DS13	| DS14 |
-|**Disk count**| 1xP20	| 3xP20 | 4xP20	| 4xP30|
+
+| Number of users    | VM size      |   Disk Count    |
+|--------------------|--------------|-----------------|
+|**0 to 5k**         |   DS11       |1xP30 or 1xP20   |
+|**20k to 60k**      |   DS13       |2xP30 or 3xP20   |
+|**5k to 20k**       |   DS12       |1xP30 or 2xP20   |
+|**60k to 100k**     |   DS14       |3xP30 or 4xP20   |
+|**100k to 150k**    |   DS15       |4xP30 or 6xP20   |
+|**Up to 700k** (Central administration site only)  |   DS15       |5xP30 or 10xP20  |
 
 
 
