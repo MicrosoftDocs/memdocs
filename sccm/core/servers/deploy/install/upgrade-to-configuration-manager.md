@@ -22,9 +22,9 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
- **You can upgrade the following to a fully licensed  version of System Center Configuration Manager:**  
+ **You can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:**  
 
--   An evaluation install of System Center Configuration Manager version 1515
+-   An evaluation install of System Center Configuration Manager version 1511
 -   A release candidate install of System Center Configuration Manager  
 -   System Center 2012 Configuration Manager with Service Pack 1  
 -   System Center 2012 Configuration Manager with Service Pack 2  
