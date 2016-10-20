@@ -35,6 +35,22 @@ To configure the **Content Size (KB)** field, go to the **Software Updates** pag
 ![Content size field](media/contentsizefield.png)
 
 ## Improved functionality for required software dialogs
+When a required software deployment is received by users, they now have the ability to choose from a list of values for the new option **Snooze and remind me:**. This gives users some additional control over the notification schedule for required software. The notification settings for upcoming deployment deadlines, which you configure on the Computer Agent page in Client Agent settings, continue to provide the minimum notification schedule for required software.
+![Computer Agent page in Client Agent settings](media/computeragentsettings.png)
+
+When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values:
+- Later: specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
+- Fixed time: specifies that the notification will be scheduled to display again after the selected time. For example, if a user selects 30 minutes, the notification will display again in 30 minutes.
+
+The maximum snooze time is always based on the notification settings configured in the Client Agent settings. For example, if the **Deployment deadline less than 1 hour, remind users every (minutes)** setting on the Computer Agent page is configured for 10 minutes, the notification would display again in 10 minutes even if the user set the **Snooze and remind me:** setting to 30 minutes.
+
+For a high-risk deployment, such as a task sequence that deploys an operating system, a dialog box such as the following displays on the user's computer:
+
+![Required Software dialog](media/requiredsoftwaredialog.png)
+
+For more information:
+- [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [How to configure client settings](../clients/deploy/configure-client-settings.md)
 
 
 
