@@ -800,6 +800,9 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 > [!NOTE]  
 >  To install an application that supersedes another application, the content files for the superseded application must be available or the task sequence step will fail. For example, Microsoft Visio 2010 is installed on a client or in a captured image. When the Install Application task sequence step is run to install Microsoft Visio 2013, the content files for Microsoft Visio 2010 (the superseded application) must be available on a distribution point or the task sequence will fail. A client or captured image without Microsoft Visio installed will complete the Microsoft Visio 2013 installation without checking for the Microsoft Visio 2010 content files.  
 
+> [!NOTE]
+> You can use the SMSTSMPListRequestTimeoutEnabled and SMSTSMPListRequestTimeout built-in variables to enable and specify how many milliseconds a task sequence waits before it retries to install an application or software update after it fails to retrieve the management point list from location services. For more information, see [Task sequence built-in varliables](task-sequence-built-in-variables)
+
  This task sequence step runs only in a standard operating system. It does not run in Windows PE.  
 
 ### Details  
@@ -809,7 +812,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   Disable the step.  
 
--   : Specify to retry this step if the computer unexpectedly restarts. You can also specify how many times to retry after a restart.  
+-   Specify to retry this step if the computer unexpectedly restarts. You can also specify how many times to retry after a restart.  
 
 -   Specify if the task sequence continues if an error occurs while running the step.  
 
@@ -855,7 +858,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   If the value of a variable contains any information other than the name of the application. That application is not installed and the task sequence continues.  
 
--   If no variable with the specified base name and "01" suffix are found, no applications are installed. When you select Continue on error on the Options tab of the task sequence step, the task sequence continues when an application fails to install. When the setting is not selected, the task sequence fails and will not install remaining applications.  
+-   If no variable with the specified base name and "01" suffix are found, no applications are installed. When you select **Continue on error** on the Options tab of the task sequence step, the task sequence continues when an application fails to install. When the setting is not selected, the task sequence fails and will not install remaining applications.  
 
  **If an application fails, continue installing other applications in the list**  
  This setting specifies that the step continues if an individual application installation fails. If this setting is specified, the task sequence will continue regardless of any installation errors that are returned. If this is not specified an installation fails, the task sequence step will end immediately.  
@@ -977,6 +980,9 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 >* For Windows 8, see [Knowledge base article 3163023](https://support.microsoft.com/kb/3163023).
 
  This task sequence step runs only in a standard operating system. It does not run in Windows PE. For information about task sequence variables for this task sequence action, see [Install Software Updates Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_InstallSoftwareUpdates).
+
+ > [!NOTE]
+ > You can use the SMSTSMPListRequestTimeoutEnabled and SMSTSMPListRequestTimeout built-in variables to enable and specify how many milliseconds a task sequence waits before it retries to install an application or software update after it fails to retrieve the management point list from location services. For more information, see [Task sequence built-in varliables](task-sequence-built-in-variables)
 
 > [!NOTE]
 >On the options tab, you can configure this task sequence to retry if the computer unexpectedly restarts. For example, a software update installation that automatically restarts the computer. Beginning in Configuration Manager 1602, you can configure the SMSTSWaitForSecondReboot variable to  specify how long (in seconds) the task sequence should pause after the computer restarts when installing software updates. For more information, see [Task sequence built-in variables](task-sequence-built-in-variables.md).
