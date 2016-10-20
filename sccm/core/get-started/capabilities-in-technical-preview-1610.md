@@ -52,7 +52,17 @@ For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [How to configure client settings](../clients/deploy/configure-client-settings.md)
 
+## Deny previously approved application requests
 
+As an administrator you can now deny a previously approved application request. Once denied, to install this application later users must resubmit a request. Denial does not uninstall the application; rather it forces reapproval for any new requst for that application from that user. Previously, application request denial was only available for application requests that had not been approved.
+
+#### Try it out
+To deny an application approved request:
+
+1.	In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) that requires approval.
+2.	On a client computer, open Software Center and submit a request for the application.
+3.	In the Configuration Manager console, approve the application request.
+4.	Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
 
 
 
