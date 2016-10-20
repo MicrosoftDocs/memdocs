@@ -22,7 +22,7 @@ The following questions and answers can help you understand when to use and how 
 Certainly, this is a supported scenario.  See [Support for Virtualization Environments for System Center Configuration Manager](/sccm/core/plan-design/configs/support-for-virtualization-environments).
 
 ### Great! My environment requires multiple sites. Should all child primary sites be located in Azure with the central administration site or on-premises? What about secondary sites?
-Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option. 
+Site-to-site communications (file-based and database replication) benefits from the proximity of being hosted in Azure. However, all client related traffic would be remote from site servers and site systems. If you use a fast and reliable network connection between Azure and your intranet with an unlimited data plan, hosting all your infrastructure in Azure is an option.
 
 However, if you use a metered data plan and available bandwidth or cost is a concern, or the network connection between Azure and your intranet is not fast or can be unreliable, then consider placing specific sites (and site systems) on-premises and then use the bandwidth controls built into Configuration Manager.
 
@@ -82,16 +82,17 @@ In general, your compute power (CPU and Memory) need to meet the [recommended ha
 The following table lists the initial suggested disk counts to utilize at primary and central administration sits for various size installations:
 
 
-| Number of users    | VM size      |   Disk Count    |
+| Number of devices  | VM size      |   Disk Count    |
 |--------------------|--------------|-----------------|
-|**0 to 5k**         |   DS11       |1xP30 or 1xP20   |
-|**20k to 60k**      |   DS13       |2xP30 or 3xP20   |
-|**5k to 20k**       |   DS12       |1xP30 or 2xP20   |
-|**60k to 100k**     |   DS14       |3xP30 or 4xP20   |
-|**100k to 150k**    |   DS15       |4xP30 or 6xP20   |
-|**Up to 700k** (Central administration site only)  |   DS15       |5xP30 or 10xP20  |
+|**0 to 1k**         |   DS11_V2    |1xP30 or 1xP20   |
+|**1k to 20k**       |   DS12_V2    |1xP30 or 2xP20   |
+|**20k to 60k**      |   DS13_V2    |2xP30 or 3xP20   |
+|**60k to 100k**     |   DS14_V2    |3xP30 or 4xP20   |
+|**100k to 150k**    |   DS15_V2    |4xP30 or 6xP20   |
+|**Up to 700k** (Central administration site only)  |   DS15_V2   |5xP30 or 10xP20  |
 
-
+Following is an example 20k-60k configuration on DS13 with 3xD20 disks configured in striped volume with separate logical volumes for the site installation and database files:   
+![VM disk configuration](media/vm_disks.png)
 
 ## User Experience
 ### You mention that user experience is one of the main areas of importance, why is that?
