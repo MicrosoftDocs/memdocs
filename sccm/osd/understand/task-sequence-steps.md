@@ -812,7 +812,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   Disable the step.  
 
--   : Specify to retry this step if the computer unexpectedly restarts. You can also specify how many times to retry after a restart.  
+-   Specify to retry this step if the computer unexpectedly restarts. You can also specify how many times to retry after a restart.  
 
 -   Specify if the task sequence continues if an error occurs while running the step.  
 
