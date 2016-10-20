@@ -14,12 +14,14 @@ ms.technology:
 ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 ---
-# System Center Configuration Manager Documentation<article id="main">
+# System Center Configuration Manager Documentation
+
+<article id="main">
 
     <section id="hero-content">
       <h1>System Center Configuration Manager Documentation</h1>
       <h2>Learn how to manage and protect corporate computers, servers, and devices with Configuration Manager on-premises infrastructure.</h2>
-      <h3>Manage devices with Microsoft Intune? <a href="https://docs.microsoft.com/en-us/intune/" target="_blank">View Intune Documentation &rarr;</a></h3>
+      <h3>Manage devices with Microsoft Intune? <a href="https://docs.microsoft.com/intune/" target="_blank">View Intune Documentation &rarr;</a></h3>
     </section>
 
     <section id="featured" class="container">
