@@ -1,7 +1,8 @@
 ---
-title: "Log files in System Center Configuration Manager"
+title: "Log files | System Center Configuration Manager"
+description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Log files in System Center Configuration Manager
+# Log files in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In System Center Configuration Manager, client and site server components record process information in individual log files. By default, client and server component logging is enabled in Configuration Manager. You can use the information in these log files to help you troubleshoot issues that might occur in your Configuration Manager hierarchy.  
 
  The following sections provide details about the different log files. Use this information to view and monitor Configuration Manager client and server logs for operation details and identify error information that might help you to troubleshoot any problems.  
@@ -182,13 +183,13 @@ In System Center Configuration Manager, client and site server components record
 |PolicySdk.log|Records activities for policy system SDK interfaces.|  
 |Pwrmgmt.log|Records information about enabling or disabling and configuring the wake-up proxy client settings.|  
 |PwrProvider.log|Records the activities of the power management provider (PWRInvProvider) hosted in the Windows Management Instrumentation (WMI) service. On all supported versions of Windows, the provider enumerates the current settings on computers during hardware inventory and applies power plan settings.|  
-|SCClient_<domain\>@<username\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
-|SCClient_<domain\>@<username\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
+|SCClient_&lt;domain\>@&lt;username\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
+|SCClient_&lt;domain\>@&lt;username\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
-|SCNotify_<domain\>@<username\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_<domain\>@<username\>_1-<date_time>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_&lt;domain\>@&lt;username\>_1.log|Records the activity for notifying users about software for the specified user.|  
+|SCNotify_&lt;domain\>@&lt;username\>_1-&lt;date_time>.log|Records the historical information for notifying users about software for the specified user.|  
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
-|SleepAgent_<domain\>@<@SYSTEM_0.log|Main log file for wake-up proxy.|  
+|SleepAgent_&lt;domain\>@&lt;@SYSTEM_0.log|Main log file for wake-up proxy.|  
 |smscliui.log|Records usage of the Configuration Manager client in Control Panel.|  
 |SrcUpdateMgr.log|Records activity for installed Windows Installer applications that are updated with current distribution point source locations.|  
 |StatusAgent.log|Records status messages that are created by the client components.|  
@@ -260,10 +261,10 @@ The Configuration Manager client for Mac computers records information in the fo
 
 |Log name|Details|  
 |--------------|-------------|  
-|CCMClient-*<date_time>*.log|Records activities that are related to the Mac client operations, which includes application management, inventory, and error logging.<br /><br /> This log file is located in the folder **/Library/Application Support/Microsoft/CCM/Logs** on the Mac computer.|  
-|CCMAgent-*<date_time>*.log|Records information that is related to client operations, which includes user logon and logoff operations and Mac computer activity.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
-|CCMNotifications-*<date_time>*.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
-|CCMPrefPane-*<date_time>*.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
+|CCMClient-*&lt;date_time>*.log|Records activities that are related to the Mac client operations, which includes application management, inventory, and error logging.<br /><br /> This log file is located in the folder **/Library/Application Support/Microsoft/CCM/Logs** on the Mac computer.|  
+|CCMAgent-*&lt;date_time>*.log|Records information that is related to client operations, which includes user logon and logoff operations and Mac computer activity.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
+|CCMNotifications-*&lt;date_time>*.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
+|CCMPrefPane-*&lt;date_time>*.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the folder **~/Library/Logs** on the Mac computer.|  
 
  Additionally, the log file SMS_DM.log on the site system server records communication between Mac computers and the management point that is enabled for mobile devices and Mac computers.  
 
@@ -472,9 +473,9 @@ The Configuration Manager client for Mac computers records information in the fo
 
  In addition to the Configuration Manager log files, review the Windows Application logs in Event Viewer on the server running the Network Device Enrollment Service and the server hosting the certificate registration point. For example, look for messages from the **NetworkDeviceEnrollmentService** source. You can also use the following log files:  
 
--   IIS log files for Network Device Enrollment Service: **<path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   IIS log files for Network Device Enrollment Service: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
 
--   IIS log files for the certificate registration point: **<path\>\inetpub\logs\LogFiles\W3SVC1**  
+-   IIS log files for the certificate registration point: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
 
 -   Network Device Enrollment Policy log file: **mscep.log**  
 
@@ -518,7 +519,7 @@ The Configuration Manager client for Mac computers records information in the fo
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-<guid\>.log|Records details for a specific cloud-based distribution point, including information about storage and content access.|Site system server|  
+|CloudDP-&lt;guid\>.log|Records details for a specific cloud-based distribution point, including information about storage and content access.|Site system server|  
 |CloudMgr.log|Records details about the provisioning of content, collecting storage and bandwidth statistics, and administrator initiated actions to stop or start the cloud service that runs a cloud-based distribution point.|Site system server|  
 |DataTransferService.log|Records all BITS communication for policy or package access. This log is also used for content management by pull-distribution points.|A computer that is configured as a pull-distribution point|  
 |PullDP.log|Records details about content that the pull-distribution point transfers from source distribution points.|A computer that is configured as a pull-distribution point|  
@@ -755,7 +756,7 @@ The following table lists the log files that contain information related to Disc
  The following table lists the log files that contain information related to using Wake on LAN.  
 
 > [!NOTE]  
->  Wehn you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_<domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
+>  Wehn you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_&lt;domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  

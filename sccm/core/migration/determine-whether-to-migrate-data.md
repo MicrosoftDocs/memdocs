@@ -1,7 +1,8 @@
 ---
-title: "Determine whether to migrate data to System Center Configuration Manager"
+title: "Choose what to migrate | System Center Configuration Manager"
+description: "Learn which data you can migrate and which data you can't migrate to System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Determine whether to migrate data to System Center Configuration Manager
+# Determine whether to migrate data to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In System Center Configuration Manager migration provides a process to  transfer data and configurations you have made from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
 
 -   Combine multiple hierarchies into one  

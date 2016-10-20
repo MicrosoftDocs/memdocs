@@ -1,7 +1,8 @@
 ---
-title: "Find help for using System Center Configuration Manager"
+title: "Find help | System Center Configuration Manager"
+description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Find help for using System Center Configuration Manager
+# Find help for using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following resources for additional information about System Center Configuration Manager:  
 
 -   [Information and support](#bkmk_Info)  

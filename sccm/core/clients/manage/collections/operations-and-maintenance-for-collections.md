@@ -1,7 +1,8 @@
 ---
 title: "Operations and maintenance for collections in System Center Configuration Manager"
+description: "Learn about operations and maintenance for collections in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 839c7aef-4863-439b-8e56-9b5d4c3d9ac4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Operations and maintenance for collections in System Center Configuration Manager
+# Operations and maintenance for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section to help you create and manage collections in the System Center Configuration Manager hierarchy.  
 
 ## In this section  

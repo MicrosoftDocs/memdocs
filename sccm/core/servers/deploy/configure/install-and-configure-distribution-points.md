@@ -1,7 +1,8 @@
 ---
-title: "Install and configure distribution points for System Center Configuration Manager"
+title: "Manage distribution points | System Center Configuration Manager"
+description: "Host the content (files and software) you deploy to devices and users by using distribution points. Here's how to install and configure them."
 ms.custom: na
-ms.date: 2016-05-02
+ms.date: 05/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Install and configure distribution points for System Center Configuration Manager
+# Install and configure distribution points for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You install System Center Configuration Manager distribution points to host the content (files and software) you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
  When you **install a new distribution point** (by using the installation Wizard) or **manage the properties of an existing distribution point** (by editing the distribution points properties), you have the opportunity to configure most of the distribution point settings. However, there are a few settings that are only available when either installing or editing, but not both:  
@@ -154,7 +155,7 @@ Use the following basic procedures to install or modify  a distribution point, a
 
 -   [Use a cloud-based distribution point with System Center Configuration Manager](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
--   [Use a pull-distribution point with System Center Configuration Manager](../Topic/Use%20a%20pull-distribution%20point%20with%20System%20Center%20Configuration%20Manager.md)  
+-   [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
 
 The following sections describe the  configurations you can select when installing a new distribution point  or editing the properties of an existing distribution point:  
 
@@ -166,7 +167,7 @@ The following sections describe the  configurations you can select when installi
     > [!NOTE]  
     >  This option is only available when installing a new distribution point  
 
--   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see [Security best practices for content management](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#BKMK_Security_ContentManagement) in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
+-   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see *Security best practices for content management* in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 -   **Allow clients to connect anonymously:** This setting specifies whether the distribution point will allow anonymous connections from Configuration Manager clients to the content library.  
 
@@ -200,7 +201,7 @@ The following sections describe the  configurations you can select when installi
 
      For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-     For an example deployment of this certificate, see the [Deploying the Client Certificate for Distribution Points](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_clientdistributionpoint2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+     For an example deployment of this certificate, see the *Deploying the Client Certificate for Distribution Points* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 -   **Enable this distribution point for prestaged content:** Select this setting to enable the distribution point for prestaged content. When this setting is selected, you can configure distribution behavior when you distribute content. You can choose whether you always want to prestage the content on the distribution point, prestage the initial content for the package, but use the normal content distribution process when there are updates to the content, or always use the normal content distribution process for the content in the package.  
 

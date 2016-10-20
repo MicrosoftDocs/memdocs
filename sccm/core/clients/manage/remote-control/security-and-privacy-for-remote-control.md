@@ -1,7 +1,8 @@
 ---
-title: "Security and privacy for remote control in System Center Configuration Manager"
+title: "Remote control security privacy | System Center Configuration Manager"
+description: "Get security and privacy information for remote control in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Security and privacy for remote control in System Center Configuration Manager
+# Security and privacy for remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for remote control in System Center 2012 Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for remote control  

@@ -5,7 +5,7 @@
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
 # [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
-## [Prerequisites for certificate profiles](plan-design/prerequisites-for-certificate-profiles.md)
+## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for SCEP](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure for .PFX](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate template permissions for certificate profiles](plan-design/planning-for-certificate-template-permissions.md)
@@ -13,31 +13,28 @@
 
 ## [Plan for Endpoint Protection](plan-design/planning-for-endpoint-protection.md)
 
-## [Plan for email, Wi-Fi, and VPN profiles](plan-design/plan-email-wi-fi-vpn.md)
+## [Plan for email, Wi-Fi, and VPN profiles](plan-design/prerequisites-for-email-profiles.md)
+### [Email profile prerequisites](plan-design/prerequisites-for-email-profiles.md)
+### [Wi-Fi and VPN profile prerequisites](plan-design/prerequisites-for-wifi-vpn-profiles.md)
 
-### [Prerequisites for email profiles](plan-design/prerequisites-for-email-profiles.md)
-### [Prerequisites for Wi-Fi profiles](plan-design/prerequisites-for-wifi-profiles.md)
-### [Prerequisites for VPN profiles](plan-design/prerequisites-for-vpn-profiles.md)
+## [Security and privacy for Wi-Fi and VPN profiles](plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
 
-## [Security and privacy for Wi-Fi profiles](plan-design/security-and-privacy-for-wifi-profiles.md)
-## [Security and privacy for VPN profiles](plan-design/security-and-privacy-for-vpn-profiles.md)
 ## [Security and privacy for email profiles](plan-design/security-and-privacy-for-email-profiles.md)
+
+## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
 # [Deploy and use](deploy-use/vpn-profiles.md)
 ## [VPN profiles](deploy-use/vpn-profiles.md)
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
-### [Deploy VPN profiles](deploy-use/deploy-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
 
 ## [Wi-Fi Profiles](deploy-use/introduction-to-wifi-profiles.md)
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
-### [Deploy Wi-Fi profiles](deploy-use/deploy-wifii-profiles.md)
 
 ## [Certificate profiles](deploy-use/introduction-to-certificate-profiles.md)
 ### [Create certificate profiles](deploy-use/create-certificate-profiles.md)
 ### [Create PFX certificate profiles](deploy-use/create-pfx-certificate-profiles.md)
-### [Configuring certificate profiles](deploy-use/configuring-certificate-profiles.md)
-### [Deploy certificate profiles](deploy-use/deploy-certificate-profiles.md)
+### [Configuring certificate infrastructure](deploy-use/certificate-infrastructure.md)
 ### [Cryptographic controls technical reference](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
@@ -48,23 +45,26 @@
 ##### [ConfigMgr updates](deploy-use/endpoint-definitions-configmgr.md)
 ##### [WSUS updates](deploy-use/endpoint-definitions-wsus.md)
 ##### [Microsoft updates](deploy-use/endpoint-definitions-microsoft-updates.md)
+##### [Malware Protection Center](deploy-use/endpoint-definitions-protection-center.md)
 ##### [Network share updates](deploy-use/endpoint-definitions-network.md)
+
 #### [Deploy policy](deploy-use/endpoint-antimalware-policies.md)
 #### [Configure client](deploy-use/endpoint-protection-configure-client.md)
-### [Windows Firewall policies for Endpoint Protection](deploy-use/create-deploy-windows-firewall-policies-for-endpoint-protection.md)
+
+### [Windows Firewall policies](deploy-use/create-windows-firewall-policies.md)
 ### [Windows Defender Advanced Threat Protection](deploy-use/windows-defender-advanced-threat-protection.md)
-### [Antimalware policies and firewall settings](deploy-use/endpoint-antimalware-firewall.md)
-### [Using Endpoint Protection to protect computers from malware](deploy-use/scenarios-endpoint-protection.md)
+### [Antimalware and firewall tasks](deploy-use/endpoint-antimalware-firewall.md)
+### [Endpoint Protection scenario](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection client help](deploy-use/endpoint-protection-client-help.md)
-### [Troubleshooting Windows Defender or Endpoint Protection client](deploy-use/troubleshoot-windows-defender-endpoint-protection-client.md)
+### [Troubleshooting client](deploy-use/troubleshoot-endpoint-client.md)
 
 ## [Email profiles](deploy-use/introduction-to-email-profiles.md)
-### [Manage email access](deploy-use/manage-email-access.md)
 ### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
-### [Deploy email profiles](deploy-use/deploy-email-profiles.md)
+### [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Manage access to services](deploy-use/manage-access-to-services.md)
-### [Manage device compliance policies](deploy-use/manage-device-compliance-policies.md)
+### [Device compliance policies](deploy-use/device-compliance-policies.md)
+### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
 ### [Manage email access](deploy-use/manage-email-access.md)
 ### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)
 ### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
@@ -72,13 +72,10 @@
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
+
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
-
-
-## [Monitor protection](deploy-use/monitor-vpn-profiles.md)
-### [Monitor VPN profiles](deploy-use/monitor-vpn-profiles.md)
-### [Monitor Wi-Fi profiles](deploy-use/monitor-wifi-profiles.md)
+## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)
+### [Monitor Wi-Fi, email and VPN profiles](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [Monitor certificate profiles](deploy-use/monitor-certificate-profiles.md)
-### [Monitor email profiles](deploy-use/monitor-email-profiles.md)
 ### [Monitor Endpoint Protection](deploy-use/monitor-endpoint-protection.md)

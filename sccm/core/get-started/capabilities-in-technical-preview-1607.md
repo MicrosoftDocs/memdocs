@@ -1,17 +1,20 @@
 ---
 title: "Capabilities in Technical Preview 1607 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1607."
 ms.custom: na
-ms.date: 2016-08-01
+ms.date: 08/01/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 caps.latest.revision: 11
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1607 for System Center Configuration Manager
+# Capabilities in Technical Preview 1607 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1607. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
@@ -24,11 +27,11 @@ In this release, the following improvements have been made to this policy:
 * You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 * You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
-[Read more about the Windows 10 Edition Upgrade Policy](Upgrade%20Windows%20devices%20to%20the%20latest%20version%20with%20the%20edition%20upgrade%20policy%20in%20Configuration%20Manager_deleted.md)
+[Read more about the Windows 10 Edition Upgrade Policy](/sccm/compliance/deploy-use/upgrade-windows-version)
 
 ### Try it out!
 
-1. Use the information in the [existing edition upgrade policy topic](Upgrade%20Windows%20devices%20to%20the%20latest%20version%20with%20the%20edition%20upgrade%20policy%20in%20Configuration%20Manager_deleted.md) to create an edition upgrade policy.
+1. Use the information in the [existing edition upgrade policy topic](/sccm/compliance/deploy-use/upgrade-windows-version) to create an edition upgrade policy.
 2. Deploy this policy to a Windows 10 PC running the Configuration Manager client.
 Once the policy reaches a targeted Windows PC, the PC will be restarted within two hours to apply the upgrade. You cannot currently suppress this restart. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
 

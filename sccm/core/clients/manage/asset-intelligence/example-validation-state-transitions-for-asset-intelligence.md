@@ -1,7 +1,8 @@
 ---
 title: "Example validation state transitions for Asset Intelligence | System Center Configuration Manager"
+description: "See examples of validation state transitions for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 6230a6e5-a1f6-459b-84f1-07fbde0e70f0
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Example validation state transitions for Asset Intelligence in System Center Configuration Manager
+# Example validation state transitions for Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Asset Intelligence validation states in System Center Configuration Manager are not static and can change from administrative actions that you take to affect the data that are stored in the Asset Intelligence catalog. This topic provides examples for possible validation state transitions.
 
 ##  <a name="BKMK_UncategorizedIsCategorized"></a> Uncategorized catalog item is categorized by the administrative user  

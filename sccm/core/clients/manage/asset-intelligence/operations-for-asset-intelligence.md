@@ -1,7 +1,8 @@
 ---
 title: "Use Asset Intelligence | System Center Configuration Manager"
+description: "Do common Asset Intelligence tasks in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to use Asset Intelligence in System Center Configuration Manager
+# How to use Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains information to help you manage typical Asset Intelligence tasks in your System Center Configuration Manager hierarchy:  
 
 ##  <a name="BKMK_ViewInformation"></a> View Asset Intelligence information  

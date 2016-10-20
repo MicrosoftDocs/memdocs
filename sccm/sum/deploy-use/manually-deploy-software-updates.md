@@ -1,33 +1,23 @@
 ---
-# required metadata
 
 title: Manually deploy software updates | Configuration Manager
-description:
+description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
+ - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
+#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  *Applies to: System Center Configuration Manager (Current Branch)*
+ A manual software update deployment is the process of selecting software updates from the Configuration Manager console and manually initiating the deployment process. Or, you can add selected software updates to an update group, and then manually deploy the update group. You will typically use manual deployment to get your client devices up-to-date with required software updates before you create ADRs that will manage ongoing monthly software update deployments. You will also use a manual method to deploy out-of-band software updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
-#  <a name="BKMK_ManualDeploy"></a> Manually deploy software updates  
- A manual software update deployment is the process of selecting software updates from the Configuration Manager console and manually initiating the deployment process. Or, you can add selected software updates to an update group, and then manually deploy the update group. You will typically use manual deployment to get your client devices up-to-date with required software updates before you create ADRs that will manage ongoing monthly software update deployments. You will also use a manual method to deploy out-of-band software updates. The following sections provide the general workflow for manual deployment of software updates.  
+ The following sections provide the steps to manually deploy software updates.  
 
 ##  <a name="BKMK_1SearchCriteria"></a> Step 1: Specify search criteria for software updates  
  There are potentially thousands of software updates displayed in the Configuration Manager console. The first step in the workflow for manually deploying software updates is to identify the software updates that you want to deploy. For example, you could provide criteria that retrieves all software updates that are required on more than 50 client devices and that have a **Security** or **Critical** software update classification.  
@@ -35,7 +25,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 > [!IMPORTANT]  
 >  The maximum number of software updates that can be included in a single software update deployment is 1000.  
 
-### To specify search criteria for software updates  
+#### To specify search criteria for software updates  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -58,7 +48,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 ##  <a name="BKMK_2UpdateGroup"></a> Step 2: Create a software update group that contains the software updates  
  Software update groups provide an effective method for you to organize software updates in preparation for deployment. You can manually add software updates to a software update group or Configuration Manager can automatically add software updates to a new or existing software update group by using an ADR. Use the following procedures to manually add software updates to a new software update group.  
 
-### To manually add software updates to a new software update group  
+#### To manually add software updates to a new software update group  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -77,9 +67,11 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 ##  <a name="BKMK_3DownloadContent"></a> Step 3: Download the content for the software update group  
  Optionally, before you deploy the software updates, you can download the content for the software updates that are included in the software update group. You might choose to do this so you can verify that the content is available on the distribution points before you deploy the software updates. This will help you to avoid any unexpected issues with the content delivery. You can skip this step and the content will be downloaded and copied to the distribution points as part of the deployment process. Use the following procedure to download the content for software updates in the software update group.  
 
-### To download content for the software update group  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+
+#### To download content for the software update group
+[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+<!--- 1.  In the Configuration Manager console, click **Software Library**.  
 
 2.  In the Software Library workspace, expand **Software Updates**, and click **Software Update Groups**.  
 
@@ -148,20 +140,21 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 10. On the Summary page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
 
-11. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**.  
+11. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**. --->
 
-12. To monitor the content status for the software updates, click **Monitoring** in the Configuration Manager console.  
+#### To monitor content status
+1. To monitor the content status for the software updates, click **Monitoring** in the Configuration Manager console.  
 
-13. In the Monitoring workspace, expand **Distribution Status**, and then click **Content Status**.  
+2. In the Monitoring workspace, expand **Distribution Status**, and then click **Content Status**.  
 
-14. Select the software update package that you previously identified to download the software updates in the software update group.  
+3. Select the software update package that you previously identified to download the software updates in the software update group.  
 
-15. On the **Home** tab, in the **Content** group, click **View Status**.  
+4. On the **Home** tab, in the **Content** group, click **View Status**.  
 
 ##  <a name="BKMK_4DeployUpdateGroup"></a> Step 4: Deploy the software update group  
  After you determine which software updates you intend to deploy and add these software updates to a software update group, you can manually deploy the software updates in the software update group. Use the following procedure to manually deploy the software updates in a software update group.  
 
-### To manually deploy the software updates in a software update group  
+#### To manually deploy the software updates in a software update group  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -226,13 +219,13 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
         > [!NOTE]  
         >  The actual installation deadline time is the specific time that you configure plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
 
 8.  On the User Experience page, configure the following settings:  
 
     -   **User notifications**: Specify whether to display notification of the software updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers. When **Type of deployment** is set to **Available** on the Deployment Settings page, you cannot select **Hide in Software Center and all notifications**.  
 
-    -   **Deadline behavior**: Specify the behavior that is to occur when the deadline is reached for the software update deployment. Specify whether to install the software updates in the deployment. Also specify whether to perform a system restart after software update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Deadline behavior**: Specify the behavior that is to occur when the deadline is reached for the software update deployment. Specify whether to install the software updates in the deployment. Also specify whether to perform a system restart after software update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
     -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations after software updates are installed and a system restart is required to complete the installation.  
 
@@ -257,14 +250,14 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
     -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
 
-    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts).  
+    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
 
     -   Specify whether to have clients that are connected to the intranet download software updates from Microsoft Update if software updates are not available on distribution points.  
 
     -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
     > [!NOTE]  
-    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, the deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
+    >  Clients request the content location from a management point for the software updates in a deployment. The download behavior depends upon how you have configured the distribution point, the deployment package, and the settings on this page. For more information, see [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
 
 11. If you have performed [Step 3: Download the content for the software update group](#BKMK_3DownloadContent), then the Deployment Package, Distribution Points, and Language Selection pages are not displayed, and you can skip to step 15 of the wizard.  
 
@@ -307,6 +300,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 17. Click **Next** to deploy the software update.  
 
- After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+ After you have completed the wizard, Configuration Manager downloads the software updates to the content library on the site server, distributes the software updates to the configured distribution points, and then deploys the software update group to clients in the target collection. For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
-For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+## Next steps
+[Monitor software updates](monitor-software-updates.md)

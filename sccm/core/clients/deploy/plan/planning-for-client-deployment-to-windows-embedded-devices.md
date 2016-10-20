@@ -1,7 +1,8 @@
 ---
 title: "Planning client deployment to Windows Embedded devices | System Center Configuration Manager"
+description: "Plan for client deployment to Windows Embedded devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Planning for client deployment to Windows Embedded devices in System Center Configuration Manager
+# Planning for client deployment to Windows Embedded devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 <a name="BKMK_DeployClientEmbedded"></a> If your Windows Embedded device does not include the System Center Configuration Manager client, you can use any of the client installation methods if the device meets the required dependencies. If the embedded device supports write filters, you must disable these filters before you install the client, and then re-enable the filters again after the client is installed and assigned to a site.  
 
  Note that when you disable the filters, you should not disable the filter drivers. Typically these drivers are started automatically when the computer is started. Disabling the drivers will either prevent installation of the client, or interfere with write filter orchestration which will cause client operations to fail. These are the services associated with each write filter type that must remain running:  
@@ -41,11 +42,11 @@ author: Mtillman
 
  Configuration Manager supports managing the following types of write filters:  
 
--   File-Based Write Filter (FBWF) –  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
+-   File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717).  
 
--   Enhanced Write Filter (EWF) RAM – For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
+-   Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718).  
 
--   Unified Write Filter (UWF) – For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
+-   Unified Write Filter (UWF) - For more information, see [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236).  
 
  Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
 

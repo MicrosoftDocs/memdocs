@@ -1,7 +1,8 @@
 ---
 title: "Planning client deployment to Linux and UNIX computers | System Center Configuration Manager"
+description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager
+# Planning for client deployment to Linux and UNIX computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can install the System Center Configuration Manager client on computers that run Linux or UNIX. This client is designed for servers that operate as a workgroup computer, and the client does not support interaction with logged-on users. After you install the client software and the client establishes communication with the Configuration Manager site, you manage the client by using the Configuration Manager console and reports.  
 
 > [!NOTE]  
@@ -114,9 +115,8 @@ You can install the System Center Configuration Manager client on computers that
 
  **Solaris 11 x86**  
 
-||||  
-|-|-|-|  
 |Required package|Description|Minimum version|  
+|----------------|-----------|---------------|  
 |SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
 |SUNWlibmsr|Math & Microtasking Libraries (Root)|5.11, REV=2011.04.11|  
 |SUNWcslr|Core Solaris Libraries (Root)|11.11, REV=2009.11.11|  

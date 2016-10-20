@@ -1,7 +1,8 @@
 ---
 title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
+description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-08-12
+ms.date: 08/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,28 +13,10 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
-translation.priority.ht:
-  - cs-cz
-  - de-de
-  - en-gb
-  - es-es
-  - fr-fr
-  - hu-hu
-  - it-it
-  - ja-jp
-  - ko-kr
-  - nl-nl
-  - pl-pl
-  - pt-br
-  - pt-pt
-  - ru-ru
-  - sv-se
-  - tr-tr
-  - zh-cn
-  - zh-tw
+author: NathBarnms.author: nathbarn
+manager: angrobe
 ---
-# Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager
+# Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Configuration Manager provides selective wipe, full wipe, remote lock, and passcode reset capabilities. Mobile devices can store sensitive corporate data and provide access to many corporate resources. To protect devices you can issue:  
 
 -   A full wipe to restore the device to its factory settings.  
@@ -87,9 +70,8 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
  **Windows 10, Windows 8.1,  Windows RT 8.1, and Windows RT**  
 
-||||  
-|-|-|-|  
 |Content removed when retiring a device|Windows 10, Windows 8.1 and Windows RT 8.1|Windows RT|  
+|---------------------------------|-------------|-----------|
 |Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled and sideloading keys are removed. Apps using Windows Selective Wipe will have the encryption key revoked and data will no longer be accessible.|Sideloading keys are removed but apps remain installed.|  
 |VPN and Wi-Fi profiles|Removed.|Not applicable.|  
 |Certificates|Removed and revoked.|Not applicable.|  
@@ -99,9 +81,9 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
  **Windows 10 Mobile, Windows Phone 8.0 and Windows Phone 8.1**  
 
-|||  
-|-|-|  
-|Content removed when retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
+
+ |Content removed when retiring a device|Windows 10 Mobile, Windows Phone 8 and Windows Phone 8.1|  
+|-|-|
 |Company apps and associated data installed by using Configuration Manager and Intune.|Apps are uninstalled. Company app data is removed.|  
 |VPN and Wi-Fi profiles|Removed for Windows 10 Mobile and Windows Phone 8.1|  
 |Certificates|Removed for Windows Phone 8.1.|  

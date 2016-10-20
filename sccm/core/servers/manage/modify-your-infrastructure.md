@@ -1,7 +1,8 @@
 ---
-title: "Modify your System Center Configuration Manager infrastructure"
+title: "Modify infrastructure | System Center Configuration Manager"
+description: "Learn how to make changes or take actions that affect the Configuration Manager infrastructure you have deployed."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Modify your System Center Configuration Manager infrastructure
+# Modify your System Center Configuration Manager infrastructure*Applies to: System Center Configuration Manager (Current Branch)*
 After you install one or more sites, you might have need to modify configurations or take actions that affect the infrastructure you have deployed.  
 
 
@@ -60,11 +61,11 @@ After you install one or more sites, you might have need to modify configuration
 
 -   **Modify the language that displays in the Configuration Manager console** - To modify the installed languages   see [Manage Configuration Manager console language](#BKMK_ManageConsoleLanguages) in this topic.  
 
--   **Install additional consoles** - To install additional consoles, see  [Install System Center Configuration Manager consoles](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md#bkmk_InstallConsole).  
+-   **Install additional consoles** - To install additional consoles, see  [Install System Center Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).  
 
 -   **Configure DCOM** - To configure DCOM permission to enable consoles that are remote from the site server to connect, see  [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) in this topic.  
 
--   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](servers\deploy\configure\configure-role-based-administration.md#BKMK_ModAdminUser).     
+-   **Modify permissions to limit what administrative users can see in the console** - To modify administrative permission, which limit what users can see and do in the console,  see [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser).     
 
 ###  <a name="BKMK_ManageConsoleLanguages"></a> Manage Configuration Manager console language  
  During site server installation, the Configuration Manager console installation files and supported language packs for the site are copied to the **&lt;ConfigMgrInstallationPath\>\Tools\ConsoleSetup** subfolder on the site server.  
@@ -161,7 +162,7 @@ For example, consider a scenario where you install the Configuration Manager con
 
 -   **Configure access:** When you move the site database to a new computer, add the computer account of the site server to the **Local Administrators** group on the computer that runs SQL Server. If you use a SQL Server cluster for the site database, you must add the computer account to the **Local Administrators** group of each Windows Server cluster node computer.  
 
--   **Enable common language runtime (CLR) integration:**  When you move the database to a new instance on SQL Server, or to a new SQL Server computer, you must enable common language runtime (CLR) integration. To enable CLR, use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database and run the following stored procedure as a query: **sp_configure ‘clr enabled’,1; reconfigure**.  
+-   **Enable common language runtime (CLR) integration:**  When you move the database to a new instance on SQL Server, or to a new SQL Server computer, you must enable common language runtime (CLR) integration. To enable CLR, use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database and run the following stored procedure as a query: **sp_configure 'clr enabled',1; reconfigure**.  
 
 > [!IMPORTANT]  
 >  Before you move a database that has one or more database replicas for management points, you must first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information see [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
@@ -197,7 +198,7 @@ You can register an SPN for the SQL Server service account of the site database 
     > [!IMPORTANT]  
     >  When you create an SPN for a clustered SQL Server, you must specify the virtual name of the SQL Server Cluster as the SQL Server computer name.  
 
-    -   To create an SPN for the NetBIOS name of the SQL Server computer, type the following command: **setspn –A MSSQLSvc/&lt;SQL Server computer name\>:1433 &lt;Domain\Account>**  
+    -   To create an SPN for the NetBIOS name of the SQL Server computer, type the following command: **setspn -A MSSQLSvc/&lt;SQL Server computer name\>:1433 &lt;Domain\Account>**  
 
     -   To create an SPN for the FQDN of the SQL Server computer, type the following command: **setspn -A MSSQLSvc/&lt;SQL Server FQDN\>:1433 &lt;Domain\Account>**  
 
@@ -208,7 +209,7 @@ You can register an SPN for the SQL Server service account of the site database 
 
 1.  On the **Start** menu, click **Run**, and then enter **cmd** in the **Run** dialog box.  
 
-2.  At the command prompt, enter the following command: **setspn –L &lt;domain\SQL Service Account>**.  
+2.  At the command prompt, enter the following command: **setspn -L &lt;domain\SQL Service Account>**.  
 
 3.  Review the registered **ServicePrincipalName** to ensure that a valid SPN has been created for the SQL Server.  
 
@@ -277,7 +278,7 @@ The account that you use to perform a site reset must have the following permiss
     -   **Primary site**: The account that you use to run a site reset at this site must be a local administrator on the primary site server and must have privileges that are equivalent to the **Full Administrator** role-based administration security role. If the primary site is in a hierarchy with a central administration site, this account must also be a local administrator on the central administration site server.  
 
 **Limitations for a site reset**
-  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a preproduction collection](clients\manage\upgrade\test-client-upgrades.md).
+  -	Beginning with version 1602, you cannot use a site reset to change the Server or Client language packs that installed at sties so long as the hierarchy is configured to support [testing client upgrades in a preproduction collection](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 #### To perform a site reset  
 
@@ -351,8 +352,8 @@ For information about the client and server languages that are supported by Conf
 
 1.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
 
-2.  Select the site that you want to configure and open that site’s **Properties**.  
+2.  Select the site that you want to configure and open that site's **Properties**.  
 
-3.  In the site’s **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
+3.  In the site's **Properties** dialog box, select the **Alert** tab, and then edit the settings.  
 
 4.  Click **OK** to close the site properties dialog box.  

@@ -1,7 +1,8 @@
 ---
-title: "Upgrade to System Center Configuration Manager"
+title: "Upgrade to System Center Configuration Manager | System Center Configuration Manager"
+description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,29 +12,31 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: 21
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager
+# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
 
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
- **You can upgrade the following to a fully licensed  version of System Center Configuration Manager:**  
+ **You can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:**  
 
--   An evaluation install of System Center Configuration Manager  
-
+-   An evaluation install of System Center Configuration Manager version 1511
 -   A release candidate install of System Center Configuration Manager  
-
 -   System Center 2012 Configuration Manager with Service Pack 1  
-
 -   System Center 2012 Configuration Manager with Service Pack 2  
-
 -   System Center 2012 R2 Configuration Manager  
-
 -   System Center 2012 R2 Configuration Manager with Service Pack 1  
+
+**You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1606:**
+
+-   An evaluation install of System Center Configuration Manager version 1606
+-   System Center 2012 Configuration Manager with Service Pack 2
+-   System Center 2012 R2 Configuration Manager with Service Pack 1
+
 
 > [!TIP]  
 >  When you upgrade from a System Center 2012 Configuration Manager version might be able to streamline your upgrade process. For more information, see the following:  
@@ -105,7 +108,7 @@ Configuration Manager cannot upgrade a site that uses a Network Load Balancing (
 
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster. (Beginning with System Center 2012 Configuration Manager SP1, there was no option in the Configuration Manager console to configure an NLB cluster)  
 
-**Disable all site maintenance tasks** at each site for the duration of that site’s upgrade:  
+**Disable all site maintenance tasks** at each site for the duration of that site's upgrade:  
 
 Before you upgrade to System Center Configuration Manager, disable any site maintenance task that might run during the time the upgrade process is active. This includes but is not limited to the following:  
 
@@ -129,13 +132,13 @@ For more information about site maintenance tasks, see:
 
 Before you upgrade a site, you can run the **Prerequisite Checker** independently from Setup to validate that your site meets the prerequisites. When you upgrade the site, Prerequisite Checker runs again.  
 
-For more information, see the [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) and [List of Prerequisite Checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md)  
+For more information, see the [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) and [List of Prerequisite Checks for System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)  
 
 **Download prerequisite files and redistributable files** for System Center Configuration Manager:  
 
 Use **Setup Downloader** to download prerequisite redistributable files, language packs, and the latest product updates for System Center Configuration Manager.  
 
-For information, see [Setup Downloader](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SetupDownloader)  
+For information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader)  
 
 **Plan to manage server and client languages**:  
 
@@ -268,7 +271,7 @@ For information about how to upgrade existing clients and how to install new cli
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
-Before you upgrade a site, test a copy of that site’s database for the upgrade.  
+Before you upgrade a site, test a copy of that site's database for the upgrade.  
 
 To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that does not host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that the version of Configuration Manager supports that is the source of the database copy.  
 
@@ -316,7 +319,7 @@ After you successfully upgrade a copy of the site database, proceed with the upg
 ##  <a name="bkmk_upgrade"></a> Upgrade sites  
 After you complete pre-upgrade configurations for your site, test the upgrade of the site database on a database copy, and download prerequisite files and language packs for the service pack version that you plan to install, you are ready to upgrade your Configuration Manager site.  
 
-When you upgrade a site in a hierarchy, you upgrade the top-level site of the hierarchy first. This top-level site is either a central administration site or a stand-alone primary site. After the upgrade of a central administration site is completed, you can upgrade child primary sites in any order that you want. After you upgrade a primary site, you can upgrade that site’s child secondary sites, or upgrade additional primary sites before you upgrade any secondary sites.  
+When you upgrade a site in a hierarchy, you upgrade the top-level site of the hierarchy first. This top-level site is either a central administration site or a stand-alone primary site. After the upgrade of a central administration site is completed, you can upgrade child primary sites in any order that you want. After you upgrade a primary site, you can upgrade that site's child secondary sites, or upgrade additional primary sites before you upgrade any secondary sites.  
 
 To upgrade a central administration site or primary site, you run Setup from the System Center Configuration Manager source media. However, you do not run Setup to upgrade secondary sites. Instead, you use the Configuration Manager console to upgrade a secondary site after you complete the upgrade of its primary parent site.  
 
@@ -348,7 +351,7 @@ Use the following procedures to upgrade Configuration Manager sites:
 
 8.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then click **Next**. Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
 
-9. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest prerequisite redistributable files, language packs, and the latest product updates from the Internet or use previously downloaded files, and then click **Next**. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For information about Setup Downloader, see the [Setup Downloader](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SetupDownloader) section in the [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md) topic.  
+9. On the **Prerequisite Downloads** page, specify whether Setup downloads the latest prerequisite redistributable files, language packs, and the latest product updates from the Internet or use previously downloaded files, and then click **Next**. If you previously downloaded the files by using Setup Downloader, select **Use previously downloaded files** and specify the download folder. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).
 
     > [!NOTE]  
     >  When you use previously downloaded files, verify that the path to the download folder contains the most recent version of the files.  
@@ -365,7 +368,7 @@ Use the following procedures to upgrade Configuration Manager sites:
 
 12. On the **Settings Summary** page, click **Next** to start Prerequisite Checker to verify server readiness for the upgrade of the site.  
 
-13. On the **Prerequisite Installation Check** page, if there are no problems listed, click **Next** to upgrade the site and site system roles. When Prerequisite Checker finds a problem, click an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that is not displayed in the user interface. For a complete list of installation prerequisite rules and descriptions, see  [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) in [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md).  
+13. On the **Prerequisite Installation Check** page, if there are no problems listed, click **Next** to upgrade the site and site system roles. When Prerequisite Checker finds a problem, click an item on the list for details about how to resolve the problem. Resolve all items in the list that have an **Error** status before you continue Setup. After you resolve the issue, click **Run Check** to restart prerequisite checking. You can also open the ConfigMgrPrereq.log file in the root of the system drive to review the Prerequisite Checker results. The log file can contain additional information that is not displayed in the user interface. For a list of installation prerequisite rules and descriptions, see [Prerequisite Checker](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
 
 On the **Upgrade** page, Setup displays the overall progress status. When Setup completes the core site server and site system installation, you can close the wizard. Site configuration continues in the background.  
 
@@ -391,3 +394,11 @@ The secondary site upgrade progresses in the background. After the upgrade is co
 
 ##  <a name="BKMK_PostUpgrade"></a> Perform post-upgrade tasks  
 After you upgrade a site to a new service pack, you might have to complete additional tasks to finish the upgrade or reconfigure the site. These tasks can include the upgrade of Configuration Manager clients or Configuration Manager consoles, re-enabling database replicas for management points, or restoring settings for Configuration Manager functionality that you use and that does not persist after the service pack upgrade.  
+
+**Known issues:**  
+Secondary sites:
+- When you upgrade to version 1511:  
+To ensure clients at secondary sites can find the management point from the secondary site (proxy management point), manually add the management point to boundary groups that also include the distribution points at the secondary site.
+
+- When you upgrade to version 1606 or later:  
+  Proxy management points are automatically added to boundary groups that include distribution points at the secondary site.

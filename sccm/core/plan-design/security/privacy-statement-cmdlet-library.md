@@ -1,7 +1,8 @@
 ---
 title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library"
+description: "Learn about how Microsoft collects and uses data related to the System Center Configuration Manager Cmdlet Library."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +13,11 @@ ms.topic: article
 ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library
-This privacy statement should be read in conjunction with the [Microsoft System Center 2012 R2 Configuration Manager Privacy Statement](hhttp://www.microsoft.com/privacystatement/en-us/SystemCenter2012R2/Default.aspx). Provisions in that document are applicable. This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
+# System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library*Applies to: System Center Configuration Manager (Current Branch)*
+This privacy statement covers the features for the System Center Configuration Manager Cmdlet Library.  
 
 ## Usage Data  
  **What This Feature Does:**   

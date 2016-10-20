@@ -1,7 +1,8 @@
 ---
 title: "Collections technical reference for System Center Configuration Manager"
+description: "A technical reference for using collections in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4074d4fd-7a9b-4b80-9a0d-f4bfc63914fa
 caps.latest.revision: 5
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Collections technical reference for System Center Configuration Manager
+# Collections technical reference for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Collections in System Center Configuration Manager provide a method of managing groups of computers, mobile devices, users, and other resources in your organization.  
 
 ## Collection topics  

@@ -1,7 +1,8 @@
 ---
 title: "Set up your System Center Configuration Manager lab"
+description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: barlanmsft
+author: brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Set up your System Center Configuration Manager lab
+# Set up your System Center Configuration Manager lab*Applies to: System Center Configuration Manager (Current Branch)*
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 ##  <a name="BKMK_LabCore"></a> Core components  
@@ -23,7 +24,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install System Center Configuration Manager.  
 
-     You can download an evaluation version of Windows Server 2012 R2 from the [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2012).  
+     You can download an evaluation version of Windows Server 2012 R2 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
      Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. Please review [Internet Explorer: Enhanced Security Configuration](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) for additional information.  
 
@@ -95,7 +96,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 1.  Run **ADSI Edit**, and connect to the domain in which the site server resides.  
 
-2.  Expand **Domain<computer fully qualified domain name\>**, expand **<distinguished name\>**, right-click **CN=System**, click **New**, and then click **Object**.  
+2.  Expand **Domain&lt;computer fully qualified domain name\>**, expand **<distinguished name\>**, right-click **CN=System**, click **New**, and then click **Object**.  
 
 3.  In the **Create Object** dialog box, select **Container**, and then click **Next**.  
 
@@ -111,11 +112,11 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 ##### To set security permissions for the System Management container:  
 
-1.  In the console pane, expand the **site server's domain**, expand **DC=<server distinguished name\>**, and then expand **CN=System**. Right-click **CN=System Management**, and then click **Properties**.  
+1.  In the console pane, expand the **site server's domain**, expand **DC=&lt;server distinguished name\>**, and then expand **CN=System**. Right-click **CN=System Management**, and then click **Properties**.  
 
 2.  In the **CN=System Management Properties** dialog box, click the **Security** tab, and then click **Add** to add the site server computer account. Grant the account **Full Control** permissions.  
 
-3.  Click **Advanced**, select the site server’s computer account, and then click **Edit**.  
+3.  Click **Advanced**, select the site server's computer account, and then click **Edit**.  
 
 4.  In the **Apply onto** list, select **This object and all descendant objects**.  
 
@@ -131,7 +132,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 ##### To extend the Active Directory schema using extadsch.exe:  
 
-1.  Create a backup of the schema master domain controller’s system state. For more information about backing up master domain controller, please review [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
+1.  Create a backup of the schema master domain controller's system state. For more information about backing up master domain controller, please review [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
 
 2.  Navigate to **\SMSSETUP\BIN\X64** in the installation media.  
 
@@ -200,7 +201,7 @@ For additional information, please review the following articles for why these .
 
 -   [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR Inside Out – In-Process Side-by-Side](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR Inside Out - In-Process Side-by-Side](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
 
 **Enable BITS, IIS, and RDC**  
 
@@ -335,18 +336,18 @@ By default, IIS blocks several types of file extensions and locations from acces
 4.  Type **.msi** into the dialog box and click **OK**.  
 
 ###  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
-You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SiteSystemScale) of potential devices.  
+You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](/sccm/core/plan-design/configs/size-and-scale-numbers) of potential devices.  
 During this process, you will also install the Configuration Manager console, which will be used to manage your evaluation devices going forward.  
 
-Before you begin the installation, launch the  [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
+Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
 
 ##### To download and install Configuration Manager:  
 
-1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
+1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of System Center Configuration Manager.  
 
 2.  Decompress the download media into your predefined location.  
 
-3.  Follow the installation procedure listed at [Install a site using the System Center Configuration Manager Setup Wizard](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md#bkmk_InstallWizard). Within that procedure, you will input the following:  
+3.  Follow the installation procedure listed at [Install a site using the System Center Configuration Manager Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites). Within that procedure, you will input the following:  
 
     |Step in site installation procedure|Selection|  
     |-----------------------------------------|---------------|  

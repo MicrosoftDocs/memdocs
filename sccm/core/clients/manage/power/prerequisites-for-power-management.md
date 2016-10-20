@@ -1,7 +1,8 @@
 ---
-title: "Prerequisites for power management in System Center Configuration Manager"
+title: "Prerequisites for power management | System Center Configuration Manager"
+description: "Get the prerequisites for power management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Prerequisites for power management in System Center Configuration Manager
+# Prerequisites for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Power management in System Center Configuration Manager has external dependencies and dependencies within the product.  
 
 ## Dependencies external to Configuration Manager  

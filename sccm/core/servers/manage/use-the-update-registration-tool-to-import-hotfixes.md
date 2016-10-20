@@ -1,7 +1,8 @@
 ---
-title: "Use the Update Registration Tool to import hotfixes to System Center Configuration Manager"
+title: "Update Registration Tool | System Center Configuration Manager"
+description: "Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Use the Update Registration Tool to import hotfixes to System Center Configuration Manager
+# Use the Update Registration Tool to import hotfixes to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Some updates for Configuration Manager are not available from the Microsoft cloud service and are only obtained out-of-band. An example is a limited release hotfix to address a specific issue.   
 When you must install an out-of-band release, and the update or hotfix file name ends with the extension **update.exe**, you use the **update registration tool** to manually import the update to the Configuration Manager console. The tool enables you to extract and transfer the update package to the site server, and register the update with the Configuration Manager console.  
 

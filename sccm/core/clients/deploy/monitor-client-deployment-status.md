@@ -1,7 +1,8 @@
 ---
 title: "Monitor client deployment status | System Center Configuration Manager"
+description: "Monitor client deployment status in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to monitor client deployment status in System Center Configuration Manager
+# How to monitor client deployment status in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Deploying clients across your site takes time and some installations are not successful the first time. The System Center Configuration Manager console provides a way to keep an eye on client deployments within a collection by reporting client deployment status in real time.  
 
 > [!NOTE]  
@@ -45,7 +46,7 @@ Deploying clients across your site takes time and some installations are not suc
 
 -   Review the charts of client deployment status and client deployment failure.  
 
--   If you want to change the scope of the report, click **Browse…** and choose a different collection.  
+-   If you want to change the scope of the report, click **Browse...** and choose a different collection.  
 
  To learn more about pre-production client deployments, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 

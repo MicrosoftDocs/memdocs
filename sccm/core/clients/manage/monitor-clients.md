@@ -1,7 +1,8 @@
 ---
 title: "Monitor clients | System Center Configuration Manager"
+description: "Get detailed guidance on how to monitor clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to monitor clients in System Center Configuration Manager
+# How to monitor clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Once the System Center Configuration Manager client application has been installed on the Windows computers and devices in your site, you can monitor their health and activity in the Configuration Manager console.  
 

@@ -1,7 +1,8 @@
 ---
 title: "Waking up clients | System Center Configuration Manager"
+description: "Plan how to wake up clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-06-10
+ms.date: 06/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# Plan how to wake up clients in System Center Configuration Manager
+# Plan how to wake up clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
  Configuration Manager supports two wake on local area network (LAN) technologies to wake up computers in sleep mode when you want to install required software, such as software updates and applications: traditional wake-up packets and AMT power-on commands.  
 
 You can supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary. When the site is configured for Wake On LAN and clients are configured for wake-up proxy, the process works as follows:  

@@ -1,7 +1,8 @@
 ---
-title: "Plan for site system servers and site system roles for System Center Configuration Manager"
+title: "Plan site system roles | System Center Configuration Manager"
+description: "Consider site system servers and site system roles as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 caps.latest.revision: 11
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Plan for site system servers and site system roles for System Center Configuration Manager
+# Plan for site system servers and site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager site you install includes a  a site server which is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server.   Site system servers (the site server or a remote site system server) support **site system roles**.
 
 
@@ -57,7 +58,7 @@ After a site installs, you can move the  location of some site system roles from
 
      When the Application Catalog supports client computers on the Internet, as a security best practice, install the Application Catalog website point in a perimeter network and the Application Catalog web service point on the intranet.  
 
--   **Asset Intelligence synchronization point** - A site system role that connects to Microsoft to download information for the Asset Intelligence catalog and to upload uncategorized titles so that they can be considered for future inclusion in the catalog.  A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.   For more information, see [Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/asset-intelligence.md).  
+-   **Asset Intelligence synchronization point** - A site system role that connects to Microsoft to download information for the Asset Intelligence catalog and to upload uncategorized titles so that they can be considered for future inclusion in the catalog.  A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.   For more information, see [Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 -   **Certificate registration point** - A site system role that communicates with a server that runs the Network Device Enrollment Service to manage device certificate requests that use the Simple Certificate Enrollment Protocol (SCEP).  This role is supported only at primary sites and the central administration site.   Although a single certificate registration point can provide functionality to an entire hierarchy, to help load balance certificate requests you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. When multiple instances exist in a hierarchy, clients are randomly assigned to one of the certificate registration points.  
 
@@ -68,11 +69,11 @@ After a site installs, you can move the  location of some site system roles from
 -   **Fallback status point** - A site system role that helps you monitor client installation and identify the clients that are unmanaged because they cannot communicate with their management point.  Althgouht this role is supported only at primary sites, you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy.  For more information, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 
--   **Endpoint Protection point** - A site system role that Configuration Manager uses to accept the Endpoint Protection license terms and to configure the default membership for Microsoft Active Protection Service. A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site. For more information, see  [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
+-   **Endpoint Protection point** - A site system role that Configuration Manager uses to accept the Endpoint Protection license terms and to configure the default membership for Cloud Protection Service (formerly known as MAPS). A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (A central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site. For more information, see  [Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
 -   **Enrollment point** - A site system role that uses PKI certificates for Configuration Manager to enroll mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
-     If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the user’s forest so that the user can be authenticated.  
+     If a user enrolls mobile devices by using Configuration Manager and their Active Directory account is in a forest that is untrusted by the site server's forest, you must install an enrollment point in the user's forest so that the user can be authenticated.  
 
 -   **Enrollment proxy point** - A site system role that manages Configuration Manager enrollment requests from mobile devices and Mac computers. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
@@ -97,9 +98,9 @@ After a site installs, you can move the  location of some site system roles from
 
     -   Consider installing a software update point in secondary sites when data transfer across the network is slow.  
 
-    For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md).  
+    For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
--   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/deploy-use/manage-user-state.md).  
+-   **State migration point** - A site system role that stores user state data when a computer is migrated to a new operating system. This role is supported  at primary sites and at secondary sites, and you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an operating system, see [Manage user state in System Center Configuration Manager](../../../osd/get-started/manage-user-state.md).  
 
 -   **System Health Validator point** - This site system role is no longer used with System Center Configuration Manager although it remains visible in the Configuration Manager console.  
 
@@ -134,7 +135,6 @@ The following are site system roles that can use a proxy server:
     > [!TIP]  
     >  A proxy server must be configured on the site system server that hosts the software update point before you can select either option. The proxy server is only used for the specific options you select.  
 
-
-     For more information about proxy servers for software update points, see the Proxy Server Settings section in the [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md) topic.  
+ For more information about proxy servers for software update points, see the Proxy Server Settings section in [Install a software update point](../../../sum/get-started/install-a-software-update-point.md) topic.  
 
 -   **Service connection point** - When configured to be online (not offline), this site system role connects to Microsoft Intune and the Microsoft cloud service.  

@@ -1,7 +1,8 @@
 ---
-title: "Security and privacy for hardware inventory in System Center Configuration Manager"
+title: "Hardware inventory security privacy | System Center Configuration Manager"
+description: "Get security and privacy information for hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 caps.latest.revision: 6
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Security and privacy for hardware inventory in System Center Configuration Manager
+# Security and privacy for hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security and privacy information for hardware inventory in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> Security best practices for hardware inventory  

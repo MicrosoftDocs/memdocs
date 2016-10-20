@@ -1,7 +1,8 @@
 ---
 title: "Deploy UNIX/Linux clients | System Center Configuration Manager"
+description: "Learn how to deploy a client to a UNIX or Linux server in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to deploy clients to UNIX and Linux servers in System Center Configuration Manager
+# How to deploy clients to UNIX and Linux servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can manage a Linux or UNIX server with System Center Configuration Manager, you must install the Configuration Manager client for Linux and UNIX on each Linux or UNIX server. You can accomplish the installation of the client manually on each computer, or use a shell script that installs the client remotely. Configuration Manager does not support the use of client push installation for Linux or UNIX servers. Optionally you can configure a Runbook for System Center Orchestrator to automate the install of the client on the Linux or UNIX server.  
 
  Regardless of the installation method you use, the install process requires the use of a script named **install** to manage the install process. This script is included when you download the Client for Linux and UNIX.  
@@ -28,11 +29,10 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  When you install a client, you can use the same process and command line properties regardless of the client installation package you use.  
 
- For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_LinuxOS) in [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+ For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
 
 ##  <a name="BKMK_InstallLnUClient"></a> Install the Client on Linux and UNIX Servers  
- To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.  
-
+ To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.
  Each client installation package contains all the necessary files to complete the client installation and unlike Windows-based computers, does not download additional files from a management point or other source location.  
 
  After you install the Configuration Manager client for Linux and UNIX, you do not need to reboot the computer. As soon as the software installation is complete, the client is operational. If you reboot the computer, the Configuration Manager client restarts automatically.  
@@ -75,7 +75,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
     > [!IMPORTANT]  
     >  You must use root credentials to install the client.  
 
-5.  Next, run the following command to install the Configuration Manager client: **./install –mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
+5.  Next, run the following command to install the Configuration Manager client: **./install -mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
 
      When you enter this command, use additional command-line properties you require.  For the list of command-line properties, see [Command Line Properties for Installing the Client on Linux and UNIX Servers](#BKMK_CmdLineInstallLnUClient)  
 
@@ -125,7 +125,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
 -   **-clean**  
 
-     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the client’s database and certificate store.  
+     Optional. Specifies the removal of all client files and data from a previously installed client for Linux and UNIX, before the new installation starts. This removes the client's database and certificate store.  
 
 -   **-keepdb**  
 
@@ -200,7 +200,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
      Optional. Specifies additional PKI certificates to import that are not part of a management points certification authority (CA) hierarchy. If you specify multiple certificates in the command line, they should be comma delimited.  
 
-     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the site’s certificate issuers list.  
+     Use this option if you use PKI client certificates that do not chain to a root CA certificate that is trusted by your sites management points. Management points will reject the client if the client certificate does not chain to a trusted root certificate in the site's certificate issuers list.  
 
      If you do not use this option, the Linux and UNIX client will verify the trust hierarchy using only the certificate in the **-UsePKICert** option.  
 

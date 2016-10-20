@@ -1,7 +1,8 @@
 ---
 title: "Endpoint Protection malware definitions from WSUS | System Center Configuration Manager"
+definition: "Learn how to configure Windows Server Updates Services to auto-approve definition updates."
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,17 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
 caps.latest.revision: 21
-author: NathBarn
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager
+# Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
  If you use WSUS to keep your antimalware definitions up to date, you can configure it to auto-approve definition updates. Although using Configuration Manager software updates is the recommended method to keep definitions up to date, you can also configure WSUS as a method to allow users to manually initiate definition updated. Use the following procedures to configure WSUS as a definition update source.
 
-## Configuring Update Synchronization
- To configure Configuration Manager software updates to synchronize Endpoint Protection definition updates, use the following procedure.
-
-## To synchronize Endpoint Protection definition updates in Configuration Manager
+## To synchronize Endpoint Protection definition updates in Configuration Manager software updates
 
 1.  In the Configuration Manager console, click **Administration**.
 

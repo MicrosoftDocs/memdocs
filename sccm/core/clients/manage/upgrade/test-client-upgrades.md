@@ -1,7 +1,8 @@
 ---
-title: "How to test client upgrades in a preproduction collection in System Center Configuration Manager"
+title: "Test client upgrades preproduction collection | System Center Configuration Manager"
+description: "Test client upgrades in a preproduction collection in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to test client upgrades in a preproduction collection in System Center Configuration Manager
+# How to test client upgrades in a preproduction collection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 For upgrading the Configuration Manager client on Windows PCs and devices, you can test a new client version in a preproduction collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the preproduction collection upgraded to the new client. Once you've had a chance to test the client in this preproduction collection, you can promote the client, which makes the new version of the client software available to the rest of the site.  
 
  There are 3 basic steps to testing clients in preproduction  
@@ -30,6 +31,11 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
 >  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.  
 
 ##  <a name="BKMK_config"></a> To configure automatic client upgrades to use a preproduction collection  
+
+1. Set up a collection that contains the computers you want to deploy the preproduction client to. For more information on how to do this step, see [How to create collections](..\collections\create-collections.md).
+
+> [!NOTE]
+> Do not include workgroup computers in preproduction collections. Workgroup computers cannot use the authentication required for the distribution point to access the preproduction client package.   
 
 1.  In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and click **Hierarchy Settings**.  
 

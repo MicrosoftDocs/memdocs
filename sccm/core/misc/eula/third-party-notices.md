@@ -8,10 +8,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 ---
-# Third Party Notices
+# Third Party Notices*Applies to: System Center Configuration Manager (Current Branch)*
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION  
 
 > [!NOTE]  
@@ -175,7 +175,7 @@ copied and put under another distribution licence
 This product includes material developed by Andy Polyakov for a Camellia assembler implementation.   
 (http://www.openssl.org/~appro/camellia/).  
 
- Copyright (c) 2008 Andy Polyakov <appro@openssl.org\>  
+ Copyright (c) 2008 Andy Polyakov &lt;appro@openssl.org\>  
 
  Redistribution and use in source and binary forms, with or without  
 modification, are permitted provided that the following conditions  
@@ -438,3 +438,4 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
  **END OF Active Directory Authentication Library (ADAL) for .NET NOTICES AND INFORMATION**
+

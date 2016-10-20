@@ -1,17 +1,20 @@
 ---
 title: "Capabilities in Technical Preview 1606 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1606."
 ms.custom: na
-ms.date: 2016-06-22
+ms.date: 06/22/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 caps.latest.revision: 31
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1606 for System Center Configuration Manager
+# Capabilities in Technical Preview 1606 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**  
@@ -138,7 +141,7 @@ The following sections provide more information for completing these steps.
 
 #### Create a custom SSL certificate
 
-You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the [instructions for cloud-based distribution points](Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.xml#BKMK_clouddp2008_cm2012) but do the following things differently:
+You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
 
 * When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 
@@ -147,7 +150,7 @@ You can create a custom SSL certificate for Cloud Proxy Service in the same way 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
 >[!NOTE]
->Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_client2008_cm2012).
+>Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012).
 
 1. In the Run window, type **mmc** and press Return.
 2. On the File menu in the management console, click **Add/Remove Snap-in...**.

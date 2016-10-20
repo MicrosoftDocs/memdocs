@@ -1,7 +1,8 @@
 ---
-title: "Use a command line to install System Center Configuration Manager sites"
+title: "Command line install | System Center Configuration Manager"
+description: "Learn how to run System Center Configuration Manager Setup from a command prompt for a variety of site installations."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Use a command line to install System Center Configuration Manager sites
+# Use a command line to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
  If you choose, you can run System Center Configuration Manager Setup from a command prompt for a variety of site installation.
 
  ## Supported tasks for command-line installs
@@ -105,7 +106,7 @@ When Setup starts the actual site installation, the automatically created script
 -   When you provide values for keys, the name of the key must be followed by an equals sign (=) and the value for the key  
 
 > [!TIP]  
->  To view the full set of options, see  [Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_cmdtop).  
+>  To view the full set of options, see  [Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md).  
 
 ## To use the /SCRIPT Setup command-line option:
 

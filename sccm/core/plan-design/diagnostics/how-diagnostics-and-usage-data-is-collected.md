@@ -1,7 +1,8 @@
 ---
-title: "How diagnostics and usage data is collected by System Center Configuration Manager"
+title: "Diagnostics data collection | System Center Configuration Manager"
+description: "Learn about how System Center Configuration Manager collects diagnostics and usage data about itself."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: becfa825-b19f-448c-ab82-bb929255e4ae
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# How diagnostics and usage data is collected by System Center Configuration Manager
+# How diagnostics and usage data is collected by System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To collect diagnostics and usage data for System Center Configuration Manager, each primary site runs SQL Server queries on a weekly basis. In a multi-site hierarchy, the data is replicated to the central administration site.  
 
 At the top-level site of a hierarchy, the service connection point site system role submits this information when it checks for updates. How the data transfers depends on the mode of the service connection point:  

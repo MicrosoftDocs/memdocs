@@ -1,7 +1,8 @@
 ---
-title: "Fundamentals of sites and hierarchies for System Center Configuration Manager"
+title: "Fundamentals of sites and hierarchies | System Center Configuration Manager"
+description: "Get basic information about System Center Configuration Manager sites and hierarchies."
 ms.custom: na
-ms.date: 2016-04-18
+ms.date: 04/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Fundamentals of sites and hierarchies for System Center Configuration Manager
+# Fundamentals of sites and hierarchies for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 A System Center Configuration Manager deployment must be installed in an Active Directory domain and has a foundation of one or more Configuration Manager sites that form a hierarchy of sites. From a single site to a multi-site hierarchy, the type and location of sites you install provide the ability to scale up (expand) your deployment when necessary, and deliver key services to managed users and devices.
 
 ## Hierarchies of sites
@@ -41,7 +42,7 @@ When you install System Center Configuration Manager for the first time, the fir
 
 -   [Design a hierarchy of sites for System Center Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
--   [Install System Center Configuration Manager sites](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md)  
+-   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
 ## Site system servers and site system roles  
  Each Configuration Manager site installs **site system roles** that support  management operations.  Some roles are installed by default when you install a site, like the **site  server** role (which is assigned to the computer where you install the site), and site database server role (which is assigned to the SQL Server that hosts the site database). Other site system roles are optional and only used when you want to use the functionality that a site system role enables.  Any computer that hosts a site system role is referred to as a site system server.  

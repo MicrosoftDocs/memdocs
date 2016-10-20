@@ -1,7 +1,8 @@
 ---
-title: "Configuring source hierarchies and source sites for migration to System Center Configuration Manager"
+title: "Migration Source hierarchies | System Center Configuration Manager"
+description: "Configure a source hierarchy and source sites so you can migrate data to your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Configuring source hierarchies and source sites for migration to System Center Configuration Manager
+# Configuring source hierarchies and source sites for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To enable migration of data to your System Center Configuration Manager environment, you must configure a supported Configuration Manager source hierarchy and one or more source sites in that hierarchy that contain data that you want to migrate.  
 
 > [!NOTE]  

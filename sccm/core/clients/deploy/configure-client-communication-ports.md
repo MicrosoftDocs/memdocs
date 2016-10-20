@@ -1,7 +1,8 @@
 ---
 title: "Configure client communication ports | System Center Configuration Manager"
+description: "Set client communication ports in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to configure client communication ports in System Center Configuration Manager
+# How to configure client communication ports in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can change the request port numbers that System Center Configuration Manager clients use to communicate with site systems that use HTTP and HTTPS for communication. Although HTTP or HTTPS is more likely to be already configured for firewalls, client notification that uses HTTP or HTTPS requires more CPU usage and memory on the management point computer than if you use a custom port number. You can also specify the site port number to use if you wake up clients by using traditional wake-up packets.  
 
  When you specify HTTP and HTTPS request ports, you can specify both a default port number and an alternative port number. Clients automatically try the alternative port after communication fails with the default port. You can specify settings for HTTP and HTTPS data communication.  

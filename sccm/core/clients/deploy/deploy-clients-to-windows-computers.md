@@ -1,7 +1,8 @@
 ---
 title: "Deploy Windows clients| System Center Configuration Manager"
+description: "Learn how to deploy clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to deploy clients to Windows computers in System Center Configuration Manager
+# How to deploy clients to Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use different client deployment methods to install the System Center Configuration Manager client software on computers. To help you decide which deployment method to use, see [Client installation methods in System Center Configuration Manager](../../../core/clients/deploy/plan/client-installation-methods.md).  
 
  Before you install Configuration Manager clients, ensure that all the prerequisites are in place and that you have completed all required deployment configurations. For more information, see [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
@@ -32,7 +33,7 @@ You can use different client deployment methods to install the System Center Con
  To help track the client installation process, install a fallback status point site system before you install the clients. When a fallback status point is installed, it is automatically assigned to clients when they are installed by the client push installation method. View the client deployment and assignment reports to track client installation progress. Additionally, the client log files provide more detailed information for troubleshooting and do not require the installation of a fallback status point. For example, the CCM.log file on the site server records any problems that the site server has connecting to the computer, and the CCMSetup.log file on the client records the installation process.  
 
 > [!IMPORTANT]  
->  For client push to succeed, ensure that all the prerequisites are in place. These are listed in the section “Installation Method Dependencies” in [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
+>  For client push to succeed, ensure that all the prerequisites are in place. These are listed in the section "Installation Method Dependencies" in [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
 
 #### To configure the site to automatically use client push for discovered computers  
 
@@ -56,7 +57,7 @@ You can use different client deployment methods to install the System Center Con
     > [!NOTE]  
     >  If you intend to use the client push installation method from a secondary site, the account must be specified at the secondary site that initiates the client push.  
     >   
-    >  For more information about the client push installation account, see the next procedure,”To use the Client Push Installation Wizard”.  
+    >  For more information about the client push installation account, see the next procedure, "To use the Client Push Installation Wizard".  
 
 8.  On the **Installation Properties** tab, specify any installation properties  to use when installing the Configuration Manager client. You can specify any installation properties of the Windows Installer package (Client.msi) and the following CCMSetup.exe properties:  
 
@@ -128,7 +129,7 @@ You can use different client deployment methods to install the System Center Con
  If a computer has the Configuration Manager client installed, Configuration Manager provides the client with the software update point server name and port from which to obtain software updates. This information is included in the client policy.  
 
 > [!IMPORTANT]  
->  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Configure software updates in System Center Configuration Manager](../../../sum/deploy-use/configure-software-updates.md).  
+>  To use software update-based installation, you must use the same Windows Server Update Services (WSUS) server for client installation and software updates. This server must be the active software update point in a primary site. For more information, see [Install a software update point](../../../sum/get-started/install-a-software-update-point.md).  
 
  If a computer does not have the Configuration Manager client installed, you must configure and assign a Group Policy Object (GPO) in Active Directory Domain Services to specify the software update point server name from which the computer will obtain software updates.  
 
@@ -156,7 +157,7 @@ You can use different client deployment methods to install the System Center Con
     -   If the Configuration Manager site system is not configured to use a fully qualified domain name (FQDN), specify the server name by using a short name format.  
 
     > [!NOTE]  
-    >  To determine the port number that is being used by the software update point, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../../sum/plan-design/determine-wsus-port-settings.md).  
+    >  To determine the port number that is being used by the software update point, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
      Example: **http://server1.contoso.com:8530**  
 
@@ -215,7 +216,7 @@ You can use different client deployment methods to install the System Center Con
 > [!IMPORTANT]  
 >  You cannot run Client.msi directly.  
 
- You can specify command-line properties for both CCMSetup.exe and Client.msi to modify the behavior of the client installation. Make sure that you specify CCMSetup properties (the properties that begin with “**/**” ) before you specify Client.msi properties.  
+ You can specify command-line properties for both CCMSetup.exe and Client.msi to modify the behavior of the client installation. Make sure that you specify CCMSetup properties (the properties that begin with **/**) before you specify Client.msi properties.  
 
  For example, you could specify the following command:  
 
@@ -242,7 +243,7 @@ CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01
 **ABC** = site code  
 **contoso.com** = domain name  
 
- All site system servers are configured with an intranet FQDN and the site is published to the client’s Active Directory forest.  
+ All site system servers are configured with an intranet FQDN and the site is published to the client's Active Directory forest.  
 
  On the client computer, you log on as a local administrator, map a drive (z:) to\\\MPSERVER\SMS_ABC\Client, switch the command prompt to the z drive, and then run one of the following commands.  
 
@@ -253,7 +254,7 @@ CCMSetup.exe
 ```  
 
 > [!NOTE]  
->  This example installs the client with no additional properties so that the client is automatically configured by using the client installation properties published to Active Directory Domain Services. For example, the client is automatically configured for the site code (requires the client’s network location to be included in a boundary group that is configured for client assignment), a management point, the fallback status point, and whether the client must communicate by using HTTPS only. For more information about the client installation properties that can be automatically configured for Active Directory clients, see [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
+>  This example installs the client with no additional properties so that the client is automatically configured by using the client installation properties published to Active Directory Domain Services. For example, the client is automatically configured for the site code (requires the client's network location to be included in a boundary group that is configured for client assignment), a management point, the fallback status point, and whether the client must communicate by using HTTPS only. For more information about the client installation properties that can be automatically configured for Active Directory clients, see [About client installation properties published to Active Directory Domain Services in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md).  
 
  **Example 2:**  
 
@@ -262,7 +263,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 ```  
 
 > [!NOTE]  
->  This example overrides the automatic configuration that Active Directory Domain Services can provide and does not require that the client’s network location is included in a boundary group that is configured for client assignment. Instead, the installation specifies the site, an intranet management point and an Internet-based management point, a fallback status point that accepts connections from the Internet, and to use a client PKI certificate (if available) that has the longest validity period.  
+>  This example overrides the automatic configuration that Active Directory Domain Services can provide and does not require that the client's network location is included in a boundary group that is configured for client assignment. Instead, the installation specifies the site, an intranet management point and an Internet-based management point, a fallback status point that accepts connections from the Internet, and to use a client PKI certificate (if available) that has the longest validity period.  
 
 ##  <a name="BKMK_ClientLogonScript"></a> How to Install Configuration Manager Clients by Using Logon Scripts  
  Configuration Manager supports logon scripts to install the Configuration Manager client software. You can use the program file **CCMSetup.exe** in a logon script to trigger the client installation.  

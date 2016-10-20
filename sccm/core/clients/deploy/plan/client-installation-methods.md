@@ -1,7 +1,8 @@
 ---
 title: "Client installation methods | System Center Configuration Manager"
+description: "Learn client installation methods for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Client installation methods in System Center Configuration Manager
+# Client installation methods in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can use different methods to install the System Center Configuration Manager client software on Windows devices, UNIX/Linux servers, and Mac computers in your enterprise. You can use one or any combination of these methods that suit your requirements.  
 
  The following sections outline the advantages and disadvantages of each client installation method to help you determine which will work best in your organization.  

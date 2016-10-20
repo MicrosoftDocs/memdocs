@@ -1,7 +1,8 @@
 ---
-title: "Security and privacy for migration to System Center Configuration Manager"
+title: "Migration security and privacy | System Center Configuration Manager"
+description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for migration to System Center Configuration Manager
+# Security and privacy for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic contains security best practices and privacy information for migration to your System Center Configuration Manager environment.  
 
 ## Security Best Practices for Migration  

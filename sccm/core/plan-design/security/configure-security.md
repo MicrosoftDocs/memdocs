@@ -1,7 +1,8 @@
 ---
 title: "Configure security in System Center Configuration Manager"
+description: "Configure security-related options for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Configure security in System Center Configuration Manager
+# Configure security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this topic to help you configure the following security-related options for System Center Configuration Manager:  
 
 -   [Configure Settings for Client PKI Certificates](#BKMK_ConfigureClientPKI)  

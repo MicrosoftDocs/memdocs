@@ -1,25 +1,29 @@
 ---
-title: "What&#39;s new in version 1602 of System Center Configuration Manager"
+title: "New in 1602 | System Center Configuration Manager"
+description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# What&#39;s new in version 1602 of System Center Configuration Manager
-Update 1602 for System Center Configuration Manager is an update that is only available in-console for previously installed sites that run version 1511.  Version 1511 is the initial baseline version you use to install new Configuration Manager sites.  
+# What&#39;s new in version 1602 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+
+Update 1602 for System Center Configuration Manager is an update that is only available in-console for previously installed sites that run version 1511. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.  
+
 
 > [!TIP]  
 >  Learn more about:  
 >   
-> -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)
-> -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602)  
+>   -   [Installing new sites](/sccm/core/servers/deploy/install) (using a baseline version like 1511)  
+>   -   [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
 
  The following sections provide details about changes and new capabilities introduced in version 1602 of Configuration Manager.  
 
@@ -63,12 +67,12 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
  App configuration policies can help you eliminate these problems by letting you deploy these settings to users in a policy before they run the app. The settings are then supplied automatically, and the user needs to take no action.  
 
- For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md)  
+ For details, see [Configure iOS apps with app configuration policies in System Center Configuration Manager](../../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
 
 ### Manage volume-purchased iOS apps  
  Configuration Manager can help you deploy and manage apps you purchased in volume from the Apple Volume-Purchase Program (VPP) by importing the license information from the app store and tracking how many of the licenses you have used.  
 
- For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md)  
+ For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
 
 ### Automatic creation of Office mobile apps  
  When you update to the 1602 release from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
@@ -85,26 +89,26 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Microsoft Outlook  
 
- You will find these apps in the **Applications** node of the Configuration Manager console.  
+You will find these apps in the **Applications** node of the Configuration Manager console.  
 
- For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md)  
+ For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../../apps/deploy-use/deploy-applications.md).  
 
 ## Software updates  
 
 ### Manage Office 365 client updates  
- System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](../Topic/Manage%20Office%20365%20ProPlus%20updates%20with%20System%20Center%20Configuration%20Manager.md).  
+ System Center Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with System Center Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
 
 ## Compliance settings  
 
 ### Compliance settings for devices running Windows 10 team  
  New settings have been added to the **Windows 8.1 and Windows 10** configuration item to help you control devices running Windows 10 Team, such as a Surface Hub device.  
 
- For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
+ For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Kiosk mode settings for Android Samsung KNOX devices  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX devices.  
 
- For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+ For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## Conditional access  
 
@@ -121,7 +125,8 @@ If these settings are incorrectly entered by the user, this can increase the bur
 ### New compliance policy rules  
  New compliance policy rules  like  automatic updates, password to unlock devices, have been added to support better security requirements.  
 
- For more details, see [Manage device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/manage-device-compliance-policies.md).  
+
+ For more details, see [Device compliance policies in System Center Configuration Manager](../../../protect/deploy-use/device-compliance-policies.md).  
 
 ### Make sure enrolled and compliant devices always have access to Exchange On-Premises  
  **Default rule override - Always allow Intune enrolled and compliant devices to access Exchange on-premises:** When you check this option, devices that are enrolled in Intune and compliant with the compliance policies are allowed to access Exchange on-premises. This rule overrides the Default Rule, which means that even if you set the Default Rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.  
@@ -160,7 +165,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Code Integrity  
 
- For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
+For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
 ### Improvements to Endpoint Protection antimalware settings  
  1602 adds the following new settings in Endpoint Protection antimalware policy for Windows Defender:  
@@ -177,9 +182,9 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
     -   Advanced: Allow users to modify auto sample file submission settings  
 
-     Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions.  
+    Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions.  
 
- For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/antimalware-policies-for-endpoint-protection.md).  
+For details, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 
 ## Mobile device management  
 
@@ -192,9 +197,9 @@ If these settings are incorrectly entered by the user, this can increase the bur
 
 -   Reactivate the device  
 
- Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
+Configuration Manager can request the Activation Lock status of both supervised and unsupervised devices that run iOS 7.1 and later. For supervised devices, Configuration Manager can retrieve the Activation Lock bypass code and directly issue it to the device.  
 
- For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](../Topic/Help%20protect%20iOS%20devices%20with%20Activation%20Lock%20bypass%20in%20System%20Center%20Configuration%20Manager.md).  
+ For details, see [Help protect iOS devices with Activation Lock bypass in System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock).  
 
 ### Monitor terms and conditions deployments  
  You can monitor terms and conditions deployments in the Configuration Manager console.  

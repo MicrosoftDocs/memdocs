@@ -1,7 +1,8 @@
 ---
-title: "List of Prerequisite Checks for System Center Configuration Manager"
+title: "Prerequisite checks | System Center Configuration Manager"
+description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 caps.latest.revision: 12
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# List of Prerequisite Checks for System Center Configuration Manager
+# List of Prerequisite Checks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following sections detail the available prerequisite checks.  
 
 
- For  information about using the Prerequisite Checker, see the [Prerequisite Checker](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_PreqChk) section of the [Site installation technical reference for System Center Configuration Manager](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md) topic.  
+ For  information about using the Prerequisite Checker, see the [Prerequisite Checker](prerequisite-checker.md).  
 
 ##  <a name="BKMK_Security"></a> Prerequisite Checks for Security Rights  
  The followingare prerequisite checks that Prerequisite Checker performs for security rights.  
@@ -524,7 +525,11 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site  
 
-**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the ‘Microsoft Intune Connector' site system role is not installed on the stand-alone primary site that you are expanding.  
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e8e486ea74f66a92696c65e3367aec2e592b001
+**Unsupported site system role Microsoft Intune Connector' on the expanded primary site** - Checks that the 'Microsoft Intune Connector' site system role is not installed on the stand-alone primary site that you are expanding.  
 
 -   **Severity:** Error  
 
@@ -718,7 +723,7 @@ The following sections detail the available prerequisite checks.
     -   Primary site    
     -   Secondary site  
 
-**Unsupported Configuration Manager console operating system** - Verifies that the Configuration Manager consoles can be installed on computers that run a supported operating system version. For more information, see the  [Supported operating systems for System Center Configuration Manager consoles](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_ConsoleOS) section in the [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md) topic.  
+**Unsupported Configuration Manager console operating system** - Verifies that the Configuration Manager consoles can be installed on computers that run a supported operating system version. For more information, see the  [Supported operating systems for System Center Configuration Manager consoles](/sccm/core/plan-design/configs/supported-operating-systems-consoles).  
 
 -   **Severity:** Error  
 
@@ -726,7 +731,7 @@ The following sections detail the available prerequisite checks.
 
     -   Configuration Manager console  
 
-**Unsupported site server operating system version for Setup** - Verifies that a supported operating system is running on the server. For more information, see  [Supported operating systems for sites and clients for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md).  
+**Unsupported site server operating system version for Setup** - Verifies that a supported operating system is running on the server. For more information, see  [Supported operating systems for sites and clients for System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
 
 -   **Severity:** Error  
 

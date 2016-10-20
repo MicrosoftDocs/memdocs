@@ -1,7 +1,8 @@
 ---
-title: "Interoperability between different versions of System Center Configuration Manager"
+title: "Interoperability between versions | System Center Configuration Manager"
+description: "Learn how to avoid conflicts between multiple System Center Configuration Manager hierarchies on the same network."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Interoperability between different versions of System Center Configuration Manager
+# Interoperability between different versions of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 It is supported to install and operate multiple, independent hierarchies of System Center Configuration Manager on the same network. However, because different hierarchies of Configuration Manager do not interoperate outside of migration, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can make certain configurations to help resources that you manage to interact with the site systems from the correct hierarchy.  
 
  The following sections provide information about using different versions of Configuration Manager on the same network:  

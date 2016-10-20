@@ -1,7 +1,8 @@
 ---
-title: "Reference for System Center Configuration Manager Setup"
+title: "Setup reference | System Center Configuration Manager"
+description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
-ms.date: 2016-01-25
+ms.date: 01/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 caps.latest.revision: 22
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Reference for System Center Configuration Manager Setup
+# Reference for System Center Configuration Manager Setup*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager Setup provides links to several topics where are detailed in the following sections. The information in the following sections can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation:  
 
 -   [Before you begin](#bkmk_start)  
@@ -30,9 +31,9 @@ System Center Configuration Manager Setup provides links to several topics where
 
 -   [Fundamentals of System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
 
--   [Plan for System Center Configuration Manager infrastructure](../Topic/Plan%20for%20System%20Center%20Configuration%20Manager%20infrastructure.md)  
+-   [Plan for System Center Configuration Manager infrastructure](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 
--   [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)  
+-   [Prepare to install System Center Configuration Manager sites](prepare-to-install-sites.md)  
 
 ##  <a name="bkmk_assess"></a> Assess server readiness  
  Before beginning the installation of a new site, ensure the site server and remote site system servers you plan to use for the site (like the server that host the site database) meet all  prerequisite configurations. The following topics in the documentation library can help:  
@@ -81,7 +82,7 @@ The three levels of data collection include:
 
 -   **Enhanced** includes the data in the Basic setting plus transmits data about the hierarchy, how each feature is used (frequency and duration), and enhanced diagnostic information like the memory state of your server when a system or app crash occurs. No personally identifiable data will be transmitted.  
 
--   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we won’t use that information to identify or contact you, or target advertising to you.  
+-   **Full** includes the data in the Basic and Enhanced settings and also sends advanced diagnostic information like system files and memory snapshots. This option may include personally identifiable information, but we won't use that information to identify or contact you, or target advertising to you.  
 
 For more information including disclosure of the details collected by each level, see [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 

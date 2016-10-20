@@ -1,7 +1,7 @@
 ---
-title: "System Center Configuration Manager privacy statement"
+title: "Privacy statement | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de4e7752-7490-4c3f-9550-ac7f476d99d8
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# System Center Configuration Manager privacy statement
-Microsoft is committed to protecting your privacy, while delivering software that brings you the performance, power, and convenience you desire in your personal computing. This privacy statement explains many of the data collection and use practices of System Center Configuration Manager (“Configuration Manager”). This disclosure focuses on features that communicate with the Internet and is not intended to be an exhaustive list. It does not apply to other online or offline Microsoft sites, products, or services. End users (information workers) should consult their IT administrators for further information about their company’s privacy policies. Microsoft is not responsible for the privacy practices of its customers or other companies.  
+# System Center Configuration Manager privacy statement*Applies to: System Center Configuration Manager (Current Branch)*
+Microsoft is committed to protecting your privacy, while delivering software that brings you the performance, power, and convenience you desire in your personal computing. This privacy statement explains many of the data collection and use practices of System Center Configuration Manager ("Configuration Manager"). This disclosure focuses on features that communicate with the Internet and is not intended to be an exhaustive list. It does not apply to other online or offline Microsoft sites, products, or services. End users (information workers) should consult their IT administrators for further information about their company's privacy policies. Microsoft is not responsible for the privacy practices of its customers or other companies.  
 
-Configuration Manager comprehensively assesses, deploys, and updates your servers, clients, and devices—across physical, virtual, distributed, and mobile environments. Optimized for Windows and extensible beyond, it is the best choice for gaining enhanced insight into, and control over, your IT systems  
+Configuration Manager comprehensively assesses, deploys, and updates your servers, clients, and devices across physical, virtual, distributed, and mobile environments. Optimized for Windows and extensible beyond, it is the best choice for gaining enhanced insight into, and control over, your IT systems  
 
 Built on key Microsoft technologies, such as Microsoft Windows Server Update Services (WSUS), Windows Server Active Directory, and the Windows architecture, Configuration Manager maximizes infrastructure investments and drives greater efficiency. With Configuration Manager, organizations can ensure that IT systems comply with desired configuration states to improve availability, security, and performance network-wide.  
 
@@ -65,7 +65,7 @@ The information we collect from you will be used by Microsoft and its controlled
 ## **Customer Experience Improvement Program**  
 
 ### What This Feature Does:  
- The Customer Experience Improvement Program (“CEIP”) collects basic information from the administration console about your hardware configuration and how you use our software and services in order to identify trends and usage patterns. CEIP also collects the type and number of errors you encounter, software and hardware performance, and the speed of services. We will not collect your name, address, or other contact information. No CEIP data is collected from client computers.  
+ The Customer Experience Improvement Program ("CEIP") collects basic information from the administration console about your hardware configuration and how you use our software and services in order to identify trends and usage patterns. CEIP also collects the type and number of errors you encounter, software and hardware performance, and the speed of services. We will not collect your name, address, or other contact information. No CEIP data is collected from client computers.  
 
 ### Information Collected, Processed, or Transmitted:  
  For more information about the information collected, processed, or transmitted by CEIP, see the [CEIP privacy statement](http://go.microsoft.com/fwlink/p/?LinkID=52097).  
@@ -78,7 +78,7 @@ The information we collect from you will be used by Microsoft and its controlled
 
 1.  Open the Configuration Manager console.  
 
-2.  Click the Application menu, click **Customer Experience Improvement Program**, click **I don’t want to join the program at this time** and then click **OK**.  
+2.  Click the Application menu, click **Customer Experience Improvement Program**, click **I don't want to join the program at this time** and then click **OK**.  
 
 > [!NOTE]  
 >  Unless specifically set, all administrative console users inherit the CEIP choice made during initial installation. Changes to the CEIP setting from the Configuration Manager console are specific to the user and computer where they are made.  
@@ -219,10 +219,10 @@ The information we collect from you will be used by Microsoft and its controlled
 ### Choice/Control:  
  Setup cannot complete without these downloads but they can be downloaded separately and a path to them provided to Setup.  
 
-## **Site Hierarchy – Geographical View with Bing Maps**  
+## **Site Hierarchy - Geographical View with Bing Maps**  
 
 ### What This Feature Does:  
- Site Hierarchy – geographical view allows you to view your Configuration Manager physical server topology using maps provided by Microsoft Bing Maps.  
+ Site Hierarchy - geographical view allows you to view your Configuration Manager physical server topology using maps provided by Microsoft Bing Maps.  
 
 ### Information Collected, Processed, or Transmitted:  
  To enable this feature, location information you provide is sent from your server to the Bing Maps Web service.  
@@ -253,7 +253,7 @@ The information we collect from you will be used by Microsoft and its controlled
  For details about what information is collected and how it is used by Windows Azure, see the [Windows Azure Trust Center](http://go.microsoft.com/fwlink/?LinkId=270141) and the [Windows Azure Privacy Statement](http://go.microsoft.com/fwlink/p/?LinkId=263680).  
 
 ### Location and Security of Distribution Point Content  
- As part of the configuration step for each cloud-based distribution point, you must specify the geographic region of the Microsoft data centers in which the distribution point content will be stored. The location you chose will apply only to the cloud-based distribution point that is being configured. It will not change your geographic location selection for other Windows Azure services that you have in your account. You can configure multiple cloud-based distribution points in different geographies. Content uploaded to cloud-based distribution points is encrypted with a key unique to your organization’s installation of Configuration Manager. Some content may be particularly sensitive to your organization or be subject to specific regulatory requirements.  
+ As part of the configuration step for each cloud-based distribution point, you must specify the geographic region of the Microsoft data centers in which the distribution point content will be stored. The location you chose will apply only to the cloud-based distribution point that is being configured. It will not change your geographic location selection for other Windows Azure services that you have in your account. You can configure multiple cloud-based distribution points in different geographies. Content uploaded to cloud-based distribution points is encrypted with a key unique to your organization's installation of Configuration Manager. Some content may be particularly sensitive to your organization or be subject to specific regulatory requirements.  
 
  For details about the location and security of data stored in Windows Azure, see the [Windows Azure Trust Center](http://go.microsoft.com/fwlink/?LinkId=270141) and the [Windows Azure Privacy Statement](http://go.microsoft.com/fwlink/p/?LinkId=263680).  
 
@@ -321,7 +321,7 @@ The information we collect from you will be used by Microsoft and its controlled
  The information sent to Microsoft Intune is used only to provide and improve the Microsoft Intune services. No information about the content assigned to the distribution point is collected by Microsoft.  
 
 ### Security of Subscription-Related Data:  
- Content selected to be uploaded to the Manage.Microsoft.com distribution point is encrypted with a key that is unique to your organization’s installation of Configuration Manager. Some content may be particularly sensitive to your organization or be subject to specific regulatory requirements. For more information, see the [Microsoft Intune Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=262214).  
+ Content selected to be uploaded to the Manage.Microsoft.com distribution point is encrypted with a key that is unique to your organization's installation of Configuration Manager. Some content may be particularly sensitive to your organization or be subject to specific regulatory requirements. For more information, see the [Microsoft Intune Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=262214).  
 
 ### Choice/Control:  
  This feature is not configured by default. Administrators have control over what content is transferred to the Manage.microsoft.com distribution point and which users are assigned to the service. The feature can be removed at any time.  

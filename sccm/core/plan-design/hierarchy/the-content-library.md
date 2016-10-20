@@ -1,18 +1,20 @@
 ---
-title: "The content library in System Center Configuration Manager"
+title: "The content library | System Center Configuration Manager"
+description: "Learn about the content library that System Center Configuration Manager uses to reduce the overall size of distributed content."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# The content library in System Center Configuration Manager
+# The content library in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The content library is a single-instance store of content that System Center Configuration Manager uses to reduce the overall size of the combined body of content you distribute. The content library stores all content files for software updates, applications, operating system deployment, and so on.
 
  - A copy of the content library is automatically created and maintained on each **site server** and on each **distribution point**
@@ -32,7 +34,7 @@ For more information about how to configure the drive settings for the distribut
 
 
 >  [!IMPORTANT]  
->  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer Tool** in the System Center 2012 Configuration Manager Service Pack 1 Toolkit. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
+>  To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer Tool** in the System Center 2012 R2 Configuration Manager Toolkit. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
 
 ## About the content library on the Central Administration Site  
  By default, Configuration Manager creates a content library on the central administration site when the site installs. The content library is placed on the drive of the site server that has the most free disk space. Because you cannot install a distribution point on the central administration site, you cannot prioritize the drives for use for the content library. Similar to the content library on other site servers and on distribution points, when the drive that contains the content library runs out of available disk space, the content library automatically spans to the next available drive.  
@@ -50,4 +52,4 @@ For more information about how to configure the drive settings for the distribut
 
 -   To prevent the content library from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before the content library is created.  
 
--   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 Configuration Manager Service Pack 1 Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  
+-   After the content library is created, use **Content Library Transfer tool** from the System Center 2012 R2 Configuration Manager Toolkit to manage the location of the content library. You can download the toolkit from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=279566).  

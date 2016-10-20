@@ -1,7 +1,8 @@
 ---
-title: "Publish site data for System Center Configuration Manager"
+title: "Publish site data | System Center Configuration Manager"
+description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Publish site data for System Center Configuration Manager
+# Publish site data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you extend the Active Directory schema for System Center Configuration Manager, you can publish Configuration Manager sites to Active Directory Domain Services (AD DS) so that Active Directory computers can securely retrieve site information from a trusted source. Although publishing site information to AD DS is not required for basic Configuration Manager functionality, this configuration can reduce administrative overhead.  
 
 -   **When a site is configured to publish to AD DS**, Configuration Manager clients can automatically find management points through Active Directory publishing using an LDAP query to a global catalog server.  

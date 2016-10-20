@@ -1,7 +1,8 @@
 ---
-title: "Maintenance tasks for System Center Configuration Manager"
+title: "Maintenance tasks | System Center Configuration Manager"
+description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies, and when to perform them."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Maintenance tasks for System Center Configuration Manager
+# Maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager sites and hierarchies require regular maintenance and monitoring to provide services effectively and continuously. Regular maintenance ensures that the hardware, software, and the Configuration Manager database continue to function correctly and efficiently. Optimal performance greatly reduces the risk of failure.  
 
  To configure Alerts, and use the Status System to monitor the health of Configuration Manager, see [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
@@ -101,7 +102,7 @@ Some tasks do not have to be performed during daily or weekly maintenance, but a
 > [!IMPORTANT]  
 >  When you plan the schedule of any task that deletes data, consider the use of that data across the hierarchy. When a task that deletes data runs at a site, the information is removed from the Configuration Manager database, and this change replicates to all sites in the hierarchy. This can affect other tasks that rely on that data. For example, at the central administration site, you might configure Discovery to run one time per month to identify non-client computers, and plan to install the Configuration Manager client to these computers within two weeks of their discovery. However, at one site in the hierarchy, an administrator configures the Delete Aged Discovery Data task to run every seven days with a result that seven days after non-client computers are discovered, they are deleted from the Configuration Manager database. Back at the central administration site, you prepare to push install the Configuration Manager client to these new computers on day 10. However, because the Delete Aged Discovery Data task has recently run and deleted data that is seven days or older, the recently discovered computers are no longer available in the database.  
 
-After you install a Configuration Manager site, review the available maintenance tasks and enable those tasks that your operations require. Review the default schedule of each task, and when necessary, modify the schedule to fine-tune the maintenance task to fit your hierarchy and environment. Although the default schedule of each task should suit most environments, monitor the performance of your sites and database and expect to fine-tune tasks to increase your deployments’ efficiency. Plan to periodically review the site and database performance and to reconfigure maintenance tasks and their schedules to maintain that efficiency.  
+After you install a Configuration Manager site, review the available maintenance tasks and enable those tasks that your operations require. Review the default schedule of each task, and when necessary, modify the schedule to fine-tune the maintenance task to fit your hierarchy and environment. Although the default schedule of each task should suit most environments, monitor the performance of your sites and database and expect to fine-tune tasks to increase your deployments' efficiency. Plan to periodically review the site and database performance and to reconfigure maintenance tasks and their schedules to maintain that efficiency.  
 
 #### Configure Maintenance Tasks  
  Each Configuration Manager site supports maintenance tasks that help maintain the operational efficiency of the site database. By default, several maintenance tasks are enabled in each site, and all tasks support independent schedules. Maintenance tasks are configured individually for each site and apply to the database at that site; however, some tasks, such as **Delete Aged Discovery Data**, affect the information available in all sites in a hierarchy.  

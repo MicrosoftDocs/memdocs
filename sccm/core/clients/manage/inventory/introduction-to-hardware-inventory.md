@@ -1,7 +1,8 @@
 ---
-title: "Introduction to hardware inventory in System Center Configuration Manager"
+title: "Hardware inventory | System Center Configuration Manager"
+description: "Get an introduction to hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to hardware inventory in System Center Configuration Manager
+# Introduction to hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use hardware inventory in System Center Configuration Manager to collect information about the hardware configuration of client devices in your organization. To collect hardware inventory, the **Enable hardware inventory on clients** setting must be enabled in client settings.  
 
- After hardware inventory is enabled and a hardware inventory cycle is run by the client, the client sends the inventory information that it has collected to a management point in the client’s site. The management point then forwards the inventory information to the Configuration Manager site server which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
+ After hardware inventory is enabled and a hardware inventory cycle is run by the client, the client sends the inventory information that it has collected to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server which stores the inventory information in the site database. Hardware inventory runs on clients according to the schedule that you specify in client settings.  
 
  You can use several methods to view the hardware inventory data that Configuration Manager collects. These include the following:  
 

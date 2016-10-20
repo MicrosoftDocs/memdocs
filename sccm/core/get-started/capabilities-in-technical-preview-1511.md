@@ -1,18 +1,21 @@
 ---
 title: "Capabilities in Technical Preview 1511 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1511."
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1511 for System Center Configuration Manager
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+# Capabilities in Technical Preview 1511 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
 The following are new features you can try out with this version.  
 
@@ -121,7 +124,7 @@ To install a site that uses a SQL Server availability group:
 
 1.  Substitute the following when prompted by Configuration Manager Setup:  
 
-    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **<endpointServer\>.fabrikam.com**.  
+    -   **SQL Server name**: Enter the virtual name for the Endpoint that you configured when creating the availability group. The virtual name should be a full DNS name, like **&lt;endpointServer\>.fabrikam.com**.  
 
     -   **Instance**:  This value should remain blank. There is no instance in this configuration.  
 

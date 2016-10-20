@@ -1,7 +1,8 @@
 ---
-title: "Configure sites and hierarchies for System Center Configuration Manager"
+title: "Configure sites | System Center Configuration Manager"
+description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
 caps.latest.revision: 15
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Configure sites and hierarchies for System Center Configuration Manager
+# Configure sites and hierarchies for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After you install your first System Center Configuration Manager site or add additional sites to your hierarchy, use the following checklist to ensure you consider the most common configurations that affect both sites and hierarchies.  
 
 ## Checklist of common configurations for new and additional sites  

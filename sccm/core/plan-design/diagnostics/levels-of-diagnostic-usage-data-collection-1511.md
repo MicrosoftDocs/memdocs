@@ -1,7 +1,8 @@
 ---
-title: "Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager"
+title: "Diagnostic data for 1511 | System Center Configuration Manager"
+description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1511 collects."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -31,7 +32,7 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager
+# Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager version 1511 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.  
 
 > [!IMPORTANT]  

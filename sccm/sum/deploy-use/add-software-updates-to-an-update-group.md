@@ -1,34 +1,22 @@
 ---
-# required metadata
-
 title: Add software updates to an update group | Configuration Manager
-description:
+description: "Manually or automatically add software updates to a software update group in your environment."
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
+
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
+ - configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Add software updates to an update group  
+# Add software updates to an update group  *Applies to: System Center Configuration Manager (Current Branch)*
  Software update groups provide you with an effective method to organize software updates in your environment. You can manually add software updates to a software update group or automatically add software updates to a software update group by using an ADR. You can also deploy a software update group manually or deploy the group automatically by using an ADR. After you deploy a software update group, you can add new software updates to the group and Configuration Manager will automatically deploy them. Use the following procedures to add software updates to a new or existing software update group.  
 
-##### To add software updates to a new software update group  
+#### To add software updates to a new software update group  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -44,7 +32,7 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 
 7.  Select the software update group, and in the **Home** tab, in the **Update** group, click **Show Members** to display a list of the software updates that are included in the group.  
 
-##### To add software updates to an existing software update group  
+#### To add software updates to an existing software update group  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 

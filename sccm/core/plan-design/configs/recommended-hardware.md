@@ -1,7 +1,8 @@
 ---
-title: "Recommended hardware for System Center Configuration Manager"
+title: "Recommended hardware | System Center Configuration Manager"
+description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 caps.latest.revision: 26
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Recommended hardware for System Center Configuration Manager
+# Recommended hardware for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following recommendations are guidelines  to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, sites systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
 
  Use this information in the following sections as a guide to help you plan for hardware that can meet the processing loads for clients and sites that use the available Configuration Manager features with the default configurations.  
@@ -47,7 +48,7 @@ For best performance, use RAID 10 configurations for all data drives and 1Gbps E
 |Remote database server for a child primary site|16|64|90|  
 |Secondary site server|8|16|-|  
 
- <sup>1</sup> When the site server and SQL Server are installed on the same computer, the deployment supports the maximum [Sizing and scale numbers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Sizing) for sites and clients. However, this configuration can limit [High availability options for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_HA) like using a SQL Server cluster.  Additionally, because of the higher I/O requirements needed to support both SQL Server and the Configuration Manager Site Server when running both on the same computer, customers with larger deployments should consider using a configuration with a remote SQL Server machine.  
+ <sup>1</sup> When the site server and SQL Server are installed on the same computer, the deployment supports the maximum [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) for sites and clients. However, this configuration can limit [High availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options) like using a SQL Server cluster.  Additionally, because of the higher I/O requirements needed to support both SQL Server and the Configuration Manager Site Server when running both on the same computer, customers with larger deployments should consider using a configuration with a remote SQL Server machine.  
 
 ###  <a name="bkmk_RemoteSiteSystem"></a> Remote site system servers  
  These following guidance is for computers that hold a single site system role. Plan to make adjustments when you install multiple site system roles on the same computer.  
@@ -131,7 +132,7 @@ For best performance, use RAID 10 configurations for all data drives and 1Gbps E
 
 |Requirement|Details|  
 |-----------------|-------------|  
-|Processor and memory|Refer to the processor and RAM requirements for the computer’s operating system.|  
+|Processor and memory|Refer to the processor and RAM requirements for the computer's operating system.|  
 |Disk space|500 MB available disk space, with 5 GB recommended for the Configuration Manager client cache.|  
 |Network connectivity|Configuration Manager client computers must have network connectivity to Configuration Manager site systems to enable management.|  
 

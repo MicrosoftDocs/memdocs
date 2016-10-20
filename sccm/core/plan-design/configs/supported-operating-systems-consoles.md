@@ -1,7 +1,8 @@
 ---
-title: "Supported operating systems for System Center Configuration Manager consoles"
+title: "Console support | System Center Configuration Manager consoles"
+description: "Learn which operating systems a System Center Configuration Manager console supports."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,11 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Supported operating systems for System Center Configuration Manager consoles
+# Supported operating systems for System Center Configuration Manager consoles*Applies to: System Center Configuration Manager (Current Branch)*
 
  To support the System Center Configuration Manager console, the following operating system require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.  
+
+-   **Windows Server 2016**  – Standard, Datacenter  
 
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter  
 

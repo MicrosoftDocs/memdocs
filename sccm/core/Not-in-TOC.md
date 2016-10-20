@@ -1,8 +1,8 @@
+﻿
 
 
 
-
-# [Not in Toc]
+Not in Toc
 **plan-design**
 -  [Ports used in System Center Configuration Manager](plan-design/hierarchy/ports.md)
 -  [Log files in System Center Configuration Manager](plan-design/hierarchy/log-files.md)
@@ -59,3 +59,4 @@
 - [MICROSOFT SYSTEM CLR TYPES FOR MICROSOFT SQL SERVER 2014](misc/eula/microsoft-system-clr-types-for-microsoft-sql-server-2014.md)
 - [MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION](misc/eula/microsoft-system-center-endpoint-protection-evaluation.md)
 - [MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION SUPPLEMENTAL PLACEHOLDER EULA](misc/eula/microsoft-system-center-endpoint-protection-supplemental-placeholder-eula.md)
+

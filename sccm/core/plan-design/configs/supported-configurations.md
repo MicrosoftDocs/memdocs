@@ -1,7 +1,8 @@
 ---
-title: "Supported configurations for System Center Configuration Manager"
+title: "Supported configurations | System Center Configuration Manager"
+description: "Identify key configurations and requirements so you can plan, deploy, and maintain a functional System Center Configuration Manager deployment."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Supported configurations for System Center Configuration Manager
+# Supported configurations for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 As an on-premises solution, System Center Configuration Manager makes use of your servers, clients, network configurations, and additional products like Microsoft Intune, SQL Server and Azure.
 
 The information in this and the following topics is essential to identifying key configurations and requirements, or limitations, so you can plan, deploy, and maintain a functional Configuration Manager deployment.  This information is specific to the infrastructure for Configuration Manager sites, hierarchies and managed devices. When a Configuration Manager feature or capability requires more specific configurations, that information will be included with the feature specific documentation, and is supplemental to these more general supported configuration details.  
@@ -55,7 +56,7 @@ Guidelines that can help you identify the right hardware and configurations to h
 -  [Support for Active Directory domains](../../../core/plan-design/configs/support-for-active-directory-domains.md)  
 Learn about the supported Active Directory domain configurations Configuration Manager requires, and supports.
 
--  [Support for Widows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
+-  [Support for Windows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
 Configuration Manager supports several Windows technologies like BranchCache and data deduplication. Learn about supported technologies and limitations for their use with Configuration Manager.
 
 -  [Support for Virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  

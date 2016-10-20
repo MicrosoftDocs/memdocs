@@ -1,7 +1,8 @@
 ---
 title: "Security and privacy for System Center Configuration Manager"
+description: "Find resources about security and privacy for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 caps.latest.revision: 9
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for System Center Configuration Manager
+# Security and privacy for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic includes resources for Security and Privacy for System Center Configuration Manager.  
 
  Before preceding, ensure  you understand the [Fundamentals of System Center Configuration Manager](../../../core/understand/fundamentals.md). If you have already installed System Center Configuration Manager, identify the design decisions for your implementation. You might find the Configuration Manager planning and deployment content helpful.  
@@ -25,7 +26,7 @@ This topic includes resources for Security and Privacy for System Center Configu
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sup/deploy-use/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
 -   [Security and privacy for compliance settings in System Center Configuration Manager](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
@@ -47,12 +48,7 @@ This topic includes resources for Security and Privacy for System Center Configu
 
 -   [Security and privacy for reporting in System Center Configuration Manager](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
 
- The information in the  following topics assumes that you understand basic security principles.  
 
-> [!TIP]  
->  In addition to this information, you can also use the Security Configuration Wizard (SCW) for System Center 2012 Configuration Manager. Run this wizard to help you reduce the attack surface for site system servers that run Windows Server 2008 R2. The wizard determines the minimum functionality required for the selected site system roles, and can disable functionality that is not required. The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center:  
->   
->  -   [System Center 2012 Service Pack 1 – Configuration Manager Component Add-ons and Extensions](http://www.microsoft.com/download/details.aspx?id=36213)  
 
  **Security and Privacy topics:**  
 

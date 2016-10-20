@@ -1,7 +1,8 @@
 ---
-title: "Operations for migrating to System Center Configuration Manager"
+title: "Migration operations | System Center Configuration Manager"
+description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Operations for migrating to System Center Configuration Manager
+# Operations for migrating to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 For migration in System Center Configuration Manager, after you successfully gather data from a source site in a supported source hierarchy, you can start to migrate data and clients. Use the information in the following sections to create and run migration jobs to migrate data, clients, and to then complete the migration process.  
 
 -   [Create and edit migration jobs](#Create_Edit_migration_Jobs)  
@@ -233,4 +234,3 @@ For migration in System Center Configuration Manager, after you successfully gat
 8.  On the **Clean Up Migration Data** dialog box, from the **Source hierarchy** drop-down list, select the site code and site server of the top-level site of the source hierarchy, and then click **OK**.  
 
 9. Click **Yes** to complete the migration process for the source hierarchy.  
-  

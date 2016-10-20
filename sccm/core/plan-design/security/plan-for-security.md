@@ -1,7 +1,8 @@
 ---
 title: "Plan for security in System Center Configuration Manager"
+description: "Get best practices and other information about security in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Nbigman
+author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Plan for security in System Center Configuration Manager
+# Plan for security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the information in this topic to help you plan for security in System Center Configuration Manager.  
 
    For additional information about how Configuration Manager uses certificates and cryptographic controls, see [Cryptographic controls technical reference for System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
@@ -33,7 +34,7 @@ Use the information in this topic to help you plan for security in System Center
  Configuration Manager can automatically generate self-signed certificates when PKI certificates are not available, and some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you do not have to take additional action. One possible exception is the site server signing certificate. The site server signing certificate is always self-signed, and it ensures that the client policies that clients download from the management point were sent from the site server and were not tampered with.  
 
 ### Planning for the site server signing certificate (self-signed)  
- Clients can securely obtain a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot obtain a copy of the site server signing certificate by using one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the client’s first communication with the site is from the Internet, because the management point is connected to an untrusted network and therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
+ Clients can securely obtain a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot obtain a copy of the site server signing certificate by using one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the client's first communication with the site is from the Internet, because the management point is connected to an untrusted network and therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
 
  Scenarios when clients cannot securely obtain a copy of the site server certificate include the following:  
 
@@ -41,7 +42,7 @@ Use the information in this topic to help you plan for security in System Center
 
     -   The Active Directory schema is not extended for Configuration Manager.  
 
-    -   The client’s site is not published to Active Directory Domain Services.  
+    -   The client's site is not published to Active Directory Domain Services.  
 
     -   The client is from an untrusted forest or a workgroup.  
 
@@ -51,11 +52,11 @@ Use the following procedure to install clients together with a copy of the site 
 
 ##### To install clients with a copy of the site server signing certificate  
 
-1.  Locate the site server signing certificate on the client’s primary site server. The certificate is stored in the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
+1.  Locate the site server signing certificate on the client's primary site server. The certificate is stored in the **SMS** certificate store and has the Subject name **Site Server** and the friendly name **Site Server Signing Certificate**.  
 
 2.  Export the certificate without the private key, store the file securely, and only access it from a secured channel (for example, by using SMB signing or IPsec).  
 
-3.  Install the client by using the Client.msi property **SMSSIGNCERT=***<Full path and file name\>* with CCMSetup.exe.  
+3.  Install the client by using the Client.msi property **SMSSIGNCERT=***&lt;Full path and file name\>* with CCMSetup.exe.  
 
 ###  <a name="BKMK_PlanningForCRLs"></a> Planning for PKI certificate revocation  
 When you use PKI certificates with Configuration Manager, plan for how and whether clients and servers will use a certificate revocation list (CRL) to verify the certificate on the connecting computer. The certificate revocation list (CRL) is a file that is created and signed by a certification authority (CA) and contains a list of certificates that it has issued, but revoked. Certificates can be revoked by a CA administrator, for example, if an issued certificate is known or suspected to be compromised.  
@@ -83,7 +84,7 @@ If your IIS site systems use PKI client certificates for client authentication o
 -   You use PKI client certificates that do not chain to a root certification authority (CA) certificate that is trusted by management points.  
 
     > [!NOTE]  
-    >  When you issue client PKI certificates from the same CA hierarchy that issues the server certificates that you use for management points, you do not have to specify this root CA certificate. However, if you use multiple CA hierarchies and you are not sure whether they trust each other, import the root CA for the clients’ CA hierarchy.  
+    >  When you issue client PKI certificates from the same CA hierarchy that issues the server certificates that you use for management points, you do not have to specify this root CA certificate. However, if you use multiple CA hierarchies and you are not sure whether they trust each other, import the root CA for the clients' CA hierarchy.  
 
 If you must import root CA certificates for Configuration Manager, export them from the issuing CA or from the client computer. If you export the certificate from the issuing CA that is also the root CA, ensure that the private key is not exported. Store the exported certificate file in a secured location to prevent tampering. You must be able to access the file when you configure the site, so that if you access the file over the network, ensure that the communication is protected from tampering by using SMB signing or IPsec.  
 
@@ -91,7 +92,7 @@ If any of the root CA certificates that you import are renewed, you must import 
 
 These imported root CA certificates and the root CA certificate of each management point create the certificate issuers list that Configuration Manager computers use in the following ways:  
 
--   When clients connect to management points, the management point verifies that the client certificate chains to a trusted root certificate in the site’s certificate issuers list. If it does not, the certificate is rejected, and the PKI connection fails.  
+-   When clients connect to management points, the management point verifies that the client certificate chains to a trusted root certificate in the site's certificate issuers list. If it does not, the certificate is rejected, and the PKI connection fails.  
 
 -   When clients select a PKI certificate, if they have a certificate issuers list, they select a certificate that chains to a trusted root certificate in the certificate issuers list. If there is no match, the client does not select a PKI certificate. For more information about the client certificate process, see the [Planning for PKI client certificate selection](#BKMK_PlanningForClientCertificateSelection) section in this topic.  
 
@@ -180,7 +181,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 2.  Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select the **Use PKI client certificate (client authentication capability) when available** check box. Configure any other settings from this tab that you require. For more information, see the  [Configure Settings for Client PKI Certificates](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) section in the [Configure security in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md) topic.  
 
-3.  Pilot a PKI rollout for client certificates. For an example deployment, see the [Deploying the Client Certificate for Windows Computers](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_client2008_cm2012) section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+3.  Pilot a PKI rollout for client certificates. For an example deployment, see the *Deploying the Client Certificate for Windows Computers* section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) topic.  
 
 4.  Install clients by using the client push installation method. For more information, see the [How to Install Configuration Manager Clients by Using Client Push](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush) section in the [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md) topic.  
 
@@ -193,16 +194,16 @@ Because of the number of configuration options and choices in Configuration Mana
     > [!NOTE]  
     >  When the Configuration Manager client installs on client computers, the **cmHttpsReadiness.exe** tool is installed in the *%windir%***\CCM** folder. When you run this tool on clients, you can specify the following options:  
     >   
-    >  -   /Store:<name\>  
-    > -   /Issuers:<list\>  
-    > -   /Criteria:<criteria\>  
+    >  -   /Store:&lt;name\>  
+    > -   /Issuers:&lt;list\>  
+    > -   /Criteria:&lt;criteria\>  
     > -   /SelectFirstCert  
     >   
     >  These options map to the **CCMCERTSTORE**, **CCMCERTISSUERS**, **CCMCERTSEL**, and **CCMFIRSTCERT** Client.msi properties, respectively. For more information about these options, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
 7.  When you are confident that a sufficient number of clients are successfully using their client PKI certificate for authentication over HTTP, do the following:  
 
-    1.  Deploy a PKI web server certificate to a member server that will run an additional management point for the site, and configure that certificate in IIS. For more information, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md#BKMK_webserver2008_cm2012)section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](../Topic/Step-by-step%20example%20deployment%20of%20the%20PKI%20certificates%20for%20System%20Center%20Configuration%20Manager:%20Windows%20Server%202008%20Certification%20Authority.md) topic.  
+    1.  Deploy a PKI web server certificate to a member server that will run an additional management point for the site, and configure that certificate in IIS. For more information, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) topic.  
 
     2.  Install the management point role on this server and configure the **Client connections** option in the management point properties for **HTTPS**.  
 
@@ -230,7 +231,7 @@ Clients can automatically retrieve the public copy of the trusted root key by us
 
 -   Clients are installed by using client push.  
 
-If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker’s management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients by using the trusted root key.  
+If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients by using the trusted root key.  
 
 Use the following procedures to pre-provision and verify the trusted root key for a Configuration Manager client:  
 
@@ -247,7 +248,7 @@ You can remove the trusted root key from a client by using the Client.msi proper
 
 #### To pre-provision a client with the trusted root key by using a file  
 
-1.  In a text editor, open the file *<Configuration Manager directory\>***\bin\mobileclient.tcf**.  
+1.  In a text editor, open the file *&lt;Configuration Manager directory\>***\bin\mobileclient.tcf**.  
 
 2.  Locate the entry **SMSPublicRootKey=**, copy the key from that line, and close the file without any changes.  
 
@@ -255,21 +256,21 @@ You can remove the trusted root key from a client by using the Client.msi proper
 
 4.  Save the file and place it somewhere where all computers can access it, but the file is secured to prevent tampering.  
 
-5.  Install the client by using any installation method that accepts Client.msi properties, and specify the Client.msi property **SMSROOTKEYPATH=***<Full path and file name\>*.  
+5.  Install the client by using any installation method that accepts Client.msi properties, and specify the Client.msi property **SMSROOTKEYPATH=***&lt;Full path and file name\>*.  
 
     > [!IMPORTANT]  
-    >  When you specify the trusted root key for additional security during client installation, you must also specify the site code, by using the Client.msi property **SMSSITECODE=<site code\>**.  
+    >  When you specify the trusted root key for additional security during client installation, you must also specify the site code, by using the Client.msi property **SMSSITECODE=&lt;site code\>**.  
 
 #### To pre-provision a client with the trusted root key without using a file  
 
-1.  In a text editor, open the file *<Configuration Manager directory\>***\bin\mobileclient.tcf**.  
+1.  In a text editor, open the file *&lt;Configuration Manager directory\>***\bin\mobileclient.tcf**.  
 
 2.  Locate the entry SMSPublicRootKey=, note the key from that line or copy it to the Clipboard, and then close the file without any changes.  
 
-3.  Install the client by using any installation method that accepts Client.msi properties, and specify the Client.msi property **SMSPublicRootKey=***<key\>*, where *<key\>* is the string that you copied from mobileclient.tcf.  
+3.  Install the client by using any installation method that accepts Client.msi properties, and specify the Client.msi property **SMSPublicRootKey=***&lt;key\>*, where *&lt;key\>* is the string that you copied from mobileclient.tcf.  
 
     > [!IMPORTANT]  
-    >  When you specify the trusted root key for additional security during client installation, you must also specify the site code, by using the Client.msi property **SMSSITECODE=<site code\>**  
+    >  When you specify the trusted root key for additional security during client installation, you must also specify the site code, by using the Client.msi property **SMSSITECODE=&lt;site code\>**  
 
 #### To verify the trusted root key on a client  
 
@@ -289,7 +290,7 @@ You can remove the trusted root key from a client by using the Client.msi proper
 
 8.  In the new **Query Result** window that displays the instances of **TrustedRootKey**, double-click **TrustedRootKey=@**  
 
-9. In the **Object editor for TrustedRootKey=@** dialog box, in the **Properties** section, scroll down to **TrustedRootKey CIM_STRING**. The string in the right column is the trusted root key. Verify that it matches the **SMSPublicRootKey** value in the file *<Configuration Manager directory\>***\bin\mobileclient.tcf**.  
+9. In the **Object editor for TrustedRootKey=@** dialog box, in the **Properties** section, scroll down to **TrustedRootKey CIM_STRING**. The string in the right column is the trusted root key. Verify that it matches the **SMSPublicRootKey** value in the file *&lt;Configuration Manager directory\>***\bin\mobileclient.tcf**.  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> Planning for Signing and Encryption  
  When you use PKI certificates for all client communications, you do not have to plan for signing and encryption to help secure client data communication. However, if you configure any site systems that run IIS to allow HTTP client connections, you must decide how to help secure the client communication for the site.  

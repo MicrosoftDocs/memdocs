@@ -1,7 +1,8 @@
 ---
-title: "Install System Center Configuration Manager consoles"
+title: "Install consoles | System Center Configuration Manager"
+description: "Read about installing Configuration Manager consoles to connect to a central administration site or a primary site."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Install System Center Configuration Manager consoles
+# Install System Center Configuration Manager consoles*Applies to: System Center Configuration Manager (Current Branch)*
 
 Administrative users use the System Center Configuration Manager console to manage the Configuration Manager environment. Each Configuration Manager console can connect to a central administration site or a primary site. You cannot connect a Configuration Manager console to a secondary site.
 
@@ -74,7 +75,7 @@ Administrative users use the System Center Configuration Manager console to mana
   | :------------- | :------------- |
   |/q|Installs the Configuration Manager console unattended. The **EnableSQM**, **TargetDir**, and **DefaultSiteServerName** options are required when you use this option.|  
   |/uninstall|Uninstalls the Configuration Manager console. You must specify this option first when you use it with the **/q** option.|  
-  |LangPackDir|Specifies the path to the folder that contains the language files. You can use **Setup Downloader** to download the language files. If you do not use this option, Setup looks for the language folder in the current folder. If the language folder is not found, Setup continues to install English only. For more information, see [Setup Downloader](../Topic/Site%20installation%20technical%20reference%20for%20System%20Center%20Configuration%20Manager.md#bkmk_SetupDownloader).|  
+  |LangPackDir|Specifies the path to the folder that contains the language files. You can use **Setup Downloader** to download the language files. If you do not use this option, Setup looks for the language folder in the current folder. If the language folder is not found, Setup continues to install English only. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).|  
   |TargetDir|Specifies the installation folder to install the Configuration Manager console. This option is required when you use the **/q** option.|  
   |EnableSQM|Specifies whether to join the Customer Experience Improvement Program (CEIP). Use a value of 1 to join the Customer Experience Improvement Program, and a value of 0 to not join the program. This option is required when you use the **/q** option.|  
   |DefaultSiteServerName|Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the **/q** option.|  

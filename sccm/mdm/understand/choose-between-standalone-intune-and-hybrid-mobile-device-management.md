@@ -1,7 +1,8 @@
 ---
-title: "Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager"
+title: "Choose Intune standalone or hybrid MDM | System Center Configuration Manager"
+description: "Choose whether to deploy hybrid mobile device management with Intune and Configuration Manager or run Intune standalone."
 ms.custom: na
-ms.date: 2016-06-01
+ms.date: 06/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,25 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 caps.latest.revision: 10
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager
+# Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I deploy hybrid MDM with Intune and Configuration Manager or run Intune standalone in the cloud only configuration?" It’s an important decision, and one that is not easily changed after implementation.  
 
  An Intune standalone deployment involves no on-premises infrastructure, and is managed via a web console. It is agile and lightweight, and popular with cloud-first minded organizations.  
 
  A hybrid MDM deployment involves Intune and Configuration Manager, and is managed using tools familiar to experienced Configuration Manager admins. It offers “single pane of glass” management of MDM and traditional clients, as well as scale in large environments.  
 
- **In this article:**  
-
- [What does Intune standalone mean?](#Intune)   
- [What does hybrid MDM mean?](#hybrid)   
- [Planning choices and Intune deployment timelines](#choices_timelines)   
- [Pros and Cons of Intune standalone](#IntuneProCon)   
- [Pros and Cons of hybrid MDM](#HybridProCon)   
- [Planning decisions](#DecsionTree)  
-
-##  <a name="Intune"></a> What does Intune standalone mean?  
+##  What does Intune standalone mean?  
  Intune at its core is a cloud service. There are Intune datacenters hosted in North America, Europe and Asia providing mobile devices with security policies, email and Wi-Fi profiles, applications, inventory, and more.  
 
  An Intune standalone implementation does not require any on-premises infrastructure. All configuration, management, deployment and reporting are performed via a web-based console, which is accessible from anywhere in the world.  
@@ -38,7 +30,7 @@ One of the most commonly asked questions regarding mobile device management (MDM
 
  Being a cloud service, Intune can be built and deployed in a short timeframe.  
 
-##  <a name="hybrid"></a> What does hybrid MDM mean?  
+##  What does hybrid MDM mean?  
  For organizations who want to maximize their Configuration Manager investment, customers who need fine-grained control, or customers who exceed scale limitations of Intune, a hybrid  implementation that uses Intune to manage mobile devices  is available.  
 
  Hybrid deployments require  Microsoft System Center 2012 Configuration Manager SP1 or above.  
@@ -49,7 +41,7 @@ One of the most commonly asked questions regarding mobile device management (MDM
 
  A hybrid deployment allows the use of tools that are familiar to Configuration Manager admins. Advanced functionality such as Role Based Administration Control (RBAC), SQL Server Reporting Services (SSRS), and complex device and user grouping using Collection Membership Queries become available for mobile devices when hybrid MDM is implemented.  
 
-##  <a name="choices_timelines"></a> Planning choices and Intune deployment timelines  
+##  Planning choices and Intune deployment timelines  
  Intune innovation and evolution is occurring at a rapid pace with monthly updates providing new or enhanced features, enhanced scale, new admin-console experiences through the Azure Portal, dynamic groups through Azure Active Directory, and more. As such, any design decisions should take into account the future direction of the product.  
 
  Many of the unique abilities that a hybrid configuration currently provides will be functionally replicated in Intune standalone as the service is developed in the short, medium, and long term.  
@@ -60,22 +52,22 @@ One of the most commonly asked questions regarding mobile device management (MDM
 
  Finally, we’re also working to assure that whatever configuration choice you make today, you’re able to move easily between hybrid and standalone configuration choices in a frictionless way. Switching MDM authorities today requires manual intervention from Microsoft Support, and significant effort by the tenant. To simplify this, our goal is to allow coexistence of hybrid and Intune standalone, allowing you to move users between the two types of management, but not requiring you to choose one configuration over the other.  This change also removes today’s challenges of having to call support and eliminates un-enrolling and re-enrolling devices.  
 
-##  <a name="IntuneProCon"></a> Pros and Cons of Intune standalone  
+##  Pros and Cons of Intune standalone  
 
 |Pros|Cons|  
 |----------|----------|  
 |Rapid build and deployment<br /><br /> No on-premises infrastructure<br /><br /> More frequent updates and feature releases<br /><br /> Low learning curve<br /><br /> Admin console available externally|Limited reporting capabilities<br /><br /> Limited security role restriction<br /><br /> No external tooling (such as PowerShell, etc.)<br /><br /> Limited app inventory<br /><br /> Basic user and device grouping capabilities<br /><br /> Silverlight required|  
 
-##  <a name="HybridProCon"></a> Pros and Cons of hybrid MDM  
+##  Pros and Cons of hybrid MDM  
 
 |Pros|Cons|  
 |----------|----------|  
 |Ability to scale<br /><br /> Advanced tooling (such as Configuration Manager console, PowerShell, logging, etc.)<br /><br /> Role Based Access Control (RBAC)<br /><br /> Advanced reporting<br /><br /> “Single pane of glass” management for MDM + traditional clients<br /><br /> Extended app inventory<br /><br /> Advanced user and device grouping<br /><br /> Multiple Exchange on-premises and Exchange Online connectors supported<br /><br /> Multiple NDES/CRP roles supported<br /><br /> Ability to mark devices as "company owned"<br /><br /> Greater troubleshooting capabilities<br /><br /> Configuration Manager user CALs included in subscription|On-premises complexity (configuration and management)<br /><br /> Steep learning curve<br /><br /> Servicing required for updates and feature releases<br /><br /> Additional licensing requirements (such as Windows, SQL Server, etc.)|  
 
-##  <a name="DecsionTree"></a> Planning decisions  
+##  Planning decisions  
  ![hybrid&#45;decisions](../../mdm/understand/media/hybrid-decisions.png)  
 
-|||  
+|Step|Decision|
 |-|-|  
 |<img src="media/hybrid-1.png" style="min-width:32px">|**How many devices are you planning to manage?**<br /><br /> Intune standalone supports up to 50,000 devices. Hybrid MDM  supports up to 300,000 devices.<br /><br /> For any deployment of significant size – standalone or hybrid MDM – we suggest you contact your Microsoft accounts team. Your Microsoft accounts team can put you in contact with Intune specialists who can discuss scale and limitations further.|  
 |![hybrid&#45;2](../../mdm/understand/media/hybrid-2.png)|**Is fine-grained access control required? (RBAC)**<br /><br /> Role Based Access Control (RBAC)  was added to System Center 2012 Configuration Manager. RBAC allows Configuration Manager administrators to design and deploy complex permission-sets, to restrict admin access to Configuration Manager objects and functions.<br /><br /> Intune standalone provides only two administrator roles: Full Access and Read-only Access.<br /><br /> If your organization needs to scope certain admins to certain users, devices, functions, or objects, Configuration Manager with RBAC is required.<br /><br /> If your organization has a small administrative team, and you don’t need the complexity of fine-grained access control, Intune with built-in security roles is the best fit.|  

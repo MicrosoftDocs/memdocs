@@ -1,7 +1,8 @@
 ---
-title: "Planning a source hierarchy strategy in System Center Configuration Manager"
+title: "Source hierarchy strategy | System Center Configuration Manager"
+description: "Configure a source hierarchy and gather data from a source site before you configure a System Center Configuration Manager migration job."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Planning a source hierarchy strategy in System Center Configuration Manager
+# Planning a source hierarchy strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you configure a migration job in your System Center Configuration Manager environment, you must configure a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining the way in which Configuration Manager gathers information from the source sites in the source hierarchy.  
 
 -   [Source hierarchies](#BKMK_Source_Hierarchies)  

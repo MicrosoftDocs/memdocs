@@ -1,7 +1,8 @@
 ---
-title: "Scenarios to streamline your installation of System Center Configuration Manager"
+title: "Install scenarios | System Center Configuration Manager"
+description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading."
 ms.custom: na
-ms.date: 2016-04-13
+ms.date: 04/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Scenarios to streamline your installation of System Center Configuration Manager
+# Scenarios to streamline your installation of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
 
 Supported scenarios include:  
@@ -48,7 +49,7 @@ In this example scenario, you install the first site of a hierarchy using a base
 
     -   You can only use baseline media to install the first site of a new hierarchy.  
 
-    -   For example, install a top-level site using the baseline version of 1511. See [Install System Center Configuration Manager sites](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md)  
+    -   For example, install a top-level site using the baseline version of 1511. See [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)  
 
     After this step, your top-level site runs version 1511.  
 
@@ -72,7 +73,7 @@ In this example scenario, you install the first site of a hierarchy using a base
 
     -   Because you did not install secondary sites while primary sites were at version 1511, you do not need to upgrade secondary sites.  
 
-    -   Instead you install new secondary sites that run version 1602. See [Install a secondary site](../Topic/Install%20System%20Center%20Configuration%20Manager%20sites.md#bkmk_pushSecondary).  
+    -   Instead you install new secondary sites that run version 1602. See *Install a secondary site* in [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)  .  
 
     After this step, new secondary sites are installed and run version 1602.  
 
@@ -80,7 +81,7 @@ In this example scenario, you install the first site of a hierarchy using a base
 
     -   Because you did not install clients while primary sites were at version 1511, you do not need to upgrade clients from 1511 to 1602.  
 
-    -   Instead, you install new clients that run version 1602. See [Deploy clients in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients.md).  
+    -   Instead, you install new clients that run version 1602. See [Deploy clients in System Center Configuration Manager](../../../clients/deploy/deploy-clients-to-windows-computers.md).  
 
     After this step, new clients are installed that run version 1602.  
 

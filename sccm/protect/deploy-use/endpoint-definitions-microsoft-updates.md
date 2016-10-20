@@ -1,7 +1,8 @@
 ---
 title: "Endpoint Protection malware definitions from network share | System Center Configuration Manager"
+description: "Learn how to enable the download of Endpoint Protection malware definitions from Microsoft Updates for Configuration Manager."
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,11 +12,11 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 caps.latest.revision: 21
-author: NathBarn
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager
+# Enable Endpoint Protection malware definitions to download from Microsoft Updates for Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  When you select to download definition updates from Microsoft Update, clients will check the Microsoft Update site at the interval defined in the **Definition updates** section of the antimalware policy dialog box.
 

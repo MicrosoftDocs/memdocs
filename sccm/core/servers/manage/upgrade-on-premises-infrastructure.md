@@ -1,7 +1,8 @@
 ---
-title: "Upgrade on-premises infrastructure that supports System Center Configuration Manager"
+title: "Upgrade on-premises infrastructure | System Center Configuration Manager"
+description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 2016-03-11
+ms.date: 03/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Upgrade on-premises infrastructure that supports System Center Configuration Manager
+# Upgrade on-premises infrastructure that supports System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to help you upgrade infrastructure that runs System Center Configuration Manager.  
 
 ##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade site operating system of site systems  

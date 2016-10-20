@@ -1,7 +1,8 @@
 ---
-title: "International support in System Center Configuration Manager"
+title: "International support | System Center Configuration Manager"
+description: "Configure System Center Configuration Manager to comply with specific international requirements."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# International support in System Center Configuration Manager
+# International support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The following sections provide technical details to help you configure System Center Configuration Manager to be compliant for specific international requirements.  
 
 ## GB18030 Requirements  

@@ -1,7 +1,8 @@
 ---
-title: "What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager"
+title: "Changes from Configuration Manager 2012 | System Center Configuration Manager "
+description: "Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 caps.latest.revision: 51
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
+# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
- System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](What%E2%80%99s%20new%20in%20System%20Center%20Configuration%20Manager%20incremental%20versions.md).
+ System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
 
 
@@ -40,10 +41,10 @@ For example, the 1602 update is only available from within the Configuration Man
 Periodically, an update version will also be released as a new baseline version (like update 1606) which can be used to install a new hierarchy without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 
 
- For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md)  
+ For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
 
 ##  <a name="bkmk_servicepoint"></a> Service connection point replaces Microsoft Intune connector  
- The **Microsoft Intune connecter** is replaced by a new site system role that enables additional functionality, the **service connection point**. The service connection point:  
+ The **Microsoft Intune connector** is replaced by a new site system role that enables additional functionality, the **service connection point**. The service connection point:  
 
 -   Replaces the Microsoft Intune connector when you integrate Intune with System Center Configuration Manager On\-premises Mobile Device Management  
 
@@ -76,20 +77,20 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 ##  <a name="bkmk_out"></a> Deprecated functionality  
  With System Center Configuration Manager, some capabilities, like native [Support for Intel Active Management Technology (AMT)](#bkmk_AMT) based-computers is removed from the Configuration Manager console, while other capabilities like Network Access Protection are removed entirely. Additionally, some older Microsoft products like Windows Vista,  Windows Server 2008, and SQL Server 2008, are no longer supported.  
 
- For a list of deprecated features, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md)  
+ For a list of deprecated features, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
- For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md)  
+ For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## Client deployment  
  System Center Configuration Manager introduces a new capability for testing new versions of  the Configuration Manager client before upgrading the rest of site with the new software.  This new capability gives you the opportunity to set up a preproduction collection in which to pilot a new client. Once you are satisfied with the new client software in preproduction, you can promote the client to automatically upgrade the rest of the site with the new version.  
 
- For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 ## Operating system deployment  
 
 -   A  new task sequence type is available in the Create Task Sequence Wizard,  **Upgrade an operating system from upgrade package**, that creates the steps to upgrade computers from Windows 7, Windows 8, or Windows 8.1 to Windows 10.  For more information, see [Upgrade Windows to the latest version with System Center Configuration Manager](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
 
--   Windows PE Peer Cache is now available when you deploy operating systems. Computers that run a task sequence to deploy an operating system can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](../../../osd/plan-design/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md).  
+-   Windows PE Peer Cache is now available when you deploy operating systems. Computers that run a task sequence to deploy an operating system can use Windows PE Peer Cache to obtain content from a local peer (a peer cache source) instead of downloading content from a distribution point. This helps minimize wide area network (WAN) traffic in branch office scenarios where there is no local distribution point. For more information, see [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic).  
 
 -   You can now view the state of Windows as a Service in your environment, create servicing plans to form deployment rings and ensure that Windows 10 current branch computers are kept up to date when new builds are released, and view alerts when Windows 10 clients are near end of support for their build of Current Branch (CB) or Current Branch for Business (CBB). For more information, see [Manage Windows as a service using System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
@@ -107,10 +108,10 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
 ## Software updates  
 
--   System Center Configuration Manager can now differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sup/deploy-use/integrate-windows-update-for-business-windows-10.md).  
+-   System Center Configuration Manager can now differentiate a Windows 10 computer that connects to  Windows Update for Business (WUfB) for software update management versus the computers connected to WSUS for software update management. The **UseWUServer** attribute is new and specifies whether the computer is managed with WUfB. You can use this setting in a collection to remove these computers from software update management. For more information, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).  
 
 -   You can now schedule and run the WSUS clean up task from the Configuration Manager console.  
-    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sup/deploy-use/manage-software-updates.md#BKMK_WSUSCleanUp).  
+    You can now manually run the WSUS cleanup task from in Software Update Point Component properties. When you select to run the WSUS cleanup task, it will run at the next software updates synchronization. The expired software updates will be set to a status of declined on the WSUS server and the Windows Update Agent on computers will no longer scan these software updates. For more information, see [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance.md).  
 
 ## Compliance settings  
 
@@ -153,4 +154,4 @@ For more information about mobile device management capabilities with Configurat
 ## On-premises Mobile Device Management  
  With System Center Configuration Manager, you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  
 
- To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
+ To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).

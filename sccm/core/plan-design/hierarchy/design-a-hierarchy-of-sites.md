@@ -1,7 +1,8 @@
 ---
-title: "Design a hierarchy of sites for System Center Configuration Manager"
+title: "Design a hierarchy | System Center Configuration Manager"
+description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
-ms.date: 2016-03-15
+ms.date: 03/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,17 +13,17 @@ ms.topic: get-started-article
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 caps.latest.revision: 22
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Design a hierarchy of sites for System Center Configuration Manager
+# Design a hierarchy of sites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before installing the first site of a new System Center Configuration Manager hierarchy, you should understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of  management each site type provides. Then, after considering content management options that can reduce the number of sites you need to install, you can plan out a topology that efficiently serves your current business needs and can later expand to manage future growth.  
 
 ##  <a name="bkmk_topology"></a> Hierarchy topology  
  Hierarchy topologies range from a single stand-alone primary site to a group of connected primary and secondary sites with a central administration site at the top-level (top-tier) site of the hierarchy.    
 The key driver of the type and count of sites that you use in a hierarchy is usually the number and type of devices you must support:  
 
- **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Sizing)). This topology is also successful when your companies different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
+ **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your companies different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
 
  Benefit of this topology include:  
 
@@ -99,7 +100,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 ##  <a name="BKMK_ChooseSecondary"></a> Determine when to use a secondary site  
  Use secondary sites to manage the transfer of deployment content and client data across low-bandwidth networks.  
 
- You manage a secondary site from a central administration site or the secondary site’s direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
+ You manage a secondary site from a central administration site or the secondary site's direct parent primary site. Secondary sites must be attached to a primary site, and you cannot move them to a different parent site without uninstalling them and then re-installing them as a child site below the new primary site. However, you can route content between two peer secondary sites to help manage the file-based replication of deployment content. To transfer client data to a primary site, the secondary site uses file-based replication. A secondary site also uses database replication to communicate with its parent primary site.  
 
  Consider installing a secondary site if any of the following conditions apply:  
 
@@ -139,9 +140,9 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 ##  <a name="bkmk_beyond"></a> Beyond hierarchy topology  
  In addition to an initial hierarchy topology, consider what services or capabilities will be available from  different sites  in the hierarchy (site system roles), and how hierarchy wide configurations and capabilities will be managed in your infrastructure. The following are the  more common considerations and are covered in separate topics. These should be considered as they can influence or be influenced by your hierarchy design:  
 
--   When you are preparing to [Manage computers and devices with System Center Configuration Manager](../Topic/Manage%20computers%20and%20devices%20with%20System%20Center%20Configuration%20Manager.md), consider if the devices you manage reside on-premises, in the cloud, or include user owned devices (BYOD).  Additionally, consider how you will manage devices that are supported by multiple  management options, like Windows 10 computers that can be managed directly by Configuration Manager or though integration with Microsoft Intune.  
+-   When you are preparing to [Manage computers and devices with System Center Configuration Manager](/sccm/core/clients/manage/manage-clients), consider if the devices you manage reside on-premises, in the cloud, or include user owned devices (BYOD).  Additionally, consider how you will manage devices that are supported by multiple  management options, like Windows 10 computers that can be managed directly by Configuration Manager or though integration with Microsoft Intune.  
 
--   Understand how your available network infrastructure might affect the flow of data between remote locations (see [Prepare your network environment for System Center Configuration Manager](../Topic/Prepare%20your%20network%20environment%20for%20System%20Center%20Configuration%20Manager.md)). Also consider where users and devices you manage are geographically located, and if they will access your infrastructure through your corporate domain, or from the Internet.  
+-   Understand how your available network infrastructure might affect the flow of data between remote locations (see [Prepare your network environment for System Center Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains)). Also consider where users and devices you manage are geographically located, and if they will access your infrastructure through your corporate domain, or from the Internet.  
 
 -   Plan for a content infrastructure to efficiently distribute the information you deploy (files and apps) to devices you manage (see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)).  
 
@@ -165,7 +166,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 
 **Consider configurations that span sites and hierarchies:**  
 
--   [High availability options for System Center Configuration Manager](../Topic/Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_HA) for sites and hierarchies  
+-   [High availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options) for sites and hierarchies  
 
 -   Will you [Extend the Active Directory schema for System Center Configuration Manager](../../../core/plan-design/network/extend-the-active-directory-schema.md) and configure and sites to [Publish site data for System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md)?  
 

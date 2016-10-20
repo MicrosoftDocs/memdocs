@@ -1,7 +1,8 @@
 ---
-title: "Uninstall sites and hierarchies in System Center Configuration Manager"
+title: "Uninstall sites | System Center Configuration Manager"
+description: "Use these details as a guide when you must uninstall a System Center Configuration Manager site."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Uninstall sites and hierarchies in System Center Configuration Manager
+# Uninstall sites and hierarchies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following details as a guide when you must uninstall a System Center Configuration Manager sites.  
 
 To decommission a hierarchy with multiple sites, the sequence of removal is important:  

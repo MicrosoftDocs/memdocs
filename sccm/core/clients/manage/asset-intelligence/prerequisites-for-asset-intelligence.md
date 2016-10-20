@@ -1,7 +1,8 @@
 ---
 title: "Asset Intelligence Prerequisites | System Center Configuration Manager"
+description: "Get the prerequisites for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Prerequisites for Asset Intelligence in System Center Configuration Manager
+# Prerequisites for Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Asset Intelligence in System Center Configuration Manager has external dependencies and dependencies within the product.  
 
 ## Dependencies external to Configuration Manager  

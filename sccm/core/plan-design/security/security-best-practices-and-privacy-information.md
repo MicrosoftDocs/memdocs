@@ -1,7 +1,8 @@
 ---
 title: "Security best practices and privacy information for System Center Configuration Manager"
+description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 caps.latest.revision: 10
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security best practices and privacy information for System Center Configuration Manager
+# Security best practices and privacy information for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following information to find security best practices and privacy information for System Center Configuration Manager.  
 
 ## Security and Privacy content:  
@@ -31,7 +32,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/deploy-use/security-and-privacy-for-software-updates.md)  
+-   [Security and privacy for software updates in System Center Configuration Manager](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
 -   [Security and privacy for operating system deployment in System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -53,10 +54,8 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for compliance settings in System Center Configuration Manager](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   [Security and Privacy for Remote Connection Profiles in Configuration Manager](../Topic/Security%20and%20Privacy%20for%20Remote%20Connection%20Profiles%20in%20Configuration%20Manager.md)  
+-   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles in System Center Configuration Manager](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
 -   [Security and privacy for certificate profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 
--   [Security and privacy for VPN profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-vpn-profiles.md)  
-
--   [Security and privacy for Wi-Fi profiles in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-profiles.md)  
+-   [Wi-Fi and VPN profile security and privacy in System Center Configuration Manager](../../../protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)  

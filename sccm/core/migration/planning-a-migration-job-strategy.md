@@ -1,7 +1,8 @@
 ---
-title: "Planning a migration job strategy in System Center Configuration Manager"
+title: "Migration job planning | System Center Configuration Manager"
+description: "Use migration jobs to configure data that you want to migrate to your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +13,11 @@ ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex
 
 ---
-# Planning a migration job strategy in System Center Configuration Manager
+# Planning a migration job strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can configure one or more migration jobs per source site. This allows you to migrate all objects at one time or limited subsets of data with each job.  
 
  You can create migration jobs after Configuration Manager has successfully gathered data from one or more sites from the source hierarchy. You can migrate data in any sequence from the source sites that have gathered data. With a Configuration Manager 2007 source site, you can migrate data only from the site where an object was created. With source sites that run System Center 2012 Configuration Manager or later,  all data that you can migrate is available at the top-level site of the source hierarchy.  

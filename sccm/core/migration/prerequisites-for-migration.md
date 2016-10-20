@@ -1,7 +1,8 @@
 ---
-title: "Prerequisites for migration in System Center Configuration Manager"
+title: "Migration prerequisites | System Center Configuration Manager"
+description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Prerequisites for migration in System Center Configuration Manager
+# Prerequisites for migration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To migrate from a supported source hierarchy, you must have access to each applicable Configuration Manager source site, and permissions within the System Center Configuration Manager destination site to configure and run migration operations.  
 
  Use the information in the following sections to help you understand the versions of Configuration Manager that are supported for migration, and the required configurations.  
@@ -85,7 +86,7 @@ The followingare required configurations for using migration and migration opera
 
     When gathering data, the following network protocols and ports are used:  
 
-    -   NetBIOS/SMB – 445 (TCP)  
+    -   NetBIOS/SMB - 445 (TCP)  
 
     -   RPC (WMI) - 135 (TCP)  
 

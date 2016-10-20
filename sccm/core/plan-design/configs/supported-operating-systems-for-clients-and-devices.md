@@ -1,7 +1,8 @@
 ---
-title: "Supported operating systems for clients and devices for System Center Configuration Manager"
+title: "Supported clients and devices | System Center Configuration Manager"
+description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
-ms.date: 2016-08-19
+ms.date: 08/19/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# Supported operating systems for clients and devices for System Center Configuration Manager
+# Supported operating systems for clients and devices for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 
@@ -28,7 +29,9 @@ author: Mtillman
 ##  <a name="bkmk_WinClientos"></a> Windows computers  
  You can manage Windows computers with the Configuration Manager client that is included with Configuration Manager. For more information see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
+
+-  **Windows Server 2016**  – Standard, Datacenter <sup>1</sup>
 
 -   **Windows Server 2012 R2** (x64) – Standard, Datacenter <sup>1</sup>    
 
@@ -72,7 +75,7 @@ author: Mtillman
 ##  <a name="bkmk_EmbeddedOS"></a> Windows Embedded  
  You can manage Windows Embedded devices by installing Configuration Manager client software on the device.  For more information see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
 -   All client features are supported on supported Windows Embedded systems that do not have write filters enabled.  
 
@@ -88,7 +91,7 @@ author: Mtillman
 
 -   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
 
 -   **Windows 10 Enterprise** (x86, x64)  
 
@@ -121,17 +124,17 @@ author: Mtillman
 ## Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
 
- **Requirements and limitations**  
+**Requirements and limitations**  
 
 -   The mobile device client requires 0.78 MB or storage space to install the client. Logging on the mobile device can require up to 256 KB of additional storage space.    
 
 -   Features for these mobile devices vary by platform and client type. For information about which management functions Configuration Manager supports for mobile device legacy client, see [Choose a device management solution for System Center Configuration Manager](../../../core/plan-design/choose-a-device-management-solution.md).  
 
- **Supported operating systems:**  
+**Supported operating systems:**  
 
 -   Windows CE 7.0 (ARM and x86 processors)  
 
- **Supported languages include:**  
+**Supported languages include:**  
 
 -   Chinese (simplified and traditional)    
 
@@ -156,15 +159,15 @@ author: Mtillman
 ## Mac computers  
  You can manage Mac OS X computers with the Configuration Manager client for Mac.  
 
- The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184)  
+ The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
  You must use the Configuration Manager client for Mac (version  5.0.8333.1 or later), which must be separately downloaded. Unlike the Windows client, the Mac client is not included in the Configuration Manager software when you install it. To download the Mac client, go to [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
  For more information, see [How to deploy clients to Macs in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-macs.md).  
 
- **Supported versions:**  
+**Supported versions:**  
 
 -   **Mac OS X 10.9** (Mavericks)  
 
@@ -177,117 +180,117 @@ author: Mtillman
 
  The Linux and UNIX  client installation packages are  are not supplied with the Configuration Manager media. You can download them  as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.  
 
- **Requirements and limitations:**  
+**Requirements and limitations:**  
 
 -   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
--   For an overview of the management capabilities supported for computers that run Linux or UNIX, see[How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
+-   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.  
 
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
- **Supported versions:** The following versions are supported by using the indicated .tar file.  
+**Supported versions:** The following versions are supported by using the indicated .tar file.  
 
 ### AIX  
 
 |||  
 |-|-|  
-|Version 5.3 (Power)|ccm-Aix53ppc.<build\>.tar|  
-|Version 6.1 (Power)|ccm-Aix61ppc.<build\>.tar|  
-|Version 7.1 (Power)|ccm-Aix71ppc.<build\>.tar|  
+|Version 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
+|Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
+|Version 7.1 (Power)|ccm-Aix71ppc.&lt;build\>.tar|  
 
 ### CentOS  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Debian  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x86|ccm-Universalx86.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
-|Version 8 x86|ccm-Universalx86.<build\>.tar|  
-|Version 8 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 8 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 8 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### HP-UX  
 
 |||  
 |-|-|  
-|Version 11iv2 IA64|ccm-HpuxB.11.23i64.<build\>.tar|  
-|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.<build\>.tar|  
-|Version 11iv3 IA64|ccm-HpuxB.11.31i64.<build\>.tar|  
-|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.<build\>.tar|  
+|Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
+|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
+|Version 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;build\>.tar|  
+|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;build\>.tar|  
 
 ### Oracle Linux  
 
 |||  
 |-|-|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Red Hat Enterprise Linux (RHEL)  
 
 |||  
 |-|-|  
-|Version 4 x86|ccm-RHEL4x86.<build\>.tar|  
-|Version 4 x64|ccm-RHEL4x64.<build\>.tar|  
-|Version 5 x86|ccm-Universalx86.<build\>.tar|  
-|Version 5 x64|ccm-Universalx64.<build\>.tar|  
-|Version 6 x86|ccm-Universalx86.<build\>.tar|  
-|Version 6 x64|ccm-Universalx64.<build\>.tar|  
-|Version 7 x64|ccm-Universalx64.<build\>.tar|  
+|Version 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
+|Version 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
+|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Solaris  
 
 |||  
 |-|-|  
-|Version 9 SPARC|ccm-Sol9sparc.<build\>.tar|  
-|Version 10 x86|ccm-Sol10x86.<build\>.tar|  
-|Version 10 SPARC|ccm-Sol10sparc.<build\>.tar|  
-|Version 11 x86|ccm-Sol11x86.<build\>.tar|  
-|Version 11 SPARC|ccm-Sol11sparc.<build\>.tar|  
+|Version 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
+|Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
+|Version 10 SPARC|ccm-Sol10sparc.&lt;build\>.tar|  
+|Version 11 x86|ccm-Sol11x86.&lt;build\>.tar|  
+|Version 11 SPARC|ccm-Sol11sparc.&lt;build\>.tar|  
 
 ### SUSE Linux Enterprise Server (SLES)  
 
 |||  
 |-|-|  
-|Version 9 x86|ccm-SLES9x86.<build\>.tar|  
-|Version 10 SP1 x86|ccm-Universalx86.<build\>.tar|  
-|Version 10 SP1 x64|ccm-Universalx64.<build\>.tar|  
-|Version 11 SP1 x86|ccm-Universalx86.<build\>.tar|  
-|Version 11 SP1 x64|ccm-Universalx64.<build\>.tar|  
-|Version 12 x64|ccm-Universalx64.<build\>.tar|  
+|Version 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
+|Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 10 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 11 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 11 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 12 x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Ubuntu  
 
 |||  
 |-|-|  
-|Version 10.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 10.04 LTS x64|ccm-Universalx64.<build\>.tar|  
-|Version 12.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 12.04 LTS x64|ccm-Universalx64.<build\>.tar|  
-|Version 14.04 LTS x86|ccm-Universalx86.<build\>.tar|  
-|Version 14.04 LTS x64|ccm-Universalx64.<build\>.tar|  
+|Version 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 12.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
+|Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
+|Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ##  <a name="bkmk_IntuneOS"></a> Mobile devices enrolled by Microsoft Intune  
  For details about the computers and devices you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  
 
--   [Mobile device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx)  
--   [Windows PC management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn646975.aspx)  
+-   [Mobile device management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
+-   [Windows PC management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
 
 ##  <a name="bkmk_OnpremOS"></a> On-premises mobile device management  
  Configuration manager has built-in capabilities to manage devices that are on-premises without installing client software.  For more information see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
@@ -319,7 +322,7 @@ author: Mtillman
 
 -   For more information about which management functions Configuration Manager supports for mobile devices that the Exchange Server connector manages, see Determine How to Manage Mobile Devices in Configuration Manager.  
 
- **Supported versions of Exchange Server:**  
+**Supported versions of Exchange Server:**  
 
 -   **Exchange Server 2010 SP1**  
 

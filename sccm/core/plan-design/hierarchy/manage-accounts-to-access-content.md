@@ -1,18 +1,20 @@
 ---
-title: "Manage accounts to access content in System Center Configuration Manager"
+title: "Accounts to access content | System Center Configuration Manager"
+description: "Learn about the accounts where clients access System Center Configuration Manager content."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: 4
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Manage accounts to access content in System Center Configuration Manager
+# Manage accounts to access content in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before deploying content in System Center Configuration Manager, take time to consider how clients will access that content from distribution points.  
 
 -   **Network Access Account** – Used by clients to connect to a distribution point and access content. By default, clients will first try their computer account  

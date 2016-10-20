@@ -1,7 +1,8 @@
 ---
 title: "Windows client firewall and port settings | System Center Configuration Manager"
+description: "Select Windows Firewall and port settings for clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Windows Firewall and port settings for clients in System Center Configuration Manager
+# Windows Firewall and port settings for clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Client computers in System Center Configuration Manager that run Windows Firewall often require you to configure exceptions to allow communication with their site. The exceptions that you must configure depend on the management features that you use with the Configuration Manager client.  
 
  Use the following sections to identify these management features and for more information about how to configure Windows Firewall for these exceptions.  
@@ -162,4 +163,4 @@ Client computers in System Center Configuration Manager that run Windows Firewal
 
  If the HTTP port is 80, the HTTPS port must be 443.  
 
- If the HTTP port is anything else, the HTTPS port must be 1 higher—for example, 8530 and 8531.
+ If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.

@@ -1,42 +1,32 @@
 ---
-# required metadata
 
-title: Overview of the software updates lifecycle | Configuration Manager
-description:
+title: Install and configure a software update point | Configuration Manager
+description: "Primary sites require a software update point on the central administration site for software updates compliance assessment and to deploy software updates to clients."
 keywords:
-author: dougeby
-manager: angrobe
+author: dougebyms.author: dougebymanager: angrobe
 ms.date: 9/14/2016
 ms.topic: article
-ms.prod:
+ms.prod: configuration-manager
 ms.service:
 ms.technology:
-ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
+ - configmgr-sum
+ms.assetid: b099a645-6434-498f-a408-1d438e394396
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer:
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
 
 ---
 
 
-# <a name="BKMK_InstallSUP"></a> Install a software update point  
+# Install and configure a software update point  *Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!IMPORTANT]  
->  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates in System Center Configuration Manager](../plan-design/plan-for-software-updates.md).  
+>  Before you install the software update point site system role, you must verify that the server meets the required dependencies and determines the software update point infrastructure on the site. For more information about how to plan for software updates and to determine your software update point infrastructure, see [Plan for software updates](../plan-design/plan-for-software-updates.md).  
 
  The software update point is required on the central administration site and on the primary sites in order to enable software updates compliance assessment and to deploy software updates to clients. The software update point is optional on secondary sites. The software update point site system role must be created on a server that has WSUS installed. The software update point interacts with the WSUS services to configure the software update settings and to request synchronization of software updates metadata. When you have a Configuration Manager hierarchy, install and configure the software update point on the central administration site first, then on child primary sites, and then optionally, on secondary sites. When you have a stand-alone primary site, not a central administration site, install and configure the software update point on the primary site first, and then optionally, on secondary sites. Some settings are only available when you configure the software update point on a top-level site. There are different options that you must consider depending on where you installed the software update point.  
 
 > [!IMPORTANT]  
 >  You can install more than one software update points on a site. The first software update point that you install is configured as the synchronization source, which synchronizes the updates from Microsoft Update or from the upstream synchronization source. The other software update points on the site are configured as replicas of the first software update point. Therefore, some settings are not available after you install and configure the initial software update point.  
 
- You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** , depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/install-site-system-roles.md).  
+ You can add the software update point site system role to an existing site system server or you can create a new one. On the **System Role Selection** page of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** , depending on whether you add the site system role to a new or existing site server, select **Software update point**, and then configure the software update point settings in the wizard. The settings are different depending on the version of Configuration Manager that you use. For more information about how to install site system roles, see [Install site system roles](../../core/servers/deploy/configure/install-site-system-roles.md).  
 
  Use the following sections for information about the software update point settings on a site.  
 
@@ -55,13 +45,19 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 > [!IMPORTANT]  
 >  By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account does not have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account does not have Internet access.  
 
+
 ## WSUS settings  
  You must configure WSUS settings on different pages of the **Create Site System Server Wizard** or **Add Site System Roles Wizard** depending on the version of Configuration Manager that you use, and in some cases, only in the properties for the software update point, also known as Software Update Point Component Properties. Use the information in the following sections to configure the WSUS settings.  
 
-### WSUS port settings  
- You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point.  
+### <a name="BKMK_wsusport"></a>WSUS port settings  
+ You must configure the WSUS port settings on the Software Update Point page of the wizard or in the properties of the software update point. Use the following procedure to determine the port settings used by WSUS.  
 
- To determine the website and port configurations in WSUS, see [How to determine the port settings used by WSUS in System Center Configuration Manager](../plan-design/determine-wsus-port-settings.md).  
+#### To determine the port settings used in IIS  
+
+ 1.  On the WSUS server, open Internet Information Services (IIS) Manager.  
+
+ 2.  Expand **Sites**, right-click the Web site for the WSUS server, and then click **Edit Bindings**. In the Site Bindings dialog, the HTTP and HTTPS port values are displayed in the **Port** column.
+
 
 ### Configure SSL communications to WSUS  
  You can configure SSL communication on the **General** page of the wizard or on the **General** tab in the properties of the software update point.  
@@ -73,8 +69,8 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 
  For more information about Configuration Manager accounts, see [Accounts used in System Center Configuration Manager](../../core/plan-design/hierarchy/accounts.md).  
 
-## Synchronization Source  
- You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site. For more information, see [Synchronization source](../plan-design/plan-for-software-updates.md#BKMK_SyncSource).  
+## Synchronization source  
+ You can configure the upstream synchronization source for software updates synchronization on the **Synchronization Source** page of the wizard, or on the on the **Sync Settings** tab in Software Update Point Component Properties. Your options for the synchronization source vary depending on the site.  
 
  Use the following table for the available options when you configure the software update point at a site.  
 
@@ -108,7 +104,7 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 >  Schedule software updates synchronization to run by using a time-frame that is appropriate for your environment. One typical scenario is to set the software updates synchronization schedule to run shortly after the Microsoft regular security update release on the second Tuesday of each month, which is normally referred to as Patch Tuesday. Another typical scenario is to set the software updates synchronization schedule to run daily when you use software updates to deliver the Endpoint Protection definition and engine updates.  
 
 > [!NOTE]  
->  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](syncrhonize-software-updates.md).  
+>  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
 ## Supersedence rules  
  Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site.  
@@ -145,4 +141,4 @@ ms.assetid: a41cf133-8e37-4834-bbd6-7da50e591d8c
 ## Next steps
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this topic to install the software update point on child sites.
 
-Once you have your software update points installed, go to [synchronize software updates](syncrhonize-software-updates.md).
+Once you have your software update points installed, go to [synchronize software updates](synchronize-software-updates.md).

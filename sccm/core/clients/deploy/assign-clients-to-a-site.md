@@ -1,7 +1,8 @@
 ---
 title: "Assign clients to a site | System Center Configuration Manager"
+description: "Assign clients to a site in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-04-21
+ms.date: 04/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 ---
-# How to assign clients to a site in System Center Configuration Manager
+# How to assign clients to a site in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 After a System Center Configuration Manager client is installed, it must join a Configuration Manager primary site before it can be managed. The site that a client joins is referred to as its assigned site. Clients cannot be assigned to a central administration site or to a secondary site.  
 
  The assignment process occurs after the client is successfully installed and determines which site manages the client computer. When you install the mobile device client during Configuration Manager enrollment, this process always automatically assigns the mobile device to a site. When you install the client on a computer, you can also assign the client to a site or you can just install the client without assigning it to a site. However, when the client is installed but not assigned, the client is unmanaged until site assignment is successful.  

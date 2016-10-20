@@ -1,7 +1,8 @@
 ---
-title: "Use cloud services with System Center Configuration Manager"
+title: "Use cloud services | System Center Configuration Manager"
+description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,11 @@ ms.topic: get-started-article
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brenduns
+manager: angrobe
 
 ---
-# Use cloud services with System Center Configuration Manager
+# Use cloud services with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports several cloud-based options that supplement your on-premises infrastructure and can help solve business problems like:  
 
 -   Manage BYOD (by using Intune for mobile device management)  
@@ -33,7 +35,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For more information about Windows Azure, see [Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
-### Microsoft Azure virtual machines<br />(for cloud-based infrastructure)  
+### Microsoft Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
 
 -   **Scenario 1:** You can run Configuration Manager in a virtual machine and use it to manage clients installed in other virtual machines.  
@@ -61,7 +63,7 @@ Additionally, Configuration Manager sites and clients that run in Azure virtual 
 
 Using Azure to hosts distribution points requires you to have an Azure subscription and you incur charges based on the amount of data that transfers to and from the service.  
 
-### Microsoft Intune <br />(for mobile device management)  
+### Microsoft Intune (for mobile device management)  
  You can integrate your Microsoft Intune subscription with Configuration Manager to enable management of devices using the Intune service. This integration:  
 
 -   Is called a hybrid configuration and extends Configuration Manager, (or Intune depending on your perspective) to support a large variety of devices.  

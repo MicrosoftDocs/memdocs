@@ -1,7 +1,8 @@
 ---
 title: "Example scenario - deploy Windows Embedded clients | System Center Configuration Manager"
+description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,15 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices
+# Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices*Applies to: System Center Configuration Manager (Current Branch)*
 This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices by using System Center Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and you do not have to take the steps in this scenario that are required to manage write filters.  
 
  Coho Vineyard & Winery is opening a visitor center and is interested in kiosks that run Windows Embedded to run interactive presentations. The building for the new visitor center is not close to the IT department, so it is important that the kiosks can be managed remotely. In addition to installing the software that runs the interactive presentations, these devices must run up-to-date antimalware protection software to comply with the company security policies. To make sure that the interactive presentations are always available for visitors, the kiosks must run 7 days a week, with no downtime while the visitor center is open.  
 
- Coho Vineyard & Winery already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks that are in the company’s reception lobby. If the pilot is successful in remotely managing these devices, the purchase order for the visitor center kiosks can be approved.  
+ Coho Vineyard & Winery already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks that are in the company's reception lobby. If the pilot is successful in remotely managing these devices, the purchase order for the visitor center kiosks can be approved.  
 
  To manage these Windows Embedded devices that are write-filter-enabled, Jane performs the following steps to install the Configuration Manager client, protect the client by using Endpoint Protection, and install the interactive presentation software.  
 
@@ -152,7 +153,7 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
 
     -   [How to monitor Endpoint Protection in System Center Configuration Manager](../../../protect/deploy-use/monitor-endpoint-protection.md)  
 
-    -   [Monitor applications with System Center Configuration Manager](../Topic/Monitor%20applications%20with%20System%20Center%20Configuration%20Manager.md)  
+    -   [Monitor applications with System Center Configuration Manager](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
 
 13. Jane monitors the kiosks and reports the successful management of them to her manager. As a result, 20 kiosks are ordered for the visitor center.  
 

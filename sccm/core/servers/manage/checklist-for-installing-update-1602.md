@@ -1,7 +1,8 @@
 ---
-title: "Checklist for installing update 1602 for System Center Configuration Manager"
+title: "Checklist for 1602 | System Center Configuration Manager"
+description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 caps.latest.revision: 13
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Checklist for installing update 1602 for System Center Configuration Manager
+# Checklist for installing update 1602 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before updating from System Center Configuration Manager version 1511 to  version 1602, review the following information and checklist for actions to take before starting the update.  
 
  **About installing update 1602:**  
@@ -69,7 +70,7 @@ For more information, see
  **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster.    
 
- For more information, see [Plan for software updates in System Center Configuration Manager](../../../sup/plan-design/plan-for-software-updates.md)  
+ For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:  
 

@@ -1,7 +1,8 @@
 ---
-title: "Prepare Windows Servers to support System Center Configuration Manager"
+title: "Prepare Windows Servers | System Center Configuration Manager"
+description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,17 +13,17 @@ ms.topic: get-started-article
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Prepare Windows Servers to support System Center Configuration Manager
+# Prepare Windows Servers to support System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you can use a Windows computer as a site system server for System Center Configuration Manager, you must ensure that the computer meets the prerequisites for its intended use as a site server or site system server.  
 
 -   These often include one or more Windows features or roles, which are enabled by using the computers Server Manager.  
 
 -   Because the method to enable Windows features and roles differs with different operating systems, refer to the documentation for your operating system for detailed information about configuring these for the operating systems you use.  
 
-The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see the [Prerequisites for site system roles](Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md#bkmk_Prrequisites) in the [Supported operating systems for sites and clients](Supported%20operating%20systems%20for%20sites%20and%20clients%20for%20System%20Center%20Configuration%20Manager.md) topic.
+The information in this article provides an overview of the types of Windows configurations that are required to support Configuration Manager site systems. For configuration details for specific site system roles, see [Site and site system prerequisites ](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
 
 ##  <a name="BKMK_WinFeatures"></a> Windows features and roles  
  When you configure Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. Therefore, we recommend you identify which computers will host which site system roles in advance of installing a Configuration Manager site or site system server.

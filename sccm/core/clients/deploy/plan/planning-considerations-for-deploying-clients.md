@@ -1,7 +1,8 @@
 ---
 title: "Client deployment planning | System Center Configuration Manager"
+description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 caps.latest.revision: 3
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Planning considerations for deploying clients in System Center Configuration Manager
+# Planning considerations for deploying clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before installing clients on PCs, servers, and other devices in System Center Configuration Manager, you should consider how to deploy the client software and prepare the Configuration Manager infrastructure accordingly.  
 
  The following pages in this section provide information on planning for various client installation methods and the various details of deploying the client to different platforms in your organization:  

@@ -1,7 +1,8 @@
 ---
 title: "Asset Intelligence introduction | System Center Configuration Manager"
+description: "Get an introduction to Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: barlanmsft
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# Introduction to Asset Intelligence in System Center Configuration Manager
+# Introduction to Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Asset Intelligence in System Center Configuration Manager lets you inventory and manage software license usage throughout your enterprise by using the Asset Intelligence catalog. Many hardware inventory Windows Management Instrumentation (WMI) classes improve the breadth of information that is collected about hardware and software titles that are being used. Over 60 reports present this information in easy-to-use format. Many of these reports link to more specific reports, where you can query for general information and drill down to more detailed information. You can add custom information to the Asset Intelligence catalog, such as custom software categories, software families, software labels, and hardware requirements. You can also connect to System Center Online to dynamically update the Asset Intelligence catalog with the most current information available. Microsoft customers can reconcile enterprise software license usage with purchased software licenses that are being used by importing software license information into the Configuration Manager site database.  
 
 ##  <a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence catalog  
@@ -138,11 +139,11 @@ Asset Intelligence in System Center Configuration Manager lets you inventory and
 ###  <a name="BKMK_SoftwareIdTagReports"></a> Asset Intelligence software identification tag reports  
  Asset Intelligence software identification tag reports provide information about software that contains a software identification tag that is compliant with ISO/IEC 19770-2. The software identification tags provide authoritative information that is used to identify installed software. When you enable the SMS_SoftwareTag hardware inventory reporting class, Configuration Manager collects information about the software with software identification tags. The following reports provide information about the software:  
 
--   **Software 14A – Search for software identification tag enabled software**: This report provides the count of installed software with a software identification tag enabled.  
+-   **Software 14A - Search for software identification tag enabled software**: This report provides the count of installed software with a software identification tag enabled.  
 
--   **Software 14B – Computers with specific software identification tag enabled software installed**: This report lists all computers that have installed software with a specific software identification tag enabled.  
+-   **Software 14B - Computers with specific software identification tag enabled software installed**: This report lists all computers that have installed software with a specific software identification tag enabled.  
 
--   **Software 14C – Installed software identification tag enabled software on a specific computer**: This report lists all installed software with a specific software identification tag enabled on a specific computer.  
+-   **Software 14C - Installed software identification tag enabled software on a specific computer**: This report lists all installed software with a specific software identification tag enabled on a specific computer.  
 
 ###  <a name="BKMK_ReportingLImitations"></a> Asset Intelligence reporting limitations  
  Asset Intelligence reports can provide large amounts of information about installed software titles and purchased software licenses that are being used. However, you should not use this information as the only source for determining purchased software license compliance.  
@@ -151,7 +152,7 @@ Asset Intelligence in System Center Configuration Manager lets you inventory and
  The accuracy of the quantity displayed in the Asset Intelligence reports for installed software titles and license information can vary from the actual amounts currently used. This variation is caused by the complex dependencies involved in inventorying software license information for software titles in use in enterprise environments. The following examples show the dependencies involved in inventorying installed software in the enterprise by using Asset Intelligence that might affect the accuracy of Asset Intelligence reports:  
 
  **Client hardware inventory dependencies**  
- Asset Intelligence installed software reports are based on data that is collected from Configuration Manager clients by extending hardware inventory to enable Asset Intelligence reporting. Because of this dependency on hardware inventory reporting, Asset Intelligence reports reflect data only from Configuration Manager clients that successfully complete hardware inventory processes with the required Asset Intelligence WMI reporting classes enabled. In addition, because Configuration Manager clients perform hardware inventory processes on a schedule defined by the administrative user, a delay might occur in data reporting that affects the accuracy of Asset Intelligence reports. For example, an inventoried licensed software title might be uninstalled after the client finishes a successful hardware inventory cycle. However, the software title is displayed as installed in Asset Intelligence reports until the client’s next scheduled hardware inventory reporting cycle.  
+ Asset Intelligence installed software reports are based on data that is collected from Configuration Manager clients by extending hardware inventory to enable Asset Intelligence reporting. Because of this dependency on hardware inventory reporting, Asset Intelligence reports reflect data only from Configuration Manager clients that successfully complete hardware inventory processes with the required Asset Intelligence WMI reporting classes enabled. In addition, because Configuration Manager clients perform hardware inventory processes on a schedule defined by the administrative user, a delay might occur in data reporting that affects the accuracy of Asset Intelligence reports. For example, an inventoried licensed software title might be uninstalled after the client finishes a successful hardware inventory cycle. However, the software title is displayed as installed in Asset Intelligence reports until the client's next scheduled hardware inventory reporting cycle.  
 
  **Software packaging dependencies**  
  Because Asset Intelligence reports are based on installed software title data that is collected by using standard Configuration Manager client hardware inventory processes, some software title data might not be collected correctly. For example, software installations that do not comply with standard installation processes or software installations that were changed before installation could cause inaccurate Asset Intelligence reporting.  

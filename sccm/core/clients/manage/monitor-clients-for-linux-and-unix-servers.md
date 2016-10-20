@@ -1,7 +1,8 @@
 ---
-title: "Monitor Linux and UNIX clients | System Center Configuration Manager"
+title: "Monitor clients | Linux UNIX |System Center Configuration Manager"
+description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to monitor clients for Linux and UNIX servers in System Center Configuration Manager
+# How to monitor clients for Linux and UNIX servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can view information from Linux and UNIX servers in the System Center Configuration Manager console using the same methods you use to view information from Windows-based clients.  
 
  The information you can view includes:  

@@ -1,7 +1,8 @@
 ---
 title: "Configure Endpoint Protection Client | System Center Configuration Manager"
+description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
-ms.date: 2016-08-05
+ms.date: 08/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,15 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarn
+author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 
-# Configure Custom Client Settings for Endpoint Protection
+# Configure Custom Client Settings for Endpoint Protection*Applies to: System Center Configuration Manager (Current Branch)*
 This procedure configures custom client settings for Endpoint Protection which can be deployed to collections of computers in your hierarchy.
 
 > [!IMPORTANT]
->  Do not configure the default Endpoint Protection client settings unless you are sure that you want them applied to all computers in your hierarchy.
+>  Only configure the default Endpoint Protection client settings if you are sure that you want them applied to all computers in your hierarchy.
 
 ## To enable Endpoint Protection and configure custom client settings
 
@@ -52,9 +53,9 @@ Use the procedures in this topic to help you install and configure the Endpoint 
 ### Prerequisites for Installing the Endpoint Protection Client on the Reference Computer
 The following list contains the required prerequisites for installing the Endpoint Protection client software on a reference computer.
 
--   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center 2012 Configuration Manager installation folder on the site server.
+-   You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. This package can be found in the **Client** folder of the Microsoft System Center Configuration Manager installation folder on the site server.
 
--   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](antimalware-policies-for-endpoint-protection.md).
+-   To ensure that the Endpoint Protection client is deployed with the configuration that is required in your organization, create an antimalware policy, and then export that policy. You can then specify the antimalware policy to use when you manually install the Endpoint Protection client. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
    > [!NOTE]
    >  The **Default Client Antimalware Policy** cannot be exported.
@@ -66,7 +67,7 @@ You can install the Endpoint Protection client locally on the reference computer
 
 ## To install the Endpoint Protection client from a command prompt
 
-1.  Copy **scepinstall.exe** from the **Client** folder on the System Center 2012 Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.
+1.  Copy **scepinstall.exe** from the **Client** folder on the System Center Configuration Manager installation media to the computer on which you want to install the Endpoint Protection client software.
 
 2.  Open a command prompt with administrator privileges, navigate to the folder where **scepinstall.exe** is located, and then run the following command, adding any additional command line properties that you require:
 
@@ -125,7 +126,8 @@ After you install the Endpoint Protection client on your reference computer, ver
 ### How to Prepare the Endpoint Protection Client for Imaging
 After you verify that the Endpoint Protection client is installed correctly on the reference computer, you can prepare the computer for imaging. Perform the following steps to prepare the Endpoint Protection client for imaging.
 
-For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).
+
+For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 ### To prepare the Endpoint Protection client for imaging
 
@@ -136,11 +138,11 @@ For more information about operating system deployment in Configuration Manager,
 3.  Open an elevated command prompt, navigate to the folder in which you installed PsTools, and then type the following command
 
    ```
-   Psexec.exe –s –i regedit.exe
+   Psexec.exe -s -i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  Use caution while you are running the Registry Editor in this manner; the –s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
+   >  Use caution while you are running the Registry Editor in this manner; the -s option in PsExec.exe runs the Registry Editor with LocalSystem privileges.
 
 4.  In the Registry Editor, navigate to each of the following registry keys and delete them.
 
@@ -159,6 +161,6 @@ For more information about operating system deployment in Configuration Manager,
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\RemovalTools\MRT\GUID**
 
-After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](../../osd/deploy-use/manage-operating-system-images.md).
+After you complete the preceding steps, you can prepare the reference computer for imaging. For more information about operating system deployment in Configuration Manager, see [Manage operating system images with System Center Configuration Manager](/sccm/osd/get-started/manage-operating-system-images).
 
 When an image that contains the Endpoint Protection client software is deployed, the Endpoint Protection client will automatically report information to the Configuration Manager site to which the computer is assigned, and policy applicable to the client computer is downloaded and applied.

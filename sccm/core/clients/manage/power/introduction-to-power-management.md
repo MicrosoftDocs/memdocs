@@ -1,7 +1,8 @@
 ---
-title: "Introduction to power management in System Center Configuration Manager"
+title: "Introduction to power management | System Center Configuration Manager"
+description: "Get an introduction to power management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Introduction to power management in System Center Configuration Manager
+# Introduction to power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Power Management in System Center Configuration Manager addresses the need that many organizations have to monitor and reduce the power consumption of their computers. The feature takes advantage of the power management features built into Windows to apply relevant and consistent settings to computers in the organization. You can apply different power settings to computers during business hours and nonbusiness hours. For example, you might want to apply a more restrictive power plan to computers during nonbusiness hours. In cases where computers must always remain turned on, you can prevent power management settings from being applied.  
 
  Power management in Configuration Manager includes several reports to help you analyze power consumption and computer power settings in your organization. You can also use the reports to help you troubleshoot problems with power management.  

@@ -1,7 +1,8 @@
 ---
-title: "Release notes for System Center Configuration Manager"
+title: "Release notes | System Center Configuration Manager"
+description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 2016-08-16
+ms.date: 08/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: 41
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Release notes for System Center Configuration Manager
+# Release notes for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 With System Center Configuration Manager, product release notes are limited to urgent issues that are not yet fixed in the product (available through a in-console update), or detailed in a Microsoft Knowledge Base article.  
 
  For known issues that affect core scenarios, this information is conveyed in the on-line product documentation in the System Center Configuration Manager documentation library.  
@@ -99,7 +100,7 @@ This issue affects System Center Configuration Manager version 1511 and 1602, an
                     , SCP.Value2 = N'3'  
     FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
     WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-    ```  
+  ```  
 
 ###  Setup fails when using redist files from the CD.Latest folder with a manifest verification error
 When you run Setup from a CD.Latest folder created for version 1606 and use the redist files included with that CD.Latest folder, Setup fails with the following errors in the Configuration Manager Setup log:
@@ -162,7 +163,7 @@ In version 1511 only, you will not be able to run automatic client upgrades for 
 ## Operating system deployment  
 
 ### Issue with the Windows ADK for Windows 10, version 1511  
-When you run a task sequence from Software Center that uses a Windows PE v.10.0.10586 boot image from the Windows ADK 10, version 1511, when the computer restarts into Windows PE, it will fail when “Initializing hardware devices” with the error: **Windows PE initialization failed with error code 0x80220014**  
+When you run a task sequence from Software Center that uses a Windows PE v.10.0.10586 boot image from the Windows ADK 10, version 1511, when the computer restarts into Windows PE, it will fail when "Initializing hardware devices" with the error: **Windows PE initialization failed with error code 0x80220014**  
 
 **Workaround**: Use the original Windows 10 ADK. For more information, see the following System Center Configuration Manager Team Blog: [Issue with the Windows ADK for Windows 10](http://blogs.technet.com/b/configmgrteam/archive/2015/11/20/issue-with-the-windows-adk-for-windows-10-version-1511.aspx)  
 
@@ -199,7 +200,7 @@ After you create a serving plan, open the properties for the servicing plan, go 
 ## Mobile device management  
 
 ### Cannot create an enrollment profile on a primary site  
-An administrator cannot create an enrollment profile in the System Center Configuration Manager administration console that connects to a primary site. When attempting to enroll, the administrator will see an error “DEP token has not been updated. Upload a DEP token” in the enrollment profile wizard. This error occurs although a valid DEP token has been uploaded to the central administration site.  
+An administrator cannot create an enrollment profile in the System Center Configuration Manager administration console that connects to a primary site. When attempting to enroll, the administrator will see an error "DEP token has not been updated. Upload a DEP token" in the enrollment profile wizard. This error occurs although a valid DEP token has been uploaded to the central administration site.  
 
 **Workaround**: Create an enrollment profile in the System Center Configuration Manager console that connects to central administration site.  
 
@@ -216,7 +217,8 @@ Performing full wipe on Windows 10 RTM devices (versions earlier than version 15
 **Workaround**: Ensure Windows 10 RTM PCs have at least 4 GB of RAM available before performing a full wipe on the device. To view the version number of Windows 10 devices, enter 'winver' at a command prompt. If the device has already been wiped and is no longer responsive, use a bootable Windows 10 USB drive to start and recover access to the device.
 
 ### When a user belongs to two or more user collections that a terms and conditions policy is deployed to, the user sees multiple sets of the same terms  
-When an administrator deploys a set of terms to multiple user collections, and a user is a member of more than one of these collections, that user will be presented multiple copies of identical terms when opening Company Portal.  For example, if a user named “SampleUser” is a member of two different user collections, one called “CompanyEmployeesFTE” and “CompanyEmployeesNA,” and the terms and conditions called “CompanyTerms” is deployed to both CompanyEmployeesFTE and CompanyEmployeesNA, SampleUser will see two identical sets of CompanyTerms on the terms acceptance page. Since the users can only accept all or decline all of the terms, there is no danger of being in an ambiguous acceptance state (where the user has both accepted and rejected the terms). The Terms and Conditions acceptance report will include only one row for each set of terms for each user, so there is no error in the report. The only effect is that the user will see two sets of terms on the acceptance page.  
+
+When an administrator deploys a set of terms to multiple user collections, and a user is a member of more than one of these collections, that user will be presented multiple copies of identical terms when opening Company Portal.  For example, if a user named "SampleUser" is a member of two different user collections, one called "CompanyEmployeesFTE" and "CompanyEmployeesNA,"" and the terms and conditions called "CompanyTerms" is deployed to both CompanyEmployeesFTE and CompanyEmployeesNA, SampleUser will see two identical sets of CompanyTerms on the terms acceptance page. Since the users can only accept all or decline all of the terms, there is no danger of being in an ambiguous acceptance state (where the user has both accepted and rejected the terms). The Terms and Conditions acceptance report will include only one row for each set of terms for each user, so there is no error in the report. The only effect is that the user will see two sets of terms on the acceptance page.  
 
 **Workaround**: Make sure each user is only included in one collection to which the terms are deployed.  
 

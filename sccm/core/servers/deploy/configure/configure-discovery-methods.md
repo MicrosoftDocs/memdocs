@@ -1,7 +1,8 @@
 ---
-title: "Configure discovery methods for System Center Configuration Manager"
+title: "Configure discovery | System Center Configuration Manager"
+description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
-ms.date: 2016-04-28
+ms.date: 04/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,22 +12,23 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Configure discovery methods for System Center Configuration Manager
+# Configure discovery methods for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+
 You configure discovery methods to run at a  System Center Configuration Manager site  to find resources you can manage from your network infrastructure and Active Directory. This requires  you to enable and then configure each method you want to use to search your environment. (You can also disable a method by using the same procedure you use to enable it.)  The only exceptions to this are Heartbeat Discovery and Server Discovery:  
 
 -   By default, Heartbeat Discovery is already enabled when you install a Configuration Manager primary site, and configured to run on a basic schedule. You should keep Heartbeat Discovery enabled as this method ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)  
 
 -   Server Discovery is an automatic discovery method that finds computers you use as site systems, and is not a method you can configure, or disable.  
 
- **To enable any configurable  discovery method:**  
+**To enable any configurable  discovery method:**  
 
 1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration**, and click **Discovery Methods**.  
 
 2.  Select the discovery method for the site where you want to enable discovery.  
 
-3.  On the **Home** tab, in the **Properties** group, click **Properties**, and then on the **General** tab, select the **Enable<discovery method\>** check box.  
+3.  On the **Home** tab, in the **Properties** group, click **Properties**, and then on the **General** tab, select the **Enable&lt;discovery method\>** check box.  
 
      If this check box is already selected, you can disable the discovery method by clearing the check box.  
 
@@ -218,7 +220,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   Limiting Network Discovery on the network  
 
- For more information, see the section [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
+For more information, see the section [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
 
  The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, you must plan for the interactions that can affect the discovery results.  
 
@@ -398,7 +400,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
 -   The type of discovery that is being run  
 
- Because Network Discovery does not create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
+Because Network Discovery does not create messages to alert you when discovery has finished, you can use the following procedure to verify when discovery has finished.  
 
 ##### To verify that Network Discovery has finished  
 
@@ -423,7 +425,7 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
     -   Description: **This component stopped**  
 
-     If this status message is not present, Network Discovery has not finished.  
+    If this status message is not present, Network Discovery has not finished.  
 
 7.  To validate when Network Discovery started, search for a status message that has the following details:  
 
@@ -433,4 +435,4 @@ You configure discovery methods to run at a  System Center Configuration Manager
 
     -   Description: **This component started**  
 
-     This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  
+    This information verifies that Network Discovery started. If this information is not present, reschedule Network Discovery.  

@@ -1,7 +1,8 @@
 ---
-title: "How to upgrade clients for Windows computers in System Center Configuration Manager"
+title: "Upgrade clients | Windows | System Center Configuration Manager"
+description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-03-08
+ms.date: 03/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
+author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# How to upgrade clients for Windows computers in System Center Configuration Manager
+# How to upgrade clients for Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can upgrade the client on Windows computers using client installation methods or the automatic client upgrade features in Configuration Manager. The following client installation methods are valid ways to upgrade client software on Windows computers:  
 
 -   Group policy installation  
@@ -45,7 +46,7 @@ You can upgrade the client on Windows computers using client installation method
 -   One or more of the client installation files are a different version.  
 
 > [!NOTE]  
->  You can run the report **Count of Configuration Manager clients by client versions** in the report folder **Site – Client Information** to identify the different versions of the Configuration Manager client in your hierarchy.  
+>  You can run the report **Count of Configuration Manager clients by client versions** in the report folder **Site - Client Information** to identify the different versions of the Configuration Manager client in your hierarchy.  
 
  Configuration Manager creates an upgrade package by default that is automatically sent to all distribution points in the hierarchy. If you make changes to the client package on the central administration site, for example, add a client language pack, Configuration Manager automatically updates the package, and distributes it to all distribution points in the hierarchy. If automatic client upgrade is enabled, every client will install the new client language package automatically.  
 

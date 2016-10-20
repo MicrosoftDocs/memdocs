@@ -1,7 +1,8 @@
 ---
-title: "Monitor content you have distributed with System Center Configuration Manager"
+title: "Monitor content | System Center Configuration Manager"
+description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
-ms.date: 2016-05-02
+ms.date: 05/02/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Monitor content you have distributed with System Center Configuration Manager
+# Monitor content you have distributed with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the System Center Configuration Manager console to monitor distributed content,  including:  
 
 -   The status for all package types in relation to the associated distribution points  

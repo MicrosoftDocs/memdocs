@@ -1,7 +1,8 @@
 ---
-title: "Install in-console updates for System Center Configuration Manager"
+title: "In-console updates | System Center Configuration Manager"
+description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Install in-console updates for System Center Configuration Manager
+# Install in-console updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager synchronizes with the Microsoft cloud service to get updates you can then install from within the Configuration Manager console.
 
 ## Get available updates
@@ -158,7 +159,7 @@ Later, when you install  an update, you have the option to configure the update 
 -   When you use a Configuration Manager console after the site updates, you are prompted to update the console.  
 
 -  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat to this is for distribution points:
-  - Due to changes introduced with update 1606, when installing an update to a site that already runs version 1606 or later, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site’s content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients. 
+  - Due to changes introduced with update 1606, when installing an update to a site that already runs version 1606 or later, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
 
 
 ###  <a name="bkmk_overview"></a> Overview of in-console update installation  
@@ -313,6 +314,7 @@ Pre-release features are included in the product for early testing in a producti
 To give consent, in the console navigate to **Administration** > **Site Configuration** > **Sites**, and then select **Hierarchy Settings**. On the **General** tab, select **Consent to use Pre-Release features**.
  -  Giving consent is a one-time action per hierarchy that cannot be undone  
  -  Until you give consent, you cannot enable new pre-release features included with update 1606 or later update versions
+
  > [!NOTE]
  > If you have enabled pre-release features from Update 1602 prior to installing update 1606, those features remain enabled for use after installing 1606 even if you do not give consent to use pre-release features.
 
@@ -320,16 +322,19 @@ When your hierarchy runs version 1606 or later, and you then install an update t
   - **If you have given consent:** You can enable pre-release features from within the Updates and Servicing Wizard when you are installing the update. To do so, select the pre-release features as you would any other feature.     
 
     Optionally, you can wait to enable a pre-release feature at a later time from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. To do so, in the Features node select the feature and then click **Turn on**. (This option is greyed out and unavailable until you give consent.)  
-  -   **If you have not given consent:** When installing an update, pre-release features are visible in the Updates and Servicing Wizard but are greyed out and cannot be enabled. After the update installs, you can view these features in the Features node, but not enable them until after you have given consent in the Hierarchy Settings.  
+  -   **If you have not given consent:** When installing an update, pre-release features are visible in the Updates and Servicing Wizard but are greyed out and cannot be enabled. After the update installs, you can view these features in the Features node, but not enable them until after you have given consent in the Hierarchy Settings.
+
  > [!TIP]
  > When you are installing update 1606, pre-release features that are included with update 1606 are not visible in the Updates and Servicing Wizard and cannot be enabled at that time. After update 1606 installs you can view the pre-release features it includes in the Features node.
+
+If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must then give consent again at the central administration site.
 
 **The following pre-release features are avaialble:**
 
  |Feature                    |Added as pre-release |Added as a full feature |  
 |----------------------------|---------------------|------------------------|
 | Microsoft Operations Management Suite (OMS) Connector  | [Release 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Servicing a cluster aware collection (Service a server group)| [Release 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#Service-a-server-group)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Servicing a cluster aware collection (Service a server group)| [Release 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |Conditional access for PCs managed by System Center Configuraiton Manager | [Release 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
@@ -344,7 +349,7 @@ On a site server you can configure service windows to control when infrastructur
 
 2.  Next, edit the site servers **Properties** and select the **Service Window** tab, where you can then set one or more service windows for that site server.  
 
-##  <a name="bkmk_faq"></a> Why don’t I see certain updates in my console?  
+##  <a name="bkmk_faq"></a> Why don't I see certain updates in my console?  
  If you cannot find a specific update, or any updates in your console after a successful sync with the Microsoft cloud service, this might be because:  
 
 -   The update requires a configuration that your infrastructure does not use, or your current product version does not fulfill a prerequisite for receiving the update.  

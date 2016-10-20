@@ -1,7 +1,8 @@
 ---
-title: "Planning for power management in System Center Configuration Manager"
+title: "Planning for power management | System Center Configuration Manager"
+description: "Get an overview of topics on planning for power management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 67762fb5-8da0-4df1-b3f1-6783849aa568
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Planning for power management in System Center Configuration Manager
+# Planning for power management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use the following topics in this section to help you plan for power management in System Center Configuration Manager.  
 
 ## In this section  

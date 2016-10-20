@@ -1,7 +1,8 @@
 ---
-title: "Add site system roles for System Center Configuration Manager"
+title: "Add site system roles | System Center Configuration Manager"
+description: "Understand Configuration Manager site system roles, and how to add them to extend the functionality and capacity of your site."
 ms.custom: na
-ms.date: 2016-04-25
+ms.date: 04/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: get-started-article
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Add site system roles for System Center Configuration Manager
+# Add site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Each System Center Configuration Manager site supports multiple site system roles which each extend the functionality and capacity of your site to provide services to, and to  manage devices and users. Each site system role on a site system server must be from the same site.   
 
 Configuration Manager does not support site system roles for multiple sites on a single site system server.  
@@ -33,7 +34,7 @@ Configuration Manager does not support site system roles for multiple sites on a
 
     When you want to use Microsoft Azure to host content you deploy to clients, the information in this topic will help you configure the required certificate files to enable Configuration Manager to communicate with and use your Microsoft Azure subscription. In addition, you  will need to configure name resolution to enable your clients to find your cloud-based distribution points.  
 
--   [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mobile-device-management.md)  
+-   [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
      This topic will help you successfully configure your site system roles to support managing modern devices using Configuration Manager on-premises MDM.  
 

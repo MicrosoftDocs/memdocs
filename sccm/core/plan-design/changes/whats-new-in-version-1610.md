@@ -1,5 +1,6 @@
 ---
-title: "What&#39;s new in version 1610 of System Center Configuration Manager"
+title: "New in 1610 | System Center Configuration Manager"
+description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  
 ms.reviewer: na
@@ -10,9 +11,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 caps.latest.revision: 40
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
+ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager
+# What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
 > [!TIP]  
 >  Learn more about:  

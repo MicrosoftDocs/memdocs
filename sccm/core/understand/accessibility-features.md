@@ -1,23 +1,25 @@
 ---
-title: "Accessibility features in System Center Configuration Manager"
+title: "Accessibility | System Center Configuration Manager"
+description: "Learn about the features that make System Center Configuration Manager accessible for people with disabilities."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: 6
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Accessibility features in System Center Configuration Manager
+# Accessibility features in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  System Center Configuration Manager includes features to help make it accessible for people with disabilities.
 
 
- ##  <a name="bkmk_aconsole"></a> Accessibility features for the Configuration Manager console  
+ ## <a name="bkmk_aconsole"></a> Accessibility features for the Configuration Manager console  
 -   To access a workspace, use the following keyboard shortcuts:  
 
     |Workspace|Keyboard shortcut|  

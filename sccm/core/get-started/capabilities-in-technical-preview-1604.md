@@ -1,17 +1,20 @@
 ---
 title: "Capabilities in Technical Preview 1604 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1604."
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1604 for System Center Configuration Manager
+# Capabilities in Technical Preview 1604 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1604. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  The following are new features you can try out with this version.  
@@ -37,7 +40,7 @@ This article introduces the features that are available in the Technical Preview
 
     3.  Enter a name for the application, select **Web application** and/or **Web API**, then click the Next arrow.  
 
-    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://<yourdomain\>/sccm**.  
+    4.  Enter the same URL for both the **Sign-on URL** and **App ID URI**.  The URL can be anything and does not need to resolve to a real address. For example, you can enter **https://&lt;yourdomain\>/sccm**.  
 
     5.  Complete the wizard.  
 
@@ -99,11 +102,11 @@ This article introduces the features that are available in the Technical Preview
 
 -   First is **client Peer Cache**, a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache. For Peer Cache clients to share content, they must be members of the same boundary group. Peer Cache does not replace the use of other solutions like BracnchCache but instead works side-by-side to give you more options to extend traditional content deployment solutions like distribution points.  
 
-     After you deploy client settings that enable Peer Cache to a collection, members of that collection will prefer to get content from a peer source before getting content from a distribution point that is across a slow connection. After a client enabled for Peer Cache downloads content from any source, that client  then acts as a peer source for other clients that share the same boundary groups.  
+     After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in its boundary group.  The client that operates as a peer content source will submit a list of available content it has cached to its management point. Then, when the next client in that boundary group requests that content, the peer cache source is offered as a potential content source along with all distribution points that are configured to be fast. The client selects a random content source from this combined pool of content sources. Clients will only seek content from a distribution point that is configured to be slow when no fast distribution points or peer cache sources are present in the boundary group.  
 
 -   The second new setting lets you **manage the size of the cache** on clients. You can set the cache to have a maximum size in megabytes and  a maximum size as a percentage of the clients drive space.  The client enforces the setting that is reached first.  
 
- To help you understand the use of client Peer Cache, you can view the **Client Data Sources** dashboard. In the console go to **Monitoring > Client Status > Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
+To help you understand the use of client Peer Cache, you can view the **Client Data Sources** dashboard. In the console go to **Monitoring > Client Status > Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
 
  You can also use a new report, **Client Data Sources - Summarization**, to view a summarization of the client data sources for each boundary group.   
 **Requirements to use Peer Cache:**  
@@ -142,28 +145,18 @@ Passport lets you use a user gesture to login, instead of a password. A user ges
 
 -   You can store authentication certificates in the Passport for Work key storage provider (KSP).  
 
- When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for.  This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if  Passport is used as the Key Storage Provider in a certificate profile.  
+When a user creates a Passport PIN, Windows sends a notification which Configuration Manager listens for.  This allows Configuration Manager to quickly become aware of which users have created a Passport PIN. Configuration Manager can then also issue new certificates to those users if  Passport is used as the Key Storage Provider in a certificate profile.  
 
 ##  <a name="bkmk_onpremdha"></a> On-premises Device Health Attestation  
- Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure.  Administrators can specify whether reporting is done via the cloud or on-premises resources.  If   
-                **on-premises** is selected for health attestation reporting, then a URI can be specified for the service. This enables client PCs without internet access to use enable and manage devices using health attestation.  
+ Health attestation for Windows 10 devices can now be configured to communicate using the on-premises infrastructure.  Administrators can specify whether reporting is done via the cloud or on-premises resources.  If **on-premises** is selected for health attestation reporting, then a URI can be specified for the service. This enables client PCs without internet access to use enable and manage devices using health attestation.  
 
 #### Enable health attestation for on-premises devices  
 
-1.  In the Configuration Manager console, navigate   
-                                    **Administration** >   
-                                    **Overview** >   
-                                    **Client settings**, and then  set   
-                                    **Use on-premises Healthy Attestation Service** to   
-                                    **Yes**.  
+1.  In the Configuration Manager console, navigate **Administration** > **Overview** > **Client settings**, and then set **Use on-premises Healthy Attestation Service** to **Yes**.  
 
-2.  Specify the   
-                                    **On-premise Health Attestation Service URL**, and then click   
-                                    **OK**.  
+2.  Specify the **On-premise Health Attestation Service URL**, and then click **OK**.  
 
- To try it out, configure on-premises Health Attestation Service using client agent settings.  
+To try it out, configure on-premises Health Attestation Service using client agent settings.  
 
 ##  <a name="BKMK_Smart"></a> SmartLock setting for Android devices  
- A new setting,    
-                **Allow SmartLock and other trust agents** has been added to the   
-                **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  
+ A new setting, **Allow SmartLock and other trust agents** has been added to the **Android and Samsung KNOX** configuration item that lets you control the SmartLock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring SmartLock.  

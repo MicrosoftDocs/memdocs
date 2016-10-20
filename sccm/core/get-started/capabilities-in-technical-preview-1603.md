@@ -1,17 +1,20 @@
 ---
 title: "Capabilities in Technical Preview 1603 for System Center Configuration Manager"
+description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1603."
 ms.custom: na
-ms.date: 2016-05-05
+ms.date: 05/05/2016
 ms.prod: configuration-manager
+ms.technology:
+  - configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1603 for System Center Configuration Manager
+# Capabilities in Technical Preview 1603 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1603. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Alternately, when you use System Center Technical Preview 5, this version installs as a baseline version of the System Center Configuration Manager Technical Preview. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
  **Known Issues for this Technical Preview:**  
@@ -63,7 +66,7 @@ You will need to test the customized settings in your environment to determine w
 
      **Type**: REG_DWORD  
 
-     **Value**: <customized window size\>  
+     **Value**: &lt;customized window size\>  
 
  The default value is 1 (1 data block fills the window)  
 
@@ -76,7 +79,6 @@ You will need to test the customized settings in your environment to determine w
 
      **Type**: REG_DWORD  
 
-     **Value**: <customized block size\>  
+     **Value**: &lt;customized block size\>  
 
  The default value is 4096 (4k).  
-  

@@ -1,7 +1,8 @@
 ---
-title: "How to view diagnostics and usage data for System Center Configuration Manager"
+title: "View diagnostics data | System Center Configuration Manager"
+description: "View diagnostic and usage data to confirm that your System Center Configuration Manager hierarchy contains no sensitive information."
 ms.custom: na
-ms.date: 2016-05-25
+ms.date: 05/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594eb284-0d93-4c5d-9ae6-f0f71203682a
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# How to view diagnostics and usage data for System Center Configuration Manager
+# How to view diagnostics and usage data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You can view diagnostic and usage data from your System Center Configuration Manager hierarchy to confirm that no sensitive or identifiable information is included. Telemetry data is summarized and stored in the **TEL_TelemetryResults** table of the site database and is formatted to be programmatically usable and efficient. While the following options give you a view of the exact data sent to Microsoft, it is not intended to be used for other purposes, like data analysis.  
 
 The following SQL command can be used to view the contents of this table, and shows the exact data that is sent (you can also export this data to a text file):  

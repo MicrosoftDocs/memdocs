@@ -1,7 +1,8 @@
 ---
-title: "Security and privacy for site administration in System Center Configuration Manager"
+title: "Site administration security and privacy | System Center Configuration Manager"
+description: "Optimize security and privacy for site administration in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,10 +12,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 caps.latest.revision: 8
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Security and privacy for site administration in System Center Configuration Manager
+# Security and privacy for site administration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
 ##  <a name="BKMK_Security_Sites"></a> Security Best Practices for Site Administration  
@@ -32,7 +33,7 @@ This top contains security and privacy information for System Center Configurati
 
  Schema extensions are not required to run System Center Configuration Manager, but they do create a more secure environment because Configuration Manager clients and site servers can retrieve information from a trusted source.  
 
- If clients are in an untrusted domain, deploy the following site system roles in the clients’ domain:  
+ If clients are in an untrusted domain, deploy the following site system roles in the clients' domain:  
 
 -   Management point  
 
@@ -41,7 +42,7 @@ This top contains security and privacy information for System Center Configurati
 -   Application Catalog website point  
 
 > [!NOTE]  
->  A trusted domain for Configuration Manager requires Kerberos authentication so if clients are in another forest that does not have a two-way forest trust with the site server’s forest, these clients are considered to be in untrusted domain. An external trust is not sufficient for this purpose.  
+>  A trusted domain for Configuration Manager requires Kerberos authentication so if clients are in another forest that does not have a two-way forest trust with the site server's forest, these clients are considered to be in untrusted domain. An external trust is not sufficient for this purpose.  
 
  **Use IPsec to secure communications between site system servers and sites.**  
 
@@ -56,11 +57,11 @@ This top contains security and privacy information for System Center Configurati
 
  Security  groups:  
 
--   **SMS_SiteSystemToSiteServerConnection_MP_<SiteCode\>**  
+-   **SMS_SiteSystemToSiteServerConnection_MP_&lt;SiteCode\>**  
 
--   **SMS_SiteSystemToSiteServerConnection_SMSProv_<SiteCode\>**  
+-   **SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;SiteCode\>**  
 
--   **SMS_SiteSystemToSiteServerConnection_Stat_<SiteCode\>**  
+-   **SMS_SiteSystemToSiteServerConnection_Stat_&lt;SiteCode\>**  
 
 Configuration Manager automatically creates and manages these security groups. This includes removing computer accounts when a site system role is removed.  
 
@@ -92,7 +93,7 @@ When you isolate each site system role on a different server, this reduces the c
 
 The Security Configuration Wizard (SCW) helps you to create a security policy that you can apply to any server on your network. After you install the System Center Configuration Manager template, SCW recognizes Configuration Manager site system roles, services, ports, and applications. It then permits the communication that is required for Configuration Manager, and blocks communication that is not required.  
 
-The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center: [System Center 2012 – Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
+The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center: [System Center 2012 - Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
 
 **Configure static IP addresses for site systems.**  
 
@@ -209,7 +210,7 @@ Periodically run Windows Update for these sites and all installed versions of SQ
 
 Identify and follow the best practices for your version of SQL Server. However, take into consideration the following requirements for Configuration Manager:  
 
--   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of “provision admin principals explicitly”, the account that you use to run Setup on the site server must be a member of the SQL Users group.  
+-   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision admin principals explicitly", the account that you use to run Setup on the site server must be a member of the SQL Users group.  
 
 -   If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that is published to Active Directory Domain Services. Without the SPN, Kerberos authentication will fail and Configuration Manager Setup will fail.  
 
@@ -284,9 +285,9 @@ Identify and follow the best practices for your version of IIS Server. However, 
 
  Use the following security best practices to help secure a management point in Configuration Manager.  
 
-**When you install a Configuration Manager client on the management point, assign it to that management point’s site.**  
+**When you install a Configuration Manager client on the management point, assign it to that management point's site.**  
 
- Avoid the scenario where a Configuration Manager client that is on a management point site system is assigned to a site other than the management point’s site.  
+ Avoid the scenario where a Configuration Manager client that is on a management point site system is assigned to a site other than the management point's site.  
 
  If you migrate from an earlier version  to System Center Configuration Manager, migrate the client software on the management point to System Center Configuration Manager as soon as possible.  
 

@@ -1,7 +1,8 @@
 ---
-title: "Site and site system prerequisites for System Center Configuration Manager"
+title: "Site prerequisites | System Center Configuration Manager"
+description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 2016-08-12
+ms.date: 08/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Site and site system prerequisites for System Center Configuration Manager
+# Site and site system prerequisites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
  Windows computers require specific configurations to support use as a System Center Configuration Manager site system server.  
 
@@ -120,7 +121,7 @@ author: Brenduns
 
     -   ASP.NET 4.5  
 
-**IIS Configuration:**  
+**IIS configuration:**  
 
 -   Common HTTP Features:  
 
@@ -195,7 +196,7 @@ author: Brenduns
 
     -   HTTP Activation  
 
-**IIS Configuration:**  
+**IIS configuration:**  
 
 -   Application Development:  
 
@@ -214,7 +215,7 @@ author: Brenduns
 
 -   Remote Differential Compression  
 
-**IIS Configuration:**  
+**IIS configuration:**  
 
 -   Application Development:  
 
@@ -421,7 +422,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support, and 
 
 -   Install the full version of the Microsoft.NET Framework before you install the site system roles. For example, see the [Microsoft .NET Framework 4 (Stand-Alone Installer)](http://go.microsoft.com/fwlink/p/?LinkId=193048). The Microsoft .NET Framework 4 Client Profile is insufficient for this requirement.  
 
-**The following applies to all Windows Commination Foundation (WCF) activation requirements:**  
+**The following applies to all Windows Communication Foundation (WCF) activation requirements:**  
 
 -   You can configure WCF activation as part of the .NET Framework Windows feature on the site system server. For example, on Windows Server 2008 R2, run the **Add Features Wizard** to install additional features on the server. On the **Select Features** page, expand **NET Framework 3.5.1 Features**, then expand **WCF Activation**, and then select the check box for both **HTTP Activation** and **Non-HTTP Activation** to enable these options.  
 
@@ -761,7 +762,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 -   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point  
 
--   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  \
+-   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)
 
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
 **IIS configuration:** Requires the default IIS configuration.  

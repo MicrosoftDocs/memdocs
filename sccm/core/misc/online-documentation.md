@@ -1,17 +1,17 @@
 ---
-title: "Online Documentation for System Center Configuration Manager"
+title: "Online Documentation | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2016-01-13
+ms.date: 01/13/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Online Documentation for System Center Configuration Manager
+# Online Documentation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Welcome to the System Center Configuration Manager documentation library.  
 
  Find the documentation library for the product version that you use:  

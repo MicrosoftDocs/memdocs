@@ -1,7 +1,7 @@
 ---
-title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client"
+title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.topic: article
 ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
-Use the System Center Configuration Manager**Windows Phone** configuration item to manage settings  for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
+Use the System Center Configuration Manager **Windows Phone** configuration item to manage settings for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
   
-### To create a Windows Phone configuration item  
+## Create a Windows Phone configuration item  
   
 1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
   
@@ -30,28 +30,28 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
   
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
   
-7.  On the **Supported Platforms** page of the wizard, select the specific Windows Phone platforms that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page, select the specific Windows Phone platforms that will evaluate the configuration item.  
   
-8.  On the **Device Settings** page of the wizard, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#BKMK_Setref) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client#windows-phone-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
   
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
   
 9. On each settings page, configure the settings you require, and whether you want to remediate them when they are not compliant on devices (when this is supported).  
   
-10. For each settings group, you can also configure the severity that will be reported when a configuration item is found to be noncompliant from:  
+10. For each settings group, you can also configure the severity that will be reported (in Configuration Manager reports) when a configuration item is found to be noncompliant from:  
   
-    -   **None** - Devices that fail this compliance rule do not report a failure severity for Configuration Manager reports.  
+    -   **None** - Devices that fail this compliance rule do not report a failure severity.  
   
-    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information** for Configuration Manager reports.  
+    -   **Information** - Devices that fail this compliance rule report a failure severity of **Information**.  
   
-    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning** for Configuration Manager reports.  
+    -   **Warning** - Devices that fail this compliance rule report a failure severity of **Warning**.  
   
-    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports.  
+    -   **Critical** - Devices that fail this compliance rule report a failure severity of **Critical**.  
   
-    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical** for Configuration Manager reports. This severity level is also be logged as a Windows event in the application event log.  
+    -   **Critical with event** - Devices that fail this compliance rule report a failure severity of **Critical**.   
   
-11. On the **Platform Applicability** page of the wizard, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
+11. On the **Platform Applicability** page, review any settings that are not compatible with the supported platforms you selected earlier. You can go back and remove these settings, or you can continue.  
   
     > [!TIP]  
     >  Unsupported settings are not assessed for compliance.  
@@ -200,25 +200,24 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 |**Offload data to Wi-Fi when possible**||  
 |**Wi-Fi hotspot reporting**||  
   
-##### To configure a wireless network connection  
+#### To configure a wireless network connection  
   
 1.  On the **Configure mobile device wireless communication settings** page, click **Add**.  
   
-2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that will be provisioned on mobile devices:  
-  
-    |Setting|More information|  
-    |-------------|----------------------|  
-    |**Network name (SSID)**||  
-    |**Network connection**|Choose from **Internet** or **Work**.|  
-    |**Authentication**|Choose the authentication method for the wireless connection from:<br /><br /> - <br />                            **Open**<br /><br /> - <br />                            **Shared**<br /><br /> - <br />                            **WPA**<br /><br /> - <br />                            **WPA-PSK**<br /><br /> - <br />                            **WPA2**<br /><br /> - <br />                            **WPA2-PSK**|  
-    |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br /><br /> - <br />                            **Disabled**<br /><br /> - <br />                            **WEP**<br /><br /> - <br />                            **TKIP**<br /><br /> - <br />                            **AES**|  
-    |**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
-    |**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
-    |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
-    |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
-    |**EAP type**|Choose the EAP type to use from:<br /><br /> - <br />                            **PEAP**<br /><br /> - **Smart card or certificate**|  
-  
-3.  When you are finished, click **OK**.  
+2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that will be provisioned on mobile devices, then click **OK**:
+
+|Setting|More information|  
+|-------------|----------------------|  
+|**Network name (SSID)**||  
+|**Network connection**|Choose from **Internet** or **Work**.|  
+|**Authentication**|Choose the authentication method for the wireless connection from:<br><br>- **Open**<br>-                    **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
+|**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br><br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
+|**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
+|**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
+|**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
+|**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
+|**EAP type**|Choose the EAP type to use from:<br><br>- **PEAP**<br>- **Smart card or certificate**|  
+
   
 ###  Certificates  
  Let’s you import certificates to install on mobile devices.  
@@ -283,17 +282,17 @@ Use the System Center Configuration Manager**Windows Phone** configuration item 
 > [!IMPORTANT]  
 >  If you specify a list of allowed apps, you must ensure that the company portal app, and any apps you have deployed to Windows Phone 8.1 devices are in the **Allowed** apps list.  
   
-##### To specify an allowed or blocked apps list  
+#### To specify an allowed or blocked apps list  
   
 1.  On the **Allowed and Blocked Apps list (Windows Phone 8.1)** page, specify the following information:  
   
-    |||  
-    |-|-|  
-    |Setting|More information|  
-    |**Blocked apps list**|Select this option if you want to specify a list of apps that users will not be allowed to install.|  
-    |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Phone Store page, search for the app you want to use.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> For the company portal app, or line of business apps, you do not have to specify a full URL, only the app GUID.|  
-    |**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
-    |**Remove**|Deletes the selected app from the list.|  
-    |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
+|Setting|More information|  
+|-|-|  
+|**Blocked apps list**|Select this option if you want to specify a list of apps that users will not be allowed to install.|  
+|**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install.|  
+|**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Phone Store page, search for the app you want to use.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51.<br /><br /> For the company portal app, or line of business apps, you do not have to specify a full URL, only the app GUID.|  
+|**Edit**|Let’s you edit the name, publisher and URL of the selected app.|  
+|**Remove**|Deletes the selected app from the list.|  
+|**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
   
+

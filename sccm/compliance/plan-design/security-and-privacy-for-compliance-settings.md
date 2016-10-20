@@ -1,25 +1,25 @@
 ---
-title: "Security and privacy for compliance settings in System Center Configuration Manager"
+title: "Security and privacy for compliance settings | System Center Configuration Manager"
+description: "Learn about the security best practices for compliance settings in System Center Configuration Manager."
 ms.custom: na
-ms.date: 2015-12-08
+ms.date: 12/08/2015
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: robstackmsft
+author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Security and privacy for compliance settings in System Center Configuration Manager
-This topic contains security and privacy information for compliance settings in System Center Configuration Manager.  
-  
+# Security and privacy for compliance settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+
 ## Security best practices for compliance settings  
-  
+
 |Security best practice|More information|  
 |----------------------------|----------------------|  
 |Do not monitor sensitive data.|To help avoid information disclosure, do not configure configuration items to monitor potentially sensitive information.|  
@@ -28,13 +28,8 @@ This topic contains security and privacy information for compliance settings in 
 |Implement access controls to protect reference computers.|Ensure that when an administrative user configures a registry or file system setting by browsing to a reference computer, the reference computer had not been compromised.|  
 |Secure the communication channel when you browse to a reference computer.|To prevent tampering of the data when it is transferred over the network, use Internet Protocol security (IPsec) or server message block (SMB) between the computer that runs the Configuration Manager console and the reference computer.|  
 |Restrict and monitor the administrative users who are granted the Compliance Settings Manager role-based security role.|Administrative users who are granted the **Compliance Settings Manager** role can deploy configuration items to all devices and all users in the hierarchy. Configuration items can be very powerful and can include, for example, scripts and registry reconfiguration.|  
-  
+
 ## Privacy information for compliance settings  
  You can use compliance settings to evaluate whether your client devices are compliant with configuration items that you deploy in configuration baselines. Some settings can be automatically remediated if they out of compliance. Compliance information is sent to the site server by the management point and stored in the site database. The information is encrypted when devices send it to the management point, but it is not stored in encrypted format in the site database. Information is retained in the database until the site maintenance task **Delete Aged Configuration Management Data** deletes it every 90 days. You can configure the deletion interval. Compliance information is not sent to Microsoft.  
-  
+
  By default, devices do not evaluate compliance settings. In addition, you must configure the configuration items and configuration baselines, and then deploy them to devices.  
-  
- Before you configure compliance settings, consider your privacy requirements.  
-  
-## See Also  
- [Compliance settings technical reference for System Center Configuration Manager](../../compliance/deploy-use/compliance-settings-technical-reference.md)

@@ -1,7 +1,8 @@
 ---
 title: "Evaluate System Center Configuration Manager by building your own lab environment"
+description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
 ms.custom: na
-ms.date: 2016-06-20
+ms.date: 06/20/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,10 @@ ms.topic: article
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 caps.latest.revision: 25
 caps.handback.revision: 0
-author: barlanmsft
+author: brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Evaluate System Center Configuration Manager by building your own lab environment
+# Evaluate System Center Configuration Manager by building your own lab environment*Applies to: System Center Configuration Manager (Current Branch)*
 Learn how to create a lab environment to evaluate System Center Configuration Manager for use in your organization.  
 
 ## Evaluate System Center Configuration Manager by Building Your Own Lab Environment  
@@ -44,7 +45,7 @@ Learn how to create a lab environment to evaluate System Center Configuration Ma
  When you build this lab, you will have a functional environment to work in. However, this environment will not be optimized for system performance, hard disk space management, SQL Server storage, etc.  
 
 ###  <a name="BKMK_EvalRec"></a> Recommended reading prior to beginning the lab  
- There is a wealth of content available in the [Documentation for System Center Configuration Manager](../Topic/Documentation%20for%20System%20Center%20Configuration%20Manager.md). A selection of topics from this library have been included below that are recommended for all administrators working on labs to read prior to beginning these exercises.  
+ There is a wealth of content available in the [Documentation for System Center Configuration Manager](http://docs.microsoft.com/sccm/). A selection of topics from this library have been included below that are recommended for all administrators working on labs to read prior to beginning these exercises.  
 
 -   Learn core concepts about the Configuration Manager console, end-user portals, and example scenarios in the [Introduction to System Center Configuration Manager](../../core/understand/introduction.md)  
 

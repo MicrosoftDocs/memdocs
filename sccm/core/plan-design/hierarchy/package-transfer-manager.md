@@ -1,18 +1,20 @@
 ---
-title: "Package Transfer Manager  in System Center Configuration Manager"
+title: "Package Transfer Manager | System Center Configuration Manager"
+description: "Understand how Package Transfer Manager in System Center Configuration Manager transfers content from a site server to remote distribution points."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 07/22/2016
 ms.reviewer: na
 ms.suite: na
+ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 caps.latest.revision: 3
-author: Brenduns
+author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Package Transfer Manager  in System Center Configuration Manager
+# Package Transfer Manager in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In a System Center Configuration Manager site, the Package Transfer Manager is a  component of the SMS_Executive that manages the transfer of content from a site server computer to remote distribution points in a site. (A remote distribution point is one that is not located on the site server computer.) The Package Transfer Manager does not support configurations by the Adminsitrator, but understanding how it operates can help you plan your content management infrastructure, and help you resolve problems with content distribution.
 
 

@@ -1,7 +1,8 @@
 ---
-title: "Support for Active Directory domains for System Center Configuration Manager"
+title: "Support for AD domains | System Center Configuration Manager"
+description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
-ms.date: 2016-05-25
+ms.date: 05/25/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +13,11 @@ ms.topic: article
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brenduns
+author: Brendunsms.author: brenduns
+manager: angrobe
 
 ---
-# Support for Active Directory domains for System Center Configuration Manager
+# Support for Active Directory domains for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 All System Center Configuration Manager site systems must be members of a supported Windows Active Directory domain. Configuration Manager client computers can be domain members, or workgroup members.  
 
  **Requirements and limitations:**  
