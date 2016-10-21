@@ -47,6 +47,19 @@ For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [How to configure client settings](../clients/deploy/configure-client-settings.md)
 
+
+## Deny previously approved application requests
+
+As an administrator you can now deny a previously approved application request. Once denied, to install this application later users must resubmit a request. Denial does not uninstall the application; rather it forces reapproval for any new requst for that application from that user. Previously, application request denial was only available for application requests that had not been approved.
+
+#### Try it out
+To deny an application approved request:
+
+1.	In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications) that requires approval.
+2.	On a client computer, open Software Center and submit a request for the application.
+3.	In the Configuration Manager console, approve the application request.
+4.	Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
+
 ## Exclude clients from automatic upgrade
 Technical Preview 1610 introduces a new setting you can use to exclude a collection of clients from automatically installing updated client versions.  This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. This can be used for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install upadted client software.
 
@@ -70,7 +83,6 @@ So long as a collection is configured to be excluded, members of that collection
   If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually).
 
 For more information on client installation methods, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
-
 
 
 ## See Also
