@@ -25,7 +25,7 @@ This article introduces the features that are available in the Technical Preview
 You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 #### To configure the Content Size field
-To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizare when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
+To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizard when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
 
 ![Content size field](media/contentsizefield.png)
 
@@ -49,7 +49,7 @@ For more information:
 
 ## Deny previously approved application requests
 
-As an administrator you can now deny a previously approved application request. Once denied, to install this application later users must resubmit a request. Denial does not uninstall the application; rather it forces reapproval for any new requst for that application from that user. Previously, application request denial was only available for application requests that had not been approved.
+As an administrator you can now deny a previously approved application request. Once denied, to install this application later users must resubmit a request. Denial does not uninstall the application; rather it forces reapproval for any new request for that application from that user. Previously, application request denial was only available for application requests that had not been approved.
 
 #### Try it out
 To deny an application approved request:
@@ -60,11 +60,11 @@ To deny an application approved request:
 4.	Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
 
 ## Exclude clients from automatic upgrade
-Technical Preview 1610 introduces a new setting you can use to exclude a collection of clients from automatically installing updated client versions.  This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. This can be used for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install upadted client software.
+Technical Preview 1610 introduces a new setting you can use to exclude a collection of clients from automatically installing updated client versions.  This applies to automatic upgrade as well as other methods such as software update-based upgrade, logon scripts, and group policy. This can be used for a collection of computers that need greater care when upgrading the client. A client that is in an excluded collection ignores requests to install updated client software.
 
 ### Configure exclusion from automatic upgrade
 To configure automatic upgrade exclusions:
-1.	In the Configuration Manager console open **Hierarchy Settings** under **Administration > Site Configuration > Sites**, and then select the **Client Upgrade**tab.
+1.	In the Configuration Manager console open **Hierarchy Settings** under **Administration > Site Configuration > Sites**, and then select the **Client Upgrade** tab.
 2.	Select the checkbox for **Exclude specified clients from upgrade**, and then for **Exclusion collection**, select the collection you want to exclude. You can only select a single collection for exclusion.
 3.	Click **OK** to close and save the configuration. Then, after clients update policy, clients in the excluded collection will no longer automatically install updates to the client software.
 
