@@ -77,22 +77,29 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
 - For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
-- If you don’t use more disks than a lower level Azure VM supports, you have some flexibility to ramp down or up (for more or less processor, memory, and IOPS) as needed. For example, if you start with a DS14 and 4 disks, but the VM seems to never be overloaded you can downsize to a DS13 with the same 4 disks and see if the lower CPU, Memory, and IOPS are sufficient for your load.
-
-The following table lists the initial suggested disk counts to utilize at primary and central administration sits for various size installations:
+- We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
 
 
-| Number of devices  | VM size      |   Disk Count    |
-|--------------------|--------------|-----------------|
-|**0 to 1k**         |   DS11_V2    |1xP30 or 1xP20   |
-|**1k to 20k**       |   DS12_V2    |1xP30 or 2xP20   |
-|**20k to 60k**      |   DS13_V2    |2xP30 or 3xP20   |
-|**60k to 100k**     |   DS14_V2    |3xP30 or 4xP20   |
-|**100k to 150k**    |   DS15_V2    |4xP30 or 6xP20   |
-|**Up to 700k** (Central administration site only)  |   DS15_V2   |5xP30 or 10xP20  |
 
-Following is an example 20k-60k configuration on DS13 with 3xD20 disks configured in striped volume with separate logical volumes for the site installation and database files:   
-![VM disk configuration](media/vm_disks.png)
+The following tables list the initial suggested disk counts to utilize at primary and central administration sites for various size installations:
+
+**Co-located site database** - Primary or central administration site with the site database on the site server:
+
+| Desktop Clients    |Recommended VM size|Recommended Disks|
+|--------------------|-------------------|-----------------|
+|**Up to 25k**       |   DS4_V2          |2xP30            |
+|**25k to 50k**      |   DS13_V2         |2xP30            |
+|**50k to 100k**     |   DS14_V2         |3xP30            |
+
+
+**Remote site database** - Primary or central administration site with the site database on a remote server:
+
+| Desktop Clients    |Recommended VM size|Recommended Disks |
+|--------------------|-------------------|------------------|
+|**Up to 25k**       |  F4S </br>DS12_V2 | 1xP30 </br>2xP30 |
+|**25k to 50k**      |  F4S </br>DS13_V2 | 1xP30 </br>2xP30 |
+|**50k to 100k**     |  F8S </br>DS14_V2 | 2xP30 </br>3xP30 |
+
 
 ## User Experience
 ### You mention that user experience is one of the main areas of importance, why is that?
@@ -131,10 +138,6 @@ Hard to say since every environment is different. The best thing to do is to cos
 ## Additional Resources
 **Fundamentals:**
 http://azure.microsoft.com/en-us/documentation/articles/fundamentals-introduction-to-azure/
-
-**Portals:**  
- - "Old" Azure Portal: https://manage.windowsazure.com/  
- - "New" Azure portal: https://ms.portal.azure.com/
 
 **Azure VM Machine Types:**
  - Azure Machine sizes: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/  
