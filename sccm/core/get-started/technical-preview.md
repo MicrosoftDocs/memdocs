@@ -15,7 +15,7 @@ caps.latest.revision: 157
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Technical Preview for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Technical Preview for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
 **Welcome to the System Center Configuration Manager Technical Preview**. This topic provides details about the evolving preview release that introduces new functionality and capabilities we are working on. With each version of the technical preview, new features are introduced that are not included in the current branch of System Center Configuration Manager at the time the technical preview version is made available. These features might eventually be included in an update to the current branch release, but before we finalize the features and add them, we want you to have a chance to try them out and give us feedback.  
 
  Because this is a technical preview, details and functionality are subject to change.  
@@ -83,6 +83,8 @@ author: Brendunsms.author: brendunsmanager: angrobe
  **Active baseline versions of the Technical Preview:**  
  You can install a baseline version for up to 1 year after its release.
 
+-   **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is availble from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
+
 -   **Technical Preview 1603** as part of the **System Center Technical Preview 5** -  The Configuration Manager Technical Preview 1603  is available as both an in-console update for the Configuration Manager Technical Preview, and as a new baseline version that is included with System Center Technical Preview 5.    Only the version included with System Center Technical Preview 5 can be used for a baseline install.  
 
      About  the baseline version of the [Configuration Manager Technical Preview from System Center Technical Preview 5](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview):  
@@ -91,7 +93,6 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   This baseline version functions as does the Configuration Manager Technical Preview 1603, including support for in-console updates.  
 
-    -   You can run this baseline version for 90 days before you must update it to a later version. (Typically, versions of the Configuration Manager Technical Preview run for 60 days before you must update them to a later version.)  
 
 ##  <a name="BKMK_TPFeedback"></a> Providing feedback  
  We would love to hear your feedback about our technical previews. To submit feedback about the capabilities in each preview, follow the link to our feedback form on the [Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/Feedback) page on the Microsoft Connect site.  
@@ -100,7 +101,14 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews  
 
--   **Technical Preview 1601:** By default, the service connection point is set to online mode when it installs, and does not support a change to offline mode.  
+-   **Technical Preview 1603:**  
+
+    -   Beginning with Technical Preview 1603, you can configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window.  
+
+         To configure this for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard select the option **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.  
+
+    -   Beginning with Technical Preview 1603, the behavior for the SMSTSRebootDelay task sequence variable has changed. The  SMSTSRebootDelay variable specifies how many seconds to wait before the computer restarts. The task sequence manager will display a notification dialog before the restart if this variable is not set to 0.  
+        When you configure a value for this variable, that value will persist until you configure a new value. The delay for all the subsequent computer restarts will have the same value. In Configuration Manager version 1602 and earlier, the variable is reset to the default value (30 seconds) after the computer restarts.   For more information, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).
 
 -   **Technical Preview 1602:** Beginning with Technical Preview 1602, you can in-place upgrade the operating system of a site system server that runs Windows 2008 Server R2 to Windows 2012 Server R2.  When you use the Windows Server 2012 R2 upgrade procedures, you do not need to run a Configuration Manager site server restore after the upgrade.  For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx).  
 
@@ -109,20 +117,21 @@ author: Brendunsms.author: brendunsmanager: angrobe
     >   
     >  For information about this critical step, see the New and changed functionality section  in [Windows Server Update Services Overview](https://technet.microsoft.com/library/hh852345.aspx) in the Windows Server documentation.  
 
--   **Technical Preview 1603:**  
+-   **Technical Preview 1601:** By default, the service connection point is set to online mode when it installs, and does not support a change to offline mode.  
 
-    -   Beginning with Technical Preview 1603, you can configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window.  
 
-         To configure this for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard select the option **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**.  
 
-    -   Beginning with Technical Preview 1603, the behavior for the SMSTSRebootDelay task sequence variable has changed. The  SMSTSRebootDelay variable specifies how many seconds to wait before the computer restarts. The task sequence manager will display a notification dialog before the restart if this variable is not set to 0.  
-        When you configure a value for this variable, that value will persist until you configure a new value. The delay for all the subsequent computer restarts will have the same value. In Configuration Manager version 1602 and earlier, the variable is reset to the default value (30 seconds) after the computer restarts.   For more information, see [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md).  
+
 
 ##  <a name="bkmk_tpCaps"></a> Capabilities delivered in technical previews  
  The following are the  capabilities delivered  with each Configuration Manager technical preview release.  Capabilities that are available beginning in a version of the technical preview remain available in later versions. Similarly, capabilities that have been added to the System Center Configuration Manager Release (current branch) remain  available in subsequent technical previews.  Click through to the content for each preview version to learn more about a specific capability.  
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
+ |Filter by content size in automatic deployment rules|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|![Not added](media/Red_X.gif)|
+ |Improved functionality for required software dialogs|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|![Not added](media/Red_X.gif)|
+ |Deny previously approved application requests|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|![Not added](media/Red_X.gif)|
+ |Exclude clients from automatic upgrade|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|![Not added](media/Red_X.gif)|
  |Improvements to Endpoint Protection|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-to-endpoint-protection)|![Not added](media/Red_X.gif)|
  |Increased number of enrolled devices|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#increased-number-of-enrolled-devices)|![Not added](media/Red_X.gif)|
  |Additional Apple DEP settings|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|![Not added](media/Red_X.gif)|

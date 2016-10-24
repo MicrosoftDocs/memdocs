@@ -14,7 +14,7 @@ ms.assetid: 63e1df5e-637c-4b07-b7ec-95340f43a805
 caps.latest.revision: 15
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
-# Capabilities in Technical Preview 1608 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Capabilities in Technical Preview 1608 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1608. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
@@ -49,3 +49,7 @@ The display now shows only the parent software items, or software that has no de
 In the past, Configuration Manager transmitted the key position from the viewer’s location to the sharer’s location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an “A”, but the sharer’s French keyboard would provide a “Q”. We are changing the default behavior so that the character itself is transmitted from the viewer’s keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
 
 This behavior can be turned off by the viewer if they prefer to type according to the sharer’s keyboard arrangement. To change the behavior, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
+
+> [!NOTE]
+>
+> Special keys, such as ~!#@$%, will not be translated correctly.
