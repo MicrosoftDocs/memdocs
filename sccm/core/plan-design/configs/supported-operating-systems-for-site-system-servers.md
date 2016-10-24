@@ -28,6 +28,8 @@ Use the information in this topic with the information in the following articles
 
 
 ## Windows Server 2016   - Standard, Datacenter
+Windows Server 2016 is supported beginning with Configuration Manager version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606 which released in October of 2016).
+
 **Site servers:**  
 
 -   Central administration site  
