@@ -2,7 +2,7 @@
 title: "Create iOS applications | System Center Configuration Manager"
 description: "See which considerations you must take into account when you create and deploy applications for iOS devices."
 ms.custom: na
-ms.date: 08/16/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

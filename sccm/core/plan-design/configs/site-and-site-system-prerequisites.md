@@ -2,7 +2,7 @@
 title: "Site prerequisites | System Center Configuration Manager"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 08/12/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

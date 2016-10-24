@@ -2,7 +2,7 @@
 title: "Endpoint Protection Client Help | System Center Configuration Manager"
 description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
 ms.custom: na
-ms.date: 02/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

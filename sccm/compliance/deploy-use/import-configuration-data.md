@@ -2,7 +2,7 @@
 title: "Import configuration data | System Center Configuration Manager"
 description: "Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

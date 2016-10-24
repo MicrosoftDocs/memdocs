@@ -2,7 +2,7 @@
 title: "Create stand-alone media with System Center Configuration Manager"
 description: "Use stand-alone media to deploy the operating system on a computer without a connection to a Configuration Manager site or the network."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

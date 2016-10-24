@@ -4,7 +4,7 @@ description: "Learn how to configure Endpoint Protection to manage security and 
 defintion: ""
 definition: ""
 ms.custom: na
-ms.date: 08/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: "Configure sites | System Center Configuration Manager"
 description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

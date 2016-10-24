@@ -2,7 +2,7 @@
 title: "Features and capabilities | System Center Configuration Manager"
 description: "Learn about the primary management capabilities of System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

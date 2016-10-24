@@ -2,7 +2,7 @@
 title: "Plan On-premises MDM | System Center Configuration Manager"
 description: "Plan for On-premises Mobile Device Management to manage mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

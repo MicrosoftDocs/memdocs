@@ -2,7 +2,7 @@
 title: "Configuration items for devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
 description: "Learn how to configure Windows and Mac devices that are managed with the System Center Configuration Manager client."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
