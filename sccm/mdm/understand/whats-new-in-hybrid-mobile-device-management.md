@@ -25,11 +25,56 @@ This article provides details on the new mobile device management (MDM) features
 |-|  
 |**New in Microsoft Intune** - In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.<br /><br /> **New in Configuration Manager Technical Preview** - All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **New in Configuration Manager (current branch)** - All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
 
+## New hybrid features in October 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in October 2016 work in hybrid deployments.
+
+- **Conditional access for mobile application management**
+
+  You can restrict access to Exchange Online so that access comes only from apps that support Intune mobile application management policies such as Outlook. [This new feature](/intune/deploy-use/allow-policy-managed-apps-access-to-o365) pairs up perfectly with Intune mobile app management (MAM) policies as you can block access to built-in mail clients or other apps that have not been configured with the Intune MAM policies. This ensures your users are accessing your organization’s data with apps that can be protected using Intune MAM. You can get started in Intune mobile app management via the Azure portal. Look for the new Conditional Access section in the “Settings” blade.
+
+-	**Intune App Wrapping Tool for Android**
+
+  You can enable your apps to use Intune mobile application management (MAM) policies by using the Intune App Wrapping Tool.
+
+- **Android Samsung KNOX compatibility with Intune**
+
+  Certain models of the Samsung Galaxy Ace phone cannot be managed by Intune as Samsung KNOX devices. When you enroll these devices with Intune, they will instead be managed as standard Android devices.
+
+  The model numbers affected are:
+
+  - SM-G313HU
+  -	SM-G313HY
+  -	SM-G313M
+  -	SM-G313MY
+  -	SM-G313U
+
+  You and your end users need take no further action. For more information, visit the Samsung KNOX website.
+
+### New in Configuration Manager Technical Preview 1610
+
+The following new hybrid features have been introduced in October 2016 for Configuration Manager Technical Preview 1610.
+
+- **Request a policy sync from the admin console**
+
+  You can request a policy sync on an enrolled mobile device from the Configuration Manager console, instead of needing to request the sync in the Company Portal app on the device itself. This is a new action called **Send Sync Request** in the Remote Device Actions menu, which appears in the ribbon when a mobile device is selected in the Devices node.
+
+- **Windows Defender Configuration Settings**
+
+  You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers using configuration items in the Configuration Manager console. There’s a new setting group called **Windows Defender** in the Configuration Item wizard. Note that this is supported only on Windows 10 Version 1511 and above.
+
+
+### New in Configuration Manager (current branch)
+
+No new hybrid features have been introduced in August 2016 for Configuration Manager (current branch).
+
 ## New hybrid features in September 2016
 
 ### New in Microsoft Intune
 
-The following Intune features introduced in September 2016 work in hybrid deployments. You use these features the same way you would use them in the standalone Intune service. No changes or administration in Configuration Manager is required to use these features.
+The following Intune features introduced in September 2016 work in hybrid deployments.
 
 - **Addition of "Notifications" to the Company Portal for Android**
 
@@ -79,7 +124,7 @@ The following new feature introduced in September 2016 is available for hybrid d
 
 ### New in Microsoft Intune
 
-The following Intune features introduced in August 2016 work in hybrid deployments. You use these features the same way you would use them in the standalone Intune service. No changes or administration in Configuration Manager is required to use these features.
+The following Intune features introduced in August 2016 work in hybrid deployments.
 
 - **Android 7 support in the Company Portal app**
 
@@ -118,7 +163,7 @@ No new hybrid features have been introduced in August 2016 for Configuration Man
 
 ### New in Microsoft Intune
 
-The following features introduced in July 2016 work in hybrid deployments exactly as they do in the standalone Intune service. No changes or administration in Configuration Manager are required to use these features.
+The following Intune features introduced in July 2016 work in hybrid deployments.
 
 - **Xamarin SDK for Intune apps is available**
 
@@ -155,7 +200,7 @@ No new hybrid features have been introduced in July 2016 for Configuration Manag
 
 ### New in Configuration Manager (current branch)
 
-The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606. These features require you to use the Configuration Manager console to configure and manage them.
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1606.
 
 * Find, manage, and distribute Windows Store for Business apps for Windows 10 devices from the Configuration Manager console ([1604](#new-in-1604-technical-preview))
 * 	SmartLock setting for Android devices ([1604](#new-in-1604-technical-preview))
@@ -172,7 +217,7 @@ For information on the new functionality, see the documentation for the specifie
 ## New hybrid features in June 2016
 
 ### New in Microsoft Intune
-The following features introduced in June 2016 work in hybrid deployments exactly as they do in the standalone Intune service. No changes or administration in Configuration Manager are required to use these features.
+The following Intune features introduced in June 2016 work in hybrid deployments.
 
 - **Intune service health**
   Service health information for Intune has been moved to a central location with other Microsoft services. You'll now find this information in the Office 365 management portal under Service Health. For more information, see this [blog post](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/).
@@ -219,7 +264,7 @@ The following features introduced in June 2016 work in hybrid deployments exactl
 
 
 ### New in 1606 Technical Preview
-The following new features introduced in June 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1606. These features require you to use the Configuration Manager console to configure and manage them.
+The following new features introduced in June 2016 are available in hybrid deployments with Intune and Configuration Manager Technical Preview 1606.
 
 - **Automatically categorize devices into collections**
 
@@ -234,7 +279,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 ##  New hybrid features in May 2016  
 
 ### New in Microsoft Intune  
- The following  features introduced in May 2016 work in hybrid deployments exactly as they do in the standalone Intune service. No changes or administration in Configuration Manager are required to use these features.  
+ The following Intune features introduced in May 2016 work in hybrid deployments.
 
 - **MAM SDK: Support PIN length configuration**
 
@@ -298,7 +343,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 ##  New hybrid features in April 2016  
 
 ### New in Microsoft Intune  
- The following  features introduced in April 2016 work in hybrid deployments exactly as they do in the standalone Intune service. No changes or administration in Configuration Manager are required to use these features.  
+ The following Intune features introduced in April 2016 work in hybrid deployments.  
 
 - **MAM user compliance**
 
@@ -346,7 +391,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 ##  New hybrid features in March 2016  
 
 ### New in Microsoft Intune  
- The following Intune features introduced in March 2016 work in hybrid deployments exactly as they do in the standalone Intune service. No changes or administration in Configuration Manager are required to use these features.  
+ The following Intune features introduced in March 2016 work in hybrid deployments.  
 
 - **MAM controls to prevent Outlook contacts sync (iOS)**
 
