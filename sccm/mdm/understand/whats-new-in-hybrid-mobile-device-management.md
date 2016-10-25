@@ -222,5 +222,6 @@ For information on the new functionality, see the documentation for the specifie
 
 
 ### See Also
- [Past hybrid MDM features](whats-new-hybrid-archive.md)
- [What's new for MDM in System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
+
+- [Past hybrid MDM features](whats-new-hybrid-archive.md)
+- [What's new for MDM in System Center 2012 Configuration Manager](https://technet.microsoft.com/library/mt445560.aspx)
