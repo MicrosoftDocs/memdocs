@@ -2,7 +2,7 @@
 title: Prepare site system roles for operating system deployments | Configuration Manager
 description: "Configure the site system roles before you deploy operating systems in System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

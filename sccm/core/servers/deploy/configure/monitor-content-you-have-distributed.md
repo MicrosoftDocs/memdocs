@@ -2,7 +2,7 @@
 title: "Monitor content | System Center Configuration Manager"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
-ms.date: 05/02/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

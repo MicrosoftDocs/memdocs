@@ -2,7 +2,7 @@
 title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
 description: "Learn how to manage and monitor Windows Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks."
 ms.custom: na
-ms.date: 07/25/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other

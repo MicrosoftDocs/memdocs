@@ -2,7 +2,7 @@
 title: "Protect data and site infrastructure | System Center Configuration Manager"
 description: "Learn how protect your organization's resources from exposure or malicious attack with System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

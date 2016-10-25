@@ -3,7 +3,7 @@ title: Deploy and use mobile device management | System Center Configuration Man
 description: "Learn about different ways to manage mobile devices with System Center Configuration Manager."
 keywords:
 author: NathBarnms.author: nathbarnmanager: angrobe
-ms.date: 09/23/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

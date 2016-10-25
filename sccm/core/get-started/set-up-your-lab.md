@@ -2,7 +2,7 @@
 title: "Set up your System Center Configuration Manager lab"
 description: "Set up a lab for evaluating Configuration Manager with simulated real-life activities."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

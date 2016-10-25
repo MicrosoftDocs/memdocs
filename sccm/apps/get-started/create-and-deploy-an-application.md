@@ -2,7 +2,7 @@
 title: "Create and deploy an application | System Center Configuration Manager"
 description: "Create and deploy an application containing a line-of-business app and learn how to manage apps effectively."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

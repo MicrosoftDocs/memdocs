@@ -2,7 +2,7 @@
 title: Create a task sequence for non-operating system deployments | Configuration Manager
 description: "Create task sequences that are not related to deploying operating systems, such as distributing software, updating drivers, editing user states, etc."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

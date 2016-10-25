@@ -2,7 +2,7 @@
 title: "Collections introduction | System Center Configuration Manager"
 description: "Get an introduction to using collections in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -4,7 +4,7 @@ description: "The Configuration Manager console contains icons that indicate a s
 keywords:
 author: dougebyms.author: dougeby
 manager: angrobe
-ms.date: 09/27/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

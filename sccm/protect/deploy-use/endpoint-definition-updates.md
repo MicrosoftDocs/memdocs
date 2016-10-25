@@ -3,7 +3,7 @@
 title: "Configure Endpoint Protection | System Center Configuration Manager"
 description: "Learn how to select and configure methods with Endpoint Protection in System Center Configuration Manager to keep antimalware definitions up to date on client computers."
 ms.custom: na
-ms.date: 08/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

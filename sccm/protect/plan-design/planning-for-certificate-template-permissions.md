@@ -2,7 +2,7 @@
 title: "Planning certificate template permissions | System Center Configuration Manager"
 description: "Learn about planning for the permissions that you need to configure the certificate templates that System Center Configuration Manager uses."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

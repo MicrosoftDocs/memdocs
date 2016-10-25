@@ -2,7 +2,7 @@
 title: "Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune"
 description: "Prepare to manage Android mobile devices with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 06/29/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

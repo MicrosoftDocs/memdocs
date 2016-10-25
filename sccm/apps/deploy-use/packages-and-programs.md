@@ -2,7 +2,7 @@
 title: "Packages and programs | System Center Configuration Manager"
 description: "Support deployments that use packages and programs or applications with System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/08/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
