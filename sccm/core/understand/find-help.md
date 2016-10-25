@@ -65,6 +65,6 @@ Use the following resources for additional information about System Center Confi
 
 -   [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=243064)  
 
--   [Configuration Manager Community Page](http://go.microsoft.com/fwlink/p/?LinkId=243065)  
+-   [Configuration Manager Community - System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager Forums Page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
