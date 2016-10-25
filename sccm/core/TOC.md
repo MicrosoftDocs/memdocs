@@ -250,7 +250,7 @@
 ###  [Example validation state transitions for Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Example Asset Intelligence general license import file](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
-##   [Remote control](clients/manage/remote-control/remote-control-technical-reference.md)
+##   [Remote control](clients/manage/remote-control/introduction-to-remote-control.md)
 ###  [Introduction to remote control](clients/manage/remote-control/introduction-to-remote-control.md)
 ###  [Planning for remote control](clients/manage/remote-control/planning-for-remote-control.md)
 #### [Prerequisites for remote control](clients/manage/remote-control/prerequisites-for-remote-control.md)
@@ -259,7 +259,6 @@
 #### [How to remotely administer a Windows client computer](clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)
 #### [How to audit remote control usage](clients/manage/remote-control/audit-remote-control-usage.md)
 ###  [Security and privacy for remote control](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
-###  [Technical reference for remote control](clients/manage/remote-control/remote-control-technical-reference.md)
 
 ##   [Power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Introduction to power management](clients/manage/power/introduction-to-power-management.md)
