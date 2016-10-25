@@ -27,7 +27,7 @@ This article provides details on the new mobile device management (MDM) features
 
 ## New hybrid features in October 2016
 
-## New in Microsoft Intune
+### New in Microsoft Intune
 
 The following Intune features introduced in October 2016 work in hybrid deployments.
 
@@ -53,7 +53,7 @@ The following Intune features introduced in October 2016 work in hybrid deployme
 
   You and your end users need take no further action. For more information, visit the Samsung KNOX website.
 
-## New in Configuration Manager Technical Preview 1610
+### New in Configuration Manager Technical Preview 1610
 
 The following new hybrid features have been introduced in October 2016 for Configuration Manager Technical Preview 1610.
 
