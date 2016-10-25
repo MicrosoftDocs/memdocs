@@ -2,7 +2,7 @@
 title: "Ports | System Center Configuration Manager"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
-ms.date: 02/10/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

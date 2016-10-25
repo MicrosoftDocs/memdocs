@@ -2,7 +2,7 @@
 title: "Introduction to queries | System Center Configuration Manager"
 description: "Create and run queries to locate objects in a System Center Configuration Manager hierarchy that match your query criteria."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

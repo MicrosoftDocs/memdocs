@@ -2,7 +2,7 @@
 title: Create a task sequence to capture and restore user state | Configuration Manager
 description: "Use System Center Configuration Manager task sequences to capture and restore the user-state data in operating system deployment scenarios."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

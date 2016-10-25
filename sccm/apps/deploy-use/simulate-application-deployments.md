@@ -2,7 +2,7 @@
 title: "Simulate application deployments | System Center Configuration Manager"
 description: "Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

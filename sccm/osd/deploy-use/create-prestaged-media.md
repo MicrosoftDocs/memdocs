@@ -2,7 +2,7 @@
 title: "Create prestaged media with System Center Configuration Manager"
 description: "Create prestaged media in System Center Configuration Manager to simplify deployment of Windows in several scenarios."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

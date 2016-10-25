@@ -2,7 +2,7 @@
 title: "Endpoint Protection malware definitions | System Center Configuration Manager"
 description: "Learn to configure Configuration Manager software updates to deliver definition updates to client computers."
 ms.custom: na
-ms.date: 08/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

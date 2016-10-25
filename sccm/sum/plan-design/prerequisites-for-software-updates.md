@@ -3,7 +3,7 @@ title: Prerequisites for software updates | Configuration Manager
 description: "Learn about prerequisites for software updates in System Center Configuration Manager."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 9/14/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

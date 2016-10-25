@@ -1,7 +1,7 @@
 ---
 title: "Setup Wizard | System Center Configuration Manager"
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -58,11 +58,19 @@ If you are installing a central administration site as part of a site expansion 
         > -   Installs a management point and a distribution point on the site server computer  
         > -   Configures the site with English and the display language of the operating system on the primary site server if it matches one of the languages that Configuration Manager supports  
 
-4.  On the **Product Key** page, choose whether to install Configuration Manager as an evaluation edition or a licensed edition.  
+4.  On the **Product Key** page:
+    - Choose whether to install Configuration Manager as an evaluation edition or a licensed edition.  
 
-    -   If you select a licensed edition, enter your product key and click **Next**.  
+      -   If you select a licensed edition, enter your product key and click **Next**.  
 
-    -   If you select an evaluation edition, click **Next**. (You can upgrade an evaluation install to a full install at a later time.)  
+      -   If you select an evaluation edition, click **Next**. (You can upgrade an evaluation install to a full install at a later time.)  
+    - Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. On this page you have the option specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you do not enter this during setup, you can specify it later from within the Configuration Manager console.
+
+      >  [!NOTE]   
+      >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
+
+      For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
+
 
 5.  On the **Microsoft Software License Terms** page, read and accept the license terms.  
 

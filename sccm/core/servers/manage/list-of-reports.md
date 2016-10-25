@@ -2,7 +2,7 @@
 title: "List of reports | System Center Configuration Manager"
 description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
 ms.custom: na
-ms.date: 06/06/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

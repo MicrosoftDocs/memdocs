@@ -2,7 +2,7 @@
 title: "Assign clients to a site | System Center Configuration Manager"
 description: "Assign clients to a site in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/21/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

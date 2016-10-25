@@ -2,7 +2,7 @@
 title: "Introduction to email profiles | System Center Configuration Manager"
 description: "Learn how to use email profiles to enable your users to access corporate email on their devices with minimal setup."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
