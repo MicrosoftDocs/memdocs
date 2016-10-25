@@ -13,7 +13,7 @@
 ### [Which branch of Configuration Manager should I use](understand/which-branch-should-i-use.md)
 ### [Supported Configurations for the Long-Term Servicing Branch](understand/supported-configurations-for-ltsb.md)
 ### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
-### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch)
+### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
@@ -259,7 +259,7 @@
 #### [How to remotely administer a Windows client computer](clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)
 #### [How to audit remote control usage](clients/manage/remote-control/audit-remote-control-usage.md)
 ###  [Security and privacy for remote control](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
-###  [Technical reference for remote control](clients/manage/remote-control/technical-reference-for-remote-control.md)
+###  [Technical reference for remote control](clients/manage/remote-control/remote-control-technical-reference.md)
 
 ##   [Power management](clients/manage/power/introduction-to-power-management.md)
 ###  [Introduction to power management](clients/manage/power/introduction-to-power-management.md)

@@ -29,5 +29,3 @@ Use the following topics to help you find information about remote control in Sy
 -   [Operations and maintenance for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/operations-and-maintenance-for-remote-control.md)  
 
 -   [Security and privacy for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md)  
-
--   [Technical reference for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/technical-reference-for-remote-control.md)  
