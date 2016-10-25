@@ -347,6 +347,14 @@ Use the following procedures to upgrade Configuration Manager sites:
 
      If you previously installed Configuration Manager Evaluation, you can select **Install the licensed edition of this product**, and then enter your product key for the full installation of Configuration Manager to convert the site to the full version.  
 
+     Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. You also have the option to specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you do not enter this during setup, you can specify it later from within the Configuration Manager console.
+
+     >  [!NOTE]   
+     >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
+
+     For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
+
+
 7.  On the **Microsoft Software License Terms** page, read and accept the license terms, and then click **Next**.  
 
 8.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software, and then click **Next**. Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
