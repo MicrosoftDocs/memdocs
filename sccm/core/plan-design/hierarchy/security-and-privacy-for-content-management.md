@@ -2,7 +2,7 @@
 title: "Content management security and privacy | System Center Configuration Manager"
 description: "Optimize security and privacy for content management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

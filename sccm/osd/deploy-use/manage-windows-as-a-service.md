@@ -2,7 +2,7 @@
 title: Manage Windows as a service | Configuration Manager
 description: "Features in System Center Configuration Manager help you view the state of Windows as a Service in your environment so that you can keep it updated."
 ms.custom: na
-ms.date: 08/12/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

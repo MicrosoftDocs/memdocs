@@ -2,7 +2,7 @@
 title: Create a task sequence to upgrade an operating system | Configuration Manager
 description: "Task sequences in System Center Configuration Manager can automatically upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
-ms.date: 08/12/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

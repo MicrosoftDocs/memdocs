@@ -2,7 +2,7 @@
 title: Create a task sequence to install an operating system | Configuration Manager
 description: "Use task sequences in System Center Configuration Manager to automatically install an operating system image and other content on a destination computer."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

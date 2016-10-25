@@ -2,7 +2,7 @@
 title: Associate users with a destination computer | Configuration Manager
 description: "Configure System Center Configuration Manager to associate users with destination computers when deploying operating systems."
 ms.custom: na
-ms.date: 07/28/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

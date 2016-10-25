@@ -1,7 +1,7 @@
 ---
 title: "SQL Server AlwaysOn | System Center Configuration Manager"
 ms.custom: na
-ms.date: 08/04/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

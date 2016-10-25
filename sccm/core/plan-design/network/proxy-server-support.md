@@ -2,7 +2,7 @@
 title: "Proxy server support | System Center Configuration Manager"
 description: "Learn about System Center Configuration Manager support for proxy servers that site system servers and clients use."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

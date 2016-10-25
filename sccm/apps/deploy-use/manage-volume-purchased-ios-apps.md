@@ -2,7 +2,7 @@
 title: "Manage volume-purchased iOS apps | System Center Configuration Manager"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 08/14/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

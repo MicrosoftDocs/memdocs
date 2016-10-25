@@ -2,7 +2,7 @@
 title: "Service Connection Tool | System Center Configuration Manager"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -65,7 +65,9 @@ You can use the following optional parameters to specify a proxy server (More in
 
 
 ## Use the service connection tool  
- You can find the service connection tool (**serviceconnectiontool.exe**), in the Configuration Manager installation media in **%path%/smssetup/tools/ServiceConnectionTool** folder.  
+
+ You can find the service connection tool (**serviceconnectiontool.exe**), in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. Always use the service connection tool that matches the version of Configuration Manager that you use.
+
 
  In this procedure, the command-line examples use the following file names and folder locations (you do not need to use these paths and file names and instead can use alternatives that match your environment and preferences):  
 
@@ -79,7 +81,7 @@ On the computer that hosts the service connection point:
 
 -   Open a command prompt  with administrative privileges, and then change directories to the location that contains **serviceconnectiontool.exe**.  
 
-     By default, you can  find this tool in the Configuration Manager installation media in **%path%\smssetup/tools\ServiceConnectionTool** folder. All of the files in this folder must be in the same folder for the service connection tool to work.  
+     By default, you can  find this tool in the Configuration Manager installation media in **%path%\smssetup\tools\ServiceConnectionTool** folder. All of the files in this folder must be in the same folder for the service connection tool to work.  
 
 When you run the following command, the tool prepares a .cab file that contains usage information and to copies it  to a location you specify. The data in the .cab file is based on the level of diagnostic usage data your site is configured to collect. (see [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Run the following command to create the .cab file:  
 
@@ -109,7 +111,7 @@ You will also need to copy the ServiceConnectionTool folder with all of its cont
 
 5.  Run the following command to begin the upload of usage information and the download of updates for Configuration Manager:  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks** 
+    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
     For more examples of this command line, see the [Command line options](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) section later in this topic.
 
