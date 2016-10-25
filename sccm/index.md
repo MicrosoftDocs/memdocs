@@ -13,6 +13,7 @@ ms.technology:
   - configmgr-other
 ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
+# toc_rel: /sccm/toc.json
 ---
 # System Center Configuration Manager Documentation
 
