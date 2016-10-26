@@ -429,7 +429,7 @@ For more information, see [How to configure client status in System Center Confi
 
 ### SITEREASSIGN
 
-Enables automatic site reassignment during push installation or automatic client upgrade when used with [SMSSITECODE](#smssitecode)=AUTO.
+Enables automatic site reassignment for client upgrades when used with [SMSSITECODE](#smssitecode)=AUTO.
 
 Example: **CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE**
 
@@ -562,7 +562,7 @@ Example: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**
 
 ### SMSSITECODE
 
- Specifies the Configuration Manager site to assign the Configuration Manager client to. This can either be a three-character  site code or the word AUTO. If AUTO is specified, or if this property is not specified, the client attempts to determine its Configuration Manager site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO, you must also set [SITEREASSIGN](#sitereassign) to TRUE.    
+ Specifies the Configuration Manager site to assign the Configuration Manager client to. This can either be a three-character  site code or the word AUTO. If AUTO is specified, or if this property is not specified, the client attempts to determine its Configuration Manager site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO for client upgrades, you must also set [SITEREASSIGN](#sitereassign) to TRUE.    
 
 > [!NOTE]  
 >  Do not use AUTO if you also specify the Internet-based management point (CCMHOSTNAME). In this scenario, you must directly assign the client to its site.  

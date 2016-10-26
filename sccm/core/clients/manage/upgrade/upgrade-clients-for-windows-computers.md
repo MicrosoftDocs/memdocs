@@ -32,6 +32,9 @@ You can upgrade the client on Windows computers using client installation method
 > [!TIP]  
 >  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.  
 
+> [!NOTE]
+> If you plan to reassign the site for the clients during upgrade, you can specify the new site using the SMSSITECODE client.msi property. If you use AUTO for the SMSSITECODE, you must also specify SITEREASSIGN=TRUE to allow automatic site reassignment to occur during upgrade. For more information, see [SMSSITECODE](../../deploy/about-cleint-installation-properties.md#smssitecode). 
+
 ## Use automatic client upgrade  
  You can also configure Configuration Manager to automatically upgrade the client software to the latest Configuration Manager client version when Configuration Manager identifies that a client that is assigned to the Configuration Manager hierarchy is lower than the version used in the hierarchy. This scenario includes upgrading the client to the latest version when it attempts to assign to a Configuration Manager site.  
 
