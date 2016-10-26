@@ -31,7 +31,7 @@ Although provisioning cloud resources is not something you must do before you de
 ## Cloud-based resources you can use with Configuration Manager  
  Because each option has different requirements, investigate each in greater depth to understand the unique prerequisites, limitations, and potential for additional costs based on use.  
 
--   For information about cloud-based distribution points, see  
+-   For information about cloud-based distribution points, see [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure).
 
 -   For more information about Windows Azure, see [Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 
