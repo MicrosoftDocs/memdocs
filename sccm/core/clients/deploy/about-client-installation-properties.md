@@ -227,6 +227,21 @@ Example: **CCMSetup.exe /ExcludeFeatures:ClientUI** will not install the Softwar
 ##  <a name="clientMsiProps"></a> Client.msi Properties  
  The following properties can modify the installation behavior of client.msi. If you use the client push installation method, you can also specify the properties in the **Client** tab of the **Client Push Installation Properties** dialog box.  
 
+### CCMADMINS  
+
+Specifies one or more Windows user accounts or groups to be given access to client settings and policies. This is useful where the Configuration Manager administrator does not have local administrative credentials on the client computer. You can specify a list of accounts that are separated by semi-colons.  
+
+Example: **CCMSetup.exe CCMADMINS="Domain\Account1;Domain\Group1"**  
+
+### CCMALLOWSILENTREBOOT
+
+Specifies that the computer is allowed to restart following the client installation, if this is required.  
+
+> [!IMPORTANT]  
+>  The computer will restart without warning even if a user is currently logged on.  
+
+Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**  
+
 ### CCMALWAYSINF
 
  Set to 1 to specify that the client will always be Internet-based and will never connect to the intranet. The client's connection type displays **Always Internet**.  
@@ -281,6 +296,26 @@ Example: **CCMSetup.exe /ExcludeFeatures:ClientUI** will not install the Softwar
 
  Example: **CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"**  
 
+### CCMDEBUGLOGGING
+
+  Enables debug logging. Values can be set to 0 (off) or 1 (on). The default value is 0. This causes the client to log low-level information that might be useful for troubleshooting problems. As a best practice, avoid using this property in production sites because excessive logging can occur, which might make it difficult to find relevant information in the log files. CCMENABLELOGGING must be set to TRUE to enable debug logging.  
+
+  Example: **CCMSetup.exe CCMDEBUGLOGGING=1**  
+
+### CCMENABLELOGGING
+
+  Enables logging if this property is set to TRUE. By default, logging is enabled. The log files are stored in the **Logs** folder in the Configuration Manager client installation folder. By default, this folder is %Windir%\CCM\Logs.  
+
+  Example: **CCMSetup.exe CCMENABLELOGGING=TRUE**  
+
+### CCMEVALINTERVAL  
+
+ Specifies the frequency when the client health evaluation tool (ccmeval.exe) runs. You can specify a value from **1** through **1440** minutes. If you do not specify this property, or specify an incorrect value, the evaluation will run once a day.  
+
+### CCMEVALHOUR
+
+ Specify the hour when the client health evaluation tool (ccmeval.exe) runs. You can specify a value between **0** (midnight) and **23** (11pm). If you do not specify this property, or specify and incorrect value, the evaluation will run at midnight.  
+
 ### CCMFIRSTCERT
 
  If set to 1, this property specifies that the client should select the PKI certificate with the longest validity period. This setting might be required if you are using Network Access Protection with IPsec enforcement.  
@@ -305,68 +340,35 @@ Example: **CCMSetup.exe /ExcludeFeatures:ClientUI** will not install the Softwar
 
 ### CCMHTTPSPORT
 
- Specifies the port that the client should use when communicating over HTTPS to site system servers. If the port is not specified, the default value of 443 will be used.  
+Specifies the port that the client should use when communicating over HTTPS to site system servers. If the port is not specified, the default value of 443 will be used.  
 
- Example: **CCMSetup.exe /UsePKICert CCMHTTPSPORT=443**  
+Example: **CCMSetup.exe /UsePKICert CCMHTTPSPORT=443**  
 
-### SMSPUBLICROOTKEY
+### CCMINSTALLDIR
 
- Specifies the Configuration Manager trusted root key where it cannot be retrieved from Active Directory Domain Services. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+ Identifies the folder where the Configuration Manager client files are installed. If this property is not set, the client software is installed in the *%Windir%*\CCM folder. Regardless of where these  files are installed, the Ccmcore.dll file is always installed in the *%Windir%\System32* folder. In addition, on 64-bit operating systems, a copy of the Ccmcore.dll file is always installed in the *%Windir%*\SysWOW64 folder to support 32-bit applications that use the 32-bit version of the Configuration Manager client APIs from the Configuration Manager software developer kit (SDK).  
 
- Example: **CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>**  
-
-### SMSROOTKEYPATH
-
- Used to reinstall the Configuration Manager trusted root key. Specifies the full path and file name to a file containing the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
-
- Example: CCMSetup.exe **SMSROOTKEYPATH=&lt;Full path and filename\>**  
-
-### RESETKEYINFORMATION
-
- If a Configuration Manager client has the wrong Configuration Manager trusted root key and cannot contact a trusted management point to receive a valid copy of the new trusted root key, you must manually remove the old trusted root key by using this property. This situation commonly occurs when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication.  
-
- Example: **CCMSetup.exe RESETKEYINFORMATION=TRUE**  
-
-### CCMDEBUGLOGGING
-
- Enables debug logging. Values can be set to 0 (off) or 1 (on). The default value is 0. This causes the client to log low-level information that might be useful for troubleshooting problems. As a best practice, avoid using this property in production sites because excessive logging can occur, which might make it difficult to find relevant information in the log files. CCMENABLELOGGING must be set to TRUE to enable debug logging.  
-
- Example: **CCMSetup.exe CCMDEBUGLOGGING=1**  
-
-### CCMENABLELOGGING
-
- Enables logging if this property is set to TRUE. By default, logging is enabled. The log files are stored in the **Logs** folder in the Configuration Manager client installation folder. By default, this folder is %Windir%\CCM\Logs.  
-
- Example: **CCMSetup.exe CCMENABLELOGGING=TRUE**  
+ Example: **CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"**  
 
 ### CCMLOGLEVEL
 
- Specifies the amount of detail to write to Configuration Manager log files. Specify an integer ranging from 0 to 3, where 0 is the most verbose logging and 3 logs only errors. The default is 1.  
+Specifies the amount of detail to write to Configuration Manager log files. Specify an integer ranging from 0 to 3, where 0 is the most verbose logging and 3 logs only errors. The default is 1.  
 
- Example: **CCMSetup.exe CCMLOGLEVEL=3**  
+Example: **CCMSetup.exe CCMLOGLEVEL=3**  
 
 ### CCMLOGMAXHISTORY
 
- When a Configuration Manager log file reaches 250000 bytes in size (or the value specified by the property CCMLOGMAXSIZE), it is renamed as a backup, and a new log file is created.  
+When a Configuration Manager log file reaches 250000 bytes in size (or the value specified by the property CCMLOGMAXSIZE), it is renamed as a backup, and a new log file is created.  
 
- This property specifies how many previous versions of the log file to retain. The default value is 1. If the value is set to 0, no old log files are kept.  
+This property specifies how many previous versions of the log file to retain. The default value is 1. If the value is set to 0, no old log files are kept.  
 
- Example: **CCMSetup.exe CCMLOGMAXHISTORY=0**  
+Example: **CCMSetup.exe CCMLOGMAXHISTORY=0**  
 
 ### CCMLOGMAXSIZE
 
- Specifies the maximum log file size in bytes. When a log grows to the size that is specified, it is renamed as a history file, and a new file is created. This property must be set to at least 10000 bytes. The default value is 250000 bytes.  
+Specifies the maximum log file size in bytes. When a log grows to the size that is specified, it is renamed as a history file, and a new file is created. This property must be set to at least 10000 bytes. The default value is 250000 bytes.  
 
- Example: **CCMSetup.exe CCMLOGMAXSIZE=300000**  
-
-### CCMALLOWSILENTREBOOT
-
- Specifies that the computer is allowed to restart following the client installation, if this is required.  
-
-> [!IMPORTANT]  
->  The computer will restart without warning even if a user is currently logged on.  
-
- Example: **CCMSetup.exe  CCMALLOWSILENTREBOOT**  
+Example: **CCMSetup.exe CCMLOGMAXSIZE=300000**  
 
 ### DISABLESITEOPT
 
@@ -379,6 +381,57 @@ Example: **CCMSetup.exe /ExcludeFeatures:ClientUI** will not install the Softwar
 If set to TRUE, disables the ability of end users with administrative credentials on the client computer to change the  client cache folder settings for the Configuration Manager client by using Configuration Manager in Control Panel of the client computer.  
 
 Example: **CCMSetup.exe DISABLECACHEOPT=TRUE**  
+
+### DNSSUFFIX
+
+ Specifies a DNS domain for clients to locate management points that are published in DNS. When a management point is located, it informs the client about other management points in the hierarchy. This means that the management point that is located by using DNS publishing does not have to be from the client’s site, but can be any management point in the hierarchy.  
+
+> [!NOTE]  
+>  You do not have to specify this property if the client is in the same domain as a published management point. In this scenario, the client’s domain is automatically used to search DNS for management points.  
+
+ For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service Location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) in [Understand how clients find site resources and services for System Center Configuration Manager](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) .  
+
+> [!NOTE]  
+>  By default, DNS publishing is not enabled in Configuration Manager.  
+
+ Example: **CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com**  
+
+### FSP
+
+Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
+
+For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)in [Determine the site system roles for System Center Configuration Manager clients](plan/determine-the-site-system-roles-for-clients.md).  
+
+Example: **CCMSetup.exe FSP=SMSFP01**  
+
+### IGNOREAPPVVERSIONCHECK
+
+ Specifies that the existence of the minimum required version of Microsoft Application Virtualization (App-V) is not checked before the client is installed.  
+
+> [!IMPORTANT]  
+>  If you install the Configuration Manager client without installing App-V, you cannot deploy virtual applications.  
+
+ Example: **CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE**  
+
+### NOTIFYONLY
+
+Specifies that client status will report, but not remediate problems that are found with the Configuration Manager client.  
+
+Example: **CCMSetup.exe NOTIFYONLY=TRUE**  
+
+For more information, see [How to configure client status in System Center Configuration Manager](configure-client-status.md).  
+
+### RESETKEYINFORMATION
+
+ If a Configuration Manager client has the wrong Configuration Manager trusted root key and cannot contact a trusted management point to receive a valid copy of the new trusted root key, you must manually remove the old trusted root key by using this property. This situation commonly occurs when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication.  
+
+ Example: **CCMSetup.exe RESETKEYINFORMATION=TRUE**  
+
+### SITEREASSIGN
+
+Enables automatic site reassignment during push installation or automatic client upgrade when used with [SMSSITECODE](#smssitecode)=AUTO.
+
+Example: **CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE**
 
 ### SMSCACHEDIR
 
@@ -474,6 +527,31 @@ Specifies the location and order that the Configuration Manager Installer checks
 
  Example: **CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS**  
 
+### SMSMP
+
+Specifies an initial management point for the Configuration Manager client to use.  
+
+> [!IMPORTANT]  
+>  If the management point accepts client connections over HTTPS only (does not allow HTTP client connections), you must prefix the management point name with https://.  
+
+Example: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
+
+Example: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
+
+Example: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**  
+
+### SMSPUBLICROOTKEY
+
+ Specifies the Configuration Manager trusted root key where it cannot be retrieved from Active Directory Domain Services. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+
+ Example: **CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>**  
+
+### SMSROOTKEYPATH
+
+ Used to reinstall the Configuration Manager trusted root key. Specifies the full path and file name to a file containing the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the Trusted Root Key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) in [Plan for security in System Center Configuration Manager](../../plan-design/security/plan-for-security.md).  
+
+ Example: CCMSetup.exe **SMSROOTKEYPATH=&lt;Full path and filename\>**  
+
 ### SMSSIGNCERT
 
  Specifies the full path and .cer file name of the exported self-signed certificate on the site server.  
@@ -482,86 +560,14 @@ Specifies the location and order that the Configuration Manager Installer checks
 
  Example: **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;Full path and file name\>**  
 
-### SMSMP
-
- Specifies an initial management point for the Configuration Manager client to use.  
-
-> [!IMPORTANT]  
->  If the management point accepts client connections over HTTPS only (does not allow HTTP client connections), you must prefix the management point name with https://.  
-
- Example: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
-
- Example: **CCMSetup.exe SMSMP=smsmp01.contoso.com**  
-
- Example: **CCMSetup.exe SMSMP=https://smsmp01.contoso.com**  
-
 ### SMSSITECODE
 
- Specifies the Configuration Manager site to assign the Configuration Manager client to. This can either be a three-character  site code or the word AUTO. If AUTO is specified, or if this property is not specified, the client attempts to determine its Configuration Manager site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO, you must also set SITEREASSIGN to TRUE.    
+ Specifies the Configuration Manager site to assign the Configuration Manager client to. This can either be a three-character  site code or the word AUTO. If AUTO is specified, or if this property is not specified, the client attempts to determine its Configuration Manager site assignment from Active Directory Domain Services or from a specified management point. To enable AUTO, you must also set [SITEREASSIGN](#sitereassign) to TRUE.    
 
 > [!NOTE]  
 >  Do not use AUTO if you also specify the Internet-based management point (CCMHOSTNAME). In this scenario, you must directly assign the client to its site.  
 
  Example: **CCMSetup.exe SMSSITECODE=XZY**  
-
-### CCMINSTALLDIR
-
- Identifies the folder where the Configuration Manager client files are installed. If this property is not set, the client software is installed in the *%Windir%*\CCM folder. Regardless of where these  files are installed, the Ccmcore.dll file is always installed in the *%Windir%\System32* folder. In addition, on 64-bit operating systems, a copy of the Ccmcore.dll file is always installed in the *%Windir%*\SysWOW64 folder to support 32-bit applications that use the 32-bit version of the Configuration Manager client APIs from the Configuration Manager software developer kit (SDK).  
-
- Example: **CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"**  
-
--   CCMADMINS  
-
- Specifies one or more Windows user accounts or groups to be given access to client settings and policies. This is useful where the Configuration Manager administrator does not have local administrative credentials on the client computer. You can specify a list of accounts that are separated by semi-colons.  
-
- Example: **CCMSetup.exe CCMADMINS="Domain\Account1;Domain\Group1"**  
-
-### FSP
-
- Specifies the fallback status point that receives and processes state messages sent by Configuration Manager client computers.  
-
- For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)in [Determine the site system roles for System Center Configuration Manager clients](plan/determine-the-site-system-roles-for-clients.md).  
-
- Example: **CCMSetup.exe FSP=SMSFP01**  
-
-### DNSSUFFIX
-
- Specifies a DNS domain for clients to locate management points that are published in DNS. When a management point is located, it informs the client about other management points in the hierarchy. This means that the management point that is located by using DNS publishing does not have to be from the client’s site, but can be any management point in the hierarchy.  
-
-> [!NOTE]  
->  You do not have to specify this property if the client is in the same domain as a published management point. In this scenario, the client’s domain is automatically used to search DNS for management points.  
-
- For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service Location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) in [Understand how clients find site resources and services for System Center Configuration Manager](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) .  
-
-> [!NOTE]  
->  By default, DNS publishing is not enabled in Configuration Manager.  
-
- Example: **CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com**  
-
-### CCMEVALINTERVAL  
-
- Specifies the frequency when the client health evaluation tool (ccmeval.exe) runs. You can specify a value from **1** through **1440** minutes. If you do not specify this property, or specify an incorrect value, the evaluation will run once a day.  
-
-### CCMEVALHOUR
-
- Specify the hour when the client health evaluation tool (ccmeval.exe) runs. You can specify a value between **0** (midnight) and **23** (11pm). If you do not specify this property, or specify and incorrect value, the evaluation will run at midnight.  
-
-### IGNOREAPPVVERSIONCHECK
-
- Specifies that the existence of the minimum required version of Microsoft Application Virtualization (App-V) is not checked before the client is installed.  
-
-> [!IMPORTANT]  
->  If you install the Configuration Manager client without installing App-V, you cannot deploy virtual applications.  
-
- Example: **CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE**  
-
-### NOTIFYONLY
-
- Specifies that client status will report, but not remediate problems that are found with the Configuration Manager client.  
-
- Example: **CCMSetup.exe NOTIFYONLY=TRUE**  
-
- For more information, see [How to configure client status in System Center Configuration Manager](configure-client-status.md).  
 
 ##  <a name="BKMK_attributevalues"></a> Supported Attribute Values for the PKI Certificate Selection Criteria  
  Configuration Manager supports the following attribute values for the PKI certificate selection criteria:  
