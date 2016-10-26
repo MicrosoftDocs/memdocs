@@ -20,7 +20,9 @@ ms.manager: angrobe
 # How to Create VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 > [!NOTE]  
->  For information about what connection types are available for the different device platforms see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+>
+> - For information about what connection types are available for the different device platforms see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+> - For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
 
 ### Start the Create VPN Profile Wizard  
 
@@ -182,4 +184,6 @@ On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select
 
 ### Next steps
 
- Deploy the VPN profile as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
+- For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
+
+- Deploy the VPN profile as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

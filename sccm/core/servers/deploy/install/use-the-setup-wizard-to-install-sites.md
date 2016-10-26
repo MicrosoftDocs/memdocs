@@ -71,7 +71,6 @@ If you are installing a central administration site as part of a site expansion 
 
       For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-
 5.  On the **Microsoft Software License Terms** page, read and accept the license terms.  
 
 6.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software.  Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
@@ -90,7 +89,7 @@ If you are installing a central administration site as part of a site expansion 
 9. On the **Client Language Selection** page, select the languages that are available to client computers, specify whether to enable all client languages for mobile device clients. (English is selected by default and cannot be removed.)  
 
     > [!IMPORTANT]  
-    >  If you are installing a central administration site to expand a stand-alone primary site, you must select the same client languages that are installed at the stand-alone primary site.  
+    > When you use a central administration site, ensure client languages that you configure at the central administration site include all client languages you configure at each child primary site. This is because clients that install from a distribution point have access to the client languages from the top-tier site, while clients that install from a management point have access to the client languages from their assigned primary site.  
 
 10. On the **Site and Installation Settings** page, specify the following for the new site you are installing:  
 
