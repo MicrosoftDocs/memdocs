@@ -76,8 +76,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
 |**Idle time before device is locked**|Specify the amount of time a device can be idle (have no user input) before it is locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
-|**Password quality**|Select the password complexity level required and also whether biometric devices can be used.|  
-|**Send password recovery PIN to Exchange Server**||  
+|**Password complexity** - **Number of complex character sets required in password**|If you selected a **Strong** password, use this setting to configure the number of complex character sets required. For a strong password, this should be set to at least **3** which means both letters and numbers are required. Select **4** if you want to enforce a password that additionally requires special characters such as **(%$**.|
+|**Send password recovery PIN to Exchange Server**|Set to **Enabled** or **Disabled**.|  
 
 ###  Device  
 
