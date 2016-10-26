@@ -178,7 +178,7 @@ This walkthrough shows you how to configure System Center Configuration Manager 
 
 -   [Set up Windows Phone and Windows 10 Mobile hybrid device management with System Center Configuration Manager and Microsoft Intune](../../mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md)  
 
--   [Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune](../../mdm/deploy-use/set-up-windows-hybrid-device-management.md)  
+-   [Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune](../../mdm/deploy-use/set-up-hybrid-windows.md)  
 
 ### Verify mobile device management configuration  
  You can verify certain device management components by checking the following log files:  
