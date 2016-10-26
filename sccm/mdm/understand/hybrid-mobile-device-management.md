@@ -49,7 +49,7 @@ To bring devices into hybrid management, those devices must be enrolled with the
 
 | **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm#set-up-device-management)|
+|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm.md#step-6-enable-platform-enrollment)|
 |**[DEM](#dem)**|	No |No |No	| [more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 |**[DEP](#dep)**|	Yes |	Optional |	Optional|[more](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
 |**[USB-SA](#usb-sa)**|	Yes |	Optional |	No| [more](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
