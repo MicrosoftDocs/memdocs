@@ -159,7 +159,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. On the User Experience page, configure the following settings:  
 
