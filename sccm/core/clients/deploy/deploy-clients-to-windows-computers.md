@@ -35,7 +35,7 @@ You can use different client deployment methods to install the System Center Con
 > [!IMPORTANT]  
 >  For client push to succeed, ensure that all the prerequisites are in place. These are listed in the section "Installation Method Dependencies" in [Prerequisites for deploying clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
 
-#### To configure the site to automatically use client push for discovered computers  
+### To configure the site to automatically use client push for discovered computers
 
 1.  In the Configuration Manager console, click **Administration.**  
 
@@ -78,7 +78,7 @@ You can use different client deployment methods to install the System Center Con
     > [!NOTE]  
     >  If you enable client push installation on a secondary site, ensure that the SMSSITECODE property is set to the Configuration Manager site name of its parent primary site. If the Active Directory schema is extended for Configuration Manager, you can also set this to AUTO to automatically find the correct site assignment.  
 
-#### To use the Client Push Installation Wizard  
+### To use the Client Push Installation Wizard
 
 1.  In the Configuration Manager console, click **Administration.**  
 
@@ -142,7 +142,7 @@ You can use different client deployment methods to install the System Center Con
 > [!NOTE]  
 >  If computers are in a pending restart state following a previous software installation, then a software update based client installation might cause the computer to restart.  
 
-#### To configure a Group Policy Object in Active Directory Domain Services to specify the software update point for client installation and software updates  
+To configure a Group Policy Object in Active Directory Domain Services to specify the software update point for client installation and software updates:  
 
 1.  Use the Group Policy Management Console to open a new or existing Group Policy Object.  
 
@@ -165,7 +165,7 @@ You can use different client deployment methods to install the System Center Con
 
 6.  Assign the Group Policy Object to the computers on which you want to install the Configuration Manager client and receive software updates.  
 
-#### To publish the Configuration Manager client to the software update point  
+### To publish the Configuration Manager client to the software update point  
 
 1.  In the Configuration Manager console, click **Administration.**  
 
@@ -282,7 +282,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  Use the following procedure to create a Configuration Manager package and program that you can deploy to Configuration Manager client computers to upgrade the client software.  
 
-#### To create a package and program for the client software  
+To create a package and program for the client software  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -309,10 +309,12 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 You can deploy the Configuration Manager client installation files to computers that are enrolled with Microsoft Intune. To do this, you use the Intune Software Publisher to a create Windows Installer (\*.msi) app containing the client installation file **ccmsetup.msi**. Then, you deploy the app to enrolled devices, which installs the client software.
 
+To ensure the device remains in a managed state after the client software is installed, the device must be on the corporate network and within a Configuration Manager site boundary. 
+
 > [!NOTE]
 > Once the client software is installed, the device will be unenrolled from Intune.
 
-To install clients with Intune:
+### To install clients with Intune:
 
 1. In Intune, [create an app](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) containing the Configuration Manager client installation file **ccmsetup.msi**.
 
@@ -332,7 +334,7 @@ To install clients with Intune:
 
  If clients cannot query Active Directory Domain Services to locate a management point, they use the trusted root key to determine trusted management points. If all imaged clients will be deployed in the same hierarchy as the master computer, leave the trusted root key in place. If the clients will be deployed in different hierarchies, remove the trusted root key and as a best practice, preprovision these clients with the new trusted root key. For more information, see  [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
-#### To prepare the client computer for imaging  
+### To prepare the client computer for imaging  
 
 1.  Manually install the Configuration Manager client software on the master image computer. For more information, see [How to Install Configuration Manager Clients Manually](#BKMK_Manual).  
 
@@ -374,7 +376,7 @@ To install clients with Intune:
 
 -   A workgroup client cannot be configured as a distribution point. Configuration Manager requires that distribution point computers be members of a domain.  
 
-#### To install the client on workgroup computers  
+### To install the client on workgroup computers  
 
 1.  Ensure that the computers on which you want to install the client meet the above prerequisites.  
 
@@ -408,7 +410,7 @@ To install clients with Intune:
 
  Because clients that are managed over the Internet must communicate with Internet-based site systems, ensure that these clients also have public key infrastructure (PKI) certificates installed before you install them. You must install these certificates independently from Configuration Manager. For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-#### To install clients on the Internet by specifying CCMSetup command-line properties  
+### To install clients on the Internet by specifying CCMSetup command-line properties  
 
 1.  Follow the directions in the section [How to Install Configuration Manager Clients Manually](#BKMK_Manual) and always include the following:  
 
@@ -438,10 +440,10 @@ To install clients with Intune:
     > [!NOTE]  
     >  This example installs the client source files from a folder on the D drive with settings to use a client PKI certificate and select the certificate with the longest validity period for Internet-only client management, assigns the client to use the Internet-based management point named SERVER1 and the Internet-based fallback status point in the contoso.com domain, and assigns the client to the ABC site.  
 
-###  <a name="BKMK_ConfigureIBCM_MP"></a> How to configure clients for Internet-based Client Management after client installation  
+###  <a name="BKMK_ConfigureIBCM_MP"></a>To configure clients for Internet-based Client Management after client installation  
  To assign the Internet-based management point after the client is installed, use one of the following procedures. The first procedure requires manual configuration so it is appropriate for a few clients, whereas the second procedure is more appropriate if you have many clients to configure.  
 
-##### To configure clients for Internet-based client management after client installation by assigning the Internet-based management point in Configuration Manager Properties  
+#### To configure clients for Internet-based client management after client installation by assigning the Internet-based management point in Configuration Manager Properties  
 
 1.  Navigate to **Configuration Manager** in the Control Panel of the client computer, and then double-click to open its properties.  
 
@@ -454,7 +456,7 @@ To install clients with Intune:
 
 4.  Click **OK**.  
 
-##### To configure clients for Internet-based client management after client installation by using a script  
+#### To configure clients for Internet-based client management after client installation by using a script  
 
 1.  Open a text editor, such as Notepad.  
 
@@ -508,7 +510,7 @@ To install clients with Intune:
 
  A Group Policy administrative template named ConfigMgrInstallation.adm is supplied on the Configuration Manager installation media, which can be used to provision client computers with installation properties. Use the following procedure to configure and assign this template to computers in your organization.  
 
-#### To configure and assign client installation properties by using a Group Policy Object  
+### To configure and assign client installation properties by using a Group Policy Object  
 
 1.  Import the administrative template ConfigMgrInstallation.adm into a new or existing Group Policy Object, by using an editor such as Windows Group Policy Object Editor.  
 
