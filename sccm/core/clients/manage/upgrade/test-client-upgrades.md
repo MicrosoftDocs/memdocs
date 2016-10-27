@@ -63,7 +63,7 @@ For upgrading the Configuration Manager client on Windows PCs and devices, you c
      After the wizard complete, clients in the pre-production collection will begin to deploy the updated client. You can monitor the deployment of upgraded clients by going to **Monitoring** > **Client Status** > **Pre-production Client Deployment**. For more information, see [How to monitor client deployment status in System Center Configuration Manager](../../../../core/clients/deploy/monitor-client-deployment-status.md).
 
     > [!NOTE]
-    > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not Started** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.
+    > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.
 
 ##  <a name="BKMK_promote"></a> To promote the new client to production  
 
