@@ -20,7 +20,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
  Many of the client settings are self-explanatory. Use the following sections for more information about the client settings that might require some information before you configure them.  
 
-##  <a name="BKMK_BITS"></a> Background Intelligent Transfer  
+## Background Intelligent Transfer  
 
 -   **Limit the maximum network bandwidth for BITS background transfers**  
 
@@ -74,7 +74,7 @@ Beginning in Release 1606, specify the maximum size of the client cache folder i
 
 Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
-##  <a name="BKMK_ClientPolicyDeviceSettings"></a> Client Policy  
+## Client Policy  
 
 -   **Client policy polling interval (minutes)**  
 
@@ -121,7 +121,7 @@ Beginning in Release 1606, specify the maximum size of the client cache folder i
   > [!NOTE]  
   >  Application approval requests from users do not require user policies or user authentication.  
 
-##  <a name="BKMK_Compliance"></a> Compliance Settings  
+##  Compliance Settings  
 
 -   **Schedule compliance evaluation**  
 
@@ -133,7 +133,7 @@ Beginning in Release 1606, specify the maximum size of the client cache folder i
 
      For more information about user data and profiles, see [How to create user data and profiles configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
 
-##  <a name="BKMK_ComputerAgentDeviceSettings"></a> Computer Agent  
+## Computer Agent  
 
 -   **Default Application Catalog website point**  
 
@@ -266,12 +266,12 @@ Beginning in Release 1606, specify the maximum size of the client cache folder i
 
      If required software updates must install without delay when the configured deadline is reached, select **Yes** for this setting.  
 
-##  <a name="BKMK_ComputerRestartDeviceSettings"></a> Computer Restart  
+##  Computer Restart  
  When you specify these computer restart settings, ensure that the value for the restart temporary notification interval and the value for the final countdown interval are shorter in duration than the shortest maintenance window that is applied to the computer.  
 
  For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-##  <a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  Endpoint Protection  
 
 -   **Manage Endpoint Protection client on client computers**  
 
