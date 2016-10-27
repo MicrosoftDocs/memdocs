@@ -24,74 +24,102 @@ All client settings in System Center Configuration Manager are managed in the Co
 
 -   **Limit the maximum network bandwidth for BITS background transfers**  
 
-     If this option is configured as **True** or **Yes**, BITS bandwidth throttling will be used by Configuration Manager clients.  
+   If this option is configured as **True** or **Yes**, BITS bandwidth throttling will be used by Configuration Manager clients.  
 
 -   **Throttling window start time**  
 
-     Specify the start time in local time that the BITS throttling window will begin.  
+   Specify the start time in local time that the BITS throttling window will begin.  
 
 -   **Throttling window end time**  
 
-     Specify the end time in local time that the BITS throttling window will end. If this value is the same as the **Throttling window start time**, BITS throttling is always enabled.  
+   Specify the end time in local time that the BITS throttling window will end. If this value is the same as the **Throttling window start time**, BITS throttling is always enabled.  
 
 -   **Maximum transfer rate during throttling window (Kbps)**  
 
-     Specify the maximum transfer rate in (Kbps) that can be used by Configuration Manager clients during the specified BITS throttling window.  
+   Specify the maximum transfer rate in (Kbps) that can be used by Configuration Manager clients during the specified BITS throttling window.  
 
 -   **Allow BITS downloads outside the throttling window**  
 
-     Select this option to allow BITS downloads outside of the throttling window. This option allows Configuration Manager clients to use separate BITS settings outside of the specified window.  
+   Select this option to allow BITS downloads outside of the throttling window. This option allows Configuration Manager clients to use separate BITS settings outside of the specified window.  
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-     Specify the maximum transfer rate in (Kbps) that will be used by Configuration Manager clients when outside of the specified BITS throttling window. This option can be configured only when you have selected to allow BITS throttling outside of the specified window.  
+   Specify the maximum transfer rate in (Kbps) that will be used by Configuration Manager clients when outside of the specified BITS throttling window. This option can be configured only when you have selected to allow BITS throttling outside of the specified window.  
+
+## Client Cache Settings
+
+- **Configure BranchCache**
+
+  Beginning in Release 1606, specify to set up the client computer for BranchCache. To allow BranchCache caching to occur on the client, **Enable BranchCache** must be **Yes**. For understand more about BranchCache, see [Support for Windows features and network](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache).
+
+- **Enable BranchCache**
+
+  Beginning in Release 1606, specify to allow BranchCache caching to occur on the client computer.
+
+- **Maximum BrancheCache cache size (percentage of disk)**
+
+  Beginning in Release 1606, specify the maximum size of the BranchCache cache in a percentage of disk size.
+
+- **Configure client cache size**
+
+  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in Release 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
+
+  Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+
+- **Maximum cache size (MB)**
+
+Beginning in Release 1606, specify the maximum size of the client cache folder in megabytes.
+
+- **Maximum cache size (percentage of disk)** (beginning in Release 1606)
+
+Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
 ##  <a name="BKMK_ClientPolicyDeviceSettings"></a> Client Policy  
 
 -   **Client policy polling interval (minutes)**  
 
-     Specify how frequently the following Configuration Manager clients download client policy:  
+   Specify how frequently the following Configuration Manager clients download client policy:  
 
-    -   Windows computers (for example, desktops, servers, laptops)  
+  -   Windows computers (for example, desktops, servers, laptops)  
 
-    -   Mobile devices that are enrolled by Configuration Manager  
+  -   Mobile devices that are enrolled by Configuration Manager  
 
-    -   Mac computers  
+  -   Mac computers  
 
-    -   Computers that run Linux or UNIX  
+  -   Computers that run Linux or UNIX  
 
 -   **Enable user policy polling on clients**  
 
-     When you configure this setting as **True** or **Yes**, and Configuration Manager has discovered the user, Configuration Manager clients on computers receive applications and programs that are targeted to the logged on user. For more information about how to discover users, see  [Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
+   When you configure this setting as **True** or **Yes**, and Configuration Manager has discovered the user, Configuration Manager clients on computers receive applications and programs that are targeted to the logged on user. For more information about how to discover users, see  [Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
 
-     Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be configured as **True** or **Yes** for users to see and request applications from the Application Catalog. However, if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
+   Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be configured as **True** or **Yes** for users to see and request applications from the Application Catalog. However, if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
 
-    -   Users cannot install the applications that they see in the Application Catalog.  
+  -   Users cannot install the applications that they see in the Application Catalog.  
 
-    -   Users will not see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
+  -   Users will not see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
 
-    -   Users will not receive revisions and updates for applications that are published to the Application Catalog. However, they will see changes to application information in the Application Catalog.  
+  -   Users will not receive revisions and updates for applications that are published to the Application Catalog. However, they will see changes to application information in the Application Catalog.  
 
-    -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to 2 days.  
+  -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to 2 days.  
 
-     In addition, when this setting is **False** or **No**, users will not receive required applications that you deploy to users or any other management operations that are contained in user policies.  
+   In addition, when this setting is **False** or **No**, users will not receive required applications that you deploy to users or any other management operations that are contained in user policies.  
 
-     This setting applies to users when their computer is on the intranet and the Internet; it must be configured as **True** or **Yes** if you also want to enable user policies on the Internet.  
+   This setting applies to users when their computer is on the intranet and the Internet; it must be configured as **True** or **Yes** if you also want to enable user policies on the Internet.  
 
 -   **Enable user policy requests from Internet clients**  
 
-     When the client and site is configured for Internet-based client management and you configure this option as **True** or **Yes** and both of the following conditions apply, users receive user policy when their computer is on the Internet:  
+   When the client and site is configured for Internet-based client management and you configure this option as **True** or **Yes** and both of the following conditions apply, users receive user policy when their computer is on the Internet:  
 
-    -   The **Enable user policy polling on clients** client setting is configured as **True** or **Enable user policy on clients** is configured as **Yes**.  
+  -   The **Enable user policy polling on clients** client setting is configured as **True** or **Enable user policy on clients** is configured as **Yes**.  
 
-    -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
+  -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
 
-     If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is configured as **True** or **Enable user policy on clients** is configured as **Yes**, users will not receive user policies until the computer is connected to the intranet.  
+   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is configured as **True** or **Enable user policy on clients** is configured as **Yes**, users will not receive user policies until the computer is connected to the intranet.  
 
-     For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+   For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-    > [!NOTE]  
-    >  Application approval requests from users do not require user policies or user authentication.  
+  > [!NOTE]  
+  >  Application approval requests from users do not require user policies or user authentication.  
 
 ##  <a name="BKMK_Compliance"></a> Compliance Settings  
 
@@ -588,22 +616,6 @@ All client settings in System Center Configuration Manager are managed in the Co
 -   **Automatically configure user device affinity from usage data**  
 
      Select **True** or **Yes** to enable Configuration Manager to automatically create user device affinities based on the usage information that is collected.  
-
-## Client Cache Settings
-
-- **Configure client cache size**
-
-  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in Release 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
-
-  Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
-
-- **Maximum cache size (MB)**
-
-  Beginning in Release 1606, specify the maximum size of the client cache folder in megabytes.
-
-- **Maximum cache size (percentage of disk)** (beginning in Release 1606)
-
-  Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
 ##  <a name="BKMK_MobileDevicesUserSettings"></a> Mobile Devices  
 
