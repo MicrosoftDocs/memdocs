@@ -305,15 +305,22 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 9. Distribute the package to all distribution points that you want to host the client upgrade package. You can then deploy the package to computer collections that contain Configuration Manager clients that you want to upgrade.  
 
-## How to install clients to MDM-managed Windows devices
+## How to install clients to MDM-managed Windows devices with Intune
 
-You can use Configuration Manager application management to deploy the client installation files to computers that are enrolled with Microsoft Intune or on-premises mobile device management (MDM). To do this, use the instructions in [Create applications with System Center Configuration Manager](/sccm/apps/deploy-use/create-applications) to create an application of the type Windows Installer through MDM (\*.msi) containing the client installation file ccmsetup.msi.
+You can deploy the Configuration Manager client installation files to computers that are enrolled with Microsoft Intune. To do this, you use the Intune Software Publisher to a create Windows Installer (\*.msi) app containing the client installation file **ccmsetup.msi**. Then, you deploy the app to enrolled devices, which installs the client software.
 
-Use the following command line parameters:
+> [!NOTE]
+> Once the client software is installed, the device will be unenrolled from Intune.
 
-    CCMSETUPCMD="/MP:[FQDN of management point] SMSMP=[FQDN of management point] SMSSITECODE=[Your site code] DNSSUFFIX=[DNS Suffix of management point]"
+To install clients with Intune:
 
-Then, [deploy this application](/sccm/apps/deploy-use/deploy-applications) to the enrolled Windows computers. As part of client installation, the devices will be unenrolled from their previous management method.
+1. In Intune, [create an app](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune) containing the Configuration Manager client installation file **ccmsetup.msi**.
+
+2. In the Intune Software Publisher, use the following command line parameters:
+
+  **CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"**
+
+3. [Deploy the app](/intune/deploy-use/deploy-apps-in-microsoft-intune) to the enrolled Windows computers.
 
 ##  <a name="BKMK_ClientImage"></a> How to install clients with a computer image  
  You can preinstall the Configuration Manager client software on a master image computer that will be used to build computers in your enterprise. To install the client on a master computer, do not specify a site code for the client. When computers are imaged from this master image, they will contain the Configuration Manager client and must complete site assignment when installation is complete.  
