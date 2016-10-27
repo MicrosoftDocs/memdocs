@@ -21,7 +21,7 @@ Use the following procedure to remotely administer a computer in System Center C
 
  Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  
 
--   [Planning for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/planning-for-remote-control.md)  
+-   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
 -   [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
 
