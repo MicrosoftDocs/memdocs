@@ -56,10 +56,10 @@ Networking is a very important decision. Network speeds and latency can affect f
 The options you select depend on the scenario you are implementing and how much data you plan to distribute. The transfer of Configuration Manager data can be controlled between site servers and distribution points, but site server-to-site server communication can’t be controlled.   When you use a metered data plan, placing specific sites (and site systems) on-premises and using [Configuration Manager's built-in bandwidth controls](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) can help control the cost of using Azure.
 
 ### What about installation requirements like Active Directory domains? Do I still need to join my site servers to an Active Directory domain?
-Yes. When you move to Azure, the supported configurations remain the same, including Active Directory requirements for installing Configuration Manager.
+Yes. When you move to Azure, the [supported configurations](/sccm/core/plan-design/configs/supported-configurations) remain the same, including Active Directory requirements for installing Configuration Manager.
 
 ### I understand the need to join my site servers to an Active Directory domain, but can I use Azure Active Directory?
-No, Azure Active Directory is not supported at this time. Your site servers still must be members of a Windows Active Directory domain.
+No, Azure Active Directory is not supported at this time. Your site servers still must be members of a [Windows Active Directory domain](/sccm/core/plan-design/configs/support-for-active-directory-domains).
 
 
 
