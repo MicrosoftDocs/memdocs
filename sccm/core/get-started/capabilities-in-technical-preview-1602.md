@@ -34,7 +34,7 @@ This article introduces the features that are available in the Technical Preview
 
  For details, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
-##  <a name="BKMK_SC1601"></a> Improvements to Software Center in the 1602 release  
+##  <a name="BKMK_SC1601"></a> Improvements to Software Center in version 1602  
 
 ### Refresh PC machine and user policy from Software Center  
  A new option, **Sync Policy** has been added to the **Options** > **Computer Maintenance** page of Software Center that causes the PC to refresh it’s Configuration Manager machine and user policy.  
