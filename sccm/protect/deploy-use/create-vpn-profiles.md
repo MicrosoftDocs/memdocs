@@ -2,7 +2,7 @@
 title: "How to Create VPN profiles in System Center Configuration Manager"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/13/2016
+ms.date: 10/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,7 +17,10 @@ ms.author: nbigman
 ms.manager: angrobe
 
 ---
-# How to Create VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to Create VPN profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 > [!NOTE]  
 >
@@ -125,7 +128,11 @@ ms.manager: angrobe
             >  
             >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.  
 
-        -   For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  
+               - **Conditional access** and  **Enterprise Data Protection primary domain** settings, supported only when using Configuration Manager without Intune, which you can access by choosing **Advanced**.
+        
+        ![Configure conditional access for VPN](../media/vpn-conditional-access.png)
+
+		-   For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  
 
 ### Configure Proxy Settings for the VPN Profile  
 
