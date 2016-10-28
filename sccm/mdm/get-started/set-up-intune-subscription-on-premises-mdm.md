@@ -29,7 +29,7 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
  Intune is required to make On\-premises Mobile Device Management functional. Simply [sign up](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) for a trial or paid subscription and go to the next step to add the subscription to Configuration Manager.  
 
 ##  Add the Intune subscription to Configuration Manager  
- To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [To create the Microsoft Intune subscription](../deploy-use/setup-hybrid#step-3-configure-intune-subscription).  
+ To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [To create the Microsoft Intune subscription](../deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).  
 
 > [!NOTE]  
 >  When adding the Intune subscription, keep the following in mind:  
@@ -49,7 +49,7 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
       > [!NOTE]  
       >  By clicking this check box, you configure the Intune subscription to keep all management information on-premises and not replicate data to the cloud.  
 
-    - If you plan to have devices managed by both Intune and Configuration Manager on-premises, leave the box unchecked. 
+    - If you plan to have devices managed by both Intune and Configuration Manager on-premises, leave the box unchecked.
 
 3.  If you plan to manage Windows 10 Mobile devices, right-click the **Microsoft Intune Subscription**, click **Configure Platforms**, and then click  **Windows Phone**.  
 
