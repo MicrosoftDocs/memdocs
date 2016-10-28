@@ -15,6 +15,7 @@
 ### [Install the Long-Term Service Branch](understand/install-the-ltsb.md)
 ### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
+### [Configuration Manager on Azure](understand/configuration-manager-on-azure.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [Plan and design](plan-design/get-ready.md)
