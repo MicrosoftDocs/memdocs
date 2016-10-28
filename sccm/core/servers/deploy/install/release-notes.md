@@ -65,7 +65,7 @@ Pre-release features are included in the product for early testing in a producti
 
 Beginning with update 1606, you must give consent before you can use pre-release features. For more information, see [Use pre-release features from updates](../../../../core/servers/manage/install-in-console-updates.md).
 
-System Center Configuration Manager release 1602 introduces two pre-release features:  
+System Center Configuration Manager version 1602 introduces two pre-release features:  
 
 -   Conditional access for PCs managed by System Center Configuration Manager. For more information, see [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md).
     - After you install update 1602, the feature type displays as released even though it is pre-release.

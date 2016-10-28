@@ -50,29 +50,29 @@ All client settings in System Center Configuration Manager are managed in the Co
 
 - **Configure BranchCache**
 
-  Beginning in Release 1606, specify to set up the client computer for BranchCache. To allow BranchCache caching to occur on the client, **Enable BranchCache** must be **Yes**. For understand more about BranchCache, see [Support for Windows features and network](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache).
+  Beginning in version 1606, specify to set up the client computer for BranchCache. To allow BranchCache caching to occur on the client, **Enable BranchCache** must be **Yes**. For understand more about BranchCache, see [Support for Windows features and network](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache).
 
 - **Enable BranchCache**
 
-  Beginning in Release 1606, specify to allow BranchCache caching to occur on the client computer.
+  Beginning in version 1606, specify to allow BranchCache caching to occur on the client computer.
 
 - **Maximum BrancheCache cache size (percentage of disk)**
 
-  Beginning in Release 1606, specify the maximum size of the BranchCache cache in a percentage of disk size.
+  Beginning in version 1606, specify the maximum size of the BranchCache cache in a percentage of disk size.
 
 - **Configure client cache size**
 
-  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in Release 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
+  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in version 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
 
   Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
 
 - **Maximum cache size (MB)**
 
-Beginning in Release 1606, specify the maximum size of the client cache folder in megabytes.
+Beginning in version 1606, specify the maximum size of the client cache folder in megabytes.
 
-- **Maximum cache size (percentage of disk)** (beginning in Release 1606)
+- **Maximum cache size (percentage of disk)** (beginning in version 1606)
 
-Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
+Beginning in version 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
 ## Client Policy  
 
@@ -543,7 +543,7 @@ Beginning in Release 1606, specify the maximum size of the client cache folder i
         >   
         >  The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box displays the maximum size for all collected files. When this size is reached, file collection will stop. Any files already collected are retained and sent to the site server.  
 
-        > [!IMPORTANT] 
+        > [!IMPORTANT]
         >  If you configure software inventory to collect many large files, this might negatively affect the performance of your network and site server.  
 
          For information about how to view collected files, see [How to use Resource Explorer to view software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  

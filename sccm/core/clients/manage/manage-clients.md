@@ -195,7 +195,7 @@ When a System Center Configuration Manager client is installed and successfully 
 ##  <a name="BKMK_ClientCache"></a> Configure the Client Cache for Configuration Manager Clients  
  You can configure the location and amount of disk space that Windows Configuration Manager clients use to store temporary files for when they install applications and programs. Software updates also use the client cache, but software updates are not restricted by the configured cache size and will always attempt to download to the cache. You can configure the client cache settings when you install the Configuration Manager client manually, when you use client push installation, or after the client is installed.
 
-In Configuration Manager Release 1606, you can specify the cache folder size using client settings in the Configuration Manager console.   
+In Configuration Manager version 1606, you can specify the cache folder size using client settings in the Configuration Manager console.   
 
  The default location for the Configuration Manager client cache is %*windir*%\ccmcache and the default disk space is 5120 MB.  
 
@@ -230,7 +230,7 @@ Run the CCMSetup.exe command from the install source location and specify the fo
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For Release 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
 
 For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -255,7 +255,7 @@ For more information about how to use these command line properties for CCMSetup
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For Release 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
 
        For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -277,7 +277,7 @@ For more information about how to use these command line properties for CCMSetup
 
 ### To configure client cache size in Client Settings
 
-Beginning in Release 1606, you can adjust the size of the client cache folder without having to reinstall the client. To do this, you configure client cache size in the Configuration Manager console using Client Settings.  
+Beginning in version 1606, you can adjust the size of the client cache folder without having to reinstall the client. To do this, you configure client cache size in the Configuration Manager console using Client Settings.  
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
 
