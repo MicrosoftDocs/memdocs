@@ -96,9 +96,9 @@ The following tables list the initial suggested disk counts to utilize at primar
 
 | Desktop Clients    |Recommended VM size|Recommended Disks |
 |--------------------|-------------------|------------------|
-|**Up to 25k**       |  F4S </br>DS12_V2 | 1xP30 </br>2xP30 |
-|**25k to 50k**      |  F4S </br>DS13_V2 | 1xP30 </br>2xP30 |
-|**50k to 100k**     |  F8S </br>DS14_V2 | 2xP30 </br>3xP30 |
+|**Up to 25k**       | Site server: F4S </br>Datbase server: DS12_V2 | Site server: 1xP30 </br>Datbase server: 2xP30 |
+|**25k to 50k**      | Site server: F4S </br>Datbase server: DS13_V2 | Site server: 1xP30 </br>Datbase server: 2xP30 |
+|**50k to 100k**     | Site server: F8S </br>Datbase server: DS14_V2 | Site server: 2xP30 </br>Datbase server: 3xP30 |
 
 
 ## User Experience
@@ -126,7 +126,7 @@ You will soon! With the Configuration Manager Technical Preview version 1606, we
 You can start testing the Cloud Service Proxy in your test environment and give us feedback to make this better.
 
 ### I also heard that you have another new feature called Peer Cache in the Technical Preview version 1604. Is that different than BranchCache? Which one should I choose?
-Yes, totally different. [Peer Cache](https://docs.microsoft.com/en-us/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
+Yes, totally different. [Peer Cache](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
 
 You can configure any client to be a Peer Cache source. Then, when management points provide  clients information about content source locations, they provide details about both the distribution points and any Peer Cache sources that have the content that client requires.
 
@@ -137,26 +137,26 @@ Hard to say since every environment is different. The best thing to do is to cos
 
 ## Additional Resources
 **Fundamentals:**
-http://azure.microsoft.com/en-us/documentation/articles/fundamentals-introduction-to-azure/
+http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
- - Azure Machine sizes: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-size-specs/  
- - VM Pricing: http://azure.microsoft.com/en-us/pricing/details/virtual-machines/  
- - Storage Pricing: http://azure.microsoft.com/en-us/pricing/details/storage/
+ - Azure Machine sizes: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+ - VM Pricing: http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - Storage Pricing: http://azure.microsoft.com/pricing/details/storage/
 
 **Disk Performance Considerations:**    
  - Premium Disk intro:  http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - Deeper Premium Disk info: http://azure.microsoft.com/en-us/documentation/articles/storage-premium-storage-preview-portal/   
- - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/en-us/documentation/articles/storage-scalability-targets/  
+ - Deeper Premium Disk info: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - Handy collection of charts for max Sizes and Perf targets for Storage: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
  - Another Intro + some cool uber-geek data on how Premium Storage works behind the covers:  http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **Availability:**
- - Azure IaaS Uptime SLA's: https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_0/  
- - Availability Sets Explained: https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-manage-availability/
+ - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+ - Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **Connectivity:**
  - Express route vs. Azure VPN: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route Pricing: http://azure.microsoft.com/en-us/pricing/details/expressroute/
- - More about Express Route: http://azure.microsoft.com/en-us/documentation/articles/expressroute-introduction/
+ - Express Route Pricing: http://azure.microsoft.com/pricing/details/expressroute/
+ - More about Express Route: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
