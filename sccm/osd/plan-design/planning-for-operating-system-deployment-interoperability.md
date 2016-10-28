@@ -2,7 +2,7 @@
 title: Planning for operating system deployment interoperability | Configuration Manager
 description: "Understand interoperability issues when different System Center Configuration Manager sites in a single hierarchy use different versions."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

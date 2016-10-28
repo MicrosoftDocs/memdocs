@@ -2,7 +2,7 @@
 title: "Prepare Windows Servers | System Center Configuration Manager"
 description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -146,3 +146,18 @@ For example, you might have source files for a software deployment that include 
 > -   Edits you make to individual websites apply to only that website  
 >   
 >  The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
+
+## HTTP verbs
+**Management points:** To ensure clients can successfully communicate with a management point, on the management point server ensure the following HTTP verbs are allowed:  
+ - GET
+ - POST
+ - CCM_POST
+ - HEAD
+ - PROPFIND
+
+**Distribution points:** Distribution points require the following HTTP verbs as allowd:
+ - GET
+ - HEAD
+ - PROFIND
+
+For information about configuring request filtering, see [Configure Request Filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) on TechNet, or similar documentation that applies to the version of Windows Server that hosts your management point.

@@ -2,7 +2,7 @@
 title: "Management point database replicas | System Center Configuration Manager"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
 ms.custom: na
-ms.date: 04/26/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: "Find help | System Center Configuration Manager"
 description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -65,6 +65,6 @@ Use the following resources for additional information about System Center Confi
 
 -   [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=243064)  
 
--   [Configuration Manager Community Page](http://go.microsoft.com/fwlink/p/?LinkId=243065)  
+-   [Configuration Manager Community - System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager Forums Page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  

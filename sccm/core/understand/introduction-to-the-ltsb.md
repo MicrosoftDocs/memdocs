@@ -72,7 +72,7 @@ Because the LTSB is based on the version 1606 Current Branch, the documentation 
 -	[Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) – How to convert your LTSB installation to a Current Branch installation.
 
 -	[Licensing and branches for System Center Configuration Manager](learn-more-editions.md) – Information about Software Assurance and related license requirement for System Center Configuration Manager.
--	[Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb) - The versions and requirements for operating system and dependent products like SQL Server that you can use with the LTSB.
+-	[Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md) - The versions and requirements for operating system and dependent products like SQL Server that you can use with the LTSB.
 
 
 To help you distinguish which branch specific documentation applies to, use the following guide:  

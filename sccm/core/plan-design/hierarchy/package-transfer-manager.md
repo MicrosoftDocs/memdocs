@@ -2,7 +2,7 @@
 title: "Package Transfer Manager | System Center Configuration Manager"
 description: "Understand how Package Transfer Manager in System Center Configuration Manager transfers content from a site server to remote distribution points."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager

@@ -2,7 +2,7 @@
 title: "The CD.Latest folder | System Center Configuration Manager"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

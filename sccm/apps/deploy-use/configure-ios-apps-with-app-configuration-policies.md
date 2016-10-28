@@ -2,7 +2,7 @@
 title: "Configure iOS apps with app configuration policies | System Center Configuration Manager"
 description: "Help eliminate configuration problems on devices running iOS 8 or later by deploying app configuration policies to users before they run apps."
 ms.custom: na
-ms.date: 04/03/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-app

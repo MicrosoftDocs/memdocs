@@ -2,7 +2,7 @@
 title: "Migration security and privacy | System Center Configuration Manager"
 description: "Get security best practices and privacy information for migration to your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

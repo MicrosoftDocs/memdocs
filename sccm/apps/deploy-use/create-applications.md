@@ -2,7 +2,7 @@
 title: "Create applications | System Center Configuration Manager"
 description: "Create and deploy applications and deployment types with System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/09/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: "Manage Linux and UNIX clients | System Center Configuration Manager"
 description: "Manage clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

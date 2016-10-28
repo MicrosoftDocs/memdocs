@@ -2,7 +2,7 @@
 title: Introduction to reporting | Configuration Manager
 description: "Learn about the set of tools and resources available to you for managing reporting in Configuration Manager."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

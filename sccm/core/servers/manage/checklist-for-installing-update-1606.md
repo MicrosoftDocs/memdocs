@@ -2,7 +2,7 @@
 title: "Checklist for 1606 | System Center Configuration Manager"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 or 1602 to version 1606."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager

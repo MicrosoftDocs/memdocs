@@ -4,7 +4,7 @@ title: Manage settings for software updates | Configuration Manager
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 9/27/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

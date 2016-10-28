@@ -2,7 +2,7 @@
 title: "In-console updates | System Center Configuration Manager"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -211,7 +211,10 @@ After the first site update completes installation:
 
 -   Child primary sites will install the update automatically. No further action is required.  
 
--   Secondary sites must be manually updated from within the Configuration Manager console.  
+-   Secondary sites must be manually updated from within the Configuration Manager console.
+> [!TIP]
+> Although the version of a secondary site does not display in the console, you can use the Configuration Manager SDK to confirm a sites version. See [SMS_Site Server WMI Class](https://technet.microsoft.com/library/hh442832(CMSDK.16).aspx).
+
 
 -   Until all sites in your hierarchy update to the new version, your hierarchy operates in a mixed version mode. For more information, see [Interoperability between different versions of System Center Configuration Manager](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 

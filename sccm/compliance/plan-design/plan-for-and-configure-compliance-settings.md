@@ -2,7 +2,7 @@
 title: "Plan for and configure compliance settings | System Center Configuration Manager"
 description: "Learn about the prerequisites and configuration tasks for working with compliance settings in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

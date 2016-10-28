@@ -3,7 +3,7 @@ title: "Monitor app usage with software metering | System Center Configuration M
 description: "Learn about operations that are available in System Center Configuration Manager software metering."
 description:
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

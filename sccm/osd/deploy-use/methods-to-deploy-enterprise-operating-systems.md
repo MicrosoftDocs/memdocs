@@ -2,7 +2,7 @@
 title: Methods to deploy enterprise operating | Configuration Manager
 description: "Learn about the methods that you can use to deploy enterprise operating systems in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

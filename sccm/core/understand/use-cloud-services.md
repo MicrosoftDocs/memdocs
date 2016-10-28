@@ -2,7 +2,7 @@
 title: "Use cloud services | System Center Configuration Manager"
 description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,7 @@ Although provisioning cloud resources is not something you must do before you de
 ## Cloud-based resources you can use with Configuration Manager  
  Because each option has different requirements, investigate each in greater depth to understand the unique prerequisites, limitations, and potential for additional costs based on use.  
 
--   For information about cloud-based distribution points, see  
+-   For information about cloud-based distribution points, see [Install cloud-based distribution points](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure).
 
 -   For more information about Windows Azure, see [Windows Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
 

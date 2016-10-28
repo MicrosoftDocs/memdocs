@@ -2,7 +2,7 @@
 title: "Monitor Email, Wi-Fi and VPN profiles | System Center Configuration Manager"
 description: "Learn how to monitor the compliance status of email, Wi-Fi, and VPN profiles in System Center Configuration Manager."
 ms.custom: na
-ms.date: 09/21/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -2,7 +2,7 @@
 title: "Create task sequence media with System Center Configuration Manager"
 description: "Create task sequence media, such as a CD, to deploy an operating system to a destination computer in your Configuration Manager environment."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

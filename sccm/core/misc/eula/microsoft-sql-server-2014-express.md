@@ -1,7 +1,7 @@
 ---
 title: "MICROSOFT SQL SERVER 2014 EXPRESS"
 ms.custom: na
-ms.date: 08/23/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
