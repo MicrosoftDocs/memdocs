@@ -25,7 +25,7 @@ This article introduces the features that are available in the Technical Preview
 
  **The following are new features you can try out with this version.**  
 
-##  <a name="BKMK_SC1603"></a> Improvements to Software Center in the 1603 release  
+##  <a name="BKMK_SC1603"></a> Improvements to Software Center  
 
 ### New tiled view for apps  
  End users can now choose between a list of apps, or a tiled view of apps in the **Applications** tab of Software Center.  

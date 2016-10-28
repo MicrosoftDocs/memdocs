@@ -218,7 +218,7 @@ Successful and unsuccessful investigation and remediation actions are logged to 
 
 **Known issues for the Replication Link Analyzer:**  
 
--   With the release of System Center Configuration Manager version 1511, the replication link analyzer generates SQL Server Service Broker certificate errors for primary sites that upgraded from System Center 2012 Configuration Manager. This is due to changes in the names of the certificates introduced with the 1511 release for which Replication Link Analyzer has not yet been updated. These errors can be safely ignored.  
+-   With the release of System Center Configuration Manager version 1511, the replication link analyzer generates SQL Server Service Broker certificate errors for primary sites that upgraded from System Center 2012 Configuration Manager. This is due to changes in the names of the certificates introduced with version 1511 for which Replication Link Analyzer has not yet been updated. These errors can be safely ignored.  
 
 ###  <a name="BKMK_ProcsforMonitoringReplication"></a> Procedures for monitoring database replication  
 
