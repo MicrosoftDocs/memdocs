@@ -593,17 +593,17 @@ All client settings in System Center Configuration Manager are managed in the Co
 
 - **Configure client cache size**
 
-  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in Release 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
+  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in version 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
 
   Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
 
 - **Maximum cache size (MB)**
 
-  Beginning in Release 1606, specify the maximum size of the client cache folder in megabytes.
+  Beginning in version 1606, specify the maximum size of the client cache folder in megabytes.
 
-- **Maximum cache size (percentage of disk)** (beginning in Release 1606)
+- **Maximum cache size (percentage of disk)** (beginning in version 1606)
 
-  Beginning in Release 1606, specify the maximum size of the client cache folder in a percentage of disk size.
+  Beginning in version 1606, specify the maximum size of the client cache folder in a percentage of disk size.
 
 ##  <a name="BKMK_MobileDevicesUserSettings"></a> Mobile Devices  
 

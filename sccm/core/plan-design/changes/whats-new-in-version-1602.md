@@ -75,7 +75,7 @@ If these settings are incorrectly entered by the user, this can increase the bur
  For details, see [Manage volume-purchased iOS apps with System Center Configuration Manager](../../../apps/deploy-use/manage-volume-purchased-ios-apps.md).  
 
 ### Automatic creation of Office mobile apps  
- When you update to the 1602 release from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
+ When you update to version 1602 from 1511, Configuration Manager automatically creates the following Microsoft Office mobile apps for Android and iOS:  
 
 -   Microsoft Word  
 
