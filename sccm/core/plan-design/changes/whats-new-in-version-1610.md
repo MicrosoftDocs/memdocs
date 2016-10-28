@@ -26,7 +26,7 @@ The following sections provide details about changes and new capabilities introd
 
 ## Customizable Branding for Software Center Dialogs
 
-Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes and taskbar notifications to provide a more consistent experience to Software Center users.
+Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
 
 Custom branding for the Software Center is applied according to the following rules:
 
