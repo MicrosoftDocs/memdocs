@@ -17,7 +17,10 @@ ms.author: nbigman
 ms.manager: angrobe
 
 ---
-# How to Create VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to Create VPN profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 > [!NOTE]  
 >
@@ -127,7 +130,7 @@ ms.manager: angrobe
 
                - **Conditional access** and  **Enterprise Data Protection primary domain** settings, supported only when using Configuration Manager without Intune, which you can access by choosing **Advanced**.
         
-        ![Configure conditional access for VPN](/Image/vpn-conditional-access.png)
+        ![Configure conditional access for VPN](../media/vpn-conditional-access.png)
 
 		-   For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  
 
