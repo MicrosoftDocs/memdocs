@@ -2,7 +2,7 @@
 title: "Predeclare devices with IMEI or iOS serial numbers"
 description: "Predeclare corporate-owned devices with their IMEI or iOS serial number."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
