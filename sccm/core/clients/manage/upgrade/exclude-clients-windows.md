@@ -30,7 +30,7 @@ Beginning in version 1610, you can exclude a collection of clients from automati
 
 3. Click the checkbox for **Exclude specified clients from upgrade**, and then for Exclusion collection, select the collection you want to exclude. You can only select a single collection for exclusion.
 
-4.  Click **OK** to close and save the configuration. Then, after clients update policy, clients in the excluded collection will no longer automatically install updates to the client software. For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md)/
+4.  Click **OK** to close and save the configuration. Then, after clients update policy, clients in the excluded collection will no longer automatically install updates to the client software. For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md).
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
 
@@ -46,6 +46,6 @@ So long as a collection is configured to be excluded, members of that collection
 
  - **Manual client installation** – You can manually upgrade clients that are in an excluded collection when you use the following command line switch with ccmsetup:  ***/ignoreskipupgrade***
 
-  If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually).
+  If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
 
 For more information on client installation methods, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
