@@ -272,7 +272,8 @@
 ###  [Security and privacy for power management](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [Upgrade clients](clients/manage/upgrade/upgrade-clients.md)
-###  [How to test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
-###  [How to upgrade clients for Windows computers](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
-###  [How to upgrade clients for Linux and UNIX servers](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
-###  [How to upgrade clients on Mac computers](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
+###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md)
+###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
+###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
+###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
