@@ -112,7 +112,7 @@ When you install an in-console update:
 -   After a primary site is updated, secondary sites do not automatically update. Instead, you must initiate the secondary site update.  
 
 > [!NOTE]  
->  The production release of System Center Configuration Manager (current branch) and the Technical Preview for System Center Configuration Manager are different releases. Therefore, updates for the current branch release are never available in or for the Technical Preview for System Center Configuration Manager.    Similarly, updates for the Technical Preview are not available in the current branch release.  
+>  The production release of System Center Configuration Manager (current branch), the Long-Term Servicing Branch, and the Technical Preview for System Center Configuration Manager are different releases. Therefore, updates that apply for one branch are not available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
 
 ##  <a name="bkmk_outofband"></a> Out-of-band hotfixes  
 Some hotfixes are released with limited availability to address specific issues, or are applicable to all customers but cannot be installed using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
