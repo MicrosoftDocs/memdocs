@@ -69,7 +69,7 @@ This operating system upgrade scenario has the following conditions:
 **Known issue for remote Configuration Manager consoles:**  
 After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
 
-1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for **WMI Control**, and select **Local computer**.
+1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for  **WMI Control**, and select **Local computer**.
 2. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
 3. Expand the tree below Root, select the **SMS** node, and then click **Security**.  Ensure the **SMS Admins** group has the following permissions:
   - 	Enable Account
@@ -172,6 +172,19 @@ When you upgrade the version of SQL Server that hosts the site database, you mus
  2. Upgrade secondary sites before you upgrade a secondary site's parent primary site.
  3. Upgrade parent primary sites last. This includes both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.
 
+**SQL Server Cardinality Estimation level and the site database:**   
+When a site database is upgraded from an earlier version of SQL Server, the database retains its existing SQL Cardinality Estimation (CE) level if it is at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL.
+
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported Compatibility levels |Recommended level|
+|----------------|--------------------|--------|
+| SQL Server 2016| 130, 120, 110, 100 | 130|
+| SQL Server 2014| 120, 110, 100      | 110|
+
+To identify the SQL Server CE compatibility level in use for your site database, run the following SQL query on the site database server:  **SELECT name, compatibility_level FROM sys.databases**
+
+ For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx).
 
 
 **For more information about SQL Server, see the SQL Server documentation on TechNet:**  
