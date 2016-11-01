@@ -128,7 +128,7 @@ ms.manager: angrobe
             >  
             >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.  
 
-               - **Conditional access** and  **Enterprise Data Protection primary domain** settings, supported only when using Configuration Manager without Intune, which you can access by choosing **Advanced**.
+               - **Conditional access** and  **Enterprise Data Protection primary domain** settings, supported only when using Configuration Manager without Intune, which you can access by choosing **Advanced**. For information about Enterprise Data Protection, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).
         
         ![Configure conditional access for VPN](../media/vpn-conditional-access.png)
 
