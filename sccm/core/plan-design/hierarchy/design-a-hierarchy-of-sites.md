@@ -17,13 +17,16 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Design a hierarchy of sites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Before installing the first site of a new System Center Configuration Manager hierarchy, you should understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of  management each site type provides. Then, after considering content management options that can reduce the number of sites you need to install, you can plan out a topology that efficiently serves your current business needs and can later expand to manage future growth.  
+Before installing the first site of a new System Center Configuration Manager hierarchy, you should understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of  management each site type provides. Then, after considering content management options that can reduce the number of sites you need to install, you can plan a topology that efficiently serves your current business needs and can later expand to manage future growth.  
+
+> [!NOTE]
+> When planning a new installation of Configuration Manager, remain aware of the [release notes]( /sccm/core/servers/deploy/install/release-notes) which detail current issues in the active versions. The release notes apply to all branches of Configuration Manager.  However, when you use the [Technical Preview Branch]( /sccm/core/get-started/technical-preview), you will find issues specific to only that branch in the documentation for each version of the Technical Preview.  
 
 ##  <a name="bkmk_topology"></a> Hierarchy topology  
  Hierarchy topologies range from a single stand-alone primary site to a group of connected primary and secondary sites with a central administration site at the top-level (top-tier) site of the hierarchy.    
 The key driver of the type and count of sites that you use in a hierarchy is usually the number and type of devices you must support:  
 
- **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your companies different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
+ **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your company’s different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
 
  Benefit of this topology include:  
 
@@ -36,7 +39,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 -   This choice is not permanent and you can expand a stand-alone primary hierarchy  into a larger hierarchy with a central administration site. This enables you to then install new primary sites to expand the scale of your deployment.  
 
 
-**Central administration site with one or more child primary sites:** Use this topology when you require more than one  primary site to support  management of all of your devices and users.  Benefits of this topology include:  
+**Central administration site with one or more child primary sites:** Use this topology when you require more than one  primary site to support  management of all your devices and users.  Benefits of this topology include:  
 
 -   Required  when you need to use more than a single primary site  
 
@@ -106,11 +109,11 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 
 -   You do not require a local point of connectivity for an  administrative user  
 
--   You have to manage the transfer of deployment content to sites lower in the hierarchy  
+-   You must manage the transfer of deployment content to sites lower in the hierarchy  
 
--   You have to manage client information that is sent to sites higher in the hierarchy  
+-   You must manage client information that is sent to sites higher in the hierarchy  
 
- If you do not want to install a secondary site and you have clients in remote locations, consider using Windows BranchCache or installing  distribution points that are enabled for bandwidth control and scheduling. You can use these content management options with or without secondary sites, and they can help you to reduce the number of sites and servers that you have to install. For information about content management options in Configuration Manager, see [Determine when to use content management options](#BKMK_ChooseSecondaryorDP).  
+ If you do not want to install a secondary site and you have clients in remote locations, consider using Windows BranchCache or installing  distribution points that are enabled for bandwidth control and scheduling. You can use these content management options with or without secondary sites, and they can help you to reduce the number of sites and servers that you must install. For information about content management options in Configuration Manager, see  [Determine when to use content management options](#BKMK_ChooseSecondaryorDP).  
 
 
 **The following information can help you decide when to install a secondary site:**  
