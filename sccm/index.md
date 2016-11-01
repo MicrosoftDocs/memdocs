@@ -1,4 +1,4 @@
----
+﻿---
 title: System Center Configuration Manager Documentation | Microsoft Docs
 description: "Documentation for System Center Configuration Manager"
 keywords:
@@ -284,6 +284,43 @@ ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
               </ul>
             </section>
           </li>
+
+
+<li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/sccm/develop/reference/configuration-manager-reference">
+                <div class="title column-third">
+                  <span class="step-number">7</span>
+                  <p>Configuration Manager SDK</p>
+                </div>
+                <p class="description column-two-thirds">Provides detailed information about the Configuration Manager class schema.</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/sccm/develop/apps/application-management-extensions">
+                    <h3>Application management extensions</h3>
+                    <p>Learn the basics about application management extensions.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                    <h3>Add next column link</h3>
+                    <p>Read this section to learn how to prepare your software updates infrastructure. This includes installing software update points, synchronizing software updates, and managing software updates settings.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/sccm/sum/deploy-use/deploy-software-updates">
+                    <h3>Add next column link here</h3>
+                    <p>After your software updates infrastructure is in place, read this section to learn about how to deploy software updates.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </li>
+
+
       </section>
     </div>
     <div class="section-border">
