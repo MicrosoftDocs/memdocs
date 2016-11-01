@@ -241,7 +241,7 @@ For additional information, see [Android](enroll-hybrid-android.md).
 - [Windows 10 and Windows 8.1 devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS and Mac devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android and Samsung KNOX Standard devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **Applications** can be deployed to managed devices:
 - [iOS applications](/sccm/apps/get-started/creating-ios-applications)

@@ -39,9 +39,9 @@ The following Intune features introduced in October 2016 work in hybrid deployme
 
   You can enable your apps to use Intune mobile application management (MAM) policies by using the Intune App Wrapping Tool.
 
-- **Android Samsung KNOX compatibility with Intune**
+- **Android Samsung KNOX Standard compatibility with Intune**
 
-  Certain models of the Samsung Galaxy Ace phone cannot be managed by Intune as Samsung KNOX devices. When you enroll these devices with Intune, they will instead be managed as standard Android devices.
+  Certain models of the Samsung Galaxy Ace phone cannot be managed by Intune as Samsung KNOX Standard devices. When you enroll these devices with Intune, they will instead be managed as standard Android devices.
 
   The model numbers affected are:
 
@@ -134,14 +134,14 @@ The following Intune features introduced in August 2016 work in hybrid deploymen
 
   Google is removing the ability of IT administrators and end users to remotely reset the passcode of Android 7.0 devices. Previously, IT administrators could remotely reset a user’s passcode, and end users could reset their passcodes from the Company Portal website.
 
-- **Allowed and blocked apps policy for Samsung KNOX devices**
+- **Allowed and blocked apps policy for Samsung KNOX Standard devices**
 
-  You can now configure a custom policy for Samsung KNOX devices that lets you create one of the following:
+  You can now configure a custom policy for Samsung KNOX Standard devices that lets you create one of the following:
 
   - A list of apps that are blocked from running on the device. Even if installed, an app defined in the blocked list cannot be activated on the device.
   - A list of apps that users of the device are allowed to install from the Google Play store. No other apps can be installed from the store.
 
-  These settings can only be used by devices that run Samsung KNOX. For details, see [Use custom policies to allow and block apps for Samsung KNOX devices](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
+  These settings can only be used by devices that run Samsung KNOX Standard. For details, see [Use custom policies to allow and block apps for Samsung KNOX Standard devices](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps).
 
 - **Feedback link from the Company Portal to Microsoft**
 

@@ -155,11 +155,11 @@ For details, see [Prepare site system roles for operating system deployments wit
 ## Compliance settings
 
 ### Smart Lock setting for Android devices
-A new setting, **Allow Smart Lock and other trust agents** has been added to the Android and Samsung KNOX configuration item.
+A new setting, **Allow Smart Lock and other trust agents** has been added to the Android and Samsung KNOX Standard configuration item.
 
 This setting lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.
 
-For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
+For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).
 
 ## Device configuration and protection
 
