@@ -143,15 +143,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
      See [View or Change the Recovery Model of a Database](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) in the SQL Server documentation. (Availability groups only support FULL).  
 
-3.  Use SQL Server to create a full backup of your site database, and then:  
-
-    -   If your current site database server will not be a member of the availability group, or will not be used as the initial primary replica for the availability group, restore a copy of the site database to the server that will host the primary replica of the group.  
-
-    -   If the current site database server will be member of your availability group, plan to use this server as the primary replica member of the availability group. When you do so, you do not need to restore a copy of the site database to this, or another server.  
-
-    For information on how to complete this step, see [Create a Full Database Backup](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) and [Restore a Database Backup (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)in the SQL Server documentation.  
-
-4.  On the server that will host the primary replica of the group, use the **New Availability Group Wizard** to create the availability group. In the wizard:  
+3.  On the server that will host the primary replica of the group, use the **New Availability Group Wizard** to create the availability group. In the wizard:  
 
     -   On the **Select Database** page, select the database for you Configuration Manager site  
 
@@ -165,15 +157,15 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     For more information, see [Use the Availability Group Wizard](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx) in the SQL Server documentation.  
 
-5.  After the availability group is configured, configure the site database on the primary replica with the **TRUSTWORTHY** property, and then **enable CLR integration**. For information on how to configure these, see [TRUSTWORTHY Database Property](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) and  [Enabling CLR Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) in the SQL Server documentation.  
+4.  After the availability group is configured, configure the site database on the primary replica with the **TRUSTWORTHY** property, and then **enable CLR integration**. For information on how to configure these, see [TRUSTWORTHY Database Property](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) and  [Enabling CLR Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) in the SQL Server documentation.  
 
-6.  Take the following actions to configure each secondary replica in the availability group:  
+5.  Take the following actions to configure each secondary replica in the availability group:  
 
     1.  Manually failover the current primary replica to a secondary replica. See [Perform a Planned Manual Failover of an Availability Group](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in the SQL Server documentation.  
 
     2.  Configure the database on the new primary replica with the **TRUSTWORTHY** property, and then **enable CLR integration**.  
 
-7.  After all replicas are promoted to primary replicas and the databases configured, the availability group is ready to be used with Configuration Manager.  
+6.  After all replicas are promoted to primary replicas and the databases configured, the availability group is ready to be used with Configuration Manager.  
 
 
 
