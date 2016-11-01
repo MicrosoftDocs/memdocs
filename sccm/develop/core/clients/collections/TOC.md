@@ -1,0 +1,8 @@
+# [Configuration Manager Collections](collections.md)
+# [How to Initiate a One-time Membership Evaluation for a Collection](how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md)
+# [How to Enumerate the Members of a Collection](how-to-enumerate-the-members-of-a-collection.md)
+# [How to Create a Dynamic Collection](how-to-create-a-dynamic-collection.md)
+# [How to Create a Static Collection](how-to-create-a-static-collection.md)
+# [How to Get the Properties of a Collection](how-to-get-the-properties-of-a-collection.md)
+# [How to Modify a Collection](how-to-modify-a-collection.md)
+# [How to Delete a Collection](how-to-delete-a-collection.md)
