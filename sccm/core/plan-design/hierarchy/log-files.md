@@ -97,6 +97,8 @@ In System Center Configuration Manager, client and site server components record
 
     -   [Wake On LAN](#BKMK_WOLLog)  
 
+    -   [Windows 10 Servicing](#BKMK_WindowsServicingLog)
+
     -   [Windows Update Agent](#BKMK_WULog)  
 
     -   [WSUS Server](#BKMK_WSUSLog)  
@@ -763,7 +765,7 @@ The following table lists the log files that contain information related to Disc
 |wolcmgr.log|Records details about which clients need to be sent wake-up packets, the number of wake-up packets sent, and the number of wake-up packets retried.|Site server|  
 |wolmgr.log|Records details about wake-up procedures, such as when to wake up deployments that are configured for Wake On LAN.|Site server|  
 
-###  <a name="BKMK_WindowsServicingLog"></a> Windows 10 Servicing  
+###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 Servicing  
  The following table lists the log files that contain information related to Windows 10 servicing.  
 
 |Log name|Description|Computer with log file|  
