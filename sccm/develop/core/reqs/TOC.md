@@ -1,0 +1,7 @@
+# [Configuration Manager SDK Libraries and Header Files](configuration-manager-sdk-libraries-and-header-files.md)
+# [About Configuration Manager SDK Requirements](about-configuration-manager-sdk-requirements.md)
+# [Configuration Manager SDK Requirements](configuration-manager-sdk-requirements.md)
+# [Configuration Manager Client Development Requirements](client development requirements.md)
+# [Configuration Manager Client Runtime Requirements](client runtime requirements.md)
+# [Configuration Manager Server Runtime Requirements](server runtime requirements.md)
+# [Configuration Manager Server Development Requirements](server development requirements.md)
