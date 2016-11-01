@@ -1,0 +1,8 @@
+# [Configuration Manager Client Status Server WMI Classes](client status server wmi classes.md)
+# [SMS_CH_Settings Server WMI Class](sms_ch_settings-server-wmi-class.md)
+# [GetOnlineCount Method in Class SMS_CN_ClientStatus](getonlinecount-method-in-class-sms_cn_clientstatus.md)
+# [SMS_CH_EvalResult Server WMI Class](sms_ch_evalresult-server-wmi-class.md)
+# [SMS_CH_SummaryHistory Server WMI Class](sms_ch_summaryhistory-server-wmi-class.md)
+# [SMS_CH_SummaryCurrent Server WMI Class](sms_ch_summarycurrent-server-wmi-class.md)
+# [SMS_CN_ClientStatus Server WMI Class](sms_cn_clientstatus-server-wmi-class.md)
+# [SMS_CH_CheckSummary Server WMI Class](sms_ch_checksummary-server-wmi-class.md)

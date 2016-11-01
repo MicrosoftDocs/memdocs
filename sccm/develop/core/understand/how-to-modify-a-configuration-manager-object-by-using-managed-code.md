@@ -1,0 +1,102 @@
+---
+title: "How to Modify a Configuration Manager Object by Using Managed Code"
+ms.custom: ""
+ms.date: "2016-09-20"
+ms.prod: "configuration-manager"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "configmgr-other"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+applies_to: 
+  - "System Center Configuration Manager (current branch)"
+ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
+caps.latest.revision: 6
+author: "shill-ms"
+ms.author: "v-suhill"
+manager: "mbaldwin"
+---
+# How to Modify a Configuration Manager Object by Using Managed Code
+To modify a System Center Configuration Manager object instance by using the managed SMS Provider, use the object's <xref:Microsoft.ConfigurationManagement.ManagementProvider.IResultObject> interface to make modifications. You then call the [IResultObject.Put](assetId:///IResultObject.Put?qualifyHint=False&autoUpgrade=True) method to submit the changes.  
+  
+> [!NOTE]
+>  The [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) interface for an object can be obtained through the [WqlConnectionManager.GetInstance](assetId:///WqlConnectionManager.GetInstance?qualifyHint=False&autoUpgrade=True) method or through other queries. For an example that uses asynchronous queries, see [How to Perform an Asynchronous Configuration Manager Query Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md).  
+  
+### To modify a Configuration Manager object  
+  
+1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md).  
+  
+2.  Using the [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True) object you obtain in step one, call [GetInstance](assetId:///GetInstance?qualifyHint=False&autoUpgrade=True) to get an assetId:///IResultObject?qualifyHint=False&autoUpgrade=True for the required object.  
+  
+3.  Make changes to object using the assetId:///IResultObject?qualifyHint=False&autoUpgrade=True.  
+  
+4.  Commit the changes to the SMS provider with the assetId:///IResultObject?qualifyHint=False&autoUpgrade=True object [Put](assetId:///Put?qualifyHint=False&autoUpgrade=True) method.  
+  
+## Example  
+ The following example function updates a package's description from a supplied package identifier and description.  
+  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+  
+```  
+  
+public void ModifyPackageDescription(WqlConnectionManager connection, string packageID, string description)  
+{  
+    try  
+    {  
+        IResultObject package = connection.GetInstance(@"SMS_Package.PackageID='" + packageID + "'");  
+        Console.WriteLine("Package Name: " + package["Name"].StringValue);  
+        Console.WriteLine("Current Description: " + package["Description"].StringValue);  
+  
+        package["Description"].StringValue = description;  
+  
+        package.Put();  
+  
+        Console.WriteLine("New description: " + package["Description"].StringValue);  
+    }  
+    catch (SmsException ex)  
+    {  
+        Console.WriteLine("Failed to get package. Error: " + ex.Message);  
+        throw;  
+    }  
+}  
+```  
+  
+ This example method has the following parameters:  
+  
+|Parameter|Type|Description|  
+|---------------|----------|-----------------|  
+|`connection`|`WqlConnectionManager`|A valid connection to the SMS Provider.|  
+  
+## Compiling the Code  
+  
+### Namespaces  
+ System  
+  
+ System.Collections.Generic  
+  
+ System.ComponentModel  
+  
+ Microsoft.ConfigurationManagement.ManagementProvider  
+  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+  
+### Assembly  
+ microsoft.configurationmanagement.managementprovider  
+  
+ adminui.wqlqueryengine  
+  
+## Robust Programming  
+ The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException.> These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException.>  
+  
+## See Also  
+ [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
+ [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
+ [How to Call a Configuration Manager Object Class Method by Using Managed Code](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md)   
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Create a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md)   
+ [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md)   
+ [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
+ [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)   
+ [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
+ [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)
