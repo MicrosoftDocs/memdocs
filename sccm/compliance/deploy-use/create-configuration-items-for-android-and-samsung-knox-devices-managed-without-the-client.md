@@ -1,6 +1,6 @@
 ---
-title: "Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
-description: "Use the System Center Configuration Manager Android and Samsung KNOX configuration item to manage settings for devices."
+title: "Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,12 +16,12 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
+# Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 
 
- Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings  for Android and Samsung KNOX devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
+ Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings  for Android and Samsung KNOX Standard devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
-## Create an Android and Samsung KNOX configuration item  
+## Create an Android and Samsung KNOX Standard configuration item  
 
 1.  In the Configuration Manager console, click **Assets and compliance** > **Compliance Settings** > **Configuration Items**.  
 
@@ -33,9 +33,9 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 6.  Click **Categories** if you create and assign categories to help you search and filter configuration items in the Configuration Manager console.  
 
-7.  On the **Supported Platforms** page, select the specific Android or Samsung KNOX platforms that will evaluate the configuration item.  
+7.  On the **Supported Platforms** page, select the specific Android or Samsung KNOX Standard platforms that will evaluate the configuration item.  
 
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX Standard configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
 
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -63,10 +63,10 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
 
-##  Android and Samsung KNOX configuration item settings reference  
+##  Android and Samsung KNOX Standard configuration item settings reference  
 
 ### Password  
- These settings apply to both Android and Samsung KNOX devices.  
+ These settings apply to both Android and Samsung KNOX Standard devices.  
 
 |Setting|Details|  
 |-------------|-------------|  
@@ -80,7 +80,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 |**Allow Smart Lock and other trust agents**|Lets you control the Smart Lock feature on compatible Android devices. This phone capability, sometimes known as trust agents lets you disable or bypass the device lock screen password if the device is in a trusted location such as when it is connected to a specific Bluetooth device, or when it is near to an NFC tag. You can use this setting to prevent end users from configuring Smart Lock.|
 
 ###  Device  
- These settings apply to Samsung KNOX devices only.  
+ These settings apply to Samsung KNOX Standard devices only.  
 
 |Setting name|Details|  
 |------------------|-------------|  
@@ -88,7 +88,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 |**Clipboard share between applications**|Use the clipboard to copy and paste between apps.|  
 
 ### Cloud  
- These settings apply to Samsung KNOX devices only.  
+ These settings apply to Samsung KNOX Standard devices only.  
 
 |Setting|Details|  
 |-------------|-------------|  
@@ -99,21 +99,21 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 |Setting|Details|  
 |-------------|-------------|  
-|**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX devices.|  
-|**YouTube**|Allows use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX devices only.|  
-|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX devices only.|  
+|**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX Standard devices.|  
+|**YouTube**|Allows use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX Standard devices only.|  
+|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.|  
 
 ### Encryption  
- These settings apply to both Android and Samsung KNOX devices.  
+ These settings apply to both Android and Samsung KNOX Standard devices.  
 
 |Setting|Details|  
 |-------------|-------------|  
 |**File encryption on device**|Requires that files on the mobile device are encrypted.|  
 
-### Kiosk mode (Samsung KNOX only)  
+### Kiosk mode (Samsung KNOX Standard only)  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device.  
 
-#### To configure kiosk mode for a Samsung KNOX device  
+#### To configure kiosk mode for a Samsung KNOX Standard device  
 
 On the **Configure Kiosk Mode Settings for Samsung KNOX Devices** page of the **Create Configuration Item Wizard**, specify the following information:  
 
