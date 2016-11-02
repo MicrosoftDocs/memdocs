@@ -28,20 +28,49 @@ In this topic, you'll learn the basics you need to know before you start working
 
  When the application is deployed to devices, **requirements** decide which deployment type is installed on the device.  
 
- Of course, there are a lot more things you can do with an application, and you'll learn about these as you read through this guide. The following table introduces some concepts you'll need to know before you start to dig deeper. You won't need all of these in every application you create:  
+ Of course, there are a lot more things you can do with an application, and you'll learn about these as you read through this guide. The following list introduces some concepts you'll need to know before you start to dig deeper. You won't need all of these in every application you create:  
 
-|Concept|Description|    
-|-|-|  
-|**Requirements**|In previous versions of Configuration Manager, you would often create a collection containing the devices you wanted to deploy an application to. Although you can still do this, requirements reduce that need by allowing you to specify much more granular criteria by which an application will be installed.<br /><br /> For example, you can specify that an application can only install on devices that run Windows 10. Then, you can deploy the application to all of your devices, but it will only install on devices that run Windows 10.<br /><br /> Configuration Manager evaluates requirements to determine whether an application and any of its deployment types will be installed. Then it determines the correct deployment type by which to install an application. Every seven days, by default, the requirement rules are reevaluated to ensure compliance according to the client setting **Schedule re-evaluation for deployments**.<br /><br /> For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).|  
-|**Global conditions**|While requirements are used with a specific deployment type in a single application, you can also create global conditions which are a library of predefined requirements that you can use with any application and deployment type.<br /><br /> Configuration Manager contains a set of built-in global conditions and you can also create your own.<br /><br /> For details, see [Create global conditions](../../apps/deploy-use/create-global-conditions.md).|  
-|**Simulated deployment**|Evaluates the requirements, detection method, and dependencies for an application and reports the results without actually installing the application.<br /><br /> For details, see [Simulate application deployments](../../apps/deploy-use/simulate-application-deployments.md).|  
-|**Deployment action**|Specifies whether you want to install, or uninstall (when supported) the application you are deploying.<br /><br /> For details, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).|  
-|**Deployment purpose**|Specifies whether the deployment app will  be **Required**, or **Available**.<br /><br /> **Required** means that the application is deployed automatically according to the configured schedule. However, a user can track the application deployment status if it is not hidden, and can install the application before the deadline by using the Software Center.<br /><br /> **Available** means that if the application is deployed to a user, the user sees the published application in Software Center, and can request it on demand.<br /><br /> For details, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).|  
-|**Revisions**|When you make revisions to an application or to a deployment type that is contained in an application, Configuration Manager creates a new revision of the application. You can display the history of each application revision, view its properties, restore a previous revision of an application, or delete an old revision.<br /><br /> For details, see [Update and retire applications](../../apps/deploy-use/update-and-retire-applications.md).|  
-|**Detection method**|Detection methods are used to discover whether a deployed application is already installed. If the detection method indicates the application is installed, Configuration Manager does not attempt to install it again.<br /><br /> For details, see [Create applications](../../apps/deploy-use/create-applications.md).|  
-|**Dependencies**|Dependencies define one or more deployment types from another application that must be installed before a deployment type is installed. You can configure the dependent deployment types to be installed automatically before a deployment type is installed.<br /><br /> For details, see [Create applications](../../apps/deploy-use/create-applications.md).|  
-|**Supersedence**|Configuration Manager lets you  upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also configure whether to upgrade or uninstall the superseded application before the superseding application is installed.<br /><br /> For details, see [Create applications](../../apps/deploy-use/create-applications.md).|  
-|**User-centric management**|Configuration Manager applications support user-centric management letting you can associate specific users with specific devices. Instead of having to remember the name of a user’s device, you can deploy apps to the user and to the device. This functionality can help you make sure that the most important apps are always available on each device that a specific user accesses. If a user acquires a new computer, you can automatically install the user’s apps on the device before they log on.<br /><br /> For details, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).|  
+
+
+- **Requirements**
+In previous versions of Configuration Manager, you would often create a collection containing the devices you wanted to deploy an application to. Although you can still do this, requirements reduce that need by allowing you to specify much more granular criteria by which an application will be installed.<br> For example, you can specify that an application can only install on devices that run Windows 10. Then, you can deploy the application to all of your devices, but it will only install on devices that run Windows 10.<br> Configuration Manager evaluates requirements to determine whether an application and any of its deployment types will be installed. Then it determines the correct deployment type by which to install an application. Every seven days, by default, the requirement rules are reevaluated to ensure compliance according to the client setting **Schedule re-evaluation for deployments**.<br> For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md). 
+
+
+- **Global conditions**
+While requirements are used with a specific deployment type in a single application, you can also create global conditions which are a library of predefined requirements that you can use with any application and deployment type.<br> Configuration Manager contains a set of built-in global conditions and you can also create your own.<br> For details, see [Create global conditions](../../apps/deploy-use/create-global-conditions.md).
+
+
+- **Simulated deployment**
+Evaluates the requirements, detection method, and dependencies for an application and reports the results without actually installing the application.<br> For details, see [Simulate application deployments](../../apps/deploy-use/simulate-application-deployments.md). 
+
+
+- **Deployment action**
+Specifies whether you want to install, or uninstall (when supported) the application you are deploying.<br> For details, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
+
+
+- **Deployment purpose**
+Specifies whether the deployment app will  be **Required**, or **Available**.<br>
+**Required** means that the application is deployed automatically according to the configured schedule. However, a user can track the application deployment status if it is not hidden, and can install the application before the deadline by using the Software Center.<br> **Available** means that if the application is deployed to a user, the user sees the published application in Software Center, and can request it on demand.<br> For details, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).
+
+
+- **Revisions**
+When you make revisions to an application or to a deployment type that is contained in an application, Configuration Manager creates a new revision of the application. You can display the history of each application revision, view its properties, restore a previous revision of an application, or delete an old revision.<br> For details, see [Update and retire applications](../../apps/deploy-use/update-and-retire-applications.md).
+
+
+- **Detection method**
+Detection methods are used to discover whether a deployed application is already installed. If the detection method indicates the application is installed, Configuration Manager does not attempt to install it again.<br> For details, see [Create applications](../../apps/deploy-use/create-applications.md). 
+
+
+- **Dependencies**
+Dependencies define one or more deployment types from another application that must be installed before a deployment type is installed. You can configure the dependent deployment types to be installed automatically before a deployment type is installed.<br> For details, see [Create applications](../../apps/deploy-use/create-applications.md).  
+
+
+- **Supersedence**
+Configuration Manager lets you  upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also configure whether to upgrade or uninstall the superseded application before the superseding application is installed.<br> For details, see [Create applications](../../apps/deploy-use/create-applications.md).
+
+
+- **User-centric management**
+Configuration Manager applications support user-centric management letting you can associate specific users with specific devices. Instead of having to remember the name of a user’s device, you can deploy apps to the user and to the device. This functionality can help you make sure that the most important apps are always available on each device that a specific user accesses. If a user acquires a new computer, you can automatically install the user’s apps on the device before they log on.<br> For details, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 ## What application types can you deploy?  
  Configuration Manager lets you deploy the following app types:  
