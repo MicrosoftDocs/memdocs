@@ -46,7 +46,7 @@ Before you configure the service connection point, understand and plan for its a
 
 To better understand what happens updates are downloaded, see:  
 
--   [Flowchart - Download updates for System Center Configuration Manager](../../../core/servers/manage/download-updates-flowchart.md).  
+-   [Flowchart - Download updates for System Center Configuration Manager](../../../core/servers/manage/download-updates-flowchart.md)
 
 -   [Flowchart - Update replication for System Center Configuration Manager](../../../core/servers/manage/update-replication-flowchart.md)  
 
@@ -127,7 +127,7 @@ Unlike past versions of Configuration Manager, if installing an update fails you
 ###  <a name="bkmk_step3"></a> Step 3: Run the prerequisite checker before installing an update  
 Before you install an update, consider running the prerequisite check for that update. If you run the prerequisite before installing an update:  
 
--   The update files are replicated to other sites in advance of actually installing the update  
+-   The update files are replicated to other sites in advance of installing the update  
 
 -   The prerequisite check will automatically run again when you choose to install the update  
 
@@ -199,12 +199,13 @@ Use the following to monitor progress:
 -   In the Configuration Manager console: **Monitoring** > **Overview** > **Updates and Servicing Status** node. this node shows the installation status of only the update package that is currently installing.  
 
     Beginning with version 1606, the update pack installation is broken down to following phases for ease of monitoring. For each phase there is now additional details including which log file to view for more information:  
-    -   **Download** (This applies only to the top-tier site where the service connection point site system role is installed)
+    -   **Download** (This phase applies only to the top-tier site where the service connection point site system role is installed)
     -   **Replication**
-    - **Prerequisites Check**
-    - **Installation**
+    -   **Prerequisites Check**
+    -   **Installation**
+    -   **Post Installation** (This phase is available beginning with version 1610)
 
--   You can view the **CMUpdate.log** file in **&lt;ConfigMgr_Installation_Directory>\Logs\\**  
+-   You can view the **CMUpdate.log** file in **&lt;ConfigMgr_Installation_Directory>\Logs**  
 
 **4. When the update installation completes**  
 After the first site update completes installation:  
@@ -303,7 +304,7 @@ For more information, see
 **Additional configurations:** Review the changes you made before starting the update and then restore those configurations to your sites and hierarchy.  
 
 ##  <a name="bkmk_options"></a> Enable optional features from updates  
-When you install an update that includes one or more optional features, you will have the opportunity to enable those features in your hierarchy.  You can do so at the time the update installs, or return to the console at a later time and enable the optional features.
+When you install an update that includes one or more optional features, you will have the opportunity to enable those features in your hierarchy.  You can do so at the time the update installs, or return to the console later and enable the optional features.
 
 To view available features and their status, in the console navigate to **Administration** > **Cloud Services** > **Updates and Servicing** > **Features**.
 
@@ -324,7 +325,7 @@ To give consent, in the console navigate to **Administration** > **Site Configur
 When your hierarchy runs version 1606 or later, and you then install an update that includes pre-release features, those features are visible in the Updates and Servicing Wizard with the regular features included in the update:
   - **If you have given consent:** You can enable pre-release features from within the Updates and Servicing Wizard when you are installing the update. To do so, select the pre-release features as you would any other feature.     
 
-    Optionally, you can wait to enable a pre-release feature at a later time from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. To do so, in the Features node select the feature and then click **Turn on**. (This option is greyed out and unavailable until you give consent.)  
+    Optionally, you can wait to enable a pre-release feature later from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. To do so, in the Features node select the feature and then click **Turn on**. (This option is greyed out and unavailable until you give consent.)  
   -   **If you have not given consent:** When installing an update, pre-release features are visible in the Updates and Servicing Wizard but are greyed out and cannot be enabled. After the update installs, you can view these features in the Features node, but not enable them until after you have given consent in the Hierarchy Settings.
 
  > [!TIP]
@@ -332,13 +333,13 @@ When your hierarchy runs version 1606 or later, and you then install an update t
 
 If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must then give consent again at the central administration site.
 
-**The following pre-release features are avaialble:**
+**The following pre-release features are available:**
 
  |Feature                    |Added as pre-release |Added as a full feature |  
 |----------------------------|---------------------|------------------------|
 | Microsoft Operations Management Suite (OMS) Connector  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Servicing a cluster aware collection (Service a server group)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|Conditional access for PCs managed by System Center Configuraiton Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+|Conditional access for PCs managed by System Center Configuration Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
 
