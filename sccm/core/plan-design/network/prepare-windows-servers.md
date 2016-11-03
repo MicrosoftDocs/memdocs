@@ -128,6 +128,6 @@ For example, you might have source files for a software deployment that include 
 **Distribution points:** Distribution points require the following HTTP verbs as allowed:
  - GET
  - HEAD
- - PROFIND
+ - PROPFIND
 
 For information about configuring request filtering, see [Configure Request Filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) on TechNet, or similar documentation that applies to the version of Windows Server that hosts your management point.
