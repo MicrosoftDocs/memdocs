@@ -72,7 +72,7 @@ Conditional access to Exchange Online supports devices that run:
 -   Windows 7.0 or Windows 8.1 (when domain joined)
 -   Windows Phone 8.1 and later
 -   iOS 7.1 and later
--   Android 4.0 and later, Samsung Knox Standard 4.0 and later
+-   Android 4.0 and later, Samsung KNOX Standard 4.0 and later
 
  **Additionally**:
 -   Devices must be workplace joined, which registers the device with the Azure Active Directory Device Registration Service (AAD DRS).<br />     
@@ -124,7 +124,7 @@ Conditional access to Exchange On-premises supports:
 Conditional access to SharePoint Online supports devices that run:
  -   iOS 7.1 and later
  -   Android 4.0 and later
- -   Samsung Knox Standard 4.0 or later
+ -   Samsung KNOX Standard 4.0 or later
 
 **Additionally,** you must enable modern authentication for Skype for Business Online. Fill this [connect form](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) to be enrolled in the modern authentication program.
 
@@ -136,7 +136,7 @@ Conditional access to SharePoint Online supports devices that run:
  -   Windows 7.0 or Windows 8.1 (when domain joined)
  -   Windows Phone 8.1 and later
  -   iOS 7.1 and later
- -   Android 4.0 and later, Samsung Knox Standard 4.0 and later
+ -   Android 4.0 and later, Samsung KNOX Standard 4.0 and later
 
  **Additionally**:
  -   Devices must be workplace joined, which registers the device with the Azure Active Directory Device Registration Service (AAD DRS).

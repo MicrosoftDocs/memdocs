@@ -131,7 +131,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
     -   iOS and Mac OS X devices managed without the Configuration Manager client  
 
-    -   Android and Samsung KNOX devices managed without the Configuration Manager client  
+    -   Android and Samsung KNOX Standard devices managed without the Configuration Manager client  
 
      See [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
 

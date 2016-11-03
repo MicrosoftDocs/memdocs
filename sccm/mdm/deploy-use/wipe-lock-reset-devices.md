@@ -57,9 +57,9 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 |Management agent|Management profile is removed.|  
 |Email profiles|For email profiles provisioned by Intune, the email account and email are removed.|  
 
- **Android and Android Samsung KNOX**  
+ **Android and Android Samsung KNOX Standard**  
 
-|Content removed when retiring a device|Android|Samsung KNOX|  
+|Content removed when retiring a device|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
 |Company apps and associated data installed by using Configuration Manager and Intune.|Apps and data remain installed.|Apps are uninstalled.|  
 |VPN and Wi-Fi profiles|Removed.|Removed.|  
