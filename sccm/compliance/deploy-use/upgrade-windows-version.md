@@ -2,7 +2,7 @@
 title: "Upgrade Windows devices to a new version | System Center Configuration Manager"
 description: "Upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a newer edition automatically."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,7 @@ The following upgrade paths are supported:
 - From Windows 10 Mobile to Windows 10 Mobile Enterprise
 - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise
 
-The devices must be enrolled in Microsoft Intune. This feature is not currently compatible with PCs that run the Configuration Manager client software, or PCs that are managed by on-premises MDM.
+The devices must be enrolled in Microsoft Intune or run the Configuration Manager client software. This policy is currently not compatible with PCs that are managed by on-premises MDM.
 
 ## Before you start  
  Before you begin to upgrade devices to the latest version, you will need one of the following:  
@@ -69,7 +69,7 @@ The devices must be enrolled in Microsoft Intune. This feature is not currently 
 
 6.  Complete the wizard.  
 
- The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **Assets and Compliance** workspace.  
+The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **Assets and Compliance** workspace.  
 
 ## Deploy the edition upgrade policy  
 
@@ -77,8 +77,10 @@ The devices must be enrolled in Microsoft Intune. This feature is not currently 
 
 3.  Select the Windows 10 edition upgrade policy you want to deploy and then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the user or device collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**.  
+4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**.
+- For PCs that are managed with the Configuration Manager client, you must deploy the policy to a device collection. 
+- For PCs that are enrolled with Intune, you can deploy the policy to a user or device collection. 
 
- You can monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace.  
+You can monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace.  
 
  Once the policy reaches a targeted Windows PC, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.

@@ -42,3 +42,11 @@ You can exclude Windows clients from getting upgraded with new versions of the c
 
 ## In-console monitoring of update installation status
 Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+
+## Improvements to the Windows 10 Edition Upgrade Policy
+
+In this release, the following improvements have been made to this policy type:
+
+- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
+- You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
+
