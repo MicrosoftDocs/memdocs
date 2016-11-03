@@ -199,7 +199,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
 - **SmartLock setting for Android devices**
 
-  A new setting has been added to the Android and Samsung KNOX configuration item that lets you control the SmartLock feature on compatible Android devices.  You can use this setting to prevent end users from configuring SmartLock. See [SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices) in [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604.md).  
+  A new setting has been added to the Android and Samsung KNOX Standard configuration item that lets you control the SmartLock feature on compatible Android devices.  You can use this setting to prevent end users from configuring SmartLock. See [SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices) in [Capabilities in Technical Preview 1604 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1604.md).  
 
 ### New in Configuration Manager (current branch)  
  No new hybrid features were introduced in April 2016 for Configuration Manager (current branch).  
@@ -280,9 +280,9 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
   You will find these apps in the Applications node of the Configuration Manager console. For more information about deploying applications, see [How to deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md).  
 
-- **Kiosk mode settings for Android Samsung KNOX devices**
+- **Kiosk mode settings for Android Samsung KNOX Standard devices**
 
-  Kiosk mode allows you to lock a device to only allow certain features to work.  Beginning in version 1602 of  Configuration Manager (current branch), you can now specify kiosk mode settings for Samsung KNOX devices. For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client).  
+  Kiosk mode allows you to lock a device to only allow certain features to work.  Beginning in version 1602 of  Configuration Manager (current branch), you can now specify kiosk mode settings for Samsung KNOX Standard devices. For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client).  
 
 - **iOS Activation Lock**
 
