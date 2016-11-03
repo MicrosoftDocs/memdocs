@@ -83,10 +83,7 @@ The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **
 
 3.  Select the Windows 10 edition upgrade policy you want to deploy and then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**.
-
-- For PCs that are managed with the Configuration Manager client, you must deploy the policy to a device collection. 
-- For PCs that are enrolled with Intune, you can deploy the policy to a user or device collection. 
+4.  In the **Deploy Windows 10 Edition Upgrade** dialog box, choose the collection to which you want to deploy the policy and the schedule by which the policy will be evaluated, and then click **OK**. For PCs that are managed with the Configuration Manager client, you must deploy the policy to a device collection. For PCs that are enrolled with Intune, you can deploy the policy to a user or device collection. 
 
 You can monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace.  
 
