@@ -29,9 +29,9 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
 
  1.  Logon to the [Windows Defender ATP online service](https://securitycenter.windows.com/)   
 
- 2.  Click on the **Client On-boarding** menu item.  
+ 2.  Click on the **Endpoint Management** menu item.  
 
- 3.  Select **System Center Configuration Manager** and click **Download package**.  
+ 3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Download package**.  
 
  4.  Download the compressed archive (.zip) file and extract the contents.
 
@@ -75,3 +75,8 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
         -   **Agent state** - The system service for the agent in Windows isn't running  
 
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
+
+## More information
+
+[Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Troubleshoot Windows Defender Advanced Threat Protection onboarding issues](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
