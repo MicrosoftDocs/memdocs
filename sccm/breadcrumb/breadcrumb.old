@@ -1,0 +1,33 @@
+- name: Docs
+  tochref: /
+  tochref: /
+  items:
+    - name: Enterprise Mobility
+      tocref: /enterprise-mobility/
+      tochref: /enterprise-mobility
+      items:
+        - name: Configuration Manager
+          tocHref: /sccm/
+          topicHref: /sccm/index
+          items:
+            - name: Core infrastructure guide
+              tocHref: /sccm/core/
+              topicHref: /sccm/core/understand/introduction
+            - name: Application management guide
+              tocHref: /sccm/apps/
+              topicHref: /sccm/apps/understand/get-started-with-application-management
+            - name: Device compliance guide
+              tocHref: /sccm/compliance/
+              topicHref: /sccm/compliance/understand/ensure-device-compliance
+            - name: Mobile device management guide
+              tocHref: /sccm/mdm/
+              topicHref: /sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management
+            - name: Operating system deployment guide
+              tocHref: /sccm/osd/
+              topicHref: /sccm/osd/understand/introduction-to-operating-system-deployment
+            - name: Protect data and infrastructure guide
+              tocHref: /sccm/protect/
+              topicHref: /sccm/protect/understand/protect-data-and-site-infrastructure
+            - name: Software update management guide
+              tocHref: /sccm/sum/
+              topicHref: /sccm/sum/understand/software-updates-introduction

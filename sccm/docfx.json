@@ -1,0 +1,40 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md", "**/**.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "sccm/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "sccm/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "/enterprise-mobility-security/toc.json",
+      "ms.locale": "en-us"
+      },
+    "fileMetadata": {},
+    "template": [
+      "docs.html"
+    ],
+    "dest": "sccm"
+  }
+}
