@@ -21,19 +21,14 @@ Boundaries for System Center Configuration Manager define network locations on y
  A  hierarchy can include any number of boundary groups, and each boundary group can contain any combination of the following boundary types:  
 
 -   IP subnet,  
-
 -   Active Directory site name  
-
 -   IPv6 Prefix  
-
 -   IP address range  
 
 Clients on the intranet evaluate their current network location and then use that information to identify boundary groups to which they belong.  
 
  Clients use boundary groups to:  
-
 -   **Find an assigned site:** Boundary groups enable clients to find a primary site for client assignment (automatic site assignment).  
-
 -   **Find certain site system roles they can use:**  When you associate a boundary group with certain site system roles, the boundary group provides clients that list of site systems for use during content location and as  preferred management points.  
 
 Clients that are on the Internet or configured as Internet-only clients do not use boundary information. These clients cannot use automatic site assignment and can always download content from any distribution point from their assigned site when the distribution point is configured to allow client connections from the Internet.  
@@ -43,21 +38,15 @@ Clients that are on the Internet or configured as Internet-only clients do not u
  You can manually create individual boundaries. Additionally, you can configure [Active Directory Forest Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) to auto-discover and create boundaries for each IP Subnet and Active Directory Site it discovers.  
 
 -   Each boundary represents a network location in and is available for use by  every site in your hierarchy.  
-
 -   Configuration Manager does not support the direct entry of a supernet as a boundary. Instead, use the IP address range boundary type.  
-
 -   When Active Directory Forest Discovery identifies a supernet that is assigned to an Active Directory site, Configuration Manager converts the supernet into an IP address range boundary.  
-
 -   The boundary a client is on is equivalent to the Active Directory site, or network IP address that the client identifies. (It is not uncommon for a client to use an IP address that the Configuration Manager administrator is not aware of. If the clients network location is in doubt, confirm what the client reports as its location using the **IPCONFIG** command on the client.)  
 
 When you create a boundary, it automatically receives a name that is based upon the type and scope of the boundary. You cannot modify this name. Instead, when you configure the boundary specify a description to help identify the boundary in the Configuration Manager console.  
 
  After you create a boundary, you can modify its properties to do the following:  
-
 -   Add the boundary to one or more boundary groups.  
-
 -   Change the type or scope of the boundary.  
-
 -   View the boundaries **Site Systems** tab to see which site system servers (distribution points, state migration points, and management  points) are associated with the boundary.  
 
 #### To create a boundary  
@@ -71,7 +60,6 @@ When you create a boundary, it automatically receives a name that is based upon 
 4.  Select a **Type** for this boundary:  
 
     -   If you select **IP Subnet**, you must specify a **Subnet ID** for this boundary.  
-
         > [!TIP]  
         >  You can specify the **Network** and **Subnet mask** to have the **Subnet ID** automatically specified. When you save the boundary, only the Subnet ID value is saved.  
 
@@ -82,7 +70,7 @@ When you create a boundary, it automatically receives a name that is based upon 
 
     -   If you select **IPv6 prefix**, you must specify a **Prefix** in the IPv6 prefix format.  
 
-    -   If you select **IP address range**, you must specify a **Starting IP address** and **Ending IP address** that includes part of an IP Subnet or includes multiple IP Subnets.  
+    -   If you select **IP address range**, you must specify a **Starting IP address** and **Ending IP address** that includes part of an IP Subnet or includes multiple IP Subnets.    
 
 5.  Click **OK** to save the new boundary.  
 
@@ -109,128 +97,86 @@ When you create a boundary, it automatically receives a name that is based upon 
 
 7.  Click **OK** to close the boundary properties and save the configuration.  
 
-##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
+##  <a name="BKMK_BoundaryGroups"></a> Boundary groups
+> [!IMPORTANT]  
+>  **The information in this Boundary gruops section and its child sections applies to version 1610 or later.** This content has been revised to be specific to the design changes introuced for boundary groups with this update version.
+>
+> **If you use versions 1511, 1602, or 1606**, see [Boundary groups for System Center Configuration Manager versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information on how to use and configure boundary groups with those product versions.
+
+Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes help simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+
+**About boundary groups:**  
  You create boundary groups to logically group related network locations (boundaries) to make it easier to manage your infrastructure. You must assign boundaries to boundary groups before you can use the boundary group. Clients use the boundary group configuration for:  
 
 -   Automatic site assignment  
-
 -   Content location  
-
 -   Preferred management points  (If you will use preferred management points, you must enable this option for the hierarchy and not from within the boundary group configuration. See the following procedure *To enable use of preferred management points*)  
 
 When you configure boundary groups, you add one or more boundaries to the boundary group, and then configure additional settings for use by clients that are  located on those boundaries.  
 
-#### To create a boundary group  
+You can find [procedures for managing boundary groups](#procedures-for-boundarygroups) later in this topic.
 
-1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
-
-2.  On the **Home** tab, in the **Create** group, click **Create Boundary Group**.  
-
-3.  In the **Create Boundary Group** dialog box, select the **General** tab and specify a **Name** for this boundary group.  
-
-4.  Click **OK** to save the new boundary group.  
-
-#### To configure a boundary group  
-
-1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
-
-2.  Select the boundary group you want to modify.  
-
-3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
-
-4.  In the **Properties** dialog box for the boundary group, select the **General** tab to modify the boundaries that are members of this boundary group:  
-
-    -   To add boundaries, click **Add**, select the check box for one or more boundaries, and click **OK**.  
-
-    -   To remove boundaries, select the boundary and click **Remove**.  
-
-5.  Select the **References** tab to modify the site assignment and associated site system server configuration:  
-
-    -   To enable this boundary group for use by clients for site assignment, select the check box for **Use this boundary group for site assignment**, and then select a site from the **Assigned site** dropdown box.  
-
-    -   To configure which available site system servers are associated with this boundary group:  
-
-    1.  Click **Add**, and then select the check box for one or more servers. The servers are added as associated site system servers for this boundary group. Only servers that have supported site system role installed on them are available.  
-
-        > [!NOTE]  
-        >  You can select any combination of available site systems from any site in the hierarchy. Selected site systems are listed on the **Site Systems** tab in the properties of each boundary that is a member of this boundary group.  
-
-    2.  To remove a server from this boundary group, select the server and then click **Remove**.  
-
-        > [!NOTE]  
-        >  To stop use of this boundary group for associating site systems you must remove all servers listed as associated site system servers.  
-
-    3.  To change the network connection speed for a site system server for this boundary group, select the server and then click **Change Connection**.  
-
-         By default, the connection speed for each site system is **Fast**, but can be changed to **Slow**. The network connection speed and the configuration of a deployment determine whether a client can download content from the server.  
-
-6.  Click **OK** to close the boundary group properties and save the configuration.  
-
-#### To associate a content deployment server or management point with a boundary group  
-
-1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
-
-2.  Select the boundary group you want to modify.  
-
-3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
-
-4.  In the **Properties** dialog box for the boundary group, select the **References** tab.  
-
-5.  Under **Select site system servers**, click **Add**, select the check box for the site system servers you want to associate with this boundary group, and then click **OK**.  
-
-6.  Click **OK** to close the dialog box and save the boundary group configuration.  
-
-#### To enable use of preferred management points  
-
-1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Sites**, and then on the **Home** tab select  **Hierarchy Settings**.  
-
-2.  On the **General** tab of the Hierarchy Settings, select **Clients prefer to use management points specified in boundary groups**.  
-
-3.  Click **OK** to close the dialog box and save the configuration.  
-
-#### To configure a fallback site for automatic site assignment  
-
-1.  In the Configuration Manager console, click **Administration** > **Site Configuration** >  **Sites**.  
-
-2.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
-
-3.  On the **General** tab, select the checkbox for **Use a fallback site**, and then select a site from the **Fallback site** drop-down list.  
-
-4.  Click **OK** to save the configuration.  
-
- The following sections provide additional details about boundary group configurations.  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> About site assignment  
  You can configure each boundary group with an assigned site for clients.  
 
 -   A newly installed client that uses automatic site assignment will join the assigned site of a boundary group that contains the client's current network location.  
-
 -   After assigning to a site, a client does not change its site assignment when it changes its network location. For example, if the client roams to a new network location that is represented by a boundary in a boundary group with a different site assignment, the client's assigned site will remain unchanged.  
-
 -   When Active Directory System Discovery discovers a new resource, network information for the discovered resource is evaluated against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.  
-
 -   When a boundary is a member of multiple boundary groups that have different assigned sites, clients will randomly select one of the sites.  
-
 -   Changes to a boundary groups assigned site only apply to new  site assignment actions. Clients that  previously  assigned to a site, do not re-evaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).  
 
 For more information about client site assignment, see [Using Automatic Site Assignment for Computers](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
 ###  <a name="BKMK_BoundaryContentLocation"></a> About content location  
- You can configure each boundary group with one or more distribution points and state migration points, and you can associate the same distribution points and state migration points with multiple boundary groups.  
+When you configure boundary groups, you associate boundaries (network locations) and site system roles, like distribution points, to the boundary group. This helps link clients to site system servers like distribution points that are located near the clients on the network.
+
+You can assign the same boundary to multiple boundary groups, and site system servers, like distribution points, can be associated to multiple boundary groups. This makes them available to a wider range of network locations.
 
 -   **During software distribution**, clients request a location for deployment content. Configuration Manager sends the client a list of distribution points that are associated with each boundary group that includes the current network location of the client.  
+-   **During operating system deployment**, clients request a location to send or receive their state migration information. Configuration Manager sends the client a list of state migration points that are associated with each boundary group that includes the current network location of the client.  
 
--   **During operating system deployment, clients** request a location to send or receive their state migration information. Configuration Manager sends the client a list of state migration points that are associated with each boundary group that includes the current network location of the client.  
+You define boundary group relationships to configure fallback behavior for content source locations. This new behavior is configured on the new **Relationships** tab of the boundary group properties and replaces configuring site systems to be slow or fast, and configuring a boundary group to allow fallback source location for content.
 
-This behavior enables the client to select the nearest server from which to transfer the content or state migration information.  
+On the Relationships tab you add other boundary groups to configure a relationship to those groups. Each relationship is a one-way link from the **current** boundary group to the boundary group you add, which is called a **neighbor**. For each link you create, you can configure distribution points with a fallback time in minutes. This time is used to determine after how long clients in the current boundary group can begin using distribution points in the neighbor boundary group if they are unable to find a valid content source location from their current boundary group.
+
+When a client can’t find content and begins to search locations from neighbor boundary groups, it increases the pool of available distribution points for that client in a controlled manner.
+
+-	A boundary group can have more than one Relationship. This lets you configure fallback to different neighbors to occur after different periods of time.
+- 	Clients will only fallback to a boundary group that is a direct neighbor of their current boundary group.
+-	When a client is a member of multiple boundary groups, the current boundary group is defined as a union of all that client’s boundary groups. That client can then fallback to a neighbor of any of those original boundary groups.
+
+In addition to the links you define, there is an implied link that is created automatically between the boundary groups you create and the default boundary group that is automatically created for each site. This automatic link:
+- 	Is used by clients that are not on a boundary associated with any boundary group in your hierarchy automatically use the default boundary group from their assigned site to identify valid content source locations.
+- 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
+
+**Example of using the new model:**
+
+
+.... Fill in Section
+
+
+
+
+### Update existing boundary groups to the new model
+When you update to version 1610, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available, until you configure new boundary groups and relationships.
+
+... Fill in Section
+
+### Changes in UI and behavior for content locations
+The following are the key changes to boundary groups and how clients find content that are introduced with version 1610. Many of these changes and concepts work together.
+
+
+... Fill In Section
+
+
+
 
 ###  <a name="BKMK_PreferredMP"></a> About preferred management points  
  Preferred management points enable a client to identify a management point that is associated with its current network location (boundary).  
 
 -   A client attempts to use a preferred management point from its assigned site before using a   management point from its  assigned site that is not configured as preferred.  
-
 -   To use this option you must enable it for the hierarchy, and configure boundary groups at individual primary sites to include the management points that should be associated with that boundary group's associated boundaries  
-
 -   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the client's assigned site)  
 
 > [!NOTE]  
@@ -240,26 +186,101 @@ This behavior enables the client to select the nearest server from which to tran
  Configuration Manager supports overlapping boundary configurations for content location:  
 
 -   **When a client requests content**, and the client network location belongs to multiple boundary groups, Configuration Manager sends the client a list of all distribution points that have the content.  
-
 -   **When a client requests a server to send or receive its state migration information**, and the client network location belongs to multiple boundary groups, Configuration Manager sends the client a list of all state migration points that are associated with a boundary group that includes the current network location of the client.  
 
 This behavior enables the client to select the nearest server from which to transfer the content or state migration information.  
 
-###  <a name="BKMK_BoudnaryNetworkSpeed"></a> About network connection speed  
- You can set the  network connection speed for each site system server in a boundary group. This setting applies to clients that connect to a site system based on this boundary groups configuration. The same site system server can have a different connection speed set for it in different boundary groups.  
 
- By default, the network connection speed is configured as **Fast**, but it can also be configured as **Slow**. The network connection speed and the deployment configuration determine whether a client can download content from a distribution point when the client is in an associated boundary group.  
 
- For more information about how the network connection speed configuration affects how clients get content, see [Content source location scenarios](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md).  
+
+
+
+## Procedures for boundary groups
+
+### To create a boundary group  
+1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
+
+2.  On the **Home** tab, in the **Create** group, click **Create Boundary Group**.  
+
+3.  In the **Create Boundary Group** dialog box, select the **General** tab and specify a **Name** for this boundary group.  
+
+4.  Click **OK** to save the new boundary group.  
+
+
+### To configure a boundary group  
+ 1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
+
+ 2.  Select the boundary group you want to modify.  
+
+ 3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
+
+ 4.  In the **Properties** dialog box for the boundary group, select the **General** tab to modify the boundaries that are members of this boundary group:  
+
+     -   To add boundaries, click **Add**, select the check box for one or more boundaries, and click **OK**.  
+
+     -   To remove boundaries, select the boundary and click **Remove**.  
+
+ 5.  Select the **References** tab to modify the site assignment and associated site system server configuration:  
+
+     -   To enable this boundary group for use by clients for site assignment, select the check box for **Use this boundary group for site assignment**, and then select a site from the **Assigned site** dropdown box.  
+
+     -   To configure which available site system servers are associated with this boundary group:  
+
+     1.  Click **Add**, and then select the check box for one or more servers. The servers are added as associated site system servers for this boundary group. Only servers that have supported site system role installed on them are available.  
+
+         > [!NOTE]  
+         >  You can select any combination of available site systems from any site in the hierarchy. Selected site systems are listed on the **Site Systems** tab in the properties of each boundary that is a member of this boundary group.  
+
+     2.  To remove a server from this boundary group, select the server and then click **Remove**.  
+
+         > [!NOTE]  
+         >  To stop use of this boundary group for associating site systems you must remove all servers listed as associated site system servers.  
+
+     3.  To change the network connection speed for a site system server for this boundary group, select the server and then click **Change Connection**.  
+
+          By default, the connection speed for each site system is **Fast**, but can be changed to **Slow**. The network connection speed and the configuration of a deployment determine whether a client can download content from the server.  
+
+ 6.  Click **OK** to close the boundary group properties and save the configuration.  
+
+#### To associate a content deployment server or management point with a boundary group  
+ 1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
+
+ 2.  Select the boundary group you want to modify.  
+
+ 3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
+
+ 4.  In the **Properties** dialog box for the boundary group, select the **References** tab.  
+
+ 5.  Under **Select site system servers**, click **Add**, select the check box for the site system servers you want to associate with this boundary group, and then click **OK**.  
+
+ 6.  Click **OK** to close the dialog box and save the boundary group configuration.  
+
+#### To enable use of preferred management points  
+
+ 1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Sites**, and then on the **Home** tab select  **Hierarchy Settings**.  
+
+ 2.  On the **General** tab of the Hierarchy Settings, select **Clients prefer to use management points specified in boundary groups**.  
+
+ 3.  Click **OK** to close the dialog box and save the configuration.  
+
+ #### To configure a fallback site for automatic site assignment  
+
+ 1.  In the Configuration Manager console, click **Administration** > **Site Configuration** >  **Sites**.  
+
+ 2.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
+
+ 3.  On the **General** tab, select the checkbox for **Use a fallback site**, and then select a site from the **Fallback site** drop-down list.  
+
+ 4.  Click **OK** to save the configuration.  
+
+  The following sections provide additional details about boundary group configurations.
 
 ##  <a name="BKMK_BoundaryBestPractices"></a> Best practices for boundaries  
 
 -   **Consider using the IP address range boundary type only when other boundary types cannot be used:**  
-
      When designing your boundary strategy, we recommend you use boundaries that are based on Active Directory sites before using other boundary types. Where boundaries based on Active Directory sites are not an option, then use IP subnet or IPv6 boundaries. If none of these options are available to you, then leverage IP address range boundaries. This is because the site evaluates boundary members periodically, and the query required to assess members of an IP address range requires a substantially larger use of SQL Server resources than queries that assess members of other boundary types.  
 
 -   **Avoid overlapping boundaries for automatic site assignment:**  
-
      Although each boundary group supports both site assignment configurations and those for content location, it is a best practice to create a separate set of  boundary groups to use only for site assignment. Meaning: ensure that each boundary in a boundary group is not a member of another boundary group with a different site assignment. This is because:  
 
     -   A single  boundary can be included in multiple boundary groups  
