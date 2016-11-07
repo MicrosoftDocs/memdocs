@@ -2,7 +2,7 @@
 title: "Log files | System Center Configuration Manager"
 description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -96,6 +96,8 @@ In System Center Configuration Manager, client and site server components record
     -   [Software Updates](#BKMK_SU_NAPLog)  
 
     -   [Wake On LAN](#BKMK_WOLLog)  
+
+    -   [Windows 10 Servicing](#BKMK_WindowsServicingLog)
 
     -   [Windows Update Agent](#BKMK_WULog)  
 
@@ -762,6 +764,39 @@ The following table lists the log files that contain information related to Disc
 |--------------|-----------------|----------------------------|  
 |wolcmgr.log|Records details about which clients need to be sent wake-up packets, the number of wake-up packets sent, and the number of wake-up packets retried.|Site server|  
 |wolmgr.log|Records details about wake-up procedures, such as when to wake up deployments that are configured for Wake On LAN.|Site server|  
+
+###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 Servicing  
+ The following table lists the log files that contain information related to Windows 10 servicing.  
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|ccmcca.log|Records details about the processing of compliance evaluation based on Configuration Manager NAP policy processing, and contains the processing of remediation for each software update required for compliance.|Client|  
+|ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
+|CcmRepair.log|Records the repair activities of the client agent.|Client|
+|PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|The computer hosting the Configuration Manager console from which downloads are initiated|  
+|PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
+|RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
+|ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
+|SdmAgent.log|Records details about tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
+|ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
+|setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the *%windir%\$Windows.~BT\sources\panther* folder.|Client|
+|smssha.log|The main log file for the Configuration Manager Network Access Protection client and it contains a merged statement of health information from the two Configuration Manager components: location services (LS) and the configuration compliance agent (CCA). This log file also contains information about the interactions between the Configuration Manager System Health Agent and the operating system NAP agent, and also between the Configuration Manager System Health Agent and both the configuration compliance agent and the location services. It provides information about whether the NAP agent successfully initialized, the statement of health data, and the statement of health response.|Client|  
+|Smsshv.log|This is the main log file for the System Health Validator point and records the basic operations of the System Health Validator service, such as the initialization progress.|Site system server|  
+|Smsshvadcacheclient.log|Records details about the retrieval of Configuration Manager health state references from Active Directory Domain Services.|Site system server|  
+|SmsSHVCacheStore.log|Records details about the cache store used to hold the Configuration Manager NAP health state references retrieved from Active Directory Domain Services, such as reading from the store and purging entries from the local cache store file. The cache store is not configurable.|Site system server|  
+|smsSHVQuarValidator.log|Records client statement of health information and processing operations. To obtain full information, change the registry key **LogLevel** from 1 to 0 in the following location: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL**|Site system server|  
+|smsshvregistrysettings.log|Records any dynamic change to the System Health Validator component configuration while the service is running.|Site system server|  
+|SMSSHVSetup.log|Records the success or failure (with failure reason) of installing the System Health Validator point.|Site system server|  
+|SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
+|StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
+|SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
+|UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|  
+|UpdatesHandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
+|UpdatesStore.log|Records details about compliance status for the software updates that were assessed during the compliance scan cycle.|Client|  
+|WCM.log|Records details about software update point configurations and connections to the Windows Server Update Services (WSUS) server for subscribed update categories, classifications, and languages.|Site server|  
+|WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
+|wsyncmgr.log|Records details about the software updates synchronization process.|Site server|  
+|WUAHandler.log|Records details about the Windows Update Agent on the client when it searches for software updates.|Client|  
 
 ###  <a name="BKMK_WULog"></a> Windows Update Agent  
  The following table lists the log files that contain information related to the Windows Update Agent.  
