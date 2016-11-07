@@ -441,7 +441,9 @@ This topic provides the steps to provision Windows To Go in System Center Config
 
     -   **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points that are on slow and unreliable networks to download the content that is required by the task sequence.  
 
-    -   **Allow clients to use a fallback source location for content**: Specify whether to allow clients to fall back and use a non-preferred distribution point as the source location for content when the content is not available on a preferred distribution point.  
+    -   **Allow clients to use a fallback source location for content**:
+        - *Prior to version 1610*, you can select the Allow fallback source location for content check box to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.
+        - *Beginning with version 1610*, you no longer can configure **Allow fallback source location for content**.  Instead, you configure relationships between boundary groups that determine when a client can begin to search additional boundary groups for a valid content source location. 
 
 11. Complete the wizard.  
 
