@@ -2,7 +2,7 @@
 title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -84,14 +84,16 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |Setting name|Details|  
 |------------------|-------------|  
 |**Screen capture**|Allows you to take a screenshot of the device display.<br /><br /> (Windows 10 only)|  
-|**Diagnostic data submission (Windows 8.1 and earlier)**|Allow submission of app log files.<br /><br /> (Windows 8.1 only)|  
+|**Diagnostic data submission**|Allow submission of app log files.<br /><br /> (Windows 8.1 only)|  
 |**Diagnostic data submission (Windows 10)**|Allow submission of app log files.|  
 |**Geolocation**|Allow the device to use location services information.<br /><br /> (Windows 10 only)|  
-|**Copy and Paste**|Use copy and paste to transfer data between apps.<br /><br /> (Windows 10 only)|  
+|**Copy and Paste**|Use copy and paste to transfer data between apps.<br /><br /> (Windows 10 only)|
+|**Factory reset**||
 |**Bluetooth**|Allow use of the devices Bluetooth capability.|  
 |**Bluetooth discoverable mode**|Allow the device to be discovered by other Bluetooth devices.<br /><br /> (Windows 10 only)|  
 |**Bluetooth advertising**|Allow the use of Bluetooth advertising.<br /><br /> (Windows 10 only)|  
-|**Voice recording**|Allow the use of the voice recording features of the device.<br /><br /> (Windows 10 only)|  
+|**Voice recording**|Allow the use of the voice recording features of the device.<br /><br /> (Windows 10 only)| 
+|**Cortana**|| 
 
 ### Email management  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -167,7 +169,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Removable storage**|Allow use of removable storage, like an SD card on the device.<br /><br /> (Windows 10 only)|  
 |**Camera**|Allow use of the device camera.<br /><br /> (Windows 10 only)|  
 |**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows 10 only)|  
-|**AntiTheft mode**|Controls whether Windows 10 AntiTheft mode is enabled.<br /><br /> (Windows 10 only)|  
+|**AntiTheft mode**|Controls whether Windows 10 AntiTheft mode is enabled.<br /><br /> (Windows 10 only)|
+|**Allow USB connection**||  
 |**Profile file**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile name**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile for all users**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
@@ -188,7 +191,9 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Device management while roaming**|Allows the device to be managed by Configuration Manager when it is roaming.<br /><br /> (Windows 10 only)|  
 |**Software download while roaming**|Allows the download of apps and software when roaming.<br /><br /> (Windows 10 only)|  
 |**Email download while roaming**|Allows e-mail downloads when roaming.<br /><br /> (Windows 10 only)|  
-|**Data roaming**|Allow roaming between networks when accessing data.|  
+|**Data roaming**|Allow roaming between networks when accessing data.| 
+|**VPN over cellular**||
+|**VPN roaming over cellular**|| 
 
 ###  Encryption  
 
@@ -282,7 +287,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Virus protection**|Select to ensure that antivirus software is installed on the device.|  
 |**Virus protection signatures are up to date**|Select to ensure that the antivirus signature files are up to date.|  
 |**Pre-release features**|Allows Microsoft to deploy pre-release settings and features to the device.<br /><br /> (Windows 10 only)|  
-|**Manual root certificate installation**|(Windows 10 only)|  
+|**Manual root certificate installation**|(Windows 10 only)|
+|**Allow manual unenrollment**||
 
 ###  Windows Server Work Folders  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -316,7 +322,24 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |------------------|-------------|  
 |**Allow screen to wake automatically when sensors detect someone in the room**|Allows the device to wake automatically when its sensor detects someone in the room.|  
 |**Required PIN for wireless projection**|Specifies whether you must enter a PIN before you can use the wireless projection capabilities of the device.|  
-|**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).|  
+|**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).| 
+|**Azure Operational Insights**||
+|**Workspace ID**||
+|**Workspace Key**||
+|**Miracast wireless projection**||
+|**Miracast channel**||
+|**Meeting information displayed on welcome screen**||
+|**Lockscreen background image URL**|| 
+
+### Windows Information Protection
+
+With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+
+Windows Information Protection (WIP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
+
+ Configuration Manager WIP configuration items manage the list of apps protected by WIP, enterprise network locations, protection level, and encryption settings.
+
+For information about how to configure Windows Information Protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 ### Microsoft Edge  
  These settings are for devices running Windows 10 and later.  
@@ -333,12 +356,23 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Allow Password Manager**|Allow the use of the password manager feature of the Edge browser.|  
 |**Enterprise Mode site list location**|Specifies where to find the list of web sites that will open in Enterprise mode. Users cannot edit this list.|  
 
-### Windows Information Protection (formerly Enterprise Data Protection)
+### Windows Defender
 
-With the increase of employee-owned devices in the enterprise, there’s also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise’s control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
+ These settings are for devices running Windows 10 and later.  
 
-Windows Information Protection (WIP) helps to protect against this potential data leakage without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work without requiring changes to your environment or other apps.
+|Setting name|Details|  
+|------------------|-------------| 
+|**Allow real-time monitoring**||
+|**Allow behavior monitoring**||
+|**Enable Network Inspection System**||
+|**Scan all downloads**||
+|**Allow script scanning**||
+|**Monitor file and program activity**||
+|**Files monitored**||
+|**Days to track resolved malware**||
+|**Allow client UI access**||
+|**Schedule a system scan**||
+|**Day scheduled**||
+|**Time scheduled**||
 
- Configuration Manager WIP configuration items manage the list of apps protected by WIP, enterprise network locations, protection level, and encryption settings.
 
-For information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
