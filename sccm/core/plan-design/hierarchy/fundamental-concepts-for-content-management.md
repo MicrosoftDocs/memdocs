@@ -157,7 +157,7 @@ Clients that cannot find content from a distribution point associated with their
 
 The concepts of preferred distribution points are no longer used, and settings for Allow fallback source locations for content, are no longer available or enforced.
 
-For more information, see [Modern boundary groups]().
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 **Version 1511, 1602, and 1606:**   
@@ -168,7 +168,7 @@ Fallback settings are related to the use of **preferred distribution points** an
 -   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that cannot get a deployment from one of its preferred distribution points.  
 
 
-See [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.
+For information about the different content location and fallback scenarios, see [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about Boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
 
 ## Network bandwidth  
  To help manage the amount of network bandwidth used when you distribute content you can use the following options:  
@@ -185,7 +185,7 @@ Beginning with version 1610, several concepts have changed for how clients find 
 **Version 1610 and later:**   
 Network connection speeds that define a distribution point as **Fast** or **Slow** are no longer used. Instead, each site system associated with a boundary group is treated the same.
 
-For more information, see [Modern boundary groups]().
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 **Version 1511, 1602, and 1606:**   
@@ -198,20 +198,20 @@ For more information, see [Modern boundary groups]().
 
 -   The **network connection speed** and a deployments configuration determine whether a client can download content from a distribution point when the client is in an associated boundary group  
 
-
-See [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
+For inforration about the different content location and fallback scenarios, see [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about Boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
 
 ## On-demand content distribution  
  An option you can set for individual applications and packages (deployments) to enable on-demand content distribution to preferred distribution points.  
 
--   To enable this for a deployment you enable **Distribute the content for this package to preferred distribution points**
+-   To enable this for a deployment you enable **Distribute the content for this package to preferred distribution points**  
 
 -   When this option is enabled for a deployment and a client attempts to request that content but the content is not available on any of the clients preferred distribution points, Configuration Manager automatically distribute that content to the clients preferred distribution points  
 
 -   Although this triggers Configuration Manager to automatically distribute the content to that clients preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment  
 
+If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+If you use version 1511, 1602, or 1606, see  [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
 
-See  [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for  information, about the different content location and fallback scenarios.  
 
 
 ## Package Transfer Manager  
@@ -230,7 +230,7 @@ See  [content source location scenarios](../../../core/plan-design/hierarchy/con
 
 
 For more information:
- - If you use version 1610 or later, see [Modern boundary groups]().
+ - If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
  - If you use version 1511, 1602, or 1606, see [content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 ## Prestage content  
