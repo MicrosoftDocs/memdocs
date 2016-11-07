@@ -724,11 +724,10 @@ The following table lists the log files that contain information related to Disc
 |Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
 
 ###  <a name="BKMK_SU_NAPLog"></a> Software Updates  
- The following table lists the log files that contain information related to software updates.  Additionally, some details remain related to Network Access Protection, a feature that is no longer available with  System Center Configuration Manager.  
+ The following table lists the log files that contain information related to software updates.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|ccmcca.log|Records details about the processing of compliance evaluation based on Configuration Manager NAP policy processing, and contains the processing of remediation for each software update required for compliance.|Client|  
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|The computer hosting the Configuration Manager console from which downloads are initiated|  
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
@@ -736,13 +735,6 @@ The following table lists the log files that contain information related to Disc
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
 |SdmAgent.log|Records details about tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
-|smssha.log|The main log file for the Configuration Manager Network Access Protection client and it contains a merged statement of health information from the two Configuration Manager components: location services (LS) and the configuration compliance agent (CCA). This log file also contains information about the interactions between the Configuration Manager System Health Agent and the operating system NAP agent, and also between the Configuration Manager System Health Agent and both the configuration compliance agent and the location services. It provides information about whether the NAP agent successfully initialized, the statement of health data, and the statement of health response.|Client|  
-|Smsshv.log|This is the main log file for the System Health Validator point and records the basic operations of the System Health Validator service, such as the initialization progress.|Site system server|  
-|Smsshvadcacheclient.log|Records details about the retrieval of Configuration Manager health state references from Active Directory Domain Services.|Site system server|  
-|SmsSHVCacheStore.log|Records details about the cache store used to hold the Configuration Manager NAP health state references retrieved from Active Directory Domain Services, such as reading from the store and purging entries from the local cache store file. The cache store is not configurable.|Site system server|  
-|smsSHVQuarValidator.log|Records client statement of health information and processing operations. To obtain full information, change the registry key **LogLevel** from 1 to 0 in the following location: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL**|Site system server|  
-|smsshvregistrysettings.log|Records any dynamic change to the System Health Validator component configuration while the service is running.|Site system server|  
-|SMSSHVSetup.log|Records the success or failure (with failure reason) of installing the System Health Validator point.|Site system server|  
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
 |StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
@@ -758,7 +750,7 @@ The following table lists the log files that contain information related to Disc
  The following table lists the log files that contain information related to using Wake on LAN.  
 
 > [!NOTE]  
->  Wehn you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_&lt;domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
+>  When you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_&lt;domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
@@ -770,7 +762,6 @@ The following table lists the log files that contain information related to Disc
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|ccmcca.log|Records details about the processing of compliance evaluation based on Configuration Manager NAP policy processing, and contains the processing of remediation for each software update required for compliance.|Client|  
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|  
 |CcmRepair.log|Records the repair activities of the client agent.|Client|
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|The computer hosting the Configuration Manager console from which downloads are initiated|  
@@ -780,13 +771,6 @@ The following table lists the log files that contain information related to Disc
 |SdmAgent.log|Records details about tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the *%windir%\$Windows.~BT\sources\panther* folder.|Client|
-|smssha.log|The main log file for the Configuration Manager Network Access Protection client and it contains a merged statement of health information from the two Configuration Manager components: location services (LS) and the configuration compliance agent (CCA). This log file also contains information about the interactions between the Configuration Manager System Health Agent and the operating system NAP agent, and also between the Configuration Manager System Health Agent and both the configuration compliance agent and the location services. It provides information about whether the NAP agent successfully initialized, the statement of health data, and the statement of health response.|Client|  
-|Smsshv.log|This is the main log file for the System Health Validator point and records the basic operations of the System Health Validator service, such as the initialization progress.|Site system server|  
-|Smsshvadcacheclient.log|Records details about the retrieval of Configuration Manager health state references from Active Directory Domain Services.|Site system server|  
-|SmsSHVCacheStore.log|Records details about the cache store used to hold the Configuration Manager NAP health state references retrieved from Active Directory Domain Services, such as reading from the store and purging entries from the local cache store file. The cache store is not configurable.|Site system server|  
-|smsSHVQuarValidator.log|Records client statement of health information and processing operations. To obtain full information, change the registry key **LogLevel** from 1 to 0 in the following location: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL**|Site system server|  
-|smsshvregistrysettings.log|Records any dynamic change to the System Health Validator component configuration while the service is running.|Site system server|  
-|SMSSHVSetup.log|Records the success or failure (with failure reason) of installing the System Health Validator point.|Site system server|  
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
 |StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
