@@ -28,7 +28,7 @@ You can manage access to:
 
 You can control access to Exchange Online and Exchange On-premises from the built-in email client on the following platforms:  
 
--   Android 4.0 and later, Samsung Knox Standard 4.0 and later  
+-   Android 4.0 and later, Samsung KNOX Standard 4.0 and later  
 
 -   iOS 7.1 and later  
 
@@ -82,7 +82,7 @@ Unsupported browsers will be blocked.The OWA apps for iOS and Android are not su
 
  You can block access to Exchange email from the devices built-in Exchange ActiveSync email client on the following platforms:  
 
--   Android 4.0 and later, Samsung Knox Standard 4.0 and later  
+-   Android 4.0 and later, Samsung KNOX Standard 4.0 and later  
 
 -   iOS 7.1 and later  
 

@@ -105,10 +105,10 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
  For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
-### Kiosk mode settings for Android Samsung KNOX devices  
- Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX devices.  
+### Kiosk mode settings for Android Samsung KNOX Standard devices  
+ Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX Standard devices.  
 
- For details, see [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
+ For details, see [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md).  
 
 ## Conditional access  
 
