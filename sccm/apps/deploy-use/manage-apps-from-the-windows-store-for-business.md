@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,10 +34,10 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 
 |Capability|Offline apps|Online apps|
 |------------|------------|------------|
-|Synchronize app data to Configuration Manager<br>(synchronization occurs every 24 hours)|Yes|Yes|
+|Synchronize app data to Configuration Manager<br>(synchronization occurs every 24 hours, or you can initiate an immediate synchronization)|Yes|Yes|
 |Create Configuration Manager applications from store apps|Yes|Yes|
 |Support for free apps from the store|Yes|Yes|
-|Support for paid apps from the store|No|No|
+|Support for paid apps from the store|No|Yes<sup>1</sup>|
 |Support required deployments to user or device collections|Yes|Yes<sup>1</sup>|
 |Support available deployments to user or device collections|Yes<sup>3</sup>|No<sup>2</sup>|
 
@@ -51,14 +51,14 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 > In this release, if you have a Configuration Manager hierarchy containing a central administration site and at least one primary site, deployment of offline Windows Store for Business apps to devices managed by Intune will fail.
 
 
-## Activate the Windows Store for Business capability
-Because this is a pre-release feature, before you can connect Configuration Manager to the Windows Store for Business, you must take the following steps:
+<!--- ## Activate the Windows Store for Business capability
+Because this is a pre-release feature, before you can connect Configuration Manager to the Windows Store for Business, you must take the following steps: 
 
 **Give your consent to use pre-release features**
 1. In the **Administration** workspace of the Configuration Manager console, click **Site Configuration** > **Sites**.
 2. Select the top-level site in your hierarchy, then, open **Hierarchy Settings**.
 3. In the **Hierarchy Settings Properties** dialog box, check the box, **Consent to use Pre-Release** features.
-4. Click **OK**.
+4. Click **OK**.--->
 
 **Activate the Windows Store for Business capability**
 1. In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Features**.
@@ -91,11 +91,28 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 
 1. Ensure you have purchased at least one app from the Windows Store for Business.In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, then click **Windows Store for Business**.
 2.  On the **Home** tab, in the **Windows Store for Business** group, click **Add Windows Store for Business Account**.
-3.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.
+3.  Add your tenant ID, client id, and client secret key from Azure Active Directory, then complete the wizard.
 4. Once you are done, you will see the account you configured in the **Windows Store for Business** list in the Configuration Manager console.
+
+### To modify the client secret key from Azure Active Directory
+
+1.	In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
+2.	Select your Windows Store for Business account, and then click **Properties**.
+3.	In the **Windows Store for Business Account Properties** dialog box, enter a new key in the **Client secret key** field, and then click **Verify**. Once verified, click **Apply**, then close the dialog box.
+
+## How to synchronize apps from the store with Configuration Manager
+
+Synchronization occurs every 24 hours, or you can initiate an immediate synchronization using this procedure:
+
+1. In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
+3.	On the **Home** tab, in the **Sync** group, click **Sync Now**.
+4.	Soon afterwards, the app you purchased will appear in the **License Information for Store Apps** node of the **Application Management** workspace.
 
 
 ## Create and deploy a Configuration Manager application from a Windows Store for Business app.
+
+This procedure assumes you have acquired at least one free app, or purchased at least one paid online licensed app from the Windows Store for Business.
+
 1.  In the **Software Library** workspace of the Configuration Manager console, expand **Application Management**, then click **License Information for Store Apps**.
 2.  Choose the app you want to deploy, then, in the **Home** tab, in the **Create** group, click **Create Application**.
 A Configuration Manager application is created containing the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
