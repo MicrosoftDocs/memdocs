@@ -50,3 +50,10 @@ In this release, the following improvements have been made to this policy type:
 - You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
+## Improvements for boundary groups
+Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.
+
+When you update to version 1610, the update converts your current boundary group configurations to fit the new model so that these changes do not disturb your existing content distribution configurations.
+
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
