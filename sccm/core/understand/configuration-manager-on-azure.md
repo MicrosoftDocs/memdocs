@@ -107,6 +107,10 @@ The following tables list the initial suggested disk counts to utilize at primar
 |**25k to 50k**      | Site server: F4S </br>Database server: DS13_V2 | Site server: 1xP30 </br>Database server: 2xP30 |
 |**50k to 100k**     | Site server: F8S </br>Database server: DS14_V2 | Site server: 2xP30 </br>Database server: 3xP30 |
 
+The following shows an example configuration for 50k to 100k clients on DS14_V2 with 3xP30 disks in a striped volume with separate logical volumes for the Configuration Manager install and database files:
+ ![VM)disks](media/vm_disks.png)  
+
+
 
 ## User Experience
 ### You mention that user experience is one of the main areas of importance, why is that?

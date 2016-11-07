@@ -203,15 +203,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 2.  Stop the Configuration Manager site by running **Preinst.exe /stopsite** See [Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md).  
 
-3.  Use SQL Server to create a backup of the site database from the primary replica, and then restore that backup to the new secondary replica server. See [Create a Full Database Backup](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) and See [Restore a Database Backup (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) in the SQL Server documentation library.  
-
-4.  Configure each secondary replica. Perform the following actions for each secondary replica in the availability group:  
+3.  Configure each secondary replica. Perform the following actions for each secondary replica in the availability group:  
 
     1.  Manually failover the primary replica to the new secondary replica. See [Perform a Planned Manual Failover of an Availability Group](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) in the SQL Server documentation.  
 
     2.  Configure the database on the new server to be Trustworthy, and enable CLR integration. See [TRUSTWORTHY Database Property](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) and  [Enabling CLR Integration](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)in the SQL Server documentation.  
 
-5.  Restart the site by starting the Site Component Manager (**sitecomp**) and **SMS_Executive** services.  
+4.  Restart the site by starting the Site Component Manager (**sitecomp**) and **SMS_Executive** services.  
 
 #### To remove a replica member from the availability group  
 
