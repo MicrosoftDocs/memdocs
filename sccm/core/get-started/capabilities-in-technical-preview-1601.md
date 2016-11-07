@@ -202,8 +202,8 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
-### Android - Kiosk Mode for Samsung KNOX<br />Hybrid  
- Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
+### Android - Kiosk Mode for Samsung KNOX Standard<br />Hybrid  
+ Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
