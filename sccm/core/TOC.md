@@ -1,6 +1,6 @@
 #   [Understand and explore](understand/introduction.md)
 ##  [Introduction to Configuration Manager](understand/introduction.md)
-### [Find help Configuration Manager](understand/find-help.md)
+### [Find help for Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
 ### [Fundamentals of sites and hierarchies](understand/fundamentals-of-sites-and-hierarchies.md)
