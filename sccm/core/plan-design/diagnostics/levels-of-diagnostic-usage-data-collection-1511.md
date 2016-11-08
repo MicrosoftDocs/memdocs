@@ -39,7 +39,10 @@ System Center Configuration Manager version 1511 collects three levels of diagno
 >  Configuration Manager does not collect site codes or sites names, IP addresses, user or computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful (potentially included in advanced diagnostic information like log files or memory snapshots) and will not be used by Microsoft to identify you, contact you, or for advertising purposes.  
 
 ##  <a name="bkmk_change"></a> How to change the level  
- Administrators with a role-based administrative scope that includes the **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.  
+ Administrators with a role-based administrative scope that includes the **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
+
+ To do so, in the console, go to the backstage tab (the upper left tab with the drop down arrow)  and select **Usage Data**, and then select the data level you want to use.  
+
 
 ##  <a name="bkmk_level1"></a> Level 1 - Basic  
  The Basic level includes data about your hierarchy and is required to help improve your installation or upgrade experience, as well as help determine which Configuration Manager updates are applicable for your hierarchy.  

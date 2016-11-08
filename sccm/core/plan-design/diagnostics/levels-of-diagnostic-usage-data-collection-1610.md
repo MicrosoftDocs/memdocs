@@ -1,8 +1,8 @@
 ---
-title: "Diagnostic data for 1606 | System Center Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1606 collects."
+title: "Diagnostic data for 1610 | System Center Configuration Manager"
+description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1610 collects."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -10,7 +10,7 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
+ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
@@ -33,10 +33,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1606 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager version 1606 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.
+# Levels of diagnostic usage data collection for version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+System Center Configuration Manager version 1610 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.
 
-Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
+Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***. However, version 1610 does not introduce revisions to the data collected with version 1606.
 
 
 > [!IMPORTANT]
@@ -45,12 +45,12 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 ##  <a name="bkmk_change"></a> How to change the level
  Administrators with a role-based administrative scope that includes the **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
-   To do so, in the console, go to the backstage tab (the upper left tab with the drop down arrow)  and select **Usage Data**, and then select the data level you want to use.  
+Beginning with version 1610, you change change the data collection level from within the console by navigating to **Adminisration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings** and then select the data level you want to use.  
 
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
  The Basic level includes data about your hierarchy and is required to help improve your installation or upgrade experience, as well as help determine which Configuration Manager updates are applicable for your hierarchy.
 
- Beginning with System Center Configuration Manager version 1606, this level includes the following:
+ For System Center Configuration Manager version 1610, this level includes the following:
 
 
  -   Setup Information:
@@ -100,7 +100,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 	 -  Statistics about console connections (OS version, language, SKU and architecture; system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 
-- ***[New]*** SQL version, Service Pack level, edition, collation ID, character set
+- SQL version, Service Pack level, edition, collation ID, character set
 
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
@@ -108,7 +108,7 @@ The Enhanced level is the default following setup. This level includes data coll
 
 This level is recommended because it provides Microsoft with the minimum data required to make useful improvements in future versions of products and services. This level does not collect object names (sites, users, computer, or objects), details of security related objects, or vulnerabilities like counts of systems requiring software updates.
 
-Beginning with System Center Configuration Manager version 1606, this level includes the following:
+For System Center Configuration Manager version 1610, this level includes the following:
 
 -   **Application management:**  
 
@@ -134,17 +134,17 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -  Application policy size and complexity statistics
 
-    - ***[New]*** Count of Windows Store for Business (WSfB) apps and sync statistics (including summarized types of apps)  
+    - Count of Windows Store for Business (WSfB) apps and sync statistics (including summarized types of apps)  
 
-    - ***[New]*** Boundary group statistics (how many fast, slow, count per group)
+    - Boundary group statistics (how many fast, slow, count per group)
 
-    - ***[New]*** MSI configuration options and counts
+    - MSI configuration options and counts
 
-    - ***[New]*** App requirements (count of built in conditions are referenced by which deployment technology)
+    - App requirements (count of built in conditions are referenced by which deployment technology)
 
-    - ***[New]*** App supersedence, maximum depth of chain
+    - App supersedence, maximum depth of chain
 
-    - ***[New]*** UDA usage, how created
+    - UDA usage, how created
 
 
 
@@ -156,43 +156,43 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Count of client installation failures  
 
-    -  ***[New]*** Client auto upgrade deployment configuration including client piloting
+    -  Client auto upgrade deployment configuration including client piloting
 
-    -  ***[New]*** Client health statistics and top issue summary
+    -  Client health statistics and top issue summary
 
-    - ***[New]*** BIOS age in years
+    - BIOS age in years
 
-    - ***[New]*** OS age in months
+    - OS age in months
 
-    - ***[New]*** Count of Software Center actions
+    - Count of Software Center actions
 
-    - ***[New]*** Active Management Technology (AMT) client version
+    - Active Management Technology (AMT) client version
 
-    - ***[New]*** Client deployment download errors
+    - Client deployment download errors
 
-    - ***[New]*** Client notification operation action status (how many times each is run, max number of targeted clients, average success rate)
+    - Client notification operation action status (how many times each is run, max number of targeted clients, average success rate)
 
-    - ***[New]*** Deployment methods used for client, count of clients per deployment method
+    - Deployment methods used for client, count of clients per deployment method
 
-    - ***[New]*** Client cache size configuration
-
-
-
-- ***[New]*** **Cloud Services:**
-
-  - ***[New]*** Count of collections sync'd to OMS
-
-  - ***[New]***  Is the OMS cloud connector enabled
+    - Client cache size configuration
 
 
 
-- ***[New] Collections:***
+- **Cloud Services:**
 
-    -  ***[Moved]*** Collection evaluation statistics (query time, assigned vs unassigned counts, counts by type, ID rollover, and rule usage)
+  - Count of collections sync'd to OMS
 
-    - ***[New]*** Collections without a deployment
+  -  Is the OMS cloud connector enabled
 
-    - ***[New]*** Collection ID usage (not running out of IDs)
+
+
+- **Collections:**
+
+    -  Collection evaluation statistics (query time, assigned vs unassigned counts, counts by type, ID rollover, and rule usage)
+
+    - Collections without a deployment
+
+    - Collection ID usage (not running out of IDs)
 
 
 
@@ -202,14 +202,14 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Basic configuration baseline information (count, number of deployments, and number of references)  
 
-    -   ***[Updated]*** Count of deployments referencing built-in settings (now capturing remediate setting)  
+    -   Count of deployments referencing built-in settings (now capturing remediate setting)  
 
-    -   ***[Updated]*** Count of rules and deployments created for custom settings (now capturing remediate setting)  
+    -   Count of rules and deployments created for custom settings (now capturing remediate setting)  
     -   Count of Simple Certificate Enrollment Protocol, VPN, WiFi, certificate (.pfx), and Compliance Policy templates deployed
 
     -  Count of SCEP certificate, VPN, Wifi, certificate (.pfx) and Compliance Policy deployments by platform
 
-    - ***[New]*** Passport for Work policy (created, deployed)
+    - Passport for Work policy (created, deployed)
 
 
 
@@ -236,21 +236,12 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Count of alerts configured for endpoint protection feature  
 
-    - ***[New]*** ATP Policies (count of policies, is it deployed)
+    - ATP Policies (count of policies, is it deployed)
 
 
--   ***[Removed]*** **Mobile application management (MAM):**  
+- **Migration:**
 
-    -   ***[Removed]*** Count of MAM-enabled Office and line of business applications and policy by operating system  
-
-    -   ***[Removed]*** Count of MAM application/policy deployments  
-
-    -   ***[Removed]*** Count of rules created per MAM setting  
-
-
-- ***[New]*** **Migration:**
-
-  -  ***[New]***  Count of migrated objects (use of migration wizard)
+  -   Count of migrated objects (use of migration wizard)
 
 
 
@@ -287,7 +278,7 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
 
-    -   ***[New]*** Counts of task sequence step usage
+    -   Counts of task sequence step usage
 
 
 
@@ -340,7 +331,7 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -   Classifications synced by Software Update Point
 
-    -   ***[New]*** Software update point load balancing statistics
+    -   Software update point load balancing statistics
 
 
 
@@ -352,24 +343,24 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
     -  SQL change tracking retention period
 
-    - ***[New]*** Discovery types, enabled and schedule (full, incremental)
+    - Discovery types, enabled and schedule (full, incremental)
 
-    - ***[New]*** Discovery operational statistics (count of objects found)
+    - Discovery operational statistics (count of objects found)
 
-    - ***[New]*** SQL change tracking performance issues, retention period, and auto-cleanup state
+    - SQL change tracking performance issues, retention period, and auto-cleanup state
 
 
 
-- ***[New]*** **Miscellaneous**
+- **Miscellaneous**
 
-    - ***[New]*** Count of sites with WOL
+    - Count of sites with WOL
 
 
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in Basic and Enhanced. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which may include personal information that existed in memory or log files at the time of capture.
 
-Beginning with System Center Configuration Manager version 1606, this level includes the following:
+For System Center Configuration Manager version 1610, this level includes the following:
 
 -   Collection evaluation and refresh statistics
 
@@ -382,8 +373,6 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 -   Overall compliance of software update deployments
 
 -   Automatic deployment rule evaluation schedule information
-
--   ***[REMOVED]*** Number of clients with network access protection policy
 
 -   Software update deployment error codes and counts
 
@@ -402,12 +391,12 @@ Beginning with System Center Configuration Manager version 1606, this level incl
 
 -    Type of EAS Conditional Access policies (block or quarantine) for Intune-managed devices
 
--   ***[New]*** Top 50 CPUs in the environment
+-   Top 50 CPUs in the environment
 
--   ***[New]*** DCM config pack for SCCM usage
+-   DCM config pack for SCCM usage
 
--   ***[New]*** MSI product code (what are the common apps that customers are deploying)
+-   MSI product code (what are the common apps that customers are deploying)
 
--   ***[New]*** ATP Health Summary
+-   ATP Health Summary
 
--   ***[New]*** Detailed Client deployment installation errors
+-   Detailed Client deployment installation errors
