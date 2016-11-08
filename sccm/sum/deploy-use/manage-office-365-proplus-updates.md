@@ -35,3 +35,6 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
     - Method 2: [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
+
+## Next steps
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md).
