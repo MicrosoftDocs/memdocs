@@ -23,7 +23,7 @@
 #### [Windows 8.1 and Windows 10](deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
 #### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
 #### [iOS and Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
-#### [Android and Samsung KNOX](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
+#### [Android and Samsung KNOX Standard](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
 ### [Create child configuration items](deploy-use/create-child-configuration-items.md)
 
 ## [Create configuration baselines](deploy-use/create-configuration-baselines.md)
@@ -37,4 +37,3 @@
 ## [Create remote connection profiles](deploy-use/create-remote-connection-profiles.md)
 ## [Upgrade Windows devices to a newer version](deploy-use/upgrade-windows-version.md)
 ## [Monitor compliance settings](deploy-use/monitor-compliance-settings.md)
-

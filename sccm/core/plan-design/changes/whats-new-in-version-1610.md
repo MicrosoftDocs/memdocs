@@ -39,3 +39,25 @@ Custom branding for the Software Center is applied according to the following ru
 ## Exclude clients from automatic upgrade
 
 You can exclude Windows clients from getting upgraded with new versions of the client software. To do this, you include the client computers in a collection that is specified to be excluded from upgrade. Client in the excluded collection ignore requests to update the client software.  For more information, see [Exclude Windows clients from upgrades](../../clients/manage/upgrade/exclude-clients-windows.md).
+
+## In-console monitoring of update installation status
+Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
+
+## Improvements to the Windows 10 Edition Upgrade Policy
+
+In this release, the following improvements have been made to this policy type:
+
+- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
+- You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
+
+## Improvements for boundary groups
+Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.
+
+When you update to version 1610, the update converts your current boundary group configurations to fit the new model so that these changes do not disturb your existing content distribution configurations.
+
+For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+
+
+## Migrate multiple shared distribution points at the same time
+You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccmn/core/migration/planning-a-content-deployment-migration-strategy#mictrage-multiple-shared-distributionpoints-at-the-same-time).

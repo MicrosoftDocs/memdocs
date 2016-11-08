@@ -92,7 +92,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Scenarios for Android and Samsung KNOX devices managed without the Configuration Manager client  
+## Scenarios for Android and Samsung KNOX Standard devices managed without the Configuration Manager client  
 
 ### Scenario: Require a password on all Android 5 devices  
  In this scenario, you'll create a configuration item for Android 5 devices only that requires users to configure a password of at least 6 characters on their devices. Additionally, if a user enters an incorrect password 5 times, then the device will be wiped.  

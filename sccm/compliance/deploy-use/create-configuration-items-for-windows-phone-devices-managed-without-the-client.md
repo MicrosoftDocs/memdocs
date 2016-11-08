@@ -1,7 +1,7 @@
 ---
 title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,8 +71,10 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Minimum password length (characters)**|The minimum length for the password.|  
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
-|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
-|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
+|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|
+|**Idle time before device is locked**||  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.| 
+|**Allow simple passwords**|| 
 |**Send password recovery PIN to Exchange Server**||  
   
 ### Device  
@@ -106,15 +108,13 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |Setting|Details|  
 |-------------|-------------|  
 |**Application store**|Allows access to the app store on the device.|  
-|**Enter a password to access the application store**|Users must enter a password to access the app store.|  
-|**In-app purchases**|Allows users to make in-app purchases.|  
   
 ### Browser  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
   
 |Setting|Details|  
 |-------------|-------------|  
-|**Default browser**|User can change the default Internet browser.|  
+|**Allow web browser**|User can change the default Internet browser.|  
 |**Autofill**|User can change autocomplete settings in the browser.|  
 |**Active scripting**|Browser can run scripts, such as Active X scripts.|  
 |**Plug-ins**|User can add plug-ins to Internet Explorer.|  
@@ -157,7 +157,8 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**SMS and MMS messaging**|Allow SMS and MMS messaging from the device.|  
 |**Removable storage**|Allow use of removable storage, like an SD card on the device.|  
 |**Camera**|Allow use of the device camera.|  
-|**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows Phone 8.1 only)|  
+|**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows Phone 8.1 only)| 
+|**Allow USB connection**|| 
   
 ### Peak synchronization  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
@@ -265,7 +266,8 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Minimum classification of updates**|Choose the minimum classification of updates that will be downloaded to Windows computers, **None**, **Important**, or **Recommended**.|  
 |**SmartScreen**|Enable or disable Windows Smart Screen.|  
 |**Virus protection**|Ensure that the device is protected by antivirus software|  
-|**Virus protection signatures are up to date**|Ensure that the antivirus software signatures are up to date.|  
+|**Virus protection signatures are up to date**|Ensure that the antivirus software signatures are up to date.|
+|**Allow manual unenrollment**||  
   
 ### Windows Server Work Folders  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  

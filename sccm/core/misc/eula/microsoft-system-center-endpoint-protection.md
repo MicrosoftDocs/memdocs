@@ -1,18 +1,18 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER"
+title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
+ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
-# MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER **PLEASE NOTE:** Your use of this software is subject to the terms and conditions of the license agreement by which you (or your company) acquired the Microsoft server software or gained access to the online service from Microsoft. For instance, if you are:  
+# MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION**PLEASE NOTE:** Your use of this software is subject to the terms and conditions of the license agreement by which you (or your company) acquired the Microsoft server software or gained access to the online service from Microsoft. For instance, if you are:  
 
 -   a volume license customer or service provider, use of this software is subject to your volume license agreement or service provider license agreement;  
 
