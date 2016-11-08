@@ -1,5 +1,6 @@
 {
   "build_entry_point": "docs",
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SMSDocs",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
@@ -19,7 +20,8 @@
       "template_folder": "_themes"
     }
   ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMDocs",
+
+
   "notification_subscribers": [],
   "branches_to_filter": [
     ""
