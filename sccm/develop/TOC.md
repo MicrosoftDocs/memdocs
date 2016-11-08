@@ -1,4 +1,4 @@
-# [System Center Configuration Manager SDK](system-center-configuration-manager-sdk.md)
+# [System Center Configuration Manager SDK](core/misc/system-center-configuration-manager-sdk.md)
 ## [Privacy Information](core/misc/privacy/privacy-information.md)
 ## [What's new in the System Center Configuration Manager SDK](core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md)
 
@@ -57,7 +57,7 @@
 ##### [How to Delete a Configuration Manager Object by Using WMI](core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md)
 ##### [How to Perform a Synchronous Configuration Manager Query by Using WMI](core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)
 ##### [How to Perform an Asynchronous Configuration Manager Query by Using WMI](core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md)
-##### [How to Read Lazy Properties by Using WMI](how-to-read-lazy-properties-by-using-wmi.md)
+##### [How to Read Lazy Properties by Using WMI](core/understand/how-to-read-lazy-properties-by-using-wmi.md)
 ##### [How to Call a Configuration Manager Object Class Method by Using WMI](core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)
 ### [Configuration Manager Queries](core/understand/queries.md)
 #### [About Configuration Manager Queries](core/understand/about-configuration-manager-queries.md)
@@ -100,10 +100,10 @@
 #### [How to Add a Configuration Manager Context Qualifier by Using WMI](core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)
 ### [Securing Configuration Manager Applications](core/understand/securing-configuration-manager-applications.md)
 
-## [Configuration Manager Application Management](apps/application management.md)
+## [Application Management](apps/application management.md)
 ### [How to Create an Application with the Script Deployment Type](apps/how-to-create-an-application-with-the-script-deployment-type.md)
 
-## [Configuration Manager Application Management Extension](apps/application management extension.md)
+## [Application Management Extension](apps/application management extension.md)
 ### [Deployment Type Extension Versioning](apps/deployment-type-extension-versioning.md)
 ### [Scenario: Extending Application Management](apps/scenario--extending-application-management.md)
 #### [Extending Application Management Overview](apps/extending-application-management-overview.md)
@@ -131,10 +131,10 @@
 ##### [How to Create the Windows Installer File (*.msi)](apps/how-to-create-the-windows-installer-file-msi.md)
 #### [Verifying the Application Management Extension](apps/verifying-the-application-management-extension.md)
 
-## [Configuration Manager Asset Intelligence](core/clients/asset-intelligence/asset intelligence.md)
+## [Asset Intelligence](core/clients/asset-intelligence/asset intelligence.md)
 ### [How to Initiate a Synchronization](core/clients/asset-intelligence/how-to-initiate-a-synchronization.md)
 
-## [Configuration Manager Client Programming](core/clients/programming/client programming.md)
+## [Client Programming](core/clients/programming/client programming.md)
 ### [Configuration Manager Client WMI Programming](core/clients/programming/client wmi programming.md)
 #### [About Configuration Manager WMI Programming](core/clients/programming/about-configuration-manager-wmi-programming.md)
 #### [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md)
@@ -145,7 +145,7 @@
 ### [Client Resource Conditions](core/clients/programming/client-resource-conditions.md)
 ### [How to Apply Custom Client Settings](core/clients/programming/how-to-apply-custom-client-settings.md)
 
-## [Configuration Manager Collections](core/clients/collections/collections.md)
+## [Collections](core/clients/collections/collections.md)
 ### [How to Create a Dynamic Collection](core/clients/collections/how-to-create-a-dynamic-collection.md)
 ### [How to Create a Static Collection](core/clients/collections/how-to-create-a-static-collection.md)
 ### [How to Enumerate the Members of a Collection](core/clients/collections/how-to-enumerate-the-members-of-a-collection.md)
@@ -154,7 +154,7 @@
 ### [How to Get the Properties of a Collection](core/clients/collections/how-to-get-the-properties-of-a-collection.md)
 ### [How to Initiate a One-time Membership Evaluation for a Collection](core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md)
 
-## [Configuration Manager Compliance Settings (DCM)](compliance/compliance settings (dcm).md)
+## [Compliance Settings (DCM)](compliance/compliance settings (dcm).md)
 ### [Compliance Settings Setup and Configuration](compliance/compliance-settings-setup-and-configuration.md)
 #### [About Compliance Settings (DCM) Setup and Configuration](compliance/about-compliance-settings--dcm--setup-and-configuration.md)
 #### [How to Enable or Disable the Compliance Settings (DCM) Agent](compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md)
@@ -183,7 +183,7 @@
 ##### [About General Configuration Items](compliance/about-general-configuration-items.md)
 ##### [General Configuration Item Example 1](compliance/general-configuration-item-example-1.md)
 
-## [Configuration Manager Console Extension](core/servers/console/console extension.md)
+## [Console Extension](core/servers/console/console extension.md)
 ### [About Configuration Manager Console Extension](core/servers/console/about-configuration-manager-console-extension.md)
 ### [Configuration Manager Console Extension Architecture](core/servers/console/console extension architecture.md)
 ### [Configuration Manager Console Extension Deployment](core/servers/console/console extension deployment.md)
@@ -224,7 +224,7 @@
 #### [How to Create a Configuration Manager Console Custom View](core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md)
 #### [How to Create Node XML for a Configuration Manager Console Grid View](core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md)
 
-## [Configuration Manager Discovery](core/servers/configure/discovery.md)
+## [Discovery](core/servers/configure/discovery.md)
 ### [How to Configure Heartbeat Discovery](core/servers/configure/how-to-configure-heartbeat-discovery.md)
 ### [How to Configure Network Discovery](core/servers/configure/how-to-configure-network-discovery.md)
 ### [How to Configure Active Directory Group Discovery](core/servers/configure/how-to-configure-active-directory-group-discovery.md)
@@ -240,7 +240,7 @@
 #### [How to Add New Properties to an Existing Resource Type](core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md)
 #### [How to Create a Data Discovery Record](core/servers/configure/how-to-create-a-data-discovery-record.md)
 
-## [Configuration Manager Inventory](core/clients/inventory/inventory.md)
+## [Inventory](core/clients/inventory/inventory.md)
 ### [About Configuration Manager Inventory](core/clients/inventory/about-configuration-manager-inventory.md)
 ### [How to Enable Hardware Inventory](core/clients/inventory/how-to-enable-hardware-inventory.md)
 ### [How to Configure Hardware Inventory Settings](core/clients/inventory/how-to-configure-hardware-inventory-settings.md)
@@ -250,11 +250,11 @@
 ### [How to Reset the Software Inventory Cache](core/clients/inventory/how-to-reset-the-software-inventory-cache.md)
 ### [How to Import a MOF File to Extend Inventory](core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md)
 
-## [Configuration Manager Mobile Device Management](mdm/mobile device management.md)
+## [Mobile Device Management](mdm/mobile device management.md)
 ### [How to Configure Mobile Device Client Agent Settings](mdm/how-to-configure-mobile-device-client-agent-settings.md)
 ### [How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices](mdm/3becb7a9-cf6b-432b-85e7-a0087df0dbb6.md)
 
-## [Configuration Manager Operating System Deployment](osd/operating system deployment.md)
+## [Operating System Deployment](osd/operating system deployment.md)
 ### [Operating System Deployment Site Role Configuration](osd/operating-system-deployment-site-role-configuration.md)
 #### [About Operating System Deployment Site Role Configuration](osd/about-operating-system-deployment-site-role-configuration.md)
 #### [How to Create a State Migration Point Role](osd/how-to-create-a-state-migration-point-role.md)
@@ -327,10 +327,10 @@
 #### [How to Create a MOF File for a Configuration Manager Custom Action](osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)
 #### [How to Use a Configuration Manager Custom Action Control](osd/how-to-use-a-configuration-manager-custom-action-control.md)
 
-## [Configuration Manager Role-Based Administration](core/servers/configure/role-based administration.md)
+## [Role-Based Administration](core/servers/configure/role-based administration.md)
 ### [Administrative User Management](core/servers/configure/administrative-user-management.md)
 #### [How to Check if a User Has Permissions for an Object](core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md)
-#### [How to Check if a User Has Permissions for a Resource](how-to-check-if-a-user-has-permissions-for-a-resource.md)
+#### [How to Check if a User Has Permissions for a Resource](core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md)
 #### [How to Enumerate the Administrative Assignments for a User or Security Group](core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md)
 #### [How to Create a New Administrator](core/servers/configure/how-to-create-a-new-administrator.md)
 #### [How to Create a New Security Role](core/servers/configure/how-to-create-a-new-security-role.md)
@@ -340,11 +340,11 @@
 #### [How to Associate an Object with a Security Scope](core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)
 #### [How to Remove an Object Association with a Security Scope](core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)
 
-## [Configuration Manager Remote Tools](core/clients/remote-control/remote tools.md)
+## [Remote Tools](core/clients/remote-control/remote tools.md)
 ### [How to Enable and Disable Remote Tools](core/clients/remote-control/how-to-enable-and-disable-remote-tools.md)
 ### [How to Configure Remote Tools Settings](core/clients/remote-control/how-to-configure-remote-tools-settings.md)
 
-## [Configuration Manager Software Distribution](core/servers/configure/software distribution.md)
+## [Software Distribution](core/servers/configure/software distribution.md)
 ### [Software Distribution Overview](core/servers/configure/software-distribution-overview.md)
 ### [Software Distribution Packages](core/servers/configure/software-distribution-packages.md)
 #### [About Package Definition Files](core/servers/configure/about-package-definition-files.md)
@@ -353,7 +353,7 @@
 #### [How to Configure Package Properties](core/servers/configure/how-to-configure-package-properties.md)
 #### [How to Configure a Package to Use Binary Delta Replication](core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md)
 #### [How to Delete a Package](core/servers/configure/how-to-delete-a-package.md)
-#### [How to Assign a Package to a Distribution Point](how-to-assign-a-package-to-a-distribution-point.md)
+#### [How to Assign a Package to a Distribution Point](core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)
 ### [Software Distribution Programs](core/servers/configure/software-distribution-programs.md)
 #### [About Software Distribution Programs](core/servers/configure/about-software-distribution-programs.md)
 #### [How to Create a Program](core/servers/configure/how-to-create-a-program.md)
@@ -386,7 +386,7 @@
 #### [How to List Distribution Points for a Site](core/servers/configure/how-to-list-distribution-points-for-a-site.md)
 #### [How to Set the Distribute on Demand Flag](core/servers/configure/how-to-set-the-distribute-on-demand-flag.md)
 
-## [Configuration Manager Software Metering](apps/software metering.md)
+## [Software Metering](apps/software metering.md)
 ### [How to Enable or Disable Software Metering](apps/how-to-enable-or-disable-software-metering.md)
 ### [How to Configure Automatic Software Metering Rule Generation](apps/how-to-configure-automatic-software-metering-rule-generation.md)
 ### [How to Create a Software Metering Rule](apps/how-to-create-a-software-metering-rule.md)
@@ -395,7 +395,7 @@
 ### [How to View File Usage Summary Information](apps/how-to-view-file-usage-summary-information.md)
 ### [How to View Monthly Usage Summary Information](apps/how-to-view-monthly-usage-summary-information.md)
 
-## [Configuration Manager Software Updates](sum/software updates.md)
+## [Software Updates](sum/software updates.md)
 ### [Software Updates Setup and Configuration](sum/software-updates-setup-and-configuration.md)
 #### [About Software Updates Setup and Configuration](sum/about-software-updates-setup-and-configuration.md)
 #### [How to Configure the Software Update Point]sum/(how-to-configure-the-software-update-point.md)
@@ -418,4 +418,4 @@
 ### [Software Updates and Maintenance Windows](sum/software-updates-and-maintenance-windows.md)
 #### [How to Configure Software Updates to Override Maintenance Windows](sum/how-to-configure-software-updates-to-override-maintenance-windows.md)
 
-## [reference](reference\TOC.md)
+## [Configuration Manager Reference](reference\TOC.md)

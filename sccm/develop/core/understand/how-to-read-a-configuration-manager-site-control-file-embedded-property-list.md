@@ -43,8 +43,6 @@ In System Center Configuration Manager, you read an embedded property list from 
 ## Example  
  The following example method populates the supplied `values` parameter with the assetId:///Values?qualifyHint=False&autoUpgrade=True array of the embedded property list (assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True) identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.  
 
- You can update the embedded property list values that are returned from this method by using the method in [How to Write a Configuration Manager Site Control File Embedded Property List](../Topic/How%20to%20Write%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20Property%20List.md).  
-
  To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  

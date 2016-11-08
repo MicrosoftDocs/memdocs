@@ -1,12 +1,10 @@
-# [Configuration Manager Reference](configuration-manager-reference.md)
+## [Class and Property Qualifiers](misc/class and property qualifiers.md)
 
-## [Configuration Manager Class and Property Qualifiers](misc/class and property qualifiers.md)
-
-## [SMS_WhatsNewFeature Server WMI Class](mis/sms_whatsnewfeature-server-wmi-class.md)
+## [SMS_WhatsNewFeature Server WMI Class](misc/sms_whatsnewfeature-server-wmi-class.md)
 ### [GetFeatures Method in Class SMS_WhatsNewFeature](misc/getfeatures-method-in-class-sms_whatsnewfeature.md)
 ## [SMS_WhatsNewScenario Server WMI Class](misc/sms_whatsnewscenario-server-wmi-class.md)
 
-## [Configuration Manager Alert System Server WMI Classes](core/servers/manage/alert system server wmi classes.md)
+## [System Server WMI Classes](core/servers/manage/alert system server wmi classes.md)
 ### [SMS_Alert Server WMI Class](core/servers/manage/sms_alert-server-wmi-class.md)
 #### [Close Method in Class SMS_Alert](core/servers/manage/close-method-in-class-sms_alert.md)
 ### [SMS_AlertBase Server WMI Class](core/servers/manage/sms_alertbase-server-wmi-class.md)
@@ -21,7 +19,7 @@
 #### [GetTestSmtpConnectionResult Method in Class SMS_Subscription](core/servers/manage/gettestsmtpconnectionresult-method-in-class-sms_subscription.md)
 #### [TestSmtpConnection Method in Class SMS_Subscription](core/servers/manage/testsmtpconnection-method-in-class-sms_subscription.md)
 
-## [Configuration Manager Alternate Content Provider Classes](core/servers/configure/alternate content provider classes.md)
+## [Alternate Content Provider Classes](core/servers/configure/alternate content provider classes.md)
 ### [CCM_CONTENTFLAG Enumeration](core/servers/configure/ccm_contentflag-enumeration.md)
 ### [CCM_DTS_PRIORITY Enumeration](core/servers/configure/ccm_dts_priority-enumeration.md)
 ### [CCM_DTS_FLAG Enumeration](core/servers/configure/ccm_dts_flag-enumeration.md)
@@ -41,7 +39,7 @@
 #### [ICcmAlternatedownloadProvider : Suspend Method](core/servers/configure/iccmalternatedownloadprovider---suspend-method.md)
 ### [ICcmContentTransferManager4 Interface](core/servers/configure/iccmcontenttransfermanager4-interface.md)
 
-## [Configuration Manager Application Management Server WMI Classes](apps/application management server wmi classes.md)
+## [Application Management Server WMI Classes](apps/application management server wmi classes.md)
 ### [SMS_AppConflictsData Server WMI Class](apps/sms_appconflictsdata-server-wmi-class.md)
 ### [SMS_AppDependencyData Server WMI Class](apps/sms_appdependencydata-server-wmi-class.md)
 ### [SMS_AppDeploymentAssetDetails Server WMI Class](apps/sms_appdeploymentassetdetails-server-wmi-class.md)
@@ -98,7 +96,7 @@
 ### [SMS_UserApplicationRequestHistoryItem Server WMI Class](apps/sms_userapplicationrequesthistoryitem-server-wmi-class.md)
 ### [SMS_VirtualEnvironment Server WMI Classes](apps/sms_virtualenvironment-server-wmi-classes.md)
 
-## [Configuration Manager Asset Intelligence Server WMI Classes](core/clients/asset-intelligence/asset intelligence server wmi classes.md)
+## [Asset Intelligence Server WMI Classes](core/clients/asset-intelligence/asset intelligence server wmi classes.md)
 ### [SMS_AICategory Server WMI Class](core/clients/asset-intelligence/sms_aicategory-server-wmi-class.md)
 #### [GetSummary Method in Class SMS_AICategory](core/clients/asset-intelligence/getsummary-method-in-class-sms_aicategory.md)
 ### [SMS_AIHardwareRequirements Server WMI Class](core/clients/asset-intelligence/sms_aihardwarerequirements-server-wmi-class.md)
@@ -116,7 +114,7 @@
 #### [ResolveConflict Method in Class SMS_AISoftwareList](core/clients/asset-intelligence/resolveconflict-method-in-class-sms_aisoftwarelist.md)
 #### [SetCategorizationRequest Method in Class SMS_AISoftwareList](core/clients/asset-intelligence/setcategorizationrequest-method-in-class-sms_aisoftwarelist.md)
 
-## [Configuration Manager Client Classes](core/clients/client-classes/client classes.md)
+## [Client Classes](core/clients/client-classes/client classes.md)
 ### [Application Management Client Interfaces](core/clients/client-classes/application-management-client-interfaces.md)
 #### [AppDetectState Enumeration](core/clients/client-classes/appdetectstate-enumeration.md)
 #### [AppContentInfo Structure](core/clients/client-classes/appcontentinfo-structure.md)
@@ -245,7 +243,7 @@
 #### [CCM_Scheduler_History Client WMI Class](core/clients/client-classes/ccm_scheduler_history-client-wmi-class.md)
 #### [CCM_Scheduler_ScheduledMessage Client WMI Class](core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md)
 
-## [Configuration Manager Client Configuration Server WMI Classes](core/clients/config/client configuration server wmi classes.md)
+## [Client Configuration Server WMI Classes](core/clients/config/client configuration server wmi classes.md)
 ### [SMS_AdvancedAntimalwareSettings Server WMI Class](core/clients/config/sms_advancedantimalwaresettings-server-wmi-class.md)
 ### [SMS_AntimalwareAdvancedSettingsConfig Server WMI Class](core/clients/config/sms_antimalwareadvancedsettingsconfig-server-wmi-class.md)
 ### [SMS_AntimalwareConfig Server WMI Class](core/clients/config/sms_antimalwareconfig-server-wmi-class.md)
@@ -287,7 +285,7 @@
 ### [SMS_StateSystemConfig Server WMI Class](core/clients/config/sms_statesystemconfig-server-wmi-class.md)
 ### [SMS_TargetingAgentConfig Server WMI Class](core/clients/config/sms_targetingagentconfig-server-wmi-class.md)
 
-## [Configuration Manager Client Deployment Server WMI Classes](core/clients/deploy/client deployment server wmi classes.md)
+## [Client Deployment Server WMI Classes](core/clients/deploy/client deployment server wmi classes.md)
 ### [SMS_ClientBaseline Sever WMI Class](core/clients/deploy/sms_clientbaseline-sever-wmi-class.md)
 ### [SMS_ClientBaselineItem Server WMI Class](core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md)
 ### [SMS_ClientBaselineStatus Server WMI Class](core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md)
@@ -303,7 +301,7 @@
 #### [ImportForUser Method in Class SMS_ClientPfxCertificate](core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md)
 #### [DeleteForUser Method in Class SMS_ClientPfxCertificate](core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md)
 
-## [Configuration Manager Client SDK WMI Classes](core/clients/sdk/client sdk wmi classes.md)
+## [Client SDK WMI Classes](core/clients/sdk/client sdk wmi classes.md)
 ### [CCM_AppDeploymentType Client WMI Class](core/clients/sdk/ccm_appdeploymenttype-client-wmi-class.md)
 #### [GetDeploymentTypeForUser Method in Class CCM_AppDeploymentType](core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md)
 #### [GetProperty Method in Class CCM_AppDeploymentType](core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md)
@@ -354,7 +352,7 @@
 ### [CCM_RemoteControlManager Client WMI Class](core/clients/sdk/ccm_remotecontrolmanager-client-wmi-class.md)
 #### [GetRemCtrlSettings Method in Class CCM_RemoteControlManager](core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)
 #### [SetRemCtrlSettings Method in Class CCM_RemoteControlManager](core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)
-### [CCM_RequestedAppPolicy Client WMI Class](ccm_requested-apppolicy-client-wmi-class.md)
+### [CCM_RequestedAppPolicy Client WMI Class](core/clients/sdk/ccm_requested-apppolicy-client-wmi-class.md)
 #### [QueueRequestedAppPolicy Method in Class CCM_RequestedAppPolicy](core/clients/sdk/queuerequestedapppolicy-method-in-class-ccm_requestedapppolicy.md)
 ### [CCM_RequestedAppPolicyActivation Client WMI Class](core/clients/sdk/ccm_requestedapppolicyactivation-client-wmi-class.md)
 #### [QueueAppPolicyActivationAction Method in Class CCM_RequestedAppPolicyActivation](core/clients/sdk/queueapppolicyactivationaction-method-in-class-ccm_requestedapppolicyactivation.md)
@@ -381,7 +379,7 @@
 #### [SetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager](core/clients/sdk/setallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md)
 ### [CCM_UserLogonEvents Client WMI Class](core/clients/sdk/ccm_userlogonevents-client-wmi-class.md)
 
-## [Configuration Manager Client Status Server WMI Classes](core/clients/status/client status server wmi classes.md)
+## [Client Status Server WMI Classes](core/clients/status/client status server wmi classes.md)
 ### [SMS_CH_CheckSummary Server WMI Class](core/clients/status/sms_ch_checksummary-server-wmi-class.md)
 ### [SMS_CH_EvalResult Server WMI Class](core/clients/status/sms_ch_evalresult-server-wmi-class.md)
 ### [SMS_CH_Settings Server WMI Class](core/clients/status/sms_ch_settings-server-wmi-class.md)
@@ -390,7 +388,7 @@
 ### [SMS_CN_ClientStatus Server WMI Class](core/clients/status/sms_cn_clientstatus-server-wmi-class.md)
 #### [GetOnlineCount Method in Class SMS_CN_ClientStatus](core/clients/status/getonlinecount-method-in-class-sms_cn_clientstatus.md)
 
-## [Configuration Manager Collections Server WMI Classes](core/clients/collections/collections server wmi classes.md)
+## [Collections Server WMI Classes](core/clients/collections/collections server wmi classes.md)
 ### [SMS_CM_RES_COLL_CollectionID Server WMI Class](core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md)
 ### [SMS_Collection Server WMI Class](core/clients/collections/sms_collection-server-wmi-class.md)
 #### [AddMembershipRule Method in Class SMS_Collection](core/clients/collections/addmembershiprule-method-in-class-sms_collection.md)
@@ -440,7 +438,7 @@
 ### [SMS_DirFullCollMem Server WMI Class](core/clients/collections/sms_dirfullcollmem-server-wmi-class.md)
 ### [SMS_FullCollectionMembership Server WMI Class](core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md)
 
-## [Configuration Manager Compliance Settings (DCM) Server WMI Classes](compliance/compliance settings (dcm) server wmi classes.md)
+## [Compliance Settings (DCM) Server WMI Classes](compliance/compliance settings (dcm) server wmi classes.md)
 ### [SMS_AdvancedThreatProtectionSettings Server WMI Class](compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md)
 ### [SMS_BaselineAssignment Server WMI Class](compliance/sms_baselineassignment-server-wmi-class.md)
 ### [SMS_Category_LocalizedProperties Server WMI Class](compliance/sms_category_localizedproperties-server-wmi-class.md)
@@ -499,7 +497,7 @@
 #### [GetEULA Method in Class SMS_UserStateManagementSettings](compliance/geteula-method-in-class-sms_userstatemanagementsettings.md)
 ### [SMS_WSfBConfigurationData Server WMI Class](compliance/sms_wsfbconfigurationdata-server-wmi-class.md)
 
-## [Configuration Manager Console Extension Server WMI Classes](core/servers/console/console extension server wmi classes.md)
+## [Console Extension Server WMI Classes](core/servers/console/console extension server wmi classes.md)
 ### [Configuration Manager Console Command-Line Options](core/servers/console/console command-line options.md)
 ### [Configuration Manager Console Folder Server WMI Classes](core/servers/console/console folder server wmi classes.md)
 #### [SMS_InstanceChangeNotification Server WMI Class](core/servers/console/sms_instancechangenotification-server-wmi-class.md)
@@ -513,7 +511,7 @@
 #### [SMS_RoleInObjectType Server WMI Class](core/servers/console/sms_roleinobjecttype-server-wmi-class.md)
 #### [SMS_SearchFolder Server WMI Class](core/servers/console/sms_searchfolder-server-wmi-class.md)
 
-## [Configuration Manager Content Server WMI Classes](core/servers/configure/content server wmi classes.md)
+## [Content Server WMI Classes](core/servers/configure/content server wmi classes.md)
 ### [SMS_Content Server WMI Class](core/servers/configure/sms_content-server-wmi-class.md)
 #### [IsOfficeContent Method in Class SMS_Content](core/servers/configure/isofficecontent-method-in-class-sms_content.md)
 ### [SMS_ContentPackage Server WMI Class](core/servers/configure/sms_contentpackage-server-wmi-class.md)
@@ -538,7 +536,7 @@
 ### [SMS_DPStatusInfo Server WMI Class](core/servers/configure/sms_dpstatusinfo-server-wmi-class.md)
 ### [SMS_PackageContentServerInfo Server WMI Class](core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md)
 
-## [Configuration Manager Deprecated Functions](misc/deprecated functions.md)
+## [Deprecated Functions](misc/deprecated functions.md)
 ### [SmsCreateAccount](misc/smscreateaccount.md)
 ### [SmsGrantActAsOSRight](misc/smsgrantactasosright.md)
 ### [SmsGrantAdminRight](misc/smsgrantadminright.md)
@@ -547,7 +545,7 @@
 ### [SmsLsaAccount](misc/smslsaaccount.md)
 ### [SmsLsaGetTrustedDomains](misc/smslsagettrusteddomains.md)
 
-## [Configuration Manager Device Management Server WMI Classes](mdm/device management server wmi classes.md)
+## [Device Management Server WMI Classes](mdm/device management server wmi classes.md)
 ### [SMS_DeviceEnrollmentProfile Server WMI Class](mdm/sms_deviceenrollmentprofile-server-wmi-class.md)
 ### [SMS_DeviceMethods Server WMI Class](mdm/sms_devicemethods-server-wmi-class.md)
 #### [AllowAccess Method in Class SMS_DeviceMethods](mdm/allowaccess-method-in-class-sms_devicemethods.md)
@@ -565,7 +563,7 @@
 #### [Unlock Method in Class SMS_DeviceSettingPackage](mdm/unlock-method-in-class-sms_devicesettingpackage.md)
 ### [SMS_DeviceSettingPackageItem Server WMI Class](mdm/sms_devicesettingpackageitem-server-wmi-class.md)
 
-## [Configuration Manager Discovery Classes](core/servers/configure/discovery classes.md)
+## [Discovery Classes](core/servers/configure/discovery classes.md)
 ### [Discovery Server WMI Classes](core/servers/configure/discovery-server-wmi-classes.md)
 #### [SMS_ADDomain Server WMI Class](core/servers/configure/sms_addomain-server-wmi-class.md)
 #### [SMS_ADForest Server WMI Class](core/servers/configure/sms_adforest-server-wmi-class.md)
@@ -576,14 +574,14 @@
 ### [SMSResGen COM Automation Class](core/servers/configure/smsresgen-com-automation-class.md)
 #### [ISMSResGen Interface](core/servers/configure/ismsresgen-interface.md)
 ##### [DDRAddStringArray](core/servers/configure/ddraddstringarray.md)
-##### [DDRAddIntegerArray](ddraddintegerarray.md)
+##### [DDRAddIntegerArray](core/servers/ddraddintegerarray.md)
 ##### [DDRAddInteger](core/servers/configure/ddraddinteger.md)
 ##### [DDRNew](core/servers/configure/ddrnew.md)
 ##### [DDRWrite](core/servers/configure/ddrwrite.md)
 ##### [DDRAddString](core/servers/configure/ddraddstring.md)
 ##### [DDRPropertyFlagsEnum Enumeration](core/servers/configure/ddrpropertyflagsenum-enumeration.md)
 
-## [Configuration Manager Endpoint Protection Server WMI Classes](protect/endpoint protection server wmi classes.md)
+## [Endpoint Protection Server WMI Classes](protect/endpoint protection server wmi classes.md)
 ### [SMS_AmPolicySummary Server WMI Class](protect/sms_ampolicysummary-server-wmi-class.md)
 ### [SMS_ClientAction Server WMI Class](protect/sms_clientaction-server-wmi-class.md)
 ### [SMS_ClientActionStatus Server WMI Class](protect/sms_clientactionstatus-server-wmi-class.md)
@@ -608,7 +606,7 @@
 ### [SMS_TopThreatPath Server WMI Class](protect/sms_topthreatpath-server-wmi-class.md)
 ### [SMS_TopThreatSummary Server WMI Class](protect/sms_topthreatsummary-server-wmi-class.md)
 
-## [Configuration Manager Hybrid Server WMI Classes](mdm/hybrid server wmi classes.md)
+## [Hybrid Server WMI Classes](mdm/hybrid server wmi classes.md)
 ### [Mobile Device Management Server WMI Classes](mdm/mobile-device-management-server-wmi-classes.md)
 #### [MDM_GenericAppConfiguration Server WMI Class](mdm/mdm_genericappconfiguration-server-wmi-class.md)
 #### [SMS_BulkEnrollmentProfiles Server WMI Class](mdm/sms_bulkenrollmentprofiles-server-wmi-class.md)
@@ -630,7 +628,7 @@
 ##### [RemoveMultipleResourceIds Method in Class SMS_MDMDeviceEnrollmentManagers](mdm/removemultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md)
 #### [SMS_WinRTSideLoadingKey Server WMI Class](mdm/sms_winrtsideloadingkey-server-wmi-class.md)
 
-## [Configuration Manager Migration Server WMI Classes](core/migration/migration server wmi classes.md)
+## [Migration Server WMI Classes](core/migration/migration server wmi classes.md)
 ### [SMS_MigrationCollectionInfo Server WMI Class](core/migration/sms_migrationcollectioninfo-server-wmi-class.md)
 #### [GetClientsCountByCollections Method in Class SMS_MigrationCollectionInfo](core/migration/getclientscountbycollections-method-in-class-sms_migrationcollectioninfo.md)
 ### [SMS_MigrationDashboard Server WMI Class](core/migration/sms_migrationdashboard-server-wmi-class.md)
@@ -653,12 +651,12 @@
 #### [Sync Method in Class SMS_MigrationSiteMapping](core/migration/sync-method-in-class-sms_migrationsitemapping.md)
 ### [SMS_MigrationSourceSite Server WMI Class](core/migration/sms_migrationsourcesite-server-wmi-class.md)
 
-## [Configuration Manager NAP Server WMI Classes](misc/nap server wmi classes.md)
+## [NAP Server WMI Classes](misc/nap server wmi classes.md)
 ### [SMS_NAPRestrictionErrorSummary Server WMI Class](misc/sms_naprestrictionerrorsummary-server-wmi-class.md)
 ### [SMS_NAPRestrictionSummary Server WMI Class](misc/sms_naprestrictionsummary-server-wmi-class.md)
 ### [SMS_NAPSystemInfo Server WMI Class](misc/sms_napsysteminfo-server-wmi-class.md)
 
-## [Configuration Manager Obsolete Classes](misc/obsolete classes.md)
+## [Obsolete Classes](misc/obsolete classes.md)
 ### [SMS_AdvertisementStatusRootSummarizer Server WMI Class](misc/sms_advertisementstatusrootsummarizer-server-wmi-class.md)
 ### [SMS_AdvertisementStatusSummarizer Server WMI Class](misc/sms_advertisementstatussummarizer-server-wmi-class.md)
 ### [SMS_AppStatePerClientDT Server WMI Class](misc/sms_appstateperclientdt-server-wmi-class.md)
@@ -714,7 +712,7 @@
 ##### [ITsMediaClass::DistributionPoints Property](misc/itsmediaclass--distributionpoints-property.md)
 ##### [ITsMediaClass::ErrorDetail Property](misc/itsmediaclass--errordetail-property.md)
 ##### [ITsMediaClass::ExitCode Property](misc/itsmediaclass--exitcode-property.md)
-##### [ITsMediaClass::MediaLabel Property](misd/itsmediaclass--medialabel-property.md)
+##### [ITsMediaClass::MediaLabel Property](misc/itsmediaclass--medialabel-property.md)
 ##### [ITsMediaClass::NumSteps Property](misc/itsmediaclass--numsteps-property.md)
 ##### [ITsMediaClass::ProviderName Property](misc/itsmediaclass--providername-property.md)
 ##### [ITsMediaClass::SiteCode Property](misc/itsmediaclass--sitecode-property.md)
@@ -722,7 +720,7 @@
 ##### [ITsMediaClass::StepInfo Property](misc/itsmediaclass--stepinfo-property.md)
 ##### [ITsMediaClass::StepProgress Property](misc/itsmediaclass--stepprogress-property.md)
 
-## [Configuration Manager Operating System Deployment Classes](osd/operating system deployment classes.md)
+## [Operating System Deployment Classes](osd/operating system deployment classes.md)
 ### [Operating System Deployment Driver Supported Platforms Schema](osd/operating-system-deployment-driver-supported-platforms-schema.md)
 #### [PlatformApplicabilityCondition](osd/platformapplicabilitycondition.md)
 #### [PlatformApplicabilityConditions](osd/platformapplicabilityconditions.md)
@@ -908,11 +906,11 @@
 #### [SMS_WinPEOptionalComponentInfo Server WMI Class](osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md)
 #### [Operating System Deployment CreateMedia.exe](osd/operating-system-deployment-createmedia.exe.md)
 
-## [Configuration Manager Out of Band Management Server WMI Classes](misc/out of band management server wmi classes.md)
+## [Out of Band Management Server WMI Classes](misc/out of band management server wmi classes.md)
 ### [SMS_AMTCertificate Server WMI Class](misc/sms_amtcertificate-server-wmi-class.md)
 ### [SMS_AMTMachineInfo Server WMI Class](misc/sms_amtmachineinfo-server-wmi-class.md)
 
-## [Configuration Manager Role-Based Administration Server WMI Classes](core/servers/configure/role-based administration server wmi classes.md)
+## [Role-Based Administration Server WMI Classes](core/servers/configure/role-based administration server wmi classes.md)
 ### [SMS_Admin Server WMI Class](core/servers/configure/sms_admin-server-wmi-class.md)
 #### [GetAdminExtendedData Method in Class SMS_Admin](core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md)
 ### [SMS_AdminCategory Server WMI Class](core/servers/configure/sms_admincategory-server-wmi-class.md)
@@ -938,7 +936,7 @@
 #### [RemoveMemberships Method in Class SMS_SecuredCategoryMembership](core/servers/configure/removememberships-method-in-class-sms_securedcategorymembership.md)
 ### [SMS_SettableSecuredCategory Server WMI Class](core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md)
 
-## [Configuration Manager Scheduling Server WMI Classes](core/servers/configure/scheduling server wmi classes.md)
+## [Scheduling Server WMI Classes](core/servers/configure/scheduling server wmi classes.md)
 ### [SMS_ScheduleMethods Server WMI Class](core/servers/configure/sms_schedulemethods-server-wmi-class.md)
 #### [ReadFromString Method in Class SMS_ScheduleMethods](core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md)
 #### [WriteToString Method in Class SMS_ScheduleMethods](core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md)
@@ -949,7 +947,7 @@
 ### [SMS_ST_RecurMonthlyByWeekday Server WMI Class](core/servers/configure/sms_st_recurmonthlybyweekday-server-wmi-class.md)
 ### [SMS_ST_RecurWeekly Server WMI Class](core/servers/configure/sms_st_recurweekly-server-wmi-class.md)
 
-## [Configuration Manager SEDO Server WMI Classes](misc/sedo server wmi classes.md)
+## [SEDO Server WMI Classes](misc/sedo server wmi classes.md)
 ### [SMS_ObjectLock Server WMI Class](misc/sms_objectlock-server-wmi-class.md)
 #### [CancelLockRequest Method in Class SMS_ObjectLock](misc/cancellockrequest-method-in-class-sms_objectlock.md)
 #### [CancelLockRequests Method in Class SMS_ObjectLock](misc/cancellockrequests-method-in-class-sms_objectlock.md)
@@ -965,7 +963,7 @@
 #### [RequestLocksAsync Method in Class SMS_ObjectLock](misc/requestlocksasync-method-in-class-sms_objectlock.md)
 ### [SMS_ObjectLockRequest Server WMI Class](misc/sms_objectlockrequest-server-wmi-class.md)
 
-## [Configuration Manager Site Configuration Server WMI Classes](core/servers/configure/site configuration server wmi classes.md)
+## [Site Configuration Server WMI Classes](core/servers/configure/site configuration server wmi classes.md)
 ### [SMS_Boundary Server WMI Class](core/servers/configure/sms_boundary-server-wmi-class.md)
 ### [SMS_BoundaryGroup Server WMI Class](core/servers/configure/sms_boundarygroup-server-wmi-class.md)
 #### [AddBoundary Method in Class SMS_BoundaryGroup](core/servers/configure/addboundary-method-in-class-sms_boundarygroup.md)
@@ -1041,7 +1039,7 @@
 ### [SMS_SiteToSubSite_a Server WMI Class](core/servers/configure/sms_sitetosubsite_a-server-wmi-class.md)
 ### [SMS_SiteToSiteID_a Server WMI Class](core/servers/configure/sms_sitetositeid_a-server-wmi-class.md)
 
-## [Configuration Manager Software Distribution Server WMI Classes](core/servers/configure/software distribution server wmi classes.md)
+## [Software Distribution Server WMI Classes](core/servers/configure/software distribution server wmi classes.md)
 ### [SMS_Advertisement Server WMI Class](core/servers/configure/sms_advertisement-server-wmi-class.md)
 #### [GetAdvertisements Method in Class SMS_Advertisement](core/servers/configure/getadvertisements-method-in-class-sms_advertisement.md)
 #### [GetNextID Method in Class SMS_Advertisement](core/servers/configure/getnextid-method-in-class-sms_advertisement.md)
@@ -1111,7 +1109,7 @@
 #### [Enable Method in Class SMS_SupportedPlatforms](core/servers/configure/enable-method-in-class-sms_supportedplatforms.md)
 ### [SMS_SupportedPlatformsOfflineServicing Server WMI Class](core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md)
 
-## [Configuration Manager Software Metering Server WMI Classes](apps/software metering server wmi classes.md)
+## [Software Metering Server WMI Classes](apps/software metering server wmi classes.md)
 ### [SMS_FileUsageSummary Server WMI Class](apps/sms_fileusagesummary-server-wmi-class.md)
 ### [SMS_G_System_SoftwareUsageData Server WMI Class](apps/sms_g_system_softwareusagedata-server-wmi-class.md)
 ### [SMS_MeterData Server WMI Class](apps/sms_meterdata-server-wmi-class.md)
@@ -1122,7 +1120,7 @@
 ### [SMS_ProductFileInfo Server WMI Class](apps/sms_productfileinfo-server-wmi-class.md)
 ### [SMS_SummarizationInterval Server WMI Class](apps/sms_summarizationinterval-server-wmi-class.md)
 
-## [Configuration Manager Software Updates Server WMI Classes](sum/software updates server wmi classes.md)
+## [Software Updates Server WMI Classes](sum/software updates server wmi classes.md)
 ### [SMS_ADRDeploymentSettings Server WMI Class](sum/sms_adrdeploymentsettings-server-wmi-class.md)
 ### [SMS_AutoDeployment Server WMI Class](sum/sms_autodeployment-server-wmi-class.md)
 #### [EvaluateAllAutoDeployment Method in Class SMS_AutoDeployment](sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md)
@@ -1182,7 +1180,7 @@
 ### [SMS_UpdateGroupAssignment Server WMI Class](sum/sms_updategroupassignment-server-wmi-class.md)
 ### [SMS_UpdatesAssignment Server WMI Class](sum/sms_updatesassignment-server-wmi-class.md)
 
-## [Configuration Manager Supporting Server WMI Classes](misc/supporting server wmi classes.md)
+## [Supporting Server WMI Classes](misc/supporting server wmi classes.md)
 ### [SMS_ContextMethods Server WMI Class](misc/sms_contextmethods-server-wmi-class.md)
 #### [ClearContextHandle Method in Class SMS_ContextMethods](misc/clearcontexthandle-method-in-class-sms_contextmethods.md)
 #### [GetContextHandle Method in Class SMS_ContextMethods](misc/getcontexthandle-method-in-class-sms_contextmethods.md)
@@ -1192,7 +1190,7 @@
 #### [UnPackNALPath Method in Class SMS_NAL_Methods](misc/unpacknalpath-method-in-class-sms_nal_methods.md)
 ### [SMS_ProviderLocation Server WMI Class](misc/sms_providerlocation-server-wmi-class.md)
 
-## [Configuration Manager Status Classes](core/servers/manage/status classes.md)
+## [Status Classes](core/servers/manage/status classes.md)
 ### [Status Client APIs](core/servers/manage/status-client-apis.md)
 #### [Smscstat.dll Status Message Functions](core/servers/manage/smscstat.dll-status-message-functions.md)
 ##### [AddAttributeToSMSStatusMessage Function](core/servers/manage/addattributetosmsstatusmessage-function.md)
@@ -1246,14 +1244,16 @@
 #### [SMS_SummarizerSiteStatus Server WMI Class](core/servers/manage/sms_summarizersitestatus-server-wmi-class.md)
 #### [SMS_SummarizerStatus Server WMI Class](core/servers/manage/sms_summarizerstatus-server-wmi-class.md)
 
-## [Configuration Manager Windows Azure Server WMI Classes](core/servers/configure/windows azure server wmi classes.md)
+## [Windows Azure Server WMI Classes](core/servers/configure/windows azure server wmi classes.md)
 ### [SMS_AzureService Server WMI Class](core/servers/configure/sms_azureservice-server-wmi-class.md)
 #### [Start Method in Class SMS_AzureService](core/servers/configure/start-method-in-class-sms_azureservice.md)
 #### [Stop Method in Class SMS_AzureService](core/servers/configure/stop-method-in-class-sms_azureservice.md)
 ### [SMS_AzureServicesTask Server WMI Class](core/servers/configure/sms_azureservicestask-server-wmi-class.md)
 
-## [Configuration Manager Windows 10 Servicing Server WMI Classes](misc/windows 10 servicing server wmi classes.md)
+## [Windows 10 Servicing Server WMI Classes](misc/windows 10 servicing server wmi classes.md)
 ### [SMS_Windows10Dashboard Server WMI Class](misc/sms_windows10dashboard-server-wmi-class.md)
 ### [SMS_WindowsServicingBusinessReadyUpdates Server WMI Class](misc/sms_windowsservicingbusinessreadyupdates-server-wmi-class.md)
 ### [SMS_WindowsServicingLocalizedNames Server WMI Class](misc/sms_windowsservicinglocalizednames-server-wmi-class.md)
 ### [SMS_WindowsServicingStates Server WMI Class](misc/sms_windowsservicingstates-server-wmi-class.md)
+
+## [Configuration Manager Managed Reference](https://msdn.microsoft.com/library/mt767606.aspx)
