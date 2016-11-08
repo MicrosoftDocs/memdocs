@@ -65,7 +65,7 @@ The LTSB does not receive in-console updates that deliver new features or update
 To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use baseline media to install a new site that runs version 1606 of the Current Branch, or a new site that runs the  Long-Term Servicing Branch.
 
 > [!TIP]  
-> To learn about System Center 2016, see the [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/System-Center-2016). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.  You can also get an Evaluation of System Center 2016 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
+> To learn about System Center 2016, see the [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/system-center). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.  You can also get an Evaluation of System Center 2016 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
 
 **Features of the LTSB:**
 -	Receives in-console updates that deliver critical security fixes.
