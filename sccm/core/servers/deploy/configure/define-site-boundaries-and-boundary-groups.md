@@ -313,11 +313,15 @@ The following procedures apply to version 1610 or later. If you use version 1511
          > [!NOTE]  
          >  To stop use of this boundary group for associating site systems you must remove all servers listed as associated site system servers.  
 
-     3.  To change the network connection speed for a site system server for this boundary group, select the server and then click **Change Connection**.  
+ 6.  Select the **Relationships** tab to configure fallback behavior:  
 
-          By default, the connection speed for each site system is **Fast**, but can be changed to **Slow**. The network connection speed and the configuration of a deployment determine whether a client can download content from the server.  
+     - Click **Add**, and then select the boundary group you want to configure.
 
- 6.  Click **OK** to close the boundary group properties and save the configuration.  
+     - Set a fallback time for distribution points. After this period of time, clients in the boundary group you are configuring relationships for, will be able to begin searching for content from the distribution points of the boundary group you are adding.
+
+     - To prevent fallback to a specific boundary group, including the *default site boundary group* which is configured by default, select the boundary group and then check the box for **Never fallback**.   
+
+ 7.  Click **OK** to close the boundary group properties and save the configuration.  
 
 #### To associate a content deployment server or management point with a boundary group  
  1.  In the Configuration Manager console, click **Administration** > **Hierarchy Configuration** >  **Boundary Groups**.  
@@ -332,6 +336,17 @@ The following procedures apply to version 1610 or later. If you use version 1511
 
  6.  Click **OK** to close the dialog box and save the boundary group configuration.  
 
+
+#### To configure a fallback site for automatic site assignment  
+
+  1.  In the Configuration Manager console, click **Administration** > **Site Configuration** >  **Sites**.  
+
+  2.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
+
+  3.  On the **General** tab, select the checkbox for **Use a fallback site**, and then select a site from the **Fallback site** drop-down list.  
+
+  4.  Click **OK** to save the configuration.  
+
 #### To enable use of preferred management points  
 
  1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Sites**, and then on the **Home** tab select  **Hierarchy Settings**.  
@@ -340,17 +355,15 @@ The following procedures apply to version 1610 or later. If you use version 1511
 
  3.  Click **OK** to close the dialog box and save the configuration.  
 
- #### To configure a fallback site for automatic site assignment  
 
- 1.  In the Configuration Manager console, click **Administration** > **Site Configuration** >  **Sites**.  
+### To enable use of Pre-Release features
+1.  In the Configuration Manager console, click **Administration** > **Site Configuration** > **Sites**, and then on the **Home** tab select  **Hierarchy Settings**.  
 
- 2.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
+2.  On the **General** tab of the Hierarchy Settings, select **Consent to use Pre-Release features**.  
 
- 3.  On the **General** tab, select the checkbox for **Use a fallback site**, and then select a site from the **Fallback site** drop-down list.  
+3.  Click **OK** to close the dialog box and save the configuration.  
 
- 4.  Click **OK** to save the configuration.  
 
-  The following sections provide additional details about boundary group configurations.
 
 ##  <a name="BKMK_BoundaryBestPractices"></a> Best practices for boundaries  
 
