@@ -10,6 +10,7 @@
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": true,
+      "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMDocs",
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -25,7 +26,7 @@
   ],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMDocs",
+
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
