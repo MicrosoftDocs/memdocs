@@ -52,7 +52,7 @@ System Center Configuration Manager device management enables mobile device soft
  Advertisements for mobile devices are identical to software distribution packages for computer clients except that they target mobile devices and contain content that is appropriate for mobile devices.  
   
 ## See Also  
- [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+ [Configuration Manager SDK](../../develop/core/misc/getautoinstallrequiredsoftwaretononbusinesshours-method.md)   
  [Configuration Manager Mobile Device Management](../../develop/mdm/mobile device management.md)   
  [Configuration Manager Software Distribution](../../develop/core/servers/configure/software distribution.md)   
  [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md)   

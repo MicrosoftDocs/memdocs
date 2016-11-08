@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
-In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the <xref:Microsoft.ConfigurationManagement.ManagementProvider.QueryProcessorBase.ProcessQuery*> method.  
+In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the <xref:Microsoft.ConfigurationManagement.ManagementProvider.QueryProcessorBase.ProcessQuery%2A> method.  
   
  The first parameter of the [ProcessQuery](assetId:///ProcessQuery?qualifyHint=False&autoUpgrade=True) method is an instance of the <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsBackgroundWorker> class that provides two event handlers:  
   
@@ -119,7 +119,7 @@ void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
  [How to Call a Configuration Manager Object Class Method by Using Managed Code](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md)   
- [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Create a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Modify a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
