@@ -1,6 +1,7 @@
 {
   "build_entry_point": "docs",
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMdocs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
