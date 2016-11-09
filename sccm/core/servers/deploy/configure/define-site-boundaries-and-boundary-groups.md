@@ -114,7 +114,7 @@ Version 1610 introduces important changes to boundary groups and how they work w
 
 When you configure boundary groups, you add one or more boundaries to the boundary group, and then configure additional settings for use by clients that are  located on those boundaries.  
 
-You can find [procedures for managing boundary groups](#procedures-for-boundarygroups) later in this topic.
+You can find [procedures for managing boundary groups](#procedures-for-boundary-groups) later in this topic.
 
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> About site assignment  
