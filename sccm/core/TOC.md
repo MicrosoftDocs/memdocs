@@ -48,7 +48,7 @@
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
-#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache)
+#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
