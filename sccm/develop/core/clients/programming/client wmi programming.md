@@ -24,7 +24,7 @@ This section discusses System Center Configuration Manager Windows Management In
   
 -   [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)  
   
--   [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md)  
+-   [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md)  
   
 -   [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md)  
   

@@ -27,7 +27,7 @@ This section provides information about software distribution Wake On LAN in Sys
   
 ## Software Distribution Wake On LAN topics  
   
--   [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/4cf2d556-eda8-42c1-9ad2-2e1229798e98.md)  
+-   [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)  
   
 -   [How to Enable the Partner Notification API](../../../../develop/core/servers/configure/how-to-enable-the-partner-notification-api.md)  
   

@@ -24,7 +24,7 @@ This section provides essential information about the SMS Provider in System Cen
   
 -   [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)  
   
--   [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)  
+-   [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)  
   
 -   [How to Add a Configuration Manager Context Qualifier by Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)  
   

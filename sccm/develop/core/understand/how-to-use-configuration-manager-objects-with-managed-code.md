@@ -32,7 +32,7 @@ This section provides code examples for using the managed SMS Provider library w
   
 -   [How to Delete a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md)  
   
--   [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md)  
+-   [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
   
 -   [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
   
@@ -57,5 +57,5 @@ This section provides code examples for using the managed SMS Provider library w
   
 ## See Also  
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)   
- [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [Managed SMS Provider Fundamentals in Configuration Manager](../../../develop/core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md)

@@ -32,7 +32,7 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
   
 2.  Restart the SMS_EXECUTIVE service on each computer where you updated the registry keys.  
   
-3.  Create an advertisement  by using the [SMS_Advertisement Server WMI Class](../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md). Set the `OfferType` value to 0 and the `AdvertFlags` value to 0x00400000. For more information about advertisements, see [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md) and [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/4cf2d556-eda8-42c1-9ad2-2e1229798e98.md).  
+3.  Create an advertisement  by using the [SMS_Advertisement Server WMI Class](../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md). Set the `OfferType` value to 0 and the `AdvertFlags` value to 0x00400000. For more information about advertisements, see [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md) and [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md).  
   
 4.  Use the `AssignedSchedule` and `AssignedScheduleEnabled` properties to set a schedule for your advertisement.  
   
@@ -43,4 +43,4 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
 ## See Also  
  [Software Distribution Wake On LAN](../../../../develop/core/servers/configure/software-distribution-wake-on-lan.md)   
  [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)   
- [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/4cf2d556-eda8-42c1-9ad2-2e1229798e98.md)
+ [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)

@@ -24,9 +24,9 @@ This section provides information about software distribution setup and configur
   
 -   [About Software Distribution Setup and Configuration](../../../../develop/core/servers/configure/about-software-distribution-setup-and-configuration.md)  
   
--   [How to Enable or Disable the Software Distribution Advertised Programs Client Agent](../../../../develop/core/servers/configure/c6fcffc5-4695-4de5-9ec3-90595239049b.md)  
+-   [How to Enable or Disable the Software Distribution Advertised Programs Client Agent](../../../../develop/core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md)  
   
--   [How to Configure Software Distribution Advertised Programs Client Agent Settings](../../../../develop/core/servers/configure/5a5ffe1b-6e82-480f-97e8-2840ba704170.md)  
+-   [How to Configure Software Distribution Advertised Programs Client Agent Settings](../../../../develop/core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md)  
   
 -   [How to Customize Advertisement Branding Information in Configuration Manager](../../../../develop/core/servers/configure/how to customize advertisement branding information.md)  
   

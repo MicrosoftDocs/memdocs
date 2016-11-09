@@ -208,5 +208,5 @@ public void WriteScfEmbeddedProperty(
  [How to Add a State Migration Point Folder](../../develop/osd/how-to-add-a-state-migration-point-folder.md)   
  [How to Set the Deletion Policy for a State Migration Point](../../develop/osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md)   
  [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)   
- [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md)   
- [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md)
+ [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
+ [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

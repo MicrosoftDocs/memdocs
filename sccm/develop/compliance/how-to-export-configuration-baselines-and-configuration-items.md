@@ -159,7 +159,7 @@ public void DCMExportBaselineOrCI(WqlConnectionManager connection,
  [About Configuration Baselines and Configuration Items](../../develop/compliance/about-configuration-baselines-and-configuration-items.md)   
  [How to Use Configuration Manager Objects With WMI](../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
- [How to Connect to a Configuration Manager Provider using Managed Code](../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to a Configuration Manager Provider Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [SMS_BaselineAssignment Server WMI Class](../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md)   
  [SMS_ConfigurationItem Server WMI Class](../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md)
