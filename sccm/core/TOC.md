@@ -65,6 +65,7 @@
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [How to view diagnostics and usage data](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [Customer Experience Improvement Program (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
