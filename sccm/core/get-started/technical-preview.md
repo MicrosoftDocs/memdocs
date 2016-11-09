@@ -136,7 +136,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
  |New compliance settings for configuration items|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|![Not added](media/Red_X.gif)|
  |Integration with Upgrade Analytics|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|![Not added](media/Red_X.gif)|
  |Native Connection Types for Windows 10 VPN Hybrid Profiles|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#native-connection-types-for-windows-10-vpn-hybrid-profiles)|![Not added](media/Red_X.gif)|
- |Improvements for boundary groups|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|![Not added](media/Red_X.gif)|
+ |Improvements for boundary groups|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|[Version 1610](sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)|
  |Office 365 Client Management dashboard|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|![Not added](media/Red_X.gif)|
  |Deploy Office 365 apps to clients|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#ceploy-office-365-apps-to-clients)|![Not added](media/Red_X.gif)|
  |Improvements to BIOS to UEFI conversion|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-bios-to-uefi-conversion)|![Not added](media/Red_X.gif)|
