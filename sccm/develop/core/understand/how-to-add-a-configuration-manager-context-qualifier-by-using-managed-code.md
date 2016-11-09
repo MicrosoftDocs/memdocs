@@ -24,7 +24,7 @@ In System Center Configuration Manager, to add a context qualifier by using the 
   
 ### To add Configuration Manager context qualifier  
   
-1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)  
+1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)  
   
 2.  Get the [SmsNamedValuesDictionary](assetId:///SmsNamedValuesDictionary?qualifyHint=False&autoUpgrade=True) object from the [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True) object that you get from step 1.  
   
@@ -93,4 +93,4 @@ public void AddContextQualifiers(WqlConnectionManager connection)
   
 ## See Also  
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context qualifiers.md)   
- [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)

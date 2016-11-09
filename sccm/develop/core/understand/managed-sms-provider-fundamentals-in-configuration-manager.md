@@ -34,11 +34,11 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
   
  It is used to connect to the SMS Provider and query, or create, System Center Configuration Manager object instances. The following tasks demonstrate the basic usage of WqlConnectionManager.  
   
- [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md).  
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
   
  [How to Read a Configuration Manager Object Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md).  
   
- [How to Perform an Asynchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md)  
+ [How to Perform an Asynchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
   
 ### IResultObject  
  <xref:Microsoft.ConfigurationManagement.ManagementProvider.IResultObject> is an interface that all result sets and objects expose. Through it, you can read, modify, delete, call methods on, and otherwise manipulate Configuration Manager objects. You typically get an `IResultObject` whenever you create an object or as a result of a query.  
@@ -54,7 +54,7 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 ### QueryProcessor  
  QueryProcesor provides support for both synchronous and asynchronous queries against the SMS Provider. In asynchronous queries, <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsBackgroundWorker> is used to provide thread support query results. The following tasks demonstrate queries:  
   
- [How to Perform an Asynchronous Configuration Manager Query Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md).  
+ [How to Perform an Asynchronous Configuration Manager Query Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md).  
   
  [How to Perform a Synchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md).  
   

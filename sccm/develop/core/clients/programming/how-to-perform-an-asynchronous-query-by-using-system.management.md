@@ -24,7 +24,7 @@ To perform an asynchronous query on a System Center Configuration Manager client
   
 ### To perform an asynchronous query  
   
-1.  Set up a connection to the System Center Configuration Manager client WMI namespace. For more information, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md).  
+1.  Set up a connection to the System Center Configuration Manager client WMI namespace. For more information, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md).  
   
 2.  Create a `ManagementObjectSearcher` object.  
   
@@ -151,6 +151,6 @@ private void Done(object sender,
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   
  [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md)   
- [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md)   
+ [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md)   
  [How to Perform a Synchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md)   
  [How to Read a WMI Object Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md)

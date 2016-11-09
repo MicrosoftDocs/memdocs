@@ -81,7 +81,7 @@ You can extend the System Center Configuration Manager console with new Windows 
 ## Queries  
  You can perform both synchronous and asynchronous queries in forms by using the managed SMS Provider. You get the <xref:Microsoft.ConfigurationManagement.AdminConsole.SmsPageControl.QueryProcessor*> object from the form's `PropertyManager`<xref:Microsoft.ConfigurationManagement.AdminConsole.SmsPageControl.ConnectionManager*>`.` After it is obtained, the code is identical to the SMS Provider examples. For an example of a synchronous query, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md).  
   
- For an example of an asynchronous query, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md).  
+ For an example of an asynchronous query, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md).  
   
 ## See Also  
  [How to Add a Property Page to an Existing Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md)   

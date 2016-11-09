@@ -28,7 +28,7 @@ You create an operating system deployment task sequence, in System Center Config
   
 ### To create a task sequence package  
   
-1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
   
 2.  Create an instance of assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True.  
   
@@ -148,7 +148,7 @@ public IResultObject CreateTaskSequencePackage(
  [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
- [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md)   
  [Operating System Deployment Task Sequencing](../../develop/osd/operating-system-deployment-task-sequencing.md)

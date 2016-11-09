@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # How to Run a Configuration Manager Query
 In System Center Configuration Manager, you run a `SMS_Query` based query by getting the query instance and then by running WQL query in the `SMS_Query` object `Expression` property.  
   
- After you have the WQL query, you can run the query either synchronously or asynchronously. The following example is synchronous. For information about running the query asynchronously, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md) and [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md). In these examples, change the `select * from collection` string to the `Expression` property value.  
+ After you have the WQL query, you can run the query either synchronously or asynchronously. The following example is synchronous. For information about running the query asynchronously, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md) and [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md). In these examples, change the `select * from collection` string to the `Expression` property value.  
   
 ### To run a query  
   
@@ -132,5 +132,5 @@ public void RunQuery(WqlConnectionManager connection, string queryId)
 ## See Also  
  [About Configuration Manager Queries](../../../develop/core/understand/about-configuration-manager-queries.md)   
  [How to Create a Configuration Manager Query](../../../develop/core/understand/how-to-create-a-configuration-manager-query.md)   
- [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md)   
+ [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)   
  [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md)

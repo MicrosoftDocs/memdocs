@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # How to Perform a Synchronous Configuration Manager Query by Using WMI
 In System Center Configuration Manager, you perform a synchronous query for System Center Configuration Manager objects by calling the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [ExecQuery](assetId:///ExecQuery?qualifyHint=False&autoUpgrade=True) method and passing a WQL query.  
   
- A synchronous query is a query that maintains control over the process of your application for the duration of the query. A synchronous query has the potential of locking up your application for large queries or for queries over a network. Alternatively, you can run an asynchronous query that returns control to the application while the query is run. For more information, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/cfbb34e8-9b47-48db-a8ef-408a0a89ad17.md)  
+ A synchronous query is a query that maintains control over the process of your application for the duration of the query. A synchronous query has the potential of locking up your application for large queries or for queries over a network. Alternatively, you can run an asynchronous query that returns control to the application while the query is run. For more information, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
   
 > [!NOTE]
 >  Lazy properties are not returned in synchronous queries. For more information, see [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md).  

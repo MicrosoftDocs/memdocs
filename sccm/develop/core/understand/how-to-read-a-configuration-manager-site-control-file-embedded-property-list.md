@@ -43,7 +43,7 @@ In System Center Configuration Manager, you read an embedded property list from 
 ## Example  
  The following example method populates the supplied `values` parameter with the assetId:///Values?qualifyHint=False&autoUpgrade=True array of the embedded property list (assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True) identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.  
 
- To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md).  
+ To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
 
@@ -138,5 +138,5 @@ public bool GetScfEmbeddedPropertyList(
 
 ## See Also  
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)  
- [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md)   
- [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md)
+ [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
+ [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

@@ -155,6 +155,6 @@ public void AddRegistryCondition(
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md)   
- [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [Operating System Deployment Task Sequencing](../../develop/osd/operating-system-deployment-task-sequencing.md)

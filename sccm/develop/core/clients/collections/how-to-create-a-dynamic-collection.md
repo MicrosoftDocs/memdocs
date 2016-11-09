@@ -190,5 +190,5 @@ public void CreateDynamicCollection(WqlConnectionManager connection, string newC
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
  [How to Use Configuration Manager Objects with WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
  [How to Use Configuration Manager Objects with Managed Code](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
- [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)

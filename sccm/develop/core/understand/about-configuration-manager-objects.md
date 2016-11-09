@@ -45,5 +45,5 @@ System Center Configuration Manager objects are instances of Configuration Manag
 ## See Also  
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)   
  [WMI Configuration Manager Provider Libraries](../../../develop/core/understand/wmi-configuration-manager-provider-fundamentals.md)   
- [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/2a435561-01b7-45d5-b7cf-89fc1845025f.md)   
+ [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Add a Configuration Manager Context Qualifier Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md)
