@@ -6,6 +6,10 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology:
+ - configmgr-other
 ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
