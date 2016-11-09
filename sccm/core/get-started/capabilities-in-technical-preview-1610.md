@@ -107,7 +107,7 @@ Specifically, you can configure the following Windows Defender settings:
 - Schedule a daily quick scan
   - Time scheduled
 - Limit CPU usage % during a scan
-- Scan archive files
+ Scan archive files
 - Scan email messages
 - Scan removable drives
 - Scan mapped drives
@@ -142,7 +142,7 @@ You can now request a policy sync for a mobile device from the Configuration Man
 
 ## Try it out!
 
-1.	In the Configuration Manager console, go **Assets adn Compliance** > **Overview** > Devices.
+1.	In the Configuration Manager console, go **Assets and Compliance** > **Overview** > Devices.
 2.	In the **Remote Device Actions** menu, select **Send Sync Request**.
 
 Sync can take five to ten minutes. Any changes in policy are synced to the device. You can track the state of the sync request in the **Remote Sync State** column in the **Devices** view, or in the device's **Properties** dialog.
