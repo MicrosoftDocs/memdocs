@@ -36,7 +36,7 @@ translation.priority.ht:
 # Levels of diagnostic usage data collection for version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager version 1610 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail of what data is collected by each level.
 
-Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***. However, version 1610 does not introduce revisions to the data collected with version 1606.
+Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
 
 > [!IMPORTANT]
@@ -61,6 +61,11 @@ Beginning with version 1610, you change change the data collection level from wi
  	  -  Version of post-upgrade script
 
  	  -  Use of update fast ring
+
+    -  ***[New]*** Pre-release use, setup media type, branch type
+
+    - ***[New]*** SA expiration date
+
 
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
@@ -134,7 +139,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -  Application policy size and complexity statistics
 
-    - Count of Windows Store for Business (WSfB) apps and sync statistics (including summarized types of apps)  
+    - ***[Updated]*** Count of Windows Store for Business (WSfB) apps and sync statistics (including summarized types of apps, licensed app status, and number of online and ofline licensed apps)  
 
     - Boundary group statistics (how many fast, slow, count per group)
 
@@ -146,6 +151,8 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     - UDA usage, how created
 
+    - ***[New]*** Application approval statistics and usage frequency
+
 
 
 -   **Client:**  
@@ -156,7 +163,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Count of client installation failures  
 
-    -  Client auto upgrade deployment configuration including client piloting
+    -  ***[Updated]*** Client auto upgrade:  deployment configuration including client piloting, exclusion usage (extended interoperabilitiy client)
 
     -  Client health statistics and top issue summary
 
@@ -176,6 +183,9 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     - Client cache size configuration
 
+    - ***[New]***  Number of hardware inventory classes, software inventory rules, and file collection rules
+
+
 
 
 - **Cloud Services:**
@@ -183,6 +193,11 @@ For System Center Configuration Manager version 1610, this level includes the fo
   - Count of collections sync'd to OMS
 
   -  Is the OMS cloud connector enabled
+
+  - ***[New]*** Configuration and usage statistics of Cloud Management Gateway
+
+  - ***[New]*** Count of Upgrade Analytics Connectors
+
 
 
 
@@ -219,11 +234,17 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Boundary group information (count of boundaries and site systems assigned to each boundary group)  
 
+    - ***[New]*** Boundary group relationships and fallback configuration
+
     -   Distribution point group information (count of packages and distribution points assigned to each distribution point group)  
 
     -   Distribution point configuration information (use of branch cache, distribution point monitoring)  
 
     -   Distribution Manager configuration information (threads, retry delay, number of retries, pull distribution point settings)  
+
+    - ***[New]*** Count of peer cache clients, and usage statistics
+
+    - ***[New]*** Client content download statistics
 
 
 -   **Endpoint Protection:**  
@@ -247,7 +268,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   **Mobile device management (MDM):**  
 
-    -   Count of mobile device actions (lock, pin rest, wipe, and retire) commands issued  
+    -   ***[Updated]*** Count of mobile device actions (lock, pin rest, wipe, retire, and Sync now) commands issued  
 
     -   Count of mobile devices managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)  
 
@@ -279,6 +300,8 @@ For System Center Configuration Manager version 1610, this level includes the fo
     -   Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
 
     -   Counts of task sequence step usage
+
+    - ***[New]*** Count of edition upgrade policies
 
 
 
@@ -333,13 +356,16 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Software update point load balancing statistics
 
+    -  ***[New]*** Configuration of Windows 10 express updates
+
+
 
 
 -   **SQL/performance data:**  
 
     -   Count of largest database tables  
 
-    -   SQL Always-On replica information  
+    -   ***[Updated]***  SQL AlwaysOn replica information, usage, and health status
 
     -  SQL change tracking retention period
 
@@ -354,6 +380,8 @@ For System Center Configuration Manager version 1610, this level includes the fo
 - **Miscellaneous**
 
     - Count of sites with WOL
+
+    - ***[New]*** Reporting usage and performance statistics  
 
 
 
@@ -400,3 +428,5 @@ For System Center Configuration Manager version 1610, this level includes the fo
 -   ATP Health Summary
 
 -   Detailed Client deployment installation errors
+
+- ***[New]*** Windows Store for Business application details (non-aggregate list of synced applications including AppID, state - online or offline, and total purchased license counts)
