@@ -1053,8 +1053,12 @@ A new task sequence variable, SMSTSSoftwareUpdateScanTimeout, was introduced in 
 
  *Domain\account*  
 
-##  <a name="BKMK_PrepareConfigMgrClientforCapture"></a> Prepare ConfigMgr Client for Capture  
- Use the **Prepare ConfigMgr Client for Capture** step to take the Configuration Manager client on the reference computer and prepares it for capture as part of the imaging process by performing the following tasks:  
+## <a name="BKMK_PrepareConfigMgrClientforCapture"></a> Prepare ConfigMgr Client for Capture  
+Use the **Prepare ConfigMgr Client for Capture** step to remove the Configuration Manager client or configure the client on the reference computer to prepare it for capture as part of the imaging process.
+
+Starting in Configuration Manager version 1610, the Prepare ConfigMgr Client step completely removes the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
+
+Prior to Configuration Manager version 1610, this step performs the following tasks:  
 
 -   Removes the client configuration properties section from the smscfg.ini file in the Windows directory. These properties include client-specific information including the Configuration Manager GUID and other client identifiers.  
 
