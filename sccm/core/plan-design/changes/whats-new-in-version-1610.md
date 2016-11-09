@@ -58,6 +58,17 @@ When you update to version 1610, the update converts your current boundary group
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-groups).
 
+## Peer Cache for content distribution to clients
+Beginning with version 1610, client **Peer Cache** helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache.
+
+After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
+
+You can also use the new **Client Data Sources** dashboard to understand the use of Peer Cache content sources in your environment.
+
+For more information see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/client-peer-cache), and [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed/#client-data-sources-dashboard).
+
+
+
 
 ## Migrate multiple shared distribution points at the same time
 You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccmn/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
