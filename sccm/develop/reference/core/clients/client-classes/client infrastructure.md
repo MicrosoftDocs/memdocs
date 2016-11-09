@@ -25,11 +25,9 @@ This section provides reference information for the System Center Configuration 
  > [!IMPORTANT]
 >  The Client Control Panel COM Automation interface has been removed or deprecated in System Center Configuration Manager SP1. Use the feature-related client WMI class instead.
 
-[Client Framework and Data Transfer Client WMI Classes](#client-framework-and-data-transfer-client-wmi-classes)
-Describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.
+[Client Framework and Data Transfer Client WMI Classes](#client-framework-and-data-transfer-client-wmi-classes) describes the Client Configuration Manager (CCM) framework and data transfer classes in System Center Configuration Manager for the client.
 
-[Policy Agent Client WMI Classes](#policy-agent-client-wmi-classes)
-Describes the classes used to manage policy on client computers and devices.
+[Policy Agent Client WMI Classes](#policy-agent-client-wmi-classes) describes the classes used to manage policy on client computers and devices.
 
 ## Client Framework and Data Transfer Client WMI Classes  
 The following framework and data transfer classes are used in System Center Configuration Manager for the client.
