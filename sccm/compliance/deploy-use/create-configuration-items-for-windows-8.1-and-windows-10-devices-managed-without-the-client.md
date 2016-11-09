@@ -88,12 +88,12 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Diagnostic data submission (Windows 10)**|Allow submission of app log files.|  
 |**Geolocation**|Allow the device to use location services information.<br /><br /> (Windows 10 only)|  
 |**Copy and Paste**|Use copy and paste to transfer data between apps.<br /><br /> (Windows 10 only)|
-|**Factory reset**||
+|**Factory reset**|Controls whether the user can factory reset their device.|
 |**Bluetooth**|Allow use of the devices Bluetooth capability.|  
 |**Bluetooth discoverable mode**|Allow the device to be discovered by other Bluetooth devices.<br /><br /> (Windows 10 only)|  
 |**Bluetooth advertising**|Allow the use of Bluetooth advertising.<br /><br /> (Windows 10 only)|  
 |**Voice recording**|Allow the use of the voice recording features of the device.<br /><br /> (Windows 10 only)| 
-|**Cortana**|| 
+|**Cortana**|Enable or disable the Cortana voice assistant.| 
 
 ### Email management  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -170,7 +170,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Camera**|Allow use of the device camera.<br /><br /> (Windows 10 only)|  
 |**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows 10 only)|  
 |**AntiTheft mode**|Controls whether Windows 10 AntiTheft mode is enabled.<br /><br /> (Windows 10 only)|
-|**Allow USB connection**||  
+|**Allow USB connection**|Controls whether devices can access external storage devices through a USB connection.|  
 |**Profile file**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile name**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
 |**Profile for all users**|Provisions a VPN profile for Windows RT devices.<br /><br /> Windows 8.1 only)|  
@@ -192,8 +192,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Software download while roaming**|Allows the download of apps and software when roaming.<br /><br /> (Windows 10 only)|  
 |**Email download while roaming**|Allows e-mail downloads when roaming.<br /><br /> (Windows 10 only)|  
 |**Data roaming**|Allow roaming between networks when accessing data.| 
-|**VPN over cellular**||
-|**VPN roaming over cellular**|| 
+|**VPN over cellular**|Controls whether the device can access VPN connections when connected to a cellular network.|
+|**VPN roaming over cellular**|Controls whether the device can access VPN connections when roaming on a cellular network.| 
 
 ###  Encryption  
 
@@ -214,8 +214,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
 |**Wi-Fi tethering**|Lets users use their device as a mobile hotspot.|  
 |**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
-|**Wi-Fi hotspot reporting**||  
-|**Manual Wi-Fi configuration**||  
+|**Wi-Fi hotspot reporting**|Sends information about Wi-Fi connections to help the user discover nearby connections.|  
+|**Manual Wi-Fi configuration**|Controls whether the user can configure their own Wi-Fi connections, or whether they can only use connections configured by a Wi-Fi profile.|  
 
 #### To configure a wireless network connection  
 
@@ -223,19 +223,18 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 
 2.  In the **Wireless Network Connection** dialog box, specify the following information about the wireless connection that will be provisioned on mobile devices:  
 
-    |Setting|More information|  
-    |-------------|----------------------|  
-    |**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
-    |**Network connection**|Choose from **Internet** or **Work**.|  
-    |**Authentication**|Choose the authentication method for the wireless connection from:<br>- **Open**<br>-                             **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
-    |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
-    |**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
-    |**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
-    |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
-    |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
-    |**EAP type**|Choose the EAP type to use from:<br>- **PEAP**<br>- **Smart card or certificate**|  
-
-3.  When you are finished, click **OK**.  
+|Setting|More information|  
+|-------------|----------------------|  
+|**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
+|**Network connection**|Choose from **Internet** or **Work**.|  
+|**Authentication**|Choose the authentication method for the wireless connection from:<br>- **Open**<br>-                             **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
+|**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
+|**Key index**|Select a key index from **1** to **4** that will be used with a **Data encryption** setting of **WEP**.|  
+|**This network connects to the Internet**|Select this option if you want to supply proxy settings that let mobile devices on a wireless connection connect to the Internet.|  
+|**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
+|**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
+|**EAP type**|Choose the EAP type to use from:<br>- **PEAP**<br>- **Smart card or certificate**|  
+ 
 
 ### Certificates  
  Lets you import certificates to install on mobile devices.  
@@ -288,7 +287,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Virus protection signatures are up to date**|Select to ensure that the antivirus signature files are up to date.|  
 |**Pre-release features**|Allows Microsoft to deploy pre-release settings and features to the device.<br /><br /> (Windows 10 only)|  
 |**Manual root certificate installation**|(Windows 10 only)|
-|**Allow manual unenrollment**||
+|**Allow manual unenrollment**|Lets the user manually delete the workplace account from the device.|
 
 ###  Windows Server Work Folders  
  These settings are for devices running Windows 8.1 and Windows 10.  
@@ -306,14 +305,14 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 
 1.  On the **Allowed and Blocked Apps list** page, specify the following information:  
 
-    |Setting|More information|  
-    |-------------|----------------------|  
-    |**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
-    |**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
-    |**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
-    |**Edit**|Lets you edit the name, publisher and URL of the selected app.|  
-    |**Remove**|Deletes the selected app from the list.|  
-    |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
+|Setting|More information|  
+|-------------|----------------------|  
+|**Blocked apps list**|Select this option if you want to specify a list of apps that users are not allowed to install.|  
+|**Allowed apps list**|Select this option if you want to specify a list of apps that users are allowed to install. Any other apps will be blocked from installing.|  
+|**Add**|Adds an app to the selected list. Specify a name of your choice, optionally the app publisher, and the URL to the app in the app store.<br /><br /> To specify the URL, from the Windows Store, search for the app you want to use.<br /><br /> Open the app’s page, and copy the URL to the clipboard. You can now use this as the URL in either the allowed or blocked apps list.<br /><br /> **Example:** Search the store for the **Skype** app. The URL you use will be **http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51**.|  
+|**Edit**|Lets you edit the name, publisher and URL of the selected app.|  
+|**Remove**|Deletes the selected app from the list.|  
+|**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
 
 ### Windows 10 Team  
  These settings are for devices running Windows 10 Team only.  
@@ -323,13 +322,10 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Allow screen to wake automatically when sensors detect someone in the room**|Allows the device to wake automatically when its sensor detects someone in the room.|  
 |**Required PIN for wireless projection**|Specifies whether you must enter a PIN before you can use the wireless projection capabilities of the device.|  
 |**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).| 
-|**Azure Operational Insights**||
-|**Workspace ID**||
-|**Workspace Key**||
-|**Miracast wireless projection**||
-|**Miracast channel**||
-|**Meeting information displayed on welcome screen**||
-|**Lockscreen background image URL**|| 
+|**Azure Operational Insights**|Azure Operational Insights , part of the Microsoft Operations Manager suite collects, stores, and analyzes log file data from Windows 10 Team devices.<br>To connect to Azure Operational insights, you must specify a **Workspace ID** and a **Workspace Key**.|
+|**Miracast wireless projection**|Enable this option if you want to let the Windows 10 Team device use Miracast enabled devices to project.<br>If you enable this option, from **Choose Miracast channel** select the Miracast channel used to project content.|
+|**Meeting information displayed on welcome screen**|If you enable this option, you can choose the information that will be displayed on the **Meetings** tile of the Welcome screen. You can:<br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)**|
+|**Lockscreen background image URL**|Enable this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.| 
 
 ### Windows Information Protection
 
@@ -347,7 +343,7 @@ For information about how to configure Windows Information Protection with Confi
 |Setting name|Details|  
 |------------------|-------------|  
 |**Allow search suggestions in address bar**|Lets your search engine suggest sites as you type search phrases.|  
-|**Allow sending intranet traffic to Internet Explorer**||  
+|**Allow sending intranet traffic to Internet Explorer**|Lets users open intranet websites in Internet Explorer.|  
 |**Allow do not track**|Do not track informs websites that you do not want them to track your visit to a site.|  
 |**Enable SmartScreen**|Use SmartScreen to check files your users download do not contain malicious code.|  
 |**Allow pop-ups**|Allow or disable browser pop-ups.|  
@@ -362,16 +358,16 @@ For information about how to configure Windows Information Protection with Confi
 
 |Setting name|Details|  
 |------------------|-------------| 
-|**Allow real-time monitoring**||
-|**Allow behavior monitoring**||
-|**Enable Network Inspection System**||
-|**Scan all downloads**||
-|**Allow script scanning**||
-|**Monitor file and program activity**||
+|**Allow real-time monitoring**|Enables real-time scanning for malware, spyware, and other unwanted software.|
+|**Allow behavior monitoring**|Lets Defender check for certain known patterns of suspicious activity on devices.|
+|**Enable Network Inspection System**|The Network Inspection System (NIS) helps to protect devices against network-based exploits by using the signatures of known vulnerabilities from the Microsoft Endpoint Protection Center to help detect and block malicious traffic.|
+|**Scan all downloads**|Controls whether Defender scans all files downloaded from the Internet.|
+|**Allow script scanning**|Lets Defender scan scripts that are used in Internet Explorer.|
+|**Monitor file and program activity**|Enable this setting to allow Defender to monitor file and program activity on devices.|
 |**Files monitored**||
-|**Days to track resolved malware**||
-|**Allow client UI access**||
-|**Schedule a system scan**||
+|**Days to track resolved malware**|Lets Defender continue to track resolved malware for the number of days you specify so that you can manually check previously affected devices. If you set the number of days to 0, malware remains in the Quarantine folder and is not automatically removed.|
+|**Allow client UI access**|Controls whether the Windows Defender user interface is hidden from end users. When this setting is changed, it will take effect the next time the end user's PC is restarted.|
+|**Schedule a system scan**|Lets you schedule a full or quick system scan that occurs regularly on the day and time you select.|
 |**Day scheduled**||
 |**Time scheduled**||
 
