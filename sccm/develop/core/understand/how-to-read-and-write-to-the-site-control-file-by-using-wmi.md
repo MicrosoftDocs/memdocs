@@ -294,9 +294,4 @@ End Sub
 ## See Also  
  [http://go.microsoft.com/fwlink/?LinkId=43950](http://go.microsoft.com/fwlink/?LinkId=43950)   
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
- [How to Write a Configuration Manager Site Control File Embedded Property](../Topic/How%20to%20Write%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20Property.md)   
- [How to Read a Configuration Manager Site Control File Embedded Property](../Topic/How%20to%20Read%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20Property.md)   
- [How to Write a Configuration Manager Site Control File Embedded Property List](../Topic/How%20to%20Write%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20Property%20List.md)   
  [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)   
- [How to Write a Configuration Manager Site Control File Embedded RegMultiString List](../Topic/How%20to%20Write%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20RegMultiString%20List.md)   
- [How to Read a Configuration Manager Site Control File Embedded RegMultiString List](../Topic/How%20to%20Read%20a%20Configuration%20Manager%20Site%20Control%20File%20Embedded%20RegMultiString%20List.md)
