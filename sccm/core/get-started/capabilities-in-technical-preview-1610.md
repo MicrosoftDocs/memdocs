@@ -83,6 +83,77 @@ So long as a collection is configured to be excluded, members of that collection
 
 For more information on client installation methods, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
+## Windows Defender configuration settings
+
+You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers using configuration items in the Configuration Manager console.
+
+Specifically, you can configure the following Windows Defender settings:
+- Allow real-time monitoring
+- Allow behavior monitoring
+- Enable Network Inspection System
+- Scan all downloads
+- Allow script scanning
+- Monitor file and program activity
+  - Files monitored
+- Days to track resolved malware
+- Allow client UI access
+- Schedule a system scan
+  - Day scheduled
+  - Time scheduled
+- Schedule a daily quick scan
+  - Time scheduled
+- Limit CPU usage % during a scan
+- Scan archive files
+- Scan email messages
+- Scan removable drives
+- Scan mapped drives
+- Scan files opened from net shares
+- Signature update interval
+- Allow cloud protection
+- Prompt users for samples
+- Potentially Unwanted Application detection
+- Excluded files/folders
+- Excluded file extensions
+- Excluded processes
+
+> [!NOTE]
+> These settings can only be configured on client computers running Windows 10 November Update (1511) and above.
+
+### Try it out!
+
+1.	In the Configuration Manager console, go **Assets adn Compliance** > **Overview** > **Compliance Settings** > **Configuration Items**, and create a new **Configuration Item**.
+2.	Enter a name, then select **Windows 8.1 and Windows 10** under **Settings for devices managed without the Configuration Manager client** and click **Next**.
+3.	Ensure **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)** are selected on the **Supported Platforms** page, then click **Next**.
+4.	Select the **Windows Defender** setting group, then click **Next**.
+5.	Configure the desired settings on this page, then click **Next**.
+6.	Complete the wizard.
+7.	Add this configuration item to a configuration baseline, and deploy this baseline to computers running Windows 10 November Update (1511) or above.
+
+> [!NOTE]
+> Remember to check the **Remediate noncompliant settings** checkbox when deploying the configuration baseline.
+
+## Request policy sync from administrator console
+
+You can now request a policy sync for a mobile device from the Configuration Manager console, instead of needing to request a sync from the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**. State also appears in the **Discovery data** section of the **Properties** dialog for each mobile device.
+
+## Try it out!
+
+1.	In the Configuration Manager console, go **Assets adn Compliance** > **Overview** > Devices.
+2.	In the **Remote Device Actions** menu, select **Send Sync Request**.
+
+Sync can take five to ten minutes. Any changes in policy are synced to the device. You can track the state of the sync request in the **Remote Sync State** column in the **Devices** view, or in the device's **Properties** dialog.
+
+## Additional security role support
+
+In addition to Full Administrator, the following built-in security roles now have full access to items in the **All Corporate-owned Devices** node, including **Predeclared Devices**, **iOS Enrollment Profiles**, and **Windows Enrollment Profiles**:
+•	**Asset Manager**
+•	**Company Resource Access Manager**
+
+Read-only access to these areas of the Configuration Manager console is still granted to the **Read-only Analyst** role.
+
+## Conditional access for Windows 10 VPN profiles
+
+You can now require Windows 10 devices enrolled in Azure Active Directory to be compliant in order to have VPN access through Windows 10 VPN profiles created in the Configuration Manager console. This is possible through the new **Enable conditional access for this VPN connection** checkbox on the **Authentication Method** page in the VPN profile wizard and VPN profile properties for Windows 10 VPN profiles. You can also specify a separate certificate for single sign-on authentication if you enable conditional access for the profile.
 
 ## See Also
 [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md)
