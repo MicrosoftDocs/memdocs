@@ -398,7 +398,7 @@
 ## [Software Updates](sum/software updates.md)
 ### [Software Updates Setup and Configuration](sum/software-updates-setup-and-configuration.md)
 #### [About Software Updates Setup and Configuration](sum/about-software-updates-setup-and-configuration.md)
-#### [How to Configure the Software Update Point]sum/(how-to-configure-the-software-update-point.md)
+#### [How to Configure the Software Update Point](sum/how-to-configure-the-software-update-point.md)
 #### [How to Configure the WSUS Settings](sum/how-to-configure-the-wsus-settings.md)
 #### [How to Enable or Disable the Software Updates Client Agent](sum/how-to-enable-or-disable-the-software-updates-client-agent.md)
 #### [How to Set Software Updates Branding Information](sum/how-to-set-software-updates-branding-information.md)
