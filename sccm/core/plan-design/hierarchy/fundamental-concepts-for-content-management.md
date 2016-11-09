@@ -66,8 +66,12 @@ Applications always use binary differential replication. For packages, binary di
 
 -   In this way, subsequent clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
 
+## Peer Cache
+Beginning with version 1610, client Peer Cache helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache.
 
+After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
 
+For more information see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).
 
 
 ## Windows PE peer cache

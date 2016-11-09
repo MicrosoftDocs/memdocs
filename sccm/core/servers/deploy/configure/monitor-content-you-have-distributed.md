@@ -18,13 +18,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 Use the System Center Configuration Manager console to monitor distributed content,  including:  
 
 -   The status for all package types in relation to the associated distribution points  
-
 -   The content validation status for the content in a package  
-
 -   The status of content assigned to a specific distribution point group  
-
 -   The state of content assigned to a distribution point  
-
 -   The status of optional features for each distribution point (Content validation, PXE, and multicast).  
 
 > [!NOTE]  
@@ -34,37 +30,27 @@ Use the System Center Configuration Manager console to monitor distributed conte
  The **Content Status** node in the **Monitoring** workspace provides information about content packages. In the Configuration Manager console, you can review information like:  
 
 -   The package name  
-
 -   Type  
-
 -   How many distribution points a package has been sent to  
-
 -   The compliance rate  
-
 -   When the package was created  
-
 -   Package ID  
-
 -   Source version  
 
 You also find detailed status information for any package as well as distribution status for the package, including:  
 
 -   The number of failures  
-
 -   pending distributions  
-
 -   The number of installations  
 
 You can also manage distributions that remain in progress to a distribution point or that failed to successfully distribute content to a distribution point:  
 
 -   The applicable option to either cancel or redistribute content is available when you view the deployment status message of a distribution job to a distribution point in the **Asset Details** pane of either the **In Progress** tab or **Error** tab of the **Content Status** node.  
-
 -   Additionally, the job details display the percentage of the job that has completed when you view the details of a job on the **In Progress** tab, and the number of retries that remain for a job as well as how long before the next retry occurs when you view the details of a job that is available from the **Error** tab.  
 
 When you cancel a deployment that is not yet complete, the distribution job to transfer that content stops:  
 
 -   The status of the deployment then updates to indicate the distribution failed and was canceled by a user action.  
-
 -   This new status appears in the **Error** tab.  
 
 > [!TIP]  
@@ -115,23 +101,16 @@ Use the following procedures to view content status and manage distributions tha
 The **Distribution Point Group Status** node in the **Monitoring** workspace provides information about distribution point groups. You can review information like:  
 
 -   The distribution point group name  
-
 -   Description  
-
 -   How many distribution points are members of the distribution point group  
-
 -   How many packages have been assigned to the group  
-
 -   Distribution point group status  
-
 -   Compliance rate  
 
 You also view detailed status information for the following:  
 
 -   Errors for the distribution point group,  
-
 -   How many distributions are in progress  
-
 -   How many have been successfully distributed  
 
 #### To monitor distribution point group status  
@@ -161,3 +140,10 @@ Use the following procedure to view distribution point configuration status.
 3.  Select the distribution point in which you want distribution point status information.  
 
 4.  In the results pane, click the **Details** tab. Status information for the distribution point is displayed.  
+
+## Client Data Sources dashboard
+Beginning with version 1610, you can use the **Client Data Sources** dashboard to help understand the use of [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) in your environment. This dashboard is not be visible in the console until after clients download content using Peer Cache and report that information back to the site. With the reporting interval, this can take up to 24 hours. 
+
+In the console go to **Monitoring** > **Client Status** > **Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
+
+You can also use a new report, **Client Data Sources - Summarization**, to view a summarization of the client data sources for each boundary group.
