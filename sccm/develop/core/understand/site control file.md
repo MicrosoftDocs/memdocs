@@ -27,9 +27,9 @@ Site control in System Center Configuration Manager defines the settings for a s
   
 -   [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)  
 
--   [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md)  
+-   [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)  
 
--   [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md)  
+-   [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)  
 
 -   [How to Read a Configuration Manager Site Control File Embedded Property List](../../../develop/core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md)  
 

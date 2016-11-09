@@ -48,7 +48,7 @@ This section provides information about using operating system deployment task s
   
 -   [How to Remove a Step from an Operating System Deployment Group](../../develop/osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md)  
   
--   [How to Move a Step to a Different Operating System Deployment Task Sequence Group](../../develop/osd/f93360ef-677e-48e0-886a-a07b8451611c.md)  
+-   [How to Move a Step to a Different Operating System Deployment Task Sequence Group](../../develop/osd/how-to-move-a-step-to-a-different-task-sequence-group.md)  
   
 -   [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md)  
   

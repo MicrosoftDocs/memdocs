@@ -26,7 +26,7 @@ Programming the System Center Configuration Manager client Windows Management In
 > [!NOTE]
 >  The managed System Center Configuration Manager library is for use with a System Center Configuration Manager site server and cannot be used to access client WMI namespaces.  
   
- For more information about connecting to the Configuration Manager client WMI namespace by using the System.Management namespace, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md).  
+ For more information about connecting to the Configuration Manager client WMI namespace by using the System.Management namespace, see [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md).  
   
  For more information about using Configuration Manager client WMI namespace objects by using the System.Management namespace, see [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md).  
   
@@ -41,7 +41,7 @@ Programming the System Center Configuration Manager client Windows Management In
 ## See Also  
  [Configuration Manager Programming Fundamentals](../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md)   
- [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/dc9ff31d-249a-40e6-83d3-db2e7bd1d6db.md)   
+ [How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management](../../../../develop/core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md)   
  [How to Perform an Asynchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md)   
  [How to Perform a Synchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md)   
  [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md)   

@@ -33,17 +33,17 @@ Class CCM_ClientUXSettings :
 ## Methods  
  The following table lists the methods in the `CCM_ClientUXSettings` class.  
   
--   [GetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/ce5440c9-2d58-4793-b727-51b6ea030e29.md)  
+-   [GetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/getautoinstallrequiredsoftwaretononbusinesshours-method.md)  
   
 -   [GetBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/getbusinesshours-method-in-class-ccm_clientuxsettings.md)  
   
--   [GetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/2286886d-040d-49e6-9739-d2950606b9e2.md)  
+-   [GetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/getsuppresscomputeractivityinpresentationmode-method.md)  
   
--   [SetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/b02219c8-09b1-4328-8b5c-796d93bc62c0.md)  
+-   [SetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/setautoinstallrequiredsoftwaretononbusinesshours-method.md)  
   
 -   [SetBusinessHours Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/setbusinesshours-method-in-class-ccm_clientuxsettings.md)  
   
--   [SetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/d7bf33f9-10e3-4257-938a-fcebaa5c5bd4.md)  
+-   [SetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings](../../../../../develop/reference/core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md)  
   
 ## Properties  
   

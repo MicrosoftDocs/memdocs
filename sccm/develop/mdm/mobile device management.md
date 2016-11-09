@@ -30,7 +30,7 @@ This section provides topics that show you how to programmatically manage mobile
   
 -   [How to Configure Mobile Device Client Agent Settings](../../develop/mdm/how-to-configure-mobile-device-client-agent-settings.md)  
   
--   [How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices](../../develop/mdm/3becb7a9-cf6b-432b-85e7-a0087df0dbb6.md)  
+-   [How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices](../../develop/mdm/how-to-create-software-distribution-packages-for-mobile-devices.md)  
   
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)

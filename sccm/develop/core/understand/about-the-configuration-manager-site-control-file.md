@@ -94,13 +94,13 @@ Class SMS_SCI_ClientConfig : SMS_SiteControlItem
  How you access the site control file differs depending on whether you are using WMI or the managed provider.  
 
 ### WMI  
- When you are using WMI, you use the `SMS_SiteControlFile` class methods to manage changes to the site control file. Writing to the site control file is managed by using session contextual information that you supply. This is used to enable concurrent writing to the site control file for multiple applications. For more information, see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md) If you are only reading from the site control file you can query it without setting up a session.   
+ When you are using WMI, you use the `SMS_SiteControlFile` class methods to manage changes to the site control file. Writing to the site control file is managed by using session contextual information that you supply. This is used to enable concurrent writing to the site control file for multiple applications. For more information, see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md) If you are only reading from the site control file you can query it without setting up a session.   
 
 ### Managed Provider  
  In almost all cases, your code does not have to lock or commit changes to the Configuration Manager site control file because the managed Configuration Manager library takes care of this for you. As a result, programming the Configuration Manager site control file is fundamentally the same as programming Configuration Manager objects. This is different from accessing the Configuration Manager site control file through WMI where you explicitly have to get a session handle and commit any changes you make.  
 
- For more information, see, [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md).  
+ For more information, see, [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md).  
 
 ## See Also  
- [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/7fc4e08d-bccf-4616-a789-71070d3c6f7b.md)   
- [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/815a4ee8-b211-48de-ba9f-6eff7497dd2b.md)
+ [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
+ [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

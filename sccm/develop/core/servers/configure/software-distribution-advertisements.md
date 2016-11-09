@@ -30,7 +30,7 @@ Advertisements are evaluated by System Center Configuration Manager to determine
   
 -   [How to Modify Advertisement Properties](../../../../develop/core/servers/configure/how-to-modify-advertisement-properties.md)  
   
--   [How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window](../../../../develop/core/servers/configure/c2f7999b-533d-493f-b2b4-079b25c36f2d.md)  
+-   [How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window](../../../../develop/core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md)  
   
 -   [How to Configure an Advertisement to Override a Maintenance Window](../../../../develop/core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md)  
   
