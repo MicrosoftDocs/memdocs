@@ -1,4 +1,4 @@
-## [Class and Property Qualifiers](misc/class and property qualifiers.md)
+# [Class and Property Qualifiers](misc/class and property qualifiers.md)
 
 ### [SMS_WhatsNewFeature Server WMI Class](misc/sms_whatsnewfeature-server-wmi-class.md)
 #### [GetFeatures Method in Class SMS_WhatsNewFeature](misc/getfeatures-method-in-class-sms_whatsnewfeature.md)
