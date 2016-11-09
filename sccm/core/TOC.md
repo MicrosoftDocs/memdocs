@@ -195,7 +195,6 @@
 ###  [Planning for client deployment to Mac computers](clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)
 ###  [Planning for client deployment to Windows Embedded devices](clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)
 ###  [Plan how to wake up clients](clients/deploy/plan/plan-wake-up-clients.md)
-###  [Plan for managing Internet-based clients](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ##   [Client deployment tasks](clients/deploy/configure-client-communication-ports.md)
@@ -218,6 +217,12 @@
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+
+##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
+###  [Plan for Cloud Management Gateway](clients/manage/plan-cloud-management-gateway.md)
+###  [Set up Cloud Management Gateway](clients/manage/setup-cloud-management-gateway.md)
+###  [Monitor clients on Cloud Management Gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
 
 ##   [Collections](clients/manage/collections/introduction-to-collections.md)
 ###  [Introduction to collections](clients/manage/collections/introduction-to-collections.md)
