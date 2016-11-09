@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Peer Cache for Configuration Manager clients*Applies to: System Center Configuration Manager (Current Branch)*
 Beginning with System Center Configuration Manager version 1610, you can use **Peer Cache** to help manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache.   
  - 	You use client settings to enable clients to use Peer Cache.
- - 	To share content, Peer Cache clients must both be members of the current boundary group of the client seeking the content. Peer Cache clients in neighbor boundary groups are not included with the pool of available content source locations when a client uses fallback to seek content from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
+ - 	To share content, Peer Cache clients must both be members of the current boundary group of the client seeking the content. Peer Cache clients in neighbor boundary groups are not included with the pool of available content source locations when a client uses fallback to seek content from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups).
  -	Peer Cache does not replace the use of other solutions like BracnchCache but instead works side-by-side to give you more options to extend traditional content deployment solutions like distribution points.
 
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group:
@@ -26,7 +26,7 @@ After you deploy client settings that enable Peer Cache to a collection, members
  -	Per the normal operating process, the client seeking the content selects one a content source from the pool of sources it is provided, and proceeds to attempt to get the content.
  -	If fallback to a neighbor boundary group for content occurs, the Peer Cache content source locations from the neighbor boundary group are  not added to the client's pool of potential content source locations.  
 
-To help you understand the use of Peer Cache, you can view the Client Data Sources dashboard. See [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed/#client-data-sources-dashboard).
+To help you understand the use of Peer Cache, you can view the Client Data Sources dashboard. See [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 ## Requirements and considerations for Peer Cache:
 - You must configure your site with a **Network Access Account** that has **Full Control** to the cache folder on each client. By default, this is ***%windir%\ccmcache***.
