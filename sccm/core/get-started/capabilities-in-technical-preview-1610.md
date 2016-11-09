@@ -12,9 +12,14 @@ ms.technology:
 ms.topic: article
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
 caps.latest.revision: 2
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Capabilities in Technical Preview 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Technical Preview)*
+# Capabilities in Technical Preview 1610 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Technical Preview)*
+
 
 
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1610. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
@@ -73,7 +78,6 @@ To configure automatic upgrade exclusions:
 > [!NOTE]
 > Although the user interface states that clients will not be upgraded via any method, there are two methods you can use to override these settings. Client push installation and a manual client installation can be used to override this configuration. For more details, see the following section.
 
-
 ### How to upgrade a client that is in an excluded collection
 So long as a collection is configured to be excluded, members of that collection can only have their client software upgraded by one of two methods, which override the exclusion:
  - **Client Push Installation** – You can use client push installation to upgrade a client that is in an excluded collection. This is allowed as it is considered to be the intent of the administrator and enables you to upgrade clients without removing the entire collection from exclusion.       
@@ -121,7 +125,7 @@ Specifically, you can configure the following Windows Defender settings:
 
 ### Try it out!
 
-1.	In the Configuration Manager console, go **Assets adn Compliance** > **Overview** > **Compliance Settings** > **Configuration Items**, and create a new **Configuration Item**.
+1.	In the Configuration Manager console, go **Assets and Compliance** > **Overview** > **Compliance Settings** > **Configuration Items**, and create a new **Configuration Item**.
 2.	Enter a name, then select **Windows 8.1 and Windows 10** under **Settings for devices managed without the Configuration Manager client** and click **Next**.
 3.	Ensure **All Windows 10 (64-bit)** and **All Windows 10 (32-bit)** are selected on the **Supported Platforms** page, then click **Next**.
 4.	Select the **Windows Defender** setting group, then click **Next**.
