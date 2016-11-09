@@ -189,7 +189,7 @@ Beginning with version 1610, you can use the option to **Reassign Distribution p
 When you reassign distribution points, each distribution point must qualify to be either upgraded or reassigned. The name of the action and process involved, upgrade or reassign, depends on which version of Configuration Manager the source site runs. However, upgraded or reassigned, the end results are the same: The distribution point is assigned to one of your Current Branch sites with its content in-place.
 
 Prior to version 1610, Configuration Manager could process only one distribution point at a time. Now, you can reassign as many distribution points as you want with the following caveats:  
-- You must select each distribution point individually.  You cannot multi-select multiple distribution points to be reassigned.
+- Although you  cannot multi-select distribution points to be reassigned, when you have queued up more than one, Configuration Manager will process them in parallel instead of waiting to complete one before starting the next.  
 - By default, up to 50 distribution points are processed in parallel at a time. After the reassignment of the first distribution point is complete, Configuration Manager will begin to process the 51st, and so on.  
 - When you use the Configuration Manager SDK, you can modify the property **SharedDPImportThreadLimit** to adjust the number of reassigned distribution points that Configuration Manager can process in parallel.
 
