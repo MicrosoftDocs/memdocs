@@ -29,6 +29,5 @@
 ## [Software updates maintenance](deploy-use/software-updates-maintenance.md)
 ## [Service a server group](deploy-use/service-a-server-group.md)
 ## [Manage Office 365 ProPlus updates](deploy-use/manage-office-365-proplus-updates.md)
-## [Manage Office 365 apps](deploy-use/manage-office-365-apps.md)
 ## [Integration with Windows Update for Business in Windows 10](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [Example scenario to deploy security updates](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
