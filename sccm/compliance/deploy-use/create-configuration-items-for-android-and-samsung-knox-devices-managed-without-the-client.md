@@ -83,12 +83,12 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 |Setting name|Details|  
 |------------------|-------------|
-|**Voice dialing**||
-|**Voice assistant**||
-|**Screen capture**||
-|**Diagnostic data submission**||
-|**Geolocation**||
-|**Copy and Paste**||  
+|**Voice dialing**|Enables or disables the voice dialing feature on the device.|
+|**Voice assistant**|Allows the use of voice assistant software on the device.|
+|**Screen capture**|Lets the user capture the screen contents as an image.|
+|**Diagnostic data submission**|Allows the device to submit diagnostic information to Google.|
+|**Geolocation**|Allows the device to utilize location information.|
+|**Copy and Paste**|Allows copy and paste functions on the device.|  
 |**Factory reset**|Allow the user to perform a factory reset on the device.|  
 |**Clipboard share between applications**|Use the clipboard to copy and paste between apps.|
 |**Bluetooth**|Allows the Bluetooth capability of the device to be used.|
@@ -101,11 +101,11 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 ### Browser
 |Setting|Details|  
 |-------------|-------------| 
-|**Allow web browser**||
-|**Autofill**||
-|**Active scripting**||
-|**Pop-up blocker**||
-|**Cookies**||
+|**Allow web browser**|Specifies whether the device's default web browser can be used.|
+|**Autofill**|Allows the autofill function of the web browser to be used.|
+|**Active scripting**|Allows the device web browser to use active scripting.|
+|**Pop-up blocker**|Allows the use of the pop-up blocker in the web browser.|
+|**Cookies**|Allows the device web browser to use cookies.|
 
 ### Cloud  
  These settings apply to Samsung KNOX Standard devices only.  
@@ -121,32 +121,32 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 |Setting|Details|  
 |-------------|-------------|  
-|**SMS and MMS messaging**||
-|**Removable storage**||
+|**SMS and MMS messaging**|Allows the use of SMS and MMS messaging on the device.|
+|**Removable storage**|Allows the device to use removable storage, like an SD card.|
 |**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX Standard devices.|  
-|**Near field communication (NFC)**||
+|**Near field communication (NFC)**|Allows operations that use near field communication if the device supports it.|
 |**YouTube**|Allows use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX Standard devices only.|  
 |**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.| 
 
 ### Roaming 
 |Setting|Details|  
 |-------------|-------------|
-|**Voice roaming**||
-|**Data roaming**||
+|**Voice roaming**|Allows voice roaming when the device is on a cellular network.|
+|**Data roaming**|Allows data roaming when the device is on a cellular network.|
 
 ### Encryption  
  These settings apply to both Android and Samsung KNOX Standard devices.  
 
 |Setting|Details|  
 |-------------|-------------|  
-|**Storage card encryption**||
+|**Storage card encryption**|Specifies whether the device storage card must be encrypted.|
 |**File encryption on device**|Requires that files on the mobile device are encrypted.|  
 
 ### Wireless communications
 |Setting|Details|  
 |-------------|-------------|
-|**Wireless network connection**||
-|**Wi-Fi Tethering**||
+|**Wireless network connection**|Allows the use of the Wi-Fi capabilities of the device.|
+|**Wi-Fi Tethering**|Allows the use of Wi-Fi tethering on the device.|
 
 
 ### Kiosk mode (Samsung KNOX Standard only)  

@@ -72,10 +72,10 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|
-|**Idle time before device is locked**||  
+|**Idle time before device is locked**|Specifies the amount of time a device must remain idle before the screen is automatically locked.|  
 |**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.| 
-|**Allow simple passwords**|| 
-|**Send password recovery PIN to Exchange Server**||  
+|**Allow simple passwords**|Specifies that simple passwords such as ‘0000’ and ‘1234’ can be used.| 
+|**Send password recovery PIN to Exchange Server**|-|  
   
 ### Device  
   
@@ -98,9 +98,9 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Maximum size for plain text email (automatically downloaded)**|Controls the maximum size of plain text emails when automatically downloaded.|  
 |**Maximum size for HTML email (automatically downloaded)**|Controls the maximum size of HTML emails when automatically downloaded.|  
 |**Maximum size of an attachment (automatically downloaded)**|Configures the maximum size email that will be automatically downloaded.|  
-|**Calendar synchronization**||  
+|**Calendar synchronization**|Lets users synchronize calendar appointments in addition to email.|  
 |**Custom email account**|Allow using a non-Microsoft account on the device.|  
-|**Make Microsoft Account optional in Windows Mail app**||  
+|**Make Microsoft Account optional in Windows Mail app**|-|  
   
 ### Store  
  These settings apply to Windows Phone 8.1 devices only.  
@@ -128,12 +128,12 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |Setting|Details|  
 |-------------|-------------|  
 |**Always send Do Not Track header**|Prevents browsing information from being sent to third-party sites.|  
-|**Intranet security zone**||  
+|**Intranet security zone**|-|  
 |**Security level for Internet zone**|Configure the security level for the Internet zone.|  
 |**Security level for intranet zone**|Configure the security level for the intranet zone.|  
 |**Security level for trusted sites zone**|Configure the security level for the trusted sites zone.|  
 |**Security level for restricted sites zone**|Configure the security level for the restricted sites zone.|  
-|**Namespaces for intranet zone**||  
+|**Namespaces for intranet zone**|-|  
 |**Go to intranet site for single word entry**|Enables or disables the setting that allows Internet Explorer to automatically go to an Intranet site if a valid site name is entered without a preceding HTTP:|  
 |**Enterprise mode menu option**|Allow users to activate and deactivate Enterprise Mode from the Internet Explorer **Tools** menu.|  
 |**Logging report location (URL)**|Specify a URL where visited websites will be logged when Enterprise Mode is active.|  
@@ -158,16 +158,16 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Removable storage**|Allow use of removable storage, like an SD card on the device.|  
 |**Camera**|Allow use of the device camera.|  
 |**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows Phone 8.1 only)| 
-|**Allow USB connection**|| 
+|**Allow USB connection**|Controls whether devices can access external storage devices through a USB connection.| 
   
 ### Peak synchronization  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
   
 |Setting|Details|  
 |-------------|-------------|  
-|**Specify peak time**||  
-|**Peak synchronization frequency**||  
-|**Off-peak synchronization frequency**||  
+|**Specify peak time**|Configure the peak time for mobile device synchronization.|  
+|**Peak synchronization frequency**|Configure how often synchronization occurs during the peak hours you configured.|  
+|**Off-peak synchronization frequency**|Configure how often synchronization occurs outside of the peak hours you configured.|  
   
 ### Roaming  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
@@ -198,8 +198,8 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
 |**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
-|**Offload data to Wi-Fi when possible**||  
-|**Wi-Fi hotspot reporting**||  
+|**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
+|**Wi-Fi hotspot reporting**|Sends information about Wi-Fi connections to help the user discover nearby connections.|  
   
 #### To configure a wireless network connection  
   
@@ -209,7 +209,7 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 
 |Setting|More information|  
 |-------------|----------------------|  
-|**Network name (SSID)**||  
+|**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
 |**Network connection**|Choose from **Internet** or **Work**.|  
 |**Authentication**|Choose the authentication method for the wireless connection from:<br><br>- **Open**<br>-                    **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
 |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br><br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
@@ -267,7 +267,7 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**SmartScreen**|Enable or disable Windows Smart Screen.|  
 |**Virus protection**|Ensure that the device is protected by antivirus software|  
 |**Virus protection signatures are up to date**|Ensure that the antivirus software signatures are up to date.|
-|**Allow manual unenrollment**||  
+|**Allow manual unenrollment**|-|  
   
 ### Windows Server Work Folders  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  

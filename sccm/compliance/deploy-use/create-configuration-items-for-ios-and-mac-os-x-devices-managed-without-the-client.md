@@ -72,11 +72,10 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
 |**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br>(iOS only)| 
-|**Idle time before device is locked**||
-|**Minutes of inactivity before password is required**|| 
+|**Idle time before device is locked**|Specifies the number of minutes of inactivity before the device automatically locks.|
 |**Password complexity**|Choose whether you can specify a PIN such as '1234', or whether you must supply a strong password.|
-|**Allow simple passwords**||
-|**Fingerprint for unlocking**||
+|**Allow simple passwords**|Specifies that simple passwords such as ‘0000’ and ‘1234’ can be used.|
+|**Fingerprint for unlocking**|Allow using a fingerprint to unlock the device.|
 
 ###  Device  
  These settings apply to both iOS and Mac OS X devices.  
