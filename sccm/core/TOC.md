@@ -48,7 +48,7 @@
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
-#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache)
+#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
@@ -195,7 +195,6 @@
 ###  [Planning for client deployment to Mac computers](clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)
 ###  [Planning for client deployment to Windows Embedded devices](clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)
 ###  [Plan how to wake up clients](clients/deploy/plan/plan-wake-up-clients.md)
-###  [Plan for managing Internet-based clients](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ##   [Client deployment tasks](clients/deploy/configure-client-communication-ports.md)
@@ -218,6 +217,12 @@
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+
+##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
+###  [Plan for Cloud Management Gateway](clients/manage/plan-cloud-management-gateway.md)
+###  [Set up Cloud Management Gateway](clients/manage/setup-cloud-management-gateway.md)
+###  [Monitor clients on Cloud Management Gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
 
 ##   [Collections](clients/manage/collections/introduction-to-collections.md)
 ###  [Introduction to collections](clients/manage/collections/introduction-to-collections.md)
