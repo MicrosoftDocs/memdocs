@@ -32,9 +32,9 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
 
-3.  In the **Applications** list, select the application that you want to deploy. Then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
+2.  In the **Applications** list, select the application that you want to deploy. Then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
-4.  On the **General** page of the Deploy Software Wizard, specify the following information:  
+3.  On the **General** page of the Deploy Software Wizard, specify the following information:  
 
     -   **Software** – This displays the application to deploy. You can click **Browse** to select a different application.  
 
@@ -49,40 +49,34 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
     -   **Comments (optional)** – Optionally, enter a description of this deployment.  
 
-5.  On the **Content** page, click **Add** to add the content that is associated with this deployment to distribution points or distribution point groups. If you have selected Use default distribution points associated to this collection on the **General** page, then this option will be automatically populated and can only be modified by a member of the **Application Administrator** security role.  
+4.  On the **Content** page, click **Add** to add the content that is associated with this deployment to distribution points or distribution point groups. If you have selected Use default distribution points associated to this collection on the **General** page, then this option will be automatically populated and can only be modified by a member of the **Application Administrator** security role.  
 
-6.  Click **Next**.  
+5.  Click **Next**.  
 
-7.  On the **Deployment Settings** page of the Deploy Software Wizard, specify the following information:  
+6.  On the **Deployment Settings** page of the Deploy Software Wizard, specify the following information:  
+- **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
+> [!NOTE]  
+>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.
 
-    -   **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
+You cannot change the action of a deployment after it has been created.  
 
-        > [!NOTE]  
-        >  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.  
-        >   
-        >  You cannot change the action of a deployment after it has been created.  
 
-    -   **Purpose** – From the drop-down list, choose one of the following options:  
-
-        -   **Available** - If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.  
-
-        -   **Required** - The application is deployed automatically according to the configured schedule. However, a user can track the application deployment status if it is not hidden, and can install the application before the deadline from Software Center.  
-
-            > [!NOTE]  
-            >  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
-
+- **Purpose** – From the drop-down list, choose one of the following options:
+	-   **Available** - If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.  
+    -   **Required** - The application is deployed automatically according to the configured schedule. However, a user can track the application deployment status if it is not hidden, and can install the application before the deadline from Software Center.  
+    > [!NOTE]  
+    >  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
     -   **Deploy automatically according to schedule whether or not a user is logged on** – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
-
     -   **Send wake-up packets** – If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.  
-
     -   **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs** – This option is only available for deployments with a purpose of **Required**.  
-
     -   **Require administrator approval if users request this application** – If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is unavailable when the deployment purpose is **Required** or when the application is deployed to a device collection.  
+    > [!NOTE]  
+    >  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If an approval request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
+    >  After you have approved an application for installation, you can subsequently choose to deny the request by clicking Deny in the Configuration Manager console (previously this button was grayed out after approval).
+    
+This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
-        > [!NOTE]  
-        >  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If an approval request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
-
-    -   **Automatically upgrade any superseded version of this application** – If this option is selected, any superseded versions of the application will be upgraded with the superseding application.  
+- **Automatically upgrade any superseded version of this application** – If this option is selected, any superseded versions of the application will be upgraded with the superseding application.  
 
 8.  On the **Scheduling** page of the Deploy Software Wizard, configure when this application will be deployed or made available to client devices.  
     The options on this page will differ depending on whether the deployment action is set to **Available** or **Required**.  
@@ -110,4 +104,22 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 4.  In the **Deployments** tab of the *<application name\>* list, select the application deployment to delete. Then, in the **Deployment** tab, in the **Deployment** group, click **Delete**.  
 
- When you delete an application deployment, any instances of the application that have already been installed are not removed. To remove these applications, you must deploy the application to computers with the action **Uninstall**. If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center.  
+ When you delete an application deployment, any instances of the application that have already been installed are not removed. To remove these applications, you must deploy the application to computers with the action **Uninstall**. If you delete an application deployment, or remove a resource from the collection you are deploying to, the application will no longer be visible in Software Center. 
+
+## End user notifications for required deployments
+When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values:
+- Later: specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
+- Fixed time: specifies that the notification will be scheduled to display again after the selected time. For example, if a user selects 30 minutes, the notification will display again in 30 minutes.
+
+![Computer Agent page in Client Agent settings](media/computeragentsettings.png)
+
+The maximum snooze time is always based on the notification values configured in the Client Agent settings at every time along the deployment timeline. For example, if the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the Computer Agent page is configured for 10 hours, and it is more than 24 hours before the deadline when the dialog is launched, the user would be presented with a set of snooze options up to but never greater than 10 hours. As the deadline approaches, the dialog will show fewer options, consistent with the relevant Client Agent settings for each component of the deployment timeline.
+
+Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the end-user notification experience is now more intrusive. Instead of a transient taskbar notification, each time the user is notified that critical software maintenance is required, a dialog box such as the following displays on the user's computer:
+
+![Required Software dialog](media/requiredsoftwaredialog.png)
+
+
+For more information:
+- [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [How to configure client settings](../clients/deploy/configure-client-settings.md) 

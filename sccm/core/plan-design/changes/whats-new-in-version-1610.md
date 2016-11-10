@@ -47,7 +47,7 @@ Beginning with version 1610, when you install an update pack and monitor the ins
 
 In this release, the following improvements have been made to this policy type:
 
-- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
+- You can now use the edition upgrade policy with Windows 10 PCs that run the the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
 ## Improvements for boundary groups
@@ -68,7 +68,170 @@ You can also use the new **Client Data Sources** dashboard to understand the use
 For more information see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache), and [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 
+## Enhancements to Windows Store for Business integration with Configuration Manager
 
+Changes in this release:
+- Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
+- You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
+- You can now modify the client secret key that you obtained from Azure Active Directory
+- You can delete a subscription to the store
+
+For details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 ## Migrate multiple shared distribution points at the same time
 You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
+
+## Use compliance settings to configure Windows Defender settings
+
+You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers using configuration items in the Configuration Manager console.
+For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
+
+## Policy sync for Intune-enrolled devices
+
+You can now request a policy sync for an Intune-enrolled device from the Configuration Manager console instead of needing to request a sync from the Company Portal app on the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**, as well as in the discovery data section of the **Properties** dialog for each device.
+
+## Improved functionality for required software dialogs
+When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values:
+- Later: specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
+- Fixed time: specifies that the notification will be scheduled to display again after the selected time. For example, if a user selects 30 minutes, the notification will display again in 30 minutes.
+
+![Computer Agent page in Client Agent settings](media/computeragentsettings.png)
+
+The maximum snooze time is always based on the notification values configured in the Client Agent settings at every time along the deployment timeline. For example, if the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the Computer Agent page is configured for 10 hours, and it is more than 24 hours before the deadline when the dialog is launched, the user would be presented with a set of snooze options up to but never greater than 10 hours. As the deadline approaches, the dialog will show fewer options, consistent with the relevant Client Agent settings for each component of the deployment timeline.
+
+Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the end-user notification experience is now more intrusive. Instead of a transient taskbar notification, each time the user is notified that critical software maintenance is required, a dialog box such as the following displays on the user's computer:
+
+![Required Software dialog](media/requiredsoftwaredialog.png)
+
+
+For more information:
+- [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [How to configure client settings](../clients/deploy/configure-client-settings.md)
+
+## General improvements to Software Center
+- Users can now request apps from Software Center, as well as the Application Catalog.
+- Improvements to help users understand what software is new and relevant.
+
+## Improvements to the application request process
+
+After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
+This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
+
+
+## New compliance settings for configuration items
+We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
+For details, see [Configuration items for devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
+ 
+### New settings for Android devices
+#### Password settings
+- **Remember password history**
+- **Allow fingerprint unlock**
+ 
+#### Security settings
+- **Require encryption on storage cards**
+- **Allow screen capture**
+- **Allow diagnostic data submission**
+
+#### Browser settings
+- **Allow web browser**
+- **Allow autofill**
+- **Allow pop-up blocker**
+- **Allow cookies**
+- **Allow active scripting**
+ 
+#### App settings
+
+
+- **Allow Google Play store**
+ 
+#### Device capability settings
+- **Allow removable storage**
+- **Allow Wi-Fi tethering**
+- **Allow geolocation**
+- **Allow NFC**
+- **Allow Bluetooth**
+- **Allow voice roaming**
+- **Allow data roaming**
+- **Allow SMS/MMS messaging**
+- **Allow voice assistant**
+- **Allow voice dialing**
+- **Allow copy and paste**
+ 
+### New settings for iOS devices
+
+#### Password settings
+- **Number of complex characters required in password**
+- **Allow simple passwords**
+- **Minutes of inactivity before password is required**
+- **Remember password history**
+
+### New settings for Mac OS X devices
+#### Password settings
+- **Number of complex characters required in password**
+- **Allow simple passwords**
+- **Remember password history**
+- **Minutes of inactivity before screensaver activates**
+
+### New settings for Windows 10 Desktop and Mobile devices
+#### Password settings
+- **Minimum number of character sets**
+- **Remember password history**
+- **Require a password when the device returns from an idle state**
+
+#### Security settings
+- **Require encryption on mobile device**
+- **Allow manual unenrollment**
+ 
+#### Device capability settings
+- **Allow VPN over cellular**
+- **Allow VPN roaming over cellular**
+- **Allow phone reset**
+- **Allow USB connection**
+- **Allow Cortana**
+- **Allow action center notifications**
+
+### New settings for Windows 10 Team devices
+#### Device settings
+- **Enable Azure Operational Insights**
+- **Enable Miracast wireless projection**
+- **Choose the meeting information displayed on the welcome screen**
+- **Lockscreen background image URL**
+
+### New settings for Windows 8.1 devices
+#### Applicability settings
+
+
+- **Apply all configurations to Windows 10**
+
+#### Password settings
+- **Required password type**
+- **Minimum number of character sets**
+- **Minimum password length**
+- **Number of repeated sign-in failures to allow before the device is wiped**
+- **Minutes of inactivity before screen turns off**
+- **Password expiration (days)**
+- **Remember password history**
+- **Prevent reuse of previous passwords**
+- **Allow picture password and PIN**
+
+#### Browser settings
+
+
+- **Allow automatic detection of intranet network**
+
+### New settings for Windows Phone 8.1 devices
+#### Applicability settings
+
+
+- **Apply all configurations to Windows 10**
+
+#### Password settings
+- **Minimum number of character sets**
+- **Allow simple passwords**
+- **Remember password history**
+
+#### Device capability settings
+
+
+- **Allow automatic connection to free Wi-Fi hotspots**
+

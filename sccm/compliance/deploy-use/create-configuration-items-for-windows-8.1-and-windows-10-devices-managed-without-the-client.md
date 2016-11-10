@@ -354,7 +354,7 @@ For information about how to configure Windows Information Protection with Confi
 
 ### Windows Defender
 
- These settings are for devices running Windows 10 and later.  
+ These settings are for devices running Windows 10 November Update (1511) and later.  
 
 |Setting name|Details|  
 |------------------|-------------| 
@@ -364,11 +364,24 @@ For information about how to configure Windows Information Protection with Confi
 |**Scan all downloads**|Controls whether Defender scans all files downloaded from the Internet.|
 |**Allow script scanning**|Lets Defender scan scripts that are used in Internet Explorer.|
 |**Monitor file and program activity**|Enable this setting to allow Defender to monitor file and program activity on devices.|
-|**Files monitored**||
+|**Files monitored**|If you enabled **Monitor file and program activity**, you can then select whether to monitor incoming files, outgoing files, or all files.|
 |**Days to track resolved malware**|Lets Defender continue to track resolved malware for the number of days you specify so that you can manually check previously affected devices. If you set the number of days to 0, malware remains in the Quarantine folder and is not automatically removed.|
 |**Allow client UI access**|Controls whether the Windows Defender user interface is hidden from end users. When this setting is changed, it will take effect the next time the end user's PC is restarted.|
 |**Schedule a system scan**|Lets you schedule a full or quick system scan that occurs regularly on the day and time you select.|
-|**Day scheduled**||
-|**Time scheduled**||
+|**Schedule a quick daily scan**|Lets you schedule a quick scan that occurs daily at the time you select.|
+|**Limit CPU usage during a scan**|Lets you limit the amount of CPU that scans are allowed to use (from **1** to **100**)|
+|**Scan archive files**|Allows Defender to scan archived files such as Zip or Cab files.|
+|**Scan email messages**|Allows Defender to scan email messages as they arrive on the device.|
+|**Scan removable drives**|Lets Defender scan removable drives like USB sticks.|
+|**Scan mapped drives**|Lets Defender scan files on mapped network drive.<br>If the files on the drive are read-only, Defender will be unable to remove any malware found in them.|
+|**Scan files opened from network shared folders**|Lets Defender scan files on shared network drives (for instance, those accessed from a UNC path.<br>If the files on the drive are read-only, Defender will be unable to remove any malware found in them.|
+|**Signature update interval**|Specify the interval at which Defender will check for new signature files.|
+|**Allow cloud protection**|Allow or block the Microsoft Active Protection Service from receiving information about malware activity from devices you manage. This information is used to improve the service in the future.|
+|**Prompt users for samples submission**|Controls whether files that might require further analysis by Microsoft to determine if they are malicious are automatically sent to Microsoft.|
+|**Potentially Unwanted Application detection**|This setting can be used to protect enrolled Windows desktop devices against running software classified by Windows Defender as potentially unwanted. You can protect against these applications running, or use audit mode to report when a potentially unwanted application is installed.|
+|**File and folder exclusions**|Add one or more files and folders like C:\Path or %ProgramFiles%\Path\filename.exe to the exclusions list. These files and folders will not be included in any real-time, or scheduled scans.|
+|**File extension exclusions**|Add one or more file extensions like jpg or txt to the exclusions list. Any files with these extensions will not be included in any real-time, or scheduled scans.|
+|**Process exclusions**|Add one or more processes of the type .exe, .com, or .scr to the exclusions list. These processes will not be included in any real-time, or scheduled scans.|
+
 
 
