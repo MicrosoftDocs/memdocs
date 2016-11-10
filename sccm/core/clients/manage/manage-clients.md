@@ -2,7 +2,7 @@
 title: "Manage clients | System Center Configuration Manager"
 description: "Learn how to manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -346,6 +346,7 @@ Beginning in version 1606, you can adjust the size of the client cache folder wi
 
 ## Manage duplicate hardware identifiers
 Beginning in Configuration Manager version 1610, you can provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
+
 1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
 2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
 
