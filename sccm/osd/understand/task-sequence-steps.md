@@ -2,7 +2,7 @@
 title: Task sequence steps | Configuration Manager
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -1453,19 +1453,19 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
  The task sequence automatically sets the following read-only task sequence variables:  
 
--   _SMSTSMake  
+ -   _SMSTSMake  
 
--   _SMSTSModel  
+ -   _SMSTSModel  
 
--   _SMSTSMacAddresses  
+ -   _SMSTSMacAddresses  
 
--   _SMSTSIPAddresses  
+ -   _SMSTSIPAddresses  
 
--   _SMSTSSerialNumber  
+ -   _SMSTSSerialNumber  
 
--   _SMSTSAssetTag  
+ -   _SMSTSAssetTag  
 
--   _SMSTSUUID  
+ -   _SMSTSUUID  
 
  This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
 
@@ -1495,7 +1495,9 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
 -   **Location**: Use this rule category to evaluate values for the default gateway.  
 
--   **Make and Model**: Use this rule category to evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.  
+-   **Make and Model**: Use this rule category to evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.
+
+    Starting in Configuration Manager version 1610, you can specify an asterisk (*****) and question mark (**?**) as wild cards, where ***** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" will match DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Use this rule category to add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
 
