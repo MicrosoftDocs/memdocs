@@ -6,6 +6,9 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology: configmgr-other
 ms.assetid: 906806fe-6d7b-4536-95fd-829290367c5c
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
@@ -120,4 +123,3 @@ for this software, unless other terms accompany those items. If so, those terms 
     -   claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  
 
    It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
-

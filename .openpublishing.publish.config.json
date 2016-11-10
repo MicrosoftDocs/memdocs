@@ -1,5 +1,7 @@
 {
   "build_entry_point": "docs",
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMdocs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "docsets_to_publish": [
@@ -9,7 +11,7 @@
       "build_output_subfolder": "sccm",
       "locale": "en-us",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -19,12 +21,15 @@
       "template_folder": "_themes"
     }
   ],
+
+
   "notification_subscribers": [],
   "branches_to_filter": [
     ""
   ],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+
   "dependent_repositories": [
     {
       "path_to_root": "_themes",

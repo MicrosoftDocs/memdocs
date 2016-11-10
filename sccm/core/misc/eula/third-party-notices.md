@@ -6,6 +6,9 @@ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
+ms.prod: configuration-manager
+ms.service:
+ms.technology: configmgr-other
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
@@ -438,4 +441,3 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
  **END OF Active Directory Authentication Library (ADAL) for .NET NOTICES AND INFORMATION**
-
