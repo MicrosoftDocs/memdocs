@@ -2,7 +2,7 @@
 title: "Upgrade clients | Windows | System Center Configuration Manager"
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to upgrade clients for Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -30,7 +30,7 @@ You can upgrade the client on Windows computers using client installation method
  If you are interested in upgrading the client using a client installation methods, learn more about using those methods in [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
 
  Beginning in version 1610, you can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exlude-clients-windows.md).  
-  
+
 
 > [!TIP]  
 >  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.
@@ -59,7 +59,7 @@ You can upgrade the client on Windows computers using client installation method
 > [!NOTE]  
 >  Configuration Manager does not automatically send the client upgrade package to Configuration Manager cloud-based distribution points.  
 
- Automatic client upgrades are useful when you want to upgrade a small number of client computers that might have been missed by your main client installation method. For example, you have completed an initial client upgrade, but some clients were offline during the upgrade deployment. You then use this method to upgrade the client on these computers when they are next active.
+ We recommend that you enable automatic client upgrades across your hierarchy. This will keep your clients updated with minimal administrative overhead.  
 
  Use the following procedure to configure automatic client upgrade. Automatic client upgrade must be configured at a central administration site and this configuration applies to all clients in your hierarchy.  
 
