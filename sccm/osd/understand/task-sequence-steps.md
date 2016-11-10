@@ -2,7 +2,7 @@
 title: Task sequence steps | Configuration Manager
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -1453,19 +1453,19 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
  The task sequence automatically sets the following read-only task sequence variables:  
 
--   _SMSTSMake  
+ -   _SMSTSMake  
 
--   _SMSTSModel  
+ -   _SMSTSModel  
 
--   _SMSTSMacAddresses  
+ -   _SMSTSMacAddresses  
 
--   _SMSTSIPAddresses  
+ -   _SMSTSIPAddresses  
 
--   _SMSTSSerialNumber  
+ -   _SMSTSSerialNumber  
 
--   _SMSTSAssetTag  
+ -   _SMSTSAssetTag  
 
--   _SMSTSUUID  
+ -   _SMSTSUUID  
 
  This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
 
@@ -1480,32 +1480,34 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
 -   Specify conditions that must be met for the step to run.  
 
- **Name**  
+**Name**  
  A short user-defined name for this task sequence step.  
 
- **Description**  
+**Description**  
  More detailed information about the action taken in this step.  
 
- **Dynamic rules and variables**  
+**Dynamic rules and variables**  
  To set a dynamic variable to use in the task sequence, you can add a rule and then specify a value for each variable that you specify for the rule or add one or more variables to set without adding a rule. When you add a rule, you can choose from the following rule categories:  
 
--   **Computer**: Use this rule category to evaluate values for Asset tag, UUID, serial number, or mac address. You can set multiple values, and if any value is true, then the rule will evaluate to true. For example, the following rule evaluates to true if the Serial Number is 5892087 regardless of whether the MAC address equals 26-78-13-5A-A4-22.  
+ -   **Computer**: Use this rule category to evaluate values for Asset tag, UUID, serial number, or mac address. You can set multiple values, and if any value is true, then the rule will evaluate to true. For example, the following rule evaluates to true if the Serial Number is 5892087 regardless of whether the MAC address equals 26-78-13-5A-A4-22.  
 
      `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
 -   **Location**: Use this rule category to evaluate values for the default gateway.  
 
--   **Make and Model**: Use this rule category to evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.  
+-   **Make and Model**: Use this rule category to evaluate values for the make and model of a computer. Both the make and model must evaluate to true for the rule to evaluate to true.   
+
+    Starting in Configuration Manager version 1610, you can specify an asterisk (*****) and question mark (**?**) as wild cards, where ***** matches multiple characters and **?** matches a single character. For example, the string "DELL*900?" will match DELL-ABC-9001 and DELL9009.
 
 -   **Task Sequence Variable**: Use this rule category to add a task sequence variable, condition, and value to evaluate. The rule evaluates to true when the value set for the variable meets the specified condition.  
 
- You can specify one or more variables that will be set for a rule that evaluates to true or set variables without using a rule. You can select from existing variables or create a custom variable.  
+You can specify one or more variables that will be set for a rule that evaluates to true or set variables without using a rule. You can select from existing variables or create a custom variable.  
 
--   **Existing task sequence variables**: Use this setting to select one or more variables from a list of existing task sequence variables. Array variables are not available to select.  
+ -   **Existing task sequence variables**: Use this setting to select one or more variables from a list of existing task sequence variables. Array variables are not available to select.  
 
--   **Custom task sequence variables**: Use this setting to define a custom task sequence variable. You can also specify an existing task sequence variable. This is useful to specify an existing variable array, such as OSDAdapter, since variable arrays are not in the list of existing task sequence variables.  
+ -   **Custom task sequence variables**: Use this setting to define a custom task sequence variable. You can also specify an existing task sequence variable. This is useful to specify an existing variable array, such as OSDAdapter, since variable arrays are not in the list of existing task sequence variables.  
 
- After you select the variables for a rule, you must provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the OSDCaptureAccountPassword task sequence variable.  
+After you select the variables for a rule, you must provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the OSDCaptureAccountPassword task sequence variable.  
 
 > [!IMPORTANT]  
 >  When you import a task sequence with the Set Dynamic Variables step, and **Secret value** is selected for the value of the variable, the value is removed when you import the task sequence. As a result, you must re-enter the value for the dynamic variable after you import the task sequence.  
