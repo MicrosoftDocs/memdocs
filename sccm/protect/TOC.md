@@ -1,10 +1,10 @@
-# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+# Understand and explore
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
-# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
+# Plan and design
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate infrastructure](plan-design/certificate-infrastructure.md)
 ### [Certificate template permissions for certificate profiles](plan-design/planning-for-certificate-template-permissions.md)
@@ -22,7 +22,7 @@
 
 ## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
-# [Deploy and use](deploy-use/vpn-profiles.md)
+# Deploy and use
 ## [VPN profiles](deploy-use/vpn-profiles.md)
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
@@ -74,7 +74,7 @@
 
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
-## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)
+## Monitor protection
 ### [Monitor Wi-Fi, email and VPN profiles](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [Monitor certificate profiles](deploy-use/monitor-certificate-profiles.md)
 ### [Monitor Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
