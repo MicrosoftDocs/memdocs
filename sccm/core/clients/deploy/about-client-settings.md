@@ -2,7 +2,7 @@
 title: "Client settings | System Center Configuration Manager"
 description: "Select client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -265,6 +265,11 @@ Beginning in version 1606, specify the maximum size of the client cache folder i
      For virtual desktop infrastructure (VDI) scenarios, this delay can help to distribute the CPU processing and data transfer for a computer that has multiple virtual machines that run the Configuration Manager client. Even if you do not use VDI, if many clients install the same updates at the same time, this can negatively increase CPU usage on the site server, slow down distribution points, and significantly reduce the available network bandwidth.  
 
      If required software updates must install without delay when the configured deadline is reached, select **Yes** for this setting.  
+
+-   **Grace period for enforcement after deployment deadline (hours)** 
+	
+	 In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can define an enforcement grace period by deploying Configuration Manager client settings to a collection.
+	You can set a grace period of between 1 and 120 hours. This setting is used in conjunction with the deployment property **Delay enforcement of this deployment according to user preferences**. For more details, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
 
 ##  Computer Restart  
  When you specify these computer restart settings, ensure that the value for the restart temporary notification interval and the value for the final countdown interval are shorter in duration than the shortest maintenance window that is applied to the computer.  

@@ -50,6 +50,17 @@ In this release, the following improvements have been made to this policy type:
 - You can now use the edition upgrade policy with Windows 10 PCs that run the the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
+## Enforcement grace period for required application and software update deployments
+
+In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
+
+To configure the grace period, take the following actions:
+1.      On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
+2.      In a new required application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the checkbox **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. All deployments that have this check-box selected and are targeted to devices to which you also deployed the client setting will use the enforcement grace period.
+
+If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments. Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages.
+
+
 ## Improvements for boundary groups
 Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
 These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.
@@ -95,13 +106,13 @@ When a user receives required software, from the **Snooze and remind me:** setti
 - Later: specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
 - Fixed time: specifies that the notification will be scheduled to display again after the selected time. For example, if a user selects 30 minutes, the notification will display again in 30 minutes.
 
-![Computer Agent page in Client Agent settings](media/computeragentsettings.png)
+![Computer Agent page in Client Agent settings](media/client-notification-settings.png)
 
 The maximum snooze time is always based on the notification values configured in the Client Agent settings at every time along the deployment timeline. For example, if the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the Computer Agent page is configured for 10 hours, and it is more than 24 hours before the deadline when the dialog is launched, the user would be presented with a set of snooze options up to but never greater than 10 hours. As the deadline approaches, the dialog will show fewer options, consistent with the relevant Client Agent settings for each component of the deployment timeline.
 
 Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the end-user notification experience is now more intrusive. Instead of a transient taskbar notification, each time the user is notified that critical software maintenance is required, a dialog box such as the following displays on the user's computer:
 
-![Required Software dialog](media/requiredsoftwaredialog.png)
+![Required Software dialog](media/client-toast-notification.png)
 
 
 For more information:

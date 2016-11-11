@@ -55,8 +55,8 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 6.  On the **Deployment Settings** page of the Deploy Software Wizard, specify the following information:  
 - **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
-> [!NOTE]  
->  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.
+	> [!NOTE]  
+	>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.
 
 You cannot change the action of a deployment after it has been created.  
 
@@ -71,23 +71,32 @@ You cannot change the action of a deployment after it has been created.
     -   **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs** – This option is only available for deployments with a purpose of **Required**.  
     -   **Require administrator approval if users request this application** – If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is unavailable when the deployment purpose is **Required** or when the application is deployed to a device collection.  
     > [!NOTE]  
-    >  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If an approval request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
+    >  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
     >  After you have approved an application for installation, you can subsequently choose to deny the request by clicking Deny in the Configuration Manager console (previously this button was grayed out after approval).
     
 This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
 - **Automatically upgrade any superseded version of this application** – If this option is selected, any superseded versions of the application will be upgraded with the superseding application.  
 
-8.  On the **Scheduling** page of the Deploy Software Wizard, configure when this application will be deployed or made available to client devices.  
-    The options on this page will differ depending on whether the deployment action is set to **Available** or **Required**.  
+8.  On the **Scheduling** page of the Deploy Software Wizard, configure when this application will be deployed or made available to client devices.
+The options on this page will differ depending on whether the deployment action is set to **Available** or **Required**.
+
+	In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
+
+To configure the grace period, take the following actions:
+- On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
+- In a new required application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the checkbox **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. All deployments that have this check-box selected and are targeted to devices to which you also deployed the client setting will use the enforcement grace period.
+
+If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments.
+
 
 9. If the application you are deploying supersedes another application, you can configure the installation deadline when users will receive the new application. Do this by using the setting **Installation Deadline** to upgrade users with superseded application.  
 
 10. On the **User Experience** page of the Deploy Software Wizard, specify information about how users can interact with the application installation.
-	When you deploy applications to Windows Embedded devices that are write-filter enabled, you can specify to install the application on the temporary overlay and commit changes later, or to commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
-   > [!NOTE]  
-   >  When you deploy an application to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy applications to Windows Embedded devices, see [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
-   >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.  
+When you deploy applications to Windows Embedded devices that are write-filter enabled, you can specify to install the application on the temporary overlay and commit changes later, or to commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
+	>[!NOTE]  
+	>  When you deploy an application to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy applications to Windows Embedded devices, see [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
+	>  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.  
 11. On the **Alerts** page of the Deploy Software Wizard, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure thresholds for reporting alerts and turn off reporting for the duration of the deployment.  
 
 12. (for iOS apps only) - On the **App Configuration Policies** page, click **New** to associate this deployment with an iOS app configuration policy (if you have created one). For more information about this type of policy, see [Configure iOS apps with app configuration policies](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md).  
@@ -117,7 +126,7 @@ The maximum snooze time is always based on the notification values configured in
 
 Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the end-user notification experience is now more intrusive. Instead of a transient taskbar notification, each time the user is notified that critical software maintenance is required, a dialog box such as the following displays on the user's computer:
 
-![Required Software dialog](media/requiredsoftwaredialog.png)
+![Required Software dialog](media/client-toast-notification.png)
 
 
 For more information:
