@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Deploy applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Deploy applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 
  Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [Create applications ](../../apps/deploy-use/create-applications.md).  
@@ -56,7 +61,8 @@ On the **Deployment Settings** page of the Deploy Software Wizard, specify the f
 
 
 
-- **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application.  
+- **Action** – From the drop-down list, choose whether this deployment is intended to **Install** or **Uninstall** the application. 
+
 	> [!NOTE]  
 	>  If an application is deployed twice to a device, once with an action of **Install** and once with an action of **Uninstall**, the application deployment with an action of **Install** will take priority.
 
@@ -65,7 +71,8 @@ You cannot change the action of a deployment after it has been created.
 - **Purpose** – From the drop-down list, choose one of the following options:
 	- **Available** If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.  
 	- **Required** The application is deployed automatically according to the configured schedule. However, a user can track the application deployment status if it is not hidden, and can install the application before the deadline from Software Center.
-	> [!NOTE]  
+	
+	> [!NOTE]   
 	>  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
 
 - **Deploy automatically according to schedule whether or not a user is logged on** – If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.  
@@ -74,6 +81,7 @@ You cannot change the action of a deployment after it has been created.
 - **Send wake-up packets** – If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers and networks must be configured for Wake On LAN.
 - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs** – This option is only available for deployments with a purpose of **Required**.
 - **Require administrator approval if users request this application** – If this option is selected, the administrator must approve any user requests for the application before it can be installed. This option is unavailable when the deployment purpose is **Required** or when the application is deployed to a device collection.  
+
 	> [!NOTE]  
 	>  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
 	>  After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
