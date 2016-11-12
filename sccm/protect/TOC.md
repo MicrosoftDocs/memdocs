@@ -6,7 +6,6 @@
 
 # Plan and design
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
-### [Certificate infrastructure](plan-design/certificate-infrastructure.md)
 ### [Certificate template permissions for certificate profiles](plan-design/planning-for-certificate-template-permissions.md)
 ### [Certificate profile security and privacy](plan-design/security-and-privacy-for-certificate-profiles.md)
 
