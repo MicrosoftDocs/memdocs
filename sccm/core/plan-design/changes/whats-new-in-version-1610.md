@@ -100,6 +100,7 @@ For details, see the **Windows Defender** section in [Create configuration items
 ## Policy sync for Intune-enrolled devices
 
 You can now request a policy sync for an Intune-enrolled device from the Configuration Manager console instead of needing to request a sync from the Company Portal app on the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**, as well as in the discovery data section of the **Properties** dialog for each device.
+For details, see [Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console](/sccm/mdm/deploy-use/sync-intune-device)
 
 ## Improved functionality for required software dialogs
 When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values:
