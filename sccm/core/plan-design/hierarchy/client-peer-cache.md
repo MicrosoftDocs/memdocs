@@ -28,6 +28,9 @@ After you deploy client settings that enable Peer Cache to a collection, members
 
 To help you understand the use of Peer Cache, you can view the Client Data Sources dashboard. See [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
+> [!TIP]  
+> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+
 ## Requirements and considerations for Peer Cache:
 - You must configure your site with a **Network Access Account** that has **Full Control** to the cache folder on each client. By default, this is ***%windir%\ccmcache***.
 
