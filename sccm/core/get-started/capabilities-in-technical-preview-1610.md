@@ -140,7 +140,7 @@ Specifically, you can configure the following Windows Defender settings:
 
 You can now request a policy sync for a mobile device from the Configuration Manager console, instead of needing to request a sync from the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**. State also appears in the **Discovery data** section of the **Properties** dialog for each mobile device.
 
-## Try it out!
+### Try it out!
 
 1.	In the Configuration Manager console, go **Assets and Compliance** > **Overview** > Devices.
 2.	In the **Remote Device Actions** menu, select **Send Sync Request**.
