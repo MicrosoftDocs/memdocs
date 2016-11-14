@@ -3,6 +3,15 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMdocs",
   "git_repository_branch_open_to_public_contributors": "master",
   "need_generate_pdf": false,
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "master": [
+      "Publish"
+    ]
+  },
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
@@ -21,21 +30,28 @@
       "template_folder": "_themes"
     }
   ],
-
-
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "notification_subscribers": [],
   "branches_to_filter": [
     ""
   ],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
     }
   ]
 }

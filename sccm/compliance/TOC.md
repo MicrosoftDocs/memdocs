@@ -1,10 +1,10 @@
-# [Understand and explore](understand/ensure-device-compliance.md)
+# Understand and explore
 ## [Ensure device compliance](understand/ensure-device-compliance.md)
 
-# [Get started](get-started/get-started-with-compliance-settings.md)
+# Get started
 ## [Get started with compliance settings](get-started/get-started-with-compliance-settings.md)
 
-# [Plan and design](plan-design/plan-for-and-configure-compliance-settings.md)
+# Plan and design
 ## [Plan for, and configure compliance settings](plan-design/plan-for-and-configure-compliance-settings.md)
 ## [Common tasks for managing compliance](plan-design/common-tasks-for-managing-compliance.md)
 ### [Devices with the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md)
@@ -12,7 +12,7 @@
 ### [Create and deploy configuration baselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-compliance-settings.md)
 
-# [Deploy and use](deploy-use/create-configuration-items.md)
+# Deploy and use
 
 ## [Create configuration items](deploy-use/create-configuration-items.md)
 ### [Devices managed with the Configuration Manager client](deploy-use/configuration-items-for-devices-managed-with-the-client.md)
@@ -24,12 +24,12 @@
 #### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
 #### [iOS and Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
 #### [Android and Samsung KNOX Standard](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
-### [Create child configuration items](deploy-use/create-child-configuration-items.md)
+## [Create child configuration items](deploy-use/create-child-configuration-items.md)
 
 ## [Create configuration baselines](deploy-use/create-configuration-baselines.md)
 ## [Deploy configuration baselines](deploy-use/deploy-configuration-baselines.md)
 
-## [Manage configuration data](deploy-use/management-tasks-for-configuration-data.md)
+## Manage configuration data
 ### [Manage configuration data](deploy-use/management-tasks-for-configuration-data.md)
 ### [Import configuration data](deploy-use/import-configuration-data.md)
 
