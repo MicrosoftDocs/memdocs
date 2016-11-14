@@ -17,6 +17,32 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 # Manage Office 365 ProPlus updates with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Beginning in Configuration Manager version 1602, Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.
 
+## Office 365 Client Management dashboard  
+Starting in Configuration Manager version 1610, the Office 365 Client Management dashboard is available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
+
+<!--- >[!NOTE]
+>In the **What's New** workspace in the Configuration Manager console, the new dashboard is incorrectly named **Office 365 Servicing dashboard**. --->
+
+The dashboard displays charts for the following:
+
+- Number of Office 365 clients
+- Office 365 client versions
+- Office 365 client languages
+- Office 365 client channels     
+For more information, see [Overview of update channels for Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+<!--- - Automatic deployment rules with Office 365 apps (have Office 365 Client selected in the set of available products). --->
+
+<!---You can take the following actions on the dashboard:
+- --->
+
+At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
+
+<!---
+ On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
+- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
+--->
+
 #### To deploy Office 365 updates with Configuration Manager
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
@@ -35,3 +61,6 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
     - Method 2: [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
+
+<!--- ## Next steps
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->

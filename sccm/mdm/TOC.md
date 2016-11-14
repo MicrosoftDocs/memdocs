@@ -33,4 +33,5 @@
 ### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
 
 ## [Retire, lock and reset devices](deploy-use/wipe-lock-reset-devices.md)
+## [Sync Intune-enrolled devices](deploy-use/sync-intune-device.md)
 ## [Manage devices with Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
