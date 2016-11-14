@@ -8,16 +8,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: configmgr-other
+ms.technology:
+ - configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Online Documentation for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Welcome to the System Center Configuration Manager documentation library.  
-
- Find the documentation library for the product version that you use:  
+# Online Documentation for System Center Configuration ManagerWelcome to the System Center Configuration Manager documentation library.  
+Find the documentation library for the product version that you use:  
 
 ## System Center Configuration Manager (current branch)  
 **On-line documentation:** You can view the on-line documentation for the current branch of System Center Configuration Manager on TechNet:  
@@ -40,19 +39,14 @@ Welcome to the System Center Configuration Manager documentation library.
 
 -   [Monitor and maintain System Center Configuration Manager](https://technet.microsoft.com/library/mt612855.aspx)  
 
--   [Technical reference for System Center Configuration Manager](https://technet.microsoft.com/library/mt634283.aspx)  
-
 -   [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**Release notes:** The release notes contain information that is not available in the product documentation and might be required to successfully install and use System Center Configuration Manager:  
+**Release notes:** The release notes contain information that is not available in the product documentation and might be required to successfully install and use System Center Configuration Manager. See [Release notes for System Center Configuration Manager](https://technet.microsoft.com/library/mt592024.aspx)  
 
--   [Release notes for System Center Configuration Manager](https://technet.microsoft.com/library/mt592024.aspx)  
+**Find Help:** See  [Find help for using System Center Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx):  
 
-**Accessibility:** See the following sections in  sections the online topic [Find help for using System Center Configuration Manager](https://technet.microsoft.com/library/mt628521.aspx):  
+**Accessibility:** See [Accessibility features for the Configuration Manager console](https://technet.microsoft.com/library/mt628521.aspx)  
 
--   [Accessibility features for the Configuration Manager console](https://technet.microsoft.com/library/mt628521.aspx#bkmk_aconsole)  
-
--   [Accessibility features for Configuration Manager Help](https://technet.microsoft.com/library/mt628521.aspx#bkmk_ahelp)  
 
 ## System Center Configuration Manager Technical Preview  
 **On-line documentation:** You can view the on-line documentation in the following guides on TechNet:  

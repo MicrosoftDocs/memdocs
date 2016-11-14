@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Install and configure distribution points for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 You install System Center Configuration Manager distribution points to host the content (files and software) you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
- When you **install a new distribution point** (by using the installation Wizard) or **manage the properties of an existing distribution point** (by editing the distribution points properties), you have the opportunity to configure most of the distribution point settings. However, there are a few settings that are only available when either installing or editing, but not both:  
+ When you **install a new distribution point** (by using the installation Wizard) or **manage the properties of an existing distribution point** (by editing the distribution points properties), you can configure most of the distribution point settings. However, there are a few settings that are only available when either installing or editing, but not both:  
 
 -   **Settings that are only available when installing a distribution point:**  
 
@@ -321,9 +321,11 @@ To view the results of the content validation process, in the **Monitoring** wor
 >  While you specify the content validation schedule by using the local time for the computer, the schedule displays in the Configuration Manager console by using UTC.  
 
 ### Boundary Group  
-Manage the boundary groups for which this distribution point is assigned. You can associate boundary groups to a distribution point. During content deployment, clients must be in a boundary group associated with the distribution point to use it as a source location for content. You can select the **Allow clients to use this site system as a fallback source location for content** check box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available.  
+Manage the boundary groups for which this distribution point is assigned. You can associate boundary groups to a distribution point. During content deployment, clients must be in a boundary group associated with the distribution point to use it as a source location for content.
+Additionally:
+- Prior to version 1610, you can select the **Allow clients to use this site system as a fallback source location for content** check box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available. For more information about boundary groups, see [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606), and for preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- With version 1610 or later, you configure boundary group *Relationships* that define wghen and to which boundary groups a client can fallback to find content. For more information see [Boundary groups](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
 
-For more information about preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 ### Schedule  
 
