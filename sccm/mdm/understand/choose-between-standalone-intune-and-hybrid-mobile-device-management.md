@@ -12,14 +12,19 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 caps.latest.revision: 10
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 ---
-# Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" To answer that questions, you should carefully compare the two options and consider updates coming in early 2017 to Intune standalone.
 
 ## What is Intune standalone?
 
-Intune standalone is a cloud-only MDM solution that involves no on-premises resources and is managed using a web console that can be accessed from anywhere in the world. Intune datacenters are hosed in North America, Europe, and Asia. Because Intune is a cloud service, you can deploy Intune management to your devices in a relatively short timeframe. You may also choose Intune standalone if your organization is moving to the cloud.
+Intune standalone is a cloud-only MDM solution that involves no on-premises resources and is managed using a web console that can be accessed from anywhere in the world. Intune datacenters are hosted in North America, Europe, and Asia. Because Intune is a cloud service, you can deploy Intune management to your devices in a relatively short timeframe. You may also choose Intune standalone if your organization is moving to the cloud.
 
 ## What is hybrid MDM with Configuration Manager?
 

@@ -1,4 +1,4 @@
-#   [Understand and explore](understand/introduction.md)
+#   Understand and explore
 ##  [Introduction to Configuration Manager](understand/introduction.md)
 ### [Find help for Configuration Manager](understand/find-help.md)
 ### [Accessibility features](understand/accessibility-features.md)
@@ -19,7 +19,8 @@
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [Plan and design](plan-design/get-ready.md)
-##   [Product changes](plan-design/changes/features-and-capabilities.md)
+
+##   Product changes
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
@@ -27,6 +28,7 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
+
 ##   [Supported configurations](plan-design/configs/supported-configurations.md)
 ###  [Size and scale numbers](plan-design/configs/size-and-scale-numbers.md)
 ###  [Site and site system prerequisites](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -38,6 +40,7 @@
 ###  [Support for Active Directory domains](plan-design/configs/support-for-active-directory-domains.md)
 ###  [Support for Windows features and networks](plan-design/configs/support-for-windows-features-and-networks.md)
 ###  [Support for Virtualization Environments](plan-design/configs/support-for-virtualization-environments.md)
+
 ##   [Choose a device management solution](plan-design/choose-a-device-management-solution.md)
 ##   [Design a hierarchy of sites](plan-design/hierarchy/design-a-hierarchy-of-sites.md)
 ###  [Plan for the SMS Provider](plan-design/hierarchy/plan-for-the-sms-provider.md)
@@ -55,11 +58,13 @@
 #### [Security and privacy for content management](plan-design/hierarchy/security-and-privacy-for-content-management.md)
 ###  [How clients find resources and services](plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
 ###  [Security and privacy for site administration](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
+
 ##   [Plan for network infrastructure](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [Extend the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
 ###  [Prepare Windows Servers to support site systems](plan-design/network/prepare-windows-servers.md)
 ###  [Websites for site system servers](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI certificate requirements](plan-design/network/pki-certificate-requirements.md)
+
 ##   [Diagnostics and usage data](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [How diagnostics and usage data is used](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
@@ -69,6 +74,7 @@
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [How to view diagnostics and usage data](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [Customer Experience Improvement Program (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
+
 ##   [Security and privacy for Configuration Manager](plan-design/security/security-and-privacy.md)
 ###  [Plan for security](plan-design/security/plan-for-security.md)
 ###  [Security best practices and privacy information](plan-design/security/security-best-practices-and-privacy-information.md)
@@ -76,9 +82,11 @@
 ###  [Additional privacy information](plan-design/security/additional-privacy.md)
 ###  [Configure security](plan-design/security/configure-security.md)
 
-#    [Get started](get-started/evaluate-with-lab-environment.md)
+#    Get started
+
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
+
 ##   [Technical Preview](get-started/technical-preview.md)
 ###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
 ###  [Capabilities in 1609](get-started/capabilities-in-technical-preview-1609.md)
@@ -92,6 +100,7 @@
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
 ###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
+
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planning for migration](migration/planning-for-migration.md)
 #### [Prerequisites for migration](migration/prerequisites-for-migration.md)
@@ -109,7 +118,8 @@
 ###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
-##   [Install infrastructure](servers/deploy/install/setup-downloader.md)
+
+##   Install infrastructure
 ###  [Before you run Setup](servers/deploy/install/setup-downloader.md)
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
@@ -122,6 +132,7 @@
 #### [Upgrade an Evaluation install](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [Upgrade to System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [Scenarios to streamline your installation](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+
 ##   [Configure sites and hierarchies](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [Add site system roles](servers/deploy/configure/add-site-system-roles.md)
 #### [Install site system roles](servers/deploy/configure/install-site-system-roles.md)
@@ -145,7 +156,7 @@
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [Configure role-based administration](servers/deploy/configure/configure-role-based-administration.md)
 
-#    [Manage infrastructure](servers/manage/maintenance-tasks.md)
+#    Manage infrastructure
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
 ###  [The CD.Latest folder](servers/manage/the-cd.latest-folder.md)
@@ -161,7 +172,8 @@
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)
-##   [Monitor infrastructure](servers/manage/use-alerts-and-the-status-system.md)
+
+##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
 ###  [Health attestation](servers/manage/health-attestation.md)
 ###  [Monitor hierarchy and replication infrastructure](servers/manage/monitor-hierarchy-and-replication-infrastructure.md)
@@ -183,8 +195,8 @@
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
 
-#    [Deploy clients](clients/deploy/plan/client-installation-methods.md)
-##   [Planning for client deployment](clients/deploy/plan/client-installation-methods.md)
+#    Deploy clients
+##   Planning for client deployment
 ###  [Client installation methods](clients/deploy/plan/client-installation-methods.md)
 ###  [Prerequisites for deploying clients to Windows computers](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 ###  [Determine the site system roles for clients](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
@@ -197,7 +209,7 @@
 ###  [Plan how to wake up clients](clients/deploy/plan/plan-wake-up-clients.md)
 ###  [Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
-##   [Client deployment tasks](clients/deploy/configure-client-communication-ports.md)
+##   Client deployment tasks
 ###  [How to configure client communication ports](clients/deploy/configure-client-communication-ports.md)
 ###  [How to configure client computers to find management points by using DNS publishing](clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)
 ###  [How to configure client settings](clients/deploy/configure-client-settings.md)
@@ -224,7 +236,7 @@
 ###  [Monitor clients on Cloud Management Gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
 ###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
 
-##   [Collections](clients/manage/collections/introduction-to-collections.md)
+##   Collections
 ###  [Introduction to collections](clients/manage/collections/introduction-to-collections.md)
 ### [Prerequisites for collections](clients/manage/collections/prerequisites-for-collections.md)
 ### [Best practices for collections](clients/manage/collections/best-practices-for-collections.md)
@@ -234,7 +246,7 @@
 ### [How to automatically categorize devices into collections with](clients/manage/collections/automatically-categorize-devices-into-collections.md)
 ###  [Security and privacy for collections](clients/manage/collections/security-and-privacy-for-collections.md)
 
-##   [Hardware inventory](clients/manage/inventory/introduction-to-hardware-inventory.md)
+##   Hardware inventory
 ###  [Introduction to hardware inventory](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [How to extend hardware inventory](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [How to configure hardware inventory](clients/manage/inventory/configure-hardware-inventory.md)
@@ -244,14 +256,14 @@
 ###  [Hardware inventory for Linux and UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Security and privacy for hardware inventory](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
 
-##   [Software inventory](clients/manage/inventory/software-inventory.md)
+##   Software inventory
 ###  [Introduction to software inventory](clients/manage/inventory/introduction-to-software-inventory.md)
 ###  [How to exclude folders from software inventory](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [How to configure software inventory](clients/manage/inventory/configure-software-inventory.md)
 ###  [How to use Resource Explorer to view software inventory](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Security and privacy for software inventory](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
 
-##   [Asset Intelligence](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
+##   Asset Intelligence
 ###  [Introduction to Asset Intelligence](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
 ###  [Prerequisites for Asset Intelligence](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
 ###  [Configure Asset Intelligence](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
@@ -260,7 +272,7 @@
 ###  [Example validation state transitions for Asset Intelligence](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [Example Asset Intelligence general license import file](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
-##   [Remote control](clients/manage/remote-control/introduction-to-remote-control.md)
+##   Remote control
 ###  [Introduction to remote control](clients/manage/remote-control/introduction-to-remote-control.md)
 ### [Prerequisites for remote control](clients/manage/remote-control/prerequisites-for-remote-control.md)
 ###  [Configuring remote control](clients/manage/remote-control/configuring-remote-control.md)
@@ -268,7 +280,7 @@
 ### [How to audit remote control usage](clients/manage/remote-control/audit-remote-control-usage.md)
 ###  [Security and privacy for remote control](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
 
-##   [Power management](clients/manage/power/introduction-to-power-management.md)
+##   Power management
 ###  [Introduction to power management](clients/manage/power/introduction-to-power-management.md)
 ### [Prerequisites for power management](clients/manage/power/prerequisites-for-power-management.md)
 ### [Best practices for power management](clients/manage/power/best-practices-for-power-management.md)
