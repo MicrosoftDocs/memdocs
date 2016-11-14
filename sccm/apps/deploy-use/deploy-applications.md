@@ -85,8 +85,7 @@ You cannot change the action of a deployment after it has been created.
 	> [!NOTE]  
 	>  Application approval requests are displayed in the **Approval Requests** node, under **Application Management** in the **Software Library** workspace. If a request is not approved within 45 days, it will be removed. Additionally, reinstalling the Configuration Manager client might cancel any pending approval requests.  
 	>  After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
-    
-This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
+	>  This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
 
 
