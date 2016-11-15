@@ -65,6 +65,13 @@ In this release, the following improvements have been made to this policy type:
 - You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
+## Manage duplicate hardware identifiers
+You can now provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
+
+1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
+2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
+
+For details, see [Manage duplicate hardware intentifiers](..\..\clients\manage\manage-clients.md#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
 Changes in this release:
@@ -138,6 +145,22 @@ For more information:
 After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
 This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
+## Filter by content size in automatic deployment rules
+You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+
+#### To configure the Content Size field
+To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizard when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
+
+![Content size field](../get-started/media/contentsizefield.png)
+
+## Task sequence steps to manage BIOS to UEFI conversion
+You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see [Task sequence steps to manage BIOS to UEFI conversion](..\..\osd\deploy-use\task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
+
+##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time. For details, see [Task sequence steps](..\..\osd\understand\task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).
+
+## Software updates dashboard
+You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
 ## New compliance settings for configuration items
 We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
