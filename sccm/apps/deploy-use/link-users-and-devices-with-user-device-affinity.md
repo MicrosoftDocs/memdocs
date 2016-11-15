@@ -1,5 +1,5 @@
 ---
-title: "Link users and devices with user device affinity | System Center Configuration Manager"
+title: "Link users and devices with user device affinity | Microsoft Docs"
 description: "Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user."
 ms.custom: na
 ms.date: 10/06/2016
@@ -78,7 +78,7 @@ User device affinity in System Center Configuration Manager associates a user wi
 
     > [!TIP]  
     >  **Example:** if **User device affinity threshold (minutes)** is specified as **60** minutes and **User device affinity threshold (days)** is specified at **5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
-   
+
 After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the configured thresholds, then the user device affinity will be removed. Configure **User device affinity threshold (days)** to a value of at least **7** days to avoid situations where an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
 
 ## Import user device affinities from a file  

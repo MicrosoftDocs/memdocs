@@ -1,5 +1,5 @@
 ---
-title: "Packages and programs | System Center Configuration Manager"
+title: "Packages and programs | Microsoft Docs"
 description: "Support deployments that use packages and programs or applications with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -24,9 +24,9 @@ System Center Configuration Manager continues to support packages and programs t
 - Scripts that do not install an application on a computer, such as a script to defragment the computer disk drive.  
 - “One-off” scripts that do not need to be continually monitored.  
 - Scripts that run on a recurring schedule and cannot use global evaluation.  
-  
+
 When you migrate packages from an earlier version of Configuration Manager, you can deploy them in your Configuration Manager hierarchy. After migration is complete, the packages appear in the **Packages** node in the **Software Library** workspace. You can modify and deploy these packages in the same way as you did by using software distribution. The **Import Package from Definition Wizard** remains in Configuration Manager to import legacy packages. Advertisements are converted to deployments when they are migrated from Configuration Manager 2007 to a Configuration Manager hierarchy.  
-  
+
 > [!NOTE]  
 >  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into Configuration Manager applications.  
 >   
@@ -68,9 +68,9 @@ Packages can use some new features of Configuration Manager, including distribut
     >  To create a new program for an existing package, select the package, and then, in the **Home** tab, in the **Package** group, click **Create Program** to open the Create Program Wizard.  
 
 6.  Use one of the following procedures to create a standard program or a device program.  
-  
+
     #### Create a standard program  
-  
+
   1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Standard Program**, and then click **Next**.     2.  On the **Standard Program** page, specify the following information:  
 
         -   **Name:** Specify a name for the program with a maximum of 50 characters.  
@@ -133,9 +133,9 @@ Packages can use some new features of Configuration Manager, including distribut
             >  If the maximum run time (whether set by the user or as the default value) is exceeded, Configuration Manager will stop the program if **run with administrative rights** is selected and **Allow users to view and interact with the program installation** is not selected.  
 
   4.  Click **Next**.  
-  
+
     #### Create a device program  
-  
+
   1.  On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then click **Next**.  
 
   2.  On the **Program for Device** page, specify the following:  
@@ -237,7 +237,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
         > [!NOTE]  
         >  When you deploy a package or program to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window. For more information about how maintenance windows are used when you deploy packages and programs to Windows Embedded devices, see [Creating Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md).  
-  
+
 10. On the **Distribution Points** page, specify the following information:  
 
     -   **Deployment options** – Specify the actions that a client should take to run program content. You can specify behavior when the client is in a fast network boundary, or a slow or unreliable network boundary.  
