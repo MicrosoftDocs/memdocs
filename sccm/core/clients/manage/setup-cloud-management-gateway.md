@@ -115,6 +115,10 @@ The final step in setting up cloud management gateway is to configure the site s
 
 4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then click **OK**. Repeat these steps for the remaining roles.
 
+## Step 8: Configure clients for cloud management gateway
+
+After the cloud management gateway and site system roles are completely configured and running, clients will get the location of the cloud management gateway service automatically on the next location request. Clients must be on the corporate network to receive the location of the cloud management gateway service. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.
+
 ## Next steps
 
 [Monitor clients for cloud management gateway](monitor-clients-cloud-management-gateway.md)
