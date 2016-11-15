@@ -1,5 +1,5 @@
 ---
-title: "Virtual desktop infrastructure (VDI) client management | System Center Configuration Manager "
+title: "Virtual desktop infrastructure (VDI) client management | Microsoft Docs "
 description: "Manage System Center Configuration Manager clients in a virtual desktop infrastructure (VDI)."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
+title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager | Microsoft Docs"
 description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

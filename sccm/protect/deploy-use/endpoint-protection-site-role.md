@@ -1,5 +1,5 @@
 ---
-title: "Configuring Endpoint Protection | System Center Configuration Manager"
+title: "Configuring Endpoint Protection | Microsoft Docs"
 description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
 defintion: ""
 definition: ""

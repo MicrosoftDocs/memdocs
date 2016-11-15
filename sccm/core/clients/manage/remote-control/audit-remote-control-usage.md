@@ -1,5 +1,5 @@
 ---
-title: "Audit remote control usage | System Center Configuration Manager"
+title: "Audit remote control usage | Microsoft Docs"
 description: "Audit remote control use in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

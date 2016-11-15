@@ -1,5 +1,5 @@
 ---
-title: "The content library | System Center Configuration Manager"
+title: "The content library | Microsoft Docs"
 description: "Learn about the content library that System Center Configuration Manager uses to reduce the overall size of distributed content."
 ms.custom: na
 ms.date: 10/06/2016

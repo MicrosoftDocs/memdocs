@@ -1,5 +1,5 @@
 ---
-title: "Monitor certificate profiles | System Center Configuration Manager"
+title: "Monitor certificate profiles | Microsoft Docs"
 description: "Learn how to monitor the compliance status of System Center Configuration Manager certificate profiles."
 ms.custom: na
 ms.date: 10/06/2016

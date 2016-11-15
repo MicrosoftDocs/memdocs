@@ -1,5 +1,5 @@
 ---
-title: "Upgrade on-premises infrastructure | System Center Configuration Manager"
+title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
 ms.date: 10/28/2016

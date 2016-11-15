@@ -1,5 +1,5 @@
 ---
-title: "Hardware inventory in System Center Configuration Manager"
+title: "Hardware inventory in System Center Configuration Manager | Microsoft Docs"
 description: "Get an overview of hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
