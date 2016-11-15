@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection client frequently asked questions | System Center Configuration Manager"
+title: "Endpoint Protection client frequently asked questions | Microsoft Docs"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 10/06/2016

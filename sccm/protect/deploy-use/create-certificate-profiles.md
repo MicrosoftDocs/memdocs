@@ -1,5 +1,5 @@
 ---
-title: "Create certificate profiles | System Center Configuration Manager"
+title: "Create certificate profiles | Microsoft Docs"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/15/2016
