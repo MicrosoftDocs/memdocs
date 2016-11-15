@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | System Center Configuration Manager"
+title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
 ms.custom: na
 ms.date: 10/06/2016

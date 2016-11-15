@@ -1,5 +1,5 @@
 ---
-title: "View software inventory | Resource Explorer | System Center Configuration Manager"
+title: "View software inventory | Microsoft Docs | Resource Explorer"
 description: "Use Resource Explorer to view software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

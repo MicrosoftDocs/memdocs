@@ -1,6 +1,6 @@
 ---
 
-title: "Bulk-enroll devices | On-premises MDM | System Center Configuration Manager"
+title: "Bulk-enroll devices | Microsoft Docs | On-premises MDM"
 description: "Bulk-enroll devices in an automated way with On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

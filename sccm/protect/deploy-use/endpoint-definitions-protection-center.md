@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from network share | System Center Configuration Manager"
+title: "Endpoint Protection malware definitions from network share | Microsoft Docs"
 ms.custom: na
 ms.date: 10/05/2016
 ms.prod: configuration-manager

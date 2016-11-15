@@ -1,5 +1,5 @@
 ---
-title: "Hardware inventory security privacy | System Center Configuration Manager"
+title: "Hardware inventory security privacy | Microsoft Docs"
 description: "Get security and privacy information for hardware inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager"
+title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager  | Microsoft Docs"
 description: "Follow these steps in System Center Configuration Manager to install an operating system on a new computer by using PXE, OEM, or stand-alone media."
 ms.custom: na
 ms.date: 10/06/2016

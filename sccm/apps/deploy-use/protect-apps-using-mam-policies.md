@@ -1,5 +1,5 @@
 ---
-title: "Protect apps using mobile application management policies | System Center Configuration Manager"
+title: "Protect apps using mobile application management policies | Microsoft Docs"
 description: "Modify the functionality of apps that you deploy so they will meet your company compliance and security policies."
 ms.custom: na
 ms.date: 10/06/2016
@@ -37,7 +37,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 -   **Use a ‘wrapped’ app** – (Android and iOS): Apps that are repackaged to include the App SDK by using the **Microsoft Intune App Wrapping Tool**. This tool is typically used to process company apps that were created in-house. It cannot be used to process apps that were downloaded from the app store. See [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx).  
 
 ## Create and deploy an app with a mobile application management policy  
-  
+
 ##  Step 1: Obtain the link to a policy managed app, or create a wrapped app  
 
 -   **To obtain a link to a policy managed app** - From the app store, find, and note the URL of the policy managed app you want to deploy.  
@@ -66,11 +66,11 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 8.  Complete the wizard.  
 
  The new application is displayed in the **Applications** node of the **Software Library** workspace.  
-  
+
 ### Create an application containing a link to a policy managed app  
-  
+
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
-  
+
 3.  In the **Home** tab, in the **Create** group, click **Create Application** to open the Create Application Wizard.  
 
 4.  On the **General** page, select **Automatically detect information about this application from installation files**.  
@@ -91,7 +91,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
 ##  Step 3: Create an application management policy  
  Next, you create an application management policy that you will associate with the application. You can create a general or managed browser policy.  
-  
+
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Application Management Policies**.  
 3.  In the **Home** tab, in the **Create** group, click **Create Application Management Policy**.  
 
@@ -125,15 +125,15 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
     > [!WARNING]  
     >  For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
-  
+
 8.  Complete the wizard.  
 
  The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
 
 ##  Step 4: Associate the application management policy with a deployment type  
- 
+
  When a deployment type is created for an app that requires an application management policy, Configuration Manager will recognize that an app management policy must be linked to this deployment type when the associated app gets deployed and prompt you to associate an app management policy. For the Managed Browser, you will be required to associate both a General and Managed Browser policy. For more information, see [Create applications](../../apps/deploy-use/create-applications.md).  
-  
+
 > [!IMPORTANT]  
 >  If the application is already deployed, then the deployment for the new deployment type will fail until this association is made. You can make the association in **Properties** for the application, on the **Application Management** tab.  
 
@@ -144,9 +144,9 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
 ##  Step 5: Monitor the app deployment  
  Once you have created and deployed an app associated with a mobile application management policy, you can monitor the app and resolve any policy conflicts.  
-  
+
 1.  In the Configuration Manager console, click **Software Library** > **Overview** > **Deployments**.  
-  
+
 3.  Select the deployment and on the **Home** tab, click **Properties**.  
 
 4.  In the details pane for the deployment, click **Application Management Policies** under **Related Objects**.  

@@ -1,5 +1,5 @@
 ---
-title: Manage task sequences to automate tasks | Configuration Manager
+title: Manage task sequences to automate tasks | Microsoft Docs
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

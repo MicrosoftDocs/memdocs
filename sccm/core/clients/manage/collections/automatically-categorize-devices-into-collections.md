@@ -1,5 +1,5 @@
 ---
-title: "Automatically categorize devices into collections | System Center Configuration Manager"
+title: "Automatically categorize devices into collections | Microsoft Docs"
 description: "Categorize devices into collections automatically with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

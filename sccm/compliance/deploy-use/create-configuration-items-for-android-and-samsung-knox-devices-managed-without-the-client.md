@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
 ms.date: 10/06/2016

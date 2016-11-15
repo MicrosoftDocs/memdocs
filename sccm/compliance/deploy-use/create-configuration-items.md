@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items | System Center Configuration Manager"
+title: "How to create configuration items | Microsoft Docs"
 description: "Create and deploy configurations to devices that are both managed by System Center Configuration Manager and enrolled with Microsoft Intune."
 ms.custom: na
 ms.date: 10/06/2016
