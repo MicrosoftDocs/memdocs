@@ -64,6 +64,15 @@ An Azure management certificate is required for Configuration Manager to access 
 
 4. Fill out the additional details in the wizard:
 
+    - Specify the name for the service which will run in Azure.
+
+    - Choose the Azure region you want the service to run in.
+
+    - Specify the number of virtual machines you want to use for the service. The default is 1, but you can run up to 16 virtual machines for the service.
+
+    >[!NOTE]
+    >If you use an internet proxy for the cloud management gateway connection point, you need to increase the number of ports on the proxy by the number of virtual machines you use, starting at port 10124.
+
     - Specify the private key (.pfx file) that you exported from the custom SSL certificate.
 
     - Specify the root certificate exported from the client certificate.
@@ -73,6 +82,8 @@ An Azure management certificate is required for Configuration Manager to access 
     - Clear the box next to **Verify Client Certificate Revocation** (unless you're publicly publishing your CRL information).
 
     - Click **Next** when you're done.
+
+5. If you want to monitor cloud management gateway traffic with a 14-day threshold, click check box to turn on the threshold alert. Then, specify the threshold (in GB) and the percentage at which to raise the different alert levels. Click **Next** when your done.
 
 5. Review the settings, and click **Next**. Configuration Manager starts setting up the service. When the wizard completes, you can click **Close**, however it will take between 5 to 15 minutes to provision the service completely in Azure. Check the **Status** column for the newly setup cloud management gateway to determine when the service is ready.
 
