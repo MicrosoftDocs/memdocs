@@ -74,7 +74,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 3. Expand the tree below Root, select the **SMS** node, and then click **Security**.  Ensure the **SMS Admins** group has the following permissions:
   - 	Enable Account
   - 	Remote Enable
-4. Next, on the **Security tab**, below the SMS node, select the **site_<sitecode>** node, and then click **Security**. Ensure the **SMS Admins** group has the following permission:
+4. Next, on the **Security tab**, below the SMS node, select the **site_&lt;sitecode>** node, and then click **Security**. Ensure the **SMS Admins** group has the following permission:
   -   Execute Methods
   -   Provider Write
   -   Enable Account
