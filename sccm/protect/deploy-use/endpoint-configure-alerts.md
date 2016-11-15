@@ -1,5 +1,5 @@
 ---
-title: "Configure Endpoint Protection alerts | System Center Configuration Manager"
+title: "Configure Endpoint Protection alerts | Microsoft Docs"
 description: "Learn how to configure Endpoint Protection alerts in Microsoft System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

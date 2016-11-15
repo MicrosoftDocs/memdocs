@@ -1,5 +1,5 @@
 ---
-title: "Predeclare devices with IMEI or iOS serial numbers"
+title: "Predeclare devices with IMEI or iOS serial numbers | Microsoft Docs"
 description: "Predeclare corporate-owned devices with their IMEI or iOS serial number."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Blocking clients | System Center Configuration Manager"
+title: "Blocking clients | Microsoft Docs"
 description: "Block client access for system security by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

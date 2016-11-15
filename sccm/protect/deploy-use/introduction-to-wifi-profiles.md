@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Wi-Fi Profiles | System Center Configuration Manager"
+title: "Introduction to Wi-Fi Profiles | Microsoft Docs"
 description: "Learn how to use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization."
 ms.custom: na
 ms.date: 10/06/2016

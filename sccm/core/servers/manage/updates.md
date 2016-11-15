@@ -1,5 +1,5 @@
 ---
-title: "Updates | System Center Configuration Manager"
+title: "Updates | Microsoft Docs"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
 ms.date: 10/06/2016

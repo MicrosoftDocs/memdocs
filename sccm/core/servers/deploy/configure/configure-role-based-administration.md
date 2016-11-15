@@ -1,5 +1,5 @@
 ---
-title: "Configure role-based administration | System Center Configuration Manager"
+title: "Configure role-based administration | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

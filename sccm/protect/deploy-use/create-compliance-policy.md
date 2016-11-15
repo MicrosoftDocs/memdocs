@@ -1,5 +1,5 @@
 ---
-title: Create and deploy a device compliance policy | System Center Configuration Manager
+title: Create and deploy a device compliance policy | Microsoft Docs
 description: "Learn how to create and deploy device compliance policies in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -205,5 +205,3 @@ robots: noindex
   For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).
   **Supported on:**
   * Windows 10 and Windows 10 Mobile
-
-  

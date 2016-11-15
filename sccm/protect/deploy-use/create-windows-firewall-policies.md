@@ -1,5 +1,5 @@
 ---
-title: "Windows Firewall policies for Endpoint Protection | System Center Configuration Manager"
+title: "Windows Firewall policies for Endpoint Protection | Microsoft Docs"
 description: "Learn how to create and deploy firewall policies for Endpoint Protection in System Center 2012 Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

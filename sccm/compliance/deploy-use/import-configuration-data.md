@@ -1,5 +1,5 @@
 ---
-title: "Import configuration data | System Center Configuration Manager"
+title: "Import configuration data | Microsoft Docs"
 description: "Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema."
 ms.custom: na
 ms.date: 10/06/2016

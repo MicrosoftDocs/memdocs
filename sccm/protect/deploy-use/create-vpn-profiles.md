@@ -1,5 +1,5 @@
 ---
-title: "How to Create VPN profiles in System Center Configuration Manager"
+title: "How to Create VPN profiles in System Center Configuration Manager  | Microsoft Docs"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/28/2016
@@ -123,13 +123,13 @@ ms.manager: angrobe
             > [!NOTE]  
             >  For iOS devices, the SCEP profile you select will be embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile is not installed if the certificate is not present, or not compliant.  
             >   
-            >  If the SCEP certificate you specify is not compliant, or has not been deployed, then the VPN profile 
+            >  If the SCEP certificate you specify is not compliant, or has not been deployed, then the VPN profile
             >  will not be installed on the device.
             >  
             >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.  
 
                - **Conditional access** and  **Enterprise Data Protection primary domain** settings, supported only when using Configuration Manager without Intune, which you can access by choosing **Advanced**. For information about Enterprise Data Protection, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).
-        
+
         ![Configure conditional access for VPN](../media/vpn-conditional-access.png)
 
 		-   For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  

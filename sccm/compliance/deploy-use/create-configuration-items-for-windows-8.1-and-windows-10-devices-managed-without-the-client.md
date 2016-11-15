@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers."
 ms.custom: na
 ms.date: 10/06/2016

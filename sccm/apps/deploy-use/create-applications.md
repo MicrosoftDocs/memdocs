@@ -1,5 +1,5 @@
 ---
-title: "Create applications | System Center Configuration Manager"
+title: "Create applications | Microsoft Docs"
 description: "Create and deploy applications and deployment types with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -46,9 +46,10 @@ Use the following steps to create Configuration Manager applications and deploym
 
 1.  On the **General** page of the Create Application wizard, select **Automatically detect information about this application from installation files**.  
 
-2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager).  
+2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
 
-3.  In the **Location** box, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, choose **Browse** to browse to the installation file.  
+3.  In the **Location** box, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
+
 	> [!IMPORTANT]  
 	>  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that the folder that you specify contains only the files that are necessary to install the application. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application has more files, consider creating multiple applications that have a smaller number of files.  
 
@@ -78,7 +79,7 @@ Use the following steps to create Configuration Manager applications and deploym
 
 6.  Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
 
- The new application appears in the **Applications** node of the Configuration Manager console, and you have finished creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
+The new application appears in the **Applications** node of the Configuration Manager console, and you have finished creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
 
 ### Manually specify application information  
 
@@ -141,6 +142,7 @@ Use the following steps to create Configuration Manager applications and deploym
 2.  In the **Type** box, select the application installation file type that you want to use to detect the deployment type information.  
 
 3.  In the **Location** box, specify the UNC path in the form *\\\\server\\share\\filename*, or specify the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also choose **Browse** to locate the installation file.  
+
     > [!NOTE]  
     >  You must have access to the UNC path that has the application and any subfolders that contain the application content.  
 
@@ -180,6 +182,7 @@ Use the following steps to create Configuration Manager applications and deploym
 1.  On the **Content** page of the Create Deployment Type wizard, specify the following information:  
 
     -   **Content location**--Specify the location of the content for this deployment type, or choose **Browse** to choose the deployment type content folder.  
+
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
 
@@ -419,7 +422,7 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
 ## Import an application  
  Use the following procedure to import an application into Configuration Manager. For information about how to export an application, see [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
 
-1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.  
+1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Applications**.   
 
 3.  On the **Home** tab, in the **Create** group, choose **Import Application**.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Client settings | System Center Configuration Manager"
+title: "Client settings | Microsoft Docs"
 description: "Select client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
