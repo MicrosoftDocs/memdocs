@@ -34,7 +34,7 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 4.  Retrieve the method return value from the *ReturnValue* property in the returned **IResultObject** object.  
 
 ## Example  
- The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](../../../develop/core/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) class [ValidateQuery](../../../develop/core/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md) class method.  
+ The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) class [ValidateQuery](../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md) class method.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
 
