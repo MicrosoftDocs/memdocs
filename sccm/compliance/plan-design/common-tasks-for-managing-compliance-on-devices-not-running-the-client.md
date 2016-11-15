@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | Microsoft Docs"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 10/06/2016
@@ -114,4 +114,3 @@ These scenarios give you an introduction to using System Center Configuration Ma
 5.  Complete the wizard to create the configuration item.  
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
-
