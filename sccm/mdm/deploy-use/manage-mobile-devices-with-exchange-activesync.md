@@ -1,5 +1,5 @@
 ---
-title: "Manage mobile devices | System Center Configuration Manager and Exchange"
+title: "Manage mobile devices  | Microsoft Docs"
 description: "Manage mobile devices by using the Exchange Server connector in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
