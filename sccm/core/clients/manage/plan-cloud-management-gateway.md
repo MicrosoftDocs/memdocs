@@ -15,28 +15,35 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-In version 1610, cloud management gateway is a Microsoft Azure service that provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
+Beginning in version 1610, cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles and cloud distribution points regardless of whether they're connected to the internal private network or on the Internet.
 
 You use the Configuration Manager console to deploy the service to Azure, add the cloud management gateway connector point role, and configure site system roles to allow cloud management gateway traffic. Cloud management gateway currently only supports the management point, cloud distribution point, and software update point roles.
 
 Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. In addition to these two types of certificates, you also need set up a management certificate on Azure that allows Configuration Manager to deploy the cloud management gateway service.  
 
 ## Requirements for cloud management gateway
+
 - Client computers and the site system server running the cloud management gateway connector point.
+
 - Custom SSL certificates from the internal CA - used to encrypt communication from the client computers and authenticate the identity of the cloud management gateway service.
+
 - Azure subscription for cloud services.
+
 - Azure management certificate - used to authenticate Configuration Manager with Azure.
 
 ## Limitations of cloud management gateway
 
 - Only supports the management point, cloud distribution point, and software update point roles.
+
 - User policies are not supported.
+
 - Cannot be used with [On-premises Mobile Device Management](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) in Configuration Manager.
+
 - Only supported on the Azure's public cloud platform.
 
 ## Cost of cloud management gateway
 
-> ![NOTE]
+> [!NOTE]
 > The cost information provided below is for estimating purposes only. Your environment may have other variables that affect the overall cost of using cloud management gateway.
 
 Cloud management gateway uses the following Microsoft Azure functionality, which incurs charges to the Azure subscription account:
@@ -47,7 +54,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
 	- See the [Azure pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to help determine potential costs.
 
-    > ![NOTE]
+    > [!NOTE]
     > Virtual machine costs vary by region.
 
 	- Expect that a single Azure Standard_A2 virtual machine can support approximately 2,000 simultaneous Internet-based clients.
@@ -58,7 +65,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
   - An Internet-based client doing policy refresh every hour is approximately 100 MB per client per month.
 
-    > ![NOTE]
+    > [!NOTE]
     > Performing other actions supported via the cloud management gateway (for example, deploying software updates or applications) will increase the amount of outbound data transfer from Azure to the client.
 
 
@@ -67,3 +74,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
   - Internet-based clients managed with cloud management gateway will get software update content from Windows Update at no charge.
 
   - Any other necessary content (for example, applications) must be distributed to a cloud distribution point. See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution) for more details.
+
+## Next steps
+
+  [Set up cloud management gateway](setup-cloud-management-gateway.md)

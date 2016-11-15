@@ -13,7 +13,7 @@ ms.technology:
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ---
 
-# Set up Cloud Management Gateway for Configuration Manager
+# Set up cloud management gateway for Configuration Manager
 
 The process for setting up cloud management gateway includes the following steps:
 
