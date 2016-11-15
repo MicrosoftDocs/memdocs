@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to View Monthly Usage Summary Information
-You view monthly usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../refernce/apps/sms_meteredfiles-server-wmi-class.md), [SMS_MonthlyUsageSummary](../refernce/apps/sms_monthlyusagesummary-server-wmi-class.md), [SMS_MeteredUser](../refernce/apps/sms_metereduser-server-wmi-class.md) and [SMS_R_System](../reference/core/clients/manage/sms_r_system-server-wmi-class.md) classes.  
+You view monthly usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../../develop/refernce/apps/sms_meteredfiles-server-wmi-class.md), [SMS_MonthlyUsageSummary](../../develop/refernce/apps/sms_monthlyusagesummary-server-wmi-class.md), [SMS_MeteredUser](../../develop/refernce/apps/sms_metereduser-server-wmi-class.md) and [SMS_R_System](../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md) classes.  
 
 > [!NOTE]
 >  The metering data is only summarized at specified intervals (by default, daily at midnight). Metering data does not appear in the summarized data until the summarization task has run.  
