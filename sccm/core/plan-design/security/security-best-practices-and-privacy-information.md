@@ -1,5 +1,5 @@
 ---
-title: "Security best practices and privacy information for System Center Configuration Manager"
+title: "Security best practices and privacy information for System Center Configuration Manager | Microsoft Docs"
 description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
