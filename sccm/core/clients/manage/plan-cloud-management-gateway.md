@@ -15,9 +15,9 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning in version 1610, cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles and cloud distribution points regardless of whether they're connected to the internal private network or on the Internet.
+Beginning in version 1610, cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet.
 
-You use the Configuration Manager console to deploy the service to Azure, add the cloud management gateway connector point role, and configure site system roles to allow cloud management gateway traffic. Cloud management gateway currently only supports the management point, cloud distribution point, and software update point roles.
+You use the Configuration Manager console to deploy the service to Azure, add the cloud management gateway connector point role, and configure site system roles to allow cloud management gateway traffic. Cloud management gateway currently only supports the management point, cloud-based distribution point, and software update point roles.
 
 Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. In addition to these two types of certificates, you also need set up a management certificate on Azure that allows Configuration Manager to deploy the cloud management gateway service.  
 
@@ -33,7 +33,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
 ## Limitations of cloud management gateway
 
-- Only supports the management point, cloud distribution point, and software update point roles.
+- Only supports the management point, cloud-based distribution point, and software update point roles.
 
 - User policies are not supported.
 
@@ -73,7 +73,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
   - Internet-based clients managed with cloud management gateway will get software update content from Windows Update at no charge.
 
-  - Any other necessary content (for example, applications) must be distributed to a cloud distribution point. Currently, cloud management gateway does not support using a standard distribution point site system role for sending content to clients.
+  - Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, cloud management gateway does not support using a standard distribution point site system role for sending content to clients.
 
   - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution) for more details.
 
