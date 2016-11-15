@@ -43,7 +43,7 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
 ## Cost of cloud management gateway
 
-> [!NOTE]
+> [!IMPORTANT]
 > The cost information provided below is for estimating purposes only. Your environment may have other variables that affect the overall cost of using cloud management gateway.
 
 Cloud management gateway uses the following Microsoft Azure functionality, which incurs charges to the Azure subscription account:
@@ -52,18 +52,18 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
   -	Cloud management gateway currently requires a Standard_A2 virtual machine. When creating the service, you can select how many VMs to support the service (one is the default).
 
+  - For estimating purposes only, expect that a single Azure Standard_A2 virtual machine can support approximately 2,000 simultaneous Internet-based clients.
+
 	- See the [Azure pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to help determine potential costs.
 
     > [!NOTE]
     > Virtual machine costs vary by region.
 
-	- Expect that a single Azure Standard_A2 virtual machine can support approximately 2,000 simultaneous Internet-based clients.
-
 -	Outbound data transfer
 
   - Charges are incurred for data flowing from the service out to the client. See the [Azure bandwidth pricing details](https://azure.microsoft.com/en-us/pricing/details/bandwidth/) to help determine potential costs.
 
-  - An Internet-based client doing policy refresh every hour is approximately 100 MB per client per month.
+  - For estimating purposes only, expect approximately 100 MB per client per month for Internet-based clients doing policy refreshes every hour.
 
     > [!NOTE]
     > Performing other actions supported via the cloud management gateway (for example, deploying software updates or applications) will increase the amount of outbound data transfer from Azure to the client.
@@ -73,7 +73,9 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
   - Internet-based clients managed with cloud management gateway will get software update content from Windows Update at no charge.
 
-  - Any other necessary content (for example, applications) must be distributed to a cloud distribution point. See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution) for more details.
+  - Any other necessary content (for example, applications) must be distributed to a cloud distribution point. Currently, cloud management gateway does not support using a standard distribution point site system role for sending content to clients.
+
+  - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution) for more details.
 
 ## Next steps
 
