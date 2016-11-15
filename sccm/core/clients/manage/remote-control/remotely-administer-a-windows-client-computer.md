@@ -31,7 +31,7 @@ Use the following procedure to remotely administer a computer in System Center C
 
 -   At the Windows command prompt.  
 
--   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center 2012** program group.  
+-   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center** program group.  
 
 ### To remotely administer a client computer from the Configuration Manager console  
 
@@ -90,7 +90,7 @@ Use the following procedure to remotely administer a computer in System Center C
     >  CmRcViewer.exe supports the following command-line options:  
     >   
     >  -   *<Address\>* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.  
-    > -   *<Site Server Name\>* - Specifies the name of the System Center 2012 Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
+    > -   *<Site Server Name\>* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
     > -   **/?** - Displays the command-line options for the remote control viewer.  
     >   
     >  **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  
