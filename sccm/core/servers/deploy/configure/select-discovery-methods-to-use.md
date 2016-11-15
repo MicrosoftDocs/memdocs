@@ -1,5 +1,5 @@
 ---
-title: "Select discovery methods | System Center Configuration Manager"
+title: "Select discovery methods | Microsoft Docs"
 description: "Review considerations for which methods to use and at which sites to run them."
 ms.custom: na
 ms.date: 10/06/2016

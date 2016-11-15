@@ -1,5 +1,5 @@
 ---
-title: "Use the extended interoperability client with the Current Branch  | System Center Configuration Manager"
+title: "Use the extended interoperability client with the Current Branch  | Microsoft Docs"
 description: "Learn about using the client from the Long-Term Servicing Branch of Configuration Manager with a Current Branch site."
 ms.custom: na
 ms.date: 10/12/2016

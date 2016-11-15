@@ -1,5 +1,5 @@
 ---
-title: "Use cloud services | System Center Configuration Manager"
+title: "Use cloud services | Microsoft Docs"
 description: "Provision cloud resources for System Center Configuration Manager to supplement your on-premises infrastructure."
 ms.custom: na
 ms.date: 10/06/2016
