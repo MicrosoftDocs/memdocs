@@ -436,7 +436,7 @@
 ## [SMS_DirFullCollMem Server WMI Class](core/clients/collections/sms_dirfullcollmem-server-wmi-class.md)
 ## [SMS_FullCollectionMembership Server WMI Class](core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md)
 
-# [Compliance Settings (DCM) Server WMI Classes](compliance/compliance settings-dcm-server-wmi-classes.md)
+# [Compliance Settings (DCM) Server WMI Classes](compliance/compliance-settings-dcm-server-wmi-classes.md)
 ## [SMS_AdvancedThreatProtectionSettings Server WMI Class](compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md)
 ## [SMS_BaselineAssignment Server WMI Class](compliance/sms_baselineassignment-server-wmi-class.md)
 ## [SMS_Category_LocalizedProperties Server WMI Class](compliance/sms_category_localizedproperties-server-wmi-class.md)
