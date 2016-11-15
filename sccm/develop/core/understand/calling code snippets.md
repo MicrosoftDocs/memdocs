@@ -5,11 +5,11 @@ ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 8d5d026f-18da-43c4-8427-575716351925
 caps.latest.revision: 15
@@ -19,65 +19,65 @@ manager: "mbaldwin"
 ---
 # Calling Configuration Manager Code Snippets
 The following code samples show how to set up the calling code for the code examples that are used throughout the System Center Configuration Manager Software Development Kit (SDK).  
-  
+
  Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.  
-  
+
 > [!NOTE]
 >  The ScriptPW COM automation object is not available in Windows Vista. If you do not want to pass your password in clear text, an alternative is to use a HTML application. For more information, see [Creating Your Own HTAs](http://go.microsoft.com/fwlink/?LinkId=110367).  
-  
+
  For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](http://go.microsoft.com/fwlink/?LinkId=94683).  
-  
+
 ## Example  
-  
+
 ```vbs  
 Dim connection  
 Dim computer  
 Dim userName  
 Dim userPassword  
 Dim password 'Password object  
-  
+
 Wscript.StdOut.Write "Computer you want to connect to (Enter . for local): "  
 computer = WScript.StdIn.ReadLine  
-  
+
 If computer = "." Then  
     userName = ""  
     userPassword = ""  
 Else  
     Wscript.StdOut.Write "Please enter the user name: "  
     userName = WScript.StdIn.ReadLine  
-  
+
     Set password = CreateObject("ScriptPW.Password")   
     WScript.StdOut.Write "Please enter your password:"   
     userPassword = password.GetPassword()   
 End If  
-  
+
 Set connection = Connect(computer,userName,userPassword)  
-  
+
 If Err.Number<>0 Then  
     Wscript.Echo "Call to connect failed"  
 End If  
-  
+
 Call SNIPPETMETHODNAME (connection)  
-  
+
 Sub SNIPPETMETHODNAME(connection)  
    ' Insert snippet code here.  
 End Sub  
-  
+
 Function Connect(server, userName, userPassword)  
-  
+
     On Error Resume Next  
-  
+
     Dim net  
     Dim localConnection  
     Dim swbemLocator  
     Dim swbemServices  
     Dim providerLoc  
     Dim location  
-  
+
     Set swbemLocator = CreateObject("WbemScripting.SWbemLocator")  
-  
+
     swbemLocator.Security_.AuthenticationLevel = 6 'Packet Privacy  
-  
+
     ' If  the server is local, don not supply credentials.  
     Set net = CreateObject("WScript.NetWork")   
     If UCase(net.ComputerName) = UCase(server) Then  
@@ -86,7 +86,7 @@ Function Connect(server, userName, userPassword)
         userPassword = ""  
         server = "."  
     End If  
-  
+
     ' Connect to the server.  
     Set swbemServices= swbemLocator.ConnectServer _  
             (server, "root\sms",userName,userPassword)  
@@ -95,10 +95,10 @@ Function Connect(server, userName, userPassword)
         Connect = null  
         Exit Function  
     End If  
-  
+
     ' Determine where the provider is and connect.  
     Set providerLoc = swbemServices.InstancesOf("SMS_ProviderLocation")  
-  
+
         For Each location In providerLoc  
             If location.ProviderForLocalSite = True Then  
                 Set swbemServices = swbemLocator.ConnectServer _  
@@ -115,9 +115,9 @@ Function Connect(server, userName, userPassword)
         Next  
     Set Connect = null ' Failed to connect.  
 End Function  
-  
+
 ```  
-  
+
 ```c#  
 using System;  
 using System.Collections.Generic;  
@@ -125,7 +125,7 @@ using System.Text;
 using System.ComponentModel;  
 using Microsoft.ConfigurationManagement.ManagementProvider;  
 using Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine;  
-  
+
 namespace ConfigurationManagerSnippets  
 {  
     class Program  
@@ -133,17 +133,17 @@ namespace ConfigurationManagerSnippets
         static void Main(string[] args)  
         {  
             // Setup snippet class.  
-  
+
             string computer = "";  
             string userName = "";  
             string password = "";  
-  
+
             SnippetClass snippets = new SnippetClass();  
-  
+
             Console.WriteLine("Computer you want to connect to (Enter . for local): ");  
             computer = Console.ReadLine();  
             Console.WriteLine();  
-  
+
             if (computer == ".")  
             {  
                 computer = System.Net.Dns.GetHostName();  
@@ -154,19 +154,19 @@ namespace ConfigurationManagerSnippets
             {  
                 Console.WriteLine("Please enter the user name: ");  
                 userName = Console.ReadLine();  
-  
+
                 Console.WriteLine("Please enter your password:");  
                 password = snippets.ReturnPassword();  
             }  
-  
+
             // Make connection to provider.  
             WqlConnectionManager WMIConnection = snippets.Connect(computer, userName, password);  
-  
+
             // Call snippet function and pass the provider connection object.  
             snippets.SNIPPETMETHODNAME(WMIConnection);  
         }  
     }  
-  
+
     class SnippetClass  
     {  
         public WqlConnectionManager Connect(string serverName, string userName, string userPassword)  
@@ -196,12 +196,12 @@ namespace ConfigurationManagerSnippets
                 return null;  
             }  
         }  
-  
+
         public void SNIPPETMETHODNAME(WqlConnectionManager connection)  
         {  
             // Insert snippet code here.  
         }  
-  
+
         public string ReturnPassword()  
         {  
             string password = "";  
@@ -230,29 +230,29 @@ namespace ConfigurationManagerSnippets
     }  
 }  
 ```  
-  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 > [!NOTE]
 >  The assemblies are in the \<Program Files>\Microsoft Configuration Manager\AdminConsole\bin folder.  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException>. These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException>.  
-  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+
 ## See Also  
  [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

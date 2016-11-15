@@ -5,11 +5,11 @@ ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 05f58b9c-80df-4c11-a5bc-d19f0c19bc04
 caps.latest.revision: 8
@@ -19,21 +19,21 @@ manager: "mbaldwin"
 ---
 # Configuration Manager Executable Action
 In System Center Configuration Manager, the executable action runs a program or opens a file by using the program registered with Windows for that file type.  
-  
+
  The following attributes and elements are specific to an action that runs a program:  
-  
+
 -   The `ActionDescription` element `Class` attribute is set to `Executable`.  
-  
+
 -   The `Executable` element is parent to `FilePath``,` the path to the program, and to `Parameters`, the parameters passed to the executable.  
-  
+
 ## Sample Executable Action XML  
-  
+
 ```  
 <ActionDescription Class="Executable" DisplayName="Test Action (execute)" MnemonicDisplayName="A test item" Description="A test item Description">  <ShowOn>    <string>DefaultHomeTab</string>    <string>ContextMenu</string>  </ShowOn>  <!--<ResourceAssembly>    <Assembly>Microsoft.ConfigurationManagement.dll</Assembly>    <Type>Microsoft.ConfigurationManagement.AdminConsole.Properties.Resources.resources</Type>  </ResourceAssembly>-->  <!--<ImagesDescription>    <ExternalImage>      <Assembly>AdminUI.Package.dll</Assembly>      <Type>Microsoft.ConfigurationManagement.AdminConsole.Package.SmsPackageUtils</Type>      <Method>ShowPackageLockedIcon</Method>    </ExternalImage>    <ResourceAssembly>      <Assembly>AdminUI.UIResources.dll</Assembly>      <Type>Microsoft.ConfigurationManagement.AdminConsole.UIResources.Properties.Resources.resources</Type>    </ResourceAssembly>    <ImageResourceName>New</ImageResourceName>  </ImagesDescription>-->  <!--<ImagesDescription AliasProperty="OwnedByThisSite">    <ResourceAssembly>      <Assembly>AdminUI.UIResources.dll</Assembly>      <Type>Microsoft.ConfigurationManagement.AdminConsole.UIResources.Properties.Resources.resources</Type>    </ResourceAssembly>    <AliasResourceAssembly>      <Assembly>AdminUI.UIResources.dll</Assembly>      <Type>Microsoft.ConfigurationManagement.AdminConsole.UIResources.SMS_Collection-OwnedByThisSite.resources</Type>    </AliasResourceAssembly>    <ImageResourceName>CollectionsIcon</ImageResourceName>  </ImagesDescription>-->  <!--<ActionStateAssembly>    <Assembly>AdminUI.Report.dll</Assembly>    <Type>Microsoft.ConfigurationManagement.AdminConsole.Report.ReportsUtilityClass</Type>    <Method>EnableReportMenu</Method>     -->  <!--Method signature: public static bool EnableMenu(object sender, ScopeNode scopeNode, ActionDescription action, ResultObjectBase resultObject)-->  <!--  </ActionStateAssembly>-->  <!--<InstancePermissions>    <SecurityFlagsDetailDescription BitName="Delete" BitValue="4" DependsOn="1" />  </InstancePermissions>-->  <!--<MatchPattern>[^1]</MatchPattern>  <MatchValueToTest>##SUB:Order##</MatchValueToTest>-->  <Executable>    <FilePath>http://go.microsoft.com/fwlink/?LinkId=67307</FilePath>  </Executable></ActionDescription>  
 ```  
-  
- Other elements and attributes are documented in <xref:Microsoft.ConfigurationManagement.AdminConsole.Schema.ActionDescription>.  
-  
+
+ Other elements and attributes are documented in [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx).  
+
 ## See Also  
  [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   

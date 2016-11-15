@@ -5,11 +5,11 @@ ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17
 caps.latest.revision: 6
@@ -18,29 +18,29 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
-In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the <xref:Microsoft.ConfigurationManagement.ManagementProvider.QueryProcessorBase.ProcessQuery%2A> method.  
-  
- The first parameter of the [ProcessQuery](assetId:///ProcessQuery?qualifyHint=False&autoUpgrade=True) method is an instance of the <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsBackgroundWorker> class that provides two event handlers:  
-  
--   [QueryProcessObjectReady](assetId:///QueryProcessObjectReady?qualifyHint=False&autoUpgrade=True). This event handler is called for each object returned by the query. The event handler provides an [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) object that represents the object.  
-  
--   [QueryProcessCompleted](assetId:///QueryProcessCompleted?qualifyHint=False&autoUpgrade=True). This event handler is called when the query is completed. It also provides information about any errors that occur. For more information, see For information about error handling, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
-  
- The second parameter to of the assetId:///ProcessQuery?qualifyHint=False&autoUpgrade=True method is the WQL statement for the query.  
-  
+In System Center Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  
+
+ The first parameter of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is an instance of the [SmsBackgroundWorker](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.aspx) class that provides two event handlers:  
+
+-   [QueryProcessObjectReady](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorobjectready.aspx). This event handler is called for each object returned by the query. The event handler provides an IResultObject object that represents the object.  
+
+-   [QueryProcessCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx). This event handler is called when the query is completed. It also provides information about any errors that occur. For more information, see For information about error handling, see [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md).  
+
+ The second parameter to of the [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method is the WQL statement for the query.  
+
 ### To perform an asynchronous query  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
-2.  Create the [SmsBackgroundWorker](assetId:///SmsBackgroundWorker?qualifyHint=False&autoUpgrade=True) object and populate the [QueryProcessorObjectReady](assetId:///QueryProcessorObjectReady?qualifyHint=False&autoUpgrade=True) and [QueryProcessorCompleted](assetId:///QueryProcessorCompleted?qualifyHint=False&autoUpgrade=True) properties with the callback method names.  
-  
-3.  From the [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True) object you obtain in step one, call the [QueryProcessor](assetId:///QueryProcessor?qualifyHint=False&autoUpgrade=True) object assetId:///ProcessQuery?qualifyHint=False&autoUpgrade=True method to start the asynchronous query.  
-  
+
+2.  Create the **SmsBackgroundWorker** object and populate the [QueryProcessorObjectReady](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorobjectready.aspx) and [QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) properties with the callback method names.  
+
+3.  From the **WqlConnectionManager** object you obtain in step one, call the **QueryProcessor** object [ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method to start the asynchronous query.  
+
 ## Example  
- The following example queries for all available [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) objects, and in the event handler, the example writes several of the collection properties to the System Center Configuration Manager console.  
-  
+ The following example queries for all available SMS_Collection objects, and in the event handler, the example writes several of the collection properties to the System Center Configuration Manager console.  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```  
 public void QueryCollections(WqlConnectionManager connection)  
 {  
@@ -50,10 +50,10 @@ public void QueryCollections(WqlConnectionManager connection)
         SmsBackgroundWorker bw1 = new SmsBackgroundWorker();  
         bw1.QueryProcessorObjectReady += new EventHandler<QueryProcessorObjectEventArgs>(bw1_QueryProcessorObjectReady);  
         bw1.QueryProcessorCompleted += new EventHandler<RunWorkerCompletedEventArgs>(bw1_QueryProcessorCompleted);  
-  
+
         // Query for all collections.  
         connection.QueryProcessor.ProcessQuery(bw1, "select * from SMS_Collection");  
-  
+
         // Pause while query runs.  
         Console.ReadLine();  
     }  
@@ -62,14 +62,14 @@ public void QueryCollections(WqlConnectionManager connection)
         Console.WriteLine("Failed to start asynchronous query: ", ex.Message);  
     }  
 }  
-  
+
 void bw1_QueryProcessorObjectReady(object sender, QueryProcessorObjectEventArgs e)  
 {  
     try  
     {  
         // Get the collection.  
         IResultObject collection = (IResultObject)e.ResultObject;  
-  
+
         //Display properties.  
         Console.WriteLine(collection["CollectionID"].StringValue);  
         Console.WriteLine(collection["Name"].StringValue);  
@@ -81,40 +81,40 @@ void bw1_QueryProcessorObjectReady(object sender, QueryProcessorObjectEventArgs 
         Console.WriteLine("Query Error: " + eX.Message);  
     }  
 }  
-  
+
 void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)  
 {  
     Console.WriteLine("Done...");  
 }  
 ```  
-  
+
  This example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|Managed: assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
-  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException>. These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException>.  
-  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+
 ## See Also  
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
