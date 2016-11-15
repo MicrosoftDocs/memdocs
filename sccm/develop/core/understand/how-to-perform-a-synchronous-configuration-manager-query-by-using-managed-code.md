@@ -5,11 +5,11 @@ ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 0ec43754-0e84-472a-af93-e7d11ab32654
 caps.latest.revision: 6
@@ -18,21 +18,21 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using Managed Code
-To perform a synchronous query by using the managed SMS Provider, you use [WqlConnectionManager.QueryProcessor.ExecuteQuery](assetId:///WqlConnectionManager.QueryProcessor.ExecuteQuery?qualifyHint=False&autoUpgrade=True) method.  
-  
- The <xref:Microsoft.ConfigurationManagement.ManagementProvider.QueryProcessorBase.ExecuteQuery*> method takes a WQL query string and optional context information for the call. An <xref:Microsoft.ConfigurationManagement.ManagementProvider.IResultObject> is returned containing the objects found in the query.  
-  
+To perform a synchronous query by using the managed SMS Provider, you use *WqlConnectionManager.QueryProcessor.ExecuteQuery* method.  
+
+ The [ExecuteQuery](https://msdn.microsoft.com/library/cc146278.aspx) method takes a WQL query string and optional context information for the call. An [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) is returned containing the objects found in the query.  
+
 ### To perform a synchronous query  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
-2.  Using the [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True) object you obtain in step one, call the [QueryProcessor](assetId:///QueryProcessor?qualifyHint=False&autoUpgrade=True) object [ExecuteQuery](assetId:///ExecuteQuery?qualifyHint=False&autoUpgrade=True) method to query SMS Provider and get an [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) containing a collection of query results.  
-  
+
+2.  Using the **WqlConnectionManager** object you obtain in step one, call the **QueryProcessor** object *ExecuteQuery* method to query SMS Provider and get an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) containing a collection of query results.  
+
 ## Example  
- The following code example shows how to make a synchronous query for the available packages by using assetId:///ExecuteQuery?qualifyHint=False&autoUpgrade=True.  
-  
+ The following code example shows how to make a synchronous query for the available packages by using *ExecuteQuery*.  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```  
 public void QueryPackages(WqlConnectionManager connection)  
 {  
@@ -51,36 +51,36 @@ public void QueryPackages(WqlConnectionManager connection)
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  This example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|Managed: assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
-  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException>. These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException>.  
-  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+
 ## See Also  
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   

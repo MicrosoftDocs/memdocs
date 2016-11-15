@@ -21,19 +21,19 @@ manager: "mbaldwin"
 To write to the System Center Configuration Manager site control file by using the managed SMS Provider, you get the site definition file by querying for the required resource or component. You then update the embedded property, embedded property list, or multi-string list as required.  
 
 > [!NOTE]
->  You can also use connection manager [GetInstance](assetId:///GetInstance?qualifyHint=False&autoUpgrade=True) to get the required resource or component.  
+>  You can also use connection manager [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) to get the required resource or component.  
 
- The managed System Center Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) objects returned from the query in the same way as you treat assetId:///IResultObject?qualifyHint=False&autoUpgrade=True objects retrieved from the SMS Provider.  
+ The managed System Center Configuration Manager manages the connection session to the site control file automatically for you. Therefore you treat the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects returned from the query in the same way as you treat [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) objects retrieved from the SMS Provider.  
 
 ### To read and write to the site control file  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Use the Connection Manager [QueryProcessor](assetId:///QueryProcessor?qualifyHint=False&autoUpgrade=True) object [ExecQuery](assetId:///ExecQuery?qualifyHint=False&autoUpgrade=True) or assetId:///GetInstance?qualifyHint=False&autoUpgrade=True method to get the required site control file resource or component assetId:///IResultObject?qualifyHint=False&autoUpgrade=True object.  
+2.  Use the Connection Manager **QueryProcessor** object *ExecQuery* or *GetInstance* method to get the required site control file resource or component [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object.  
 
-3.  Using the assetId:///IResultObject?qualifyHint=False&autoUpgrade=True update the site control file.  
+3.  Using the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) update the site control file.  
 
-4.  Use the assetId:///IResultObject?qualifyHint=False&autoUpgrade=True object [Put](assetId:///Put?qualifyHint=False&autoUpgrade=True) method to commit the changes.  
+4.  Use the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object [Put](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.put.aspx) method to commit the changes.  
 
 ## Example  
  The following C# example accesses the client agent component of the site control file and creates a dummy property, property list and multi-string list. It then removes the updates that were made. The example demonstrates how to query the site control file, make updates, and commit changes to the site control file.  
@@ -197,7 +197,7 @@ public void ReadWriteSCF(WqlConnectionManager connection,string siteCode)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|-   `String`|The site code for the Configuration Manager site.|  
 
 ## Compiling the Code  
@@ -221,7 +221,7 @@ public void ReadWriteSCF(WqlConnectionManager connection,string siteCode)
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException>. These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException>.  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
 
 ## See Also  
  [About the Configuration Manager Provider](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md)   

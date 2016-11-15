@@ -5,11 +5,11 @@ ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 46cb95e6-9dae-4c08-9cfb-1a570e4c05bc
 caps.latest.revision: 6
@@ -18,39 +18,39 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Call a Configuration Manager Object Class Method by Using Managed Code
-To call a SMS Provider class method, in System Center Configuration Manager, you use the <xref:Microsoft.ConfigurationManagement.ManagementProvider.ConnectionManagerBase.ExecuteMethod*> method. You populate a [Dictionary](assetId:///Dictionary?qualifyHint=False&autoUpgrade=True) object with the method's parameters, and the return value is an [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) object that contains the result of the method call.  
-  
+To call a SMS Provider class method, in System Center Configuration Manager, you use the [ExecuteMethod](https://msdn.microsoft.com/en-us/library/cc146186.aspx) method. You populate a [Dictionary](https://msdn.microsoft.com/library/aa239680.aspx) object with the method's parameters, and the return value is an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that contains the result of the method call.  
+
 > [!NOTE]
->  To call a method on an object instance, use the <xref:Microsoft.ConfigurationManagement.ManagementProvider.IResultObject.ExecuteMethod*> method on the assetId:///IResultObject?qualifyHint=False&autoUpgrade=True object instance.  
-  
+>  To call a method on an object instance, use the [ExecuteMethod](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.executemethod.aspx) method on the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object instance.  
+
 ### To call a Configuration Manager object class method  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
-2.  Create the input parameters as a assetId:///Dictionary?qualifyHint=False&autoUpgrade=True object.  
-  
-3.  Using the [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True) object instance, call [ExecuteMethod](assetId:///ExecuteMethod?qualifyHint=False&autoUpgrade=True) and specify the class name and input parameters.  
-  
-4.  Retrieve the method return value from the [ReturnValue](assetId:///ReturnValue?qualifyHint=False&autoUpgrade=True) property in the returned assetId:///IResultObject?qualifyHint=False&autoUpgrade=True object.  
-  
+
+2.  Create the input parameters as a **Dictionary** object.  
+
+3.  Using the **WqlConnectionManager** object instance, call [ExecuteMethod](https://msdn.microsoft.com/en-us/library/cc146186.aspx) and specify the class name and input parameters.  
+
+4.  Retrieve the method return value from the *ReturnValue* property in the returned **IResultObject** object.  
+
 ## Example  
- The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](assetId:///SMS_CollectionRuleQuery?qualifyHint=False&autoUpgrade=True) class [ValidateQuery](assetId:///ValidateQuery?qualifyHint=False&autoUpgrade=True) class method.  
-  
+ The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](../../../develop/core/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) class [ValidateQuery](../../../develop/core/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md) class method.  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```  
 public void ValidateQueryRule(WqlConnectionManager connection, string wqlQuery)  
 {  
     try  
     {  
         Dictionary<string,object> validateQueryParameters = new Dictionary<string,object>();  
-  
+
         // Add the sql query as the WQLQuery parameter.  
         validateQueryParameters.Add("WQLQuery",wqlQuery);  
-  
+
         // Call the method  
         IResultObject result=connection.ExecuteMethod("SMS_CollectionRuleQuery", "ValidateQuery", validateQueryParameters);  
-  
+
         if (result["ReturnValue"].BooleanValue == true)  
         {  
             Console.WriteLine (wqlQuery + " is a valid query");  
@@ -66,37 +66,37 @@ public void ValidateQueryRule(WqlConnectionManager connection, string wqlQuery)
            throw;  
      }  
 }  
-  
+
 ```  
-  
+
  This example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
-|`wqlQuery`|-   Managed: assetId:///IResultObject?qualifyHint=False&autoUpgrade=True|A WQL query string. For this example, `SELECT * FROM SMS_R_System` is a valid query.|  
-  
+|`connection`|-   Managed: **WqlConnectionManager**|A valid connection to the SMS Provider.|  
+|`wqlQuery`|-   Managed: **IResultObject**|A WQL query string. For this example, `SELECT * FROM SMS_R_System` is a valid query.|  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsConnectionException> and <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsQueryException>. These can be caught together with <xref:Microsoft.ConfigurationManagement.ManagementProvider.SmsException>.  
-  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+
 ## See Also  
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   

@@ -46,7 +46,7 @@ This reference contains detailed information about the Microsoft System Center C
 
 -   [Configuration Manager Collections Server WMI Classes](../../develop/reference/core/clients/collections/collections server wmi classes.md)  
 
--   [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../develop/reference/compliance/compliance settings (dcm) server wmi classes.md)  
+-   [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)  
 
 -   [Configuration Manager Console Extension Server WMI Classes](../../develop/reference/core/servers/console/console extension server wmi classes.md)  
 
@@ -72,9 +72,9 @@ This reference contains detailed information about the Microsoft System Center C
 
 -   [Configuration Manager Out of Band Management Server WMI Classes](../../develop/reference/misc/out of band management server wmi classes.md)  
 
--   [Configuration Manager Reporting Server WMI Classes](../Topic/Configuration%20Manager%20Reporting%20Server%20WMI%20Classes.md)  
+-   [Configuration Manager Reporting Server WMI Classes](../../develop/reference/core/servers/reporting/configuration-manager-reporting-server-wmi-classes.md)  
 
--   [Configuration Manager Resource Management Server WMI Classes](../Topic/Configuration%20Manager%20Resource%20Management%20Server%20WMI%20Classes.md)  
+-   [Configuration Manager Resource Management Server WMI Classes](../../develop/reference/core/clients/manage/configuration-manager-resource-management-server-wmi-classes.md)  
 
 -   [Configuration Manager Role-Based Administration Server WMI Classes](../../develop/reference/core/servers/configure/role-based administration server wmi classes.md)  
 

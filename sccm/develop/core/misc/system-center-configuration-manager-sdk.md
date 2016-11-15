@@ -73,6 +73,6 @@ Welcome to the System Center Configuration Manager Software Development Kit (SDK
 
 -   [Configuration Manager Software Updates](../../../develop/sum/software updates.md)  
 
--   [Configuration Manager Status and Summarizers](../../../develop/core/servers/manage/Configuration%20Manager%20Status%20and%20Summarizers.md)  
+-   [Configuration Manager Status and Summarizers](../../../develop/core/servers/manage/configuration-manager-status-and-summarizers.md)  
 
 -   [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)
