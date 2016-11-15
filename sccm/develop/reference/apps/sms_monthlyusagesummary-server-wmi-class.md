@@ -130,5 +130,5 @@ Class SMS_MonthlyUsageSummary : SMS_BaseClass
 ## See Also  
  [Software Metering Server WMI Classes](../../../develop/reference/apps/software metering server wmi classes.md)   
  [SMS_MeteredUser Server WMI Class](../../../develop/reference/apps/sms_metereduser-server-wmi-class.md)   
- [SMS_R_System Server WMI Class](../Topic/SMS_R_System%20Server%20WMI%20Class.md)   
+ [SMS_R_System Server WMI Class](../../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.m)   
  [SMS_SummarizationInterval Server WMI Class](../../../develop/reference/apps/sms_summarizationinterval-server-wmi-class.md)

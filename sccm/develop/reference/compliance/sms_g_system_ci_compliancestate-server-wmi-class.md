@@ -210,4 +210,4 @@ Class SMS_G_System_CI_ComplianceState : SMS_G_System
 
 ## See Also  
  [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)   
- [SMS_G_System Server WMI Class](../Topic/SMS_G_System%20Server%20WMI%20Class.md)
+ [SMS_G_System Server WMI Class](../../../develop/reference/core/clients/manage/sms_g_system_system-server-wmi-class.md)
