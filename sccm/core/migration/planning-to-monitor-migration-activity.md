@@ -1,5 +1,5 @@
 ---
-title: "Monitor migration | System Center Configuration Manager"
+title: "Monitor migration | Microsoft Docs"
 description: "Learn how to use the Configuration Manager console to monitor the progress and success of migration jobs."
 ms.custom: na
 ms.date: 10/06/2016
