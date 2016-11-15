@@ -1,5 +1,5 @@
 ---
-title: "Software inventory in System Center Configuration Manager"
+title: "Software inventory in System Center Configuration Manager | Microsoft Docs"
 description: "Get an overview of software inventory topics in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Deploy App-V virtual applications | System Center Configuration Manager"
+title: "Deploy App-V virtual applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy virtual applications."
 ms.custom: na
 ms.date: 11/07/2016
@@ -46,7 +46,7 @@ To deploy virtual applications to computers, you must have the Configuration Man
 -   To deploy virtual applications in Configuration Manager, client computers must have at minimum the App-V 4.6 SP1 or a later version of the client installed.  
 
 -   Additionally, before you can successfully deploy virtual applications, you must update the App-V client with the hotfix described in the Knowledge Base article [2645225](https://support.microsoft.com/kb/2645225).  
-  
+
 -   When you use connection groups in Microsoft Application Virtualization 5.0, your deployed virtual applications can share the same file system and registry on client computers. Unlike standard virtual applications, these applications can share data with one another. Additionally, connection groups preserve user settings for the applications that they contain. App-V virtual environments in Configuration Manager are used to configure connection groups on client computers. Virtual environments are created or changed on client computers when the application is installed or when clients next evaluate their installed applications. You can prioritize these applications so that when multiple applications try to change a file system or registry value, the application that has the highest priority takes precedence. For more information, see [Create App-V virtual environments](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
 ##  Supported App-V versions  
@@ -120,9 +120,9 @@ To deploy virtual applications to computers, you must have the Configuration Man
  When you migrate connection groups from stand-alone App-V 5 to Configuration Manager virtual environments, you must ensure that the connection groups that already exist on client computers are managed correctly by Configuration Manager, and that the user's environment within those connection groups is preserved.  
 
  Use the following procedure to help you successfully convert App-V 5 connection groups into Configuration Manager virtual environments.  
-  
+
 ### Convert App-V 5 connection groups to Configuration Manager virtual environments  
-  
+
 1.  Create Configuration Manager applications for all applications that existed in App-V.  
 
 2.  Deploy the applications to users or devices with a deployment purpose of **Required**. Deployments to users must be deployed to the same users who used the application in App-V, and deployments to computers must be deployed to the same computers that had the application in App-V.  

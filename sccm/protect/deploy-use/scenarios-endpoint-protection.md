@@ -1,5 +1,5 @@
 ---
-title: Scenario Endpoint Protection protects computers from malware | System Center Configuration Manager
+title: Scenario Endpoint Protection protects computers from malware | Microsoft Docs
 description: "Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks."
 ms.custom: na
 ms.date: 10/06/2016

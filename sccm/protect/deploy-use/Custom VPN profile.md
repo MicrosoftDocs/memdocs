@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create a custom VPN profile | System Center Configuration Manager
+title: Create a custom VPN profile | Microsoft Docs
 description: Create VPN profiles for Windows 8 and later devices.
 keywords:
 ms.author: nbigman
@@ -9,7 +9,7 @@ ms.manager: angerobe
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
+ms.service:
 ms.technology:- configmgr-other
 ms.assetid: 53a8c892-8ebc-4d1e-8332-0ff43003ec3d
 
@@ -26,12 +26,12 @@ ms.assetid: 53a8c892-8ebc-4d1e-8332-0ff43003ec3d
 ---
 
 # Create a custom configuration
-You can use custom configurations to create VPN profiles for Windows 8 and later devices when using Configuration Manager with Microsoft Intune. 
+You can use custom configurations to create VPN profiles for Windows 8 and later devices when using Configuration Manager with Microsoft Intune.
 
 > [!IMPORTANT]
 >
 > After you deploy a custom VPN profile, removing the profile will not uninstall the profile from the device. Here are several ways to remove the profile from the device, ranked from easiest to most difficult:
-> 
+>
 > 1. Deploy a non-custom profile with the same name to those devices, overwriting the custom profile.
 > 2. Manually remove the VPN profile from the device.
 > 3. Un-enroll, then re-enroll the device.
@@ -44,25 +44,25 @@ To create a custom configuration profile:
    3. At the bottom of the **Device Settings** page, choose **Configure additional settings that are not in the default setting groups** and click **Next**.
    4. Choose **Add** > **Create Setting**.
    5. In the **Create setting** dialog, provide the OMA-URI as shown in this example:
-   
+
    ![oma-uri-create-setting_new](/Image/oma-uri-create-setting_new.png)
-   
+
    6. After you create the setting and click **OK**, choose the new setting on the **Browse settings** dialog, and choose **Select**.
-   
+
    ![oma-uri-browse-settings](/Image/oma-uri-browse-settings.png)
-    
+
    6. Create a rule to specify the value as shown in this example:
-   
+
    ![oma-uri-create_rule-new](/Image/oma-uri-create_rule-new.png)
-    
+
    7. Repeat the setting and rule creation for each setting in the profile.
-   
+
    8. Complete the Create Configuration Item wizard. You can now add the  item to a configuration baseline and deploy it to a collection.
-   
+
 > [!NOTE]
 > For Windows 10, you can create a profile in XML and then save it as the value for the ProfileXML setting.
-  
-   
+
+
 
 ## Example of URI settings for a custom VPN profile configuration
 
@@ -124,4 +124,3 @@ Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 Microsoft.MicrosoftEdge_8wekyb3d8bbwe
 
 For any questions about how these settings should be used or more details about what they do, see the [configuration service provider (CSP) documentation](https://msdn.microsoft.com/en-us/library/windows/hardware/dn914776.aspx).
-

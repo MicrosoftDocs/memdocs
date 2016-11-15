@@ -1,5 +1,5 @@
 ---
-title: "Current Branch versions | System Center Configuration Manager"
+title: "Current Branch versions | Microsoft Docs"
 description: "Review the version history of System Center Configuration Manager, and learn about the phases of service offered."
 ms.custom: na
 ms.date: 10/06/2016

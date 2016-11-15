@@ -1,5 +1,5 @@
 ---
-title: "SQL Server AlwaysOn | System Center Configuration Manager"
+title: "SQL Server AlwaysOn | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

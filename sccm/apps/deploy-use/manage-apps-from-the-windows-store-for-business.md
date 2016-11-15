@@ -1,5 +1,5 @@
 ---
-title: "Manage apps from the Windows Store for Business | System Center Configuration Manager"
+title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

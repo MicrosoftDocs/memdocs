@@ -1,5 +1,5 @@
 ---
-title: "Configure Endpoint Protection Client | System Center Configuration Manager"
+title: "Configure Endpoint Protection Client | Microsoft Docs"
 description: "Learn how to configure custom client settings for Endpoint Protection that can be deployed to computer collections in your hierarchy."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Conditional access | System Center Configuration Manager"
+title: "Conditional access | Microsoft Docs"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
 ms.date: 10/06/2016

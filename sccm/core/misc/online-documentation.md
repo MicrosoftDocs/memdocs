@@ -1,5 +1,5 @@
 ---
-title: "Online Documentation | System Center Configuration Manager"
+title: "Online Documentation | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

@@ -1,5 +1,5 @@
 ---
-title: "Maintenance tasks | System Center Configuration Manager"
+title: "Maintenance tasks | Microsoft Docs"
 description: "Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies, and when to perform them."
 ms.custom: na
 ms.date: 10/06/2016
