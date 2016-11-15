@@ -13,7 +13,7 @@ manager: angrobe
 
 # Manage clients on the Internet in Configuration Manager
 
-Typically in Configuration Manager, most of the computers and servers that are being managed are physically on the internal private or corporate network as the site system servers that perform management functions. However, you can manage client computers outside your corporate network if they are connected to the Internet without requiring the clients to connect via virtual private networks to reach the site system servers.
+Typically in Configuration Manager, most of the computers and servers that are being managed are physically on the same internal private or corporate network as the site system servers that perform management functions. However, you can manage client computers outside your corporate network if they are connected to the Internet without requiring the clients to connect via virtual private networks to reach the site system servers.
 
 Configuration Manager provides two ways to manage Internet connected clients:
 
