@@ -1,5 +1,5 @@
 ---
-title: "Migration checklists | System Center Configuration Manager"
+title: "Migration checklists | Microsoft Docs"
 description: "Use administrator checklists to help you plan a migration strategy to System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

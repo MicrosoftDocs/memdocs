@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for power management | System Center Configuration Manager"
+title: "Prerequisites for power management | Microsoft Docs"
 description: "Get the prerequisites for power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Hardware inventory | Linux UNIX | System Center Configuration Manager"
+title: "Hardware inventory | Microsoft Docs | Linux UNIX "
 description: "Learn how use hardware inventory for Linux and UNIX in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

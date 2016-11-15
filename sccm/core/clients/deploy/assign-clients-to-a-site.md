@@ -1,5 +1,5 @@
 ---
-title: "Assign clients to a site | System Center Configuration Manager"
+title: "Assign clients to a site | Microsoft Docs"
 description: "Assign clients to a site in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

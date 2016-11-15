@@ -1,5 +1,5 @@
 ---
-title: "Site components | System Center Configuration Manager"
+title: "Site components | Microsoft Docs"
 description: "Learn how to configure site components to modify the behavior of site system roles and site status reporting."
 ms.custom: na
 ms.date: 10/06/2016

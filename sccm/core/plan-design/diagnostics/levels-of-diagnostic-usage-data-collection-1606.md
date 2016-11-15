@@ -1,5 +1,5 @@
 ---
-title: "Diagnostic data for 1606 | System Center Configuration Manager"
+title: "Diagnostic data for 1606 | Microsoft Docs"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1606 collects."
 ms.custom: na
 ms.date: 10/06/2016

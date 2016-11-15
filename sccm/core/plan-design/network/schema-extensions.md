@@ -1,5 +1,5 @@
 ---
-title: "Schema extensions | System Center Configuration Manager"
+title: "Schema extensions | Microsoft Docs"
 description: "Extend the Active Directory schema to support System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

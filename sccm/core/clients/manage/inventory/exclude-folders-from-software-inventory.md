@@ -1,5 +1,5 @@
 ---
-title: "Exclude folders from software inventory | System Center Configuration Manager"
+title: "Exclude folders from software inventory | Microsoft Docs"
 description: "Exclude folders from software inventory in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

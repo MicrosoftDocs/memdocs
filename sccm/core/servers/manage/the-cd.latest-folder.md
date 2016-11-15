@@ -1,5 +1,5 @@
 ---
-title: "The CD.Latest folder | System Center Configuration Manager"
+title: "The CD.Latest folder | Microsoft Docs"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
 ms.date: 10/06/2016
