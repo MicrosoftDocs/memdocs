@@ -150,7 +150,16 @@ In addition to the links you define, there is an implied link that is created au
 - 	Is used by clients that are not on a boundary associated with any boundary group in your hierarchy. Clients automatically use the default boundary group from their assigned site to identify valid content source locations.
 - 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
-**Example of using the new model:**
+**When content is not available from a current boundary group:**  
+When content that is being requested by a client is not available from a valid content source in a current boundary group, the client uses immediate fallback to seek the content from a distribution point in a neighbor boundary group:   
+- Immediate fallback happens to the neighbor boundary group or groups that are configured with the smallest fallback time. This can include the default site boundary group when there are no neighbor boundary groups with a shorter fallback time.
+- After immediate fallback to the first set of neighbor boundary groups, fallback to additional boundary groups occurs based on the configured fallback time to those groups.
+
+If the content is distributed on-demand but not available when requested by a client, the process to transfer the content to a distribution point in the current boundary begins. However, because the content is not available at that time, the client uses immediate fallback to a neighbor boundary group with the shortest fallback time. After content becomes available in the current boundary group, additional clients no longer use immediately fallback to neighbor groups.
+
+
+
+**Example of using the new model:**   
 You create three boundary groups that do not share boundaries or site system servers:
 -	Group BG_A with distribution points DP_A1 and DP_A2 associated to the group
 -	Group BG_B with distribution points DP_B1 and DP_B2 associated to the group
@@ -179,16 +188,16 @@ By configuring the different neighbor groups to be available at different times 
 
 ### Update existing boundary groups to the new model
 When you update to version 1610, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available, until you configure new boundary groups and relationships.
--	A default site boundary group is created for each primary site, the name is ***Default-Site-Boundary-Group\<sitecode>.***
--	Unprotected distribution points and state migration points at primary sites are added to the *Default-Site-Boundary-Group\<sitecode>* boundary group of that site.
--	A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***\<original boundary group name>-Slow-Tmp***:  
+-	A default site boundary group is created for each primary site, the name is ***Default-Site-Boundary-Group&lt;sitecode>.***
+-	Unprotected distribution points and state migration points at primary sites are added to the *Default-Site-Boundary-Group&lt;sitecode>* boundary group of that site.
+-	A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***&lt;original boundary group name>-Slow-Tmp***:  
 	-	Site systems that have a fast connection are left in the original boundary group.
 	-	A copy of site systems (distribution points, management points, and state migration points) that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in their original boundary groups for backward compatibility, but are not used from those boundary groups.
 	- 	This boundary group copy does not have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.  
 
 
 - **Specific to secondary sites:**
-  - A boundary group is created if a secondary site has at least one unprotected distribution point or state migration point. The name of the boundary group is ***Secondary-Site-Neighbor--Tmp\<Sitecode>.***
+  - A boundary group is created if a secondary site has at least one unprotected distribution point or state migration point. The name of the boundary group is ***Secondary-Site-Neighbor--Tmp&lt;Sitecode>.***
   - All unprotected distribution points and state migration points are added to this newly created secondary site boundary group.
   - A fallback link is created between the original boundary group and the newly created neighbor boundary group and the fallback time is set to zero.
 
@@ -211,7 +220,7 @@ The following are the key changes to boundary groups and how clients find conten
 
 
 -	**Configurations for Fast or Slow are removed:** You no longer configure individual distribution points to be fast or slow.  Instead, each site system associated with a boundary group is treated the same. Because of this change, the **References** tab of the boundary group properties no longer supports the configuration of Fast or Slow.
-- 	**New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group\<sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.  	
+- 	**New default boundary group at each site:**  Each primary site has a new default boundary group named ***Default-Site-Boundary-Group&lt;sitecode>***.  When a client is not on a network location that is assigned to a boundary group, that client will use the site systems associated with the default group from its assigned site. Plan to use this boundary group as a replacement to the concept of fallback content location.  	
  -	**‘Allow fallback source locations for content’** is removed: You no longer explicitly configure a distribution point to be used for fallback, and the options to set this are removed from the UI.
 
 	Additionally, the result of setting **Allow clients to use a fallback source location for content** on a deployment type for applications has changed. This setting on a deployment type now enables a client to use the default site boundary group as a content source location.
