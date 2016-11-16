@@ -15,7 +15,7 @@ manager: angrobe
 
 Beginning in version 1610, after the cloud management gateway service is running and clients are connecting through it, you can monitor the status of clients in the Configuration Manager console. For more information, see [how to monitor clients](monitor-clients.md).
 
-You can also monitor the network traffic and set up outbound traffic alerts to make sure you know how the service is performing. 
+You can also monitor the network traffic and set up outbound traffic alerts to make sure you know how the service is performing.
 
 ## Monitor traffic in the console
 
