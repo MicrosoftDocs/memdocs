@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" To answer that questions, you should carefully compare the two options and consider updates coming in early 2017 to Intune standalone.
+One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" To answer that question, you should carefully compare the two options and consider updates coming in early 2017 to Intune standalone.
 
 ## What is Intune standalone?
 
