@@ -30,7 +30,8 @@ This topic describes features, products, and operating systems that are removed 
 |**Feature**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|√|  
-|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|  
+|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|
+|Task Sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |11/18/2016|Support for these task sequences ends with the first update released after June 1st, 2017|  
 
  **Deprecated server operating systems:**  
 
