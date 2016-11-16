@@ -29,7 +29,7 @@ You can create a custom SSL certificate for cloud management gateway in the same
 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
-> \[!NOTE\] Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012).
+> \[!NOTE\] Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#deploying-the-client-certificate-for-windows-computers).
 
 1.  In the Run window, type **mmc** and press Return.
 
@@ -107,7 +107,7 @@ An Azure management certificate is required for Configuration Manager to access 
 
 ## Step 6: Add the cloud management gateway connector point
 
-The cloud management gateway connector point is a new site system role for communicating with cloud management gateway. To add the cloud management gateway connector point, follow the instructions in [Add site system roles for System Center Configuration Manager](../../core/servers/deploy/configure/add-site-system-roles.md).
+The cloud management gateway connector point is a new site system role for communicating with cloud management gateway. To add the cloud management gateway connector point, follow the instructions in [Add site system roles for System Center Configuration Manager](/sccm/core/servers/deploy/configure/add-site-system-roles).
 
 ## Step 7: Configure roles for cloud management gateway traffic
 
