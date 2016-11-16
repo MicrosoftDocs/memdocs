@@ -48,7 +48,7 @@ Use the following steps to create Configuration Manager applications and deploym
 
 2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
 
-3.  In the **Location** box, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
+3.  In the **Location** box, specify the UNC path (in the form *\\\\server\\share\\\filename*) or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
 
 	> [!IMPORTANT]  
 	>  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that the folder that you specify contains only the files that are necessary to install the application. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application has more files, consider creating multiple applications that have a smaller number of files.  
@@ -62,7 +62,7 @@ Use the following steps to create Configuration Manager applications and deploym
     > [!NOTE]  
     >  Some of this information might already be populated if it was automatically obtained from the application installation files. Additionally, the displayed options might be different depending on the application type that you create.  
 
-    -   Provide general information about the application, like the application name, comments, version, and an optional reference to help you reference the application in the Configuration Manager console.  
+    -   General information about the application, like the application name, comments, version, and an optional reference to help you find the application in the Configuration Manager console.  
 
     -   **Installation program**--Specify the installation program and any required properties that are needed to install the application deployment type.  
 
@@ -118,7 +118,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
 5.  Choose **Next**, review the application information on the **Summary** page, and then finish the Create Application wizard.  
 
- The new application appears in the **Applications** node of the Configuration Manager console.  
+The new application appears in the **Applications** node of the Configuration Manager console.  
 
 ##  Create deployment types for the application  
  If you select **Automatically identify information about this deployment type from installation files** on the **General** page of the Create Deployment Type wizard, you might not need to finish some of the steps in the following procedures.  
@@ -141,7 +141,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
 2.  In the **Type** box, select the application installation file type that you want to use to detect the deployment type information.  
 
-3.  In the **Location** box, specify the UNC path in the form *\\\\server\\share\\filename*, or specify the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also choose **Browse** to locate the installation file.  
+3.  In the **Location** box, specify the UNC path (in the form *\\\\server\\share\\filename*) or specify the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also choose **Browse** to locate the installation file.  
 
     > [!NOTE]  
     >  You must have access to the UNC path that has the application and any subfolders that contain the application content.  
@@ -153,7 +153,7 @@ The new application appears in the **Applications** node of the Configuration Ma
     > [!NOTE]  
     >  Some of the deployment type information might already be present if it was read from the application installation files. Additionally, the displayed options might differ, depending on the deployment type that you are creating.  
 
-    -   Specify general information about the deployment type, like the name, admin comments, and available languages.  
+    -   General information about the deployment type, like the name, admin comments, and available languages.  
 
     -   **Installation program**--Specify the installation program and any properties that you require to install the deployment type.  
 
@@ -181,7 +181,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
 1.  On the **Content** page of the Create Deployment Type wizard, specify the following information:  
 
-    -   **Content location**--Specify the location of the content for this deployment type, or choose **Browse** to choose the deployment type content folder.  
+    -   **Content location**--Specify the location of the content for this deployment type, or select **Browse** to choose the deployment type content folder.  
 
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
@@ -219,7 +219,7 @@ The new application appears in the **Applications** node of the Configuration Ma
         >   
         >  To check 32-bit file locations for the specified file or folder, select the option **This file or folder is associated with a 32-bit application on 64-bit systems** first. If the file or folder is not found, 64-bit locations will be searched.  
 
-    -   **Registry**--You can use this method to detect whether a specified registry key or registry value exists on a client device, thus indicating that the application is installed.  
+    -   **Registry**--Use this method to detect whether a specified registry key or registry value exists on a client device, thus indicating that the application is installed.  
 
         > [!NOTE]  
         >  To check 32-bit registry locations for the specified registry key, select the option **This registry key is associated with a 32-bit application on 64-bit systems** first. If the registry key is not found, 64-bit locations will be searched.  
@@ -228,7 +228,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
 3.  Specify details about the item that you want to use to detect whether this deployment type is installed. For example, you can use a file, folder, registry key, registry value, or a Windows Installer product code.  
 
-4.  Specify details about the value that you want to assess against the item that you use to detect whether the deployment type is installed. For example, if you use a file to check whether the deployment type is installed, you can select the **The file system setting must exist on the target system to indicate presence of this application** box.  
+4.  Specify details about the value that you want to assess against the item that you use to detect whether the deployment type is installed. For example, if you use a file to check whether the deployment type is installed, you can select **The file system setting must exist on the target system to indicate presence of this application**.  
 
 5.  Choose **Next** to close the **Detection Rule** dialog box.  
 
@@ -243,7 +243,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 Use the following table to see how to use the output from a script to check whether an application is installed.  
 
 |Script exit code|Details|
-|-|-|
+|--------------------------------|-----------------|
 |0|**Data read from STDOUT**--Empty<br /><br /> **Data read from STDERR**--Empty<br /><br /> **Script result**--Success<br /><br /> **Application detection state**--Not installed|  
 |0|**Data read from STDOUT**--Empty<br /><br /> **Data read from STDERR**--Not empty<br /><br /> **Script result**--Failure<br /><br /> **Application detection state**--Unknown|  
 |0|**Data read from STDOUT**--Not empty<br /><br /> **Data read from STDERR**--Empty<br /><br /> **Script result**--Success<br /><br /> **Application detection state**--Installed|  
