@@ -13,14 +13,19 @@ ms.topic: article
 ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Create App-V virtual environments in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create App-V virtual environments in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In a Microsoft Application Virtualization (App-V) virtual environment in System Center Configuration Manager (Configuration Manager), deployed virtual applications can share the same file system and registry on client Windows PCs. Unlike standard virtual applications, these applications can share data with each other. Virtual environments are created or modified on client PCs when the application is installed or when clients next evaluate their installed applications. You can order these applications so that when multiple applications try to modify a file system or registry value, the application with the highest order takes priority.  
 
 > [!IMPORTANT]  
->  Do not rely on App-V virtual environments to provide security protection, for example, from malware.  
+>  Do not rely on App-V virtual environments to provide security protection, such as from malware.  
 
  Use the following procedure to create an App-V virtual environment in Configuration Manager.  
 
@@ -32,13 +37,13 @@ In a Microsoft Application Virtualization (App-V) virtual environment in System 
 
 4.  In the **Create Virtual Environment** dialog box, enter the following information:  
 
-    -   **Name**.  Enter a unique name for the virtual environment. Maximum 128 characters.  
+    -   **Name**.  Enter a unique name for the virtual environment (maximum 128 characters).  
 
     -   **Description**. (Optional) Enter a description for the virtual environment.  
 
 5.  To add a new deployment type to the virtual environment, choose **Add**. You must add at least one deployment type.  
 
-6.  In the **Add Applications** dialog box, specify a **Group name** of up to 128 characters. You'll use this name to refer to this group of applications that you add to the virtual environment.  
+6.  In the **Add Applications** dialog box, specify a **Group name** (maximum 128 characters). You'll use this name to refer to the group of applications that you add to the virtual environment.  
 
 7.  Choose **Add**, select the App-V 5 applications and deployment types that you want to add to the group, and then choose **OK**.  
 
