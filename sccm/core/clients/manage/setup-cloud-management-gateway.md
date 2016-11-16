@@ -58,6 +58,9 @@ An Azure management certificate is required for Configuration Manager to access 
 
 ## Step 4: Set up cloud management gateway
 
+>[!NOTE]
+>In version 1610, cloud management gateway is a pre-release feature. To enable it, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+
 1. In the Configuration Manager console, go to **Administration > Cloud Services > Cloud Management Gateway**.
 2. Click **Create Cloud Management Gateway**.
 
