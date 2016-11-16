@@ -16,19 +16,19 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Configure iOS apps with app configuration policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Apply settings to iOS apps with app configuration policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-Use app configuration policies in System Center Configuration Manager (Configuration Manager) to supply settings that might be required when the user runs an app. For example, an app might require the user to specify these details:
+You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app. For example, an app might require a user to specify these details:
 - A custom port number
 - Language settings
 - Security settings
 - Branding settings, like a company logo
 
-If the user enters the settings incorrectly, the burden to fix them falls on your help desk, and new-app deployment is slow.
+If the user enters the settings incorrectly, the burden to fix them falls on your help desk, and app deployment is slow.
 To help you prevent these problems, you can use app configuration policies to deploy required settings to users before they run the app. The settings are associated with a user automatically. The user doesn't need to take any action.
-To use an app configuration policy in Configuration Manager, instead of deploying the configuration policies directly to users and devices, you associate a policy with a deployment type when you deploy the app. The policy settings are used whenever the app checks for them (typically, the first time the app runs).
+To use an app configuration policy in Configuration Manager, instead of deploying the configuration policies directly to users and devices, you associate a policy with a deployment type when you deploy the app. The policy settings are applied whenever the app checks for them (typically, the first time the app runs).
 
-Currently, app configuration policies are available only on devices running iOS 8 and later, and for the following application types:
+Currently, app configuration policies are available only on devices running iOS 8 and later, and for these application types:
 
 - **app package for iOS (*.ipa file)**
 - **app package for iOS from App Store**
@@ -38,26 +38,28 @@ For more information about app installation types, see the [introduction to appl
 ## Create an app configuration policy
 
 1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies**.
-3. On the **Home** tab, in the **App Configuration Policies** group, choose **Create new Application Configuration Policy**.
-4. In the **Create App Configuration Policy Wizard**, on the **General** page, set up your policy with this information:
-	- **Name**. Enter a unique name for the policy.
-	- **Description**. (Optional) Enter an optional description, to help you identify it.
-	- **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
-5. On the **iOS Policy** page, choose how to set the configuration policy information:
-	- **Specify name and value pairs**. You can use this option for property list files that do not use nesting.
+2. On the **Home** tab, in the **App Configuration Policies** group, choose **Create new Application Configuration Policy**.
+3. In the **Create App Configuration Policy Wizard**, on the **General** page, set this policy information:
+  - **Name**. Enter a unique name for the policy.
+  - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
+  - **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
+4. On the **iOS Policy** page, choose how to set the configuration policy information:
+  - **Specify name and value pairs**. You can use this option for property list files that do not use nesting.
 
-	To specify name and value pairs
-		- To add a new pair, choose **New**.
-		- In the **Add Name/Value Pair** dialog box, specify the following:
-			- **Type**: From the list, choose the type of value that you want to specify.
-			- **Name**: Enter the name of the property list key for which you want to specify a value.
-			- **Value**: Enter the value that will be applied to the key you entered.
-		- Browse to a property list file: Use this option if you already have an app configuration XML file, or for more complex files that use nesting.
+      *To specify a name and value pair*
+        1. To add a new pair, choose **New**.
+        2. In the **Add Name/Value Pair** dialog box, specify the following:
+            - **Type**. From the list, select the type of value that you want to specify.
+            - **Name**. Enter the name of the property list key for which you want to specify a value.
+            - **Value**. Enter the value that will be applied to the key you entered.
 
-		To browse to a property list file
-			- In the **App configuration policy** field, enter the property list information in the correct XML format.
+  - **Browse to a property list file**. Use this option if you already have an app configuration XML file, or for more complex files that use nesting.
 
-			To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
+    *To browse to a property list file*
+
+      1.  In the **App configuration policy** field, enter the property list information in the correct XML format.
+
+      To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
 
 			The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
 			Intune supports the following data types in a property list:
@@ -84,17 +86,18 @@ For more information about app installation types, see the [introduction to appl
 
 			The {{ and }} characters are used by token types only and must not be used for other purposes.
 			```
-			To import an XML file that you created earlier, choose **Select file**.
-6. Choose **Next**. If there are errors in the XML code, you'll have to correct these before you continue.
+
+      2.  To import an XML file that you created earlier, choose **Select file**.
+6. Choose **Next**. If there are errors in the XML code, you'll have to correct them before you continue.
 7. Finish the steps shown in the wizard.
 
-The new app configuration policy is shown in the **App Configuration Policies** node of the **Software Library** workspace.
+The new app configuration policy is shown in the **Software Library** workspace, in the **App Configuration Policies** node.
 
 ## Associate an app configuration policy with a Configuration Manager application
 
 To associate an app configuration policy with the deployment of an iOS app, deploy the application as you normally would by using the procedure in the [Deploy applications](/sccm/apps/deploy-use/deploy-applications) topic.
 
-On the **App Configuration Policies** page of the **Deploy Software Wizard**, choose **New**. Then, in the **Select App Configuration Policy** dialog box, choose an application deployment type and an app configuration policy you want to associate it with.
+In the **Deploy Software Wizard**, on the **App Configuration Policies** page, choose **New**. In the **Select App Configuration Policy** dialog box, choose an application deployment type and an app configuration policy that you want to associate it with.
 When the deployment type is installed, the app configuration policy settings is automatically applied.
 
 ## Example format for the mobile app configuration XML file
