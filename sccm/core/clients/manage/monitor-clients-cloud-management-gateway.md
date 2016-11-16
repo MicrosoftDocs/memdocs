@@ -13,14 +13,28 @@ manager: angrobe
 
 # Monitor clients for cloud management gateway in Configuration Manager
 
-After the [cloud management gateway and site system roles are completely configured](setup-cloud-management-gateway.md), clients will get the location of the cloud management gateway service on the next location request. Clients must be on the corporate network to receive the location of the cloud management gateway service. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.
+Beginning in version 1610, after the cloud management gateway service is running and clients are connecting through it, you can monitor the status of clients in the Configuration Manager console. For more information, see [how to monitor clients](monitor-clients.md).
 
-After clients have the new location information for cloud management gateway, you can monitor the status of clients that are no longer on the internal private network but have Internet access. For more information, see [how to monitor clients](monitor-clients.md).
+You can also monitor the network traffic and set up outbound traffic alerts to make sure you know how the service is performing.
 
-You can monitor traffic on cloud management gateway:
+## Monitor traffic in the console
+
+You can monitor traffic on cloud management gateway using the Configuration Manager console:
 
 1. Go to **Administration > Cloud Services > Cloud Management Gateway**.
 
 2. Select the cloud management gateway service in the list pane.
 
-3. View the traffic information in the details pane.   
+3. View the traffic information in the details pane for the cloud management gateway connection role and the site system roles it connects to.
+
+## Set up outbound traffic alerts
+
+Outbound traffic alerts will help you know when traffic approaches a 14-day (2 week) threshold level. You are given the option of setting up traffic alerts when you create the cloud management gateway service. If you skipped that part, you can still set up the alerts after the service is running. And you can also adjust the alert settings at any time.
+
+1. Go to **Administration > Cloud Services > Cloud Management Gateway**.
+
+2. Right-click the cloud management gateway service in the list pane, and choose **Properties**.
+
+3. Click the Alerts tab, and choose to turn on (or off) the threshold and alerts. Then specify the 14-day threshold (in GB) and percentages of the threshold for raising the different alert levels.
+
+4. Click **OK** when you're done.
