@@ -1,5 +1,5 @@
 ---
-title: "New in 1610 | System Center Configuration Manager"
+title: "New in 1610 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  
@@ -60,7 +60,7 @@ You can now use the option to **Reassign Distribution Point** to have Configurat
 
 ## Cloud management gateway for managing Internet-based clients
 
-Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway).
+Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
 
 ## Improvements to the Windows 10 Edition Upgrade Policy
 In this release, the following improvements have been made to this policy type:
@@ -283,7 +283,7 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow automatic connection to free Wi-Fi hotspots**
 
 ## Compliance policies charts
-You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. 
+You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category.
 
 #### To view the Intune compliance charts
 1. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Compliance Settings**.

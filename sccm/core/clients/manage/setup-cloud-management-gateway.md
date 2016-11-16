@@ -1,5 +1,5 @@
 ---
-title: "Set up Cloud Management Gateway | System Center Configuration Manager"
+title: "Set up Cloud Management Gateway | Microsoft Docs"
 description: ""
 author: mtillman
 manager: angrobe

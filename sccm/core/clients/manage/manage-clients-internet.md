@@ -1,5 +1,5 @@
 ---
-title: "Manage clients | Internet | Cloud Management Gateway | System Center Configuration Manager"
+title: "Manage clients | Internet | Cloud Management Gateway | Microsoft Docs"
 description: ""
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -11,7 +11,7 @@ ms.author: mtillman
 manager: angrobe
 ---
 
-# Manage clients on the Internet in Configuration Manager
+# Manage clients on the Internet with Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
