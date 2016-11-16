@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Windows devices to a new version | System Center Configuration Manager"
+title: "Upgrade Windows devices to a new version | Microsoft Docs"
 description: "Upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a newer edition automatically."
 ms.custom: na
 ms.date: 10/06/2016

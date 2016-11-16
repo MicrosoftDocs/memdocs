@@ -1,5 +1,5 @@
 ---
-title: "Firewalls and domains | System Center Configuration Manager"
+title: "Firewalls and domains | Microsoft Docs"
 description: "Configure firewalls, ports, and domains to prepare for System Center Configuration Manager communications."
 ms.custom: na
 ms.date: 10/06/2016

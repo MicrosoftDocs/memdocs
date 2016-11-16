@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the Long-Term Servicing Branch | System Center Configuration Manager"
+title: "Introduction to the Long-Term Servicing Branch | Microsoft Docs"
 description: "Learn about the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016

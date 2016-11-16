@@ -1,5 +1,5 @@
 ---
-title: "Planning client deployment to Windows Embedded devices | System Center Configuration Manager"
+title: "Planning client deployment to Windows Embedded devices | Microsoft Docs"
 description: "Plan for client deployment to Windows Embedded devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

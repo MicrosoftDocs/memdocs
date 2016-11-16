@@ -1,5 +1,5 @@
 ---
-title: "Configure sites | System Center Configuration Manager"
+title: "Configure sites | Microsoft Docs"
 description: "Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies."
 ms.custom: na
 ms.date: 10/06/2016

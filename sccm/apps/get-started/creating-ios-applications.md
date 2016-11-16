@@ -1,5 +1,5 @@
 ---
-title: "Create iOS applications | System Center Configuration Manager"
+title: "Create iOS applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for iOS devices."
 ms.custom: na
 ms.date: 10/06/2016

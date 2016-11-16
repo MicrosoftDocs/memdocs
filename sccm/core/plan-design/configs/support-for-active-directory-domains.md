@@ -1,5 +1,5 @@
 ---
-title: "Support for AD domains | System Center Configuration Manager"
+title: "Support for AD domains | Microsoft Docs"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
 ms.date: 10/06/2016

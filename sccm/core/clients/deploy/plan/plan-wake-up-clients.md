@@ -1,5 +1,5 @@
 ---
-title: "Waking up clients | System Center Configuration Manager"
+title: "Waking up clients | Microsoft Docs"
 description: "Plan how to wake up clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

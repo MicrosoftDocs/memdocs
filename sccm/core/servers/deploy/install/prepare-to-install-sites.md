@@ -1,5 +1,5 @@
 ---
-title: "Prepare to install sites | System Center Configuration Manager"
+title: "Prepare to install sites | Microsoft Docs"
 description: "Read these details to save time during installation of multiple sites and prevent errors."
 ms.custom: na
 ms.date: 10/06/2016

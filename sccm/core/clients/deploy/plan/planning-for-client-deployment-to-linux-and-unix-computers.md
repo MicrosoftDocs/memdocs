@@ -1,5 +1,5 @@
 ---
-title: "Planning client deployment to Linux and UNIX computers | System Center Configuration Manager"
+title: "Planning client deployment to Linux and UNIX computers | Microsoft Docs"
 description: "Plan for client deployment to Linux and UNIX computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
