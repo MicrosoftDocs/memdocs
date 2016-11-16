@@ -58,6 +58,9 @@ For more information see [Peer Cache for Configuration Manager clients](/sccm/co
 ## Migrate multiple shared distribution points at the same time
 You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
 
+## Cloud management gateway for managing Internet-based clients
+
+Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway.md).
 
 ## Improvements to the Windows 10 Edition Upgrade Policy
 In this release, the following improvements have been made to this policy type:
