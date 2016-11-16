@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 74d5d776-e37d-45de-bdba-43541b03d12c
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Apply settings to iOS apps with app configuration policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Apply settings to iOS apps with app configuration policies in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 You can use app configuration policies in System Center Configuration Manager (Configuration Manager) to distribute settings that might be required when a user runs an app. For example, an app might require a user to specify these details:
 - A custom port number
@@ -39,7 +44,7 @@ For more information about app installation types, see the [introduction to appl
 
 1. In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies**.
 2. On the **Home** tab, in the **App Configuration Policies** group, choose **Create new Application Configuration Policy**.
-3. In the **Create App Configuration Policy Wizard**, on the **General** page, set this policy information:
+3. In the Create App Configuration Policy Wizard, on the **General** page, set this policy information:
   - **Name**. Enter a unique name for the policy.
   - **Description**. (Optional) To make it easier to identify the policy, you can add a description.
   - **Assigned categories to improve searching and filtering**. (Optional) To create and assign categories to the policy, choose **Categories**. Categories make it easier for you to sort and find items in the Configuration Manager console.
@@ -97,7 +102,7 @@ The new app configuration policy is shown in the **Software Library** workspace,
 
 To associate an app configuration policy with the deployment of an iOS app, deploy the application as you normally would by using the procedure in the [Deploy applications](/sccm/apps/deploy-use/deploy-applications) topic.
 
-In the **Deploy Software Wizard**, on the **App Configuration Policies** page, choose **New**. In the **Select App Configuration Policy** dialog box, choose an application deployment type and an app configuration policy that you want to associate it with.
+In the Deploy Software Wizard, on the **App Configuration Policies** page, choose **New**. In the **Select App Configuration Policy** dialog box, choose an application deployment type, and the app configuration policy that you want to associate it with.
 When the deployment type is installed, the app configuration policy settings is automatically applied.
 
 ## Example format for the mobile app configuration XML file
