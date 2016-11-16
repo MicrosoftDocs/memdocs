@@ -71,9 +71,8 @@ Disconnected means that Lookout MTP has not heard from the device for over a pre
 From the **Devices** module of the Lookout MTP console, the administrator can select the device and choose to delete it.   The next time the device owner opens the Lookout for Work app and taps **Activate**, the device state will do a full resync.
 
 ### The owner of the device is no longer using this device
-You must wipe the device and ask the new user to enroll.  From the [Intune administrator console](https://manage.microsoft.com), select the device, right click, and choose **Retire/Wipe** to remove the device from management. After retiring the device you can delete it.
+You must wipe the device and ask the new user to enroll as described in [this topic](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe).
 
-![screenshot of the device module in the Intune admin console with the retire/wipe option displayed](../media/mtp/mtp-retire-device-intune-console.png)
 
 You can also go to the **Devices** module of the Lookout MTP Console and choose **Delete**.
 
