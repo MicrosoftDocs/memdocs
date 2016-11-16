@@ -125,6 +125,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
+ |USE THIS ROW for 1611 |[Tech Preview 1611](capabilities-in-technical-preview-1611.md)|![Not added](media/Red_X.gif)|
  |Windows Defender configuration settings|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|![Not added](media/Red_X.gif)|
  |Request policy sync from administrator console|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#request-policy-sync-from-administrator-console)|![Not added](media/Red_X.gif)|
  |Additional security role support for All Corporate-owned Devices node|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#additional-security-role-support)|![Not added](media/Red_X.gif)|
