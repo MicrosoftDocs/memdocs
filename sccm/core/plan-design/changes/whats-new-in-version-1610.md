@@ -282,7 +282,7 @@ For details, see [Configuration items for devices managed without the System Cen
 
 - **Allow automatic connection to free Wi-Fi hotspots**
 
-## Compliance policies charts
+## Compliance policy charts
 You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category.
 
 #### To view the compliance policy charts
