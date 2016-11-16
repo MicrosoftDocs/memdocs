@@ -27,7 +27,6 @@ With System Center Configuration Manager, product release notes are limited to u
 ## Setup and upgrade  
 
 
-
 ### The  SQL Server backup model in use by Configuration Manager can change from full to simple  
  When you upgrade to System Center Configuration Manager version 1511, the SQL Server backup model in use by Configuration Manager can change from full to simple.  
 
@@ -111,6 +110,32 @@ When you run Setup from a CD.Latest folder created for version 1606 and use the 
 **Workaround:**  Use one of the following:
  - During Setup choose to download the most current redist files from Microsoft to use instead of those included in the CD.Latest folder.
  - Manually delete the *cd.latest\redist\languagepack\zhh* folder, and then run Setup again.
+
+### Service connection tool throws an exception when SQL server is remote, or when Shared Memory is disabled
+Beginning with version 1606, the service connection tool generates an exception when one of the following is true:  
+ -	Your site database is remote from the computer that hosts the service connection point and uses a non-standard port (a port other than 1433)
+ - 	Your site database is on the same server as the service connection point but SQL protocol **Shared Memory** is disabled
+
+The exception is similar to the following:
+ - *Unhandled Exception: System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) --*
+
+**Workaround**: During use of the tool you must modify the registry of the server that hosts the service connection point to include information about the SQL Server port:
+
+   1.	Before using the tool, edit the following registry key and add the number of the port that is in use to the name of the SQL Server:
+    - Key:   HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
+	  - Value: &lt;SQL Server Name>
+    - Add: **,&lt;PORT>**
+
+    For example, to add port *15001* to a server named *testserver.test.net*, the resultant key would be: ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
+
+   2.	After adding the port to the registry, the tool should function normally.  
+
+   3.	After your use of the tool is complete, for both the **-connect** and **-import** steps, change the registry key back to the original value.  
+
+
+
+
+
 
 ## Backup and recovery
 ### Pre\-production client is not available after a site restore
