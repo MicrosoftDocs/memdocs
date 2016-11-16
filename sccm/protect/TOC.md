@@ -69,6 +69,12 @@
 ### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
 ### [Manage Dynamics CRM Online access](deploy-use/manage-dynamics-crm-online-access.md)
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+## [Manage access based on device,network,and application risk](manage-access-based-on-device-network-app-risk.md)
+### [Set up Lookout device threat protection](set-up-your-subscription-with-lookout.md)
+### [Enable Lookout in Intune](enable-lookout-connection-in-intune.md)
+### [Deploy Lookout for Work apps](configure-and-deploy-lookout-for-work-apps.md)
+### [Enable device threat protection policy](enable-device-threat-protection-rule-compliance-policy.md)
+### [Troubleshoot Lookout integration](troubleshoot-lookout-integration.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 
