@@ -74,7 +74,7 @@
 ### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
 ### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
 ### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
-### [Troubleshoot Lookout integration](deploy/usetroubleshoot-lookout-integration.md)
+### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 
