@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients | cloud management gateway | System Center Configuration Manager"
+title: "Monitor clients | cloud management gateway | Microsoft Docs"
 description: ""
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -11,11 +11,15 @@ ms.author: mtillman
 manager: angrobe
 ---
 
-# Monitor clients for cloud management gateway in Configuration Manager
+# Monitor cloud management gateway in Configuration Manager
 
-Beginning in version 1610, after the cloud management gateway service is running and clients are connecting through it, you can monitor the status of clients in the Configuration Manager console. For more information, see [how to monitor clients](monitor-clients.md).
+*Applies to: System Center Configuration Manager (Current Branch)*
 
-You can also monitor the network traffic and set up outbound traffic alerts to make sure you know how the service is performing.
+Beginning in version 1610, after the cloud management gateway service is running and clients are connecting through it, you can monitor clients and network traffic to make sure you know how the service is performing.
+
+## Monitor clients
+
+Clients connected through the cloud management gateway service appear in the Configuration Manager console the same way on-premises clients do. For more information, see [how to monitor clients](monitor-clients.md).
 
 ## Monitor traffic in the console
 
@@ -38,3 +42,13 @@ Outbound traffic alerts will help you know when traffic approaches a 14-day (2 w
 3. Click the Alerts tab, and choose to turn on (or off) the threshold and alerts. Then specify the 14-day threshold (in GB) and percentages of the threshold for raising the different alert levels.
 
 4. Click **OK** when you're done.
+
+## Monitor logs
+
+The cloud management gateway service generates entries in the following log files:
+
+-   **Cloudmgr.log** – Contains entries for deploying the cloud management gateway service, on-going service status, and usage data associated with the service.
+
+-   **SMS\_Cloud\_ProxyConnector.log** – Contains entries for setting up connections between the cloud management gateway service and the cloud management gateway connection point.
+
+For more information, see [Configuration Manager logs](/sccm/core/plan-design/hierarchy/log-files).

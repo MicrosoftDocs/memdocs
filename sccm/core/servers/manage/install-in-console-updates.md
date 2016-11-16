@@ -60,7 +60,7 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
     - A user with this security role and access to the **Default** security scope can view updates, install updates and enable features during the install, and view features after an update has installed but not enable the features after the update has previously installed.
 
 - **Read-only Analyst** with **Read** permissions:
-  -  A user with this security role and access to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
+  -  A user with this security role and acceUpdate to 1606 from either 1511 orss to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
 
 **Summary of permissions required for updates and servicing:**   
   - Use an account that is assigned a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.
@@ -91,13 +91,14 @@ Before installing a new update from within the Configuration Manager console, re
 
 - Update to 1606 from either 1511 or 1602: See [Checklist for installing update 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md)  
 
+- Update to 1610 from either 1511, 1602, or 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md)  
 
 ###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
 Before you install a new update in your hierarchy, like update 1602, you should test the upgrade of your site database. The name of the command line option you use to test installing an update to a backup of your site database is **testdbupgrade**.  
 
 Unlike past versions of Configuration Manager, if installing an update fails you should not need to perform a site recovery and instead can Retry the update installation. Therefore, while the test upgrade of the database is less critical than in past product versions it remains a recommended step.  
 
-##### To run testdbupgrade before installing an update  
+#### To run testdbupgrade before installing an update  
 
 1.  Obtain a set of source files from the **CD.Latest** folder of a site that runs the version you plan to update to. This might require you to first install a site in a lab or test environment that runs that version of System Center Configuration Manager.  
 
@@ -133,7 +134,7 @@ Before you install an update, consider running the prerequisite check for that u
 
 Later, when you install  an update, you have the option to configure the update to ignore prerequisite check warnings.  
 
-##### To run the prerequisite checker before installing an update  
+#### To run the prerequisite checker before installing an update  
 
 1.  In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Updates and Servicing**.  
 
