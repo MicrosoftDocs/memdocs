@@ -31,5 +31,6 @@ This completes the setup of the Lookout and Intune integration in the Intune adm
 
 >[!IMPORTANT]
 > You **must** configure the Lookout for Work app before creating compliance policy rules and configuring conditional access. This ensures that the app is ready and available for end users to install before they can get access to email or other company resources.
+
 ## Next steps
 [Configure Lookout for Work app ](configure-and-deploy-lookout-for-work-apps.md)

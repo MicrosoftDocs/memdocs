@@ -84,4 +84,4 @@ When the user opens the Lookout for Work on the device they are prompted to acti
 * [You need to resolve a threat that Lookout for Work found on your Android device](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## Next steps
-* [Enable device threat protection rule in the compliance policy](enable-device-threat-protection-rule-in-compliance-policy.md)
+* [Enable device threat protection rule in the compliance policy](enable-device-threat-protection-rule-compliance-policy.md)
