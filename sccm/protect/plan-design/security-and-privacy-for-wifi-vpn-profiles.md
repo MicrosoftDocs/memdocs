@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi and VPN profile security and privacy | System Center Configuration Manager"
+title: "Wi-Fi and VPN profile security and privacy | Microsoft Docs"
 description: "Learn about the security best practices for managing Wi-Fi and VPN profiles for devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/19/2016

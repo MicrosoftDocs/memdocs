@@ -1,5 +1,5 @@
 ---
-title: "Find site resources | System Center Configuration Manager"
+title: "Find site resources | Microsoft Docs"
 description: "Understand how and when System Center Configuration Manager clients use service location to find site resources."
 ms.custom: na
 ms.date: 10/06/2016

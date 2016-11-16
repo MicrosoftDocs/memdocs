@@ -1,5 +1,5 @@
 ---
-title: "Migration prerequisites | System Center Configuration Manager"
+title: "Migration prerequisites | Microsoft Docs"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.custom: na
 ms.date: 10/06/2016

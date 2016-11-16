@@ -1,5 +1,5 @@
 ---
-title: "Upgrade clients | Windows | System Center Configuration Manager"
+title: "Upgrade clients | Microsoft Docs | Windows "
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/10/2016

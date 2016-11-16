@@ -1,5 +1,5 @@
 ---
-title: "Configuring power management | System Center Configuration Manager"
+title: "Configuring power management | Microsoft Docs"
 description: "Set up power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

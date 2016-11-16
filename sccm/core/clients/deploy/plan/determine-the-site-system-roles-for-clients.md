@@ -1,5 +1,5 @@
 ---
-title: "Site system roles for clients | System Center Configuration Manager"
+title: "Site system roles for clients | Microsoft Docs"
 description: "Determine site system roles for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

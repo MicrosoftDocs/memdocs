@@ -1,5 +1,5 @@
 ---
-title: "Monitor app usage with software metering | System Center Configuration Manager"
+title: "Monitor app usage with software metering | Microsoft Docs"
 description: "Learn about operations that are available in System Center Configuration Manager software metering."
 description:
 ms.custom: na

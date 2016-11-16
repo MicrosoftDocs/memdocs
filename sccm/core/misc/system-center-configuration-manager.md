@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager"
+title: "System Center Configuration Manager | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

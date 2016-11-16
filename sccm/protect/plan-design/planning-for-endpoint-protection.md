@@ -1,5 +1,5 @@
 ---
-title: Plan for Endpoint Protection | System Center Configuration Manager
+title: Plan for Endpoint Protection | Microsoft Docs
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
