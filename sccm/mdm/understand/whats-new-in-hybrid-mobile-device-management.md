@@ -2,7 +2,7 @@
 title: "What's new hybrid MDM  | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,6 +24,32 @@ This article provides details on the new mobile device management (MDM) features
 |Feature categories|
 |-|  
 |**New in Microsoft Intune** - In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.<br /><br /> **New in Configuration Manager Technical Preview** - All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **New in Configuration Manager (current branch)** - All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
+
+## New hybrid features in November 2016
+
+### New in Configuration Manager (current branch)
+
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1610.
+
+* Additional settings and improved experience for Configuration items ([1609](#new-in-configuration-manager-technical-preview-1609))
+* Additional settings for DEP profiles ([1609](#new-in-configuration-manager-technical-preview-1609))
+* Paid apps in Windows Store for Business ([1609](#new-in-configuration-manager-technical-preview-1609))
+* Native connection types for Windows 10 VPN profiles ([1609](#new-in-configuration-manager-technical-preview-1609))
+* Intune compliance charts ([1609](#new-in-configuration-manager-technical-preview-1609))
+* Request to policy sync from console ([1610](#new-in-configuration-manager-technical-preview-1610))
+* Windows Defender configuration settings ([1610](#new-in-configuration-manager-technical-preview-1610))
+
+For information on the new functionality listed above, see the documentation for the specified Technical Preview release.
+
+The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
+
+- **Improved RBAC behavior for corporate-owned devices**
+
+  RBAC now correctly allows only administrators with the appropriate roles to view or edit corporate-owned devices.
+
+- **Auto-trigger VPN access from Windows Information Protection apps**
+
+  You can add a Windows Information Protection primary domain to Windows 10 VPN profiles that causes all associated apps to automatically trigger a VPN connection when they are run on the device. This option is only available when choosing a native connection type.
 
 ## New hybrid features in October 2016
 
