@@ -92,7 +92,7 @@ robots: noindex
     -   **Unknown**: Displays a list of all users and devices that did not report compliance for the selected policy deployment together with the current client status of devices.
 
 ### To view compliance policies charts
-1. **Beginning in version 1610 of Configuration Manager**, in the Configuration Manager console, click **Monitoring**.
+1. Beginning in version 1610 of Configuration Manager, in the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, go to **Overview** > **Compliance Settings** >  **Compliance Policies**.
 3. The following charts are displayed:
     - **Overall Device Compliance**: Display the overall compliance of devices for all compliance policies.

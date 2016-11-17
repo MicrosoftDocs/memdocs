@@ -149,12 +149,24 @@ After you have approved an application for installation, you can subsequently ch
 This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
 ## Filter by content size in automatic deployment rules
-You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see:
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+- [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 #### To configure the Content Size field
 To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizard when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
 
-![Content size field](../get-started/media/contentsizefield.png)
+## Office 365 Client Management dashboard
+The Office 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
+
+The dashboard displays charts for the following:
+
+- Number of Office 365 clients
+- Office 365 client versions
+- Office 365 client languages
+- Office 365 client channels     
+
+For details, see [Manage Office 365 ProPlus updates](..\..\sum\deploy-use\manage-office-365-proplus-updates.mdmanage-office-365-proplus-updates.md)
 
 ## Task sequence steps to manage BIOS to UEFI conversion
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see [Task sequence steps to manage BIOS to UEFI conversion](..\..\osd\deploy-use\task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
@@ -164,6 +176,8 @@ The Prepare ConfigMgr Client step will now completely remove the Configuration M
 
 ## Software updates dashboard
 You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+
+For details, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
 
 ## New compliance settings for configuration items
 We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
@@ -284,9 +298,4 @@ For details, see [Configuration items for devices managed without the System Cen
 
 
 ## Compliance policy charts
-You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category.
-
-#### To view the compliance policy charts
-1. In the Configuration Manager console, go to **Monitoring** > **Overview** > **Compliance Settings**.
-2. The **Overall Device Compliance** chart is displayed.
-3. Click the **Compliance Policies** node to view the **Overall Device Compliance** and **Top Non-Compliance Reasons** charts.
+You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](../../protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy). 
