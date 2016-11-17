@@ -31,25 +31,32 @@ This article provides details on the new mobile device management (MDM) features
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1610.
 
-* Additional settings and improved experience for Configuration items ([1609](#new-in-configuration-manager-technical-preview-1609))
-* Additional settings for DEP profiles ([1609](#new-in-configuration-manager-technical-preview-1609))
-* Paid apps in Windows Store for Business ([1609](#new-in-configuration-manager-technical-preview-1609))
-* Native connection types for Windows 10 VPN profiles ([1609](#new-in-configuration-manager-technical-preview-1609))
-* Intune compliance charts ([1609](#new-in-configuration-manager-technical-preview-1609))
-* Request to policy sync from console ([1610](#new-in-configuration-manager-technical-preview-1610))
-* Windows Defender configuration settings ([1610](#new-in-configuration-manager-technical-preview-1610))
-
-For information on the new functionality listed above, see the documentation for the specified Technical Preview release.
+* [Additional settings and improved experience for Configuration items](/sccm/core/plan-design/changes/whats-new-in-version-1610?branch=sccm-1610-release#new-compliance-settings-for-configuration-items)
+* [Additional settings for DEP profiles](#new-in-configuration-manager-technical-preview-1609)
+* [Paid apps in Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Native connection types for Windows 10 VPN profiles](#new-in-configuration-manager-technical-preview-1609)
+* [Intune compliance charts](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy)
+* [Request to policy sync from console](/sccm/mdm/deploy-use/sync-intune-device)
+* [Windows Defender configuration settings](sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
 
 The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
 
-- **Improved RBAC behavior for corporate-owned devices**
+- **Addtional security support**
 
-  RBAC now correctly allows only administrators with the appropriate roles to view or edit corporate-owned devices.
+  In addition to Full Administrator, the following built-in security roles now have full access to items in the All Corporate-owned Devices node, including Predeclared Devices, iOS Enrollment Profiles, and Windows Enrollment Profiles:
+
+    - Asset Manager
+    - Company Resource Access Manager
+
+  Read-only access to these areas of the Configuration Manager console is still granted to the Read-only Analyst role.
 
 - **Auto-trigger VPN access from Windows Information Protection apps**
 
   You can add a Windows Information Protection primary domain to Windows 10 VPN profiles that causes all associated apps to automatically trigger a VPN connection when they are run on the device. This option is only available when choosing a native connection type.
+
+  - **Conditional access for Windows 10 VPN profiles**
+
+    You can now require Windows 10 devices enrolled in Azure Active Directory to be compliant in order to have VPN access through Windows 10 VPN profiles created in the Configuration Manager console. This is possible through the new **Enable conditional access for this VPN connection** checkbox on the Authentication Method page in the VPN profile wizard and VPN profile properties for Windows 10 VPN profiles. You can also specify a separate certificate for single sign-on authentication if you enable conditional access for the profile.
 
 ## New hybrid features in October 2016
 
