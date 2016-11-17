@@ -68,13 +68,13 @@ In this release, the following improvements have been made to this policy type:
 - You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
-## Manage duplicate hardware identifiers
+## Manage  hardware identifiers
 You can now provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
 
 1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
 2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
 
-For details, see [Manage duplicate hardware intentifiers](..\..\clients\manage\manage-clients.md#manage-duplicate-hardware-identifiers).
+For details, see [Manage duplicate hardware identifiers](..\..\clients\manage\manage-clients.md#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
 Changes in this release:
@@ -298,4 +298,4 @@ For details, see [Configuration items for devices managed without the System Cen
 
 
 ## Compliance policy charts
-You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](../../protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy). 
+You you can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](../../protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy).
