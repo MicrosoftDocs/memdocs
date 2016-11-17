@@ -143,6 +143,11 @@ For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [How to configure client settings](../clients/deploy/configure-client-settings.md)
 
+## Software updates dashboard
+You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+
+For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates.md).
+
 
 ## Improvements to the application request process
 After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
@@ -174,10 +179,16 @@ You can now customize an operating system deployment task sequence with a new va
 ##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
 The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).
 
-## Software updates dashboard
-You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
-For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates.md).
+## Intune compliance policy charts
+You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy).
+
+
+## Lookout integration for Hybrid implementations to protect iOS and Android devices
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+
+End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
+
 
 ## New compliance settings for configuration items
 We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
@@ -201,8 +212,6 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow active scripting**
 
 #### App settings
-
-
 - **Allow Google Play store**
 
 #### Device capability settings
@@ -219,7 +228,6 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow copy and paste**
 
 ### New settings for iOS devices
-
 #### Password settings
 - **Number of complex characters required in password**
 - **Allow simple passwords**
@@ -260,8 +268,6 @@ For details, see [Configuration items for devices managed without the System Cen
 
 ### New settings for Windows 8.1 devices
 #### Applicability settings
-
-
 - **Apply all configurations to Windows 10**
 
 #### Password settings
@@ -276,14 +282,10 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow picture password and PIN**
 
 #### Browser settings
-
-
 - **Allow automatic detection of intranet network**
 
 ### New settings for Windows Phone 8.1 devices
 #### Applicability settings
-
-
 - **Apply all configurations to Windows 10**
 
 #### Password settings
@@ -292,16 +294,4 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Remember password history**
 
 #### Device capability settings
-
-
 - **Allow automatic connection to free Wi-Fi hotspots**
-
-
-## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy).
-
-
-## Lookout integration for Hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
-
-End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
