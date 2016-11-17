@@ -61,6 +61,8 @@ In System Center Configuration Manager, client and site server components record
 
     -   [Certificate Enrollment](#BKMK_CertificateEnrollment)  
 
+    - [Cloud management gateway](#cloud-management-gateway)
+
     -   [Compliance Settings and Company Resource Access](#BKMK_CompSettingsLog)  
 
     -   [Configuration Manager Console](#BKMK_ConsoleLog)  
