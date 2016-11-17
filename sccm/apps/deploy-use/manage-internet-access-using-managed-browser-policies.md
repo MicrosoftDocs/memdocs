@@ -18,9 +18,9 @@ manager: angrobe
 
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the web sites that users of the managed browser can go to.  
+In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the websites that users of the managed browser can go to.  
 
- Because this app is a managed app, you can also apply mobile application management policies to the app, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+ Because this app is a managed app, you can also apply mobile application management policies to it, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
 > [!IMPORTANT]  
 >  If users install the managed browser themselves, it will not be managed by any policies you specify. To ensure that the browser is managed by Configuration Manager, they must uninstall the app before you can deploy it to them as a managed app.  
@@ -53,7 +53,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
     > [!NOTE]  
     >  You cannot include both allowed and blocked URLs in the same managed browser policy.  
 
-     For more about the URL formats you can specify, see URL format for allowed and blocked URLs in this topic.  
+     For more about the URL formats you can specify, see URL format for allowed and blocked URLs in this article.  
 
     > [!NOTE]  
     >  The General policy type lets you change the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app. For more about the General policy type, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
@@ -69,11 +69,11 @@ The new policy is displayed in the **Application Management Policies** node of t
 
 ## Security and privacy for the managed browser  
 
--   On iOS devices, web sites that have expired or untrusted certificates cannot be opened.  
+-   On iOS devices, websites that have expired or untrusted certificates cannot be opened.  
 
 -   Settings that users make for the built-in browser on their devices are not used by the managed browser. The managed browser does not have access to these settings.  
 
--   If you set up the options **Require simple PIN for access** or **Require corporate credentials for access** in a mobile application management policy associated with the managed browser and a user clicks the help link on the authentication page, they can then browse any Internet sites regardless of whether they were added to a block list in the managed browser policy.  
+-   If you set up the options **Require simple PIN for access** or **Require corporate credentials for access** in a mobile application management policy associated with the managed browser, a user can click Help on the authentication page and then go to any site--even one added to a block list in the managed browser policy.  
 
 -   The managed browser can only block access to sites when they are accessed directly. It cannot block access when intermediate services (such as a translation service) are used to access the site.  
 
@@ -138,7 +138,7 @@ Use the following information to learn about the allowed formats and wildcards y
 
 -   If the modes in each policy are the same but the URL lists are different, the URLs will not be enforced on the device.  
 
--   If the modes in each policy are different, but the URL lists are the same, the URLs will not be enforced on the device.  
+-   If the modes in each policy are different but the URL lists are the same, the URLs will not be enforced on the device.  
 
 -   If a device is receiving managed browser policies for the first time and two policies conflict, the URLs will not be enforced on the device. Use the **Policy Conflicts** node of the **Policy** workspace to view the conflicts.  
 
