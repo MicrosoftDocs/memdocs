@@ -1,5 +1,5 @@
 ---
-title: "Flowchart - Download updates | System Center Configuration Manager"
+title: "Flowchart - Download updates | Microsoft Docs"
 description: "See the process by which a site with an online service connection point downloads in-console updates."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Configure Asset Intelligence | System Center Configuration Manager"
+title: "Configure Asset Intelligence | Microsoft Docs"
 description: "Set up Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

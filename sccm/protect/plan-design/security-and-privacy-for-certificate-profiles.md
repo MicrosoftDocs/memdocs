@@ -1,5 +1,5 @@
 ---
-title: "Certificate profile security and privacy | System Center Configuration Manager"
+title: "Certificate profile security and privacy | Microsoft Docs"
 description: "Learn about the security best practices for managing certificate profiles for users and devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Site system role options | System Center Configuration Manager"
+title: "Site system role options | Microsoft Docs"
 description: "Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory."
 ms.custom: na
 ms.date: 10/06/2016

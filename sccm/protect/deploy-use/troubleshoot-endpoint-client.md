@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Windows Defender or Endpoint Protection client | System Center Configuration Manager"
+title: "Troubleshooting Windows Defender or Endpoint Protection client | Microsoft Docs"
 description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
 ms.custom: na
 ms.date: 10/06/2016

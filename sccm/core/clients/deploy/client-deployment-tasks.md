@@ -1,5 +1,5 @@
 ---
-title: "Client deployment tasks for System Center Configuration Manager"
+title: "Client deployment tasks for System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to deploy and configure clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

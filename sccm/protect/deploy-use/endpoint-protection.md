@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection | System Center Configuration Manager"
+title: "Endpoint Protection | Microsoft Docs"
 description: "Learn how to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 10/06/2016

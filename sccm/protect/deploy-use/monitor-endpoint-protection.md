@@ -1,5 +1,5 @@
 ---
-title: "Monitor Endpoint Protection | System Center Configuration Manager"
+title: "Monitor Endpoint Protection | Microsoft Docs"
 description: "Learn how monitor Endpoint Protection in your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 10/06/2016

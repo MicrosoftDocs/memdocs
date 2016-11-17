@@ -1,5 +1,5 @@
 ---
-title: "Deploy Windows clients| System Center Configuration Manager"
+title: "Deploy Windows clients| Microsoft Docs"
 description: "Learn how to deploy clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

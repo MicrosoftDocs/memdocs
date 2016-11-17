@@ -1,5 +1,5 @@
 ---
-title: "Introduction to email profiles | System Center Configuration Manager"
+title: "Introduction to email profiles | Microsoft Docs"
 description: "Learn how to use email profiles to enable your users to access corporate email on their devices with minimal setup."
 ms.custom: na
 ms.date: 10/06/2016

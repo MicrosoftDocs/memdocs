@@ -1,5 +1,5 @@
 ---
-title: "Checklist for 1602 | System Center Configuration Manager"
+title: "Checklist for 1602 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
 ms.date: 10/06/2016

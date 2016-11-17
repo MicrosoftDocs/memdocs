@@ -1,5 +1,5 @@
 ---
-title: Customize operating system images | Configuration Manager
+title: Customize operating system images | Microsoft Docs
 description: "Use capture-and-build task sequences, manual configuration, or a combination of both to customize an operating system image."
 ms.custom: na
 ms.date: 10/06/2016
