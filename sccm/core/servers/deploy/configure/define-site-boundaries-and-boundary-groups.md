@@ -189,16 +189,16 @@ By configuring the different neighbor groups to be available at different times 
 ### Update existing boundary groups to the new model
 When you update to version 1610, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available, until you configure new boundary groups and relationships.
 -	A default site boundary group is created for each primary site, the name is ***Default-Site-Boundary-Group&lt;sitecode>.***
--	Unprotected distribution points and state migration points at primary sites are added to the *Default-Site-Boundary-Group&lt;sitecode>* boundary group of that site.
--	A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***&lt;original boundary group name>-Slow-Tmp***:  
+-	Distribution points with *Allow fallback source location for content* checked and state migration points at primary sites are added to the *Default-Site-Boundary-Group&lt;sitecode>* boundary group of that site.
+-	A copy is made of each existing boundary group that includes a site server configured with a slow connection. The name of the new group is ***&lt;original boundary group name>-&lt;original boundary group ID>***:  
 	-	Site systems that have a fast connection are left in the original boundary group.
 	-	A copy of site systems (distribution points, management points, and state migration points) that have a slow connection are added to the copy of the boundary group. The original site systems configured as slow remain in their original boundary groups for backward compatibility, but are not used from those boundary groups.
 	- 	This boundary group copy does not have boundaries associated with it. However, A fallback link is created between the original group and the new boundary group copy that has the fallback time set to zero.  
 
 
 - **Specific to secondary sites:**
-  - A boundary group is created if a secondary site has at least one unprotected distribution point or state migration point. The name of the boundary group is ***Secondary-Site-Neighbor--Tmp&lt;Sitecode>.***
-  - All unprotected distribution points and state migration points are added to this newly created secondary site boundary group.
+  - A boundary group is created if a secondary site has at least one distribution point with *Allow fallback source location for content* checked or state migration point. The name of the boundary group is ***Secondary-Site-Neighbor--Tmp&lt;Sitecode>.***
+  - All distribution points with *Allow fallback source location for content* checked and state migration points are added to this newly created secondary site boundary group.
   - A fallback link is created between the original boundary group and the newly created neighbor boundary group and the fallback time is set to zero.
 
 
