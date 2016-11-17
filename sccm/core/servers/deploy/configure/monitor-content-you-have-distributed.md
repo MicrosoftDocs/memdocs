@@ -1,5 +1,5 @@
 ---
-title: "Monitor content | System Center Configuration Manager"
+title: "Monitor content | Microsoft Docs"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
 ms.date: 10/06/2016

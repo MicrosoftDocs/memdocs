@@ -1,5 +1,5 @@
 ---
-title: "Privacy statement - Mobile device addendum | System Center Configuration Manager"
+title: "Privacy statement - Mobile device addendum | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

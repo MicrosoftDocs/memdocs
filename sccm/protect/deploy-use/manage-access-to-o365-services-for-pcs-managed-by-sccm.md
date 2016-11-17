@@ -1,5 +1,5 @@
 ---
-title: "Manage access to O365 services for managed PCs | System Center Configuration Manager"
+title: "Manage access to O365 services for managed PCs | Microsoft Docs"
 description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/18/2016

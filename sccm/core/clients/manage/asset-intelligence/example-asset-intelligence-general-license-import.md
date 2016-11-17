@@ -1,5 +1,5 @@
 ---
-title: "Example Asset Intelligence general license import file | System Center Configuration Manager"
+title: "Example Asset Intelligence general license import file | Microsoft Docs"
 description: "Use a sample Asset Intelligence general license file to help import software licenses in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

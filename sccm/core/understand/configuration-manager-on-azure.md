@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager on Azure  | System Center Configuration Manager"
+title: "Configuration Manager on Azure  | Microsoft Docs"
 description: "Information about using Configuration Manager on an Azure environment."
 ms.custom: na
 ms.date: 10/21/2016

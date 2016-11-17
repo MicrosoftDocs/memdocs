@@ -1,5 +1,5 @@
 ---
-title: Service a server group | Configuration Manager
+title: Service a server group | Microsoft Docs
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
 author: dougebyms.author: dougeby

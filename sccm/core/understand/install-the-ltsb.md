@@ -1,5 +1,5 @@
 ---
-title: "Install a site using the 1606 baseline media  | System Center Configuration Manager"
+title: "Install a site using the 1606 baseline media  | Microsoft Docs"
 description: "Learn about using the 1606 baseline media to install or upgrade sites for System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016
@@ -79,7 +79,7 @@ For example, to install a licensed Current Branch edition you would use:
   **Key Name: SABranchOptions**
    -	**SSActive = 1**
    - **CurrentBranch = 1**
- 
+
 
 > [!IMPORTANT]  
 > **SABranchOptions** only works with Setup from the baseline media. It does not apply when you run Setup from the CD.Latest folder of a site you previously installed using the version 1606 baseline media.

@@ -1,5 +1,5 @@
 ---
-title: "Plan client migration | System Center Configuration Manager"
+title: "Plan client migration | Microsoft Docs"
 description: "Learn about the tasks that migrate clients from a source hierarchy to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
 ms.date: 10/06/2016

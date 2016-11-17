@@ -1,5 +1,5 @@
 ---
-title: "Recommended hardware | System Center Configuration Manager"
+title: "Recommended hardware | Microsoft Docs"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
 ms.date: 10/06/2016

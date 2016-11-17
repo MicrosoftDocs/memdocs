@@ -1,5 +1,5 @@
 ---
-title: "Remote control | System Center Configuration Manager"
+title: "Remote control | Microsoft Docs"
 description: "Get an introduction to remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

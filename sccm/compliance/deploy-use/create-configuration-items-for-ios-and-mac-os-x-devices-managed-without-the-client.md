@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
 ms.custom: na
 ms.date: 11/18/2016

@@ -1,5 +1,5 @@
 ---
-title: "Deploy applications | System Center Configuration Manager"
+title: "Deploy applications | Microsoft Docs"
 description: "Create a deployment type or simulate deployment for an application by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

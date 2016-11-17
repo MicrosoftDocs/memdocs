@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for managing compliance | System Center Configuration Manager"
+title: "Common tasks for managing compliance | Microsoft Docs"
 description: "Learn how to use compliance settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

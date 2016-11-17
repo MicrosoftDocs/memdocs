@@ -1,5 +1,5 @@
 ---
-title: "Upgrade on-premises infrastructure | System Center Configuration Manager"
+title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
 ms.date: 10/28/2016
@@ -74,7 +74,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 3. Expand the tree below Root, select the **SMS** node, and then click **Security**.  Ensure the **SMS Admins** group has the following permissions:
   - 	Enable Account
   - 	Remote Enable
-4. Next, on the **Security tab**, below the SMS node, select the **site_<sitecode>** node, and then click **Security**. Ensure the **SMS Admins** group has the following permission:
+4. Next, on the **Security tab**, below the SMS node, select the **site_&lt;sitecode>** node, and then click **Security**. Ensure the **SMS Admins** group has the following permission:
   -   Execute Methods
   -   Provider Write
   -   Enable Account

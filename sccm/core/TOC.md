@@ -231,9 +231,9 @@
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
-###  [Plan for Cloud Management Gateway](clients/manage/plan-cloud-management-gateway.md)
-###  [Set up Cloud Management Gateway](clients/manage/setup-cloud-management-gateway.md)
-###  [Monitor clients on Cloud Management Gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
+###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md)
+###  [Monitor clients on cloud management gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
 ###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
 
 ##   Collections

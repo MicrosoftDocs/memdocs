@@ -1,5 +1,5 @@
 ---
-title: "List of reports | System Center Configuration Manager"
+title: "List of reports | Microsoft Docs"
 description: "Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories."
 ms.custom: na
 ms.date: 10/06/2016

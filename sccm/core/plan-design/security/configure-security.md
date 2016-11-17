@@ -1,5 +1,5 @@
 ---
-title: "Configure security in System Center Configuration Manager"
+title: "Configure security in System Center Configuration Manager | Microsoft Docs"
 description: "Configure security-related options for System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

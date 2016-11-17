@@ -1,5 +1,5 @@
 ---
-title: "Websites for site systems | System Center Configuration Manager"
+title: "Websites for site systems | Microsoft Docs"
 description: "Learn about default and custom websites for site system servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

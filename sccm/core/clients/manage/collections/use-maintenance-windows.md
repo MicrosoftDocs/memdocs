@@ -1,5 +1,5 @@
 ---
-title: "Use maintenance windows | System Center Configuration Manager"
+title: "Use maintenance windows | Microsoft Docs"
 description: "Use collections and maintenance windows to effectively manage clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

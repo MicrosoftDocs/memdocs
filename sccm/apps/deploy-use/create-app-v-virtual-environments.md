@@ -1,5 +1,5 @@
 ---
-title: "Create App-V virtual environments | System Center Configuration Manager"
+title: "Create App-V virtual environments | Microsoft Docs"
 description: "Create virtual environments with Microsoft Application Virtualization so apps can share data with each other."
 ms.custom: na
 ms.date: 10/06/2016

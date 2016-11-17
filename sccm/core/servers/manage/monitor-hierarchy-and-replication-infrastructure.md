@@ -1,5 +1,5 @@
 ---
-title: "Monitor replication | System Center Configuration Manager"
+title: "Monitor replication | Microsoft Docs"
 description: "Learn how to monitor infrastructure and operations in Configuration Manager by using the Monitoring workspace in the console."
 ms.custom: na
 ms.date: 10/06/2016
