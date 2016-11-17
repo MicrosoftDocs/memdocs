@@ -1,5 +1,5 @@
 ---
-title: "Install site system roles | System Center Configuration Manager"
+title: "Install site system roles | Microsoft Docs"
 description: "Wizards help you add site system roles to an existing or new site system server in the site."
 ms.custom: na
 ms.date: 10/06/2016

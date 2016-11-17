@@ -1,5 +1,5 @@
 ---
-title: "Client deployment planning | System Center Configuration Manager"
+title: "Client deployment planning | Microsoft Docs"
 description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

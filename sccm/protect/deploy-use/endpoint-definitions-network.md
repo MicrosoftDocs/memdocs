@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection malware definitions from network share | System Center Configuration Manager"
+title: "Endpoint Protection malware definitions from network share | Microsoft Docs"
 description: "Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions."
 ms.custom: na
 ms.date: 10/06/2016

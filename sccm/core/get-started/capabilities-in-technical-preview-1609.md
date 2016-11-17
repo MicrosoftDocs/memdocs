@@ -1,5 +1,5 @@
 ---
-title: "Capabilities in Technical Preview 1609 for System Center Configuration Manager"
+title: "Capabilities in Technical Preview 1609 for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1609."
 ms.custom: na
 ms.date: 10/06/2016
@@ -367,8 +367,10 @@ In this release, from the Office 365 Client Management dashboard, you can start 
 3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*.
 4. On the **Import Client Settings** page, choose whether to import the Office 365 client settings from an existing XML configuration file or to manually specify the settings, and then click **Next**.
 When you have an existing configuration file, enter the location for the file and skip to step 7. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
-	>[!IMPORTANT]
-	>You might have issues when you try to import existing client settings (XML) in this technical preview.
+
+    > [!IMPORTANT]
+    >You might have issues when you try to import existing client settings (XML) in this technical preview.
+
 5. On the **Client Products** page, select the Office 365 suite that you use, select the applications that you want to include, select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
 7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**.

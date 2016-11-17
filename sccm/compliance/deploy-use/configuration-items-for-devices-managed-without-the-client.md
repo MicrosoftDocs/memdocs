@@ -1,5 +1,5 @@
 ---
-title: "Configuration items for devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Configuration items for devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Create configuration items for Windows, Mac, and other devices that aren't managed by the System Center Configuration Manager client."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Install scenarios | System Center Configuration Manager"
+title: "Install scenarios | Microsoft Docs"
 description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading."
 ms.custom: na
 ms.date: 10/06/2016

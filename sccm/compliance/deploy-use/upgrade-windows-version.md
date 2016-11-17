@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Windows devices to a new version | System Center Configuration Manager"
+title: "Upgrade Windows devices to a new version | Microsoft Docs"
 description: "Upgrade devices that run Windows 10 Desktop, Windows 10 Mobile, or Windows 10 Holographic to a newer edition automatically."
 ms.custom: na
 ms.date: 11/18/2016
@@ -87,4 +87,4 @@ The new policy is displayed in the **Windows 10 Edition Upgrade** node of the **
 
 You can monitor the deployment you just created from the **Deployments** node of the **Monitoring** workspace.  
 
- Once the policy reaches a targeted Windows PC, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.
+ Once the policy reaches a targeted Windows PC and is evaluated, it will be restarted within two hours to apply the upgrade. Ensure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users working hours.

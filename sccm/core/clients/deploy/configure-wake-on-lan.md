@@ -1,5 +1,5 @@
 ---
-title: "Configure Wake on LAN | System Center Configuration Manager"
+title: "Configure Wake on LAN | Microsoft Docs"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

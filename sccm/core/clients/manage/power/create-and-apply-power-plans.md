@@ -1,5 +1,5 @@
 ---
-title: "Create and apply power plans | System Center Configuration Manager"
+title: "Create and apply power plans | Microsoft Docs"
 description: "Create and apply power plans in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

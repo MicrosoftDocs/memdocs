@@ -1,5 +1,5 @@
 ---
-title: "Collections prerequisites | System Center Configuration Manager"
+title: "Collections prerequisites | Microsoft Docs"
 description: "Get prerequisites for using collections in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

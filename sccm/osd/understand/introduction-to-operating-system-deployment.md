@@ -1,5 +1,5 @@
 ---
-title: Introduction to operating system deployment | Configuration Manager
+title: Introduction to operating system deployment | Microsoft Docs
 description: "Understand the concepts before you deploy operating systems in your Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016

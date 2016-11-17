@@ -1,5 +1,5 @@
 ---
-title: "Content infrastructure | System Center Configuration Manager"
+title: "Content infrastructure | Microsoft Docs"
 description: "Learn how to deploy and then manage your content management infrastructure for System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

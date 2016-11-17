@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
+title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
 ms.custom: na
 ms.date: 11/18/2016

@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for sites | System Center Configuration Manager"
+title: "Prerequisites for sites | Microsoft Docs"
 description: "Learn about the different prerequisites that are required to install the different types of System Center Configuration Manager sites."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Test client upgrades preproduction collection | System Center Configuration Manager"
+title: "Test client upgrades preproduction collection | Microsoft Docs"
 description: "Test client upgrades in a preproduction collection in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
