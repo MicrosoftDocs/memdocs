@@ -104,13 +104,6 @@ The followingare required configurations for using migration and migration opera
 
      In addition, to share a distribution point from a System Center 2012 Configuration Manager or System Center Configuration Manager source site, the **Source Site Account** (which accesses the SMS Provider for the source site server), must have **Modify** permissions to the **Site** object on the source site. You grant this permission to the account by using role-based administration. For information about how to use role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
--   **Share distribution points:**  
-
-     To successfully share any distribution points from a source site, at least one primary site or the central administration site in the destination hierarchy must use the same port numbers for client requests as the source site. For information about client request ports, see [How to configure client communication ports in System Center Configuration Manager](../../core/clients/deploy/configure-client-communication-ports.md)  
-
-     For each source site, only the distribution points that are installed on site system servers that are configured with a FQDN are shared.  
-
-     In addition, to share a distribution point from a System Center 2012 Configuration Manager or System Center Configuration Manager source site, the **Source Site Account** (which accesses the SMS Provider for the source site server), must have **Modify** permissions to the **Site** object on the source site. You grant this permission to the account by using role-based administration. For information about how to use role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md).  
 
 -   **Upgrade or reassign distribution points:**  
 
