@@ -18,9 +18,9 @@ manager: angrobe
 
 ---
 # Manage Internet access using managed browser policies with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-In System Center Configuration Manager, you can deploy the Intune Managed Browser, a web browsing application, and associate the application with a managed browser policy. The managed browser policy configures an allow list or a block list that restricts the web sites that users of the managed browser can visit.  
+In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the web sites that users of the managed browser can go to.  
 
- Because this app is a managed app, you can also apply mobile application management policies to the app, such as controlling the use of cut, copy and paste, preventing screen captures, and also ensuring that links to content that users click only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+ Because this app is a managed app, you can also apply mobile application management policies to the app, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
 > [!IMPORTANT]  
 >  If users install the managed browser themselves, it will not be managed by any policies you specify. To ensure that the browser is managed by Configuration Manager, they must uninstall the app before you can deploy it to them as a managed app.  
@@ -36,44 +36,44 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
 
 ## Create a managed browser policy  
 
-1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Application Management Policies**.  
+1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **Application Management Policies**.  
 
-3.  In the **Home** tab, in the **Create** group, click **Create Application Management Policy**.  
+3.  On the **Home** tab, in the **Create** group, choose **Create Application Management Policy**.  
 
-4.  On the **General** page, enter the name and description for the policy, and then click **Next**.  
+4.  On the **General** page, enter the name and description for the policy, and then choose **Next**.  
 
-5.  On the **Policy Type** page, select the platform, select **Managed Browser** for the policy type, and then click **Next**.  
+5.  On the **Policy Type** page, select the platform, select **Managed Browser** for the policy type, and then choose **Next**.  
 
      On the **Managed Browser** page, select one of the following options:  
 
-    -   **Allow the managed browser to open only the URLs listed below** – Specify a list of URLs that the managed browser can open.  
+    -   **Allow the managed browser to open only the URLs listed below**–Specify a list of URLs that the managed browser can open.  
 
-    -   **Block the managed browser from opening the URLs listed below** – Specify a list of URLs that the managed browser will be blocked from opening.  
+    -   **Block the managed browser from opening the URLs listed below**–Specify a list of URLs that the managed browser will be blocked from opening.  
 
     > [!NOTE]  
     >  You cannot include both allowed and blocked URLs in the same managed browser policy.  
 
-     For more information about the URL formats you can specify, see **URL format for allowed and blocked URLs** in this topic.  
+     For more about the URL formats you can specify, see URL format for allowed and blocked URLs in this topic.  
 
     > [!NOTE]  
-    >  The **General** policy type lets you modify the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy and paste operations within a restricted app. For more information about the General policy type, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
+    >  The General policy type lets you change the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app. For more about the General policy type, see [Protect apps using mobile application management policies](../../apps/deploy-use/protect-apps-using-mam-policies.md).  
 
-6.  Complete the wizard.  
+6.  Finish the wizard.  
 
- The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
+The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
 
 ## Create a software deployment for the managed browser app  
- After you have created the managed browser policy, you can then create a software deployment type for the managed browser app. You must associate both a General and Managed Browser policy for the Managed Browser app.  
+ After you have created the managed browser policy, you can then create a software deployment type for the managed browser app. You must associate both a general and managed browser policy for the managed browser app.  
 
  For more information, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
 ## Security and privacy for the managed browser  
 
--   On iOS devices, web sites that users visit that have an expired or untrusted certificate cannot be opened.  
+-   On iOS devices, web sites that have expired or untrusted certificates cannot be opened.  
 
--   Settings that users make for the built-in browser on their devices are not used by the managed browser. This is because the managed browser does not have access to these settings.  
+-   Settings that users make for the built-in browser on their devices are not used by the managed browser. The managed browser does not have access to these settings.  
 
--   If you configure the options **Require simple PIN for access** or **Require corporate credentials for access** in a mobile application management policy associated with the managed browser and a user clicks the help link on the authentication page, they can then browse any Internet sites regardless of whether they were added to a block list in the managed browser policy.  
+-   If you set up the options **Require simple PIN for access** or **Require corporate credentials for access** in a mobile application management policy associated with the managed browser and a user clicks the help link on the authentication page, they can then browse any Internet sites regardless of whether they were added to a block list in the managed browser policy.  
 
 -   The managed browser can only block access to sites when they are accessed directly. It cannot block access when intermediate services (such as a translation service) are used to access the site.  
 
@@ -136,7 +136,7 @@ Use the following information to learn about the allowed formats and wildcards y
 ### How conflicts between the allow and block list are resolved  
  If multiple managed browser policies are deployed to a device and the settings conflict, both the mode (allow or block) and the URL lists are evaluated for conflicts. In case of a conflict, the following behavior applies:  
 
--   If the modes in each policy are the same, but the URL lists are different, the URLs will not be enforced on the device.  
+-   If the modes in each policy are the same but the URL lists are different, the URLs will not be enforced on the device.  
 
 -   If the modes in each policy are different, but the URL lists are the same, the URLs will not be enforced on the device.  
 
