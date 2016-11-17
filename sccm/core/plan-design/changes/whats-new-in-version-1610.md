@@ -68,7 +68,7 @@ In this release, the following improvements have been made to this policy type:
 - You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
-## Manage  hardware identifiers
+## Manage hardware identifiers
 You can now provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
 
 1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
