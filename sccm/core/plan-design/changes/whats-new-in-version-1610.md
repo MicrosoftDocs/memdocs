@@ -299,3 +299,9 @@ For details, see [Configuration items for devices managed without the System Cen
 
 ## Intune compliance policy charts
 You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy).
+
+
+## Lookout integration for Hybrid implementations to protect iOS and Android devices
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+
+End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
