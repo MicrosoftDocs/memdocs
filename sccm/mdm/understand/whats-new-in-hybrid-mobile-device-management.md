@@ -35,9 +35,9 @@ The following features that were previously available in Configuration Manager T
 * [Additional settings for DEP profiles](#new-in-configuration-manager-technical-preview-1609)
 * [Paid apps in Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 * [Native connection types for Windows 10 VPN profiles](#new-in-configuration-manager-technical-preview-1609)
-* [Intune compliance charts](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy)
+* [Intune compliance charts](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
 * [Request to policy sync from console](/sccm/mdm/deploy-use/sync-intune-device)
-* [Windows Defender configuration settings](sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
+* [Windows Defender configuration settings](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
 
 The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
 
