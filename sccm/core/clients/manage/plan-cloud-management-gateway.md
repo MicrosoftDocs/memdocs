@@ -1,7 +1,7 @@
 ---
 title: "Plan for cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client

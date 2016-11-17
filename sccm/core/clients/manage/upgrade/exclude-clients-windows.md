@@ -2,7 +2,7 @@
 title: "Exclude client upgrades | Windows | System Center Configuration Manager"
 description: "Learn how to exclude Windows clients from getting upgraded in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/31/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
