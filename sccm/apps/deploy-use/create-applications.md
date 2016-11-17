@@ -240,7 +240,7 @@ The new application appears in the **Applications** node of the Configuration Ma
 
 3.  In the **Script contents** box, enter the script that you want to use. You can also paste the contents of an existing script in this field, or choose **Open** to browse to an existing saved script. Configuration Manager checks the results from the script by reading the values that are written to the Standard Out (STDOUT) output stream, the Standard Error (STDERR) output stream, and the exit code from the script. If the exit code is a nonzero value, the script has failed and the application detection status is unknown. If the exit code is zero and STDOUT has data, the application detection status is Installed.  
 
-Use the following table to see how to use the output from a script to check whether an application is installed.  
+ Use the following table to see how to use the output from a script to check whether an application is installed.  
 
 |Script exit code|Details|
 |--------------------------------|-----------------|
@@ -263,8 +263,8 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
 |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The value for STDOUT is not empty, which indicates that the application is installed.|  
 |**WScript.StdOut.Write "The application is installed"**<br /><br /> **WScript.StdErr.Write "Completed"**<br /><br /> **WScript.Quit(0)**|The script returns an exit code of zero, which indicates that it ran successfully. The values for STDOUT and STDERR are not empty, which indicates that the application is installed.|  
 
-> [!NOTE]  
-    >  The maximum size that you can use for a script is 32 kilobytes (KB).  
+ > [!NOTE]  
+ >  The maximum size that you can use for a script is 32 kilobytes (KB).  
 
 4.  Choose **OK** to close the **Script Editor** dialog box.  
 
@@ -330,7 +330,7 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
 2.  In the **Category** drop-down list, select whether this requirement is for a device or a user, or select **Custom** to use a previously created global condition. When you select **Custom**, you can also choose **Create** to create a new global condition. For more about global conditions, see [How to create global conditions](../../apps/deploy-use/create-global-conditions.md).  
 
     > [!IMPORTANT]  
-    >  If you create a requirement of the category **User** and the condition **Primary Device**, and then deploy the application to a device collection, the requirement will be ignored.  
+    >  Any requirement of the category **User** and the condition **Primary Device** will be ignored if you deploy the application to a device collection.  
     >   
     >  If you created a Windows package and program or task sequence that has Windows 10 as a requirement using System Center 2012 R2 Configuration Manager SP1 and then upgrade to System Center Configuration Manager, the requirements for Windows 10 might be removed. To fix this problem, specify the requirements again. Note that although the requirement has been removed from the requirements display, it is still processed correctly on devices.  
 
@@ -370,7 +370,7 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
     > [!NOTE]  
     >  A dependent application does not need to be deployed to be automatically installed.  
 
-6.  In the **Add Dependency** dialog box, in the **Dependency group name** box, enter a name to refer to this group of application dependencies.  
+6.  In the **Add Dependency** dialog box under **Dependency group name**, enter a name to refer to this group of application dependencies.  
 
 7.  Optionally, use the **Increase Priority** and **Decrease Priority** buttons to change the order in which each dependency is evaluated.  
 
