@@ -1,7 +1,7 @@
 ---
-title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | Microsoft Docs"
+title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.topic: article
 ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the System Center Configuration Manager **Windows Phone** configuration item to manage settings for Windows Phone devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## Create a Windows Phone configuration item  
@@ -71,9 +76,11 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Minimum password length (characters)**|The minimum length for the password.|  
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
-|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|  
-|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|  
-|**Send password recovery PIN to Exchange Server**||  
+|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.|
+|**Idle time before device is locked**|Specifies the amount of time a device must remain idle before the screen is automatically locked.|  
+|**Password complexity**|Choose whether you can specify a PIN such as ‘1234’, or whether you must supply a strong password.|
+|**Allow simple passwords**|Specifies that simple passwords such as ‘0000’ and ‘1234’ can be used.|
+|**Send password recovery PIN to Exchange Server**|-|  
 
 ### Device  
 
@@ -96,9 +103,9 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Maximum size for plain text email (automatically downloaded)**|Controls the maximum size of plain text emails when automatically downloaded.|  
 |**Maximum size for HTML email (automatically downloaded)**|Controls the maximum size of HTML emails when automatically downloaded.|  
 |**Maximum size of an attachment (automatically downloaded)**|Configures the maximum size email that will be automatically downloaded.|  
-|**Calendar synchronization**||  
+|**Calendar synchronization**|Lets users synchronize calendar appointments in addition to email.|  
 |**Custom email account**|Allow using a non-Microsoft account on the device.|  
-|**Make Microsoft Account optional in Windows Mail app**||  
+|**Make Microsoft Account optional in Windows Mail app**|-|  
 
 ### Store  
  These settings apply to Windows Phone 8.1 devices only.  
@@ -106,15 +113,13 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |Setting|Details|  
 |-------------|-------------|  
 |**Application store**|Allows access to the app store on the device.|  
-|**Enter a password to access the application store**|Users must enter a password to access the app store.|  
-|**In-app purchases**|Allows users to make in-app purchases.|  
 
 ### Browser  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
 
 |Setting|Details|  
 |-------------|-------------|  
-|**Default browser**|User can change the default Internet browser.|  
+|**Allow web browser**|User can change the default Internet browser.|  
 |**Autofill**|User can change autocomplete settings in the browser.|  
 |**Active scripting**|Browser can run scripts, such as Active X scripts.|  
 |**Plug-ins**|User can add plug-ins to Internet Explorer.|  
@@ -128,12 +133,12 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |Setting|Details|  
 |-------------|-------------|  
 |**Always send Do Not Track header**|Prevents browsing information from being sent to third-party sites.|  
-|**Intranet security zone**||  
+|**Intranet security zone**|-|  
 |**Security level for Internet zone**|Configure the security level for the Internet zone.|  
 |**Security level for intranet zone**|Configure the security level for the intranet zone.|  
 |**Security level for trusted sites zone**|Configure the security level for the trusted sites zone.|  
 |**Security level for restricted sites zone**|Configure the security level for the restricted sites zone.|  
-|**Namespaces for intranet zone**||  
+|**Namespaces for intranet zone**|-|  
 |**Go to intranet site for single word entry**|Enables or disables the setting that allows Internet Explorer to automatically go to an Intranet site if a valid site name is entered without a preceding HTTP:|  
 |**Enterprise mode menu option**|Allow users to activate and deactivate Enterprise Mode from the Internet Explorer **Tools** menu.|  
 |**Logging report location (URL)**|Specify a URL where visited websites will be logged when Enterprise Mode is active.|  
@@ -157,16 +162,17 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**SMS and MMS messaging**|Allow SMS and MMS messaging from the device.|  
 |**Removable storage**|Allow use of removable storage, like an SD card on the device.|  
 |**Camera**|Allow use of the device camera.|  
-|**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows Phone 8.1 only)|  
+|**Near field communication (NFC)**|Allow communication using NFC on the device.<br /><br /> (Windows Phone 8.1 only)|
+|**Allow USB connection**|Controls whether devices can access external storage devices through a USB connection.|
 
 ### Peak synchronization  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
 
 |Setting|Details|  
 |-------------|-------------|  
-|**Specify peak time**||  
-|**Peak synchronization frequency**||  
-|**Off-peak synchronization frequency**||  
+|**Specify peak time**|Configure the peak time for mobile device synchronization.|  
+|**Peak synchronization frequency**|Configure how often synchronization occurs during the peak hours you configured.|  
+|**Off-peak synchronization frequency**|Configure how often synchronization occurs outside of the peak hours you configured.|  
 
 ### Roaming  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  
@@ -197,8 +203,8 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |------------------|-------------|  
 |**Wireless network connection**|Enable or disable the devices Wi-Fi capability.|  
 |**Wi-Fi tethering**|Let’s users use their device as a mobile hotspot.|  
-|**Offload data to Wi-Fi when possible**||  
-|**Wi-Fi hotspot reporting**||  
+|**Offload data to Wi-Fi when possible**|Configure this to use the Wi-Fi connection on the device when possible.|  
+|**Wi-Fi hotspot reporting**|Sends information about Wi-Fi connections to help the user discover nearby connections.|  
 
 #### To configure a wireless network connection  
 
@@ -208,7 +214,7 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 
 |Setting|More information|  
 |-------------|----------------------|  
-|**Network name (SSID)**||  
+|**Network name (SSID)**|Enter the name of the Wi-Fi network.|  
 |**Network connection**|Choose from **Internet** or **Work**.|  
 |**Authentication**|Choose the authentication method for the wireless connection from:<br><br>- **Open**<br>-                    **Shared**<br>- **WPA**<br>- **WPA-PSK**<br>- **WPA2**<br>- **WPA2-PSK**|  
 |**Data encryption**|Choose the encryption method used by this connection. The values you can select will differ depending on the **Authentication** method you selected:<br><br>- **Disabled**<br>- **WEP**<br>- **TKIP**<br>- **AES**|  
@@ -265,7 +271,8 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 |**Minimum classification of updates**|Choose the minimum classification of updates that will be downloaded to Windows computers, **None**, **Important**, or **Recommended**.|  
 |**SmartScreen**|Enable or disable Windows Smart Screen.|  
 |**Virus protection**|Ensure that the device is protected by antivirus software|  
-|**Virus protection signatures are up to date**|Ensure that the antivirus software signatures are up to date.|  
+|**Virus protection signatures are up to date**|Ensure that the antivirus software signatures are up to date.|
+|**Allow manual unenrollment**|-|  
 
 ### Windows Server Work Folders  
  These settings apply to both Windows Phone 8 and Windows Phone 8.1.  

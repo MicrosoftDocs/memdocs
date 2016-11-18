@@ -24,8 +24,6 @@ Deploying clients across your site takes time and some installations are not suc
 
  In the **Monitoring** workspace of the console, you can monitor the following statuses for client deployments taking place within a collection that you specify:  
 
--   Not started   
-
 -   Compliant  
 
 -   In progress  
@@ -51,7 +49,7 @@ Deploying clients across your site takes time and some installations are not suc
  To learn more about pre-production client deployments, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 
  > [!NOTE]
- > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not Started** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.   
+ > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.   
 
  To monitor the status of deployed clients, see [How to monitor clients in System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)  
 

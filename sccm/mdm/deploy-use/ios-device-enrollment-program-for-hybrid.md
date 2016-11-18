@@ -82,22 +82,18 @@ Companies can purchase iOS devices through Apple's device enrollment program and
 
             -   **Disable** - Allows the management profile to be removed from the **Settings** menu  
 
-            -   Enable - (Requires **Preparation Mode** = **Supervised**) Disables iOS settings that could allow removal of the management profile  
+            -   **Enable** - (Requires **Preparation Mode** = **Supervised**) Disables iOS settings that could allow removal of the management profile  
 
     3.  On the **Setup Assistant** page, configure the settings that customize the iOS Setup Assistant that starts when the device is first powered on, and then click **Next**. These settings include:  
-
         -   **Passcode** - Prompt for passcode during activation. Always require a passcode unless the device will be secured or have access controlled in some other manner (i.e. kiosk mode that restricts the device to one app).  
-
         -   **Location Services** - If enabled, Setup Assistant prompts for the service during activation  
-
         -   **Restore** - If enabled, Setup Assistant prompts for iCloud backup during activation  
-
         -   **Apple ID** - An Apple ID is required to download iOS App Store apps, including those installed by Intune. If enabled, iOS will prompt users for an Apple ID when Intune attempts to install an app without an ID.  
-
         -   **Terms and Conditions** - If enabled, Setup Assistant prompts users to accept Apple's terms and conditions during activation  
-
+        -   **Touch ID** - If enabled, Setup Assistant prompts for this service during activation
+        -   **Apple Pay** - If enabled, Setup Assistant prompts for this service during activation
+        -   **Zoom** - If enabled, Setup Assistant prompts for this service during activation
         -   **Siri** - If enabled, Setup Assistant prompts for this service during activation  
-
         -   **Send diagnostic data to Apple** - If enabled, Setup Assistant prompts for this service during activation  
 
     4.  On the **Additional Management** page, specify whether a USB connection can be used for additional management settings. When you select **Require certificate**, you must import an Apple Configurator management certificate to use for this profile.  Set to **Disallow** to prevent syncing files with iTunes or management via Apple Configurator. Microsoft recommends you set to **Disallow**, export any further configuration from Apple Configurator, and then deploy as a Custom iOS configuration profile, rather than use this setting to allow manual deployment with or without a certificate.  
