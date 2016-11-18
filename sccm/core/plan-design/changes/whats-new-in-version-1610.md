@@ -15,12 +15,15 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
 # What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
+Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
+
+
 > [!TIP]  
->  Learn more about:  
->   
->  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)  
->  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
+> To install a new site, you must use a baseline version of Configuration Manager.  
+>  Learn more about:    
+>  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+>  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+>  -   [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
 
