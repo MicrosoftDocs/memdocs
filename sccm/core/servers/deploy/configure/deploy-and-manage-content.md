@@ -298,43 +298,19 @@ Use the following sections to prestage content.
 
 ##  <a name="bkmk_manage"></a> Manage the content you have distributed  
  You have the following options for managing content:  
+ - [Update content](#update-content)
+ - [Redistribute content](#redistribute-content)
+ - [Remove content](#remove-content)
+ - [validate content](#validate-content)
 
-**Update content:** When the source file location for a deployment is updated by adding new files or replace existing files with a newer version, you can update the content files on distribution points by using the **Update Distribution Points** or **Update Content** action:  
-
+### Update content
+When the source file location for a deployment is updated by adding new files or replace existing files with a newer version, you can update the content files on distribution points by using the **Update Distribution Points** or **Update Content** action:  
 -   The content files are copied from the source file path to the content library on the site that owns the package content source  
-
 -   The package version is incremented  
-
 -   Each instance of the content library on site servers and on  distribution points updates with only the files that have changed  
 
 > [!WARNING]  
 >  The package version for applications is always 1. When you update the content for an application deployment type, Configuration Manager creates a new content ID for the deployment type, and the package references the new content ID.  
-
-**Redistribute content:** You can redistribute a package to copy all of the content files in the package to distribution points or distribution point groups and thereby overwrite the existing files.  
-
- Use this operation to repair content files in the package or resend the content when the initial distribution fails. You can redistribute a package from:  
-
--   Package properties  
-
--   Distribution point properties  
-
--   Distribution point group properties.  
-
-**Remove content:** When you no longer require content on your distribution points, you can remove the content files on the distribution point.  
-
--   Package properties  
-
--   Distribution point properties  
-
--   Distribution point group properties.  
-
- However, when the content is associated with another package that was distributed to the same distribution point, you cannot remove the content. You can remove the content from:  
-
-**Validate content:** The content validation process verifies the integrity of content files on distribution points. You enable content validation on a schedule, or you can manually initiate content validation from the properties of distribution points and packages.  
-
- When the content validation process starts, Configuration Manager verifies the content files on distribution points, and if the file hash is unexpected for the files on the distribution point, Configuration Manager creates a status message that you can review in the **Monitoring** workspace.  
-
- For more information about configuring the content validation schedule, see [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) in the [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
 
 #### To update content on distribution points  
 
@@ -363,6 +339,16 @@ Use the following sections to prestage content.
 
     > [!NOTE]  
     >  When you update content for boot images, the Manage Distribution Point Wizard opens. Review the information on the **Summary** page, and then complete the wizard to update the content.  
+
+### Redistribute content
+You can redistribute a package to copy all of the content files in the package to distribution points or distribution point groups and thereby overwrite the existing files.  
+
+ Use this operation to repair content files in the package or resend the content when the initial distribution fails. You can redistribute a package from:  
+
+-   Package properties  
+-   Distribution point properties  
+-   Distribution point group properties.  
+
 
 #### To redistribute content from package properties  
 
@@ -411,6 +397,23 @@ Use the following sections to prestage content.
     > [!IMPORTANT]  
     >  The content in the package is redistributed to all of the distribution points in the distribution point group.  
 
+
+#### Use the SDK to force replication of content
+You can use the **RetryContentReplication** Windows Management Instrumentation (WMI) class method from the Configuration Manager SDK to force Distribution Manager to copy content from the source location to the content library.  
+
+Only use this method to force replication when you must redistribute content after there were issues with normal replication of content (typically confirmed by use of the Monitoring node of the console).   
+
+For more information about this SDK option, see [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) on MSDN.Microsoft.com.
+
+### Remove content
+When you no longer require content on your distribution points, you can remove the content files on the distribution point.  
+
+-   Package properties  
+-   Distribution point properties  
+-   Distribution point group properties.  
+
+However, when the content is associated with another package that was distributed to the same distribution point, you cannot remove the content.  
+
 #### To remove package content files from distribution points  
 
 1.  In the Configuration Manager console, click **Software Library**.  
@@ -454,6 +457,15 @@ Use the following sections to prestage content.
 3.  On the **Home** tab, in the **Properties** group, click **Properties**.  
 
 4.  Click the **Content** tab, select the content to remove, click **Remove**, and then click **OK**.  
+
+
+### Validate content
+The content validation process verifies the integrity of content files on distribution points. You enable content validation on a schedule, or you can manually initiate content validation from the properties of distribution points and packages.  
+
+ When the content validation process starts, Configuration Manager verifies the content files on distribution points, and if the file hash is unexpected for the files on the distribution point, Configuration Manager creates a status message that you can review in the **Monitoring** workspace.  
+
+ For more information about configuring the content validation schedule, see [Distribution point configurations](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs) in the [Install and configure distribution points for System Center Configuration Manager](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) topic.  
+
 
 #### To initiate content validation for all content on a distribution point  
 
