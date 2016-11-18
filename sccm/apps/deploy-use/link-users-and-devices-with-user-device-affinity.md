@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Link users and devices with user device affinity in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Link users and devices with user device affinity in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 User device affinity in System Center Configuration Manager (Configuration Manager) associates a user with one or more devices. This can eliminate the need to know the names of a user’s devices to deploy an application to the user. Instead of deploying the application to each of the user’s devices, you deploy the application to the user. Then, user device affinity automatically ensures that the application installs on all devices that are associated with that user.  
 
  You can define primary devices that typically are the devices that users use on a daily basis to perform their work. When you create an affinity between a user and a device, you gain more app deployment options. For example, if a user requires Microsoft Visio, you can install it on the user’s primary device by using a Windows Installer deployment. However, on a device that's not a primary device, you might deploy Visio as a virtual application. You also can use user device affinity to predeploy software on a user’s device when the user isn't logged on so that, when the user logs on, the app is already installed and ready to run.  
@@ -89,7 +94,7 @@ After an automatic user device affinity is created, Configuration Manager contin
 
 3.  In the Import User Device Affinity Wizard, on the **Choose Mapping** page, set this information:  
 
-    -   **File name**. Specify a comma-separated values (CSV) file that has a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on its own row, with values separated by a comma. Use this format: <*Domain*>\\<*user name*>,<*device NetBIOS name*>.  
+    -   **File name**. Specify a comma-separated values (CSV) file that has a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on its own row, with values separated by a comma. Use this format: <*Domain*>&#92;<*user name*>,<*device NetBIOS name*>.  
 
     -   **This file has column headings for reference purposes**. If the .csv file has a top-row header, select this option and the header line will be ignored during the import.  
 
