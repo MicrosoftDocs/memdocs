@@ -13,11 +13,15 @@ ms.topic: article
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: robstackmsftms.author: robstack
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
-# Uninstall applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Uninstall applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ## Introduction  
 
@@ -32,7 +36,7 @@ manager: angrobe
 
 -   When you uninstall a System Center Configuration Manager (Configuration Manager) application, any dependent applications are not automatically uninstalled.  
 
--   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, then the uninstall might fail if the user’s account does not have permissions to uninstall the application.  
+-   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, the uninstall might fail if the user’s account does not have permissions to uninstall the application.  
 
 -   If you remove a user or a device from a collection that has an application deployed to it, the application is not automatically removed from the device.  
 
