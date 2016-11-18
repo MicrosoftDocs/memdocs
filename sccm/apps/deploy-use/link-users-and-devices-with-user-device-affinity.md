@@ -83,7 +83,7 @@ User device affinity in System Center Configuration Manager (Configuration Manag
     > [!TIP]  
     > **Example:** If you set **User device affinity threshold (minutes)** to **60** minutes and you set **User device affinity threshold (days)** to**5** days, the user must use the device for at least 60 minutes over a period of 5 days to automatically create a user device affinity.  
 
-After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the thresholds you've set, then the user device affinity is removed. Set **User device affinity threshold (days)** to a value of at least **7** days to avoid situations in which an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
+After an automatic user device affinity is created, Configuration Manager continues to monitor the user device affinity thresholds. If the user’s activity for the device falls below the thresholds you've set, the user device affinity is removed. Set **User device affinity threshold (days)** to a value of at least **7** days to avoid situations in which an automatically configured user device affinity might be lost while the user is not logged on, for example, during the weekend.  
 
 ## Import user device affinities from a file  
  To create many relationships at one time, you can import a file that has the details for multiple user device affinities. For this procedure, the subject devices must have been discovered and exist as resources in the Configuration Manager database, or the procedure will fail.  
@@ -96,14 +96,14 @@ After an automatic user device affinity is created, Configuration Manager contin
 
     -   **File name**. Specify a comma-separated values (CSV) file that has a list of users and devices between which you want to create an affinity. In this file, each user-and-device pair must be on its own row, with values separated by a comma. Use this format: <*Domain*>&#92;<*user name*>,<*device NetBIOS name*>.  
 
-    -   **This file has column headings for reference purposes**. If the .csv file has a top-row header, select this option and the header line will be ignored during the import.  
+    -   **This file has column headings for reference purposes**. If the .csv file has a top-row header, select this option and the header row is ignored during the import.  
 
 4.  If the file you are importing has more than two items in each row, you can use **Column** and **Assign** to specify which columns represent users and devices, and which columns to ignore during import.  
 
 5.  Choose **Next**, and then finish the Import User Device Affinity Wizard.  
 
 ## Let users create their own device affinities  
- Use these procedures to let users create their own user device affinity by using the Software Center app.  
+ With the next procedures, you can set up a user to create their own user device affinity in the Software Center app.  
 
 ### Set up the site to allow user-created user device affinity requests  
 
