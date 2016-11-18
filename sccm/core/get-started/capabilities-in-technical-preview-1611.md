@@ -26,11 +26,34 @@ This article introduces the features that are available in the Technical Preview
 
 
 **The following are new features you can try out with this version.**  
-## ADD CONTENT HERE
+
+## Pre-cache content for available deployments and task sequences
+Starting in Configuration Manager version 1611, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients only download relevant content before a user chooses to install the content.  , instead of content for all architectures and/or languages, in available deployments and task sequences.
+
+For example, let's say you want to deploy a Windows 10 in-place upgrade task sequence, only want a single task sequence for all users, and have multiple architectures and/or languages. In Current Branch, if you create an available deployment, and then the user clicks **Install** in Software Center, the content downloads at that time. This adds additional time before the installation is ready to start. Alternatively, in Current Branch if you create an available task sequence deployment, all content referenced in the task sequence is downloaded. This includes the operating system upgrade package for all languages and architectures. If each is roughly 3 GB in size, the download package can be quite large.
+
+The pre-cache content feature gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive.
+
+### To configure the pre-cache feature
+
+1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
+
+    The architecture and language values are used to match task sequence step conditions that you will create in the next step to determine whether the operating system upgrade package is pre-cached.
+2. Create a task sequence with conditional steps for the different languages and architectures.
+
+    ------ *insert images here* ------
+
+3. Deploy the task sequence. For the pre-cache feature, consider the following:
+    - On the **General** tab, select **Pre-download content for this task sequence**.
+    - On the **Deployment settings** tab, configure the task sequence with the **Available** for **Purpose**. If you create a **Required** deployment, the pre-cache functionality will not work.
+    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users.   
+    - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content is not pre-cached on a client before a user starts the installation, these settings are used.
 
 
-
-
+### User experience
+- When the client receives the deployment policy, it will start to pre-cache the content. This includes all referenced content (any other package types) and only the operating system upgrade package that matches the client based on the conditions that you set in the task sequence.
+- When the deployment is made available to users (setting on the **Scheduling** tab of the deployment), a notification displays to inform users about the new deployment and the deployment becomes visible in Software Center. The user can go to Software Center and click **Install** to start the installation.
+- If the content is not fully pre-cached, then it will use the settings specified on the **Deployment Option** tab of the deployment. We recommend that there is sufficient time between when the deployment is created and the time in which the deployment becomes available to users to allow clients enough time to pre-cache the content.
 
 
 ## See Also
