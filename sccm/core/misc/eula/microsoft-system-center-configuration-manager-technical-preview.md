@@ -4,9 +4,8 @@ ms.custom: na
 ms.date: 10/21/2016
 ms.prod: configuration-manager
 ms.service:
-ms.technology:
- - configmgr-other
- ms.reviewer: na
+ms.technology: configmgr-other
+ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
