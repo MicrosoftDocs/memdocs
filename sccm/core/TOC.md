@@ -24,6 +24,7 @@
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
+###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
@@ -50,6 +51,7 @@
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
+#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [Manage network bandwidth for content management](plan-design/hierarchy/manage-network-bandwidth.md)
@@ -68,6 +70,7 @@
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [How to view diagnostics and usage data](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [Customer Experience Improvement Program (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -165,6 +168,7 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)
@@ -203,7 +207,6 @@
 ###  [Planning for client deployment to Mac computers](clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)
 ###  [Planning for client deployment to Windows Embedded devices](clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)
 ###  [Plan how to wake up clients](clients/deploy/plan/plan-wake-up-clients.md)
-###  [Plan for managing Internet-based clients](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [Considerations for managing clients  in a Virtual Desktop Infrastructure (VDI)](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ##   Client deployment tasks
@@ -226,6 +229,12 @@
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+
+##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
+###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
+###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md)
+###  [Monitor clients on cloud management gateway](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [Plan for Internet-based Client Management](clients/manage/plan-internet-based-client-management.md)
 
 ##   Collections
 ###  [Introduction to collections](clients/manage/collections/introduction-to-collections.md)
@@ -282,7 +291,8 @@
 ###  [Security and privacy for power management](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [Upgrade clients](clients/manage/upgrade/upgrade-clients.md)
-###  [How to test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
-###  [How to upgrade clients for Windows computers](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
-###  [How to upgrade clients for Linux and UNIX servers](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
-###  [How to upgrade clients on Mac computers](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
+###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md)
+###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
+###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
+###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)

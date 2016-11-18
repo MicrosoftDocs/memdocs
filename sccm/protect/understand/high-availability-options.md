@@ -144,7 +144,7 @@ Options that support high availability:
 
  Each Application Catalog site system role provides the same information as other instances of that site system role regardless of the location of this site server role in the hierarchy. Therefore, when a client makes a request for the Application Catalog and you have configured the Default Application Catalog website point device client setting for Automatically detect, the client can be directed to an available instance. Preference is given to local Application Catalog site system servers, based on the current network location of the client.  
 
- For more information about this client setting and how automatic detection works, see the [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings) section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
+ For more information about this client setting and how automatic detection works, see the [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent) section in the [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md) topic.  
 
 ##  <a name="bkmk_client"></a> High availability for clients  
  **Client operations are autonomous:**  
