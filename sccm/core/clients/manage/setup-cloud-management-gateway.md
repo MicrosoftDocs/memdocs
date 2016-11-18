@@ -68,7 +68,7 @@ An Azure management certificate is required for Configuration Manager to access 
 
 4. Fill out the additional details in the wizard:
 
-    - Specify the name for the service which will run in Azure.
+    - Specify the name for the service which will run in Azure. Service name must be alphanumeric characters only and 3-24 characters in length.
 
     - Choose the Azure region you want the service to run in.
 
