@@ -148,7 +148,7 @@ Client computers are configured with these settings the next time they download 
  Before you set up software metering, consider your privacy requirements.  
 
 ## Example scenario for using software metering  
- This section outlines a scenario showing how a software metering rule can help you solve the following business requirements:  
+ This section outlines a scenario showing how a software metering rule can help you address the following business requirements:  
 
 -   Determine how many copies of a particular app are in your company  
 
@@ -156,16 +156,16 @@ Client computers are configured with these settings the next time they download 
 
 -   Determine which users regularly use a particular app  
 
- Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify who uses the legacy application.  
+Woodgrove Bank has deployed Microsoft Office 2010 as its standard office productivity suite. However, to support a legacy application, some computers must continue to run Microsoft Office Word 2003. The IT department wants to reduce support and licensing costs by removing these copies of Word 2003 if the legacy application is no longer used. The help desk also wants to identify who uses the legacy application.  
 
- John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
+John is Woodgrove Bank's IT Systems Manager who uses software metering in Configuration Manager to achieve these business objectives. He performs the following actions:
 
- - John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
- - John configures the default client settings for software metering.<br>He enables software metering and uses the default data collection schedule of once every seven days.<br>By configuring the software inventory client setting **Inventory these file types**, John sets up software inventory to inventory files that have the extension .exe.<br>He adds a new software metering rule named **woodgrove.exe** to monitor the legacy application.  
- - John waits for seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.
- - John uses the Configuration Manager report **Install base for all metered software programs** to see which computers have loaded the application **woodgrove.exe**.
- - After six months, John runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.
- - John confirms that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
- - John continues to check the software metering reports weekly and takes remedial action if necessary.  
+- John checks the prerequisites for software metering and confirms that the reporting services point is installed and operational.
+- John configures the default client settings for software metering.<br>He enables software metering and uses the default data collection schedule of once every seven days.<br>By configuring the software inventory client setting **Inventory these file types**, John sets up software inventory to inventory files that have the extension .exe.<br>He adds a new software metering rule named **woodgrove.exe** to monitor the legacy application.  
+- John waits seven days, after which the client computers begin to report usage data for the **woodgrove.exe** executable.
+- John uses the Configuration Manager report **Install base for all metered software programs** to see which computers have loaded the application **woodgrove.exe**.
+- After six months, John runs the report **Computers that have a metered program installed, but have not run the program since a specified date**, specifying the software metering rule and a date six months in the past. This report identifies 120 computers that have not run the program in the past six months.
+- John confirms that the legacy application is not required on the identified computers. He then uninstalls the legacy application and the copy of Word 2003 from these computers.<br>John runs the report **Users that have run a specific metered software program** to provide the help desk with a list of users who continue to use the legacy application.
+- John continues to check the software metering reports weekly and takes remedial action if necessary.  
 
- John's actions reduced IT support and licensing costs by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.  
+John's actions reduced IT support and licensing costs by removing the applications that are no longer required. In addition, the help desk now has the list that it wanted of the users who run the legacy application.  
