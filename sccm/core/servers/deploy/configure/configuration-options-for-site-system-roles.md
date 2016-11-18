@@ -56,15 +56,12 @@ Most configuration options for System Center Configuration Manager site system r
  For information about how to configure the distribution point for multicast deployments, see [Use multicast to deploy Windows over the network with System Center Configuration Manager](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
  **Install and configure IIS if required by Configuration Manager**  
-
  Select this option to let Configuration Manager install and configure IIS on the site system if it is not already installed. IIS must be installed on all distribution points, and you must select this setting to continue in the wizard.  
 
  **Site System Installation Account**  
-
  For distribution points that are installed on a site server, only the computer account of the site server is supported for use as the Site System Installation Account.  
 
  **Create a self-signed certificate or import a PKI client certificate**  
-
  This certificate has two purposes:  
 
 1.  It authenticates the distribution point to a management point before the distribution point sends status messages.  
@@ -84,12 +81,12 @@ There are no specific requirements for the certificate Subject name or Subject A
 For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md). For an example deployment of this certificate, see the *Deploying the Client Certificate for Distribution Points* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 **Enable this distribution point for prestaged content**  
-
 Select this check box to enable the distribution point for prestaged content. When this check box is selected, you can configure distribution behavior when you distribute content. You can choose whether you always prestage the content on the distribution point, prestage the initial content for the package, but use the normal content distribution process when there are updates to the content, or always use the normal content distribution process for the content in the package.  
 
 **Boundary groups**  
-
- You can associate boundary groups to a distribution point. During content deployment, clients must be in a boundary group that is associated with the distribution point to use it as a source location for content. You can select the **Allow fallback source location for content** check box to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.  
+ You can associate boundary groups to a distribution point. During content deployment, clients must be in a boundary group that is associated with the distribution point to use it as a source location for content.
+ - **Prior to version 1610**, you can select the **Allow fallback source location for content** check box to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.
+ - **Beginning with version 1610**, you no longer can configure **Allow fallback source location for content**.  Instead, you configure relationships between boundary groups that determine when a client can begin to search additional boundary groups for valid content source locations.
 
 ##  <a name="BKMK_Enrollment_Point"></a> Enrollment point  
 Enrollment points are used to install Mac computers and enroll devices you manage with on-premises mobile device management. For more information, see the following:  
@@ -99,7 +96,6 @@ Enrollment points are used to install Mac computers and enroll devices you manag
 -   [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 **Allowed connections**  
-
  The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point and the out of band service point, and for encryption of data over SSL. For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
@@ -108,14 +104,12 @@ Enrollment points are used to install Mac computers and enroll devices you manag
 For information about how to configure an enrollment proxy point for mobile devices, see [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 **Client connections**  
-
  The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to mobile devices and Mac computers enrolled by Configuration Manager, and for encryption of data over Secure Sockets Layer (SSL). For more information about the certificate requirements, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  For an example deployment of the server certificate and information about how to configure it in IIS, see the *Deploying the Web Server Certificate for Site Systems that Run IIS* section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="BKMK_Fallback_Status_Point"></a> Fallback status point  
 **Number of state messages** and **Throttle interval (in seconds)**  
-
 Although the default settings for these options (10,000 state messages and 3,600 seconds for the throttle interval) are sufficient for most circumstances, you might have to change them when both of the following conditions are true:  
 
 -   The fallback status point accepts connections only from the intranet.  

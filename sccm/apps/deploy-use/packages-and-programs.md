@@ -244,7 +244,9 @@ Packages can use some new features of Configuration Manager, including distribut
 
     -   **Allow clients to share content with other clients on the same subnet** – Select this option to reduce load on the network by allowing clients to download content from other clients on the network that already downloaded and cached the content. This option utilizes Windows BranchCache and can be used on computers that run Windows Vista SP2 and later.  
 
-    -   **Allow clients to use a fallback source location for content** – If enabled, clients can search other distribution points in the hierarchy for required content if this is not available on the specified distribution point or distribution point groups.  
+    -   **Allow clients to use a fallback source location for content**:  
+        -  *Prior to version 1610*, you can select the Allow fallback source location for content check box to allow clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.
+        - *Beginning with version 1610*, you no longer can configure **Allow fallback source location for content**.  Instead, you configure relationships between boundary groups that determine when a client can begin to search additional boundary groups for a valid content source location. 
 
 11. On the **Summary** page, review the actions that will be taken and then complete the wizard.  
 

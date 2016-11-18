@@ -8,8 +8,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: configmgr-other
-ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
+ms.technology:
+ - configmgr-other
+ ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
 caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
