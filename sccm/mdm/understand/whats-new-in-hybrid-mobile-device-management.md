@@ -42,6 +42,7 @@ The following features that were previously available in Configuration Manager T
 The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
 
 - **Increased number of enrolled devices**
+
   You can now enable users to enroll up to 15 devices. The previous limit was 5 devices per user.
 
 
