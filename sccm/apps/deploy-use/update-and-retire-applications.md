@@ -12,21 +12,25 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 caps.latest.revision: 9
-author: robstackmsftms.author: robstack
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
-# Update and retire applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Update and retire applications with System Center Configuration Manager
 
-It's like that eventually you'll want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. System Center Configuration Manager (Configuration Manager) has these capabilities to help you update and retire applications:  
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+
+It's likely that eventually you'll want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. System Center Configuration Manager (Configuration Manager) gives you these capabilities, to help you update and retire applications:  
 
 -   **Revise applications**. When you make changes to an application or deployment type, Configuration Manager maintains a history of the changes. You can revert the application to a previous revision at any time. You also can view its properties, restore a previous revision of an application, or delete an old revision.  
 
-  For more information, see [Application revisions](/sccm/apps/deploy-use/revise-and-supersede-applications#application-revisions).  
+  For more information, see [Application revisions](../../apps/deploy-use/revise-and-supersede-applications#application-revisions).  
 
 -   **Supersede applications**. You can upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application. Also, you can set whether to upgrade or uninstall the superseded application before the superseding application is installed.  
 
-  For more information, see [Application supersedence](/sccm/apps/deploy-use/revise-and-supersede-applications#application-supersedence).  
+  For more information, see [Application supersedence](../../apps/deploy-use/revise-and-supersede-applications#application-supersedence).  
 
 -   **Uninstall applications**. Configuration Manager makes uninstalling an application easy. This can be accomplished silently, without any intervention from the application or device user.  
 
