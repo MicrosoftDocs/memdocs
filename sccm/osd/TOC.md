@@ -54,8 +54,10 @@
 ### [Create a task sequence to capture and restore user state](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [Use a task sequence to manage virtual hard disks](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
-## [Create a custom task sequence](deploy-use/create-a-custom-task-sequence.md)
+## [Custom task sequence scenarios](deploy-use/custom-task-sequence-scenarios.md)
+### [Create a custom task sequence](deploy-use/create-a-custom-task-sequence.md)
 ### [Create a task sequence for non-operating system deployments](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+### [Task sequence steps to manage BIOS to UEFI conversion](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
 
 ## [Create task sequence media](deploy-use/create-task-sequence-media.md)
 ### [Create stand-alone media](deploy-use/create-stand-alone-media.md)

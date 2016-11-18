@@ -2,7 +2,7 @@
 title: Create and deploy a device compliance policy | Microsoft Docs
 description: "Learn how to create and deploy device compliance policies in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,7 +71,7 @@ robots: noindex
 
 ## Monitor the compliance policy
 
-#### To view compliance results in the Configuration Manager console
+### To view compliance results in the Configuration Manager console
 
 1.  In the Configuration Manager console, click **Monitoring**.
 
@@ -90,6 +90,14 @@ robots: noindex
     -   **Non-Compliant**: Displays a list of all noncompliant rules within the policy based on number of assets affected. You can click a rule to create a temporary node under the **Users** or **Devices** node of the **Assets and Compliance** workspace, which contains all users or devices that are not compliant with this rule. When you select a user or device, the **Asset Details** pane displays the users or devices that are affected by the selected issue. Double-click a user or device in the list to display further information about the issue.
 
     -   **Unknown**: Displays a list of all users and devices that did not report compliance for the selected policy deployment together with the current client status of devices.
+
+### To view Intune compliance policies charts
+1. Beginning in version 1610 of Configuration Manager, in the Configuration Manager console, click **Monitoring**.
+2. In the **Monitoring** workspace, go to **Overview** > **Compliance Settings** >  **Compliance Policies**.
+3. The following charts are displayed:
+    - **Overall Device Compliance**: Display the overall compliance of devices for all compliance policies.
+    - **Top Non-Compliance Reasons**: Displays the top policies for which devices are non-compliant.
+4. Click a section in either chart to drill-down to a list of the devices within that category.
 
 ### To view a Health Attestation Report
 
