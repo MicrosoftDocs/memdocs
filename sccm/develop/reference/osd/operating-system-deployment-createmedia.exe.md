@@ -44,7 +44,8 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
          "SMSTSLocationMPs= http://server1.contoso.net*http://server2.contoso.net"
     ```  
 
-         Note: * is a separator symbol.  
+         >[!Note]
+         > * is a separator symbol.  
 
     -   For static based media:  
 
@@ -52,7 +53,8 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
          "SMSTSMP= http://server.contoso.net"  
     ```
 
-         Note: It is important to correctly specify whether the prefix is http:// or https://  
+         >[!Note]
+         > It is important to correctly specify whether the prefix is http:// or https://  
 
 5.  Running the `CreateMedia.exe` program returns to the command prompt immediately. View the `CreateTsMedia.log` file to monitor progress.  
 
