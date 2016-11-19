@@ -110,7 +110,9 @@ manager: "mbaldwin"
 
 4.  The results should appear similar to the below list:  
 
-     <AppMgmtDigest xmlns="\http://schemas.microsoft.com/SystemCenterConfigurationManager/…  
+```text
+     <AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/…  
+```
 
 5.  Double-click the result value to view the digest.  
 
