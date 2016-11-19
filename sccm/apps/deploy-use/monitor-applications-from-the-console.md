@@ -35,7 +35,7 @@ In System Center Configuration Manager, you can monitor the deployment of all so
 
 -   **Error** – The application failed to deploy because of an error.  
 
-You can view additional information for each compliance state, which includes subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
+You can view additional information for each compliance state, including subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
 
 -   Error evaluating requirements  
 
