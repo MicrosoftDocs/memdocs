@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 11/19/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -39,13 +39,9 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 |Support for free apps from the store|Yes|Yes|
 |Support for paid apps from the store|No|Yes<sup>1</sup>|
 |Support required deployments to user or device collections|Yes|Yes<sup>1</sup>|
-|Support available deployments to user or device collections|Yes<sup>3</sup>|No<sup>2</sup>|
+|Support available deployments to user or device collections|Yes|Yes|
 
 <sup>1</sup>Supports devices managed by Intune only. Although you are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, this will not work. The end user will be directed to the relevant page in the app store from where they must install the app manually.
-
-<sup>2</sup>Online apps can be deployed as available to user or device collections for devices managed by the Configuration Manager client only, but when the end user selects the app in Software Center, they will be taken to the Windows Store for Business, where they must install the app manually. Available deployments to devices enrolled with Microsoft Intune are not supported.
-
-<sup>3</sup>Not supported for devices managed by Intune.
 
 
 <!--- ## Activate the Windows Store for Business capability
@@ -64,6 +60,14 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 4. You'll now see the node **Windows Store for Business** in the **Administration** workspace under **Cloud Services**. --->
 
 ## Set up Windows Store for Business synchronization
+
+> [!IMPORTANT]
+> When you configure a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept.
+To ensure this folder is secure, and that its content can be deployed to devices, make sure the following permissions are in place.
+1.	The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account. 
+2.	The App Author must have read permissions to the folder you specified.
+3.	The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to access the folder you specified.
+
 
 **In Azure Active Directory, register Configuration Manager as a “Web Application and/or Web API” management tool. This will give you a client ID that you will need later.**
 1. In the Active Directory node of [https://manage.windowsazure.com](https://manage.windowsazure.com), select your Azure Active Directory, then click **Applications** > **Add**.

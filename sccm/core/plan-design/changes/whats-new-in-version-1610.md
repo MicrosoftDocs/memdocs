@@ -104,6 +104,9 @@ For details, see the **Windows Defender** section in [Create configuration items
 - Users can now request apps from Software Center, as well as the Application Catalog.
 - Improvements to help users understand what software is new and relevant.
 
+## New columns in device collection views
+You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
+For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
 ## Customizable Branding for Software Center Dialogs
 Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
