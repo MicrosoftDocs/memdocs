@@ -25,6 +25,8 @@ You can create a custom SSL certificate for cloud management gateway in the same
 
 -   When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 
+-  When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
+
 ## Step 2: Export the client certificate's root
 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
@@ -81,9 +83,9 @@ An Azure management certificate is required for Configuration Manager to access 
 
     - Specify the root certificate exported from the client certificate.
 
-    -   Specify the same service name FQDN that you used when you created the new certificate template. You must use the following prefixes for the FQDN service name and the Azure platform you are using:
+    -   Specify the same service name FQDN that you used when you created the new certificate template. You must specify the one of the following suffixes for the FQDN service name based on the Azure cloud you are using:
 
-    Azure platform | FQDN prefix
+    Azure cloud | FQDN prefix
     --------------|-------------
     Public (commercial) cloud | .cloudapp.net    
     Government cloud | .usgovcloudapp.net
