@@ -40,17 +40,17 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 
     -   For dynamic media:  
 
-```text
-         “SMSTSLocationMPs= http://server1.contoso.net*http://server2.contoso.net“
-```  
+    ```text
+         "SMSTSLocationMPs= http://server1.contoso.net*http://server2.contoso.net"
+    ```  
 
          Note: * is a separator symbol.  
 
     -   For static based media:  
 
-```text
-         “SMSTSMP= http://server.contoso.net”  
-```
+    ```text
+         "SMSTSMP= http://server.contoso.net"  
+    ```
 
          Note: It is important to correctly specify whether the prefix is http:// or https://  
 
