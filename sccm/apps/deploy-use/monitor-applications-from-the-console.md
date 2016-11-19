@@ -61,7 +61,7 @@ The deployment state for package and program deployments is not aggregated.
 
 1.  In the Configuration Manager console, choose **Monitoring** > **Deployments**.  
 
-3.  To review deployment details for each compliance state and the devices in that state, select a deployment, and then, on the **Home** tab, in the **Deployment** group, choose **View Status** to open the **Deployment Status** pane. In this pane, you can view the assets with each compliance state. choose any asset to view more detailed information about the deployment status to that asset.  
+3.  To review deployment details for each compliance state and the devices in that state, select a deployment, and then, on the **Home** tab, in the **Deployment** group, choose **View Status** to open the **Deployment Status** pane. In this pane, you can view the assets with each compliance state. Choose any asset to view more detailed information about the deployment status to that asset.  
 
     > [!NOTE]  
     >  The number of items that can be displayed in the **Deployment Status** pane is limited to 20,000. If you need to see more items, use Configuration Manager reports to view application status data.  
@@ -72,8 +72,14 @@ The deployment state for package and program deployments is not aggregated.
 
 5.  To review information about the applications deployment type, select a deployment, and then choose the **Deployment Types** tab in the **Selected Deployment** window.  
 
-The information that's shown in the **Deployment Status** pane after you choose **View Status** is live data from the Configuration Manager database. The information that's shown in the **Summary** tab and the **Deployment Types** tab is summarized data. If the data that is shown in the **Summary** tab and the **Deployment Types** tab does not match the data that's hown in the **Deployment Status** pane, choose **Run Summarization** to update the data in these tabs. You can configure the default application deployment summarization interval as follows:  
+The information that's shown in the **Deployment Status** pane after you choose **View Status** is live data from the Configuration Manager database. The information that's shown in the **Summary** tab and the **Deployment Types** tab is summarized data.
+
+If the data that is shown in the **Summary** tab and the **Deployment Types** tab does not match the data that's shown in the **Deployment Status** pane, choose **Run Summarization** to update the data in these tabs. You can configure the default application deployment summarization interval as follows:  
+
 1. In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Sites**.
+
 2. From the **Sites** list, select the site for which you want to configure the summarization interval, and then in the **Home** tab, in the **Settings** group, choose **Status Summarizers**.
+
 3. In the **Status Summarizers** dialog box, choose **Application Deployment Summarizer**, and then choose **Edit**.  
+
 4. In the **Application Deployment Summarizer Properties** dialog box, configure the required summarization intervals, and then choose **OK**.  
