@@ -63,6 +63,8 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Access level allowed.  
 
+|Possible values|
+|----|
 |No Access|  
 |View Only|  
 |Full Control|  
@@ -130,6 +132,8 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Value indicating if a control beep should be sounded during a remote control session to signify that the computer is being remotely controlled. This is only for Remote Control, not Remote Assistance. Possible values are:  
 
+|Value|Definition|
+|----|----|
 |0|None|  
 |1|Beginning and end of the session|  
 |2|Repeatedly|  
@@ -206,6 +210,8 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Value indicating that the helpdesk administrator is required to get permission from the remote user before starting remote control session. This is only applied when remote user is on an active session.  
 
+|Value|Definition|
+|----|----|
 |false|Bypass remote control permission dialog.|  
 |true|Ask permission to start a remote control session.|  
 

@@ -98,6 +98,8 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Type of client. Possible values are:  
 
+|Value|Definition|
+|----|----|
 |1|Client|  
 |3|Device|  
 
@@ -137,6 +139,8 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Owner of the device. Possible values are:  
 
+|Value|Definition|
+|----|----|
 |1|Company|  
 |2|Personal|  
 
@@ -176,6 +180,8 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Whether the resource is approved. Possible values are:  
 
+|Value|Definition|
+|----|----|
 |0|Not approved|  
 |1|Approved|  
 |2|Not applicable|  

@@ -159,6 +159,8 @@ Class SMS_ConfigMgrClientAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Install permissions.  
 
+|Possible values|
+|----|
 |All users|  
 |Only administrators|  
 |Only administrators and primary users|  
@@ -200,6 +202,8 @@ Class SMS_ConfigMgrClientAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  PowerShell execution policy.  
 
+|Value|Definition|
+|----|----|
 |0|Bypass|  
 |1|Restricted|  
 
@@ -230,6 +234,8 @@ Class SMS_ConfigMgrClientAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  `true` to disable PIN protector on the system volume if the reboot is initiated by CcmExec (not including the user explicitly rebooting from the reboot UI). After the reboot, the PIN protector is enabled. This enables a computer reboot without user intervention.  
 
+|Value|Definition|
+|----|----|
 |0|Never disable PIN protection.|  
 |1|Always disable PIN protection.|  
 

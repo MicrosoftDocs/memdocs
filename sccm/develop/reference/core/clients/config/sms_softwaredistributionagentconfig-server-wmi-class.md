@@ -177,7 +177,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- A list of the default program retry values from the site. If a program fails with one of these exit codes, the program will be retried. 
+ A list of the default program retry values from the site. If a program fails with one of these exit codes, the program will be retried.
 
  `ExecutionFailureRetryInterval`  
  Data type: `UInt32`  
@@ -233,8 +233,8 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  The console that should be shown when a user double-clicks a new program notification. Possible values are:  
 
-|||  
-|-|-|  
+|Value|Definition|  
+|----|----|  
 |ARP|Add/Remove Programs|  
 |RAP|Run Advertised Programs|  
 
