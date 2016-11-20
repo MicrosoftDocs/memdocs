@@ -128,7 +128,10 @@ This topic describes how to create trusted root and SCEP certificate profiles. I
     -   **Certificate type**: Select whether the certificate will be deployed to a device or a user.  
 
 
-    -   **Subject name format**: From the list, select how System Center Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name.  
+    -   **Subject name format**: From the list, select how System Center Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name. 
+    
+        > [!NOTE]  
+        >  Selecting **IMEI number** or **Serial number** enables you to differentiate between different devices that are owned by the same user. For example, those devices could share a common name, but not an IMEI number or serial number.
 
     -   **Subject alternative name**: Specify how System Center Configuration Manager automatically creates the values for the subject alternative name (SAN) in the certificate request. For example, if you selected a user certificate type, you can include the user principal name (UPN) in the subject alternative name.  If the client certificate will be used to authenticate to a Network Policy Server, you must set the subject alternative name to the UPN.  
 
