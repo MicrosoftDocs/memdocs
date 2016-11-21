@@ -1,15 +1,15 @@
 ---
-title: "How to List the Maintenance Windows and Properties for a Specific Collection"
+title: "List Maintenance Windows and Properties for a Collection | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: ea92b17f-06f1-4f96-a99d-551d5422092d
 caps.latest.revision: 9
@@ -19,48 +19,48 @@ manager: "mbaldwin"
 ---
 # How to List the Maintenance Windows and Properties for a Specific Collection
 The following example shows how to list the maintenance windows for a specific collection by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) class. Maintenance windows are created by using the [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) class and then stored as embedded objects in [SMS_CollectionSettings](assetId:///SMS_CollectionSettings?qualifyHint=False&autoUpgrade=True) instances, one per collection.  
-  
+
 ### To list the maintenance windows and properties for a collection  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
+
 2.  Get the existing collection settings instance by using the collection ID provided.  
-  
+
 3.  Enumerate the existing service window objects and properties.  
-  
+
 > [!NOTE]
 >  The example method includes additional steps, primarily to handle the overhead of dealing with the service window objects, which are stored as embedded objects in the collection settings instance.  
-  
+
 ## Example  
  The following example method lists the maintenance windows and properties for a collection.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub ListMaintenanceWindowsAndPropertiesForASpecificCollection(connection,         _  
                                                               targetCollectionID)  
-  
+
     ' Build a query to get the specified collection.   
      collectionSettingsQuery = "SMS_CollectionSettings.CollectionID='" & targetCollectionID & "'"  
-  
+
     ' Get the collection settings instance for the targetCollectionID.  
     Set allCollectionSettings = connection.ExecQuery("Select * From SMS_CollectionSettings Where CollectionID = '" & targetCollectionID & "'")    
-  
+
     ' If a collection settings instance does not exist, output a message.  
     If allCollectionSettings.Count = 0 Then  
         Wscript.Echo "There are no maintenance windows for collection: " & targetCollectionID  
     Else               
-  
+
     ' Get the specific collection settings instance.  
     Set collectionSettingsInstance = connection.Get("SMS_CollectionSettings.CollectionID='" & targetCollectionID &"'" )  
-  
+
         ' Populate the local array list with the existing service window objects (from the target collection).  
         tempMaintenanceWindowArray = collectionSettingsInstance.ServiceWindows   
-  
+
         ' Enumerate through the array list to access each maintenance window object.  
         For Each maintenanceWindow in tempMaintenanceWindowArray     
-  
+
                 Wscript.Echo "Maintenance Window Properties "  
                 Wscript.Echo "----------------------------- "  
                 Wscript.Echo "Name:              " & maintenanceWindow.Name  
@@ -70,17 +70,17 @@ Sub ListMaintenanceWindowsAndPropertiesForASpecificCollection(connection,       
                 Wscript.Echo "Is Enabled:        " & maintenanceWindow.IsEnabled  
                 Wscript.Echo "Type:              " & maintenanceWindow.ServiceWindowType  
                 Wscript.Echo " "  
-  
+
         Next  
-  
+
     End If    
-  
+
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
-  
+
 public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnectionManager connection,   
                                                                       string targetCollectionID)  
 {      
@@ -88,16 +88,16 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
     {  
         // Create an object to hold the collection settings instance (used to check whether a collection settings instance exists).   
         IResultObject collectionSettingsInstance = null;  
-  
+
         // Get the collection settings instance for the targetCollectionID.  
         IResultObject allCollectionSettings = connection.QueryProcessor.ExecuteQuery("Select * from SMS_CollectionSettings where CollectionID='" + targetCollectionID + "'");  
-  
+
         // Enumerate the allCollectionSettings collection (there should be just one item) and save the instance.  
         foreach (IResultObject collectionSetting in allCollectionSettings)  
         {  
             collectionSettingsInstance = collectionSetting;  
         }  
-  
+
         // If a collection settings instance, output message that there are no maintenance windows.  
         if (collectionSettingsInstance == null)  
         {              
@@ -107,13 +107,13 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
         {  
             // Create a new array list to hold the service window objects.  
             List<IResultObject> maintenanceWindowArray = new List<IResultObject>();  
-  
+
             // Establish connection to collection settings instance associated with the Collection ID.  
             IResultObject collectionSettings = connection.GetInstance(@"SMS_CollectionSettings.CollectionID='" + targetCollectionID + "'");  
-  
+
             // Populate the array list with the existing service window objects (from the target collection).  
             maintenanceWindowArray = collectionSettings.GetArrayItems("ServiceWindows");  
-  
+
             // Enumerate through the array list to access each maintenance window object and output specific properties for each object.  
             foreach (IResultObject maintenanceWindow in maintenanceWindowArray)  
             {  
@@ -135,41 +135,41 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`<br /><br /> `swebemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the collection.|  
-  
+
 ## Compiling the Code  
  The C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [Software Distribution Maintenance Windows](../../../../develop/core/servers/configure/software-distribution-maintenance-windows.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   

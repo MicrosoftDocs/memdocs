@@ -1,15 +1,15 @@
 ---
-title: "How to Handle Configuration Manager Synchronous Errors by Using WMI"
+title: "Handle Synchronous Errors by Using WMI | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: d11bbdc3-f47e-4088-bed8-7e38d119e278
 caps.latest.revision: 8
@@ -19,42 +19,42 @@ manager: "mbaldwin"
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using WMI
 You handle synchronous errors, in System Center Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.  
-  
+
 > [!NOTE]
 >  In VBScript you should declare that you want to resume running the script if an error occurs. Otherwise, the script will end when an error condition occurs. To do this, use the `On Error Resume Next` declaration in your script.  
-  
+
 ## Example  
  The following VBScript example displays the most recent error information that is available from the `SWbemLastError` object. You can use the following code, which tries to get an invalid SMS_Package package to test it.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub ExerciseError(connection)  
-  
+
     On Error Resume next  
-  
+
     Dim packages  
     Dim package  
-  
+
     ' Run the query.  
     Set package = connection.Get("SMS_Package.PackageID='UNKNOWN'")  
-  
+
     If Err.Number<>0 Then  
         Call DisplayLastError  
     End If  
-  
+
 End Sub      
 ```  
-  
+
 ```vbs  
-  
+
 Sub DisplayLastError  
     Dim ExtendedStatus  
-  
+
     ' Get the error object.  
     Set ExtendedStatus = CreateObject("WbemScripting.SWBEMLastError")  
-  
+
     ' Determine the type of error.  
     If ExtendedStatus.Path_.Class = "__ExtendedStatus" Then  
         WScript.Echo "WMI Error: "& ExtendedStatus.Description              
@@ -63,11 +63,11 @@ Sub DisplayLastError
         WScript.Echo "Code: " & ExtendedStatus.ErrorCode  
     End If  
 End Sub  
-  
+
 ```  
-  
+
 ## .NET Framework Security  
-  
+
 ## See Also  
  [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)   
  [WMI SDK](http://go.microsoft.com/fwlink/?LinkId=43950)

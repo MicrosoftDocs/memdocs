@@ -1,15 +1,15 @@
 ---
-title: "How to Move a Step to a Different Operating System Deployment Task Sequence Group"
+title: "Move a Step to a Different OS Deployment Task Sequence Group | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: f93360ef-677e-48e0-886a-a07b8451611c
 caps.latest.revision: 9
@@ -19,34 +19,34 @@ manager: "mbaldwin"
 ---
 # How to Move a Step to a Different Operating System Deployment Task Sequence Group
 You move a step (an action or a group) from one operating system deployment task sequence group to another, in System Center Configuration Manager, by adding the step to the target group and then by deleting the step from the source group.  
-  
+
 ### To move a step from one group to another  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
+
 2.  Get the source and target [SMS_TaskSequenceGroup](assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) objects. Copy a step that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
-  
+
 3.  Add the step to the target group. For more information, see [How to Add a Step to an Operating System Deployment Group](../../develop/osd/how-to-add-a-step-to-an-operating-system-deployment-group.md).  
-  
+
 4.  Reorder the step within the target group array property as necessary. For more information, see [How to Re-order an Operating System Deployment Task Sequence](../../develop/osd/how-to-reorder-an-operating-system-deployment-task-sequence.md)  
-  
+
 5.  Delete the step from the source group. For more information, see [How to Remove a Step From an Operating System Deployment Group](../../develop/osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md).  
-  
+
 ## Example  
  The following example method moves a step from one task sequence group to another.  
-  
+
  You will need the code snippet in [How to Remove a Step From an Operating System Deployment Group](../../develop/osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md) to run this example.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub MoveActionToGroup( taskSequenceStep, sourceGroup,targetGroup)  
-  
+
         Dim steps  
         Dim groupSteps   
-  
+
         Steps = Array(targetGroup.Steps)  
-  
+
         If IsNull(targetGroup.Steps) Then  
             groupSteps = Array(taskSequenceStep)  
             targetGroup.Steps = groupSteps  
@@ -54,12 +54,12 @@ Sub MoveActionToGroup( taskSequenceStep, sourceGroup,targetGroup)
             ReDim steps (UBound (targetGroup.Steps)+1)    
             targetGroup.Steps(UBound(steps))=taskSequenceStep  
         End If      
-  
+
         Call RemoveActionFromGroup(sourceGroup,taskSequenceStep.Name)  
-  
+
 End Sub  
 ```  
-  
+
 ```c#  
 public void MoveActionToGroup(  
     IResultObject taskSequenceStep,   
@@ -71,11 +71,11 @@ public void MoveActionToGroup(
         // Add the step to the target group.   
         // Note. You can use MoveTaskSequenceStepUp and MoveTaskSequenceStepDown  
         // to place the step in the target group.  
-  
+
         List<IResultObject> groupSteps = targetGroup.GetArrayItems("Steps");  
         groupSteps.Add(taskSequenceStep);  
         targetGroup.SetArrayItems("Steps", groupSteps);  
-  
+
         // Remove action from the source group.  
         this.RemoveActionFromGroup(sourceGroup, taskSequenceStep["Name"].StringValue);  
     }  
@@ -86,40 +86,40 @@ public void MoveActionToGroup(
     }  
 }  
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`taskSequenceStep`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True)).|  
 |`sourceGroup`|-   Managed: assetId:///IResultObject?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True|The group (assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) the step is copied from.|  
 |`targetGroup`|-   Managed: assetId:///IResultObject?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True|The group (assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) the step is copied to.|  
-  
+
 ## Compiling the Code  
  This C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.Text  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   

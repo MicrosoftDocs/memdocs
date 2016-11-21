@@ -1,5 +1,5 @@
 ---
-title: "How to Read a Configuration Manager Site Control File Embedded Property List"
+title: "Read a Site Control File Embedded Property List | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

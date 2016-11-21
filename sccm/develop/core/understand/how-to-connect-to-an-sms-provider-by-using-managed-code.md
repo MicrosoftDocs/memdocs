@@ -1,5 +1,5 @@
 ---
-title: "How to Connect to an SMS Provider in Configuration Manager by Using Managed Code"
+title: "Connect to an SMS Provider by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

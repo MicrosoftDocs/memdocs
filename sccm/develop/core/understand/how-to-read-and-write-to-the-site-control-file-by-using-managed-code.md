@@ -1,5 +1,5 @@
 ---
-title: "How to Read and Write to the Configuration Manager Site Control File by Using Managed Code"
+title: "Read and Write to the Site Control File by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

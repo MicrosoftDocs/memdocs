@@ -1,5 +1,5 @@
 ---
-title: "How to Create a Configuration Manager Object by Using Managed Code"
+title: "Create an Object by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

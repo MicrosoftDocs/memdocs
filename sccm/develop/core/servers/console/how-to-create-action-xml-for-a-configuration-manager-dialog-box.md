@@ -1,5 +1,5 @@
 ---
-title: "How to Create Action XML for a Configuration Manager Dialog Box"
+title: "Create Action XML for a Dialog Box | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

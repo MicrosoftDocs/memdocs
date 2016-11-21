@@ -1,5 +1,5 @@
 ---
-title: "How to Create Node XML for a Configuration Manager Console Grid View"
+title: "How to Create Node XML for a Grid View | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

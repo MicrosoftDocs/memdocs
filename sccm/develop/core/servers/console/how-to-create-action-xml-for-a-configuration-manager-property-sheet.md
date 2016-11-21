@@ -1,5 +1,5 @@
 ---
-title: "How to Create Action XML for a Configuration Manager Property Sheet"
+title: "Create Action XML for a Property Sheet | System Center Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

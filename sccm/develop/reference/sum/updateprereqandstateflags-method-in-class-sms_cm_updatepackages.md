@@ -1,11 +1,11 @@
 ---
-title: "UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages"
+title: "UpdatePrereqAndStateFlags Method | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,40 +17,40 @@ manager: "mbaldwin"
 ---
 # UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages
 The `UpdatePrereqAndStateFlags` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the installation state of update packages.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
-  
+
 ## Syntax  
-  
+
 ```  
 SInt32 UpdatePrereqAndStateFlags(  
      UInt32 flag,  
      UInt32 state  
 );  
-  
+
 ```  
-  
+
 #### Parameters  
  `flag`  
  Data type: `UInt32`  
-  
+
  Qualifiers: [in]  
-  
+
  Pre-requisites  flag for an update package. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  
-  
+
  `state`  
  Data type: `UInt32`  
-  
+
  Qualifiers: [in]  
-  
+
  Installation state of an update package. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0x2|ENABLED|  
@@ -92,20 +92,20 @@ SInt32 UpdatePrereqAndStateFlags(
 |0x00030013|INSTALL_SSB_ACTIVATION_ON|  
 |0x00030014|INSTALL_UPGRADEDATABASE|  
 |0x00030015|INSTALL_UPDATEADMINCONSOLE|  
-  
+
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
-  
+
  For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [SMS_CM_UpdatePackages Server WMI Class](../../../develop/reference/sum/sms_cm_updatepackages-server-wmi-class.md)   
  [Configuration Manager Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)

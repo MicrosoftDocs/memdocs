@@ -1,15 +1,15 @@
 ---
-title: "How to Enumerate the Administrative Assignments for a User or Security Group"
+title: "Enumerate Administrative Assignments | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: e1d7ac85-f3ab-4b9f-9017-9a7b5769b365
 caps.latest.revision: 8
@@ -19,23 +19,23 @@ manager: "mbaldwin"
 ---
 # How to Enumerate the Administrative Assignments for a User or Security Group
 The administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group. The Windows Management Instrumentation (WMI)`SMS_Admin` class contains all the administrators defined in Configuration Manager. The security roles for an admin are in the `SMS_Admin.Roles` property and the security scopes for an admin are in the `SMS_Admin.Categories` property. Both of these properties expose an array of strings which correspond to the identifier of the role or security scope. Both properties are also marked as `lazy` and are read-only.  
-  
+
 > [!IMPORTANT]
 >  `Lazy` properties are never retrieved with the class instance if the class instance was loaded from a query. The object must be directly accessed from WMI. Generally the WMI provider will supply a `Get` method that will accept a query path to the object.  
-  
+
  To determine whether an administrator references a user account or a security group, check the `SMS_Admin.AccountType` property. This property value will be one or zero. Zero means that the account is a user, and one means the account is a security group.  
-  
+
 ### To read the roles and security scopes of an administrator  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Get an instance to a `SMS_Admin` WMI class that matches the desired administrator by using their identifier.  
-  
+
 3.  Read the `Roles` and `Categories` properties.  
-  
+
 ## Example  
  The following example pulls an admin directly from WMI and displays the role and security scope identifiers:  
-  
+
 ```vbs  
 Sub PrintAdminScopesAndRoles(connection, adminId)  
     Dim admin  
@@ -60,9 +60,9 @@ Sub PrintAdminScopesAndRoles(connection, adminId)
         WScript.Echo "Admin with id " + CStr(adminId) + " not found."  
     End If  
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
 public void PrintAdminScopesAndRoles(WqlConnectionManager connection, int adminId)  
 {  
@@ -86,37 +86,37 @@ public void PrintAdminScopesAndRoles(WqlConnectionManager connection, int adminI
     else  
         Console.WriteLine("Admin with id " + adminId.ToString() + " not found.");  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
 |`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
 |`adminId`|`Integer`|The admin identifier.|  
-  
+
 ## Compiling the Code  
  The C# example requires:  
-  
+
 ### Namespaces  
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
  System  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
  mscorlib  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## See Also  
  [SMS_Admin Server WMI Class](../../../../develop/reference/core/servers/configure/sms_admin-server-wmi-class.md)   
  [SMS_Role Server WMI Class](../../../../develop/reference/core/servers/configure/sms_role-server-wmi-class.md)   
