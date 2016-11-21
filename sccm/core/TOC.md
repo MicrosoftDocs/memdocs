@@ -88,6 +88,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
 ###  [Capabilities in 1609](get-started/capabilities-in-technical-preview-1609.md)
 ###  [Capabilities in 1608](get-started/capabilities-in-technical-preview-1608.md)
