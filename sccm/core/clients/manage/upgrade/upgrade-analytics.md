@@ -7,7 +7,7 @@ keywords:
 author: nbigman
 ms.author: nbigman
 manager: angerobe
-ms.date: 11/18/2016
+ms.date: 11/20/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -36,7 +36,7 @@ Upgrade Analytics is a solution in the Microsoft Operations Management Suite (OM
 
 ## Configure clients 
 
-There are several configuration steps that you have to take to ensrue that your clients can provide data to Upgrade Analytics:
+There are several configuration steps that you have to take to ensure that your clients can provide data to Upgrade Analytics:
 
 -  Configure client telemetry settings as described in [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
 -  Install the KBs described in the *Deploy the compatibility update and related KBs *section of [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
@@ -72,9 +72,16 @@ There are several configuration steps that you have to take to ensrue that your 
 
 ## Viewing Microsoft Upgrade Analytics properties in Configuration Manager
 
-1.  Navigate to **Cloud Services**, then select **OMS Connector** to open the **OMS Connection Properties** page.
+1.  Navigate to **Cloud Services**, then select **Upgrade Analytics Connector** to open the **Upgrade Analytics Properties** page.
 2.  Within this page there are two tabs:
   * The **Azure Active Directory** tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to **Verify** your **Client secret key** if it has expired.
-  * The **OMS Connection Properties** tab shows your **Azure subscription**, **Azure resource group**, **Operations Management Suite Workspace**, and a list of **Device collections that Operations Management Suite can get data for**. Use the **Add** and **Remove** buttons to modify which collections are allowed.
+  * The **Upgrade Analytics** tab shows your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
 
+## View and use the upgrade information
 
+After you've integrated Upgrade Analytics with Configuration Manager, you can view the analysis of your clients' upgrade readiness and then take action.
+
+1. In the Configuration Manager console, choose **Monitoring** > **Overview** > **Upgrade Analytics**. 
+2. Review the data, which includes the upgrade readiness state and the percent of Windows devices that are reporting telemetry. 
+3. You can filter the dashboard to view data for devices in specific collections. 
+4. You can view the devices in a particular readiness state, and create a dynamic collection for those devices so that you can upgrade those devices if ready, or take action to bring them to a readiness state. 
