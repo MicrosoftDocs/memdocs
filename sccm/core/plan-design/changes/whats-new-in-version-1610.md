@@ -28,7 +28,7 @@ Update 1610 for System Center Configuration Manager current branch is an update 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
 
 
-## In-console monitoring of update installation status
+## In-console monitoring of update installation status  
 Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
