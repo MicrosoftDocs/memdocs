@@ -1,4 +1,4 @@
-# [Introduction](configuration-manager--reference.md)
+# [Introduction](configuration-manager-reference.md)
 
 # [Class and Property Qualifiers](misc/class and property qualifiers.md)
 
