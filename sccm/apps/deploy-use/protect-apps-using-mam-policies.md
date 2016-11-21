@@ -129,7 +129,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 6)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, manage the URLs in the list, and then click **Next**.  
 
 > [!WARNING]  
-    >  For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
+> For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
 
 7)  Complete the wizard.  
 
