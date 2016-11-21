@@ -35,7 +35,7 @@ manager: angrobe
 
 2.  In the **Applications** list, select the application that you want to deploy. Then on the **Home** tab, in the **Deployment** group, choose **Deploy**.  
 
-### Specify general information about the deployment
+### Specify general information about the deployment 
 
 On the **General** page of the Deploy Software wizard, specify the following information:  
 
