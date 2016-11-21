@@ -1,15 +1,15 @@
 ---
-title: "How to Track Operating System Deployment Migrations in Configuration Manager"
+title: "Track OS Deployment Migrations | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765e
 caps.latest.revision: 8
@@ -19,37 +19,37 @@ manager: "mbaldwin"
 ---
 # How to Track Operating System Deployment Migrations in Configuration Manager
 You track System Center Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.  
-  
+
  The [StoreCreationDate](assetId:///StoreCreationDate?qualifyHint=False&autoUpgrade=True), [StoreDeletionDate](assetId:///StoreDeletionDate?qualifyHint=False&autoUpgrade=True), and [StoreReleaseDate](assetId:///StoreReleaseDate?qualifyHint=False&autoUpgrade=True) properties can be used to identify the current state of the migration.  
-  
+
 ### To track state migrations  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
+
 2.  Get an instance of [SMS_StateMigration](assetId:///SMS_StateMigration?qualifyHint=False&autoUpgrade=True).  
-  
+
 3.  Calculate the current migration state using the assetId:///StoreCreationDate?qualifyHint=False&autoUpgrade=True, assetId:///StoreDeletionDate?qualifyHint=False&autoUpgrade=True, and assetId:///StoreReleaseDate?qualifyHint=False&autoUpgrade=True properties.  
-  
+
 ## Example  
  The following example method enumerates through all migrations and determines whether they are in progress.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub MigrationState(connection)  
-  
+
     Dim migrations  
     Dim migration  
     Dim inProgress  
     Dim zeroTime  
-  
+
     zeroTime = "00000000000000.000000+***"  
-  
+
     Set migrations = connection.ExecQuery( "Select * From SMS_StateMigration")  
-  
+
     For Each migration in Migrations  
         inProgress=False  
-  
+
         If migration.StoreCreationDate<>zeroTime Then  
             If migration.StoreReleaseDate = zeroTime Then  
                 inProgress=True  
@@ -62,7 +62,7 @@ Sub MigrationState(connection)
         Else  
             inProgress=False  
         End If  
-  
+
         WScript.StdOut.Write "Migration " + migration.MigrationID  
         If inProgress = True Then  
             Wscript.Echo " is in progress"  
@@ -70,10 +70,10 @@ Sub MigrationState(connection)
             WScript.Echo " is not in progress"  
         End If     
     Next  
-  
+
 End Sub     
 ```  
-  
+
 ```c#  
 public void MigrationState(WqlConnectionManager connection)  
 {  
@@ -81,13 +81,13 @@ public void MigrationState(WqlConnectionManager connection)
     {  
         IResultObject migrations =  
             connection.QueryProcessor.ExecuteQuery("Select * from SMS_StateMigration");  
-  
+
         string zeroTime = "00000000000000.000000+***";  
-  
+
         foreach (IResultObject migration in migrations)  
         {  
             Boolean inProgress = false;  
-  
+
             if (migration["StoreCreationDate"].DateTimeValue.Equals(zeroTime) == false)  
             {  
                 if (migration["StoreReleaseDate"].DateTimeValue.Equals(zeroTime) == true)  
@@ -107,7 +107,7 @@ public void MigrationState(WqlConnectionManager connection)
             {  
                 inProgress = false;  
             }  
-  
+
             Console.Write("Migration " + migration["MigrationID"].StringValue);  
             if (inProgress)  
             {  
@@ -125,39 +125,39 @@ public void MigrationState(WqlConnectionManager connection)
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
 |`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-  
+
 ## Compiling the Code  
  The C# example has the following compilation requirements:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   

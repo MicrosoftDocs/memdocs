@@ -1,15 +1,15 @@
 ---
-title: "How to Enumerate the Steps in an Operating System Deployment Task Sequence"
+title: "Enumerate the Steps in an OS Deployment Task Sequence | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438a
 caps.latest.revision: 8
@@ -19,39 +19,39 @@ manager: "mbaldwin"
 ---
 # How to Enumerate the Steps in an Operating System Deployment Task Sequence
 You enumerate an operating system deployment task sequence, in System Center Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.  
-  
+
 ### To enumerate the steps in a task sequence  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
+
 2.  Obtain a valid task sequence [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md)  
-  
+
 3.  Enumerate through the steps to display any action ([SMS_TaskSequence_Actions](assetId:///SMS_TaskSequence_Actions?qualifyHint=False&autoUpgrade=True) names. Use recursion to access any groups ([SMS_TaskSequence_Group](assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True)) that are found and display their actions.  
-  
+
 ## Example  
  The following example displays the actions and groups within a task sequence.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub RecurseTaskSequenceSteps(taskSequence, indent)  
-  
+
     Dim osdStep   
     Dim i  
-  
+
     ' Indent each new group.  
     for each osdStep in taskSequence.Steps  
-  
+
         for i=0 to indent  
             WScript.StdOut.Write " "  
         next  
-  
+
         If osdStep.SystemProperties_("__CLASS")="SMS_TaskSequence_Group" Then  
             wscript.StdOut.Write "Group: "   
         End If  
-  
+
         WScript.Echo osdStep.Name  
-  
+
         ' Recurse into each group found.  
         If osdStep.SystemProperties_("__CLASS")="SMS_TaskSequence_Group" Then  
             If IsNull(osdStep.Steps) Then  
@@ -63,7 +63,7 @@ Sub RecurseTaskSequenceSteps(taskSequence, indent)
      Next     
 End Sub          
 ```  
-  
+
 ```c#  
 public void RecurseTaskSequenceSteps(  
     IResultObject taskSequence,  
@@ -73,21 +73,21 @@ public void RecurseTaskSequenceSteps(
     {  
         // The array of SMS_TaskSequence_Steps.  
         List<IResultObject> steps = taskSequence.GetArrayItems("Steps");  
-  
+
         foreach (IResultObject ro in steps)  
         {  
             for (int i = 0; i < indent; i++)  
             {  
                 Console.Write(" ");  
             }  
-  
+
             if (ro["__CLASS"].StringValue == "SMS_TaskSequence_Group")  
             {  
                 Console.Write("Group: ");  
             }  
-  
+
             Console.WriteLine(ro["Name"].StringValue);  
-  
+
             // Child groups that are found. Use recursion to view them.  
             if (ro["__CLASS"].StringValue == "SMS_TaskSequence_Group")  
             {  
@@ -102,39 +102,39 @@ public void RecurseTaskSequenceSteps(
     }  
 }  
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True). The group is added to this task sequence.|  
 |`indent`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Indent is used to space console output for child groups.|  
-  
+
 ## Compiling the Code  
  This C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.Text  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   

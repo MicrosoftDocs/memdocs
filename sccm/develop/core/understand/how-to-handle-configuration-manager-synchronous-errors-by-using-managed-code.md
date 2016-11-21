@@ -1,5 +1,5 @@
 ---
-title: "How to Handle Configuration Manager Synchronous Errors by Using Managed Code"
+title: "Handle Synchronous Errors by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

@@ -1,5 +1,5 @@
 ---
-title: "How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices"
+title: "Create Software Distribution Packages for Mobile Devices | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

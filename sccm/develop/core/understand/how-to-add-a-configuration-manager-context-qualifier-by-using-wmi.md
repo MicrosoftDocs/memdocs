@@ -1,5 +1,5 @@
 ---
-title: "How to Add a Configuration Manager Context Qualifier by Using WMI"
+title: "Add a Context Qualifier by Using WMI | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

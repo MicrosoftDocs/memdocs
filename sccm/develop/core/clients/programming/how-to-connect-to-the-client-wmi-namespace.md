@@ -1,5 +1,5 @@
 ---
-title: "How to Connect to the Configuration Manager Client WMI Namespace by Using System.Management"
+title: "Connect to the Client WMI Namespace | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

@@ -1,15 +1,15 @@
 ---
-title: "UpdateOptionalComponents Method in Class SMS_BootImagePackage"
+title: "UpdateOptionalComponents Method | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 1563c3a6-5850-404f-9638-090c7bd3c4e5
 caps.latest.revision: 8
@@ -19,28 +19,28 @@ manager: "mbaldwin"
 ---
 # UpdateOptionalComponents Method in Class SMS_BootImagePackage
 The `UpdateOptionalComponents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates all specified optional components to the boot image package.  
-  
+
 > [!NOTE]
 >  It is necessary to refresh the distribution points when using this method.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
-  
+
 ## Syntax  
-  
+
 ```  
 SInt32 UpdateOptionalComponents(  
       String ComponentIds[],  
 );  
 ```  
-  
+
 #### Parameters  
  `ComponentIds`  
  Data type: `String` Array  
-  
+
  Qualifiers: [in]  
-  
+
  Component identifiers. The following are possible values:  
-  
+
 |||  
 |-|-|  
 |X86||  
@@ -70,7 +70,7 @@ SInt32 UpdateOptionalComponents(
 |24|WinPE-WDS-Tools.cab|  
 |25|WinPE-WinReCfg.cab|  
 |26|WinPE-WMI.cab|  
-  
+
 |||  
 |-|-|  
 |X64||  
@@ -100,25 +100,25 @@ SInt32 UpdateOptionalComponents(
 |50|WinPE-WDS-Tools.cab|  
 |51|WinPE-WinReCfg.cab|  
 |52|WinPE-WMI.cab|  
-  
+
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
-  
+
  For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## Remarks  
  It is not necessary to refresh the distribution points when using this method.  
-  
+
  For more information about NAL paths, see [SMS_NAL_Methods Server WMI Class](../../../develop/reference/misc/sms_nal_methods-server-wmi-class.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)   
  [SMS_NAL_Methods Server WMI Class](../../../develop/reference/misc/sms_nal_methods-server-wmi-class.md)

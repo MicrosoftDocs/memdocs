@@ -1,5 +1,5 @@
 ---
-title: "How to Call a Configuration Manager Object Class Method by Using Managed Code"
+title: "Call an Object Class Method by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"

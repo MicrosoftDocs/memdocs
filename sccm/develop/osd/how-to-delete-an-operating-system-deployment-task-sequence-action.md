@@ -1,15 +1,15 @@
 ---
-title: "How to Delete an Operating System Deployment Task Sequence Action"
+title: "Delete an OS Deployment Task Sequence Action | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 32db0107-f390-4324-9c36-e60976edf9eb
 caps.latest.revision: 8
@@ -19,41 +19,41 @@ manager: "mbaldwin"
 ---
 # How to Delete an Operating System Deployment Task Sequence Action
 You delete an operating system deployment task sequence action, in System Center Configuration Manager, by removing the action from the task sequence steps.  
-  
+
 ### To delete a task sequence action  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
-  
+
 2.  Obtain a task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
-  
+
 3.  Remove the action from the [SMS_TaskSequence.Steps](assetId:///SMS_TaskSequence.Steps?qualifyHint=False&autoUpgrade=True) array property.  
-  
+
 ## Example  
  The following example method deletes an action from the task sequence. The action is identified as an action by checking the Windows Management Instrumentation (WMI) property __SUPERCLASS to ensure it derives from [SMS_TaskSequenceAction](assetId:///SMS_TaskSequenceAction?qualifyHint=False&autoUpgrade=True).  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub RemoveAction (connection, taskSequence, actionName)  
-  
+
     Dim i  
     Dim newArray  
     Dim actionStep  
-  
+
     If taskSequence.SystemProperties_("__CLASS")<>"SMS_TaskSequence" Then  
         wscript.echo "Not a task sequence"  
         Exit Sub  
     End If  
-  
+
     if IsNull(taskSequence.Steps) Then  
         Wscript.Echo "No steps"  
         Exit Sub  
     End If  
-  
+
     ' Create an array to hold copied steps.  
     newArray = Array(taskSequence.Steps)  
     ReDim newArray(UBound(taskSequence.Steps))  
-  
+
     ' Copy the steps into the array and remove the matching action.  
     i=0  
     for each  actionStep in taskSequence.Steps  
@@ -65,13 +65,13 @@ Sub RemoveAction (connection, taskSequence, actionName)
            i=i+1  
         End If     
      Next  
-  
+
      ' Assign new array back to the task sequence.  
      taskSequence.Steps=newArray           
-  
+
 End Sub      
 ```  
-  
+
 ```c#  
 public void RemoveAction(  
     IResultObject taskSequence,   
@@ -81,7 +81,7 @@ public void RemoveAction(
     {  
         // Get a list of steps.  
         List<IResultObject> actionSteps = taskSequence.GetArrayItems("Steps");  
-  
+
         // Find the action to be deleted.  
         foreach (IResultObject actionStep in actionSteps)  
         {  
@@ -92,7 +92,7 @@ public void RemoveAction(
                 break;  
             }  
         }  
-  
+
         // Update the task sequence.  
         taskSequence.SetArrayItems("Steps", actionSteps);  
     }  
@@ -103,40 +103,40 @@ public void RemoveAction(
     }  
 }  
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`Connection`|-   Managed:[WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
 |`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|The task sequence containing the action to be deleted.|  
 |`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the [SMS_TaskSequenceAction.Name](assetId:///SMS_TaskSequenceAction.Name?qualifyHint=False&autoUpgrade=True) property.|  
-  
+
 ## Compiling the Code  
  This C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.Text  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  microsoft.configurationmanagement.managementprovider  
-  
+
  adminui.wqlqueryengine  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   

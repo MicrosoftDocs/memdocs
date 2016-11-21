@@ -1,5 +1,5 @@
 ---
-title: "How to Perform an Asynchronous Configuration Manager Query by Using Managed Code"
+title: "Perform an Asynchronous Query by Using Managed Code | Configuration Manager"
 ms.custom: ""
 ms.date: "2016-09-20"
 ms.prod: "configuration-manager"
