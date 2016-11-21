@@ -131,7 +131,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
     > [!WARNING]  
     >  For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
 
-6).  Complete the wizard.  
+6)  Complete the wizard.  
 
  The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
 
