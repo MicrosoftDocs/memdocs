@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarnms.author: nathbarn
+author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

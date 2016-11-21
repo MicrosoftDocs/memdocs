@@ -6,8 +6,8 @@ ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 ---
 
