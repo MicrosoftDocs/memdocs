@@ -1,8 +1,8 @@
 ---
-title: "Reference for maintenance tasks | System Center Configuration Manager"
+title: "Reference for maintenance tasks | Microsoft Docs"
 description: "Read details for each of the System Center Configuration Manager site maintenance tasks, and whether these tasks are enabled by default."
 ms.custom: na
-ms.date: 07/29/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

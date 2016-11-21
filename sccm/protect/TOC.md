@@ -1,13 +1,11 @@
-# [Understand and explore](understand\protect-data-and-site-infrastructure.md)
+# Understand and explore
 ## [Overview](understand\protect-data-and-site-infrastructure.md)
 ## [Backup and recovery](understand/backup-and-recovery.md)
 ## [High availability options](understand/high-availability-options.md)
 ## [Manage high-risk deployments](understand/settings-to-manage-high-risk-deployments.md)
 
-# [Plan and design](plan-design/prerequisites-for-certificate-profiles.md)
+# Plan and design
 ## [Certificate profile prerequisites](plan-design/prerequisites-for-certificate-profiles.md)
-### [Certificate infrastructure for SCEP](plan-design/prerequisites-for-certificate-profiles.md)
-### [Certificate infrastructure for .PFX](plan-design/prerequisites-for-certificate-profiles.md)
 ### [Certificate template permissions for certificate profiles](plan-design/planning-for-certificate-template-permissions.md)
 ### [Certificate profile security and privacy](plan-design/security-and-privacy-for-certificate-profiles.md)
 
@@ -23,7 +21,7 @@
 
 ## [Security and privacy for certificate profiles](plan-design/security-and-privacy-for-certificate-profiles.md)
 
-# [Deploy and use](deploy-use/vpn-profiles.md)
+# Deploy and use
 ## [VPN profiles](deploy-use/vpn-profiles.md)
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
@@ -70,12 +68,18 @@
 ### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
 ### [Manage Dynamics CRM Online access](deploy-use/manage-dynamics-crm-online-access.md)
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+## [Manage access based on device, network, and application risk](deploy-use/manage-access-based-on-device-network-app-risk.md)
+### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md)
+### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
+### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
+### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 
 ## [Terms and Conditions settings](../mdm/deploy-use/terms-and-conditions.md)
 
-## [Monitor protection](deploy-use/monitor-wifi-email-vpn-profiles.md)
+## Monitor protection
 ### [Monitor Wi-Fi, email and VPN profiles](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [Monitor certificate profiles](deploy-use/monitor-certificate-profiles.md)
 ### [Monitor Endpoint Protection](deploy-use/monitor-endpoint-protection.md)

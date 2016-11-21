@@ -1,8 +1,8 @@
 ---
-title: "Create queries | System Center Configuration Manager"
+title: "Create queries | Microsoft Docs"
 description: "Discover how to create and import queries in System Center Configuration Manager. Includes example queries and tips."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

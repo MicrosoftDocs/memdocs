@@ -1,8 +1,8 @@
 ---
-title: Manage Windows as a service | Configuration Manager
+title: Manage Windows as a service | Microsoft Docs
 description: "Features in System Center Configuration Manager help you view the state of Windows as a Service in your environment so that you can keep it updated."
 ms.custom: na
-ms.date: 08/12/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -159,7 +159,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 9. On the User Experience page, configure the following settings:  
 

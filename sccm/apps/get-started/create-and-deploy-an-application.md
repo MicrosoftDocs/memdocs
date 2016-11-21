@@ -1,8 +1,8 @@
 ---
-title: "Create and deploy an application | System Center Configuration Manager"
+title: "Create and deploy an application | Microsoft Docs"
 description: "Create and deploy an application containing a line-of-business app and learn how to manage apps effectively."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,24 +29,24 @@ In this topic, you'll jump right in and create an application with System Center
 -   [Create Android applications](../../apps/get-started/creating-android-applications.md)  
 -   [Create Windows Phone applications](../../apps/get-started/creating-windows-phone-applications.md)  
 -   [Create Mac computer applications](../../apps/get-started/creating-mac-computer-applications.md)  
--   [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md) 
--   [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md) 
+-   [Create Linux and UNIX server applications](../../apps/get-started/creating-linux-and-unix-server-applications.md)
+-   [Create Windows Embedded applications](../../apps/get-started/creating-windows-embedded-applications.md)
 
-  
+
 If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [Create applications](../../apps/deploy-use/create-applications.md) to learn about all the options available when you create and deploy applications.  
-  
+
 ## Before you start  
 
 Ensure you have reviewed the information in [Introduction to application management](/sccm/apps/understand/introduction-to-application-management) so that you have prepared your site to install applications and you understand the terminology used in this topic.  
 
  Also, ensure that the installation files for the **Contoso.msi** app are in an accessible location on your network.  
-  
+
 ## Create the Configuration Manager application  
-  
+
 ### Start the create application wizard and create the application  
-  
+
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
-  
+
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
 
 4.  On the **General** page of the **Create Application wizard**, choose to **Automatically detect information about this application from installation files**. This will pre-populate some of the information in the wizard with information extracted from the installation .msi file, then specify the following information:  
@@ -54,11 +54,11 @@ Ensure you have reviewed the information in [Introduction to application managem
     -   **Type** - Choose **Windows Installer (\*.msi file)**  
 
     -   **Location** - Enter the location (or click **Browse** to select the location) of the installation file **Contoso.msi**. Note that the location must be specified in the form *\\\Server\Share\File* in order for Configuration Manager to locate the installation files.  
-  
+
 	You'll end up with something looking like the following screenshot:  
-  
+
 	![App management wizard general page](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
-  
+
 5.  Click **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, click **Next** again.  
 
 6.  On the **General Information** page, you can supply further information about the application to help you sort and locate it in the Configuration Manager console.  
@@ -69,29 +69,29 @@ Ensure you have reviewed the information in [Introduction to application managem
     >  Some of the fields on this page of the wizard might have been filled in automatically when you imported the application installation files.  
 
      You'll end up with a screen that looks similar to the screenshot below:  
-  
+
      ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
-  
+
 7.  Click **Next**. On the Summary page, you can confirm your application settings, then complete the wizard.  
 
  You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then click **Applications**. For this example, you'll see:  
-  
+
  ![Final app graphic](/sccm/apps/get-started/media/Final-app-graphic.png)  
-  
+
 ## Examine the properties of the application and its deployment type  
 
 Now that you've created an application, you can refine the application settings if required. To look at the application properties, select the app, and then, in the **Home** tab, in the **Properties** group, click **Properties**.  
 
  In the **<Contoso\> Application Properties** dialog box, you'll see many items that you can configure to fine-tune the behavior of the application. For details about all the settings you can configure, see [Create applications](../../apps/deploy-use/create-applications.md). For the purposes of this example, you'll just be changing some properties of the application's deployment type.  
-  
+
  Click the **Deployment Types** tab, select the **Contoso Application** deployment type, and then click **Edit**. 	
 You'll see a dialog box like this one:  
- 
+
 ![App management app properties page](/sccm/apps/get-started/media/App-management-app-properties-page.png)  
-  
+
 ## Add a requirement to the deployment type  
  Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements, or create your own. In this example, you will add a requirement that the application will only install on PCs running Windows 10.  
-  
+
 1.  From the deployment type properties page you just opened, click the **Requirements** tab.  
 
 2.  Click **Add** to open the **Create Requirement** dialog box.  
@@ -107,23 +107,23 @@ You'll see a dialog box like this one:
     -   **Operator** - **One of**  
 
     -   From the operating systems list, select **Windows 10**.  
-  
+
     You'll end up with a dialog box that looks like this:  
-  
+
     ![App management requirements page](/sccm/apps/get-started/media/App-management-requirements-page.png)  
-  
+
 4.  Click **OK** to close each property page you opened, and return to the **Applications** list in the Configuration Manager console.  
 
 > [!TIP]  
 >  Requirements can help reduce the number of Configuration Manager collections you need. Because you just specified that the application can only install on PCs running Windows 10, you can later deploy this to a collection that contains PCs that run many different operating systems, and the application will only install on Windows 10 PCs.  
-  
+
 ## Add the application content to a distribution point  
 
 To successfully deploy the application to PCs, you must next ensure that the application content is copied to a distribution point. PCs will access the distribution point to install the application.  
 
 > [!TIP]  
 >  To find out more about distribution points and content management in Configuration Manager, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
-  
+
 1.  In the Configuration Manager console, click **Software Library**.  
 
 2.  In the **Software Library** workspace, expand **Applications** and then, in the list of applications, select the **Contoso Application** that you created.  
@@ -139,16 +139,16 @@ To successfully deploy the application to PCs, you must next ensure that the app
 7.  Complete the wizard.  
 
  You can check that the application content copied successfully to the distribution point from the **Monitoring** workspace under **Distribution Status** > **Content Status**.  
-  
+
 ## Deploy the application  
 
 Next, deploy the application to a device collection in your hierarchy. For this example, you'll deploy the application to the **All Systems** device collection.  
 
 > [!TIP]  
 >  Remember that only Windows 10 computers will install the application because of the requirements you selected earlier.  
-  
+
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **Applications**.  
-  
+
 3.  From the list of applications, select the application you created earlier, **Contoso Application**, and then, on the **Home** tab, in the **Deployment** group, click **Deploy**.  
 
 4.  On the **General** page of the **Deploy Software Wizard**, click **Browse** to select the **All Systems** device collection.  
@@ -167,14 +167,14 @@ Next, deploy the application to a device collection in your hierarchy. For this 
 9. Complete the wizard.  
 
  Use the information in the **Monitor the application** section below to see the status of your application deployment.  
-  
+
 ## Monitor the application  
  In this section, you'll take a quick look at the deployment status of the application you just deployed.  
-  
+
 ### To review the deployment status  
-  
+
 1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.  
-  
+
 3.  From the list of deployments, select **Contoso Application**.  
 
 4.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
@@ -193,7 +193,7 @@ Next, deploy the application to a device collection in your hierarchy. For this 
 
 > [!TIP]  
 >  There are a few ways you can monitor application deployments. For full details, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
-  
+
 ## End user experience  
 
 Users who have PCs running Windows 10 managed by Configuration Manager will see a message telling them that they must install the Contoso application. Once they accept the installation, the application will be installed.  

@@ -1,10 +1,10 @@
 ---
 
-title: Synchronize software updates from a disconnected software update point | Configuration Manager
+title: Synchronize software updates from a disconnected software update point | Microsoft Docs
 description: "Follow these procedures to verify that software updates synchronization was successful on the export server, export updates, and import updates metadata."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 9/15/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

@@ -1,8 +1,8 @@
 ---
-title: "Fundamentals of System Center Configuration Manager | System Center Configuration Manager"
+title: "Fundamentals of System Center Configuration Manager | Microsoft Docs"
 description: "Learn about basic concepts for System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/18/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "Communications between endpoints | System Center Configuration Manager"
+title: "Communications between endpoints | Microsoft Docs"
 description: "Learn about how System Center Configuration Manager site systems and components communicate across a network."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

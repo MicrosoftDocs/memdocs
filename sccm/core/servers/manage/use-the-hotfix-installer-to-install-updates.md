@@ -1,8 +1,8 @@
 ---
-title: "Hotfix Installer | System Center Configuration Manager"
+title: "Hotfix Installer | Microsoft Docs"
 description: "Find out when and how to install updates via the Hotfix Installer for Configuration Manager."
 ms.custom: na
-ms.date: 03/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

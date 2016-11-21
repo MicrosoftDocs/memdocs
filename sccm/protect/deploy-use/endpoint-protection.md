@@ -1,8 +1,8 @@
 ---
-title: "Endpoint Protection | System Center Configuration Manager"
+title: "Endpoint Protection | Microsoft Docs"
 description: "Learn how to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -79,7 +79,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
 ## Windows Defender Advanced Threat Protection
 
-Starting with the 1606 release of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP). Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Windows Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
+Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP). Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. See [Windows Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  

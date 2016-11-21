@@ -1,8 +1,8 @@
 ---
-title: "Windows Defender Advanced Threat Protection | System Center Configuration Manager"
+title: "Windows Defender Advanced Threat Protection | Microsoft Docs"
 description: "Learn how to manage and monitor Windows Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks."
 ms.custom: na
-ms.date: 07/25/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -15,7 +15,7 @@ caps.latest.revision: 5
 author: NathBarnms.author: nathbarnmanager: angrobe
 ---
 # Windows Defender Advanced Threat Protection*Applies to: System Center Configuration Manager (Current Branch)*
-Starting with the 1606 release of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP. Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks.  Learn more about [Windows Defender ATP](http://aka.ms/technet-wdatp). Configuration Manager policies can help you onboard and monitor managed Windows 10, version 1607 (build 14328) or later.
+Starting with version 1606 of Configuration Manager (current branch), Endpoint Protection can help manage and monitor Windows Defender Advanced Threat Protection (ATP. Windows Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks.  Learn more about [Windows Defender ATP](http://aka.ms/technet-wdatp). Configuration Manager policies can help you onboard and monitor managed Windows 10, version 1607 (build 14328) or later.
 
 Windows Defender ATP is a service in the [Windows Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Windows Defender ATP agent health. Windows Defender ATP is only supported on PCs running the Configuration Manager client. On-premises mobile device management and Intune hybrid MDM-managed computers are not supported.
 
@@ -29,9 +29,9 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
 
  1.  Logon to the [Windows Defender ATP online service](https://securitycenter.windows.com/)   
 
- 2.  Click on the **Client On-boarding** menu item.  
+ 2.  Click on the **Endpoint Management** menu item.  
 
- 3.  Select **System Center Configuration Manager** and click **Download package**.  
+ 3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Download package**.  
 
  4.  Download the compressed archive (.zip) file and extract the contents.
 
@@ -75,3 +75,8 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
         -   **Agent state** - The system service for the agent in Windows isn't running  
 
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
+
+## More information
+
+[Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Troubleshoot Windows Defender Advanced Threat Protection onboarding issues](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)

@@ -1,11 +1,11 @@
 ---
 
-title: Monitor software updates | Configuration Manager
+title: Monitor software updates | Microsoft Docs
 description: "The System Center Configuration Manager console provides alerts and statuses to monitor updates and compliance."
 keywords:
 author: dougebyms.author: dougeby
 manager: angrobe
-ms.date: 09/27/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -15,6 +15,9 @@ ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ---
 # Monitor software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager provides many ways to help you to monitor software updates objects, processes, and compliance information. Use the following sections to monitor software updates.
+
+## Software updates dashboard
+Starting in Configuration Manager version 1610, you can use the Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.   
 
 ##  <a name="BKMK_SUAlerts"></a> Alerts for software updates  
  You can configure alerts for software updates to notify administrative users when compliance levels for software update deployments are below the configured percentage. You can configure alerts for software update deployments in the following locations:  

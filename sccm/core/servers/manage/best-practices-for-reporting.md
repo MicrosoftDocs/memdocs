@@ -1,8 +1,8 @@
 ---
-title: "Reporting best practices | System Center Configuration Manager"
+title: "Reporting best practices | Microsoft Docs"
 description: "Read some helpful tips about using the reporting capability of System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

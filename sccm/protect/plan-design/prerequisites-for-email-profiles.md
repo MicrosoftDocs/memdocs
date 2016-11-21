@@ -1,8 +1,8 @@
 ---
-title: "Email profile prerequisites| System Center Configuration Manager"
+title: "Email profile prerequisites| Microsoft Docs"
 description: "Learn about email profiles in System Center Configuration Manager and their dependencies both externally and within the product."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "International support | System Center Configuration Manager"
+title: "International support | Microsoft Docs"
 description: "Configure System Center Configuration Manager to comply with specific international requirements."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

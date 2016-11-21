@@ -1,8 +1,8 @@
 ---
-title: "Custom database file locations | System Center Configuration Manager"
+title: "Custom database file locations | Microsoft Docs"
 description: "Learn how to specify custom locations for SQL Server database files."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager

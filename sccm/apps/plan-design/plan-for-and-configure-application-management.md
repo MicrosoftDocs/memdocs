@@ -1,8 +1,8 @@
 ---
-title: "Plan for and configure application management | System Center Configuration Manager"
+title: "Plan for and configure application management | Microsoft Docs"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/10/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

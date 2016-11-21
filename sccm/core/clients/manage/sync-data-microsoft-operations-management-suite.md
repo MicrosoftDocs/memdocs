@@ -1,5 +1,5 @@
 ---
-title: "Sync data | Microsoft Operations Management Suite | System Center Configuration Manager"
+title: "Sync data | Microsoft Docs  | Microsoft Operations Management Suite "
 description: "Sync data from System Center Configuration Manager to Microsoft Operations Management Suite."
 ms.custom: na
 ms.date: 10/13/2016

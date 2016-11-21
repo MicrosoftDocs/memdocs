@@ -1,8 +1,8 @@
 ---
-title: "Role-based administration Fundamentals | System Center Configuration Manager"
+title: "Role-based administration Fundamentals | Microsoft Docs"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

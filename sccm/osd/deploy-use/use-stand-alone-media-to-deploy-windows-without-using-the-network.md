@@ -1,8 +1,8 @@
 ---
-title: Use stand-alone media to deploy Windows without using the network | Configuration Manager
+title: Use stand-alone media to deploy Windows without using the network | Microsoft Docs
 description: "Use stand-alone media in Configuration Manager to deploy operating systems where bandwidth is limited or as an option to refresh, install, or upgrade computers."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

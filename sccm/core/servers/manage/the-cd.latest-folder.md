@@ -1,8 +1,8 @@
 ---
-title: "The CD.Latest folder | System Center Configuration Manager"
+title: "The CD.Latest folder | Microsoft Docs"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,8 @@ author: Brendunsms.author: brendunsmanager: angrobe
 System Center Configuration Manager introduces a new update process which delivers updates to the product from within the Configuration Manager console. To support this new method of updating Configuration Manager, a new folder is created named **CD.Latest** that contains a copy of the Configuration Manager installation files for the updated version of your site.  
 
 Beginning with update 1606, the CD.Latest folder contains a folder named **Redist** which contains the redistributable files that setup downloads and uses. These files are matched to the version of Configuration Manager files found in that CD.Latest folder. When you run Setup from a CD.Latest folder, you must use files that are matched to that version of Setup. To do so you can either direct Setup to download new and current files from Microsoft, or direct Setup to use the files from the Redist folder included in the CD.Latest folder.
+
+However, baseline media, like the baseline version 1606 that released in October of 2016, does not include a Redist folder. The Redist folder will not be created until you install an in-console update. In the meantime, use the Redist folder that you used when installing sites from the baseline media.  
 
 > [!TIP]
 > If you have not yet installed version 1606, you must ensure redist files you use are current. If you have not downloaded redist files recently, plan to allow Setup to do so from Microsoft.   

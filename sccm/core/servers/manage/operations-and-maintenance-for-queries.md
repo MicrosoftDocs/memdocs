@@ -1,8 +1,8 @@
 ---
-title: "Operations and maintenance for queries | System Center Configuration Manager"
+title: "Operations and maintenance for queries | Microsoft Docs"
 description: "See a list of topics about queries in System Center Configuration Manager. Focus is operations and maintenance."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

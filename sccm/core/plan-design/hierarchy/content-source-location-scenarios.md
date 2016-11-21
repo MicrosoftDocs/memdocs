@@ -1,8 +1,8 @@
 ---
-title: "Content source location | System Center Configuration Manager"
+title: "Content source location | Microsoft Docs"
 description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,7 +15,14 @@ caps.latest.revision: 3
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Content source location scenarios in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager supports several settings that combine to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and if they can successfully use a fallback lcoation when a prefered source for content is not avaialble.  
+Prior to version 1610, System Center Configuration Manager supports several settings that combine to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and if they can successfully use a fallback location when a preferred source for content is not available.  
+
+> [!IMPORTANT]  
+> **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information specific to boundary groups with these versions of Configuration Manager.
+>
+> **If your sites run version 1610 or later**, use the information in [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
+
+
 
 
 

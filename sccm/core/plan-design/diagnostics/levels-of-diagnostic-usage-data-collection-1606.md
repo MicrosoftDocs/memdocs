@@ -1,8 +1,8 @@
 ---
-title: "Diagnostic data for 1606 | System Center Configuration Manager"
+title: "Diagnostic data for 1606 | Microsoft Docs"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1606 collects."
 ms.custom: na
-ms.date: 03/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -44,6 +44,8 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 
 ##  <a name="bkmk_change"></a> How to change the level
  Administrators with a role-based administrative scope that includes the **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
+
+   To do so, in the console, go to the backstage tab (the upper left tab with the drop down arrow)  and select **Usage Data**, and then select the data level you want to use.  
 
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
  The Basic level includes data about your hierarchy and is required to help improve your installation or upgrade experience, as well as help determine which Configuration Manager updates are applicable for your hierarchy.

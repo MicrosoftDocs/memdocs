@@ -1,5 +1,5 @@
 ---
-title: "Learn More about licensing and branches | System Center Configuration Manager"
+title: "Learn More about licensing and branches | Microsoft Docs"
 description: "Use this topic to learn about the licensing requirements for the installation options available with the October 2016 release of System Center Configuration Manager, which include the Current Branch version 1606, Long-Term Servicing Branch (LTSB), and Evaluation installation of the Current Branch."
 ms.custom: na
 ms.date: 10/12/2016
@@ -76,16 +76,17 @@ LTSB is based on Current Branch version 1606 and has the following limitations:
 
 
 ### Software Assurance expiration date
-The **Software Assurance expiration date** is an optional value you can specify as a convenient reminder.
+Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. To do so, you use the **Software Assurance expiration date** which is an optional value you can specify as a convenient reminder when you run Configuration Manager Setup or later from within the Configuration Manager console.
 
 >  [!NOTE]   
 >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
 
-- You can specify the value on the **Product Key** page of the Setup Wizard when you run Setup from the System Center Configuration Manager version 1606 baseline media
+**To specify the date:**
+- You can specify the value on the **Product Key** page of the Setup Wizard when you run Setup from the System Center Configuration Manager version 1606 baseline media.
 
-- You can also specify this date on the **Licensing** tab of the **Hierarchy Settings Properties** in the Configuration Manager console
+- You can also specify this date on the **Licensing** tab of the **Hierarchy Settings Properties** in the Configuration Manager console.
 
-
+For more information about Software Assurance licensing and the Current Branch of System Center Configuration Manager, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
 
 ## Resources for Licensing information

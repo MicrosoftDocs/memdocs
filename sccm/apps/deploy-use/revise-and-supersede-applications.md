@@ -1,8 +1,8 @@
 ---
-title: "Revise and supersede applications | System Center Configuration Manager"
+title: "Revise and supersede applications | Microsoft Docs"
 description: "Work with System Center Configuration Manager application versions and supersede applications."
 ms.custom: na
-ms.date: 05/26/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

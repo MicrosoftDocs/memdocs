@@ -1,8 +1,8 @@
 ---
-title: "Deployment PKI certificates | System Center Configuration Manager"
+title: "Deployment PKI certificates | Microsoft Docs"
 description: "Follow a step-by-step example to learn the process of creating and deploying PKI certificates that System Center Configuration Manager uses."
 ms.custom: na
-ms.date: 04/04/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

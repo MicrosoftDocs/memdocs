@@ -1,8 +1,8 @@
 ---
-title: "Plan for migration | System Center Configuration Manager"
+title: "Plan for migration | Microsoft Docs"
 description: "Learn about sites and hierarchies before you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

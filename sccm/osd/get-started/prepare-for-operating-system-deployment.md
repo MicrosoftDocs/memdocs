@@ -1,8 +1,8 @@
 ---
-title: Prepare for operating system deployment | Configuration Manager
+title: Prepare for operating system deployment | Microsoft Docs
 description: "Read these articles to learn about what you must do in Configuration Manager to prepare for operating system deployments."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

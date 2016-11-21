@@ -1,8 +1,8 @@
 ---
-title: "Pull-distribution point | System Center Configuration Manager"
+title: "Pull-distribution point | Microsoft Docs"
 description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
 ms.custom: na
-ms.date: 2016-07-22
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -102,4 +102,3 @@ When a pull-distribution point downloads content from a source distribution poin
 
 ## See Also  
  [Fundamental concepts for content management in System Center Configuration Manager](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
- 

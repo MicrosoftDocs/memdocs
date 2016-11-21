@@ -1,8 +1,8 @@
 ---
-title: Create a custom task sequence | Configuration Manager
+title: Create a custom task sequence | Microsoft Docs
 description: "Edit a custom task sequence in System Center Configuration Manager to add steps to the task sequence."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "Create collections | System Center Configuration Manager"
+title: "Create collections | Microsoft Docs"
 description: "Create collections in System Center Configuration Manager to more easily manage groups of users and devices."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "Extend hardware inventory | System Center Configuration Manager"
+title: "Extend hardware inventory | Microsoft Docs"
 description: "Learn ways to extend hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 04/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,7 +30,7 @@ System Center Configuration Manager hardware inventory reads information about d
  In Configuration Manager, you no longer edit the sms_def.mof file as you did in Configuration Manager 2007. Instead, you can enable and disable WMI classes, and add new classes to collect by hardware inventory by using client settings. Configuration Manager provides the following methods to extend hardware inventory.  
 
 > [!NOTE]  
->  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to the 1602 release. To keep using custom classes after you update, you must add these to the "Added extensions" section of the Configuration.mof file after you update to 1602.  
+>  If you have manually changed the Configuration.mof file to add custom inventory classes, these changes will be overwritten when you update  to version 1602. To keep using custom classes after you update, you must add these to the "Added extensions" section of the Configuration.mof file after you update to 1602.  
 > However, you must not modify anything above this section, as these sections are reserved for  modification by Configuration Manager. A backup of your custom Configuration.mof can be found in:  
 > **<CM Install dir\>\data\hinvarchive\\**.  
 
@@ -156,7 +156,7 @@ System Center Configuration Manager hardware inventory reads information about d
 8.  In the **Export** dialog box, specify the Managed Object Format (MOF) file that you want to export the classes to, and then click **Save**.  
 
 ## How to Use Management Information Files (MIF Files) to extend hardware inventory  
- Use Management Information Format (MIF) files to extend hardware inventory information collected from clients by Configuration Manager. During hardware inventory, the information stored in MIF files is added to the client inventory report and stored in the site database, where you can use the data in the same ways that you use default client inventory data. There are two types of MIF files, NOIDMIF and IDMIF. 
+ Use Management Information Format (MIF) files to extend hardware inventory information collected from clients by Configuration Manager. During hardware inventory, the information stored in MIF files is added to the client inventory report and stored in the site database, where you can use the data in the same ways that you use default client inventory data. There are two types of MIF files, NOIDMIF and IDMIF.
 
 > [!IMPORTANT]  
 >  Before you can add information from MIF files to the Configuration Manager database, you must create or import class information for them. For more information, see the sections [To add a new inventory class](#BKMK_Add) and [To import hardware inventory classes](#BKMK_Import) in this topic.  
@@ -174,5 +174,5 @@ System Center Configuration Manager hardware inventory reads information about d
 
  After you create an IDMIF file, store this in the folder *%Windir%***\System32\CCM\Inventory\Idmifs** folder on client computers. Configuration Manager will collect information from this file during the next scheduled hardware inventory cycle. You must declare new classes for information contained in the file by adding or importing them.  
 
-> [!NOTE] 
+> [!NOTE]
 > MIF files could contain large amounts of data and collecting this data could negatively affect the performance of your site. Enable MIF collection only when required and configure the option **Maximum custom MIF file size (KB)** in the hardware inventory settings. For more information, see [Introduction to hardware inventory in System Center Configuration Manager](introduction-to-hardware-inventory.md).

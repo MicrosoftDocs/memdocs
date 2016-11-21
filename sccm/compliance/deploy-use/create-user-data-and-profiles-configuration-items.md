@@ -1,8 +1,8 @@
 ---
-title: "Create user data and profiles configuration items | System Center Configuration Manager"
+title: "Create user data and profiles configuration items | Microsoft Docs"
 description: "Use data and profiles configuration items in System Center Configuration Manager to manage folder redirection, offline files, and roaming profiles."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "Create applications | System Center Configuration Manager"
+title: "Create applications | Microsoft Docs"
 description: "Create and deploy applications and deployment types with System Center Configuration Manager."
 ms.custom: na
-ms.date: 05/09/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,7 +47,7 @@ A System Center Configuration Manager application contains the files and informa
 1.  On the **General** page of the Create Application Wizard, select the **Automatically detect information about this application from installation files** check box.  
 
 2.  In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager) in this topic.  
-  
+
 3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\\filename* or the store link for the application installation file that you want to use to detect application information. Alternatively, click **Browse** to browse to the installation file.  
 	> [!IMPORTANT]  
 	>  When you select **Windows Installer (\*.msi file)** as an application type, all of the files in the folder that you specify will be imported with the application and will be sent to distribution points. Ensure that only the files that are necessary to install the application are in the folder that you specify. Configuration Manager is tested to support up to 20,000 application files in the application package. If your application contains more files, consider creating multiple applications that have a smaller number of files.  
@@ -72,9 +72,9 @@ A System Center Configuration Manager application contains the files and informa
     -   **Use an automatic VPN connection (if configured)** -If a VPN profile has been deployed to the device on which the app is launched, launch the VPN connection when the app starts (Windows 8.1 and Windows Phone 8.1 only).  
 
          On Windows Phone 8.1 devices, automatic VPN connections are not supported if more than one VPN profile has been deployed to the device.  
-  
+
          For more information about VPN profiles, see [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
-  
+
 6.  Click **Next**, review the application information on the **Summary** page, and then complete the Create Application Wizard.  
 
  The new application appears in the **Applications** node of the Configuration Manager console, and you have completed the process of creating an application. If you want to add more deployment types to the application, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#create-deployment-types-for-the-application) in this topic.  
@@ -137,7 +137,7 @@ For more information, see [Create deployment types for the application](/sccm/ap
 1.  On the **General** page of the Create Deployment Type Wizard, select the **Automatically identify information about this deployment type from installation files** check box.  
 
 2.  In the **Type** field, select the application installation file type that you want to use to detect the deployment type information.  
-  
+
 3.  In the **Location** field, specify the UNC path in the form *\\\\server\\share\\filename* or the store link to the application installation files and the content that you want to use to detect the deployment type information. You can also click **Browse** to locate the installation file.  
     > [!NOTE]  
     >  You must have access to the UNC path that contains the application and any subfolders that contain the application content.  
@@ -176,7 +176,7 @@ For more information, see [Create deployment types for the application](/sccm/ap
 ##  Specify content options for the deployment type  
 
 1.  On the **Content** page of the Create Deployment Type Wizard, specify the following information:  
-  
+
     -   Content location - Specify the location of the content for this deployment type, or click **Browse** to choose the deployment type content folder.  
         > [!IMPORTANT]  
         >  The System account of the site server computer must have permissions to the content location that you specify.  
@@ -321,9 +321,9 @@ The following table contains Microsoft Visual Basic (VB) sample scripts that you
 
     > [!NOTE]  
     >  You can also add new requirements on the **Requirements** tab of the *<deployment type name\>***Properties** dialog box.  
-  
+
 2.  In the **Category** drop-down list, select whether this requirement is for a device or a user, or select **Custom** to use a previously created global condition. When you select **Custom**, you can also click **Create** to create a new global condition. For more information about global conditions, see [How to create global conditions](../../apps/deploy-use/create-global-conditions.md).  
-  
+
 
     > [!IMPORTANT]  
     >  If you create a requirement of the category **User** and the condition **Primary Device**, and then deploy the application to a device collection, the requirement will be ignored.  

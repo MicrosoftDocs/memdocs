@@ -1,8 +1,8 @@
 ---
-title: "Prepare Windows Servers | System Center Configuration Manager"
+title: "Prepare Windows Servers | Microsoft Docs"
 description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,11 +33,8 @@ The information in this article provides an overview of the types of Windows con
 -   **.NET Framework**: Including  
 
     -   ASP.NET  
-
     -   HTTP Activation  
-
     -   Non-HTTP Activation  
-
     -   WCF Services  
 
     Different versions of .NET Framework are required by different site system roles.  
@@ -59,61 +56,37 @@ The information in this article provides an overview of the types of Windows con
  -   **Network Device Enrollment Service** (under Active Directory Certificate Services):  This Windows role is a prerequisite to using Certificate Profiles in Configuration Manager.  
 
  -   **Web server (IIS)**: Including:  
-
     -   Common HTTP Features >  
-
         -   HTTP Redirection  
-
     -   Application Development >  
-
         -   .NET Extensibility  
-
         -   ASP.NET  
-
         -   ISAPI Extensions  
-
         -   ISAPI Filters  
-
     -   Management Tools >  
-
         -   IIS 6 Management Compatibility  
-
         -   IIS 6 Metabase Compatibility  
-
         -   IIS 6 WMI Compatibility  
-
     -   Security >  
-
         -   Request Filtering  
-
         -   Windows Authentication  
 
  The following site system roles use one or more of the listed IIS Configurations:  
-
     -   Application Catalog web service point  
-
     -   Application Catalog website point  
-
     -   Distribution point  
-
     -   Enrollment point  
-
     -   Enrollment proxy point  
-
     -   Fallback status point  
-
     -   Management point  
-
     -   Software update point  
-
-    -   State migration point  
+    -   State migration point     
 
     The minimum version of IIS that is required is the version that is supplied with the operating system of the site server.  
 
     In addition to these IIS configurations, you might need to configure [IIS Request Filtering for distribution points](#BKMK_IISFiltering).  
 
 -   **Windows Deployment Services**: This role is used with Operating System Deployment.  
-
 -   **Windows Server Update Services**: This role is required when you will deploy software updates.  
 
 ##  <a name="BKMK_IISFiltering"></a> IIS Request Filtering for distribution points  
@@ -124,11 +97,8 @@ The information in this article provides an overview of the types of Windows con
  Additionally, the following file name extensions are used by Configuration Manager for packages and applications. Ensure your Request Filtering configurations do not block these file extensions:  
 
 -   .PCK  
-
 -   .PKG  
-
 -   .STA  
-
 -   .TAR  
 
 For example, you might have source files for a software deployment that include a folder named **bin**, or that contain a file with the **.mdb** file name extension.  
@@ -146,3 +116,18 @@ For example, you might have source files for a software deployment that include 
 > -   Edits you make to individual websites apply to only that website  
 >   
 >  The security best practice is to run Configuration Manager on a dedicated web server. If you must run other applications on the web server, use a custom website for Configuration Manager. For information, see [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md).  
+
+## HTTP verbs
+**Management points:** To ensure clients can successfully communicate with a management point, on the management point server ensure the following HTTP verbs are allowed:  
+ - GET
+ - POST
+ - CCM_POST
+ - HEAD
+ - PROPFIND
+
+**Distribution points:** Distribution points require the following HTTP verbs as allowed:
+ - GET
+ - HEAD
+ - PROPFIND
+
+For information about configuring request filtering, see [Configure Request Filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs) on TechNet, or similar documentation that applies to the version of Windows Server that hosts your management point.

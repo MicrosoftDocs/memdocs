@@ -1,8 +1,8 @@
 ---
-title: "Setup Downloader | System Center Configuration Manager"
+title: "Setup Downloader | Microsoft Docs"
 description: "Read about this standalone application designed to ensure your site installation uses current versions of key installation files."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

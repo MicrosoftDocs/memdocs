@@ -1,8 +1,8 @@
 ---
-title: "Example validation state transitions for Asset Intelligence | System Center Configuration Manager"
+title: "Example validation state transitions for Asset Intelligence | Microsoft Docs"
 description: "See examples of validation state transitions for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

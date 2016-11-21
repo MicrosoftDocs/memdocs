@@ -1,8 +1,8 @@
 ---
-title: "Manage volume-purchased iOS apps | System Center Configuration Manager"
+title: "Manage volume-purchased iOS apps | Microsoft Docs"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 08/14/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -55,9 +55,9 @@ manager: angrobe
  Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to allow you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
 
 ## Step 1 - To get and upload an Apple VPP token  
-  
+
 1.  In the Configuration Manager console, click **Administration** > **Cloud Services** > **Apple Volume Purchase Program Tokens**.   
-  
+
 3.  On the **Home** tab, in the **Apple Volume Purchase Program Tokens** group, click **Add Apple Volume Purchase Program Token**.  
 
 4.  On the **General** page of the **Add Apple Volume Purchase Program Token** wizard, configure the following:   
@@ -73,11 +73,11 @@ manager: angrobe
     -   **Assigned categories to improve searching and filtering** - Optionally, you can assign categories to the VPP token to make it easier to search for in the Configuration Manager console.  
 
 5.  Click **Next**, and then complete the wizard.  
-  
-From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized. 
-  
+
+From the **Apple Volume Purchase Program Tokens** node, you can now view information about the Apple VPP token including when it was last updated, when it will expire, and when it was last synchronized.
+
 You can fully synchronize the data held by Apple with Configuration Manager at any time by clicking **Sync** on the **Home** tab, in the **Sync** group.  
-  
+
 ## Step 2 - Deploy a volume-purchased app  
 
 1.  In the Configuration Manager console, click **Software Library** > **Application Management** > **License Information for Store Apps**.  

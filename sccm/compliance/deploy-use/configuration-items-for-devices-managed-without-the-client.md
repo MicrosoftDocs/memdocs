@@ -1,8 +1,8 @@
 ---
-title: "Configuration items for devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Configuration items for devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Create configuration items for Windows, Mac, and other devices that aren't managed by the System Center Configuration Manager client."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,4 +25,4 @@ This topic list the System Center Configuration Manager configuration item types
 
 -   [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
 
--   [How to create configuration items for Android and Samsung KNOX devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+-   [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  

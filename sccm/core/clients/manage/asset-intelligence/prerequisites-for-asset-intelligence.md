@@ -1,8 +1,8 @@
 ---
-title: "Asset Intelligence Prerequisites | System Center Configuration Manager"
+title: "Asset Intelligence Prerequisites | Microsoft Docs"
 description: "Get the prerequisites for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

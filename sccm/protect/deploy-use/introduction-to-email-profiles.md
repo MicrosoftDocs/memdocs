@@ -1,8 +1,8 @@
 ---
-title: "Introduction to email profiles | System Center Configuration Manager"
+title: "Introduction to email profiles | Microsoft Docs"
 description: "Learn how to use email profiles to enable your users to access corporate email on their devices with minimal setup."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,7 +32,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 -   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
 
 > [!IMPORTANT]  
->  To deploy profiles to iOS, Android Samsung KNOX, Windows Phone, and Windows 8.1 or Windows 10 devices, these devices must be enrolled into Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  To deploy profiles to iOS, Android Samsung KNOX Standard, Windows Phone, and Windows 8.1 or Windows 10 devices, these devices must be enrolled into Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 

@@ -1,8 +1,8 @@
 ---
-title: "Features and capabilities | System Center Configuration Manager"
+title: "Features and capabilities | Microsoft Docs"
 description: "Learn about the primary management capabilities of System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,9 +49,9 @@ The following are the primary management capabilities of System Center Configura
 
 **Mobile device management with Microsoft Intune**  
 
- You can use Configuration Manager to manage iOS, Android (including Samsung KNOX), Windows Phone and Windows devices using the Microsoft Intune service over the Internet.
+ You can use Configuration Manager to manage iOS, Android (including Samsung KNOX Standard), Windows Phone and Windows devices using the Microsoft Intune service over the Internet.
 
- Although you use the Intune service, management tasks are completed by using the service connection point site system role available through the Configuration Manager console. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+ Although you use the Intune service, management tasks are completed by using the service connection point site system role available through the Configuration Manager console. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
  **On-premises Mobile Device Management**  
 

@@ -1,8 +1,8 @@
 ---
-title: "Create remote connection profiles | System Center Configuration Manager"
+title: "Create remote connection profiles | Microsoft Docs"
 description: "Use System Center Configuration Manager remote connection profiles to enable your users to remotely connect to work computers."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

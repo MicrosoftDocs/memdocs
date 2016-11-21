@@ -1,8 +1,8 @@
 ---
-title: "Create custom reports | System Center Configuration Manager"
+title: "Create custom reports | Microsoft Docs"
 description: "Define report models to meet your business requirements, and then deploy the report models to Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

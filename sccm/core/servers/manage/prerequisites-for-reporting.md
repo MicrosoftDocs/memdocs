@@ -1,8 +1,8 @@
 ---
-title: "Prerequisites for reporting | Configuration Manager"
+title: "Prerequisites for reporting | Microsoft Docs"
 description: "Understand various dependencies that impact your use of reporting in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

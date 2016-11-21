@@ -1,8 +1,8 @@
 ---
-title: "Capabilities in Technical Preview 1602 for System Center Configuration Manager"
+title: "Capabilities in Technical Preview 1602 for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1602."
 ms.custom: na
-ms.date: 05/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -34,7 +34,7 @@ This article introduces the features that are available in the Technical Preview
 
  For details, see [Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
-##  <a name="BKMK_SC1601"></a> Improvements to Software Center in the 1602 release  
+##  <a name="BKMK_SC1601"></a> Improvements to Software Center in version 1602  
 
 ### Refresh PC machine and user policy from Software Center  
  A new option, **Sync Policy** has been added to the **Options** > **Computer Maintenance** page of Software Center that causes the PC to refresh it’s Configuration Manager machine and user policy.  

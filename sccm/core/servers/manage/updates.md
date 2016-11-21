@@ -1,8 +1,8 @@
 ---
-title: "Updates | System Center Configuration Manager"
+title: "Updates | Microsoft Docs"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -63,12 +63,13 @@ The following versions of Configuration Manager are available as a baseline, an 
 |**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Yes|
 |**1606**<br /><br /> 5.00.8412.1000|7/22/2016|No|Yes|
 |**1606** with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016|Yes|No|
+|**1610**<br /><br /> 5.00.8458.1000|11/18/2016|No|Yes|
 *(Note 1)* This 1606 baseline media is available as part of Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
 
 ##  <a name="bkmk_inconsole"></a> In-console updates and servicing  
- When you use a production ready installation of System Center Configuration Manager, also referred to as the current branch, the majority of updates you install are available using the Updates and Servicing channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration, and includes only updates that Microsoft recommends for all customers.   
+ When you use a production ready installation of System Center Configuration Manager, also referred to as the current branch, most updates you install are available using the Updates and Servicing channel. This method identifies, downloads, and makes available the updates that apply to your current infrastructure version and configuration, and includes only updates that Microsoft recommends for all customers.   
  These include:  
 
 -   New versions, like version 1602  
@@ -112,7 +113,7 @@ When you install an in-console update:
 -   After a primary site is updated, secondary sites do not automatically update. Instead, you must initiate the secondary site update.  
 
 > [!NOTE]  
->  The production release of System Center Configuration Manager (current branch) and the Technical Preview for System Center Configuration Manager are different releases. Therefore, updates for the current branch release are never available in or for the Technical Preview for System Center Configuration Manager.    Similarly, updates for the Technical Preview are not available in the current branch release.  
+>  The production release of System Center Configuration Manager (current branch), the Long-Term Servicing Branch, and the Technical Preview for System Center Configuration Manager are different releases. Therefore, updates that apply for one branch are not available as in-console updates for the other branches. For more information about available branches, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
 
 ##  <a name="bkmk_outofband"></a> Out-of-band hotfixes  
 Some hotfixes are released with limited availability to address specific issues, or are applicable to all customers but cannot be installed using the in-console method. These fixes are delivered out-of-band and not discovered from the Microsoft cloud service.  
@@ -121,10 +122,10 @@ Typically, you learn about out-of-band hotfixes from Microsoft customer support 
 
 You install these fixes manually, using one of two methods:  
 
--   **Update Registration Tool:** This tool manually imports the hotfix into your Configuration Manager console where you can then install the update as you would in-console updates that are discovered automatically. This method is used for updates that use the following file name structure: **.update.exe**.  The full file name for this type of hotfix resembles: **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**  
+-   **Update Registration Tool:** This tool manually imports the hotfix into your Configuration Manager console where you can then install the update as you would in-console updates that are discovered automatically. This method is used for updates that use the following file name structure: **.update.exe**.  The full file name for this type of hotfix resembles: **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-ConfigMgr.Update.exe**.  
 
-     For more information, see [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)  
+     For more information, see [Use the Update Registration Tool to import hotfixes to System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
 
--   **Hotfix Installer:** This tool is used to manually install a hotfix that cannot be installed using the in-console method. This method is used for fixes that use the following file name structure: **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe**  
+-   **Hotfix Installer:** This tool is used to manually install a hotfix that cannot be installed using the in-console method. This method is used for fixes that use the following file name structure: **&lt;Product\>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe**.
 
-     For more information, see [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+     For more information, see [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md).

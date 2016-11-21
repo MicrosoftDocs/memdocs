@@ -1,8 +1,8 @@
 ---
-title: Use PXE to deploy Windows over the network | Configuration Manager
+title: Use PXE to deploy Windows over the network | Microsoft Docs
 description: "Use PXE-initiated operating system deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer."
 ms.custom: na
-ms.date: 08/12/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

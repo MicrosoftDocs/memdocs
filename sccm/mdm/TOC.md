@@ -1,14 +1,14 @@
-#  [Understand and explore](understand/hybrid-mobile-device-management.md)
+#  Understand and explore
 ## [Hybrid MDM](understand/hybrid-mobile-device-management.md)
 ## [Choose Intune or hybrid MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 
-# [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
+# Plan and design
 ## [Plan for hybrid MDM](plan-design/plan-hybrid-mobile-device-management.md)
 ## [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
-# [Deploy and use](deploy-use/setup-hybrid-mdm.md)
+# Deploy and use
 
 ## [Set up hybrid MDM](deploy-use/setup-hybrid-mdm.md)
 ### [iOS and Mac](deploy-use/enroll-hybrid-ios-mac.md)
@@ -33,4 +33,5 @@
 ### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
 
 ## [Retire, lock and reset devices](deploy-use/wipe-lock-reset-devices.md)
+## [Sync Intune-enrolled devices](deploy-use/sync-intune-device.md)
 ## [Manage devices with Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)

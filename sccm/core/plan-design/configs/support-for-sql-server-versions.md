@@ -1,8 +1,8 @@
 ---
-title: "Support for SQL Server | System Center Configuration Manager"
+title: "Support for SQL Server | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 08/23/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -211,6 +211,10 @@ For information about how to change the account that is used by the SQL Service,
 **SQL Server Reporting Services:**  
 Required to install a reporting services point that lets you run reports.  
 
+> [!IMPORTANT]  
+> After you upgrade SQL Server from a previous version, you might see the following error:  *Report Builder Does Not Exist*.    
+> To resolve this you must reinstall the reporting services point site system role.
+
 **SQL Server ports:**  
 For communication to the SQL Server database engine, and for intersite replication, you can use the default SQL Server port configurations or specify custom ports:  
 
@@ -219,7 +223,7 @@ For communication to the SQL Server database engine, and for intersite replicati
 
     -   Management point  
     -   SMS Provider computer  
-    -   Reporting Services point  
+    -   Reporting services point  
     -   Site server  
 
 When a SQL Server hosts a database from more than one site, each database must use a separate instance of SQL Server, and each instance must be configured to use a unique set of ports.  

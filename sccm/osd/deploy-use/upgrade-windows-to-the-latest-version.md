@@ -1,8 +1,8 @@
 ---
-title: Upgrade Windows to the latest version | Configuration Manager
+title: Upgrade Windows to the latest version | Microsoft Docs
 description: "Learn how to use stand-alone media or Software Center in Configuration Manager to upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

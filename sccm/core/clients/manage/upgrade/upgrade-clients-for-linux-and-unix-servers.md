@@ -1,8 +1,8 @@
 ---
-itle: "Upgrade clients | Linux UNIX | System Center Configuration Manager"
+itle: "Upgrade clients | Microsoft Docs | Linux UNIX "
 description: "Upgrade a client on a Linux or UNIX server in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

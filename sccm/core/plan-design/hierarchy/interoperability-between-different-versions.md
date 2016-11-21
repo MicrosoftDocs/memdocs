@@ -1,8 +1,8 @@
 ---
-title: "Interoperability between versions | System Center Configuration Manager"
+title: "Interoperability between Configuration Manager versions | Microsoft Docs"
 description: "Learn how to avoid conflicts between multiple System Center Configuration Manager hierarchies on the same network."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

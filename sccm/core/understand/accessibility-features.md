@@ -1,8 +1,8 @@
 ---
-title: "Accessibility | System Center Configuration Manager"
+title: "Accessibility | Microsoft Docs"
 description: "Learn about the features that make System Center Configuration Manager accessible for people with disabilities."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager

@@ -1,8 +1,8 @@
 ---
-title: "Monitor compliance settings | System Center Configuration Manager"
+title: "Monitor compliance settings | Microsoft Docs"
 description: "Use one or more of the procedures in this topic to display the compliance status of the configuration baseline."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

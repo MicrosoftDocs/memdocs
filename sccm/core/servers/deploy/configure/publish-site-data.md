@@ -1,8 +1,8 @@
 ---
-title: "Publish site data | System Center Configuration Manager"
+title: "Publish site data | Microsoft Docs"
 description: "Learn how to publish Configuration Manager sites to Active Directory Domain Services."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

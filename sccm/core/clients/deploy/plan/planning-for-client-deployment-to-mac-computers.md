@@ -1,8 +1,8 @@
 ---
-title: "Planning client deployment to Mac computers | System Center Configuration Manager"
+title: "Planning client deployment to Mac computers | Microsoft Docs"
 description: "Plan for client deployment to Mac computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

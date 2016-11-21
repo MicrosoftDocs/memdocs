@@ -1,8 +1,8 @@
 ---
-title: Replace an existing computer and transfer settings | Configuration Manager
+title: Replace an existing computer and transfer settings | Microsoft Docs
 description: "In Configuration Manager, choose from deployment methods, such as bootable media, multicast, or Software Center, to replace an existing computer with a new computer."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

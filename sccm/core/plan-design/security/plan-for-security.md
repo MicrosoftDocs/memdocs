@@ -1,8 +1,8 @@
 ---
-title: "Plan for security in System Center Configuration Manager"
+title: "Plan for security in System Center Configuration Manager | Microsoft Docs"
 description: "Get best practices and other information about security in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

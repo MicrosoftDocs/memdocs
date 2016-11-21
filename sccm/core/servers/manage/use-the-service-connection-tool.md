@@ -1,8 +1,8 @@
 ---
-title: "Service Connection Tool | System Center Configuration Manager"
+title: "Service Connection Tool | Microsoft Docs"
 description: "Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,7 +20,10 @@ Use the **service connection tool** when your Configuration Manager  site system
 
  The tool enables you to connect to the Configuration Manager cloud service to manually upload usage information for your hierarchy, and to download updates. Uploading usage data is necessary to enable the cloud service to provide the correct updates for your deployment.  
 
- **Prerequisites for using the service connection tool:**  
+## Prerequisites for using the service connection tool
+The following are prerequisites, and known issues.
+
+**Prerequisites:**
 
 -   You  have a service connection point installed, and it is set to **Offline, on-demand connection**.  
 
@@ -41,26 +44,6 @@ Use the **service connection tool** when your Configuration Manager  site system
 
 
 -   You will need a USB drive with sufficient free space to store the files and updates, or another method to transfer files between the service connection point computer, and the computer that has access to the Internet. (This scenario assumes that your site and managed computers do not have a direct connection to the Internet.)  
-
-**There are three primary steps to using the service connection tool:**  
-
-1.  **Prepare**:  This step puts your usage data into a .cab file and stores it on a USB drive (or alternate transfer location you specify).  
-
-2.  **Connect**: This step has you run the tool on a remote computer that connects to the Internet to upload data and download updates.  
-
-3.  **Import**: This step imports updates for Configuration Manager to your site so you can then view and install updates from the Configuration Manager console.  
-
-Beginning with version 1606, when connecting to Microsoft you can upload multiple .cab files at one time (each from a different hierarchy), and specify a proxy server and a user for the proxy server.   
-
-**To upload multiple .cab files:**
- -  Place each .cab file you export from separate hierarchies into the same folder. The name of each file must be unique, and you can manually rename them if necessary.
- -  Then, when you run the command to upload data to Microsoft, you specify the folder that contains the .cab files. (Prior to update 1606, you could only upload data from a single hierarchy at a time, and the tool required you to specify the name of the .cab file in the folder.)
- -  Later, when you run the import task on the service connection point of a hierarchy, the tool automatically imports only the data for that hierarchy.  
-
-**To specify a proxy server:**  
-You can use the following optional parameters to specify a proxy server (More information about using these parameters is available in the Command line parameters section of this topic):
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  Use this parameter to specify the proxy server to use for this connection.
-  -  **-proxyusername [username]**  Use this parameter when  you must specify a user for the proxy server.
 
 
 
@@ -89,7 +72,30 @@ When you run the following command, the tool prepares a .cab file that contains 
 
 You will also need to copy the ServiceConnectionTool folder with all of its contents to the USB drive, or otherwise make it available on the computer you will use for steps 3 and 4.  
 
-#### To use the service connection tool  
+### Overview
+**There are three primary steps to using the service connection tool:**  
+
+1.  **Prepare**:  This step puts your usage data into a .cab file and stores it on a USB drive (or alternate transfer location you specify).  
+
+2.  **Connect**: This step has you run the tool on a remote computer that connects to the Internet to upload data and download updates.  
+
+3.  **Import**: This step imports updates for Configuration Manager to your site so you can then view and install updates from the Configuration Manager console.  
+
+Beginning with version 1606, when connecting to Microsoft you can upload multiple .cab files at one time (each from a different hierarchy), and specify a proxy server and a user for the proxy server.   
+
+**To upload multiple .cab files:**
+ -  Place each .cab file you export from separate hierarchies into the same folder. The name of each file must be unique, and you can manually rename them if necessary.
+ -  Then, when you run the command to upload data to Microsoft, you specify the folder that contains the .cab files. (Prior to update 1606, you could only upload data from a single hierarchy at a time, and the tool required you to specify the name of the .cab file in the folder.)
+ -  Later, when you run the import task on the service connection point of a hierarchy, the tool automatically imports only the data for that hierarchy.  
+
+**To specify a proxy server:**  
+You can use the following optional parameters to specify a proxy server (More information about using these parameters is available in the Command line parameters section of this topic):
+  - **-proxyserveruri [FQDN_of_proxy_sever]**  Use this parameter to specify the proxy server to use for this connection.
+  -  **-proxyusername [username]**  Use this parameter when  you must specify a user for the proxy server.
+
+
+
+### To use the service connection tool  
 
 1.  On the computer that hosts the service connection point:  
 

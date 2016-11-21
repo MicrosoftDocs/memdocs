@@ -1,8 +1,8 @@
 ---
-title: "Hardware inventory | System Center Configuration Manager"
+title: "Hardware inventory | Microsoft Docs"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,7 +25,7 @@ Use hardware inventory in System Center Configuration Manager to collect informa
 
 -   Create queries that return devices that are based on a specific hardware configuration. For more information, see [Queries technical reference for System Center Configuration Manager](../../../../core/servers/manage/queries-technical-reference.md).  
 
--   Create query-based collections that are based on a specific hardware configuration. Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, which include software deployment. For more information, see [Collections technical reference for System Center Configuration Manager](../../../../core/clients/manage/collections/collections-technical-reference.md).  
+-   Create query-based collections that are based on a specific hardware configuration. Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, which include software deployment. For more information, see [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).  
 
 -   Run reports that display specific details about hardware configurations in your organization. For more information, see [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md).  
 

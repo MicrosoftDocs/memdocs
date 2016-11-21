@@ -1,8 +1,8 @@
 ---
-title: Infrastructure requirements for operating system deployment | Configuration Manager
+title: Infrastructure requirements for operating system deployment | Microsoft Docs
 description: "Make sure you know external dependencies and product dependencies before you use System Center 2012 Configuration Manager for operating system deployment."
 ms.custom: na
-ms.date: 08/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

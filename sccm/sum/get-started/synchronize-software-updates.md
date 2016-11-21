@@ -1,11 +1,11 @@
 ---
 
-title: Manage software updates synchronization | Configuration Manager
+title: Manage software updates synchronization | Microsoft Docs
 description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
 
-ms.date: 9/14/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

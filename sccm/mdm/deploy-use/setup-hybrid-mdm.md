@@ -1,8 +1,8 @@
 ---
-title: Setup hybrid MDM | System Center Configuration Manager and Microsoft Intune
+title: Setup hybrid MDM  | Microsoft Docs
 description: "Set up hybrid device enrollment with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 09/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -169,6 +169,7 @@ When you have created your subscription, you can then install the service connec
   - [Windows enrollment setup](#windows-enrollment-setup): Configure DNS and enable enrollment for both Windows PCs, Windows 10 Mobile, and Windows Phone devices
   - Android: Android devices require no additional steps to enable enrollment
 
+Once you enable MDM management, you can specify the number of devices each user can enroll, up to 15 devices per user.
 
 ### iOS and Mac enrollment setup
   The following steps enable management for Apple devices by uploading an Apple MDM Push certificate to the Intune service.
@@ -241,7 +242,7 @@ For additional information, see [Android](enroll-hybrid-android.md).
 - [Windows 10 and Windows 8.1 devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone devices](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS and Mac devices](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android and Samsung KNOX devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android and Samsung KNOX Standard devices](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **Applications** can be deployed to managed devices:
 - [iOS applications](/sccm/apps/get-started/creating-ios-applications)

@@ -1,8 +1,8 @@
 ---
-title: "How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager"
+title: "How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager | Microsoft Docs"
 description: "Understand how users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 03/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

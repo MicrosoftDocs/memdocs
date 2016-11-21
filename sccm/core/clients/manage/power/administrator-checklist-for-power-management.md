@@ -1,8 +1,8 @@
 ---
-title: "Administrator checklist for power management | System Center Configuration Manager"
+title: "Administrator checklist for power management | Microsoft Docs"
 description: "Use the administrator checklist to help you plan for and implement power management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

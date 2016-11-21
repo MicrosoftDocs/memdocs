@@ -1,8 +1,8 @@
 ---
-title: "Deploy configuration baselines | System Center Configuration Manager"
+title: "Deploy configuration baselines | Microsoft Docs"
 description: "Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

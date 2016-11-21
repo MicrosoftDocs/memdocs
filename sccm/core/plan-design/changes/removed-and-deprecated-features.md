@@ -1,8 +1,8 @@
 ---
-title: "Deprecated features | System Center Configuration Manager"
+title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,7 +30,8 @@ This topic describes features, products, and operating systems that are removed 
 |**Feature**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|√|  
-|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|  
+|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|
+|Task Sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |11/18/2016|Support for these task sequences ends with the first update released after June 1st, 2017|  
 
  **Deprecated server operating systems:**  
 

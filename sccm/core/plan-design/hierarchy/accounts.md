@@ -1,8 +1,8 @@
 ---
-title: "Accounts | System Center Configuration Manager"
+title: "Accounts used by Configuration Manager | Microsoft Docs"
 description: "Identify and manage the Windows groups and the accounts in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

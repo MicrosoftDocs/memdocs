@@ -1,8 +1,8 @@
 ---
-title: "Migrate content |System Center Configuration Manager"
+title: "Migrate content | Microsoft Docs"
 description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -162,7 +162,7 @@ If you decide not to upgrade a shared distribution point, you can still install 
  For more information about how to upgrade a shared distribution point, see [Planning to upgrade Configuration Manager 2007 shared distribution points](#Planning_to_Upgrade_DPs).  
 
 ##  <a name="BKMK_ReassignDistPoint"></a> Planning to Reassign System Center Configuration Manager Distribution Points  
- When you migrate from a supported version of System Center 2012 Configuration Manager to a hierarchy of the same version, you can reassign a shared distribution point from the source hierarchy to a site in the destination hierarchy. This is similar to the concept of upgrading a Configuration Manager 2007 distribution point to become a distribution point in the destination hierarchy. You can reassign distribution points from both primary sites and secondary sites. The action to reassign a distribution point removes the distribution point from the source hierarchy and makes the computer, and its distribution point, a site system server of the site that you select in the destination hierarchy.  
+ When you migrate from a supported version of System Center 2012 Configuration Manager to a hierarchy of the same version, you can reassign a shared distribution point from the source hierarchy to a site in the destination hierarchy. This is like the concept of upgrading a Configuration Manager 2007 distribution point to become a distribution point in the destination hierarchy. You can reassign distribution points from both primary sites and secondary sites. The action to reassign a distribution point removes the distribution point from the source hierarchy and makes the computer, and its distribution point, a site system server of the site that you select in the destination hierarchy.  
 
  When you reassign a distribution point, you do not have to redistribute migrated content that was hosted on the source site distribution point. Additionally, unlike the upgrade of a Configuration Manager 2007 distribution point, reassignment of a distribution point does not require additional disk space on the distribution point computer. This is because beginning with System Center 2012 Configuration Manager, distribution points use the single instance store format for content and the content on the distribution point computer does not need to be converted when the distribution point is reassigned between hierarchies.  
 
@@ -179,8 +179,23 @@ To identify distribution points that are eligible for reassignment in the Config
 
  To reassign the distribution point, the destination hierarchy uses the Source Site Access Account that is configured to gather data from the SMS Provider of the source site. For information about required permissions and additional prerequisites, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
+## Migrate multiple shared distribution points at the same time
+Beginning with version 1610, you can use the option to **Reassign Distribution point** to have Configuration Manager process in parllel the reassignment of up to 50 shared distribution points at the same time. This includes shared distribution points from supported source sites that run:  
+- Configuration Manager 2007
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 Configuration Manager
+- System Center Configuration Manager Current Branch site
+
+When you reassign distribution points, each distribution point must qualify to be either upgraded or reassigned. The name of the action and process involved, upgrade or reassign, depends on which version of Configuration Manager the source site runs. However, upgraded or reassigned, the end results are the same: The distribution point is assigned to one of your Current Branch sites with its content in-place.
+
+Prior to version 1610, Configuration Manager could process only one distribution point at a time. Now, you can reassign as many distribution points as you want with the following caveats:  
+- Although you  cannot multi-select distribution points to be reassigned, when you have queued up more than one, Configuration Manager will process them in parallel instead of waiting to complete one before starting the next.  
+- By default, up to 50 distribution points are processed in parallel at a time. After the reassignment of the first distribution point is complete, Configuration Manager will begin to process the 51st, and so on.  
+- When you use the Configuration Manager SDK, you can modify the property **SharedDPImportThreadLimit** to adjust the number of reassigned distribution points that Configuration Manager can process in parallel.
+
+
 ##  <a name="About_Migrating_Content"></a> Content ownership when migrating content  
- When you migrate content for deployments, you must assign the content object to a site in the destination hierarchy. This site then becomes the owner for that content in the destination hierarchy. Although the top-level site of your destination hierarchy is the site that actually migrates the metadata for content, it is the assigned site that accesses the original source files for the content across the network.  
+ When you migrate content for deployments, you must assign the content object to a site in the destination hierarchy. This site then becomes the owner for that content in the destination hierarchy. Although the top-level site of your destination hierarchy is the site that migrates the metadata for content, it is the assigned site that accesses the original source files for the content across the network.  
 
  To minimize the network bandwidth that is used when you migrate content, consider transferring ownership of content to a site in the destination hierarchy that is close on the network to the content location in the source hierarchy. Because information about the content in the destination hierarchy is shared globally, it will be available at every site.  
 

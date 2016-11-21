@@ -1,8 +1,8 @@
 ---
-title: "Hierarchy Maintenance Tool | System Center Configuration Manager"
+title: "Hierarchy Maintenance Tool | Microsoft Docs"
 description: "Understand what the Hierarchy Maintenance Tool does, and why you might use it. Includes command-line options reference."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

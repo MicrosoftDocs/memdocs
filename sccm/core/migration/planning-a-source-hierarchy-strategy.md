@@ -1,8 +1,8 @@
 ---
-title: "Source hierarchy strategy | System Center Configuration Manager"
+title: "Source hierarchy strategy | Microsoft Docs"
 description: "Configure a source hierarchy and gather data from a source site before you configure a System Center Configuration Manager migration job."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

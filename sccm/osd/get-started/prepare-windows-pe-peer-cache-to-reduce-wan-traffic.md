@@ -1,8 +1,8 @@
 ---
-title: Prepare Windows PE peer cache to reduce WAN traffic | Configuration Manager
+title: Prepare Windows PE peer cache to reduce WAN traffic | Microsoft Docs
 description: "The Windows PE Peer Cache works in the Windows PE to get content from a local peer and minimize WAN traffic when there's no local distribution point."
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

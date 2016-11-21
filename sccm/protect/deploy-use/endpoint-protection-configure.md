@@ -1,8 +1,8 @@
 ---
-title: "Configure Endpoint Protection | System Center Configuration Manager"
+title: "Configure Endpoint Protection | Microsoft Docs"
 description: "Learn how to set up Configuration Manager to update and distribute malware definitions for Windows Defender."
 ms.custom: na
-ms.date: 08/05/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

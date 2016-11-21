@@ -1,8 +1,8 @@
 ---
-title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Common tasks for managing compliance on devices not running the System Center Configuration Manager client | Microsoft Docs"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -92,7 +92,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Scenarios for Android and Samsung KNOX devices managed without the Configuration Manager client  
+## Scenarios for Android and Samsung KNOX Standard devices managed without the Configuration Manager client  
 
 ### Scenario: Require a password on all Android 5 devices  
  In this scenario, you'll create a configuration item for Android 5 devices only that requires users to configure a password of at least 6 characters on their devices. Additionally, if a user enters an incorrect password 5 times, then the device will be wiped.  
@@ -114,4 +114,3 @@ These scenarios give you an introduction to using System Center Configuration Ma
 5.  Complete the wizard to create the configuration item.  
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
-

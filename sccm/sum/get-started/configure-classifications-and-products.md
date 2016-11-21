@@ -1,10 +1,10 @@
 ---
 
-title: Configure classifications and products to synchronize | System Center Configuration Manager
+title: Configure classifications and products to synchronize | Microsoft Docs
 description: "Follow these steps to configure classifications and products to synchronize in the Configuration Manager console."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 9/27/2016
+ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

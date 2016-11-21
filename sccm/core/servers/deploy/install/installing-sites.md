@@ -1,8 +1,8 @@
 ---
-title: "Installing sites | System Center Configuration Manager"
+title: "Installing sites | Microsoft Docs"
 description: "Review a list of topics that help you install your first System Center Configuration Manager, or add sites to your hierarchy."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

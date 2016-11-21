@@ -1,8 +1,8 @@
 ---
-title: Monitor operating system deployments | Configuration Manager
+title: Monitor operating system deployments | Microsoft Docs
 description: "To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

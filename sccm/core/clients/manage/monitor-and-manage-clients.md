@@ -1,8 +1,8 @@
 ---
-title: "Monitor clients | System Center Configuration Manager"
+title: "Monitor clients | Microsoft Docs"
 description: "Learn how to monitor and manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

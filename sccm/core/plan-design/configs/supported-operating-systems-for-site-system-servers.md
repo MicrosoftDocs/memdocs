@@ -1,8 +1,8 @@
 ---
-title: "Supported site system servers | System Center Configuration Manager"
+title: "Supported site system servers | Microsoft Docs"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -28,6 +28,8 @@ Use the information in this topic with the information in the following articles
 
 
 ## Windows Server 2016   - Standard, Datacenter
+Windows Server 2016 is supported beginning with Configuration Manager version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606 which released in October of 2016).
+
 **Site servers:**  
 
 -   Central administration site  

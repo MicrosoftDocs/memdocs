@@ -1,8 +1,8 @@
 ---
-title: "Capabilities in Technical Preview 1605 for System Center Configuration Manager"
+title: "Capabilities in Technical Preview 1605 for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1605."
 ms.custom: na
-ms.date: 06/20/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -169,7 +169,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 -   [Create and deploy an enterprise data protection (EDP) policy using System Center Configuration Manager](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
 ##  <a name="BKMK_End"></a> End users can install apps from the Company Portal  
- On-premises MDM was introduced in the System Center Configuration Manager 1511 release. In previous versions, you could deploy applications to MDM-managed Windows 10 devices with a deployment purpose of **Required** install for on-premises MDM managed devices.  
+ On-premises MDM was introduced in the System Center Configuration Manager version 1511. In previous versions, you could deploy applications to MDM-managed Windows 10 devices with a deployment purpose of **Required** install for on-premises MDM managed devices.  
 
  In this release, you can now deploy apps with a deployment purpose of **Available** to users of on-premises MDM managed Windows 10 computers, and users can now install these apps themselves from the Company Portal.
 In this technical preview, if the Company Portal is open for more than 15 minutes, the end user will see an error message. To work around the issue, restart the Company Portal.  

@@ -1,8 +1,8 @@
 ---
-title: "Introduction to application management | System Center Configuration Manager"
+title: "Introduction to application management | Microsoft Docs"
 description: "Discover the basic information you’ll need to manage and deploy System Center Configuration Manager applications."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -98,4 +98,3 @@ Additionally, when you manage devices through Microsoft Intune or Configuration 
 -   Scripts that run on a recurring schedule and cannot use global evaluation  
 
  For more information, see [Packages and programs](../../apps/deploy-use/packages-and-programs.md).  
-

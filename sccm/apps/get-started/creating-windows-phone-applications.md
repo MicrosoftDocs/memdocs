@@ -1,8 +1,8 @@
 ---
-title: "Create Windows Phone applications | System Center Configuration Manager"
+title: "Create Windows Phone applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Windows Phone devices."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

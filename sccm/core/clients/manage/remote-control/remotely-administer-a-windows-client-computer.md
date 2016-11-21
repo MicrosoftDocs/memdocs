@@ -1,8 +1,8 @@
 ---
-title: "Remotely administer Windows computer | System Center Configuration Manager"
+title: "Remotely administer Windows computer | Microsoft Docs"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ Use the following procedure to remotely administer a computer in System Center C
 
  Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  
 
--   [Planning for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/planning-for-remote-control.md)  
+-   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
 -   [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
 
@@ -31,7 +31,7 @@ Use the following procedure to remotely administer a computer in System Center C
 
 -   At the Windows command prompt.  
 
--   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center 2012** program group.  
+-   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center** program group.  
 
 ### To remotely administer a client computer from the Configuration Manager console  
 
@@ -90,7 +90,7 @@ Use the following procedure to remotely administer a computer in System Center C
     >  CmRcViewer.exe supports the following command-line options:  
     >   
     >  -   *<Address\>* - Specifies the NetBIOS name, the fully qualified domain name (FQDN), or the IP address of the client computer that you want to connect to.  
-    > -   *<Site Server Name\>* - Specifies the name of the System Center 2012 Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
+    > -   *<Site Server Name\>* - Specifies the name of the System Center Configuration Manager site server to which you want to send status messages that are related to the remote control session.  
     > -   **/?** - Displays the command-line options for the remote control viewer.  
     >   
     >  **Example:CmRcViewer.exe** *<Address\>* *<\\\Site Server Name>*  

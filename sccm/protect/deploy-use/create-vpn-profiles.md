@@ -1,8 +1,8 @@
 ---
-title: "How to Create VPN profiles in System Center Configuration Manager"
+title: "How to Create VPN profiles in System Center Configuration Manager  | Microsoft Docs"
 description: "Learn how to create VPN profiles in System Center Configuration Manager."
-ms.custom: na
-ms.date: 10/13/2016
+ms.custom:
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
+author: nbigman
 caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 
 ---
-# How to Create VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to Create VPN profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 > [!NOTE]  
->  For information about what connection types are available for the different device platforms see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+>
+> - For information about what connection types are available for the different device platforms see [VPN profiles in System Center Configuration Manager](../../protect/deploy-use/vpn-profiles.md).  
+> - For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
 
 ### Start the Create VPN Profile Wizard  
 
@@ -118,12 +124,24 @@ ms.manager: angrobe
             > [!NOTE]  
             >  For iOS devices, the SCEP profile you select will be embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile is not installed if the certificate is not present, or not compliant.  
             >   
-            >  If the SCEP certificate you specify is not compliant, or has not been deployed, then the VPN profile 
+            >  If the SCEP certificate you specify is not compliant, or has not been deployed, then the VPN profile
             >  will not be installed on the device.
             >  
             >  Devices that run iOS support only RSA SecurID and MSCHAP v2 for the authentication method when the connection type is PPTP. To avoid reporting errors, deploy a separate PPTP VPN profile to devices that run iOS.  
 
-        -   For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  
+        - **Conditional access**
+			- Choose **Enable conditional access for this VPN connection** to ensure that devices that connect to the VPN are tested for conditional access compliance before connecting. Compliance policies are described in [Device compliance policies in System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)
+			- Choose **Enable single sign-on (SSO) with alternate certificate** to choose a certificate other than the VPN Authentication cert for device compliance. If you choose this option, provide the **EKU** (comma-separated list) and **Issuer Hash**, for the correct certificate that the VPN Client should locate.
+
+         - **Windows Information Protection** - provide the enterprise-managed corporate identity, which is usually your organization's primary domain, for example, *contoso.com*. You can specify multiple domains owned by your organization by separating them with the "|" character. For example, *contoso.com|newcontoso.com*.   
+	      	For information about Windows Information Protection, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune).   
+
+         ![Configure conditional access for VPN](../media/vpn-conditional-access.png)
+
+
+        > [!NOTE]  
+        >
+	    >For some authentication methods, you can click **Configure** to open the Windows properties dialog box (if the version of Windows on which you are running the System Center Configuration Manager console supports this authentication method) where you can configure the properties of the authentication method.  
 
 ### Configure Proxy Settings for the VPN Profile  
 
@@ -182,4 +200,6 @@ On the **Supported Platforms** page of the **Create VPN Profile Wizard**, select
 
 ### Next steps
 
- Deploy the VPN profile as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  
+- For third-party VPN connections, distribute the VPN app before deploying the VPN profile. If you don't deploy the app, users will be prompted to do so when they try to connect to the VPN. To learn how to deploy apps, see [Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications).
+
+- Deploy the VPN profile as described in [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md).  

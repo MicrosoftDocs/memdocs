@@ -1,8 +1,8 @@
 ---
-title: "Prerequisite checks | System Center Configuration Manager"
+title: "Prerequisite checks | Microsoft Docs"
 description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
-ms.date: 03/11/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

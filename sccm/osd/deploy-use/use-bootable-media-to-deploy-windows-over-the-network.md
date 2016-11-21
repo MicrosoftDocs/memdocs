@@ -1,8 +1,8 @@
 ---
-title: Use bootable media to deploy Windows over the network | Configuration Manager
+title: Use bootable media to deploy Windows over the network | Microsoft Docs
 description: "Use bootable media deployments in System Center Configuration Manager to deploy the operating system when the destination computer starts."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

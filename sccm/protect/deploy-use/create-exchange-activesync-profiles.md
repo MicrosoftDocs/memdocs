@@ -1,8 +1,8 @@
 ---
-title: "Create Exchange ActiveSync email profiles | System Center Configuration Manager"
+title: "Create Exchange ActiveSync email profiles | Microsoft Docs"
 description: "Learn how to create and configure email profiles in System Center Configuration Manager that work with Microsoft Intune."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ Email profiles works with  Microsoft Intune to enable you to provision devices w
 -   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
 
 > [!IMPORTANT]  
->  To deploy profiles to iOS, Android Samsung KNOX, Windows Phone, and Windows 8.1 or Windows 10 devices, these devices must be enrolled into Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
+>  To deploy profiles to iOS, Android Samsung KNOX Standard, Windows Phone, and Windows 8.1 or Windows 10 devices, these devices must be enrolled into Intune. For information about how to get your devices enrolled, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).  
 
  In addition to configuring an email account on the device, you can also configure synchronization settings for contacts, calendars and tasks.  
 
@@ -48,7 +48,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
 
 2.  In the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then click **Email Profiles**.  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**. 
+3.  On the **Home** tab, in the **Create** group, click **Create Exchange ActiveSync Profile**.
 
 4.  Follow the wizard instructions   
 
@@ -164,7 +164,7 @@ Start the Create Exchange ActiveSync Email Profile Wizard
         -   **Tasks**  
 
 ###  Specify Supported Platforms for the Exchange ActiveSync Email Profile.  
- 
+
 1.  On the **Supported Platforms** page of the Create Exchange ActiveSync Email Profile Wizard, select the operating systems on which the email profile will be installed, or click **Select all** to install the email profile on all available operating systems.  
 
 2.  Complete the wizard.

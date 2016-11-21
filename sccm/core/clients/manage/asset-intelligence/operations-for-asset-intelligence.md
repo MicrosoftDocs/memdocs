@@ -1,8 +1,8 @@
 ---
-title: "Use Asset Intelligence | System Center Configuration Manager"
+title: "Use Asset Intelligence | Microsoft Docs"
 description: "Do common Asset Intelligence tasks in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

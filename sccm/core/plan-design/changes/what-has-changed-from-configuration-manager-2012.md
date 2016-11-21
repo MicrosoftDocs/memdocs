@@ -1,8 +1,8 @@
 ---
-title: "Changes from Configuration Manager 2012 | System Center Configuration Manager "
+title: "Changes from Configuration Manager 2012 | Microsoft Docs "
 description: "Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -131,7 +131,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
     -   iOS and Mac OS X devices managed without the Configuration Manager client  
 
-    -   Android and Samsung KNOX devices managed without the Configuration Manager client  
+    -   Android and Samsung KNOX Standard devices managed without the Configuration Manager client  
 
      See [How to create configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-configuration-items.md).  
 

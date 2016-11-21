@@ -1,8 +1,8 @@
 ---
-title: "Client management Fundamentals | System Center Configuration Manager"
+title: "Client management Fundamentals | Microsoft Docs"
 description: "Learn about tasks that you can run to manage System Center Configuration Manager clients."
 ms.custom: na
-ms.date: 04/18/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,8 +1,8 @@
 ---
-title: "Uninstall sites | System Center Configuration Manager"
+title: "Uninstall sites | Microsoft Docs"
 description: "Use these details as a guide when you must uninstall a System Center Configuration Manager site."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

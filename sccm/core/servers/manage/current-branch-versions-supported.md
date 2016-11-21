@@ -1,8 +1,8 @@
 ---
-title: "Current Branch versions | System Center Configuration Manager"
+title: "Current Branch versions | Microsoft Docs"
 description: "Review the version history of System Center Configuration Manager, and learn about the phases of service offered."
 ms.custom: na
-ms.date: 07/22/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,3 +35,6 @@ Figure 1. Example of current branch servicing support.
 |1511|12/8/2015|12/8/2016|  
 |1602|3/11/2016|3/11/2017|
 |1606|7/22/2016|7/22/2017|
+|1610|11/18/2016|11/18/2017|
+
+For information about version numbers and availability as an in-console update or as a baseline, see [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions).

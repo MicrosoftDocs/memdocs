@@ -1,8 +1,8 @@
 ---
-title: "Run discovery | System Center Configuration Manager"
+title: "Run discovery | Microsoft Docs"
 description: "Read an overview of the discovery process and discovery data records."
 ms.custom: na
-ms.date: 04/28/2016
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

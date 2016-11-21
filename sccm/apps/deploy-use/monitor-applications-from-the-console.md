@@ -1,8 +1,8 @@
 ---
-title: "Monitor applications from the System Center Configuration Manager console | System Center Configuration Manager"
+title: "Monitor applications from the System Center Configuration Manager console | Microsoft Docs"
 description: "Monitor deployment of software, including updates, compliance settings, and applications by using the Monitoring workspace in Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2015
+ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,9 +35,9 @@ In System Center Configuration Manager, you can monitor the deployment of all so
 -   **Requirements Not Met** – The application was not deployed because it was not compliant with a dependency or a requirement rule, or because the operating system to which it was deployed was not applicable.  
 
 -   **Error** – The application failed to deploy because of an error.  
-  
+
 You can view additional information for each compliance state, which includes subcategories within the compliance state and the number of users and devices in this category. For example, the **Error** compliance state includes the following subcategories:  
-  
+
 -   Error evaluating requirements  
 
 -   Content related errors  
@@ -49,19 +49,19 @@ You can view additional information for each compliance state, which includes su
 -   If a user logs in to two devices and the application is successfully installed on one device but fails to install on the second device, the aggregate deployment state of the application for that user displays as **Error**.  
 
 -   If an application is deployed to all users that log on to a computer, you will receive multiple deployment results for that computer. If one of the deployments fails, the aggregate deployment state for the computer displays as **Error**.  
-  
+
 The deployment state for package and program deployments is not aggregated.  
-  
+
  Use these subcategories to help you to quickly identify any important issues with an application deployment. You can also view additional information about the devices that fall into a particular subcategory of a compliance state.  
 
  Application management in Configuration Manager includes a number of built-in reports that allow you to monitor information about applications and deployments. These reports have the report category of **Software Distribution – Application Monitoring**.  
 
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
-  
+
 ## Monitor the state of an application in the Configuration Manager console  
-  
+
 1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.  
-  
+
 3.  To review deployment details for each compliance state and the devices in that state, select a deployment, and then, on the **Home** tab, in the **Deployment** group, click **View Status** to open the **Deployment Status** pane. In this pane, you can view the assets with each compliance state. Click any asset to view more detailed information about the deployment status to that asset.  
 
     > [!NOTE]  
