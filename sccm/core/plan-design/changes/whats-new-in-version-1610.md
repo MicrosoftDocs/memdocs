@@ -28,7 +28,7 @@ Update 1610 for System Center Configuration Manager current branch is an update 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
 
 
-## In-console monitoring of update installation status
+## In-console monitoring of update installation status  
 Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
@@ -104,6 +104,9 @@ For details, see the **Windows Defender** section in [Create configuration items
 - Users can now request apps from Software Center, as well as the Application Catalog.
 - Improvements to help users understand what software is new and relevant.
 
+## New columns in device collection views
+You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
+For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
 ## Customizable Branding for Software Center Dialogs
 Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
