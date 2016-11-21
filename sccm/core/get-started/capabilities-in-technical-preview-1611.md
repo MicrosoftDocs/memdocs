@@ -22,13 +22,13 @@ manager: angrobe
 
 
 
-This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 
 **The following are new features you can try out with this version.**  
 
 ## Pre-cache content for available deployments and task sequences
-Starting in Configuration Manager version 1611, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients only download relevant content before a user chooses to install the content.  , instead of content for all architectures and/or languages, in available deployments and task sequences.
+In this technical preview, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
 
 For example, let's say you want to deploy a Windows 10 in-place upgrade task sequence, only want a single task sequence for all users, and have multiple architectures and/or languages. In Current Branch, if you create an available deployment, and then the user clicks **Install** in Software Center, the content downloads at that time. This adds additional time before the installation is ready to start. Alternatively, in Current Branch if you create an available task sequence deployment, all content referenced in the task sequence is downloaded. This includes the operating system upgrade package for all languages and architectures. If each is roughly 3 GB in size, the download package can be quite large.
 
@@ -36,17 +36,19 @@ The pre-cache content feature gives you the option to allow the client to only d
 
 ### To configure the pre-cache feature
 
-1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
+1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of the package. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
 
-    The architecture and language values are used to match task sequence step conditions that you will create in the next step to determine whether the operating system upgrade package is pre-cached.
-2. Create a task sequence with conditional steps for the different languages and architectures.
+    The architecture and language values are used to match task sequence step conditions that you will create in the next step to determine whether the operating system upgrade package should be pre-cached.
+2. Create a task sequence with conditional steps for the different languages and architectures. For example, for the English version you could create a step like the following:
 
-    ------ *insert images here* ------
+    ![pre-cache properties](media/precacheproperties2.png)
 
-3. Deploy the task sequence. For the pre-cache feature, consider the following:
+    ![pre-cache options](media/precacheoptions2.png)  
+
+3. Deploy the task sequence. For the pre-cache feature, configure the following:
     - On the **General** tab, select **Pre-download content for this task sequence**.
     - On the **Deployment settings** tab, configure the task sequence with the **Available** for **Purpose**. If you create a **Required** deployment, the pre-cache functionality will not work.
-    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users.   
+    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users. For example, you can set the available time to be 3 hours in the future to allow enough time for the content to be pre-cached.  
     - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content is not pre-cached on a client before a user starts the installation, these settings are used.
 
 
