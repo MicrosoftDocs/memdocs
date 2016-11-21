@@ -436,4 +436,4 @@
 #### [How to Determine Package Status](core/servers/manage/how-to-determine-package-status.md)
 #### [How to Determine Advertisement Status](core/servers/manage/how-to-determine-advertisement-status.md)
 
-## [Configuration Manager Reference](reference/TOC.md)
+## [Configuration Manager Reference](reference/configuration-manager-reference.md)
