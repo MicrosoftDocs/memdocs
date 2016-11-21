@@ -108,7 +108,7 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
 -   **Managed Browser**: The Managed Browser policy lets you decide whether to allow or block the managed browser from opening a list of URLs. The Managed Browser policy type lets you modify the functionality of the Intune Managed Browser app. This is a web browser that lets you manage the actions that users can perform, including the sites they can visit, and how links to content within the browser are opened. Learn more about the  [Intune Managed Browser app for iOS](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) and [the Intune Managed Browser app for Android](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en).  
 
-6.  On the **iOS Policy** or **Android Policy** page, configure the following values as required, and then click **Next**. The options might differ depending on the device type for which you are configuring the policy.  
+5)  On the **iOS Policy** or **Android Policy** page, configure the following values as required, and then click **Next**. The options might differ depending on the device type for which you are configuring the policy.  
 
 |Value|More information|  
 |-----------|----------------------|  
@@ -126,12 +126,12 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 |**Encrypt app data**|Specifies that all data that is associated with this app is encrypted, including data that's stored externally, such as data stored on SD cards.<br /><br /> **Encryption for iOS**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, data is encrypted at rest using device-level encryption that's provided by the OS. This is enabled through a device PIN policy that must be set by the IT admin. When a PIN is required, the data is encrypted per the settings in the mobile application management policy. As stated in Apple documentation, [the modules that are used by iOS 7 are FIPS 140-2 certified](http://support.apple.com/en-us/HT202739).<br /><br /> **Encryption for Android**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, encryption is provided by Microsoft. Data is encrypted synchronously during file I/O operations according to the setting in the mobile application management policy. Managed apps on Android use AES-128 encryption in CBC mode utilizing the platform cryptography libraries. The encryption method is not FIPS 140-2 certified. Content on the device storage is always encrypted.|  
     |**Block screen capture** (Android devices only)|Specifies that the screen capture capabilities of the device are blocked when using this app.|  
 
-5)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, manage the URLs in the list, and then click **Next**.  
+6)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, manage the URLs in the list, and then click **Next**.  
 
-    > [!WARNING]  
+> [!WARNING]  
     >  For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
 
-6)  Complete the wizard.  
+7)  Complete the wizard.  
 
  The new policy is displayed in the **Application Management Policies** node of the **Software Library** workspace.  
 
