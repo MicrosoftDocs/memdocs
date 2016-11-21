@@ -44,11 +44,11 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 
 ##  Step 1: Obtain the link to a policy managed app or create a wrapped app  
 
--   **To obtain a link to a policy managed app** - From the app store, find, and note the URL of the policy managed app you want to deploy.  
+-   **To obtain a link to a policy managed app**: From the app store, find, and note the URL of the policy managed app you want to deploy.  
 
      For example, the URL of the Microsoft Word for iPad app is **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **To create a wrapped app** - Use the information in the topics [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx) to create a wrapped app.  
+-   **To create a wrapped app**: Use the information in the topics [Prepare iOS apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/dn878028.aspx) and [Prepare Android apps for mobile application management with the Microsoft Intune App Wrapping Tool](https://technet.microsoft.com/en-us/library/mt147413.aspx) to create a wrapped app.  
 
      The tool creates a processed app and an associated manifest file. You use these files when you create a Configuration Manager application that contains the app.  
 
