@@ -1,7 +1,7 @@
 ---
 title: "Plan for cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 11/18/2016
+ms.date: 11/22/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -94,7 +94,7 @@ Cloud management gateway uses the following Microsoft Azure functionality, which
 
     -   Internet-based clients managed with cloud management gateway will get software update content from Windows Update at no charge.
 
-    -   Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, cloud management gateway does not support using a standard distribution point site system role for sending content to clients.
+    -   Any other necessary content (for example, applications) must be distributed to a cloud-based distribution point. Currently, cloud management gateway supports only Cloud Distribution Point for sending content to clients.
 
     - See the cost of using a [cloud-based distribution](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution) for more details.
 
