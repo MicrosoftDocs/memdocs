@@ -42,7 +42,7 @@ Before you configure the service connection point, understand and plan for its a
 
 -   The service connection point is used to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information see [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
--   The service connection point is used to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information see   [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+-   The service connection point is used to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information see   [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 To better understand what happens updates are downloaded, see:  
 

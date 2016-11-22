@@ -2,7 +2,7 @@
 title: Deploy and use mobile device management | Microsoft Docs
 description: "Learn about different ways to manage mobile devices with System Center Configuration Manager."
 keywords:
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
