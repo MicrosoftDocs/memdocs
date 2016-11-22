@@ -2,7 +2,7 @@
 title: "Create certificate profiles | Microsoft Docs"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/20/2016
+ms.date: 11/22/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # How to create SCEP certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-Use certificate profiles to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
+Use certificate profiles in Configuration Manager (SCCM) to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
 
 This topic describes how to create trusted root and SCEP certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md).
 
@@ -131,7 +131,8 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
  -   **Subject name format**: From the list, select how System Center Configuration Manager automatically creates the subject name in the certificate request. If the certificate is for a user, you can also include the user's email address in the subject name. 
     
    > [!NOTE]  
-   >  Selecting **IMEI number** or **Serial number** enables you to differentiate between different devices that are owned by the same user. For example, those devices could share a common name, but not an IMEI number or serial number.
+   > 
+   > Selecting **IMEI number** or **Serial number** enables you to differentiate between different devices that are owned by the same user. For example, those devices could share a common name, but not an IMEI number or serial number. If the device does not report an IMEI or serial number, the certificate will be issued with the common name.
 
  -   **Subject alternative name**: Specify how System Center Configuration Manager automatically creates the values for the subject alternative name (SAN) in the certificate request. For example, if you selected a user certificate type, you can include the user principal name (UPN) in the subject alternative name.  If the client certificate will be used to authenticate to a Network Policy Server, you must set the subject alternative name to the UPN.  
 
