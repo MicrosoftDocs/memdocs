@@ -156,4 +156,4 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 
 ## For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
-- [How to configure client settings](../clients/deploy/configure-client-settings.md)
+- [How to configure client settings](../../core/clients/deploy/configure-client-settings.md)
