@@ -12,11 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 309b7936-a5ca-45c5-8bef-10424eb2e091
 caps.latest.revision: 13
-author: robstackmsftms.author: robstack
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
-# Protect apps using mobile application management policies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Protect apps using mobile application management policies in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager application management policies let you modify the functionality of apps that you deploy to help bring them in line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app, or configure an app to open all URLs inside a managed browser. App management policies support:  
 
 -   Devices that run Android 4 and later  
@@ -126,10 +130,8 @@ To apply restrictions to an app, the app must incorporate the Microsoft Intune A
 |**Encrypt app data**|Specifies that all data that is associated with this app is encrypted, including data that's stored externally, such as data stored on SD cards.<br /><br /> **Encryption for iOS**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, data is encrypted at rest using device-level encryption that's provided by the OS. This is enabled through a device PIN policy that must be set by the IT admin. When a PIN is required, the data is encrypted per the settings in the mobile application management policy. As stated in Apple documentation, [the modules that are used by iOS 7 are FIPS 140-2 certified](http://support.apple.com/en-us/HT202739).<br /><br /> **Encryption for Android**<br /><br /> For apps that are associated with a Configuration Manager mobile application management policy, encryption is provided by Microsoft. Data is encrypted synchronously during file I/O operations according to the setting in the mobile application management policy. Managed apps on Android use AES-128 encryption in CBC mode utilizing the platform cryptography libraries. The encryption method is not FIPS 140-2 certified. Content on the device storage is always encrypted.|  
     |**Block screen capture** (Android devices only)|Specifies that the screen capture capabilities of the device are blocked when using this app.|  
 
-6)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, manage the URLs in the list, and then choose **Next**.  
-
-> [!WARNING]  
-> For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
+6)  On the **Managed Browser** page, select whether the managed browser is allowed to open only URLs in the list or to block the managed browser from opening the URLs in the list, and then choose **Next**.  
+For more information, see [Manage Internet access using managed browser policies](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md).  
 
 7)  Complete the wizard.  
 
