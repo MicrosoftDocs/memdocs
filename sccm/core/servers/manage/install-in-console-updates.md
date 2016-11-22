@@ -42,7 +42,7 @@ Before you configure the service connection point, understand and plan for its a
 
 -   The service connection point is used to upload usage information about your site. This information helps the Microsoft cloud service identify the updates that are available for the current version of your infrastructure. For more information see [Diagnostics and usage data for System Center Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
--   The service connection point is used to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information see   [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+-   The service connection point is used to manage devices with Microsoft Intune, and using Configuration Manager on-premises mobile device management. For more information see   [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 To better understand what happens updates are downloaded, see:  
 
@@ -342,7 +342,7 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 | Cloud management gateway |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Client Data Sources dashboard |  [Version 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft Operations Management Suite (OMS) Connector  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Servicing a cluster aware collection (Service a server group)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Servicing a cluster aware collection (Service a server group)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |Conditional access for PCs managed by System Center Configuration Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
@@ -366,4 +366,4 @@ On a site server you can configure service windows to control when infrastructur
 
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
-    See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
+    See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.

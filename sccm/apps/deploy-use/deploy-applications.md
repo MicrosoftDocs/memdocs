@@ -53,7 +53,7 @@ On the **General** page of the Deploy Software wizard, specify the following inf
 
 ### Specify content options for the deployment
 
-On the **Content** page, click **Add** to add the content associated with this deployment to distribution points or distribution point groups. If you have selected **Use default distribution points associated to this collection** on the **General** page, then this option will be automatically populated and can only be modified by a member of the Application Administrator security role.
+On the **Content** page, click **Add** to add the content associated with this deployment to distribution points or distribution point groups. If you have selected **Use default distribution points associated to this collection** on the **General** page, then this option will be automatically populated and can only be modified by a member of the Application Administrator security role. 
 
 ### Specify deployment settings
 
@@ -70,8 +70,8 @@ You cannot change the action of a deployment after it has been created.
 	- **Available**--If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.
 	- **Required**--The application is deployed automatically according to the schedule. If the application deployment status is not hidden, anyone using the application can track its deployment status and install the application from Software Center before the deadline.
 
-	> [!NOTE]
-	>  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.
+	> [!NOTE]   
+	>  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.  
 
 - **Deploy automatically according to schedule whether or not a user is logged on**--If the deployment is to a user, select this option to deploy the application to the user’s primary devices. This setting does not require the user to log on before the deployment runs. Do not select this option if the user must provide input to complete the installation. This option is only available when the deployment has a purpose of **Required**.
 
@@ -106,6 +106,7 @@ After the application install deadline is reached, the application will be insta
 If the application you are deploying supersedes another application, you can set the installation deadline when users will receive the new application. Do this by using the setting **Installation Deadline** to upgrade users with the superseded application.
 
 ### Specify user experience settings for the deployment
+
 
 On the **User Experience** page of the Deploy Software wizard, specify information about how users can interact with the application installation.
 
@@ -152,7 +153,6 @@ The maximum snooze time is always based on the notification values configured in
 Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required:
 
 ![Required Software dialog](media/client-toast-notification.png)
-
 
 ## For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
