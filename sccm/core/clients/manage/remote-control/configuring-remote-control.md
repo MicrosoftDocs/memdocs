@@ -1,5 +1,5 @@
 ---
-title: "Configure remote control | System Center Configuration Manager"
+title: "Configure remote control | Microsoft Docs"
 description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,7 +34,7 @@ Before you can use remote control in System Center Configuration Manager, you mu
 
 5.  In the **Default**  dialog box, click **Remote Tools**.  
 
-6.  Configure the remote control, Remote Assistance and Remote Desktop client settings that you require. For a list of remote tools client settings that you can configure, see the section [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#BKMK_RemoteToolsDeviceSettings) in the topic [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
+6.  Configure the remote control, Remote Assistance and Remote Desktop client settings that you require. For a list of remote tools client settings that you can configure, see the section [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#remote-tools) in the topic [About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md).  
 
     > [!NOTE]  
     >  You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.  

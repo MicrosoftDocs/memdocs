@@ -1,5 +1,5 @@
 ---
-title: "Data transfers | System Center Configuration Manager"
+title: "Data transfers | Microsoft Docs"
 description: "Learn how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network."
 ms.custom: na
 ms.date: 10/06/2016

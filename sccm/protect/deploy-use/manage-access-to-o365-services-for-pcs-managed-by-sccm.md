@@ -1,8 +1,8 @@
 ---
-title: "Manage access to O365 services for managed PCs | System Center Configuration Manager"
+title: "Manage access to O365 services for managed PCs | Microsoft Docs"
 description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,7 +21,7 @@ author: karthikaramanms.author: karamanmanager: angrobe
  Beginning with version 1602 of Configuration Manager, you can configure conditional access for PCs managed by System Center Configuration Manager.  
 
 > [!IMPORTANT]  
->  This is a pre-release feature available in update 1602 and update 1606. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. For more information, see [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
+>  This is a pre-release feature available in update 1602,update 1606, and update 1610. Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. For more information, see [Use pre-release features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 > - After you install update 1602, the feature type displays as released even though it is pre-release.
 > - If you then update from 1602 to 1606, the feature type displays as released even through it remains pre-release.
 > - If you update from version 1511 directly to 1606, the feature type displays as pre-release.
@@ -87,9 +87,9 @@ author: karthikaramanms.author: karamanmanager: angrobe
 
  Active Directory security user groups. These user groups should be synchronized to Azure Active Directory. You can also configure these groups in the Office 365 admin center, or the Intune account portal.  
 
- You can specify two group types in each policy:  
+ You can specify two group types in each policy. :  
 
--   **Targeted groups** - User groups  to which the policy is applied  
+-   **Targeted groups** - User groups  to which the policy is applied. The same group should be used both for compliance and conditional access policy.  
 
 -   **Exempted groups** - User groups that are exempt from the policy (optional)  
     If a user is in both, they will be exempt from the policy.  
@@ -117,7 +117,7 @@ author: karthikaramanms.author: karamanmanager: angrobe
 6.  Under **Targeted Groups**, click **Modify** to select the Azure Active Directory security groups to which the policy will apply.  
 
     > [!NOTE]  
-    >  The users groups to which the conditional access policies are applied should also have the compliance policy applied to them.  
+    >  The same security user group should be used for deploying compliancy policy and the Targeted Group for conditional access policy.  
 
      Under **Exempted Groups**, optionally, click **Modify** to select the Azure Active Directory security groups that are exempt from this policy.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Manage Skype for Business Online access | System Center Configuration Manager"
+title: "Manage Skype for Business Online access | Microsoft Docs"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
 ms.date: 10/06/2016

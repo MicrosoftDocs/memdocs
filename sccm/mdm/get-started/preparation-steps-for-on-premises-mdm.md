@@ -1,5 +1,5 @@
 ---
-title: "Preparation steps | On-premises MDM | System Center Configuration Manager"
+title: "Preparation steps  | Microsoft Docs | On-premises MDM"
 description: "Prepare to manage devices with On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

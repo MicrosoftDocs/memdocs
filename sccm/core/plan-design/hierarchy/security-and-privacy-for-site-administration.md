@@ -1,5 +1,5 @@
 ---
-title: "Site administration security and privacy | System Center Configuration Manager"
+title: "Site administration security and privacy | Microsoft Docs"
 description: "Optimize security and privacy for site administration in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

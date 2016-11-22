@@ -1,8 +1,8 @@
 ---
-title: "Client settings | System Center Configuration Manager"
+title: "Client settings | Microsoft Docs"
 description: "Select client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,80 +20,108 @@ All client settings in System Center Configuration Manager are managed in the Co
 
  Many of the client settings are self-explanatory. Use the following sections for more information about the client settings that might require some information before you configure them.  
 
-##  <a name="BKMK_BITS"></a> Background Intelligent Transfer  
+## Background Intelligent Transfer  
 
 -   **Limit the maximum network bandwidth for BITS background transfers**  
 
-     If this option is configured as **True** or **Yes**, BITS bandwidth throttling will be used by Configuration Manager clients.  
+   If this option is configured as **True** or **Yes**, BITS bandwidth throttling will be used by Configuration Manager clients.  
 
 -   **Throttling window start time**  
 
-     Specify the start time in local time that the BITS throttling window will begin.  
+   Specify the start time in local time that the BITS throttling window will begin.  
 
 -   **Throttling window end time**  
 
-     Specify the end time in local time that the BITS throttling window will end. If this value is the same as the **Throttling window start time**, BITS throttling is always enabled.  
+   Specify the end time in local time that the BITS throttling window will end. If this value is the same as the **Throttling window start time**, BITS throttling is always enabled.  
 
 -   **Maximum transfer rate during throttling window (Kbps)**  
 
-     Specify the maximum transfer rate in (Kbps) that can be used by Configuration Manager clients during the specified BITS throttling window.  
+   Specify the maximum transfer rate in (Kbps) that can be used by Configuration Manager clients during the specified BITS throttling window.  
 
 -   **Allow BITS downloads outside the throttling window**  
 
-     Select this option to allow BITS downloads outside of the throttling window. This option allows Configuration Manager clients to use separate BITS settings outside of the specified window.  
+   Select this option to allow BITS downloads outside of the throttling window. This option allows Configuration Manager clients to use separate BITS settings outside of the specified window.  
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-     Specify the maximum transfer rate in (Kbps) that will be used by Configuration Manager clients when outside of the specified BITS throttling window. This option can be configured only when you have selected to allow BITS throttling outside of the specified window.  
+   Specify the maximum transfer rate in (Kbps) that will be used by Configuration Manager clients when outside of the specified BITS throttling window. This option can be configured only when you have selected to allow BITS throttling outside of the specified window.  
 
-##  <a name="BKMK_ClientPolicyDeviceSettings"></a> Client Policy  
+## Client Cache Settings
+
+- **Configure BranchCache**
+
+  Beginning in version 1606, specify to set up the client computer for BranchCache. To allow BranchCache caching to occur on the client, **Enable BranchCache** must be **Yes**. For understand more about BranchCache, see [Support for Windows features and network](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache).
+
+- **Enable BranchCache**
+
+  Beginning in version 1606, specify to allow BranchCache caching to occur on the client computer.
+
+- **Maximum BrancheCache cache size (percentage of disk)**
+
+  Beginning in version 1606, specify the maximum size of the BranchCache cache in a percentage of disk size.
+
+- **Configure client cache size**
+
+  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in version 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
+
+  Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
+
+- **Maximum cache size (MB)**
+
+Beginning in version 1606, specify the maximum size of the client cache folder in megabytes.
+
+- **Maximum cache size (percentage of disk)** (beginning in version 1606)
+
+Beginning in version 1606, specify the maximum size of the client cache folder in a percentage of disk size.
+
+## Client Policy  
 
 -   **Client policy polling interval (minutes)**  
 
-     Specify how frequently the following Configuration Manager clients download client policy:  
+   Specify how frequently the following Configuration Manager clients download client policy:  
 
-    -   Windows computers (for example, desktops, servers, laptops)  
+  -   Windows computers (for example, desktops, servers, laptops)  
 
-    -   Mobile devices that are enrolled by Configuration Manager  
+  -   Mobile devices that are enrolled by Configuration Manager  
 
-    -   Mac computers  
+  -   Mac computers  
 
-    -   Computers that run Linux or UNIX  
+  -   Computers that run Linux or UNIX  
 
 -   **Enable user policy polling on clients**  
 
-     When you configure this setting as **True** or **Yes**, and Configuration Manager has discovered the user, Configuration Manager clients on computers receive applications and programs that are targeted to the logged on user. For more information about how to discover users, see  [Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
+   When you configure this setting as **True** or **Yes**, and Configuration Manager has discovered the user, Configuration Manager clients on computers receive applications and programs that are targeted to the logged on user. For more information about how to discover users, see  [Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
 
-     Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be configured as **True** or **Yes** for users to see and request applications from the Application Catalog. However, if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
+   Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be configured as **True** or **Yes** for users to see and request applications from the Application Catalog. However, if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
 
-    -   Users cannot install the applications that they see in the Application Catalog.  
+  -   Users cannot install the applications that they see in the Application Catalog.  
 
-    -   Users will not see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
+  -   Users will not see notifications about their application approval requests. Instead, they must refresh the Application Catalog and check the approval status.  
 
-    -   Users will not receive revisions and updates for applications that are published to the Application Catalog. However, they will see changes to application information in the Application Catalog.  
+  -   Users will not receive revisions and updates for applications that are published to the Application Catalog. However, they will see changes to application information in the Application Catalog.  
 
-    -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to 2 days.  
+  -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to 2 days.  
 
-     In addition, when this setting is **False** or **No**, users will not receive required applications that you deploy to users or any other management operations that are contained in user policies.  
+   In addition, when this setting is **False** or **No**, users will not receive required applications that you deploy to users or any other management operations that are contained in user policies.  
 
-     This setting applies to users when their computer is on the intranet and the Internet; it must be configured as **True** or **Yes** if you also want to enable user policies on the Internet.  
+   This setting applies to users when their computer is on the intranet and the Internet; it must be configured as **True** or **Yes** if you also want to enable user policies on the Internet.  
 
 -   **Enable user policy requests from Internet clients**  
 
-     When the client and site is configured for Internet-based client management and you configure this option as **True** or **Yes** and both of the following conditions apply, users receive user policy when their computer is on the Internet:  
+   When the client and site is configured for Internet-based client management and you configure this option as **True** or **Yes** and both of the following conditions apply, users receive user policy when their computer is on the Internet:  
 
-    -   The **Enable user policy polling on clients** client setting is configured as **True** or **Enable user policy on clients** is configured as **Yes**.  
+  -   The **Enable user policy polling on clients** client setting is configured as **True** or **Enable user policy on clients** is configured as **Yes**.  
 
-    -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
+  -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
 
-     If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is configured as **True** or **Enable user policy on clients** is configured as **Yes**, users will not receive user policies until the computer is connected to the intranet.  
+   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is configured as **True** or **Enable user policy on clients** is configured as **Yes**, users will not receive user policies until the computer is connected to the intranet.  
 
-     For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
+   For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
-    > [!NOTE]  
-    >  Application approval requests from users do not require user policies or user authentication.  
+  > [!NOTE]  
+  >  Application approval requests from users do not require user policies or user authentication.  
 
-##  <a name="BKMK_Compliance"></a> Compliance Settings  
+##  Compliance Settings  
 
 -   **Schedule compliance evaluation**  
 
@@ -105,7 +133,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      For more information about user data and profiles, see [How to create user data and profiles configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
 
-##  <a name="BKMK_ComputerAgentDeviceSettings"></a> Computer Agent  
+## Computer Agent  
 
 -   **Default Application Catalog website point**  
 
@@ -238,12 +266,17 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      If required software updates must install without delay when the configured deadline is reached, select **Yes** for this setting.  
 
-##  <a name="BKMK_ComputerRestartDeviceSettings"></a> Computer Restart  
+-   **Grace period for enforcement after deployment deadline (hours)** 
+	
+	 In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can define an enforcement grace period by deploying Configuration Manager client settings to a collection.
+	You can set a grace period of between 1 and 120 hours. This setting is used in conjunction with the deployment property **Delay enforcement of this deployment according to user preferences**. For more details, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
+
+##  Computer Restart  
  When you specify these computer restart settings, ensure that the value for the restart temporary notification interval and the value for the final countdown interval are shorter in duration than the shortest maintenance window that is applied to the computer.  
 
  For more information about maintenance windows, see [How to use maintenance windows in System Center Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-##  <a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  Endpoint Protection  
 
 -   **Manage Endpoint Protection client on client computers**  
 
@@ -281,7 +314,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select **True** or **Yes** if you want Configuration Manager to only install the initial definition update on client computers. This setting can be helpful to avoid unnecessary network connections and reduce network bandwidth during the initial installation of the definition update.  
 
-##  <a name="BKMK_HardwareInventoryDeviceSettings"></a> Hardware Inventory  
+##  Hardware Inventory  
 
 -   **Maximum custom MIF file size (KB)**  
 
@@ -307,7 +340,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!NOTE]  
     >  This setting is only available in the default client settings.  
 
-##  <a name="BKMK_MeteredInternetConnetionsSettings"></a> Metered Internet Connections  
+##  Metered Internet Connections  
  You can manage how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  
 
 > [!NOTE]  
@@ -339,7 +372,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
     -   **Block**: The Configuration Manager client does not attempt to communicate with Configuration Manager sites when it is on a metered Internet connection. This is the default value.  
 
-##  <a name="BKMK_PowMgmtDeviceSettings"></a> Power Management  
+##  Power Management  
 
 -   **Allow users to exclude their device from power management**  
 
@@ -367,7 +400,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  This number must match the number in the site **Properties**. If you change this number in one place, it does not automatically update in the other place.  
 
-##  <a name="BKMK_RemoteToolsDeviceSettings"></a> Remote Tools  
+##  Remote Tools  
 
 -   **Enable Remote Control on clients** and **Firewall exception profiles**  
 
@@ -451,7 +484,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select this more secure option if you want to use network-level authentication to establish Remote Desktop connections to client computers that run Windows Vista or later. Network-level authentication requires fewer remote computer resources initially because it completes user authentication before it establishes a Remote Desktop connection. This method is more secure because it can help protect the computer from malicious users or software, and it reduces the risk from denial-of-service attacks.  
 
-##  <a name="BKMK_SoftwareDeploymentDeviceSettings"></a> Software Deployment  
+## Software Deployment  
 
 -   **Schedule re-evaluation for deployments**  
 
@@ -462,7 +495,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      You can also initiate this action from a Configuration Manager client computer by selecting the action **Application Deployment Evaluation Cycle** from the **Actions** tab of **Configuration Manager** in Control Panel.  
 
-##  <a name="BKMK_SoftInventoryDeviceSettings"></a> Software Inventory  
+##  Software Inventory  
 
 -   **Inventory reporting detail**  
 
@@ -515,7 +548,7 @@ All client settings in System Center Configuration Manager are managed in the Co
         >   
         >  The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box displays the maximum size for all collected files. When this size is reached, file collection will stop. Any files already collected are retained and sent to the site server.  
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         >  If you configure software inventory to collect many large files, this might negatively affect the performance of your network and site server.  
 
          For information about how to view collected files, see [How to use Resource Explorer to view software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md).  
@@ -534,7 +567,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
     -   **Inventoried names:** - Click the New icon to add a new inventoried name which will be replaced in software inventory by the name selected in the **Display name** list. You can add multiple names that will be replaced.  
 
-##  <a name="BKMK_SoftwareUpdatesDeviceSetting"></a> Software Updates  
+##  Software Updates  
 
 -   **Enable software updates on clients**  
 
@@ -572,7 +605,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Use this setting to specify the timeframe for the previous setting. You can enter a value from 1 to 23 hours and from 1 to 365 days. By default, this setting is configured for 7 days.  
 
-##  <a name="BKMK_UserDeviceAffinityDeviceSettings"></a> User and Device Affinity  
+##  User and Device Affinity  
 
 -   **User device affinity usage threshold (minutes)**  
 
@@ -589,23 +622,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
      Select **True** or **Yes** to enable Configuration Manager to automatically create user device affinities based on the usage information that is collected.  
 
-## Client Cache Settings
-
-- **Configure client cache size**
-
-  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in version 1606, select **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
-
-  Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
-
-- **Maximum cache size (MB)**
-
-  Beginning in version 1606, specify the maximum size of the client cache folder in megabytes.
-
-- **Maximum cache size (percentage of disk)** (beginning in version 1606)
-
-  Beginning in version 1606, specify the maximum size of the client cache folder in a percentage of disk size.
-
-##  <a name="BKMK_MobileDevicesUserSettings"></a> Mobile Devices  
+##  Mobile Devices  
 
 -   **Mobile device enrollment profile**  
 
@@ -614,7 +631,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  Ensure that you have configured a certificate template to use for mobile device enrollment before you configure this option.  
 
-##  <a name="BKMK_EnrollmentUserSettings"></a> Enrollment  
+##  Enrollment  
 
 -   **Mobile device enrollment profile**  
 
@@ -623,7 +640,7 @@ All client settings in System Center Configuration Manager are managed in the Co
     > [!IMPORTANT]  
     >  Ensure that you have configured a certificate template to use for mobile device enrollment or for Mac client certificate enrollment before you configure this option.  
 
-##  <a name="BKMK_UserDeviceAffinityUserSettings"></a> User and Device Affinity  
+## User and Device Affinity  
 
 -   **Allow user to define their primary devices**  
 

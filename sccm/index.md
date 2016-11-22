@@ -6,7 +6,7 @@ layout: HubPage
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
 ms.technology:
@@ -31,7 +31,7 @@ toc_rel: /sccm/toc.json
         <ul class="column column-half">
           <li><a href="/sccm/core/understand/introduction">Introduction to Configuration Manager</a></li>
           <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">Evaluate System Center Configuration Manager by building your own lab environment</a></li>
-          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1606">What&#39;s new in version 1606 of System Center Configuration Manager</a></li>
+          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">What&#39;s new in version 1610 of System Center Configuration Manager</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Features and capabilities of System Center Configuration Manager</a></li>

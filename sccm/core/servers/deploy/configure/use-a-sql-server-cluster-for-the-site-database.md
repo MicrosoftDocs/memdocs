@@ -1,5 +1,5 @@
 ---
-title: "SQL Server cluster | System Center Configuration Manager"
+title: "SQL Server cluster | Microsoft Docs"
 description: "Use a SQL Server cluster to host the System Center Configuration Manager site database. Includes information about supported options."
 ms.custom: na
 ms.date: 10/06/2016

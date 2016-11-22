@@ -1,5 +1,5 @@
 ---
-title: "Package Transfer Manager | System Center Configuration Manager"
+title: "Package Transfer Manager | Microsoft Docs"
 description: "Understand how Package Transfer Manager in System Center Configuration Manager transfers content from a site server to remote distribution points."
 ms.custom: na
 ms.date: 10/06/2016

@@ -1,5 +1,5 @@
 ---
-title: "Simulate application deployments | System Center Configuration Manager"
+title: "Simulate application deployments | Microsoft Docs"
 description: "Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application."
 ms.custom: na
 ms.date: 10/06/2016
@@ -24,9 +24,9 @@ Use simulated deployments if you want to test the applicability of an applicatio
 >  You cannot use simulated deployments for collections of mobile devices.  
 >   
 >  You cannot deploy an application with a deployment purpose of **Uninstall** if a simulated deployment of the same application is active.  
-  
+
 Use the following procedure to configure a simulated application deployment:
-  
+
 1.  In the Configuration Manager console, select one of the following:  
 
     -   A collection of users.  

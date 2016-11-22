@@ -1,5 +1,5 @@
 ---
-title: "VPN profiles in System Center Configuration Manager | System Center Configuration Manager"
+title: "VPN profiles in System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization."
 ms.custom: na
 ms.date: 10/10/2016

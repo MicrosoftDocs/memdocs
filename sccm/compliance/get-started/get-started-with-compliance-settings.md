@@ -1,5 +1,5 @@
 ---
-title: "Get started with compliance settings | System Center Configuration Manager"
+title: "Get started with compliance settings | Microsoft Docs"
 description: "Learn how compliance settings work in System Center Configuration Manager. Also learn about core concepts that you need to know."
 ms.custom: na
 ms.date: 10/06/2016
