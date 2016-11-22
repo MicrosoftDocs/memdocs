@@ -22,7 +22,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-It's likely that eventually you'll want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. System Center Configuration Manager (Configuration Manager) gives you these capabilities, to help you update and retire applications:  
+It's likely that eventually you'll want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. System Center Configuration Manager gives you these capabilities, to help you update and retire applications:  
 
 -   **Revise applications**. When you make changes to an application or deployment type, Configuration Manager maintains a history of the changes. You can revert the application to a previous revision at any time. You also can view its properties, restore a previous revision of an application, or delete an old revision.  
 
