@@ -24,6 +24,12 @@ manager: angrobe
 
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
+**Known Issues in this Technical Preview:**   
+When you install version 1611, the overall status for prerequisites might show as passed with warnings, but does not list which prerequisites caused the warnings. This can be caused by the following two prerequisites:
+  - SQL Index Create Memory options
+  - Checks for supported SQL Server version  
+   
+Because these are only warnings, they can be ignored.
 
 **The following are new features you can try out with this version.**  
 
