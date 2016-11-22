@@ -13,11 +13,15 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: robstackmsftms.author: robstack
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 
 ---
-# Create applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 A System Center Configuration Manager application has the files and information that are required to deploy software to a device. An application has one or more deployment types that comprise the installation files and information that are required to install software. A deployment type also has rules that specify when and how the software is deployed.  
 
  You can create applications by using the following methods:  
@@ -275,7 +279,7 @@ The following table has Microsoft Visual Basic (VB) sample scripts that you can 
 
     -   **Installation behavior**--In the drop-down list, select one of the following options:  
 
-        -   **Install for user**--The application is installed only for the user to whom the application is deployed.  
+        -   **Install for User**--The application is installed only for the user to whom the application is deployed.  
 
         -   **Install for System**--The application is installed only once, and it is available to all users.  
 
