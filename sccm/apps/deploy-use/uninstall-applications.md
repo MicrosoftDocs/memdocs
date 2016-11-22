@@ -23,7 +23,7 @@ manager: angrobe
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 
-## Introduction  
+Take the following actions to uninstall an application you previously deployed.
 
 -   Specify the command line to uninstall the deployment type content on the **Content** page of the Create Deployment Type Wizard.  
 
