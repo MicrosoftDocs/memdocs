@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to monitor client deployment status in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

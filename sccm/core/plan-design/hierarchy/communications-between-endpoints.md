@@ -139,7 +139,7 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     -   [Manage Conflicting Records for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
-    -   [Network Access Account](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_NAA)  
+    -   [Network Access Account](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
     -   [How to Install Configuration Manager Clients on Workgroup Computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 

@@ -164,7 +164,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 
 -   [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md)  
 
--   [Managing network bandwidth](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_bandwidth) when deploying content within a site  
+-   [Managing network bandwidth](../../../core/plan-design/hierarchy/manage-network-bandwidth.md) when deploying content within a site  
 
 
 **Consider configurations that span sites and hierarchies:**  
