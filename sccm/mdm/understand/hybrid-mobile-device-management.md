@@ -58,7 +58,7 @@ To bring devices into hybrid management, those devices must be enrolled with the
 
 | **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm.md#set-up-device-management)|
+|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm.md#windows-enrollment-setup)|
 |**[DEM](#dem)**|	No |No |No	|[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 For a series of question that help you find the right method, see [Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1).

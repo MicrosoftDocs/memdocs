@@ -230,7 +230,7 @@ Run the CCMSetup.exe command from the install source location and specify the fo
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
 For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -255,7 +255,7 @@ For more information about how to use these command line properties for CCMSetup
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
        For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
