@@ -55,6 +55,6 @@ Learn how to create a lab environment to evaluate System Center Configuration Ma
 
 -   Learn the importance of security roles in the [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)  
 
--   Understanding these [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts) can provide you with specific concepts relating to content management  
+-   Understanding these [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) can provide you with specific concepts relating to content management  
 
 -   [Understand how clients find site resources and services for System Center Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) to successfully support daily operations throughout your deployment  
