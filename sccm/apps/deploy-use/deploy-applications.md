@@ -22,8 +22,6 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-
-
  Before you can deploy a System Center Configuration Manager application, you must create at least one deployment type for the application. For more information about creating applications and deployment types, see [Create applications ](../../apps/deploy-use/create-applications.md).
 
  You can also simulate an application deployment. This type of deployment tests the applicability of an application deployment to computers without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments ](../../apps/deploy-use/simulate-application-deployments.md).
@@ -150,7 +148,7 @@ When you receive required software from the **Snooze and remind me** setting, yo
 
 The maximum snooze time is always based on the notification values configured in the Client Agent settings at every time along the deployment timeline. For example, if the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the **Computer Agent** page is configured for 10 hours, and it is more than 24 hours before the deadline when the dialog is launched, you would be presented with a set of snooze options up to but never greater than 10 hours. As the deadline approaches, the dialog will show fewer options, consistent with the relevant Client Agent settings for each component of the deployment timeline.
 
-Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required: 
+Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required:
 
 ![Required Software dialog](media/client-toast-notification.png)
 
