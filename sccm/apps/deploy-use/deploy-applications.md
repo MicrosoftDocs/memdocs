@@ -53,7 +53,7 @@ On the **General** page of the Deploy Software wizard, specify the following inf
 
 ### Specify content options for the deployment
 
-On the **Content** page, click **Add** to add the content associated with this deployment to distribution points or distribution point groups. If you have selected **Use default distribution points associated to this collection** on the **General** page, then this option will be automatically populated and can only be modified by a member of the Application Administrator security role. 
+On the **Content** page, click **Add** to add the content associated with this deployment to distribution points or distribution point groups. If you have selected **Use default distribution points associated to this collection** on the **General** page, then this option will be automatically populated and can only be modified by a member of the Application Administrator security role.
 
 ### Specify deployment settings
 
@@ -150,7 +150,7 @@ When you receive required software from the **Snooze and remind me** setting, yo
 
 The maximum snooze time is always based on the notification values configured in the Client Agent settings at every time along the deployment timeline. For example, if the **Deployment deadline greater than 24 hours, remind users every (hours)** setting on the **Computer Agent** page is configured for 10 hours, and it is more than 24 hours before the deadline when the dialog is launched, you would be presented with a set of snooze options up to but never greater than 10 hours. As the deadline approaches, the dialog will show fewer options, consistent with the relevant Client Agent settings for each component of the deployment timeline.
 
-Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required:
+Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required: 
 
 ![Required Software dialog](media/client-toast-notification.png)
 
