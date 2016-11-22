@@ -45,17 +45,17 @@ Packages can use some new features of Configuration Manager, including distribut
 
 3.  In the **Home** tab, in the **Create** group, choose **Create Package**.  
 
-4.  On the **Package** page of the **Create Package and Program** Wizard, specify the following information:  
+4.  On the **Package** page of the **Create Package and Program Wizard**, specify the following information:  
 
     -   **Name**: Specify a name for the package with a maximum of 50 characters.  
 
     -   **Description**: Specify a description for this package with a maximum of 128 characters.  
 
-    -   **Manufacturer**: (Optional) Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters.  
+    -   **Manufacturer**: Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters. **Optional**
 
-    -   **Language**: (Optional) Specify the language version of the package with a maximum of 32 characters.  
+    -   **Language**: Specify the language version of the package with a maximum of 32 characters. **Optional**  
 
-    -   **Version**: (Optional) Specify a version number for the package with a maximum of 32 characters.  
+    -   **Version**:  Specify a version number for the package with a maximum of 32 characters. **Optional**
 
     -   **This package contains source files**: This setting indicates whether the package requires source files to be present on client devices. By default, this check box is cleared, and Configuration Manager does not use distribution points for the package. When this check box is selected, distribution points are used.  
 
@@ -82,15 +82,15 @@ Packages can use some new features of Configuration Manager, including distribut
             > [!NOTE]  
             >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
 
-        -   **Command Line**: Enter the command line to be used to start this program, or choose **Browse** to browse to the file location.  
+        -   **Command Line**: Enter the command line to use to start this program, or choose **Browse** to browse to the file location.  
 
             If a file name does not have an extension that's specified, Configuration Manager attempts to use .com, .exe, and .bat as possible extensions.  
 
              When the program is run on a client, Configuration Manager first searches for the command-line file name within the package,  searches next in the local Windows folder, and then searches in local *%path%*. If the file cannot be found, the program fails.  
 
-        -   **Startup folder**: (Optional) Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package.  
+        -   **Startup folder**: Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package. **Optional**
 
-        -   **Run**: Specifies the mode in which the program runs on client computers. Select one of the following:  
+        -   **Run**: Specify the mode in which the program runs on client computers. Select one of the following:  
 
             -   **Normal**: The program runs in the normal mode based on system and program defaults. This is the default mode.  
 
@@ -112,9 +112,9 @@ Packages can use some new features of Configuration Manager, including distribut
 
             -   **Requires drive letter**: Specify that the program requires a drive letter to fully qualify its location. For this setting, Configuration Manager can use any available drive letter on the client.  
 
-            -   **Requires specific drive letter (example: Z:)**:  Specify that the program requires a specific drive letter that you specify to fully qualify its location. If the specified drive letter is already used on a client, the program does not run.  
+            -   **Requires specific drive letter** : Specify that the program requires a specific drive letter that you specify to fully qualify its location (for example, **Z:**). If the specified drive letter is already used on a client, the program does not run.  
 
-        -   **Reconnect to distribution point at log on**: Use this check box to indicate  whether the client computer reconnects to the distribution point when the user logs on. By default, this check box is cleared.  
+        -   **Reconnect to distribution point at log on**: Use this check box to indicate whether the client computer reconnects to the distribution point when the user signs in. By default, this check box is cleared.  
 
   3.  On the **Requirements** page of the **Create Package and Program Wizard,** specify the following information:  
 
@@ -149,7 +149,7 @@ Packages can use some new features of Configuration Manager, including distribut
             > [!NOTE]  
             >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
 
-        -   **Comment**: (Optional) Specify a comment for this device program with a maximum of 127 characters.  
+        -   **Comment**: Specify a comment for this device program with a maximum of 127 characters.**Optional**  
 
         -   **Download folder**: Specify the name of the folder on the Windows CE device in which the package source files will be stored. The default value is **\Temp\\**.  
 
@@ -211,7 +211,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
     -   **Send wake-up packets**: If the deployment purpose is set to **Required** and this option is selected, a wake-up packet is sent to computers before the deployment is installed to wake the computer from sleep at the installation deadline time. Before you can use this option, computers must be configured for Wake On LAN.  
 
-    -   Select **Allow clients on a metered Internet connection to download content after  the installation deadline, which might incur additional costs** if required.  
+    -  **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: Select this if it's required.  
 
     > [!NOTE]  
     >  The **Pre-deploy software to the user's primary device** option is not available when you deploy a package and program.  
@@ -220,14 +220,14 @@ Packages can use some new features of Configuration Manager, including distribut
 
      The options on this page vary depending on whether the deployment action is set to **Available** or **Required**.  
 
-7.  If the deployment purpose is set to **Required**, configure the rerun behavior for the program from the **Rerun behavior** drop-down list. Choose from the following options:  
+7.  If the deployment purpose is set to **Required**, configure the rerun behavior for the program from the **Rerun behavior** drop-down menu. Choose from the following options:  
 
     |Rerun behavior|More information|  
     |--------------------|----------------------|  
-    |Never rerun deployed program|The program will not be rerun on the client, even if the program originally failed or if the program files are changed.|  
-    |Always rerun program|The program will always be rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.|  
-    |Rerun if failed previous attempt|The program will be rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
-    |Rerun if succeeded on previous attempt|The program will be rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
+    |Never rerun deployed program|The program won't be rerun on the client, even if the program originally failed or if the program files are changed.|  
+    |Always rerun program|The program is always be rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.|  
+    |Rerun if failed previous attempt|The program is rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
+    |Rerun if succeeded on previous attempt|The program is rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
 
 8. On the **User Experience** page, specify the following information:  
 
@@ -235,7 +235,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
     -   **Software installation**: Allows the software to be installed outside of any configured maintenance windows.  
 
-    -   **System restart (if required to complete the installation)**: If the software installation requires a device restart to complete, allow this to happen outside of any configured maintenance windows.  
+    -   **System restart (if required to complete the installation)**: If the software installation requires a device restart to finish, allow this to happen outside of any configured maintenance windows.  
 
     -   **Embedded devices**: When you deploy packages and programs to Windows Embedded devices that are write-filter-enabled, you can specify that packages and programs be installed on the temporary overlay and commit changes later. Alternately, you commit the changes on the installation deadline or during a maintenance window. When you commit changes on the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
 
@@ -250,9 +250,9 @@ Packages can use some new features of Configuration Manager, including distribut
 
     -   **Allow clients to use a fallback source location for content**:  
 
-        -  *Versions earlier than 1610*: You can select the **Allow fallback source location for content check box** to enable clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.
+        -  **Versions earlier than 1610**: You can select the **Allow fallback source location for content check box** to enable clients outside these boundary groups to fall back and use the distribution point as a source location for content when no other distribution points are available.
 
-        - *Version 1610 and later*: You can no longer configure **Allow fallback source location for content**.  Instead, you configure relationships between boundary groups that determine when a client can begin to search additional boundary groups for a valid content source location.
+        - **Version 1610 and later**: You can no longer configure **Allow fallback source location for content**.  Instead, you configure relationships between boundary groups that determine when a client can begin to search additional boundary groups for a valid content source location.
 
 10. On the **Summary** page, review the actions that will be taken, and then complete the wizard.  
 
@@ -262,7 +262,7 @@ Packages can use some new features of Configuration Manager, including distribut
 >  If you configured the option **Run program from distribution point** on the **Distribution Points** page of the **Deploy Software Wizard**, do not clear the option **Copy the content in this package to a package share on distribution points**, because this makes the package unavailable to run from distribution points.  
 
 ##  Monitor packages and programs  
- To monitor package and program deployments, you use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+ To monitor package and program deployments, use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
  Packages and programs also includes a number of built-in reports, which enables you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
 
@@ -273,11 +273,11 @@ Packages can use some new features of Configuration Manager, including distribut
 
 |Task|More information|  
 |----------|----------------------|  
-|**Create Prestage Content File**|Opens the **Create Prestaged Content File Wizard**, which allows you to create a file that contains the package content that can be manually imported to another site. This is useful in situations where you have low network bandwidth between the site server and the distribution point.|  
-|**Create Program**|Opens the **Create Program Wizard**, which allows you to create a new program for this package.|  
-|**Export**|Opens the **Export Package Wizard**, which allows you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see Create packages and programs in this topic.|  
-|**Deploy**|Opens the **Deploy Software Wizard**, which allows you to deploy the selected package and program to a collection. For more information, see [Deploy packages and programs](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) in this topic.|  
-|**Distribute Content**|Opens the **Distribute Content Wizard**, which allows you to send the content that is associated with the package and program to selected distribution points or distribution point groups.|  
+|**Create Prestage Content File**|Opens the **Create Prestaged Content File Wizard**, which enables you to create a file that contains the package content that can be manually imported to another site. This is useful in situations where you have low network bandwidth between the site server and the distribution point.|  
+|**Create Program**|Opens the **Create Program Wizard**, which enables you to create a new program for this package.|  
+|**Export**|Opens the **Export Package Wizard**, which enables you to export the selected package and its content to a file.<br /><br /> For information about how to import packages and programs, see Create packages and programs in this topic.|  
+|**Deploy**|Opens the **Deploy Software Wizard**, which enables you to deploy the selected package and program to a collection. For more information, see [Deploy packages and programs](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs) in this topic.|  
+|**Distribute Content**|Opens the **Distribute Content Wizard**, which enables you to send the content that is associated with the package and program to selected distribution points or distribution point groups.|  
 |**Update Distribution Points**|Updates distribution points with the latest content for the selected package and program.|  
 
 ##  About the package definition file format  
@@ -286,26 +286,26 @@ Packages can use some new features of Configuration Manager, including distribut
 ###  [PDF]  
  This section identifies the file as a package definition file. It contains the following information:  
 
--   **Version**: This specifies the version of the package definition file format that is used by the file. This corresponds to the version of System Management Server (SMS) or Configuration Manager for which it was written. This entry is required.  
+-   **Version**: Specify the version of the package definition file format that is used by the file. This corresponds to the version of System Management Server (SMS) or Configuration Manager for which it was written. This entry is required.  
 
 ###  [Package Definition]  
- This section of the package definition file specifies the properties of the package and program. It provides the following information:  
+ Specify the properties of the package and program. It provides the following information:  
 
--   **Name**: The name of the package, up to 50 characters. This entry is required.  
+-   **Name**: The name of the package, up to 50 characters.  
 
--   **Version**: The version of the package, up to 32 characters. This entry is optional.  
+-   **Version**: The version of the package, up to 32 characters. **Optional**  
 
--   **Icon**: The file that contains the icon to use for this package. If specified, this icon replaces the default package icon in the Configuration Manager console. This entry is optional.
+-   **Icon**: The file that contains the icon to use for this package. If specified, this icon replaces the default package icon in the Configuration Manager console. **Optional**
 
--   **Publisher**: The publisher of the package, up to 32 characters. This entry is required.  
+-   **Publisher**: The publisher of the package, up to 32 characters.
 
--   **Language**: The language version of the package, up to 32 characters. This entry is required.  
+-   **Language**: The language version of the package, up to 32 characters.
 
--   **Comment**: An comment about the package, up to 127 characters. This entry is optional.
+-   **Comment**: An comment about the package, up to 127 characters. **Optional**
 
 -   **ContainsNoFiles**: This entry indicates whether or not a source is associated with the package.  
 
--   **Programs**: The programs that are defined for this package. Each program name corresponds to a **[Program]** section in this package definition file. This entry is required.  
+-   **Programs**: The programs that are defined for this package. Each program name corresponds to a **[Program]** section in this package definition file.  
 
      Example:  
 
@@ -322,35 +322,35 @@ Packages can use some new features of Configuration Manager, including distribut
 ###  [Program]  
  For each program that's specified in the **Programs** entry in the **[Package Definition]** section, the package definition file must include a [Program] section that defines that program. Each Program section provides the following information:  
 
--   **Name**: The name of the program, up to 50 characters. This entry must be unique within a package. This name is used when defining advertisements. On client computers, the name of the program is shown in **Run Advertised Programs** in Control Panel. This entry is required.  
+-   **Name**: The name of the program, up to 50 characters. This entry must be unique within a package. This name is used when defining advertisements. On client computers, the name of the program is shown in **Run Advertised Programs** in Control Panel.  
 
--   **Icon**: Specifies the file containing the icon to use for this program. If specified, this icon replaces the default program icon in the Configuration Manager console and is displayed on client computers when the program is advertised. This entry is optional.
+-   **Icon**: Specify the file that contains the icon to use for this program. If specified, this icon replaces the default program icon in the Configuration Manager console and is displayed on client computers when the program is advertised. **Optional**
 
--   **Comment**: An comment about the program, up to 127 characters. This entry is optional.
+-   **Comment**: An comment about the program, up to 127 characters. **Optional**
 
--   **CommandLine**: Specifies the command line for the program, up to 127 characters. The command is relative to the package source folder. This entry is required.  
+-   **CommandLine**: Specify the command line for the program, up to 127 characters. The command is relative to the package source folder.
 
--   **StartIn**: Specifies the working folder for the program, up to 127 characters. This entry can be an absolute path on the client computer or a path that's relative to the package source folder. This entry is required.  
+-   **StartIn**: Specify the working folder for the program, up to 127 characters. This entry can be an absolute path on the client computer or a path that's relative to the package source folder.
 
--   **Run**: Specifies the program mode in which the program runs. You can specify **Minimized**, **Maximized**, or **Hidden**. If this entry is not included, the program runs in normal mode.  
+-   **Run**: Specify the program mode in which the program runs. You can specify **Minimized**, **Maximized**, or **Hidden**. If this entry is not included, the program runs in normal mode.  
 
--   **AfterRunning**: Specifies any special action that occurs after the program is successfully completed. Options available are **SMSRestart**, **ProgramRestart**, or **SMSLogoff**. If this entry is not included, the program doesn't run a special action.  
+-   **AfterRunning**: Specify any special action that occurs after the program is successfully completed. Options available are **SMSRestart**, **ProgramRestart**, or **SMSLogoff**. If this entry is not included, the program doesn't run a special action.  
 
--   **EstimatedDiskSpace**: Specifies the amount of disk space that the software program requires to be able run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, the units for the value must also be specified.  
+-   **EstimatedDiskSpace**: Specify the amount of disk space that the software program requires to be able run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, the units for the value must also be specified.  
 
      Example:  
 
      `EstimatedDiskSpace=38MB`  
 
--   **EstimatedRunTime**: Specifies the estimated duration (in minutes) that the program is expected to run on the client computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than zero.  
+-   **EstimatedRunTime**: Specify the estimated duration (in minutes) that the program is expected to run on the client computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than zero.  
 
      Example:  
 
      `EstimatedRunTime=25`  
 
--   **SupportedClients**: Specifies the processors and operating systems on which this program runs. The specified platforms must be separated by commas. If this entry is not included, supported platform checking is disabled for this program.  
+-   **SupportedClients**: Specify the processors and operating systems on which this program runs. The specified platforms must be separated by commas. If this entry is not included, supported platform checking is disabled for this program.  
 
--   **SupportedClientMinVersionX**, **SupportedClientMaxVersionX**: Specifies the beginning-to-ending range for version numbers for the operating systems that are specified in the **SupportedClients** entry.  
+-   **SupportedClientMinVersionX**, **SupportedClientMaxVersionX**: Specify the beginning-to-ending range for version numbers for the operating systems that are specified in the **SupportedClients** entry.  
 
      Example:  
 
@@ -378,29 +378,29 @@ Packages can use some new features of Configuration Manager, including distribut
     Win NT (x64) MaxVersion4=6.00.9999.9999   
     ```  
 
--   **AdditionalProgramRequirements**: Optionally provide any other information or requirements for client computers, up to 127 characters.  
+-   **AdditionalProgramRequirements**: Provide any other information or requirements for client computers, up to 127 characters. **Optional**
 
--   **CanRunWhen**: Specifies the user status that the program requires to be able run on the client computer. Available values are **UserLoggedOn**, **NoUserLoggedOn**, or **AnyUserStatus**. The default value is **UserLoggedOn**.  
+-   **CanRunWhen**: Specify the user status that the program requires to be able run on the client computer. Available values are **UserLoggedOn**, **NoUserLoggedOn**, or **AnyUserStatus**. The default value is **UserLoggedOn**.  
 
--   **UserInputRequired**: Specifies whether the program requires interaction with the user. Available values are **True** or **False**. The default value is **True**. This entry is set to **False** if **CanRunWhen** is not set to **UserLoggedOn**.  
+-   **UserInputRequired**: Specify whether the program requires interaction with the user. Available values are **True** or **False**. The default value is **True**. This entry is set to **False** if **CanRunWhen** is not set to **UserLoggedOn**.  
 
--   **AdminRightsRequired**: Specifies whether the program requires administrative credentials on the computer to be able to run. Available values are **True** or **False**. The default value is **False**. This entry is set to **True** if **CanRunWhen** is not set to **UserLoggedOn**.  
+-   **AdminRightsRequired**: Specify whether the program requires administrative credentials on the computer to be able to run. Available values are **True** or **False**. The default value is **False**. This entry is set to **True** if **CanRunWhen** is not set to **UserLoggedOn**.  
 
--   **UseInstallAccount**: Specifies whether the program uses the Client Software Installation Account when it runs on client computers. By default, this value is **False**. This value is also **False** if **CanRunWhen** is set to **UserLoggedOn**.  
+-   **UseInstallAccount**: Specify whether the program uses the Client Software Installation Account when it runs on client computers. By default, this value is **False**. This value is also **False** if **CanRunWhen** is set to **UserLoggedOn**.  
 
--   **DriveLetterConnection**: Specifies whether the program requires a drive letter connection to the package files that are located on the distribution point. You can specify **True** or **False**. The default value is **False**, which allows the program to use a Universal Naming Convention (UNC) connection. When this value is set to **True**, the next available drive letter will be used (starting with Z: and proceeding backward).  
+-   **DriveLetterConnection**: Specify whether the program requires a drive letter connection to the package files that are located on the distribution point. You can specify **True** or **False**. The default value is **False**, which allows the program to use a Universal Naming Convention (UNC) connection. When this value is set to **True**, the next available drive letter is used (starting with Z: and proceeding backward).  
 
--   **SpecifyDrive**: Optionally, specifies a drive letter that the program requires to connect to the package files on the distribution point. This specification forces the use of the specified drive letter for client connections to distribution points.  
+-   **SpecifyDrive**: Specify a drive letter that the program requires to connect to the package files on the distribution point. This specification forces the use of the specified drive letter for client connections to distribution points. **Optional**
 
--   **ReconnectDriveAtLogon**: Specifies whether the computer reconnects to the distribution point when the user logs on. Available values are **True** or **False**. The default value is **False**.  
+-   **ReconnectDriveAtLogon**: Specify whether the computer reconnects to the distribution point when the user signs in. Available values are **True** or **False**. The default value is **False**.  
 
--   **DependentProgram**: Specifies a program in this package that must run before the current program. This entry uses the format **DependentProgram**=<**ProgramName>**, where **<ProgramName\>** is the **Name** entry for that program in the package definition file. If there are no dependent programs, leave this entry empty.  
+-   **DependentProgram**: Specify a program in this package that must run before the current program. This entry uses the format **DependentProgram**=<**ProgramName>**, where **<ProgramName\>** is the **Name** entry for that program in the package definition file. If there are no dependent programs, leave this entry empty.  
 
      Example:  
 
      DependentProgram=Admin  
     DependentProgram=  
 
--   **Assignment**: Specifies how the program is assigned to users. This value can be: **FirstUser,** only the first user who logs on runs the program; or **EveryUser,** every user who logs on to the client runs the program. When **CanRunWhen** is not set to **UserLoggedOn**, this entry is set to **FirstUser**.  
+-   **Assignment**: Specify how the program is assigned to users. This value can be: **FirstUser,** only the first user who logs on runs the program; or **EveryUser,** every user who signs in to the client runs the program. When **CanRunWhen** is not set to **UserLoggedOn**, this entry is set to **FirstUser**.  
 
--   **Disabled**: Specifies whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
+-   **Disabled**: Specify whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
