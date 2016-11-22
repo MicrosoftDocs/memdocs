@@ -151,7 +151,7 @@ When a System Center Configuration Manager client is installed and successfully 
 
         To see the ownership value in the devices list, you may need to add the column to the view by right-clicking any column heading and choosing **Device Owner**.
 
-         For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+         For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage Clients from the Device Collections Node  
  Use the following procedure and table to manage devices in a collection from the **Device Collections** node in the **Assets and Compliance** workspace.  

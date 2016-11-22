@@ -52,7 +52,7 @@ manager: angrobe
 > -   If you need to recover or restore you Configuration Manager database, we recommend that you do a manual sync afterwards to ensure that your synced license data is up to date.  
 > -   Although you can deploy iOS volume-purchased apps to user or device collections, VPP apps that you deploy to a device without a user (for instance, a device you enrolled without user affinity using the Device Enrollment Program (DEP) or Apple Configurator) will not be installed.  
 
- Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](../../mdm/deploy-use/set-up-ios-hybrid-device-management.md).  
+ Additionally, you must have imported a valid Apple Push Notification service (APNs) certificate from Apple to let you to manage iOS devices, including app deployment. For more information, see [Set up iOS hybrid device management](../../mdm/deploy-use/enroll-hybrid-ios-mac.md).  
 
 ## Step 1 - To get and upload an Apple VPP token  
 

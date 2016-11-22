@@ -126,7 +126,7 @@ Although there is no requirement to have a trust between a client's forest and t
 
 -   You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the Internet and the Internet-based site system servers.  
 
-     For more information about the PKI certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).  
+     For more information about the PKI certificates, see [PKI certificate requirements for System Center Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
 
 -   The Internet fully qualified domain name (FQDN) of site systems that support Internet-based client management must be registered as host entries on public DNS servers.  
 

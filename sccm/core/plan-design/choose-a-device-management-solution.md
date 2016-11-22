@@ -39,7 +39,7 @@ System Center Configuration Manager offers different solutions for managing PCs,
 
      This option is referred to as hybrid mobile device management.  It uses Microsoft Intune to enroll and manage devices instead of using Configuration Manager on-premises resources. Even though Intune manages the devices, you to control management tasks in the Configuration Manager console. This option supports all major mobile device operating systems, including Windows 10 Mobile, Windows Phone, iOS, and Android. It also provides management for Windows 8.1 and Windows 10 computers in your organization.  
 
-     For more information about this solution, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md).  
+     For more information about this solution, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md).  
 
 -   **Managing mobile devices with Exchange**  
 
