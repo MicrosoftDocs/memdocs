@@ -34,7 +34,7 @@ You can modify and deploy these packages in the same way you did by using softwa
 >   
 >  For more information, see [Configuration Manager Package Conversion Manager](https://technet.microsoft.com/library/hh531519.aspx).  
 
-Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. Microsoft Application Virtualization (App-V) applications cannot be distributed by using packages and programs in Configuration Manager. To distribute virtual applications, you must create these as Configuration Manager applications.  
+Packages can use some new features of Configuration Manager, including distribution point groups and monitoring. Microsoft Application Virtualization (App-V) applications cannot be distributed by using packages and programs in Configuration Manager. To distribute virtual applications, you must create them as Configuration Manager applications.  
 
 ##  Create a package and program  
  Use one of these procedures to help you create or import packages and programs.  
@@ -51,11 +51,11 @@ Packages can use some new features of Configuration Manager, including distribut
 
     -   **Description**: Specify a description for this package with a maximum of 128 characters.  
 
-    -   **Manufacturer**: Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters. **Optional**
+    -   **Manufacturer** (optional): Specify a manufacturer name to help you identify the package in the Configuration Manager console. This name can be a maximum of 32 characters.
 
-    -   **Language**: Specify the language version of the package with a maximum of 32 characters. **Optional**  
+    -   **Language** (optional): Specify the language version of the package with a maximum of 32 characters.  
 
-    -   **Version**:  Specify a version number for the package with a maximum of 32 characters. **Optional**
+    -   **Version** (optional):  Specify a version number for the package with a maximum of 32 characters.
 
     -   **This package contains source files**: This setting indicates whether the package requires source files to be present on client devices. By default, this check box is cleared, and Configuration Manager does not use distribution points for the package. When this check box is selected, distribution points are used.  
 
@@ -88,7 +88,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
              When the program is run on a client, Configuration Manager first searches for the command-line file name within the package,  searches next in the local Windows folder, and then searches in local *%path%*. If the file cannot be found, the program fails.  
 
-        -   **Startup folder**: Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package. **Optional**
+        -   **Startup folder** (optional): Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client or a path that's relative to the distribution point folder that contains the package.
 
         -   **Run**: Specify the mode in which the program runs on client computers. Select one of the following:  
 
@@ -149,7 +149,7 @@ Packages can use some new features of Configuration Manager, including distribut
             > [!NOTE]  
             >  The program name must be unique within a package. After you create a program, you cannot modify its name.  
 
-        -   **Comment**: Specify a comment for this device program with a maximum of 127 characters.**Optional**  
+        -   **Comment** (optional): Specify a comment for this device program with a maximum of 127 characters.  
 
         -   **Download folder**: Specify the name of the folder on the Windows CE device in which the package source files will be stored. The default value is **\Temp\\**.  
 
@@ -293,15 +293,15 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **Name**: The name of the package, up to 50 characters.  
 
--   **Version**: The version of the package, up to 32 characters. **Optional**  
+-   **Version** (optional): The version of the package, up to 32 characters.  
 
--   **Icon**: The file that contains the icon to use for this package. If specified, this icon replaces the default package icon in the Configuration Manager console. **Optional**
+-   **Icon** (optional): The file that contains the icon to use for this package. If specified, this icon replaces the default package icon in the Configuration Manager console.
 
 -   **Publisher**: The publisher of the package, up to 32 characters.
 
 -   **Language**: The language version of the package, up to 32 characters.
 
--   **Comment**: An comment about the package, up to 127 characters. **Optional**
+-   **Comment** (optional): An comment about the package, up to 127 characters.
 
 -   **ContainsNoFiles**: This entry indicates whether or not a source is associated with the package.  
 
@@ -324,9 +324,9 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **Name**: The name of the program, up to 50 characters. This entry must be unique within a package. This name is used when defining advertisements. On client computers, the name of the program is shown in **Run Advertised Programs** in Control Panel.  
 
--   **Icon**: Specify the file that contains the icon to use for this program. If specified, this icon replaces the default program icon in the Configuration Manager console and is displayed on client computers when the program is advertised. **Optional**
+-   **Icon** (optional): Specify the file that contains the icon to use for this program. If specified, this icon replaces the default program icon in the Configuration Manager console and is displayed on client computers when the program is advertised.
 
--   **Comment**: An comment about the program, up to 127 characters. **Optional**
+-   **Comment** (optional): An comment about the program, up to 127 characters.
 
 -   **CommandLine**: Specify the command line for the program, up to 127 characters. The command is relative to the package source folder.
 
@@ -378,7 +378,7 @@ Packages can use some new features of Configuration Manager, including distribut
     Win NT (x64) MaxVersion4=6.00.9999.9999   
     ```  
 
--   **AdditionalProgramRequirements**: Provide any other information or requirements for client computers, up to 127 characters. **Optional**
+-   **AdditionalProgramRequirements** (optional): Provide any other information or requirements for client computers, up to 127 characters.
 
 -   **CanRunWhen**: Specify the user status that the program requires to be able run on the client computer. Available values are **UserLoggedOn**, **NoUserLoggedOn**, or **AnyUserStatus**. The default value is **UserLoggedOn**.  
 
@@ -390,7 +390,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **DriveLetterConnection**: Specify whether the program requires a drive letter connection to the package files that are located on the distribution point. You can specify **True** or **False**. The default value is **False**, which allows the program to use a Universal Naming Convention (UNC) connection. When this value is set to **True**, the next available drive letter is used (starting with Z: and proceeding backward).  
 
--   **SpecifyDrive**: Specify a drive letter that the program requires to connect to the package files on the distribution point. This specification forces the use of the specified drive letter for client connections to distribution points. **Optional**
+-   **SpecifyDrive** (optional): Specify a drive letter that the program requires to connect to the package files on the distribution point. This specification forces the use of the specified drive letter for client connections to distribution points.
 
 -   **ReconnectDriveAtLogon**: Specify whether the computer reconnects to the distribution point when the user signs in. Available values are **True** or **False**. The default value is **False**.  
 
