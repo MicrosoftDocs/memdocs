@@ -69,7 +69,7 @@ You cannot change the action of a deployment after it has been created.
 - **Purpose**--From the drop-down list, choose one of the following options:
 	- **Available**--If the application is deployed to a user, the user sees the published application in Software Center and can install it on demand.
 	- **Required**--The application is deployed automatically according to the schedule. If the application deployment status is not hidden, anyone using the application can track its deployment status and install the application from Software Center before the deadline.
-<br /><br />
+
 	> [!NOTE]
 	>  When the deployment action is set to **Uninstall**, the deployment purpose is automatically set to **Required** and cannot be changed.
 
