@@ -152,7 +152,7 @@ The maximum snooze time is always based on the notification values configured in
 Additionally, for a high-risk deployment, such as a task sequence that deploys an operating system, the user notification experience is now more intrusive. Instead of a transient taskbar notification, a dialog box like the following displays on your computer each time you are notified that critical software maintenance is required:
 
 ![Required Software dialog](media/client-toast-notification.png)
-
+ 
 
 ## For more information:
 - [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
