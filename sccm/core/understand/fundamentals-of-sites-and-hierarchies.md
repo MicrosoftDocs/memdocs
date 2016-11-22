@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of sites and hierarchies | System Center Configuration Manager"
+title: "Fundamentals of sites and hierarchies | Microsoft Docs"
 description: "Get basic information about System Center Configuration Manager sites and hierarchies."
 ms.custom: na
 ms.date: 10/06/2016

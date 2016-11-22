@@ -1,5 +1,5 @@
 ---
-title: "Prerequisite checker | System Center Configuration Manager"
+title: "Prerequisite checker | Microsoft Docs"
 description: "Learn how to use the prerequisite checker to identify and fix problems that would block an actual site or site system role installation."
 ms.custom: na
 ms.date: 10/06/2016

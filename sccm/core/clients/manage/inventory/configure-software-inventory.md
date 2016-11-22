@@ -1,5 +1,5 @@
 ---
-title: "Configure software inventory | System Center Configuration Manager"
+title: "Configure software inventory | Microsoft Docs"
 description: "Set up software inventory and an inventory exclusion folder in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

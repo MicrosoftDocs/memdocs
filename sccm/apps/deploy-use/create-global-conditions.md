@@ -1,5 +1,5 @@
 ---
-title: "Create global conditions | System Center Configuration Manager"
+title: "Create global conditions | Microsoft Docs"
 description: "Create global conditions to specify how an application is provided and deployed to client devices."
 ms.custom: na
 ms.date: 10/06/2016

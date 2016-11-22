@@ -1,8 +1,8 @@
 ---
-title: "Set up Intune subscription | On-premises | System Center Configuration Manager"
+title: "Set up Intune subscription  | Microsoft Docs | On-premises"
 description: "Set up an Intune subscription to track licensing for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,25 +19,17 @@ author: Mtillmanms.author: mtillmanmanager: angrobe
 # Set up a Microsoft Intune subscription for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager On\-premises Mobile Device Management requires a Microsoft Intune subscription to track licensing. The Intune service is not used to manage the devices or to store management information. For On\-premises Mobile Device Management, all device management is handled by the Configuration Manager infrastructure.  
 
-> [!IMPORTANT]  
->  Configuration Manager does not support using both Microsoft Intune and on-premises Configuration Manager infrastructure as management authorities at the same time. So when you set up the Intune subscription for on-premises management, you effectively disable Intune management.  
-
- Setting up the  Intune service to work with  On\-premises Mobile Device Management involves the following high-level steps:  
-
--   [Sign up for Microsoft Intune](#bkmk_signup)  
-
--   [Add the Intune subscription to Configuration Manager](#bkmk_addSub)  
-
--   [Configure the Intune subscription for On-premises Mobile Device Management](#bkmk_configure)  
+> [!NOTE]  
+> Beginning in version 1610, Configuration Manager supports using both Microsoft Intune and on-premises Configuration Manager infrastructure to manage mobile devices at the same time.   
 
 > [!TIP]  
 >  We recommend that you set up the Intune subscription for On\-premises Mobile Device Management before you install the required site system roles to minimize the time required for the newly installed site system roles to become functional.  
 
-##  <a name="bkmk_signup"></a> Sign up for Microsoft Intune  
+##  Sign up for Microsoft Intune  
  Intune is required to make On\-premises Mobile Device Management functional. Simply [sign up](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) for a trial or paid subscription and go to the next step to add the subscription to Configuration Manager.  
 
-##  <a name="bkmk_addSub"></a> Add the Intune subscription to Configuration Manager  
- To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences , and then use the instructions in [To create the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_subscription) in [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md).  
+##  Add the Intune subscription to Configuration Manager  
+ To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [To create the Microsoft Intune subscription](../deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).  
 
 > [!NOTE]  
 >  When adding the Intune subscription, keep the following in mind:  
@@ -46,14 +38,18 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
 > -   The site code setting specified in the wizard is ignored for On\-premises Mobile Device Management. The site code that is used is the one you specify in the enrollment profile that grants users permission to enroll devices.  
 > -   Do not enable multi factor authentication. It is not supported in On\-premises Mobile Device Management.  
 
-##  <a name="bkmk_configure"></a> Configure the Intune subscription for On-premises Mobile Device Management  
+##  Configure the Intune subscription for On-premises Mobile Device Management  
 
 1.  In the Configuration Manager console, right-click  the **Microsoft Intune Subscription**, and click **Properties**.  
 
-2.  In the On Premises Mobile Device Management box, click the check box next to **Only manage devices on-premises**, and click **OK**.  
+2.  In the On Premises Mobile Device Management box, choose one of the following:
 
-    > [!NOTE]  
-    >  By clicking this check box, you configure the Intune subscription to keep all management information on-premises and not replicate data to the cloud.  
+  - If you plan to only have devices managed on-premises, click the check box next to **Only manage devices on-premises**, and click **OK**.  
+
+      > [!NOTE]  
+      >  By clicking this check box, you configure the Intune subscription to keep all management information on-premises and not replicate data to the cloud.  
+
+    - If you plan to have devices managed by both Intune and Configuration Manager on-premises, leave the box unchecked.
 
 3.  If you plan to manage Windows 10 Mobile devices, right-click the **Microsoft Intune Subscription**, click **Configure Platforms**, and then click  **Windows Phone**.  
 

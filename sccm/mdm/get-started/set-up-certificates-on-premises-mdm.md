@@ -1,5 +1,5 @@
 ---
-title: "Set up certificates | On-premises MDM | System Center Configuration Manager"
+title: "Set up certificates  | Microsoft Docs| On-premises MDM"
 description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

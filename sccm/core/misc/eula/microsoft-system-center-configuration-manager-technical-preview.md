@@ -1,9 +1,12 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER TECHNICAL PREVIEW"
+title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER TECHNICAL PREVIEW | Microsoft Docs"
 ms.custom: na
 ms.date: 10/21/2016
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.service:
+ms.technology:
+ - configmgr-other
+ ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -189,7 +192,7 @@ for this software, unless other terms accompany those items. If so, those terms 
   Cette limitation concerne :
 
   - tout ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
-  
+
   - les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.   
 
   Elle s’applique également, même si Microsoft connaissait ou devrait connaître l’éventualité d’un tel dommage. Si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre égard.

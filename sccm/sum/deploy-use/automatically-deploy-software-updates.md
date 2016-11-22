@@ -1,9 +1,9 @@
 ---
-title: Automatically deploy software updates | Configuration Manager
+title: Automatically deploy software updates | Microsoft Docs
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -94,6 +94,9 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     > [!IMPORTANT]  
     >  The limit for software updates in the ADR is 1000 software updates. To ensure that the criteria that you specify on this page retrieves less than 1000 software updates, consider setting the same criteria on the **All Software Updates** node in the **Software Library** workspace.  
+
+    > [!NOTE]
+    > Starting in Configuration Manager version 1610, you can filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 6.  On the Evaluation Schedule page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
 

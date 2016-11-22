@@ -1,5 +1,5 @@
 ---
-title: "Common tasks for creating and deploying configuration baselines with System Center Configuration Manager | System Center Configuration Manager"
+title: "Common tasks for creating and deploying configuration baselines with System Center Configuration Manager | Microsoft Docs"
 description: "Learn about how to create and deploy System Center Configuration Manager configuration baselines."
 ms.custom: na
 ms.date: 10/06/2016
