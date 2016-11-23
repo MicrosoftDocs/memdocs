@@ -144,7 +144,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 
  The **Apply Operating System Image** step performs the following actions when an operating system image is used.  
 
-1.  Deletes all content on the targeted volume except for those files under the folder specified by the _SMSTSUserStatePath task sequence variable.  
+1.  Deletes all content on the targeted volume except for those files under the folder specified by the &#95;SMSTSUserStatePath task sequence variable.  
 
 2.  Extracts the contents of the specified .wim file to the specified destination partition.  
 
@@ -160,7 +160,7 @@ The following task sequence steps can be added to a Configuration Manager task s
 
  The **Apply Operating System Image** step performs the following actions when an operating system installation package is used.  
 
-1.  Deletes all content on the targeted volume except for those files under the folder specified by the _SMSTSUserStatePath task sequence variable.  
+1.  Deletes all content on the targeted volume except for those files under the folder specified by the &#95;SMSTSUserStatePath task sequence variable.  
 
 2.  Prepares the answer file:  
 
@@ -618,7 +618,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable, and use the variable for the **Staged content** value in drivers section on the **Upgrade Operating System** step.  
 
- This step runs only in a standard operating system. It does not run in Windows PE.  
+This step runs in either a standard operating system or Windows PE. However, the option to save the package in the Configuration Manager client cache is not supported in WinPE. 
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
@@ -1453,19 +1453,19 @@ Prior to Configuration Manager version 1610, this step performs the following ta
 
  The task sequence automatically sets the following read-only task sequence variables:  
 
- -   _SMSTSMake  
+ -   &#95;SMSTSMake  
 
- -   _SMSTSModel  
+ -   &#95;SMSTSModel  
 
- -   _SMSTSMacAddresses  
+ -   &#95;SMSTSMacAddresses  
 
- -   _SMSTSIPAddresses  
+ -   &#95;SMSTSIPAddresses  
 
- -   _SMSTSSerialNumber  
+ -   &#95;SMSTSSerialNumber  
 
- -   _SMSTSAssetTag  
+ -   &#95;SMSTSAssetTag  
 
- -   _SMSTSUUID  
+ -   &#95;SMSTSUUID  
 
  This step can be run in either a standard operating system or Windows PE. For more information about task sequence variables, see [Task sequence action variables](task-sequence-action-variables.md).  
 

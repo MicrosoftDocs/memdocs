@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to manage clients for Linux and UNIX servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

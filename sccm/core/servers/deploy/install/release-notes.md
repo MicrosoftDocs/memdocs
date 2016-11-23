@@ -26,6 +26,22 @@ With System Center Configuration Manager, product release notes are limited to u
 
 ## Setup and upgrade  
 
+### When installing a Long-Term Service Branch site using version 1606, a Current Branch site is installed
+When you use the version 1606 baseline media from the October 2016 release to install a Long-Term Servicing Branch (LTSB) site, Setup installs a Current Branch site instead. This occurs because the option to install a service connection point with the site install is not selected.
+
+ - Although a service connection point is not required, it must be selected to install during Setup to install a LTSB site.
+
+After Setup completes you can uninstall the service connection point.  However, you must have a service connection point in offline or online mode to submit telemetry data and to get security updates for both Current Branch and LTSB sites.
+
+If your site installed as a Current Branch site but you wanted to install the LTSB, you can uninstall the site and then reinstall it. Alternately, you can call [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=243064) for assistance.  
+
+To confirm which branch installed, in the console at **Administration** > **Site Configuration** > **Sites**, and open **Hierarchy Settings**. The option to convert the site to a Current Branch site is only available when the site runs the LTSB.  
+
+**Workaround:**  None.   
+
+
+
+
 
 ### The  SQL Server backup model in use by Configuration Manager can change from full to simple  
  When you upgrade to System Center Configuration Manager version 1511, the SQL Server backup model in use by Configuration Manager can change from full to simple.  

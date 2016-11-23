@@ -36,13 +36,14 @@ Configuration Manager supports managing Windows Store for Business apps on both 
 |------------|------------|------------|
 |Synchronize app data to Configuration Manager<br>(synchronization occurs every 24 hours, or you can initiate an immediate synchronization)|Yes|Yes|
 |Create Configuration Manager applications from store apps|Yes|Yes|
-|Support for free apps from the store|Yes|Yes|
+|Support for free apps from the store|Yes|Yes<sup>1</sup>|
 |Support for paid apps from the store|No|Yes<sup>1</sup>|
 |Support required deployments to user or device collections|Yes|Yes<sup>1</sup>|
-|Support available deployments to user or device collections|Yes|Yes|
+|Support available deployments to user or device collections|Yes<sup>2</sup>|No|
 
 <sup>1</sup>Supports devices managed by Intune only. Although you are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, this will not work. The end user will be directed to the relevant page in the app store from where they must install the app manually.
 
+<sup>2</sup>For devices managed by the Configuration Manager client only.
 
 <!--- ## Activate the Windows Store for Business capability
 Because this is a pre-release feature, before you can connect Configuration Manager to the Windows Store for Business, you must take the following steps: 
