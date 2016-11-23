@@ -23,9 +23,9 @@ The [Windows Store for Business](https://www.microsoft.com/business-store) is wh
 The Windows Store for Business supports two types of app:
 
 - **Online**--This license type requires users and devices to connect to the store to get an app and its license. Windows 10 devices must be Azure Active Directory domain-joined.
-- **Offline**--Organizations can cache apps and licenses to deploy directly within their on-premises network, without connecting to the store or having a connection to the Internet.
+- **Offline**--Organizations can cache apps and licenses to deploy directly within their on-premises networks, without connecting to the store or having a connection to the Internet.
 
-[Read more](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview) about the Windows Store for Business.
+Read more about the [Windows Store for Business](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview).
 
 Configuration Manager supports managing Windows Store for Business apps on Windows 10 devices running the Configuration Manager client and on Windows 10 devices that are enrolled with Microsoft Intune (hybrid configuration). Configuration Manager offers the following capabilities for online and offline apps.
 
@@ -34,16 +34,16 @@ Configuration Manager supports managing Windows Store for Business apps on Windo
 
 |Capability|Offline apps|Online apps|
 |------------|------------|------------|
-|Synch app data to Configuration Manager<br>(synchronization occurs every 24 hours, or you can initiate an immediate synchronization)|Yes|Yes|
+|Synch app data to Configuration Manager<br>(Synchronization occurs every 24 hours, or you can initiate an immediate synchronization,)|Yes|Yes|
 |Create Configuration Manager applications from store apps|Yes|Yes|
 |Support for free apps from the store|Yes|Yes<sup>1</sup>|
 |Support for paid apps from the store|No|Yes<sup>1</sup>|
 |Support required deployments to user or device collections|Yes|Yes<sup>1</sup>|
 |Support available deployments to user or device collections|Yes<sup>2</sup>|No|
 
-<sup>1</sup>Only supports devices managed by Intune. Although you are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, this will not work. Your users will be directed to the relevant page in the app store to install the app manually.
+<sup>1</sup>Support is only for devices managed by Intune. You are not blocked from creating an online application in the Configuration Manager console and deploying this to a device managed by the Configuration Manager client, but the deployment will not work. Your users will be directed to the relevant page in the app store to install the app manually.
 
-<sup>2</sup>Only for devices managed by the Configuration Manager client.
+<sup>2</sup>Support is only for devices managed by the Configuration Manager client.
 
 <!--- ## Activate the Windows Store for Business capability
 Because this is a pre-release feature, before you can connect Configuration Manager to the Windows Store for Business, you must take the following steps:
@@ -96,7 +96,7 @@ Add the store account to Configuration Manager.
 3.  Add your tenant ID, client id, and client secret key from Azure Active Directory, and then finish the wizard.
 4. Once you're done, you will see the account you set up in the **Windows Store for Business** list in the Configuration Manager console.
 
-Change the app languages that will be shown in the Application Catalog for users to download
+Change the app languages that will be shown in the Application Catalog for users to download.
 
 1.	In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
 2.	Select your Windows Store for Business account, and then choose **Properties**.
@@ -122,7 +122,7 @@ Synchronization occurs every 24 hours, or you can initiate an immediate synchron
 4.	The app you bought will appear in the **License Information for Store Apps** node of the **Application Management** workspace.
 
 
-## Create and deploy a Configuration Manager application from a Windows Store for Business app.
+## Create and deploy a Configuration Manager application from a Windows Store for Business app
 
 This procedure assumes you have acquired at least one free app, or bought at least one paid online licensed app from the Windows Store for Business.
 
@@ -137,4 +137,4 @@ A Configuration Manager application is created containing the Windows Store for 
 
 In the **Software Library** workspace, expand **Application Management**, and then choose **License Information for Store Apps**.
 
-For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
+For each store app you manage, you can view information about the app including its name, platform, the number of licenses for the app that you own, and the number of licenses you have available.
