@@ -2,7 +2,7 @@
 title: "PKI certificate requirements | Microsoft Docs"
 description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,7 @@ The public key infrastructure (PKI) certificates that you might require for Syst
 -   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Effective January 1, 2017, Windows will no longer trust certificates signed with SHA-1.  We recommend that you issue new server and client authentication certificates signed with SHA-2.  
+>  Effective January 1, 2017, Windows will no longer trust certificates signed with SHA-1.  We recommend that you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256).  
 >   
 >  For more details about this change, and possible updates to the deadline, follow this blog post: [Windows Enforcement of Authenticode Code Signing and Timestamping](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 

@@ -69,7 +69,7 @@ This topic lists the prerequisites for software updates in System Center Configu
 
 -   [Client Settings for software updates](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates).  
 
--   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates) topic.  
+-   [Software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) topic.  
 
 ### Reporting services point  
  The reporting services point site system role can display reports for software updates. This role is optional, but recommended. For more information about how to create a reporting services point, see [Configuring reporting](../../core/servers/manage/configuring-reporting.md) .  

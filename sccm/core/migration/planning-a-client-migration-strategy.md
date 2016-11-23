@@ -34,7 +34,7 @@ To migrate clients from the source hierarchy to a System Center Configuration Ma
 -   **A System Center 2012 Configuration Manager or later source hierarchy:** When you migrate clients between hierarchies that are of the same product version, the client software does not change or upgrade. Instead, the client reassigns from the source hierarchy to a site in the destination hierarchy.  
 
     > [!NOTE]  
-    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see the [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions) section in the [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md) topic.  
+    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see the [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) section in the [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md) topic.  
 
 Use the following information to help you plan the client migration:  
 

@@ -2,7 +2,7 @@
 title: "Monitor clients |System Center Configuration Manager | Linux UNIX "
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to monitor clients for Linux and UNIX servers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -26,11 +26,10 @@ You can view information from Linux and UNIX servers in the System Center Config
 
 -   Inventory details in the Resource Explorer  
 
- The following sections provide information about using the resource explorer and reports to view details about your Linux and UNIX servers.  
+ The following sections describe hoe to get these details from the resource explorer and reports.  
 
-##  <a name="BKMK_UseResourceExpforLnU"></a> How to use Resource Explorer to View Inventory for Linux and UNIX Servers  
- You can view hardware and installed software details on Linux and UNIX servers by using Resource Explorer.  
-
+##  <a name="BKMK_UseResourceExpforLnU"></a> Use resource explorer to view inventory for Linux and UNIX servers  
+ 
  After a Configuration Manager client submits hardware inventory to the Configuration Manager site, you can use Resource Explorer to view this information. The Configuration Manager client for Linux and UNIX does not add new classes or views for inventory to the Resource Explorer. The Linux and UNIX inventory data maps to existing WMI classes. You can view the inventory details for your Linux and UNIX servers in the Windows-based classifications using Resource Explorer.  
 
  For example, you can collect the list of all natively installed programs found on your Linux and UNIX servers. Examples of natively installed programs include **.rpms** in Linux or **.pkgs** in Solaris. After inventory has been submitted by a Linux or UNIX client, you can view the list of all the natively installed Linux or UNIX programs in Resource Explorer in the Configuration Manager console.  
