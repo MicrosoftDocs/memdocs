@@ -100,7 +100,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
             -   **Hidden**: The program runs hidden on client devices. Users don't see any installation activity.  
 
-        -   **Program can run**: Specify whether the program runs only when a user is signed in, run only when no user is signed in, or run regardless of whether  a user is signed in to the client computer.  
+        -   **Program can run**: Specify whether the program runs only when a user is signed in, only when no user is signed in, or regardless of whether  a user is signed in to the client computer.  
 
         -   **Run mode**: Specify whether the program runs with administrative permissions or with the permissions of the user who's currently signed in.  
 
@@ -122,7 +122,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
         -   **Platform requirements**: Select **This program can run on any platform** or  **This program can run only on specified platforms**, and then choose the operating systems that clients must be running to be able to install the package and program.  
 
-        -   **Estimated disk space**: Specify the amount of disk space that the software program requires to be able to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, units for the value must also be specified.  
+        -   **Estimated disk space**: Specify the amount of disk space that the software program requires to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, units for the value must also be specified.  
 
         -   **Maximum allowed run time (minutes)**: Specify the maximum time that the program is expected to run on the client computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than zero.  
 
@@ -225,7 +225,7 @@ Packages can use some new features of Configuration Manager, including distribut
     |Rerun behavior|More information|  
     |--------------------|----------------------|  
     |Never rerun deployed program|The program won't be rerun on the client, even if the program originally failed or if the program files are changed.|  
-    |Always rerun program|The program is always be rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.|  
+    |Always rerun program|The program is always rerun on the client when the deployment is scheduled, even if the program has already successfully run. This can be useful when you use recurring deployments in which the program is updated, for example with antivirus software.|  
     |Rerun if failed previous attempt|The program is rerun when the deployment is scheduled only if it failed on the previous run attempt.|  
     |Rerun if succeeded on previous attempt|The program is rerun only if it previously ran successfully on the client. This is useful when you use recurring advertisements in which the program is routinely updated, and in which each update requires the previous update to be successfully installed.|  
 
@@ -259,12 +259,12 @@ Packages can use some new features of Configuration Manager, including distribut
      You can view the deployment in the **Deployments** node of the **Monitoring** workspace and in the details pane of the package deployment tab when you select the deployment. For more information, see [Monitor packages and programs](/sccm/apps/deploy-use/packages-and-programs#monitor-packages-and-programs) in this topic.  
 
 > [!IMPORTANT]  
->  If you configured the option **Run program from distribution point** on the **Distribution Points** page of the **Deploy Software Wizard**, do not clear the option **Copy the content in this package to a package share on distribution points**, because this makes the package unavailable to run from distribution points.  
+>  If you configured the option **Run program from distribution point** on the **Distribution Points** page of the **Deploy Software Wizard**, do not clear the option **Copy the content in this package to a package share on distribution points** because this makes the package unavailable to run from distribution points.  
 
 ##  Monitor packages and programs  
  To monitor package and program deployments, use the same procedures that you use to monitor applications as detailed in [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
 
- Packages and programs also includes a number of built-in reports, which enables you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
+ Packages and programs also includes a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
 
  For more information about how to configure reporting in Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
 
@@ -301,7 +301,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **Language**: The language version of the package, up to 32 characters.
 
--   **Comment** (optional): An comment about the package, up to 127 characters.
+-   **Comment** (optional): A comment about the package, up to 127 characters.
 
 -   **ContainsNoFiles**: This entry indicates whether or not a source is associated with the package.  
 
@@ -326,7 +326,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **Icon** (optional): Specify the file that contains the icon to use for this program. If specified, this icon replaces the default program icon in the Configuration Manager console and is displayed on client computers when the program is advertised.
 
--   **Comment** (optional): An comment about the program, up to 127 characters.
+-   **Comment** (optional): A comment about the program, up to 127 characters.
 
 -   **CommandLine**: Specify the command line for the program, up to 127 characters. The command is relative to the package source folder.
 
@@ -336,7 +336,7 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **AfterRunning**: Specify any special action that occurs after the program is successfully completed. Options available are **SMSRestart**, **ProgramRestart**, or **SMSLogoff**. If this entry is not included, the program doesn't run a special action.  
 
--   **EstimatedDiskSpace**: Specify the amount of disk space that the software program requires to be able run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, the units for the value must also be specified.  
+-   **EstimatedDiskSpace**: Specify the amount of disk space that the software program requires to run on the computer. This can be specified as **Unknown** (the default setting) or as a whole number greater than or equal to zero. If a value is specified, the units for the value must also be specified.  
 
      Example:  
 
@@ -380,15 +380,15 @@ Packages can use some new features of Configuration Manager, including distribut
 
 -   **AdditionalProgramRequirements** (optional): Provide any other information or requirements for client computers, up to 127 characters.
 
--   **CanRunWhen**: Specify the user status that the program requires to be able run on the client computer. Available values are **UserLoggedOn**, **NoUserLoggedOn**, or **AnyUserStatus**. The default value is **UserLoggedOn**.  
+-   **CanRunWhen**: Specify the user status that the program requires to run on the client computer. Available values are **UserLoggedOn**, **NoUserLoggedOn**, or **AnyUserStatus**. The default value is **UserLoggedOn**.  
 
 -   **UserInputRequired**: Specify whether the program requires interaction with the user. Available values are **True** or **False**. The default value is **True**. This entry is set to **False** if **CanRunWhen** is not set to **UserLoggedOn**.  
 
--   **AdminRightsRequired**: Specify whether the program requires administrative credentials on the computer to be able to run. Available values are **True** or **False**. The default value is **False**. This entry is set to **True** if **CanRunWhen** is not set to **UserLoggedOn**.  
+-   **AdminRightsRequired**: Specify whether the program requires administrative credentials on the computer to run. Available values are **True** or **False**. The default value is **False**. This entry is set to **True** if **CanRunWhen** is not set to **UserLoggedOn**.  
 
 -   **UseInstallAccount**: Specify whether the program uses the Client Software Installation Account when it runs on client computers. By default, this value is **False**. This value is also **False** if **CanRunWhen** is set to **UserLoggedOn**.  
 
--   **DriveLetterConnection**: Specify whether the program requires a drive letter connection to the package files that are located on the distribution point. You can specify **True** or **False**. The default value is **False**, which allows the program to use a Universal Naming Convention (UNC) connection. When this value is set to **True**, the next available drive letter is used (starting with Z: and proceeding backward).  
+-   **DriveLetterConnection**: Specify whether the program requires a drive letter connection to the package files that are located on the distribution point. You can specify **True** or **False**. The default value is **False**, which enables the program to use a Universal Naming Convention (UNC) connection. When this value is set to **True**, the next available drive letter is used (starting with Z: and proceeding backward).  
 
 -   **SpecifyDrive** (optional): Specify a drive letter that the program requires to connect to the package files on the distribution point. This specification forces the use of the specified drive letter for client connections to distribution points.
 
@@ -401,6 +401,6 @@ Packages can use some new features of Configuration Manager, including distribut
      DependentProgram=Admin  
     DependentProgram=  
 
--   **Assignment**: Specify how the program is assigned to users. This value can be: **FirstUser,** only the first user who logs on runs the program; or **EveryUser,** every user who signs in to the client runs the program. When **CanRunWhen** is not set to **UserLoggedOn**, this entry is set to **FirstUser**.  
+-   **Assignment**: Specify how the program is assigned to users. This value can be: **FirstUser** (only the first user who signs in to the client runs the program) or **EveryUser** (every user who signs in runs the program). When **CanRunWhen** is not set to **UserLoggedOn**, this entry is set to **FirstUser**.  
 
 -   **Disabled**: Specify whether this program can be advertised to clients. Available values are **True** or **False**. The default value is **False**.  
