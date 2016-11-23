@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to test client upgrades in a preproduction collection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

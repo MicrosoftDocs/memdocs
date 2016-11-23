@@ -113,11 +113,11 @@ Custom branding for the Software Center was introduced in Configuration Manager 
 
 Custom branding for the Software Center is applied according to the following rules:
 
-1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
+1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../clients/deploy/configure-client-settings.md).
 
-2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#Application-Catalog-website-point).
+2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point).
 
-3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).
+3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 
 ## Enforcement grace period for required application and software update deployments
@@ -146,8 +146,8 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 
 
 For more information:
-- [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
-- [How to configure client settings](../clients/deploy/configure-client-settings.md)
+- [Settings to manage high-risk deployments](../../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [How to configure client settings](../../clients/deploy/configure-client-settings.md)
 
 ## Software updates dashboard
 You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
