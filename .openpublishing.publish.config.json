@@ -3,13 +3,15 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMdocs",
   "git_repository_branch_open_to_public_contributors": "master",
   "need_generate_pdf": false,
+  "need_generate_pdf_url_template": true,
   "branch_target_mapping": {
     "live": [
       "Publish",
       "Pdf"
     ],
     "master": [
-      "Publish"
+      "Publish",
+      "Pdf"
     ]
   },
   "need_generate_intellisense": false,
