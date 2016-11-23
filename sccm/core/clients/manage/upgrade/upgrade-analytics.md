@@ -7,7 +7,7 @@ keywords:
 author: nbigman
 ms.author: nbigman
 manager: angerobe
-ms.date: 11/20/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -58,21 +58,55 @@ There are several configuration steps that you have to take to ensure that your 
 
 ### Create the connection
 
-1.  In **Administration** > **Cloud Services** > **Upgrade Analytics Connector**, choose **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connector wizard**.
+1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Analytics Connector** > **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connection wizard**.
 3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client Secret Key**, then select **Next**.
-4.  On the **Upgrade Analytics** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+4.  On the **Upgrade Analytics** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
 5.  Verify your connection settings on the **Summary** screen, then select **Next**.
 
 	> [!NOTE]
 	> You must connect Upgrade Analytics to the top-tier site in your hierarchy. If you connect Upgrade Analytics to a standalone primary site and then add a central administration site to your environment, you must delete and recreate the OMS connection within the new hierarchy.
 
-6.  After you have linked Configuration Manager to Upgrade Analytics add the UpgradeAnalytics service to the workspace.
-7.	Generate a commercial ID.
-8.	Subscribe to Upgrade Analytics.
+### Complete Upgrade Analytics tasks  
 
-## Viewing Microsoft Upgrade Analytics properties in Configuration Manager
+After you've create the connection in Configuration Manager, perform these tasks, as described in [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).  
 
-1.  Navigate to **Cloud Services**, then select **Upgrade Analytics Connector** to open the **Upgrade Analytics Properties** page.
+1. Add the UpgradeAnalytics service to the OMS workspace.  
+2. Generate a commercial ID.  
+3. Subscribe to Upgrade Analytics.   
+
+## Use the Upgrade Analytics deployment script  
+
+You can automate many of the Upgrade Analytics tasks and troubleshoot data sharing issues with the Microsoft **Upgrade Analytics deployment script**.  
+The Upgrade Analytics deployment script does the following:  
+
+- Sets commercial ID key + CommercialDataOptIn + RequestAllAppraiserVersions keys.  
+- Verifies that user computers can send data to Microsoft.  
+- Checks whether the computer has a pending restart.   
+- Verifies that the latest version of KB package 10.0.x is installed (requires 10.0.14348 or subsequent releases).  
+- If enabled, turns on verbose mode for troubleshooting.  
+- Initiates the collection of the telemetry data that Microsoft needs to assess your organization’s upgrade readiness.  
+- If enabled, displays the script’s progress in a cmd window, providing you visibility into issues (success or fail for each step) and/or writes to log file.  
+  
+### To run the Upgrade Analytics deployment script:  
+  
+1. Download the [Upgrade Analytics deployment script](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409) and extract UpgradeAnalytics.zip. The files in the **Diagnostics** folder are necessary only if you plan to run the script in troubleshooting mode.  
+2. Edit these parameters in RunConfig.bat:  
+- Storage location for log information. Example: %SystemDrive%\UADiagnostics. You can store log information on a remote file share or a local directory. If the script is blocked from creating the log file for the given path, it creates the log files in the drive with the Windows directory.  
+- Commercial ID key.  
+- By default, the script sends log information to both the console and the log file. To change the default behavior, use one of the following options:  
+	- logMode = 0 log to console only  
+	- logMode = 1 log to file and console  
+	- logMode = 2 log to file only  
+    - For troubleshooting, set **isVerboseLogging** to **$true** to generate log information that can help with diagnosing issues. By default, **isVerboseLogging** is set to **$false**. Ensure the Diagnostics folder is installed in the same directory as the script to use this mode.  
+	- Notify users if they need to restart their computers. By default, this is set to off.  
+  
+3. After you finish editing the parameters in RunConfig.bat, run the script as an administrator.  
+  
+  
+## View Microsoft Upgrade Analytics properties in Configuration Manager  
+  
+1.  In the Configuration Manager console, navigate to **Cloud Services**, then choose **OMS Connector** to open the **OMS Connection Properties** page.  
+
 2.  Within this page there are two tabs:
   * The **Azure Active Directory** tab shows your **Tenant**, **Client ID**, **Client secret key expiration**, and allows you to **Verify** your **Client secret key** if it has expired.
   * The **Upgrade Analytics** tab shows your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
