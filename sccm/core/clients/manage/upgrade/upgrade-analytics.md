@@ -7,7 +7,7 @@ keywords:
 author: nbigman
 ms.author: nbigman
 manager: angerobe
-ms.date: 11/20/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -58,9 +58,9 @@ There are several configuration steps that you have to take to ensure that your 
 
 ### Create the connection
 
-1.  In **Administration** > **Cloud Services** > **Upgrade Analytics Connector**, choose **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connector wizard**.
+1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Analytics Connector** > **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connection wizard**.
 3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client Secret Key**, then select **Next**.
-4.  On the **Upgrade Analytics** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.
+4.  On the **Upgrade Analytics** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
 5.  Verify your connection settings on the **Summary** screen, then select **Next**.
 
 	> [!NOTE]
