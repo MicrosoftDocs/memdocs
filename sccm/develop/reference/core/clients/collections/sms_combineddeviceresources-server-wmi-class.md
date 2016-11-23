@@ -992,7 +992,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 |3|Wipe Confirmed/Registered|  
 
 ## Remarks  
- Similar to the members class that is generated for querying “All Systems,��? this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the “All Systems��? resource class.  
+ Similar to the members class that is generated for querying "All Systems," this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the "All Systems" resource class.  
 
 ## Requirements  
 

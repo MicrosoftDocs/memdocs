@@ -51,7 +51,7 @@ Class SMS_AssociatedSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [read, sizelimit(��?512��?)]  
+ Qualifiers: [read, sizelimit("512")]  
 
  Description of the RBA security category.  
 
@@ -69,7 +69,7 @@ Class SMS_AssociatedSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, sizelimit(��?256��?)]  
+ Qualifiers: [not_null, read, sizelimit("256")]  
 
  Name of the RBA security category.  
 
@@ -78,7 +78,7 @@ Class SMS_AssociatedSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(��?512��?)]  
+ Qualifiers: [not_null, read, SizeLimit("512")]  
 
  The user who created the RBA security category.  
 
@@ -105,7 +105,7 @@ Class SMS_AssociatedSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512��?)]  
+ Qualifiers: [not_null, read, SizeLimit("512")]  
 
  The user who last modified this RBA security category.  
 
@@ -150,7 +150,7 @@ Class SMS_AssociatedSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“3��?)]  
+ Qualifiers: [not_null, read, SizeLimit("3")]  
 
  The source site of the RBA security category.  
 

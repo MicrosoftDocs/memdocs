@@ -199,10 +199,10 @@ interface ICcmContentTransferManager4 : IUnknown
  The XML used to describe allowed alternate download providers and settings for each, may be NULL.  
 
 ```  
-<AlternateDownloadSettings SchemaVersion=��?1.0��?>  
-    <Provider Name=��?logical name here��?>        <Data>provider specific data here</Data>  
+<AlternateDownloadSettings SchemaVersion="1.0">  
+    <Provider Name="logical name here">        <Data>provider specific data here</Data>  
     </Provider>  
-    <Provider Name=��?logical name here��?>   
+    <Provider Name="logical name here">   
         <Data>provider specific data here</Data>  
     </Provider>  
 </AlternateDownloadSettings>  
