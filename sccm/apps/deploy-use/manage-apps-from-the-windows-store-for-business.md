@@ -85,7 +85,7 @@ In the Windows Store for Business, set up Configuration Manager as the store man
 1.  Open [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) and sign in if prompted.
 2.  Accept the terms of use if requested.
 3.  Under **Management Tools**, choose **Add a management tool**.
-4.  In **Search for the tool by name**, type the name of the application you created in AAD previously, then choose **Add**.
+4.  In **Search for the tool by name**, type the name of the application you created in Azure Active Directory previously, then choose **Add**.
 5.  Choose **Activate** next to the application you just imported.
 6.  On the **Manage > Account Information** page, select **Show Offline-Licensed Apps** if you want to allow offline-licensed apps to be purchased.
 
