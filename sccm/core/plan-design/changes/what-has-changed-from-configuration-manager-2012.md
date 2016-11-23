@@ -149,7 +149,7 @@ The removal of integrated AMT for System Center Configuration Manager includes:
 
 -   Added a device enrollment manager role to help manage large numbers of devices  
 
-For more information about mobile device management capabilities with Configuration Manager and Intune, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+For more information about mobile device management capabilities with Configuration Manager and Intune, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ## On-premises Mobile Device Management  
  With System Center Configuration Manager, you can now manage mobile devices using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software since the capabilities that Configuration Manager uses to manage the devices are built into the device operating systems.  

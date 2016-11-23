@@ -2,7 +2,7 @@
 title: "Wi-Fi and VPN profile prerequisites | Microsoft Docs"
 description: "Learn about the security permissions needed to manage certificate profiles, Wi-Fi profiles, and VPN profiles in System Center Configuration Manager."
 ms.custom: na
-ms.date: 0201-03-31
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
