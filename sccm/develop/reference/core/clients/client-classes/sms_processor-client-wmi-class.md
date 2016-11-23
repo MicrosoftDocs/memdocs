@@ -1,15 +1,15 @@
 ---
-title: "SMS_Processor Client WMI Class"
+title: "SMS_Processor Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 7f338a23-33c5-44c0-adc2-a8d44ceaa179
 caps.latest.revision: 9
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_Processor Client WMI Class
 The `SMS_Processor` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device that can interpret a sequence of instructions on a computer that is running a Windows operating system. On a multiprocessor computer, one `SMS_Processor` object exists for each processor.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_Processor   
 {  
@@ -82,29 +82,29 @@ Class SMS_Processor
       UInt32 VoltageCaps;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_Processor` class does not define any methods.  
-  
+
 ## Properties  
  `AddressWidth`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor address width, in bits, that represents the size of a pointer type on the processor. On a 32-bit processor, the value is 32. On a 64-bit processor, the value is 64.  
-  
+
  `Architecture`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor architecture used by the platform. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0 (0x0)|x86|  
@@ -113,16 +113,16 @@ Class SMS_Processor
 |3 (0x3)|PowerPC|  
 |6 (0x6)|Intel Itanium Processor Family (IPF)|  
 |9 (0x9)|x64|  
-  
+
  `Availability`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Availability and status of the device. Possible values are:  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|Other|  
@@ -142,34 +142,34 @@ Class SMS_Processor
 |15 (0xF)|Power Save - Standby. The device is not functioning, but it can be brought to full power quickly.|  
 |16 (0x10)|Power Cycle|  
 |17 (0x11)|Power Save - Warning. The device is in a warning state, though also in a power save state.|  
-  
+
  `BrandID`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor architecture-specific brand identification information.  
-  
+
  `Caption`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Short description of an object. The caption consists of a one-line string.  
-  
+
  `ConfigManagerErrorCode`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Windows API Configuration Manager error code. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0 (0x0)|Device is working properly.|  
@@ -204,43 +204,43 @@ Class SMS_Processor
 |29 (0x1D)|Device is disabled. The device firmware did not provide the required resources.|  
 |30 (0x1E)|Device is using an IRQ resource that another device is using.|  
 |31 (0x1F)|Device is not working properly. Windows cannot load the required device drivers.|  
-  
+
  `ConfigManagerUserConfig`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  `true` if the device is using a configuration that the user defines.  
-  
+
  `CPUHash`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  A unique 128-bit signature that is derived from a combination of the `Manufacturer`, `BrandID`, `PCache`, `NormSpeed`, `IsMobile`, and `Name` properties.  
-  
+
  `CPUKey`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Key for the CPU associated with the processor.  
-  
+
  `CpuStatus`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Current status of the processor. Possible values are listed below. Status changes indicate processor usage, but not the physical condition of the processor.  
-  
+
 |||  
 |-|-|  
 |0 (0x0)|Unknown|  
@@ -251,99 +251,99 @@ Class SMS_Processor
 |5 (0x5)|Reserved|  
 |6 (0x6)|Reserved|  
 |7 (0x7)|Other|  
-  
+
  `CreationClassName`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  The creation class name.  
-  
+
  `CurrentClockSpeed`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Current speed of the processor, in megahertz.  
-  
+
  `CurrentVoltage`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Voltage of the processor. If the eighth bit is set, bits 0-6 contain the voltage multiplied by 10. If the eighth bit is not set, the bit setting in the `VoltageCaps` property represents the voltage value. The `CurrentVoltage` property is only set when SMBIOS designates a voltage value.  
-  
+
  Example: Value for a processor voltage of 1.8 volts is 0x12 (1.8 x 10).  
-  
+
  `DataWidth`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor data width, in bits.  
-  
+
  `Description`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Description of the processor.  
-  
+
  `DeviceID`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key]  
-  
+
  Unique ID of the processor.  
-  
+
  `ErrorCleared`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  `true` if the error reported in the `LastErrorCode` property is cleared.  
-  
+
  `ErrorDescription`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Additional information about the error that is recorded in the `LastErrorCode` property and information about corrective actions that can be taken.  
-  
+
  `ExtClock`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  External clock frequency, in megahertz. If the frequency is unknown, set this property to `null`.  
-  
+
  `Family`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor family type. Possible values are:  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|Other|  
@@ -454,178 +454,178 @@ Class SMS_Processor
 |320 (0x140)|WinChip|  
 |350 (0x15E)|DSP|  
 |500 (0x1F4)|Video Processor|  
-  
+
  `InstallDate`  
  Data type: `DateTime`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Date and time when the processor was installed. A value for this property is not required.  
-  
+
  `Is64Bit`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  A non-zero value if the CPU is 64-bit. Otherwise, this property is set to zero.  
-  
+
  `IsHyperthreadCapable`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  A non-zero value if processor supports hyperthreading. Otherwise, this property is set to zero.  
-  
+
  `IsHyperthreadEnabled`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  A non-zero value if hyperthreading is enabled. Otherwise, this property is set to zero.  
-  
+
  `IsMobile`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  `true` if the computer is a mobile device.  
-  
+
  `IsMulticore`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  `true` if the computer has more than one core.  
-  
+
  `L2CacheSize`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Size of the level 2 processor cache. A level 2 cache is an external memory area that has a faster access time than the main RAM.  
-  
+
  `L2CacheSpeed`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Clock speed of the level 2 processor cache.  
-  
+
  `LastErrorCode`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Last error code reported by the logical device.  
-  
+
  `Level`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Level definition for the processor. The value depends on processor architecture.  
-  
+
  `LoadPercentage`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Load capacity for the processor, averaged to the last second. Processor loading refers to the total computing burden for a processor at one time.  
-  
+
  `Manufacturer`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Name of the processor manufacturer, for example, "A. Datum Corporation".  
-  
+
  `MaxClockSpeed`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Maximum speed of the processor, in megahertz.  
-  
+
  `Name`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Label by which the processor is known. When this name indicates a subclass, it can be overridden to be a key property.  
-  
+
  `NormSpeed`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  The normalized processor speed, in megahertz.  
-  
+
  `OtherFamilyDescription`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor family type. This property is used when the `Family` property is set to "Other". For other settings of the `Family` property, set this string to `null`.  
-  
+
  `PCache`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor cache.  
-  
+
  `PNPDeviceID`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Windows Plug and Play device ID of the logical device.  
-  
+
  `PowerManagementCapabilities`  
  Data type: `UInt16` Array  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Specific power-related capabilities of a logical device. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0 (0x0)|Unknown|  
@@ -636,34 +636,34 @@ Class SMS_Processor
 |5 (0x5)|Power State Settable. The `SetPowerState` method is supported. This method is found on the parent `CIM_LogicalDevice` class and can be implemented.|  
 |6 (0x6)|Power Cycling Supported. The `SetPowerState` method can be invoked with the `PowerState` parameter set to 5 (Power Cycle).|  
 |7 (0x7)|Timed Power-On Supported. The `SetPowerState` method can be invoked with the `PowerState` parameter set to 5 (Power Cycle) and the `Time` parameter set to a specific date and time, or interval, for power-on.|  
-  
+
  `PowerManagementSupported`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  `true` if the power of the logical device can be managed, indicating that it can be put into suspend mode, and so on. This property does not indicate that power management features are enabled.  
-  
+
  `ProcessorId`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor ID. For an x86 class CPU, the field format depends on the processor support of the CPUID instruction. If the instruction is supported, the property contains two DWORD formatted values. The first is an offset of 08h-0Bh, which is the EAX value that a CPUID instruction returns with input EAX set to 1. The second is an offset of 0Ch-0Fh, which is the EDX value that the instruction returns. Only the first two bytes of the property are significant and contain the contents of the DX register at CPU reset. All other bytes are set to 0 (zero), and the contents are in DWORD format.  
-  
+
  `ProcessorType`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Primary function of the processor. Possible values are:  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|Other|  
@@ -672,76 +672,76 @@ Class SMS_Processor
 |4 (0x4)|Math Processor|  
 |5 (0x5)|DSP Processor|  
 |6 (0x6)|Video Processor|  
-  
+
  `Revision`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  System revision level that depends on the processor architecture. The system revision level contains the same values as the `Version` property, but in a numerical format.  
-  
+
  `Role`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Role of the processor, for example, "Central Processor" or "Math Processor".  
-  
+
  `SocketDesignation`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Type of chip socket used on the circuit, for example, "J202".  
-  
+
  `Status`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Current status of the processor. Possible values are:  
-  
+
 -   OK  
-  
+
 -   Error  
-  
+
 -   Degraded  
-  
+
 -   Unknown  
-  
+
 -   Pred Fail  
-  
+
 -   Starting  
-  
+
 -   Stopping  
-  
+
 -   Service  
-  
+
 -   Stressed  
-  
+
 -   NonRecover  
-  
+
 -   NoContact  
-  
+
 -   LostComm  
-  
+
  `StatusInfo`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  State of the logical device. Possible values are listed below. If this property does not apply to the logical device, the property is set to "Not Applicable".  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|Other|  
@@ -749,43 +749,43 @@ Class SMS_Processor
 |3 (0x3)|Enabled|  
 |4 (0x4)|Disabled|  
 |5 (0x5)|Not Applicable|  
-  
+
  `Stepping`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Revision level of the processor in the processor family.  
-  
+
  `SystemName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Name of the scoping system.  
-  
+
  `UniqueId`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  GUID for the processor. This identifier can be unique only within a processor family.  
-  
+
  `UpgradeMethod`  
  Data type: `UInt16`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  CPU socket information, including the method by which the processor can be upgraded, if upgrades are supported. Possible values are:  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|Other|  
@@ -806,41 +806,41 @@ Class SMS_Processor
 |16 (0x10)|Socket 754|  
 |17 (0x11)|Socket 940|  
 |18 (0x12)|Socket 939|  
-  
+
  `Version`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Processor revision number that depends on the architecture.  
-  
+
  `VoltageCaps`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: None  
-  
+
  Voltage capabilities of the processor. Possible values are listed below. If the property is set to `null`, the voltage capabilities are unknown.  
-  
+
 |||  
 |-|-|  
 |1 (0x1)|5 volts|  
 |2 (0x2)|3.3 volts|  
 |4 (0x4)|2.9 volts|  
-  
+
  Bits 0-3 of the property represent specific voltages that the processor socket can accept. All other bits should be set to 0 (zero). The socket is configurable if multiple bits are set. For more information about the actual voltage at which the processor is running, see the `CurrentVoltage` property.  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
-  
+
 ## See Also  
  [Asset Intelligence Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/asset-intelligence-client-wmi-classes.md)   
  [SMS_AutoStartSoftware Class](../../../../../develop/reference/core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md)   

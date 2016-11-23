@@ -1,15 +1,15 @@
 ---
-title: "SMS_Operation Server WMI Class"
+title: "SMS_Operation Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
 caps.latest.revision: 11
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_Operation Server WMI Class
 The `SMS_Operation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_RbacSecuredObject` and describes the various operations.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_Operation :    
 {  
@@ -33,20 +33,20 @@ Class SMS_Operation :
     String OperationName;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_Operation` class does not define any methods.  
-  
+
 ## Properties  
  `BitFlag`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The bit flag of the operation. Possible values are:  
-  
+
 ||||  
 |-|-|-|  
 |0|1|Read|  
@@ -79,42 +79,42 @@ Class SMS_Operation :
 |27|134217728|AISoftwareList.View AI<br /><br /> Collection.Deploy Firewall Policies|  
 |28|268435456|RunReport|  
 |29|536870912|ModifyReport|  
-  
+
  `IsTypeWideOperation`  
  Data type: `Boolean`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  `true`, if the operation is type wide.  
-  
+
  If the operation is type wide, the user will have the permission against all objects of this type, if the user has this operation against any RBA security category. If the operation is not type wide, then user will has the permission against the objects which are assigned to the related RBA security category.  
-  
+
  `ObjectTypeID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Type ID of the object.  
-  
+
  `OperationName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
- Qualifiers: [sizelimit(“256”)]  
-  
+
+ Qualifiers: [sizelimit(“256��?)]  
+
  Name of the operation.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

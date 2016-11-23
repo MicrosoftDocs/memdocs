@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511 or 1602, you must first install the 1606 update before you can update to version 1610.
+When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610. 
 
 To get the update for version 1610, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in on-line or off-line mode. After your hierarchy downloads the update package from Microsoft, you will find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 

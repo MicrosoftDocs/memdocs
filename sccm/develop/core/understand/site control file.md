@@ -1,7 +1,7 @@
 ---
-title: "Configuration Manager Site Control File"
+title: "Site Control File | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ Site control in System Center Configuration Manager defines the settings for a s
 >  Previous releases of Configuration Manager had a physical file that was processed for site settings referred to as the site control file. System Center Configuration Manager stores site settings directly in the site database; however, very little has changed when programmatically configuring a site.  
 
 ## Site Control File topics  
-  
+
 -   [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)  
 
 -   [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)  

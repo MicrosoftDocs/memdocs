@@ -1,15 +1,15 @@
 ---
-title: "Configuration Manager SDK Requirements"
+title: "Configuration Manager SDK Requirements | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 7e1a9f96-6e2d-4656-9bb1-a5b8d40b3416
 caps.latest.revision: 15
@@ -19,23 +19,23 @@ manager: "mbaldwin"
 ---
 # Configuration Manager SDK Requirements
 This section provides information about System Center Configuration Manager SDK requirements.  
-  
+
 ## SDK Requirements topics  
-  
+
 -   [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md)  
-  
+
 -   [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client runtime requirements.md)  
-  
+
 -   [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md)  
-  
+
 -   [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md)  
-  
+
 -   [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md)  
-  
+
 -   [Configuration Manager SDK Libraries and Header Files](../../../develop/core/reqs/configuration-manager-sdk-libraries-and-header-files.md)  
-  
+
 > [!IMPORTANT]
 >  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  
-  
+
 ## See Also  
  [Configuration Manager SDK](../../../develop/core/misc/system-center-configuration-manager-sdk.md)

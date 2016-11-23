@@ -1,7 +1,7 @@
 ---
-title: "SMS_CombinedDeviceResources Server WMI Class"
+title: "SMS_CombinedDeviceResources Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -992,7 +992,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 |3|Wipe Confirmed/Registered|  
 
 ## Remarks  
- Similar to the members class that is generated for querying “All Systems,” this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the “All Systems” resource class.  
+ Similar to the members class that is generated for querying “All Systems,��? this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the “All Systems��? resource class.  
 
 ## Requirements  
 

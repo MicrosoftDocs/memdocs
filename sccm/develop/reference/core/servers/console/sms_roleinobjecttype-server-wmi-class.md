@@ -1,15 +1,15 @@
 ---
-title: "SMS_RoleInObjectType Server WMI Class"
+title: "SMS_RoleInObjectType Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 849fb64d-23d4-4642-b5bc-92168a35b2c1
 caps.latest.revision: 8
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_RoleInObjectType Server WMI Class
 The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a role and its associated object types.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_RoleInObjectType : SMS_BaseClass  
 {  
@@ -31,20 +31,20 @@ Class SMS_RoleInObjectType : SMS_BaseClass
     String RoleID;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_RoleInObjectType` class does not define any methods.  
-  
+
 ## Properties  
  `ObjectTypeID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Secured object class ID. Possible values are listed below.  
-  
+
 |||  
 |-|-|  
 |2|SMS_Package|  
@@ -55,22 +55,22 @@ Class SMS_RoleInObjectType : SMS_BaseClass
 |23|SMS_DriverPackage|  
 |24|SMS_SoftwareUpdatesPackage|  
 |31|SMS_Application|  
-  
+
  `RoleID`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  The ID of the role.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

@@ -1,7 +1,7 @@
 ---
-title: "Set the PXE Service Point Response to All Network Interfaces | Configuration Manager"
+title: "Set the PXE Service Point Response to All Network Interfaces | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -57,7 +57,7 @@ public void SetNetworkInterface(WqlConnectionManager connection,                
 |Parameter|Type|Description|  
 |`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM”`.|  
+|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM�?`.|  
 |respondToSpecficInterface|Managed: `String`|The value to set which network interfaces will respond to PXE requests.<br /><br /> -   0 - Responds to PXE requests on all network interfaces.<br />-   1 - Responds to requests on specific network interfaces.|  
 
 ## Compiling the Code  

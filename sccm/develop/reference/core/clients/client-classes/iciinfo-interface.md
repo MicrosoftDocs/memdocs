@@ -1,15 +1,15 @@
 ---
-title: "ICIINFO Interface"
+title: "ICIINFO Interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 9c61cbd9-3f54-41da-abf0-05159f43dc86
 caps.latest.revision: 7
@@ -19,12 +19,12 @@ manager: "mbaldwin"
 ---
 # ICIINFO Interface
 The `ICIINFO` interface, in System Center Configuration Manager, can represent the properties of a configuration item which has been downloaded and stored by the Desired Configuration Management client or the properties of a baseline configuration item in a Desired Configuration Management Agent job in the client data store. In both cases, the configuration item is either a (top level/root) baseline or a Software Updates configuration item.  
-  
+
  The interface inherits from `IUnknown`.  
-  
+
 ## In This Section  
  The following table lists the methods in the `ICIINFO` interface.  
-  
+
 |Term|Definition|  
 |----------|----------------|  
 |[ICIINFO::GetCategory](../../../../../develop/reference/core/clients/client-classes/iciinfo--getcategory-method.md)|Gets a localized category name by index and the group name of the category.|  
@@ -40,13 +40,13 @@ The `ICIINFO` interface, in System Center Configuration Manager, can represent t
 |[ICIINFO::GetProperty](../../../../../develop/reference/core/clients/client-classes/iciinfo--getproperty-method.md)|Gets a named property value from the configuration item.|  
 |[ICIINFO::GetSdmTypeName](../../../../../develop/reference/core/clients/client-classes/iciinfo--getsdmtypename-method.md)|Gets the fully qualified name of a root configuration item.|  
 |[ICIINFO::GetVersion](../../../../../develop/reference/core/clients/client-classes/iciinfo--getversion-method.md)|Gets the version of the configuration item.|  
-  
+
 ## Remarks  
  To obtain this interface, the application calls the [IDCMSDK Interface](../../../../../develop/reference/core/clients/client-classes/idcmsdk-interface.md). The application calls the [IDCMAgentCallback Interface](../../../../../develop/reference/core/clients/client-classes/idcmagentcallback-interface.md) interface to respond to agent calls.  
-  
+
 ## UUID  
  The UUID for `ICIINFO` is ACF43B8E-23A2-4923-B421-CB918FC5CA1F.  
-  
+
 ## See Also  
  [Compliance Settings (DCM) Client Interfaces](../../../../../develop/reference/core/clients/client-classes/compliance-settings--dcm--client-interfaces.md)   
  [IDCMSDK Interface](../../../../../develop/reference/core/clients/client-classes/idcmsdk-interface.md)   

@@ -1,15 +1,15 @@
 ---
-title: "SMS_DistributionPointDriveInfo Server WMI Class"
+title: "SMS_DistributionPointDriveInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 325e64e8-86d4-4f92-83f9-ace4630d0a4c
 caps.latest.revision: 8
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_DistributionPointDriveInfo Server WMI Class
 The `SMS_DistributionPointDriveInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic information about the drives on a distribution point site system role.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_DistributionPointDriveInfo : SMS_BaseClass  
 {  
@@ -39,65 +39,65 @@ Class SMS_DistributionPointDriveInfo : SMS_BaseClass
     SInt32 Status;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_DistributionPointDriveInfo` class does not define any methods.  
-  
+
 ## Properties  
  `BytesFree`  
  Data type: `SInt64`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Amount of free, unused storage space, in kilobytes, for the storage object.  
-  
+
  `BytesTotal`  
  Data type: `SInt64`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Maximum amount of storage space, in kilobytes, of the storage object. A negative value indicates that information is currently unavailable.  
-  
+
  `ConttentLibPriority`  
  Data type: `SInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The order of preference for distributing content to this drive when copying packages to the Configuration Manager content library on the distribution point system. Lower values are preferred over higher values.  
-  
+
  `Drive`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Drive that is used by the distribution point.  
-  
+
  `NALPath`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Network abstraction layer (NAL) path to the distribution point.  
-  
+
  `ObjectType`  
  Data type: `SInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Object type. Possible values are:  
-  
+
 |||  
 |-|-|  
 |Value|Description|  
@@ -111,49 +111,49 @@ Class SMS_DistributionPointDriveInfo : SMS_BaseClass
 |258|PKG_TYPE_BOOTIMAGE|  
 |259|PKG_TYPE_OSINSTALLIMAGE|  
 |512|APPLICATION|  
-  
+
  `PercentFree`  
  Data type: `SInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Percentage of free storage space available on the storage object.  
-  
+
  `PkgSharePriority`  
  Data type: `SInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The order of preference for distributing packages to this drive when coping packages to package share location. Lower values are preferred over higher values.  
-  
+
  `SiteCode`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Site code of the role.  
-  
+
  `Status`  
  Data type: `SInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The last returned error code from attempts to copy content to this drive. A status of 0 indicates success.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

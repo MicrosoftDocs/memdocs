@@ -1,15 +1,15 @@
 ---
-title: "IAppManagementHandler::EnumerateApps Method"
+title: "IAppManagementHandler::EnumerateApps | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 0e4b2ecd-ebc1-4a38-af80-e3d198d6a1a7
 caps.latest.revision: 16
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # IAppManagementHandler::EnumerateApps Method
 The `IAppManagementHandler::EnumerateApps` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.  
-  
+
 ## Syntax  
-  
+
 ```  
 [IDL]  
 HRESULT EnumerateApps(  
@@ -29,36 +29,36 @@ HRESULT EnumerateApps(
      AppDeploymentTypeData* pDetectResult  
 );  
 ```  
-  
+
 #### Parameters  
  `hUserToken`  
  Data type: `HANDLE`  
-  
+
  Qualifiers: [in]  
-  
+
  The user token. If it is null, the action is for computer. If it is not NULL, the action is for the user.  
-  
+
  `pDetectResult`  
  Data type: `AppDeploymentTypeData`  
-  
+
  Qualifiers: [out]  
-  
+
  .   
-  
+
 ## Return Values  
  An `HRESULT` code. Possible values include, but are not limited to, the following:  
-  
+
  S_OK  
  Success implies that discovery was triggered successfully.  All other return values indicate failure.  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
-  
+
 ## See Also  
  [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)   
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   

@@ -1,15 +1,15 @@
 ---
-title: "How to Define the Installer"
+title: "How to Define the Installer | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: f18ca88b-a1e2-46d0-8740-00d36dc09e0e
 caps.latest.revision: 24
@@ -19,42 +19,42 @@ manager: "mbaldwin"
 ---
 # How to Define the Installer
 To define the application management deployment technology installer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class. The new class instance will define the properties and methods used on the client to actually install the application.  
-  
+
  The Installer class has three abstract methods (CreateDetectionAction, CreateInstallAction, CreateUninstallAction) allowing the Installer to specify the Action objects that will be used on the client for detection, installation and uninstall.  
-  
+
  Corresponding client-side implementation is required for the end to end Installer to work correctly.  The client-side implementation is covered in [How to Define the Client-side Handler](../../develop/apps/how-to-define-the-client-side-handler.md).  
-  
+
  In the Remote Desktop Protocol (RDP) sample project, a new installer is required for Remote Desktop Protocol (RDP).  Installation support for RDP is not built-in to Configuration Manager, so a custom installer is required.  
-  
+
  Basic Overview of Defining a Custom Installer  
-  
+
 1.  Create a custom instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class.  
-  
+
 2.  Override the Technology property and return the TechnologyId string specific to the technology.  
-  
+
 3.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateDetectAction` method and create a custom detection method specific to the technology.  
-  
+
 4.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateInstallAction` method and create a custom installation method specific to the technology.  
-  
+
 5.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateUninstallAction` method and create a custom uninstallation method specific to the technology.  
-  
+
 6.  Create the general properties required to install the custom technology on the client.  
-  
+
 ### To define a custom installer  
-  
+
 1.  Create an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class using the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` constructor.  
-  
+
      The following example from the RDP sample project demonstrates how to create the custom class.  
-  
+
     ```  
     //   Installer class for a specific technology. The Installer class defines properties and methods used on the client to actually install the application.   
     public class RdpInstaller : Installer  
     ```  
-  
+
 2.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.Technology` property to return the correct value for the custom installer technology.  
-  
+
      The following example from the RDP sample project demonstrates how to override the Technology property.  
-  
+
     ```  
     // RDP Installer Technology string  
     public override string Technology  
@@ -65,38 +65,38 @@ To define the application management deployment technology installer, use an ins
         }  
     }  
     ```  
-  
+
      In the RDP sample project, the string parameter for InstallerTechnologyId is defined as a constant in the Common class of the project.  
-  
+
     ```  
     //   Internal ID of the technology.   
           public const string TechnologyId = "Rdp";  
     ```  
-  
+
 3.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateDetectAction` method and create a custom action specific to the custom technology.  
-  
+
      The following example from the RDP sample project demonstrates how to override the CreateDetectAction method.  
-  
+
     ```  
     //   Creates an Action used for detection. On the client, this sequence is used to validate if the application is installed.   
     public override Action CreateDetectAction()  
     {  
         Action detectionAction = new Action { Provider = Common.TechnologyId };  
-  
+
         detectionAction.Arguments.Add(new Argument("Filename", typeof(string), this.Filename));   
         detectionAction.Arguments.Add(new Argument("InstallFolder", typeof(string), this.InstallFolder));   
         detectionAction.Arguments.Add(new Argument("FullAddress", typeof(string), this.FullAddress));   
         detectionAction.Arguments.Add(new Argument("RemoteApplication", typeof(string), this.RemoteApplication));   
         detectionAction.Arguments.Add(new Argument("RemoteApplicationMode", typeof(bool), false));   
-  
+
         return detectionAction;   
     }  
     ```  
-  
+
 4.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateInstallAction` method and create a custom action specific to the custom technology.  
-  
+
      The following example from the RDP sample project demonstrates how to override the CreateInstallAction method.  
-  
+
     ```  
     //   Creates an Action used for installation. On the client, this sequence defines the properties needed to install the application.   
     public override Action CreateInstallAction()  
@@ -129,11 +129,11 @@ To define the application management deployment technology installer, use an ins
         return installationAction;   
     }  
     ```  
-  
+
 5.  Override the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer.CreateUninstallAction` method and create a custom action specific to the custom technology.  
-  
+
      The following example from the RDP sample project demonstrates how to override the CreateUninstallAction method.  
-  
+
     ```  
     public override Action CreateUninstallAction()  
     {  
@@ -143,11 +143,11 @@ To define the application management deployment technology installer, use an ins
         return uninstallAction;   
     }  
     ```  
-  
+
 6.  Create addition properties and methods used on the client to install the custom technology.  
-  
+
      The following example from the RDP sample project demonstrates the creation of properties and methods used on the client to install the RDP application.  
-  
+
     ```  
     // Default height for the RDP window.  
     public const int DefaultDesktopHeight = 768;   
@@ -366,15 +366,15 @@ To define the application management deployment technology installer, use an ins
         }  
     }  
     ```  
-  
+
 #### Namespaces  
  Microsoft.ConfigurationManagement.ApplicationManagement  
-  
+
  Microsoft.ConfigurationManagement.ApplicationManagement.Serialization  
-  
+
 #### Assemblies  
  Microsoft.ConfigurationManagement.ApplicationManagement.dll  
-  
+
 ## See Also  
  [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

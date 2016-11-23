@@ -1,15 +1,15 @@
 ---
-title: "SMS_AdvertisementInfo Server WMI Class"
+title: "SMS_AdvertisementInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: de34161a-9f17-4b93-b1b0-5020f0533886
 caps.latest.revision: 9
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # SMS_AdvertisementInfo Server WMI Class
 The `SMS_AdvertisementInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information about a specific advertisement.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_AdvertisementInfo : SMS_BaseClass  
 {  
@@ -46,144 +46,144 @@ Class SMS_AdvertisementInfo : SMS_BaseClass
       UInt32 TimeFlags;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_AdvertisementInfo` class does not define any methods.  
-  
+
 ## Properties  
  `AdvertFlags`  
  Data type: `UInt32`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [bits]  
-  
+
  Flags identifying the advertisement. Possible values are defined for the `AdvertFlags` property of [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md). The default value is 0.  
-  
+
  `AdvertisementID`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [key]  
-  
+
  A unique auto-generated key.  
-  
+
  `AdvertisementName`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [Not_null]  
-  
+
  A plain text name of the advertisement.  
-  
+
  `AdvertisementSourceSite`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [read]  
-  
+
  The three-letter site code of the site from which the advertisement originated.  
-  
+
  `AssignmentID`  
  Data type: `UInt32`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [read]  
-  
+
  ID for the assignment associated with the advertisement.  
-  
+
  `CollectionID`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The ID that refers to the collection to which the specified advertisement will advertise.  
-  
+
  `CollectionName`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The name of the collection to which the advertisement is advertising.  
-  
+
  `ExpirationTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The date and time when the advertisement will no longer be available to clients.  
-  
+
  `OfferType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [enumeration]  
-  
+
  The type of advertisement.  
-  
+
 |||  
 |-|-|  
 |0|Required Advertisement.|  
 |2|Available advertisement.|  
-  
+
  `PackageID`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The ID that refers to the package the advertisement will advertise.  
-  
+
  `PackageLanguage`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The language of the advertised package.  
-  
+
  `PackageManufacturer`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The manufacturer of the advertised package.  
-  
+
  `PackageName`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The name of the advertised package.  
-  
+
  `PackageType`  
  Data type: `UInt32`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  [enumeration]  
-  
+
  The type of the package. Possible values are:  
-  
+
 |Value|Description|  
 |-----------|-----------------|  
 |0|Regular software distribution package.|  
@@ -194,41 +194,41 @@ Class SMS_AdvertisementInfo : SMS_BaseClass
 |257|Image package.|  
 |258|Boot image package.|  
 |259|Operating system install package.|  
-  
+
  `PackageVersion`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The version of the advertised package.  
-  
+
  `PresentTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: None  
-  
+
  The date and time when the advertisement will be presented to clients.  
-  
+
  `ProgramFlags`  
  Data type: `UInt32`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [bits]  
-  
+
  ProgramFlags define the installation characteristics of the program, such as whether this is an unattended install, the install restarts the computer, or the install runs in a minimized window. The default flags are USERCONTEXT, USEUNCPATH, and ANY_PLATFORM.  
-  
+
  When using SMS_Program programmatically, ensure that no conflicting options are selected. For example, NOUSERLOGGEDIN and USERCONTEXT should not be used together.  
-  
+
 > [!NOTE]
 >  Unlisted bits are either obsolete or unused by SMS.  
-  
+
  Possible values are:  
-  
+
 |Hexadecimal (Bit)|Description|  
 |-------------------------|-----------------|  
 |0x00000001 (0)|Program is authorized for dynamic install|  
@@ -260,40 +260,40 @@ x08000000 (27)|Override check for platform support.|
 |0x20000000 (29)|Run uninstall from the registry key when the advertisement expires.|  
 |0x40000000 (30)|The platform is not supported.|  
 |0x80000000 (31)|Display in Add Remove Programs.|  
-  
+
  `ProgramName`  
  Data type: `String`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The program name of the program related to the package that the advertisement will advertise.  
-  
+
  `TimeFlags`  
  Data type: `UInt32`  
-  
+
  Access type: Read Only  
-  
+
  Qualifiers: [read, bits]  
-  
+
  Flags that duplicate the information in the time-related properties. Possible values are defined for the `TimeFlags` property of [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md).  
-  
+
 ## Remarks  
  Class qualifiers for this class include:  
-  
+
 -   Read (Read Only)  
-  
+
  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software distribution server wmi classes.md)   
  [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md)

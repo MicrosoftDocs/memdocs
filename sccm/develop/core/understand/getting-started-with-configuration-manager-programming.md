@@ -1,7 +1,7 @@
 ---
-title: "Getting Started with Configuration Manager Programming"
+title: "Configuration Manager Programming | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ manager: "mbaldwin"
 To get started with programming for System Center Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
 
 > [!IMPORTANT]
->  You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you’ll find many references containing “SMS” – in fact, most WMI classes start with “SMS_” and the primary Configuration Manager WMI namespace is “SMS”. Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
+>  You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you’ll find many references containing “SMS��? – in fact, most WMI classes start with “SMS_��? and the primary Configuration Manager WMI namespace is “SMS��?. Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
 
 ## Functional Understanding  
  To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. See the below resources, for functional information on Configuration Manager.  
@@ -52,7 +52,7 @@ To get started with programming for System Center Configuration Manager, it’s 
  **Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
 
 -   [TechNet: Configuration Manager 2012 - General](http://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
-  
+
 -   [windows-noob.com: Configuration Manager 2012](http://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 
 ## Architectural Understanding  
@@ -123,7 +123,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 ## Basic Tools  
 
 ### WBEMTEST  
- If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is “Windows Management Instrumentation” and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
+ If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is “Windows Management Instrumentation��? and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
 
 -   [Introduction to WBEMTEST](../../../develop/core/understand/introduction-to-wbemtest.md)  
 
@@ -133,7 +133,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 ### CMTrace  
  **CMTrace:** CMTrace is a customized log file viewer that is useful in monitoring and troubleshooting Configuration Manager. CMTrace provides a continuous view of the log file changes (rather than having to reload to monitor logged activity) and is particularly useful when monitoring/troubleshooting object creation or modification via the SMS Provider (see the SMSProv.log below).  
 
- CMTrace can be found on the Configuration Manager site server, under the “\<Configuration Manager Installation Directory>\tools\” folder.  
+ CMTrace can be found on the Configuration Manager site server, under the “\<Configuration Manager Installation Directory>\tools\��? folder.  
 
  **SMSProv.log:** SMS Provider log file (\<Configuration Manager Installation Directory >\Logs\SMSProv.log) logs the activity of the SMS Provider and provides low-level information that is useful to monitor/troubleshoot issues when programmatically creating or modifying Configuration Manager objects via the SMS Provider.  
 

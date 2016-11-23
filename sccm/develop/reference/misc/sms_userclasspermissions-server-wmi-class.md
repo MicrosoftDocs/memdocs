@@ -1,15 +1,15 @@
 ---
-title: "SMS_UserClassPermissions Server WMI Class"
+title: "SMS_UserClassPermissions Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 840ce395-0fe8-47c4-815a-cf70367e32bf
 caps.latest.revision: 10
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_UserClassPermissions Server WMI Class
 The `SMS_UserClassPermissions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user's class-level permissions for a secured class.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_UserClassPermissions : SMS_BaseClass  
 {  
@@ -32,22 +32,22 @@ Class SMS_UserClassPermissions : SMS_BaseClass
       String UserName;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_UserClassPermissions` class does not define any methods.  
-  
+
 ## Properties  
  `ClassPermissions`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers:  
-  
+
  [bits]  
-  
+
  Permissions granted to a user for a specific class. The default value is 0.  
-  
+
 |Bit|Decimal|Hexadecimal|Description|  
 |---------|-------------|-----------------|-----------------|  
 |0|1|0x00000001|READ|  
@@ -78,37 +78,37 @@ Class SMS_UserClassPermissions : SMS_BaseClass
 |25|33554432|0x02000000|VIEWBMC|  
 |26|67108864|0x04000000|MANAGEAI|  
 |27|134217728|0x08000000|VIEWAI|  
-  
+
  `ObjectKey`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Numeric key that describes the type of secured object. See the `ObjectKey` property of [SMS_SecuredObject Server WMI Class](../../../develop/reference/misc/sms_securedobject-server-wmi-class.md).  
-  
+
  `UserName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers:  
-  
+
  [key]  
-  
+
  Name of the user, including the domain name. The default value is "".  
-  
+
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [SMS_UserClassPermissionNames Server WMI Class](../../../develop/reference/misc/sms_userclasspermissionnames-server-wmi-class.md)

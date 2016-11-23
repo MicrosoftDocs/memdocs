@@ -1,15 +1,15 @@
 ---
-title: "SMS_StateInformation Server WMI Class"
+title: "SMS_StateInformation Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 7cf84467-bfe5-4517-8cec-c6a6380850cf
 caps.latest.revision: 12
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_StateInformation Server WMI Class
 The `SMS_StateInformation` WMI class is an SMS Provider server class, in Configuration Manager, that provides information about a state message.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_StateInformation : SMS_BaseClass  
 {  
@@ -33,47 +33,47 @@ Class SMS_StateInformation : SMS_BaseClass
       UInt32 TopicType;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_StateInformation` class does not define any methods.  
-  
+
 ## Properties  
  `StateDescription`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Description of the state.  
-  
+
  `StateID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Unique ID of the state.  
-  
+
  `StateName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Name of the state.  
-  
+
  `TopicType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  State message topic type. Possible values are:  
-  
+
 |||  
 |-|-|  
 |500|Software update detection|  
@@ -99,26 +99,26 @@ Class SMS_StateInformation : SMS_BaseClass
 |702|ClientKeyData updates (server only)|  
 |1500, 1501|CAL tracking (user)|  
 |1502, 1503|CAL tracking (computer)|  
-  
+
 ## Remarks  
  Class qualifiers for this class include:  
-  
+
 -   Read (read-only)  
-  
+
  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
-  
+
  This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
-  
+
  State messages are used with software updates, Network Access Protection (NAP), desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
  [SMS_StateMigration Server WMI Class](../../../develop/reference/osd/sms_statemigration-server-wmi-class.md)

@@ -1,15 +1,15 @@
 ---
-title: "About Configuration Manager Console Management Classes"
+title: "Configuration Manager Console Management Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 571b9272-01b5-412b-8adb-ccad96dabff4
 caps.latest.revision: 5
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # About Configuration Manager Console Management Classes
 System Center Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console. Custom management classes can be created and added within the console architecture.  
-  
+
  The XML for a management class defines the name and the properties of the class.  
-  
+
  For information about node XML, see [Configuration Manager Console Management Class XML](../../../../develop/core/servers/console/console management class xml.md).  
-  
+
 ## See Also  
  [Configuration Manager Administrator Console Actions](../../../../develop/core/servers/console/console actions.md)   
  [Configuration Manager Administrator Console Forms](../../../../develop/core/servers/console/console forms.md)   

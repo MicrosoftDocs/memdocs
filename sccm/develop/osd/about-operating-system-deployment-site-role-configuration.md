@@ -1,15 +1,15 @@
 ---
-title: "About Operating System Deployment Site Role Configuration"
+title: "OS Deployment Site Role Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678
 caps.latest.revision: 9
@@ -19,20 +19,20 @@ manager: "mbaldwin"
 ---
 # About Operating System Deployment Site Role Configuration
 The following two site roles are of particular importance to Operating System Deployment in System Center Configuration Manager.  
-  
+
 ## State Migration Point Site Role  
  The state migration point (SMP) is a System Center Configuration Manager site role that provides a secure location to store user state information before an operating system deployment. You can store the user state on the SMP while the operating system deployment proceeds and then restore the user state to the new computer from the SMP. Each SMP site role can only be a member of one System Center Configuration Manager site.  
-  
+
 ## PXE Service Point Site Role  
  You use the PXE protocol to initiate operating system deployments to Configuration Manager clients. Configuration Manager uses the PXE service point site role to initiate the operating system deployment process. The PXE service point must be configured to respond to PXE boot requests made by Configuration Manager clients on the network and then interact with Configuration Manager infrastructure to determine the appropriate installation actions to take.  
-  
+
 ## Programming the Site Roles  
  Most information about Configuration Manager site roles is stored in the Configuration Manager site control file.  
-  
+
  You can make updates to the site control file through Windows Management Instrumentation (WMI) by using the [SMS_SiteControlFile](assetId:///SMS_SiteControlFile?qualifyHint=False&autoUpgrade=True) class. In managed code, [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) allows access to the site control file. For more information, see [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
-  
+
  The properties you will need to access are stored as system resources in the site control file. For example, the following site control file section shows the properties for the PXE service point site role.  
-  
+
 ```  
 BEGIN_SYSTEM_RESOURCE_USE  
     RESOURCE<Windows NT Server><["Display=\\SERVERNAME\"]MSWNET:["SMS_SITE=ABC"]\\SERVERNAME\>  
@@ -59,9 +59,9 @@ BEGIN_SYSTEM_RESOURCE_USE
     END_PROPERTY_LIST  
 END_SYSTEM_RESOURCE_USE  
 ```  
-  
+
  When you have access to the site control file, the various properties are stored as embedded properties or in embedded property lists. For example [UserName](assetId:///UserName?qualifyHint=False&autoUpgrade=True) in the sample above is an embedded property. Other properties are stored as embedded property lists. In the example above, the MAC addresses in [BindExcept](assetId:///BindExcept?qualifyHint=False&autoUpgrade=True) are stored in an embedded property list.  
-  
+
 ## See Also  
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)   

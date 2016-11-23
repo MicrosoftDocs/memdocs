@@ -1,15 +1,15 @@
 ---
-title: "How to Define the Hosting Technology Registration File"
+title: "Define the Hosting Technology Registration File | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 47960cf4-e7dd-4e26-92b7-5774cfc44a1c
 caps.latest.revision: 19
@@ -19,13 +19,13 @@ manager: "mbaldwin"
 ---
 # How to Define the Hosting Technology Registration File
 To define a hosting technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom hosting technology with Configuration Manager.  The hosting technology registration file is required for the installation of the custom hosting technology.  See [Installing the Application Management Extension](../../develop/apps/installing-the-application-management-extension.md) for additional details.  
-  
+
 ### To define the hosting technology registration file  
-  
+
 1.  Create a hosting technology registration file.  
-  
+
      The following example from the RPC sample project demonstrates how to define a hosting technology registration file.  
-  
+
     ```  
     <AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <HostingTechnology AuthoringScopeId="GLOBAL" LogicalName="RdpHostingTechnology" HostingId="Rdp" AssemblySuffix="Rdp" Version="1">  
@@ -75,19 +75,19 @@ To define a hosting technology registration file, create an XML file based on th
       </HostingTechnology>  
     </AppMgmtDigest>  
     ```  
-  
+
 |Attributes|Description|  
 |----------------|-----------------|  
-|AuthoringScopeID|AuthoringScopeId will always be “GLOBAL”.|  
+|AuthoringScopeID|AuthoringScopeId will always be “GLOBAL��?.|  
 |LogicalName|LogicalName must match the name of the SDK class created in the SDK assembly for HostingTechnology.|  
 |HostingId|HostingId must match the constant declared and used in the SDK assembly for HostingTechnolgy.|  
 |AssemblySuffix|AssemblySuffix must match the filename of the SDK assembly (Microsoft.ConfigurationManagement.ApplicationManagement.< `AssemblySuffix`>.dll).|  
 |Version|Version is the version number for the release of the deployment type extension. This version number is used for in-place revisions.|  
-  
+
 |Element|Description|  
 |-------------|-----------------|  
 |Requirements|The requirements section is based on DCM requirement rules.  The supported platforms for the custom technology must be specified here.|  
-  
+
 ## See Also  
  [How to Define the Deployment Technology Registration File](../../develop/apps/how-to-define-the-deployment-technology-registration-file.md)   
  [How to Define the Installer Technology Registration File](../../develop/apps/how-to-define-the-installer-technology-registration-file.md)   

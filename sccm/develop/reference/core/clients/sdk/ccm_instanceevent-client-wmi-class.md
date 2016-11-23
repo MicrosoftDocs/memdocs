@@ -1,15 +1,15 @@
 ---
-title: "CCM_InstanceEvent Client WMI Class"
+title: "CCM_InstanceEvent Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 75240595-d0c1-48d9-9279-f3165934b888
 caps.latest.revision: 5
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # CCM_InstanceEvent Client WMI Class
 The `CCM_InstanceEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an instance event.   
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class CCM_InstanceEvent : __ExtrinsicEvent  
 {  
@@ -39,20 +39,20 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
     UInt32 Verbosity;  
 };  
 ```  
-  
+
 ## Methods  
  The `CCM_InstanceEvent` class does not define any methods.  
-  
+
 ## Properties  
  `ActionType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [valuemap, values]  
-  
+
  Action type. Possible values are:    
-  
+
 |||  
 |-|-|  
 |1|Update|  
@@ -79,94 +79,94 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
 |24|AppEnforcementSuccess|  
 |25|AppEnforcementFailure|  
 |26|AppRemoved|  
-  
+
  `ClassName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Event target class.    
-  
+
  `MessageLevel`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [valuemap, values]  
-  
+
  Message level. Possible values are:    
-  
+
 |||  
 |-|-|  
 |0|Informational|  
 |1|Warning|  
 |2|Error|  
-  
+
  `SECURITY_DESCRIPTOR`  
  Data type: `UInt8 Array`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Security descriptor.   
-  
+
  `SessionID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  User logon session identifier.   
-  
+
  `TargetInstancePath`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Event target instance path.    
-  
+
  `TIME_CREATED`  
  Data type: `UInt64`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Time created.   
-  
+
  `UserSID`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  User identifier (SID).    
-  
+
  `Value`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Value for an event.    
-  
+
  `Verbosity`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [valuemap, values]  
-  
+
  Verbosity. Possible values are:  
-  
+
 |||  
 |-|-|  
 |10|Low|  
@@ -174,13 +174,13 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
 |30|Medium|  
 |40|Medium_High|  
 |50|High|  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

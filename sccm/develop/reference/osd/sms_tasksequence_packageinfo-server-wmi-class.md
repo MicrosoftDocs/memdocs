@@ -1,11 +1,11 @@
 ---
-title: "SMS_TaskSequence_PackageInfo Server WMI Class"
+title: "SMS_TaskSequence_PackageInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,11 +17,11 @@ manager: "mbaldwin"
 ---
 # SMS_TaskSequence_PackageInfo Server WMI Class
 The `SMS_TaskSequence_PackageInfo` Windows Management Instrumentation (WMI) class is an SMS provider server class, in Configuration Manager, that represents information about an operating system deployment task sequence.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_TaskSequence_PackageInfo   
 {  
@@ -30,56 +30,56 @@ Class SMS_TaskSequence_PackageInfo
     UInt32 PkgType;  
     UInt32 Size;  
 };  
-  
+
 ```  
-  
+
 ## Methods  
  The `SMS_TaskSequence_PackageInfo` class does not define any methods.  
-  
+
 ## Properties  
  `Name`  
  Data type:  `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The name of the package.  
-  
+
  `PackageId`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The ID of the package.  
-  
+
  `PkgType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The package type.  
-  
+
  `Size`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The size of the package, in kilobytes.  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

@@ -1,15 +1,15 @@
 ---
-title: "How to Define the Deployment Type Property Sheet XML File"
+title: "Define the Deployment Type Property Sheet XML File  | Microsoft Docs
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56
 caps.latest.revision: 19
@@ -19,13 +19,13 @@ manager: "mbaldwin"
 ---
 # How to Define the Deployment Type Property Sheet XML File
 To define the custom deployment type property page XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the deployment type property sheet should be named \<*TechnologyID*>DeploymentTypePropertySheet.xml.  
-  
+
 ### To define the deployment type property page XML file  
-  
+
 1.  Create a deployment type property sheet XML file.  
-  
+
      The following example from the RPC sample project shows how to define the deployment type property sheet XML file.  
-  
+
     ```  
     <?xml version="1.0" encoding="utf-8" ?>   
     <SmsFormData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FormatVersion="1" xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework">  
@@ -41,7 +41,7 @@ To define the custom deployment type property page XML file, create an XML file 
       </Form>  
     </SmsFormData>  
     ```  
-  
+
 ## See Also  
  [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

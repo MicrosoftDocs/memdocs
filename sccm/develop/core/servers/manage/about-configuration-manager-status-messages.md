@@ -1,7 +1,7 @@
 ---
-title: "About Configuration Manager Status Messages"
+title: "Configuration Manager Status Messages | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,7 +27,7 @@ In System Center Configuration Manager, status messages are the universal means 
  Certain kinds of status messages are automatically processed by Summarizer components that are running on the site servers. The Summarizers produce high-level data about the raw flows of status messages. Administrators monitor this data in the Configuration Manager console.  
 
  Status messages are similar to Windows events; they have a severity, ID, and description. They also support message insertion strings and named attribute values. This allows user-defined messages to be reported through the site.  
-   
+
 ## Types of Status Messages  
 
 ### Predefined Status Messages  

@@ -1,15 +1,15 @@
 ---
-title: "About Configuration Manager Tally Intervals"
+title: "Configuration Manager Tally Intervals | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
 caps.latest.revision: 5
@@ -19,10 +19,10 @@ manager: "mbaldwin"
 ---
 # About Configuration Manager Tally Intervals
 System Center Configuration Manager is configured with 16 default tally intervals. The intervals for a site are maintained in the site control file. The values are stored in the order that is shown in the following table. For information about accessing these values in the site control file, see the example at the end of this topic.  
-  
+
 > [!NOTE]
 >  You can use only the tally intervals that are listed in the table in your queries. When you use a tally interval that is not from the list, an object is returned that contains no data.  
-  
+
 |Schedule|Tally Interval|Class|  
 |--------------|--------------------|-----------|  
 |Since 12:00AM|0001128000100008|SMS_ST_RecurInterval|  
@@ -41,13 +41,13 @@ System Center Configuration Manager is configured with 16 default tally interval
 |Since 1st of month|000A470000284400|SMS_ST_RecurMonthlyByDate|  
 |Since 15th of month|000A4700002BC400|SMS_ST_NonRecurring|  
 |Since site installation|0001128000080008|SMS_ST_NonRecurring|  
-  
+
  The **Schedule** column is the beginning value of the tally interval. You interpret the beginning value of the tally interval as, "Give me the tallies since Monday." The end of the tally interval is always the current time. The complete tally interval is the same as saying, "Give me all the tallies from Monday to the current time."  
-  
+
  The classes listed in the tally interval table are embedded schedule token classes that you can use to interpret the interval string. You use the `ReadFromString` method of the `SMS_ScheduleMethods` class to interpret an interval string. This method breaks the interval string into its components and returns the appropriate embedded object.  
-  
+
  Tally intervals are commonly used in component (SMS_ComponentSummarizer) and site detail (SMS_SiteDetailSummarizer) summarizer queries. For more information, see [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md).  
-  
+
 ## See Also  
  [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)   
  [Configuration Manager Status and State](../../../../develop/core/servers/manage/configuration-manager-status-and-summarizers.md)   

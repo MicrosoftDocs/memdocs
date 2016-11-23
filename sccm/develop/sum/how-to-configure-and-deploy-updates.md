@@ -1,15 +1,15 @@
 ---
-title: "How to Configure and Deploy Updates"
+title: "Configure and Deploy Updates | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
 caps.latest.revision: 8
@@ -19,27 +19,27 @@ manager: "mbaldwin"
 ---
 # How to Configure and Deploy Updates
 You create a software updates deployment, in System Center Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  
-  
+
 ### To configure and deploy updates  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Create the new deployment object by using the [SMS_UpdatesAssignment](assetId:///SMS_UpdatesAssignment?qualifyHint=False&autoUpgrade=True) class.  
-  
+
 3.  Populate the new deployment properties.  
-  
+
 4.  Save the new deployment and properties.  
-  
+
 ## Example  
  The following example method shows how to create a software updates deployment by using the assetId:///SMS_UpdatesAssignment?qualifyHint=False&autoUpgrade=True class. Note that the parameters of the example method reflect certain properties of `SMS_UpdatesAssignment`.  
-  
+
 > [!IMPORTANT]
 >  The methods below require an array of the assigned configuration items (CI_IDs). The update content for these CI_IDs must have already been downloaded and added to an updates deployment package.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub ConfigureAndDeploySUMUpdates(connection,                             _  
                                   newApplyToSubTargets,                  _  
                                   newArrayAssignedCIs,                   _  
@@ -57,10 +57,10 @@ Sub ConfigureAndDeploySUMUpdates(connection,                             _
                                   newSuppressReboot,                     _  
                                   newTargetCollectionID,                 _  
                                   newUseGMTTimes)  
-  
+
   ' Create the new deployment object.  
   Set newSUMUpdatesAssignment = connection.Get("SMS_UpdatesAssignment").SpawnInstance_  
-  
+
   ' Populate the deployment properties.  
   newSUMUpdatesAssignment.ApplyToSubTargets = newApplyToSubTargets  
   newSUMUpdatesAssignment.AssignedCIs = newArrayAssignedCIs  
@@ -78,19 +78,19 @@ Sub ConfigureAndDeploySUMUpdates(connection,                             _
   newSUMUpdatesAssignment.SuppressReboot = newSuppressReboot  
   newSUMUpdatesAssignment.TargetCollectionID = newTargetCollectionID  
   newSUMUpdatesAssignment.UseGMTTimes = newUseGMTTimes  
-  
+
   ' Save the new deployment and properties.  
   newSUMUpdatesAssignment.Put_   
-  
+
   ' Output the new deployment name.  
   Wscript.Echo "Created new deployment " & newSUMUpdatesAssignment.AssignmentName                    
-  
+
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
-  
+
 public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,  
                                         bool newApplyToSubTargets,  
                                         int[] newArrayAssignedCIs,  
@@ -111,13 +111,13 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 {  
     try  
     {  
-  
+
         // Create the deployment object.  
         IResultObject newSUMUpdatesAssignment = connection.CreateInstance("SMS_UpdatesAssignment");  
-  
+
         // Populate new deployment properties.  
         // Note: newTemplateName must be unique.  
-  
+
         newSUMUpdatesAssignment["ApplyToSubTargets"].BooleanValue = newApplyToSubTargets;  
         newSUMUpdatesAssignment["AssignedCIs"].IntegerArrayValue = newArrayAssignedCIs;  
         newSUMUpdatesAssignment["AssignmentAction"].IntegerValue = newAssignmentAction;  
@@ -135,25 +135,25 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
         newSUMUpdatesAssignment["SuppressReboot"].IntegerValue = newSuppressReboot;  
         newSUMUpdatesAssignment["TargetCollectionID"].StringValue = newTargetCollectionID;  
         newSUMUpdatesAssignment["UseGMTTimes"].BooleanValue = newUseGMTTimes;  
-  
+
         // Save new deployment and new deployment properties.  
         newSUMUpdatesAssignment.Put();  
-  
+
         // Output the new deployment name.  
         Console.WriteLine("Created deployment: " + newAssignmentName);  
     }  
-  
+
     catch (SmsException ex)  
     {  
         Console.WriteLine("Failed to create newSUMUpdatesAssignment. Error: " + ex.Message);  
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
@@ -174,32 +174,32 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 |`newSuppressReboot`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Identifies whether reboot is suppressed.|  
 |`newTargetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The new target collection IDs.|  
 |`newUseGMTTimes`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Identifies whether to use Coordinated Universal Time (UTC).<br /><br /> -   True<br />-   False|  
-  
+
 ## Compiling the Code  
  This C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.Text  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Software Updates](../../develop/sum/software updates.md)   

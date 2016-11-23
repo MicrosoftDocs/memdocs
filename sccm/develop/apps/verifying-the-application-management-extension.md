@@ -1,7 +1,7 @@
 ---
-title: "Verifying the Application Management Extension"
+title: "Verifying the Application Management Extension | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -150,11 +150,11 @@ manager: "mbaldwin"
 
 4.  The results should appear similar to the below list:  
 
-     \<*Technology*>_Detect_Synclet.ActionType=”Detect”,AppDeliveryTypeId=”ScopeId\_ …  
+     \<*Technology*>_Detect_Synclet.ActionType=��?Detect��?,AppDeliveryTypeId=��?ScopeId\_ …  
 
-     \<*Technology*>_Install_Synclet.ActionType=”Install” ,AppDeliveryTypeId=”ScopeId\_ …  
+     \<*Technology*>_Install_Synclet.ActionType=��?Install��? ,AppDeliveryTypeId=��?ScopeId\_ …  
 
-     \<*Technology*>_Uninstall_Synclet.ActionType=”Uninstall” ,AppDeliveryTypeId=”ScopeId_ …  
+     \<*Technology*>_Uninstall_Synclet.ActionType=��?Uninstall��? ,AppDeliveryTypeId=��?ScopeId_ …  
 
 #### Ensure that each action performs as expected on the client  
 

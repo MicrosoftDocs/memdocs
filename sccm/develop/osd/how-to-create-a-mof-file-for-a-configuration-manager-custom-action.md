@@ -1,7 +1,7 @@
 ---
-title: "Create a MOF File for a Custom Action | Configuration Manager"
+title: "Create a MOF File for a Custom Action | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
-title: "Read an Object by Using Managed Code | Configuration Manager"
+title: "Read an Object by Using Managed Code | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""

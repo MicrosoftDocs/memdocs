@@ -1,7 +1,7 @@
 ---
-title: "Role-Based Administration Server WMI Classes | Configuration Manager"
+title: "Role-Based Administration Server WMI Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""

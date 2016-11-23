@@ -1,7 +1,7 @@
 ---
-title: "IAppContentExt::GetExcludedFileList"
+title: "IAppContentExt::GetExcludedFileList | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,7 +44,7 @@ HRESULT GetExcludedFileList(
 
  Qualifiers: [out]  
 
- The exclude file list is a single string separated by the ‘:’ character. For example, “File1.txt:File2.exe”.  
+ The exclude file list is a single string separated by the ‘:’ character. For example, “File1.txt:File2.exe��?.  
 
  `pbForceFileExclusion`  
  Data type: `BOOL`  

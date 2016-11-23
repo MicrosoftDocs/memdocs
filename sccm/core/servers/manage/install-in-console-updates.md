@@ -339,6 +339,7 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
  |Feature                    |Added as pre-release |Added as a full feature |  
 |----------------------------|---------------------|------------------------|
 | Peer Cache for content distribution to clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Cloud management gateway |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Client Data Sources dashboard |  [Version 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft Operations Management Suite (OMS) Connector  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Servicing a cluster aware collection (Service a server group)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|

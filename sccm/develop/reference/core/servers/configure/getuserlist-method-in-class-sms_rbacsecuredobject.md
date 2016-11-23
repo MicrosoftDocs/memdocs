@@ -1,15 +1,15 @@
 ---
-title: "GetUserList Method in Class SMS_RbacSecuredObject"
+title: "GetUserList Method | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 817f73f8-0573-41a5-92a4-b2a18fdfa1b9
 caps.latest.revision: 10
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # GetUserList Method in Class SMS_RbacSecuredObject
 The `GetUserList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, returns the list of users who have been granted permission to this object.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
-  
+
 ## Syntax  
-  
+
 ```  
 UInt32 GetUserList(  
      SMS_BaseClass ref ObjectPath,  
@@ -31,39 +31,39 @@ UInt32 GetUserList(
      Uint32 PermittedOperations[]  
 );  
 ```  
-  
+
 #### Parameters  
  `ObjectPath`  
  Data type: `SMS_BaseClass`  
-  
+
  Qualifiers: [in]  
-  
+
  The path of the object.  
-  
+
  `UserNames`  
  Data type: `String` Array  
-  
+
  Qualifiers: [out]  
-  
+
  Logon names of the users.  
-  
+
  `PermittedOperations`  
  Data type: `UInt32` Array  
-  
+
  Qualifiers: [out]  
-  
+
  Granted permissions.  
-  
+
 ## Return Values  
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [SMS_RbacSecuredObject Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md)

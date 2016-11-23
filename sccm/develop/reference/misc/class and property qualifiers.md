@@ -1,15 +1,15 @@
 ---
-title: "Configuration Manager Class and Property Qualifiers"
+title: "Class and Property Qualifiers | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 836a5204-4439-4fbd-a5d2-0b7796ae24ae
 caps.latest.revision: 13
@@ -19,7 +19,7 @@ manager: "mbaldwin"
 ---
 # Configuration Manager Class and Property Qualifiers
 The following table shows the qualifiers that are specific to Microsoft System Center Configuration Manager.  
-  
+
 |Qualifier|Description|  
 |---------------|-----------------|  
 |`Bits` (property)|A bit position of a Boolean flag in a bit field.|  
@@ -33,7 +33,7 @@ The following table shows the qualifiers that are specific to Microsoft System C
 |`Secured` (class)|An indicator that a class requires special rights to read or manipulate.|  
 |`SecurityVerbs` (instance)|**Important:**  This qualifier is not used in System Center Configuration Manager. This functionality has been superseded by the role-based administration security model. <br /><br /> A bit field used on instances of secured objects to describe the rights that a requesting user has on the object. The meanings of the bits are the same as those found in the `AvailableInstancePermissions` property of the `SMS_SecuredObject` class.|  
 |`SizeLimit` (property)|The size limit of the data, which depends on the property data type:<br /><br /> `<low length>-<high length>`<br /><br /> or<br /><br /> `<specific length>`|  
-  
+
 ## See Also  
  [Configuration Manager SDK](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)

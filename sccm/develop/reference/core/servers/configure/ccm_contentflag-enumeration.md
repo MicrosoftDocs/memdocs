@@ -1,15 +1,15 @@
 ---
-title: "CCM_CONTENTFLAG Enumeration"
+title: "CCM_CONTENTFLAG Enumeration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
 caps.latest.revision: 8
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # CCM_CONTENTFLAG Enumeration
 The **CCM_CONTENTFLAG** enumeration contains options for transferring content.  
-  
+
 ## Syntax  
-  
+
 ```vb  
 typedef enum  
 {  
@@ -37,9 +37,9 @@ typedef enum
 }  
 CCM_CONTENTFLAG;   
 ```  
-  
+
 ## Members  
-  
+
 |||  
 |-|-|  
 |CCM_CONTENTFLAG_LOCAL_ONLY|Local only.|  
@@ -51,14 +51,14 @@ CCM_CONTENTFLAG;
 |CCM_CONTENTFLAG_REMOTE_NOLOCALPEERDP|No local branch distribution point.|  
 |CCM_CONTENTFLAG_DELTA_DOWNLOAD|Delta download.|  
 |CCM_CONTENTFLAG_ALLOW_ALTERNATE_PROVIDERS|Allow alternate providers.|  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
-  
+
 ## See Also  
  [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate content provider classes.md)

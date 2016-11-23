@@ -1,15 +1,15 @@
 ---
-title: "SMS_ARoleOperation Server WMI Class"
+title: "SMS_ARoleOperation Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 0631a5e5-4f9c-4e14-b662-684439588b55
 caps.latest.revision: 10
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_ARoleOperation Server WMI Class
 The `SMS_ARoleOperation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by SMS_Role and describes the operation that is granted to this role.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_ARoleOperation : SMS_BaseClass  
 {  
@@ -31,20 +31,20 @@ Class SMS_ARoleOperation : SMS_BaseClass
     UInt32 ObjectTypeID;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_ARoleOperation` class does not define any methods.  
-  
+
 ## Properties  
  `GrantedOperations`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  A bit mask representing the granted operations. Possible values are:  
-  
+
 ||||  
 |-|-|-|  
 |0|1|Read|  
@@ -77,25 +77,25 @@ Class SMS_ARoleOperation : SMS_BaseClass
 |27|134217728|AISoftwareList.View AI<br /><br /> Collection.Deploy Firewall Policies|  
 |28|268435456|RunReport|  
 |29|536870912|ModifyReport|  
-  
+
  `ObjectTypeID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  ID of the object type ID. See `SMS_RbacSecuredObject` for a list of secured object types.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Role Based Administration Server WMI Classes](../../../../../develop/reference/core/servers/configure/role-based administration server wmi classes.md)
