@@ -228,6 +228,8 @@ Use task sequences to automate steps in your System Center Configuration Manager
 
 -   Passwords that are stored in the task sequence are not exported. If you export and import a task sequence that contains passwords, you must edit the imported task sequence and specify any passwords again. Ensure that you specify passwords for [Join Domain or Workgroup](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder), and [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) actions.  
 
+- When you export a task sequence with the **Set Dynanmic Variables** step, no values are exported for variables that are configured with the **Secret value** setting. You must reenter the values for these variables after you import the task sequence.
+
 -   As a best practice, when you have multiple primary sites, import task sequences at the central administration site.  
 
  Use the following procedures to export and import a task sequence.  
