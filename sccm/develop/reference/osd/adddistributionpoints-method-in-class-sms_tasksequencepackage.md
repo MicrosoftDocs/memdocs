@@ -1,7 +1,7 @@
 ---
-title: "AddDistributionPoints Method | Configuration Manager"
+title: "AddDistributionPoints Method in SMS_TaskSequencePackage | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""

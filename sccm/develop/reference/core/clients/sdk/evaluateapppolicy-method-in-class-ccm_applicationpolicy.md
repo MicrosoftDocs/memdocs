@@ -1,15 +1,15 @@
 ---
-title: "EvaluateAppPolicy Method in Class CCM_ApplicationPolicy"
+title: "EvaluateAppPolicy Method | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 96b4dfce-3e5f-4e88-a19c-2429b2b1aae4
 caps.latest.revision: 6
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # EvaluateAppPolicy Method in Class CCM_ApplicationPolicy
 The `EvaluateAppPolicy` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that evaluates application policy.   
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
-  
+
 ## Syntax  
-  
+
 ```  
 uint32 EvaluateAppPolicy   
 {  
@@ -37,77 +37,77 @@ uint32 EvaluateAppPolicy
     [OUT]   String JobId  
 };  
 ```  
-  
+
 ## Parameters  
  `PolicyId`  
  Data type: `String`  
-  
+
  Qualifiers: [id("0"), in]  
-  
+
  Policy identifier.    
-  
+
  `PolicyRevision`  
  Data type: `String`  
-  
+
  Qualifiers: [id("1"), in]  
-  
+
  Policy revision.    
-  
+
  `IsMachineTarget`  
  Data type: `Boolean`  
-  
+
  Qualifiers: [id("2"), in]  
-  
+
  `True` if this is a device targeted application.      
-  
+
  `Priority`  
  Data type: `String`  
-  
+
  Qualifiers: [id("3"), in, valuemap]  
-  
+
  Priority. Possible values are:   
-  
+
 ||  
 |-|  
 |Foreground|  
 |High|  
 |Normal|  
 |Low|  
-  
+
  `IsEnforceAction`  
  Data type: `Boolean`  
-  
+
  Qualifiers: [id("4"), in]  
-  
+
  `True` if the action will be enforced.    
-  
+
  `MTCToken`  
  Data type: `String`  
-  
+
  Qualifiers: [id("5"), in]  
-  
+
  MTC token.    
-  
+
  `SDKCallerId`  
  Data type: `String`  
-  
+
  Qualifiers: [id("6"), in]  
-  
+
  SDK caller identifier.    
-  
+
  `JobId`  
  Data type: `String`  
-  
+
  Qualifiers: [id("7"), out]  
-  
+
  Job identifier.    
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

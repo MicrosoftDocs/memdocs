@@ -1,15 +1,15 @@
 ---
-title: "AppDeploymentTypeData Structure"
+title: "AppDeploymentTypeData Structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 7adb722c-0a96-4580-bf2b-4f381e9b5a95
 caps.latest.revision: 15
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # AppDeploymentTypeData Structure
 In Configuration Manager, the `AppDeploymentTypeData` structure contains detection results for a set of deployment types.  
-  
+
 ## Syntax  
-  
+
 ```  
 typedef struct tagAppDeploymentTypeData  
 {  
@@ -30,17 +30,17 @@ typedef struct tagAppDeploymentTypeData
     PAppDeploymentTypeItem pData;  
 }AppDeploymentTypeData;  
 ```  
-  
+
 ## Members  
  `cbSize`  
  The size of this structure to indicate version.  
-  
+
  `dwCount`  
  The number of discovered items.  
-  
+
  `PAppDeploymentTypeItem`  
  An array of discovered items.  
-  
+
 ## See Also  
  [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   

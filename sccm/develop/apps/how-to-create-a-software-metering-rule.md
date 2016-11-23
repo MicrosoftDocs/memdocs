@@ -1,7 +1,7 @@
 ---
-title: "How to Create a Software Metering Rule"
+title: "How to Create a Software Metering Rule | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -145,7 +145,7 @@ public void CreateSWMRule(WqlConnectionManager connection,
 
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Software Metering](../../develop/apps/software metering.md)   

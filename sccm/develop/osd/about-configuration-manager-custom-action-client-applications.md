@@ -1,7 +1,7 @@
 ---
-title: "About Custom Action Client Applications | Configuration Manager"
+title: "Custom Action Client Applications | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ class MyCustomAction : SMS_TaskSequence_Action
  For example:  
 
 ```  
-CommandLine(“smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]”  
+CommandLine(“smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]��?  
 ```  
 
 ## Application Processing  

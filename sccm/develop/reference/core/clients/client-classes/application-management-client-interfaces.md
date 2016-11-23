@@ -1,15 +1,15 @@
 ---
-title: "Application Management Client Interfaces"
+title: "Application Management Client Interfaces | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 7156f07b-12cd-40b6-ba57-1ed482218c10
 caps.latest.revision: 15
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # Application Management Client Interfaces
 In System Center Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.  
-  
+
 ## In This Section  
-  
+
 |Term|Definition|  
 |----------|----------------|  
 |[AppDetectState Enumeration](../../../../../develop/reference/core/clients/client-classes/appdetectstate-enumeration.md)|The `AppDetectState` enumeration defines application installation states.  This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).|  
@@ -31,7 +31,7 @@ In System Center Configuration Manager, the application management interfaces ar
 |[IAppContentExt Interface](../../../../../develop/reference/core/clients/client-classes/iappcontentext-interface.md)|The `IAppContentExt` interface defines functions to retrieve the application content information.|  
 |[IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)|The `IAppManagementHandler` interface defines functions to interact with the handler.|  
 |[IAppManagementTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md)|The `IAppManagementTypes` interface is a container for Application Management related type definitions.|  
-  
+
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   

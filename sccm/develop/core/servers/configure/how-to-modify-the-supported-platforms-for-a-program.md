@@ -1,15 +1,15 @@
 ---
-title: "How to Modify the Supported Platforms for a Program"
+title: "Modify the Supported Platforms for a Program | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12
 caps.latest.revision: 11
@@ -19,27 +19,27 @@ manager: "mbaldwin"
 ---
 # How to Modify the Supported Platforms for a Program
 Your application can add supported platforms to a package, in System Center Configuration Manager, by obtaining specific instances of the `SMS_Package` and `SMS_Program` classes and then adding an instance of the `SMS_OS_Details` class to the `SupportedOperatingSystems` property.  
-  
+
 ### To modify the supported platforms for a program  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Obtain an existing package object by using the `SMS_Package` class.  
-  
+
 3.  Obtain an existing program object by using the `SMS_Program` class.  
-  
+
 4.  Create and populate an instance of the `SMS_OS_Details` class.  
-  
+
 5.  Add the new `SMS_OS_Details` instance to the `SupportedOperatingSystems` property of the program object (from step 3).  
-  
+
 ## Example  
  The following example method shows how to add supported platforms for a program.  
-  
+
 > [!NOTE]
 >  A slight variation of this example could change property values for all of the programs associated with a specific package. For an example, see the [How to List All Programs and Their Maximum Run Time Value](../../../../develop/core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md) code example. However, for a more efficient method of accessing a specific program, using the `PackageID` and `ProgramName`, see the [How to Modify Program Properties](../../../../develop/core/servers/configure/how-to-modify-program-properties.md) code example.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub ModifySupportedPlatformsForProgram(connection,          _  
                                        existingPackageID,   _  
@@ -48,7 +48,7 @@ Sub ModifySupportedPlatformsForProgram(connection,          _
                                        newMinVersion,       _  
                                        newName,             _  
                                        newPlatform)   
-  
+
 ' Define a constant with the hexadecimal value for RUN_ON_ANY_PLATFORM.   
     Const wbemFlagReturnImmediately = 16  
     Const wbemFlagForwardOnly = 32  
@@ -110,9 +110,9 @@ Sub ModifySupportedPlatformsForProgram(connection,          _
     Next  
 End Sub  
 ```  
-  
+
 ```c#  
-  
+
 public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,  
                                     string existingPackageID,  
                                     string existingProgramNameToModify,  
@@ -125,13 +125,13 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
     {  
         // Define a constant with the hexadecimal value for RUN_ON_ANY_PLATFORM.   
         const Int32 RUN_ON_ANY_PLATFORM = 0x08000000;  
-  
+
         // Build query to get the programs for the package.   
         string query = "SELECT * FROM SMS_Program WHERE PackageID='" + existingPackageID + "'";  
-  
+
         // Load the specific program to change (programname is a key value and must be unique).  
         IResultObject programsForPackage = connection.QueryProcessor.ExecuteQuery(query);  
-  
+
         // The query returns a collection that needs to be enumerated.  
         foreach (IResultObject program in programsForPackage)  
         {  
@@ -140,40 +140,40 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
             {  
                 // Get all properties, specifically the lazy properties, for the program object.  
                 program.Get();  
-  
+
                 // Check whether RUN_ON_ANY_PLATFORM is already set.  
                 Int32 checkPlatformValue = (program["ProgramFlags"].IntegerValue & RUN_ON_ANY_PLATFORM);  
-  
+
                 if (checkPlatformValue != 0)  
                 {  
                     // RUN_ON_ANY_PLATFORM is set. Removing RUN_ON_ANY_PLATFORM value.  
                     program["ProgramFlags"].IntegerValue = program["ProgramFlags"].IntegerValue ^ RUN_ON_ANY_PLATFORM;  
                 }  
-  
+
                 // Create a new array list to hold the supported platform window objects.  
                 List<IResultObject> tempSupportedPlatformsArray = new List<IResultObject>();  
-  
+
                 // Create and populate a temporary SMS_OS_Details object with the new operating system values.  
                 IResultObject tempSupportedPlatformsObject = connection.CreateEmbeddedObjectInstance("SMS_OS_Details");  
-  
+
                 // Populate temporary SMS_OS_Details object with the new supported platforms values.  
                 tempSupportedPlatformsObject["MaxVersion"].StringValue = newMaxVersion;  
                 tempSupportedPlatformsObject["MinVersion"].StringValue = newMinVersion;  
                 tempSupportedPlatformsObject["Name"].StringValue = newName;  
                 tempSupportedPlatformsObject["Platform"].StringValue = newPlatform;  
-  
+
                 // Populate the local array list with the existing supported platform objects (type SMS_OS_Details).  
                 tempSupportedPlatformsArray = program.GetArrayItems("SupportedOperatingSystems");  
-  
+
                 // Add the newly created service window object to the local array list.  
                 tempSupportedPlatformsArray.Add(tempSupportedPlatformsObject);  
-  
+
                 // Replace the existing service window objects from the target collection with the temporary array that includes the new service window.  
                 program.SetArrayItems("SupportedOperatingSystems", tempSupportedPlatformsArray);  
-  
+
                 // Save the new values in the collection settings instance associated with the Collection ID.  
                 program.Put();  
-  
+
                 // Output program name.  
                 Console.WriteLine("Modified program: " + program["ProgramName"].StringValue);  
             }  
@@ -185,11 +185,11 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
@@ -200,28 +200,28 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
 |`newMinVersionsion`|-   Managed: `String`<br />-   VBScript: `String`|The minimum supported version.|  
 |`newName`|-   Managed: `String`<br />-   VBScript: `String`|The modified program name.|  
 |`newPlatform`|-   Managed: `String`<br />-   VBScript: `String`|The new platform.|  
-  
+
 ## Compiling the Code  
  The C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
  mscorlib  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## See Also  
  [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)

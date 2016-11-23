@@ -1,15 +1,15 @@
 ---
-title: "SMS_TopThreatSummary Server WMI Class"
+title: "SMS_TopThreatSummary Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 8803e2a7-f4f2-4748-acc2-bcaeb777be7d
 caps.latest.revision: 5
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_TopThreatSummary Server WMI Class
 The `SMS_TopThreatSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats per collection.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_TopThreatSummary : SMS_BaseClass  
 {  
@@ -46,137 +46,137 @@ Class SMS_TopThreatSummary : SMS_BaseClass
     String ThreatName;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_TopThreatSummary` class does not define any methods.  
-  
+
 ## Properties  
  `CollectionID`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Identifier of the collection.  
-  
+
  `CollectionMembers`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Count of collection members.  
-  
+
  `CollectionName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Name of the collection.  
-  
+
  `FailedCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Failed action client count.  
-  
+
  `FirstDetectionTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  First time the malware is detected.  
-  
+
  `InfectedCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Infected client count.  
-  
+
  `IsAllowed`  
  Data type: `Boolean`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  `true` if we've trigger the action to allow this malware in this collection.  
-  
+
  `IsExcluded`  
  Data type: `Boolean`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  `true` if we've chosen to exclude this malware path (in the scan list) in this collection.  
-  
+
  `IsRestored`  
  Data type: `Boolean`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  `true` if we've tried to restore this malware in this collection.  
-  
+
  `LastDetectionTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Last detection time.  
-  
+
  `LastUpdateTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Last update time.  
-  
+
  `PendingCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Number of clients with pending actions to finish the remediation of the malware in this collection.  
-  
+
  `RemediatedCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Number of clients where malware was remediated successfully in the collection.  
-  
+
  `Severity`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Threat severity. Possible values are:  
-  
+
 |||  
 |-|-|  
 |0|Not Yet Classified|  
@@ -185,40 +185,40 @@ Class SMS_TopThreatSummary : SMS_BaseClass
 |3|Not Used|  
 |4|High|  
 |5|Severe|  
-  
+
  `ThreatCategoryID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Category identifier of the threat.  
-  
+
  `ThreatID`  
  Data type: `UInt64`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Identifier of the threat.  
-  
+
  `ThreatName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Name of the threat.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).

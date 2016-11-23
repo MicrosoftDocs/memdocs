@@ -1,15 +1,15 @@
 ---
-title: "Asset Intelligence Client WMI Classes"
+title: "Asset Intelligence Client WMI Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: daea40b0-c6cf-40fa-b759-6b3038889512
 caps.latest.revision: 12
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # Asset Intelligence Client WMI Classes
 In System Center Configuration Manager, the Asset Intelligence client Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes are in the root/cimv2/sms namespace.  
-  
+
 ## In This Section  
-  
+
 |Term|Definition|  
 |----------|----------------|  
 |[SMS_AutoStartSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md)|Enumerates software that starts automatically with, or immediately after, the operating system.|  
@@ -34,15 +34,15 @@ In System Center Configuration Manager, the Asset Intelligence client Windows Ma
 |[SMS_SoftwareTag Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_softwaretag-client-wmi-class.md)|Indicates the presence of a software application on a computer.<br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |[SMS_SystemConsoleUsage Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md)|Defines usage data about devices, based on the system security event log.|  
 |[SMS_SystemConsoleUser Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleuser-client-wmi-class.md)|Defines usage data about users, based on the system security event log.|  
-  
+
 ## Remarks  
  Classes related to the asset intelligence client WMI classes are:  
-  
+
 -   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
-  
+
 -   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](http://go.microsoft.com/fwlink/?LinkId=99938).  
-  
+
 -   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
-  
+
 ## See Also  
  [Configuration Manager Asset Intelligence](../../../../../develop/core/clients/asset-intelligence/asset intelligence.md)

@@ -1,15 +1,15 @@
 ---
-title: "CIEvalState Enumeration"
+title: "CIEvalState Enumeration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 952016eb-b0b5-47a6-acef-01d65acc9f65
 caps.latest.revision: 6
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # CIEvalState Enumeration
 In System Center Configuration Manager, the `CIEvalState` enumeration defines configuration item evaluation states. This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).  
-  
+
 ## Syntax  
-  
+
 ```  
 typedef enum tagCIEvalState  
 {  
@@ -29,13 +29,13 @@ typedef enum tagCIEvalState
   ciEvaluating   
 } CIEvalState;  
 ```  
-  
+
 ## Elements  
  ciIdle  
  Configuration item is idle.  
-  
+
  ciEvaluating  
  Configuration item is being evaluated.  
-  
+
 ## See Also  
  [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md)

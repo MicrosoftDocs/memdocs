@@ -1,15 +1,15 @@
 ---
-title: "ICCMEvent::SetProperty Method"
+title: "ICCMEvent::SetProperty Method | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 44f3a746-4a3c-489d-bbfb-78cf0ed31fed
 caps.latest.revision: 6
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # ICCMEvent::SetProperty Method
 In Configuration Manager, the `ICcmEvent::SetProperty` method sets an event property.  
-  
+
 ## Syntax  
-  
+
 ```  
 [C++]  
 HRESULT ICcmEvent::SetProperty  
@@ -30,39 +30,39 @@ HRESULT ICcmEvent::SetProperty
    VARIANT* vPropValue  
 );  
 ```  
-  
+
 #### Parameters  
  `sPropName`  
  Data type: `BSTR`  
-  
+
  Qualifiers: [in]  
-  
+
  Name of the property to set. This must correspond to a property name in the Windows Management Instrumentation (WMI) event class.  
-  
+
  `vPropValue`  
  Data type: `VARIANT`  
-  
+
  Qualifiers: [in]  
-  
+
  Pointer to the new value for the property.  
-  
+
 ## Return Values  
  An `HRESULT` code. Possible values include, but are not limited to, the following:  
-  
+
  S_OK  
  The method succeeded.  
-  
+
 ## Remarks  
  Your application must set the [EventType property](../../../../../develop/reference/core/servers/manage/iccmevent--eventtype-property.md) before calling this method.  
-  
+
 ## Requirements  
  Smscore.dll.  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
-  
+
 ## See Also  
  [SMSEvent Class (client)](../../../../../develop/reference/core/servers/manage/smsevent-class.md)

@@ -1,15 +1,15 @@
 ---
-title: "SMS_TopThreatsDetected Server WMI Class"
+title: "SMS_TopThreatsDetected Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: d15d9933-913a-418e-8474-4310ddbc367b
 caps.latest.revision: 5
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_TopThreatsDetected Server WMI Class
 The `SMS_TopThreatsDetected` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats found in the last 24 hours per collection.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_TopThreatsDetected : SMS_BaseClass  
 {  
@@ -36,47 +36,47 @@ Class SMS_TopThreatsDetected : SMS_BaseClass
     UInt32 TotalMemberCount;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_TopThreatsDetected` class does not define any methods.  
-  
+
 ## Properties  
  `CollectionID`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Identifier of the collection summarized.  
-  
+
  `MemberCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Count of members with a threat.  
-  
+
  `Rank`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Rank of threat exposure in collection (1 is greatest).  
-  
+
  `ThreatCategoryID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Category identifier of threat. Possible values are:  
-  
+
 |CategoryID|Category|  
 |----------------|--------------|  
 |1|Adware|  
@@ -108,40 +108,40 @@ Class SMS_TopThreatsDetected : SMS_BaseClass
 |43|Permitted|  
 |44|Not Yet Classified|  
 |46|Suspicious Behavior|  
-  
+
  `ThreatID`  
  Data type: `UInt64`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Threat identifier.  
-  
+
  `ThreatName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Name of the threat.  
-  
+
  `TotalMemberCount`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Total count of members in the collection.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).

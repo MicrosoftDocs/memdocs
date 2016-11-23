@@ -1,15 +1,15 @@
 ---
-title: "How to Define the Create Application Wizard XML File"
+title: "How to Define the Create Application Wizard XML File | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 5e09cee5-b251-42d0-b927-e1d6019f3695
 caps.latest.revision: 20
@@ -19,13 +19,13 @@ manager: "mbaldwin"
 ---
 # How to Define the Create Application Wizard XML File
 To define the custom deployment technology XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the Create Application Wizard should be named, CreateApp_\<*TechnologyID*>.xml.  
-  
+
 ### To define the create application wizard XML file  
-  
+
 1.  Create a Create Application Wizard XML file.  
-  
+
      The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Note that wizards are not extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create a RDP deployment type.  
-  
+
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
     <SmsFormData xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">  
@@ -36,7 +36,7 @@ To define the custom deployment technology XML file, create an XML file based on
       </Form>  
     </SmsFormData>  
     ```  
-  
+
 ## See Also  
  [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

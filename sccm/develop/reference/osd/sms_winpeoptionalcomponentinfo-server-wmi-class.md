@@ -1,15 +1,15 @@
 ---
-title: "SMS_WinPEOptionalComponentInfo Server WMI Class"
+title: "SMS_WinPEOptionalComponentInfo Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 5b4d124c-2eb3-4e32-9027-c076dc27e91f
 caps.latest.revision: 4
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_WinPEOptionalComponentInfo Server WMI Class
 The `SMS_WinPEOptionalComponentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents WinPE optional components information.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass  
 {  
@@ -38,97 +38,97 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
     UInt32 UniqueID;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_WinPEOptionalComponentInfo` class does not define any methods.  
-  
+
 ## Properties  
  `Architecture`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The architecture of WinPE optional components. Possible values are:  
-  
+
 ||  
 |-|  
 |X86|  
 |X64|  
-  
+
  `DependentComponentNames`  
  Data type: `String` Array  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The name of dependent WinPE optional components.  
-  
+
  `DependentIds`  
  Data type: `UInt32` Array  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The unique ID of dependent WinPE optional components.  
-  
+
  `IsRequired`  
  Data type: `Boolean`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  `true` if the WinPE optional component is required.  
-  
+
  `LanguageID`  
  Data type: `UInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: [key]  
-  
+
  The language ID of the WinPE optional component.  
-  
+
  `Name`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The name of the WinPE optional component.  
-  
+
  `RelativePath`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The relative path to the Assessment and Deployment Kit (ADK) installation path of the WinPE optional component.  
-  
+
  `Size`  
  Data type: `UInt64`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The size of the WinPE optional component.  
-  
+
  `UniqueID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  The unique ID of WinPE optional component. Possible values are:  
-  
+
 |||  
 |-|-|  
 |X86||  
@@ -158,7 +158,7 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 |24|WinPE-WDS-Tools.cab|  
 |25|WinPE-WinReCfg.cab|  
 |26|WinPE-WMI.cab|  
-  
+
 |||  
 |-|-|  
 |X64||  
@@ -188,13 +188,13 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 |50|WinPE-WDS-Tools.cab|  
 |51|WinPE-WinReCfg.cab|  
 |52|WinPE-WMI.cab|  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).

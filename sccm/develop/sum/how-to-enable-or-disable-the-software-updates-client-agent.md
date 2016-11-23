@@ -1,15 +1,15 @@
 ---
-title: "How to Enable or Disable the Software Updates Client Agent"
+title: "Enable or Disable the Software Updates Client Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 6993ac90-2dd3-49a5-a14d-fe86356e644c
 caps.latest.revision: 9
@@ -19,64 +19,64 @@ manager: "mbaldwin"
 ---
 # How to Enable or Disable the Software Updates Client Agent
 You enable or disable the Software Updates Client Agent, in System Center Configuration Manager, by modifying the site control file settings.  
-  
+
 ### To enable or disable the Software Updates Client Agent  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Make a connection to the Software Updates Client Agent section of the site control file by using the [SMS_SCI_ClientComp](assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True) class.  
-  
+
 3.  Loop through the array of available properties, making changes as needed.  
-  
+
 4.  Commit the changes to the site control file.  
-  
+
 ## Example  
  The following example method enables or disables the Software Updates Client Agent by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change properties.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub EnableDisableSUMClientAgent(swbemServices,     _  
                                 swbemContext,      _  
                                 enableDisableFlag, _  
                                 siteToChange )  
-  
+
     ' Load site control file and get software updates client component section.  
     swbemServices.ExecMethod "SMS_SiteControlFile.Filetype=1,Sitecode=""" & siteToChange & """", "Refresh", , , swbemContext  
     Set objSWbemInst = swbemServices.Get("SMS_SCI_ClientComp.Filetype=1,Itemtype='Client Component',Sitecode='" & siteToChange & "',ItemName='Software Updates'", , swbemContext)  
-  
+
     ' Display the Software Updates Client Agent settings before changing the properties.  
     Wscript.Echo " "  
     Wscript.Echo "Properties - Before Change"  
     Wscript.Echo "---------------------------"  
     Wscript.Echo objSWbemInst.ClientComponentName  
     Wscript.Echo objSWbemInst.Flags & " (0 = Disabled, 1 = Enabled)"  
-  
+
     ' Set Software Updates Client Agent by setting Flags value to 0 or 1 by using the enableDisableFlag variable.  
     objSWbemInst.Flags = enableDisableFlag  
-  
+
     ' Save new Software Updates Client Agent settings.  
     objSWbemInst.Put_ , swbemContext  
     swbemServices.ExecMethod "SMS_SiteControlFile.Filetype=1,Sitecode=""" & siteToChange & """", "Commit", , , swbemContext  
-  
+
     ' Refresh in-memory copy of the site control file and get the software updates client component section.  
     swbemServices.ExecMethod "SMS_SiteControlFile.Filetype=1,Sitecode=""" & siteToChange & """", "Refresh", , , swbemContext  
     Set objSWbemInst = swbemServices.Get("SMS_SCI_ClientComp.Filetype=1,Itemtype='Client Component',Sitecode='" & siteToChange & "',ItemName='Software Updates'", , swbemContext)  
-  
+
     ' Display the Software Updates Client Agent settings after changing the properties.  
     Wscript.Echo " "  
     Wscript.Echo "Properties - After Change"  
     Wscript.Echo "---------------------------"  
     Wscript.Echo objSWbemInst.ClientComponentName  
     Wscript.Echo objSWbemInst.Flags & " (0 = Disabled, 1 = Enabled)"  
-  
+
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
-  
+
 public void EnableDisableSUMClientAgent(WqlConnectionManager connection,   
                                         string enableDisableFlag,   
                                         string siteCode)  
@@ -84,23 +84,23 @@ public void EnableDisableSUMClientAgent(WqlConnectionManager connection,
     try  
     {  
         IResultObject siteDefinition = connection.GetInstance(@"SMS_SCI_ClientComp.FileType=1,ItemType='Client Component',SiteCode='" + siteCode + "',ItemName='Software Updates'");  
-  
+
         // Display Software Updates Client Agent settings before changing the properties.  
         Console.WriteLine();  
         Console.WriteLine("Properties - Before Change");  
         Console.WriteLine("---------------------------");  
         Console.WriteLine(siteDefinition["ClientComponentName"].StringValue);  
         Console.WriteLine(siteDefinition["Flags"].StringValue + " (0 = Disabled, 1 = Enabled)");  
-  
+
         // Set Software Updates Client Agent by setting "Flags" value to 0 or 1 by using the enableDisableFlag variable.  
         siteDefinition["Flags"].StringValue = enableDisableFlag;  
-  
+
         // Save the settings.  
         siteDefinition.Put();  
-  
+
         // Verify the change by reconnecting and getting the value again.  
         IResultObject siteDefinition2 = connection.GetInstance(@"SMS_SCI_ClientComp.FileType=1,ItemType='Client Component',SiteCode='" + siteCode + "',ItemName='Software Updates'");  
-  
+
         // Display Software Updates Client Agent settings after changing the properties.  
         Console.WriteLine();  
         Console.WriteLine("Properties - After Change");  
@@ -108,19 +108,19 @@ public void EnableDisableSUMClientAgent(WqlConnectionManager connection,
         Console.WriteLine(siteDefinition2["ClientComponentName"].StringValue);  
         Console.WriteLine(siteDefinition2["Flags"].StringValue + " (0 = Disabled, 1 = Enabled)");  
     }  
-  
+
     catch (SmsException ex)  
     {  
         Console.WriteLine("Failed. Error: " + ex.InnerException.Message);  
         throw;  
     }  
-  
+
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
@@ -129,32 +129,32 @@ public void EnableDisableSUMClientAgent(WqlConnectionManager connection,
 |`siteCode`|-   Managed: `String`|The site code.|  
 |`siteToChange`|-   VBScript: `String`|The site code.|  
 |`enableDisableFlag`|-   Managed: `String`<br />-   VBScript: `String`|Determines whether the Software Updates Client Agent is enabled or disabled.<br /><br /> 0 - Disabled<br /><br /> 1 - Enabled|  
-  
+
 ## Compiling the Code  
  This C# example requires:  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.Text  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Software Updates](../../develop/sum/software updates.md)   

@@ -1,15 +1,15 @@
 ---
-title: "Query2"
+title: "Query2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 25845005-f0e3-44b3-a3d8-acb08bca4c40
 caps.latest.revision: 11
@@ -19,19 +19,19 @@ manager: "mbaldwin"
 ---
 # Query2
 `Query2` specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running.  
-  
+
 > [!NOTE]
 >  This information should come from `SMS_SupportedPlatforms Server WMI Class` objects and match the platform information specified in the PlatformApplicabilityCondition node.  
-  
+
  The query is run on the client computer and typically inspects Windows Management Instrumentation (WMI) to determine the client platform. For example, `SELECT * FROM Win32_Processor WHERE Architecture=9 AND DataWidth=64`.  
-  
+
  **Type**: Element.  
-  
+
  **Instances**: One.  
-  
+
 ## Attributes  
  None  
-  
+
 ## See Also  
  [Operating System Deployment Driver Supported Platforms Schema](../../../develop/reference/osd/operating-system-deployment-driver-supported-platforms-schema.md)   
  [PlatformApplicabilityCondition](../../../develop/reference/osd/platformapplicabilitycondition.md)   

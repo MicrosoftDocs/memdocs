@@ -1,15 +1,15 @@
 ---
-title: "ITsMediaClass Interface"
+title: "ITsMediaClass Interface | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: d2e2146c-8c64-40ab-8b6f-6b7d1dd571c2
 caps.latest.revision: 7
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # ITsMediaClass Interface
 The `ITsMediaClass` automation interface, in System Center Configuration Manager, enables the creation of task sequence media for operating system deployment. This interface inherits from `IDispatch`.  
-  
+
 ## In This Section  
-  
+
 |Term|Definition|  
 |----------|----------------|  
 |[ITsMediaClass::Cancel Method](../../../develop/reference/misc/itsmediaclass--cancel-method.md)|Cancels task sequence media creation.|  
@@ -40,10 +40,10 @@ The `ITsMediaClass` automation interface, in System Center Configuration Manager
 |[ITsMediaClass::Status Property](../../../develop/reference/misc/itsmediaclass--status-property.md)|Contains the status for task sequence media creation.|  
 |[ITsMediaClass::StepInfo Property](../../../develop/reference/misc/itsmediaclass--stepinfo-property.md)|Contains information about the steps required for task sequence media creation.|  
 |[ITsMediaClass::StepProgress Property](../../../develop/reference/misc/itsmediaclass--stepprogress-property.md)|Contains a value indicating the progress of task sequence media creation.|  
-  
+
 ## Remarks  
  The UUID for `ITsMediaClass` is EBA491FD-A947-4f99-9F60-D615F810CCDC.  
-  
+
 ## See Also  
  [TsMediaClass Client COM Automation Class](../../../develop/reference/misc/tsmediaclass-client-com-automation-class.md)   
  [Operating System Deployment Task Sequencing](../../../develop/osd/operating-system-deployment-task-sequencing.md)

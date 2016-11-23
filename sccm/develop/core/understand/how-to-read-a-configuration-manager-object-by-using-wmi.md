@@ -1,15 +1,15 @@
 ---
-title: "How to Read a Configuration Manager Object by Using WMI"
+title: "Read an Object by Using WMI | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 17017166-8b01-4a7d-99df-97be3bdda83f
 caps.latest.revision: 7
@@ -19,46 +19,46 @@ manager: "mbaldwin"
 ---
 # How to Read a Configuration Manager Object by Using WMI
 In System Center Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [Get](assetId:///Get?qualifyHint=False&autoUpgrade=True) method to return an object instance that is identified by a key value.  
-  
+
 > [!NOTE]
 >  to query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
-  
+
 ### To read a Configuration Manager object  
-  
+
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
-  
+
 2.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object that you obtain from step 1, call the assetId:///Get?qualifyHint=False&autoUpgrade=True method and specify the class and key information for the object you want.  
-  
+
 ## Example  
  The following VBScript code example function displays the name and description for a supplied key package identifier (`packageID`).  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
 Sub DisplayPackageName (connection, packageID)  
-  
+
     On Error Resume Next   
     Dim package  
-  
+
     Set package = connection.Get("SMS_Package.PackageID='" & packageID & "'")  
     If Err.Number<>0 Then  
         Wscript.Echo "Couldn't get package " + packageID  
         Exit Sub  
     End If  
-  
+
     Wscript.Echo "Package Name: " + package.Name  
     Wscript.Echo "Package Description: " + package.Description  
-  
+
 End Sub  
 ```  
-  
+
  This example method has the following parameters:  
-  
+
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`|assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
 |`packageID`|`String`|A package identifier. This can be obtained from the [SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True) class [PackageID](assetId:///PackageID?qualifyHint=False&autoUpgrade=True) property.|  
-  
+
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   

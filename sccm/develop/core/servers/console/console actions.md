@@ -1,15 +1,15 @@
 ---
-title: "Configuration Manager Console Actions"
+title: "Configuration Manager Console Actions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 51f90185-c59f-4ee6-ad51-499ce5a05bda
 caps.latest.revision: 10
@@ -19,13 +19,13 @@ manager: "mbaldwin"
 ---
 # Configuration Manager Console Actions
 This section provides information about System Center Configuration Manager console actions and also provides a procedure for creating an action.  
-  
+
 ## Console Actions topics  
-  
+
 -   [About Configuration Manager Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md)  
-  
+
 -   [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)  
-  
+
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
  [Configuration Manager Console Forms](../../../../develop/core/servers/console/console forms.md)   

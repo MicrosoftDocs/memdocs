@@ -1,15 +1,15 @@
 ---
-title: "AppContentInfo Structure"
+title: "AppContentInfo Structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: eae48844-c1fe-4dd1-9c76-21d7f53217b6
 caps.latest.revision: 15
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # AppContentInfo Structure
 In Configuration Manager, the `AppContentInfo` structure contains information about the application content.  
-  
+
 ## Syntax  
-  
+
 ```  
 struct AppContentInfo  
 {  
@@ -30,17 +30,17 @@ struct AppContentInfo
     LPCWSTR szLocalPath;  
 };  
 ```  
-  
+
 ## Members  
  `szContentId`  
  The content id.  
-  
+
  `szContentVersion`  
  The content version.  
-  
+
  `szLocalPath`  
  The local path.  
-  
+
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Scenario: Extending Application Management](../../../../../develop/apps/scenario--extending-application-management.md)   

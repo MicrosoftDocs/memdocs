@@ -1,15 +1,15 @@
 ---
-title: "SMS_ReplicationLinkStatus Server WMI Class"
+title: "SMS_ReplicationLinkStatus Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: eb30cf7e-c3dc-4d9f-b70b-453dbf059896
 caps.latest.revision: 6
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_ReplicationLinkStatus Server WMI Class
 The `SMS_ReplicationLinkStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the database link status between the child and parent site for each replication group.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_ReplicationLinkStatus : SMS_BaseClass  
 {  
@@ -43,143 +43,143 @@ Class SMS_ReplicationLinkStatus : SMS_BaseClass
     UInt32 SyncInterval;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_ReplicationLinkStatus` class does not define any methods.  
-  
+
 ## Properties  
  `ChildLastReceived`  
  Data type: `DateTime`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  The time of last received message for this replication group on the child site.  
-  
+
  `ChildLastSent`  
  Data type: `DateTime`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  The time of last message for this replication group sent from the child site.  
-  
+
  `ChildSite`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  Site code of the child site.  
-  
+
  `DegradedSyncs`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  If the link status is degraded, this will show the synchronization intervals from the last synchronization finish time.  
-  
+
  `FailedSyncs`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  If the link status is status is failed, this will show the synchronization intervals from last synchronization finish time.  
-  
+
  `InitializationPercent`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Re-initialization progress for this replication group.  
-  
+
  `InitializationStatus`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Re-initialization status.  
-  
+
  `ParentLastReceived`  
  Data type: `DateTime`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Time of the last received message for this replication group on the parent site.  
-  
+
  `ParentLastSent`  
  Data type: `DateTime`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Time of the last message for this replication group sent from the parent site.  
-  
+
  `ParentSite`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  Site code of the parent site.  
-  
+
  `RecoveryStatus`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Recovery status.  
-  
+
  `ReplicationGroup`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  Name of the replication group. See [SMS_ReplicationGroup Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_replicationgroup-server-wmi-class.md).  
-  
+
  `ReplicationPattern`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Replication pattern. See [SMS_ReplicationGroup Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_replicationgroup-server-wmi-class.md).  
-  
+
  `SyncInterval`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Synchronization interval, in minutes, for the replication group.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

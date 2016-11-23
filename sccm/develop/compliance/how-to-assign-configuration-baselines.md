@@ -1,15 +1,15 @@
 ---
-title: "How to Assign Configuration Baselines"
+title: "Assign Configuration Baselines | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
 caps.latest.revision: 9
@@ -19,24 +19,24 @@ manager: "mbaldwin"
 ---
 # How to Assign Configuration Baselines
 In System Center Configuration Manager, to assign a configuration baseline to a collection, an assignment instance is created, populated with a minimum set of required values, and saved.  
-  
+
 ### To assign Configuration Baselines  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Create an instance of `SMS_BaselineAssignment`.  
-  
+
 3.  Populate the instance properties.  
-  
+
 4.  Save the new `SMS_BaselineAssignment` instance.  
-  
+
 ## Example  
  The following code examples show how to create an instance of a baseline assignment.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub DCMCreateAssignment(swbemServices,                     _  
                         baselineID,                        _  
                         applyToSubTargets,                 _  
@@ -53,10 +53,10 @@ Sub DCMCreateAssignment(swbemServices,                     _
                         suppressReboot,                    _  
                         targetCollectionID,                _  
                         useGMTTimes)  
-  
+
 ' Create new assignment object.  
 set newAssignment = swbemServices.Get("SMS_BaselineAssignment").SpawnInstance_()        
-  
+
 ' Assign variable values to assignment properties.  
 '    //  
 '    // The following properties are set by the provider on put():  
@@ -64,7 +64,7 @@ set newAssignment = swbemServices.Get("SMS_BaselineAssignment").SpawnInstance_()
 '    //     AssignmentUniqueID  
 '    //     SourceSite  
 '    //     CreationTime  
-  
+
 newAssignment.ApplyToSubTargets = applyToSubTargets   
 newAssignment.AssignmentAction = assignmentAction   
 newAssignment.AssignmentName = assignmentName   
@@ -80,19 +80,19 @@ newAssignment.SuppressReboot = suppressReboot
 newAssignment.TargetCollectionID = targetCollectionID   
 newAssignment.UseGMTTimes = useGMTTimes   
 newAssignment.AssignedCIs = Array(baselineID)   
-  
+
 ' Save assignment.  
 newAssignment.Put_  
-  
+
 Wscript.Echo " "  
 Wscript.Echo "Created new assignment."      
-  
+
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
-  
+
 public void DCMCreateAssignment(WqlConnectionManager connection,  
                                 bool applyToSubTargets,  
                                 int assignmentAction,  
@@ -110,16 +110,16 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
                                 bool useGMTTimes,  
                                 int baselineID)  
 {  
-  
+
     // Set required variables.   
     // Set AssignedCIs like array with a known baseline id (this is the initial creation of the assignment, so no existing values).  
     int[] arrayBaselineNumbers = new int[] { baselineID };  
-  
+
     try  
     {  
         // Create new assignment object.  
         IResultObject newAssignment = connection.CreateInstance("SMS_BaselineAssignment");  
-  
+
         // Assign variable values to assignment properties.  
         //  
         // The following properties are set by the provider on put():  
@@ -142,7 +142,7 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
         newAssignment["TargetCollectionID"].StringValue = targetCollectionID;  
         newAssignment["AssignedCIs"].IntegerArrayValue = arrayBaselineNumbers;  
         newAssignment["UseGMTTimes"].BooleanValue = useGMTTimes;  
-  
+
         // Save assignment object.  
         newAssignment.Put();  
     }  
@@ -151,15 +151,15 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
         Console.WriteLine("Failed to create new assignment." + "\\n" + ex.Message);  
         throw;  
     }  
-  
+
     Console.WriteLine("Created new assignment.");  
-  
+
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
@@ -179,31 +179,31 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
 |`targetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The identifier of the collection to which the assignment is targeted.|  
 |`useGMTTimes`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|`true` if the times and schedules are in Universal Coordinated Time (UTC).|  
 |`baselineID`|-   Managed: `Integer` Array<br />-   VBScript: `Integer` Array|Array of IDs for the configuration items targeted by the assignment.|  
-  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [About Configuration Baselines and Configuration Items](../../develop/compliance/about-configuration-baselines-and-configuration-items.md)   
  [How to Use Configuration Manager Objects With WMI](../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   

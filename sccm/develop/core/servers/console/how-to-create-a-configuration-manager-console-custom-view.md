@@ -1,7 +1,7 @@
 ---
-title: "How to Create a Configuration Manager Console Custom View"
+title: "Create a Console Custom View | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ In System Center Configuration Manager, to create a custom console view, you mus
 
  The following procedure creates a view that displays a custom control. In this case, the view displays the string content of a label control.  
 
- The procedures in this topic create a “My View” console extension node that displays. beneath the **Site Configuration** console node in the Administration workspace. When you click the “My View” node, your custom view control will load into the Configuration Manager console  
+ The procedures in this topic create a “My View��? console extension node that displays. beneath the **Site Configuration** console node in the Administration workspace. When you click the “My View��? node, your custom view control will load into the Configuration Manager console  
 
 ## Creating a Custom View  
  The following procedures create an extension node with a custom view control.  

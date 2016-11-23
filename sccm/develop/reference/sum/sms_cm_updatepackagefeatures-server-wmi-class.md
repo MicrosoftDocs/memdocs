@@ -1,11 +1,11 @@
 ---
-title: "SMS_CM_UpdatePackageFeatures Server WMI Class"
+title: "SMS_CM_UpdatePackageFeatures Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -17,11 +17,11 @@ manager: "mbaldwin"
 ---
 # SMS_CM_UpdatePackageFeatures Server WMI Class
 The  `SMS_CM_UpdatePackageFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_CM_UpdatePackageFeatures : SMS_BaseClass  
 {  
@@ -37,132 +37,132 @@ Class SMS_CM_UpdatePackageFeatures : SMS_BaseClass
     String PackageGuid;  
     SInt32 Status;  
  };  
-  
+
 ```  
-  
+
 ## Methods  
  The following table lists the methods in the `SMS_CM_UpdatePackageFeatures` class.  
-  
+
 |Method|Description|  
 |------------|-----------------|  
 |[UpdateFeatureExposureStatus Method in Class SMS_CM_UpdatePackageFeatures](../../../develop/reference/sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatepackagefeatures.md)|Updates the feature exposure status for an update package feature extension.|  
-  
+
 ## Properties  
  `Description`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Description for the feature extension.  
-  
+
  `EULA`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: [lazy]  
-  
+
  Microsoft Software License Terms for the feature extension.  
-  
+
  `Exposed`  
  Data type: `UInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Bit value for exposing a feature.  
-  
+
  `FeatureGuid`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: [key, not_null]  
-  
+
  A unique identifier for a feature.  
-  
+
  `FeatureType`  
  Data type: `SInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Type of the feature in the package.  
-  
+
  `Flag`  
  Data type: `SInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Flag indicating the latest type of the feature.  
-  
+
  `LocaleID`  
  Data type: `SInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  The locale ID for the localized data.  
-  
+
  `MoreInfoLink`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Link to additional information about the feature extension.  
-  
+
  `Name`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Name of the feature extension.  
-  
+
  `PackageGuid`  
  Data type: `String`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: [key, not_null]  
-  
+
  A unique identifier for the feature.  
-  
+
  `Status`  
  Data type: `SInt32`  
-  
+
  Access type: Read  
-  
+
  Qualifiers: none  
-  
+
  Flag indicating whether a feature will be exposed.  
-  
+
 ## Remarks  
  Class qualifiers for this class include:  
-  
+
 -   Dynamic  
-  
+
 -   Read (read-only)  
-  
+
  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Configuration Manager Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)

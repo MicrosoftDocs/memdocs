@@ -1,15 +1,15 @@
 ---
-title: "How to Define the Resources"
+title: "How to Define the Resources | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 29a19b45-0413-4cb1-a74a-4c38cdc84118
 caps.latest.revision: 18
@@ -19,28 +19,28 @@ manager: "mbaldwin"
 ---
 # How to Define the Resources
 To support the Installer, a custom XML schema should be included as part of the assembly. The schema file (XSD) file must be included as a resource in the assembly.  
-  
+
 > [!IMPORTANT]
 >  The custom XML schema name must use the following naming convention:  
 >   
 >  1.  \<*InstallerClassName*>_XmlSchema.xsd  
 >   
 >  In the case of the RDP sample, the Installer implementation is called RdpInstaller, therefore the XML schema file for that technology is called RdpInstaller_XmlSchema.xsd.  
-  
+
  As part of the resource documentation, a localizable title and description the technology should be created.  
-  
+
 > [!IMPORTANT]
 >  The Title and Desciption should use the following naming conventions:  
 >   
 >  1.  \<*DeploymentTechnologyClassName*>_Title  
 > 2.  \<*DeploymentTechnologyClassName*>_Description  
-  
+
 ### To define a custom schema file  
-  
+
 1.  Create the custom schema file.  
-  
+
      The following example from the RDP sample project demonstrates how to define a custom schema file.  
-  
+
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
     <xs:schema id="RdpInstaller" version="1" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns="http://schemas.microsoft.com/SystemsManagement/2009/ApplicationManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -70,17 +70,17 @@ To support the Installer, a custom XML schema should be included as part of the 
       </xs:complexType>  
     </xs:schema>  
     ```  
-  
+
 #### Namespaces  
  Microsoft.ConfigurationManagement.ApplicationManagement  
-  
+
  Microsoft.ConfigurationManagement.ApplicationManagement.Serialization  
-  
+
 #### Assemblies  
  Microsoft.ConfigurationManagement.ApplicationManagement.dll  
-  
+
 ## .NET Framework Security  
-  
+
 ## See Also  
  [How to Define the Hosting Technology](../../develop/apps/how-to-define-the-hosting-technology.md)   
  [How To Define the Installer Technology](../../develop/apps/how-to-define-the-installer-technology.md)   

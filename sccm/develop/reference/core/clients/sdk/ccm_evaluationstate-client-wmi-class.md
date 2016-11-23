@@ -1,15 +1,15 @@
 ---
-title: "CCM_EvaluationState Client WMI Class"
+title: "CCM_EvaluationState Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: cee8005f-1db4-4978-ae16-51901fd0ff1c
 caps.latest.revision: 6
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # CCM_EvaluationState Client WMI Class
 The `CCM_EvaluationState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class CCM_EvaluationState :    
 {  
@@ -32,29 +32,29 @@ Class CCM_EvaluationState :
     UInt32 PercentComplete;  
 };  
 ```  
-  
+
 ## Methods  
  The `CCM_EvaluationState` class does not define any methods.  
-  
+
 ## Properties  
  `ErrorCode`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Error code.    
-  
+
  `EvaluationState`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Evaluation state. Possible values are:  
-  
+
 |Evaluation State Value|Description|  
 |----------------------------|-----------------|  
 |0|No state information is available.|  
@@ -86,22 +86,22 @@ Class CCM_EvaluationState :
 |26|Download success (downloading during install job).|  
 |27|Post-enforce evaluation.|  
 |28|Waiting for network connectivity.|  
-  
+
  `PercentComplete`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Percent complete.    
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

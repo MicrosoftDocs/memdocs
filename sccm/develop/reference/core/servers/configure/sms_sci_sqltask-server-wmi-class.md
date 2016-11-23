@@ -1,15 +1,15 @@
 ---
-title: "SMS_SCI_SQLTask Server WMI Class"
+title: "SMS_SCI_SQLTask Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 92b5c389-ae47-4a77-8dbc-181926f23ba8
 caps.latest.revision: 12
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_SCI_SQLTask Server WMI Class
 The `SMS_SCI_SQLTask` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a SQL task to be run periodically.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_SCI_SQLTask : SMS_SiteControlItem   
 {  
@@ -42,29 +42,29 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
      UInt32 TaskType;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_SCI_SQLTask` class does not define any methods.  
-  
+
 ## Properties  
  `BeginTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Beginning time for execution of the SQL task. The default value is "00000000000000.000000+***". Only the hours and minutes of this property are used.  
-  
+
  `DaysOfWeek`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [bits]  
-  
+
  Days of the week on which the SQL task executes. Possible values are listed below. The default value is 0.  
-  
+
 |||  
 |-|-|  
 |0|SUNDAY|  
@@ -74,97 +74,97 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 |4|THURSDAY|  
 |5|FRIDAY|  
 |6|SATURDAY|  
-  
+
  `DeleteOlderThan`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Number of days after which records are deleted if the `TaskType` property is set to DELETE. The default value is 0.  
-  
+
  `DeviceName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Device name if the `TaskType` property is set to BACKUP. The default value is "".  
-  
+
  `Enabled`  
  Data type: `Boolean`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  TRUE if the task is active.  
-  
+
  `FileType`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, enumeration:ToSubClass]  
-  
+
  See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
-  
+
  `ItemName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
-  
+
  `ItemType`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
-  
+
  `LatestBeginTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Latest beginning time of execution for the SQL command. The default value is "00000000000000.000000+***". Only the hours and minutes of this property are used.  
-  
+
  `NumRefreshDays`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Number of days between task executions. The default value is 0.  
-  
+
  `SiteCode`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key, SizeLimit("3")]  
-  
+
  See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
-  
+
  `TaskName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [StringEnumeration]  
-  
+
  Configuration Manager-defined task name. Possible values are listed below. The default value is "".  
-  
+
 ||  
 |-|  
 |Backup SMS Site Server|  
@@ -199,33 +199,33 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 |Summarize File Usage Metering Data|  
 |Summarize Installed Software Data|  
 |Summarize Monthly Usage Metering Data|  
-  
+
  `TaskType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  Task type. Possible values are listed below. The default value is 0.  
-  
+
 |||  
 |-|-|  
 |1|BACKUP|  
 |2|PERIOD|  
 |3|DELETE|  
-  
+
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site configuration server wmi classes.md)   
  [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)   

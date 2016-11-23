@@ -1,15 +1,15 @@
 ---
-title: "SMS_ObjectContainerItem Server WMI Class"
+title: "SMS_ObjectContainerItem Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: bfa25626-733e-4023-98b2-e1ff3ee18255
 caps.latest.revision: 9
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_ObjectContainerItem Server WMI Class
 The `SMS_ObjectContainerItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a Configuration Manager console folder item.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_ObjectContainerItem : SMS_BaseClass  
 {  
@@ -36,61 +36,61 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
     String SourceSite;  
 };  
 ```  
-  
+
 ## Methods  
  The following table lists the methods in the `SMS_ObjectContainerItem` class.  
-  
+
 |Method|Description|  
 |------------|-----------------|  
 |[MoveMembers Method in Class SMS_ObjectContainerItem](../../../../../develop/reference/core/servers/console/movemembers-method-in-class-sms_objectcontaineritem.md)|Moves one or more folder items to another folder.|  
 |[MoveMembersEx Method in Class SMS_ObjectContainerItem](../../../../../develop/reference/core/servers/console/movemembersex-method-in-class-sms_objectcontaineritem.md)|Moves one or more folder items to another folder.|  
-  
+
 ## Properties  
  `ContainerNodeID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The unique id of the folder.  
-  
+
  `InstanceKey`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [Not_null]  
-  
+
  The name of the folder.  
-  
+
  `MemberGuid`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [not_null, read]  
-  
+
  The guid of the relation.  
-  
+
  `MemberID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key, Not_null]  
-  
+
  The unique id of the relation.  
-  
+
  `ObjectType`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [deprecated, enumeration, read]  
-  
+
  The type of the folder. Possible values are listed below.  
-  
+
 |||  
 |-|-|  
 |2|TYPE_PACKAGE|  
@@ -109,31 +109,31 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 |25|TYPE_DRIVER|  
 |1011|TYPE_SOFTWAREUPDATE|  
 |2011|TYPE_CONFIGURATIONBASELINE|  
-  
+
  `ObjectTypeName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: None  
-  
+
  The WMI Class Name of the object. Example SMS_Package. This will take effect if the ObjectType is 0 or null.  
-  
+
  `SourceSite`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [not_null, read]  
-  
+
  The sitecode of the site that the relation was originally created from.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).

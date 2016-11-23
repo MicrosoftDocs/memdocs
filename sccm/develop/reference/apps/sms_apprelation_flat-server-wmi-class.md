@@ -1,15 +1,15 @@
 ---
-title: "SMS_AppRelation_Flat Server WMI Class"
+title: "SMS_AppRelation_Flat Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
 caps.latest.revision: 17
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_AppRelation_Flat Server WMI Class
 The `SMS_AppRelation_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the flattened application relation. This includes direct and indirect relations.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_AppRelation_Flat : SMS_BaseClass  
 {  
@@ -35,47 +35,47 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
     UInt32 ToDeploymentTypeCIID;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_AppRelation_Flat` class does not define any methods.  
-  
+
 ## Properties  
  `FromApplicationCIID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  From-application configuration item identifier.  
-  
+
  `FromDeploymentTypeCIID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  From-deployment type identifier.  
-  
+
  `Level`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Level between the from-deployment type and the to-deployment type.  
-  
+
  `RelationType`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  Type of relationship between configuration items. Possible values are:  
-  
+
 |||  
 |-|-|  
 |1|Bundled|  
@@ -84,34 +84,34 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
 |4|Optional|  
 |5|Derived|  
 |6|Superseded|  
-  
+
  `ToApplicationCIID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  To-application configuration item identifier.  
-  
+
  `ToDeploymentTypeCIID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: [key]  
-  
+
  To-deployment type configuration item identifier.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Application Management Server WMI Classes](../../../develop/reference/apps/application management server wmi classes.md)

@@ -1,7 +1,7 @@
 ---
-title: "Operating System Deployment CreateMedia.exe"
+title: "OS Deployment CreateMedia.exe | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,16 +59,16 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**Parameter**|**Value**|**Comment**|  
 |-------------------|---------------|-----------------|  
 |**/K:    (or /k: )**|Boot|Label used to specify the boot media type|  
-|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net”|  
-|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM”|  
+|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net��?|  
+|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM��?|  
 |**/C:**|Credentials|optional, example: "Username=Administrator,Domain=MyDomain,Password=password"|  
-|**/D:  (or /d: )**|\<FQDN of one or more distribution points >|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net”|  
-|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager”|  
-|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009”|  
-|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “notepad license.txt”|  
-|**/Y: (or /y: )**|\<Password>|optional, example: “Password1”|  
-|**/R: (or /r: )**|\<Certificate file path>|Optional, example: “c:\cert\certificate.file”|  
-|**/W**: (or /w: )|\<Certificate file password>|example: “Password2”|  
+|**/D:  (or /d: )**|\<FQDN of one or more distribution points >|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net��?|  
+|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager��?|  
+|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009��?|  
+|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “notepad license.txt��?|  
+|**/Y: (or /y: )**|\<Password>|optional, example: “Password1��?|  
+|**/R: (or /r: )**|\<Certificate file path>|Optional, example: “c:\cert\certificate.file��?|  
+|**/W**: (or /w: )|\<Certificate file password>|example: “Password2��?|  
 |**/U: (or /u: )**|\<Unknown machine support>|true or false|  
 |**/J: (or /j:)**|\<Internet client>|true or false|  
 |**/Z: (or /z: )**|\<User interaction>|true or false|  
@@ -76,8 +76,8 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**/2:**|\<[SS certificate expire time] HIGH;LOW >|Long integer; long integer|  
 |**/5:**|\<UDA setting>|Integer as a string, example: 0|  
 |**/X: (or /x: )**|\<TS variable>|task sequence variable, in the form name=value<br /><br /> i.e. SMSTSMP= server.contoso.net|  
-|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002”|  
-|**/T: (or /t: )**|\<Media Type>|One of:  “CD”, “UDF”, “UDF+FORMAT”|  
+|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002��?|  
+|**/T: (or /t: )**|\<Media Type>|One of:  “CD��?, “UDF��?, “UDF+FORMAT��?|  
 |**/F: (or /f: )**|\<Destination of media file>|Path for media ISO file|  
 
 ## Parameters for capture media  
@@ -85,13 +85,13 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**Parameter**|**Value**|**Comment**|  
 |-------------------|---------------|-----------------|  
 |**/K:    (or /k: )**|capture|Label used to specify the capture media type|  
-|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net”|  
-|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM”|  
+|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net��?|  
+|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM��?|  
 |**/C:**|Credentials|optional, example: "Username=Administrator,Domain=MyDomain,Password=password"|  
-|**/D:  (or /d: )**|\<FQDN of one or more distribution points>|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net”|  
-|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager”|  
-|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002”|  
-|**/T: (or /t: )**|\<Media Type>|One of:  “CD”, “UDF”, “UDF+FORMAT”|  
+|**/D:  (or /d: )**|\<FQDN of one or more distribution points>|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net��?|  
+|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager��?|  
+|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002��?|  
+|**/T: (or /t: )**|\<Media Type>|One of:  “CD��?, “UDF��?, “UDF+FORMAT��?|  
 |**/F: (or /f: )**|\<Destination of media file>|Path for boot ISO file|  
 
 ## Parameters for stand-alone media  
@@ -99,19 +99,19 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**Parameter**|**Value**|**Comment**|  
 |-------------------|---------------|-----------------|  
 |**/K:    (or /k: )**|full|Label used to specify the full media type|  
-|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net”|  
-|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM”|  
+|**/P:    (or /p: )**|\<FQDN of Configuration Manager Provider>|example: “server.contoso.net��?|  
+|**/S:    (or /s: )**|\< Configuration Manager site code>|example:  “MCM��?|  
 |**/C:**|Credentials|optional, example: "Username=Administrator,Domain=MyDomain,Password=password"|  
-|**/D:  (or /d: )**|\<FQDN of one or more distribution points>|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net”|  
-|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager”|  
-|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009”|  
-|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “cmd.exe”|  
-|**/Y: (or /y: )**|\<Password>|optional, example: “Password1”|  
-|**/A: (or /a: )**|\<ID of task sequence>|i.e. “MCM00007”|  
-|**/T: (or /t: )**|\<Media Type>|One of:  “CD”, “UDF”, “UDF+FORMAT”|  
+|**/D:  (or /d: )**|\<FQDN of one or more distribution points>|list of distribution point FQDN names separated by a comma,<br /><br /> example: “server1.contoso.net, server2.contoso.net��?|  
+|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager��?|  
+|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009��?|  
+|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “cmd.exe��?|  
+|**/Y: (or /y: )**|\<Password>|optional, example: “Password1��?|  
+|**/A: (or /a: )**|\<ID of task sequence>|i.e. “MCM00007��?|  
+|**/T: (or /t: )**|\<Media Type>|One of:  “CD��?, “UDF��?, “UDF+FORMAT��?|  
 |**/Z: (or /z: )**|\<User interaction>|true or false|  
 |**/X: (or /x: )**|\<TS variable>|task sequence variable, in the form name=value<br /><br /> i.e. var1=test|  
-|**/T: (or /t: )**|\<Media Type>|One of:  “CD”, “UDF”, “UDF+FORMAT”|  
+|**/T: (or /t: )**|\<Media Type>|One of:  “CD��?, “UDF��?, “UDF+FORMAT��?|  
 |**/M: (or /m: )**|\<Media size>|Size of selected media, units|  
 |**/F: (or /f: )**|\<Destination of media file>|Path for media ISO file|  
 
@@ -120,19 +120,19 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**Parameter**|**Value**|**Comment**|  
 |-------------------|---------------|-----------------|  
 |**/K:    (or /k: )**|prestaged|Label used to specify the prestaged media type|  
-|**/P:    (or /p: )**|\< FQDN of Configuration Manager Provider >|example: “server.contoso.net”|  
-|**/S:    (or /s: )**|\<Configuration Manager site code>|example:  “MCM”|  
+|**/P:    (or /p: )**|\< FQDN of Configuration Manager Provider >|example: “server.contoso.net��?|  
+|**/S:    (or /s: )**|\<Configuration Manager site code>|example:  “MCM��?|  
 |**/C:**||optional, example: L"Username=Administrator,Domain=MyDomain,Password=password"|  
-|**/D:  (or /d: )**|\<One or more distribution point FQDN names>|list of distribution point FQDN names separated by a semicolon,<br /><br /> example: “server1.contoso.net; server2.contoso.net”|  
-|**/L: (or /l: )**|\<CREATED BY text>|optional example: “Bob”|  
+|**/D:  (or /d: )**|\<One or more distribution point FQDN names>|list of distribution point FQDN names separated by a semicolon,<br /><br /> example: “server1.contoso.net; server2.contoso.net��?|  
+|**/L: (or /l: )**|\<CREATED BY text>|optional example: “Bob��?|  
 |**/3:**|\<Version text>|optional i.e. 1.10.1.10|  
-|**/4:**|\<Description text>|optional i.e. “OEM scenario image”|  
-|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager”|  
-|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009”|  
-|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “cmd.exe”|  
-|**/Y: (or /y: )**|\<Password>|optional, example: “Password1”|  
-|**/R: (or /r: )**|\<Certificate file path>|Optional, example: “c:\cert\certificate.file”|  
-|**/W**: (or /w: )|\<Certificate file password>|example: “Password2”|  
+|**/4:**|\<Description text>|optional i.e. “OEM scenario image��?|  
+|**/L: (or /l: )**|\<Media Text Label>|optional, example: “Configuration Manager��?|  
+|**/E: (or /e: )**|\<Pre-exec Package ID>|optional, example: “MCM00009��?|  
+|**/G: (or /g: )**|\<Pre-exec command-line>|optional, example: “cmd.exe��?|  
+|**/Y: (or /y: )**|\<Password>|optional, example: “Password1��?|  
+|**/R: (or /r: )**|\<Certificate file path>|Optional, example: “c:\cert\certificate.file��?|  
+|**/W**: (or /w: )|\<Certificate file password>|example: “Password2��?|  
 |**/U: (or /u: )**|\<Unknown machine support>|true or false|  
 |**/J:**|\<Internet client>|true or false|  
 |**/Z: (or /z: )**|\<User interaction>|true or false|  
@@ -140,10 +140,10 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**/2:**|\<[SS certificate expire time] HIGH;LOW >|Long integer; long integer|  
 |**/5:**|\<UDA setting>|Integer as a string, example: 0|  
 |**/X: (or /x: )**|\<TS variable>|task sequence variable, in the form name=value<br /><br /> i.e. SMSTSMP=server.contoso.net|  
-|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002”|  
-|**/O: (or /o: )**|\<Operating system image ID>|i.e. “MCM00006”|  
-|**/I: (or /i: )**|\<Operating system image index number>|i.e. “1”|  
-|**/T: (or /t: )**|\<Media Type>|“HD”|  
+|**/B: (or /b: )**|\<Boot Image ID>|i.e. “MCM00002��?|  
+|**/O: (or /o: )**|\<Operating system image ID>|i.e. “MCM00006��?|  
+|**/I: (or /i: )**|\<Operating system image index number>|i.e. “1��?|  
+|**/T: (or /t: )**|\<Media Type>|“HD��?|  
 |**/F: (or /f: )**|\<destination of media file>|Path for prestaged media file|  
 
 ## See Also  

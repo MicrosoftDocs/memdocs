@@ -1,15 +1,15 @@
 ---
-title: "CCM_DTS_FLAG Enumeration"
+title: "CCM_DTS_FLAG Enumeration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 90f20778-f069-4af1-bcfd-c27230818a77
 caps.latest.revision: 10
@@ -19,9 +19,9 @@ manager: "mbaldwin"
 ---
 # CCM_DTS_FLAG Enumeration
 The **CCM_DTS_FLAG** enumeration indicates special options on download jobs.  
-  
+
 ## Syntax  
-  
+
 ```  
 typedef enum  
 {  
@@ -36,11 +36,11 @@ typedef enum
     CCM_DTS_FLAG_SKIPHOSTCHANGEHANDLING = 0x00000100   
 }  
 CCM_DTS_FLAG;  
-  
+
 ```  
-  
+
 ## Members  
-  
+
 |||  
 |-|-|  
 |CCM_DTS_FLAG_SINGLEFILE|Reserved.|  
@@ -52,14 +52,14 @@ CCM_DTS_FLAG;
 |CCM_DTS_FLAG_SENDAUTHHEADERS_MIXED|Reserved.|  
 |CCM_DTS_FLAG_USEINPUTMANIFEST|Reserved.|  
 |CCM_DTS_FLAG_SKIPHOSTCHANGEHANDLING|Reserved.|  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
-  
+
 ## See Also  
  [Configuration Manager Alternate Content Provider](../../../../../develop/reference/core/servers/configure/alternate content provider classes.md)

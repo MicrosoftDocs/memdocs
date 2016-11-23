@@ -1,15 +1,15 @@
 ---
-title: "SMS_G_System_AppClientState Server WMI Class"
+title: "SMS_G_System_AppClientState Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: d346eaee-b7eb-4072-9b74-06916e15d18c
 caps.latest.revision: 16
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_G_System_AppClientState Server WMI Class
 The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_G_System_AppClientState : SMS_G_System  
 {  
@@ -38,101 +38,101 @@ Class SMS_G_System_AppClientState : SMS_G_System
     String UserName;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_G_System_AppClientState` class does not define any methods.  
-  
+
 ## Properties  
  `AppCI`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, not_null, read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
  `AppModelID`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [not_null, read]  
-  
+
  Identifier of the application model.  
-  
+
  `AppModelName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Name of the Application Model.  
-  
+
  `AppName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
  `ComplianceState`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [not_null, read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
  `MachineName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, not_null, read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
  `ResourceID`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Resource ID.  
-  
+
  `Revision`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [not_null, read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
  `UserName`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, not_null, read]  
-  
+
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
-  
+
 ## See Also  
  [Application Management Server WMI Classes](../../../develop/reference/apps/application management server wmi classes.md)

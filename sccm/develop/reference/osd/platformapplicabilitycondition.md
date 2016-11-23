@@ -1,15 +1,15 @@
 ---
-title: "PlatformApplicabilityCondition"
+title: "PlatformApplicabilityCondition | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54
 caps.latest.revision: 12
@@ -19,16 +19,16 @@ manager: "mbaldwin"
 ---
 # PlatformApplicabilityCondition
 `PlatformApplicabilityCondition` specifies one supported platform for an operating system deployment driver in System Center Configuration Manager.  
-  
+
 > [!NOTE]
 >  It is only valid to populate this information with values from `SMS_SupportedPlatforms Server WMI Class` objects. Drivers can be targeted only at major releases, for example, all Windows.  
-  
+
  **Type**: String.  
-  
+
  **Instances**: Zero or more.  
-  
+
 ## Attributes  
-  
+
 |Attribute|Description|  
 |---------------|-----------------|  
 |DisplayName|The platform name displayed in the System Center Configuration Manager console.|  
@@ -36,7 +36,7 @@ manager: "mbaldwin"
 |MinVersion|The minimum supported version. For example, "5.20.3790.0".|  
 |Name|The operating system name. For example, "Windows NT".|  
 |Platform|The supported platform. For example "x64".|  
-  
+
 ## See Also  
  [Operating System Deployment Driver Supported Platforms Schema](../../../develop/reference/osd/operating-system-deployment-driver-supported-platforms-schema.md)   
  [PlatformApplicabilityConditions](../../../develop/reference/osd/platformapplicabilityconditions.md)   

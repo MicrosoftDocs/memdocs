@@ -1,15 +1,15 @@
 ---
-title: "SMS_ImageDiskInformation Server WMI Class"
+title: "SMS_ImageDiskInformation Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: 8e189e99-5a5f-41c9-91ee-14a69cc5fe58
 caps.latest.revision: 13
@@ -19,11 +19,11 @@ manager: "mbaldwin"
 ---
 # SMS_ImageDiskInformation Server WMI Class
 The `SMS_ImageDiskInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all disks and partition information in an operating system image and operating system installer.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class SMS_ImageDiskInformation : SMS_BaseClass  
 {  
@@ -40,116 +40,116 @@ Class SMS_ImageDiskInformation : SMS_BaseClass
     String PartitionType;  
 };  
 ```  
-  
+
 ## Methods  
  The `SMS_ImageDiskInformation` class does not define any methods.  
-  
+
 ## Properties  
  `DiskIndex`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  Disk Index of this image.  
-  
+
  `DiskStyle`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Disk style.   
-  
+
  `PackageID`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  ID of the image package.  
-  
+
  `PartitionFileSystem`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition file system.  
-  
+
  `PartitionIndex`  
  Data type: `UInt32`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [key, read]  
-  
+
  Partition index of this image.  
-  
+
  `PartitionIsBoot`  
  Data type: `Boolean`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Whether the partition is the boot partition.  
-  
+
  `PartitionLabel`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition label.  
-  
+
  `PartitionOffset`  
  Data type: `SInt64`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition offset.  
-  
+
  `PartitionSize`  
  Data type: `SInt64`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition size.  
-  
+
  `PartitionStyle`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition style.   
-  
+
  `PartitionType`  
  Data type: `String`  
-  
+
  Access type: Read-only  
-  
+
  Qualifiers: [read]  
-  
+
  Partition type.  
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).

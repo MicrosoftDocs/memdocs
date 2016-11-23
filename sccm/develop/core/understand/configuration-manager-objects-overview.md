@@ -1,15 +1,15 @@
 ---
-title: "Configuration Manager Objects Overview"
+title: "Objects Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: f3ddf4dc-2acd-4d59-be88-b2296d9333cd
 caps.latest.revision: 7
@@ -19,7 +19,7 @@ manager: "mbaldwin"
 ---
 # Configuration Manager Objects Overview
 The System Center Configuration Manager objects are instances of Configuration Manager-specific Windows Management Instrumentation (WMI) classes that are managed by the SMS Provider. The Configuration Manager object class categories are described in the following table.  
-  
+
 |System Center Configuration Manager Object Class Category|Description|  
 |----------------------------------------------------------------------------------------|-----------------|  
 |Software distribution|Objects associated with the software distribution feature of Configuration Manager, such as advertisement, collection, package, and program objects.|  
@@ -32,14 +32,14 @@ The System Center Configuration Manager objects are instances of Configuration M
 |Software metering|Describes the metered Configuration Manager resources, such as program files.|  
 |Status and summarizer|Indicates the status of Configuration Manager sites, components, and software distribution operations.|  
 |Collected files|Contains information about files collected from clients.|  
-  
+
 ## DebugView  
  To show SMS Provider object property values in the System Center Configuration Manager console results pane, start the console with the following command line:  
-  
+
  \<InstallationDirectory>\Microsoft.ConfigurationManagement.exe /SMS:DebugView=1  
-  
+
  For more information about command-line options, see [Configuration Manager Console Command-Line Options](../../../develop/reference/core/servers/console/console command-line options.md)  
-  
+
 ## See Also  
  [Configuration Manager Association Classes](../../../develop/core/understand/association classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   

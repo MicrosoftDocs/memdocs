@@ -1,15 +1,15 @@
 ---
-title: "How to List Configuration Assignments"
+title: "List Configuration Assignments | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
 caps.latest.revision: 10
@@ -19,39 +19,39 @@ manager: "mbaldwin"
 ---
 # How to List Configuration Assignments
 The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
-  
+
 ### To list Configuration Assignments  
-  
+
 1.  Set up a connection to the SMS Provider.  
-  
+
 2.  Query for all instances `SMS_BaselineAssignment`.  
-  
+
 3.  Loop through the array of available configuration baseline assignments, listing each configuration baseline assignment and specific properties.  
-  
+
 ## Example  
  The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
-  
+
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
-  
+
 ```vbs  
-  
+
 Sub DCMAssignments_ListProperties(swbemServices)  
-  
+
     On Error Resume Next  
-  
+
     Dim queryBaselineAssignmentResults  
     Dim assignment  
-  
+
     ' Query assignments.  
     Set queryBaselineAssignmentResults = swbemServices.ExecQuery("Select * From SMS_BaselineAssignment", , 0)  
-  
+
     If Err.Number<>0 Then  
         Wscript.Echo "Couldn't get assignments."  
         Exit Sub  
     End If  
-  
+
     On Error Goto 0  
-  
+
     ' List assignments and various assignment's properties.  
     For Each assignment In queryBaselineAssignmentResults  
         Wscript.Echo ""  
@@ -78,24 +78,24 @@ Sub DCMAssignments_ListProperties(swbemServices)
         Wscript.Echo "UseGMTTimes: " & assignment.UseGMTTimes  
         Wscript.Echo "==============================================================================="  
     Next  
-  
+
     If queryBaselineAssignmentResults.Count = 0 Then  
         Wscript.Echo "      no query results"  
     End If  
-  
+
     set queryBaselineAssignmentResults = Nothing  
-  
+
 End Sub  
-  
+
 ```  
-  
+
 ```c#  
-  
+
 public void DCMAssignments_ListProperties(WqlConnectionManager connection)  
 {  
-  
+
     IResultObject baselineAssignments = connection.QueryProcessor.ExecuteQuery("SELECT * FROM SMS_BaselineAssignment");  
-  
+
     try  
     {  
         foreach (IResultObject assignment in baselineAssignments)  
@@ -121,7 +121,7 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
             Console.WriteLine("StartTime: " + assignment["StartTime"].StringValue);  
             Console.WriteLine("SuppressReboot: " + assignment["SuppressReboot"].IntegerValue);  
             Console.WriteLine("UseGMTTimes: " + assignment["UseGMTTimes"].BooleanValue);  
-  
+
             // Process the array.  
             int[] arrayofAssignedCIs = assignment["AssignedCIs"].IntegerArrayValue;  
             Console.Write("Assigned baseline ID(s): ");  
@@ -129,9 +129,9 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
             {  
                 Console.Write(i + " ");  
             }  
-  
+
             Console.WriteLine();  
-  
+
             // NULL BY DEFAULT (on a generic assignment created through the user interface).  
             //  
             //Console.WriteLine("EnforcementDeadline: " + assignment["EnforcementDeadline"].StringValue);  
@@ -140,11 +140,11 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
             //Console.WriteLine("OverrideServiceWindows: " + assignment["OverrideServiceWindows"].BooleanValue);  
             //Console.WriteLine("RebootOutsideOfServiceWindows: " + assignment["RebootOutsideOfServiceWindows"].BooleanValue);  
             //Console.WriteLine("WoLEnabled: " + assignment["WoLEnabled"].BooleanValue);  
-  
+
             Console.WriteLine("================================================================================");  
-  
+
         }  
-  
+
     }  
     catch (SmsException ex)  
     {  
@@ -152,40 +152,40 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
         throw;  
     }  
 }  
-  
+
 ```  
-  
+
  The example method has the following parameters:  
-  
+
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
 |-   `connection`<br />-   `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-  
+
 ## Compiling the Code  
-  
+
 ### Namespaces  
  System  
-  
+
  System.Collections.Generic  
-  
+
  System.ComponentModel  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider  
-  
+
  Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
-  
+
 ### Assembly  
  adminui.wqlqueryengine  
-  
+
  microsoft.configurationmanagement.managementprovider  
-  
+
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
-  
+
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
-  
+
 ## See Also  
  [About Configuration Baselines and Configuration Items](../../develop/compliance/about-configuration-baselines-and-configuration-items.md)   
  [How to Use Configuration Manager Objects With WMI](../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   

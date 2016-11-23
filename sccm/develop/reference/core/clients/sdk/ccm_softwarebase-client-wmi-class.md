@@ -1,15 +1,15 @@
 ---
-title: "CCM_SoftwareBase Client WMI Class"
+title: "CCM_SoftwareBase Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
+applies_to:
   - "System Center Configuration Manager (current branch)"
 ms.assetid: d01a7ab7-5edd-4534-926d-161ec05d813d
 caps.latest.revision: 10
@@ -19,14 +19,14 @@ manager: "mbaldwin"
 ---
 # CCM_SoftwareBase Client WMI Class
 The `CCM_SoftwareBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for management entities like software updates. applications and so on. This class contains the common properties across these management entities. This class is listed here for completeness and to show the base class properties which derived classes would inherit. Client SDK users will always use the specific derived classes of interest to achieve the functionality.  
-  
+
 > [!IMPORTANT]
 >  The software update client side SDK will only return set of updates which are deployed to client from Configuration Manager site server, and are applicable, and are yet to be installed on the client.  
-  
+
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
-  
+
 ## Syntax  
-  
+
 ```  
 Class CCM_SoftwareBase :    
 {  
@@ -44,65 +44,65 @@ Class CCM_SoftwareBase :
     UInt32 Type;  
 };  
 ```  
-  
+
 ## Methods  
  The `CCM_SoftwareBase` class does not define any methods.  
-  
+
 ## Properties  
  `ContentSize`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Represents the content size. Populated only if the managed entity has binary content associated with it.  
-  
+
  `Deadline`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The deadline specified by the administrator to deploy this managed entity on a client computer.  
-  
+
  `Description`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The description of the managed entity.  
-  
+
  `ErrorCode`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Error code.    
-  
+
  `EstimatedInstallTime`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  EstimatedInstallTime    
-  
+
  `EvaluationState`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Software enforcement state, such as downloading content, waiting servicewindow, and so on.  
-  
+
 ||||  
 |-|-|-|  
 |0|Unknown|No state information is available.|  
@@ -133,67 +133,67 @@ Class CCM_SoftwareBase :
 |25|AdvanceDownloadFailed|Application is pre-downloading failed (downloading outside of the install job).|  
 |26|DownloadSuccess|Download success (downloading during the install job).|  
 |27|PostEnforceEvaluation|Post enforce evaluation. |  
-  
+
  `FullName`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The complete name of the managed entity, such as software update, application and so on.  
-  
+
  `Name`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The name of the actual managed entity like software update, application and so on.  
-  
+
  `NextUserScheduledTime`  
  Data type: `DateTime`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Next scheduled time when end user would like to deploy this managed entity.  
-  
+
  `PercentComplete`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Percent complete.    
-  
+
  `Publisher`  
  Data type: `String`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  The publisher that published the managed entity, such as Microsoft for software updates coming from Windows Updates.  
-  
+
  `Type`  
  Data type: `UInt32`  
-  
+
  Access type: Read/Write  
-  
+
  Qualifiers: none  
-  
+
  Type.    
-  
+
 ## Remarks  
-  
+
 ## Requirements  
-  
+
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
-  
+
 ## Development Requirements  
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).
