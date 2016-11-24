@@ -58,7 +58,7 @@ Class SMS_ApplicationManagementAgentConfig : SMS_ClientAgentConfig_BaseClass
  An XML string to set alternate content provider settings. This property does not apply to a software update package or a driver package.  
 
 ```  
-<AlternateDownloadSettings SchemaVersion=��?1.0��?>    <Provider Name=��?logical name here��?>        <Data>provider specific data here</Data>    </Provider>    <Provider Name=��?logical name here��?>         <Data>provider specific data here</Data>    </Provider></AlternateDownloadSettings>  
+<AlternateDownloadSettings SchemaVersion="1.0">    <Provider Name="logical name here">        <Data>provider specific data here</Data>    </Provider>    <Provider Name="logical name here">         <Data>provider specific data here</Data>    </Provider></AlternateDownloadSettings>  
 ```  
 
  `AppXInplaceUpgradeEnabled`  

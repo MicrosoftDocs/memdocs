@@ -56,7 +56,7 @@ class MyCustomAction : SMS_TaskSequence_Action
  For example:  
 
 ```  
-CommandLine(“smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]��?  
+CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"  
 ```  
 
 ## Application Processing  

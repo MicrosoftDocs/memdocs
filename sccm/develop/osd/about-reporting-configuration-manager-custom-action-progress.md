@@ -36,15 +36,15 @@ While a custom action is running on a System Center Configuration Manager client
 ### Determining Whether the Progress Indicator Should Be Displayed  
  Using the following logic, you can use environment variables to determine whether the progress indicator should be displayed.  
 
- If you are running in WindowsPE ( `_SMSTSInWinPE` == “true��?), or  
+ If you are running in WindowsPE ( `_SMSTSInWinPE` == "true"), or  
 
- If you are running in full operating system post installation (`_SMSTSReturnToGINA`==��?true��?), or  
+ If you are running in full operating system post installation (`_SMSTSReturnToGINA`=="true"), or  
 
- If the task sequence is started from media (`_SMSTSLaunchMode` is “CD��?, “DVD��? or “USB��?), or  
+ If the task sequence is started from media (`_SMSTSLaunchMode` is "CD", "DVD" or "USB"), or  
 
- If the task sequence is running in stand-alone mode (`_SMSTSStandAloneMode`==��?true��?), or  
+ If the task sequence is running in stand-alone mode (`_SMSTSStandAloneMode`=="true"), or  
 
- If the show progress UI flag is set (`_SMSTSShowProgressUI` == “true��?), the progress indicator should be displayed; otherwise, it should not be displayed.  
+ If the show progress UI flag is set (`_SMSTSShowProgressUI` == "true"), the progress indicator should be displayed; otherwise, it should not be displayed.  
 
 ### Creating the COM ProgressUI Object  
  You create a `ProgressUI` object by using the same technique that you use with any COM object. In C++ you use `CoCreateInstance`. In C# you add a reference to **SMS TSE Progress UI,** and in your source code you create an instance of the `ProgressUILib.ProgressUIClass` class.  
