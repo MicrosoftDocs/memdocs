@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarnms.author: nathbarn
+author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
@@ -58,7 +58,7 @@ To bring devices into hybrid management, those devices must be enrolled with the
 
 | **Method** |	**Wipe** |	**Affinity**	|	**Lock** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm.md#set-up-device-management)|
+|**[BYOD](#byod)** | No|	Yes |	No | [more](../deploy-use/setup-hybrid-mdm.md#windows-enrollment-setup)|
 |**[DEM](#dem)**|	No |No |No	|[more](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 For a series of question that help you find the right method, see [Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1).
