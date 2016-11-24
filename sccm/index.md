@@ -293,14 +293,14 @@ toc_rel: /sccm/toc.json
                   <span class="step-number">8</span>
                   <p>Configuration Manager SDK</p>
                 </div>
-                <p class="description column-two-thirds">Learn how to develop applications for Configuration Manager.</p>
+                <p class="description column-two-thirds">Learn how to automate and extend Configuration Manager.</p>
               </a>
             </header>
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
                   <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
-                    <h3>Configuration Manager Programming Fundamentals</h3>
+                    <h3>Configuration Manager programming fundamentals</h3>
                     <p>Learn about the fundamental programming techniques that will help you to successfully program Configuration Manager.</p>
                   </a>
                 </li>
