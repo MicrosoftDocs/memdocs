@@ -2,7 +2,7 @@
 title: "VPN profiles in System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization."
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-Use VPN profiles in System Center Configuration Manager to deploy VPN settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
+Use VPN profiles in System Center Configuration Manager (also known as ConfigMgr or SCCM) to deploy VPN settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
 
  For example, you want to provision all devices that run the iOS operating system with the settings required to connect to a file share on the corporate network. You can create a VPN profile containing the settings necessary to connect to the corporate network and then deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the VPN connection in the list of available networks and can connect to this network with the minimum of effort.  
 
