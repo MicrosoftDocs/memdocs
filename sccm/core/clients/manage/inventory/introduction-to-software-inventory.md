@@ -45,6 +45,7 @@ Use software inventory in System Center Configuration Manager to collect informa
 
 |Platform|For Personal-owned Devices|For Company-owned devices|  
 |--------------|---------------------------------|--------------------------------|  
+|Windows 10 (without the Configuration Manager client)|Only managed apps|Only managed apps| 
 |Windows 8.1 (without the Configuration Manager client)|Only managed apps|Only managed apps|  
 |Windows Phone 8|Only managed apps|Only managed apps|  
 |Windows RT|Only managed apps|Only managed apps|  
