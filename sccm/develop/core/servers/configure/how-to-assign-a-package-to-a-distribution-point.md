@@ -146,6 +146,6 @@ public void AssignPackageToDistributionPoint(WqlConnectionManager connection, st
 ## See Also  
  [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
- [Configuration Manager Site Control File](../../../../develop/core/understand/site-control file.md)   
+ [Configuration Manager Site Control File](../../../../develop/core/understand/site-control-file.md)   
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)   
  [SMS_SystemResourceList Server WMI Class](../../../../develop/reference/core/servers/configure/sms_systemresourcelist-server-wmi-class.md)

@@ -35,7 +35,7 @@ In System Center Configuration Manager, the driver catalog helps manage the cost
 -   Supported platforms  
 
 ### Driver Import  
- Using the [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) import methods, you can import the Windows drivers described by .inf and Txtsetup.oem files into the driver catalog. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md) and [How to Import a Windows Driver Described by an OEM File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-a-txtsetup.oem file.md).  
+ Using the [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) import methods, you can import the Windows drivers described by .inf and Txtsetup.oem files into the driver catalog. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md) and [How to Import a Windows Driver Described by an OEM File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md).  
 
  Before a driver can be used, it must be enabled. For more information, see [How to Enable or Disable a Windows Driver in Configuration Manager](../../develop/osd/how-to-enable-or-disable-a-windows-driver.md).  
 

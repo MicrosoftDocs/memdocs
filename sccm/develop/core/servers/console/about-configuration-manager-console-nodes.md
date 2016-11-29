@@ -39,7 +39,7 @@ System Center Configuration Manager uses XML to define the nodes and their conte
 > [!NOTE]
 >  The Configuration Manager SDK includes a sample XML file and GUID folder for a node that displays the available collections. The GUID folder is the namespace identifier for the tools node  
 
- For information about node XML, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md).  
+ For information about node XML, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md).  
 
 ## See Also  
  [Configuration Manager Administrator Console Actions](../../../../develop/core/servers/console/console-actions.md)   
@@ -47,4 +47,4 @@ System Center Configuration Manager uses XML to define the nodes and their conte
  [Configuration Manager Administrator Console Views](../../../../develop/core/servers/console/console-views.md)   
  [How to Create a Configuration Manager Administrator Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)   
- [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md)
+ [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

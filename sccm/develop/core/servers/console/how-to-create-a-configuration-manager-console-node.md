@@ -38,5 +38,5 @@ In System Center Configuration Manager, to create a Configuration Manager consol
 
 ## See Also  
  [About Configuration Manager Administrator Console Nodes](../../../../develop/core/servers/console/about-configuration-manager-console-nodes.md)   
- [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md)   
+ [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

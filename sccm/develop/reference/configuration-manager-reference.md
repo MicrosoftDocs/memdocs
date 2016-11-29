@@ -34,7 +34,7 @@ This reference contains detailed information about the Microsoft System Center C
 
 -   [Configuration Manager Application Management Server WMI Classes](../../develop/reference/apps/application-management-server-wmi-classes.md)  
 
--   [Configuration Manager Asset Intelligence Server WMI Classes](../../develop/reference/core/clients/asset-intelligence/asset-intelligence-server-wmi classes.md)  
+-   [Configuration Manager Asset Intelligence Server WMI Classes](../../develop/reference/core/clients/asset-intelligence/asset-intelligence-server-wmi-classes.md)  
 
 -   [Configuration Manager Client Configuration Server WMI Classes](../../develop/reference/core/clients/config/client-configuration-server-wmi-classes.md)  
 

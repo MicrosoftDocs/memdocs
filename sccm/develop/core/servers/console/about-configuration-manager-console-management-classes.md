@@ -30,4 +30,4 @@ System Center Configuration Manager uses XML to define management classes whose 
  [Configuration Manager Administrator Console Views](../../../../develop/core/servers/console/console-views.md)   
  [How to Create a Configuration Manager Administrator Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)   
- [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md)
+ [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)

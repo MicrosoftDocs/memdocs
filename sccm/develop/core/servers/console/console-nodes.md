@@ -24,7 +24,7 @@ This section provides information about System Center Configuration Manager cons
 
 -   [About Configuration Manager Console Nodes](../../../../develop/core/servers/console/about-configuration-manager-console-nodes.md)  
 
--   [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md)  
+-   [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node-xml.md)  
 
 -   [Configuration Manager Console RootNodes Element](../../../../develop/core/servers/console/console-rootnodes-element.md)  
 
