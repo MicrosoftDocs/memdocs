@@ -25,7 +25,7 @@ For detailed information about Configuration Manager maintenance windows, see th
 -   [Program Run Scenario using Maintenance Windows](http://technet.microsoft.com/library/bb694197.aspx)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)

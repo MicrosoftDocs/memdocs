@@ -55,18 +55,18 @@ Class SMS_SummarizationInterval : SMS_BaseClass
  Key that uniquely identifies the interval, equivalent to 100*Year+Month.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  This class is the source for the `TimeKey` property in a monthly usage summary represented by [SMS_MonthlyUsageSummary Server WMI Class](../../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md).  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software metering server wmi classes.md)   
+ [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)   
  [SMS_MonthlyUsageSummary Server WMI Class](../../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md)

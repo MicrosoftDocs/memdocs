@@ -36,7 +36,7 @@ To modify a System Center Configuration Manager object instance by using the man
 ## Example  
  The following example function updates a package's description from a supplied package identifier and description.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 

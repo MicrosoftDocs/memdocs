@@ -37,7 +37,7 @@ You move a step (an action or a group) from one operating system deployment task
 
  You will need the code snippet in [How to Remove a Step From an Operating System Deployment Group](../../develop/osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md) to run this example.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub MoveActionToGroup( taskSequenceStep, sourceGroup,targetGroup)  
@@ -121,7 +121,7 @@ public void MoveActionToGroup(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Add a Step  to an Operating System Deployment Group](../../develop/osd/how-to-add-a-step-to-an-operating-system-deployment-group.md)   

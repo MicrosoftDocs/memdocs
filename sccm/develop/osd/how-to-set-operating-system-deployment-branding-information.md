@@ -38,7 +38,7 @@ You set the operating system deployment branding information for the System Cent
 ## Example  
  The following example method changes the operating system deployment branding text to the supplied value.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub SetOsdBranding(connection,          _  

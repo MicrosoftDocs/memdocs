@@ -35,7 +35,7 @@ An operating system deployment task sequence group, in System Center Configurati
 ## Example  
  The following example method adds a new group to the supplied task sequence. Because the group is added to the end of the task sequence `Steps` array, you might want to reorder its position. For more information, see [How to Reorder an Operating System Deployment Task Sequence](../../develop/osd/how-to-reorder-an-operating-system-deployment-task-sequence.md).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddTaskSequenceGroup(connection, taskSequence, name, description)  
@@ -115,7 +115,7 @@ public IResultObject AddTaskSequenceGroup(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Add a Step to an Operating System Deployment Group](../../develop/osd/how-to-add-a-step-to-an-operating-system-deployment-group.md)   

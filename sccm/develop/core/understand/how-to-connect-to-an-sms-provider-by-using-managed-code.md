@@ -56,7 +56,7 @@ To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is 
 ## Example  
  The following example method connects to the SMS Provider on a local or remote computer. If `servername` is remote, the method uses the supplied user name and password to connect to the remote computer. If you want to use the current user context, for the remote connection, change the code so that it does not pass the user name and password. If the connection is successful, a **WqlConnectionManager** object is returned.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public WqlConnectionManager Connect(string serverName, string userName, string userPassword)  

@@ -82,7 +82,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 ### Client  
  **Primary WMI Namespace:** ROOT\CCM  
 
- **Client WMI Classes:** [Configuration Manager Client SDK WMI Classes](../../../develop/reference/core/clients/sdk/client sdk wmi classes.md)  
+ **Client WMI Classes:** [Configuration Manager Client SDK WMI Classes](../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md)  
 
 > [!IMPORTANT]
 >  The client-side programming story for Configuration Manager is evolving to be primarily WMI-based. In the past, a set of client-side COM classes were the primary method used to access client functionality, although additional client-side WMI classes/methods were also used. With the release of System Center 2012 Configuration Manager, the focus is shifting to a set of WMI classes in the namespace: **root/ccm/ClientSDK**. Understandably, an abstraction, in the form of COM or specific SDK classes, provides a useful abstraction from underlying architectural changes over the course of product updates.  
@@ -102,7 +102,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 
 -   [About Configuration Manager Console Extension](../../../develop/core/servers/console/about-configuration-manager-console-extension.md)  
 
--   [Configuration Manager Console Extension Architecture](../../../develop/core/servers/console/console extension architecture.md)  
+-   [Configuration Manager Console Extension Architecture](../../../develop/core/servers/console/console-extension-architecture.md)  
 
 ## Programming Fundamentals  
  The Configuration Manager Programming Fundamentals section of the SDK provides examples of how to work with the various types of objects and structures available in Configuration Manager. Configuration Manager contains some objects/concepts that can be initially confusing. Of particular interest are **embedded properties** (used primary with the Site Control File) and **lazy properties** (used throughout the Configuration Manager classes). Below are links to the Programming Fundamentals (and other sub-sections) of the SDK. These sections contain code examples showing how to work with the various object types.  
@@ -116,7 +116,7 @@ To get started with programming for System Center Configuration Manager, it’s 
 
 -   [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)  
 
--   [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+-   [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
 -   [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)  
 

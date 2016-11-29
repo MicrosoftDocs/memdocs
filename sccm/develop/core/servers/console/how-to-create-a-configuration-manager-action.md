@@ -22,17 +22,17 @@ To create a Configuration Manager console action, in System Center Configuration
 
  For sample XML for each action type, see the following:  
 
--   [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable action.md)  
+-   [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)  
 
--   [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog action.md)  
+-   [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md)  
 
--   [Configuration Manager Report Action](../../../../develop/core/servers/console/report action.md)  
+-   [Configuration Manager Report Action](../../../../develop/core/servers/console/report-action.md)  
 
--   [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype action.md)  
+-   [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)  
 
--   [Configuration Manager Group Action](../../../../develop/core/servers/console/group action.md)  
+-   [Configuration Manager Group Action](../../../../develop/core/servers/console/group-action.md)  
 
- For information about deploying the action XML, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console extension deployment.md).  
+ For information about deploying the action XML, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
 ### To add an executable action to the Configuration Manager console  
 
@@ -59,5 +59,5 @@ To create a Configuration Manager console action, in System Center Configuration
 ## See Also  
  [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)   
  [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md)   
- [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable action.md)   
+ [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

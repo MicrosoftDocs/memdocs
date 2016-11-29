@@ -30,8 +30,8 @@ Globally Unique Identifiers (GUIDs) are used, in Adminconsole.xml, to identify p
 
  `RootNodeDescription` contains further `RootNodeDescription` elements for each of the major Configuration Manager features displayed in the Configuration Manager console tree view. By expanding these, you can navigate to the required part of the Configuration Manager console and get the GUID from the appropriate XML element.  
 
- Namespace GUIDs can be associated with several types of elements. For more information, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console node xml.md).  
+ Namespace GUIDs can be associated with several types of elements. For more information, see [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md).  
 
 ## See Also  
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)   
- [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console node xml.md)
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [Configuration Manager Console Node XML](../../../../develop/core/servers/console/console-node xml.md)

@@ -41,6 +41,6 @@ Applications that run on Microsoft System Center Configuration Manager clients h
  For more information about System Center Configuration Manager client requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  
 
 ## See Also  
- [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md)   
- [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md)   
- [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md)
+ [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
+ [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md)   
+ [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

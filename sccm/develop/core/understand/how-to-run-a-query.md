@@ -33,7 +33,7 @@ In System Center Configuration Manager, you run a `SMS_Query` based query by get
 ## Example  
  The following example method synchronously runs the query identified by the `queryId` parameter.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub RunQuery(connection, queryId)  

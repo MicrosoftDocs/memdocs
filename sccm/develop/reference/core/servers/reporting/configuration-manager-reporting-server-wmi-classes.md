@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # Configuration Manager Reporting Server WMI Classes
-Reporting server Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager assist in reporting in the console.The Configuration Manager server class schema is a set of WMI classes that represent the objects on a server running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object, and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data, and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+Reporting server Windows Management Instrumentation (WMI) classes in Microsoft System Center Configuration Manager assist in reporting in the console.The Configuration Manager server class schema is a set of WMI classes that represent the objects on a server running System Center Configuration Manager. Each System Center Configuration Manager class is a template for a managed object, and all instances of the object use the template. Classes can contain properties and methods. The properties describe the class data, and the methods typically perform data management. For more information about developing applications using these classes, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## Reporting topics  
 

@@ -34,7 +34,7 @@ You delete an operating system deployment driver package, in System Center Confi
 ## Example  
  The following example method deletes a driver package identified by its package identifier.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub DeleteDriverPackage(connection,packageID)  

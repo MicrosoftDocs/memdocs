@@ -52,7 +52,7 @@ You use the SMS Provider to access and modify System Center Configuration Manage
 
  For information about accessing the SMS Provider by using .NET Framework, see [.NET Managed Configuration Manager Provider Fundamentals](../../../develop/core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md)  
 
- You can also use the .NET Framework WMI management namespace System.Management, but this does not provide any Configuration Manager-specific interfaces. It is, however, the recommended way to use managed code on a System Center Configuration Manager client. For more information, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client wmi programming.md).  
+ You can also use the .NET Framework WMI management namespace System.Management, but this does not provide any Configuration Manager-specific interfaces. It is, however, the recommended way to use managed code on a System Center Configuration Manager client. For more information, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client-wmi-programming.md).  
 
 ## See Also  
  [Configuration Manager Provider](../../../develop/core/understand/sms-provider-in-configuration-manager.md)   

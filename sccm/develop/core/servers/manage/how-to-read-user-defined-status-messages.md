@@ -29,7 +29,7 @@ In System Center Configuration Manager, you can read user-defined status message
 ## Example  
  The following example reads error message status messages for the sample created in [How to Report User-Defined Status Messages Using WMI](../../../../develop/core/servers/manage/how-to-report-user-defined-status-messages.md). Make sure the `MyPackageID` and `MyApplication` values in the query match in both samples.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ReadErrorStatusMesage(connection)  

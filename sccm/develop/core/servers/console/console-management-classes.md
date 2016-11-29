@@ -24,7 +24,7 @@ This section provides information about System Center Configuration Manager mana
 
 -   [About Configuration Manager Console Management Classes](../../../../develop/core/servers/console/about-configuration-manager-console-management-classes.md)  
 
--   [Configuration Manager Console Management Class XML](../../../../develop/core/servers/console/console management class xml.md)  
+-   [Configuration Manager Console Management Class XML](../../../../develop/core/servers/console/console-management-class-xml.md)  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../../develop/core/servers/console/console extension.md)
+ [Configuration Manager Console Extension](../../../../develop/core/servers/console/console-extension.md)

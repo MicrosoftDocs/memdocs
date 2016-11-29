@@ -38,7 +38,7 @@ In System Center Configuration Manager, to add a context qualifier by using the 
 
  In the example, the `LocaleID` context qualifier is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void AddContextQualifiers(WqlConnectionManager connection)  
@@ -92,5 +92,5 @@ public void AddContextQualifiers(WqlConnectionManager connection)
  The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
 
 ## See Also  
- [Configuration Manager Context Qualifiers](../../../develop/core/understand/context qualifiers.md)   
+ [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)

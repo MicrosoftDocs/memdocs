@@ -33,7 +33,7 @@ This section describes System Center Configuration Manager objects and provides 
 
  [SMS Provider in Configuration Manager](../../../develop/core/understand/sms-provider-in-configuration-manager.md)  
 
- [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+ [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
  [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)  
 

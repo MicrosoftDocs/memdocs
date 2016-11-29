@@ -37,5 +37,5 @@ Before software update compliance assessment data is displayed in the System Cen
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)

@@ -70,10 +70,10 @@ UInt32 TriggerSchedule(
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
  [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)   

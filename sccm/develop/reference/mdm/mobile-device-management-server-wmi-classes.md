@@ -41,4 +41,4 @@ The mobile device management (MDM) classes, in Microsoft System Center Configura
 -   [SMS_MDMDeviceEnrollmentManagers Server WMI Class](../../../develop/reference/mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Hybrid Server WMI Classes](../../../develop/reference/mdm/hybrid server wmi classes.md)
+ [Configuration Manager Hybrid Server WMI Classes](../../../develop/reference/mdm/hybrid-server-wmi-classes.md)

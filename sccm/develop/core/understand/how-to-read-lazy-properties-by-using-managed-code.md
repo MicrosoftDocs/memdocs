@@ -38,7 +38,7 @@ To read a lazy property from a System Center Configuration Manager object return
 ## Example  
  The following C# code example queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects and then displays rule names obtained from the `CollectionRules` lazy property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void ReadLazyProperty(WqlConnectionManager connection)  

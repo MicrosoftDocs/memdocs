@@ -36,9 +36,9 @@ In System Center Configuration Manager, you create an `SMS_Query`-based query by
 5.  If required, retrieve the query object and get the query identifier.  
 
 ## Example  
- The following example method creates an `SMS_Query` class query that queries for all systems. The method returns the query identifier, which can be used as input to the example in [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md).  
+ The following example method creates an `SMS_Query` class query that queries for all systems. The method returns the query identifier, which can be used as input to the example in [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Function CreateQuery(connection)  
@@ -174,4 +174,4 @@ public string CreateQuery(WqlConnectionManager connection)
 
 ## See Also  
  [About Configuration Manager Queries](../../../develop/core/understand/about-configuration-manager-queries.md)   
- [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md)
+ [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md)

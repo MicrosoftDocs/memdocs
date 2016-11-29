@@ -29,7 +29,7 @@ In System Center Configuration Manager, you delete status messages by calling th
 ## Example  
  The following example deletes a single status message identified by the `recordId` identifier.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub DeleteStatusMessage(connection, recordId)  

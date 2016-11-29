@@ -24,7 +24,7 @@ Many System Center Configuration Manager features use queries against objects wi
 
 -   [About Configuration Manager Queries](../../../develop/core/understand/about-configuration-manager-queries.md)  
 
--   [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md)  
+-   [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md)  
 
 -   [How to Create a Configuration Manager Query](../../../develop/core/understand/how-to-create-a-configuration-manager-query.md)  
 
@@ -32,9 +32,9 @@ Many System Center Configuration Manager features use queries against objects wi
  [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
  [About Configuration Manager Queries](../../../develop/core/understand/about-configuration-manager-queries.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
- [Configuration Manager Result Sets](../../../develop/core/understand/result sets.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
+ [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [How to Create a Configuration Manager Query](../../../develop/core/understand/how-to-create-a-configuration-manager-query.md)   
- [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md)   
+ [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md)   
  [SMS_Query](../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md)

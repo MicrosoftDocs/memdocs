@@ -37,7 +37,7 @@ You add updates to a software updates deployment package, in System Center Confi
 > [!IMPORTANT]
 >  No VBScript example was included, as the assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True method does not return from the method call on failure. This is a known issue and is being investigated.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
  Example of the method call in C#:  
 
@@ -127,7 +127,7 @@ public void AddUpdatestoSUMDeploymentPackage(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)   

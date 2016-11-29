@@ -90,10 +90,10 @@ typedef DWORD (WINAPI *PROC_ADDATTRIBUTETOSMSSTATUSMESSAGE)
  Smscstat.dll.  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
  [SMSCSTAT.DLL Status Message Functions](../../../../../develop/reference/core/servers/manage/smscstat.dll-status-message-functions.md)   

@@ -41,7 +41,7 @@ You can delete maintenance window, in System Center Configuration Manager, by us
 > [!IMPORTANT]
 >  This assumes that the collection instance can modified. This might not be the case at child sites, where the collections are owned by the parent site or sites.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```c#  
 public void DeleteMaintenanceWindowfromCollection(WqlConnectionManager connection,   
@@ -128,7 +128,7 @@ public void DeleteMaintenanceWindowfromCollection(WqlConnectionManager connectio
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [How to Use Configuration Manager Objects With WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
  [How to Connect to a Configuration Manager Provider using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   

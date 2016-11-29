@@ -35,7 +35,7 @@ In System Center Configuration Manager, you can read the available tally interva
 ## Example  
  The following example method returns a [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) object after importing it from the supplied XML.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ShowSiteTallyIntervals(connection, siteCode)  

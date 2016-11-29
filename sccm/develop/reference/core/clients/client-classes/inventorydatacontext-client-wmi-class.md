@@ -70,10 +70,10 @@ Class InventoryDataContext : SMS_InventoryAgent_EmbeddedObject
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
  [Inventory Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/inventory-agent-client-wmi-classes.md)   

@@ -35,6 +35,6 @@ Advertisements are evaluated by System Center Configuration Manager to determine
 -   [How to Configure an Advertisement to Override a Maintenance Window](../../../../develop/core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)

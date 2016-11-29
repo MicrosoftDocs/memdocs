@@ -540,19 +540,19 @@ Class SMS_PackageBaseclass : SMS_BaseClass
 
 -   Abstract  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  If you set the USE_SPECIAL_MIF flag of the `PkgFlags` property, Configuration Manager looks in the %*TEMP*% directory or the %*windir*% directory for the install status MIF file that is specified in the `MIFFileName` property. If Configuration Manager does not find the file, it searches for all MIF files in those directories. A case-insensitive comparison is made of the values for `MIFName`, `MIFPublisher`, and `MIFVersion` to those specified in the MIF file. If a match is found, the status that is specified in the MIF file is used as the install status for the program, which indicates whether the program successfully executed. If Configuration Manager cannot find a match, or if USE_SPECIAL_MIF is not specified, Configuration Manager uses the program exit code to set the install status for the program. An exit code of zero is considered successful. Any other values are considered application-specific error codes.  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software distribution server wmi classes.md)   
+ [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
  [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
  [PowerShell Cmdlet: New-CMPackage](http://go.microsoft.com/fwlink/?LinkId=309284)

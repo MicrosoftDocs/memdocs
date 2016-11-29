@@ -31,7 +31,7 @@ To delete a System Center Configuration Manager object, in System Center Configu
 ## Example  
  The following VBScript code example deletes the package ([SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True)) identified by its package identifier [packageID](assetId:///packageID?qualifyHint=False&autoUpgrade=True).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub DeletePackage (connection, packageID)  

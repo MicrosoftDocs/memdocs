@@ -121,10 +121,10 @@ Values for the second DWORD layed out as follows:
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_ScheduleMethods Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md)   

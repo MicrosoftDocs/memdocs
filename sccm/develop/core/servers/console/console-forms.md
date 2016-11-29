@@ -45,4 +45,4 @@ This section describes the property sheet and dialog box form types that you can
 ## See Also  
  [About Configuration Manager Administrator Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
  [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)   
- [Configuration Manager Administrator Console Extension Architecture](../../../../develop/core/servers/console/console extension architecture.md)
+ [Configuration Manager Administrator Console Extension Architecture](../../../../develop/core/servers/console/console-extension-architecture.md)

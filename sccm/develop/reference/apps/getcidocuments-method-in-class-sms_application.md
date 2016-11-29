@@ -69,11 +69,11 @@ sint32 GetCIDocuments (
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md)   
- [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application management server wmi classes.md)
+ [Configuration Manager Application Management Server WMI Classes](../../../develop/reference/apps/application-management-server-wmi-classes.md)

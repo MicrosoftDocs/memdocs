@@ -36,7 +36,7 @@ You configure software updates to override maintenance windows, in System Center
 > [!NOTE]
 >  This task only applies to mandatory deployments.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -122,6 +122,6 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates and Maintenance Windows](../../develop/sum/software-updates-and-maintenance-windows.md)   
  [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)

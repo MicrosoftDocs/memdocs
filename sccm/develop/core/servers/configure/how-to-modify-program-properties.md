@@ -33,7 +33,7 @@ The following example shows how to modify a program, in System Center Configurat
 ## Example  
  The following example method modifies program properties for software distribution.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -115,6 +115,6 @@ public void ModifyProgram(WqlConnectionManager connection, string existingPackag
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)

@@ -35,7 +35,7 @@ In System Center Configuration Manager, you view the image properties for the Wi
 ## Example  
  The following example displays the operating system image package property XML that defines the package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ViewOSImage(connection,imagePackageID)  

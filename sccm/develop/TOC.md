@@ -308,7 +308,7 @@
 ## [Operating System Deployment Driver Management](osd/operating-system-deployment-driver-management.md)
 ### [About Operating System Deployment Driver Management](osd/about-operating-system-deployment-driver-management.md)
 ### [How to Import a Windows Driver Described by an INF File into Configuration Manager](osd/how-to-import-a-windows-driver-described-by-an-inf-file.md)
-### [How to Import a Windows Driver Described by a Txtsetup.oem File into Configuration Manager](osd/how-to-import-a-windows-driver-described-by-a-txtsetup.oem file.md)
+### [How to Import a Windows Driver Described by a Txtsetup.oem File into Configuration Manager](osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md)
 ### [How to Create a Driver Package for a Windows Driver in Configuration Manager](osd/how-to-create-a-driver-package-for-a-windows-driver.md)
 ### [How to Add a Windows Driver to a Configuration Manager Boot Image Package](osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md)
 ### [How to Remove a Windows Driver from a Boot Image Package](osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md)
@@ -386,7 +386,7 @@
 ### [How to List Distribution Points for a Site](core/servers/configure/how-to-list-distribution-points-for-a-site.md)
 ### [How to Set the Distribute on Demand Flag](core/servers/configure/how-to-set-the-distribute-on-demand-flag.md)
 
-# [Software Metering](apps/software metering.md)
+# [Software Metering](apps/software-metering.md)
 ## [How to Enable or Disable Software Metering](apps/how-to-enable-or-disable-software-metering.md)
 ## [How to Configure Automatic Software Metering Rule Generation](apps/how-to-configure-automatic-software-metering-rule-generation.md)
 ## [How to Create a Software Metering Rule](apps/how-to-create-a-software-metering-rule.md)

@@ -40,5 +40,5 @@ This section provides task-based topics that show you how to extend application 
 -   [Verifying the Application Management Extension](../../develop/apps/verifying-the-application-management-extension.md)  
 
 ## See Also  
- [Configuration Manager Application Management Extension](../../develop/apps/application management extension.md)   
+ [Configuration Manager Application Management Extension](../../develop/apps/application-management-extension.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

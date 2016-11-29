@@ -50,10 +50,10 @@ HRESULT ICcmEvent::RawEvent([out, retval] IUnknown** ppWmiEvent);
  Smscore.dll.  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client runtime requirements.md).  
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client development requirements.md).  
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
  [SMSEvent Class (client)](../../../../../develop/reference/core/servers/manage/smsevent-class.md)

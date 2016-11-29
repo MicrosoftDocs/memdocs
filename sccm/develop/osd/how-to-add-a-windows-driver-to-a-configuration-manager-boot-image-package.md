@@ -46,7 +46,7 @@ In System Center Configuration Manager, you add a Windows driver to an operating
 ## Example  
  The following example method adds a Windows driver to a boot image package. The package is identified by its [PackageID](assetId:///PackageID?qualifyHint=False&autoUpgrade=True) property, and the driver is identified by its [CI_ID](assetId:///CI_ID?qualifyHint=False&autoUpgrade=True) property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddDriverToBootImagePackage(connection, driverId,packageId)  

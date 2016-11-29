@@ -227,5 +227,5 @@ The Operating System Deployment server Windows Management Instrumentation (WMI) 
 -   [SMS_VhdPackage Server WMI Class](../../../develop/reference/osd/sms_vhdpackage-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../../develop/reference/osd/operating system deployment classes.md)   
+ [Configuration Manager Operating System Deployment](../../../develop/reference/osd/operating-system-deployment-classes.md)   
  [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)

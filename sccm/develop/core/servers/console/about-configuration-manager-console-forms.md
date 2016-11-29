@@ -60,7 +60,7 @@ You can extend the System Center Configuration Manager console with new Windows 
 > [!NOTE]
 >  Extension property sheets are stored in *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Forms.  
 
- For more information about form XML deployment, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console extension deployment.md).  
+ For more information about form XML deployment, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
  Depending on whether you are displaying a dialog box or a property sheet, the [FormType](assetId:///FormType?qualifyHint=False&autoUpgrade=True) attribute values must be set.  
 

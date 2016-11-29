@@ -65,12 +65,12 @@ Although only the [SMS_UserInstancePermissions Server WMI Class](../../../develo
 
 ## See Also  
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
- [Configuration Manager Association Classes](../../../develop/core/understand/association classes.md)   
+ [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
- [Configuration Manager Date and Time Formats](../../../develop/core/understand/date and time formats.md)   
- [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded objects.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
+ [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
+ [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [Configuration Manager Errors](../../../develop/core/understand/configuration-manager-errors.md)

@@ -28,7 +28,7 @@ This section provides information about the schema used by Configuration Manager
 
 -   [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md)  
 
--   [Configuration Manager SQL View Security](../../../develop/core/understand/sql view security.md)  
+-   [Configuration Manager SQL View Security](../../../develop/core/understand/sql-view-security.md)  
 
 ## See Also  
  [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)   

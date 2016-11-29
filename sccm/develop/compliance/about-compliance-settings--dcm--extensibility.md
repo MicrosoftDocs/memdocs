@@ -43,4 +43,4 @@ The content in this section provides information about extending the functionali
 >  In the case of settings detection, the script output is cast to the type of setting being detected. If the cast of the script output fails, a discovery failure is returned. For example, a script that reads and returns registry values, passes a set of values back to the rule; however, one value is a string (1, 2, x). If the rule is expecting only integer values back, it will cast all of the values to integers, causing a failure. In this case, the rule returns an evaluation failure.  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

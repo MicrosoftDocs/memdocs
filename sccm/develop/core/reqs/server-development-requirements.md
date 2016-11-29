@@ -52,9 +52,9 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 
 -   Microsoft .NET Framework 4  
 
- For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console extension.md)  
+ For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
- For specific information about deploying System Center Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console extension deployment.md)  
+ For specific information about deploying System Center Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
 
 ## VBScript  
  You can use Windows Management Instrumentation (WMI) to access the SMS Provider.  
@@ -79,5 +79,5 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 >  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/?LinkId=276781).  
 
 ## See Also  
- [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md)   
+ [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
  [Configuration Manager SDK Libraries and Header Files](../../../develop/core/reqs/configuration-manager-sdk-libraries-and-header-files.md)

@@ -36,7 +36,7 @@ You enable or disable the Software Metering Client Agent, in System Center Confi
 ## Example  
  The following example method enables or disables the Software Metering Client Agent by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -160,7 +160,7 @@ public void EnableDisableSWMClientAgent(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software metering.md)   
+ [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)   

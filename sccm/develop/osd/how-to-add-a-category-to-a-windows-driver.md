@@ -40,7 +40,7 @@ In System Center Configuration Manager, you add a category to a Windows driver b
 ## Example  
  The following example methods adds a category to a Windows driver. `driverID` is a valid [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddDriverCategory(connection,driver,categoryName)  

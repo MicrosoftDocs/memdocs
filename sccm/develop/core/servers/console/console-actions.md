@@ -28,7 +28,7 @@ This section provides information about System Center Configuration Manager cons
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console views.md)
+ [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
+ [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)

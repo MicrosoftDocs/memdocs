@@ -394,7 +394,7 @@ Class SMS_Collection : SMS_BaseClass
 
 -   Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Collection information represented by this class includes the refresh schedule and the members, represented by [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) objects. Your application can use a collection to target resources for software distribution.  
 
@@ -405,11 +405,11 @@ Class SMS_Collection : SMS_BaseClass
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md)   
- [Configuration Manager Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections server wmi classes.md)
+ [Configuration Manager Collections Server WMI Classes](../../../../../develop/reference/core/clients/collections/collections-server-wmi-classes.md)

@@ -46,11 +46,11 @@ Every System Center Configuration Manager action is defined by an `ActionDescrip
 
 ## See Also  
  [About Configuration Manager Console Actions](../../../../develop/core/servers/console/about-configuration-manager-console-actions.md)   
- [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype action.md)   
- [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional actions.md)   
- [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable action.md)   
- [Configuration Manager Group Action](../../../../develop/core/servers/console/group action.md)   
- [Configuration Manager Report Action](../../../../develop/core/servers/console/report action.md)   
- [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog action.md)   
+ [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)   
+ [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional-actions.md)   
+ [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)   
+ [Configuration Manager Group Action](../../../../develop/core/servers/console/group-action.md)   
+ [Configuration Manager Report Action](../../../../develop/core/servers/console/report-action.md)   
+ [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

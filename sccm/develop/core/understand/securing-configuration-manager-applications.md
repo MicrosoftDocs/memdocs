@@ -22,12 +22,12 @@ The security model for System Center Configuration Manager has changed significa
 
  For an extensive discussion of the Configuration Manager security and privacy model, see [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/en-US/library/mt622694.aspx).  
 
- Specific to the System Center Configuration Manager SDK, see [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based administration.md).  
+ Specific to the System Center Configuration Manager SDK, see [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md).  
 
 ## Related Sections  
  [Security and privacy for System Center Configuration Manager](https://technet.microsoft.com/en-US/library/mt622694.aspx)  
 
- [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based administration.md)  
+ [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md)  
 
  [Administrative User Management](../../../develop/core/servers/configure/administrative-user-management.md)  
 

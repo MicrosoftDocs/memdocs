@@ -37,5 +37,5 @@ This section provides reference content for Microsoft System Center Configuratio
 -   [SMS_SearchFolder Server WMI Class](../../../../../develop/reference/core/servers/console/sms_searchfolder-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../../../develop/reference/core/servers/console/console extension server wmi classes.md)   
+ [Configuration Manager Console Extension](../../../../../develop/reference/core/servers/console/console-extension-server-wmi-classes.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

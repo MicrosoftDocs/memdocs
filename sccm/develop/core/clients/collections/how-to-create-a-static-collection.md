@@ -75,7 +75,7 @@ CreateStaticCollection (WMIConnection, "New Static Collection Name", "New static
 ## Example  
  The following example method creates a collection.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -212,7 +212,7 @@ public void CreateStaticCollection(WqlConnectionManager connection, string newCo
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [SMS_CollectionRuleDirect Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

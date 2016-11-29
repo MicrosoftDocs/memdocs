@@ -442,7 +442,7 @@ x01000000 (24)|HIDEWINDOW. Hide the program window.|
  The working directory can be an absolute path on the client or a path relative to the distribution point folder that contains the package. If a working directory is not specified, Configuration Manager uses the default distribution point folder.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  A program is always associated with a parent package and typically represents the installation program for the package. Note that more than one program can be associated with the same package. The application uses the `PackageID` property to make this association. Your application cannot change this property after the `SMS_Program` object is created. To associate the program with a different package, the application must delete the object and create a new object with a new `PackageID` value.  
 
@@ -472,13 +472,13 @@ x01000000 (24)|HIDEWINDOW. Hide the program window.|
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Distribution Server Classes](../../../../../develop/reference/core/servers/configure/software distribution server wmi classes.md)   
+ [Software Distribution Server Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
  [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)   
  [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
  [How to Create a Program](../../../../../develop/core/servers/configure/how-to-create-a-program.md)

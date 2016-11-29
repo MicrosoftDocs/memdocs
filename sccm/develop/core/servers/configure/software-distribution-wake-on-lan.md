@@ -32,7 +32,7 @@ This section provides information about software distribution Wake On LAN in Sys
 -   [How to Enable the Partner Notification API](../../../../develop/core/servers/configure/how-to-enable-the-partner-notification-api.md)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

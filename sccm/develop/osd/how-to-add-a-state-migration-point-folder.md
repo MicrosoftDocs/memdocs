@@ -44,7 +44,7 @@ In System Center Configuration Manager, you add an operating system deployment s
 ## Example  
  The following example method adds a new folder to the state migration point.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddSmpFolder( connection, _  
@@ -223,7 +223,7 @@ public void AddSmpFolder(
 
 ## See Also  
  [About Operating System Deployment Site Role Configuration](../../develop/osd/about-operating-system-deployment-site-role-configuration.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

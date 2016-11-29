@@ -35,7 +35,7 @@ To clear a PXE advertisement for a System Center Configuration Manager resource,
 ## Example  
  The following example clears the PXE advertisement for the resource identified by the `resourceID` parameter.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ClearPxeAdvertisementResource(connection,resourceID)  

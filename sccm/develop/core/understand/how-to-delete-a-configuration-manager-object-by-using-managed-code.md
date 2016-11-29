@@ -31,7 +31,7 @@ To delete a System Center Configuration Manager object by using the managed SMS 
 ## Example  
  The following example deletes a package by using the supplied package identifier. This example uses the **WqlConnectionManager** class **GetInstance** method to get an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for the Configuration Manager package and then deletes the package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void DeletePackage(WqlConnectionManager connection, string packageID)  

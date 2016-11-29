@@ -29,7 +29,7 @@ manager: "mbaldwin"
 ## Example  
  The following example method refreshes the collection membership for a specific collection.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub RefreshCollection(connection, collectionID)    Dim collection    Set collection = connection.Get("SMS_Collection.CollectionID='" & collectionID & "'")    Call collection.RequestRefresh()End Sub  

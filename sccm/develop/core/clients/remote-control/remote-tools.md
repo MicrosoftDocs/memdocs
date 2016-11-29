@@ -30,4 +30,4 @@ This section provides topics that show you how to programmatically manage Remote
 -   [How to Configure Remote Tools Settings](../../../../develop/core/clients/remote-control/how-to-configure-remote-tools-settings.md)  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../../../develop/osd/operating system deployment.md)
+ [Configuration Manager Operating System Deployment](../../../../develop/osd/operating-system-deployment.md)

@@ -29,4 +29,4 @@ In System Center Configuration Manager, the device management client Windows Man
 |[SMS_DmInvVersion Class](../../../../../develop/reference/core/clients/client-classes/sms_dminvversion-client-wmi-class.md)|Represents the device management inventory version.|  
 
 ## See Also  
- [Configuration Manager Mobile Device Management](../../../../../develop/mdm/mobile device management.md)
+ [Configuration Manager Mobile Device Management](../../../../../develop/mdm/mobile-device-management.md)

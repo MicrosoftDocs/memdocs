@@ -22,9 +22,9 @@ This section provides reference information for Microsoft System Center Configur
 
 ## Console Extension topics  
 
--   [Configuration Manager Console Command-Line Options](../../../../../develop/reference/core/servers/console/console command-line options.md)  
+-   [Configuration Manager Console Command-Line Options](../../../../../develop/reference/core/servers/console/console-command-line-options.md)  
 
--   [Configuration Manager Console Folder Server WMI Classes](../../../../../develop/reference/core/servers/console/console folder server wmi classes.md)  
+-   [Configuration Manager Console Folder Server WMI Classes](../../../../../develop/reference/core/servers/console/console-folder-server-wmi-classes.md)  
 
 ## See Also  
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

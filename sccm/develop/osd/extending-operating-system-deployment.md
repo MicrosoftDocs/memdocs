@@ -37,4 +37,4 @@ This section provides information about operating system deployment custom actio
 -   [How to Use a Configuration Manager Custom Action Control](../../develop/osd/how-to-use-a-configuration-manager-custom-action-control.md)  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)

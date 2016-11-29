@@ -46,7 +46,7 @@ Before connecting to the SMS Provider for a local or remote System Center Config
 ## Example  
  The following VB Script example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, assetId:///SMS_ProviderLocation?qualifyHint=False&autoUpgrade=True provides the correct computer name.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Function Connect(server, userName, userPassword)  

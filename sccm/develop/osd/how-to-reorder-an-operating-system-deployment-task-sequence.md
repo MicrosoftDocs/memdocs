@@ -33,7 +33,7 @@ In System Center Configuration Manager, you can reorder the steps (an action or 
 ## Example  
  The following example shows how to move a step up or down within a task sequence or group.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub MoveTaskSequenceStepDown(taskSequence, stepName)  
@@ -186,7 +186,7 @@ public void MoveTaskSequenceStepUp(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md)   

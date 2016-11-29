@@ -34,5 +34,5 @@ The management classes XML for the System Center Configuration Manager console a
 ```  
 
 ## See Also  
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md)   
+ [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
  [About Configuration Manager Console Management Classes](../../../../develop/core/servers/console/about-configuration-manager-console-management-classes.md)

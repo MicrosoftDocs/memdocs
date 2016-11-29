@@ -38,7 +38,7 @@ To read a lazy property from a System Center Configuration Manager object return
 ## Example  
  The following VBScript code example queries for all [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) objects and then displays rule names obtained from the `CollectionRules` lazy property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ReadLazyProperty(connection)  

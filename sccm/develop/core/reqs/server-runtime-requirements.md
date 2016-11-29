@@ -39,7 +39,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 
 -   .NET Framework 4.0  
 
- For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console extension.md)  
+ For more information, see [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
 ## VBScript  
 
@@ -56,6 +56,6 @@ Microsoft System Center Configuration Manager server applications that are devel
 >  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../develop/core/servers/console/console extension.md)   
- [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md)   
- [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md)
+ [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)   
+ [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
+ [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

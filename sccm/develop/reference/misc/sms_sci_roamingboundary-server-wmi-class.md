@@ -134,10 +134,10 @@ Class SMS_SCI_RoamingBoundary : SMS_SiteControlItem
 |IPv6 Prefixes|  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Your application should specify the `Details`, `DisplayNames`, `Flags`, and `Types` properties as parallel arrays.  
 
 ## See Also  
- [Configuration Manager Site Configuration Server WMI Classes](../../../develop/reference/core/servers/configure/site configuration server wmi classes.md)   
+ [Configuration Manager Site Configuration Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
  [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)

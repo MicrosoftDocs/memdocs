@@ -31,7 +31,7 @@ The following code examples show how to list the current configuration baseline 
 ## Example  
  The following example method shows how to list the current configuration baseline assignments and a specific set of properties for each assignment in System Center Configuration Manager.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

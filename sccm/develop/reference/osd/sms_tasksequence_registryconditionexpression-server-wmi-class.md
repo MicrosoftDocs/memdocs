@@ -115,7 +115,7 @@ Class SMS_TaskSequence_RegistryConditionExpression : SMS_TaskSequence_ConditionE
  Value of the registry key. The value length can be between 0 and 250 characters.  
 
 ## Remarks  
- There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  You use `SMS_TaskSequence_RegistryConditionExpression` to check for the existence of a registry key, or alternatively to check for a registry key value. For example, if you have the registry key "HKEY_LOCAL_MACHINE\SYSTEM\Select" and the DWORD value set to 'Current' under it, then, `KeyPath` would be "HKEY...\Select", `Operator` would be 'Equals' (or 'NotEquals', and so on), `Type` would be REG_DWORD, `Value` would be 'Select', and `Data` would be the numeric value to compare against the value of the registry key ('Select').  
 
@@ -126,10 +126,10 @@ Class SMS_TaskSequence_RegistryConditionExpression : SMS_TaskSequence_ConditionE
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)

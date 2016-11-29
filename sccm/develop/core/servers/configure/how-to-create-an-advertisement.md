@@ -36,7 +36,7 @@ The following example shows how to create an advertisement by using the `SMS_Adv
 ## Example  
  The following example method creates an advertisement for software distribution.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -132,5 +132,5 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)

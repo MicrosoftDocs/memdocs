@@ -24,18 +24,18 @@ You can create and run the queries that are accessible in the System Center Conf
 >  For information about using Queries in System Center Configuration Manager, see [http://go.microsoft.com/fwlink/?LinkId=133894](http://go.microsoft.com/fwlink/?LinkId=133894).  
 
 ## SMS_Query  
- Configuration Manager queries are defined by `SMS_Query` object instances. The query is a WQL query and is defined in the `Expression` property. For more information about WQL, see [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md).  
+ Configuration Manager queries are defined by `SMS_Query` object instances. The query is a WQL query and is defined in the `Expression` property. For more information about WQL, see [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md).  
 
  Each query has a unique identifier assigned to it by the SMS Provider and can be used to get a specific query.  
 
- For information about running a query, see [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md).  
+ For information about running a query, see [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md).  
 
  You can also create queries by creating instances of `SMS_Query`. When you create a query, it is displayed in the Configuration Manager console under **Queries**. If you want to, you can limit the results returned to those resources that belong to a specific collection. For more information about creating queries, see [How to Create a Configuration Manager Query](../../../develop/core/understand/how-to-create-a-configuration-manager-query.md).  
 
 ## See Also  
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
- [Configuration Manager Result Sets](../../../develop/core/understand/result sets.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
+ [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [How to Create a Configuration Manager Query](../../../develop/core/understand/how-to-create-a-configuration-manager-query.md)   
- [How to Run a Configuration Manager Query](../../../develop/core/understand/how to run a query.md)   
+ [How to Run a Configuration Manager Query](../../../develop/core/understand/how-to-run-a-query.md)   
  [SMS_Query](../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md)

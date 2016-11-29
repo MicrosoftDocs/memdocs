@@ -49,7 +49,7 @@ You add a new computer directly to the System Center Configuration Manager datab
 > [!IMPORTANT]
 >  In previous version of this example, the computer was added to the “All Systems��? collection. It is no longer possible to modify the built-in collections, use a custom collection instead.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddNewComputer (connection, netBiosName, smBiosGuid, macAddress)  

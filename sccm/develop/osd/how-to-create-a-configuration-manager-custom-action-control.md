@@ -184,7 +184,7 @@ In System Center Configuration Manager, to create a custom action control, you c
 9. In the **Value** column, enter `Custom Action`. This is the string that is displayed when you add the custom action.  
 
 ## Deploy the Assembly  
- This procedure builds and copies the assembly that you have created to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [About Configuration Manager Administrator Console Extension Deployment](../../develop/core/servers/console/console extension deployment.md).  
+ This procedure builds and copies the assembly that you have created to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [About Configuration Manager Administrator Console Extension Deployment](../../develop/core/servers/console/console-extension-deployment.md).  
 
 #### To deploy the assembly  
 
@@ -194,7 +194,7 @@ In System Center Configuration Manager, to create a custom action control, you c
 
 ## See Also  
  [About Configuration Manager Console Extension](../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Extension Deployment](../../develop/core/servers/console/console extension deployment.md)   
+ [Configuration Manager Console Extension Deployment](../../develop/core/servers/console/console-extension-deployment.md)   
  [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
  [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
  [How to Use a Configuration Manager Custom Action](../../develop/osd/how-to-use-a-configuration-manager-custom-action-control.md)

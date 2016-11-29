@@ -42,7 +42,7 @@ This section contains detailed reference information about the site configuratio
 
 -   [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)  
 
- Classes that are derived from `SMS_SiteControlItem` use the naming convention `SMS_SCI_*`. Use these classes to access and modify the configuration items that are contained in the site control file.For information about managing the site control file and changing component configuration, see [Configuration Manager Site Control File](../../../../../develop/core/understand/site control file.md).  
+ Classes that are derived from `SMS_SiteControlItem` use the naming convention `SMS_SCI_*`. Use these classes to access and modify the configuration items that are contained in the site control file.For information about managing the site control file and changing component configuration, see [Configuration Manager Site Control File](../../../../../develop/core/understand/site-control-file.md).  
 
 ## Site Configuration Server WMI Classes  
 

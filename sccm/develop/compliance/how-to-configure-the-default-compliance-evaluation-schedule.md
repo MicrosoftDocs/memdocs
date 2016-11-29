@@ -33,7 +33,7 @@ In System Center Configuration Manager, the site control file maintains configur
 ## Example  
  The following code example shows how to change the default compliance evaluation schedule for the configuration management client agent.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

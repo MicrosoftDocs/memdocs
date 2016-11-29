@@ -35,5 +35,5 @@ This section discusses System Center Configuration Manager Windows Management In
 -   [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md)  
 
 ## See Also  
- [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client programming.md)   
+ [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client-programming.md)   
  [Configuration Manager Programming Fundamentals](../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

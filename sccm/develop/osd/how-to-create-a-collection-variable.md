@@ -33,7 +33,7 @@ You create a collection variable for a System Center Configuration Manager colle
 ## Example  
  The following example method creates a collection variable and adds it to the collection identified by the supplied identifier. If the `SMS_CollectionSettings` object for the collection does not exist, it is created.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub CreateCollectionVariable( connection, name, value, mask, collectionId, precedence)  
@@ -169,12 +169,12 @@ public void CreateCollectionVariable(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how to create a computer variable.md)   
+ [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how-to-create-a-computer-variable.md)   
  [How to Create a Configuration Manager Object by Using Managed Code](../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   
  [Operating System Deployment Computer Management](../../develop/osd/operating-system-deployment-computer-management.md)

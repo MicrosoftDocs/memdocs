@@ -37,7 +37,7 @@ This section provides essential information about the SMS Provider in System Cen
 
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)  
 
- [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+ [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
  [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)  
 

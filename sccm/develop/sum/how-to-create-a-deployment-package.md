@@ -36,7 +36,7 @@ You create a software updates deployment package, in System Center Configuration
 > [!NOTE]
 >  The package location must be unique, and the updates must be available in the package source.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
  Example of the subroutine call in Visual Basic:  
 
@@ -162,7 +162,7 @@ public void CreateSUMDeploymentPackage(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)

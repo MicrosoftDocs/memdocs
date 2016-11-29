@@ -38,7 +38,7 @@ You add a boot image from a Windows Image (WIM) file to System Center Configurat
 ## Example  
  The following example method adds a boot image from a WIM file.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddBootImagePackage(connection, name, description, pathToWim)  

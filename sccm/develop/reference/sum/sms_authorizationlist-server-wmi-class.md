@@ -638,7 +638,7 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 
 -   Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Use of this class is optional. An `SMS_AuthorizationList` object is created based on criteria that are chosen by the administrator for deployment of selected `SMS_SoftwareUpdate` objects. The authorization list is used by an [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) object to create a deployment.  
 
@@ -647,13 +647,13 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)   
+ [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)

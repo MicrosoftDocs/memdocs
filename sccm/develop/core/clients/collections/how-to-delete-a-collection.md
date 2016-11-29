@@ -54,7 +54,7 @@ DeleteCollection(WMIConnection,"ABC00010")
 ## Example  
  The following example method deletes a collection.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -147,7 +147,7 @@ public void DeleteCollection(WqlConnectionManager connection, string collectionI
 ## See Also  
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

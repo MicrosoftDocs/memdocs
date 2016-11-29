@@ -45,7 +45,7 @@ Class SMS_TaskSequence_Condition
  [SMS_TaskSequence_ConditionOperand Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionoperand-server-wmi-class.md) objects indicating condition operands. For example, the array can contain a single expression, such as an [SMS_TaskSequence_WMIConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_wmiconditionexpression-server-wmi-class.md) object. A more complicated condition array can contain a combination of expressions, operators, and operating system condition groups.  
 
 ## Remarks  
- There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  This class is the root for a hierarchy of operator and expression objects that represent the condition that determines whether a step or group or action should be executed. This class implies an AND operator. Therefore, all child operands in the array must be `true` for the overall condition to be `true`.  
 
@@ -56,10 +56,10 @@ Class SMS_TaskSequence_Condition
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [Operating System Deployment Server WMI Classes](../../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   

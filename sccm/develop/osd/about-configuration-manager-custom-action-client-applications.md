@@ -68,7 +68,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
  The choice of environment depends on the circumstances. For example, pre-operating install configuration will likely be done in the Windows PE environment. For more information, see [http://go.microsoft.com/fwlink/?LinkID=110498](http://go.microsoft.com/fwlink/?LinkID=110498). Updates to currently installed operating systems will use the full operating system environment. For example, software or driver installation. Operating system environment agnostic tasks such as reboots or the creation of network connections, can be performed by using both environment settings.  
 
 ### Processing  
- During processing, you access the task sequence variables defined by the MOF file by using the `TSEnvironment` COM automation object. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md).  
+ During processing, you access the task sequence variables defined by the MOF file by using the `TSEnvironment` COM automation object. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
  If the operation takes a long time, you can report progress to the task sequence environment and display a progress indicator by using the [ProgressUI Client COM Automation Class](../../develop/reference/core/clients/client-classes/progressui-client-com-automation-class.md). For more information, see [About Reporting Configuration Manager Custom Action Progress](../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md).  
 
@@ -80,7 +80,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
 |0|Success|  
 |Non-zero|Failure|  
 
- If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [http://go.microsoft.com/fwlink/?LinkId=110499](http://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md).  
+ If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [http://go.microsoft.com/fwlink/?LinkId=110499](http://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
 ## Deployment  
  To be used by System Center Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  

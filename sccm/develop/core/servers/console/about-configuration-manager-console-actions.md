@@ -26,23 +26,23 @@ This section provides information about System Center Configuration Manager cons
 
 -   [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md)  
 
--   [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional actions.md)  
+-   [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional-actions.md)  
 
--   [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable action.md)  
+-   [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)  
 
--   [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog action.md)  
+-   [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md)  
 
--   [Configuration Manager Report Action](../../../../develop/core/servers/console/report action.md)  
+-   [Configuration Manager Report Action](../../../../develop/core/servers/console/report-action.md)  
 
--   [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype action.md)  
+-   [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)  
 
--   [Configuration Manager Group Action](../../../../develop/core/servers/console/group action.md)  
+-   [Configuration Manager Group Action](../../../../develop/core/servers/console/group-action.md)  
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console views.md)   
+ [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
+ [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
+ [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)

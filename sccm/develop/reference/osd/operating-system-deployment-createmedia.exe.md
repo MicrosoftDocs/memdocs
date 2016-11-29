@@ -147,4 +147,4 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 |**/F: (or /f: )**|\<destination of media file>|Path for prestaged media file|  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../../develop/reference/osd/operating system deployment classes.md)
+ [Configuration Manager Operating System Deployment](../../../develop/reference/osd/operating-system-deployment-classes.md)

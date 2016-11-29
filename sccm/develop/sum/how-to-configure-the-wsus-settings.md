@@ -36,7 +36,7 @@ You configure the Windows Server Update Services (WSUS) component settings, in S
 > [!NOTE]
 >  For configuration related information and values, see the Configuring Software Updates section of the System Center Configuration Manager documentation at [http://go.microsoft.com/fwlink/?LinkId=111682](http://go.microsoft.com/fwlink/?LinkId=111682).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -236,7 +236,7 @@ public void ConfigureWSUSSettings(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   

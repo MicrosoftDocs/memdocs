@@ -29,4 +29,4 @@ This section contains topics about desired configuration management setup and co
 -   [How to Configure the Default Compliance Evaluation Schedule](../../develop/compliance/how-to-configure-the-default-compliance-evaluation-schedule.md)  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

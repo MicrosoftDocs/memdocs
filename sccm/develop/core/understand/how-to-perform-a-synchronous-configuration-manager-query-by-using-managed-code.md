@@ -31,7 +31,7 @@ To perform a synchronous query by using the managed SMS Provider, you use *WqlCo
 ## Example  
  The following code example shows how to make a synchronous query for the available packages by using *ExecuteQuery*.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void QueryPackages(WqlConnectionManager connection)  
@@ -92,7 +92,7 @@ public void QueryPackages(WqlConnectionManager connection)
  [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
- [Configuration Manager Result Sets](../../../develop/core/understand/result sets.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
+ [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [Configuration Manager Queries](../../../develop/core/understand/queries.md)

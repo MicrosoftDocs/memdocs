@@ -25,5 +25,5 @@ The status server API, in System Center Configuration Manager, provides function
 -   [SMSFormatMessageCtl Class](../../../../../develop/reference/core/servers/manage/smsformatmessagectl-class.md)  
 
 ## See Also  
- [Configuration Manager Status](../../../../../develop/reference/core/servers/manage/status classes.md)   
+ [Configuration Manager Status](../../../../../develop/reference/core/servers/manage/status-classes.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

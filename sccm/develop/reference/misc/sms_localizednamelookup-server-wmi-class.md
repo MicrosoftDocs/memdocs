@@ -65,17 +65,17 @@ Class SMS_LocalizedNameLookup : SMS_BaseClass
  ID of the string in the resource DLL that contains the localized version of the name.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  The localized name lookup represented by this class is used by Web reports to match an English view column name to a string resource in a resource DLL that contains the localized version of the name. It can be manipulated through the provider so that custom property names and resource DLLs can be defined.  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [Configuration Manager Reporting Server WMI Classes](../../../develop/reference/core/servers/reporting/configuration-manager-reporting-server-wmi-classes.md)

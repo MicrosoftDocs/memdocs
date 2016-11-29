@@ -22,7 +22,7 @@ This section provides information about programming Windows Management Instrumen
 
 ## Client Programming topics  
 
--   [Configuration Manager Client WMI Programming](../../../../develop/core/clients/programming/client wmi programming.md)  
+-   [Configuration Manager Client WMI Programming](../../../../develop/core/clients/programming/client-wmi-programming.md)  
 
 -   [Client Resource Conditions](../../../../develop/core/clients/programming/client-resource-conditions.md)  
 
@@ -30,4 +30,4 @@ This section provides information about programming Windows Management Instrumen
 
 ## See Also  
  [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Client Infrastructure](../../../../develop/reference/core/clients/client-classes/client infrastructure.md)
+ [Configuration Manager Client Infrastructure](../../../../develop/reference/core/clients/client-classes/client-infrastructure.md)

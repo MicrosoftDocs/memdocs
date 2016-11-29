@@ -40,7 +40,7 @@ An operating system deployment task sequence action is added to a task sequence,
 ## Example  
  The following example method creates a command-line action and adds it to the supplied task sequence.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddTaskSequenceActionCommandLine(connection, taskSequence, name, description)     
@@ -141,7 +141,7 @@ public IResultObject AddTaskSequenceActionCommandLine(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Add a Condition to an Operating System Deployment Task Sequence Step](../../develop/osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md)   

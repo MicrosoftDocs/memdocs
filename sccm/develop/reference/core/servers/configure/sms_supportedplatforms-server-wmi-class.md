@@ -137,7 +137,7 @@ Class SMS_SupportedPlatforms : SMS_BaseClass
  String ID in the resource DLL containing the localized name of the platform.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  This class is populated when Configuration Manager is installed. Your application cannot add, update, or delete instances of this class by using WMI. However, new instances are added to the class when a package definition file is processed that contains a platform that is not identified by a class instance.  
 
@@ -146,12 +146,12 @@ Class SMS_SupportedPlatforms : SMS_BaseClass
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software distribution server wmi classes.md)   
+ [Software Distribution Server WMI Classes](../../../../../develop/reference/core/servers/configure/software-distribution-server-wmi-classes.md)   
  [SMS_OS_Details Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_os_details-server-wmi-class.md)   
  [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md)

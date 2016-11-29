@@ -33,7 +33,7 @@ The following example shows how to set the distribute on demand flag property of
 ## Example  
  The following example method sets the distribute on demand flag for a package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -148,7 +148,7 @@ public void SetDistributeOnDemandFlag(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Distribution Points](../../../../develop/core/servers/configure/distribution-points.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [How to Use Configuration Manager Objects with WMI](../../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   

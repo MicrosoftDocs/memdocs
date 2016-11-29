@@ -33,7 +33,7 @@ You set the Hardware Inventory Client Agent settings, in System Center Configura
 ## Example  
  The following example sets the Hardware Inventory Client Agent settings by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

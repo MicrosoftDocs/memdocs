@@ -33,7 +33,7 @@ In System Center Configuration Manager, to assign a configuration baseline to a 
 ## Example  
  The following code examples show how to create an instance of a baseline assignment.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

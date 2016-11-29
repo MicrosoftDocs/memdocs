@@ -31,7 +31,7 @@ You delete a Windows driver from the operating system deployment driver catalog,
 ## Example  
  The following example method deletes a driver identified by its `CI_ID` property value.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub DeleteDriver(connection,driverID)  

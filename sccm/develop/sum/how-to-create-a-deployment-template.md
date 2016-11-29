@@ -33,7 +33,7 @@ You create a software updates deployment template, in System Center Configuratio
 ## Example  
  The following example method shows how to create a software updates deployment template by using the `SMS_Template` class and class properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 
@@ -169,7 +169,7 @@ public void CreateSUMDeploymentTemplate(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
  [SMS_Template](../../develop/reference/sum/sms_template-server-wmi-class.md)

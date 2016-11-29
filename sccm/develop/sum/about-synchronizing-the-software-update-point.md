@@ -39,5 +39,5 @@ In System Center Configuration Manager, software updates must be synchronized be
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Other Deployment Options](../../develop/sum/synchronizing-the-software-update-point.md)

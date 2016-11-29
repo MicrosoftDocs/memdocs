@@ -29,4 +29,4 @@ This section describes System Center Configuration Manager console views and sho
 -   [How to Create Node XML for a Configuration Manager Console Grid View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md)  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../../develop/core/servers/console/console extension.md)
+ [Configuration Manager Console Extension](../../../../develop/core/servers/console/console-extension.md)

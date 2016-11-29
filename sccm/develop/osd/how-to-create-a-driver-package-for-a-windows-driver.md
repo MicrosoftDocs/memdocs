@@ -59,7 +59,7 @@ You create a package for an operating system deployment driver, in System Center
 > [!NOTE]
 >  The `packageSourcePath` parameter must be supplied as a Universal Naming Convention (UNC) network path, for example, \\\localhost\Drivers\ATIVideo\\.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub CreateDriverPackage(connection, driverId, newPackageName, newPackageDescription,  newPackageSourcePath)  

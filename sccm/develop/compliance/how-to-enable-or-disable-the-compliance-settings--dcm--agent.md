@@ -33,7 +33,7 @@ In System Center Configuration Manager, you enable or disable the Desired Config
 ## Example  
  The following example method enables or disables the Desired Configuration Management Client Agent by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change the `Flag` property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

@@ -33,7 +33,7 @@ In System Center Configuration Manager, you set the Remote Tools Client Agent se
 ## Example  
  The following example sets the Remote Tools Client Agent settings by using the `SMS_SCI_ClientComp` class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

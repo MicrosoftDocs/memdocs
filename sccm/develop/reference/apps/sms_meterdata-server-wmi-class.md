@@ -185,17 +185,17 @@ Class SMS_MeterData : SMS_BaseClass
  A rough ordering of the time used to process the record. Records with a smaller `TimeSerial` value were processed before a record with a larger `TimeSerial` value. This property is not unique across records.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Each record represents a report of a running program on a computer. If a program runs over several reporting cycles, there are several instances of `SMS_MeterData` that report on it, all with the same `MeterDataID` value. The time periods specified by `StartTime` and `EndTime` are consecutive and do not overlap. The full period of program execution can be found by the earliest `StartTime` value (where `Started` = 1) and the latest `EndTime` value (where `StillRunning` = 0).  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software metering server wmi classes.md)
+ [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)

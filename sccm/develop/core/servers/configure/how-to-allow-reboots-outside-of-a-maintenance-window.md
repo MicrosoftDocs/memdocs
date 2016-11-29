@@ -36,7 +36,7 @@ The following example shows how to configure an advertisement to allow reboots o
 > [!IMPORTANT]
 >  The hexadecimal values that define the `AdvertFlags` property are listed in the `SMS_Advertisement` reference material.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -145,5 +145,5 @@ public void ModifySWDAdvertisementToRebootOutsideOfMaintenanceWindows(WqlConnect
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)

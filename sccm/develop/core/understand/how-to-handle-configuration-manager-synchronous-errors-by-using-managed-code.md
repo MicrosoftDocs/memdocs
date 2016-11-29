@@ -34,7 +34,7 @@ To handle a System Center Configuration Manager error that is raised in a synchr
 ## Example  
  The following C# example function attempts to open a nonexistent `SMS_Package` package. In the exception handler, the code determines what type of error has been raised and displays its information.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```c#  
 public void ExerciseException(WqlConnectionManager connection)  
