@@ -121,4 +121,4 @@ HRESULT ShowActionProgress(
  [IProgressUI Interface](../../../../../develop/reference/core/clients/client-classes/iprogressui-interface.md)   
  [About Reporting Configuration Manager Custom Action Progress](../../../../../develop/osd/about-reporting-configuration-manager-custom-action-progress.md)   
  [Extending Operating System Deployment](../../../../../develop/osd/extending-operating-system-deployment.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../../../../develop/osd/how to use task sequence variables in a running task sequence.md)
+ [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../../../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)

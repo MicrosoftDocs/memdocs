@@ -28,4 +28,4 @@ This section provides task-based topics that show you how to create schedule tok
 
 ## See Also  
  [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
- [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling server wmi classes.md)
+ [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling-server-wmi-classes.md)

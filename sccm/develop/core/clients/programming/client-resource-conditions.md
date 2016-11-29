@@ -48,5 +48,5 @@ In System Center Configuration Manager SP1, the Configuration Manager client has
 |Software Inventory Launch Conditions|10 = fire only when battery is high+ and user is idle.|  
 
 ## See Also  
- [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client programming.md)   
+ [Configuration Manager Client Programming](../../../../develop/core/clients/programming/client-programming.md)   
  [CCM_Scheduler_ScheduledMessage Client WMI Class](../../../../develop/reference/core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md)

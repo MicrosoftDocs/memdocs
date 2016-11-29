@@ -60,7 +60,7 @@ System Center Configuration Manager actions can be displayed according to specif
 
  `public static bool EnableDecrementPriority(object sender, ScopeNode scopeNode, ActionDescription action, ResultObjectBase resultObject)`  
 
- For more information about calling methods in a .NET Framework assembly, see [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype action.md).  
+ For more information about calling methods in a .NET Framework assembly, see [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md).  
 
 ## Security Permissions  
  You can restrict the availability of an action by applying security restrictions to the selected object or object class.  
@@ -121,10 +121,10 @@ System Center Configuration Manager actions can be displayed according to specif
 ## See Also  
  [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)   
  [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md)   
- [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype action.md)   
- [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable action.md)   
- [Configuration Manager Group Action](../../../../develop/core/servers/console/group action.md)   
- [Configuration Manager Report Action](../../../../develop/core/servers/console/report action.md)   
- [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog action.md)   
+ [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)   
+ [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)   
+ [Configuration Manager Group Action](../../../../develop/core/servers/console/group-action.md)   
+ [Configuration Manager Report Action](../../../../develop/core/servers/console/report-action.md)   
+ [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

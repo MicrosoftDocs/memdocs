@@ -99,20 +99,20 @@ Class SMS_CIUpdateSources : SMS_BaseClass
 
 -   Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Your application uses this class in synchronizing software update metadata so that correct information can be obtained from a source during software update deployment.  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)   
+ [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SMS_SoftwareUpdateSource Server WMI Class](../../../develop/reference/sum/sms_softwareupdatesource-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)

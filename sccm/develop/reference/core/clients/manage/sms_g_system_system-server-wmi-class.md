@@ -137,7 +137,7 @@ Class SMS_G_System_SYSTEM : SMS_G_System_Current
  For this class, the default value of this property is `null`.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  This class was added in SMS 2.0 Service Pack 1. It does not have a Win32 class equivalent.  
 

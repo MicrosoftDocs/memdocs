@@ -38,7 +38,7 @@ You create an update list that contains a set of software updates, in System Cen
 
  In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
  The following example shows the subroutine call in Visual Basic:  
 
@@ -189,6 +189,6 @@ public void CreateSUMUpdateList(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Other Deployment Options](../../develop/sum/synchronizing-the-software-update-point.md)   
  [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md)

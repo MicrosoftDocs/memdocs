@@ -58,7 +58,7 @@ EnumerateCollectionMembers(WMIConnection)
 ## Example  
  The following example method enumerates the members of a collection.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -198,7 +198,7 @@ public void EnumerateCollectionMembers(WqlConnectionManager connection)
  [SMS_CollectionMember_a Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionmember_a-server-wmi-class.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)

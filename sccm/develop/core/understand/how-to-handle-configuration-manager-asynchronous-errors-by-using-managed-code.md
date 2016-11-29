@@ -33,7 +33,7 @@ To handle a System Center Configuration Manager error that is raised during an a
 ## Example  
  The following example implements a [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```c#  
 void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)  

@@ -113,7 +113,7 @@ Class SMS_Template : SMS_BaseClass
 
 -   Secured  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Use of this class is optional. You can use an `SMS_Template` object instead of the console if required. In this case, the properties are populated for you, and you need to change only the ones that reflect information that has changed since the last software update deployment.  
 
@@ -123,11 +123,11 @@ Class SMS_Template : SMS_BaseClass
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software updates.md)
+ [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
+ [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)

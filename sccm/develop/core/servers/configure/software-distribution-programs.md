@@ -36,7 +36,7 @@ This section provides topics that show you how to programmatically manage progra
 -   [How to Modify the Supported Platforms for a Program](../../../../develop/core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)

@@ -39,7 +39,7 @@ You change the deployment package source for a software updates deployment packa
 > [!NOTE]
 >  All of the updates available in the old package source must be available in the new package source (the content source path, passed in as the `newPackageSourceLocation` variable in the below scripts).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
  Example of the subroutine call in Visual Basic:  
 
@@ -192,7 +192,7 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
  [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md)   
  [ValidateNewPackageSource Method in Class SMS_SoftwareUpdatesPackage](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md)

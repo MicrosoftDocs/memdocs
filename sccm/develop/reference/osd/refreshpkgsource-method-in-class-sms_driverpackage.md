@@ -41,15 +41,15 @@ SInt32 RefreshPkgSource();
 
  Using this method is the only way to force an update of the source files, other than by creating a RefreshSchedule value for the package. For information about the RefreshSchedule property, see [SMS_PackageBaseclass Server WMI Class](../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md).  
 
- For more information about using this method, see [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how to create a driver package for a windows driver.md).  
+ For more information about using this method, see [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how-to-create-a-driver-package-for-a-windows-driver.md).  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_DriverPackage Server WMI Class](../../../develop/reference/osd/sms_driverpackage-server-wmi-class.md)   

@@ -145,7 +145,7 @@ Class SMS_UpdateCategoryInstance : SMS_CategoryInstanceBase
 
 -   Read (read-only)  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Your application uses the `SMS_UpdateCategoryInstance` class after creating or modifying a software update deployment using [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md). The application can use [SMS_CIAllCategories Server WMI Class](../../../develop/reference/sum/sms_ciallcategories-server-wmi-class.md) to query for all categories associated with the software updates configuration item or for all configuration items associated with a category.  
 
@@ -154,12 +154,12 @@ Class SMS_UpdateCategoryInstance : SMS_CategoryInstanceBase
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Updates Server WMI Classes](../../../develop/reference/sum/software updates server wmi classes.md)   
+ [Software Updates Server WMI Classes](../../../develop/reference/sum/software-updates-server-wmi-classes.md)   
  [SMS_CIAllCategories Server WMI Class](../../../develop/reference/sum/sms_ciallcategories-server-wmi-class.md)   
- [Configuration Manager Software Updates](../../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)

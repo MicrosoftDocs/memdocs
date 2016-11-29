@@ -34,7 +34,7 @@ You enable or disable a software metering rule, in System Center Configuration M
 > [!IMPORTANT]
 >  The rule ID corresponds to the value that is stored in the property [RuleID](assetId:///RuleID?qualifyHint=False&autoUpgrade=True). The Configuration Manager console displays a **Rule ID** column, which actually corresponds to the value that is stored in the property [SecurityID](assetId:///SecurityID?qualifyHint=False&autoUpgrade=True).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -134,5 +134,5 @@ public void EnableDisableSoftwareMeteringRule(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software metering.md)   
+ [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
  [SMS_MeteredProductRule Server WMI Class](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md)

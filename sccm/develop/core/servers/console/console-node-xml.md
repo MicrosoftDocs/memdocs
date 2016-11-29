@@ -35,7 +35,7 @@ The node XML for the System Center Configuration Manager console is in workspace
 |Element|Description|  
 |-------------|-----------------|  
 |[RootNodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.aspx)|Describes the root node for the node.|  
-|[Configuration Manager Console RootNodes Element](../../../../develop/core/servers/console/console rootnodes element.md)|Root node for describing the node.|  
+|[Configuration Manager Console RootNodes Element](../../../../develop/core/servers/console/console-rootnodes-element.md)|Root node for describing the node.|  
 |[NodeDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.nodedescription.aspx)|Parent for nodes describing the tree view and result pane.|  
 |[RootNodeDescription.resourceAssembly](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.rootnodedescription.resourceassembly.aspx)|The assembly from which to load resources for this node instance.|  
 |[ActionDescription.imageDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.imagedescription.aspx)|The assembly containing the icon and other image resources used by the node.|  
@@ -52,4 +52,4 @@ The node XML for the System Center Configuration Manager console is in workspace
 ## See Also  
  [About Configuration Manager Console Nodes](../../../../develop/core/servers/console/about-configuration-manager-console-nodes.md)   
  [How to Create a Configuration Manager Console Node](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-node.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)

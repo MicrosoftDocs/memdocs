@@ -66,4 +66,4 @@ int _stdcall SmsGrantActAsOSRight(
  **Header**: Lsaapi.h.  
 
 ## See Also  
- [Configuration Manager Deprecated Functions](../../../develop/reference/misc/deprecated functions.md)
+ [Configuration Manager Deprecated Functions](../../../develop/reference/misc/deprecated-functions.md)

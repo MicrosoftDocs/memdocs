@@ -45,4 +45,4 @@ With this release, System Center Configuration Manager expands the abilities of 
 
 ## See Also  
  [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)

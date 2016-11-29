@@ -50,11 +50,11 @@ This section provides information about using operating system deployment task s
 
 -   [How to Move a Step to a Different Operating System Deployment Task Sequence Group](../../develop/osd/how-to-move-a-step-to-a-different-task-sequence-group.md)  
 
--   [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md)  
+-   [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
 
 -   [How to Set an Operating System Deployment Task Sequence Variable](../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md)  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -33,7 +33,7 @@ You enable or disable a Windows driver in the operating system deployment driver
 ## Example  
  The following example method enables or disables a driver depending on the value of the `enableDriver` parameter.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub EnableDriver(connection,driverID,vEnableDriver)  

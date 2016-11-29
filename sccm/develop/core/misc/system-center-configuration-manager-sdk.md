@@ -41,37 +41,37 @@ Welcome to the System Center Configuration Manager Software Development Kit (SDK
 
 -   [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)  
 
--   [Configuration Manager Application Management](../../../develop/apps/application management.md)  
+-   [Configuration Manager Application Management](../../../develop/apps/application-management.md)  
 
--   [Configuration Manager Application Management Extension](../../../develop/apps/application management extension.md)  
+-   [Configuration Manager Application Management Extension](../../../develop/apps/application-management-extension.md)  
 
--   [Configuration Manager Asset Intelligence](../../../develop/core/clients/asset-intelligence/asset intelligence.md)  
+-   [Configuration Manager Asset Intelligence](../../../develop/core/clients/asset-intelligence/asset-intelligence.md)  
 
--   [Configuration Manager Client Programming](../../../develop/core/clients/programming/client programming.md)  
+-   [Configuration Manager Client Programming](../../../develop/core/clients/programming/client-programming.md)  
 
 -   [Configuration Manager Collections](../../../develop/core/clients/collections/collections.md)  
 
--   [Configuration Manager Compliance Settings (DCM)](../../../develop/compliance/compliance settings (dcm).md)  
+-   [Configuration Manager Compliance Settings (DCM)](../../../develop/compliance/compliance-settings-dcm.md)  
 
--   [Configuration Manager Console Extension](../../../develop/core/servers/console/console extension.md)  
+-   [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)  
 
 -   [Configuration Manager Discovery](../../../develop/core/servers/configure/discovery.md)  
 
 -   [Configuration Manager Inventory](../../../develop/core/clients/inventory/inventory.md)  
 
--   [Configuration Manager Mobile Device Management](../../../develop/mdm/mobile device management.md)  
+-   [Configuration Manager Mobile Device Management](../../../develop/mdm/mobile-device-management.md)  
 
--   [Configuration Manager Operating System Deployment](../../../develop/osd/operating system deployment.md)  
+-   [Configuration Manager Operating System Deployment](../../../develop/osd/operating-system-deployment.md)  
 
--   [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based administration.md)  
+-   [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md)  
 
--   [Configuration Manager Remote Tools](../../../develop/core/clients/remote-control/remote tools.md)  
+-   [Configuration Manager Remote Tools](../../../develop/core/clients/remote-control/remote-tools.md)  
 
--   [Configuration Manager Software Distribution](../../../develop/core/servers/configure/software distribution.md)  
+-   [Configuration Manager Software Distribution](../../../develop/core/servers/configure/software-distribution.md)  
 
--   [Configuration Manager Software Metering](../../../develop/apps/software metering.md)  
+-   [Configuration Manager Software Metering](../../../develop/apps/software-metering.md)  
 
--   [Configuration Manager Software Updates](../../../develop/sum/software updates.md)  
+-   [Configuration Manager Software Updates](../../../develop/sum/software-updates.md)  
 
 -   [Configuration Manager Status and Summarizers](../../../develop/core/servers/manage/configuration-manager-status-and-summarizers.md)  
 

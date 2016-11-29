@@ -24,13 +24,13 @@ This section provides information about System Center Configuration Manager SDK 
 
 -   [About Configuration Manager SDK Requirements](../../../develop/core/reqs/about-configuration-manager-sdk-requirements.md)  
 
--   [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client runtime requirements.md)  
+-   [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client-runtime-requirements.md)  
 
--   [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md)  
+-   [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md)  
 
--   [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md)  
+-   [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)  
 
--   [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md)  
+-   [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)  
 
 -   [Configuration Manager SDK Libraries and Header Files](../../../develop/core/reqs/configuration-manager-sdk-libraries-and-header-files.md)  
 

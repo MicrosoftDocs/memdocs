@@ -205,7 +205,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  Code of the site that created the rule.  
 
 ## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class and property qualifiers.md).  
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  Software metering rules instruct the client agent to meter the running of certain applications. The data that the agent reports contains only information about the file that was metered, not the rules that caused it to be metered. This class is used to match the metering rules with metering data by combining information about each rule and its matching properties with files that the system knows about and the properties that were matched.  
 
@@ -214,10 +214,10 @@ Class SMS_MeteredFiles : SMS_BaseClass
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Software Metering Server WMI Classes](../../../develop/reference/apps/software metering server wmi classes.md)
+ [Software Metering Server WMI Classes](../../../develop/reference/apps/software-metering-server-wmi-classes.md)

@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Enable or Disable the Software Distribution Advertised Programs Client Agent
-In System Center Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. Details about reading from and writing to the site control file are discussed in the [Configuration Manager Site Control File](../../../../develop/core/understand/site control file.md) section of the Configuration Manager SDK.  
+In System Center Configuration Manager, the site control file maintains configuration for the site. This topic shows how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file. Details about reading from and writing to the site control file are discussed in the [Configuration Manager Site Control File](../../../../develop/core/understand/site-control-file.md) section of the Configuration Manager SDK.  
 
 > [!CAUTION]
 >  You should be experienced in managing a site's configuration before using the SMS Provider classes to modify the site configuration. You should use caution or avoid using the `SMS_SCI_FileDefinition` and `SMS_SCI_SiteDefinition` classes altogether. These classes manage the site control file itself. You can cause significant damage to a site by changing some configurable items.  
@@ -36,7 +36,7 @@ In System Center Configuration Manager, the site control file maintains configur
 ## Example  
  The following example method queries for the specific site control file item, software distribution client component section, and changes the flag value to enable or disable the client agent.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -150,7 +150,7 @@ public void EnableDisableSWDClientAgent(WqlConnectionManager connection, string 
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Setup and Configuration](../../../../develop/core/servers/configure/software-distribution-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

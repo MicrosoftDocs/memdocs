@@ -53,7 +53,7 @@ This section provides information about using Windows Management Instrumentation
 
  [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)  
 
- [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+ [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
  [Securing Configuration Manager Applications](../../../develop/core/understand/securing-configuration-manager-applications.md)  
 

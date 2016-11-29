@@ -33,7 +33,7 @@ You configure the Active Directory Group Discovery settings, in System Center Co
 ## Example  
  The following example sets the Active Directory Group Discovery settings by using the `SMS_SCI_Component` class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

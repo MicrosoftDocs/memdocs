@@ -32,7 +32,7 @@ In System Center Configuration Manager, you read a Configuration Manager object 
 ## Example  
  The following VBScript code example function displays the name and description for a supplied key package identifier (`packageID`).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub DisplayPackageName (connection, packageID)  

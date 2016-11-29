@@ -28,4 +28,4 @@ This section provides information about synchronizing the software update point 
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)

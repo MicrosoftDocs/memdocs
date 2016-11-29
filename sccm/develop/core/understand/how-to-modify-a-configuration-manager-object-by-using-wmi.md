@@ -33,7 +33,7 @@ You modify a Configuration Manager object, in System Center Configuration Manage
 ## Example  
  The following VBScript code example gets a package (SMS_Package) object, changes the package description, and then commits the changes back to the SMS Provider. In this example, the package is retrieved through a call to the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object assetId:///Get?qualifyHint=False&autoUpgrade=True. You can also retrieve the package by using a query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ModifyPackageDescription (connection, packageID, description)  

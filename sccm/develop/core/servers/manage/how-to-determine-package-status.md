@@ -51,7 +51,7 @@ In System Center Configuration Manager, the software distribution process can ta
 > [!NOTE]
 >  It is not possible to use the managed provider libraries to query WMI object instance creation and modification. Therefore the C# sample is written by using the System.Management libraries.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub QueryPackageStatus (connection)  

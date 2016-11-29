@@ -36,7 +36,7 @@ You create a software updates deployment, in System Center Configuration Manager
 > [!IMPORTANT]
 >  The methods below require an array of the assigned configuration items (CI_IDs). The update content for these CI_IDs must have already been downloaded and added to an updates deployment package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -202,7 +202,7 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Deployments](../../develop/sum/software-updates-deployments.md)   
  [About Software Updates Deployments](../../develop/sum/about-software-updates-deployments.md)   
  [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)

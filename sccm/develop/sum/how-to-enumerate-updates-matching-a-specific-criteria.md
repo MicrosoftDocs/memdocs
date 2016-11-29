@@ -43,7 +43,7 @@ This topic explains how to enumerate software updates that match specific criter
 
  Detailed information about the properties that are associated with a software update is in the [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) class reference material.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -264,6 +264,6 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Scheduled Deployment](../../develop/sum/software-updates-deployments.md)   
  [SMS_SoftwareUpdate](../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)

@@ -18,9 +18,9 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set an Operating System Deployment Task Sequence Variable
-In System Center Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md).  
+In System Center Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
- A task sequence variable is a name/value pair that you can access by task sequence steps. You can also create computer and collection-specific variables. For more information, see [How to Create a Collection Variable in Configuration Manager](../../develop/osd/how to create a collection variable.md) and [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how to create a computer variable.md).  
+ A task sequence variable is a name/value pair that you can access by task sequence steps. You can also create computer and collection-specific variables. For more information, see [How to Create a Collection Variable in Configuration Manager](../../develop/osd/how-to-create-a-collection-variable.md) and [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how-to-create-a-computer-variable.md).  
 
 > [!NOTE]
 >  Variables that are set with the [SMS_TaskSequenceSetVariableAction](assetId:///SMS_TaskSequenceSetVariableAction?qualifyHint=False&autoUpgrade=True) class override variables that are set elsewhere. For example, If a collection variable and a assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True have the same name, the value of the assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True variable takes precedence.  
@@ -40,7 +40,7 @@ In System Center Configuration Manager, you create an operating system deploymen
 ## Example  
  The following example method sets a task sequence variable name and value.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddTaskSequenceVariable(connection, taskSequence, variableName, variableValue)     
@@ -136,11 +136,11 @@ public void AddTaskSequenceVariable(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [Operating System Deployment Task Sequencing](../../develop/osd/operating-system-deployment-task-sequencing.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md)   
+ [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)   
  [How to Read a Task Sequence from a Task Sequence Package](../../develop/osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md)

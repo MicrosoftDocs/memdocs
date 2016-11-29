@@ -39,7 +39,7 @@ In System Center Configuration Manager, to perform an asynchronous query by usin
 ## Example  
  The following example queries for all available SMS_Collection objects, and in the event handler, the example writes several of the collection properties to the System Center Configuration Manager console.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void QueryCollections(WqlConnectionManager connection)  
@@ -127,7 +127,7 @@ void bw1_QueryProcessorCompleted(object sender, RunWorkerCompletedEventArgs e)
  [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query Using  Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
- [Configuration Manager Result Sets](../../../develop/core/understand/result sets.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
+ [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [Configuration Manager Queries](../../../develop/core/understand/queries.md)

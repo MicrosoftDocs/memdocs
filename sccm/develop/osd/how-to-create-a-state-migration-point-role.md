@@ -59,7 +59,7 @@ You create the state migration point role, in System Center Configuration Manage
 >   
 >  The methods `AddSmpFolder`, `SetRestoreOnlyMode`, `SetDeletionPolicy` must be included for the example to work. The methods are not included in the code snippets below.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```c#  
 public void CreateSmpRole(  
@@ -202,7 +202,7 @@ public void WriteScfEmbeddedProperty(
  [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
  [PackNALPath Method in Class SMS_NAL_Methods](../../develop/reference/misc/packnalpath-method-in-class-sms_nal_methods.md)   
  [About Operating System Deployment Site Role Configuration](../../develop/osd/about-operating-system-deployment-site-role-configuration.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md)   
  [How to Add a State Migration Point Folder](../../develop/osd/how-to-add-a-state-migration-point-folder.md)   

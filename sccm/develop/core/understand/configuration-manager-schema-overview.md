@@ -32,7 +32,7 @@ Configuration Manager uses Windows Management Instrumentation (WMI) to manage it
 ## Client  
  A number of Managed Object Format (MOF) files represent the client Configuration Manager schema. The client includes schemas that can be used for items such as inventory, policy, and software distribution management.  
 
- For more information about using client objects with WMI or managed code, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client wmi programming.md).  
+ For more information about using client objects with WMI or managed code, see [Configuration Manager Client WMI Programming](../../../develop/core/clients/programming/client-wmi-programming.md).  
 
 ## Classes  
  For more information about the classes that Configuration Manager supports, see [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md).  
@@ -41,4 +41,4 @@ Configuration Manager uses Windows Management Instrumentation (WMI) to manage it
  [About Configuration Manager Schema](../../../develop/core/understand/about-configuration-manager-schema.md)   
  [Configuration Manager Schema View Mapping](../../../develop/core/understand/configuration-manager-schema-view-mapping.md)   
  [Configuration Manager Schema SQL Views](../../../develop/core/understand/configuration-manager-schema-sql-views.md)   
- [Configuration Manager SQL View Security](../../../develop/core/understand/sql view security.md)
+ [Configuration Manager SQL View Security](../../../develop/core/understand/sql-view-security.md)

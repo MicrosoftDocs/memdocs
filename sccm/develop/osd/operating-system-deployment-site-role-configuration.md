@@ -48,9 +48,9 @@ This section provides information about using the System Center Configuration Ma
 
 -   [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md)  
 
--   [How to Set Operating System Deployment Branding Information in Configuration Manager](../../develop/osd/how to set operating system deployment branding information.md)  
+-   [How to Set Operating System Deployment Branding Information in Configuration Manager](../../develop/osd/how-to-set-operating-system-deployment-branding-information.md)  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
- [Configuration Manager Site Control File](../../develop/core/understand/site control file.md)
+ [Configuration Manager Site Control File](../../develop/core/understand/site-control-file.md)

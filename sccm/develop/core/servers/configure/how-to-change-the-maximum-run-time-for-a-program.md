@@ -41,7 +41,7 @@ The following example shows how to modify a program, in System Center Configurat
 > [!NOTE]
 >  A slight variation of this example could change property values for all of the programs associated with a specific package. For an example, see the [How to List All Programs and Their Maximum Run Time Value](../../../../develop/core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md) code example. However, for a more efficient method of accessing a specific program, using the `PackageID` and `ProgramName`, see the [How to Modify Program Properties](../../../../develop/core/servers/configure/how-to-modify-program-properties.md) code example.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -150,6 +150,6 @@ public void ModifyProgram(WqlConnectionManager connection, string existingPackag
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)

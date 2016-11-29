@@ -40,7 +40,7 @@ You view monthly usage summary information, in System Center Configuration Manag
 ## Example  
  The following example method displays file usages summary information by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md) and [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md) classes.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -231,7 +231,7 @@ public void ViewMonthlySummaryInfo(WqlConnectionManager connection)
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software metering.md)   
+ [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
  [SMS_MeteredFiles Server WMI Class](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md)   
  [SMS_MeteredUser Server WMI Class](../../develop/reference/apps/sms_metereduser-server-wmi-class.md)   
  [SMS_MonthlyUsageSummary Server WMI Class](../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md)   

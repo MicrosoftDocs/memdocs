@@ -42,7 +42,7 @@ You configure the Network Discovery settings, in System Center Configuration Man
 > [!NOTE]
 >  Network Discovery is unusual, in that it requires setting both the `SMS_SCI_Component` and `SMS_SCI_Configuration` class properties to enable the component.  
 
- For information about calling the smple code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the smple code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

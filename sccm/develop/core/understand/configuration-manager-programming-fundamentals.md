@@ -26,7 +26,7 @@ This section provides information and tasks for the fundamental programming tech
 
 -   [Getting Started with Configuration Manager Windows PowerShell](../../../develop/core/understand/getting-started-with-configuration-manager-and-windows-powershell.md)  
 
--   [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md)  
+-   [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md)  
 
 -   [Configuration Manager Accounts](../../../develop/core/understand/configuration-manager-accounts.md)  
 
@@ -40,7 +40,7 @@ This section provides information and tasks for the fundamental programming tech
 
 -   [Configuration Manager Schedules](../../../develop/core/understand/schedules.md)  
 
--   [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+-   [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
 -   [Configuration Manager Class Schema](../../../develop/core/understand/configuration-manager-class-schema.md)  
 

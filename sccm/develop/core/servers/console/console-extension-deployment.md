@@ -89,15 +89,15 @@ The deployment of a typical System Center Configuration Manager extension has to
 ## Nodes  
 
 ### Installing a Node  
- To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md).  
+ To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md).  
 
 ### Removing a Node  
  To remove a node, delete the node XML file from the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> folder.  
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console views.md)
+ [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
+ [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
+ [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)

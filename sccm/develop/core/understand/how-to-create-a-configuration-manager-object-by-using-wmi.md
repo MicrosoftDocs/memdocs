@@ -37,7 +37,7 @@ You create a Configuration Manager object, in System Center Configuration Manage
 ## Example  
  The following VBScript code example creates an assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True object.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub CreatePackage (connection)  

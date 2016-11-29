@@ -53,8 +53,8 @@ System Center Configuration Manager device management enables mobile device soft
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Mobile Device Management](../../develop/mdm/mobile device management.md)   
- [Configuration Manager Software Distribution](../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Mobile Device Management](../../develop/mdm/mobile-device-management.md)   
+ [Configuration Manager Software Distribution](../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../develop/core/servers/configure/software-distribution-advertisements.md)

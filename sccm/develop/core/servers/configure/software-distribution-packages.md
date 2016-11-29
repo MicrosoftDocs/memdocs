@@ -41,4 +41,4 @@ This section provides topics that show you how to programmatically manage packag
 
 ## See Also  
  [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)

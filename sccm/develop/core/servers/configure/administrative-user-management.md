@@ -34,9 +34,9 @@ The following section describes managing administrators and security groups with
 
 ## Other Resources  
 
--   [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based administration.md)  
+-   [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based-administration.md)  
 
 -   [Security Scope Management](../../../../develop/core/servers/configure/security-scope-management.md)  
 
 ## See Also  
- [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based administration.md)
+ [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based-administration.md)

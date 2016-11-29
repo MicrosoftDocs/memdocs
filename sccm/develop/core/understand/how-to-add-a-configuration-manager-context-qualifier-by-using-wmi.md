@@ -41,7 +41,7 @@ In System Center Configuration Manager, you add context qualifiers to a connecti
 
  `package.Put_ , context`  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -86,6 +86,6 @@ End Function
 ## See Also  
  [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md)   
- [Configuration Manager Context Qualifiers](../../../develop/core/understand/context qualifiers.md)   
+ [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)

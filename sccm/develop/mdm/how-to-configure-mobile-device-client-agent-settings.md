@@ -36,7 +36,7 @@ You configure the Mobile Device Client Agent settings, in System Center Configur
 ## Example  
  The following example method configures various Mobile Device Client Agent settings by using the `SMS_SCI_ClientComp` class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -278,7 +278,7 @@ public void ConfigureMobileDeviceClientAgentSettings(WqlConnectionManager connec
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Mobile Device Management](../../develop/mdm/mobile device management.md)   
+ [Configuration Manager Mobile Device Management](../../develop/mdm/mobile-device-management.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

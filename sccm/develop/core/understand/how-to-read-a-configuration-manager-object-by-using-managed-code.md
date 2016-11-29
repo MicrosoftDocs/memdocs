@@ -33,7 +33,7 @@ To read a System Center Configuration Manager object instance by using the manag
 ## Example  
  The following code example shows how to read a Configuration Manager object.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void DisplayPackageName(WqlConnectionManager connection, string packageID)  

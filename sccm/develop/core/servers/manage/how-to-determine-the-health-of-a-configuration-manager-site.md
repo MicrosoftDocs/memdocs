@@ -39,7 +39,7 @@ You can determine the overall health or status of a site, in System Center Confi
 ## Example  
  The following example determines the health of the site code supplied in the parameter `siteCode`.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ShowSiteHealth(connection, siteCode)  

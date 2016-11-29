@@ -33,7 +33,7 @@ You configure the software update point, in System Center Configuration Manager,
 ## Example  
  The following example method configures various software update point settings by using the assetId:///SMS_SCI_SysResUse?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change the software update point properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -251,7 +251,7 @@ public void ConfigureSoftwareUpdatePoint(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [Software Updates Setup and Configuration](../../develop/sum/software-updates-setup-and-configuration.md)   
  [About Software Updates Setup and Configuration](../../develop/sum/about-software-updates-setup-and-configuration.md)   
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   

@@ -33,7 +33,7 @@ You enable or disable the Hardware Inventory Client Agent, in System Center Conf
 ## Example  
  The following example method enables or disables the Hardware Inventory Client Agent by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

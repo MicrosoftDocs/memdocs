@@ -36,7 +36,7 @@ In System Center Configuration Manager, to export a configuration baseline or co
 ## Example  
  The following code example shows how to read an instance of a configuration baseline or configuration item and then export it to a file.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

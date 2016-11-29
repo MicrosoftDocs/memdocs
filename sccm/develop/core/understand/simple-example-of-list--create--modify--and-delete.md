@@ -62,7 +62,7 @@ The following example shows set of very basic methods using the `SMS_Package` cl
 ## Example  
  The following example method shows set of very basic methods using `SMS_Package` class to demonstrate List, Create, Modify and Delete operations using the SMS Provider.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 > [!NOTE]
 >  The below example embeds the calling code in the code. Most other examples in SDK the simply show a method with parameters.  
@@ -282,7 +282,7 @@ namespace BasicApp
  For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../develop/core/servers/configure/software-distribution-packages.md)   
  [UPDATED: SMS_Package Server WMI Class](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)   
  [Getting Started with Configuraiton Manager Programming](../../../develop/core/understand/getting-started-with-configuration-manager-programming.md)

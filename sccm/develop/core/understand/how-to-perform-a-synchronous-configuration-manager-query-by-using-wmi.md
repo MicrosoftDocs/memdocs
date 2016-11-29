@@ -36,7 +36,7 @@ In System Center Configuration Manager, you perform a synchronous query for Syst
 ## Example  
  The following example performs a synchronous query of all packages in Configuration Manager.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub QueryPackages(connection)  
@@ -84,7 +84,7 @@ End Sub
  [How to Read a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md)   
  [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
  [How to Use Configuration Manager Objects With WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
- [Configuration Manager Result Sets](../../../develop/core/understand/result sets.md)   
- [Configuration Manager Special Queries](../../../develop/core/understand/special queries.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
+ [Configuration Manager Result Sets](../../../develop/core/understand/result-sets.md)   
+ [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)   
  [Configuration Manager Queries](../../../develop/core/understand/queries.md)

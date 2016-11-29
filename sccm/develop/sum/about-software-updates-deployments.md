@@ -54,7 +54,7 @@ Software updates are delivered to client computers in System Center Configuratio
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)   
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)   
  [How to Enumerate Updates Matching a Specific Criteria](../../develop/sum/how-to-enumerate-updates-matching-a-specific-criteria.md)   
  [How to Create an Update List](../../develop/sum/how-to-create-an-update-list.md)   
  [How to Create a Deployment Package](../../develop/sum/how-to-create-a-deployment-package.md)   

@@ -33,7 +33,7 @@ You create a software metering rule, in System Center Configuration Manager, by 
 ## Example  
  The following example method shows how to create a software metering rule by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -148,5 +148,5 @@ public void CreateSWMRule(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Metering](../../develop/apps/software metering.md)   
+ [Configuration Manager Software Metering](../../develop/apps/software-metering.md)   
  [SMS_MeteredProductRule Server WMI Class](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md)

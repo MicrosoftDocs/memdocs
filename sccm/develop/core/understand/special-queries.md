@@ -59,11 +59,11 @@ Extended WMI Query Language (WQL) supports queries that are specific to System C
  The second approach is slower, but it is the only possible approach if you use an application that uses the WMI ODBC Adapter.  
 
 ## See Also  
- [Configuration Manager Association Classes](../../../develop/core/understand/association classes.md)   
+ [Configuration Manager Association Classes](../../../develop/core/understand/association-classes.md)   
  [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)   
- [Configuration Manager Date and Time Formats](../../../develop/core/understand/date and time formats.md)   
- [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded objects.md)   
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended wmi query language.md)   
+ [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)   
+ [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)   
+ [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)   
  [How to Use Configuration Manager Objects With Managed Code](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-managed-code.md)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects-overview.md)   

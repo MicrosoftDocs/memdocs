@@ -33,7 +33,7 @@ To create a System Center Configuration Manager object by using the managed SMS 
 ## Example  
  The following example demonstrates how to create and then populate a new Configuration Manager package (`SMS_Package`).  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```  
 public void CreatePackage(WqlConnectionManager connection)  

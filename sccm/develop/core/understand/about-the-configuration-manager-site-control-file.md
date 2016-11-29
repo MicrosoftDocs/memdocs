@@ -56,7 +56,7 @@ BEGIN_CLIENT_COMPONENT
 END_CLIENT_COMPONENT  
 ```  
 
- The provider has several Windows Management Instrumentation (WMI) classes that represent resources in the site control file. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information on the server components stored on a System Center Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes &#91;reference&#93;](../../../develop/reference/core/servers/configure/site configuration server wmi classes.md).  
+ The provider has several Windows Management Instrumentation (WMI) classes that represent resources in the site control file. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information on the server components stored on a System Center Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes &#91;reference&#93;](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
 
  The following example is the declaration for [SMS_SCI_ClientConfig Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_clientconfig-server-wmi-class.md).  
 

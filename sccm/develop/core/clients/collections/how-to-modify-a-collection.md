@@ -31,7 +31,7 @@ manager: "mbaldwin"
 ## Example  
  The following example method shows how to modify collection properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub RenameCollection(connection, collectionID, name, comment)    Dim collection    Set collection = connection.Get("SMS_Collection.CollectionID='" & collectionID & "'")    WScript.Echo "-- Collection " & collectionID & " --"    WScript.Echo "Name before: " & collection.Name    WScript.Echo "Comment before: " & collection.Comment    collection.Name = name    collection.Comment = comment    collection.Put_    WScript.Echo ""    WScript.Echo "Name after: " & collection.Name    WScript.Echo "Comment after: " & collection.CommentEnd Sub  

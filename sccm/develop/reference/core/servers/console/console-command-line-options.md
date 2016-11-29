@@ -29,5 +29,5 @@ The Microsoft System Center Configuration Manager console has the following comm
 |**/sms:NoRestore**|The System Center Configuration Manager console ignores previous persisted node navigation.|  
 
 ## See Also  
- [Configuration Manager Console Extension](../../../../../develop/core/servers/console/console extension.md)   
+ [Configuration Manager Console Extension](../../../../../develop/core/servers/console/console-extension.md)   
  [Configuration Manager Programming Fundamentals](../../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -87,5 +87,5 @@ In System Center Configuration Manager, a task sequence is a series of one or mo
  A task sequence package ([SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)) is secured by using the [SMS_UserClassPermissions Server WMI Class](../../develop/reference/misc/sms_userclasspermissions-server-wmi-class.md) and [SMS_UserInstancePermissionInfo Server WMI Class](../../develop/reference/misc/sms_userinstancepermissioninfo-server-wmi-class.md) permissions to set class and instance permissions.  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md)

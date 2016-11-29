@@ -33,4 +33,4 @@ This section provides topics about configuration baselines and configuration ite
 -   [How to List Configuration Assignments](../../develop/compliance/how-to-list-configuration-assignments.md)  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

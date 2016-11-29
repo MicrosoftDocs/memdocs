@@ -27,7 +27,7 @@ In System Center Configuration Manager, operating system deployment actions are 
 ## MOF File Content  
  A custom action derives from [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md). The MOF file declaration includes a class definition and various qualifiers for the command line, task sequence variables, category, and custom action control assembly location.  
 
- Properties declared in a class, except those with the `CommandLineArg` qualifier, are available as task sequence variables during client deployment. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md).  
+ Properties declared in a class, except those with the `CommandLineArg` qualifier, are available as task sequence variables during client deployment. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
  The namespace for the custom action is \\\root\SMS_Site_SITECODE. When the MOF file is compiled, the custom action is made a child of [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
@@ -169,7 +169,7 @@ string          PackageIDForApplicationExe;
 
  If the `VariablePrefix` class qualifier is used, the variables are prefixed with the class qualifier value.  
 
- For more information about variable usage, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md)  
+ For more information about variable usage, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
 
 ### Properties  
 
@@ -199,5 +199,5 @@ string          PackageIDForApplicationExe;
  [Extending Operating System Deployment](../../develop/osd/extending-operating-system-deployment.md)   
  [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)   
  [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how to use task sequence variables in a running task sequence.md)   
+ [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)   
  [About Configuration Manager Custom Action Client Applications](../../develop/osd/about-configuration-manager-custom-action-client-applications.md)

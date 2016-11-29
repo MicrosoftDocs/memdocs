@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # Compliance Settings (DCM) Client Interfaces
-In System Center Configuration Manager, the desired configuration management COM automation classes and related types are used by client applications to manage configuration items on the client computer. They concern client-side behavior only and are called externally by the Desired Configuration Management Agent, which is enabled by default on the client computer. For more information about the agent, see [Configuration Manager Compliance Settings (DCM)](../../../../../develop/compliance/compliance settings (dcm).md).  
+In System Center Configuration Manager, the desired configuration management COM automation classes and related types are used by client applications to manage configuration items on the client computer. They concern client-side behavior only and are called externally by the Desired Configuration Management Agent, which is enabled by default on the client computer. For more information about the agent, see [Configuration Manager Compliance Settings (DCM)](../../../../../develop/compliance/compliance-settings-dcm.md).  
 
  Before the Desired Configuration Management Client Agent can call the desired configuration management client COM automation objects in your application, Configuration Manager must send a policy to the client computers for the site. The policy requests desired configuration management components to be enabled. The Desired Configuration Management Client Agent properties are site-wide client settings.  
 
@@ -40,4 +40,4 @@ In System Center Configuration Manager, the desired configuration management COM
 |[CIPresence Enumeration](../../../../../develop/reference/core/clients/client-classes/cipresence-enumeration.md)|Defines configuration item presence types used in the discovery process.|  
 
 ## See Also  
- [Configuration Manager Desired Configuration Management](../../../../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Desired Configuration Management](../../../../../develop/compliance/compliance-settings-dcm.md)

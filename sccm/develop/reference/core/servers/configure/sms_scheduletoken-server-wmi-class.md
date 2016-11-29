@@ -91,7 +91,7 @@ Class SMS_ScheduleToken
 
 -   Embedded  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class and property qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
 
  This class is the abstract base class for a number of derived classes representing schedule tokens used for scheduling events with different frequencies, for example, daily. An example of a derived class is [SMS_ST_RecurWeekly Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md).  
 
@@ -135,12 +135,12 @@ instance of SMS_ST_RecurWeekly
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [Scheduling Server WMI Classes](../../../../../develop/reference/core/servers/configure/scheduling server wmi classes.md)   
+ [Scheduling Server WMI Classes](../../../../../develop/reference/core/servers/configure/scheduling-server-wmi-classes.md)   
  [SMS_ST_NonRecurring Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)   
  [SMS_ST_RecurWeekly Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md)

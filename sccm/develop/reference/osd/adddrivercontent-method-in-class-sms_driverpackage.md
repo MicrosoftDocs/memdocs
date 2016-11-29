@@ -60,20 +60,20 @@ SInt32 AddDriverContent(
  For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## Remarks  
- An example of the use of this method is provided in [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how to create a driver package for a windows driver.md).  
+ An example of the use of this method is provided in [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how-to-create-a-driver-package-for-a-windows-driver.md).  
 
  If the call to this method fails, check the Smsprov.log file on the provider computer for more information.  
 
 ## Requirements  
 
 ## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
  [SMS_DriverPackage Server WMI Class](../../../develop/reference/osd/sms_driverpackage-server-wmi-class.md)   
  [RemoveDriverContent Method in Class SMS_DriverPackage](../../../develop/reference/osd/removedrivercontent-method-in-class-sms_driverpackage.md)   
  [ValidateNewPackageSource Method in Class SMS_DriverPackage](../../../develop/reference/osd/validatenewpackagesource-method-in-class-sms_driverpackage.md)   
- [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how to create a driver package for a windows driver.md)
+ [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../../develop/osd/how-to-create-a-driver-package-for-a-windows-driver.md)

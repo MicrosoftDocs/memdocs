@@ -25,7 +25,7 @@ In System Center Configuration Manager, when an error occurs in an asynchronous 
 ## Example  
  This VBScript sample displays error information if there is a error during an asynchronous operation. To test, change the query to an invalid query such as `Select * From ?????`.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

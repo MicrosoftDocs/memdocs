@@ -33,7 +33,7 @@ You configure the Active Directory System Discovery settings, in System Center C
 ## Example  
  The following example sets the Active Directory System Discovery settings by using the `SMS_SCI_Component` class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

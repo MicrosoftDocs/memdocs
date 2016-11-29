@@ -34,7 +34,7 @@ The Asset Intelligence catalog can be refreshed manually, outside the normal syn
 ## Example  
  The following example method runs the refresh on the provided server.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Function InitateSync(connection, serverName)    On Error Resume Next    Dim classObj: Set classObj = connection.Get("SMS_AIProxy")    Dim inParams: Set inParams = classObj.Methods_("RequestCatalogUpdate").InParameters.SpawnInstance_()    Dim outParams        inParams.Properties_.Item("ProxyName") = serverName        Set outParams = connection.ExecMethod("SMS_AIProxy", "RequestCatalogUpdate", inParams)    If Err.Number <> 0 Then         InitateSync = False    Else        InitateSync = True    End If    On Error Goto 0End Function  

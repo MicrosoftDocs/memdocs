@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # How to Add a Property Page to an Existing Configuration Manager Property Sheet
 To add a property page to an existing property sheet, in System Center Configuration Manager, you add the property page XML to the property sheet's XML file. For existing Configuration Manager property sheets, you copy the existing property XML file to the XmlStorage\Extensions\Forms folder from XmlStorage\Forms. When the Configuration Manager console loads, it will use the XML it finds in the XmlStorage\Extensions\Forms folder in preference to existing forms in XmlStorage\Forms.  
 
- Because multiple vendors can extend existing property sheets, you must deploy and remove your property sheets with care. For more information, see [About Configuration Manager Administrator Console Extension Deployment](../../../../develop/core/servers/console/console extension deployment.md).  
+ Because multiple vendors can extend existing property sheets, you must deploy and remove your property sheets with care. For more information, see [About Configuration Manager Administrator Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
  The following procedure demonstrates how to add a property page to the `Properties` page for a package. To complete it. you will first need to create a property page. For more information, see [How to Create a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-property-sheet.md).  
 

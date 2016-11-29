@@ -29,10 +29,10 @@ Developing applications and scripts for Microsoft System Center Configuration Ma
  Visual Studio 2010 provides a suitable environment for developing Configuration Manager applications and scripts. For more information about Visual Studio hardware requirements, see [Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkId=110322).  
 
 ## Development Requirements  
- For information about development requirements, see [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client development requirements.md) and [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server development requirements.md).  
+ For information about development requirements, see [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md) and [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
 
 ## Runtime Requirements  
- For information about runtime requirements, see [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client runtime requirements.md) and [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server runtime requirements.md).  
+ For information about runtime requirements, see [Configuration Manager Client Runtime Requirements](../../../develop/core/reqs/client-runtime-requirements.md) and [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 > [!IMPORTANT]
 >  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  

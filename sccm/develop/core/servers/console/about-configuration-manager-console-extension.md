@@ -36,7 +36,7 @@ The System Center Configuration Manager console has an XML-based architecture th
  You can integrate your own custom wizards into the Configuration Manager console by using a wizard framework of your choice.  
 
 ## Management Classes  
- You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md).  
+ You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md).  
 
 ## Unsupported Features  
  The Configuration Manager console does not support the following features:  
@@ -57,9 +57,9 @@ The System Center Configuration Manager console has an XML-based architecture th
  Extensions written with the Microsoft Management Console SDK are not supported by the Configuration Manager console.  
 
 ## See Also  
- [Configuration Manager Console Extension Architecture](../../../../develop/core/servers/console/console extension architecture.md)   
- [Configuration Manager Console Actions](../../../../develop/core/servers/console/console actions.md)   
- [Configuration Manager Console Forms](../../../../develop/core/servers/console/console forms.md)   
- [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console management classes.md)   
- [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console nodes.md)   
- [Configuration Manager Console Views](../../../../develop/core/servers/console/console views.md)
+ [Configuration Manager Console Extension Architecture](../../../../develop/core/servers/console/console-extension-architecture.md)   
+ [Configuration Manager Console Actions](../../../../develop/core/servers/console/console-actions.md)   
+ [Configuration Manager Console Forms](../../../../develop/core/servers/console/console-forms.md)   
+ [Configuration Manager Console Management Classes](../../../../develop/core/servers/console/console-management-classes.md)   
+ [Configuration Manager Console Nodes](../../../../develop/core/servers/console/console-nodes.md)   
+ [Configuration Manager Console Views](../../../../develop/core/servers/console/console-views.md)

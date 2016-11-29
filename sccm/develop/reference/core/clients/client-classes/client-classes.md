@@ -21,7 +21,7 @@ manager: "mbaldwin"
 This section contains detailed reference information about the client-side functionality in System Center Configuration Manager.  
 
 > [!IMPORTANT]
->  `Software Distribution Client Control Panel Automation` and `Software Updates Client COM Automation Classes` have been deprecated in System Center Configuration Manager, use the functionality available in the [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client sdk wmi classes.md) instead.  
+>  `Software Distribution Client Control Panel Automation` and `Software Updates Client COM Automation Classes` have been deprecated in System Center Configuration Manager, use the functionality available in the [Configuration Manager Client SDK WMI Classes](../../../../../develop/reference/core/clients/sdk/client-sdk-wmi-classes.md) instead.  
 
 ## Configuration Manager Client Classes  
 
@@ -29,7 +29,7 @@ This section contains detailed reference information about the client-side funct
 
 -   [Asset Intelligence Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/asset-intelligence-client-wmi-classes.md)  
 
--   [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client infrastructure.md)  
+-   [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client-infrastructure.md)  
 
 -   [Compliance Settings (DCM) Client Interfaces](../../../../../develop/reference/core/clients/client-classes/compliance-settings--dcm--client-interfaces.md)  
 

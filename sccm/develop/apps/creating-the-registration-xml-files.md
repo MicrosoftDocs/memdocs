@@ -32,6 +32,6 @@ This section provides task-based topics that show you how to create registration
 -   [How to Define the Installer Technology Registration File](../../develop/apps/how-to-define-the-installer-technology-registration-file.md)  
 
 ## See Also  
- [Configuration Manager Application Management Extension](../../develop/apps/application management extension.md)   
+ [Configuration Manager Application Management Extension](../../develop/apps/application-management-extension.md)   
  [Scenario: Extending Application Management](../../develop/apps/scenario--extending-application-management.md)   
  [Configuration Manager Reference](../../develop/reference/configuration-manager-reference.md)

@@ -35,7 +35,7 @@ You create a schedule token, in System Center Configuration Manager, by creating
 ## Example  
  The following example method shows how to create a schedule token by creating and populating an instance of the assetId:///SMS_ST_RecurInterval?qualifyHint=False&autoUpgrade=True schedule token class. In addition, the example shows how to convert the schedule to an interval string by using the assetId:///SMS_ScheduleMethods?qualifyHint=False&autoUpgrade=True class and assetId:///WriteToString?qualifyHint=False&autoUpgrade=True method.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -161,7 +161,7 @@ public void CreateDailyRecurringScheduleToken(WqlConnectionManager connection,
 
 ## See Also  
  [System Center Configuration Manager Software Development Kit](../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling server wmi classes.md)   
+ [Scheduling Server WMI Classes](../../../develop/reference/core/servers/configure/scheduling-server-wmi-classes.md)   
  [SMS_ST_NonRecurring Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)   
  [SMS_ST_RecurInterval Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md)   
  [SMS_ST_RecurMonthlyByDate Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md)   

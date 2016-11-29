@@ -39,7 +39,7 @@ You create an operating system deployment task sequence, in System Center Config
 ## Example  
  The following example method creates a task sequence package (assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True) and associates task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) with it.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub CreateTaskSequencePackage (connection, taskSequence)  
@@ -145,7 +145,7 @@ public IResultObject CreateTaskSequencePackage(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   

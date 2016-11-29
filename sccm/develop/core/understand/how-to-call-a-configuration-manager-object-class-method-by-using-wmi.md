@@ -38,7 +38,7 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 ## Example  
  The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](assetId:///SMS_CollectionRuleQuery?qualifyHint=False&autoUpgrade=True) class [ValidateQuery](assetId:///ValidateQuery?qualifyHint=False&autoUpgrade=True) class method.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ValidateQueryRule(connection, wqlQuery)  

@@ -33,7 +33,7 @@ You add an operating system install package to System Center Configuration Manag
 ## Example  
  The following example method adds an operating system install package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddOSInstallPackage(connection, name, description, path)  

@@ -33,7 +33,7 @@ In System Center Configuration Manager, you update the Windows Image (WIM) file 
 ## Example  
  The following example updates an operating system image package.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub UpdateOSImage(connection,imagePackageID, sourcePath)  

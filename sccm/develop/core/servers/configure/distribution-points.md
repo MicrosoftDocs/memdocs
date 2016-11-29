@@ -30,7 +30,7 @@ This section provides topics that show you how to programmatically manage Distri
 -   [How to Set the Distribute on Demand Flag](../../../../develop/core/servers/configure/how-to-set-the-distribute-on-demand-flag.md)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

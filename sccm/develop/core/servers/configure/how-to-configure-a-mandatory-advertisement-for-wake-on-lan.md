@@ -33,7 +33,7 @@ You can configure an existing mandatory advertisement for Wake On LAN by using t
 ## Example  
  The following example method configures a software distribution mandatory advertisement for Wake On LAN.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -143,7 +143,7 @@ public void SetWOLOnAdvertisment(WqlConnectionManager connection,
 
 ## See Also  
  [Software Distribution Wake On LAN](../../../../develop/core/servers/configure/software-distribution-wake-on-lan.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)

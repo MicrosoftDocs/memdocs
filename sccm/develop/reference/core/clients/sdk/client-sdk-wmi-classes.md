@@ -73,4 +73,4 @@ This section contains detailed reference information about the client-side SDK f
 -   [CCM_SoftwareUpdatesManager Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_softwareupdatesmanager-client-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Client Classes](../../../../../develop/reference/core/clients/client-classes/client classes.md)
+ [Configuration Manager Client Classes](../../../../../develop/reference/core/clients/client-classes/client-classes.md)

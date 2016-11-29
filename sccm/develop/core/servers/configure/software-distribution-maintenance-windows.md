@@ -38,7 +38,7 @@ This section provides information about software distribution maintenance window
 -   [How to List the Maintenance Windows and Properties for a Specific Collection](../../../../develop/core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md)  
 
 ## See Also  
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   

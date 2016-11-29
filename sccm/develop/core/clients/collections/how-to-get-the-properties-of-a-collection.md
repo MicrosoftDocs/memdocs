@@ -29,7 +29,7 @@ manager: "mbaldwin"
 ## Example  
  The following example method gets the properties of a collection.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ReadCollectionProperties(connection, collectionID)    Dim collection    Dim statusText    Set collection = connection.Get("SMS_Collection.CollectionID='" & collectionID & "'")    WScript.Echo "Processing Collection - " & CStr(collection.CollectionID)    WScript.Echo "-- Name: " & collection.Name    WScript.Echo "-- Comment: " & collection.Comment    WScript.Echo "-- Members: " & CStr(collection.MemberCount)    statusText = "None"    Select Case collection.CurrentStatus    Case 1        statusText = "Ready"    Case 2        statusText = "Refreshing"    Case 5        statusText = "Awaiting Refresh"    End Select        WScript.Echo "-- Status: " & statusTextEnd Sub  

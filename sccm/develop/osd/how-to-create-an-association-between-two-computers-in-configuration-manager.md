@@ -32,7 +32,7 @@ You create an association between a reference and destination computer, in Syste
 ## Example  
  The following example method adds an association between a source and reference computer.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AssociateComputer(connection, referenceComputerResourceId, destinationComputerResourceId)  

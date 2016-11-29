@@ -58,7 +58,7 @@ In System Center Configuration Manager, you specify the supported platforms of a
 
  `AddSupportedPlatform objDriver, "All x64 Windows XP Professional", "5.20.9999.9999","5.20.3790.0", "Win NT","x64", "SELECT * FROM Win32_OperatingSystem WHERE BuildNumber = 3790 AND OSType=18 AND ProductType=1", "SELECT * FROM Win32_Processor WHERE Architecture=9 AND DataWidth=64"`  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub AddSupportedPlatform( objDriver, sDisplayName, sMaxVersion, sMinVersion, sName, sPlatform, sQuery1, sQuery2 )  
@@ -226,7 +226,7 @@ public void AddSupportedPlatform(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`driver`<br /><br /> `objDriver`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|-   A valid [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how to import a windows driver described by an inf file.md).|  
+|`driver`<br /><br /> `objDriver`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|-   A valid [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
 |`displayName`<br /><br /> `sDisplayName`|-   Managed: `String`<br />-   VBScript: `String`|The display name for the condition shown in the System Center Configuration Manager console.|  
 |`maxVersion`<br /><br /> `sMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  
 |`minVersion`<br /><br /> `sMinVersion`|-   Managed: `String`<br />-   VBScript: `String`|The minimum supported version.|  
@@ -266,7 +266,7 @@ public void AddSupportedPlatform(
 
 ## See Also  
  [SMS_SupportedPlatforms Server WMI Class](../../develop/reference/core/servers/configure/sms_supportedplatforms-server-wmi-class.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Objects](../../develop/core/understand/configuration-manager-objects.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   

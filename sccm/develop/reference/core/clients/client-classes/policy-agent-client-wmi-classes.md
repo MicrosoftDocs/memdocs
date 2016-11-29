@@ -67,4 +67,4 @@ This section describes the classes used, in System Center Configuration Manager,
  Represents the Policy Agent configuration for a given authority.  
 
 ## See Also  
- [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client infrastructure.md)
+ [Configuration Manager Client Infrastructure](../../../../../develop/reference/core/clients/client-classes/client-infrastructure.md)

@@ -33,7 +33,7 @@ In System Center Configuration Manager, you configure the Heartbeat Discovery se
 ## Example  
  The following example sets the Heartbeat Discovery settings by using the `SMS_SCI_Component` class to connect to the site control file and change properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

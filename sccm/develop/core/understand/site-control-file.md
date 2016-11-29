@@ -39,9 +39,9 @@ Site control in System Center Configuration Manager defines the settings for a s
 
 -   [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)  
 
--   [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling code snippets.md)  
+-   [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md)  
 
--   [Configuration Manager Hierarchy Server WMI Classes](../../../develop/reference/core/servers/configure/site configuration server wmi classes.md)  
+-   [Configuration Manager Hierarchy Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)  
 
 ## See Also  
  [Configuration Manager Programming Fundamentals](../../../develop/core/understand/configuration-manager-programming-fundamentals.md)

@@ -33,7 +33,7 @@ To clear a PXE advertisement for a System Center Configuration Manager collectio
 ## Example  
  The following example clears the PXE advertisement for the collection that is identified by the `collectionID` parameter.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 Sub ClearPxeAdvertisementCollection (connection, collectionID)  

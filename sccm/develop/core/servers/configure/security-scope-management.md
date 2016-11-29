@@ -32,9 +32,9 @@ The following topics describe programmatically working with the role-based admin
 
 ## Other Resources  
 
--   [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based administration.md)  
+-   [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based-administration.md)  
 
 -   [Administrative User Management](../../../../develop/core/servers/configure/administrative-user-management.md)  
 
 ## See Also  
- [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based administration.md)
+ [Configuration Manager Role-Based Administration](../../../../develop/core/servers/configure/role-based-administration.md)

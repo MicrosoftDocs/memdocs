@@ -28,10 +28,10 @@ There are several package types that System Center Configuration Manager uses to
  The operating system installation package contains all the files necessary to install the desired Windows operating system on a reference computer. In System Center Configuration Manager, they are managed by [SMS_OperatingSystemInstallPackage](assetId:///SMS_OperatingSystemInstallPackage?qualifyHint=False&autoUpgrade=True). This package does not require a program. The task sequence references the source files as needed.  
 
 ### Boot Image  
- An operating system deployment boot image is a Windows Pre-Installation Environment (PE) 2.0 image that is used during the operating system deployment process. In Configuration Manager, boot images are managed by [SMS_BootImagePackage](assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True). For more information, see [How to Add a Boot Image from a WIM File in Configuration Manager](../../develop/osd/how to add a boot image from a wim file.md).  
+ An operating system deployment boot image is a Windows Pre-Installation Environment (PE) 2.0 image that is used during the operating system deployment process. In Configuration Manager, boot images are managed by [SMS_BootImagePackage](assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True). For more information, see [How to Add a Boot Image from a WIM File in Configuration Manager](../../develop/osd/how-to-add-a-boot-image-from-a-wim-file.md).  
 
 ### Driver Packages  
- Driver packages contain Windows device drivers that are not included with the operating system. In Configuration Manager they are managed by [SMS_DriverPackage](assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True) objects. For more information, see [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../develop/osd/how to create a driver package for a windows driver.md).  
+ Driver packages contain Windows device drivers that are not included with the operating system. In Configuration Manager they are managed by [SMS_DriverPackage](assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True) objects. For more information, see [How to Create a Driver Package for a Windows Driver in Configuration Manager](../../develop/osd/how-to-create-a-driver-package-for-a-windows-driver.md).  
 
 ### Sysprep Package  
  Sysprep is a Windows system presentation tool that facilitates image creation and preparation of an image for deployment to multiple computers. Sysprep is supplied with Windows Vista, but if you are deploying Windows XP or an earlier operating system, you must create an [SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True) object package to contain Sysprep and its support files. For more information about creating assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True objects, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md)  
@@ -56,7 +56,7 @@ There are several package types that System Center Configuration Manager uses to
  You copy the various package types to distribution points by using the same method that you would use for copying assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True package object. For more information, see [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md).  
 
 ## See Also  
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Operating System Deployment Driver Management](../../develop/osd/operating-system-deployment-driver-management.md)   
  [Operating System Deployment Server WMI Classes](../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md)   
  [Software Distribution Packages](../../develop/core/servers/configure/software-distribution-packages.md)

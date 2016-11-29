@@ -25,4 +25,4 @@ This section provides topics about compliance settings extensibility in System C
 -   [About Desired Configuration Management Extensibility](../../develop/compliance/about-compliance-settings--dcm--extensibility.md)  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

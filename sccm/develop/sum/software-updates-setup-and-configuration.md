@@ -34,4 +34,4 @@ This section provides information about software updates setup and configuration
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)

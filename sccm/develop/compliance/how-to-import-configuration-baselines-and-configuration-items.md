@@ -44,7 +44,7 @@ In System Center Configuration Manager, importing a configuration baseline or co
 ## Example  
  The following code examples show how to create an instance of a configuration baseline or a configuration item and then populate it by importing a configuration baseline or a configuration item XML definition.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 

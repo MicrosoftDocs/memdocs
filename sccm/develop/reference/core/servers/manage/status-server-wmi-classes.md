@@ -65,5 +65,5 @@ The status server Windows Management Instrumentation (WMI) classes allow access 
 -   [SMS_SummarizerStatus Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_summarizerstatus-server-wmi-class.md)  
 
 ## See Also  
- [Configuration Manager Status](../../../../../develop/reference/core/servers/manage/status classes.md)   
+ [Configuration Manager Status](../../../../../develop/reference/core/servers/manage/status-classes.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

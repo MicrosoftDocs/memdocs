@@ -22,13 +22,13 @@ This section provides information about the SMS Provider in System Center Config
 
 ## About the SMS Provider topics  
 
--   [SMS Provider Fundamentals in Configuration Manager](../../../develop/core/understand/sms provider fundamentals.md)  
+-   [SMS Provider Fundamentals in Configuration Manager](../../../develop/core/understand/sms-provider-fundamentals.md)  
 
 -   [WMI Configuration Manager Provider Fundamentals](../../../develop/core/understand/wmi-configuration-manager-provider-fundamentals.md)  
 
 -   [Managed SMS Provider Fundamentals in Configuration Manager](../../../develop/core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md)  
 
--   [Configuration Manager Context Qualifiers](../../../develop/core/understand/context qualifiers.md)  
+-   [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)  
 
 -   [SMS Provider Field Length Restrictions in Configuration Manager](../../../develop/core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md)  
 
@@ -37,7 +37,7 @@ This section provides information about the SMS Provider in System Center Config
 
  [Configuration Manager Objects](../../../develop/core/understand/configuration-manager-objects.md)  
 
- [Configuration Manager Site Control File](../../../develop/core/understand/site control file.md)  
+ [Configuration Manager Site Control File](../../../develop/core/understand/site-control-file.md)  
 
  [Configuration Manager Schema](../../../develop/core/understand/configuration-manager-schema.md)  
 

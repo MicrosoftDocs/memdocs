@@ -82,7 +82,7 @@ To create a System Center Configuration Manager console property sheet, in Confi
     ```  
 
 ## Deploy the Assembly  
- The following procedure builds and copies the assembly that you have created to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [About Configuration Manager Administrator Console Extension Deployment](../../../../develop/core/servers/console/console extension deployment.md).  
+ The following procedure builds and copies the assembly that you have created to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [About Configuration Manager Administrator Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
 #### To deploy the property sheet assembly  
 

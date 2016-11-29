@@ -33,4 +33,4 @@ This section provides information about authoring Compliance Settings configurat
 -   [General Configuration Item Examples](../../develop/compliance/general-configuration-item-examples.md)  
 
 ## See Also  
- [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance settings (dcm).md)
+ [Configuration Manager Compliance Settings (DCM)](../../develop/compliance/compliance-settings-dcm.md)

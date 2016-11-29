@@ -35,7 +35,7 @@ In System Center Configuration Manager, you set the operating system deployment 
 ## Example  
  The following example method adds a supplied MAC address to the list of MAC address that are responded to.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
 ```c#  
 public void SetNetworkInterface(WqlConnectionManager connection,                                string siteCode,                                string serverName,                                string macAddress){    try    {        //Connect to distribution point instance.                        IResultObject siteRole = connection.GetInstance("SMS_SCI_SysResUse.FileType=2,ItemName=\"[\\\"Display=\\\\\\\\" + serverName + "\\\\\\\"]MSWNET:[\\\"SMS_SITE=" + siteCode + "\\\"]\\\\\\\\" + serverName + "\\\\,SMS Distribution Point\",ItemType=\"System Resource Usage\",SiteCode=" + "\"" + siteCode + "\"");        // Create temporary copy of the embedded properties.        Dictionary<string, IResultObject> embeddedPropertyLists = siteRole.EmbeddedPropertyLists;        // Get current mac addresses.        string[] macAddresses = embeddedPropertyLists["BindExcept"]["Values"].StringArrayValue;        //Convert to list.        List<string> addressList = new List<string>();        foreach (string address in macAddresses)        {            addressList.Add(address);        }        // Add the new mac address to the list.        addressList.Add(macAddress);        // Add the new mac address to the list.        embeddedPropertyLists["BindExcept"]["Values"].StringArrayValue = addressList.ToArray();        siteRole.EmbeddedPropertyLists = embeddedPropertyLists;        // Save the settings.         siteRole.Put();    }    catch (SmsException ex)    {        Console.WriteLine();        Console.WriteLine("Failed. Error: " + ex.InnerException.Message);    }}  
@@ -78,7 +78,7 @@ public void SetNetworkInterface(WqlConnectionManager connection,                
 
 ## See Also  
  [About Operating System Deployment Site Role Configuration](../../develop/osd/about-operating-system-deployment-site-role-configuration.md)   
- [Configuration Manager Operating System Deployment](../../develop/osd/operating system deployment.md)   
+ [Configuration Manager Operating System Deployment](../../develop/osd/operating-system-deployment.md)   
  [Configuration Manager Programming Fundamentals](../../develop/core/understand/configuration-manager-programming-fundamentals.md)   
  [Operating System Deployment Site Role Configuration](../../develop/osd/operating-system-deployment-site-role-configuration.md)   
  [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   

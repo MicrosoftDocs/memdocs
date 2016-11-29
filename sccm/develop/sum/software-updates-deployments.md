@@ -42,4 +42,4 @@ The System Center Configuration Manager software updates feature provides a set 
 
 ## See Also  
  [Configuration Manager SDK](../../develop/core/misc/system-center-configuration-manager-sdk.md)   
- [Configuration Manager Software Updates](../../develop/sum/software updates.md)
+ [Configuration Manager Software Updates](../../develop/sum/software-updates.md)

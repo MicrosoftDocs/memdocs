@@ -78,7 +78,7 @@ CreateDynamicCollection(WMIConnection, "New Dynamic Collection Name", "New dynam
 ## Example  
  The following example method creates a dynamic collection by using the[SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and the [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) classes and class properties.  
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling code snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
 ```vbs  
 
@@ -184,7 +184,7 @@ public void CreateDynamicCollection(WqlConnectionManager connection, string newC
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md)   
  [Configuration Manager Collections](../../../../develop/core/clients/collections/collections.md)   
- [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software distribution.md)   
+ [Configuration Manager Software Distribution](../../../../develop/core/servers/configure/software-distribution.md)   
  [Software Distribution Packages](../../../../develop/core/servers/configure/software-distribution-packages.md)   
  [Software Distribution Programs](../../../../develop/core/servers/configure/software-distribution-programs.md)   
  [Software Distribution Advertisements](../../../../develop/core/servers/configure/software-distribution-advertisements.md)   
