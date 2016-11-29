@@ -21,7 +21,7 @@ System Center Configuration Manager (also known as ConfgMgr or SCCM) offers diff
 
 
 ##  Overview of device management solutions  
- This overview section is followed by two tables that compare the management solutions, one [based on supported mobile device platforms](Compare-device-management-solutions-based-on-supported-mobile-device-platforms), and [one based on management functionality](Compare-mobile-device-management-solutions-based-on-management-functionality).
+ This overview section is followed by two tables that compare the management solutions, one [based on supported mobile device platforms](#compare-device-management-solutions-based-on-supported-mobile-device-platforms), and [one based on management functionality](#compare-mobile-device-management-solutions-based-on-management-functionality).
   
 
 -   **Managing devices with the Configuration Manager client**  
