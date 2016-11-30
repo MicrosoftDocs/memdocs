@@ -479,15 +479,15 @@ The site system roles must be in a primary site.
 
 Beging by performing *only* these steps:
 
-a. [Deploy a web server certificate to site system servers](deploy-a-web-server-certificate-to-site-system-servers)
+a. [Deploy a web server certificate to site system servers](#deploy-a-web-server-certificate-to-site-system-servers)
 
-b. [Deploy a client authentication certificate to site system servers](deploy-a-client-authentication-certificate-to-site-system-servers)
+b. [Deploy a client authentication certificate to site system servers](#deploy-a-client-authentication-certificate-to-site-system-servers)
 
-c. [Configure the management point and distribution point](configure-the-management-point-and-distribution-point)
+c. [Configure the management point and distribution point](#configure-the-management-point-and-distribution-point)
 
-d. [Optional: Install the reporting services point](optional:-install-the-reporting-services-point)
+d. [Optional: Install the reporting services point](#optional:-install-the-reporting-services-point)
 
-e. [Download the client source files for Macs](download-the-client-source-files-forMacs) .  
+e. [Download the client source files for Macs](#download-the-client-source-files-forMacs) .  
   
 
 #### To install the client certificate independently from Configuration Manager and install the client  
