@@ -25,11 +25,16 @@ manager: angrobe
 This article introduces the features that are available in the Technical Preview for System Center Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
 
 **Known Issues in this Technical Preview:**   
-When you install version 1611, the overall status for prerequisites might show as passed with warnings, but does not list which prerequisites caused the warnings. This can be caused by the following two prerequisites:
+- ***Prerequisite status***: When you install version 1611, the overall status for prerequisites might show as passed with warnings, but does not list which prerequisites caused the warnings. This can be caused by the following two prerequisites:
   - SQL Index Create Memory options
   - Checks for supported SQL Server version  
-   
-Because these are only warnings, they can be ignored.
+
+ Because these are only warnings, they can be ignored.
+
+- ***PowerShell***: When you connect to Windows PowerShell from the Configuration Manager console, you might receive the following error: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml is not digitally signed**.  
+
+   You can resolve this issue by replacing certain files with signed versions from version 1610. Copy all files with the following extensions from the **&lt;install directory>\AdminConsole\bin\** folder in your version 1610 installation: **.psd1**, **.ps1xml**, and **.psm1**. Paste these files into the **&lt;install directory>\AdminConsole\bin\** folder in your Technical Preview 1611 installation, overwriting the 1611 version of the files.
+
 
 **The following are new features you can try out with this version.**  
 

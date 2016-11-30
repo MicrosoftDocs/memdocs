@@ -2,7 +2,7 @@
 title: "Support for SQL Server | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,7 +20,6 @@ Each System Center Configuration Manager site requires a supported SQL Server ve
 
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
  **Central administration site and  Primary sites:**  
-
 The site database must use a full install of SQL Server.  
 
  The location of SQL Server can be on:  
@@ -40,22 +39,19 @@ The following instances are supported:
 
 
  **Secondary Sites:**  
+ The site database can use the default instance of a full install of SQL Server, or SQL Server Express.  
 
- The site database can use the default instance of a full install of SQL Server, or SQL Server Express  
-
- The location of SQL Server must be on the site server computer  
+ The location of SQL Server must be on the site server computer.  
 
 ##  <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server  
  In a hierarchy with multiple sites, different sites can use different versions of SQL Server to host the site database so long as the versions of SQL Server you use are supported by Configuration Manager.  
 
- The following versions of SQL Server are supported with System Center Configuration Manager version 1511 and later.  
+ Unless specified otherwise, the following versions of SQL Server are supported with System Center Configuration Manager version 1511 and later.  
 
 > [!IMPORTANT]  
 >  Use of SQL Server Standard for the database at the central administration site limits the total number of clients a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
 ### SQL Server 2016 SP1 - Standard, Enterprise  
-
-Supported for use with version 1606 and later.   
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -63,8 +59,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 -   Secondary site  
 
 ### SQL Server 2016 - Standard, Enterprise  
-
-Supported for use with version 1606 and later.   
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -73,8 +67,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 
 ### SQL Server 2014 SP2 - Standard, Enterprise  
-
-Supported for version 1511 and later.  
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -84,8 +76,6 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 
 ### SQL Server 2014 SP1 - Standard, Enterprise  
-
-Supported for version 1511 and later.  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -94,8 +84,6 @@ Supported for version 1511 and later.
 
 
 ### SQL Server 2012 SP3 - Standard, Enterprise  
-
-Supported for version 1511 and later.  
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -103,9 +91,7 @@ Supported for version 1511 and later.
 -   Secondary site  
 
 
-### SQL Server 2012 SP2 - Standard, Enterprise  
-
-Supported for version 1511 and later.  
+### SQL Server 2012 SP2 - Standard, Enterprise   
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -113,9 +99,7 @@ Supported for version 1511 and later.
 -   Secondary site  
 
 
-### SQL Server 2008 R2 SP3 - Standard, Enterprise, Datacenter  
-
-Supported for version 1511 and later.    
+### SQL Server 2008 R2 SP3 - Standard, Enterprise, Datacenter     
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Central administration site  
@@ -124,38 +108,32 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 
 
-### SQL Server 2016 Express SP1
-Supported for use with version 1606 and later  
+### SQL Server 2016 Express SP1  
 You can use this version of SQL Server with no minimum cumulative update version for the following:
 -   Secondary site
 
 ### SQL Server 2016 Express
-Supported for use with version 1606 and later.  
 You can use this version of SQL Server with no minimum cumulative update version for the following:
 -   Secondary site
 
 
-### SQL Server 2014 Express SP2  
-Supported for use with version 1511 and later.  
+### SQL Server 2014 Express SP2   
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Secondary site  
 
 
-### SQL Server 2014 Express SP1  
- Supported for use with version 1511 and later.   
+### SQL Server 2014 Express SP1   
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Secondary site  
 
 ### SQL Server 2012 Express SP3  
-Supported for use with version 1511 and later.   
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Secondary site  
 
-### SQL Server 2012 Express SP2  
- Supported for use with version 1511 and later.  
+### SQL Server 2012 Express SP2   
  You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   Secondary site  
@@ -195,13 +173,11 @@ You can use this version of SQL Server with no minimum cumulative update version
     -   Primary site: minimum of 8 gigabytes (GB)  
     -   Secondary site: minimum of 4 gigabytes (GB)  
 
- **SQL nested triggers:**  
-
+**SQL nested triggers:**  
  [SQL nested triggers](http://go.microsoft.com/fwlink/?LinkId=528802) must be enabled.  
 
  **SQL Server CLR integration**  
-
-  The site database requires SQL Server common language runtime (CLR) to be enabled. This is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)  
+  The site database requires SQL Server common language runtime (CLR) to be enabled. This is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx).  
 
 ##  <a name="bkmk_optional"></a> Optional configurations for SQL Server  
  The following configurations are optional for each database that uses a full SQL Server installation.  
