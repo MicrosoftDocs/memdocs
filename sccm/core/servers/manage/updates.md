@@ -29,6 +29,8 @@ System Center Configuration Manager uses an in-console service method called **U
 
 -   [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
+> [!TIP]  
+> If you use the Technical Preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) for additional information that is specific to that branch.
 
 ##  <a name="bkmk_Baselines"></a> Baseline and update versions  
  The initial release of System Center Configuration Manager current branch is version 1511. This is a baseline version:  

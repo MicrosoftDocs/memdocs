@@ -1,10 +1,10 @@
 ---
 title: "Set up Cloud Management Gateway | Microsoft Docs"
 description: ""
-author: mtillman
+author: nbigman
 manager: angrobe
-ms.author: mtillman
-ms.date: 10/06/2016
+ms.author: nbigman
+ms.date: 11/18/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -25,11 +25,13 @@ You can create a custom SSL certificate for cloud management gateway in the same
 
 -   When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 
+-  When requesting the custom web server certificate, provide an FQDN for the certificate's common name that ends in **cloudapp.net** for using cloud management gateway on Azure public cloud or **usgovcloudapp.net** for the Azure government cloud.
+
 ## Step 2: Export the client certificate's root
 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
-> \[!NOTE\] Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
+> [!NOTE] Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
 1.  In the Run window, type **mmc** and press Return.
 
@@ -68,7 +70,7 @@ An Azure management certificate is required for Configuration Manager to access 
 
 4. Fill out the additional details in the wizard:
 
-    - Specify the name for the service which will run in Azure.
+    - Specify the name for the service which will run in Azure. Service name must be alphanumeric characters only and 3-24 characters in length.
 
     - Choose the Azure region you want the service to run in.
 
@@ -81,9 +83,9 @@ An Azure management certificate is required for Configuration Manager to access 
 
     - Specify the root certificate exported from the client certificate.
 
-    -   Specify the same service name FQDN that you used when you created the new certificate template. You must use the following prefixes for the FQDN service name and the Azure platform you are using:
+    -   Specify the same service name FQDN that you used when you created the new certificate template. You must specify the one of the following suffixes for the FQDN service name based on the Azure cloud you are using:
 
-    Azure platform | FQDN prefix
+    Azure cloud | FQDN prefix
     --------------|-------------
     Public (commercial) cloud | .cloudapp.net    
     Government cloud | .usgovcloudapp.net
@@ -133,11 +135,11 @@ With the location of the cloud management gateway service configured on the clie
 >[!NOTE]
 > You can force the client to always use cloud management gateway regardless of whether it’s on the intranet or Internet. To do that, you set the following registry key on the client computer:\
 >
-> `HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\CCM\\Security, ClientAlwaysOnInternet = 1`
+> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
 
 To verify that clients can contact Configuration Manager, you can run the following PowerShell command on the client computer:
 
-`gwmi -namespace root\\ccm\\locationservices -class SMS\_ActiveMPCandidate`
+`gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate`
 
 This command displays the management points the client can contact including the cloud management gateway service.
 

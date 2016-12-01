@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

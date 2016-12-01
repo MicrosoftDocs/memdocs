@@ -1,13 +1,13 @@
 ---
 title: "Manage clients | Internet | Cloud Management Gateway | Microsoft Docs"
 description: ""
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 ---
 

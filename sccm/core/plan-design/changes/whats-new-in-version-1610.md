@@ -15,17 +15,20 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
 # What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
+Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
+
+
 > [!TIP]  
->  Learn more about:  
->   
->  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (using a baseline version like 1511)  
->  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (like update 1602 or 1606)  
+> To install a new site, you must use a baseline version of Configuration Manager.  
+>  Learn more about:    
+>  -   [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
+>  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+>  -   [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
 
 
-## In-console monitoring of update installation status
+## In-console monitoring of update installation status  
 Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates).
 
 
@@ -74,7 +77,7 @@ You can now provide a list of hardware IDs that Configuration Manager will ignor
 1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
 2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
 
-For details, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers).
+For details, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
 Changes in this release:
@@ -101,17 +104,20 @@ For details, see the **Windows Defender** section in [Create configuration items
 - Users can now request apps from Software Center, as well as the Application Catalog.
 - Improvements to help users understand what software is new and relevant.
 
+## New columns in device collection views
+You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
+For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
 ## Customizable Branding for Software Center Dialogs
 Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
 
 Custom branding for the Software Center is applied according to the following rules:
 
-1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
+1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../clients/deploy/configure-client-settings.md).
 
-2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#Application-Catalog-website-point).
+2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point).
 
-3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).
+3. If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
 
 
 ## Enforcement grace period for required application and software update deployments
@@ -140,8 +146,13 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 
 
 For more information:
-- [Settings to manage high-risk deployments](../../protect/understand/settings-to-manage-high-risk-deployments.md)
-- [How to configure client settings](../clients/deploy/configure-client-settings.md)
+- [Settings to manage high-risk deployments](../../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [How to configure client settings](../../clients/deploy/configure-client-settings.md)
+
+## Software updates dashboard
+You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+
+For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
 
 
 ## Improvements to the application request process
@@ -151,7 +162,7 @@ This action does not cause the application to be uninstalled from any devices. H
 ## Filter by content size in automatic deployment rules
 You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see:
 - [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
-- [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates.md)
+- [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 
 #### To configure the Content Size field
 To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizard when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
@@ -166,18 +177,26 @@ The dashboard displays charts for the following:
 - Office 365 client languages
 - Office 365 client channels     
 
-For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates.mdmanage-office-365-proplus-updates.md)
+For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates)
 
 ## Task sequence steps to manage BIOS to UEFI conversion
-You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
+You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
 
 ##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
-The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
 
-## Software updates dashboard
-You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
-For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates.md).
+
+## Intune compliance policy charts
+You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+
+
+## Lookout integration for Hybrid implementations to protect iOS and Android devices
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+
+End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
+
+
 
 ## New compliance settings for configuration items
 We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
@@ -201,8 +220,6 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow active scripting**
 
 #### App settings
-
-
 - **Allow Google Play store**
 
 #### Device capability settings
@@ -219,7 +236,6 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow copy and paste**
 
 ### New settings for iOS devices
-
 #### Password settings
 - **Number of complex characters required in password**
 - **Allow simple passwords**
@@ -260,8 +276,6 @@ For details, see [Configuration items for devices managed without the System Cen
 
 ### New settings for Windows 8.1 devices
 #### Applicability settings
-
-
 - **Apply all configurations to Windows 10**
 
 #### Password settings
@@ -276,14 +290,10 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Allow picture password and PIN**
 
 #### Browser settings
-
-
 - **Allow automatic detection of intranet network**
 
 ### New settings for Windows Phone 8.1 devices
 #### Applicability settings
-
-
 - **Apply all configurations to Windows 10**
 
 #### Password settings
@@ -292,16 +302,4 @@ For details, see [Configuration items for devices managed without the System Cen
 - **Remember password history**
 
 #### Device capability settings
-
-
 - **Allow automatic connection to free Wi-Fi hotspots**
-
-
-## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy.md#monitor-the-compliance-policy).
-
-
-## Lookout integration for Hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
-
-End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).

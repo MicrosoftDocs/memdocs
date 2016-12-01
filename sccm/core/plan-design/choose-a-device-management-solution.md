@@ -2,7 +2,7 @@
 title: "Choose a device management solution for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about the solutions that System Center Configuration Manager offers for managing PCs, servers, and devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,43 +13,44 @@ ms.topic: article
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Choose a device management solution for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager offers different solutions for managing PCs, servers, and devices. You can choose the solution that's right for you based on the device platforms you need to manage and the management functionality you need.  
+System Center Configuration Manager (also known as ConfgMgr or SCCM) offers different solutions for managing PCs, servers, and devices. You can choose the solution that's right for you based on the device platforms you need to manage and the management functionality you need.  
 
 
-##  <a name="bkmk_overview"></a> Overview of device management solutions  
- The following options are available to manage computers and  devices with Configuration Manager:  
+##  Overview of device management solutions  
+ This overview section is followed by two tables that compare the management solutions, one [based on supported mobile device platforms](#compare-device-management-solutions-based-on-supported-mobile-device-platforms), and [one based on management functionality](#compare-mobile-device-management-solutions-based-on-management-functionality).
+  
 
 -   **Managing devices with the Configuration Manager client**  
 
-     This option, which requires installation of the Configuration Manager client application on each device to be managed, provides the most features and functionality for managing PCs, servers, and other devices in your environment. This option is the traditional way Configuration Manager has provided device management over the history of the product.  
+     This option, which requires installation of the Configuration Manager client application on the devices, provides the most features and functionality for managing PCs, servers, and other devices in your environment.   
 
-     For more information about this solution, see [Client installation methods in System Center Configuration Manager ](/sccm/core/client/deploy/plan/client-installation-methods).  
+     For more information see [Client installation methods in System Center Configuration Manager ](/sccm/core/client/deploy/plan/client-installation-methods).  
 
 -   **Managing mobile devices with on-premises Configuration Manager infrastructure**  
 
-     This option uses the device management capabilities built into operating systems of certain device platforms. While not as full-featured as the client-based management, On\-premises Mobile Device Management provides a lighter touch approach to management that uses on-premises Configuration Manager resources to reach and manage devices. On\-premises Mobile Device Management is currently only supported for Windows 10 PCs and Windows 10 Mobile devices.  
+     This option uses the device management capabilities built into operating systems of some device platforms. While not as full-featured as the client-based management, On\-premises Mobile Device Management provides a lighter touch approach to management that uses on-premises Configuration Manager resources to reach and manage devices. On\-premises Mobile Device Management is currently supported only for Windows 10 PCs and Windows 10 Mobile devices.  
 
      For more information about this solution, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 -   **Managing mobile devices with Microsoft Intune (hybrid)**  
 
-     This option is referred to as hybrid mobile device management.  It uses Microsoft Intune to enroll and manage devices instead of using Configuration Manager on-premises resources. Even though Intune manages the devices, you to control management tasks in the Configuration Manager console. This option supports all major mobile device operating systems, including Windows 10 Mobile, Windows Phone, iOS, and Android. It also provides management for Windows 8.1 and Windows 10 computers in your organization.  
+     This option uses Microsoft Intune to enroll and manage devices instead of using Configuration Manager on-premises resources. Even though Intune manages the devices, you access your management tasks in the Configuration Manager console. This option supports all major mobile device operating systems, including Windows 10 Mobile, Windows Phone, iOS, and Android. It also provides management for Windows 8.1 and Windows 10 computers in your organization.  
 
-     For more information about this solution, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md).  
+     For more information about this solution, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md).  
 
 -   **Managing mobile devices with Exchange**  
 
-     This option, which uses the Exchange Server connector to connect to multiple Exchange servers to Configuration Manager, centralizes management of devices that can connect to Exchange ActiveSync. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
+     This option uses the Exchange Server connector to connect multiple Exchange servers to Configuration Manager, and centralizes management of devices that can connect to Exchange ActiveSync. You can configure Exchange mobile device management features, such as remote device wipe and settings control for multiple Exchange servers, from the Configuration Manager console.  
 
      For more information about this solution, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)  
 
- You can use these device management solutions by themselves are in combination with each other. For example, you can use the client-based management approach to cover managing the computers and servers in your organization and also use Intune-based management to cover mobile devices. By combining approaches in this way, you can cover all of your device management needs and control it all from the Configuration Manager console.  
+ You can use these device management solutions by themselves or in combination with each other. For example, you can use the client-based management approach to manage the computers and servers in your organization and also use Intune to manage mobile devices. By combining approaches this way, you can cover all of your device management needs  from the Configuration Manager console.  
 
-##  <a name="bkmk_comp1"></a> Compare device management solutions based on supported mobile device platforms  
+## Compare device management solutions based on supported mobile device platforms  
 
 |Platform|With the Configuration Manager client|Configuration Manager with Microsoft Intune (hybrid)|On\-premises Mobile Device Management|Configuration Manager with Exchange|  
 |--------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  

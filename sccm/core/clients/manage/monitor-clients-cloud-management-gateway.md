@@ -1,13 +1,13 @@
 ---
 title: "Monitor clients | cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 ---
 

@@ -219,7 +219,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
         > [!NOTE]  
         >  The actual installation deadline time is the specific time that you configure plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8.  On the User Experience page, configure the following settings:  
 

@@ -2,7 +2,7 @@
 title: "Set up Intune subscription  | Microsoft Docs | On-premises"
 description: "Set up an Intune subscription to track licensing for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,7 +29,7 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
  Intune is required to make On\-premises Mobile Device Management functional. Simply [sign up](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) for a trial or paid subscription and go to the next step to add the subscription to Configuration Manager.  
 
 ##  Add the Intune subscription to Configuration Manager  
- To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [To create the Microsoft Intune subscription](../deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).  
+ To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [To create the Microsoft Intune subscription](../deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 > [!NOTE]  
 >  When adding the Intune subscription, keep the following in mind:  

@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511 or 1602, you must first install the 1606 update before you can update to version 1610.
+When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610. 
 
 To get the update for version 1610, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in on-line or off-line mode. After your hierarchy downloads the update package from Microsoft, you will find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
@@ -33,24 +33,20 @@ For information about the versions of the Current Branch, see [Baseline and upda
 
 ## About installing update 1610
 
-**Sites:**
-
+**Sites:**  
 Update 1610 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site. After the update installs at the top-tier site, child sites have the following update behavior:
 
 -   Child primary sites install the update automatically after the central administration site completes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_ServiceWindow).
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site completes the update installation. Automatic update of secondary site servers is not supported.
 
-**Site system roles:**
+**Site system roles:**  
 When the site server installs the update, site system roles installed on the site server and those installed on remote computers automatically update. Therefore, before installing the update, make sure each site system server meets any new prerequisites for operation with the new update version.
 
-**Configuration Manager consoles:**
+**Configuration Manager consoles:**   
 The first time you use a Configuration Manager consoles after the update completes, you will be prompted to update that console. To do so you must run Configuration Manager Setup on the computer that hosts the console, and select the option to update the console. We recommend that you do not delay installing the update to the console.
 
-**Known issues for this update:**
-The following issues apply when you view the Update Pack Installation Status:
 
--   <None identified to docs team for this update>
 
 ## Checklist
 

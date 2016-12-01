@@ -31,7 +31,7 @@ Profiles must be deployed to one or more collections before they can be used.
 > -   [How to create certificate profiles in System Center Configuration Manager](create-certificate-profiles.md)    
 
 > [!IMPORTANT]  
->  When a Wi-Fi profile deployment is removed, the Wi-Fi profile is not removed from client devices. If you want to remove the profile from devices, you must manually remove it.
+>  When a VPN profile deployment is removed, it is not removed from client devices. If you want to remove the profile from devices, you must manually remove it.
 >   
 
 ## Deploying  profiles  

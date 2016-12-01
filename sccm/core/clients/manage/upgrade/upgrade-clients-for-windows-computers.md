@@ -2,7 +2,7 @@
 title: "Upgrade clients | Microsoft Docs | Windows "
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/10/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -29,7 +29,7 @@ You can upgrade the client on Windows computers using client installation method
 
  If you are interested in upgrading the client using a client installation methods, learn more about using those methods in [How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md).
 
- Beginning in version 1610, you can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exlude-clients-windows.md).  
+ Beginning in version 1610, you can exclude clients from being upgraded by specifying an exclusion group. For more information, see [How to exclude upgrading clients for Windows computers](exclude-clients-windows.md).  
 
 
 > [!TIP]  
