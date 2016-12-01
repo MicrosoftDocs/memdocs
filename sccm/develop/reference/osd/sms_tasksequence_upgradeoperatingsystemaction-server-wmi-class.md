@@ -92,14 +92,12 @@ Class SMS_TaskSequence_UpgradeOperatingSystemAction : SMS_TaskSequence_Action
 
  Qualifiers:  [ValueMap]  
 
- Specifies whether to dynamically update Windows Setup with Windows Update. Possible values are:  
+ Specifies whether to dynamically update Windows Setup with Windows Update.  
 
-||  
-|-|  
+|Possible values|  
+|----|  
 |Disable|  
-|UsingPolicy|  
 |OveridePolicy|  
-|PreDownload|  
 
  `Enabled`  
  Data type: `Boolean`  
