@@ -16,7 +16,7 @@ caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# How to revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Revise and supersede applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In this topic, you'll learn how to work with System Center Configuration Manager application versions and how to supersede applications with a new version.  
 
 ##  Application revisions  
@@ -52,10 +52,10 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 2.  In the **Delete Application Revision** dialog box, choose **Yes**.  
 
 > [!IMPORTANT]  
->  You can only delete the current application revision if the application is retired and contains no references.  
+>  You can only delete the current application revision if the application is retired and has no references.  
 
 ##  Application supersedence  
- Application management in Configuration Manager enables you to upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also configure whether to upgrade or uninstall the superseded application before the superseding application is installed.  
+ Application management in Configuration Manager lets you upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also decide whether to upgrade or uninstall the superseded application before the superseding application is installed.  
 
 > [!IMPORTANT]  
 >  When the option to uninstall the superseded deployment type is selected, a deployment type cannot be superseded by a deployment type that was deployed to a different collection type.  For example, a deployment type that was deployed to a device collection cannot be superseded by a deployment type that was deployed to a user collection if the option to uninstall the superseded deployment type is selected.  
@@ -68,7 +68,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 -   If you want to change to a different application (with a different application ID), check **Uninstall**. You need to remove the superseded version of the application.  
 
 ### Supersede dependent applications  
- In this example, **master application** refers to the app that you are deploying that contains the dependencies.  
+ In this example, **master application** refers to the app that you are deploying that has the dependencies.  
 
  You can create a supersedence relationship that updates the dependent application to a new version.  
 
@@ -78,13 +78,13 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 
  During new installations of the master application, the new dependent application is installed. Existing installations of the master application are updated with the new dependent application.  
 
- The end result is that all deployments of the master application will use the new dependent application.  
+ The end result is that all deployments of the master application use the new dependent application.  
 
 ### Further considerations  
 
 -   You can specify multiple supersedence relationships for dependent applications. The highest dependent application in the supersedence chain gets installed.  
 
--   Dependent applications must be deployed to the device where the master application is installed, or the dependent application won't get installed.  
+-   Dependent applications must be deployed to the device where the master application is installed or the dependent application won't get installed.  
 
 -   For new installations of the master application, when you have multiple dependencies, the dependency order determines which version of the dependent application gets installed.  
 
@@ -94,11 +94,11 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties** to open the application name **Properties** dialog box.  
 
-4.  On the **Supersedence** tab of the *<Application Name\>***Properties** dialog box, choose **Add**.  
+4.  On the **Supersedence** tab of the *<Application Name\>* **Properties** dialog box, choose **Add**.  
 
 5.  In the **Specify Supersedence Relationship** dialog box, click **Browse**.  
 
-6.  In the **Choose Application** dialog box, choose the application that you want to supersede and then choose **OK**.  
+6.  In the **Choose Application** dialog box, choose the application that you want to supersede, and then choose **OK**.  
 
 7.  In the **Specify Supersedence Relationship** dialog box, select the deployment type that replaces the deployment type of the superseded application.  
 
