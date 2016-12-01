@@ -1,7 +1,7 @@
 ---
 title: "SMS_TaskSequence_UpgradeOperatingSystemAction Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "12/01/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
