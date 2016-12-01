@@ -76,7 +76,29 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
 
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
 
-## More information
 
+## How to create an onboarding configuration file  
+
+1.  Logon to the [Windows Defender ATP online service](https://securitycenter.windows.com/)   
+
+2.  Click on the **Endpoint Management** menu item.  
+
+3.  Select **System Center Configuration Manager (current branch) version 1606** and click **Endpoint offboarding**.  
+
+4.  Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
+
+5.  In the Configuration Manager console, navigate **Assets and Compliance** > **Overview** > **Endpoint Protection** > **Windows Defender ATP Policies** and click **Create Windows Defender ATP Policy**. The Windows Defender ATP Policy Wizard opens.  
+
+6.  Type the **Name** and **Description** for the Windows Defender ATP policy and select **Offboarding**. Click **Next**.  
+
+7.  **Browse** to the Configuration file provided by your organization’s Windows Defender ATP cloud service tenant. Click **Next**.  
+
+8.  Review the summary and complete the wizard.  
+
+9.  You can now deploy the Windows Defender ATP policy to managed client computers by clicking **Deploy**.  
+
+> [!IMPORTANT]
+> The Windows Defender ATP configuration files contains sensitive information which should be kept secure.
+    
 [Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
 [Troubleshoot Windows Defender Advanced Threat Protection onboarding issues](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
