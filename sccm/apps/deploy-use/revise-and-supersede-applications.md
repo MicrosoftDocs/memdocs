@@ -63,7 +63,7 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 ### Decide whether to upgrade or replace an application  
  You specify whether to replace or upgrade an app in the **Specify Supersedence Relationship** dialog box of the application properties dialog box. The type of supersedence depends on whether you check the **Uninstall** option in this dialog box:  
 
--   If you want to update to a newer version of the same application (with the same application ID), do **not** check **Uninstall**.  
+-   If you want to update to a newer version of the same application (with the same application ID), **do not** check **Uninstall**.  
 
 -   If you want to change to a different application (with a different application ID), check **Uninstall**. You need to remove the superseded version of the application.  
 
@@ -117,6 +117,6 @@ In this topic, you'll learn how to work with System Center Configuration Manager
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties** to open the *<Application Name\>* **Properties** dialog box.  
 
-4.  On the **References** tab of the *<Application Name\>* **Properties** dialog box, select **Applications that supersede this application** from the **Relationship type** drop-down list.  
+4.  On the **References** tab of the *<Application Name\>* **Properties** dialog box, choose **Applications that supersede this application** from the **Relationship type** drop-down list.  
 
 5.  Review the list of applications that supersede the selected application, and then choose **OK** to close the *<Application Name\>* **Properties** dialog box.  
