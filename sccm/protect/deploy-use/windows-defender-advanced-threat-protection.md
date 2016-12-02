@@ -77,7 +77,7 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
         -   **Not onboarded** - Policy was applied but the agent has not reported policy onboard  
 
 
-## How to create an onboarding configuration file  
+## How to create and deploy an offboarding configuration file  
 
 1.  Logon to the [Windows Defender ATP online service](https://securitycenter.windows.com/)   
 
@@ -99,6 +99,6 @@ Windows Defender ATP is a service in the [Windows Security Center](https://secur
 
 > [!IMPORTANT]
 > The Windows Defender ATP configuration files contains sensitive information which should be kept secure.
-    
+
 [Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
 [Troubleshoot Windows Defender Advanced Threat Protection onboarding issues](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
