@@ -135,11 +135,11 @@ With the location of the cloud management gateway service configured on the clie
 >[!NOTE]
 > You can force the client to always use cloud management gateway regardless of whether it’s on the intranet or Internet. To do that, you set the following registry key on the client computer:\
 >
-> `HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\CCM\\Security, ClientAlwaysOnInternet = 1`
+> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
 
 To verify that clients can contact Configuration Manager, you can run the following PowerShell command on the client computer:
 
-`gwmi -namespace root\\ccm\\locationservices -class SMS\_ActiveMPCandidate`
+`gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate`
 
 This command displays the management points the client can contact including the cloud management gateway service.
 
