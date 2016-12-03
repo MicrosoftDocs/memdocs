@@ -18,7 +18,7 @@ manager: angrobe
 
 ---
 # Create and deploy an application with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-In this topic, you'll jump right in and create an application with System Center Configuration Manager. In this example, you'll create and deploy an application that contains a line-of-business app for Windows PCs called **Contoso.msi**, which must be installed on all PCs that are running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to help you manage applications effectively.  
+In this topic, you'll jump right in and create an application with System Center Configuration Manager. In this example, you'll create and deploy an application that contains a line-of-business app for Windows PCs called **Contoso.msi**, which must be installed on all PCs that are running Windows 10 in your company. Along the way, you'll learn about many of the things you can do to manage applications effectively.  
 
  This procedure is designed to give you an overview of how to create and deploy Configuration Manager applications. However, it does not cover all the configuration options, or how to create and deploy applications for other platforms.  
 
@@ -39,7 +39,7 @@ If you are already familiar with Configuration Manager applications, you can ski
 
 Make sure that you've reviewed the information in [Introduction to application management](/sccm/apps/understand/introduction-to-application-management) so that you have prepared your site to install applications and you understand the terminology that's used in this topic.  
 
- Also, make sured that the installation files for the **Contoso.msi** app are in an accessible location on your network.  
+ Also, make sure that the installation files for the **Contoso.msi** app are in an accessible location on your network.  
 
 ## Create the Configuration Manager application  
 
@@ -91,7 +91,7 @@ You'll see a dialog box like this one:
 ![App management app properties page](/sccm/apps/get-started/media/App-management-app-properties-page.png)  
 
 ## Add a requirement to the deployment type  
- Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements, or you can create your own. In this example, you add a requirement that the application will only get installed on PCs thate are running Windows 10.  
+ Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements, or you can create your own. In this example, you add a requirement that the application will only get installed on PCs that are running Windows 10.  
 
 1.  From the deployment type properties page you just opened, choose the **Requirements** tab.  
 
@@ -113,14 +113,14 @@ You'll see a dialog box like this one:
 
     ![App management requirements page](/sccm/apps/get-started/media/App-management-requirements-page.png)  
 
-4.  Choose **OK** to close each property page that you opened, and then return to the **Applications** list in the Configuration Manager console.  
+4.  Choose **OK** to close each property page that you opened. Then return to the **Applications** list in the Configuration Manager console.  
 
 > [!TIP]  
->  Requirements can help reduce the number of Configuration Manager collections you need. Because you just specified that the application can only get installed on PCs that are running Windows 10, you can later deploy this to a collection that contains PCs that run many different operating systems, and the application will only get installed on Windows 10 PCs.  
+>  Requirements can help reduce the number of Configuration Manager collections you need. Because you just specified that the application can only get installed on PCs that are running Windows 10, you can later deploy this to a collection that contains PCs that run many different operating systems. But the application will only get installed on Windows 10 PCs.  
 
 ## Add the application content to a distribution point  
 
-To successfully deploy the application to PCs, you next make sure that the application content is copied to a distribution point. PCs access the distribution point to install the application.  
+Next, to deploy the application to PCs, make sure that the application content is copied to a distribution point. PCs access the distribution point to install the application.  
 
 > [!TIP]  
 >  To find out more about distribution points and content management in Configuration Manager, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
