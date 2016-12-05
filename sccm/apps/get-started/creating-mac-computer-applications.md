@@ -20,7 +20,7 @@ manager: angrobe
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Mac computers.  
 
 > [!IMPORTANT]  
->  The procedures in this topic cover information about deploying applications to Mac computer on which you installed the Configuration Manager client. Mac computers that you enrolled with Microsoft Intune do not support application deployment.  
+>  The procedures in this topic cover information about deploying applications to the Mac computer on which you installed the Configuration Manager client. Mac computers that you enrolled with Microsoft Intune do not support application deployment.  
 
 ## General considerations  
  You can use System Center Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to those that are used to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
@@ -39,7 +39,7 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 -   Configuration Manager does not support global conditions when you create deployment types for Mac computers.  
 
-## Steps to Create and Deploy an Application  
+## Steps to create and deploy an application  
  The following table provides the steps, details, and more information for creating and deploying applications for Mac computers.  
 
 |Step|Details|  
@@ -202,7 +202,7 @@ Use the following procedure to help you create an application for Mac computers 
 
  For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).  
 
-###  Step 5: Monitor the Deployment of the Mac Application  
+###  Step 5: Monitor the deployment of the Mac application  
  You can use the same process to monitor application deployments to Mac computers as you would use for application deployments to Windows computers.  
 
  For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
