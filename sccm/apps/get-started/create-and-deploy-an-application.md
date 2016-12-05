@@ -68,7 +68,7 @@ Make sure that you've reviewed the information in [Introduction to application m
     > [!TIP]  
     >  Some of the fields on this page of the wizard might have been filled in automatically when you imported the application installation files.  
 
-     You'll end up with a screen that looks similar to the screenshot below:  
+     You'll end up with a screen that looks similar to the following screenshot:  
 
      ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
 
@@ -91,7 +91,7 @@ You'll see a dialog box like this one:
 ![App management app properties page](/sccm/apps/get-started/media/App-management-app-properties-page.png)  
 
 ## Add a requirement to the deployment type  
- Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements, or you can create your own. In this example, you add a requirement that the application will only get installed on PCs that are running Windows 10.  
+ Requirements specify conditions that must be met before an application is installed on a device.  You can choose from built-in requirements or you can create your own. In this example, you add a requirement that the application will only get installed on PCs that are running Windows 10.  
 
 1.  From the deployment type properties page you just opened, choose the **Requirements** tab.  
 
@@ -143,7 +143,7 @@ You can check that the application content was copied successfully to the distri
 
 ## Deploy the application  
 
-Next, deploy the application to a device collection in your hierarchy. For this example, you'll deploy the application to the **All Systems** device collection.  
+Next, deploy the application to a device collection in your hierarchy. In this example, you deploy the application to the **All Systems** device collection.  
 
 > [!TIP]  
 >  Remember that only Windows 10 computers will install the application because of the requirements that you selected earlier.  
@@ -188,7 +188,7 @@ Use the information in the following **Monitor the application** section to see 
 
     -   **Error**: An error occurred installing the application on the indicated PCs. Further information about the error is also displayed.  
 
-    -   **Requirements Not Met**: The application did not attempt to install on the indicated devices because they did not meet the requirements you configured (in this example, because they do not run on Windows 10).  
+    -   **Requirements Not Met**: No installation attempt was made on the indicated devices because they did not meet the requirements you configured (in this example, because they do not run on Windows 10).  
 
     -   **Unknown**: Configuration Manager was unable to report the status of the deployment. Check back again later.  
 
