@@ -26,7 +26,7 @@
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
 
-## [Wi-Fi Profiles](deploy-use/introduction-to-wifi-profiles.md)
+## [Wi-Fi Profiles](deploy-use/create-wifi-profiles.md)
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
 
 ## [Certificate profiles](deploy-use/introduction-to-certificate-profiles.md)

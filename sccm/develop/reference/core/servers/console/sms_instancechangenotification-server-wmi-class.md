@@ -46,10 +46,10 @@ Class SMS_InstanceChangeNotification : SMS_BaseClass
 
  Qualifiers: None  
 
- The action that caused the change notification. Possible values are:  
+ The action that caused the change notification.  
 
-||  
-|-|  
+|Possible values|  
+|----|  
 |Insert|  
 |Update|  
 |Delete|  
