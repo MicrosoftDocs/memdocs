@@ -48,7 +48,7 @@ Keep the following considerations in mind when you create and deploy application
 |**Step 2**: Create a Configuration Manager application that contains the Mac software|Use the **Create Application Wizard** to create an application for the Mac software.|  
 |**Step 3**: Create a deployment type for the Mac application|This step is required only if you did not automatically import this information from the application.|  
 |**Step 4**: Deploy the Mac application|Use the **Deploy Software Wizard** to deploy the application to Mac computers.|  
-|**Step 5**: Monitor the Deployment of the Mac Application|Monitor the success of application deployments to Mac computers.|  
+|**Step 5**: Monitor the deployment of the Mac Application|Monitor the success of application deployments to Mac computers.|  
 
 ## Supplemental procedures to create and deploy applications for Mac computers  
  Use the following procedures to create and deploy applications for Mac computers that are managed by Configuration Manager.  
@@ -74,7 +74,7 @@ After it gathers application information, the **CMAppUtil** then creates a file 
 
      **./CMAppUtil** *<properties\>*  
 
-     For example, say you want to convert the contents of an Apple disk image file named **MySoftware.dmg** that's stored in the user's desktop folder into a **cmmac** file in the same folder, and you also want to create **cmmac** files for all applications that are found in the disk image file. To do this, use the following command line:  
+     For example, say you want to convert the contents of an Apple disk image file named **MySoftware.dmg** that's stored in the user's desktop folder into a **cmmac** file in the same folder. You also want to create **cmmac** files for all applications that are found in the disk image file. To do this, use the following command line:  
 
      **./CMApputil –c /Users/** *<User Name\>* **/Desktop/MySoftware.dmg -o /Users/** *<User Name\>* **/Desktop -a**  
 
@@ -87,9 +87,9 @@ After it gathers application information, the **CMAppUtil** then creates a file 
     |--------------|----------------------|  
     |**-h**|Displays the available command-line properties.|  
     |**-r**|Outputs the **detection.xml** of the provided **.cmmac** file to **stdout**. The output contains the detection parameters and the version of **CMAppUtil** that was used to create the **.cmmac** file.|  
-    |**-c**|Specify the source file to be converted.|  
-    |**-o**|This property must be used in conjunction with the –c property to specify the output path.|  
-    |**-a**|Use this property in conjunction with the –c property and the disk image (**.dmg**) file to automatically create .cmmac files for all applications and packages that are found in the disk image file.|  
+    |**-c**|Specifies the source file to be converted.|  
+    |**-o**|Specifies the output path in conjunction with the –c property.|  
+    |**-a**|Automatically creates .cmmac files in conjunction with the –c property for all applications and packages in the disk image file.|  
     |**-s**|Skips generating the **detection.xml** if no detection parameters are found and forces the creation of the **.cmmac** file without the **detection.xml** file.|  
     |**-v**|Displays more detailed output from the **CMAppUtil** tool together with diagnostic information.|  
 
@@ -143,7 +143,7 @@ Use the following procedure to help you create an application for Mac computers 
 
 4.  On the **General** page of the **Create Deployment Type Wizard**, in the **Type** drop-down list, select **Mac OS X**.  
 
-5.  In the **Location** field, specify the UNC path in the form \\\\<server\>\\<share\>\\<filename\> to the application installation file (**.cmmac** file). Alternatively, choose **Browse** to browse and specify the installation file location.  
+5.  In the **Location** field, specify the UNC path in the form \\\\<server\>\\<share\>\\<filename\> to the application installation file (**.cmmac** file). Alternatively, choose **Browse** to browse to and specify the installation file location.  
 
     > [!NOTE]  
     >  You must have access to the UNC path that contains the application.  
@@ -170,7 +170,7 @@ Use the following procedure to help you create an application for Mac computers 
 
 13. From the **Condition** drop-down list, select the condition that you want to use to assess whether the Mac computer meets the installation requirements. The contents of this list varies depending on the category that you select.  
 
-14. From the **Operator** drop-down list, choose the operator to use to compare the selected condition to the specified value to assess whether the user or device meets in the installation requirement. The available operators vary depending on the selected condition.  
+14. From the **Operator** drop-down list, choose the operator to use to compare the selected condition to the specified value to assess whether the user or device meets the installation requirements. The available operators vary depending on the selected condition.  
 
 15. In the **Value** field, specify the values to use with the selected condition and operator to assess whether the user or device meets in the installation requirement. The available values vary depending on the condition and operator that you select.
 
