@@ -13,6 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 caps.latest.revision: 18
 author: robstackmsftms.author: robstackmanager: angrobe
+experimental: true
+experiment_id: "robstack-table-20161101"
 
 ---
 # Introduction to application management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
