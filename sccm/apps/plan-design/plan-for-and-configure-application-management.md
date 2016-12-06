@@ -2,7 +2,7 @@
 title: "Plan for and configure application management | Microsoft Docs"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -163,7 +163,17 @@ Use the information in this topic to help you implement the necessary dependenci
 
 5.  Click **OK** to close the **Default Client Settings** dialog box.  
 
- Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../core/clients/manage/manage-clients.md).  
+ Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../core/clients/manage/manage-clients.md). 
+
+#### How to customize Software Center branding
+
+Custom branding for the Software Center is applied according to the following rules:
+
+1. If the Application Catalog website point site server role is not installed, then Software Center will display the organization name specified in the **Computer Agent** client setting **Organization name** displayed in Software Center. For instructions, see [How to configure client settings](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/configure-client-settings).
+2. If the Application Catalog website point site server role is installed, then Software Center will display the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
+3. If a Microsoft Intune subscription is configured and connected to Configuration Manager, then Software Center will display the organization name, color and company logo specified in the Intune subscription properties. For more information, see [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription).
+	> [!IMPORTANT]  
+	>  Software Center branding is synchronized with the Intune service every 14 days therefore there might be a delay before changes you make in Intune are displayed in Configuration Manager.
 
 ###  Step 5: Verify that the Application Catalog is operational  
  Use the following procedures to verify that the Application Catalog is operational. You can access the Application Catalog directly from a browser or from Software Center.  
