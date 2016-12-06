@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,28 +21,40 @@ This topic describes features, products, and operating systems that are removed 
 
  This information is subject to change with future releases and might not include each deprecated feature, product, or operating system.  
 
-## Deprecated features, products, and operating systems  
- Microsoft products and operating systems that are listed as deprecated are either in extended support or have reached end of life. Microsoft products and operating systems that are listed as deprecated are still tested with current versions of  Configuration Manager until they are beyond their Microsoft support lifecycle.  For more information, see the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website.  
+## How to use this information  
+When a feature or operating system is first listed as deprecated, support for using it with Configuration Manager is scheduled to be removed in a future version of Configuration Manager. This information is provided to help assist you in planning for alternatives to using that feature or operating system.  When the first version of Configuration Manager releases in which that support is removed, the details in this topic will update to indicate that specific version.  
 
- **Deprecated features:**  
+When support is removed for a feature or operating system, the feature or operating system remains supported when you use a previous version of Configuration Manager so long as that version of Configuration Manager remains in support. However, when you use a version of Configuration Manager released after the date or version indicated, that version of Configuration Manager does not provide support.
+
+**For example:**
+If a feature was scheduled to have its support removed with the first update released after September 2016, this would mean support for that feature would no longer be included in update 1610, which released in October of 2016.
+-  With Update 1610, the feature would no longer be supported.
+-  This content would update to indicate support was removed with version 1610.
+However, if you continue to use an earlier version that supports the feature, like version 1602 or 1606, you can continue to use that feature until the version you use drops out of support.
+
+For more information, see:
+ - The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website
+ - [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)
+
+**Deprecated features:**  
 
 
 |**Feature**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
-|Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|√|  
-|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|√|
+|Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|Version 1511|  
+|Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|Version 1511|
 |Task Sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |11/18/2016|Support for these task sequences ends with the first update released after June 1st, 2017|  
 
  **Deprecated server operating systems:**  
 
- |**Operating systems**|**Deprecation first announced**|**Support removed**|  
+ |**Operating systems**|**Deprecation first announced**|**Support removed** |  
 |-|-|-|  
-|Windows Server 2008|7/10/2015|Support ends with the first update released after 12/31/2016  (See note 1)|  
-|Windows Server 2008 R2|7/10/2015|Support ends with the first update released after 12/31/2016  (See note 2)|  
+|Windows Server 2008|7/10/2015|Support ends with the first update released after 12/31/2016  *(See note 1)*|  
+|Windows Server 2008 R2|7/10/2015|Support ends with the first update released after 12/31/2016  *(See note 2)*|  
 
--   Note 1:   After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the distribution point site system role (including pull-distribution point) until deprecation of this support is announced or this operating system's extended support period expires.  
+-   *Note 1*:   After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the distribution point site system role (including pull-distribution point) until deprecation of this support is announced or this operating system's extended support period expires.  
 
--   Note 2:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multi-cast) until deprecation of this support is announced or this operating system's extended support period expires.  Beginning with version 1602, you can in-place upgrade the operating system of a site server from Windows Server 2008 R2 to Windows  Server 2012 R2.  
+-   *Note 2*:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multi-cast) until deprecation of this support is announced or this operating system's extended support period expires.  Beginning with version 1602, you can in-place upgrade the operating system of a site server from Windows Server 2008 R2 to Windows  Server 2012 R2.  
 
      For more information about in-place upgrade of a site servers operating system, see the [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS) section in [What's changed in System Center Configuration Manager](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
@@ -54,22 +66,22 @@ This topic describes features, products, and operating systems that are removed 
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
-|Windows XP|7/10/2015|√|  
+|Windows XP|7/10/2015|Version 1511|  
 |Windows XP Embedded|7/10/2015|Support ends with the first update released after 12/31/2016|  
-|Windows Server 2003|7/10/2015|√|  
-|Windows Server 2003 R2|7/10/2015|√|  
-|Windows Vista|7/10/2015|√|  
-|Mac OS X  10.6 - 10.8|7/10/2015|√|  
-|Windows Mobile 6.0 - 6.5|7/10/2015|√|  
-|Nokia Symbian Belle|7/10/2015|√|  
-|Windows CE 5.0 - 6.0|7/10/2015|√|  
+|Windows Server 2003|7/10/2015|Version 1511|  
+|Windows Server 2003 R2|7/10/2015|Version 1511|  
+|Windows Vista|7/10/2015|Version 1511|  
+|Mac OS X  10.6 - 10.8|7/10/2015|Version 1511|  
+|Windows Mobile 6.0 - 6.5|7/10/2015|Version 1511|  
+|Nokia Symbian Belle|7/10/2015|Version 1511|  
+|Windows CE 5.0 - 6.0|7/10/2015|Version 1511|  
 
 
  **Deprecated support for SQL Server versions as a site database:**  
 
 |**SQL Server versions**|**Deprecation first announced**|**Support removed**|   
 |-|-|-|  
-|SQL Server 2008|7/10/2015|√|  
+|SQL Server 2008|7/10/2015|Version 1511|  
 |SQL Server 2008 R2|7/10/2015|Support ends with the first update released after 12/31/2016|  
 
 ## Features removed in System Center Configuration Manager  
