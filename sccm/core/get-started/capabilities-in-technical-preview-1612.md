@@ -26,7 +26,6 @@ This article introduces the features that are available in the Technical Preview
 **The following are new features you can try out with this version.**  
 
 ## The Data Warehouse Service point
-
 Beginning with the Technical Preview version 1612, the Data Warehouse Service point enables you to store and report on long-term historical data for your Configuration Manager deployment. This is accomplished by automated synchronizations from the Configuration Manager site database to a data warehouse database. This information is then accessible from your Reporting services point.
 
 By default, when you install the new site system role, Configuration Manager creates the data warehouse database for you on a SQL Server instance that you specify. The data warehouse supports up to 2 TB of data, with timestamps for change tracking.  By default, the data that is synchronized from the site database includes the data groups for Global Data, Site Data, Global_Proxy, Cloud Data, and Database Views. You can also modify what is synchronized to include additional tables, or exclude specific tables from the default replication sets.
@@ -43,7 +42,6 @@ In addition to installing and configuring the data warehouse database, several n
 ### Data Warehouse Dataflow   
 ![Datawarehouse_flow](./media/datawarehouse.png)
 
-
 | Step         | Details  |
 |:------:|-----------|  
 | **1**  | 	The site server transfers and stores data in the site database.  |  
@@ -52,7 +50,6 @@ In addition to installing and configuring the data warehouse database, several n
 | **A** |  Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
 | **B** |  	Most reports are for current information, and these requests are run against the site database. |  
 | **C** | When a report requests historical data, by using one of the reports with a *Category* of **Data Warehouse**, the request is run against the Data Warehouse database.   |  
-
 
 ### Prerequisites for the Data Warehouse Service point and database
 - Your hierarchy must have a Reporting services point site system role installed.
@@ -138,3 +135,58 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:  
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
 - 	**Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
+
+
+## Content Library Cleanup Tool
+Beginning with Technical Preview version 1612, you can use a new command line tool (**ContentLibraryCleanup.exe**) to remove content that is no-longer associated with any package or application from a distribution point (orphaned content). This tool is called the content library cleanup tool.
+
+This tool only affects the content on the distribution point you specify when you run the tool and cannot remove content from the content library on the site server.
+
+After you install Technical Preview 1612, you can find **ContentLibraryCleanup.exe** in the *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* folder on the Technical Preview site server.
+
+The tool released with this Technical Preview is intended to replace older versions of similar tools released for past Configuration Manager products. Although this tool version will cease to function after March 1st, 2017, new versions will release with future Technical Previews until such time as this tool is released as part of the Current Branch, or a production ready out-of-band release.
+
+### Requirements  
+ - The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
+ - The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool does not function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
+
+### Modes of operation
+The tool can be run in two modes:
+  1.	**What-If mode**:   
+      When you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but does not actually delete any data.
+
+      - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user is not prompted to confirm each potential deletion.
+      - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.  
+      </br>
+
+    We recommend you run the tool in this mode and review the resulting log file before you run the tool with the /delete switch.  
+
+  2. **Delete mode**:
+    When you run the tool with the **/delete** switch, the tool runs in delete mode.
+
+     - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point’s content library.
+     - 	Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.  
+     </br>
+
+     We recommend you run the tool in What-If mode and review the resulting log file before you run the tool with the /delete switch.  
+
+When the content library cleanup tool runs in either mode, it automatically creates a log with a name that includes the mode the tool runs in, distribution point name, date, and time of operation. The log file automatically opens when the tool finishes. By default, this log is written to the users **temp** folder on the computer where you run the tool., However, you can use a command line switch to redirect the log file to another location, including a network share.   
+
+
+### Run the tool
+To run the tool, open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.  
+
+Next, enter a command line that includes the required command line switches, and optional switches you want to use.
+
+
+### Command line switches  
+The following command line switches can be used in any order.   
+
+|Switch|Details|
+|---------|-------|
+|**/delete**  |**Optional** </br> Use this switch when you want to delete content from the distribution point. You are prompted before content is deleted. </br></br> When this switch is not used, the tool logs results about what content would be deleted, but does not delete any content from the distribution point. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
+| **/q**       |**Optional** </br> Run the tool in quiet mode that suppresses all prompts (like prompts when you are deleting content), and do not automatically open the log file. </br></br> Example: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
+| **/dp &lt;distribution point FQDN>**  | **Required** </br> Specify the fully qualified domain name (FQDN) of the distribution point that you want to clean. </br></br> Example:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
+| **/ps &lt;primary site FQDN>**       | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the FQDN of the primary site the distribution point belongs to, or of the parent primary parent when the distribution point is at a secondary site. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/sc &lt;primary site code>**  | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the site code of the primary site that the distribution point belongs to, or of the parent primary site when the distribution point is at a secondary site.</br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
+| **/log <log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
