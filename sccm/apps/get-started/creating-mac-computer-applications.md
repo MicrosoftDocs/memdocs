@@ -23,7 +23,7 @@ Keep the following considerations in mind when you create and deploy application
 >  The procedures in this topic cover information about deploying applications to Mac computers on which you installed the Configuration Manager client. Mac computers that you enrolled with Microsoft Intune do not support application deployment.  
 
 ## General considerations  
- You can use System Center Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to the steps that are used to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
+ You can use System Center Configuration Manager to deploy applications to Mac computers that run the Configuration Manager Mac client. The steps to deploy software to Mac computers are similar to the steps to deploy software to Windows computers. However, before you create and deploy applications for Mac computers that are managed by Configuration Manager, consider the following:  
 
 -   Before you can deploy Mac application packages to Mac computers, you must use the **CMAppUtil** tool on a Mac computer to convert these applications into a format that can be read by Configuration Manager.  
 
@@ -185,7 +185,7 @@ Use the following procedure to help you create an application for Mac computers 
 20. If you started this wizard from the **Create Application Wizard**, you will return to the **Deployment Types** page.  
 
 ###  Deploy the Mac application  
- The steps to deploy an application to Mac computers are the same as the steps that are used to deploy an application to Windows computers, except for the following differences:  
+ The steps to deploy an application to Mac computers are the same as the steps to deploy an application to Windows computers, except for the following differences:  
 
 -   The deployment of applications to users is not supported.  
 
