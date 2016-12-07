@@ -2,7 +2,7 @@
 title: Manage Windows as a service | Microsoft Docs
 description: "Features in System Center Configuration Manager help you view the state of Windows as a Service in your environment so that you can keep it updated."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -125,14 +125,15 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     -   **Specify the Windows readiness state to which this servicing plan should apply**: Select one of the following:  
 
-        -   **Release Ready (Current Branch)**:  
+        -   **Release Ready (Current Branch)**: In the CB servicing model, feature updates are available as soon as Microsoft releases them.
 
-        -   **Business Ready (Current Branch for Business**:  
+        -   **Business Ready (Current Branch for Business**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
 
-    -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**:  
+    -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the number of days that you configure for this setting.
 
     -   Prior to Configuration Manager version 1602, click **Preview** to view the Windows 10 updates associated with the readiness state.  
 
+    For more information, see [Servicing branches](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches).
 7.  Beginning in Configuration Manager version 1602, on the Upgrades page, configure the search criteria to filter the upgrades that will be added to the service plan. Only upgrades that meet the specified criteria will be added to the associated deployment.  
 
      Click **Preview** to view the upgrades that meet the specified criteria.  
@@ -211,7 +212,12 @@ Servicing plans use only the **Upgrades** software updates classification, not c
  After you have completed the wizard, the servicing plan will run. It will add the updates that meet the specified criteria to a software update group, download the updates to the content library on the site server, distribute the updates to the configured distribution points, and then deploy the software update group to clients in the target collection.  
 
 ##  <a name="BKMK_ModifyServicingPlan"></a> Modify a servicing plan  
- After you create a basic servicing plan from the Windows 10 servicing dashboard or  you need to change the settings for an existing servicing plan, you can go to properties for the servicing plan. Use the following procedure to modify the properties of a servicing plan.  
+After you create a basic servicing plan from the Windows 10 servicing dashboard or you need to change the settings for an existing servicing plan, you can go to properties for the servicing plan.
+
+> [!NOTE]
+> You can configure settings in the properties for the servicing plan that are not available in the wizard when you create the servicing plan. The wizard uses default settings for the settings for the following: download settings, deployment settings, and alerts.  
+
+Use the following procedure to modify the properties of a servicing plan.  
 
 #### To modify the properties of a servicing plan  
 
@@ -219,4 +225,29 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
 2.  In the Software Library workspace, expand **Windows 10 Servicing**,  click **Servicing Plans**, and then select the servicing plan that you want to modify.  
 
-3.  On the **Home** tab, click **Properties** to open properties for the selected servicing plan.  
+3.  On the **Home** tab, click **Properties** to open properties for the selected servicing plan.
+
+    The following settings are available in the servicing plan properties that were not configured in the wizard:
+
+    - Deployment Settings
+    On the Deployment Settings tab, configure the following settings:  
+
+        -   **Type of deployment**: Specify the deployment type for the software update deployment. Select **Required** to create a mandatory software update deployment in which the software updates are automatically installed on clients before a configured installation deadline. Select **Available** to create an optional software update deployment that is available for users to install from Software Center.  
+
+            > [!IMPORTANT]  
+            >  After you create the software update deployment, you cannot later change the type of deployment.  
+
+            > [!NOTE]  
+            >  A software update group deployed as **Required** will be downloaded in background and honor  BITS settings, if configured.  
+            > However, software update groups deployed as **Available** will be downloaded in the foreground and will ignore BITS settings.  
+
+        -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time will be awakened  so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled and is available only when **Type of deployment** is set to **Required**.  
+
+            > [!WARNING]  
+            >  Before you can use this option, computers and networks must be configured for Wake On LAN.  
+
+        -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
+
+    - Download Settings
+
+    - Alerts

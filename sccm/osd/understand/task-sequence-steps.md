@@ -2,7 +2,7 @@
 title: Task sequence steps | Microsoft Docs
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 11/10/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -618,7 +618,7 @@ This task sequence step runs only in Windows PE. It does not run in a standard o
 
 -   To dynamically download an applicable driver package, use two **Download Package Content** steps with conditions to detect the appropriate hardware type for each driver package. Configure each **Download Package Content** step to use the same variable, and use the variable for the **Staged content** value in drivers section on the **Upgrade Operating System** step.  
 
-This step runs in either a standard operating system or Windows PE. However, the option to save the package in the Configuration Manager client cache is not supported in WinPE. 
+This step runs in either a standard operating system or Windows PE. However, the option to save the package in the Configuration Manager client cache is not supported in WinPE.
 
 ### Details  
  On the **Properties** tab for this step, you can configure the settings described in this section.  
