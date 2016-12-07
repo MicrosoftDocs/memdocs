@@ -48,7 +48,7 @@ Keep the following considerations in mind when you create and deploy application
 |**Step 2**: Create a Configuration Manager application that contains the Mac software|Use the **Create Application Wizard** to create an application for the Mac software.|  
 |**Step 3**: Create a deployment type for the Mac application|This step is required only if you did not automatically import this information from the application.|  
 |**Step 4**: Deploy the Mac application|Use the **Deploy Software Wizard** to deploy the application to Mac computers.|  
-|**Step 5**: Monitor the deployment of the Mac Application|Monitor the success of application deployments to Mac computers.|  
+|**Step 5**: Monitor the deployment of the Mac application|Monitor the success of application deployments to Mac computers.|  
 
 ## Supplemental procedures to create and deploy applications for Mac computers  
  Use the following procedures to create and deploy applications for Mac computers that are managed by Configuration Manager.  
