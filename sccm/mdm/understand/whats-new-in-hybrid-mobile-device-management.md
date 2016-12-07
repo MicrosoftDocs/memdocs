@@ -27,6 +27,37 @@ This article provides details on the new mobile device management (MDM) features
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+## New hybrid features in December 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in Decmember 2016 work in hybrid deployments:
+
+- **Multi-Factor authentication (MFA) on enrollment is moving to the Azure portal**
+
+  Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. With this updated feature, you now login to the [Microsoft Azure portal] (https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad).
+
+- **Company Portal app for Android now available in China**
+
+  The Company Portal app for Android is now available in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android is available for download on the following stores:
+
+  -	[Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  -	[Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  -	[Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  -	[Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  -	[Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+
+  The Company Portal app for Android uses Google Play Services to communicate with the Microsoft Intune service. Since Google Play Services are not yet available in China, performing any of the following tasks can take up to 8 hours to complete.
+
+  | Configuration Manager Admin Console | Intune Company Portal app for Android | Intune Company Portal Website |
+  |----|----|----|		
+  | Retire/wipe (remove all data)	| Remove a remote device | Remove device (local and remote) |
+  | Retire/wipe (remove company data)	| Reset device | Reset device|
+  | New or updated app deployments | Install available line-of-business apps | Device passcode reset|
+  | Remote lock	| | |
+  | Passcode reset | | |		
+
+
 ## New hybrid features in November 2016
 
 ### New in Microsoft Intune
