@@ -4,7 +4,7 @@ title: Plan for software updates | Microsoft Docs
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -25,8 +25,16 @@ Before you use software updates in a System Center Configuration Manager product
 
 -   The software update point can support up to 25,000 clients when WSUS runs on the software update point computer and the software update point co-exists with another site system role.  
 
--   The software update point can support up to 150,000 clients when the remote computer meets the WSUS requirements to support this number of clients.   
-    By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
+-   The software update point can support up to 150,000 clients when the remote computer meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following:
+
+    IIS Application Pools:
+    - Increase the WsusPool Queue Length to 2000
+    - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited)      
+
+    For details about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
+
+-   By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
+
 
 ### Capacity planning for software updates objects  
  Use the following capacity information to plan for software updates objects.  
