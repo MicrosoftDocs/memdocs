@@ -4,7 +4,7 @@ description: "The System Center Configuration Manager console provides alerts an
 keywords:
 author: dougebyms.author: dougeby
 manager: angrobe
-ms.date: 11/07/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
