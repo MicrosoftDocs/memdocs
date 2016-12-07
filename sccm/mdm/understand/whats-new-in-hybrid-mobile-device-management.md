@@ -37,7 +37,7 @@ The following Intune features introduced in Decmember 2016 work in hybrid deploy
 
   Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. With this updated feature, you now login to the [Microsoft Azure portal] (https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad).
 
-  - **Company Portal app for Android now available in China**
+- **Company Portal app for Android now available in China**
 
   The Company Portal app for Android is now available in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android is available for download on the following stores:
 
