@@ -2,7 +2,7 @@
 title: "PKI certificate requirements | Microsoft Docs"
 description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
