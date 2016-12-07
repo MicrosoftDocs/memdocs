@@ -58,6 +58,23 @@ An Azure management certificate is required for Configuration Manager to access 
 >[!IMPORTANT]
 >Make sure to copy the subscription ID associated with the management certificate. You will need it for configuring cloud management gateway in the Configuration Manager console in the [next step](#step-4-set-up-cloud-management-gateway).
 
+### Subordinate CA certificates and Azure
+
+If your certificate is issued by a subordinate CA (subCA), and your enterprise PKI infrastructure is not on the Internet, use this procedure to upload the certificate to Azure.
+
+1. In your Azure portal, after setting up a cloud management gateway, locate the cloud management gateway service and go to the **Certificate" tab. Upload your subCA certificate(s) there. 
+2. Once the certificate is uploaded, record its thumbprint. 
+3. Add the thumbprint to site database using WMI:
+    
+	1. Run wbemtest as an administrator.
+	1. Connect to namespace root\sms\site_sitecode, and run the query "Select *" from SMS_AzureService. You should see the instance of your CMG in the results.
+	2. Edit the property SubCACertThumbprint, set the value not=null, then add the thumbprint in the value textbox.
+	3. Save the property and save the object. 
+
+
+You should see the thumbprint appear in the site database (Azure_Service table). If you have more than one subCA cert, you need to upload all of them and add their thumbprints in the same property separated by semicolons. Up to four subCA certs are supported.
+
+
 ## Step 4: Set up cloud management gateway
 
 >[!NOTE]
