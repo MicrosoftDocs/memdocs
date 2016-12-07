@@ -3,7 +3,7 @@ title: Automatically deploy software updates | Microsoft Docs
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 11/10/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -148,6 +148,8 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
         > [!NOTE]  
         >  When you deploy a software update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
+
+    - **Software updates deployment re-evaluation behavior upon restart**: Starting in Configuration Manager version 1606, select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window.
 
 9. On the Alerts page, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment.  
 

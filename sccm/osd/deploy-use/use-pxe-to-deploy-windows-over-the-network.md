@@ -2,7 +2,7 @@
 title: Use PXE to deploy Windows over the network | Microsoft Docs
 description: "Use PXE-initiated operating system deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -89,6 +89,8 @@ You can customize the RamDisk TFTP block size, and beginning in Configuration Ma
 ##  How is the boot image selected for clients booting with PXE?
 When a client boots with PXE, Configuration Manager provides the client with a boot image to use. Starting in Configuration Manager version 1606, Configuration Manager uses a boot image with an exact architecture match if one is available. If a boot image with the exact architecture is not available, Configuration Manager uses a boot image with a compatible architecture. The following list provides details about how a boot image is selected for clients booting with PXE.
 1. Configuration Manager looks in the site database for the system record that matches the MAC address or SMBIOS of the client that is trying to boot.
+    > [!NOTE]
+    > If a computer that is assigned to a site boots to PXE for a differenet site, the policies are not visible for the computer. For example, if a client is already assigned to site A, the management point and distribution point on site B will not be able to access the policies from site A and the client will not successfully PXE boot.
 2. Configuration Manager looks for task sequences that are deployed to the system record found in step 1.
 3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that is trying to boot. If a boot image is found with the same architecture, that boot image is used.
 
