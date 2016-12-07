@@ -25,7 +25,7 @@ Before you use software updates in a System Center Configuration Manager product
 
 -   The software update point can support up to 25,000 clients when WSUS runs on the software update point computer and the software update point co-exists with another site system role.  
 
--   The software update point can support up to 150,000 clients when the remote computer meets WSUS requirements and is used with Configuration Manager, and you configure the following:
+-   The software update point can support up to 150,000 clients when the remote computer meets WSUS requirements, WSUS is used with Configuration Manager, and you configure the following:
 
     IIS Application Pools:
     - Increase the WsusPool Queue Length to 2000
