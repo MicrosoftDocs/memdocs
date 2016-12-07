@@ -75,7 +75,7 @@ This topic can help you determine the site system roles that you need to deploy 
 
 ##  Determine Whether You Require a Cloud Management Gateway Connector point 
 
-You need a cloud management gateway connector point if you are setting up a [cloud management gateway](sccm/core/clients/manage/setup-cloud-management-gateway) to [manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
+You need a cloud management gateway connector point if you are setting up a [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway) to [manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
 
 
  
