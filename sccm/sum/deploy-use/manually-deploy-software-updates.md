@@ -243,7 +243,7 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 
 9. On the Alerts page, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure alerts only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 10. On the Download Settings page, configure the following settings:  
