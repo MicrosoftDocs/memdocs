@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library"
+title: "System Center Configuration Manager privacy statement - Configuration Manager Cmdlet Library | Microsoft Docs"
 description: "Learn about how Microsoft collects and uses data related to the System Center Configuration Manager Cmdlet Library."
 ms.custom: na
 ms.date: 10/06/2016
@@ -40,25 +40,4 @@ This Usage Data feature is enabled by default. The System Center Configuration M
 
  Changes to the Usage Data settings are specific to the computer where they are made.  
 
- For more information about how to configure Usage Data (collection), see the [System Center Configuration Manager Cmdlet Library documentation](https://technet.microsoft.com/en-us/library/dn958404.aspx).  
-
-## Update Check  
- **What This Feature Does:**   
-The System Center Configuration Manager Cmdlet Library automatically checks for library updates on a daily basis, and notifies you to download the updated library.  
-
- **Information Collected, Processed, or Transmitted:**   
-The Cmdlet Library update check will download a small text file from the Microsoft Download Center to do a version check.   This file is not stored locally.  The Cmdlet Library will not automatically upgrade the software.  
-
- **Use of Information:**   
-We use this information to improve the quality, security and integrity of the products and services we offer.  
-
- **Choice/Control:**   
-The Update Check is enabled by default.  The System Center Configuration Manager Cmdlet Library includes these cmdlets to control the update notification functionality:  
-
--   `Get-CMCmdletUpdateCheck` gets the update feature configuration and will indicate if user policy is being overridden by system policy.  
-
--   `Send-CMCmdletUpdateCheck` lets you perform an unscheduled update check. An unscheduled check does not consider policy settings.  
-
--   `Set-CMCmdletUpdateCheck` configures the update check settings on a per-user or per-system basis. You must be running as an administrator to set system settings.  
-
- You can find more information about to configure the update check in the [System Center Configuration Manager Cmdlet Library documentation](https://technet.microsoft.com/en-us/library/dn958404.aspx).  
+ For more information about how to configure Usage Data (collection), see the [System Center Configuration Manager Cmdlet Library documentation](https://technet.microsoft.com/en-us/library/dn958404.aspx).   

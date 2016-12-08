@@ -1,5 +1,5 @@
 ---
-title: "Backup and recovery | System Center Configuration Manager"
+title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -105,9 +105,9 @@ Use the following sections to help you create your Configuration Manager backup 
     -   **Local drives on site server and SQL Server**: Specifies that the backup files for the site are stored in the specified path on the local drive of the site server, and the backup files for the site database are stored in the specified path on the local drive of the site database server. You must create the local folders before the backup task runs. The computer account of the site server must have **Write** NTFS permissions to the folder that you create on the site server. The computer account of the SQL Server must have **Write** NTFS permissions to the folder that you create on the site database server. This option is available only when the site database is not installed on the site server.  
 
     > [!NOTE]  
-    >	 - The option to browse to the backup destination is only available when you specify the UNC path of the backup destination.
+    >	- The option to browse to the backup destination is only available when you specify the UNC path of the backup destination.
 
-    >- The folder name or share name that is used for the backup destination does not support the use of Unicode characters.  
+    > - The folder name or share name that is used for the backup destination does not support the use of Unicode characters.  
 
 
 6.  Configure a schedule for the site backup task. As a best practice, consider a backup schedule that is outside active working hours. If you have a hierarchy, consider a schedule that runs at least two times a week to ensure maximum data retention in the event of site failure.  
@@ -181,7 +181,7 @@ Use the following sections to help you create your Configuration Manager backup 
  Verify that you include both the content library and package source locations in your file system backup for the site server.  
 
 #### Back up custom software updates  
-     System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
 
  Use the following procedure to back up the Updates Publisher database.  
 
@@ -197,7 +197,7 @@ Use the following sections to help you create your Configuration Manager backup 
 ### User state migration data  
  You can use Configuration Manager task sequences to capture and restore the user state data in operating system deployment scenarios where you want to retain the user state of the current operating system. The folders that store the user state data are listed in the properties for the state migration point. This user state migration data is not backed up as part of the Site Server Backup maintenance task. As part of your backup plan, you must manually back up the folders that you specify to store the user state migration data.   
 
-##### To determine the folders used to store user state migration data  
+#### To determine the folders used to store user state migration data  
 
 1.  In the Configuration Manager console, click **Administration**.  
 
@@ -375,7 +375,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Recovers a central administration site  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Key name:** ServerRecoveryOptions  
 
@@ -445,7 +445,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Specifies the path to the site database backup set. The **BackupLocation** key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
- **Options**  
+**Options**  
 
 -   **Key name:** ProductID  
 
@@ -540,7 +540,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Key name:** SQLServerName  
 
@@ -588,7 +588,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Recovers a primary site  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **Key name:** ServerRecoveryOptions  
 
@@ -644,7 +644,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Specifies the path to the site database backup set. The **BackupLocation** key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
- **Options**  
+**Options**  
 
 -   **Key name:** ProductID  
 
@@ -739,7 +739,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **Key name:** SQLServerName  
 
@@ -774,7 +774,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.  
 
- **Hierarchy ExpansionOption**  
+**Hierarchy ExpansionOption**  
 
 -   **Key name:** CCARSiteServer  
 
@@ -830,7 +830,7 @@ Use the following sections to help you create your Configuration Manager backup 
  After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, let's say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
 
 #### Recreate the Microsoft Intune subscription  
- If you recover a Configuration Manager site server after the site server computer is  re-imaged, the Microsoft Intune subscription is not restored. You must recreate the subscription after you recover the site. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub).  
+ If you recover a Configuration Manager site server after the site server computer is  re-imaged, the Microsoft Intune subscription is not restored. You must recreate the subscription after you recover the site. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 #### Configure SSL for site system roles that use IIS  
  When you recover site systems that run IIS and that were configured for HTTPS before the failure, you must reconfigure IIS to use the web server certificate.  

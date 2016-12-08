@@ -1,5 +1,5 @@
 ---
-title: "Plan site system roles | System Center Configuration Manager"
+title: "Plan site system roles | Microsoft Docs"
 description: "Consider site system servers and site system roles as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 10/06/2016
@@ -63,6 +63,8 @@ After a site installs, you can move the  location of some site system roles from
 -   **Certificate registration point** - A site system role that communicates with a server that runs the Network Device Enrollment Service to manage device certificate requests that use the Simple Certificate Enrollment Protocol (SCEP).  This role is supported only at primary sites and the central administration site.   Although a single certificate registration point can provide functionality to an entire hierarchy, to help load balance certificate requests you can install multiple instances of this role at a site, and at multiple sites in the same hierarchy. When multiple instances exist in a hierarchy, clients are randomly assigned to one of the certificate registration points.  
 
      Each certificate registration point requires access to a separate instance of a Network Device Enrollment Service. You cannot configure two or more certificate registration points to use the same Network Device Enrollment Service. Additionally, the certificate registration point must not be installed on the same server that runs the Network Device Enrollment Service.  
+
+- **Cloud management gateway connector point** - A site system role for communicating with the [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway). 
 
 -   **Distribution point** - A site system role that contains source files for clients to download, such as application content, software packages, software updates, operating system images, and boot images. By default, this role installs on the site server computer of new primary and secondary sites when the site installs, but is not supported at a central administration site.  You can install multiple instances of this role at a supported site, and at multiple sites in the same hierarchy.  For more information, see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md), and [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 

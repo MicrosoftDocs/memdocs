@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1)"
+title: "MICROSOFT SQL SERVER COMPACT 4.0 SERVICE PACK 1 (SP1) | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,8 +8,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: configmgr-other
-ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
+ms.technology:
+ - configmgr-other
+ ms.assetid: 980133ce-cf9d-46e8-a119-b8b960b2e25e
 caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow

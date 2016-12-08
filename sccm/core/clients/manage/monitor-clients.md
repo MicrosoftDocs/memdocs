@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients | System Center Configuration Manager"
+title: "Monitor clients | Microsoft Docs"
 description: "Get detailed guidance on how to monitor clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to monitor clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

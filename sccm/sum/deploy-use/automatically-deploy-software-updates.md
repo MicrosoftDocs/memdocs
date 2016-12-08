@@ -1,9 +1,9 @@
 ---
-title: Automatically deploy software updates | Configuration Manager
+title: Automatically deploy software updates | Microsoft Docs
 description: "Automatically deploy software updates by adding new updates to an update group that's associated with an active deployment or by using ADRs."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -85,7 +85,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms, such as a service pack. When you automatically deploy software updates, the license terms are not displayed and there is not an option to accept the license terms. You can choose to automatically deploy all software updates regardless of an associated license terms or only deploy software updates that do not have associated license terms.  
 
-        > [!WARNING]  
+        > [!NOTE]  
         >  To review the license terms for a software update, you can select the software update in the **All Software Updates** node of the **Software Library** workspace, and then on the **Home** tab, in the **Update** group, click **Review License**.  
         >   
         >  To find software updates with associated license terms, you can add the **License Terms** column to the results pane in the **All Software Updates** node, and then click the heading for the column to sort by the software updates with license terms.  
@@ -94,6 +94,9 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
     > [!IMPORTANT]  
     >  The limit for software updates in the ADR is 1000 software updates. To ensure that the criteria that you specify on this page retrieves less than 1000 software updates, consider setting the same criteria on the **All Software Updates** node in the **Software Library** workspace.  
+
+    > [!NOTE]
+    > Starting in Configuration Manager version 1610, you can filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
 
 6.  On the Evaluation Schedule page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
 
@@ -128,7 +131,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8. On the User Experience page, configure the following settings:  
 
@@ -146,9 +149,11 @@ You can automatically approve and deploy software updates by using an ADR. You c
         > [!NOTE]  
         >  When you deploy a software update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
 
+    - **Software updates deployment re-evaluation behavior upon restart**: Starting in Configuration Manager version 1606, select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window.
+
 9. On the Alerts page, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 10. On the Download Settings page, configure the following settings:  
@@ -200,7 +205,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
 
 15. On the Summary page, review the settings. To save the settings to a deployment template, click **Save As Template**, enter a name and select the settings that you want to include in the template, and then click **Save**. To change a configured setting, click the associated wizard page and change the setting.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  The template name can consist of alphanumeric ASCII characters as well as **\\** (backslash) or **‘** (single quotation mark).  
 
 16. Click **Next** to create the ADR.  
@@ -260,7 +265,7 @@ You can automatically approve and deploy software updates by using an ADR. You c
         > [!NOTE]  
         >  The actual installation deadline time is the displayed deadline time plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 6.  On the User Experience page, configure the following settings:  
 

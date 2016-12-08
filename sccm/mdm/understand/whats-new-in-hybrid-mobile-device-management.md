@@ -1,8 +1,8 @@
 ---
-title: "What's new hybrid MDM | Microsoft Intune | System Center Configuration Manager"
+title: "What's new hybrid MDM  | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -21,9 +21,95 @@ This article provides details on the new mobile device management (MDM) features
 
  Each section of this article lists hybrid features under 3 different categories. Use the following guidance to determine compatibility of the features in each category  with different versions of Configuration Manager:  
 
-|Feature categories|
-|-|  
-|**New in Microsoft Intune** - In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.<br /><br /> **New in Configuration Manager Technical Preview** - All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).<br /><br /> **New in Configuration Manager (current branch)** - All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|  
+|Feature categories|Description|
+|-|-|
+|**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.|
+|**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
+|**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## New hybrid features in December 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in Decmember 2016 work in hybrid deployments:
+
+- **Multi-Factor authentication (MFA) on enrollment is moving to the Azure portal**
+
+  Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. With this updated feature, you now login to the [Microsoft Azure portal] (https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune] (https://aka.ms/mfa_ad).
+
+- **Company Portal app for Android now available in China**
+
+  The Company Portal app for Android is now available in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android is available for download on the following stores:
+
+  -	[Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  -	[Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  -	[Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  -	[Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+  -	[Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+
+  The Company Portal app for Android uses Google Play Services to communicate with the Microsoft Intune service. Since Google Play Services are not yet available in China, performing any of the following tasks can take up to 8 hours to complete.
+
+  | Configuration Manager Admin Console | Intune Company Portal app for Android | Intune Company Portal Website |
+  |----|----|----|		
+  | Retire/wipe (remove all data)	| Remove a remote device | Remove device (local and remote) |
+  | Retire/wipe (remove company data)	| Reset device | Reset device|
+  | New or updated app deployments | Install available line-of-business apps | Device passcode reset|
+  | Remote lock	| | |
+  | Passcode reset | | |		
+
+
+## New hybrid features in November 2016
+
+### New in Microsoft Intune
+
+The following Intune features introduced in November 2016 work in hybrid deployments:
+
+- **New Microsoft Intune Company Portal available for Windows 10 devices**
+
+  Microsoft has released a new [Company Portal app for Windows 10 devices](https://www.microsoft.com/store/apps/9wzdncrfj3pz). This app, which leverages the new Windows 10 Universal format, provides an updated user experience that is identical across all Windows 10 devices, PC and Mobile alike, while still enabling all the same functionality provided by previous Company Portal apps.
+
+  The new app leverages platform features like single sign-on (SSO) and certificate-based authentication on Windows 10 devices. The app is available as an upgrade to the existing Windows 8.1 Company Portal and Windows Phone 8.1 Company Portal installs from the Windows Store. For more details, go to the [Intune Support Team Blog](http://aka.ms/intunecp_universalapp).
+
+  The new Company Portal app also displays any Windows Store for Business applications marked **Available** in the Configuration Manager console.
+
+
+### New in Configuration Manager (current branch)
+
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1610.
+
+* [Additional settings and improved experience for Configuration items](/sccm/core/plan-design/changes/whats-new-in-version-1610?branch=sccm-1610-release#new-compliance-settings-for-configuration-items)
+* [Additional settings for DEP profiles](#new-in-configuration-manager-technical-preview-1609)
+* [Paid apps in Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Native connection types for Windows 10 VPN profiles](#new-in-configuration-manager-technical-preview-1609)
+* [Intune compliance charts](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
+* [Request to policy sync from console](/sccm/mdm/deploy-use/sync-intune-device)
+* [Windows Defender configuration settings](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
+
+The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
+
+- **Increased number of enrolled devices**
+
+  You can now enable users to enroll up to 15 devices. The previous limit was 5 devices per user.
+
+
+- **Addtional security support**
+
+  In addition to Full Administrator, the following built-in security roles now have full access to items in the All Corporate-owned Devices node, including Predeclared Devices, iOS Enrollment Profiles, and Windows Enrollment Profiles:
+
+    - Asset Manager
+    - Company Resource Access Manager
+
+  Read-only access to these areas of the Configuration Manager console is still granted to the Read-only Analyst role.
+
+- **Auto-trigger VPN access from Windows Information Protection apps**
+
+  You can add a Windows Information Protection primary domain to Windows 10 VPN profiles that causes all associated apps to automatically trigger a VPN connection when they are run on the device. This option is only available when choosing a native connection type.
+
+- **Conditional access for Windows 10 VPN profiles**
+
+    You can now require Windows 10 devices enrolled in Azure Active Directory to be compliant in order to have VPN access through Windows 10 VPN profiles created in the Configuration Manager console. This is possible through the new **Enable conditional access for this VPN connection** checkbox on the Authentication Method page in the VPN profile wizard and VPN profile properties for Windows 10 VPN profiles. This option is only available when choosing a native connection type.
+
+    You can also specify a separate certificate for single sign-on authentication if you enable conditional access for the profile.
 
 ## New hybrid features in October 2016
 

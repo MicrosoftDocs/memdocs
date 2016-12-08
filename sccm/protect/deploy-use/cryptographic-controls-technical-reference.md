@@ -1,5 +1,5 @@
 ---
-title: "Cryptographic controls technical reference | System Center Configuration Manager"
+title: "Cryptographic controls technical reference | Microsoft Docs"
 description: "Learn about how signing and encryption can help protect attacks from reading data in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -272,4 +272,3 @@ System Center Configuration Manager uses signing and encryption to help protect 
 
 ##  About SSL vulnerabilities  
  We recommend the disabling of SSL 3.0, the enabling of TLS 1.1, and 1.2, and the reordering of TLS-related cipher suites, to improve the security of your Configuration Manager servers. You can learn how to take these actions in [this KB article](https://support.microsoft.com/en-us/kb/245030/). This action will not affect Configuration Manager functionality.  
-

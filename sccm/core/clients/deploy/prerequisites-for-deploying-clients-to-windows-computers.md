@@ -1,5 +1,5 @@
 ---
-title: "Windows client deployment prerequisites | System Center Configuration Manager"
+title: "Windows client deployment prerequisites | Microsoft Docs"
 description: "Learn the prerequisites for deploying clients to Windows computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Prerequisites for deploying clients to Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -49,7 +49,7 @@ Deploying Configuration Manager clients in your environment has the following ex
 |Microsoft Core XML Services (MSXML) version 6.20.5002 or later|Required to support the processing of XML documents in Windows.|  
 |Microsoft Remote Differential Compression (RDC)|Required to optimize data transmission over the network.|  
 |Microsoft Visual C++ 2013 Redistributable version 12.0.21005.1|Required to support client operations. When this update is installed on client computers, a restart might be required to complete the installation.|  
-|Microsoft Visual C++ 2005 Redistributable version 8.0.50727.42|Required to support Microsoft SQL Server Compact operations.|  
+|Microsoft Visual C++ 2005 Redistributable version 8.0.50727.42|For version 1606 and earlier, required to support Microsoft SQL Server Compact operations.|  
 |Windows Imaging APIs 6.0.6001.18000|Required to allow Configuration Manager to manage Windows image (.wim) files.|  
 |Microsoft Policy Platform 1.2.3514.0|Required to allow clients to evaluate compliance settings.|  
 |Microsoft Silverlight 5.1.41212.0 (beginning in Configuration Manager version 1602)|Required to support the Application Catalog website user experience.|  

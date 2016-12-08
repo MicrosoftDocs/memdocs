@@ -1,8 +1,8 @@
 ---
-title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager"
+title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager  | Microsoft Docs"
 description: "Follow these steps in System Center Configuration Manager to install an operating system on a new computer by using PXE, OEM, or stand-alone media."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,7 +24,7 @@ This topic provides the general steps in System Center Configuration Manager to 
 
 -   **Plan for and implement  infrastructure requirements**  
 
-     There are several infrastructure requirements that must be in place before you can deploy operating systems, such as Windows ADK, Windows Deployment Services (WDS), supported hard disk configurations, etc. For more information, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)  
+     There are several infrastructure requirements that must be in place before you can deploy operating systems, such as Windows ADK, Windows Deployment Services (WDS), supported hard disk configurations, etc. For more information, see [Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md).
 
 ##  <a name="BKMK_Configure"></a> Configure  
 

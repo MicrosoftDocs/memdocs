@@ -1,5 +1,5 @@
 ---
-title: "Upgrade clients | System Center Configuration Manager"
+title: "Upgrade clients | Microsoft Docs"
 description: "Get information about how to upgrade clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 caps.latest.revision: 8
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Upgrade clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

@@ -1,5 +1,5 @@
 ---
-title: "Client deployment best practices | System Center Configuration Manager"
+title: "Client deployment best practices | Microsoft Docs"
 description: "Get best practices for client deployment in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Best practices for client deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

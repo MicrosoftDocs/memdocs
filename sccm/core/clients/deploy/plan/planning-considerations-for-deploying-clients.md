@@ -1,5 +1,5 @@
 ---
-title: "Client deployment planning | System Center Configuration Manager"
+title: "Client deployment planning | Microsoft Docs"
 description: "Plan to deploy clients and prepare the infrastructure in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 caps.latest.revision: 3
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Planning considerations for deploying clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

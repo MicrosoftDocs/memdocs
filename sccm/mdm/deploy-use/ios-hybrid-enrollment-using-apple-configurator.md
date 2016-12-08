@@ -1,5 +1,5 @@
 ---
-title: "iOS hybrid enrollment using Apple Configurator with Configuration Manager"
+title: "iOS hybrid enrollment using Apple Configurator with Configuration Manager | Microsoft Docs"
 descriptions: "Pre-enroll iOS devices by using Apple Configurator with Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 caps.latest.revision: 5
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

@@ -1,8 +1,8 @@
 ---
-title: "Support for Virtualization | System Center Configuration Manager"
+title: "Support for Virtualization | Microsoft Docs"
 description: "Get requirements for installing System Center Configuration Manager client and site system roles in a virtualization environment."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -49,6 +49,8 @@ No special consideration is given to virtual machines. For example, Configuratio
 -   **Scenario 3:** You can run different Configuration Manager site system roles in Microsoft Azure virtual machines while running other roles in your physical corporate network (with appropriate network connectivity for communications).  
 
 The same System Center Configuration Manager requirements for networks, supported configurations and hardware requirements that apply to installing Configuration Manager on-premises in your physical corporate network also apply to installation in Microsoft Azure.  
+
+For more information, see [Configuration Manager on Azure - Frequently Asked Questions](/sccm/core/understand/configuration-manager-on-azure).
 
 > [!IMPORTANT]  
 >  Configuration Manager sites and clients that run in Azure virtual machines are subject to the same license requirements as on-premises installations.  

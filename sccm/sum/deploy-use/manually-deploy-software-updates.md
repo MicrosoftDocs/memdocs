@@ -1,10 +1,10 @@
 ---
 
-title: Manually deploy software updates | Configuration Manager
+title: Manually deploy software updates | Microsoft Docs
 description: "To deploy updates manually, select updates from the Configuration Manager console and manually deploy them, or add updates to an update group and deploy the group."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -219,29 +219,31 @@ ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
         > [!NOTE]  
         >  The actual installation deadline time is the specific time that you configure plus a random amount of time up to 2 hours. This reduces the potential impact of all client computers in the destination collection installing the software updates in the deployment at the same time.  
         >   
-        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent).  
+        >  You can configure the **Computer Agent** client setting, **Disable deadline randomization** to disable the installation randomization delay for the required software updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 8.  On the User Experience page, configure the following settings:  
 
     -   **User notifications**: Specify whether to display notification of the software updates in Software Center on the client computer at the configured **Software available time** and whether to display user notifications on the client computers. When **Type of deployment** is set to **Available** on the Deployment Settings page, you cannot select **Hide in Software Center and all notifications**.  
 
-    -   **Deadline behavior**: Specify the behavior that is to occur when the deadline is reached for the software update deployment. Specify whether to install the software updates in the deployment. Also specify whether to perform a system restart after software update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Deadline behavior**: *Available only when **Type of deployment** *is set to **Required** *on the Deployment Settings page.*   
+    Specify the behavior that is to occur when the deadline is reached for the software update deployment. Specify whether to install the software updates in the deployment. Also specify whether to perform a system restart after software update installation regardless of a configured maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
-    -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations after software updates are installed and a system restart is required to complete the installation.  
+    -   **Device restart behavior**: *Available only when **Type of deployment** *is set to **Required** *on the Deployment Settings page.*    
+    Specify whether to suppress a system restart on servers and workstations after software updates are installed and a system restart is required to complete the installation.  
 
         > [!IMPORTANT]  
-        >  Suppressing system restarts can be useful in server environments or for cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation. .  
+        >  Suppressing system restarts can be useful in server environments or for cases in which you do not want the computers that are installing the software updates to restart by default. However, doing so can leave computers in an insecure state, whereas allowing a forced restart helps to ensure immediate completion of the software update installation.
 
     -   **Write filter handling for Windows Embedded devices**: When you deploy software updates to Windows Embedded devices that are write filter enabled, you can specify to install the software update on the temporary overlay and either commit changes later or commit the changes at the installation deadline or during a maintenance window. When you commit changes at the installation deadline or during a maintenance window, a restart is required and the changes persist on the device.  
 
         > [!NOTE]  
         >  When you deploy a software update to a Windows Embedded device, make sure that the device is a member of a collection that has a configured maintenance window.  
 
-     You can configure the **Deadline behavior** and **Device restart behavior** settings only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
+    - **Software updates deployment re-evaluation behavior upon restart**: Starting in Configuration Manager version 1606, select this setting to configure software updates deployments to have clients run a software updates compliance scan immediately after a client installs software updates and restarts. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window.
 
 9. On the Alerts page, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure alerts only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
 
 10. On the Download Settings page, configure the following settings:  

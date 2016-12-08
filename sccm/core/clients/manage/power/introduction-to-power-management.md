@@ -1,5 +1,5 @@
 ---
-title: "Introduction to power management | System Center Configuration Manager"
+title: "Introduction to power management | Microsoft Docs"
 description: "Get an introduction to power management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

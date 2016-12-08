@@ -1,5 +1,5 @@
 ---
-title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune"
+title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up Windows device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 caps.latest.revision: 9
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune

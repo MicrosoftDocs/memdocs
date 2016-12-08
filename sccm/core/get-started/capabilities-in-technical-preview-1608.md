@@ -1,5 +1,5 @@
 ---
-title: "Capabilities in Technical Preview 1608 for System Center Configuration Manager"
+title: "Capabilities in Technical Preview 1608 for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1608."
 ms.custom: na
 ms.date: 10/06/2016

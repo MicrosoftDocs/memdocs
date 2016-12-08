@@ -1,5 +1,5 @@
 ---
-title: "Service connection point | System Center Configuration Manager"
+title: "Service connection point | Microsoft Docs"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
 ms.date: 10/06/2016
@@ -19,7 +19,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # About the service connection point in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 The System Center Configuration Manager service connection point is a site system role that serves several important functions for the hierarchy. Before configuring the service connection point, understand and plan for its range of uses which might affect how you configure this site system role:  
 
--   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector  used by previous versions of Configuration Manager, and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/plan-design/hybrid-mobile-device-management.md)  
+-   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector  used by previous versions of Configuration Manager, and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md)  
 
 -   **Manage mobile devices with on-premises MDM** - This role provides support for on-premises devices you manage that do not connect to the Internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)  
 
@@ -65,9 +65,11 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 
 **When the role installs on a computer that is remote from the site server:**  
 
+-   The computer account of the site server must be a local admin on the computer that hosts a remote service connection
+
 -   You must configure the site system server that hosts the role with a Site System Installation Account  
 
--   The Site System Installation Account is used by the distribution manager on the site server to transfer updates from the service connection point.  
+-   The Site System Installation Account is used by the distribution manager on the site server to transfer updates from the service connection point
 
 ##  <a name="bkmk_urls"></a> Internet access requirements  
 To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to access these locations.  

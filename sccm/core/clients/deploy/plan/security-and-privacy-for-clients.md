@@ -1,5 +1,5 @@
 ---
-title: "Client security and privacy | System Center Configuration Manager"
+title: "Client security and privacy | Microsoft Docs"
 description: "Learn about security and privacy for clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Security and privacy for clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

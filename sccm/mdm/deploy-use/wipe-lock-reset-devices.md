@@ -1,5 +1,5 @@
 ---
-title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager"
+title: "Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager | Microsoft Docs"
 description: "Protect device data with full wipe, selective wipe, remote lock, or passcode reset using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarnms.author: nathbarn
+author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Protect data with remote wipe, lock, or passcode reset using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -235,4 +235,4 @@ Configuration Manager provides selective wipe, full wipe, remote lock, and passc
 
 ## See Also  
  [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)   
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md)

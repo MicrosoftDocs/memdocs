@@ -1,5 +1,5 @@
 ---
-title: "Set up iOS and Mac hybrid device management with System Center Configuration Manager and Microsoft Intune"
+title: "Set up iOS and Mac hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up iOS device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*

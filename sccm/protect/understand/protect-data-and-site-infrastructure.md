@@ -1,8 +1,8 @@
 ---
-title: "Protect data and site infrastructure | System Center Configuration Manager"
+title: "Protect data and site infrastructure | Microsoft Docs"
 description: "Learn how protect your organization's resources from exposure or malicious attack with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,7 +17,7 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # Protect data and site infrastructure with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack. The information in these topics describes how to enable that access and how to help protect your organization's resources.  
+You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack. The information in these topics describes how to use System Center Configuration Manager (also known as ConfigMgr or SCCM) to enable that access and how to help protect your organization's resources.  
 
 -   You can minimize your users' efforts to connect to corporate resources by enabling VPN connectivity using VPN profiles. Learn more in [VPN profiles in System Center Configuration Manager](../deploy-use/vpn-profiles.md).  
 

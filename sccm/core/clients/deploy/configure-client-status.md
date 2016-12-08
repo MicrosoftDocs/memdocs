@@ -1,5 +1,5 @@
 ---
-title: "Configure client status | System Center Configuration Manager"
+title: "Configure client status | Microsoft Docs"
 description: "Select client status settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to configure client status in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

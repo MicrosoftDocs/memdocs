@@ -1,5 +1,5 @@
 ---
-title: "Asset Intelligence security privacy | System Center Configuration Manager"
+title: "Asset Intelligence security privacy | Microsoft Docs"
 description: "Get security and privacy information for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

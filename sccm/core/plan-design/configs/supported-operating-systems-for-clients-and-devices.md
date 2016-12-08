@@ -1,5 +1,5 @@
 ---
-title: "Supported clients and devices | System Center Configuration Manager"
+title: "Supported clients and devices | Microsoft Docs"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: 5
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 ---
 # Supported operating systems for clients and devices for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 

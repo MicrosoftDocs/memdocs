@@ -1,5 +1,5 @@
 ---
-title: Setup hybrid MDM | System Center Configuration Manager and Microsoft Intune
+title: Setup hybrid MDM  | Microsoft Docs
 description: "Set up hybrid device enrollment with Configuration Manager and Intune."
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
 
@@ -169,6 +169,7 @@ When you have created your subscription, you can then install the service connec
   - [Windows enrollment setup](#windows-enrollment-setup): Configure DNS and enable enrollment for both Windows PCs, Windows 10 Mobile, and Windows Phone devices
   - Android: Android devices require no additional steps to enable enrollment
 
+Once you enable MDM management, you can specify the number of devices each user can enroll, up to 15 devices per user.
 
 ### iOS and Mac enrollment setup
   The following steps enable management for Apple devices by uploading an Apple MDM Push certificate to the Intune service.

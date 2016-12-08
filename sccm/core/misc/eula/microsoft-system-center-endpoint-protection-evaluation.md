@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION"
+title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION EVALUATION | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,7 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: configmgr-other
+ms.technology:
+ - configmgr-other
 ms.assetid: 906806fe-6d7b-4536-95fd-829290367c5c
 caps.latest.revision: 5
 author: Brendunsms.author: brendunsmanager: angrobe

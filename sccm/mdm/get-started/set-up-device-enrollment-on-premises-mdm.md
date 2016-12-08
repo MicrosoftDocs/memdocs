@@ -1,5 +1,5 @@
 ---
-title: "Set up device enrollment | On-premises MDM | System Center Configuration Manager"
+title: "Set up device enrollment  | Microsoft Docs | On-premises MDM"
 description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

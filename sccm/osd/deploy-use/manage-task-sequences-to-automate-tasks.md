@@ -1,5 +1,5 @@
 ---
-title: Manage task sequences to automate tasks | Configuration Manager
+title: Manage task sequences to automate tasks | Microsoft Docs
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
 ms.date: 10/06/2016
@@ -227,6 +227,8 @@ Use task sequences to automate steps in your System Center Configuration Manager
  Consider the following when you export and import task sequences.  
 
 -   Passwords that are stored in the task sequence are not exported. If you export and import a task sequence that contains passwords, you must edit the imported task sequence and specify any passwords again. Ensure that you specify passwords for [Join Domain or Workgroup](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup), [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder), and [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) actions.  
+
+- When you export a task sequence with the **Set Dynanmic Variables** step, no values are exported for variables that are configured with the **Secret value** setting. You must reenter the values for these variables after you import the task sequence.
 
 -   As a best practice, when you have multiple primary sites, import task sequences at the central administration site.  
 

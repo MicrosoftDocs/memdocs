@@ -1,5 +1,5 @@
 ---
-title: "Configure Wake on LAN | System Center Configuration Manager"
+title: "Configure Wake on LAN | Microsoft Docs"
 description: "Select Wake On LAN settings in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 ---
 # How to configure Wake on LAN in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Specify Wake on LAN settings for System Center Configuration Manager when you want to bring computers out of a sleep state to install required software, such as software updates, applications, task sequences, and programs.
@@ -38,7 +38,7 @@ A computer that receives the wake-up proxy client settings will likely pause its
 1. In the Configuration Manager console, go to **Administration > Client Settings**.
 2. Click **Default Client Settings**, and then click **Properties**.
 3. Select **Power Management** and then choose **Yes** for **Enable wake-up proxy**.
-4. Review and if necessary, configure the other wake-up proxy settings. For more information on these settings see [Power management settings](../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings).
+4. Review and if necessary, configure the other wake-up proxy settings. For more information on these settings see [Power management settings](../../../core/clients/deploy/about-client-settings.md#power-management).
 5. Click **OK** to close the dialog box, and then click **OK** to close the Default Client Settings dialog box.
 
 You can use the following Wake On LAN reports to monitor the installation and configuration of wake-up proxy:

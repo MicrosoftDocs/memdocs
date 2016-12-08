@@ -1,5 +1,5 @@
 ---
-title: "Migration checklists | System Center Configuration Manager"
+title: "Migration checklists | Microsoft Docs"
 description: "Use administrator checklists to help you plan a migration strategy to System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -138,7 +138,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     For example, when you migrate content, regardless of the migration job you use, you must assign a site in the destination hierarchy to own management of that content. The assigned site will access the original source file location for the content and is responsible for distributing that content to distribution points in the destination hierarchy.  
 
-    For more information, see the [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#create_edit_migration_jobs) section in the [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) topic.  
+    For more information, see the [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) section in the [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) topic.  
 
 -   **Migrate clients to the destination hierarchy:**  
 
@@ -158,7 +158,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     You can also upgrade a distribution point that is co-located on a Configuration Manager 2007 secondary site server. This removes the secondary site and results in only a distribution point in the destination hierarchy.  
 
-    For information about shared distribution points, see the [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#about_shared_dps_in_migrations) section in the [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) topic.  
+    For information about shared distribution points, see the [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) section in the [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) topic.  
 
 -   **Complete migration:**  
 

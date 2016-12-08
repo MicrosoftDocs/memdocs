@@ -1,5 +1,5 @@
 ---
-title: "Enroll company-owned devices for hybrid deployments with Configuration Manager"
+title: "Enroll company-owned devices for hybrid deployments with Configuration Manager | Microsoft Docs"
 description: "Learn about different methods to enroll company-owned devices for hybrid deployments with Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: 13
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Enroll company-owned devices for hybrid deployments with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

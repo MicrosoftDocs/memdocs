@@ -1,5 +1,5 @@
 ---
-title: "Third Party Notices"
+title: "Third Party Notices | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,7 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
-ms.technology: configmgr-other
+ms.technology: 
+ - configmgr-other
 ms.assetid: a784d39d-ab55-439e-a147-e764bd17fa61
 caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
@@ -90,7 +91,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 
 6.  Redistributions of any form whatsoever must retain the following acknowledgment:    "This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)"  
 
-THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT \``AS IS'' AND ANY  
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT \''AS IS'' AND ANY  
  EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE  
  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR  
  PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE OpenSSL PROJECT OR  
@@ -152,7 +153,7 @@ are met:
 4.  If you include any Windows specific code (or a derivative thereof) from    the apps directory (application code) you must include an acknowledgement:  
     "This product includes software written by Tim Hudson (tjh@cryptsoft.com  
 
-THIS SOFTWARE IS PROVIDED BY ERIC YOUNG \``AS IS'' AND  
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG \''AS IS'' AND  
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE  
 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE  
 ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE  
@@ -192,7 +193,7 @@ are met:
        notice, this list of conditions and the following disclaimer in the  
        documentation and/or other materials provided with the distribution.  
 
-HIS SOFTWARE IS PROVIDED BY Andy Polyakov \``AS IS'' AND ANY EXPRESS OR  
+HIS SOFTWARE IS PROVIDED BY Andy Polyakov \''AS IS'' AND ANY EXPRESS OR  
 IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  
 OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  
 IN NO EVENT SHALL NTT BE LIABLE FOR ANY DIRECT, INDIRECT,  
@@ -227,7 +228,7 @@ This software contains material from FreeBSD's cd.c. (http://www.freebsd.org/).
 
 -   The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission.  
 
-THIS SOFTWARE IS PROVIDED BY THE AUTHOR \``AS IS'' AND ANY EXPRESS OR  
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR \''AS IS'' AND ANY EXPRESS OR  
 IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  
 OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  
 IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,  
@@ -434,6 +435,7 @@ you may not use this file except in compliance with the License.
 You may obtain a copy of the License at  
 
  http://www.apache.org/licenses/LICENSE-2.0   
+
 Unless required by applicable law or agreed to in writing, software  
 distributed under the License is distributed on an "AS IS" BASIS,  
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
@@ -441,3 +443,83 @@ See the License for the specific language governing permissions and
 limitations under the License.  
 
  **END OF Active Directory Authentication Library (ADAL) for .NET NOTICES AND INFORMATION**
+
+
+## WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Copyright 2016 Microsoft. All rights reserved.  
+
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at  
+
+ http://www.apache.org/licenses/LICENSE-2.0  
+
+Unless required by applicable law or agreed to in writing, software  
+ distributed under the License is distributed on an "AS-IS" BASIS,  
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+ See the License for the specific language governing permissions and  
+ limitations under the License.  
+
+  **END OF WINDOWSAZURE.CONFIGURATIONMANAGER v. 2.0.3 NOTICES AND INFORMATION**  
+
+
+## Microsoft Azure Monitoring Services 4.1.0
+
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Copyright 2016 Microsoft. All rights reserved.  
+
+Licensed under the Apache License, Version 2.0 (the "License");  
+  you may not use this file except in compliance with the License.  
+  You may obtain a copy of the License at  
+
+http://www.apache.org/licenses/LICENSE-2.0  
+
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS-IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.  
+
+  **END OF Microsoft Azure Monitoring Services 4.1.0 NOTICES AND INFORMATION**
+
+## Microsoft Azure Common Library 2.1.0
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Copyright 2016 Microsoft. All rights reserved.  
+
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at  
+
+http://www.apache.org/licenses/LICENSE-2.0  
+
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS-IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.  
+
+**END OF Microsoft Azure Common Library 2.1.0 NOTICES AND INFORMATION**
+
+
+## Common Library for Hyak Code Generator 1.0.1
+**NOTICES AND INFORMATION BEGIN HERE**  
+
+Copyright 2016 Microsoft. All rights reserved.  
+
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at  
+       
+http://www.apache.org/licenses/LICENSE-2.0  
+
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS-IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.  
+
+**END OF Common Library for Hyak Code Generator 1.0.1 NOTICES AND INFORMATION**

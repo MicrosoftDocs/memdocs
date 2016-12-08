@@ -1,5 +1,5 @@
 ---
-title: "Terms and Conditions in System Center Configuration Manager"
+title: "Terms and Conditions in System Center Configuration Manager | Microsoft Docs"
 description: "Deploy terms and conditions to user groups in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Terms and Conditions in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

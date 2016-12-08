@@ -1,8 +1,8 @@
 ---
-title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | System Center Configuration Manager"
+title: "How to create configuration items for Windows 10 devices managed with the System Center Configuration Manager Client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Windows 10 configuration item to manage settings for Windows 10 computers that are managed by the Configuration Manager client."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -116,7 +116,7 @@ Use the System Center Configuration Manager **Windows 10** configuration item to
 |**Virus protection**|Requires that antivirus software must be installed and configured.|  
 |**Virus protection signatures are up to date**|Requires that the signature files for the antivirus software on the device must be up to date.|  
 
-### Windows Information Protection (formerly Enterprise Data Protection)
+### Windows Information Protection
 
 With the increase of employee-owned devices in the enterprise, there's also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud, which are outside of the enterprise's control. For example, when an employee sends the latest engineering pictures from their personal email account, copies and pastes product info into a tweet, or saves an in-progress sales report to their public cloud storage.
 

@@ -1,5 +1,5 @@
 ---
-title: "Blocking clients | System Center Configuration Manager"
+title: "Blocking clients | Microsoft Docs"
 description: "Block client access for system security by using System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Determine whether to block clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

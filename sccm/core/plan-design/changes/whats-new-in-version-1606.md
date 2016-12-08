@@ -1,5 +1,5 @@
 ---
-title: "New in 1606 | System Center Configuration Manager"
+title: "New in 1606 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/09/2016
@@ -209,7 +209,7 @@ For more details, see [Predeclare devices with IMEI or iOS serial numbers](../..
 
 You can now enable Health Attestation services monitoring for Windows 10 PCs using only on-premises infrastructure so that computers without internet access can report Device Health Attestation (DHA).
 
-For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#How-to-enable-Health-Attestation-service-communication-on-Configuration-Manager-client-computers).  
+For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
 ## Remote Control
 Allow your end-users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. End-users will only need to grant permission once per session, and the viewer will not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace, then navigating to **Client Settings**, then opening the **Remote Tools** panel in **Default Settings**.

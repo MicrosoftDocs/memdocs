@@ -1,6 +1,6 @@
 ---
 
-title: Remove a software update point | Configuration Manager
+title: Remove a software update point | Microsoft Docs
 description: "Follow this procedure to remove the software update point site system role at a site from the Configuration Manager console."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

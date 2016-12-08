@@ -26,7 +26,7 @@
 ### [Create VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Find a package family name (PFN) for per-app VPN](deploy-use/find-a-pfn-for-per-app-vpn.md)
 
-## [Wi-Fi Profiles](deploy-use/introduction-to-wifi-profiles.md)
+## [Wi-Fi Profiles](deploy-use/create-wifi-profiles.md)
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
 
 ## [Certificate profiles](deploy-use/introduction-to-certificate-profiles.md)
@@ -68,6 +68,12 @@
 ### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
 ### [Manage Dynamics CRM Online access](deploy-use/manage-dynamics-crm-online-access.md)
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+## [Manage access based on device, network, and application risk](deploy-use/manage-access-based-on-device-network-app-risk.md)
+### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md)
+### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
+### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
+### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 

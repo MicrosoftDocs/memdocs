@@ -1,5 +1,5 @@
 ---
-title: "Archive | What's new hybrid MDM | Microsoft Intune | System Center Configuration Manager"
+title: "Archive of  What's new hybrid MDM | Microsoft Docs"
 description: "Archive of past mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
 ms.date: 10/25/2016
@@ -143,7 +143,7 @@ No new hybrid features have been introduced in June 2016 for Configuration Manag
 
 - **Pre-declare corporate-owned devices with IMEI or iOS serial number**
 
-  You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  For more information, see [Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#pre-declare-corporate-owned-devices-with-with-imei-or-ios-serial-number) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
+  You can now identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  You can also import serial numbers for iOS devices.  For more information, see [Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI) in [Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605).  
 
 - **Windows Information Protection (WIP)**
 

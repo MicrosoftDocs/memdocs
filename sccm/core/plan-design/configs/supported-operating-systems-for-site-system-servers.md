@@ -1,5 +1,5 @@
 ---
-title: "Supported site system servers | System Center Configuration Manager"
+title: "Supported site system servers | Microsoft Docs"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
 ms.date: 10/06/2016
@@ -60,6 +60,8 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 
 -   Fallback status point  
 
+-   Management point
+
 -   Reporting services point  
 
 -   Service connection point  
@@ -104,6 +106,8 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 -   Enrollment proxy point  
 
 -   Fallback status point  
+
+-   Management point
 
 -   Reporting services point  
 
@@ -150,6 +154,8 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 
 -   Fallback status point  
 
+-   Management point
+
 -   Reporting services point  
 
 -   Service connection point  
@@ -165,7 +171,7 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 -   State migration point  
 
 ## Windows Server 2008 R2 with SP1 (x64)   - Standard, Enterprise, Datacenter  
- Windows Server 2008 R2 is now in extended support and no longer in maintstream support, as detailed by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 R2 is now in extended support and no longer in mainstream support, as detailed by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Site servers:**  
 
@@ -197,6 +203,8 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 
 -   Fallback status point  
 
+-   Management point
+
 -   Reporting services point  
 
 -   Service connection point  
@@ -212,7 +220,7 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 -   State migration point  
 
 ## Windows Server 2008 with SP2 (x86, x64) - Standard, Enterprise, Datacenter  
- Windows Server 2008 is now in extended support and no longer in maintstream support, as detailed  by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
+ Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed  by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
 **Site servers:**  
 
@@ -247,6 +255,8 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 -   Enrollment proxy point  
 
 -   Fallback status point  
+
+-   Management point
 
 -   Reporting services point  
 

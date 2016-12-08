@@ -1,4 +1,4 @@
----
+﻿---
 title: System Center Configuration Manager Documentation | Microsoft Docs
 description: "Documentation for System Center Configuration Manager"
 keywords:
@@ -6,7 +6,7 @@ layout: HubPage
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
 ms.technology:
@@ -31,7 +31,7 @@ toc_rel: /sccm/toc.json
         <ul class="column column-half">
           <li><a href="/sccm/core/understand/introduction">Introduction to Configuration Manager</a></li>
           <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">Evaluate System Center Configuration Manager by building your own lab environment</a></li>
-          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1606">What&#39;s new in version 1606 of System Center Configuration Manager</a></li>
+          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">What&#39;s new in version 1610 of System Center Configuration Manager</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">Features and capabilities of System Center Configuration Manager</a></li>
@@ -284,6 +284,37 @@ toc_rel: /sccm/toc.json
               </ul>
             </section>
           </li>
+
+
+<li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
+                <div class="title column-third">
+                  <span class="step-number">8</span>
+                  <p>Configuration Manager SDK</p>
+                </div>
+                <p class="description column-two-thirds">Learn how to automate and extend Configuration Manager.</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
+                    <h3>Configuration Manager programming fundamentals</h3>
+                    <p>Learn about the fundamental programming techniques that will help you to successfully program Configuration Manager.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/sccm/develop/reference/configuration-manager-reference">
+                    <h3>Configuration Manager reference</h3>
+                    <p>Provides detailed information about the managed SMS Provider library, Configuration Manager class schema, extended WMI Query Language (WQL), named values and qualifiers, and the Configuration Manager console libraries.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </li>
+
+
       </section>
     </div>
     <div class="section-border">

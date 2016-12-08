@@ -1,5 +1,5 @@
 ---
-title: "Create Windows applications | System Center Configuration Manager"
+title: "Create Windows applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Windows devices."
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,9 +18,9 @@ author: robstackmsftms.author: robstackmanager: angrobe
 In addition to the other System Center Configuration Manager requirements and procedures for creating an application, you must also take the following considerations into account when you create and deploy applications for Windows devices.  
 
 ## General considerations  
- Configuration Manager supports deploying the following app types:  
+ Configuration Manager supports deploying the following app file types:  
 
-|Device Type|Supported Files|  
+|Device type|Supported file types|  
 |-----------------|---------------------|  
 |Windows RT and Windows RT 8.1|*.appx, \*.appxbundle|  
 |Windows 8.1 and later enrolled as a mobile device|*.appx, \*.appxbundle|  
@@ -29,15 +29,15 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 |Device type|Supported actions|  
 |-----------------|-----------------------|  
-|Windows 8.1 and later|Available, Required. Uninstall|  
-|Windows RT|Available, Required, Uninstall|  
+|Windows 8.1 and later|available, required, uninstall|  
+|Windows RT|available, required, uninstall|  
 
 ## Support for Universal Windows Platform (UWP) apps  
- Windows 10 devices do not require a sideloading key to install line of business apps. However, the registry key **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** must have a value of to 1 to enable sideloading.  
+ Windows 10 devices do not require a sideloading key to install line-of-business apps. For sideloading to be enabled, however, the registry key **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** must have a value of 1.  
 
- If this registry key is not configured, Configuration Manager will automatically set this value to **1** the first time you deploy an app to the device. If you have set this value to **0**, then Configuration Manager cannot automatically change the value, and the deployment of line of business apps will fail.  
+ If this registry key is not configured, Configuration Manager automatically sets this value to **1** the first time you deploy an app to the device. If you have set this value to **0**, Configuration Manager cannot automatically change the value, and the deployment of line-of-business apps fails.  
 
- Universal Windows Platform line of business apps must be signed with a code-signing certificate that is trusted on each device to which the app is deployed. You can use certificates from an in-house PKI infrastructure, or a certificate from a third-party public root certificate installed on the device.  
+ Universal Windows Platform line-of-business apps must be signed with a code-signing certificate that is trusted on each device to which the app is deployed. You can use certificates from an in-house PKI infrastructure, or a certificate from a third-party public root certificate installed on the device.  
 
  On Windows 10 Mobile devices, you can use a non-Symantec code signing certificate to sign universal **.appx** apps. For **.xap** apps, and also **.appx** packages built for Windows Phone 8.1 that you want to install on Windows 10 Mobile devices, you must use a Symantec code-signing certificate.  
 
@@ -50,10 +50,10 @@ In addition to the other System Center Configuration Manager requirements and pr
 
 -   The file's product code and product version are used for app detection.  
 
--   The default restart behavior of the app will be used. Configuration Manager does not control this.  
+-   The default restart behavior of the app is used. Configuration Manager does not control this.  
 
--   Per user MSI packages will be installed for a single user.  
+-   Per user MSI packages are installed for a single user.  
 
--   Per machine MSI packages will be installed for all users on the device.  
+-   Per machine MSI packages are installed for all users on the device.  
 
 -   App updates are supported when the MSI product code of each version is the same.  

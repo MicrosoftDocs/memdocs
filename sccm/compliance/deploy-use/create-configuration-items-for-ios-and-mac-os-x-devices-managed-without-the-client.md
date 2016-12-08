@@ -1,8 +1,8 @@
 ---
-title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,8 +71,11 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Minimum password length (characters)**|The minimum length for the password.|  
 |**Password expiration in days**|The number of days before a password must be changed.|  
 |**Number of passwords remembered**|Prevents re-using previously used passwords.|  
-|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br>(iOS only)|  
-|**Password complexity**|Choose whether you can specify a PIN such as '1234', or whether you must supply a strong password.|  
+|**Number of failed logon attempts before device is wiped**|Wipes the device if this number of login attempts fail.<br>(iOS only)| 
+|**Idle time before device is locked**|Specifies the number of minutes of inactivity before the device automatically locks.|
+|**Password complexity**|Choose whether you can specify a PIN such as '1234', or whether you must supply a strong password.|
+|**Allow simple passwords**|Specifies that simple passwords such as ‘0000’ and ‘1234’ can be used.|
+|**Fingerprint for unlocking**|Allow using a fingerprint to unlock the device.|
 
 ###  Device  
  These settings apply to both iOS and Mac OS X devices.  
@@ -103,7 +106,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 
 |Setting name|Details|  
 |------------------|-------------|  
-|**Default browser**|User can change the default Internet browser.|  
+|**Allow web browser**|User can use the default device web browser.|  
 |**Autofill**|User can change autocomplete settings in the browser.|  
 |**Active scripting**|Browser can run scripts, such as Active X scripts.|  
 |**Pop-up blocker**|Enables or disables the browser pop-up blocker.|  
@@ -159,8 +162,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 |**Allow Activation Lock (supervised mode only)**|Use this setting to enable iOS Activation Lock on **supervised** iOS devices that you manage. For more information about Activation Lock, see [Manage iOS Activation Lock](../../mdm/deploy-use/manage-ios-activation-lock.md).
 |**Lock screen control center**|Controls whether the control center app can be accessed when the device is locked.|  
 |**Lock screen notification view**|Controls whether notifications can be viewed when the device is locked.|  
-|**Lock screen today view**|Controls whether the Today view can be seen when the device is locked.|  
-|**Fingerprint for unlocking**|Allow the use of the fingerprint sensor to unlock the device.|  
+|**Lock screen today view**|Controls whether the Today view can be seen when the device is locked.|   
 
 ###  Data protection  
  These settings apply to iOS devices only.  

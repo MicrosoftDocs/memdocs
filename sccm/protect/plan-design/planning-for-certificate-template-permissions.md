@@ -1,5 +1,5 @@
 ---
-title: "Planning certificate template permissions | System Center Configuration Manager"
+title: "Planning certificate template permissions | Microsoft Docs"
 description: "Learn about planning for the permissions that you need to configure the certificate templates that System Center Configuration Manager uses."
 ms.custom: na
 ms.date: 10/06/2016
@@ -27,7 +27,7 @@ The following information can help you plan for how to configure permissions for
 
 -   Read for the account that runs the System Center Configuration Manager console  
 
- For more information about these security permissions, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../deploy-use/certificate-infrastructure.md#BKMK_Step1).  
+ For more information about these security permissions, see [Step 1: Install and Configure the Network Device Enrollment Service and Dependencies](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies).  
 
  When you use this default configuration, users and devices cannot directly request certificates from the certificate templates and all requests must be initiated by the Network Device Enrollment Service. This is an important restriction, because these certificate templates must be configured with **Supply in the request** for the certificate Subject, which means that there is a risk of impersonation if a rogue user or a compromised device requests a certificate. In the default configuration, the Network Device Enrollment Service must initiate such a request. However, this risk of impersonation remains if the service that runs the Network Device Enrollment Service is compromised. To help avoid this risk, follow all security best practices for the Network Device Enrollment Service and the computer that runs this role service.  
 

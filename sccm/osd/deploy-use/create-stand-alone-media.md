@@ -1,8 +1,8 @@
 ---
-title: "Create stand-alone media with System Center Configuration Manager"
+title: "Create stand-alone media with System Center Configuration Manager | Microsoft Docs"
 description: "Use stand-alone media to deploy the operating system on a computer without a connection to a Configuration Manager site or the network."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,16 +30,39 @@ Stand-alone media in Configuration Manager contains everything that is required 
 ##  <a name="BKMK_CreateStandAloneMedia"></a> Create stand-alone media  
  Before you create stand-alone media by using the Create Task Sequence Media Wizard, be sure that the following conditions are met:  
 
-|Task|Description|  
-|----------|-----------------|  
-|Create a task sequence to deploy an operating system|As part of the stand-alone media, you must specify the task sequence to deploy an operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).<br /><br /> The following actions are not supported for stand-alone media:<br /><br /> -   The Auto Apply Drivers step in the task sequence. Automatic application of device drivers from the driver catalog is not supported, but you can choose the Apply Driver Package step to make a specified set of drivers available to Windows Setup.<br />-   Installing software updates.<br />-   Installing software before deploying the  operating system.<br />-   Associating users with the destination computer to support user device affinity.<br />-   Dynamic package installs via the Install Packages task.<br />-   Dynamic application installs via the Install Application task.<br /><br /> <br /><br /> If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:<br /><br /> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"<br /><br /> For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:<br /><br /> **Command Line**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**|  
-|Distribute all content associated with the task sequence|You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).|  
-|Prepare the removable USB drive|For a removable USB drive:<br /><br /> If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.|  
-|Create an output folder|For a CD/DVD set:<br /><br /> Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.|  
+### Create a task sequence to deploy an operating system
+As part of the stand-alone media, you must specify the task sequence to deploy an operating system. For the steps to create a new task sequence, see [Create a task sequence to install an operating system in System Center Configuration Manager](create-a-task-sequence-to-install-an-operating-system.md).
+
+The following actions are not supported for stand-alone media:
+- The Auto Apply Drivers step in the task sequence. Automatic application of device drivers from the driver catalog is not supported, but you can choose the Apply Driver Package step to make a specified set of drivers available to Windows Setup.
+- The Download Package Content step in the task sequence. The management point information is not available on standalone media, therefore the step will fail trying to enumerate content locations.
+- Installing software updates.
+- Installing software before deploying the operating system.
+- Associating users with the destination computer to support user device affinity.
+- Dynamic package installs via the Install Packages task.
+- Dynamic application installs via the Install Application task.
+
+If your task sequence to deploy an operating system includes  the [Install Package](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site, an error might occur. The central administration site does not have the necessary client configuration policies that are required to enable the software distribution agent during the execution of the task sequence. The following error might appear in the CreateTsMedia.log file:<br /><br /> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"<br /><br /> For stand-alone media that includes an **Install Package** step, you must create the stand-alone media at a primary site that has the software distribution agent enabled or add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step in the task sequence. The **Run Command Line** step runs a WMIC command to enable the software distribution agent before the first Install package step runs. You can use the following in your **Run Command Line** task sequence step:<br /><br />
+```WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
+```
+
+### Distribute all content associated with the task sequence
+You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+
+### Prepare the removable USB drive
+*For a removable USB drive:*
+
+If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
+
+### Create an output folder
+*For a CD/DVD set:*
+
+Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.
+
 
  Use the following procedure to create stand-alone media for a removable USB drive or a CD/DVD set.  
 
-#### To create stand-alone media  
+## To create stand-alone media  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 

@@ -1,5 +1,5 @@
 ---
-title: "Example scenario - deploy Windows Embedded clients | System Center Configuration Manager"
+title: "Example scenario - deploy Windows Embedded clients | Microsoft Docs"
 description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices*Applies to: System Center Configuration Manager (Current Branch)*

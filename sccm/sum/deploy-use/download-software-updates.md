@@ -1,5 +1,5 @@
 ---
-title: Download software updates | Configuration Manager
+title: Download software updates | Microsoft Docs
 description: "Use the Download Software Updates Wizard to download software updates from the Software Library workspace."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe

@@ -1,8 +1,8 @@
 ---
-title: "Manage clients | System Center Configuration Manager"
+title: "Manage clients | Microsoft Docs"
 description: "Learn how to manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to manage clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -151,7 +151,7 @@ When a System Center Configuration Manager client is installed and successfully 
 
         To see the ownership value in the devices list, you may need to add the column to the view by right-clicking any column heading and choosing **Device Owner**.
 
-         For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md).  
+         For more information, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> Manage Clients from the Device Collections Node  
  Use the following procedure and table to manage devices in a collection from the **Device Collections** node in the **Assets and Compliance** workspace.  
@@ -230,7 +230,7 @@ Run the CCMSetup.exe command from the install source location and specify the fo
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
 For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -255,7 +255,7 @@ For more information about how to use these command line properties for CCMSetup
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings).
+        > For version 1606, use the cache size settings available in **Client Settings** in the Configuration Manager console instead of SMSCACHESIZE. For more information see [Client Cache Settings](../../../core/clients/deploy/about-client-settings.md#client-cache-settings).
 
        For more information about how to use these command line properties for CCMSetup.exe, see [About client installation properties in System Center Configuration Manager](../../../core/clients/deploy/about-client-installation-properties.md).  
 
@@ -314,6 +314,7 @@ Beginning in version 1606, you can adjust the size of the client cache folder wi
 
  When Configuration Manager can resolve a conflict by using Windows authentication of the computer account or a PKI certificate from a trusted source, the conflict is automatically resolved for you. However, when Configuration Manager cannot resolve the conflict, it uses a hierarchy setting that either automatically merges the records when it detects duplicate hardware IDs (the default setting), or allows you to decide when to merge, block, or create new client records. If you decide to manually manage duplicate records, you must manually resolve the conflicting records by using the Configuration Manager console.  
 
+
 #### To change the hierarchy setting for managing conflicting records  
 
 1.  In the Configuration Manager console, click **Administration.**  
@@ -342,6 +343,18 @@ Beginning in version 1606, you can adjust the size of the client cache folder wi
     -   **New** to create a new record for the conflicting client record.  
 
     -   **Block** to create a new record for the conflicting client record, but mark it as blocked.  
+
+## Manage duplicate hardware identifiers
+Beginning in Configuration Manager version 1610, you can provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
+
+1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
+2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
+
+#### To add hardware identifiers for Configuration Manager to ignore  
+1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**.
+2. On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
+3. Go to the **Client Approval and Conflicting Records** tab.
+4. Click **Add** in the **Duplicate hardware identifiers** section to add new hardware identifiers.
 
 ##  <a name="BKMK_PolicyRetrieval"></a> Initiate Policy Retrieval for a Configuration Manager Client  
  A Windows Configuration Manager client downloads its client policy on a schedule that you configure as a client setting. However, there might be occasions when you want to initiate ad-hoc policy retrieval from the client; for example, in a troubleshooting scenario or when you are testing.  

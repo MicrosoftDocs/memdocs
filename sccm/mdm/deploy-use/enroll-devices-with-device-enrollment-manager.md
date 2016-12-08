@@ -1,5 +1,5 @@
 ---
-title: "Enroll devices with device enrollment manager with Configuration Manager"
+title: "Enroll devices with device enrollment manager with Configuration Manager | Microsoft Docs"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Enroll devices with device enrollment manager with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

@@ -1,5 +1,5 @@
 ---
-title: "Modify infrastructure | System Center Configuration Manager"
+title: "Modify infrastructure | Microsoft Docs"
 description: "Learn how to make changes or take actions that affect the Configuration Manager infrastructure you have deployed."
 ms.custom: na
 ms.date: 10/06/2016
@@ -163,6 +163,8 @@ For example, consider a scenario where you install the Configuration Manager con
 -   **Configure access:** When you move the site database to a new computer, add the computer account of the site server to the **Local Administrators** group on the computer that runs SQL Server. If you use a SQL Server cluster for the site database, you must add the computer account to the **Local Administrators** group of each Windows Server cluster node computer.  
 
 -   **Enable common language runtime (CLR) integration:**  When you move the database to a new instance on SQL Server, or to a new SQL Server computer, you must enable common language runtime (CLR) integration. To enable CLR, use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database and run the following stored procedure as a query: **sp_configure 'clr enabled',1; reconfigure**.  
+-  **Ensure the new SQL Server has access to the backup location:** When you use a UNC for storing your site database backup, after moving the database to a new server, including a move a SQL Server AlwaysOn availability group or to a SQL Server cluster, ensure the computer account of the new SQL Server has **write** permissions to the UNC location.  
+
 
 > [!IMPORTANT]  
 >  Before you move a database that has one or more database replicas for management points, you must first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information see [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  

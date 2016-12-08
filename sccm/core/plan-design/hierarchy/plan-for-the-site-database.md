@@ -1,5 +1,5 @@
 ---
-title: "Plan the site database | System Center Configuration Manager"
+title: "Plan the site database | Microsoft Docs"
 description: "Consider the site database and the site database server role as you plan your System Center Configuration Manager hierarchy."
 ms.custom: na
 ms.date: 10/06/2016
