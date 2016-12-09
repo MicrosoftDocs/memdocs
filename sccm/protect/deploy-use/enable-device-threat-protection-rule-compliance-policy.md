@@ -2,7 +2,7 @@
 title: "Enable device protection rule in compliance policy | System Center Configuration Manager"
 description: "Enable mobile threat protection rule in the device compliance policy."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -46,6 +46,6 @@ On the **Rules** page of the compliance policy wizard,  define a new rule with t
 
 If you create conditional access policies for Office 365 and other services, the above compliance evaluation is taken into consideration and non-compliant devices are blocked from accessing company resources until the threat is resolved.
 
-The device threat protection status is displayed on the **Security** page in the **Monitoring** workspace.
+The device threat protection status is displayed on the **Security** node in the **Monitoring** workspace.
 A summary of the status with various thread level is displayed in a visual chart. You can click on the individual sections of the chart to see more information like, the number of devices reporting as non-compliant by platform, and any errors that are reported.
 You can also see the individual device status in the **Assets and compliance** workspace, under **Devices**.  You can add the **Device threat compliance** and the **Device threat level** columns to see the status.  These columns are not displayed by default.

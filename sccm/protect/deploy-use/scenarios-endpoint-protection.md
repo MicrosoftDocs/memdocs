@@ -2,7 +2,7 @@
 title: Scenario Endpoint Protection protects computers from malware | Microsoft Docs
 description: "Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -63,6 +63,6 @@ This topic provides an example scenario for how you can implement Endpoint Prote
 |John uses the Create Windows Firewall Policy Wizard to create a policy by configuring the following settings for the domain profile:<br /><br /> 1) **Enable Windows Firewall**: **Yes**<br /><br /> 2)<br />                    **Notify the user when Windows Firewall blocks a new program**: **Yes**|See [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/create-windows-firewall-policies.md)|  
 |John deploys the new firewall policy to the collection **All Computers Protected by Endpoint Protection** that he created earlier.|See "To deploy a Windows Firewall policy" in the [How to create and deploy Windows Firewall policies for Endpoint Protection in System Center Configuration Manager](create-windows-firewall-policies.md)|  
 |John uses the available management tasks for Endpoint Protection to manage antimalware and Windows Firewall policies, perform on-demand scans of computers when necessary, force computers to download the latest definitions, and to specify any further actions to take when malware is detected.|See [How to manage antimalware policies and firewall settings for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-firewall.md)|  
-|John uses the following methods to monitor the status of Endpoint Protection and the actions that are taken by Endpoint Protection:<br /><br /> 1) By using the **System Center 2012 Endpoint Protection Status** node in the **Monitoring** workspace.<br /><br /> 2) By using the **Endpoint Protection** node in the **Assets and Compliance** workspace.<br /><br /> 3) By using the built-in Configuration Manager reports.|See [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md)|  
+|John uses the following methods to monitor the status of Endpoint Protection and the actions that are taken by Endpoint Protection:<br /><br /> 1) By using the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace.<br /><br /> 2) By using the **Endpoint Protection** node in the **Assets and Compliance** workspace.<br /><br /> 3) By using the built-in Configuration Manager reports.|See [How to monitor Endpoint Protection in System Center Configuration Manager](monitor-endpoint-protection.md)|  
 
  John reports a successful implementation of Endpoint Protection to his manager, and confirms that the computers at Woodgrove Bank are now protected from antimalware, according to the business requirements that he was given.
