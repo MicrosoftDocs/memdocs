@@ -190,3 +190,15 @@ The following command line switches can be used in any order.
 | **/ps &lt;primary site FQDN>**       | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the FQDN of the primary site the distribution point belongs to, or of the parent primary parent when the distribution point is at a secondary site. </br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;primary site code>**  | **Optional** when cleaning content from a distribution point at a primary site.</br>**Required** when cleaning content from a distribution point at a secondary site. </br></br> Specify the site code of the primary site that the distribution point belongs to, or of the parent primary site when the distribution point is at a secondary site.</br></br> Example: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/log <log file directory>**       |**Optional** </br> Specify a directory to place log files in. This can be a local drive, or on a network share.</br></br> When this switch is not used, log files are automatically placed in the users temp folder.</br></br> Example of local drive: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Example of network share: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+
+
+## Improvements for in-console search
+Based on User Voice feedback, we have added the following improvements to in-console search:
+ - **Object Path:**  
+  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the patch to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
+
+- **Preservation of search text:**  
+  When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
+
+- **Preservation of your decision to search sub-nodes:**  
+ The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node. 
