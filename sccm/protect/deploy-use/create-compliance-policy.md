@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision:
-author: karthikaramanms.author: karaman
+author: andredm7ms.author: andredm
 manager: angrobe
 robots: noindex
 ---
