@@ -2,7 +2,7 @@
 title: "Create Wi-Fi profiles | Microsoft Docs"
 description: "Learn how to use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to users in your organization."
 ms.custom: na
-ms.date: 12/04/2016
+ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,7 +38,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 
 -   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
 
--   Android devices that run version 4  
+-   Android devices that run version 4 or later
 
 > [!IMPORTANT]  
 >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled in Microsoft Intune. For information about how to get your devices enrolled, see [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
