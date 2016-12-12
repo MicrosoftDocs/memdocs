@@ -2,7 +2,7 @@
 title: "Configure remote control | Microsoft Docs"
 description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,7 +17,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Configuring remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
- This procedure describes configuring the default client settings for remote control and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers that you want to use in a remote control session. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
+ This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 
 To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.  
 
