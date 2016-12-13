@@ -2,7 +2,7 @@
 title: "Client settings | Microsoft Docs"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,61 +18,43 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 # About client settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (current branch)*
 All client settings in System Center Configuration Manager are managed in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign these to collections. For information about how to configure client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
- Many of the client settings are self-explanatory. Use the following sections to learn about the client settings that might require some information before you configure them.  
+Many of the client settings are self-explanatory, but others are described here.  
 
 ## Background Intelligent Transfer Service  
 
 -   **Limit the maximum network bandwidth for BITS background transfers**  
 
-   If this option is **True** or **Yes**, Configuration Manager clients will use BITS bandwidth throttling.  
+   When this option is **True** or **Yes**, the clients will use BITS bandwidth throttling.  
 
 -   **Throttling window start time**  
 
-   Specify the start time, in local time, that the BITS throttling window will begin.  
+   Specify the local start time for the BITS throttling window.  
 
 -   **Throttling window end time**  
 
-   Specify the end time, in local time, that the BITS throttling window will end. If this value is the same as the value for **Throttling window start time**, BITS throttling is always enabled.  
+   Specify the local end time for the BITS throttling window. If equal to the **Throttling window start time**, BITS throttling is always enabled.  
 
 -   **Maximum transfer rate during throttling window (Kbps)**  
 
-   Specify the maximum transfer rate, in kilobits per second, that Configuration Manager clients can use during the specified BITS throttling window.  
+   Specify the maximum transfer rate that clients can use during the window.  
 
 -   **Allow BITS downloads outside the throttling window**  
 
-   Choose this option to allow BITS downloads outside the throttling window. This option lets Configuration Manager clients use separate BITS settings outside the specified window.  
+   Choose this option to allow Configuration Manager clients to use separate BITS settings outside the specified window.  
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-   Specify the maximum transfer rate, in kilobits per second, that Configuration Manager clients will use when outside the specified BITS throttling window. You can configure this option only when you have chosen to allow BITS throttling outside the specified window.  
+   Specify the maximum transfer rate that clients will use outside the BITS throttling window, when you have selected to allow BITS throttling outside the window.  
 
 ## Client cache settings
 
 - **Configure BranchCache**
 
-  Beginning in version 1606, specify to set up the client computer for BranchCache. To allow BranchCache caching to occur on the client, **Enable BranchCache** must be **Yes**. To learn more about BranchCache, see [Support for Windows features and network](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache).
-
-- **Enable BranchCache**
-
-  Beginning in version 1606, specify to allow BranchCache caching to occur on the client computer.
-
-- **Maximum BrancheCache cache size (percentage of disk)**
-
-  Beginning in version 1606, specify the maximum size of the BranchCache cache in a percentage of disk size.
+  Beginning in version 1606, use to set up the client computer for [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Configure client cache size**
 
-  The client cache folder is used on Windows computers to store temporary files used to install applications and programs. Beginning in version 1606, choose **Yes** to specify the size of the client cache folder using the **Maximum cache size** settings. If set to **No**, the client cache folder defaults to 5120 MB.
-
-  Other client cache properties can be set during client installation. For more information, see [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache).
-
-- **Maximum cache size (MB)**
-
-  Beginning in version 1606, specify the maximum size of the client cache folder in megabytes.
-
-- **Maximum cache size (percentage of disk)** (beginning in version 1606)
-
-  Beginning in version 1606, specify the maximum size of the client cache folder in a percentage of disk size.
+  The client cache on Windows computers stores temporary files used to install applications and programs. Select **Yes** to specify the **Maximum cache size** (MB or percentage of disk). If set to **No**, the default size is 5120 MB.
 
 ## Client policy  
 
@@ -90,7 +72,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
 -   **Enable user policy polling on clients**  
 
-   When you configure this setting as **True** or **Yes**, and Configuration Manager has discovered the user, Configuration Manager clients on computers receive applications and programs that are targeted to the logged on user. For more information about how to discover users, see  [Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).  
+   When you set to **True** or **Yes**, and Configuration Manager has [discovered the user](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), clients on computers receive applications and programs that are targeted to the logged-on user.  
 
    Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be **True** or **Yes** for users to see and request applications from the Application Catalog. But if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
 
@@ -129,9 +111,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
 -   **Enable User Data and Profiles**  
 
-     Choose **Yes** if you want to deploy user data and profiles configuration items to Windows 8 computers in your hierarchy.  
-
-     For more information about user data and profiles, see [How to create user data and profiles configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md).  
+     Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items to Windows 8 computers in your hierarchy.  
 
 ## Computer agent  
 
@@ -141,7 +121,7 @@ All client settings in System Center Configuration Manager are managed in the Co
 
     -   Clients are automatically given an Application Catalog website point from their site, if their site has an Application Catalog website point.  
 
-    -   Protection against a rogue server because Application Catalog website points on the intranet that are configured for HTTPS are given preference over Application Catalog website points that are not configured for HTTPS.  
+    -   Protection against a rogue server, because Application Catalog website points on the intranet that are configured for HTTPS are given preference over those that aren't.  
 
     -   When clients are configured for intranet and Internet-based client management, they will be given an Internet-based Application Catalog website point when they are on the Internet and an intranet-based Application Catalog website point when they are on the intranet.  
 
