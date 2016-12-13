@@ -32,7 +32,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Throttling window end time**  
 
-   Specify the local end time for the BITS throttling window. If equal to the **Throttling window start time**, BITS throttling is always enabled.  
+   Specify the local end time for the BITS throttling window. If equal to **Throttling window start time**, BITS throttling is always enabled.  
 
 -   **Maximum transfer rate during throttling window (Kbps)**  
 
@@ -44,17 +44,17 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Maximum transfer rate outside the throttling window (Kbps)**  
 
-   Specify the maximum transfer rate that clients will use outside the BITS throttling window, when you have selected to allow BITS throttling outside the window.  
+   Specify the maximum transfer rate that clients will use outside the BITS throttling window, when you have chosen to allow BITS throttling outside the window.  
 
 ## Client cache settings
 
 - **Configure BranchCache**
 
-  Beginning in version 1606, use to set up the client computer for [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+  Beginning in version 1606, use this setting to set up the client computer for [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Configure client cache size**
 
-  The client cache on Windows computers stores temporary files used to install applications and programs. Select **Yes** to specify the **Maximum cache size** (MB or percentage of disk). If set to **No**, the default size is 5120 MB.
+  The client cache on Windows computers stores temporary files used to install applications and programs. Choose **Yes** to specify **Maximum cache size** (megabytes or percentage of disk). If this option is **No**, the default size is 5,120 MB.
 
 ## Client policy  
 
@@ -64,7 +64,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
   -   Windows computers (for example, desktops, servers, laptops)  
 
-  -   Mobile devices that are enrolled by Configuration Manager  
+  -   Mobile devices that Configuration Manager enrolls  
 
   -   Mac computers  
 
@@ -72,7 +72,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Enable user policy polling on clients**  
 
-   When you set to **True** or **Yes**, and Configuration Manager has [discovered the user](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), clients on computers receive applications and programs that are targeted to the logged-on user.  
+   When you set this option to **True** or **Yes**, and Configuration Manager has [discovered the user](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser), clients on computers receive applications and programs that are targeted to the logged-on user.  
 
    Because the Application Catalog receives the list of available software for users from the site server, this setting does not have to be **True** or **Yes** for users to see and request applications from the Application Catalog. But if this setting is **False** or **No**, the following will not work when users use the Application Catalog:  
 
@@ -82,7 +82,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
   -   Users will not receive revisions and updates for applications that are published to the Application Catalog. But they will see changes to application information in the Application Catalog.  
 
-  -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to 2 days.  
+  -   If you remove an application deployment after the client has installed the application from the Application Catalog, clients continue to check that the application is installed for up to two days.  
 
    In addition, when this setting is **False** or **No**, users will not receive required applications that you deploy to users or any other management tasks in user policies.  
 
@@ -90,13 +90,13 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Enable user policy requests from Internet clients**  
 
-   When the client and site is configured for Internet-based client management and you configure this option as **True** or **Yes** and both of the following conditions apply, users receive user policy when their computer is on the Internet:  
+   When the client and site are configured for Internet-based client management and you set this option as **True** or **Yes** and both of the following conditions apply, users receive the user policy when their computer is on the Internet:  
 
   -   The **Enable user policy polling on clients** client setting is **True**, or **Enable user policy on clients** is **Yes**.  
 
   -   The Internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM).  
 
-   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but the **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
+   If you leave this option as **False** or **No**, or if either of the conditions fails, a computer on the Internet will receive computer policies only. In this scenario, users can still see, request, and install applications from an Internet-based Application Catalog. If this setting is **False** or **No** but **Enable user policy polling on clients** is **True** or **Enable user policy on clients** is **Yes**, users will not receive user policies until the computer is connected to the intranet.  
 
    For more information about managing clients on the Internet, see  [Considerations for client communications from the Internet or an untrusted forest](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan) in [Communications between endpoints in System Center Configuration Manager](../../../core/plan-design/hierarchy/communications-between-endpoints.md).  
 
@@ -121,9 +121,9 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   Clients are automatically given an Application Catalog website point from their site, if their site has an Application Catalog website point.  
 
-    -   Protection against a rogue server, because Application Catalog website points on the intranet that are configured for HTTPS are given preference over those that aren't.  
+    -   Application Catalog website points on the intranet that are configured for HTTPS are given preference over those that aren't. This helps protect against a rogue server.
 
-    -   When clients are configured for intranet and Internet-based client management, they will be given an Internet-based Application Catalog website point when they are on the Internet and an intranet-based Application Catalog website point when they are on the intranet.  
+    -   When clients are configured for intranet-based and Internet-based client management, they will be given an Internet-based Application Catalog website point when they are on the Internet and an intranet-based Application Catalog website point when they are on the intranet.  
 
      Automatic detection does not guarantee that clients will be given an Application Catalog website point that is closest to them. You might decide not to use **Automatically detect** for the following reasons:  
 
@@ -133,11 +133,11 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   You do not want to wait up to 25 hours or for a network change for clients to be configured with a different Application Catalog website point.  
 
-     If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN to help reduce the likelihood that users will be prompted for credentials when they connect to the Application Catalog on the intranet. To use the NetBIOS name, the following conditions must apply:  
+     If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This helps reduce the likelihood that users will be prompted for credentials when they connect to the Application Catalog on the intranet. To use the NetBIOS name, the following conditions must apply:  
 
     -   The NetBIOS name is specified in the Application Catalog website point properties.  
 
-    -   You use WINS or all clients are in the same domain as the Application Catalog website point.  
+    -   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
 
     -   The Application Catalog website point is configured for HTTP client connections, or it is configured for HTTPS client connections and the web server certificate has the NetBIOS name.  
 
@@ -146,7 +146,7 @@ Many of the client settings are self-explanatory, but others are described here.
     > [!NOTE]  
     >  How automatic detection works:  
     >   
-    >  The client makes a service location request to a management point. If there is an Application Catalog website point in the same site as the client, this server is given to the client as the Application Catalog server to use. When there is more than one available Application Catalog website point in the site, an HTTPS-enabled server takes precedence over a server that is not enabled for HTTPS. After this filtering, all clients are given one of the servers to use as the Application Catalog; Configuration Manager does not load-balance between multiple servers. When the client’s site does not have an Application Catalog website point, the management point nondeterministically returns an Application Catalog website point from the hierarchy.  
+    >  The client makes a service location request to a management point. If there is an Application Catalog website point in the same site as the client, this server is given to the client as the Application Catalog server to use. When more than one Application Catalog website point is available in the site, an HTTPS-enabled server takes precedence over a server that is not enabled for HTTPS. After this filtering, all clients are given one of the servers to use as the Application Catalog; Configuration Manager does not load-balance between multiple servers. When the client’s site does not have an Application Catalog website point, the management point nondeterministically returns an Application Catalog website point from the hierarchy.  
     >   
     >  When the client is on the intranet, if the chosen Application Catalog website point is configured with a NetBIOS name for the Application Catalog URL, clients are given this NetBIOS name instead of the intranet FQDN. When the client is detected to be on the Internet, only the Internet FQDN is given to the client.  
     >   
@@ -163,7 +163,7 @@ Many of the client settings are self-explanatory, but others are described here.
     > [!NOTE]  
     >  Whenever Configuration Manager adds a default Application Catalog to the trusted sites zone, Configuration Manager removes a previous default Application Catalog URL that Configuration Manager added before it adds a new entry.  
     >   
-    >  Configuration Manager cannot add the URL if it is already specified in one of the security zones. In this scenario, you must either remove the URL from the other zone, or manually configure the required Internet Explorer settings.  
+    >  Configuration Manager cannot add the URL if it is already specified in one of the security zones. In this scenario, you must either remove the URL from the other zone or manually configure the required Internet Explorer settings.  
 
 -   **Allow Silverlight applications to run in elevated trust mode**  
 
