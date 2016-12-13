@@ -204,16 +204,15 @@ Based on User Voice feedback, we have added the following improvements to in-con
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
-You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation, and then try again.
+You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation.
 
-###Try it out
+### Try it out
 To configure a list of executable files
 1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
 2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
 3.	Click **OK** to close the deployment type properties dialog box.
 
 Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
-To continue, they must close the application, and then click **Try Again**.
 
 ## New Windows Hello for Business notification for end users
 
