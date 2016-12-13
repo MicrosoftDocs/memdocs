@@ -121,7 +121,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
 -   **When the source hierarchy runs Configuration Manager 2007 SP2, select and set up additional sites in the source hierarchy.**  
 
-    For each additional site in the Configuration Manager 2007 SP2 source hierarchy that you want to collect data from, you must set up credentials for data gathering. When you set up each source site, the data-gathering process begins immediately and continues throughout the migration period until you stop data gathering for that site. Data gathering ensures that you can migrate objects from the source hierarchy that are updated or new since a previous data gathering process.  
+    For each additional site in the Configuration Manager 2007 SP2 source hierarchy that you want to collect data from, you must set up credentials for data gathering. When you set up each source site, the data-gathering process begins immediately and continues throughout the migration period until you stop data gathering for that site. Data gathering ensures that you can migrate objects from the source hierarchy that are updated or new since a previous data-gathering process. 
 
     > [!NOTE]  
     >  When the source hierarchy runs System Center 2012 Configuration Manager or later, you do not need to set up additional source sites.  
