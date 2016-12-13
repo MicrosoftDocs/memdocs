@@ -195,10 +195,33 @@ The following command line switches can be used in any order.
 ## Improvements for in-console search
 Based on User Voice feedback, we have added the following improvements to in-console search:
  - **Object Path:**  
-  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the patch to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
+  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 
 - **Preservation of search text:**  
   When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
 
 - **Preservation of your decision to search sub-nodes:**  
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node. 
+
+## Prevent installation of an application if a specified program is running.
+You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation, and then try again.
+
+###Try it out
+To configure a list of executable files
+1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
+2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
+3.	Click **OK** to close the deployment type properties dialog box.
+
+Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
+To continue, they must close the application, and then click **Try Again**.
+
+## New Windows Hello for Business notification for end users
+
+A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
+
+## Windows Store for Business support in Configuration Manager
+
+You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
+For more details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+
+Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.

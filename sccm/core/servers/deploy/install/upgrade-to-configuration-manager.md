@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -23,7 +23,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
  **You can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:**  
-
 -   An evaluation install of System Center Configuration Manager version 1511
 -   A release candidate install of System Center Configuration Manager  
 -   System Center 2012 Configuration Manager with Service Pack 1  
@@ -32,7 +31,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 -   System Center 2012 R2 Configuration Manager with Service Pack 1  
 
 **You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1606:**
-
 -   An evaluation install of System Center Configuration Manager version 1606
 -   System Center 2012 Configuration Manager with Service Pack 2
 -   System Center 2012 R2 Configuration Manager with Service Pack 1
@@ -45,7 +43,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 >  -   [The CD.Latest folder for System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  
 
  **The following is not supported:**  
-
 -   It is not supported to upgrade a Technical Preview for System Center Configuration Manager to a fully licensed installation.  A Technical Preview version can  only upgrade to a later version of the Technical Preview.  
 
 -   Migration from a Technical Preview to a fully licensed  version is not supported  
@@ -59,7 +56,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 Review the server operating systems in use to host site system roles:  
 
 -   Some older operating systems supported by System Center 2012 Configuration Manager are not supported by System Center Configuration Manager, and site system roles on those operating systems must be relocated or removed before the upgrade  
-
 -   Prerequisite Checker for Configuration Manager does not verify the prerequisites for site system roles on the site server or on remote computers  
 
 Review required prerequisites for each computer that hosts a site system role:  
@@ -70,52 +66,40 @@ For general information about supported platforms and prerequisite configuration
 
 For information about using the Windows ADK with Configuration Manager, see [Infrastructure requirements for operating system deployment in System Center Configuration Manager](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md).  
 
-**Review the site and hierarchy status** and verify that there are no unresolved issues:  
-
+**Review the site and hierarchy status and verify that there are no unresolved issues:**  
 Before you upgrade a site, resolve all operational issues for the site server, the site database server, and site system roles that are installed on remote computers. A site upgrade can fail due to existing operational problems.  
 
-**Install all applicable critical updates** for operating systems on computers that host the site, the site database server, and remote site system roles:  
-
+**Install all applicable critical updates for operating systems on computers that host the site, the site database server, and remote site system roles:**  
 Before you upgrade a site, install any critical updates for each applicable site system. If an update that you install requires a restart, restart the applicable computers before you start the service pack update.  
 
-For more information, see [Windows Update](http://go.microsoft.com/fwlink/p/?LinkId=105851)  
+For more information, see [Windows Update](http://go.microsoft.com/fwlink/p/?LinkId=105851).  
 
-**Uninstall the site system roles** not supported by System Center Configuration Manager:  
-
+**Uninstall the site system roles not supported by System Center Configuration Manager:**  
 The following site system roles are no longer used in System Center Configuration Manager and must be uninstalled before you upgrade from System Center 2012 Configuration Manager:  
 
 -   Out of Band Management point  
-
 -   Service Health Validator point  
 
-**Disable database replicas** for management points at primary sites:  
-
+**Disable database replicas for management points at primary sites:**  
 Configuration Manager cannot successfully upgrade a primary site that has a database replica for management points enabled. Disable database replication before you:  
 
 -   Create a backup of the site database to test the database upgrade  
-
 -   Upgrade the production site to System Center Configuration Manager  
 
 For more information, see the following:  
-
 -   System Center 2012 Configuration Manager:  [Configure Database Replicas for Management Points](https://technet.microsoft.com/library/hh846234.aspx)  
-
 -   System Center Configuration Manager: [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
-**Reconfigure software update points that use NLBs**:  
-
+**Reconfigure software update points that use NLBs:**  
 Configuration Manager cannot upgrade a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 
 If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster. (Beginning with System Center 2012 Configuration Manager SP1, there was no option in the Configuration Manager console to configure an NLB cluster)  
 
-**Disable all site maintenance tasks** at each site for the duration of that site's upgrade:  
-
+**Disable all site maintenance tasks at each site for the duration of that site's upgrade:**  
 Before you upgrade to System Center Configuration Manager, disable any site maintenance task that might run during the time the upgrade process is active. This includes but is not limited to the following:  
 
 -   Backup Site Server  
-
 -   Delete Aged Client Operations  
-
 -   Delete Aged Discovery Data  
 
 When a site database maintenance task runs during the upgrade process, the site upgrade can fail.  
@@ -125,62 +109,56 @@ Before you disable a task, record the schedule of the task so you can restore it
 For more information about site maintenance tasks, see:  
 
 -   System Center 2012 Configuration Manager:  [Planning for Maintenance Tasks for Configuration Manager](https://technet.microsoft.com/library/gg712686.aspx)  
-
 -   System Center Configuration Manager:  [Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **Run Setup Prerequisite Checker**:  
+Before you upgrade a site, you can run the **Prerequisite Checker** independently from Setup to validate that your site meets the prerequisites. Later, when you upgrade the site, Prerequisite Checker runs again.  
 
-Before you upgrade a site, you can run the **Prerequisite Checker** independently from Setup to validate that your site meets the prerequisites. When you upgrade the site, Prerequisite Checker runs again.  
+If you use the baseline media for version 1606 from the October 2016 release, the independent prerequisite check evaluates the site for upgrade to both the Current Branch and the Long-Term Servicing Branch (LTSB) of System Center Configuration Manage. Because some features are not supported by the LTSB, you might see entries in the *ConfigMgrPrereq.log* that are similar to the following:
+ - INFO: The site is a LTSB edition.
+ - Unsupported site system role 'Asset Intelligence synchronization point' for the LTSB edition;    Error;    Configuration Manager has detected that the 'Asset Intelligence synchronization point' is installed. Asset Intelligence is not supported on the LTSB edition. You must uninstall the Asset Intelligence synchronization point site system role before you can continue.
 
-For more information, see the [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) and [List of Prerequisite Checks for System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)  
+If you plan to upgrade to the Current Branch, errors for the LTSB edition can be safely ignored. They only apply if you plan to upgrade to the LTSB.
 
-**Download prerequisite files and redistributable files** for System Center Configuration Manager:  
+Later, when you run Configuration Manager Setup to do the upgrade, the prerequisite check will run again and evaluate your site based on the branch of System Center Configuration Manager you choose to install (Current Branch, or LTSB). If you choose to upgrade to the Current Branch, the check for features that are not supported by the LTSB are not run.
 
+For more information, see the [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) and [List of Prerequisite Checks for System Center Configuration Manager](/sccm/core/servers/deploy/install/list-of-prerequisite-checks).  
+
+**Download prerequisite files and redistributable files for System Center Configuration Manager:**    
 Use **Setup Downloader** to download prerequisite redistributable files, language packs, and the latest product updates for System Center Configuration Manager.  
 
-For information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader)  
+For information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
 
 **Plan to manage server and client languages**:  
-
 When you upgrade a site, the site upgrade installs only the language pack versions you select during the upgrade.  
 
 -   Setup reviews the current language configuration of your site, and then identifies the language packs that are available in the folder where you store previously downloaded prerequisite files.  
-
 -   You can then affirm the selection of the current server and client language packs, or change the selections to add or remove support for languages.  
-
 -   Only language packs that are available when you run Setup (which you get with the prerequisite files that you download) can be selected.  
 
 > [!NOTE]  
 >  You cannot use the language packs from System Center 2012 Configuration Manager to enable languages for a System Center Configuration Manager site.  
 
-For more information about language packs, see  [Language Packs in System Center Configuration Manager](../../../../core/servers/deploy/install/language-packs.md)  
+For more information about language packs, see  [Language Packs in System Center Configuration Manager](../../../../core/servers/deploy/install/language-packs.md).  
 
 **Review considerations for site upgrades**:  
-
 When you upgrade a site, some features and configurations reset to a default configuration. To help you prepare for these and related changes, review the information in  [Considerations for upgrading](#bkmk_considerations).  
 
-**Create a backup** of the site database at the central administration site and primary sites:  
-
+**Create a backup of the site database at the central administration site and primary sites:**  
 Before you upgrade a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.  
 
-See [Backup and recovery for System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md)  
+See [Backup and recovery for System Center Configuration Manager](../../../../protect/understand/backup-and-recovery.md).  
 
 **Backup a customized Configuration.mof file**:  
+If you use a customized Configuration.mof file to define data classes you use with hardware inventory, create a backup of this file before upgrading the site. Then after the upgrade, restore this file to your  site. For more information  about using this file see [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
-If you use a customized Configuration.mof file to define data classes you use with hardware inventory, create a backup of this file before upgrading the site. Then after the upgrade, restore this file to your  site. For more information  about using this file see [How to extend hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)  
-
-**Test the database upgrade** process on a copy of the most recent site database backup:  
-
+**Test the database upgrade process on a copy of the most recent site database backup:**  
 Before you upgrade a Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
 
 -   You should test the site database upgrade process because when you upgrade a site, the site database might be modified  
-
 -   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected  
-
 -   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality  
-
 -   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site  
-
 -   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database  
 
 Configuration Manager does not support  the backup of secondary sites nor the test upgrade of a secondary site database.  
@@ -189,23 +167,20 @@ It is not supported to run a test database upgrade on the production site databa
 
 For more information, see [Test the site database upgrade](#bkmk_test).  
 
-**Restart the site server and each computer that hosts a site system role** to ensure that there are no pending actions from a recent installation of updates or from prerequisites:  
-
-Internal process that is company-specific.  
+**Restart the site server and each computer that hosts a site system role**:  
+This is done to ensure that there are no pending actions from a recent installation of updates or from prerequisites, and is an internal process that is company-specific.  
 
 **Upgrade sites**:  
-
-**Starting at the top-level site in the hierarchy**, run Setup.exe from the System Center Configuration Manager source media.  
+Starting at the top-level site in the hierarchy, run Setup.exe from the System Center Configuration Manager source media.  
 
 After the top-level site upgrades,    you can begin the upgrade of each child site. Complete the upgrade of each site before you begin to upgrade the next site  
 
 Until all sites in your hierarchy upgrade to System Center Configuration Manager, your hierarchy operates in a mixed version mode.  
 
-For information about how to run upgrade, see [Upgrade sites](#bkmk_upgrade)  
+For information about how to run upgrade, see [Upgrade sites](#bkmk_upgrade).  
 
 ### After you upgrade  
 **Upgrade stand-alone Configuration Manager consoles**:  
-
 By default, when you upgrade a central administration site or primary site, the installation also upgrades the Configuration Manager console that is installed on the site server. However, you must manually upgrade each console that is installed on a computer other than the site server.  
 
 > [!TIP]  
@@ -213,17 +188,14 @@ By default, when you upgrade a central administration site or primary site, the 
 
 For more information, see [Install System Center Configuration Manager consoles](../../../../core/servers/deploy/install/install-consoles.md).  
 
-**Reconfigure database replicas** for management points at primary sites:  
-
+**Reconfigure database replicas for management points at primary sites:**  
 If you use database replicas for management points at primary sites, you must uninstall the database replicas before you upgrade the site. After you upgrade a primary site, reconfigure the database replica for management points.   
 For more information, see  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
-**Reconfigure any database maintenance tasks** you disabled prior to the upgrade:  
-
+**Reconfigure any database maintenance tasks you disabled prior to the upgrade:**  
 If you disabled database [Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md) at a site prior to the upgrade, reconfigure those tasks at the site using the same settings that were in place prior to the upgrade.  
 
 **Upgrade clients**:  
-
 After all your sites upgrade to System Center Configuration Manager, plan to upgrade clients.  
 
 When you upgrade a client, the current client software is uninstalled and the new client software version is installed. To upgrade clients, you can use any method that Configuration Manager supports.  
@@ -234,40 +206,31 @@ When you upgrade a client, the current client software is uninstalled and the ne
 For information about how to upgrade existing clients and how to install new clients, see [How to upgrade clients for Windows computers in System Center Configuration Manager](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 ##  <a name="bkmk_considerations"></a> Considerations for upgrading  
-**Automatic actions** - When you upgrade to System Center Configuration Manager, the following actions occur automatically:  
+**Automatic actions**:  
+When you upgrade to System Center Configuration Manager, the following actions occur automatically:  
 
 -   The site performs a site reset, which includes a reinstallation of all site system roles.  
-
 -   If the site is the top-level site of a hierarchy, it updates the client installation package on each distribution point in the hierarchy. The site also updates the default boot images to use the new Windows PE version that is included with the Windows Assessment and Deployment Kit 10. However, the upgrade does not upgrade existing media for use with image deployment.  
-
 -   If the site is a primary site, it updates the client upgrade package for that site.  
 
-**Manual actions for the administrative user after an upgrade** - After you upgrade a site, ensure that the following actions are performed:  
+**Manual actions for the administrative user after an upgrade**   
+After you upgrade a site, ensure that the following actions are performed:  
 
 -   Ensure that clients that are assigned to each primary site upgrade and install the client software for the new version  
-
 -   Upgrade each Configuration Manager console that connects to the site and that runs on a computer that is remote from the site server  
-
 -   At primary sites where you use database replicas for management points, reconfigure the database replicas  
-
 -   After the site upgrades, you must manually upgrade physical media like ISO files for CDs and DVDs or USB flash drives, or prestaged media used for Windows To Go deployments or provided to hardware vendors. Although the site upgrade updates the default boot images it cannot upgrade these media files or devices used external to Configuration Manager  
-
 -   Plan to update non-default boot images when you do not require the original (older) version of Windows PE.  
 
-**Actions that affect configurations and settings** - When a site upgrades to System Center Configuration Manager, some configurations and settings do not persist after the upgrade or are set to a new default configuration. The following table are settings that do not persist or that change, and provides details to help you plan for them during a site upgrade:  
+**Actions that affect configurations and settings**   
+When a site upgrades to System Center Configuration Manager, some configurations and settings do not persist after the upgrade or are set to a new default configuration. The following table are settings that do not persist or that change, and provides details to help you plan for them during a site upgrade:  
 
 -   **Software Center:**  
-
     The following Software Center items are reset to their default values:  
-
     -   **Work information** is reset to business hours from **5.00am** to **10.00pm** Monday to Friday.  
-
     -   The value for **Computer maintenance** is set to **Suspend Software Center activities when my computer is in presentation mode**.  
-
     -   The value for **Remote control** is set to the value in the client settings that are assigned to the computer.  
-
 -   **Software update summarization schedules:**  
-
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
@@ -278,9 +241,7 @@ To test the database for an upgrade, you first restore a copy of the site databa
 Next, after you restore the site database, on the SQL Server computer, run Configuration Manager Setup from the source media folder for System Center Configuration Manager with the **/TESTDBUPGRADE** command-line option.  
 
 -   For information about how to create and restore a backup of a site database, see [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md).  
-
 -   For information about the **/TESTDBUPGRADE** command-line option, see the table in [Command-line options for Setup](../../../../core/servers/deploy/install/command-line-options-for-setup.md).  
-
 -   For information about the supported versions of SQL Server, see the [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md) topic.  
 
 > [!TIP]  
@@ -291,7 +252,7 @@ Next, after you restore the site database, on the SQL Server computer, run Confi
 >  -   WARN: Upgrade will force full sync to cloud.  
 >  -   ERROR: Database upgrade will force full sync to cloud.  
 >   
-> Both of these can be safely ignored during the testing of a database upgrade as they do not indicate a failure or problem with the test upgrade. Instead, they indicate that during the actual upgrade, data from the **Cloud** database replication group might synchronize with Microsoft Intune.  
+> Both can be safely ignored during the testing of a database upgrade as they do not indicate a failure or problem with the test upgrade. Instead, they indicate that during the actual upgrade, data from the **Cloud** database replication group might synchronize with Microsoft Intune.  
 
 Use the following procedure on each central administration site and primary site that you plan to upgrade.  
 
@@ -308,7 +269,6 @@ Use the following procedure on each central administration site and primary site
 3.  On the instance of SQL Server where you run the database upgrade test, monitor the ConfigMgrSetup.log in the root of the system drive for progress and success:  
 
     -   If the test upgrade fails, resolve any issues related to the site database upgrade failure, create a new backup of the site database, and then test the upgrade of the new copy of the site database.  
-
     -   After the process is successful, you can delete the database copy.  
 
         > [!NOTE]  
@@ -323,7 +283,7 @@ When you upgrade a site in a hierarchy, you upgrade the top-level site of the hi
 
 To upgrade a central administration site or primary site, you run Setup from the System Center Configuration Manager source media. However, you do not run Setup to upgrade secondary sites. Instead, you use the Configuration Manager console to upgrade a secondary site after you complete the upgrade of its primary parent site.  
 
-Before you upgrade a site, close the Configuration Manager console that is installed on the site server until after the site upgrade is completed. Also close each Configuration Manager console that runs on computers other than the site server. You can reconnect the console after the site upgrade is completed. However, until you upgrade a Configuration Manager console to the new version of Configuration Manager, that console cannot display some objects and information that are available in new version of Configuration Manager.  
+Before you upgrade a site, close the Configuration Manager console that is installed on the site server until after the site upgrade is completed. Also, close each Configuration Manager console that runs on computers other than the site server. You can reconnect the console after the site upgrade is completed. However, until you upgrade a Configuration Manager console to the new version of Configuration Manager, that console cannot display some objects and information that are available in new version of Configuration Manager.  
 
 Use the following procedures to upgrade Configuration Manager sites:  
 
@@ -332,8 +292,7 @@ Use the following procedures to upgrade Configuration Manager sites:
 1.  Verify that the user who runs Setup has the following security rights:  
 
     -   Local Administrator rights on the site server computer.  
-
-    -   Local Administrator rights on the remote site database server for the site, if it is remote.  
+    -   Local Administrator rights on the remote site database server for the site, if it is remote.    </br></br>
 
 2.  On the site server computer, open Windows Explorer and browse to **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**.  
 
@@ -353,7 +312,6 @@ Use the following procedures to upgrade Configuration Manager sites:
      >  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
 
      For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
-
 
 7.  On the **Microsoft Software License Terms** page, read and accept the license terms, and then click **Next**.  
 
@@ -385,11 +343,9 @@ On the **Upgrade** page, Setup displays the overall progress status. When Setup 
 1.  Verify that the administrative user that runs Setup has the following security rights:  
 
     -   Local Administrator rights on the secondary site computer  
-
     -   Infrastructure Administrator or a Full Administrator security role on the parent primary site  
-
     -   System administrator (SA) rights on the site database of the secondary site  
-
+    </br>
 2.  In the Configuration Manager console, click **Administration**.  
 
 3.  In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.  
@@ -403,10 +359,7 @@ The secondary site upgrade progresses in the background. After the upgrade is co
 ##  <a name="BKMK_PostUpgrade"></a> Perform post-upgrade tasks  
 After you upgrade a site to a new service pack, you might have to complete additional tasks to finish the upgrade or reconfigure the site. These tasks can include the upgrade of Configuration Manager clients or Configuration Manager consoles, re-enabling database replicas for management points, or restoring settings for Configuration Manager functionality that you use and that does not persist after the service pack upgrade.  
 
-**Known issues:**  
-Secondary sites:
-- When you upgrade to version 1511:  
-To ensure clients at secondary sites can find the management point from the secondary site (proxy management point), manually add the management point to boundary groups that also include the distribution points at the secondary site.
+**Known issues for Secondary sites:**  
+- **When you upgrade to version 1511:** To ensure clients at secondary sites can find the management point from the secondary site (proxy management point), manually add the management point to boundary groups that also include the distribution points at the secondary site.  
 
-- When you upgrade to version 1606 or later:  
-  Proxy management points are automatically added to boundary groups that include distribution points at the secondary site.
+- **When you upgrade to version 1606 or later:** Proxy management points are automatically added to boundary groups that include distribution points at the secondary site.

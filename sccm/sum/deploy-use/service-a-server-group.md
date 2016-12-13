@@ -4,7 +4,7 @@ description: "The System Center Configuration Manager console provides alerts an
 keywords:
 author: dougebyms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -39,8 +39,11 @@ The server group settings are configured in the properties for a device collecti
 
 5.  Specify whether to use a pre-deployment (node drain) script or post-deployment (node resume) script.  
 
+    > [!WARNING]
+    > Custom scripts are not signed by Microsoft. It is your responsibility to maintain the integrity of these scripts.
+
     > [!TIP]  
-    >The following are examples that you can use in testing for pre-deployment and post-deployment scripts that write the current time to a text file:  
+    > The following are examples that you can use in testing for pre-deployment and post-deployment scripts that write the current time to a text file:  
     >   
     >  **Pre-deployment**  
     >   
