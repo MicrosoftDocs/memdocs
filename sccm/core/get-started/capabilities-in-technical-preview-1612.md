@@ -201,4 +201,19 @@ Based on User Voice feedback, we have added the following improvements to in-con
   When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
 
 - **Preservation of your decision to search sub-nodes:**  
- The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node. 
+ The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
+
+## OData endpoint data access
+
+ Configuration Manager now provides an RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 supports read-only access to objects in Configuration Manager.  
+
+ Here are some example queries you might use to query various objects in Configuration Manager with your favorite OData query viewer:
+
+| To... | Use...|
+|---|---|
+| Get all collections | `http://localhost/SccmGraph/Collection` |
+| Get collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')`
+| Get top 100 devices in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device?$top=100` |
+| Get device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)` |
+| Get operating system of device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
+| Get users in collection SMS00002 | `http://localhost/SccmGraph/Collection('SMS00002')/User`
