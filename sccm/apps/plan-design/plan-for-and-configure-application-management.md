@@ -2,7 +2,7 @@
 title: "Plan for and configure application management | Microsoft Docs"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -59,7 +59,11 @@ Use the information in this article to help you implement the necessary dependen
  Whatever version you choose to use, Software Center is installed automatically when you install the Configuration Manager client on Windows PCs.  
 
     > [!TIP]  
-    >  The version of  Software Center that users see is based on Configuration Manager client settings. This gives you the flexibility to control the version that's used based on custom client settings that you deploy to a collection.  
+    >  The version of  Software Center that users see is based on Configuration Manager client settings. This gives you the flexibility to control the version that's used based on custom client settings that you deploy to a collection. 
+
+	> [!IMPORTANT]
+	> In the coming months, we will be removing the previous version of Software Center, and it will no longer be available for you to use.
+	> You can configure clients to use the new Software Center by enabling the client setting **Computer Agent** > **Use new Software Center**. 
 
 ## Steps to install and configure the Application Catalog and Software Center  
 
