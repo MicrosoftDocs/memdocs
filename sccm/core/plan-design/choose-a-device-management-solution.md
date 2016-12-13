@@ -2,7 +2,7 @@
 title: "Choose a device management solution for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about the solutions that System Center Configuration Manager offers for managing PCs, servers, and devices."
 ms.custom: na
-ms.date: 11/29/2016
+ms.date: 12/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,7 +38,7 @@ System Center Configuration Manager (also known as ConfgMgr or SCCM) offers diff
 
 -   **Managing mobile devices with Microsoft Intune (hybrid)**  
 
-     This option uses Microsoft Intune to enroll and manage devices instead of using Configuration Manager on-premises resources. Even though Intune manages the devices, you access your management tasks in the Configuration Manager console. This option supports all major mobile device operating systems, including Windows 10 Mobile, Windows Phone, iOS, and Android. It also provides management for Windows 8.1 and Windows 10 computers in your organization.  
+     This option uses Microsoft Intune to enroll and manage devices instead of using Configuration Manager on-premises resources. Even though Intune manages the devices, you access your management tasks in the Configuration Manager console. This option supports all major mobile device operating systems, including Windows 10 Mobile, Windows Phone, iOS, Mac OS X, and Android. It also provides management for Windows 8.1 and Windows 10 computers in your organization.  
 
      For more information about this solution, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../mdm/understand/hybrid-mobile-device-management.md).  
 

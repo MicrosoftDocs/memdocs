@@ -195,7 +195,7 @@ The following command line switches can be used in any order.
 ## Improvements for in-console search
 Based on User Voice feedback, we have added the following improvements to in-console search:
  - **Object Path:**  
-  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the patch to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
+  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 
 - **Preservation of search text:**  
   When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
@@ -203,17 +203,50 @@ Based on User Voice feedback, we have added the following improvements to in-con
 - **Preservation of your decision to search sub-nodes:**  
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
-## OData endpoint data access
+## Prevent installation of an application if a specified program is running.
+You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation, and then try again.
 
- Configuration Manager now provides an RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 supports read-only access to objects in Configuration Manager.  
+###Try it out
+To configure a list of executable files
+1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
+2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
+3.	Click **OK** to close the deployment type properties dialog box.
 
- Here are some example queries you might use to query various objects in Configuration Manager with your favorite OData query viewer:
+Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
+To continue, they must close the application, and then click **Try Again**.
 
-| To... | Use...|
+## New Windows Hello for Business notification for end users
+
+A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
+
+## Windows Store for Business support in Configuration Manager
+
+You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
+For more details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+
+Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
+
+## OData endpoint data access (SccmGraph)
+
+ Configuration Manager now provides an RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
+
+Data that is currently available in the [Configuration Manager WMI Provider](/sccm/develop/reference/configuration-manager-reference) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
+
+### Try it out
+
+Before you can use the OData endpoint, you must enable it for the site.
+
+1.  Go to **Administration** > **Site Configuration** > **Server and Site System Roles**.
+2.  Select the primary site and click **Properties**.
+3.  On the General tab of the primary site properties sheet, click **Enable REST endpoint for all providers on this site**, and then click **OK**.
+
+In your favorite OData query viewer, try queries similar to the following examples to return various objects in Configuration Manager:
+
+| Purpose | OData query |
 |---|---|
 | Get all collections | `http://localhost/SccmGraph/Collection` |
 | Get collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')`
 | Get top 100 devices in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device?$top=100` |
 | Get device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)` |
 | Get operating system of device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
-| Get users in collection SMS00002 | `http://localhost/SccmGraph/Collection('SMS00002')/User`
+| Get users in collection SMS00002 | `http://localhost/SccmGraph/Collection('SMS00002')/User` |

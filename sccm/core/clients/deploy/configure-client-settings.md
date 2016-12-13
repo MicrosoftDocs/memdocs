@@ -2,7 +2,7 @@
 title: "Configure client settings | Microsoft Docs"
 description: "Select client settings in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,78 +15,58 @@ caps.latest.revision: 5
 author: nbigmanms.author: nbigmanmanager: angrobe
 ---
 # How to configure client settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You manage all client settings in System Center Configuration Manager from the **Client Settings** node in the **Administration** workspace of the Configuration Manager console. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy these to collections.  
+You manage all client settings in System Center Configuration Manager from  **Administration** > **Client Settings**. Modify the default settings when you want to configure settings for all users and devices in the hierarchy that do not have any custom settings applied. If you want to apply different settings to just some users or devices, create custom settings and deploy these to collections.  
+
+For information about each client setting, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).
 
 > [!NOTE]  
 >  You can also use configuration items to manage clients to assess, track, and remediate the configuration compliance of devices. For more information, see [Ensure device compliance with System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md).  
 
-##  <a name="BKMK_DefaultClientSettings"></a> How to Configure the Default Client Settings  
+##  Configure the default client settings    
 
- Use the following procedure to configure the default client settings for all clients in the hierarchy.  
+1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
-#### To configure the default client settings  
+3.  On the **Home** tab, choose **Properties**.  
 
-1.  In the Configuration Manager console, click **Administration**.  
-
-2.  In the **Administration** workspace, click **Client Settings**, and then select **Default Client Settings**.  
-
-3.  On the **Home** tab, click **Properties**.  
-
-4.  View and configure the client settings for each group of settings in the navigation pane. For more information about each setting, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).  
-
-5.  Click **OK** to close the **Default Client Settings** dialog box.  
+4.  View and configure the client settings for each group of settings in the navigation pane.  
 
  Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
-##  <a name="BKMK_CustomClientSettings"></a> How to Create and Deploy Custom Client Settings  
- Use the following procedure to configure and deploy custom settings for a selected collection of users or devices. When you deploy these custom settings, they override the default client settings.  
+##  Create and deploy custom client settings  
+When you deploy these custom settings, they override the default client settings. Before you begin this procedure, ensure that you have a collection that contains the users or devices that require these custom client settings.  
 
-> [!NOTE]  
->  Before you begin this procedure, ensure that you have a collection that contains the users or devices that require these custom client settings.  
+1.  In the Configuration Manager console, choose **Administration** > **Client Settings**.  
 
-#### To configure and deploy custom client settings  
-
-1.  In the Configuration Manager console, click **Administration**.  
-
-2.  In the **Administration** workspace, click **Client Settings**.  
-
-3.  On the **Home** tab, in the **Create** group, click **Create Custom Client Settings**, and then click one of the following options depending on whether you want to create custom client settings for devices or for users:  
+3.  On the **Home** tab, in the **Create** group, choose **Create Custom Client Settings**, and then choose either:  
 
     -   **Create Custom Client Device Settings**  
 
     -   **Create Custom Client User Settings**  
 
-4.  In the **Create Custom Device Settings** or **Create Custom User Settings** dialog box, specify a unique name for the custom settings, and an optional description.  
+4.  Specify a unique name and option description.  
 
-5.  Select one or more of the available check boxes that display a group of settings.  
+5.  Select one or more of the check boxes that display a group of settings.  
 
-6.  Click the first group settings from the navigation pane, and then view and configure the available custom settings. Repeat this process for any remaining group settings. For information about each client setting, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).  
+6.  Choose each group of  settings from the navigation pane, and configure the available settings, then click **OK**.   
 
-7.  Click **OK** to close the **Create Custom Device Settings** or **Create Custom User Settings** dialog box.  
+8.  Select the custom client setting that you created. On the **Home** tab, in the **Client Settings** group, choose **Deploy**.  
 
-8.  Select the custom client setting that you have just created. On the **Home** tab, in the **Client Settings** group, click **Deploy**.  
+9. In the **Select Collection** dialog box, select the appropriate collection, and then choose **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
 
-9. In the **Select Collection** dialog box, select the collection that contains the devices or users to be configured with the custom settings, and then click **OK**. You can verify the selected collection if you click the **Deployments** tab in the details pane.  
+10. View the order of the custom client setting that you have just created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, choose **Move Item Up** or **Move Item Down**.  
 
-10. View the order of the custom client setting that you have just created. When you have multiple custom client settings, they are applied according to their order number. If there are any conflicts, the setting that has the lowest order number overrides the other settings. To change the order number, on the **Home** tab, in the **Client Settings** group, click **Move Item Up** or **Move Item Down**.  
+ Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
 
- Client computers will be configured with these settings when they next download client policy. To initiate policy retrieval for a single client, see see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval) in [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md).  
+##  View client settings  
+ When multiple client settings have been deployed to the same device, user, or user group, the prioritization and combination of settings can be complex. To view the client settings:  
 
-##  <a name="BKMK_ResultantClientSettings"></a> How to View Resultant Client Settings  
- When multiple client settings have been deployed to the same device, user, or user group, the prioritization and combination of settings can be complex. Use the following procedure to view the calculated resultant client settings.  
+1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** > **Users** or **User Collections**.  
 
-#### To view the resultant client settings  
+3.  Select a device, user, or user group and in the **Client Settings** group, select **Resultant Client Settings**.  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
-
-2.  In the **Assets and Compliance** workspace, click **Devices**, **Users**, or **User Collections**.  
-
-3.  Select a device, user, or user group and in the **Client Settings** group, select **Resultant Client Settings**.  Alternately, you can right click the device, user, or user group, select **Client Settings**, and click **Resultant Client Settings**.  
-
-4.  Select a client setting from the left pane, and the resultant settings are displayed.  
+4.  Select a client setting from the left pane, and the settings are displayed. In this view, the settings are read-only. 
 
     > [!NOTE]  
-    >  To view the resultant client settings, the logged on user must have read access to Client Settings.  
+    >  To view the client settings, you must have read access to Client Settings.  
 
-    > [!NOTE]  
-    >  The displayed resultant settings are read only. To modify any settings, use the above procedures.  
+    

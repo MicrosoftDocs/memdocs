@@ -2,7 +2,7 @@
 title: "Endpoint Protection | Microsoft Docs"
 description: "Learn how to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -50,7 +50,7 @@ Windows 10 computers don't require any additional client for endpoint protection
 
 
 ## Managing Malware with Endpoint Protection  
- Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. You can then deploy these antimalware policies to client computers and monitor them in the **Endpoint Protection Status** node in the **Monitoring** workspace, or by using Configuration Manager reports.  
+ Endpoint Protection in Configuration Manager allows you to create antimalware policies that contain settings for Endpoint Protection client configurations. You can then deploy these antimalware policies to client computers and monitor them in the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace, or by using Configuration Manager reports.  
 
  Additional information:  
 
