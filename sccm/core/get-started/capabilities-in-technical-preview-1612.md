@@ -204,7 +204,7 @@ Based on User Voice feedback, we have added the following improvements to in-con
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
-You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation.
+You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, users will see a dialog box asking them to close the processes that are blocking installation.
 
 ### Try it out
 To configure a list of executable files
