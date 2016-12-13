@@ -3,7 +3,8 @@
 title: Introduction to software updates | Microsoft Docs
 description: "Learn the basics of software updates in System Center Configuration Manager."
 keywords:
-author: dougebyms.author: dougeby
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -15,13 +16,16 @@ ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 
 
 ---
-# Introduction to software updates in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Introduction to software updates in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Software updates in System Center Configuration Manager provides a set of tools and resources that can help manage the complex task of tracking and applying software updates to client computers in the enterprise. An effective software update management process is necessary to maintain operational efficiency, overcome security issues, and maintain the stability of the network infrastructure. However, because of the changing nature of technology and the continual appearance of new security threats, effective software update management requires consistent and continual attention.  
 
 For an example scenario that shows how you might deploy software updates in your environment, see [Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 
 ##  <a name="BKMK_Synchronization"></a> Software updates synchronization  
- Software updates synchronization in Configuration Manager uses Microsoft Update to retrieve software updates metadata. The top-level site (central administration site or stand-alone primary site) synchronizes with Microsoft Update on a schedule or when you manually start synchronization from the Configuration Manager console. When Configuration Manager finishes software updates synchronization at the top-level site, software updates synchronization starts at child sites, if they exist. When synchronization is complete at each primary site or secondary site, a site-wide policy is created that provides to client computers the location of the software update points.  
+ Software updates synchronization in Configuration Manager connects to Microsoft Update to retrieve software updates metadata. The top-level site (central administration site or stand-alone primary site) synchronizes with Microsoft Update on a schedule or when you manually start synchronization from the Configuration Manager console. When Configuration Manager finishes software updates synchronization at the top-level site, software updates synchronization starts at child sites, if they exist. When synchronization is complete at each primary site or secondary site, a site-wide policy is created that provides to client computers the location of the software update points.  
 
 > [!NOTE]  
 >  Software updates are enabled by default in client settings. However, if you set the **Enable software updates on clients** client setting to **No** to disable software updates on a collection or in the default settings, the location for software update points are not sent to associated clients. For details, see [software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates).  
