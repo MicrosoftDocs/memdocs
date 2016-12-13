@@ -27,9 +27,11 @@ In System Center Configuration Manager, migration provides a process for transfe
 
 With the exception of the distribution point site system role and the computers that host distribution points, no infrastructure (which includes sites, site system roles, or computers that host a site system role), migrates, transfers, or can be shared between hierarchies.  
 
- Although you cannot migrate server infrastructure, you can migrate Configuration Manager clients between hierarchies. Client migration involves migrating the data that clients use from the source hierarchy to the destination hierarchy, and then installing or reassigning the client software so that the client then reports to the new hierarchy. After you install a client to the new hierarchy and the client submits its data, its unique Configuration Manager ID helps Configuration Manager associate the data that you previously migrated with each client computer.  
+ Although you cannot migrate server infrastructure, you can migrate Configuration Manager clients between hierarchies. Client migration involves migrating the data that clients use from the source hierarchy to the destination hierarchy, and then installing or reassigning the client software so that the client then reports to the new hierarchy.
 
- The functionality provided by migration helps you maintain investments that you have made in configurations and deployments while letting you take full advantage of core changes in the product first (which was first introduced in System Center 2012 Configuration Manager and then continued in System Center Configuration Manager). These changes include a simplified Configuration Manager hierarchy that uses fewer sites and resources, and the improved processing by usingfrom native 64-bit code that runs on 64-bit hardware.  
+After you install a client to the new hierarchy and the client submits its data, its unique Configuration Manager ID helps Configuration Manager associate the data that you previously migrated with each client computer.  
+
+ The functionality that's provided by migration helps you maintain investments that you have made in configurations and deployments while letting you take full advantage of core changes in the product first (which was first introduced in System Center 2012 Configuration Manager and then continued in System Center Configuration Manager). These changes include a simplified Configuration Manager hierarchy that uses fewer sites and resources, and the improved processing that comes from using native 64-bit code that runs on 64-bit hardware.  
 
  For information about the versions of Configuration Manager that migration supports, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
@@ -40,13 +42,13 @@ With the exception of the distribution point site system role and the computers 
 -   [Data that you can't migrate to System Center Configuration Manager](#Cannot_migrate)  
 
 ##  <a name="Can_Migrate"></a> Data that you can migrate to System Center Configuration Manager  
- Migration can migrate most objects from between supported Configuration Manager hierarchies. The migrated instances of some objects from a supported version of Configuration Manager 2007 must be modified to conform to the System Center 2012 Configuration Manager schema and object format.
+ Migration can migrate most objects between supported Configuration Manager hierarchies. The migrated instances of some objects from a supported version of Configuration Manager 2007 must be modified to conform to the System Center 2012 Configuration Manager schema and object format.
 
 These modifications don't affect the data in the source site database. Objects that are migrated from a supported version of System Center 2012 Configuration Manager or System Center Configuration Manager do not require modification.  
 
  The following are objects that can migrate based on the version of Configuration Manager in the source hierarchy. Some objects, like queries, do not migrate. If you want to continue to use these objects that do not migrate you must recreate them in the new hierarchy. Other objects, including some client data, are automatically recreated in the new hierarchy when you manage clients in that hierarchy.  
 
- ### Objects you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch  
+ ### Objects that you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch  
 
 -   Advertisements  
 
@@ -98,7 +100,7 @@ These modifications don't affect the data in the source site database. Objects t
 
 -   Virtual application packages  
 
-### Objects you can migrate from Configuration Manager 2007 SP2
+### Objects that you can migrate from Configuration Manager 2007 SP2
 
 -   Advertisements  
 
