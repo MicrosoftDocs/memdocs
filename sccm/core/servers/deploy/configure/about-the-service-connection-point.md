@@ -100,3 +100,8 @@ To enable operation, the computer that hosts the service connection point and an
 -   download.microsoft.com  
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
+
+## Install the service connection point
+When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.
+
+After setup runs, or if you are reinstalling the site system role, use the **Add Site System Roles** wizard, or the **Create Site System Server** wizard to install the site system on a server at the top-tier site of your hierarchy (the central administration site, or a stand-alone primary site).  Both wizards are located on the **Home** tab in the console at **Administration** > **Site Configuration** > **Servers and Site System Roles**.
