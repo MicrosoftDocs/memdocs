@@ -225,9 +225,9 @@ For more details, see [Manage apps from the Windows Store for Business with Syst
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
 
-## OData endpoint data access (SccmGraph)
+## OData endpoint data access
 
- Configuration Manager now provides an RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
+ Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
 
 Data that is currently available in the [Configuration Manager WMI Provider](/sccm/develop/reference/configuration-manager-reference) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
 
@@ -235,7 +235,7 @@ Data that is currently available in the [Configuration Manager WMI Provider](/sc
 
 Before you can use the OData endpoint, you must enable it for the site.
 
-1.  Go to **Administration** > **Site Configuration** > **Server and Site System Roles**.
+1.  Go to **Administration** > **Site Configuration** > **Sites**.
 2.  Select the primary site and click **Properties**.
 3.  On the General tab of the primary site properties sheet, click **Enable REST endpoint for all providers on this site**, and then click **OK**.
 
@@ -243,9 +243,12 @@ In your favorite OData query viewer, try queries similar to the following exampl
 
 | Purpose | OData query |
 |---|---|
-| Get all collections | `http://localhost/SccmGraph/Collection` |
-| Get collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')`
-| Get top 100 devices in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device?$top=100` |
-| Get device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)` |
-| Get operating system of device with resource id 16777573 in collection SMS00001 | `http://localhost/SccmGraph/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
-| Get users in collection SMS00002 | `http://localhost/SccmGraph/Collection('SMS00002')/User` |
+| Get all collections | `http://localhost/CMRestProvider/Collection` |
+| Get a collection | `http://localhost/CMRestProvider/Collection('SMS00001')`
+| Get the top 100 devices in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device?$top=100` |
+| Get a device with a resource ID in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)` |
+| Get operating system of the device in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
+| Get users in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/User` |
+
+> [!NOTE]
+> The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
