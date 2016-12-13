@@ -243,12 +243,12 @@ In your favorite OData query viewer, try queries similar to the following exampl
 
 | Purpose | OData query |
 |---|---|
-| Get all collections | `http://localhost/CMRestProvider/Collection` |
-| Get collection SMS00001 | `http://localhost/CMRestProvider/Collection('SMS00001')`
-| Get top 100 devices in collection SMS00001 | `http://localhost/CMRestProvider/Collection('SMS00001')/Device?$top=100` |
-| Get device with resource id 16777573 in collection SMS00001 | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)` |
-| Get operating system of device with resource id 16777573 in collection SMS00001 | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
-| Get users in collection SMS00002 | `http://localhost/CMRestProvider/Collection('SMS00002')/User` |
+| Get all collections | http://localhost/CMRestProvider/Collection |
+| Get collection SMS00001 | http://localhost/CMRestProvider/Collection('SMS00001')
+| Get top 100 devices in collection SMS00001 | http://localhost/CMRestProvider/Collection('SMS00001')/Device?$top=100 |
+| Get device with resource id 16777573 in collection SMS00001 | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573) |
+| Get operating system of device with resource id 16777573 in collection SMS00001 | http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM |
+| Get users in collection SMS00002 | http://localhost/CMRestProvider/Collection('SMS00002')/User |
 
 > [!NOTE]
 > The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
