@@ -125,6 +125,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
+ |OData endpoint data access |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access-sccmgraph)|![Not added](media/Red_X.gif)|
  |Data Warehouse Service point |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Not added](media/Red_X.gif)|
  |Content library cleanup tool |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Not added](media/Red_X.gif)|
  |Improvements for in-console search |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#improvements-for-in-console-search)|![Not added](media/Red_X.gif)|
