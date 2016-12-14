@@ -2,7 +2,7 @@
 title: "Monitor Endpoint Protection | Microsoft Docs"
 description: "Learn how monitor Endpoint Protection in your System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,13 +16,13 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 ---
 # How to monitor Endpoint Protection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You can monitor Endpoint Protection in your Microsoft System Center 2012 Configuration Manager hierarchy by using the **Endpoint Protection Status** node in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
+You can monitor Endpoint Protection in your Microsoft System Center Configuration Manager hierarchy by using the **Endpoint Protection Status** node under **Security** in the **Monitoring** workspace, the **Endpoint Protection** node in the **Assets and Compliance** workspace, and by using reports.  
 
 ##  <a name="BKMK_1"></a> How to Monitor Endpoint Protection by Using the Endpoint Protection Status Node  
 
 1.  In the Configuration Manager console, click **Monitoring**.  
 
-2.  In the **Monitoring** workspace, click **Endpoint Protection Status**.  
+2.  In the **Monitoring** workspace, expand **Security** and then click **Endpoint Protection Status**.  
 
 3.  In the **Collection** list, select the collection for which you want to view status information.  
 

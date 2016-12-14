@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c7cec31-f78d-46b9-93ae-a12ae27a1de6
 caps.latest.revision: 5
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ---
 # Manage Dynamics CRM Online access in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

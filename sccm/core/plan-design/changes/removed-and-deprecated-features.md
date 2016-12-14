@@ -43,7 +43,8 @@ For more information, see:
 |-|-|-|  
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|7/10/2015|Version 1511|  
 |Out of Band Management - as found in System Center 2012 Configuration Manager|10/16/2015|Version 1511|
-|Task Sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |11/18/2016|Support for these task sequences ends with the first update released after June 1st, 2017|  
+|Task Sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |11/18/2016|Support for these task sequences ends with the first update released after June 1st, 2017|
+|The new Software Center has a new, modern look and apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center under the **Applications** tab. The Application Catalog can still be accessed using the link under the **Installation Status** tab of Software Center.<br><br>In the coming months, we will be removing the previous version of Software Center, and it will no longer be available for you to use.<br><br>You can configure clients to use the new Software Center by enabling the client setting **Computer Agent** > **Use new Software Center**.<br><br>For more information about Software Center, see [Plan for and configure application management in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|12/13/2016|To be announced| 
 
  **Deprecated server operating systems:**  
 
