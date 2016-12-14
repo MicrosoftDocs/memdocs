@@ -2,7 +2,7 @@
 title: "Create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager iOS and Mac OS X configuration item to manage settings for iOS and Mac OS X devices."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -240,7 +240,7 @@ Use the System Center Configuration Manager **iOS and Mac OS X** configuration i
 
     -   **Import** - Imports a list of apps you have specified in a comma-separated values file. Use the format, app name, publisher, app bundle ID in the file.  
 
-2.  When you are finished, click **Next**.  
+2.  When you are finished, click **Next**. Configuration items containing compliant and noncompliant app settings must be deployed to collections of users.
 
  You can use one of the following reports monitor compliant and noncompliant apps:  
 

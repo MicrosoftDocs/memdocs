@@ -252,3 +252,28 @@ In your favorite OData query viewer, try queries similar to the following exampl
 
 > [!NOTE]
 > The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
+
+## Azure Active Directory onboarding
+
+Azure Active Directory (AD) onboarding creates a connection between Configuration Manager and Azure Active Directory to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway. 
+
+Perform this task with an Azure admin, as you will need Azure admin credentials.
+
+#### To create the connection:
+
+2. In the **Administration** workspace, **Azure Active Directory** node, choose **Add Azure Active Directory**. 
+2. Choose **Sign In** to create the connection with Azure AD. 
+
+#### Update Configuration Manager clients
+
+> [!NOTE]
+>
+>This connection will only apply to clients that are both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD). 
+
+After setting up the connection, modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
+
+After you make these configuration changes, a user policy request through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
+
+## Change to configuring multi-factor authentication for device enrollment
+
+Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory).

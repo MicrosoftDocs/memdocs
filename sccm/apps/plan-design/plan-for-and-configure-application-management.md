@@ -18,7 +18,9 @@ manager: angrobe
 
 ---
 # Plan for and configure application management in System Center Configuration Manager
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the information in this article to help you implement the necessary dependencies to deploy applications in System Center Configuration Manager.  
 
 ## Dependencies external to Configuration Manager  
@@ -128,7 +130,7 @@ Use the information in this article to help you implement the necessary dependen
     For more information, search for the **awebsvcMSI.log** and **portlwebMSI.log** log files.  
 
 ###  Step 4: Configure the client settings for the Application Catalog and Software Center  
- This procedure configures the default client settings for the Application Catalog and Software Center that will apply to all devices in the hierarchy. If you want these settings to apply to only some devices, you can create a custom client setting and deploy it to a collection that has the devices that will have the specific settings. For more about how to create a custom device setting, see the [How to Create and Deploy Custom Client Settings](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings) section in the [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) article.  
+ This procedure configures the default client settings for the Application Catalog and Software Center that will apply to all devices in the hierarchy. If you want these settings to apply to only some devices, you can create a custom client setting and deploy it to a collection that has the devices that will have the specific settings. For more about how to create a custom device setting, see the [How to Create and Deploy Custom Client Settings](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings) section in the [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) article.  
 
 1.  In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
 
