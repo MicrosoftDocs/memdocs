@@ -33,9 +33,8 @@ To enable migration of data to your System Center Configuration Manager environm
 
  Use the following procedures to specify a source hierarchy for migration and to identify additional source sites in a Configuration Manager 2007 hierarchy.  
 
- Run this procedure with a Configuration Manager console that is connected to the destination hierarchy.  
+ Run this procedure with a Configuration Manager console that is connected to the destination hierarchy:  
 
-#### Configure a source hierarchy  
 
 1.  In the Configuration Manager console, choose **Administration**.  
 
@@ -70,7 +69,7 @@ To enable migration of data to your System Center Configuration Manager environm
 
 When you set up additional source sites for a Configuration Manager 2007 source hierarchy, you must configure the additional source sites from the top of the source hierarchy to the bottom. You must set up a parent site as a source site before you set up any of its child sites as source sites.  
 
-Use the following procedure to set up additional source sites for Configuration Manager 2007 source hierarchies.  
+Use the following procedure to set up additional source sites for Configuration Manager 2007 source hierarchies:  
 
 1.  In the Configuration Manager console, choose **Administration**.  
 
