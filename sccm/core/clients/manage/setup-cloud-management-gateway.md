@@ -4,7 +4,7 @@ description: ""
 author: nbigman
 manager: angrobe
 ms.author: nbigman
-ms.date: 11/18/2016
+ms.date: 12/14/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -31,19 +31,21 @@ You can create a custom SSL certificate for cloud management gateway in the same
 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
-> [!NOTE] Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
+> [!NOTE] 
+>
+> Client certificates are required on any computer you want to manage with cloud management gateway and on the site system server hosting the cloud management gateway connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).
 
 1.  In the Run window, type **mmc** and press Return.
 
-2.  On the File menu in the management console, click **Add/Remove Snap-in...**.
+2.  From the File menu choose **Add/Remove Snap-in...**.
 
-3.  In the Add or Remove Snap-ins dialog box, click **Certificates**, click **Add &gt;**, click **Computer account**, click **Next**, click **Local computer**, and then click **Finish**. Click **OK** to close the dialog box.
+3.  In the Add or Remove Snap-ins dialog box, choose **Certificates** > **Add &gt;** > **Computer account** > **Next** > **Local computer** > **Finish**. 
 
-4.  Go to **Certificates &gt; Personal &gt; Certificates**.
+4.  Go to **Certificates** &gt; **Personal** &gt; **Certificates**.
 
-5.  Double-click the certificate for client authentication on the computer, click the Certification Path tab, and double-click the root authority (at the top of the path).
+5.  Double-click the certificate for client authentication on the computer, choose the Certification Path tab, and double-click the root authority (at the top of the path).
 
-6.  Click the Details tab, and click **Copy to File...**.
+6.  On the Details tab, choose **Copy to File...**.
 
 7.  Complete the Certificate Export Wizard using the default certificate format. Make note of the name and location of the root certificate you create. You will need it to configure cloud management gateway in a [later step](#step-4-set-up-cloud-management-gateway).
 
@@ -58,15 +60,84 @@ An Azure management certificate is required for Configuration Manager to access 
 >[!IMPORTANT]
 >Make sure to copy the subscription ID associated with the management certificate. You will need it for configuring cloud management gateway in the Configuration Manager console in the [next step](#step-4-set-up-cloud-management-gateway).
 
+### Subordinate CA certificates and Azure
+
+If your certificate is issued by a subordinate CA (subCA), and your enterprise PKI infrastructure is not on the Internet, use this procedure to upload the certificate to Azure. 
+
+1. In your Azure portal, after setting up a cloud management gateway, locate the cloud management gateway service and go to the **Certificate** tab. Upload your subCA certificate(s) there. If you have more than one subCA cert, you need to upload all of them. 
+2. Once the certificate is uploaded, record its thumbprint. 
+3. Add the thumbprint to site database using this script:
+	
+```
+
+	DIM serviceCName
+	DIM subCAThumbprints
+
+	' Verify arguments
+	IF WScript.Arguments.Count <> 2 THEN
+	WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
+	WScript.Quit 1
+	END IF
+
+	'Get arguments
+	serviceCName = WScript.Arguments.Item(0)
+	subCAThumbprints = WScript.Arguments.Item(1)
+
+	'Find SMS Provider
+	WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
+	SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
+	SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
+
+	'Process the results
+	FOR EACH var in results
+	siteCode = var.SiteCode
+	NEXT
+
+	IF siteCode = "" THEN
+	WScript.StdOut.WriteLine "Failed to locate SMS provider."
+	WScript.Quit 1
+	END IF
+
+	WScript.StdOut.WriteLine "SiteCode = " & siteCode 
+
+	' Connect to the SMS namespace
+	SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
+
+	'Get instance of SMS_AzureService
+	DIM query
+	query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
+	WScript.StdOut.WriteLine "Run WQL query: " &  query
+	SET objInstances = objWMIService.ExecQuery(query)
+
+	IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
+	WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
+	WScript.Quit 1
+	END IF
+
+	FOR EACH var IN objInstances
+	SET azService = var
+	NEXT
+
+	WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
+
+	'Update SubCA cert thumbprints
+	azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
+
+	'Save data back to provider
+	azService.Put_
+
+	WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
+```
+
 ## Step 4: Set up cloud management gateway
 
 >[!NOTE]
 >In version 1610, cloud management gateway is a pre-release feature. To enable it, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
-1. In the Configuration Manager console, go to **Administration > Cloud Services > Cloud Management Gateway**.
-2. Click **Create Cloud Management Gateway**.
+1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Cloud Management Gateway**.
+2. Choose **Create Cloud Management Gateway**.
 
-3. In Create Cloud Management Gateway Wizard, enter your Azure subscription ID (copied from the Azure management portal), click Browse, and select the certificate file you used to upload as an Azure management certificate. Click **Next**. Wait a few moments for the console to connect to Azure.
+3. In Create Cloud Management Gateway Wizard, enter your Azure subscription ID (copied from the Azure management portal), and browse to the certificate file you used to upload as an Azure management certificate. Choose **Next** and then wait a few moments for the console to connect to Azure.
 
 4. Fill out the additional details in the wizard:
 
@@ -92,23 +163,22 @@ An Azure management certificate is required for Configuration Manager to access 
 
   - Clear the box next to **Verify Client Certificate Revocation** (unless you're publicly publishing your CRL information).
 
-  - Click **Next** when you're done.
+  - Choose **Next** when you're done.
 
-5. If you want to monitor cloud management gateway traffic with a 14-day threshold, click check box to turn on the threshold alert. Then, specify the threshold (in GB) and the percentage at which to raise the different alert levels. Click **Next** when your done.
+5. If you want to monitor cloud management gateway traffic with a 14-day threshold, choose the check box to turn on the threshold alert. Then, specify the threshold, and the percentage at which to raise the different alert levels. Choose **Next** when you're done.
 
-6. Review the settings, and click **Next**. Configuration Manager starts setting up the service. When the wizard completes, you can click **Close**, however it will take between 5 to 15 minutes to provision the service completely in Azure. Check the **Status** column for the newly setup cloud management gateway to determine when the service is ready.
+6. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard it will take between 5 to 15 minutes to provision the service completely in Azure. Check the **Status** column for the newly setup cloud management gateway to determine when the service is ready.
 
 ## Step 5: Configure primary site for client certification authentication
 
-1. In the Configuration Manager console, go to **Administration > Site Configuration > Sites**.
+1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Sites**.
 
-2. Select the primary site for the clients you want to manage through cloud management gateway, and click **Properties**.
+2. Select the primary site for the clients you want to manage through cloud management gateway, and choose **Properties**.
 
-3. On the Client Computer Communications tab of the primary site property sheet, check the box next to **Use PKI client certificate (client authentication) when available**.
+3. On the Client Computer Communications tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.
 
-4. Make sure to clear the box next to **Clients check the certificate revocation list (CRL) for site systems**. This option would only be required if you were publicly publishing your CRL.
+4. Make sure to clear **Clients check the certificate revocation list (CRL) for site systems**. This option would only be required if you were publicly publishing your CRL.
 
-5. Click **OK**.
 
 ## Step 6: Add the cloud management gateway connector point
 
@@ -118,13 +188,13 @@ The cloud management gateway connector point is a new site system role for commu
 
 The final step in setting up cloud management gateway is to configure the site system roles to accept cloud management gateway traffic. For Tech Preview 1606, only the management point, distribution point, and software update point roles are supported for cloud management gateway. You must configure each role separately.
 
-1. In the Configuration Manager console, go to **Administration > Site Configuration > Servers and Site System Roles**.
+1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**.
 
-2. Click the site system server for the role you want to configure for cloud management gateway traffic.
+2. Choose the site system server for the role you want to configure for cloud management gateway traffic.
 
-3. Click the role, and then click **Properties**.
+3. Choose the role, and then choose **Properties**.
 
-4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then click **OK**. Repeat these steps for the remaining roles.
+4. In the role Properties sheet, under Client Connections, choose **HTTPS**, check the box next to **Allow Configuration Manager cloud management gateway traffic**, and then choose **OK**. Repeat these steps for the remaining roles.
 
 ## Step 8: Configure clients for cloud management gateway
 
