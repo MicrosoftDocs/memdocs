@@ -18,7 +18,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 # About client settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (current branch)*
 All client settings in System Center Configuration Manager are managed in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign these to collections. For information about how to configure client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
-Many of the client settings are self-explanatory, but others are described here.  
+Many of the client settings are self-explanatory. Others are described here.  
 
 ## Background Intelligent Transfer Service  
 
@@ -121,25 +121,25 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   Clients are automatically given an Application Catalog website point from their site, if their site has an Application Catalog website point.  
 
-    -   Application Catalog website points on the intranet that are configured for HTTPS are given preference over those that aren't. This helps protect against a rogue server.
+    -   Application Catalog website points on the intranet that are configured for HTTPS are given preference over those that aren't configured for HTTPS. This helps protect against a rogue server.
 
     -   When clients are configured for intranet-based and Internet-based client management, they will be given an Internet-based Application Catalog website point when they are on the Internet and an intranet-based Application Catalog website point when they are on the intranet.  
 
      Automatic detection does not guarantee that clients will be given an Application Catalog website point that is closest to them. You might decide not to use **Automatically detect** for the following reasons:  
 
-    -   You want to manually configure the closest server for clients or ensure that they do not connect to a server across a slow network connection.  
+     -   You want to manually configure the closest server for clients or ensure that they do not connect to a server across a slow network connection.  
 
-    -   You want to control which clients connect to which server. This might be for testing, performance, or business reasons.  
+     -   You want to control which clients connect to which server. This might be for testing, performance, or business reasons.  
 
-    -   You do not want to wait up to 25 hours or for a network change for clients to be configured with a different Application Catalog website point.  
+     -   You do not want to wait up to 25 hours or for a network change for clients to be configured with a different Application Catalog website point.  
 
      If you specify the Application Catalog website point rather than use automatic detection, specify the NetBIOS name rather than the intranet FQDN. This helps reduce the likelihood that users will be prompted for credentials when they connect to the Application Catalog on the intranet. To use the NetBIOS name, the following conditions must apply:  
 
-    -   The NetBIOS name is specified in the Application Catalog website point properties.  
+     -   The NetBIOS name is specified in the Application Catalog website point properties.  
 
-    -   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
+     -   You use WINS, or all clients are in the same domain as the Application Catalog website point.  
 
-    -   The Application Catalog website point is configured for HTTP client connections, or it is configured for HTTPS client connections and the web server certificate has the NetBIOS name.  
+     -   The Application Catalog website point is configured for HTTP client connections, or it is configured for HTTPS client connections and the web server certificate has the NetBIOS name.  
 
      Typically, users are prompted for credentials when the URL has an FQDN but not when the URL is a NetBIOS name. Expect users to be always prompted when they connect from the Internet, because this connection must use the Internet FQDN. When users are prompted for credentials when they are on the Internet, ensure that the server that runs the Application Catalog website point can connect to a domain controller for the user’s account so that the user can be authenticated by using Kerberos.  
 
@@ -190,21 +190,21 @@ Many of the client settings are self-explanatory, but others are described here.
     > [!WARNING]  
     >  This setting applies to the Application Catalog and Software Center. This setting has no effect when users use the company portal.  
 
-     Configure how users can start the installation of software, software updates, and task sequences:  
+     Configure how users can initiate the installation of software, software updates, and task sequences:  
 
-    -   **All Users**: Users logged on to a client computer with any permission except Guest can start the installation of software, software updates, and task sequences.  
+    -   **All Users**: Users logged on to a client computer with any permission except Guest can initiate the installation of software, software updates, and task sequences.  
 
-    -   **Only Administrators**: Users logged on to a client computer must be a member of the local Administrators group to start the installation of software, software updates, and task sequences.  
+    -   **Only Administrators**: Users logged on to a client computer must be a member of the local Administrators group to initiate the installation of software, software updates, and task sequences.  
 
-    -   **Only Administrators and primary users**: Users logged on to a client computer must be a member of the local Administrators group or a primary user of the computer to start the installation of software, software updates, and task sequences.  
+    -   **Only Administrators and primary users**: Users logged on to a client computer must be a member of the local Administrators group or a primary user of the computer to initiate the installation of software, software updates, and task sequences.  
 
-    -   **No Users**: No users logged on to a client computer can start the installation of software, software updates, and task sequences. Required deployments for the computer are always installed at the deadline. Users cannot start the installation of software from the Application Catalog or Software Center.  
+    -   **No Users**: No users logged on to a client computer can initiate the installation of software, software updates, and task sequences. Required deployments for the computer are always installed at the deadline. Users cannot initiate the installation of software from the Application Catalog or Software Center.  
 
 -   **Suspend BitLocker PIN entry on restart**  
 
      If the BitLocker PIN entry is configured on computers, this option can bypass the requirement to enter a PIN when the computer restarts after a software installation.  
 
-    -   **Always**: Configuration Manager temporarily suspends the BitLocker requirement to enter a PIN on the next computer startup after it has installed software that requires a restart and started a restart of the computer. This setting applies only to computer restarts that are started by Configuration Manager and does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement is resumed after Windows startup.  
+    -   **Always**: Configuration Manager temporarily suspends the BitLocker requirement to enter a PIN on the next computer startup after it has installed software that requires a restart and has initiated a restart of the computer. This setting applies only to computer restarts that are initiated by Configuration Manager and does not suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement is resumed after Windows startup.  
 
     -   **Never**: Configuration Manager does not suspend the BitLocker requirement to enter a PIN on the next computer startup after it has installed software that requires a restart. In this scenario, the software installation cannot finish until the user enters the PIN to finish the standard startup process and load Windows.  
 
@@ -234,7 +234,7 @@ Many of the client settings are self-explanatory, but others are described here.
     > [!TIP]  
     >  If unsigned scripts fail to run because of this client setting, Configuration Manager reports this error in the following ways:  
     >   
-    >  -   Error ID **0X87D00327** and the description of **Script is not signed** as a deployment status error in the **Monitoring** workspace of the Configuration Manager console.  
+    > -   Error ID **0X87D00327** and the description of **Script is not signed** as a deployment status error in the **Monitoring** workspace of the Configuration Manager console.  
     > -   Error codes and descriptions of **0X87D00327** and **Script is not signed** or **0X87D00320** and **The script host has not been installed yet** with the error type of **Discovery Error** in reports. An example is **Details of errors of configuration items in a configuration baseline for an asset**.  
     > -   The message **Script is not signed (Error: 87D00327; Source: CCM)** in the **DcmWmiProvider.log** file.  
 
@@ -250,7 +250,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 	 In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you configured. This might typically be required when a computer has been turned off for an extended period of time and needs to install a large number of application or update deployments. For example, if a user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can define an enforcement grace period by deploying Configuration Manager client settings to a collection.
 
-     You can set a grace period of between 1 and 120 hours. This setting is used in conjunction with the deployment property **Delay enforcement of this deployment according to user preferences**. For more details, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
+     You can set a grace period of 1 to 120 hours. This setting is used in conjunction with the deployment property **Delay enforcement of this deployment according to user preferences**. For more details, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).
 
 ##  Computer restart  
  When you specify these computer restart settings, ensure that the value for the restart temporary notification interval and the value for the final countdown interval are shorter in duration than the shortest maintenance window that is applied to the computer.  
@@ -299,7 +299,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Maximum custom MIF file size (KB)**  
 
-     Specify the maximum size, in kilobytes, allowed for each custom Management Information Format (MIF) file that will be collected from a client during a hardware inventory cycle. If any MIF files exceed this size, the Configuration Manager hardware inventory will not process them. You can specify a size between 1 and 5,000 KB. By default, this value is set to 250 KB. This setting does not affect the size of the regular hardware inventory data file.  
+     Specify the maximum size, in kilobytes, allowed for each custom Management Information Format (MIF) file that will be collected from a client during a hardware inventory cycle. If any MIF files exceed this size, the Configuration Manager hardware inventory will not process them. You can specify a size of 1 to 5,000 KB. By default, this value is set to 250 KB. This setting does not affect the size of the regular hardware inventory data file.  
 
     > [!NOTE]  
     >  This setting is available only in the default client settings.  
@@ -327,7 +327,7 @@ Many of the client settings are self-explanatory, but others are described here.
 > [!NOTE]  
 >  The configured client setting is not applied to Windows 8 client computers in the following scenarios:  
 >   
->  -   The computer is on a roaming data connection: The Configuration Manager client does not perform any tasks that require data to be transferred to Configuration Manager sites.  
+> -   The computer is on a roaming data connection: The Configuration Manager client does not perform any tasks that require data to be transferred to Configuration Manager sites.  
 > -   The Windows network connection properties are configured as non-metered: The Configuration Manager client behaves as if this is a non-metered Internet connection and so transfers data to the Configuration Manager sites.  
 
 -   **Client communication on metered Internet connections**  
@@ -347,7 +347,7 @@ Many of the client settings are self-explanatory, but others are described here.
         -   Required deployments (when the installation deadline is reached)  
 
         > [!IMPORTANT]  
-        >  If a user starts a software installation from Software Center or the Application Catalog, these are always permitted, regardless of the metered Internet connection settings.  
+        >  If a user initiates a software installation from Software Center or the Application Catalog, these are always permitted, regardless of the metered Internet connection settings.  
 
          If the data transfer limit is reached for the metered Internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
@@ -370,7 +370,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Wake-up proxy port number (UDP)**  
 
-     Keep the default value for the port number that managed computers use to send wake-up packets to sleeping computers, or change the number to a value of your choice.  
+     Keep the default value for the port number that managed computers use to send wake-up packets to sleeping computers. Or, change the number to a value of your choice.  
 
      The port number specified here is automatically configured for clients that run Windows Firewall when you use the **Windows Firewall exception for wake-up proxy** option. If clients run a different firewall, you must manually configure it to allow the UDP port number that is specified for this setting.  
 
@@ -406,7 +406,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Grant Remote Control permission to local Administrators group**  
 
-     Choose whether local admins on the server that starts the remote control connection can establish remote control sessions to client computers.  
+     Choose whether local admins on the server that initiates the remote control connection can establish remote control sessions to client computers.  
 
 -   **Access level allowed**  
 
@@ -438,7 +438,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
      Choose this option to let Configuration Manager manage unsolicited remote assistance sessions.  
 
-     In an unsolicited remote assistance session, the user at the client computer did not request assistance to start the session.  
+     In an unsolicited remote assistance session, the user at the client computer did not request assistance to initiate the session.  
 
 -   **Manage solicited Remote Assistance settings**  
 
@@ -448,7 +448,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Level of access for Remote Assistance**  
 
-     Choose the level of access to assign to remote assistance sessions that are started in the Configuration Manager console.  
+     Choose the level of access to assign to remote assistance sessions that are initiated in the Configuration Manager console.  
 
     > [!NOTE]  
     >  The user at the client computer must always grant permission for a Remote Assistance session to occur.  
@@ -474,7 +474,7 @@ Many of the client settings are self-explanatory, but others are described here.
     > [!IMPORTANT]  
     >  We recommend that you do not change this value to a lower value than the default. Doing that might negatively affect the performance of your network and client computers.  
 
-     You can also start this action from a Configuration Manager client computer by choosing the action **Application Deployment Evaluation Cycle** from the **Actions** tab of **Configuration Manager** in Control Panel.  
+     You can also initiate this action from a Configuration Manager client computer by choosing the action **Application Deployment Evaluation Cycle** from the **Actions** tab of **Configuration Manager** in Control Panel.  
 
 ##  Software inventory  
 
@@ -491,7 +491,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   Choose the **New** icon to add a new file type to inventory. Then, specify the following information in the **Inventoried File Properties** dialog box:  
 
-        -   **Name**: Provide a name for the file that you want to inventory. You can use the **\*** character to represent any string of text and the **?** character to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name **\*.doc**.  
+        -   **Name**: Provide a name for the file that you want to inventory. You can use the **\** character to represent any string of text and the **?** character to represent any single character. For example, if you want to inventory all files with the extension .doc, specify the file name **\*.doc**.  
 
         -   **Location**: Choose **Set** to open the **Path Properties** dialog box. You can configure software inventory to search all client hard disks for the specified file, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
 
@@ -501,7 +501,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   Choose **OK** to close the **Inventoried File Properties** dialog box.  
 
-    -   Add all of the files that you want to inventory, and then choose **OK** to close the **Configure Client Setting** dialog box.  
+    -   Add all the files that you want to inventory, and then choose **OK** to close the **Configure Client Setting** dialog box.  
 
 -   **Collect files**  
 
@@ -514,18 +514,18 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   In the **Collected File Properties** dialog box, provide the following information:  
 
-        -   **Name**: Provide a name for the file that you want to collect. You can use the **\*** character to represent any string of text and the **?** character to represent any single character.  
+        -   **Name**: Provide a name for the file that you want to collect. You can use the **\** character to represent any string of text and the **?** character to represent any single character.  
 
-        -   **Location**: Choose **Set** to open the **Path Properties** dialog box. You can configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example **C:\Folder**) or a specified variable (for example *%windir%*) and you can also search all subfolders under the specified path.  
+        -   **Location**: Choose **Set** to open the **Path Properties** dialog box. You can configure software inventory to search all client hard disks for the file that you want to collect, search a specified path (for example, **C:\Folder**), or search for a specified variable (for example, *%windir%*). You can also search all subfolders under the specified path.  
 
         -   **Exclude encrypted and compressed files**: When you choose this option, any files that have been compressed or encrypted will not be collected.  
 
-        -   **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size (in KB) after which no more of the files specified under **Name** will be collected.  
+        -   **Stop file collection when the total size of the files exceeds (KB)**: Specify the file size (in kilobytes) after which no more of the files specified under **Name** will be collected.  
 
           > [!NOTE]  
-          >  The site server collects the five most recently changed versions of collected files and stores them in the *&lt;ConfigMgr installation directory\>***\Inboxes\Sinv.box\Filecol** directory. If a file has not changed since the last software inventory was collected, the file will not be collected again.  
+          >  The site server collects the five most recently changed versions of collected files and stores them in the *&lt;ConfigMgr installation directory\>*\Inboxes\Sinv.box\Filecol directory. If a file has not changed since the last software inventory was collected, the file will not be collected again.  
           >   
-          >  Files larger than 20 MB are not collected by software inventory.  
+          >  Software inventory does not collect files larger than 20 MB.  
           >   
           >  The value **Maximum size for all collected files (KB)** in the **Configure Client Setting** dialog box shows the maximum size for all collected files. When this size is reached, file collection will stop. Any files already collected are retained and sent to the site server.  
 
@@ -536,7 +536,7 @@ Many of the client settings are self-explanatory, but others are described here.
 
     -   Choose **OK** to close the **Collected File Properties** dialog box.  
 
-    -   Add all of the files that you want to collect, and then choose **OK** to close the **Configure Client Setting** dialog box.  
+    -   Add all the files that you want to collect, and then choose **OK** to close the **Configure Client Setting** dialog box.  
 
 -   **Set Names**  
 
@@ -559,26 +559,28 @@ Many of the client settings are self-explanatory, but others are described here.
 
 -   **Software update scan schedule**  
 
-     Use this setting to specify how often the client starts a software update compliance assessment scan. The compliance assessment scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+     Use this setting to specify how often the client initiates a software update compliance assessment scan. The compliance assessment scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-     By default, a simple schedule is used and the compliance scan starts every 7 days. You can choose to create a custom schedule to specify an exact start day and time, choose whether to use UTC or the local time, and configure the recurring interval for a specific day of the week.  
+     By default, a simple schedule is used and the compliance scan is initiated every 7 days. You can choose to create a custom schedule to specify an exact start day and time, choose whether to use UTC or the local time, and configure the recurring interval for a specific day of the week.  
 
     > [!NOTE]  
     >  If you specify an interval of less than 1 day, Configuration Manager will automatically default to 1 day.  
 
     > [!WARNING]  
-    >  The actual start time on client computers is the start time plus a random amount of time up to 2 hours. This prevents client computers from starting the scan and connecting to Windows Server Update Services (WSUS) on the active software update point server at the same time.  
+    >  The actual start time on client computers is the start time plus a random amount of time up to 2 hours. This prevents client computers from initiating the scan and connecting to Windows Server Update Services (WSUS) on the active software update point server at the same time.  
 
 -   **Schedule deployment re-evaluation**  
 
-     Use this setting to configure how often the Software Updates Client Agent re-evaluates software updates for installation status on Configuration Manager client computers. When software updates that were previously installed are no longer found on client computers and are still required, they are reinstalled. The deployment re-evaluation schedule should be adjusted based on company policy for software update compliance, whether users have the ability to uninstall software updates, and so on. Remember that every deployment re-evaluation cycle results in some network and client computer CPU activity. By default, a simple schedule is used and the deployment re-evaluation scan starts every 7 days.  
+     Use this setting to configure how often the Software Updates Client Agent re-evaluates software updates for installation status on Configuration Manager client computers. When software updates that were previously installed are no longer found on client computers and are still required, they are reinstalled.
+
+     The deployment re-evaluation schedule should be adjusted based on company policy for software update compliance, whether users have the ability to uninstall software updates, and so on. Remember that every deployment re-evaluation cycle results in some network and client computer CPU activity. By default, a simple schedule is used and the deployment re-evaluation scan is initiated every 7 days.  
 
     > [!NOTE]  
     >  If you specify an interval of less than 1 day, Configuration Manager will automatically default to 1 day.  
 
 -   **When any software update deadline is reached, install all other software update deployments with deadline coming within a specified period of time**  
 
-     Use this setting to install all software updates in required deployments that have deadlines that will occur within a specified period of time. When a deadline is reached for a required software update deployment, installation starts on clients for the software updates in the deployment. This setting determines whether to also start the installation for software updates defined in other required deployments that have a configured deadline within the specified period of time.  
+     Use this setting to install all software updates in required deployments that have deadlines that will occur within a specified period of time. When a deadline is reached for a required software update deployment, installation is initiated on clients for the software updates in the deployment. This setting determines whether to also initiate the installation for software updates defined in other required deployments that have a configured deadline within the specified period of time.  
 
      Use this setting to expedite software update installation for required software updates, potentially increase security, potentially decrease display notifications, and potentially decrease system restarts on client computers. By default, this setting is not enabled.  
 
