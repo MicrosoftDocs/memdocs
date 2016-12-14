@@ -129,6 +129,7 @@ If your certificate is issued by a subordinate CA (subCA), and your enterprise P
 	WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
 ```
 
+
 ## Step 4: Set up cloud management gateway
 
 >[!NOTE]
