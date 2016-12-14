@@ -99,7 +99,7 @@ Use the following checklist to help you plan a destination hierarchy before you 
 
 -   **Install and set up additional site system roles in the destination hierarchy.**  
 
-    Set up additional site system roles and site systems that you will require.  
+    Set up additional site system roles and site systems that you require.  
 
 -   **Check operational functionality in the destination hierarchy.**  
 
@@ -121,7 +121,7 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
 -   **When the source hierarchy runs Configuration Manager 2007 SP2, select and set up additional sites in the source hierarchy.**  
 
-    For each additional site in the Configuration Manager 2007 SP2 source hierarchy that you want to collect data from, you must set up credentials for data gathering. When you set up each source site, the data-gathering process begins immediately and continues throughout the migration period until you stop data gathering for that site. Data gathering ensures that you can migrate objects from the source hierarchy that are updated or new since a previous data-gathering process. 
+    For each additional site in the Configuration Manager 2007 SP2 source hierarchy that you want to collect data from, you must set up credentials for data gathering. When you set up each source site, the data-gathering process begins immediately and continues throughout the migration period until you stop data gathering for that site. Data gathering ensures that you can migrate objects from the source hierarchy that are updated or added after a previous data-gathering process.
 
     > [!NOTE]  
     >  When the source hierarchy runs System Center 2012 Configuration Manager or later, you do not need to set up additional source sites.  
@@ -138,13 +138,13 @@ Use the following checklist to migrate data from the source hierarchy to the des
 
     For example, when you migrate content, regardless of the migration job you use, you must assign a site in the destination hierarchy to own management of that content. The assigned site will access the original source file location for the content and is responsible for distributing that content to distribution points in the destination hierarchy.  
 
-    For more information, see the [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) section in the [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) topic.  
+    For more information, see [Create and edit migration jobs for system center configuration manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) in [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md).  
 
 -   **Migrate clients to the destination hierarchy.**  
 
     The process of migrating clients depends on your migration scenario:  
 
-    -   When you migrate clients that have a client version that is not the same as the destination hierarchy, the client software must upgrade. Upgrade requires the removal of the current Configuration Manager client, followed by the installation of the new client version that matches the destination site.  
+    -   When you migrate clients that have a client version that is not the same as the destination hierarchy, you must upgrade the client software. Upgrade requires the removal of the current Configuration Manager client, followed by the installation of the new client version that matches the destination site.  
 
     -   When you migrate clients that have a client version that matches the version of the destination hierarchy, the client does not upgrade or reinstall. Instead, the client reassigns to a primary site in the destination hierarchy.  
 
