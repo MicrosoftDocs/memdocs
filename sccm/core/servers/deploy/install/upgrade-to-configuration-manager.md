@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 12/01/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,7 +22,22 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 
 
 ##  <a name="bkmk_path"></a> In-place upgrade paths  
- **You can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:**  
+**Upgrade to version 1606**  
+On December 15th, 2016, the baseline media for version 1606 was rereleased to add support for additional upgrade scenarios. This new release supports the upgrade of the following to a fully licensed version of System Center Configuration Manager version 1606:  
+-   An evaluation install of System Center Configuration Manager version 1606
+-   A release candidate install of System Center Configuration Manager  
+-   System Center 2012 Configuration Manager with Service Pack 1  
+-   System Center 2012 Configuration Manager with Service Pack 2  
+-   System Center 2012 R2 Configuration Manager  
+-   System Center 2012 R2 Configuration Manager with Service Pack 1  
+
+If you use version 1606 baseline media downloaded prior to December 15th, 2016, you can  upgrade only the following to a fully licensed version of System Center Configuration Manager version 1606:
+-   An evaluation install of System Center Configuration Manager version 1606
+-   System Center 2012 Configuration Manager with Service Pack 2
+-   System Center 2012 R2 Configuration Manager with Service Pack 1
+
+**Upgrade to version 1511**  
+When you have version 1511 baseline media, you can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:  
 -   An evaluation install of System Center Configuration Manager version 1511
 -   A release candidate install of System Center Configuration Manager  
 -   System Center 2012 Configuration Manager with Service Pack 1  
@@ -30,10 +45,6 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
 -   System Center 2012 R2 Configuration Manager  
 -   System Center 2012 R2 Configuration Manager with Service Pack 1  
 
-**You can upgrade the following to a fully licensed version of System Center Configuration Manager version 1606:**
--   An evaluation install of System Center Configuration Manager version 1606
--   System Center 2012 Configuration Manager with Service Pack 2
--   System Center 2012 R2 Configuration Manager with Service Pack 1
 
 
 > [!TIP]  
@@ -45,7 +56,7 @@ You can run an in-place upgrade to upgrade to System Center Configuration Manage
  **The following is not supported:**  
 -   It is not supported to upgrade a Technical Preview for System Center Configuration Manager to a fully licensed installation.  A Technical Preview version can  only upgrade to a later version of the Technical Preview.  
 
--   Migration from a Technical Preview to a fully licensed  version is not supported  
+-   Migration from a Technical Preview to a fully licensed  version is not supported.  
 
 ##  <a name="bkmk_checklist"></a> Upgrade checklists  
  The following check lists can help you plan a successful upgrade to  System Center Configuration Manager.  
