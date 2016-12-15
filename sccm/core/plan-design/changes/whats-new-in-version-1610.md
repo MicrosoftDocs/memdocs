@@ -11,10 +11,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 caps.latest.revision: 40
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# What&#39;s new in version 1610 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
@@ -108,7 +113,7 @@ For details, see the **Windows Defender** section in [Create configuration items
 You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
 For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
-## Customizable Branding for Software Center Dialogs
+## Customizable branding for Software Center dialogs
 Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
 
 Custom branding for the Software Center is applied according to the following rules:
