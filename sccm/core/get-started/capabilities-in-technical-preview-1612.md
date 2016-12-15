@@ -261,18 +261,20 @@ Perform this task with an Azure admin, as you will need Azure admin credentials.
 
 #### To create the connection:
 
-2. In the **Administration** workspace, **Azure Active Directory** node, choose **Add Azure Active Directory**. 
+2. In the **Administration** workspace, choose **Cloud Services** > **Azure Active Directory** > **Add Azure Active Directory**. 
 2. Choose **Sign In** to create the connection with Azure AD. 
 
-#### Update Configuration Manager clients
+#### Configuration Manager client requirements
 
-> [!NOTE]
->
->This connection will only apply to clients that are both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD). 
+There are several requirements for enabling the creation of user policy in the Cloud Management Gateway.
+ 
+- The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
+- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD). 
+- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery). 
+- You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
+- Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 
-After setting up the connection, modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
-
-After you make these configuration changes, a user policy request through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
+After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
 
 ## Change to configuring multi-factor authentication for device enrollment
 
