@@ -16,7 +16,7 @@ author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. You can pre-enroll iOS devices by USB-connecting them to a Mac PC running Apple Configurator. Before enrolling, you must prepare an Intune corporate-enrolled device profile in the Intune admin console and export it to the Mac PC. The enrollment process will factory reset the device and go through the Setup Assistant process to configure the device. The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  
+Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. You can pre-enroll iOS devices by USB-connecting them to a Mac PC running Apple Configurator. Before enrolling, you must prepare an corporate-owned device enrollment profile in the Configuration Manager console and export it to the Mac PC. The enrollment process will factory reset the device and go through the Setup Assistant process to configure the device. The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  
 
 ##  <a name="BKMK_SAE"></a> Apple Configurator enrollment via Setup Assistant  
  Using Apple Configurator, you can factory reset iOS devices and prepares them for setup by the device’s new user.  This method requires you to USB-connect the iOS device to a Mac computer to setup corporate enrollment and assumes you are using Apple Configurator 2.0.  
@@ -33,7 +33,7 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
 #### Enable Setup Assistant enrollment with Configuration Manager and Intune  
 
-1.  **Add a Corporate Device Enrollment profile**   
+1.  **Add a corporate-owned device enrollment profile**   
     In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and click **Enrollment Profiles**. Click **Create Profile** on the **Home** tab to open the Create Profile wizard. Configure the settings on the following pages:  
 
     1.  On the **General** page, specify the following information, and then click **Next**.  
@@ -50,14 +50,14 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
     2.  On the **Device Enrollment Program** page, leave the **Configure Device Enrollment Program settings for this profile** checkbox unchecked, and click **Next**.  
 
-    3.  Review the Summary and then click net.  
+    3.  Review the summary and then click **Next**.  
 
 2.  **Add iOS devices to enroll with Setup Assistant**   
     In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and click **Device Information**. and then click **Add devices**. You can add devices in two ways:  
 
     - You can **Upload a CSV file containing serial numbers** – Create a comma-separated value (.csv) list of two columns without a header, limited to 5000 devices or 5MB per csv file. For each row, the first cell is the device serial number, the second cell are device details (optional).
 
-  This .csv file when viewed in a text editor appears as:  
+    This .csv file when viewed in a text editor appears as:  
 
     ```  
     0000000,PO 1234  
@@ -101,7 +101,7 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
     2.  In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
 
-    3.  Enter the **Name** and **Enrollment URL** for the MDM server from the step #5 above. Click **Next**.  
+    3.  Enter the **Name** and **Enrollment URL** for the MDM server from the step 5 above. Click **Next**.  
 
          If you receive a warning about trust profile requirements for Apple TV, you may safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning. To continue, click **Next** until the wizard is complete.  
 
