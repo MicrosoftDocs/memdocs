@@ -2,7 +2,7 @@
 title: "Remotely administer Windows computer | Microsoft Docs"
 description: "Administer a remote Windows client computer by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,29 +17,25 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to remotely administer a Windows client computer by using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use the following procedure to remotely administer a computer in System Center Configuration Manager.  
-
- Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  
+Before you begin to use remote control, ensure that you have reviewed the information in the following topics:  
 
 -   [Prerequisites for remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
 -   [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
 
- You can start the Configuration Manager remote control viewer by using one of three methods:  
+Here are three ways to start the remote control viewer:  
 
--   By using the Configuration Manager console.  
+-   In the Configuration Manager console.  
 
--   At the Windows command prompt.  
+-   In a Windows command prompt.  
 
 -   On the Windows **Start** menu on a computer that runs the Configuration Manager console from the **Microsoft System Center** program group.  
 
 ### To remotely administer a client computer from the Configuration Manager console  
 
-1.  In the Configuration Manager console, click **Assets and Compliance**.  
+1.  In the Configuration Manager console, choose **Assets and Compliance** > **Devices** or **Device Collections**.  
 
-2.  In the **Assets and Compliance** workspace, click **Devices** or **Device Collections**.  
-
-3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, click **Start**, and then click **Remote Control**.  
+3.  Select the computer that you want to remotely administer and then, in the **Home** tab, in the **Device** group, choose **Start** > **Remote Control**.  
 
     > [!IMPORTANT]  
     >  If the client setting **Prompt user for Remote Control** permission is set to **True**, the connection does not initiate until the user at the remote computer agrees to the remote control prompt. For more information, see [Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md).  
@@ -47,7 +43,7 @@ Use the following procedure to remotely administer a computer in System Center C
 4.  After the **Configuration Manager Remote Control** window opens, you can remotely administer the client computer. Use the following options to configure the connection.  
 
     > [!NOTE]  
-    >  If the computer that you connect to has multiple monitors, the display from all these monitors is shown in the remote control window.  
+    >  If the computer that you connect to has multiple monitors, the display from all the monitors is shown in the remote control window.  
 
     -   **File - Connect** - Connect to another computer. This option is unavailable when a remote control session is active.  
 
@@ -58,7 +54,7 @@ Use the following procedure to remotely administer a computer in System Center C
         > [!NOTE]  
         >  When you disconnect a remote control session, the contents of the Windows Clipboard on the computer that you are viewing is deleted.  
 
-    -   **View - Full Screen** - Maximizes the **Configuration Manager Remote Control** window to fill all the available display space.  
+    -   **View - Full Screen** - Maximizes the **Configuration Manager Remote Control** window.  
 
         > [!NOTE]  
         >  To exit full screen mode, press Ctrl+Alt+Break.  
@@ -76,11 +72,9 @@ Use the following procedure to remotely administer a computer in System Center C
 
     -   **Action - Lock Remote Keyboard and Mouse** - Locks the remote keyboard and mouse to prevent the user from operating the remote computer.  
 
-    -   **Help - About Remote Control** - Displays information about the current version of the remote control viewer.  
+    -   **Help - About Remote Control** - Displays ithe current version of the viewer.  
 
 5.  Users at the remote computer can view more information about the remote control session when they click the Configuration Manager**Remote Control** icon in the Windows notification area or the icon on the remote control session bar.  
-
-6.  When you no longer require the remote control session, use one of the methods detailed earlier to end the remote control session.  
 
 ### To start the remote control viewer from the Windows command line  
 
