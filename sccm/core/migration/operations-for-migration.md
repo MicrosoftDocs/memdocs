@@ -34,7 +34,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
  Use the following procedures to create data migration jobs, edit the exclusion list for collection-based migration jobs, set up shared distribution points, and edit migration job schedules.  
 
 > [!NOTE]  
->  The following procedure for creating a migrating job that migrates by collections applies only for source hierarchies that run a supported version of Configuration Manager 2007. The collection-based migration job type is not available when you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy.  
+>  The following procedure for creating a migrating job that migrates by collections applies only to source hierarchies that run a supported version of Configuration Manager 2007. The collection-based migration job type is not available when you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy.  
 
 #### Create a migration job to migrate by collections  
 
@@ -56,7 +56,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
     -   If you want to migrate only collections and not the objects that are associated with those collections, uncheck **Migrate objects that are associated with the specified collections**. If you uncheck this option, no associated objects are migrated in this job, and you can skip steps 6 and 7.  
 
-6.  On the **Select Objects** page, uncheck any object types or specific available objects that you do not want to migrate. By default, all associated object types and available objects are selected. Then choose **Next**.  
+6.  On the **Select Objects** page, uncheck any object types or specific available objects that you do not want to migrate. By default, all associated object types and available objects are selected. Choose **Next**.  
 
 7.  On the **Content Ownership** page, assign the ownership of content from each listed source site to a site in the destination hierarchy, and then choose **Next**.  
 
@@ -168,7 +168,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 3.  Choose the migration job that you want to run. On the **Home** tab, in the **Migration Job** group, choose **Start**.  
 
-4.  Choose **Yes** to start the migration job now.  
+4.  Choose **Yes** to start the migration job.  
 
 ##  <a name="BKMK_ProcUpgrdSS"></a> Upgrade or reassign a shared distribution point  
  You can upgrade a supported distribution point that is shared from a Configuration Manager 2007 source site (or reassign a supported distribution point that is shared from a System Center Configuration Manager source site) to be a distribution point in the destination hierarchy.  
@@ -177,7 +177,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 >  Before you upgrade a Configuration Manager 2007 branch distribution point, you must uninstall the Configuration Manager 2007 client software from the branch distribution point computer. If the Configuration Manager 2007 client software is installed when you attempt to upgrade the distribution point, the upgrade fails and content that was previously deployed to the branch distribution point is removed from the computer.  
 
 > [!CAUTION]  
->  When you upgrade or reassign a shared distribution point, the distribution point site system role and site system computer is removed from the source site and added as a distribution point to the site in the destination hierarchy that you select.  
+>  When you upgrade or reassign a shared distribution point, the distribution point site system role and site system computer are removed from the source site and added as a distribution point to the site in the destination hierarchy that you select.  
 
 #### Upgrade or reassign a shared distribution point  
 
@@ -191,7 +191,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 5.  Specify settings in the Reassign Shared Distribution Point wizard like you are installing a new distribution point for the destination hierarchy, with the following addition:  
 
-    -   On the **Content Conversion** page, review the guidance about the required space to convert the existing content. Then, on the **Drive Settings** page of the wizard, ensure that the drive of the distribution point computer that is selected has the required amount of free disk space.  
+    -   On the **Content Conversion** page, review the guidance about the space required to convert the existing content. Then, on the **Drive Settings** page of the wizard, ensure that the drive of the distribution point computer that is selected has the required amount of free disk space.  
 
 6.  Confirm the settings and then finish the wizard.  
 
