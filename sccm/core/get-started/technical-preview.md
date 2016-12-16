@@ -125,13 +125,16 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
+ |OData endpoint data access |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Not added](media/Red_X.gif)|
  |Data Warehouse Service point |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Not added](media/Red_X.gif)|
  |Content library cleanup tool |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Not added](media/Red_X.gif)|
  |Improvements for in-console search |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#improvements-for-in-console-search)|![Not added](media/Red_X.gif)|
  |Prevent installation of an application if a specified program is running|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#prevent-installation-of-an-application-if-a-specified-program-is-running)|![Not added](media/Red_X.gif)|
  |New Windows Hello for Business notification for end users|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#new-windows-hello-for-business-notification-for-end-users)|![Not added](media/Red_X.gif)|
  |Windows Store for Business support in Configuration Manager|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|![Not added](media/Red_X.gif)|
- |Pre-cache content for deployments and task sequences |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|![Not added](media/Red_X.gif)|
+ |Azure Active Directory onboarding|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|![Not added](media/Red_X.gif)|
+|Change to configuring multi-factor authentication for device enrollment|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![Not added](media/Red_X.gif)|
+|Pre-cache content for deployments and task sequences |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|![Not added](media/Red_X.gif)|
  |Windows Defender configuration settings|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|[Version 1610](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
  |Request policy sync from administrator console|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#request-policy-sync-from-administrator-console)|[Version 1610](/sccm/mdm/deploy-use/sync-intune-device)|
  |Additional security role support for All Corporate-owned Devices node|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#additional-security-role-support)|[Version 1610](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management#new-hybrid-features-in-november-2016)|

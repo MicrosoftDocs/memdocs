@@ -204,16 +204,15 @@ Based on User Voice feedback, we have added the following improvements to in-con
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
-You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation, and then try again.
+You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, users will see a dialog box asking them to close the processes that are blocking installation.
 
-###Try it out
+### Try it out
 To configure a list of executable files
 1.	On the properties page of any deployment type, choose the **Installer Handling** tab.
 2.	Click **Add**, to add one of more executable files to the list (for example **Edge.exe**)
 3.	Click **OK** to close the deployment type properties dialog box.
 
 Now, when you deploy this application to a user or a device, and one of executables you added is running, the end user will see a Software Center dialog box telling them that the installation failed because an application is running.
-To continue, they must close the application, and then click **Try Again**.
 
 ## New Windows Hello for Business notification for end users
 
@@ -250,3 +249,59 @@ To enable express installation files support on clients, you must enable express
 2.	In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 3.	Select the appropriate client settings, then on the **Home** tab, click **Properties**.
 4.	Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
+
+
+## OData endpoint data access
+
+ Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
+
+Data that is currently available in the [Configuration Manager WMI Provider](/sccm/develop/reference/configuration-manager-reference) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
+
+### Try it out
+
+Before you can use the OData endpoint, you must enable it for the site.
+
+1.  Go to **Administration** > **Site Configuration** > **Sites**.
+2.  Select the primary site and click **Properties**.
+3.  On the General tab of the primary site properties sheet, click **Enable REST endpoint for all providers on this site**, and then click **OK**.
+
+In your favorite OData query viewer, try queries similar to the following examples to return various objects in Configuration Manager:
+
+| Purpose | OData query |
+|---|---|
+| Get all collections | `http://localhost/CMRestProvider/Collection` |
+| Get a collection | `http://localhost/CMRestProvider/Collection('SMS00001')`
+| Get the top 100 devices in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device?$top=100` |
+| Get a device with a resource ID in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)` |
+| Get operating system of the device in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/Device(16777573)/OPERATING_SYSTEM` |
+| Get users in the collection | `http://localhost/CMRestProvider/Collection('SMS00001')/User` |
+
+> [!NOTE]
+> The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
+
+## Azure Active Directory onboarding
+
+Azure Active Directory (AD) onboarding creates a connection between Configuration Manager and Azure Active Directory to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway.
+
+Perform this task with an Azure admin, as you will need Azure admin credentials.
+
+#### To create the connection:
+
+2. In the **Administration** workspace, choose **Cloud Services** > **Azure Active Directory** > **Add Azure Active Directory**.
+2. Choose **Sign In** to create the connection with Azure AD.
+
+#### Configuration Manager client requirements
+
+There are several requirements for enabling the creation of user policy in the Cloud Management Gateway.
+
+- The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
+- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
+- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#active-directory-user-discovery#active-directory-user-discovery).
+- You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
+- Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
+
+After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
+
+## Change to configuring multi-factor authentication for device enrollment
+
+Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory).
