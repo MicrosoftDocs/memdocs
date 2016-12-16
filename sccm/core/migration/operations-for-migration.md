@@ -196,7 +196,7 @@ For migration in System Center Configuration Manager, you can migrate data and c
 6.  Confirm the settings and then finish the wizard.  
 
 ##  <a name="Monitor_MIgration"></a> Monitor migration activity in the Migration workspace  
- Use the following procedure to use the Configuration Manager console to monitor migration.  
+ Use the Configuration Manager console to monitor migration.  
 
 1.  In the Configuration Manager console, choose **Administration**.  
 
