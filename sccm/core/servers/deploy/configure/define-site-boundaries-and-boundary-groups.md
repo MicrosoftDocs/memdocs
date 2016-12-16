@@ -2,7 +2,7 @@
 title: "Define site boundaries | Microsoft Docs"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -376,8 +376,8 @@ The following procedures apply to version 1610 or later. If you use version 1511
 
 ##  <a name="BKMK_BoundaryBestPractices"></a> Best practices for boundaries  
 
--   **Consider using the IP address range boundary type only when other boundary types cannot be used:**  
-     When designing your boundary strategy, we recommend you use boundaries that are based on Active Directory sites before using other boundary types. Where boundaries based on Active Directory sites are not an option, then use IP subnet or IPv6 boundaries. If none of these options are available to you, then leverage IP address range boundaries. This is because the site evaluates boundary members periodically, and the query required to assess members of an IP address range requires a substantially larger use of SQL Server resources than queries that assess members of other boundary types.  
+-   **Use a mix of the fewest boundaries that meet your needs:**  
+   In the past, we recommended the use of some boundary types over others. With changes to improve performance, we now recommend you use whichever boundary type or types you choose that work for your environment, and that let you use the fewest number of boundaries you can to simplify your management tasks.      
 
 -   **Avoid overlapping boundaries for automatic site assignment:**  
      Although each boundary group supports both site assignment configurations and those for content location, it is a best practice to create a separate set of  boundary groups to use only for site assignment. Meaning: ensure that each boundary in a boundary group is not a member of another boundary group with a different site assignment. This is because:  
