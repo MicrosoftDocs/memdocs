@@ -124,7 +124,7 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 
 2.  In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
 
-3.  Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-iOS-devices). Click **Next**.  
+3.  Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-ios-devices). Click **Next**.  
 
    > [!NOTE]
    > If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.
