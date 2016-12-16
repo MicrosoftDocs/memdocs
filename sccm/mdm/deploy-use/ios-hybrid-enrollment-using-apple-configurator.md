@@ -80,7 +80,7 @@ The following procedure is recommended for dedicated iOS devices that will have 
 4. Specify the profile to assign to added devices from the list of available profiles, review the **Enrollment profile details**, and then click **Finish**.
 
 > [!NOTE]
->Manually added devices can be assigned to any Enrollment profile, but DEP-synced devices must be assigned to a DEP-enabled profile.
+> Manually added devices can be assigned to any Enrollment profile, but DEP-synced devices must be assigned to a DEP-enabled profile.
 
 You're now ready to export the enrollment profile to deploy using Apple Configurator.
 
@@ -126,7 +126,8 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 
 3.  Enter the **Name** and **Enrollment URL** you saved [earlier](#step-3-export-the-profile-to-deploy-to-iOS-devices). Click **Next**.  
 
-   > [!NOTE] If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.
+   > [!NOTE]
+   > If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.
 
    To continue, click **Next** until the wizard is complete.  
 
