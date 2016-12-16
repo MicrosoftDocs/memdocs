@@ -201,7 +201,7 @@ Based on User Voice feedback, we have added the following improvements to in-con
   When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
 
 - **Preservation of your decision to search sub-nodes:**  
- The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node. 
+ The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
 You can now configure a list of executable files (with the extension .exe) in deployment type properties which, if running, will block installation of an application. After installation is attempted, a user will see a dialog box asking them to close the processes that are blocking installation, and then try again.
@@ -225,3 +225,28 @@ You can now deploy online licensed apps with a deployment purpose of **Available
 For more details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
+
+## Return to previous page when a task sequence fails
+You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+
+- When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
+
+## Express installation files support for Windows 10 updates
+We have added express installation files support in Configuration Manager for Windows 10 updates. When you use a supported version of Windows 10, you can now use Configuration Manager settings to download only the delta between the current month's Windows 10 Cumulative Update and the previous month's update. Currently in Configuration Manager Current Branch, the full Windows 10 Cumulative Update (including all updates from previous months) are downloaded each month. Using express installation files provides for smaller downloads and faster installation times on clients.
+
+> [!IMPORTANT]
+> While the settings to support the use of express installation files is available in Configuration Manager, this functionality is only supported in Windows 10 version 1607 with an update that will be released in early 2017 and later versions of Windows. Windows 10 version 1607 without the update and prior versions do not support express installation files.
+
+### To enable the download of express installation files for Windows 10 updates on the server
+To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.
+1.	In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.
+2.	Select the central administration site or the stand-alone primary site.
+3.	On the **Home** tab, in the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**. On the **Update Files** tab, select **Download full files for all approved updates and express installation files for Windows 10**.
+
+### To enable support for clients to download and install express installation files
+To enable express installation files support on clients, you must enable express installation files on clients in the Software Updates section of client settings. This creates a new HTTP listener that listens for requests to download express installation files on the port that you specify. Once you deploy client settings to enable this functionality on the client, it will attempt to download the delta between the current month's Windows 10 Cumulative Update and the previous month's update (clients must run a version of Windows 10 that supports express installation files).
+1.	Enable support for express installation files in the Software Update Point Component properties (previous procedure).
+2.	In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
+3.	Select the appropriate client settings, then on the **Home** tab, click **Properties**.
+4.	Select the **Software Updates** page, configure **Yes** for the **Enable installation of Express Updates on clients** setting and configure the port used by the HTTP listener on the client for the **Port used to download content for Express Updates** setting.
