@@ -27,7 +27,7 @@ You can identify corporate-owned devices by importing their international statio
 
      -	**Upload a CSV file containing IMEI or serial numbers and details**
 
-        For this option, click **Browse** to specify the .csv file containing information to predeclare corporate-owned devices. The .csv file must be formatted correct. For more information, see [Format for uploading .csv files](#format-for-uploading-csv-files).
+        For this option, click **Browse** to specify the .csv file containing information to predeclare corporate-owned devices. The .csv file must be formatted correctly. For more information, see [Format for uploading .csv files](#format-for-uploading-csv-files).
 
      -	**Manually add IMEI or serial numbers and details**
 
