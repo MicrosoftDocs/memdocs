@@ -44,13 +44,13 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 3.  On the **Home** tab, in the **Create** group, choose **Create Migration Job**.  
 
-4.  On the **General** page of the Create Migration Job wizard, set up the following, and then choose **OK**:  
+4.  On the **General** page of the Create Migration Job wizard, set up the following, choose **OK**, and:  
 
     -   Specify a name for the migration job.  
 
     -   In the **Job type** drop-down list, select **Collection migration**.  
 
-5.  On the **Select Collections** page, set up the following, and then choose **Next**:  
+5.  On the **Select Collections** page, set up the following, choose **Next**, and:  
 
     -   Select the collections that you want to migrate.  
 
