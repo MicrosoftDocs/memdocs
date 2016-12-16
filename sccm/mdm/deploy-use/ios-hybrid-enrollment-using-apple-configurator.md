@@ -16,7 +16,9 @@ author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # iOS hybrid enrollment using Apple Configurator with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. You can pre-enroll iOS devices by USB-connecting them to a Mac PC running Apple Configurator 2.0. Before enrolling, you must prepare an corporate-owned device enrollment profile in the Configuration Manager console and export it to the Mac PC. The enrollment process will factory reset the device and go through the Setup Assistant process to configure the device. The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  
+Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. To prepare corporate-owned iOS devices for enrollment, you configure an enrollment profile in the Configuration Manager console and then export the profile URL for use by Apple Configurator. You prepare the iOS device for enrollment by connecting it to a Mac computer with a USB cable and using Apple Configurator to set it up. Apple Configurator factory resets the device and adds the enrollment profile so that the device can be enrolled when the user first powers it up and goes through the Setup Assistant process.
+
+The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  
 
 ## Prerequisites  
 
@@ -28,11 +30,11 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
 -   USB cables for connecting devices to your Mac computer  
 
-## Add a corporate-owned device enrollment profile
+## Step 1: Add a corporate-owned device enrollment profile
 
-1.  In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and click **Enrollment Profiles**. Click **Create Profile** on the **Home** tab to open the Create Profile wizard. Configure the settings on the following pages:  
+1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**. Click **Create Profile** to open the Create Profile wizard. Configure the settings on the following pages:  
 
-2.  On the **General** page, specify the following information, and then click **Next**.  
+2.  On the **General** page, specify the following information:  
 
     -   **Name** (Not visible to users)  
 
@@ -42,15 +44,17 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
         -   **Prompt for user affinity**: The device must be affiliated with a user during initial setup and could then be permitted to access company data and email as that user.  
 
-        -   **No user affinity**: The device is not affiliated with a user. Use this affiliation for devices that perform tasks without accessing local user data. Apps requiring user affiliation won’t work.  
+        -   **No user affinity**: The device is not affiliated with a user. Use this affiliation for devices that perform tasks without accessing local user data. Apps requiring user affiliation won’t work.
+
+    Click **Next** to continue.  
 
 3.  On the **Device Enrollment Program** page, leave the **Configure Device Enrollment Program settings for this profile** checkbox unchecked, and click **Next**.  
 
-4.  Review the summary, and then click **Next** to create the enrollment profile. Click **Close** to finish the wizard.  
+4.  Review the summary, and then click **Next** to create the enrollment profile. Click **Close** to finish the wizard. You're now ready to add the serial numbers for the devices you want to enroll.  
 
-## Add iOS devices to enroll with Setup Assistant
+## Step 2: Add iOS devices to enroll with Setup Assistant
 
-1.  In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and click **Device Information**. and then click **Add devices**.
+1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Device Information**. Click **Add devices**.
 
 2.  Add devices in two ways:  
 
@@ -75,13 +79,16 @@ Companies that buy iOS devices to be used by employees can manage them using Mic
 
 4. Specify the profile to assign to added devices from the list of available profiles, review the **Enrollment profile details**, and then click **Finish**.
 
-Manually added devices can be assigned to any Enrollment profile, but DEP-synced devices must be assigned to a DEP-enabled profile.  
+> [!NOTE]
+>Manually added devices can be assigned to any Enrollment profile, but DEP-synced devices must be assigned to a DEP-enabled profile.
 
-## Select a profile to deploy to iOS devices
+You're now ready to export the enrollment profile to deploy using Apple Configurator.
 
-1.  In the Configuration Manager console, in the **Assets and Compliance** workspace, expand **Overview**, expand **All Corporate-owned Devices**, expand **iOS**, and then click **Enrollment Profiles**.
+## Step 3: Export the profile to deploy to iOS devices
 
-2.  Select the enrollment profile to deploy to mobile devices and click **Export…** in the taskbar.
+1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Enrollment Profiles**.
+
+2.  Select the enrollment profile to deploy to mobile devices and click **Export…**.
 
 3.  Copy and save the **Profile URL** in a file you can edit.   
 
@@ -99,44 +106,49 @@ Manually added devices can be assigned to any Enrollment profile, but DEP-synced
 
     ```
 
-5.  Save the edited profile URL. You will upload it in Apple Configurator in the [next section](#prepare-the-device-with-apple-configurator) to define the Intune profile used by iOS devices.  The enrollment profile URL is valid for two weeks from when it is exported. After two weeks, you must export a new URL to enroll iOS devices.
+5.  Save the edited profile URL. You will use it to add the enrollment profile URL in Apple Configurator in the [next section](#prepare-the-device-with-apple-configurator).  
 
-## Prepare the device with Apple Configurator
+> [!NOTE]
+> The enrollment profile URL is valid for two weeks from when it is exported. After two weeks, you must export a new URL to enroll iOS devices.
 
-iOS devices are connected to the Mac computer and enrolled for mobile device management.  
+## Step 4: Prepare the device with Apple Configurator
+
+To prepare iOS devices for enrollment, you connect each device to a Mac computer and upload the enrollment profile to it.  
 
 > [!WARNING]  
 >  The devices will be reset to factory configurations during the enrollment process.  
 
 1.  On a Mac computer, open **Apple Configurator 2**.  
 
-2.  In the menu bar, click **Apple Configurator 2**, and click **Preferences**.  
+2.  In the menu bar, click **Apple Configurator 2** > **Preferences**.  
 
 2.  In the preferences pane, select **Servers** and click the "+" symbol below the left pane to launch the MDM Server wizard. Click **Next**.  
 
 3.  Enter the **Name** and **Enrollment URL** you saved [earlier](#select-a-profile-to-deploy-to-iOS-devices). Click **Next**.  
 
-   If you receive a warning about trust profile requirements for Apple TV, you may safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning. To continue, click **Next** until the wizard is complete.  
+   > [!NOTE] If you receive a warning about trust profile requirements for Apple TV, you can safely cancel the **Trust Profile** option by clicking the grey "X". You can also safely disregard any Anchor certificate warning.
 
-4.  On the **Servers** pane, click “Edit” beside the new server’s profile. Ensure that the Enrollment URL exactly matches the the URL you saved in step 5. Reenter the URL if it is different, and click **Save**.  
+   To continue, click **Next** until the wizard is complete.  
 
-5.  Connect the iOS mobile devices to the Apple computer with a USB adapter.  
+4.  On the **Servers** pane, click “Edit” beside the new server’s profile. Ensure that the Enrollment URL exactly matches the URL you entered earlier. Reenter the URL if it is different, and click **Save**.  
+
+5.  Connect the iOS devices to the Mac computer with a USB cable.  
 
   > [!WARNING]  
-  >  The devices will be reset to factory configurations during the enrollment process. As a best practice, reset the device and power it on. As a best practice, devices should be at the Hello screen when you start Setup Assistant.  
+  >  This process resets devices to factory configurations. Prior to connecting the device, reset the device and power it on. As a best practice, the device should be at the Hello screen before continuing.  
 
-6.  Click **Prepare**. On the **Prepare iOS Device** pane, select **Manual** and then click **Next**.  
+6.  Click **Prepare**. On the **Prepare iOS Device** pane, select **Manual**, and then click **Next**.  
 
-7.  On the **Enroll in MDM Server** pane, select the server name you created and then click **Next**.  
-
-8.  On the **Enroll in MDM Server** pane, select the server name you created and then click **Next**.  
+7.  On the **Enroll in MDM Server** pane, select the server name you created, and then click **Next**.  
 
 9. On the **Create an Organization** pane, choose the **Organization** or create a new organization, and then click **Next**.  
 
-10. On the **Configure iOS Setup Assistant** pane, choose the steps presented to the user, and then click **Prepare**. If prompted, authenticate to update trust settings.  
+10. On the **Configure iOS Setup Assistant** pane, choose the steps to present to the user, and then click **Prepare**. If prompted, authenticate to update trust settings.  
 
-11. When the iOS device finishes preparing, you can disconnect the USB cable.  
+11. When finished, you can disconnect the USB cable.  
 
-## Distribute devices
+Repeat these steps for all the devices you want to prepare for enrollment.
+
+## Step 5: Distribute devices
 
 The devices are now ready for corporate enrollment. Power down the devices and distribute them to users. When the device is turned on, Setup Assistant will start and prompt the user for their work or school account to begin enrollment.
