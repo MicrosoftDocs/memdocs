@@ -132,6 +132,8 @@ author: Brendunsms.author: brendunsmanager: angrobe
  |Prevent installation of an application if a specified program is running|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#prevent-installation-of-an-application-if-a-specified-program-is-running)|![Not added](media/Red_X.gif)|
  |New Windows Hello for Business notification for end users|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#new-windows-hello-for-business-notification-for-end-users)|![Not added](media/Red_X.gif)|
  |Windows Store for Business support in Configuration Manager|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|![Not added](media/Red_X.gif)|
+ |Return to previous page when a task sequence fails|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#return-to-previous-page-when-a-task-sequence-fails)|![Not added](media/Red_X.gif)|
+ |Express installation files support for Windows 10 updates|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#express-installation-files-support-for-windows-10-updates)|![Not added](media/Red_X.gif)|
  |Azure Active Directory onboarding|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|![Not added](media/Red_X.gif)|
 |Change to configuring multi-factor authentication for device enrollment|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![Not added](media/Red_X.gif)|
 |Pre-cache content for deployments and task sequences |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|![Not added](media/Red_X.gif)|
