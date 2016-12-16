@@ -52,9 +52,9 @@ You can identify corporate-owned devices by importing their international statio
 The .csv file you use to identify devices by IMEI or serial number must have the following format, excluding the top row which provided for guidance only. Each row must contain either an IMEI number or iOS serial number. Only the serial numbers of iOS devices can be predeclared; use IMEI number for other device platforms. This table contains sample data:
 
 | IMEI #  | iOS Serial #  | OS | Details |
-| :------------ |:---------------|:-----|:-----|
+|------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | Company-owned Windows device|
-|   | A1B2C3D4E5C6 |   IOS | 	Company-owned iOS device|
+|   | A1B2C3D4E5C6 | IOS | 	Company-owned iOS device|
 | 223456789012345 | E6D5C4B3A210 |   IOS | 	Another iOS device|
 | 323456789012345 |        |   IOS | 	A third iOS device|
 | 123456789012346 |         |   ANDROID | 	Company-owned Android device|
@@ -73,4 +73,4 @@ The columns in the .csv file accept the following values:
 
 | Column 1 | Column 2 | Column 3 | Column 4 |
 |---|---|---|---|
-|IMEI number without spaces | iOS serial number | IOS, WINDOWS, ANDROID | Details (optional), 1024 character limit. |
+|IMEI number without spaces | iOS serial number | IOS, WINDOWS, or ANDROID | Optional device details (1024 character limit) |

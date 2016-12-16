@@ -54,9 +54,9 @@ The following procedure is recommended for dedicated iOS devices that will have 
 
 ## Step 2: Predeclare devices to enroll with Setup Assistant
 
-In this step, you predeclare devices as corporate-owned by providing a list of hardware identifiers (IMEI or serial numbers) and assigning the enrollment profile to them.
+In this step, you predeclare devices as corporate-owned by providing a list of hardware identifiers (IMEI or serial numbers).
 
-For more information, see [Predeclare devices with IMEI and iOS serial number](predeclare-devices-with-hardware-id.md). When you're done with that task, return to this page to continue with the next step. 
+For more information, see [Predeclare devices with IMEI and iOS serial number](predeclare-devices-with-hardware-id.md). When you're done with that task, return to this page to continue with the next step.
 
 ## Step 3: Export the profile to deploy to iOS devices
 
