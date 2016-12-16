@@ -50,39 +50,13 @@ The following procedure is recommended for dedicated iOS devices that will have 
 
 3.  On the **Device Enrollment Program** page, leave the **Configure Device Enrollment Program settings for this profile** checkbox unchecked, and click **Next**.  
 
-4.  Review the summary, and then click **Next** to create the enrollment profile. Click **Close** to finish the wizard. You're now ready to add the serial numbers for the devices you want to enroll.  
+4.  Review the summary, and then click **Next** to create the enrollment profile. Click **Close** to finish the wizard. You're now ready to add IMEI numbers or serial numbers for the devices you want to enroll.  
 
-## Step 2: Add iOS devices to enroll with Setup Assistant
+## Step 2: Predeclare devices to enroll with Setup Assistant
 
-1.  In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **All Corporate-owned Devices** > **iOS** > **Device Information**. Click **Add devices**.
+In this step, you predeclare devices as corporate-owned by providing a list of hardware identifiers (IMEI or serial numbers).
 
-2.  Add devices in two ways:  
-
-  - **Upload a CSV file containing serial numbers**
-
-      Create a comma-separated value (.csv) list of two columns without a header, limited to 5000 devices or 5MB per csv file. For each row, the first cell is the device serial number, the second cell are device details (optional).
-
-      This .csv file when viewed in a text editor appears as:  
-
-      ```  
-      0000000,PO 1234  
-      111111111,PO 1234  
-      ```  
-
-  - **Manually add serial numbers and details**
-
-      Enter the serial number and device details of up to five devices  
-
-2. click **Next**.  
-
-3. Confirm the devices to enroll. Serial numbers of devices already enrolled or enrolled by other means cannot be imported. Click **Next**.  
-
-4. Specify the profile to assign to added devices from the list of available profiles, review the **Enrollment profile details**, and then click **Finish**.
-
-> [!NOTE]
-> Manually added devices can be assigned to any Enrollment profile, but DEP-synced devices must be assigned to a DEP-enabled profile.
-
-You're now ready to export the enrollment profile to deploy using Apple Configurator.
+For more information, see [Predeclare devices with IMEI and iOS serial number](predeclare-devices-with-hardware-id.md). When you're done with that task, return to this page to continue with the next step.
 
 ## Step 3: Export the profile to deploy to iOS devices
 
