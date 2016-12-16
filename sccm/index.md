@@ -332,7 +332,7 @@ toc_rel: /sccm/toc.json
           <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on the documentation</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="https://technet.microsoft.com/en-us/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager documentation</a></li>
+          <li><a href="https://technet.microsoft.com/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager documentation</a></li>
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet forums</a></li>
           <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Configuration Manager product page</a></li>
           </ul>
