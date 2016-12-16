@@ -106,7 +106,7 @@ You're now ready to export the enrollment profile to deploy using Apple Configur
 
     ```
 
-5.  Save the edited profile URL. You will use it to add the enrollment profile URL in Apple Configurator in the [next section](#prepare-the-device-with-apple-configurator).  
+5.  Save the edited profile URL. You will use it to add the enrollment profile URL in Apple Configurator in the [next section](#step-4-prepare-the-device-with-apple-configurator).  
 
 > [!NOTE]
 > The enrollment profile URL is valid for two weeks from when it is exported. After two weeks, you must export a new URL to enroll iOS devices.
@@ -116,7 +116,7 @@ You're now ready to export the enrollment profile to deploy using Apple Configur
 To prepare iOS devices for enrollment, you connect each device to a Mac computer and upload the enrollment profile to it.  
 
 > [!WARNING]  
->  The devices will be reset to factory configurations during the enrollment process.  
+>  Apple Configurator wipes and resets devices to factory configurations.  
 
 1.  On a Mac computer, open **Apple Configurator 2**.  
 
@@ -132,7 +132,7 @@ To prepare iOS devices for enrollment, you connect each device to a Mac computer
 
 4.  On the **Servers** pane, click “Edit” beside the new server’s profile. Ensure that the Enrollment URL exactly matches the URL you entered earlier. Reenter the URL if it is different, and click **Save**.  
 
-5.  Connect the iOS devices to the Mac computer with a USB cable.  
+5.  With a USB cable, connect an iOS device to the Mac computer.  
 
   > [!WARNING]  
   >  This process resets devices to factory configurations. Prior to connecting the device, reset the device and power it on. As a best practice, the device should be at the Hello screen before continuing.  
