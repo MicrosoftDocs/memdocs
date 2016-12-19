@@ -45,7 +45,7 @@ When you install System Center Configuration Manager for the first time, the fir
 -   [Install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites)  
 
 ## Site system servers and site system roles  
- Each Configuration Manager site installs *site system roles* that support  management operations.  Some roles are installed by default when you install a site. For example, the site server role, which is assigned to the computer where you install the site, and the site database server role, which is assigned to the SQL Server that hosts the site database. Other site system roles are optional and are only used when you want to use the functionality that a site system role enables.  Any computer that hosts a site system role is referred to as a site system server.  
+ Each Configuration Manager site installs *site system roles* that support  management operations.  Some roles are installed by default when you install a site. For example, the site server role, which is assigned to the computer where you install the site, and the site database server role, which is assigned to the SQL Server that hosts the site database. Other site system roles are optional, and are only used when you want to use the functionality that is active in a site system role.  Any computer that hosts a site system role is referred to as a site system server.  
 
  For a smaller deployment of Configuration Manager, you might initially run all of your site system roles directly on the site server computer. Then, as your managed environment and needs grow, you can  install additional site system servers to host additional site system roles to improve the sites efficiency in providing services to more devices.  
 
