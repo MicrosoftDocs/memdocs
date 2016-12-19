@@ -42,7 +42,12 @@ Looking for Intune without Configuration Manager?
 [View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## Step 1: Create an MDM collection
-You will need a Configuration Manager user collection to specify users who can enroll devices into management. Only user collections can be targeted because Intune licenses are assigned to users. For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
+A Configuration Manager user collection is required to specify the users who can enroll devices into management. You can only use user collections (instead of device collections) because Intune licenses are assigned by user.
+
+> [!NOTE]
+> To enroll devices with Intune, you do not need to assign licenses to users in the Office 365 portal or Azure Active Directory portal. Including the users in a collection that gets associated with the Intune subscription (in a [later step](#step-3-configure-intune-subscription)) is all that's required.
+
+For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
 
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
