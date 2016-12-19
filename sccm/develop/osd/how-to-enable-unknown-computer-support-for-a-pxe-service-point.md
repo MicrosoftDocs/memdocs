@@ -18,9 +18,9 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Enable Unknown Computer Support for a PXE Service Point
-In System Center Configuration Manager, you set the operating system deployment PXE service point response to incoming PXE requests from unknown computers by setting the [SupportUnknownMachines](assetId:///SupportUnknownMachines?qualifyHint=False&autoUpgrade=True) embedded property.  
+In System Center Configuration Manager, you set the operating system deployment PXE service point response to incoming PXE requests from unknown computers by setting the **SupportUnknownMachines** embedded property.  
 
- assetId:///SupportUnknownMachines?qualifyHint=False&autoUpgrade=True has the following possible values.  
+ **SupportUnknownMachines** has the following possible values.  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -35,7 +35,7 @@ In System Center Configuration Manager, you set the operating system deployment 
 
 3.  Get the embedded properties.  
 
-4.  Update the assetId:///SupportUnknownMachines?qualifyHint=False&autoUpgrade=True embedded property.  
+4.  Update the **SupportUnknownMachines** embedded property.  
 
 5.  Commit the changes to the site control file.  
 
@@ -53,10 +53,10 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM�?`.|  
-|allowResponse|Managed: `String`|The value to set whether the PXE service point will respond to unknown computers.<br /><br /> -   0 - The PXE service point does not respond to PXE requests from unknown computers.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
+|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`allowResponse`|Managed: `String`|The value to set whether the PXE service point will respond to unknown computers.<br /><br /> -   0 - The PXE service point does not respond to PXE requests from unknown computers.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

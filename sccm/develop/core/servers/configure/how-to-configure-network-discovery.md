@@ -221,7 +221,7 @@ public void ConfigureNetworkDiscoverySettings(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|-   `connection`<br />-   `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`serverName`|-   Managed: `String`<br />-   VBScript: `String`|The server name.|  

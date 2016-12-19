@@ -58,7 +58,7 @@ public void DisplayPackageName(WqlConnectionManager connection, string packageID
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager?qualifyHint=False&autoUpgrade=True|-   A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`|-   A valid connection to the SMS Provider.|  
 |`PackageID`|-   Managed: `String`|A valid package identifier. Obtained from the [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class PackageID property.|  
 
 ## Compiling the Code  
