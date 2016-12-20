@@ -17,13 +17,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Recommended hardware for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-The following recommendations are guidelines to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, sites systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
+The following recommendations are guidelines to help you scale your System Center Configuration Manager environment to support more than a very basic deployment of sites, site systems, and clients. They are not intended to cover all possible site and hierarchy configurations.  
 
  Use the information in the following sections as a guide to help you plan for hardware that can meet the processing loads for clients and sites that use the available Configuration Manager features with the default configurations.  
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a> Site systems  
- This section provides recommended hardware configurations for Configuration Manager site systems for deployments that support the maximum number of clients and use most or all Configuration Manager features. Deployments that support less than the maximum number of clients and don't use all available features can require fewer computer resources. In general, the key factors that limit performance of the overall system include the following, in order:  
+ This section provides recommended hardware configurations for Configuration Manager site systems for deployments that support the maximum number of clients and use most or all Configuration Manager features. Deployments that support less than the maximum number of clients and don't use all available features might require fewer computer resources. In general, the key factors that limit performance of the overall system include the following, in order:  
 
 1.  Disk I/O performance  
 
@@ -48,7 +48,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 |Remote database server for a child primary site|16|64|90|  
 |Secondary site server|8|16|-|  
 
- <sup>1</sup> When the site server and SQL Server are installed on the same computer, the deployment supports the maximum [sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) for sites and clients. But, this configuration can limit [high availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options) like using a SQL Server cluster. Also, because of the higher I/O requirements that are needed to support both SQL Server and the Configuration Manager site server when you're running both on the same computer, it's a good idea to consider using a configuration with a remote SQL Server machine if you have a larger deployment.  
+ <sup>1</sup> When the site server and SQL Server are installed on the same computer, the deployment supports the maximum [sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) for sites and clients. But, this configuration can limit [high availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options), like using a SQL Server cluster. Also, because of the higher I/O requirements that are needed to support both SQL Server and the Configuration Manager site server when you're running both on the same computer, it's a good idea to consider using a configuration with a remote SQL Server machine if you have a larger deployment.  
 
 ###  <a name="bkmk_RemoteSiteSystem"></a> Remote site system servers  
  The following guidance is for computers that hold a single site system role. Plan to make adjustments when you install multiple site system roles on the same computer.  
@@ -119,6 +119,8 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
     > [!TIP]  
     >  Installing the client with minimal disk space is useful for Windows Embedded devices that typically have smaller disk sizes than standard Windows computers.  
 
+
+
  The following are additional minimum hardware requirements for optional functionality in Configuration Manager.  
 
 -   **Operating system deployment:** 384 MB of RAM  
@@ -145,7 +147,7 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 
 -   2 GB of RAM  
 
--   2 GB of disk space.  
+-   2 GB of disk space  
 
 |DPI setting|Minimum resolution|  
 |-----------------|------------------------|  
