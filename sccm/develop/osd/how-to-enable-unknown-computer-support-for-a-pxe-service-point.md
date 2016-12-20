@@ -55,7 +55,7 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 |Parameter|Type|Description|  
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  
 |`allowResponse`|Managed: `String`|The value to set whether the PXE service point will respond to unknown computers.<br /><br /> -   0 - The PXE service point does not respond to PXE requests from unknown computers.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
 
 ## Compiling the Code  
