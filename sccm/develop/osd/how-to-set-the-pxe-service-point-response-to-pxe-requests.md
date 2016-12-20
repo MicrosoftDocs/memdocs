@@ -18,9 +18,9 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set the PXE Service Point Response to PXE Requests
-In System Center Configuration Manager, you set the distribution point response to incoming PXE requests by setting the [IsActive](assetId:///IsActive?qualifyHint=False&autoUpgrade=True) embedded property.  
+In System Center Configuration Manager, you set the distribution point response to incoming PXE requests by setting the **IsActive** embedded property.  
 
- assetId:///IsActive?qualifyHint=False&autoUpgrade=True has the following possible values.  
+ **IsActive** has the following possible values.  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -35,7 +35,7 @@ In System Center Configuration Manager, you set the distribution point response 
 
 3.  Get the embedded properties.  
 
-4.  Update the assetId:///IsActive?qualifyHint=False&autoUpgrade=True embedded property.  
+4.  Update the **IsActive** embedded property.  
 
 5.  Commit the changes to the site control file.  
 
@@ -53,10 +53,10 @@ public void SetAllowResponse(WqlConnectionManager connection,                   
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
-|allowResponse|Managed: `String`|The value to set whether the distribution point will respond to PXE requests.<br /><br /> -   0 - The distribution point does not respond to PXE requests.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  
+|`allowResponse`|Managed: `String`|The value to set whether the distribution point will respond to PXE requests.<br /><br /> -   0 - The distribution point does not respond to PXE requests.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

@@ -18,20 +18,20 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to View File Usage Summary Information
-You view file usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](assetId:///SMS_MeteredFiles?qualifyHint=False&autoUpgrade=True) and [SMS_FileUsageSummary](assetId:///SMS_FileUsageSummary?qualifyHint=False&autoUpgrade=True) classes.  
+You view file usage summary information, in System Center Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md) and [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md) classes.  
 
 ### To view file usage summary information  
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Get a collection of all of the metered files (assetId:///SMS_MeteredFiles?qualifyHint=False&autoUpgrade=True).  
+2.  Get a collection of all of the metered files [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md).  
 
-3.  Get a collection of all of the summarized files (assetId:///SMS_FileUsageSummary?qualifyHint=False&autoUpgrade=True).  
+3.  Get a collection of all of the summarized files [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md).  
 
 4.  Loop through the summarized file information, displaying information as required.  
 
 ## Example  
- The following example method displays file usage summary information by using the assetId:///SMS_MeteredFiles?qualifyHint=False&autoUpgrade=True and assetId:///SMS_FileUsageSummary?qualifyHint=False&autoUpgrade=True classes.  
+ The following example method displays file usage summary information by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md) and [SMS_FileUsageSummary](../../develop/reference/apps/sms_fileusagesummary-server-wmi-class.md) classes.  
 
 > [!NOTE]
 >  The example code below is relatively inefficient. In an environment with large amounts of data (large result sets), it would be better to do the query on SMS_MeteredFiles, then loop over that result, doing individual queries for SMS_FileUsageSummary where SMS_FileUsageSummary.FileID=meteredFile.FileID.  
@@ -152,7 +152,7 @@ public void ViewFileUsageSummaryInfo(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  This C# example requires:  

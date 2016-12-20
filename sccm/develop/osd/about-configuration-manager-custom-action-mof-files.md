@@ -128,7 +128,7 @@ string          PackageIDForApplicationExe;
  `ActionCategory{"My Custom Category",2,5"},`  
 
 ### ActionName  
- The [ActionName](assetId:///ActionName?qualifyHint=False&autoUpgrade=True) class qualifier defines the custom action control name. The qualifier has the following syntax:  
+ The `ActionName` class qualifier defines the custom action control name. The qualifier has the following syntax:  
 
  `ActionName{"Assembly", "Namespace.Properties.Resources", "Control"}`  
 
@@ -142,7 +142,7 @@ string          PackageIDForApplicationExe;
  The control that contains the string resources.  
 
 ### Action User Interface  
- The [ActionUI](assetId:///ActionUI?qualifyHint=False&autoUpgrade=True) class qualifier defines the location of the assembly and classes that are used by an action. The qualifier has the following syntax:  
+ The `ActionUI` class qualifier defines the location of the assembly and classes that are used by an action. The qualifier has the following syntax:  
 
  `ActionUI{"Assembly","Namespace", "Control", "Option control"}`  
 

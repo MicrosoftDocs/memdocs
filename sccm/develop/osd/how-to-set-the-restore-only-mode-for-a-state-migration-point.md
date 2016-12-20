@@ -18,9 +18,9 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set the Restore-Only Mode for a State Migration Point
-In System Center Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the [SMPQuiesceState](assetId:///SMPQuiesceState?qualifyHint=False&autoUpgrade=True) embedded property.  
+In System Center Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the **SMPQuiesceState** embedded property.  
 
- assetId:///SMPQuiesceState?qualifyHint=False&autoUpgrade=True has two possible values.  
+ **SMPQuiesceState** has two possible values.  
 
 |Value|Definition|  
 |-----------|----------------|  
@@ -35,7 +35,7 @@ In System Center Configuration Manager, you configure the operating system deplo
 
 3.  Get the embedded properties.  
 
-4.  Update assetId:///SMPQuiesceState?qualifyHint=False&autoUpgrade=True  
+4.  Update **SMPQuiesceState**.  
 
 5.  Commit the changes to the site control file.  
 
@@ -129,7 +129,7 @@ public void SetRestoreOnlyMode(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`context (VBScript)`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`server`|-   Managed: `String`<br />-   VBScript: `String`|The Configuration Manager server that the state migration point is running on.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The Configuration Manager site code.|  

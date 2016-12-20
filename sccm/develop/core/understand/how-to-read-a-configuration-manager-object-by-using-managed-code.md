@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Read a Configuration Manager Object by Using Managed Code
-To read a System Center Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance]*. The [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) method takes a string that identifies a specific object instance and returns an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that is used to access the object.  
+To read a System Center Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance*. The [GetInstance](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.getinstance.aspx) method takes a string that identifies a specific object instance and returns an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that is used to access the object.  
 
  The following example function shows the name and description for a supplied package identifier.  
 
@@ -58,7 +58,7 @@ public void DisplayPackageName(WqlConnectionManager connection, string packageID
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager?qualifyHint=False&autoUpgrade=True|-   A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`|-   A valid connection to the SMS Provider.|  
 |`PackageID`|-   Managed: `String`|A valid package identifier. Obtained from the [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class PackageID property.|  
 
 ## Compiling the Code  
