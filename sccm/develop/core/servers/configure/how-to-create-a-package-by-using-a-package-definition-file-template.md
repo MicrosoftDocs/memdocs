@@ -80,7 +80,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingPDF_ID`|-   VBScript: `Integer`|ID of the package definition file.|  
 |`newPackageSourceFlag`|-   VBScript: `Integer`|The package source.|  
 |`newPackageSourcePath`|-   VBScript: `String`|The path to the package source.|  

@@ -24,14 +24,14 @@ You create a software updates deployment, in System Center Configuration Manager
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Create the new deployment object by using the [SMS_UpdatesAssignment](assetId:///SMS_UpdatesAssignment?qualifyHint=False&autoUpgrade=True) class.  
+2.  Create the new deployment object by using the [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) class.  
 
 3.  Populate the new deployment properties.  
 
 4.  Save the new deployment and properties.  
 
 ## Example  
- The following example method shows how to create a software updates deployment by using the assetId:///SMS_UpdatesAssignment?qualifyHint=False&autoUpgrade=True class. Note that the parameters of the example method reflect certain properties of `SMS_UpdatesAssignment`.  
+ The following example method shows how to create a software updates deployment by using the [SMS_UpdatesAssignment](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) class. Note that the parameters of the example method reflect certain properties of `SMS_UpdatesAssignment`.  
 
 > [!IMPORTANT]
 >  The methods below require an array of the assigned configuration items (CI_IDs). The update content for these CI_IDs must have already been downloaded and added to an updates deployment package.  
@@ -157,7 +157,7 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newApplyToSubTargets`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Determines whether the deployment applies to subtargets.<br /><br /> -   True<br />-   False|  
 |`newArrayAssignedCIs`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the assigned configuration items (CI_IDs). The update content for these CI_IDs must have already been downloaded and added to an updates deployment package.|  
 |`newAssignmentAction`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The new assignment action.|  

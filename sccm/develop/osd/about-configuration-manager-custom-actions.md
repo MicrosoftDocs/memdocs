@@ -31,9 +31,9 @@ You can create custom actions that can be used with existing System Center Confi
 ## Creating the Custom Action Control  
  To create a custom action control, you use Visual Studio 2005 to create a Windows control that implements two classes.  
 
- The control that is displayed in the Task Sequence Editor is the first class, which derives from the [SMSOsdEditorPageControl](assetId:///SMSOsdEditorPageControl?qualifyHint=False&autoUpgrade=True) class. In this class, you define the user interface and the data transfer to and from the action. When a custom action is created, the control's [PropertyManager](assetId:///PropertyManager?qualifyHint=False&autoUpgrade=True) makes the custom action's properties available for use. These are the properties that are defined in the custom action MOF file.  
+ The control that is displayed in the Task Sequence Editor is the first class, which derives from the **SMSOsdEditorPageControl** class. In this class, you define the user interface and the data transfer to and from the action. When a custom action is created, the control's PropertyManager makes the custom action's properties available for use. These are the properties that are defined in the custom action MOF file.  
 
- The second class implements the options control, and it derives from the [TaskSequenceOptionControl](assetId:///TaskSequenceOptionControl?qualifyHint=False&autoUpgrade=True) class.  
+ The second class implements the options control, and it derives from the **TaskSequenceOptionControl** class.  
 
  For more information about creating a custom control in Visual Studio, see [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md).  
 

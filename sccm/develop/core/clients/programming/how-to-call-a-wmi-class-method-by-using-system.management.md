@@ -70,7 +70,7 @@ public void CallMethod(ManagementScope scope)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`scope`|-   [ManagementScope](assetId:///ManagementScope?qualifyHint=False&autoUpgrade=True)|A valid connection to the client WMI provider. The path is root\ccm.|  
+|`scope`|-   `ManagementScope`|A valid connection to the client WMI provider. The path is root\ccm.|  
 
 ## Compiling the Code  
 
@@ -83,7 +83,7 @@ public void CallMethod(ManagementScope scope)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   
