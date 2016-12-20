@@ -27,7 +27,7 @@ To migrate clients from the source hierarchy to a System Center Configuration Ma
 -   [Plan for inventory and compliance data during migration](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="Planning_for_Client_Agent_Migration"></a> Plan to migrate clients to the destination hierarchy  
- When you migrate clients from a source hierarchy, the client software on the client computer upgrades to match the product version of the destination hierarchy:  
+ When you migrate clients from a source hierarchy, the client software on the client computer upgrades to match the product version of the destination hierarchy.  
 
 -   **A Configuration Manager 2007 source hierarchy:** When you migrate clients from a source hierarchy that runs a supported version of Configuration Manager, the client software upgrades to the client version for the destination hierarchy.  
 
@@ -42,23 +42,23 @@ Use the following information to help you plan the client migration:
 
 -   Ensure that the device that runs the client software in the source hierarchy meets the minimum hardware requirements and runs an operating system that is supported by the version of Configuration Manager in the destination hierarchy.  
 
--   Before you migrate a client, run a migration job to migrate the information the client will use in the destination hierarchy.  
+-   Before you migrate a client, run a migration job to migrate the information that the client will use in the destination hierarchy.  
 
--   Clients that upgrade retain their run history for deployments to prevent deployments from rerunning unnecessarily in the destination hierarchy.  
+-   Clients that upgrade retain their run history for deployments. This prevents deployments from rerunning unnecessarily in the destination hierarchy.  
 
     -   For Configuration Manager 2007 clients, advertisement run history is retained.  
 
-    -   With clients from System Center 2012 Configuration Manager or System Center Configuration Manager, deployment run history is retained.  
+    -   For clients from System Center 2012 Configuration Manager or System Center Configuration Manager, deployment run history is retained.  
 
--   You can migrate clients from sites in the source hierarchy in any order that you choose. However, consider migrating limited numbers of clients in phases, rather than large numbers of clients at a single time. A phased migration reduces the network bandwidth requirements and server processing when each newly upgraded client submits its initial full inventory and compliance data to its assigned site.  
+-   You can migrate clients from sites in the source hierarchy in any order that you choose. However, consider migrating limited numbers of clients in phases rather than migrating large numbers of clients at a single time. A phased migration reduces the network bandwidth requirements and server processing when each newly upgraded client submits its initial full inventory and compliance data to its assigned site.  
 
--   When you migrate Configuration Manager 2007 clients, the existing client software is uninstalled from the client computer, and the new client software is installed.  
+-   When you migrate Configuration Manager 2007 clients, the existing client software is uninstalled from the client computer and the new client software is installed.  
 
--   Configuration Manager cannot migrate a Configuration Manager 2007 client that has the App-V client installed, unless the App-V client version is 4.6 SP1 or later.  
+-   Configuration Manager cannot migrate a Configuration Manager 2007 client that has the App-V client installed unless the App-V client version is 4.6 SP1 or later.  
 
 You can monitor the client migration process in the **Migration** node of the **Administration** workspace in the Configuration Manager console.  
 
-After you migrate the client to the destination hierarchy, you can no longer manage that device by using your source hierarchy and should consider removing the client from the source hierarchy. Although this is not a requirement when you migrate hierarchies, it can help prevent identification of a migrated client in a source hierarchy report, or an incorrect count of resources between the two hierarchies during the migration. For example, when a migrated client remains in the source site database, you might run a software updates report that incorrectly identifies the computer as an unmanaged resource when it is now managed by the destination hierarchy.  
+After you migrate the client to the destination hierarchy, you can no longer manage that device by using your source hierarchy, and you should consider removing the client from the source hierarchy. Although this is not a requirement when you migrate hierarchies, it can help prevent identification of a migrated client in a source hierarchy report, or an incorrect count of resources between the two hierarchies during the migration. For example, when a migrated client remains in the source site database, you might run a software updates report that incorrectly identifies the computer as an unmanaged resource when it is now managed by the destination hierarchy.  
 
 ##  <a name="Planning_for_Client_Data_Migration"></a> Plan to handle data maintained on clients during migration  
 When you migrate a client from its source hierarchy to the destination hierarchy, some information is retained on the device, while other information is not available on the device after migration.  
