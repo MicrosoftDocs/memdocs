@@ -1,5 +1,5 @@
 ---
-title: "Client management Fundamentals | Microsoft Docs"
+title: "Client management fundamentals | Microsoft Docs"
 description: "Learn about tasks that you can run to manage System Center Configuration Manager clients."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,12 +16,12 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Fundamentals of client management tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-After you have installed System Center Configuration Manager clients, there are several tasks you can run to manage the clients.  Some you  start from the Configuration Manager console while other can be started or viewed on a  client from the clients Configuration Manager app in the Windows control panel.  
+After you have installed the System Center Configuration Manager clients, there are several tasks that you can run to manage the clients.  Some of the tasks are started from the Configuration Manager console. The other tasks are started or viewed on a client from the client's Configuration Manager app in Windows Control Panel.  
 
-## The console  
- From within the Configuration Manager console, you can perform various client management tasks, which include the following:  
+## Configuration Manager console tasks
+ In the Configuration Manager console, you can do various client management tasks, which include the following:  
 
--   Deploy applications, software updates, maintenance scripts, and operating systems. You can configure these to be installed by a specified date and time, or make them available for users to install when they are requested, and you can configure applications to be uninstalled.  
+-   Deploy applications, software updates, maintenance scripts, and operating systems. You can configure installation for a specific date and time, make the software available for users to install when they are requested, and you can configure applications to be uninstalled.  
 
 -   Help protect computers from malware and security threats, and notify you when problems are detected.  
 
@@ -38,7 +38,7 @@ To monitor these operations in near real-time, you use the Configuration Manager
  For more information about  management tasks for clients, see  [How to manage clients in System Center Configuration Manager](../../core/clients/manage/manage-clients.md) and [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md). To learn about using reports, see   
             [Introduction to reporting in System Center Configuration Manager](../../core/servers/manage/introduction-to-reporting.md).  
 
-## The Windows control panel app  
+## Windows Control Panel app  
  When you install the Configuration Manager client software, this installs the **Configuration Manager** client application in Control Panel. Unlike Software Center, this application is designed for the help desk rather than for end users. Some configuration options require local administrative permissions and most options require technical knowledge about how Configuration Manager works. You can use this application to perform the following tasks on a client:  
 
 -   View properties about the client, such as the build number, its assigned site, the management point it is communicating with, and whether the client is using a PKI certificate or a self-signed certificate.  
