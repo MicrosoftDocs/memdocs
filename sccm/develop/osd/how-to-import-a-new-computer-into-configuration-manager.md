@@ -41,13 +41,13 @@ You add a new computer directly to the System Center Configuration Manager datab
 
 2.  Call the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md).  
 
-3.  Add the resource identifier you get from [ImportMachineEntry](assetId:///ImportMachineEntry?qualifyHint=False&autoUpgrade=True) to a collection.  
+3.  Add the resource identifier you get from ImportMachineEntry to a collection.  
 
 ## Example  
  The following example method adds a new computer to Configuration Manager. The [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md) is used to import the computer. Then, the computer is added to a custom collection. "All Systems" collection.  
 
 > [!IMPORTANT]
->  In previous version of this example, the computer was added to the “All Systems��? collection. It is no longer possible to modify the built-in collections, use a custom collection instead.  
+>  In previous version of this example, the computer was added to the "All Systems" collection. It is no longer possible to modify the built-in collections, use a custom collection instead.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -157,7 +157,7 @@ public int AddNewComputer(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|-   A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|-   A valid connection to the SMS Provider.|  
 |`netBiosName`|-   Managed: `String`<br />-   VBScript: `String`|-   The computer NETBIOS name.|  
 |`smBiosGuid`|-   Managed: `String`<br />-   VBScript: `String`|The SMBIOS GUID for the computer.|  
 |`MacAddress`|-   Managed: `String`<br />-   VBScript: `String`|The MAC address for the computer in the following format: `00:00:00:00:00:00`.|  

@@ -93,7 +93,7 @@ public void DeleteMaintenanceWindowfromCollection(WqlConnectionManager connectio
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`|The ID of the collection.|  
 |`serviceWindowID`|-   Managed: `String`|The ID of the maintenance window to delete.|  
 

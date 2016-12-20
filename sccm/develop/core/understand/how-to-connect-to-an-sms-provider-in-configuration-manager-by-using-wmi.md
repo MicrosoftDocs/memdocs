@@ -33,18 +33,18 @@ Before connecting to the SMS Provider for a local or remote System Center Config
 
 ### To connect to an SMS provider  
 
-1.  Get a [WbemScripting.SWbemLocator](assetId:///WbemScripting.SWbemLocator?qualifyHint=False&autoUpgrade=True) object.  
+1.  Get a [WbemScripting.SWbemLocator](https://msdn.microsoft.com/library/aa393719.aspx) object.  
 
 2.  Set the authentication level to packet privacy.  
 
-3.  Set up a connection to the SMS Provider by using the [SWbemLocator](assetId:///SWbemLocator?qualifyHint=False&autoUpgrade=True) object [ConnectServer](assetId:///ConnectServer?qualifyHint=False&autoUpgrade=True) method. Supply credentials only if it is a remote computer.  
+3.  Set up a connection to the SMS Provider by using the [SWbemLocator](https://msdn.microsoft.com/library/aa393719.aspx) object [ConnectServer](https://msdn.microsoft.com/library/aa393720.aspx) method. Supply credentials only if it is a remote computer.  
 
-4.  Using the [SMS_ProviderLocation](assetId:///SMS_ProviderLocation?qualifyHint=False&autoUpgrade=True) object [ProviderForLocalSite](assetId:///ProviderForLocalSite?qualifyHint=False&autoUpgrade=True) property, connect to the SMS Provider for the local computer and receive a [SWbemServicesObject](assetId:///SWbemServicesObject?qualifyHint=False&autoUpgrade=True).  
+4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServices object](https://msdn.microsoft.com/library/aa393854.aspx).  
 
-5.  Use the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object to access provider objects. For more information, see [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md).  
+5.  Use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object to access provider objects. For more information, see [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md).  
 
 ## Example  
- The following VB Script example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, assetId:///SMS_ProviderLocation?qualifyHint=False&autoUpgrade=True provides the correct computer name.  
+ The following VB Script example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -111,8 +111,9 @@ End Function
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence ([SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True)).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)
+|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|A valid task sequence ([SMS_TaskSequence](../../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)).|  
 |`taskSequenceXML`|-   Managed: `String`<br />-   VBScript: `String`|A valid task sequence XML.|  
 
 ## Robust Programming  

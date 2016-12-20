@@ -24,9 +24,9 @@ In System Center Configuration Manager, you delete a step (an action or a group)
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the [SMS_TaskSequenceGroup](assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) object that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
+2.  Get the [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) object that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
 
-3.  Remove the action from the [SMS_TaskSequenceGroup.Steps](assetId:///SMS_TaskSequenceGroup.Steps?qualifyHint=False&autoUpgrade=True) array property.  
+3.  Remove the action from the SMS_TaskSequence_Group.Steps array property.  
 
 ## Example  
  The following example method removes an action from a task sequence group.  
@@ -105,8 +105,8 @@ public void RemoveActionFromGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequenceGroup`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|The task sequence group containing the action to be deleted.|  
-|`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the [SMS_TaskSequenceAction.Name](assetId:///SMS_TaskSequenceAction.Name?qualifyHint=False&autoUpgrade=True) property.|  
+|`taskSequenceGroup`|-   Managed: IResultObject<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|The task sequence group containing the action to be deleted.|  
+|`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the [SMS_TaskSequenceAction.Name](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) property.|  
 
 ## Compiling the Code  
  This C# example requires:  

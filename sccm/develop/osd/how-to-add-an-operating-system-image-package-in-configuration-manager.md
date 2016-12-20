@@ -18,17 +18,17 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add an Operating System Image Package in Configuration Manager
-In System Center Configuration Manager, you add an operating system image package by creating an instance of [SMS_ImagePackage](assetId:///SMS_ImagePackage?qualifyHint=False&autoUpgrade=True) class. The path to the Windows Image (WIM) file is specified in the [PkgSourcePath](assetId:///PkgSourcePath?qualifyHint=False&autoUpgrade=True) property as a Universal Naming Convention (UNC) path.  
+In System Center Configuration Manager, you add an operating system image package by creating an instance of [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class. The path to the Windows Image (WIM) file is specified in the **PkgSourcePath** property as a Universal Naming Convention (UNC) path.  
 
 ### To create an operating system image package  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create an instance of assetId:///SMS_ImagePackage?qualifyHint=False&autoUpgrade=True.  
+2.  Create an instance of SMS_ImagePackage.  
 
-3.  Specify the path to the WIM file [in PkgSourcePath](assetId:///in PkgSourcePath?qualifyHint=False&autoUpgrade=True).  
+3.  Specify the path to the WIM file in **PkgSourcePath**.  
 
-4.  Commit the assetId:///SMS_ImagePackage?qualifyHint=False&autoUpgrade=True class instance.  
+4.  Commit the SMS_ImagePackage class instance.  
 
 ## Example  
  The following example method creates an operating system package.  
@@ -88,7 +88,7 @@ public void AddOSImagePackage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newImagePackageName`|-   Managed: `String`<br />-   VBScript: `String`|The new image package name.|  
 |`newImagePackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The new image package description|  
 |`newImagePackageSourcePath`|-   Managed: `String`<br />-   VBScript: `String`|The UNC path to the WIM file.|  

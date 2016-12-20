@@ -18,24 +18,24 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create a Configuration Manager Object by Using WMI
-You create a Configuration Manager object, in System Center Configuration Manager, by calling the [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True) object [SpawnInstance](assetId:///SpawnInstance?qualifyHint=False&autoUpgrade=True) method.  
+You create a Configuration Manager object, in System Center Configuration Manager, by calling the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [SpawnInstance_](https://msdn.microsoft.com/library/aa393789.aspx) method.  
 
- The assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True is the class definition for the object type that you want to create. For example, [SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True). You get the [SWBemObject](assetId:///SWBemObject?qualifyHint=False&autoUpgrade=True) by calling the [SWBemServices](assetId:///SWBemServices?qualifyHint=False&autoUpgrade=True) object [Get](assetId:///Get?qualifyHint=False&autoUpgrade=True) method.  
+ The [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) is the class definition for the object type that you want to create. For example, [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md). You get the [SWBemObject](https://msdn.microsoft.com/library/aa393741.aspx) by calling the [SWBemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method.  
 
 ### To create a Configuration Manager object  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object you obtain from step one, call assetId:///Get?qualifyHint=False&autoUpgrade=True to get the assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True for the Configuration Manager object class definition.  
+2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the [SWBemObject](https://msdn.microsoft.com/library/aa393741.aspx) for the Configuration Manager object class definition.  
 
-3.  Call assetId:///SpawnInstance?qualifyHint=False&autoUpgrade=True on the assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True to create the new object. A assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True is returned for the new object.  
+3.  Call [SpawnInstance_](https://msdn.microsoft.com/library/aa393789.aspx) on the SWbemObject to create the new object. An SWbemObject is returned for the new object.  
 
-4.  Using the assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True returned from the call to assetId:///SpawnInstance?qualifyHint=False&autoUpgrade=True, populate the object properties.  
+4.  Using the SWbemObject returned from the call to SpawnInstance, populate the object properties.  
 
-5.  Call [Put](assetId:///Put?qualifyHint=False&autoUpgrade=True) to commit the new object to the SMS Provider.  
+5.  Call [Put_](https://msdn.microsoft.com/library/aa393783.aspx) to commit the new object to the SMS Provider.  
 
 ## Example  
- The following VBScript code example creates an assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True object.  
+ The following VBScript code example creates an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -73,7 +73,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
+|`Connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
 
