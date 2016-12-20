@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Delete a Driver Package in Configuration Manager
-You delete an operating system deployment driver package, in System Center Configuration Manager, by deleting its [SMS_DriverPackage](assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True) object.  
+You delete an operating system deployment driver package, in System Center Configuration Manager, by deleting its [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  
 
 > [!NOTE]
 >  Windows drivers that are referenced by the driver package are not deleted.  
@@ -27,9 +27,9 @@ You delete an operating system deployment driver package, in System Center Confi
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True object for the driver that you want to delete.  
+2.  Get the [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object for the driver that you want to delete.  
 
-3.  Delete the assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True object.  
+3.  Delete the SMS_DriverPackage object.  
 
 ## Example  
  The following example method deletes a driver package identified by its package identifier.  
@@ -73,8 +73,8 @@ public void DeleteDriverPackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:[WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`packageID`|-   Managed: `String`<br />-   VBScript: `String`|-   The driver package identifier available in [SMS_DriverDriverPackage.PackageID](assetId:///SMS_DriverDriverPackage.PackageID?qualifyHint=False&autoUpgrade=True).|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`packageID`|-   Managed: `String`<br />-   VBScript: `String`|-   The driver package identifier available in SMS_DriverDriverPackage.PackageID.|  
 
 ## Compiling the Code  
  This C# example requires:  
