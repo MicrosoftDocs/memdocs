@@ -24,7 +24,7 @@ manager: "mbaldwin"
 
 2.  Get the specific collection instance by using the collection ID provided.  
 
-3.  Refresh the collection membership using the [RequestRefresh Method in Class SMS_Collection](../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md) method.  
+3.  Refresh the collection membership using the [RequestRefresh](../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md) method in the [SMS_Collection](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) class.  
 
 ## Example  
  The following example method refreshes the collection membership for a specific collection.  

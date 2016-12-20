@@ -55,7 +55,7 @@ public void SetAllowResponse(WqlConnectionManager connection,                   
 |Parameter|Type|Description|  
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  
 |`allowResponse`|Managed: `String`|The value to set whether the distribution point will respond to PXE requests.<br /><br /> -   0 - The distribution point does not respond to PXE requests.<br />-   1 - The PXE service point responds to requests from unknown computers.|  
 
 ## Compiling the Code  

@@ -39,7 +39,7 @@ Before connecting to the SMS Provider for a local or remote System Center Config
 
 3.  Set up a connection to the SMS Provider by using the [SWbemLocator](https://msdn.microsoft.com/library/aa393719.aspx) object [ConnectServer](https://msdn.microsoft.com/library/aa393720.aspx) method. Supply credentials only if it is a remote computer.  
 
-4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServicesObject](https://msdn.microsoft.com/library/aa393854.aspx).  
+4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServices object](https://msdn.microsoft.com/library/aa393854.aspx).  
 
 5.  Use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object to access provider objects. For more information, see [About Configuration Manager Objects](../../../develop/core/understand/about-configuration-manager-objects.md).  
 

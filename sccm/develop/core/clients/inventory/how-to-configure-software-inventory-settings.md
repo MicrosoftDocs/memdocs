@@ -24,7 +24,7 @@ You set the Software Inventory Client Agent settings, in System Center Configura
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Make a connection to the Software Inventory Client Agent section of the site control file by using the `SMS_SCI_ClientComp` class.  
+2.  Make a connection to the Software Inventory Client Agent section of the site control file by using the [SMS_SCI_ClientComp](../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class.  
 
 3.  Loop through the array of available properties, making changes as needed.  
 

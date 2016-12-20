@@ -47,7 +47,7 @@ You add a new computer directly to the System Center Configuration Manager datab
  The following example method adds a new computer to Configuration Manager. The [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md) is used to import the computer. Then, the computer is added to a custom collection. "All Systems" collection.  
 
 > [!IMPORTANT]
->  In previous version of this example, the computer was added to the “All Systems��? collection. It is no longer possible to modify the built-in collections, use a custom collection instead.  
+>  In previous version of this example, the computer was added to the "All Systems" collection. It is no longer possible to modify the built-in collections, use a custom collection instead.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

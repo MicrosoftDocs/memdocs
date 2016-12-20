@@ -32,7 +32,7 @@ In System Center Configuration Manager, you use the [SmsPageControl.PropertyMana
  For information about getting the property manager in a dialog box, see [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
 
 ## Displaying the Package Name  
- The following procedure demonstrates using a [PropertyManager]((https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access a single object passed to a property sheet. Clicking a button displays a message box that contains the name of a selected package. To complete these steps, you must first perform the actions in the following topics:  
+ The following procedure demonstrates using a [PropertyManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access a single object passed to a property sheet. Clicking a button displays a message box that contains the name of a selected package. To complete these steps, you must first perform the actions in the following topics:  
 
 -   [How to Create a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-property-sheet.md)  
 
