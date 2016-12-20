@@ -24,14 +24,14 @@ You set the Hardware Inventory Client Agent settings, in System Center Configura
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Make a connection to the Hardware Inventory Client Agent section of the site control file by using the [SMS_SCI_ClientComp](assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True) class.  
+2.  Make a connection to the Hardware Inventory Client Agent section of the site control file by using the [SMS_SCI_ClientComp](../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class.  
 
 3.  Loop through the array of available properties, making changes as needed.  
 
 4.  Commit the changes to the site control file.  
 
 ## Example  
- The following example sets the Hardware Inventory Client Agent settings by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change properties.  
+ The following example sets the Hardware Inventory Client Agent settings by using the [SMS_SCI_ClientComp](../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class to connect to the site control file and change properties.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -205,7 +205,7 @@ public void ConfigureHardwareInventoryClientAgentSettings(WqlConnectionManager c
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|-   `connection`<br />-   `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`enableDisableClientAgent`|-   Managed: `String`<br />-   VBScript: `String`|A value to enable or disable the client agent.<br /><br /> Disabled - 0<br /><br /> Enabled - 1|  

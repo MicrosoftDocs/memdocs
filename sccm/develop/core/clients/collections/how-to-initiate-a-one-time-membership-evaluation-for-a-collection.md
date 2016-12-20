@@ -24,7 +24,7 @@ manager: "mbaldwin"
 
 2.  Get the specific collection instance by using the collection ID provided.  
 
-3.  Refresh the collection membership using the [RequestRefresh Method in Class SMS_Collection](../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md) method.  
+3.  Refresh the collection membership using the [RequestRefresh](../../../../develop/reference/core/clients/collections/requestrefresh-method-in-class-sms_collection.md) method in the [SMS_Collection](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) class.  
 
 ## Example  
  The following example method refreshes the collection membership for a specific collection.  
@@ -43,8 +43,8 @@ public void RefreshCollection(WqlConnectionManager connection, string collection
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|collectionID|-   Managed: [String](assetId:///String?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: assetId:///String?qualifyHint=False&autoUpgrade=True|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
 
 ## Compiling the Code  
  The C# example requires:  
