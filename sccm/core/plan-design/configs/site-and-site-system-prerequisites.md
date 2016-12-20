@@ -24,7 +24,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 > [!NOTE]  
 >  On January 12th of 2016, support for .NET 4.0, 4.5, and 4.5.1 expires. For more information see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
 
-## <a name="bkmk_generalprerewq"></a> General site server requierments and limitations:
+## <a name="bkmk_generalprerewq"></a> General site server requirements and limitations:
 **The following apply to all site system servers:**
 
 -   Each site system server must use a 64-bit operating system. The only exception to this is the distribution point site system role which can be installed on some 32-bit operating systems.  
@@ -33,11 +33,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   After a site system server is installed, it is not supported to change:  
 
-    -   The domain name of the domain where the site system computer is located (also called a **domain rename**)  
+    -   The domain name of the domain where the site system computer is located (also called a **domain rename**).  
 
-    -   The domain membership of the computer  
+    -   The domain membership of the computer.  
 
-    -   The name of the computer  
+    -   The name of the computer.  
 
   If you must change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
 
@@ -247,10 +247,10 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 **To support PXE or multicast:**  
 
--   Install and configure the Windows Deployment Services (WDS) Windows role  
+-   Install and configure the Windows Deployment Services (WDS) Windows role.  
 
     > [!NOTE]  
-    >  WDS installs and configures automatically when you configure a distribution point to support PXE or Multicast on a server that runs Windows Server 2012 or later.  
+    >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
 > [!NOTE]  
 >  The distribution point site system role does not require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer is not used to facilitate the download of content by clients that use BITS.  
@@ -404,23 +404,23 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   .NET Framework 4.5.2  
 
-**Requires the default IIS configuration.**  
+Requires the default IIS configuration.
 
 **Windows Server Update Services:**  
 
--   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point  
+-   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point.  
 
--   For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)  
+-   For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
 ### State migration point  
-**Requires the default IIS configuration.**  
+Requires the default IIS configuration.  
 
 ##  <a name="bkmk_2008"></a> Prerequisites for Windows Server 2008 R2 and Windows Server 2008  
 Windows Server 2008 and Windows Server 2008 R2 are now in extended support, and no longer in maintstream support, as detailed  by the  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information regarding future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
-**The following applies to all .NET frame work requirements:**  
+**The following applies to all .NET Framework requirements:**  
 
--   Install the full version of the Microsoft.NET Framework before you install the site system roles. For example, see the [Microsoft .NET Framework 4 (Stand-Alone Installer)](http://go.microsoft.com/fwlink/p/?LinkId=193048). The Microsoft .NET Framework 4 Client Profile is insufficient for this requirement.  
+-   Install the full version of the Microsoft .NET Framework before you install the site system roles. For example, see the [Microsoft .NET Framework 4 (Stand-Alone Installer)](http://go.microsoft.com/fwlink/p/?LinkId=193048). The Microsoft .NET Framework 4 Client Profile is insufficient for this requirement.  
 
 **The following applies to all Windows Communication Foundation (WCF) activation requirements:**  
 
@@ -429,7 +429,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support, and 
 ###  <a name="bkmk_2008sspreq"></a> Site server - central administration site and primary site  
 **.NET Framework:**  
 
--   3.5 SP1 (or later)  
+-   .NET Framework 3.5 SP1 (or later)  
 
 -   .NET Framework 4.5.2  
 
@@ -611,7 +611,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 **To support PXE or multicast:**  
 
--   Install and configure the Windows Deployment Services (WDS) Windows role  
+-   Install and configure the Windows Deployment Services (WDS) Windows role.  
 
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or Multicast on a server that runs Windows Server 2012 or later.  
@@ -628,7 +628,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 ###  <a name="bkmk_2008Enrollpreq"></a> Enrollment point  
 **.NET Framework:**  
 
--   4.5.2  
+-   .NET Framework 4.5.2  
 
      When this site system role installs, if the server does not already have a supported version of .NET Framework installed, Configuration Manager automatically installs .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
@@ -655,7 +655,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 ###  <a name="bkmk_2008EnrollProxpreq"></a> Enrollment proxy point  
 **.NET Framework:**  
 
--   4.5.2  
+-   .NET Framework 4.5.2  
 
      When this site system role installs, if the server does not already have a supported version of .NET Framework installed, Configuration Manager automatically installs .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
@@ -689,7 +689,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 ###  <a name="bkmk_2008MPpreq"></a> Management point  
 **.NET Framework:**  
 
--   4.5.2  
+-   .NET Framework 4.5.2  
 
 **IIS configuration:** You can use the default IIS configuration, or a custom configuration. Each management point that you enable to support mobile devices requires the additional IIS configuration for ASP.NET (and its automatically selected options). In some scenarios, such as when IIS is installed or reconfigured after the .NET Framework version 4.5.2 is installed, you must explicitly enable ASP.NET version 4.5. For example, on a 64-bit computer that runs the .NET Framework version 4.0.30319, run the following command: **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
 
@@ -726,7 +726,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 ###  <a name="bkmk_2008RSpoint"></a> Reporting services point  
 **.NET Framework:**  
 
--   4.5.2  
+-   .NET Framework 4.5.2  
 
 **SQL Server Reporting Services:**  
 
@@ -739,7 +739,7 @@ When you use a custom IIS configuration, you can remove options that are not req
 ###  <a name="bkmk_2008SCPpreq"></a> Service connection point  
 **.NET Framework:**  
 
--   4.5.2  
+-   .NET Framework 4.5.2  
 
      When this site system role installs, if the server does not already have a supported version of .NET Framework installed, Configuration Manager automatically installs .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for .NET Framework, .NET applications might fail until after the server reboots and the installation completes.  
 
@@ -747,12 +747,12 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 -   Configuration Manager installs the Microsoft Visual C++ 2013 Redistributable on each computer that hosts a distribution point.  
 
--   The site system role requires   the x64 version.  
+-   The site system role requires the x64 version.  
 
 ###  <a name="bkmk_2008SUPpreq"></a> Software update point  
 **.NET Framework:**  
 
--   3.5 SP1 (or later)  
+-   .NET Framework 3.5 SP1 (or later)  
 
 -   .NET Framework 4.5.2  
 
@@ -760,9 +760,9 @@ When you use a custom IIS configuration, you can remove options that are not req
 
 **Windows Server Update Services:**  
 
--   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point  
+-   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point.  
 
--   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md)
+-   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).
 
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
 **IIS configuration:** Requires the default IIS configuration.  
