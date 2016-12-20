@@ -36,7 +36,7 @@ In System Center Configuration Manager, you perform an synchronous query for Con
 4.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query System Center Configuration Manager objects asynchronously.  
 
 ## Example  
- The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collectionssms_collection-server-wmi-class.md) objects.  
+ The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 

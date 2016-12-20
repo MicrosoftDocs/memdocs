@@ -24,14 +24,14 @@ You configure the Windows Server Update Services (WSUS) component settings, in S
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Make a connection to the WSUS Configuration Manager component section of the site control file by using the [SMS_SCI_Component](../../developdevelop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class.  
+2.  Make a connection to the WSUS Configuration Manager component section of the site control file by using the [SMS_SCI_Component](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class.  
 
 3.  Loop through the array of available properties, making changes as needed.  
 
 4.  Commit the property changes to the site control file.  
 
 ## Example  
- The following example method configures various Windows Server Update Services (WSUS) component settings by using the [SMS_SCI_Component](../../developdevelop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class to connect to the site control file and change properties.  
+ The following example method configures various Windows Server Update Services (WSUS) component settings by using the [SMS_SCI_Component](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class to connect to the site control file and change properties.  
 
 > [!NOTE]
 >  For configuration related information and values, see the Configuring Software Updates section of the System Center Configuration Manager documentation at [http://go.microsoft.com/fwlink/?LinkId=111682](http://go.microsoft.com/fwlink/?LinkId=111682).  
