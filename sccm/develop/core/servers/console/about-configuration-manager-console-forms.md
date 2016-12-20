@@ -42,7 +42,7 @@ You can extend the System Center Configuration Manager console with new Windows 
  To create a property sheet, you create a Windows Control Library project in Visual Studio. In this project, you create a class that inherits from the [Microsoft.ConfigurationManagement.AdminConsole.SmsPageControl](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.aspx) class. This class implements the control you want to display on a property page. In a property sheet, you create an [SmsPageControl](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.aspx) class for each property page that you need. The Property Sheet Prototype sample in the Configuration Manager SDK has a complete solution that you can use. For more information, see [How to Create a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-property-sheet.md).  
 
 #### Dialog boxes  
- A dialog box in Configuration Manager is displayed like a typical modeless dialog box. You create an SMSPageControl and specify “Dialog��? in the Form XML. For more information, see [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
+ A dialog box in Configuration Manager is displayed like a typical modeless dialog box. You create an SMSPageControl and specify "Dialog" in the Form XML. For more information, see [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
 
 ### Create the Form Action XML  
  An action describes the type of extension that is called, and where the action is placed in the Configuration Manager console user interface. For an extension form, you use the `ShowDialog` action type to display the form. For more information, see [How to Create Action XML for a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md).  
@@ -62,7 +62,7 @@ You can extend the System Center Configuration Manager console with new Windows 
 
  For more information about form XML deployment, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
- Depending on whether you are displaying a dialog box or a property sheet, the [FormType](assetId:///FormType?qualifyHint=False&autoUpgrade=True) attribute values must be set.  
+ Depending on whether you are displaying a dialog box or a property sheet, the FormType attribute values must be set.  
 
 |FormType|Description|  
 |--------------|-----------------|  

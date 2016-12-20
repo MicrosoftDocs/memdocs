@@ -18,10 +18,10 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set the Deletion Policy for a State Migration Point
-In System Center Configuration Manager, you configure the state migration point deletion policy by updating the [SMPStoreDeletionDelayTimeInMinutes](assetId:///SMPStoreDeletionDelayTimeInMinutes?qualifyHint=False&autoUpgrade=True) and [SMPStoreDeletionCycleTimeInMinutes](assetId:///SMPStoreDeletionCycleTimeInMinutes?qualifyHint=False&autoUpgrade=True) embedded properties. The deletion policy defines when the state migration point should remove data marked for deletion.  
+In System Center Configuration Manager, you configure the state migration point deletion policy by updating the **SMPStoreDeletionDelayTimeInMinutes** and **SMPStoreDeletionCycleTimeInMinutes** embedded properties. The deletion policy defines when the state migration point should remove data marked for deletion.  
 
 > [!NOTE]
->  The Configuration Manager console displays the deletion delay time in days, whereas assetId:///SMPStoreDeletionDelayTimeInMinutes?qualifyHint=False&autoUpgrade=True and assetId:///SMPStoreDeletionCycleTimeInMinutes?qualifyHint=False&autoUpgrade=True are stored in minutes.  
+>  The Configuration Manager console displays the deletion delay time in days, whereas SMPStoreDeletionDelayTimeInMinutes and SMPStoreDeletionCycleTimeInMinutes are stored in minutes.  
 
 ### To set the deletion policy  
 
@@ -31,7 +31,7 @@ In System Center Configuration Manager, you configure the state migration point 
 
 3.  Get the embedded properties.  
 
-4.  Update assetId:///SMPStoreDeletionDelayTimeInMinutes?qualifyHint=False&autoUpgrade=True and assetId:///SMPStoreDeletionCycleTimeInMinutes?qualifyHint=False&autoUpgrade=True.  
+4.  Update `SMPStoreDeletionDelayTimeInMinutes` and `SMPStoreDeletionCycleTimeInMinutes`.  
 
 5.  Commit the changes to the site control file.  
 
@@ -159,7 +159,7 @@ int deletionPolicyDays)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`context (VBScript)`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`server`|-   Managed: `String`<br />-   VBScript: `String`|The Configuration Manager server that the state migration point is running on.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The Configuration Manager site code.|  

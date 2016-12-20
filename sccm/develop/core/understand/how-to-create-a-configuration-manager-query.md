@@ -27,11 +27,11 @@ In System Center Configuration Manager, you create an `SMS_Query`-based query by
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create an instance of [SMS_Query](assetId:///SMS_Query?qualifyHint=False&autoUpgrade=True).  
+2.  Create an instance of [SMS_Query](../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md).  
 
 3.  Populate the `SMS_Query` properties.  
 
-4.  Commit the assetId:///SMS_Query?qualifyHint=False&autoUpgrade=True.  
+4.  Commit the `SMS_Query`.  
 
 5.  If required, retrieve the query object and get the query identifier.  
 
@@ -145,7 +145,7 @@ public string CreateQuery(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|-   A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|-   A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

@@ -18,9 +18,9 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
-In System Center Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [ExecQueryAsync](assetId:///ExecQueryAsync?qualifyHint=False&autoUpgrade=True) method and by implementing a sink method to handle query results.  
+In System Center Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
 
- To handle each returned object, create an [objWbemSink.OnObjectReady](assetId:///objWbemSink.OnObjectReady?qualifyHint=False&autoUpgrade=True) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](assetId:///objWbemSink.OnCompleted?qualifyHint=False&autoUpgrade=True) event subroutine.  
+ To handle each returned object, create an [objWbemSink.OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) event subroutine.  
 
 > [!NOTE]
 >  Lazy properties are not returned in asynchronous queries. For more information, see [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md).  
@@ -29,14 +29,14 @@ In System Center Configuration Manager, you perform an synchronous query for Con
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Create an [OnObjectReady](assetId:///OnObjectReady?qualifyHint=False&autoUpgrade=True) subroutine to handle objects by the query.  
+2.  Create an [OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) subroutine to handle objects by the query.  
 
-3.  Create an [OnCompleted](assetId:///OnCompleted?qualifyHint=False&autoUpgrade=True) subroutine to handle query completion.  
+3.  Create an [OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) subroutine to handle query completion.  
 
-4.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object you obtain from step one, use assetId:///ExecQueryAsync?qualifyHint=False&autoUpgrade=True object to query System Center Configuration Manager objects asynchronously.  
+4.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query System Center Configuration Manager objects asynchronously.  
 
 ## Example  
- The following VBScript code example asynchronously queries for all [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) objects.  
+ The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collectionssms_collection-server-wmi-class.md) objects.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -80,7 +80,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
+|`connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   

@@ -21,18 +21,18 @@ manager: "mbaldwin"
 In System Center Configuration Manager, you use the [SmsPageControl.PropertyManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access objects that are selected in the Configuration Manager console.  
 
 > [!NOTE]
->  If no object is selected in the Configuration Manager console, an empty [PropertyManager](assetId:///PropertyManager?qualifyHint=False&autoUpgrade=True) object is created and passed to the form. This can be used for creating new objects.  
+>  If no object is selected in the Configuration Manager console, an empty PropertyManager object is created and passed to the form. This can be used for creating new objects.  
 
- The form manages the serialization of objects in the assetId:///PropertyManager?qualifyHint=False&autoUpgrade=True object, and any changes you make are automatically saved when you click **OK**, or they are abandoned when you click **Cancel**.  
+ The form manages the serialization of objects in the PropertyManager object, and any changes you make are automatically saved when you click **OK**, or they are abandoned when you click **Cancel**.  
 
- Depending on the [SelectionMode](assetId:///SelectionMode?qualifyHint=False&autoUpgrade=True) attribute of the action's [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element, more than one object can be passed to the *PropertyManager* object. Changes that you make by using the *PropertyManager* object are then applied to all objects that are passed in. If you want to access the individual objects, you must cast the *PropertyManager* object to a [ResultObjectsManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.resultobjectsmanager.aspx). You then access the objects through the [ResultObjectManager](assetId:///ResultObjectManager?qualifyHint=False&autoUpgrade=True) object collection.  
+ Depending on the SelectionMode attribute of the action's [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element, more than one object can be passed to the *PropertyManager* object. Changes that you make by using the *PropertyManager* object are then applied to all objects that are passed in. If you want to access the individual objects, you must cast the *PropertyManager* object to a [ResultObjectsManager](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.resultobjectsmanager.aspx). You then access the objects through the ResultObjectsManager object collection.  
 
  For more information, see [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md).  
 
  For information about getting the property manager in a dialog box, see [How to Create a Configuration Manager Dialog Box](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-dialog-box.md).  
 
 ## Displaying the Package Name  
- The following procedure demonstrates using a assetId:///PropertyManager?qualifyHint=False&autoUpgrade=True object to access a single object passed to a property sheet. Clicking a button displays a message box that contains the name of a selected package. To complete these steps, you must first perform the actions in the following topics:  
+ The following procedure demonstrates using a [PropertyManager]((https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.propertymanager.aspx) object to access a single object passed to a property sheet. Clicking a button displays a message box that contains the name of a selected package. To complete these steps, you must first perform the actions in the following topics:  
 
 -   [How to Create a Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-property-sheet.md)  
 
