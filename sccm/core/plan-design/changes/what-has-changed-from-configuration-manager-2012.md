@@ -17,49 +17,49 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
- System Center Configuration Manager current branch introduces important changes from System Center 2012 Configuration Manager. The information in this topic identifies the more significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about additional changes that are introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
+ The current branch of System Center Configuration Manager introduces important changes from System Center 2012 Configuration Manager. This topic identifies significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about changes introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
 
 
- The December 2015 release of System Center Configuration Manager (version 1511), is the latest product release of Configuration Manager from Microsoft.   It is typically referred to as System Center Configuration Manager current branch. *Current branch* indicates this is a version that supports incremental updates to the product and can be an important distinction between this and past releases of Configuration Manager.  
+ The December 2015 release of System Center Configuration Manager (version 1511) is the latest product release of Configuration Manager from Microsoft. It is typically referred to as System Center Configuration Manager current branch. *Current branch* indicates this is a version that supports incremental updates to the product. It also provides a way to distinguish between this release and previous releases of Configuration Manager.  
 
- With this release System Center Configuration Manager:  
+ With this release, System Center Configuration Manager:  
 
--   Does not  use a year or product identifier in the product name, as seen with past versions like Configuration Manager 2007 or System Center 2012 Configuration Manager.
+-   Does not  use a year or product identifier in the product name, unlike past versions such as Configuration Manager 2007 or System Center 2012 Configuration Manager.
 
--   Supports incremental in-product  updates, also called update versions. The initial release is version 1511. Subsequent versions are released several times a year as in-console updates, like version 1602 or 1606.
+-   Supports incremental, in-product updates, also called update versions. The initial release is version 1511. Subsequent versions are released several times a year as in-console updates, like version 1602 or 1606.
 
 
 
 
 ##  <a name="bkmk_updates"></a> In-console updates for Configuration Manager  
- System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and then install recommended updates for Configuration Manager.  
+ System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates.  
 
  Some versions are only available as updates for existing sites (from within the Configuration Manager console), and cannot be used to install new Configuration Manager sites.   
-For example, the 1602 update is only available from within the Configuration Manager console and is used to update a site that runs a baseline version of 1511 to version 1602.  
+For example, the 1602 update is only available from within the Configuration Manager console. It is used to update a site that runs a baseline version of 1511 to version 1602.  
 
-Periodically, an update version will also be released as a new baseline version (like update 1606) which can be used to install a new hierarchy without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
+Periodically, an update version is released as a new baseline version (like update 1606). This kind of update can be used to install a new hierarchy, without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 
 
  For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
 
-##  <a name="bkmk_servicepoint"></a> Service connection point replaces Microsoft Intune connector  
+##  <a name="bkmk_servicepoint"></a> New site system role: service connection point  
  The **Microsoft Intune connector** is replaced by a new site system role that enables additional functionality, the **service connection point**. The service connection point:  
 
--   Replaces the Microsoft Intune connector when you integrate Intune with System Center Configuration Manager On\-premises Mobile Device Management  
+-   Replaces the Microsoft Intune connector when you integrate Intune with System Center Configuration Manager on-premises mobile device management.  
 
--   Is used as a point of contact for devices you manage with  
+-   Is used as a point-of-contact for devices you manage.  
 
--   Uploads usage data about your deployment to the Microsoft cloud service  
+-   Uploads usage data about your deployment to the Microsoft cloud service.  
 
--   Makes updates that apply to your deployment available from within the Configuration Manager console  
+-   Makes updates that apply to your deployment available from within the Configuration Manager console.  
 
-This site system role supports both an online and offline mode of operation that can affect its additional use. For more information see [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
+This site system role supports both online and offline modes of operation. For more information, see [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md).  
 
 ##  <a name="bkmk_usage"></a> Usage data collection  
- System Center Configuration Manager collects usage data about your sites and infrastructure. This information is compiled and submitted to the Microsoft cloud service by the service connection point (a new site system role) and is required to enable Configuration Manager to download updates for your deployment that apply to the version of Configuration Manager you use. When you configure the service connection point you can configure both the level of data that is collected, and whether this is submitted automatically (online mode) or manually (offline mode).  
+ System Center Configuration Manager collects usage data about your sites and infrastructure. This information is compiled and submitted to the Microsoft cloud service by the service connection point. It is required to enable Configuration Manager to download updates for your deployment that apply to the version of Configuration Manager you use. When you set up the service connection point, you can specify both the level of data that is collected, and whether this is submitted automatically (online mode) or manually (offline mode).  
 
- For more information see [Usage data levels and settings](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+ For more information, see [Usage data levels and settings](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 ##  <a name="bkmk_AMT"></a> Support for Intel Active Management Technology (AMT)  
  With System Center Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
