@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Planning a client migration strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan a client migration strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 To migrate clients from the source hierarchy to a System Center Configuration Manager destination hierarchy, you must do two tasks. You must migrate the objects that are associated with the client and you must then reinstall or reassign the clients from the source hierarchy to the destination hierarchy. You migrate the objects first so that they are available when the clients are migrated. The objects associated with the client are migrated by using migration jobs. For information about how to migrate the objects that are associated with the client, see [Planning a migration job strategy in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md).  
 
  Use the following sections to help you plan to migrate clients to the destination hierarchy.  
@@ -27,24 +27,24 @@ To migrate clients from the source hierarchy to a System Center Configuration Ma
 -   [Plan for inventory and compliance data during migration](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="Planning_for_Client_Agent_Migration"></a> Plan to migrate clients to the destination hierarchy  
- When you migrate clients from a source hierarchy, the client software on the client computer updates to match the product version of the destination hierarchy:  
+ When you migrate clients from a source hierarchy, the client software on the client computer upgrades to match the product version of the destination hierarchy:  
 
 -   **A Configuration Manager 2007 source hierarchy:** When you migrate clients from a source hierarchy that runs a supported version of Configuration Manager, the client software upgrades to the client version for the destination hierarchy.  
 
 -   **A System Center 2012 Configuration Manager or later source hierarchy:** When you migrate clients between hierarchies that are of the same product version, the client software does not change or upgrade. Instead, the client reassigns from the source hierarchy to a site in the destination hierarchy.  
 
     > [!NOTE]  
-    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see the [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) section in the [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md) topic.  
+    >  When the product version of a hierarchy is not supported for migration to your destination hierarchy, upgrade all sites and clients in the source hierarchy to a compatible product version. After the source hierarchy upgrades to a supported product version, you can migrate between the hierarchies. For more information, see [Versions of Configuration Manager that are supported for migration](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions) in [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
 Use the following information to help you plan the client migration:  
 
 -   To upgrade or reassign clients from a source site to a destination site, you can use any client deployment method that is supported for deploying clients in the destination hierarchy. Typical client deployment methods include client push installation, software distribution, Group Policy, and software update-based client installation. For more information, see [Client installation methods in System Center Configuration Manager](../../core/clients/deploy/plan/client-installation-methods.md).  
 
--   Ensure the device that runs the client software in the source hierarchy meets the minimum hardware requirements and runs an operating system that is supported by the version of Configuration Manager in the destination hierarchy.  
+-   Ensure that the device that runs the client software in the source hierarchy meets the minimum hardware requirements and runs an operating system that is supported by the version of Configuration Manager in the destination hierarchy.  
 
 -   Before you migrate a client, run a migration job to migrate the information the client will use in the destination hierarchy.  
 
--   Clients that upgrade retain their run history for deployments to prevent deployments from rerunning unnecessarily in the destination hierarchy:  
+-   Clients that upgrade retain their run history for deployments to prevent deployments from rerunning unnecessarily in the destination hierarchy.  
 
     -   For Configuration Manager 2007 clients, advertisement run history is retained.  
 
@@ -75,9 +75,9 @@ The following information is not retained on the client device:
 
 -   Information from the source hierarchy about any advertisements or deployments that have not yet run. If you want the client to run the advertisements or deployments after it migrates, you must redeploy them to the client in the destination hierarchy.  
 
--   Information about inventory. The client resends this information to its assigned site in the destination hierarchy after the client migrates, and the new client data has been generated.  
+-   Information about inventory. The client resends this information to its assigned site in the destination hierarchy after the client migrates and the new client data has been generated.  
 
--   Compliance data. The client resends this information to its assigned site in the destination hierarchy after the client migrates, and the new client data has been generated.  
+-   Compliance data. The client resends this information to its assigned site in the destination hierarchy after the client migrates and the new client data has been generated.  
 
 When a client migrates, information that is stored in the Configuration Manager client registry and file path is not retained. After migration, reapply these settings. Typical settings include the following:  
 
