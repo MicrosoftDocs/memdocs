@@ -16,9 +16,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Fundamentals of role-based administration for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-With System Center Configuration Manager you use role-based administration to secure access to administer Configuration Manager, and to the objects that you manage like collections, deployments, and sites.   After you understand the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+With System Center Configuration Manager, you use role-based administration to gain access to administer Configuration Manager. You also gain access to the objects that you manage like collections, deployments, and sites.   After you review the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
- The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings using the following:  
+ The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings by using the following:  
 
 -   **Security roles** - which are assigned to administrative users to provide those users (or groups of users) permissions to different Configuration Manager objects,   such as the permissions to create or change client settings.  
 
