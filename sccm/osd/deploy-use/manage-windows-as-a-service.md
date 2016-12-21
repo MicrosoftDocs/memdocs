@@ -229,25 +229,39 @@ Use the following procedure to modify the properties of a servicing plan.
 
     The following settings are available in the servicing plan properties that were not configured in the wizard:
 
-    - Deployment Settings
-    On the Deployment Settings tab, configure the following settings:  
+    **Deployment Settings**: On the Deployment Settings tab, configure the following settings:  
 
-        -   **Type of deployment**: Specify the deployment type for the software update deployment. Select **Required** to create a mandatory software update deployment in which the software updates are automatically installed on clients before a configured installation deadline. Select **Available** to create an optional software update deployment that is available for users to install from Software Center.  
+    -   **Type of deployment**: Specify the deployment type for the software update deployment. Select **Required** to create a mandatory software update deployment in which the software updates are automatically installed on clients before a configured installation deadline. Select **Available** to create an optional software update deployment that is available for users to install from Software Center.  
 
-            > [!IMPORTANT]  
-            >  After you create the software update deployment, you cannot later change the type of deployment.  
+        > [!IMPORTANT]  
+        >  After you create the software update deployment, you cannot later change the type of deployment.  
 
-            > [!NOTE]  
-            >  A software update group deployed as **Required** will be downloaded in background and honor  BITS settings, if configured.  
-            > However, software update groups deployed as **Available** will be downloaded in the foreground and will ignore BITS settings.  
+        > [!NOTE]  
+        >  A software update group deployed as **Required** will be downloaded in background and honor  BITS settings, if configured.  
+        > However, software update groups deployed as **Available** will be downloaded in the foreground and will ignore BITS settings.  
 
-        -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time will be awakened  so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled and is available only when **Type of deployment** is set to **Required**.  
+    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specify whether to enable Wake On LAN at the deadline to send wake-up packets to computers that require one or more software updates in the deployment. Any computers that are in sleep mode at the installation deadline time will be awakened  so the software update installation can initiate. Clients that are in sleep mode that do not require any software updates in the deployment are not started. By default, this setting is not enabled and is available only when **Type of deployment** is set to **Required**.  
 
-            > [!WARNING]  
-            >  Before you can use this option, computers and networks must be configured for Wake On LAN.  
+        > [!WARNING]  
+        >  Before you can use this option, computers and networks must be configured for Wake On LAN.  
 
-        -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
+    -   **Detail level**: Specify the level of detail for the state messages that are reported by client computers.  
 
-    - Download Settings
+   **Download Settings**: On the Download Settings tab, configure the following settings:  
 
-    - Alerts
+    -   Specify whether the client will download and install the software updates when a client is connected to a slow network or is using a fallback content location.  
+
+    -   Specify whether to have the client download and install the software updates from a fallback distribution point when the content for the software updates is not available on a preferred distribution point.  
+
+    -   **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information about BranchCache, see  [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache).  
+
+    -   Specify whether to have clients download software updates from Microsoft Update if software updates are not available on distribution points.
+    > [!IMPORTANT]
+    > Do not use this setting for Windows 10 Servicing updates. Configuration Manager (at least through version 1610) will fail to download the Windows 10 Servicing updates from Microsoft Update.
+
+    -   Specify whether to allow clients to download after an installation deadline when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.   
+
+    **Alerts**: On the Alerts tab, configure how Configuration Manager and System Center Operations Manager will generate alerts for this deployment. You can configure alerts only when **Type of deployment** is set to **Required** on the Deployment Settings page.  
+
+    > [!NOTE]  
+    >  You can review recent software updates alerts from the **Software Updates** node in the **Software Library** workspace.  
