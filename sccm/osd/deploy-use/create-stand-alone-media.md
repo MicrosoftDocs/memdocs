@@ -38,6 +38,7 @@ The following actions are not supported for stand-alone media:
 - The Download Package Content step in the task sequence. The management point information is not available on standalone media, therefore the step will fail trying to enumerate content locations.
 - Installing software updates.
 - Installing software before deploying the operating system.
+- Task sequences for non-operating system deployments.
 - Associating users with the destination computer to support user device affinity.
 - Dynamic package installs via the Install Packages task.
 - Dynamic application installs via the Install Application task.
