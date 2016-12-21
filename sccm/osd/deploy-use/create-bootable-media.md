@@ -38,7 +38,7 @@ Bootable media in Configuration Manager contains the boot image, optional presta
 
  Use the following procedure to create bootable media.  
 
-#### To create bootable media  
+### To create bootable media  
 
 1.  In the Configuration Manager console, click **Software Library**.  
 
@@ -136,6 +136,13 @@ Bootable media in Configuration Manager contains the boot image, optional presta
          Optionally, select the **Files for the prestart command** check box to include any required files for the prestart command.  
 
 10. Complete the wizard.  
+
+## Create bootable media on a USB drive from a network share
+The information in this section helps you to create bootable media on a USB flash drive when the flash drive is not connected to the computer running the Configuration Manager console. To create the bootable media on the USB drive, you can create task sequence boot media, mount the ISO, and transfer the files from the ISO to the USB drive.
+
+1. [Create the task sequence boot media](#to-create-task-boobable-media). On the **Media type** page, select **CD/DVD set**. The wizard writes the output files to the location that you specify. For example: **\\\servername\folder\outputfile.iso**.  
+2. Prepare the removable USB drive. The drive must be formatted, empty, and bootable.
+3. Mount the ISO from the share location and transfer the files from the ISO to the USB drive.
 
 ## Next steps  
 [Use bootable media to deploy Windows over the network](use-bootable-media-to-deploy-windows-over-the-network.md)  
