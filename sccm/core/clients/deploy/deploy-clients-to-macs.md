@@ -2,7 +2,7 @@
 title: "Deploy Mac clients | Microsoft Docs"
 description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/30/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to deploy clients to Macs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-This topic describes how to install the Configuration Manager client on Mac computers.
+
 
 ## Prerequisites and preparatory steps
 
@@ -27,9 +27,9 @@ Before you install the client make sure that the Mac computers meet the prerequi
 ### Certificate requirements
 Client installation and management for Mac computers requires public key infrastructure (PKI) certificates. PKI certificates secure the communication between the Mac computers and the Configuration Manager site by using mutual authentication and encrypted data transfers. Configuration Manager can request and install a user client certificate by using Microsoft Certificate Services with an enterprise certification authority (CA) and the Configuration Manager enrollment point and enrollment proxy point site system roles. Or, you can request and install a computer certificate independently from Configuration Manager if the certificate meets the requirements for Configuration Manager.   
   
-Configuration Manager Mac clients always perform certificate revocation checking; unlike Configuration Manager clients that run on Windows, you cannot disable this certificate revocation list (CRL) checking function.  
+Configuration Manager Mac clients always perform certificate revocation checking. You cannot disable this function.  
   
-If Mac clients cannot confirm the certificate revocation status for a server certificate because they cannot locate the CRL, they will not be able to successfully connect to Configuration Manager site systems, such as management points and distribution points. Especially for Mac clients in a different forest to the issuing certification authority, check your CRL design to ensure that Mac clients can locate and connect to a CRL distribution point (CDP) for connecting site system servers.  
+If Mac clients cannot confirm the certificate revocation status for a server certificate because they cannot locate the CRL, they will not be able to successfully connect to Configuration Manager site systems. Especially for Mac clients in a different forest to the issuing certification authority, check your CRL design to ensure that Mac clients can locate and connect to a CRL distribution point (CDP) for connecting site system servers.  
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
 
@@ -65,7 +65,7 @@ For an example deployment that creates and installs this web server certificate,
  
 
 ### Deploy a client authentication certificate to site system servers  
- If these site systems don't have it, deploy a client authentication certificate to the following computers that hold the following site system roles:  
+ If these site systems don't have it, deploy a client authentication certificate to the computers that host these site system roles:  
 
 -   Management point  
 
@@ -128,7 +128,7 @@ The site system roles must be in a primary site.
 
  For more information about site system role placement and considerations, see  [Site system roles](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
 
- These procedures configure the site system roles to support Mac computers. Choose one of these procedures, depending on whether you will install a new site system server to support Mac computers or use an existing site system server:  
+ These procedures configure the site system roles to support Mac computers.   
 
 -   [New site system server](#new-site-system-server)  
 
@@ -163,18 +163,12 @@ The site system roles must be in a primary site.
 7.  On the **Enrollment Point Settings** page, review the settings and make any necessary changes. Then, complete the wizard.  
 
 ### Optional: Install the reporting services point  
- Install the reporting services point if you want to run reports for Macs.  
-
- For more information about how to install and configure the reporting services point, see [Configuring reporting in System Center Configuration Manager](../../../core/servers/manage/configuring-reporting.md).  
-
+ [Install the reporting services point](../../../core/servers/manage/configuring-reporting.md) if you want to run reports for Macs.  
 
 ##  Install and configure the client for Macs  
 
-
 ### Configure client settings for enrollment  
- You must use the default client settings to configure enrollment for Mac computers; you cannot use custom client settings.  
-
- For more information about client settings, see [About client settings in System Center Configuration Manager](../../../core/clients/deploy/about-client-settings.md).  
+ You must use the [default client settings](../../../core/clients/deploy/about-client-settings.md)  to configure enrollment for Mac computers; you cannot use custom client settings.  
 
  This is required for Configuration Manager to request and install the certificate on the Mac.  
 
@@ -206,11 +200,11 @@ The site system roles must be in a primary site.
 11. Click **OK** to close the **Enrollment Profile** dialog box, and then  the **Default Client Settings** dialog box.  
 
     > [!TIP]  
-    >  If you want to change the client policy interval, use the **Client policy polling interval** client setting in the **Client Policy** client setting group.  
+    >  If you want to change the client policy interval, use **Client policy polling interval** in the **Client Policy** client setting group.  
 
  All users will be configured with these settings the next time that they download client policy. To initiate policy retrieval for a single client, see [Initiate Policy Retrieval for a Configuration Manager Client](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).  
 
- In addition to the enrollment client settings, ensure that you have configured the following Configuration Manager client device settings:  
+ In addition to the enrollment client settings, ensure that you have configured the following client device settings:  
 
 -   **Hardware inventory**: Enable and configure this if you want to collect hardware inventory from Mac and Windows client computers. For more information, see [How to extend hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
@@ -598,4 +592,4 @@ e. [Download the client source files for Macs](#download-the-client-source-files
 
      For example: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
 
-17. Restart the Mac.  
+17. Restart.  
