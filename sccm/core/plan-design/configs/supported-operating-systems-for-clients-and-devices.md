@@ -2,7 +2,7 @@
 title: "Supported clients and devices | Microsoft Docs"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,17 +16,15 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 ---
 # Supported operating systems for clients and devices for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-
-
  System Center Configuration Manager supports installing client software on a variety of Windows, Mac and Linux and UNIX computers.  
 
  **Requirements and limitations for all clients:**  
 
--   It is not supported to change the startup type or Log on as settings for any Configuration Manager service. Doing so can prevent key services from running correctly.    
+-   Changing the startup type or Log on as settings for any Configuration Manager service is not supported, and can prevent key services from running correctly.    
 
--   It is not supported to install or run the Configuration Manager client for Linux or UNIX or the client for Mac on computers under an account other than root. Doing so can prevent key services from running correctly.  
+-   Installing or running the Configuration Manager client for Linux or UNIX or the client for Mac on computers under an account other than root is not supported. Doing so can prevent key services from running correctly.  
 
-##  <a name="bkmk_WinClientos"></a> Windows computers  
+##  Windows computers  
  You can manage Windows computers with the Configuration Manager client that is included with Configuration Manager. For more information see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Supported operating systems:**  
@@ -74,14 +72,14 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
  <sup>3</sup> Use of  this operating system requires version 1602 or later.  
 
-##  <a name="bkmk_EmbeddedOS"></a> Windows Embedded  
+##  Windows Embedded  
  You can manage Windows Embedded devices by installing Configuration Manager client software on the device.  For more information see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 **Requirements and limitations:**  
 
 -   All client features are supported on supported Windows Embedded systems that do not have write filters enabled.  
 
--   Clients that use one of the following are supported for all features expect power management:  
+-   Clients that use one of the following are supported for all features except power management:  
 
     -   Enhanced Write Filters (EWF)    
 
@@ -91,7 +89,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 -   The Application Catalog is not supported for any Windows Embedded device.  
 
--   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
+-   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
 
 **Supported operating systems:**  
 
@@ -128,9 +126,9 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 **Requirements and limitations**  
 
--   The mobile device client requires 0.78 MB or storage space to install the client. Logging on the mobile device can require up to 256 KB of additional storage space.    
+-   The mobile device client requires 0.78 MB or storage space for installation. Logon can require up to 256 KB of additional storage space.    
 
--   Features for these mobile devices vary by platform and client type. For information about which management functions Configuration Manager supports for mobile device legacy client, see [Choose a device management solution for System Center Configuration Manager](../../../core/plan-design/choose-a-device-management-solution.md).  
+-   Features for these mobile devices vary by platform and client type. For information about which management functions are supported, see [Choose a device management solution for System Center Configuration Manager](../../../core/plan-design/choose-a-device-management-solution.md).  
 
 **Supported operating systems:**  
 
@@ -161,15 +159,19 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 ## Mac computers  
  You can manage Mac OS X computers with the Configuration Manager client for Mac.  
 
- The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
-
-**Requirements and limitations:**  
-
- You must use the Configuration Manager client for Mac (version  5.0.8333.1 or later), which must be separately downloaded. Unlike the Windows client, the Mac client is not included in the Configuration Manager software when you install it. To download the Mac client, go to [Microsoft System Center Configuration Manager - Clients for Additional Operating Systems](http://go.microsoft.com/fwlink/?LinkID=525184).  
+ The Mac client installation package is not supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
  For more information, see [How to deploy clients to Macs in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-macs.md).  
 
 **Supported versions:**  
+
+-   **Mac OS X 10.6** (Snow Leopard) 
+
+-   **Mac OS X 10.7** (Lion) 
+
+-   **Mac OS X 10.8** (Mountain Lion)
+
+-   **Mac OS X 10.9** (Mavericks)
 
 -   **Mac OS X 10.9** (Mavericks)  
 
@@ -177,18 +179,20 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 -   **Mac OS X 10.11** (El Capitan)  
 
-##  <a name="bkmk_LinuxOS"></a> Linux and UNIX servers  
+-   **Mac OS X 10.12** (Sierra)
+
+##  Linux and UNIX servers  
  You can manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.  
 
- The Linux and UNIX  client installation packages are  are not supplied with the Configuration Manager media. You can download them  as part of the Clients for Additional Operating Systems download from the    [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.  
+ The Linux and UNIX  client installation packages are  are not supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.  
 
 **Requirements and limitations:**  
 
 -   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
--   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
+-   For an overview of supported management capabilities for Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
--   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.  
+-   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example,  CentOS version 6 includes  CentOS 6.3. Similarly, support for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, it includes subsequent service packs for that operating system version.  
 
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
@@ -288,7 +292,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 |Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
-##  <a name="bkmk_IntuneOS"></a> Mobile devices enrolled by Microsoft Intune  
+##  Mobile devices enrolled by Microsoft Intune  
  For details about the computers and devices you can manage when you integrate Microsoft Intune with Configuration Manager, see the following two topics   in the Microsoft Intune documentation library:  
 
 -   [Mobile device management capabilities in Microsoft Intune](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
