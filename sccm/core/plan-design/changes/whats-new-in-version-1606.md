@@ -2,7 +2,7 @@
 title: "New in 1606 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/09/2016
+ms.date: 12/21/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -134,6 +134,9 @@ For details, see [Plan for software updates in Configuration Manager](../../../s
 When a software update that requires a restart is deployed using Configuration Manager and installed on a computer, a pending restart is scheduled and a restart dialog box is displayed. Beginning in Configuration Manager version 1606, the option to **Update and Restart**, and **Update and Shutdown** is available on Windows 10 computers in the Windows Power options whenever there is a pending restart for a Configuration Manager software update. After using one of these options, the restart dialog will not display after the computer restarts.
 
 For details, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
+
+### Run software updates compliance scan immediately after a client installs software updates and restarts
+You can now run a software updates compliance scan immediately after a client installs software updates and restarts. To configure this for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard, select the **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart** option. This enables the client to check for additional software updates that become applicable after the client restarts, and to then install them (and become compliant) during the same maintenance window. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates)
 
 ## Operating system deployment
 
