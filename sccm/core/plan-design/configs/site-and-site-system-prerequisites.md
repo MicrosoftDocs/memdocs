@@ -19,12 +19,12 @@ author: Brendunsms.author: brendunsmanager: angrobe
  Windows-based computers require specific configurations to support their use as System Center Configuration Manager site system servers.  
 
 
- For some products, like Windows Server Update Services (WSUS), for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
+ For some products, features, and roles (like Windows Server Update Services (WSUS)), for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
 
 > [!NOTE]  
 >  In January 2016, support expired for the .NET Framework 4.0, 4.5, and 4.5.1. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
 
-## <a name="bkmk_generalprerewq"></a> General site server requirements and limitations:
+## <a name="bkmk_generalprerewq"></a> General site server requirements and limitations
 **The following apply to all site system servers:**
 
 -   Each site system server must use a 64-bit operating system. The only exception to this is the distribution point site system role, which you can install on some 32-bit operating systems.  
@@ -39,14 +39,14 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   The name of the computer.  
 
-  If you must change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
+  If you have to change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
 
 -   Site system roles are not supported on an instance of a Windows Server cluster. The only exception to this is the site database server.  
 
 -   It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do this, you might prevent key services from running correctly.  
 
 ##  <a name="bkmk_2012Prereq"></a> Prerequisites for Windows Server 2012 and later operating systems  
-###  <a name="bkmk_2012sspreq"></a> Site server - central administration site and primary site  
+###  <a name="bkmk_2012sspreq"></a> Site server: central administration site and primary site  
   **Windows Server roles and features:**  
 
 -   .NET Framework 3.5 SP1 (or later)  
@@ -57,7 +57,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you are installing or upgrading to requires.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of the Windows Assessment and Deployment Kit (ADK) that the version of Configuration Manager you're installing or upgrading to requires.  
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
@@ -69,7 +69,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   Central administration sites and primary sites require both the x86 and x64 versions of the applicable Redistributable file.  
 
-###  <a name="bkmk_2012secpreq"></a> Site server- secondary site  
+###  <a name="bkmk_2012secpreq"></a> Site server: secondary site  
 **Windows Server roles and features:**  
 
 -   .NET Framework 3.5 SP1 (or later)  
@@ -106,7 +106,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you are installing or upgrading to requires.  
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
@@ -117,7 +117,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2:  
 
     -   ASP.NET 4.5  
 
@@ -152,9 +152,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   .NET Framework 3.5 SP1 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2:  
 
-    -   ASP.NET 4.5  
+    -   ASP.NET 4.5:  
 
         -   HTTP Activation (and automatically selected options)  
 
@@ -192,7 +192,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ###  <a name="bkmk_2012crppreq"></a> Certificate registration point  
 **Windows Server roles and features:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2:  
 
     -   HTTP Activation  
 
@@ -247,13 +247,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 **To support PXE or multicast:**  
 
--   Install and configure the Windows Deployment Services (WDS) Windows role.  
+-   Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
 > [!NOTE]  
->  The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
+> The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection point  
 **Windows Server roles and features:**  
@@ -265,7 +265,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   .NET Framework 3.5 (or later)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2:  
 
      When this site system role installs, Configuration Manager automatically installs the .NET Framework 4.5.2. This installation can place the server into a reboot pending state. When a reboot is pending for the .NET Framework, .NET applications might fail until after the server reboots and the installation finishes.  
 
@@ -353,7 +353,7 @@ The default IIS configuration is required with the following additions:
 
 -   .NET Framework 4.5.2  
 
--   BITS Server Extensions (and automatically selected options), or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
+-   BITS Server Extensions (and automatically selected options) or Background Intelligent Transfer Services (BITS) (and automatically selected options)  
 
 **IIS configuration:**  
 
@@ -426,7 +426,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 -   You can configure WCF activation as part of the .NET Framework Windows feature on the site system server. For example, on Windows Server 2008 R2, run the **Add Features Wizard** to install additional features on the server. On the **Select Features** page, expand **NET Framework 3.5.1 Features**, expand **WCF Activation**, and then check the boxes for both **HTTP Activation** and **Non-HTTP Activation** to enable these options.  
 
-###  <a name="bkmk_2008sspreq"></a> Site server - central administration site and primary site  
+###  <a name="bkmk_2008sspreq"></a> Site server: central administration site and primary site  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (or later)  
@@ -439,7 +439,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 **Windows ADK:**  
 
--   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you are installing or upgrading to requires.  
+-   Before you install or upgrade a central administration site or primary site, you must install the version of Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
@@ -451,7 +451,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
 -   Central administration sites and primary sites require both the x86 and x64 versions of the applicable Redistributable file.  
 
-###  <a name="bkmk_2008secpreq"></a> Site server - secondary site  
+###  <a name="bkmk_2008secpreq"></a> Site server: secondary site  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (or later)  
@@ -486,7 +486,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS Provider server  
 **Windows ADK:**  
 
--   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you are installing or upgrading to requires.  
+-   The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're installing or upgrading to requires.  
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
@@ -615,17 +615,17 @@ When you use a custom IIS configuration, you can remove options that aren't requ
 
 **Microsoft Azure:**  
 
--   You can use a cloud service in Microsoft Azure to host a distribution point.  
+-   You can use a cloud service in Azure to host a distribution point.  
 
 **To support PXE or multicast:**  
 
--   Install and configure the Windows Deployment Services (WDS) Windows role.  
+-   Install and configure the Windows Deployment Services (WDS) Windows Server role.  
 
     > [!NOTE]  
     >  WDS installs and configures automatically when you configure a distribution point to support PXE or multicast on a server that runs Windows Server 2012 or later.  
 
 > [!NOTE]  
->  The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
+> The distribution point site system role doesn't require Background Intelligent Transfer Service (BITS). When BITS is configured on the distribution point computer, BITS on the distribution point computer isn't used to facilitate the download of content by clients that use BITS.  
 
 
 ###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection point  
@@ -676,6 +676,7 @@ The default IIS configuration is required with the following additions:
 -   Non-HTTP Activation  
 
 **IIS configuration:**
+
 The default IIS configuration is required with the following additions:  
 
 -   Application Development:  
@@ -779,9 +780,9 @@ The default IIS configuration is required.
 
 **Windows Server Update Services:**  
 
--   You must install the Windows server role Windows Server Update Services on a computer before installing a software update point.  
+-   You must install the Windows Server role Windows Server Update Services on a computer before installing a software update point.  
 
--   For more information, see  [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).
+-   For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).
 
 ###  <a name="bkmk_2008SMPpreq"></a> State migration point  
 **IIS configuration:**
