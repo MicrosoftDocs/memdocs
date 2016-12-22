@@ -2,7 +2,7 @@
 title: "New in 1606 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/09/2016
+ms.date: 12/21/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
