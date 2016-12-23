@@ -2,7 +2,7 @@
 title: "Introduction to application management | Microsoft Docs"
 description: "Discover the basic information you’ll need to manage and deploy System Center Configuration Manager applications."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,12 +47,12 @@ In this topic, you'll learn the basics you need to know before you start working
  Configuration Manager lets you deploy the following app types:  
 
 - Windows Installer (*.msi file)
-- Windows app package (*.appx, \*.appxbundle)
+- Windows app package (*.appx, *.appxbundle)
 - Windows app package (in the Windows Store)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5
 - Windows Mobile Cabinet
-- Mac OS X  
+- macOS  
 
 
 Additionally, when you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these further app types:
