@@ -82,7 +82,7 @@ The support numbers in this article are based on using the recommended hardware 
 
     -   A pull-distribution point acts like a client when it accesses content from a source distribution point.  
 
--   Each primary site supports a combined total of up to 5,000 distribution points. This total includes all the distribution points at the primary site and all distribution points that belong to the primary site’s child secondary sites.  
+-   Each primary site supports a combined total of up to 5,000 distribution points. This total includes all the distribution points at the primary site and all the distribution points that belong to the primary site’s child secondary sites.  
 
 -   Each distribution point supports a combined total of up to 10,000 packages and applications.  
 
@@ -116,7 +116,7 @@ The support numbers in this article are based on using the recommended hardware 
 -   By default, Configuration Manager doesn't support configuring software update points as Network Load Balancing (NLB) clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on an NLB cluster.  
 
 ##  <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies  
- Use the following information to determine how many clients and which types of clients that you can support at a site or in a hierarchy.  
+ Use the following information to determine how many clients and which types of clients you can support at a site or in a hierarchy.  
 
 ###  <a name="bkmk_cas"></a> Hierarchy with a central administration site  
 A central administration site supports a total number of devices that includes up to the number of devices listed for the following three groups:  
@@ -127,14 +127,14 @@ A central administration site supports a total number of devices that includes u
 
 -   One of the following, depending on how your deployment supports mobile device management (MDM):  
 
-    -   100,000 devices that you manage with on-premises MDM  
+    -   100,000 devices that you manage by using on-premises MDM  
 
     -   300,000 cloud-based devices  
 
  For example, in a hierarchy, you can support 700,000 desktops, up to 25,000 Mac and Windows CE 7.0 clients, and up to 300,000 cloud-based devices when you integrate Microsoft Intune—for a total of 1,025,000 devices. If you support devices that are managed by on-premises MDM, the total for the hierarchy is 825,000 devices.  
 
 > [!IMPORTANT]  
->  In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. The edition of SQL Server that is in use at a stand-alone primary site doesn't limit that site's capacity to support up to the stated number of clients.  
+>  In a hierarchy where the central administration site uses a Standard edition of SQL Server, the hierarchy supports a maximum of 50,000 desktops and devices. The edition of SQL Server that is used at a stand-alone primary site doesn't limit that site's capacity to support up to the stated number of clients.  
 
 
 ###  <a name="bkmk_chipri"></a> Child primary site  
@@ -142,7 +142,7 @@ Each child primary site in a hierarchy with a central administration site suppor
 
 -   150,000 total clients and devices that aren't limited to a specific group or type, as long as support doesn't exceed the number that is supported for the hierarchy.  
 
-For example, a primary site that supports 25,000 computers that run Mac and Windows CE 7.0 (because that is the limit for a hierarchy) can then support an additional 125,000 desktop computers. This brings the total number of supported devices up to the child primary site's supported maximum limit of 150,000.
+For example, a primary site that supports 25,000 computers that run Mac and Windows CE 7.0 clients (because that is the limit for a hierarchy) can then support an additional 125,000 desktop computers. This brings the total number of supported devices up to the child primary site's supported maximum limit of 150,000.
 
 ###  <a name="bkmk_pri"></a> Stand-alone primary site  
 A stand-alone primary site supports the following number of devices:  
@@ -151,11 +151,11 @@ A stand-alone primary site supports the following number of devices:
 
     -   150,000 desktops (computers that run Windows, Linux, and UNIX)  
 
-    -   25,000 devices that run Mac and Windows CE 7.0  
+    -   25,000 devices that run Mac and Windows CE 7.0 clients
 
     -   One of the following, depending on how your deployment supports mobile device management:  
 
-        -   50,000 devices that you manage with on-premises MDM  
+        -   50,000 devices that you manage by using on-premises MDM  
 
         -   150,000 cloud-based devices  
 
@@ -177,4 +177,4 @@ Each management point can support the following number of devices:
 
         -   10,000 devices that are managed by using on-premises MDM  
 
-        -   10,000 devices that run Mac and Windows CE 7.0  
+        -   10,000 devices that run Mac and Windows CE 7.0 clients
