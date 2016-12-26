@@ -187,7 +187,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 -   The **domain local user** account:  
 
-    -   This is a best practice and might require you to manually register the Service Principle Name (SPN) for the account.  
+    -   This is a best practice and might require you to manually register the service principal name (SPN) for the account.  
 
 -   The **local system** account  of the computer that runs SQL Server:  
 
@@ -195,7 +195,7 @@ You can use this version of SQL Server with no minimum cumulative update version
     -   When you use the local system account, Configuration Manager automatically registers the SPN for the SQL Server service.  
     -   Be aware that using the local system account for the SQL Server service is not a SQL Server best practice.  
 
-When the computer running SQL Server doesn't use its local system account to run the SQL Server service, you must configure the Service Principal Name (SPN) of the account that runs the SQL Server service in Active Directory Domain Services. (When the system account is used, the SPN is automatically registered for you).
+When the computer running SQL Server doesn't use its local system account to run the SQL Server service, you must configure the SPN of the account that runs the SQL Server service in Active Directory Domain Services. (When the system account is used, the SPN is automatically registered for you.)
 
 For information about SPNs for the site database, see  [Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) in the [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) topic.  
 
