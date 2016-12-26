@@ -21,27 +21,27 @@ This topic identifies System Center Configuration Manager support for common Win
 
 
 ##  <a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache is integrated in Configuration Manager. You can configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences.  
+Windows BranchCache is integrated with Configuration Manager. You can configure the BranchCache settings on a deployment type for applications, on the deployment for a package, and for task sequences.  
 
-When all the requirements for BranchCache are met, this feature enables clients at remote locations to obtain content from local clients that have a current cache of the content.  
+When all the requirements for BranchCache are met, this feature enables clients in remote locations to obtain content from local clients that have a current cache of the content.  
 
-For example, when the first BranchCache-enabled client computer requests content from a distribution point that is configured as a BranchCache server, the client computer downloads and caches the content. This content is then made available for clients on the same subnet that request this same content, and these clients also cache the content. In this manner, successive clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
+For example, when the first BranchCache-enabled client computer requests content from a distribution point that is configured as a BranchCache server, the client computer downloads and caches the content. This content is then made available for clients on the same subnet that request this same content. These clients also cache the content. In this manner, successive clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
 
 **To support BranchCache with Configuration Manager:**  
 
 -   Add the **Windows BranchCache** feature to the site system server that is configured as a distribution point.  
 
-    -   Distribution points on servers configured to support BranchCache require no additional configuration  
+    -   Distribution points on servers that are configured to support BranchCache require no additional configuration.  
 
-    -   You cannot add Windows BranchCache to a cloud-based distribution point, but cloud-based distribution points support the download of content by clients that are configured for Windows BranchCache  
+    -   You cannot add Windows BranchCache to a cloud-based distribution point, but cloud-based distribution points support the download of content by clients that are configured for Windows BranchCache.  
 
 **To enable clients to use BranchCache:**  
 
--   The clients that can support BranchCache must be configured for BranchCache distributed mode  
+-   The clients that can support BranchCache must be configured for BranchCache distributed mode.  
 
--   The operating system setting for BITS client settings must be enabled to support BranchCache  
+-   The operating system setting for BITS client settings must be enabled to support BranchCache.  
 
-**The following client operating systems  are supported with Windows BranchCache:**  
+**The following client operating systems are supported by Windows BranchCache:**  
 
 |Operating system|Support details|  
 |----------------------|---------------------|  
@@ -49,14 +49,14 @@ For example, when the first BranchCache-enabled client computer requests content
 |Windows 8|Supported by default|  
 |Windows 8.1|Supported by default|  
 |Windows 10|Supported by default|  
-|Windows Server 2008 with SP2|**Requires BITS 4.0**-  You can install the BITS 4.0 release on Configuration Manager clients by using software updates or software distribution. For more information about the BITS 4.0 release, see [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979).<br /><br /> On this operating system, the BranchCache client functionality is not supported for software distribution that is run from the network or for SMB file transfers. Additionally, this operating system cannot use BranchCache functionality with cloud-based distribution points.|  
+|Windows Server 2008 with SP2|**Requires BITS 4.0**: You can install the BITS 4.0 release on Configuration Manager clients by using software updates or software distribution. For more information about the BITS 4.0 release, see [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979).<br /><br /> On this operating system, the BranchCache client functionality is not supported for software distribution that is run from the network or for SMB file transfers. Additionally, this operating system cannot use BranchCache functionality with cloud-based distribution points.|  
 |Windows Server 2008 R2|Supported by default|  
 |Windows Server 2012|Supported by default|  
 |Windows Server 2012 R2|Supported by default|  
 
  For more information about BranchCache, see [BranchCache for Windows](http://go.microsoft.com/fwlink/p/?LinkId=177945) in the Windows Server documentation.  
 
-##  <a name="bkmk_Workgroups"></a> Computers in Workgroups  
+##  <a name="bkmk_Workgroups"></a> Computers in workgroups  
 Configuration Manager provides support for clients in workgroups.  
 
 -   Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to Install Configuration Manager Clients on Workgroup Computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup) in the [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md) topic.  
@@ -73,14 +73,14 @@ Configuration Manager supports the use of data deduplication with distribution p
 -   Windows Server 2012 R2  
 
 > [!IMPORTANT]  
->  The volume that hosts package source files cannot be marked for data deduplication. This is because data deduplication uses reparse points and Configuration Manager does not support using a content source location with files stored on reparse points.  
+>  The volume that hosts package source files cannot be marked for data deduplication. This is because data deduplication uses reparse points and Configuration Manager does not support using a content source location with files that are stored on reparse points.  
 
 For more information, see [Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) on the Configuration Manager team blog, and [Data Deduplication Overview](http://technet.microsoft.com/library/hh831602.aspx) in the Windows Server TechNet library.  
 
 ##  <a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager supports the DirectAccess feature in Windows Server 2008 R2 for communication between site system servers and clients.  
 
--   When all the requirements for DirectAccess are met, by using this feature, Configuration Manager clients on the Internet can communicate with their assigned site as if they were on the intranet.  
+-   When all the requirements for DirectAccess are met, DirectAccess enables Configuration Manager clients on the Internet to communicate with their assigned site as if they were on the intranet.  
 
 -   For server-initiated actions, such as remote control and client push installation, the initiating computer (such as the site server) must be running IPv6, and this protocol must be supported on all intervening networking devices.  
 
@@ -102,7 +102,7 @@ Configuration Manager does not support the following over DirectAccess:
 |--------------|-------------------------------|  
 |Cloud-based distribution points|IPv4 is required to support Microsoft Azure and cloud-based distribution points.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
-|Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
+|Network discovery|IPv4 is required when you configure a DHCP server to search in network discovery.|  
 |Operating system deployment|IPv4 is required to support operating system deployment.|  
 |Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
 |Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
@@ -111,7 +111,9 @@ Configuration Manager does not support the following over DirectAccess:
  Network Address Translation (NAT) is not supported in Configuration Manager, unless the site supports clients that are on the Internet and the client detects that it is connected to the Internet. For more information about Internet-based client management, see [Plan for managing Internet-based clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md).  
 
 ##  <a name="bkmk_storage"></a> Specialized storage technology  
- Configuration Manager works with any hardware that is certified on the Windows Hardware Compatibility List for the version of the operating system that the Configuration Manager component is installed on. Site Server roles require NTFS file systems so that directory and file permissions can be set. Because Configuration Manager assumes that it has complete ownership of a logical drive, site systems that run on separate computers cannot share a logical partition on any storage technology. However, each computer can use a separate logical partition on the same physical partition of a shared storage device.  
+ Configuration Manager works with any hardware that is certified on the Windows Hardware Compatibility List for the version of the operating system that the Configuration Manager component is installed on.
+
+Site Server roles require NTFS file systems so that directory and file permissions can be set. Because Configuration Manager assumes that it has complete ownership of a logical drive, site systems that run on separate computers cannot share a logical partition on any storage technology. However, each computer can use a separate logical partition on the same physical partition of a shared storage device.  
 
  **Support considerations:**  
 
@@ -121,4 +123,4 @@ Configuration Manager does not support the following over DirectAccess:
 
      Additionally, the cache of a Configuration Manager client is not supported on a SIS-enabled volume.  
 
--   **Removable Disk Drive**: Configuration Manager does not support install of Configuration Manager site system or clients on a removable disk drive.  
+-   **Removable disk drive**: Configuration Manager does not support the installation of Configuration Manager site systems or clients on a removable disk drive.  
