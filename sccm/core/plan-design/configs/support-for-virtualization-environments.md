@@ -42,11 +42,11 @@ No special consideration is given to virtual machines. For example, Configuratio
 ##  <a name="bkmk_Azure"></a> Microsoft Azure virtual machines  
  Configuration Manager can run on virtual machines in Azure just as it does when on-premises within your physical corporate network. You can use Configuration Manager with Azure virtual machines in the following scenarios:  
 
--   **Scenario 1:** You can run Configuration Manager on an Azure virtual machine and use it to manage clients installed on other Azure virtual machines.  
+-   **Scenario 1:** You can run Configuration Manager on an Azure virtual machine and use it to manage clients that are installed on other Azure virtual machines.  
 
--   **Scenario 2:** You can run Configuration Manager in an Azure virtual machine and use it to manage clients that are not running on Azure.  
+-   **Scenario 2:** You can run Configuration Manager on an Azure virtual machine and use it to manage clients that are not running on Azure.  
 
--   **Scenario 3:** You can run different Configuration Manager site system roles in Azure virtual machines while running other roles in your physical corporate network (with appropriate network connectivity for communications).  
+-   **Scenario 3:** You can run different Configuration Manager site system roles on Azure virtual machines while running other roles in your physical corporate network (with appropriate network connectivity for communications).  
 
 The same System Center Configuration Manager requirements for networks, supported configurations, and hardware requirements that apply to installing Configuration Manager on-premises on your physical corporate network also apply to installation on Azure.  
 
