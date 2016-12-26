@@ -49,7 +49,7 @@ Learn about which operating systems can host the Configuration Manager console t
 -  [Support for SQL Server versions](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 Learn about which versions of SQL Server can host the site database and reporting database, as well as required configurations and optional configurations that you can use.
 
--  [High availability options](../../../protect/understand/high-availability-options.md)  
+-  [High-availability options](../../../protect/understand/high-availability-options.md)  
 Learn about the options you can implement when designing your environment to help maintain a high level of available service for your Configuration Manager deployment.
 
 -  [Recommended hardware](../../../core/plan-design/configs/recommended-hardware.md)  
@@ -59,7 +59,7 @@ Learn about guidelines that can help you identify the right hardware and configu
 Learn about the supported Active Directory domain configurations that Configuration Manager requires and supports.
 
 -  [Support for Windows features and networks](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
-Learn about supported Windows technologies technologies (such as BranchCache and data deduplication) and limitations for their use with Configuration Manager.
+Learn about supported Windows technologies  (such as BranchCache and data deduplication) and limitations for their use with Configuration Manager.
 
--  [Support for Virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
-Learn more about information how to use supported virtual machine technologies.
+-  [Support for virtualization environments](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
+Learn more about how to use supported virtual machine technologies.
