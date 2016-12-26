@@ -73,7 +73,7 @@ Configuration Manager supports the use of data deduplication with distribution p
 -   Windows Server 2012 R2  
 
 > [!IMPORTANT]  
->  The volume that hosts package source files cannot be marked for data deduplication. This is because data deduplication uses reparse points and Configuration Manager does not support using a content source location with files that are stored on reparse points.  
+>  The volume that hosts package source files cannot be marked for data deduplication. This is because data deduplication uses reparse points, and Configuration Manager does not support using a content source location with files that are stored on reparse points.  
 
 For more information, see [Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx) on the Configuration Manager team blog, and [Data Deduplication Overview](http://technet.microsoft.com/library/hh831602.aspx) in the Windows Server TechNet library.  
 
