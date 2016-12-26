@@ -49,7 +49,7 @@ The following instances are supported:
  Unless specified otherwise, the following versions of SQL Server are supported with System Center Configuration Manager version 1511 and later.  
 
 > [!IMPORTANT]  
->  Using SQL Server Standard for the database at the central administration site limits the total number of clients that a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
+>  When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](../../../core/plan-design/configs/size-and-scale-numbers.md).
 
 ### SQL Server 2016 SP1: Standard, Enterprise  
 You can use this version of SQL Server with no minimum cumulative update version for the following:  
@@ -161,7 +161,7 @@ You can use this version of SQL Server with no minimum cumulative update version
  You must use a dedicated instance of SQL Server for each site. This can be a **named instance** or the **default instance**.  
 
  **SQL Server memory:**  
- Reserve  memory for SQL Server by using SQL Server Management Studio and setting the **Minimum server memory** setting under **Server Memory Options**. For more information about how to set a fixed amount of memory, see [How to: Set a Fixed Amount of Memory (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
+ Reserve memory for SQL Server by using SQL Server Management Studio and setting the **Minimum server memory** setting under **Server Memory Options**. For more information about how to set a fixed amount of memory, see [How to: Set a Fixed Amount of Memory (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759).  
 
 -   **For a database server that is installed on the same computer as the site server:** Limit the memory for SQL Server to 50 to 80 percent of the available addressable system memory.  
 
@@ -189,7 +189,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 
     -   This is a best practice and might require you to manually register the service principal name (SPN) for the account.  
 
--   The **local system** account  of the computer that runs SQL Server:  
+-   The **local system** account of the computer that runs SQL Server:  
 
     -   Use the local system account to simplify the configuration process.  
     -   When you use the local system account, Configuration Manager automatically registers the SPN for the SQL Server service.  
@@ -197,7 +197,7 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 When the computer running SQL Server doesn't use its local system account to run the SQL Server service, you must configure the SPN of the account that runs the SQL Server service in Active Directory Domain Services. (When the system account is used, the SPN is automatically registered for you.)
 
-For information about SPNs for the site database, see  [Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) in the [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) topic.  
+For information about SPNs for the site database, see [Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) in the [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) topic.  
 
 For information about how to change the account that is used by the SQL Server service, see [How to: Change the Service Startup Account for SQL Server (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkId=237661).  
 
