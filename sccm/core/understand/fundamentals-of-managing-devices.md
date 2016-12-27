@@ -20,7 +20,7 @@ System Center Configuration Manager can manage two broad categories of devices:
 
 -   *Clients* are devices like workstations, laptops, servers, and mobile devices where you install the Configuration Manager client software. Some management functions, like hardware inventory, require this client software.  
 
--   *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software is not installed. On this kind of device, you manage by using Intune, or Configuration Manager's built-in on-premises mobile device management.
+-   *Managed devices* can include *clients*, but typically it's a mobile device where the Configuration Manager client software is not installed. On this kind of device, you manage by using Intune, or the built-in on-premises mobile device management in Configuration Manager.
 
 You can also group and identify devices based on the user, not just the client type.
 
@@ -34,13 +34,13 @@ There are two ways to use the Configuration Manager client software to manage a 
 
  - Software update-based installation.
 
- - Use a group policy.
+ - Group policy.
 
  - Manual installation on a computer.
- - Include the client as part of an operating system image that you deploy.  
+ - Including the client as part of an operating system image that you deploy.  
 
 
- After the client is installed, you can simplify the tasks of managing devices by using collections. Collections are groups of devices or users that you create so that you can manage them as a group. For example, you might want to install a mobile device application on all mobile devices that are enrolled by Configuration Manager. If this is the case, you could use the All Mobile Devices collection.  
+ After the client is installed, you can simplify the tasks of managing devices by using collections. Collections are groups of devices or users that you create so that you can manage them as a group. For example, you might want to install a mobile device application on all mobile devices that Configuration Manager enrolls. If this is the case, you can use the All Mobile Devices collection.  
 
  For more information, see these topics:  
 
@@ -53,11 +53,11 @@ There are two ways to use the Configuration Manager client software to manage a 
 ### Client settings  
  When you first install Configuration Manager, all clients in the hierarchy are configured by using the default client settings that you can change. The client settings include these configuration options:
 
- -  How often the device communicates with the site.
+ -  How frequently the devices communicate with the site.
 
- -  Set up a client for software updates and other management operations.
+ -  Whether the client is set up for software updates and other management operations.
 
- -  Let users enroll their mobile devices so they're managed by Configuration Manager.  
+ -  Whether users can enroll their mobile devices so they're managed by Configuration Manager.  
 
 You can create custom client settings and then assign them to collections.  Members of the collection are configured to have the custom settings, and you can create multiple custom client settings that are applied in the order that you specify (by numerical order).  If there are conflicting settings, the setting that has the lowest order number overrides the other settings.  
 
@@ -69,12 +69,12 @@ The following diagram shows an example of how you create and apply custom client
                 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md) and  [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md).
 
 ## Managing devices without the Configuration Manager client  
- Configuration Manager supports the management of some devices that have not installed the client software, and are not managed by Intune. For more information see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) and  [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+ Configuration Manager supports the management of some devices that have not installed the client software, and are not managed by Intune. For more information, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) and  [Manage mobile devices with System Center Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ## User-based management  
- Configuration Manager supports collections of Active Directory Domain Services users. When you use a user collection, you can install software on all computers that members of the collection use. To make sure the software you deploy installs only on the devices that are specified as a user's primary device, set up user device affinity. A user can have one or more primary devices.  
+ Configuration Manager supports collections of Active Directory Domain Services users. When you use a user collection, you can install software on all computers that members of the collection use. To make sure that the software you deploy only installs on the devices that are specified as a user's primary device, set up user device affinity. A user can have one or more primary devices.  
 
- One of the ways that users can control their software deployment experience is to use the **Software Center** client interface. The **Software Center** is automatically installed on client computers and is run from the **Start** menu. In the **Software Center**, users can manage their own software and do the following tasks:  
+ One of the ways that users can control their software deployment experience is to use the **Software Center** client interface. The **Software Center** is automatically installed on client computers and is run from the **Start** menu. The **Software Center** lets users manage their own software and do the following tasks:  
 
 -   Install software.  
 
@@ -85,6 +85,7 @@ The following diagram shows an example of how you create and apply custom client
 -   Configure the access settings for remote control, if remote control is set up in Configuration Manager.  
 
 -   Configure options for power management, if an administrative user sets up this option.  
+
 
  A link in the **Software Center** lets users connect to the **Application Catalog**, where they can browse for, install, and request software. The **Application Catalog** is also used to configure preference settings, wipe mobile devices, and when it's set up, specify a primary device for user device affinity.   
 
