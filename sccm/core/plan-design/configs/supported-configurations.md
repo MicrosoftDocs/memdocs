@@ -35,13 +35,13 @@ When a Configuration Manager feature or capability requires more specific config
 Learn about how many sites, site system roles per site, and clients or devices are supported in different hierarchy designs for Configuration Manager.
 
 -  [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
-Learn about configurations that are required on a Windows server to support different site types and site system roles.
+Learn about configurations that are required on a Windows Server to support different site types and site system roles.
 
 -  [Supported operating systems for site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
 Learn about which operating systems you can use as a site server or site system server.
 
 -  [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)  
-Learn about which operating systems you can manage with Configuration Manager, including Windows, Linux and UNIX, Mac, Embedded operating systems, and mobile devices.
+Learn about which operating systems you can manage with Configuration Manager, including Windows, Windows Embedded, Linux and UNIX, Mac, and mobile devices.
 
 -  [Supported operating systems for the console](../../../core/plan-design/configs/supported-operating-systems-consoles.md)  
 Learn about which operating systems can host the Configuration Manager console to provide a point of access for managing your deployment.  

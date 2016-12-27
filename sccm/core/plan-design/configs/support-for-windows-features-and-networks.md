@@ -25,7 +25,9 @@ Windows BranchCache is integrated with Configuration Manager. You can configure 
 
 When all the requirements for BranchCache are met, this feature enables clients in remote locations to obtain content from local clients that have a current cache of the content.  
 
-For example, when the first BranchCache-enabled client computer requests content from a distribution point that is configured as a BranchCache server, the client computer downloads and caches the content. This content is then made available for clients on the same subnet that request this same content. These clients also cache the content. In this manner, successive clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
+For example, when the first BranchCache-enabled client computer requests content from a distribution point that is configured as a BranchCache server, the client computer downloads and caches the content. This content is then made available for clients on the same subnet that requested this content.
+
+These clients also cache the content. In this manner, successive clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
 
 **To support BranchCache with Configuration Manager:**  
 
@@ -62,7 +64,7 @@ Configuration Manager provides support for clients in workgroups.
 -   Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to Install Configuration Manager Clients on Workgroup Computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup) in the [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md) topic.  
 
 > [!NOTE]  
->  Although clients in workgroups are supported, all site systems must be members of a supported Active Directory Domain  
+>  Although clients in workgroups are supported, all site systems must be members of a supported Active Directory Domain.  
 
 
 ##  <a name="bkmmk_datadedup"></a> Data deduplication  
@@ -86,7 +88,7 @@ Configuration Manager supports the DirectAccess feature in Windows Server 2008 R
 
 Configuration Manager does not support the following over DirectAccess:  
 
--   Deploying operating systems  
+-   The deployment of operating systems  
 
 -   Communication between Configuration Manager sites  
 
@@ -95,7 +97,7 @@ Configuration Manager does not support the following over DirectAccess:
 ##  <a name="bkmk_dualboot"></a> Dual boot computers  
  Configuration Manager cannot manage more than one operating system on a single computer. If there is more than one operating system on a computer that must be managed, adjust the discovery and installation methods that are used to ensure that the Configuration Manager client is installed only on the operating system that has to be managed.  
 
-##  <a name="bkmk_IPv6"></a> Internet protocol version 6  
+##  <a name="bkmk_IPv6"></a> Internet Protocol version 6  
  In addition to Internet Protocol version 4 (IPv4), Configuration Manager supports Internet Protocol version 6 (IPv6) with the following exceptions:  
 
 |Function|Exception to IPv6 support|  
