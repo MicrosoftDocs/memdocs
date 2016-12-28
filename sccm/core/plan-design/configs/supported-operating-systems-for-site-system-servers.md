@@ -299,7 +299,7 @@ Windows Server 2016 is supported beginning with Configuration Manager version 16
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configuration support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## Windows 8 (x86, x64): Professional and Enterprise Distribution point  
+## Windows 8 (x86, x64): Professional and Enterprise
 **Site system servers:**  
 
 -   Distribution point  
