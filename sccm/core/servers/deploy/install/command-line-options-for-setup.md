@@ -132,7 +132,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -166,7 +166,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteCode*>  
+    -   **Values:** <*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
 
@@ -174,7 +174,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteName*>  
+    -   **Values:** <*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -182,7 +182,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
+    -   **Values:** <*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -190,7 +190,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*FQDN of SMS Provider*>  
+    -   **Values:** <*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
 
@@ -210,7 +210,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -288,7 +288,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SQLServerName*>  
+    -   **Values:** <*SQLServerName*>  
 
     -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server. It will host the site database.  
 
@@ -296,7 +296,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteDatabaseName*\> or &lt;*InstanceName*\>\&lt;*SiteDatabaseName*\>  
+    -   **Values:** <*SiteDatabaseName*> or <*InstanceName*>\<*SiteDatabaseName*>  
 
     -   **Details:**  Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database.  
 
@@ -307,7 +307,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*SSBPortNumber*>  
+    -   **Values:** <*SSBPortNumber*>  
 
     -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. Typically, SSB is configured to use TCP port 4022, but other ports are supported.  
 
@@ -315,7 +315,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .mdb file*>  
+    -   **Values:** <*FilePath to database .mdb file*>  
 
     -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
@@ -323,7 +323,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .ldf file*>  
+    -   **Values:** <*FilePath to database .ldf file*>  
 
     -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
@@ -345,7 +345,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Service connection point server FQDN*>  
+    -   **Values:** <*Service connection point server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
@@ -365,7 +365,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Required when UseProxy equals 1  
 
-    -   **Values:** &lt;*Proxy server FQDN*>  
+    -   **Values:** <*Proxy server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
 
@@ -373,7 +373,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Required when UseProxy equals 1  
 
-    -   **Values:** &lt;*PortNumber*>  
+    -   **Values:** <*PortNumber*>  
 
     -   **Details:** Specifies the port number to use.  
 
@@ -406,7 +406,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteCode*>  
+    -   **Values:** <*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy.  
 
@@ -414,7 +414,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteName*>  
+    -   **Values:** <*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -422,7 +422,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
+    -   **Values:** <*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -430,7 +430,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*FQDN of SMS Provider*>  
+    -   **Values:** <*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
 
@@ -450,7 +450,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -482,7 +482,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Management point site server FQDN*>  
+    -   **Values:** <*Management point site server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the server that will host the management point site system role.  
 
@@ -498,7 +498,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Distribution Point site server FQDN*>  
+    -   **Values:** <*Distribution Point site server FQDN*>  
 
     -   **Details:** Specifies the protocol to use for the management point.  
 
@@ -514,7 +514,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** EnforceHTTPS *or* HTTPorHTTPS  
+    -   **Values:** *EnforceHTTPS* or *HTTPorHTTPS*  
 
     -   **Details:** Specifies whether to configure all site systems to accept only HTTPS communication from clients, or for the communication method to be configured for each site system role. When you select to **EnforceHTTPS**, client computer must have a valid public key infrastructure (PKI) certificate for client authentication.  
 
@@ -580,7 +580,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SQLServerName*>  
+    -   **Values:** <*SQLServerName*>  
 
     -   **Details:** Specifies the name of the server, or the name of the clustered instance, that is running SQL Server. It will host the site database.  
 
@@ -588,7 +588,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>\&lt;SiteDatabaseName\>*  
+    -   **Values:** <*SiteDatabaseName*> or <*InstanceName*>\<*SiteDatabaseName*>  
 
     -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the primary site database.  
 
@@ -599,7 +599,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*SSBPortNumber*>  
+    -   **Values:** <*SSBPortNumber*>  
 
     -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. Typically, SSB is configured to use TCP port 4022, but other ports are supported.  
 
@@ -607,7 +607,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .mdb file*>  
+    -   **Values:** <*FilePath to database .mdb file*>  
 
     -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
@@ -615,7 +615,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .ldf file*>  
+    -   **Values:** <*FilePath to database .ldf file*>  
 
     -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
@@ -625,7 +625,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FQDN of central administration site*>  
+    -   **Values:** <*FQDN of central administration site*>  
 
     -   **Details:** Specifies the central administration site that a primary site will attach to when it joins the Configuration Manager hierarchy. You must specify the central administration site during Setup.  
 
@@ -633,7 +633,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Interval*>  
+    -   **Values:** <*Interval*>  
 
     -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then re-attempts the connection.  
 
@@ -641,7 +641,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Timeout*>  
+    -   **Values:** <*Timeout*>  
 
          A value of **0** to **100**  
 
@@ -665,7 +665,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Service connection point server FQDN*\>  
+    -   **Values:** <*Service connection point server FQDN*\>  
 
     -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
@@ -685,7 +685,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when UseProxy equals 1  
 
-    -   **Values:** &lt;*Proxy server FQDN*>  
+    -   **Values:** <*Proxy server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
 
@@ -693,7 +693,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when UseProxy equals 1  
 
-    -   **Values:** &lt;*PortNumber*>  
+    -   **Values:** <*PortNumber*>  
 
     -   **Details:** Specifies the port number to use.  
 
@@ -752,7 +752,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** This key is required when the **DatabaseRecoveryOptions** setting has a value of **40**.  
 
-    -   **Values:** &lt;*ReferenceSiteFQDN*>  
+    -   **Values:** <*ReferenceSiteFQDN*>  
 
     -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change-tracking retention period or when you recover the site without a backup.  
 
@@ -764,7 +764,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*PathToSiteServerBackupSet*>  
+    -   **Values:** <*PathToSiteServerBackupSet*>  
 
     -   **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -772,7 +772,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and you configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
-    -   **Values:** &lt;*PathToSiteDatabaseBackupSet*>  
+    -   **Values:** <*PathToSiteDatabaseBackupSet*>  
 
     -   **Details:** Specifies the path to the site database backup set.  
 
@@ -790,7 +790,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteCode*>  
+    -   **Values:** <*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
 
@@ -798,7 +798,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*SiteName*>  
+    -   **Values:** <*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -806,7 +806,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
+    -   **Values:** <*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -814,7 +814,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*FQDN of SMS Provider*>  
+    -   **Values:** <*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.  
 
@@ -836,7 +836,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -870,7 +870,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SQLServerName*>  
+    -   **Values:** <*SQLServerName*>  
 
     -   **Details:** Specifies the name of the server, or the name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
@@ -878,7 +878,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>\&lt;SiteDatabaseName\>*  
+    -   **Values:** <*SiteDatabaseName*> or <*InstanceName*>\<*SiteDatabaseName*>  
 
     -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database. You must specify the same database name that was used before the failure.  
 
@@ -889,7 +889,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SSBPortNumber*>  
+    -   **Values:** <*SSBPortNumber*>  
 
     -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
 
@@ -897,7 +897,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .mdb file*>  
+    -   **Values:** <*FilePath to database .mdb file*>  
 
     -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
@@ -905,7 +905,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .ldf file*>  
+    -   **Values:** <*FilePath to database .ldf file*>  
 
     -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
@@ -927,7 +927,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Service connection point server FQDN*>  
+    -   **Values:** <*Service connection point server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
@@ -947,7 +947,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Proxy server FQDN*>  
+    -   **Values:** <*Proxy server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
 
@@ -955,7 +955,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*PortNumber*>  
+    -   **Values:** <*PortNumber*>  
 
     -   **Details:** Specifies the port number to use.  
 
@@ -968,7 +968,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*RecoverPrimarySite*>  
+    -   **Values:** <*RecoverPrimarySite*>  
 
     -   **Details:** Recovers a primary site.  
 
@@ -1014,7 +1014,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*PathToSiteServerBackupSet*>  
+    -   **Values:** <*PathToSiteServerBackupSet*>  
 
     -   **Details:**  
 
@@ -1024,7 +1024,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
-    -   **Values:** &lt;*PathToSiteDatabaseBackupSet*>  
+    -   **Values:** <*PathToSiteDatabaseBackupSet*>  
 
     -   **Details:** Specifies the path to the site database backup set.  
 
@@ -1042,7 +1042,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SiteCode*>  
+    -   **Values:** <*SiteCode*>  
 
     -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
 
@@ -1050,7 +1050,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*SiteName*>  
+    -   **Values:** <*SiteName*>  
 
     -   **Details:** Specifies the name for this site.  
 
@@ -1058,7 +1058,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
+    -   **Values:** <*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -1066,7 +1066,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*FQDN of SMS Provider*>  
+    -   **Values:** <*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure. You can configure additional SMS Providers for the site after the initial installation. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
@@ -1086,7 +1086,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -1120,7 +1120,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SQLServerName*>  
+    -   **Values:** <*SQLServerName*>  
 
     -   **Details:** Specifies the name of the server or the name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
@@ -1128,7 +1128,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:**  &lt;*SiteDatabaseName*\> or &lt;*InstanceName*\>\\&lt;*SiteDatabaseName*\>
+    -   **Values:**  <*SiteDatabaseName*> or <*InstanceName*>\<*SiteDatabaseName*>
 
     -   **Details:**  
 
@@ -1141,7 +1141,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** &lt;*SSBPortNumber*>  
+    -   **Values:** <*SSBPortNumber*>  
 
     -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
 
@@ -1149,7 +1149,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .mdb file*>  
+    -   **Values:** <*FilePath to database .mdb file*>  
 
     -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
@@ -1157,7 +1157,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .ldf file*>  
+    -   **Values:** <*FilePath to database .ldf file*>  
 
     -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
@@ -1167,7 +1167,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** See details.  
 
-    -   **Values:** &lt;*SiteCodeForCentralAdministrationSite*>  
+    -   **Values:** <*SiteCodeForCentralAdministrationSite*>  
 
     -   **Details:** Specifies the central administration site to which a primary site attaches when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. You must specify the site code that was used for the central administration site before the failure.  
 
@@ -1175,7 +1175,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Interval*>  
+    -   **Values:** <*Interval*>  
 
     -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then attempts the connection again.  
 
@@ -1183,9 +1183,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*Timeout*>  
+    -   **Values:** <*Timeout*>  
 
-    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
+    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
 
 **CloudConnectorOptions**  
 
@@ -1205,7 +1205,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Service connection point server FQDN*>  
+    -   **Values:** <*Service connection point server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the server that will host the service connection point site system role.  
 
@@ -1225,7 +1225,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*Proxy server FQDN*>  
+    -   **Values:** <*Proxy server FQDN*>  
 
     -   **Details:** Specifies the FQDN of the proxy server that will be used by the service connection point site system role.  
 
@@ -1233,6 +1233,6 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Required when CloudConnector equals 1  
 
-    -   **Values:** &lt;*PortNumber*>  
+    -   **Values:** <*PortNumber*>  
 
     -   **Details:** Specifies the port number to use.  
