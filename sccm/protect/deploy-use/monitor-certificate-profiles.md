@@ -18,46 +18,30 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 ---
 # How to monitor certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-After you deploy System Center Configuration Manager certificate profiles to users in your hierarchy, you can use the following procedures to monitor the compliance status of the certificate profile:  
+##  View Compliance Results in the Configuration Manager Console  
 
--   [How to View Compliance Results in the Configuration Manager Console](#BKMK_console)  
+To monitor SCEP certificate compliance  do not use the console, rather, use [reports](#view-compliance-results-by-using-reports). 
 
--   [How to View Compliance Results by Using Reports](#BKMK_Reports)  
+1.  In the Configuration Manager console, choose **Monitoring**>  **Deployments**.  
 
-##  <a name="BKMK_console"></a> How to View Compliance Results in the Configuration Manager Console  
- Use this procedure to view details about the compliance of deployed certificate profiles in the System Center Configuration Manager console.  
+3.  Select the certificate profile deployment of interest.  
 
-> [!NOTE]  
->  To monitor SCEP certificate compliance  do not use the Configuration Manager console, rather, use reports as described in [How to View Compliance Results by Using Reports](#BKMK_Reports). Specifically, use these  certificate reports under the report node **Company Resource Access**:  
->   
->  -   Certificate issuance history  
-> -   List of assets with certificates nearing expiry  
-> -   List of assets by certificate issuance status  
-
-#### To view compliance results in the Configuration Manager console  
-
-1.  In the System Center Configuration Manager console, click **Monitoring**.  
-
-2.  In the **Monitoring** workspace, click **Deployments**.  
-
-3.  In the **Deployments** list, select the certificate profile deployment for which you want to review compliance information.  
-
-4.  You can review summary information about the compliance of the certificate profile on the main page. To view more detailed information, select the certificate profile, and then on the **Home** tab, in the **Deployment** group, click **View Status** to open the **Deployment Status** page.  
+4.  Review summary certificate compliance information on the main page. For more detailed information, select the certificate profile, and then on the **Home** tab, in the **Deployment** group, choose **View Status** to open the **Deployment Status** page.  
 
      The **Deployment Status** page contains the following tabs:  
 
-    -   **Compliant**: Displays the compliance of the certificate profile based on the number of assets that are affected. You can double-click a rule to create a temporary node under the **Users** node in the **Assets and Compliance** workspace. This node contains all users that are compliant with the certificate profile. The **Asset Details** pane also displays the users that are compliant with this profile. Double-click a user in the list to display additional information.  
+    -   **Compliant**: Displays the compliance of the certificate profile based on the number of assets that are affected. You can double-click a rule to create a temporary node under the **Users** node in the **Assets and Compliance** workspace. This node contains all users that are compliant with the certificate profile. The **Asset Details** pane also displays the users that are compliant with this profile. Double-click a user in the list for more information.  
 
         > [!IMPORTANT]  
         >  A certificate profile is not evaluated if it is not applicable on a client device. However, it is returned as compliant.  
 
-    -   **Error**: Displays a list of all errors for the selected certificate profile deployment based on the number of assets that are affected. You can double-click a rule to create a temporary node under the **Users** node of the **Assets and Compliance** workspace. This node contains all users that generated errors with this profile. When you select a user, the **Asset Details** pane displays the users that are affected by the selected issue. Double-click a user in the list to display additional information about the issue.  
+    -   **Error**: Displays a list of all errors for the selected certificate profile deployment based on the number of assets that are affected. You can double-click a rule to create a temporary node under the **Users** node of the **Assets and Compliance** workspace. This node contains all users that generated errors with this profile. When you select a user, the **Asset Details** pane displays the users that are affected by the selected issue. Double-click a user in the list to display for more information.  
 
     -   **Non-Compliant**: Displays a list of all noncompliant rules within the certificate profile based on the number of assets that are affected. You can double-click a rule to create a temporary node under the **Users** node of the **Assets and Compliance** workspace. This node contains all users that are not compliant with this profile. When you select a user, the **Asset Details** pane displays the users that are affected by the selected issue. Double-click a user in the list to display further information about the issue.  
 
     -   **Unknown**: Displays a list of all users that did not report compliance for the selected certificate profile deployment together with the current client status of the devices.  
 
-5.  On the **Deployment Status** page, you can review detailed information about the compliance of the deployed certificate profile. A temporary node is created under the **Deployments** node that helps you find this information again quickly.  
+5.  On the **Deployment Status** page, review detailed information about the compliance of the deployed certificate profile. A temporary node is created under the **Deployments** node that helps you find this information again quickly.  
 
      The enrollment status of the certificate is displayed as a number. Use the following table to understand what each number means:  
 
@@ -71,11 +55,19 @@ After you deploy System Center Configuration Manager certificate profiles to use
     |0x00000040|The status information has been skipped. This can occur if a  HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" certification authority is not valid or has not been selected for monitoring.|  
     |0x00000100|Enrollment has been denied.|  
 
-##  <a name="BKMK_Reports"></a> How to View Compliance Results by Using Reports
+##  View Compliance Results by Using Reports
 
  Compliance settings in System Center Configuration Manager include built-in reports that you can use to monitor information about certificate profiles. These reports have the report category of **Compliance and Settings Management**.  
 
 > [!IMPORTANT]  
 >  You must use a wildcard (%) character when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
+
+To monitor SCEP certificate compliance  use these  certificate reports under the report node **Company Resource Access**:  
+
+ -   Certificate issuance history  
+ -   List of assets with certificates nearing expiry  
+ -   List of assets by certificate issuance status  
+
+
 
  For more information about how to configure reporting in System Center Configuration Manager, see [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md).  
