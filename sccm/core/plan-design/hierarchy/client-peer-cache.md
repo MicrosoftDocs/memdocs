@@ -2,7 +2,7 @@
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 12/28/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -28,8 +28,10 @@ Beginning with System Center Configuration Manager version 1610, you can use **P
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group:
  -	A client that operates as a peer content source will submit a list of available content it has cached to its management point.
  -	Then, when the next client in that boundary group requests that content, each peer cache source which has the content is returned as a potential content source along with the distribution points and other content source locations in that boundary group.
- -	Per the normal operating process, the client seeking the content selects one a content source from the pool of sources it is provided, and proceeds to attempt to get the content.
- -	If fallback to a neighbor boundary group for content occurs, the Peer Cache content source locations from the neighbor boundary group are  not added to the client's pool of potential content source locations.  
+ -	Per the normal operating process, the client seeking the content selects one content source from the pool of sources it is provided, and proceeds to attempt to get the content.
+
+> [!NOTE]
+> If fallback to a neighbor boundary group for content occurs, the Peer Cache content source locations from the neighbor boundary group are  not added to the client's pool of potential content source locations.  
 
 Even though you could make all clients participate in Peer Cache, it is best practice to choose only clients that are best suited for being peer cache sources.  Suitability of clients can be evaluated based on a client’s chassis type, disk space, network connectivity, and more. For more information that can help you select the best clients to use for Peer Cache, see [this blog by a Microsoft Consultant](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/).
 
@@ -41,7 +43,7 @@ To help you understand the use of Peer Cache, you can view the Client Data Sourc
 
 - Clients can only transfer content from Peer Cache clients that are in their current boundary group.
 
-- 	Because the current boundary of a Peer Cache content source is determined by that clients last hardware inventory submission, a client that roams to a network location that is in a different boundary group might still be considered a member of its former boundary group for the purpose of Peer Cache. This can result in a client being offered a Peer Cache content source that is not in its immediate network location. We recommend excluding clients that are prone to this configuration from participating in Peer Cache.
+- 	Because the current boundary of a Peer Cache content source is determined by that clients last hardware inventory submission, a client that roams to a network location that is in a different boundary group might still be considered a member of its former boundary group for the purpose of Peer Cache. This can result in a client being offered a Peer Cache content source that is not in its immediate network location. We recommend excluding clients that are prone to this configuration from participating as a Peer Cache source.
 
 ## To configure Client Peer Cache client settings
 1.	In the Configuration Manager console, go to **Administration** > **Client Settings**, and then open device client settings object you want to use. You can also modify the Default Client Settings object.
