@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: nbigman
+ms.author: nbigman
+manager: angrobe
 
 ---
-# Fundamentals of managing devices with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Fundamentals of managing devices with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager can manage two broad categories of devices:
 
 -   *Clients* are devices like workstations, laptops, servers, and mobile devices where you install the Configuration Manager client software. Some management functions, like hardware inventory, require this client software.  
@@ -80,11 +85,11 @@ The following diagram shows an example of how you create and apply custom client
 
 -   Schedule software to automatically install outside working hours.  
 
--   Configure when Configuration Manager installs software on a device.  
+-   Configure when Configuration Manager can install software on a device.  
 
 -   Configure the access settings for remote control, if remote control is set up in Configuration Manager.  
 
--   Configure options for power management, if an administrative user sets up this option.  
+-   Configure options for power management, if an administrator sets up this option.  
 
 
  A link in the **Software Center** lets users connect to the **Application Catalog**, where they can browse for, install, and request software. The **Application Catalog** is also used to configure preference settings, wipe mobile devices, and when it's set up, specify a primary device for user device affinity.   
