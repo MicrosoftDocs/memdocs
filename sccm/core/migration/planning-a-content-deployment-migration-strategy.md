@@ -194,7 +194,7 @@ Prior to version 1610, Configuration Manager could process only one distribution
 - When you use the Configuration Manager SDK, you can change **SharedDPImportThreadLimit** to adjust the number of reassigned distribution points that Configuration Manager can process in parallel.
 
 
-##  <a name="About_Migrating_Content"></a> Content ownership when migrating content  
+##  <a name="About_Migrating_Content"></a> Assign content ownership when migrating content  
  When you migrate content for deployments, you must assign the content object to a site in the destination hierarchy. This site then becomes the owner for that content in the destination hierarchy. Although the top-level site of your destination hierarchy is the site that migrates the metadata for content, it is the assigned site that uses the original source files for the content across the network.  
 
  To minimize the network bandwidth that is used when you migrate content, consider transferring ownership of content to a site in the destination hierarchy that is close on the network to the content location in the source hierarchy. Because information about the content in the destination hierarchy is shared globally, it will be available at every site.  
