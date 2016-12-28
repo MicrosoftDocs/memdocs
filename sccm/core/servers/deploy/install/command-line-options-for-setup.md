@@ -16,50 +16,50 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Command-line options for Setup for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
- Use information in the following tables when configuring scripts or installing System Center Configuration Manager from a command line.  
+ Use the following information to configure scripts or install System Center Configuration Manager from a command line.  
 
 ##  <a name="bkmk_setup"></a> Command-line options for Setup  
  **/DEINSTALL**  
  Uninstalls the site. You must run Setup from the site server computer.  
 
  **/DONTSTARTSITECOMP**  
- Install a site, but prevent the Site Component Manager service from starting. Until the Site Component Manager service starts, the site is not active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and additional processes at the site. After the site install is completed, when you start the Site Component Manager service, it will then install the SMS_Executive and additional processes necessary for the site to operate.  
+ Installs a site, but prevents the Site Component Manager service from starting. Until the Site Component Manager service starts, the site is not active. The Site Component Manager is responsible for installing and starting the SMS_Executive service, and for additional processes at the site. After the site install is finished, when you start the Site Component Manager service, it installs the SMS_Executive service and additional processes that are necessary for the site to operate.  
 
  **/HIDDEN**  
- Hides the user interface during setup. This option must be used in conjunction with the **/SCRIPT** option, and the unattended script file must provide all required options, or Setup fails.  
+ Hides the user interface during Setup. This option must be used in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or Setup fails.  
 
  **/NOUSERINPUT**  
- Disables user input during Setup, but display the **Setup Wizard** interface. This option must be used in conjunction with the **/SCRIPT** option, and the unattended script file must provide all required options, or Setup fails.  
+ Disables user input during Setup, but displays the Setup Wizard. This option must be used in conjunction with the **/SCRIPT** option. The unattended script file must provide all required options or Setup fails.  
 
  **/RESETSITE**  
- Performs a site reset that resets the database and service accounts for the site. You must run Setup from **&lt;ConfigMgrInstallationPath\>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in the [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) topic.  
+ Performs a site reset that resets the database and service accounts for the site. You must run Setup from **&lt;*ConfigMgrInstallationPath*>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md).  
 
  **/TESTDBUPGRADE &lt;*InstanceName\DatabaseName*>**  
- Performs a test on a backup of the site database to ensure that it is capable of an upgrade. You must provide the instance name and database name for the site database. If you specify only the database name, Setup uses the default instance name.  
+ Performs a test on a backup of the site database to ensure that the database is capable of an upgrade. You must provide the instance name and database name for the site database. If you specify only the database name, Setup uses the default instance name.  
 
 > [!IMPORTANT]  
->  It is not supported to run this command-line option on your production site database. Doing so upgrades the site database and could render your site inoperable.  
+>  Do not run this command-line option on your production site database. Running this command-line option on your production site database upgrades the site database and could render your site inoperable.  
 
  **/UPGRADE**  
- Runs an unattended upgrade of a site. When you use /UPGRADE, you must also specify the product key, including the dashes (-). Additionally, you must specify the path to the previously downloaded Setup prerequisite files.  
+ Runs an unattended upgrade of a site. When you use **/UPGRADE**, you must specify the product key, including the dashes (-). Also, you must specify the path to the previously downloaded Setup prerequisite files.  
 
- Example: **setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx &lt;path to external component files\>**  
+ Example: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx &lt;path to external component files\>`  
 
- For more information about Setup prerequisite files, see  [Setup Downloader](#bkmk_SetupDownloader) in this topic.  
+ For more information about Setup prerequisite files, see  [Setup downloader](#bkmk_SetupDownloader) in this topic.  
 
  **/SCRIPT &lt;*SetupScriptPath*>**  
- Performs unattended installations. A Setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run Setup unattended, see  [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
+ Performs unattended installations. A Setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run Setup unattended, see [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
 
  **/SDKINST &lt;*FQDN*>**  
- Installs the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer. For more information about the SMS Provider, see the [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
+ Installs the SMS Provider on the specified computer. You must provide the fully qualified domain name (FQDN) for the SMS Provider computer. For more information about the SMS Provider, see [Plan for the SMS Provider for System Center Configuration Manager](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
  **/SDKDEINST &lt;*FQDN*>**  
  Uninstalls the SMS Provider on the specified computer. You must provide the FQDN for the SMS Provider computer.  
 
  **/MANAGELANGS &lt;*LanguageScriptPath*>**  
- Manages the languages that are installed at a previously installed site. To use this option, you must run Setup from **&lt;ConfigMgrInstallationPath\>\BIN\X64** on the site server and provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see [Command line options to manage languages](#bkmk_Lang) in this topic.  
+ Manages the languages that are installed at a previously installed site. To use this option, you must run Setup from **&lt;*ConfigMgrInstallationPath*\>\BIN\X64** on the site server and provide the location for the language script file that contains the language settings. For more information about the language options available in the language setup script file, see [Command-line options to manage languages](#bkmk_Lang) in this topic.  
 
-##  <a name="bkmk_Lang"></a> Command line options to manage languages  
+##  <a name="bkmk_Lang"></a> Command-line options to manage languages  
  **Identification**  
 
 -   **Key Name:** Action  
@@ -110,9 +110,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether the mobile device client languages are installed.  
 
@@ -122,11 +122,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = download  
+         0 = Download  
 
-         1 = already downloaded  
+         1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of 0, Setup downloads the files.  
+    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
 
 -   **Key Name:** PrerequisitePath  
 
@@ -137,7 +137,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 ##  <a name="bkmk_Unattended"></a> Unattended Setup script file keys  
- Use the following sections to help you to create your script for unattended Setup. The tables list the available Setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.  
+ Use the following sections to help you create your script for unattended Setup. The tables list the available Setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.  
 
 ### Unattended install for a central administration site  
  Use the following details to install a central administration site by using an unattended Setup script file.  
@@ -158,7 +158,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* or  *Eval*  
+    -   **Values:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* or *Eval*  
 
     -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
 
@@ -182,7 +182,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** *ConfigMgrInstallationPath*  
+    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -192,8 +192,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** &lt;*FQDN of SMS Provider*>  
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider.  
-        You can configure additional SMS Providers for the site after the initial installation.  
+    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
 
 -   **Key Name:** PrerequisiteComp  
 
@@ -201,11 +200,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = download  
+         0 = Download  
 
-         1 = already downloaded  
+         1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of 0, Setup will download the files.  
+    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup will download the files.  
 
 -   **Key Name:** PrerequisitePath  
 
@@ -213,7 +212,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
 
-    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the PrerequisiteComp value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
+    -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 -   **Key Name:** AdminConsole  
 
@@ -221,9 +220,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
@@ -233,11 +232,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not join  
+         0 = Do not join  
 
-         1 = join  
+         1 = Join  
 
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
+    -   **Details:** Specifies whether to join the Customer Experience Improvement Program (CEIP).  
 
 -   **Key Name:** AddServerLanguages  
 
@@ -261,8 +260,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed.  
-        Specifies the languages to remove that will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
+    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove that will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
 
 -   **Key Name:** DeleteClientLanguages  
 
@@ -270,8 +268,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed.  
-        Specifies the languages to remove that will no longer be available to client computers. English is available by default and cannot be removed.  
+    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove that will no longer be available to client computers. English is available by default and cannot be removed.  
 
 -   **Key Name:** MobileDeviceLanguage  
 
@@ -279,9 +276,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether the mobile device client languages are installed.  
 
@@ -291,19 +288,17 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** Yes  
 
-    -   **Values:** *SQLServerName*  
+    -   **Values:** &lt;*SQLServerName*>  
 
-    -   **Details:** Specifies the name of the server, or name of the clustered instance, that is running SQL Server. It will host the site database.  
+    -   **Details:** Specifies the name of the server or clustered instance that is running SQL Server. It will host the site database.  
 
 -   **Key Name:** DatabaseName  
 
     -   **Required:** Yes  
 
-    -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>\&lt;SiteDatabaseName\>*  
+    -   **Values:** &lt;*SiteDatabaseName*\> or &lt;*InstanceName*\>\&lt;*SiteDatabaseName*\>  
 
-    -   **Details:**  
-
-         Specifies the name of the SQL Server database to create or use to install the central administration site database.  
+    -   **Details:**  Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -320,17 +315,17 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .MDB file*>  
+    -   **Values:** &lt;*FilePath to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .MDB file.  
+    -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
 -   **Key Name:** SQLLogFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .LDF file*>  
+    -   **Values:** &lt;*FilePath to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .LDF file.  
+    -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
 **CloudConnectorOptions**  
 
@@ -340,11 +335,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
+    -   **Details:** Specifies whether you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
 
 -   **Key Name:** CloudConnectorServer  
 
@@ -360,11 +355,11 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point will use a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -427,7 +422,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *ConfigMgrInstallationPath*  
+    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -437,8 +432,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*FQDN of SMS Provider*>  
 
-    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider.  
-        You can configure additional SMS Providers for the site after the initial installation.  
+    -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You can configure additional SMS Providers for the site after the initial installation.  
 
 -   **Key Name:** PrerequisiteComp  
 
@@ -446,11 +440,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = download  
+         0 = Download  
 
-         1 = already downloaded  
+         1 = Already downloaded  
 
-    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of 0, Setup will download the files.  
+    -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup will download the files.  
 
 -   **Key Name:** PrerequisitePath  
 
@@ -466,9 +460,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
@@ -478,11 +472,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not join  
+         0 = Do not join  
 
-         1 = join  
+         1 = Join  
 
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
+    -   **Details:** Specifies whether to join the CEIP.  
 
 -   **Key Name:** ManagementPoint  
 
@@ -520,9 +514,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** EnforceHTTPS or HTTPorHTTPS  
+    -   **Values:** EnforceHTTPS *or* HTTPorHTTPS  
 
-    -   **Details:** Specifies whether to configure all site systems to accept only HTTPS communication from clients or for the communication method to be configured for each site system role. When you select to **EnforceHTTPS**, client computer must have a valid PKI certificate for client authentication.  
+    -   **Details:** Specifies whether to configure all site systems to accept only HTTPS communication from clients, or for the communication method to be configured for each site system role. When you select to **EnforceHTTPS**, client computer must have a valid public key infrastructure (PKI) certificate for client authentication.  
 
 -   **Key Name:** ClientsUsePKICertificate  
 
@@ -530,9 +524,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not use  
+         0 = Do not use  
 
-         1 = use  
+         1 = Use  
 
     -   **Details:** Specifies whether clients will use a client PKI certificate to communicate with site system roles.  
 
@@ -558,8 +552,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed.  
-        Specifies the languages to remove that will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
+    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove that will no longer be available for the Configuration Manager console, reports, and Configuration Manager objects. English is available by default and cannot be removed.  
 
 -   **Key Name:** DeleteClientLanguages  
 
@@ -567,8 +560,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** DEU, FRA, RUS, CHS, JPN, CHT, CSY, ESN, HUN, ITA, KOR, NLD, PLK, PTB, PTG, SVE, TRK, or ZHH  
 
-    -   **Details:** Modifies a site after it is installed.  
-        Specifies the languages to remove that will no longer be available to client computers. English is available by default and cannot be removed.  
+    -   **Details:** Modifies a site after it is installed. Specifies the languages to remove that will no longer be available to client computers. English is available by default and cannot be removed.  
 
 -   **Key Name:** MobileDeviceLanguage  
 
@@ -576,9 +568,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether the mobile device client languages are installed.  
 
@@ -588,9 +580,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *SQLServerName*  
+    -   **Values:** &lt;*SQLServerName*>  
 
-    -   **Details:** Specifies the name of the server, or name of the clustered instance, that is running SQL Server. It will host the site database.  
+    -   **Details:** Specifies the name of the server, or the name of the clustered instance, that is running SQL Server. It will host the site database.  
 
 -   **Key Name:** DatabaseName  
 
@@ -598,9 +590,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>\&lt;SiteDatabaseName\>*  
 
-    -   **Details:**  
-
-         Specifies the name of the SQL Server database to create or use to install the primary site database.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the primary site database.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -617,17 +607,17 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .MDB file*>  
+    -   **Values:** &lt;*FilePath to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .MDB file.  
+    -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
 -   **Key Name:** SQLLogFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .LDF file*>  
+    -   **Values:** &lt;*FilePath to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .LDF file.  
+    -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
 **HierarchyExpansionOption**  
 
@@ -645,7 +635,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*Interval*>  
 
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for CASRetryInterval, and then re-attempts the connection.  
+    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then re-attempts the connection.  
 
 -   **Key Name:** WaitForCASTimeout  
 
@@ -653,9 +643,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*Timeout*>  
 
-         A value of 0 to 100  
+         A value of **0** to **100**  
 
-    -   **Details:** Specifies the maximum time-out value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site, based on the CASRetryInterval until the WaitForCASTimeout period is reached. You can specify a value of 0 to 100.  
+    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** value until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
 
 **CloudConnectorOptions**  
 
@@ -665,11 +655,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
+    -   **Details:** Specifies whether you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
 
 -   **Key Name:** CloudConnectorServer  
 
@@ -685,11 +675,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point will use a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -728,13 +718,13 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 1, 2, or 4  
 
-         1 = Recovery site server and SQL Server.  
+         1 = Recover site server and SQL Server.  
 
          2 = Recover site server only.  
 
          4 = Recover SQL Server only.  
 
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:  
+    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
 
         -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -744,7 +734,7 @@ Use the following details to install a central administration site by using an u
 
 -   **Key Name:** DatabaseRecoveryOptions  
 
-    -   **Required:** This key is required when the ServerRecoveryOptions setting has a value of **1** or **4**.  
+    -   **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
 
     -   **Values:** 10, 20, 40, 80  
 
@@ -754,7 +744,7 @@ Use the following details to install a central administration site by using an u
 
          40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
 
-         80 = skip database recovery.  
+         80 = Skip database recovery.  
 
     -   **Details:** Specifies how Setup recovers the site database in SQL Server.  
 
@@ -764,11 +754,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*ReferenceSiteFQDN*>  
 
-    -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change tracking retention period or when you recover the site without a backup.  
+    -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change-tracking retention period or when you recover the site without a backup.  
 
-         When you do not specify a reference site and the backup is older than the change tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.  
+         When you do not specify a reference site and the backup is older than the change-tracking retention period, all primary sites are reinitialized with the restored data from the central administration site.  
 
-         When you do not specify a reference site and the backup is within the change tracking retention period, only changes after the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the central administration site uses the first one that it receives.  
+         When you do not specify a reference site and the backup is within the change-tracking retention period, only changes that are made after the backup are replicated from primary sites. When there are conflicting changes from different primary sites, the central administration site uses the first one that it receives.  
 
 -   **Key Name:** SiteServerBackupLocation  
 
@@ -780,7 +770,7 @@ Use the following details to install a central administration site by using an u
 
 -   **Key Name:** BackupLocation  
 
-    -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
+    -   **Required:** This key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and you configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
     -   **Values:** &lt;*PathToSiteDatabaseBackupSet*>  
 
@@ -802,7 +792,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*SiteCode*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) section in this topic.  
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
 
 -   **Key Name:** SiteName  
 
@@ -836,9 +826,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = download  
+         0 = Download  
 
-         1 = already downloaded  
+         1 = Already downloaded  
 
     -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
 
@@ -856,9 +846,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
@@ -868,11 +858,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not join  
+         0 = Do not join  
 
-         1 = join  
+         1 = Join  
 
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
+    -   **Details:** Specifies whether to join the CEIP.  
 
 **SQLConfigOptions**  
 
@@ -880,9 +870,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *SQLServerName*  
+    -   **Values:** &lt;*SQLServerName*>  
 
-    -   **Details:**Specifies the name of the server, or name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
+    -   **Details:** Specifies the name of the server, or the name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
 -   **Key Name:** DatabaseName  
 
@@ -890,9 +880,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** *&lt;SiteDatabaseName\>* or *&lt;InstanceName\>\&lt;SiteDatabaseName\>*  
 
-    -   **Details:**  
-
-         Specifies the name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database. You must specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -903,23 +891,23 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*SSBPortNumber*>  
 
-    -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
+    -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
 
 -   **Key Name:** SQLDataFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .MDB file*>  
+    -   **Values:** &lt;*FilePath to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .MDB file.  
+    -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
 -   **Key Name:** SQLLogFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .LDF file*>  
+    -   **Values:** &lt;*FilePath to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .LDF file.  
+    -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
 **CloudConnectorOptions**  
 
@@ -929,11 +917,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
+    -   **Details:** Specifies whether you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
 
 -   **Key Name:** CloudConnecorServer  
 
@@ -949,11 +937,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point will use a proxy server.  
 
 -   **Key Name:** ProxyName  
 
@@ -980,7 +968,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** RecoverPrimarySite  
+    -   **Values:** &lt;*RecoverPrimarySite*>  
 
     -   **Details:** Recovers a primary site.  
 
@@ -992,13 +980,13 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 1, 2, or 4  
 
-         1 = Recovery site server and SQL Server.  
+         1 = Recover site server and SQL Server.  
 
          2 = Recover site server only.  
 
          4 = Recover SQL Server only.  
 
-    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the ServerRecoveryOptions setting:  
+    -   **Details:** Specifies whether Setup will recover the site server, SQL Server, or both. The associated keys are required when you set the following value for the **ServerRecoveryOptions** setting:  
 
         -   Value = 1: You have the option to specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -1008,7 +996,7 @@ Use the following details to install a central administration site by using an u
 
 -   **Key Name:** DatabaseRecoveryOptions  
 
-    -   **Required:** This key is required when the ServerRecoveryOptions setting has a value of **1** or **4**.  
+    -   **Required:** This key is required when the **ServerRecoveryOptions** setting has a value of **1** or **4**.  
 
     -   **Values:** 10, 20, 40, 80  
 
@@ -1018,7 +1006,7 @@ Use the following details to install a central administration site by using an u
 
          40 = Create a new database for the site. Use this option when there is no site database backup available. Global and site data is recovered through replication from other sites.  
 
-         80 = skip database recovery.  
+         80 = Skip database recovery.  
 
     -   **Details:** Specifies how Setup recovers the site database in SQL Server.  
 
@@ -1046,7 +1034,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* or  *Eval*  
+    -   **Values:** *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* or *Eval*  
 
     -   **Details:** Specifies the Configuration Manager installation product key, including the dashes. Enter **Eval** to install the evaluation version of Configuration Manager.  
 
@@ -1056,7 +1044,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*SiteCode*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) section in this topic.  
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
 
 -   **Key Name:** SiteName  
 
@@ -1088,9 +1076,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = download  
+         0 = Download  
 
-         1 = already downloaded  
+         1 = Already downloaded  
 
     -   **Details:** Specifies whether Setup prerequisite files have already been downloaded. For example, if you use a value of **0**, Setup downloads the files.  
 
@@ -1108,9 +1096,9 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
     -   **Details:** Specifies whether to install the Configuration Manager console.  
 
@@ -1120,11 +1108,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not join  
+         0 = Do not join  
 
-         1 = join  
+         1 = Join  
 
-    -   **Details:** Specifies whether to join the Customer Experience Improvement Program.  
+    -   **Details:** Specifies whether to join the CEIP.  
 
 **SQLConfigOptions**  
 
@@ -1132,19 +1120,19 @@ Use the following details to install a central administration site by using an u
 
     -   **Required:** Yes  
 
-    -   **Values:** *SQLServerName*  
+    -   **Values:** &lt;*SQLServerName*>  
 
-    -   **Details:**Specifies the name of the server, or name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
+    -   **Details:** Specifies the name of the server or the name of the clustered instance that is running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
 -   **Key Name:** DatabaseName  
 
     -   **Required:** Yes  
 
-    -   **Values:**  &lt;*SiteDatabaseName*\> or                                &lt;*InstanceName*\>\\&lt;*SiteDatabaseName*\>
+    -   **Values:**  &lt;*SiteDatabaseName*\> or &lt;*InstanceName*\>\\&lt;*SiteDatabaseName*\>
 
     -   **Details:**  
 
-         Specifies the name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.  
+         Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database. You must specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -1155,23 +1143,23 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*SSBPortNumber*>  
 
-    -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
+    -   **Details:** Specifies the SSB port that SQL Server uses. Typically, SSB is configured to use TCP port 4022. You must specify the same SSB port that was used before the failure.  
 
 -   **Key Name:** SQLDataFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .MDB file*>  
+    -   **Values:** &lt;*FilePath to database .mdb file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .MDB file.  
+    -   **Details:** Specifies an alternate location to create the database .mdb file.  
 
 -   **Key Name:** SQLLogFilePath  
 
     -   **Required:** No  
 
-    -   **Values:** &lt;*FilePath to database .LDF file*>  
+    -   **Values:** &lt;*FilePath to database .ldf file*>  
 
-    -   **Details:** Specifies an alternate location to create the database .LDF file.  
+    -   **Details:** Specifies an alternate location to create the database .ldf file.  
 
 **HierarchyExpansionOptions**  
 
@@ -1189,7 +1177,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*Interval*>  
 
-    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for **CASRetryInterval**, and then attempts the connection again.  
+    -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for the **CASRetryInterval** value, and then attempts the connection again.  
 
 -   **Key Name:** WaitForCASTimeout  
 
@@ -1197,7 +1185,7 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** &lt;*Timeout*>  
 
-    -   **Details:** Specifies the maximum time-out value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site, based on the **CASRetryInterval** until the **WaitForCASTimeout** period is reached. You can specify a value of 0 to 100.  
+    -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the **CASRetryInterval** until the **WaitForCASTimeout** period is reached. You can specify a value of **0** to **100**.  
 
 **CloudConnectorOptions**  
 
@@ -1207,11 +1195,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
+    -   **Details:** Specifies whether you will install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be 0 for a child primary site.  
 
 -   **Key Name:** CloudConnecorServer  
 
@@ -1227,11 +1215,11 @@ Use the following details to install a central administration site by using an u
 
     -   **Values:** 0 or 1  
 
-         0 = do not install  
+         0 = Do not install  
 
-         1 = install  
+         1 = Install  
 
-    -   **Details:** Specifies if the service connection point will use a proxy server.  
+    -   **Details:** Specifies whether the service connection point will use a proxy server.  
 
 -   **Key Name:** ProxyName  
 
