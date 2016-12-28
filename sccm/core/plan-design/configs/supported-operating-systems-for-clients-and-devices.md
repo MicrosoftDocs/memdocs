@@ -25,7 +25,7 @@ manager: angrobe
 
  **Requirements and limitations for all clients:**  
 
--   Changing the startup type or **Log on as** settings for any Configuration Manager service is not supported, and can prevent key services from running correctly.    
+-   Changing the startup type or **Log on as** settings for any Configuration Manager service is not supported and can prevent key services from running correctly.    
 
 -   Installing or running the Configuration Manager client for Linux or UNIX or the client for Mac on computers under an account other than root is not supported. Doing so can prevent key services from running correctly.  
 
