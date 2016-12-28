@@ -60,7 +60,7 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
     - A user with this security role and access to the **Default** security scope can view updates, install updates and enable features during the install, and view features after an update has installed but not enable the features after the update has previously installed.
 
 - **Read-only Analyst** with **Read** permissions:
-  -  A user with this security role and acceUpdate to 1606 from either 1511 orss to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
+  -  A user with this security role and access to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
 
 **Summary of permissions required for updates and servicing:**   
   - Use an account that is assigned a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.
