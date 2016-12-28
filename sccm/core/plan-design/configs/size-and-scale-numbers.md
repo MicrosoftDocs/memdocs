@@ -2,7 +2,7 @@
 title: "Size and scale | Microsoft Docs"
 description: "Identify the number of site system roles and sites you'll need to support the devices in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,7 +25,7 @@ Use the information in this topic with the information in the following articles
 -   [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 -   [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
-These support numbers in this article are based on using the recommended hardware for Configuration Manager. When you do not use the recommended hardware, the performance of site systems can be degraded and might not meet the stated levels of support.
+The support numbers in this article are based on using the recommended hardware for Configuration Manager with all available Configuration Manager features with default settings. When you do not use the recommended hardware, or use custom settings, the performance of site systems can be degraded and might not meet the stated levels of support.
 
 ##  <a name="bkmk_SiteSystemScale"></a> Site types  
  **Central administration site:**  
