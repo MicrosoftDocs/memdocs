@@ -82,7 +82,7 @@ manager: angrobe
 
 **Requirements and limitations:**  
 
--   All client features are supported on supported Windows Embedded systems that do not have write filters enabled.  
+-   All client features are supported on Windows Embedded systems that do not have write filters enabled.  
 
 -   Clients that use one of the following are supported for all features except power management:  
 
