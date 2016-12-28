@@ -21,43 +21,43 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A member of the Microsoft System Center suite of management solutions, System Center Configuration Manager can help you manage devices and users both on-premises and in the cloud.  
+As a product in the Microsoft System Center suite of management solutions, System Center Configuration Manager can help you manage devices and users both on-premises and in the cloud.  
 
 **Configuration Manager can help you to:**   
--   Increase IT productivity and efficiency by reducing manual tasks and letting you focus on high-value projects  
--   Maximize hardware and software investments  
--   Empower end-user productivity by providing the right software at the right time  
+-   Increase IT productivity and efficiency by reducing manual tasks and letting you focus on high-value projects.  
+-   Maximize hardware and software investments.  
+-   Empower user productivity by providing the right software at the right time.  
 
 **Configuration Manager helps you deliver more effective IT services by enabling:**  
 
--   Secure and scalable software deployment  
--   Compliance settings management  
+-   Secure and scalable software deployment.  
+-   Compliance settings management.  
 -   Comprehensive asset management of servers, desktops, laptops, and mobile devices.  
 
 **Configuration Manager extends and works alongside your existing Microsoft technologies and solutions.**  
 
 For example, Configuration Manager integrates with:  
 
--   Microsoft Intune to manage a wide variety of mobile device platforms  
--   Windows Server Update Services (WSUS) to manage software updates  
--   Certificate Services  
--   Exchange Server and Exchange Online  
--   Windows Group Policy
--   DNS   
--   Windows Automated Deployment Kit (Windows ADK) and the User State Migration Tool (USMT),  
--   Windows Deployment Services (WDS)  
--   Remote Desktop and Remote Assistance  
+-   Microsoft Intune to manage a wide variety of mobile device platforms.  
+-   Windows Server Update Services (WSUS) to manage software updates.  
+-   Certificate Services.  
+-   Exchange Server and Exchange Online.  
+-   Windows Group Policy.
+-   DNS.   
+-   Windows Automated Deployment Kit (Windows ADK) and the User State Migration Tool (USMT).  
+-   Windows Deployment Services (WDS).  
+-   Remote Desktop and Remote Assistance.  
 
 Configuration Manager also uses:  
 
 -   Active Directory Domain Services for security, service location, configuration, and to discover the users and devices that you want to manage.  
--   Microsoft SQL Server as a distributed change management database and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track the management activities.  
--   Site system roles that extend management functionality and  use the web services of Internet Information Services (IIS).  
+-   Microsoft SQL Server as a distributed change management database—and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track the management activities.  
+-   Site system roles that extend management functionality and use the web services of Internet Information Services (IIS).  
 -   Background Intelligent Transfer Service (BITS) and BranchCache to help manage the available network bandwidth.  
 
  To be successful with Configuration Manager, you must first thoroughly plan and test the management features before you use Configuration Manager in a production environment. As a powerful management application, Configuration Manager has the potential to affect every computer in your organization. When you deploy and manage Configuration Manager with careful planning and consideration of your business requirements, Configuration Manager can reduce your administrative overhead and total cost of ownership.  
 
- Use the following topics and additional sections in this topic  to learn more about Configuration Manager:  
+ Use the following topics and additional sections in this topic to learn more about Configuration Manager:  
 
 
 **Related topics in this documentation library:**  
@@ -82,56 +82,56 @@ Configuration Manager also uses:
 
  For more information, see [Install System Center Configuration Manager consoles](../../core/servers/deploy/install/install-consoles.md).
 
-##  <a name="BKMK_ApplicationCatalog"></a> The Application Catalog, Software Center, and the Company Portal  
+##  <a name="BKMK_ApplicationCatalog"></a> The Application Catalog, Software Center, and the company portal  
  The **Application Catalog** is a website where users can browse for and request software for their Windows-based PCs. To use the Application Catalog, you must install the Application Catalog web service point and the Application Catalog website point for the site.  
 
  **Software Center** is an application that is installed when the Configuration Manager client is installed on Windows-based computers. Users run this application to request software and manage the software that is deployed to them by using Configuration Manager. Software Center lets users do the following:  
 
--   Browse for and install software from the Application Catalog  
+-   Browse for and install software from the Application Catalog.  
 -   View their software request history.  
--   Configure when Configuration Manager can install software on their devices  
--   Configure access settings for remote control, if an administrative user enabled remote control  
+-   Configure when Configuration Manager can install software on their devices.  
+-   Configure access settings for remote control, if an administrative user enabled remote control.  
 
- **The company portal** is an app or website that provides similar functions to the Application Catalog, but for mobile devices that are enrolled by Microsoft Intune  
+**The company portal** is an app or website that provides similar functions to the Application Catalog, but for mobile devices that are enrolled by Microsoft Intune.  
 
- For more information, see the [Get started with application management in System Center Configuration Manager](../../apps/understand/introduction-to-application-management.md) topic.  
+For more information, see the [Get started with application management in System Center Configuration Manager](../../apps/understand/introduction-to-application-management.md) topic.  
 
 ###  <a name="BKMK_Client"></a> Configuration Manager Properties (on Windows PCs)  
- When the Configuration Manager client is installed on Windows computers, Configuration Manager is installed in Control Panel. Typically, you do not have to configure this application because the client configuration is performed in the Configuration Manager console. This application helps administrative users and the help desk troubleshoot problems with individual clients.  
+ When the Configuration Manager client is installed on Windows computers, Configuration Manager is installed in Control Panel. Typically, you don't have to configure this application because the client configuration is performed in the Configuration Manager console. This application helps administrative users and the help desk troubleshoot problems with individual clients.  
 
  For more information about client deployment, see [Client installation methods in System Center Configuration Manager](../../core/clients/deploy/plan/client-installation-methods.md).  
 
 ##  <a name="BKMK_ExampleScenarios"></a> Example scenarios for Configuration Manager  
  The following example scenarios demonstrate how a company named Trey Research uses System Center Configuration Manager to empower users to:  
 
--   Be more productive  
--   Unify their compliance management for devices for a more streamlined administration experience  
--   Simplify device management to reduce IT operating costs  
+-   Be more productive.  
+-   Unify their compliance management for devices for a more streamlined administration experience.  
+-   Simplify device management to reduce IT operating costs.  
 
  In all scenarios, Adam is the main administrator for Configuration Manager.  
 
 ###  <a name="BKMK_ScenarioEmpower"></a> Example Scenario: Empower users by ensuring access to applications from any device  
- Trey Research wants to ensure that employees have access to the applications that they require and as efficiently as possible. Adam maps these company requirements to the following scenarios:  
+ Trey Research wants to ensure that employees have access to the applications that they need, as efficiently as possible. Adam maps these company requirements to the following scenarios:  
 
 |Requirement|Current client management state|Future client management state|  
 |-----------------|-------------------------------------|------------------------------------|  
-|New employees can work efficiently from day one.|When employees join the company, they have to wait for applications to be installed after they first log on.|When employees join the company, they log on and their applications are installed and are ready to be used.|  
-|Employees can quickly and easily request additional software that they need.|When employees require additional applications, they file a ticket with the help desk, and then typically wait two days for the ticket to be processed and the applications are installed.|When employees require additional applications, they can request them from a website and they are installed immediately if there are no licensing restrictions. If there are licensing restrictions, users must first ask for approval before they can install the application.<br /><br /> The website shows users only the applications that they are allowed to install.|  
-|Employees can use their mobile devices at work if the devices comply with security policies that are monitored and enforced.<br /><br /> These policies include enforcing a strong password, locking a device after period of inactivity, and remote wipe of lost or stolen devices.|Employees connect their mobile devices to Exchange Server for email service  but there is limited reporting to confirm that they are in compliance with the security policies in the default Exchange ActiveSync mailbox policies. The personal use of mobile devices is at risk of being prohibited unless IT can confirm adherence to policy.|The IT organization can report mobile device security compliance with the required settings. This confirmation lets users continue to use their mobile device at work. Users can remotely wipe their mobile device if it is lost or stolen, and the help desk can wipe any user's mobile device that is reported as lost or stolen.<br /><br /> Provide mobile device enrollment in a PKI environment for additional security and control.|  
-|Employees can be productive even if they are not at their desk.|When employees are not at their desk and do not have portable computers, they cannot access their applications by using the kiosk computers that are available throughout the company.|Employees can use kiosk computers to access their applications and data.|  
-|Usually, business continuity takes precedence over installing required applications and software updates.|Applications and software updates that are required install during the day and frequently disrupt users from working because their computers slow down or restart during the installation.|Users can configure their working hours to prevent required software from installing while they are using their computer.|  
+|New employees can work efficiently from day one.|When employees join the company, they have to wait for applications to be installed after they first sign in.|When employees join the company, they sign in and their applications are installed and ready to be used.|  
+|Employees can quickly and easily request additional software that they need.|When employees need additional applications, they file a ticket with the help desk. Then they typically wait two days for the ticket to be processed and for the applications to be installed.|When employees need additional applications, they can request them from a website. They are installed immediately if there are no licensing restrictions. If there are licensing restrictions, users must first ask for approval before they can install the application.<br /><br /> The website shows users only the applications that they are allowed to install.|  
+|Employees can use their mobile devices at work if the devices comply with security policies that are monitored and enforced.<br /><br /> These policies include enforcing a strong password, locking a device after period of inactivity, and remotely wiping lost or stolen devices.|Employees connect their mobile devices to Exchange Server for email service. But, there is limited reporting to confirm that they are in compliance with the security policies in the default Exchange ActiveSync mailbox policies. The personal use of mobile devices is at risk of being prohibited unless IT can confirm adherence to policy.|The IT organization can report mobile device security compliance with the required settings. This confirmation lets users continue to use their mobile device at work. Users can remotely wipe their mobile device if it's lost or stolen, and the help desk can wipe any user's mobile device that is reported as lost or stolen.<br /><br /> Provide mobile device enrollment in a PKI environment for additional security and control.|  
+|Employees can be productive even if they're not at their desk.|When employees aren't at their desk and don't have portable computers, they can't access their applications by using the kiosk computers that are available throughout the company.|Employees can use kiosk computers to access their applications and data.|  
+|Usually, business continuity takes precedence over installing required applications and software updates.|Applications and software updates that are required install during the day and frequently disrupt users from working because their computers slow down or restart during the installation.|Users can configure their working hours to prevent required software from installing while they're using their computer.|  
 
  To meet the requirements, Adam uses these Configuration Manager management capabilities and configuration options:  
 
 -   Application management  
 -   Mobile device management  
 
- He implements these by using the configuration steps in the following table.  
+He implements these by using the configuration steps in the following table.  
 
 |Configuration steps|Outcome|  
 |-------------------------|-------------|  
-|Adam makes sure that the new users have user accounts in Active Directory and creates a new query-based collection in Configuration Manager for these users. He then defines user device affinity for these users by creating a file that maps the user accounts to the primary computers that they will use and imports this file into Configuration Manager.<br /><br /> The applications that the new users must have are already created in Configuration Manager. He then deploys these applications that have the purpose of Required to the collection that contains the new users.|Because of the user device affinity information, the applications are installed to each user's primary computer or computers before the user log on.<br /><br /> The applications are ready to use as soon as the user successfully logs on.|  
-|Adam installs and configures the Application Catalog site system roles so that users can browse for applications to install. He creates application deployments that have the purpose of Available, and then deploys these applications to the collection that contains the new users.<br /><br /> For the applications that have a restricted number of licenses, Adam configures these applications to require approval.|By configuring applications as available to these users and by using the Application Catalog, users can now browse the applications that they are allowed to install. Users can then either install the applications immediately or request approval and return to the Application Catalog to install them after the help desk has approved their request.|  
+|Adam makes sure that new users have user accounts in Active Directory and creates a new query-based collection in Configuration Manager for these users. He then defines user device affinity for these users by creating a file that maps the user accounts to the primary computers that they will use and imports this file into Configuration Manager.<br /><br /> The applications that new users must have are already created in Configuration Manager. He then deploys these applications that have the purpose of Required to the collection that contains the new users.|Because of the user device affinity information, the applications are installed to each user's primary computer or computers before the user signs in.<br /><br /> The applications are ready to use as soon as the user successfully signs in.|  
+|Adam installs and configures the Application Catalog site system roles so that users can browse for applications to install. He creates application deployments that have the purpose of Available, and then deploys these applications to the collection that contains the new users.<br /><br /> For the applications that have a restricted number of licenses, Adam configures these applications to require approval.|Users can now use the Application Catalog to browse the applications that they are allowed to install. Users can then either install the applications immediately, or request approval and return to the Application Catalog to install them after the help desk has approved their request.|  
 |Adam creates an Exchange Server connector in Configuration Manager to manage the mobile devices that connect to the company's on-premises Exchange Server. He configures this connector with security settings that include the requirement for a strong password and lock the mobile device after a period of inactivity.<br /><br /> For additional management for devices that run Windows Phone 8, Windows RT, and iOS, Adam obtains a Microsoft Intune subscription and then installs the Service connection point site system role. This mobile device management solution gives the company greater management support for these devices. This includes making applications available for users to install on these devices, and extensive settings management. In addition, mobile device connections are secured by using PKI certificates that are automatically created and deployed by Intune. After configuring the service connection point and subscription for use with Configuration Manager Adam sends an email message to the users who own these mobile devices for them to click a link to start the enrollment process.<br /><br /> For the mobile devices to be enrolled by Microsoft Intune, Adam uses compliance settings to configure security settings for these mobile devices. These settings include the requirement to configure a strong password and lock the mobile device after a period of inactivity.|With these two mobile device management solutions, the IT organization can now provide reporting information about the mobile devices that are being used on the company network and their compliance with the configured security settings.<br /><br /> Users are shown how to remotely wipe their mobile device by using the Application Catalog or the company portal if their mobile device is lost or stolen. The help desk is also instructed how to remotely wipe a mobile device for users by using the Configuration Manager console.<br /><br /> In addition, for the mobile devices that are enrolled by Microsoft Intune, Adam can now deploy mobile applications for users to install, collect more inventory data from these devices, and have better management control over these devices by being able to access more settings.|  
 |Trey Research has several kiosk computers that are used by employees who visit the office. The employees want their applications to be available to them wherever they log on. However, Adam does not want to locally install all the applications on each computer.<br /><br /> To achieve this, Adam creates the required applications that have two deployment types:<br /><br /> **The first:** A full, local installation of the application that has a requirement that it can only be installed on a user's primary device.<br /><br /> **The second:** A virtual version of the application that has the requirement that it must not be installed on the user's primary device.|When visiting employees log on to a kiosk computer, they see the applications that they require displayed as icons on the kiosk computer's desktop. When they run the application, it is streamed as a virtual application. This way, they can be as productive as if they are sitting at their desktop.|  
 |Adam lets users know that they can configure their business hours in Software Center and select options to prevent software deployment activities during this time period and when the computer is in presentation mode.|Because users can control when Configuration Manager deploys software to their computers, users remain more productive during their work day.|  
