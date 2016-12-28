@@ -60,7 +60,7 @@
 ###  [Security and privacy for site administration](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
 
 ##   [Plan for network infrastructure](plan-design/network/configure-firewalls-ports-domains.md)
-###  [Extend the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
+###  [Prepare the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
 ###  [Prepare Windows Servers to support site systems](plan-design/network/prepare-windows-servers.md)
 ###  [Websites for site system servers](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI certificate requirements](plan-design/network/pki-certificate-requirements.md)
@@ -87,7 +87,7 @@
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md) 
+##   [Technical Preview](get-started/technical-preview.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
