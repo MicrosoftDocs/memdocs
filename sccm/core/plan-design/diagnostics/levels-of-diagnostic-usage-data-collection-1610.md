@@ -2,7 +2,7 @@
 title: "Diagnostic data for 1610 | System Center Configuration Manager"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1610 collects."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -43,7 +43,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 >  Configuration Manager does not collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful, that is, potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft will not use this information to identify you, contact you, or develop advertising.
 
 ##  <a name="bkmk_change"></a> How to change the level
- Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the **Diagnostics** and **Usage Data** settings in the Configuration Manager console.
+ Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
 Beginning with version 1610, you change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.  
 
@@ -257,7 +257,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Count of alerts that are configured for Endpoint Protection feature  
 
-    - o	Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
+    - 	Advanced Threat Protection (ATP) Policies (count of policies and whether policies are deployed)
 
 
 - **Migration:**
@@ -386,7 +386,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
-The Full level includes all data in the Basic and Enhanced levels. It also includes information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which might include personal information that existed in memory or log files at the time of capture.
+The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which might include personal information that existed in memory or log files at the time of capture.
 
 For System Center Configuration Manager version 1610, this level includes the following:
 
