@@ -34,7 +34,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
  **/RESETSITE**  
  Performs a site reset that resets the database and service accounts for the site. You must run Setup from **<*Configuration Manager installation path*>\BIN\X64** on the site server. For more information about the site reset, see the [Run a site reset](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_reset) section in [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md).  
 
- **/TESTDBUPGRADE <*Instance name*>\<*Database name*>**  
+ **/TESTDBUPGRADE <*Instance name*>\\<*Database name*>**  
  Performs a test on a backup of the site database to ensure that the database is capable of an upgrade. You must provide the instance name and database name for the site database. If you specify only the database name, Setup uses the default instance name.  
 
 > [!IMPORTANT]  
@@ -298,7 +298,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:**  Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -599,7 +599,7 @@ Use the following details to install a primary site or to install a central admi
 
     -   **Values:** <*SSB port number*>  
 
-    -   **Details:** Specifies the SQL Server Service Broker (SSB) port that SQL Server uses. SSB typically is configured to use TCP port 4022, but you can use a different port.  
+    -   **Details:** Specifies the SSB port that SQL Server uses. SSB typically is configured to use TCP port 4022, but you can use a different port.  
 
 -   **Key Name:** SQLDataFilePath  
 
@@ -790,7 +790,7 @@ Use the following details to install a primary site or to install a central admi
 
     -   **Values:** <*Site code*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure.
 
 -   **Key Name:** SiteName  
 
@@ -1042,7 +1042,7 @@ Use the following details to install a primary site or to install a central admi
 
     -   **Values:** <*Site code*>  
 
-    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure. For more information about site code restrictions, see [About site names and site codes](#bkmk_codes) in this topic.  
+    -   **Details:** Specifies three alphanumeric characters that uniquely identify the site in your hierarchy. You must specify the site code that the site used before the failure.
 
 -   **Key Name:** SiteName  
 
