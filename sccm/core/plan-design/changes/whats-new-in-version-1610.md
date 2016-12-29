@@ -1,5 +1,5 @@
 ---
-title: "New in 1610 | Microsoft Docs"
+title: "New in System Center Configuration Manager version 1610 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
 ms.custom: na
 ms.date:  
@@ -15,7 +15,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
 # What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Update 1610 for System Center Configuration Manager current branch is an update that is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
+Update 1610 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
 > [!TIP]  
@@ -33,20 +33,20 @@ Beginning with version 1610, when you install an update pack and monitor the ins
 
 
 ## Exclude clients from automatic upgrade
-You can exclude Windows clients from getting upgraded with new versions of the client software. To do this, you include the client computers in a collection that is specified to be excluded from upgrade. Client in the excluded collection ignore requests to update the client software.  For more information, see [Exclude Windows clients from upgrades](../../clients/manage/upgrade/exclude-clients-windows.md).
+You can exclude Windows clients from getting upgraded with new versions of the client software. To do this, you include the client computers in a collection that is specified to be excluded from upgrade. Clients in the excluded collection ignore requests to update the client software.  For more information, see [Exclude Windows clients from upgrades](../../clients/manage/upgrade/exclude-clients-windows.md).
 
 
 ## Improvements for boundary groups
-Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
-These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.
+Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure, while giving you more control over how and when clients fall back to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+These improvements replace concepts and behaviors you might be familiar with (like configuring distribution points to be fast or slow) The new model should be easier to set up and maintain. These changes also lay the groundwork for future changes that will improve other site system roles you associate to boundary groups.
 
-When you update to version 1610, the update converts your current boundary group configurations to fit the new model so that these changes do not disturb your existing content distribution configurations.
+When you update to version 1610, the update converts your current boundary group configurations to fit the new model. These changes do not disturb your existing content distribution configurations.
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-groups).
 
 
 ## Peer Cache for content distribution to clients
-Beginning with version 1610, client **Peer Cache** helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache.
+Beginning with version 1610, a client solution called **Peer Cache** helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients, directly from their local cache.
 
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
 
@@ -55,11 +55,11 @@ You can also use the new **Client Data Sources** dashboard to understand the use
 > [!TIP]  
 > With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
-For more information see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache), and [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+For more information, see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache), and [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
 
 
 ## Migrate multiple shared distribution points at the same time
-You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
+You can now use the option to reassign distribution points. Configuration Manager can process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
 
 ## Cloud management gateway for managing Internet-based clients
 
