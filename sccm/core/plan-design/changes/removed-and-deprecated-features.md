@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Removed and deprecated features for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Removed and deprecated features for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic describes features, products, and operating systems that are removed from support for System Center Configuration Manager, or will be removed in a future update (deprecated). This provides early notice about future changes that might affect your use of Configuration Manager.  
 
 This information is subject to change with future releases, and might not include each deprecated feature, product, or operating system.  
@@ -37,17 +42,33 @@ For more information, see:
 
 ## Deprecated features  
 
-
 |**Feature**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Network Access Protection (NAP)  - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|  
 |Out of Band Management - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
-|Task sequences: <br /> - Convert disk to dynamic <br /> - Install deployment tools |November 18, 2016|Support for these task sequences ends with the first update released after June 1, 2017.|
+|Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Support for these task sequences ends with the first update released after June 1, 2017.|
 |The Software Center has a new, modern look. Apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center, on the **Applications** tab. The Application Catalog can still be accessed by using the link on the **Installation Status** tab of Software Center.<br><br>In the coming months, the previous version of Software Center will no longer be available.<br><br>You can set up clients to use the new Software Center by enabling the client setting, **Computer Agent** > **Use new Software Center**.<br><br>For more information about Software Center, see [Plan for and configure application management in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|December 13, 2016|To be announced|
 
- ## Deprecated server operating systems  
 
- |**Operating systems**|**Deprecation first announced**|**Support removed** |  
+Additional details for features removed with version 1511 of System Center Configuration Manager release:
+
+###  <a name="bkmk_amt"></a> Out of Band Management  
+ With Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
+
+-   AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
+
+-   Out of Band Management in System Center 2012 Configuration Manager is not affected by this change.  
+
+###  <a name="bkmk_nap"></a> Network Access Protection  
+ System Center Configuration Manager has removed support for  Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
+
+ For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx).  
+
+
+## Deprecated operating systems
+### Server operating systems  
+
+|**Operating systems**|**Deprecation first announced**|**Support removed** |  
 |-|-|-|  
 |Windows Server 2008|July 10, 2015|Support ends with the first update released after December 31, 2016 (see note 1).|  
 |Windows Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016 (see note 2).|  
@@ -60,9 +81,9 @@ For more information, see:
 
 
 
- ## Deprecated client operating systems  
+### Client operating systems  
 
- Unless noted otherwise, each operating system that is supported as a Configuration Manager client is supported until the extended support end date of that operating system. For details about extended support end dates, see the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). If Configuration Manager support for an operating system will end prior to the extended support end date, a deprecation date and support removal date for that operating system will be listed here.  
+ Unless noted otherwise, each operating system that is supported as a Configuration Manager client is supported until the Extended Support End Date of that operating system. For details about Extended Support End Dates, see the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). If Configuration Manager support for an operating system will end prior to the Extended Support End Date, a deprecation date and support removal date for that operating system will be listed here.  
 
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
@@ -84,17 +105,3 @@ For more information, see:
 |SQL Server 2008|July 10, 2015|Version 1511|  
 |SQL Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016.|  
 
-## Features removed in System Center Configuration Manager  
- Beginning with the initial System Center Configuration Manager release, the following features are removed:
-
-###  <a name="bkmk_amt"></a> Out of Band Management  
- With Configuration Manager, native support for AMT-based computers from within the Configuration Manager console has been removed.  
-
--   AMT-based computers remain fully managed when you use the [Intel SCS Add-on for Microsoft System Center Configuration Manager](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html). The add-on provides you access to the latest capabilities to manage AMT, while removing limitations introduced until Configuration Manager could incorporate those changes.  
-
--   Out of Band Management in System Center 2012 Configuration Manager is not affected by this change.  
-
-###  <a name="bkmk_nap"></a> Network Access Protection  
- System Center Configuration Manager has removed support for  Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
-
- For network access protection alternatives, see the "Deprecated functionality" section of [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx).  
