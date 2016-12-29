@@ -2,7 +2,7 @@
 title: "Create Windows Phone applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Windows Phone devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -24,13 +24,14 @@ In addition to the other System Center Configuration Manager requirements and pr
 |Device type|Supported file types|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
-|Windows Phone 8.1|.xap, .appx, .appxbundle|  
+|Windows Phone 8.1|.xap, .appx, .appxbundle|
+|Windows 10 Mobile|.xap, .appx, .appxbundle|
 
  The following deployment actions are supported:  
 
 |Device type|Supported actions|  
 |-----------------|-----------------------|  
-|Windows Phone 8 and Windows Phone 8.1|available, required, uninstall|  
+|Windows Phone 8, Windows Phone 8.1, and Windows 10 Mobile|Available, Required, Uninstall|  
 
 ## Steps to deploy the latest Windows Phone company portal app with supersedence  
  The following table provides the steps, details, and more information for creating and deploying the latest Windows Phone 8 company portal app.  

@@ -2,7 +2,7 @@
 title: "Configure remote control | Microsoft Docs"
 description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -44,3 +44,17 @@ To turn on keyboard translation, in **Configuration Manager Remote Control**, ch
 > [!NOTE]
 >
 > Special keys, such as ~!#@$%, will not be translated correctly.
+
+
+## Keyboard shortcuts for the remote control viewer
+
+|Keyboard shortcut|Description|  
+|-----------------------|-----------------|  
+|Alt+Page Up|Switches between running programs from left to right.|  
+|Alt+Page Down|Switches between running programs from right to left.|  
+|Alt+Insert|Cycles through running programs in the order that they were opened.|  
+|Alt+Home|Displays the **Start** menu.|  
+|Ctrl+Alt+End|Displays the Windows Security dialog box (Ctrl+Alt+Del).|  
+|Alt+Delete|Displays the Windows menu.|  
+|Ctrl+Alt+Minus Sign (on the numeric keypad)|Copies the active window of the local computer to the remote computer Clipboard.|  
+|Ctrl+Alt+Plus Sign (on the numeric keypad)|Copies the entire local computer's window area to the remote computer Clipboard.|  

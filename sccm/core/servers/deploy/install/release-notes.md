@@ -238,6 +238,12 @@ By default, the Create Servicing Plan wizard currently runs after every software
 **Workaround**:    
 After you create a serving plan, open the properties for the servicing plan, go to the **Evaluation Schedule** tab,  select **Run the rule on a schedule**, click **Customize**, and create a custom schedule. For example, you can have the servicing plan run every 60 days.  
 
+### When a high-risk deployment dialog is visible to a user, subsequent high-risk dialogs with a sooner deadline are not displayed
+After you create and deploy a high-risk task deployment to users, a high-risk dialog box is displayed to the user. If the user does not close the dialog box, you create and deploy another high-risk deployment with a sooner deadline than the first, the user will not receive an updated dialog box until they have closed the original dialog box. The deployments will still run at the configured deadlines.
+
+**Workaround**:  
+The user must close the dialog box for the first high-risk deployment to see the dialog box for the next high-risk deployment.
+
 ## Mobile device management  
 
 ### Cannot create an enrollment profile on a primary site  
