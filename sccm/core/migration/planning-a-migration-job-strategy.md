@@ -17,14 +17,14 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex
 
 ---
-# Planning a migration job strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan a migration job strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can set up one or more migration jobs per source site. This lets you migrate all objects at one time or limited subsets of data with each job.  
 
  You can create migration jobs after Configuration Manager has successfully gathered data from one or more sites from the source hierarchy. You can migrate data in any sequence from the source sites that have gathered data. With a Configuration Manager 2007 source site, you can migrate data only from the site where an object was created. With source sites that run System Center 2012 Configuration Manager or later,  all data that you can migrate is available at the top-level site of the source hierarchy.  
 
  Before you migrate clients between hierarchies, ensure that the objects that clients use have migrated and that these objects are available in the destination hierarchy. For example, when you migrate from a Configuration Manager 2007 SP2 source hierarchy, you might have an advertisement for content that is deployed to a custom collection that has a client. In this scenario, we recommend that you migrate the collection, the advertisement, and the associated content before you migrate the client. This data cannot be associated with the client in the destination hierarchy if the content, collection, and advertisement are not migrated before the client migrates. If a client is not associated with the data related to a previously run advertisement and content, the client can be offered the content for installation in the destination hierarchy, which might be unnecessary. When the client migrates after the data has migrated, the client is associated with this content and advertisement, and unless the advertisement is recurring, is not offered this content for the migrated advertisement again.  
 
- Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and sync the software update point with a Windows Server Update Services (WSUS) in the destination hierarchy.  
+ Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and sync the software update point with Windows Server Update Services (WSUS) in the destination hierarchy.  
 
  Use the following sections to help you plan your migration jobs.  
 
@@ -227,7 +227,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 
  Information about content is shared to all sites in the destination hierarchy by using database replication. However, any content that you assign to a primary site and then deploy to distribution points at other primary sites transfers by using file-based replication. This transfer is routed through the central administration site and then to each additional primary site. By centralizing packages that you plan to distribute to multiple primary sites before or during migration when you assign a site as the content owner, you can reduce data transfers across low-bandwidth networks.  
 
-### Set up role-based administration security scopes for migrated data  
+### Role-based administration security scopes for migrated data  
  When you migrate data to a destination hierarchy, you must assign one or more role-based administration security scopes to the objects whose data is migrated. This ensures that only the appropriate administrative users have access to this data after it is migrated. The security scopes that you specify are defined by the migration job and are applied to each object that is migrated by that job. If you require different security scopes to be applied to different sets of objects and you want to assign those scopes during migration, you must migrate the different sets of objects by using different migration jobs.  
 
  Before you set up a migration job, review how role-based administration works in System Center Configuration Manager. If necessary, set up one or more security scopes for the data that you migrate to control who will have access to the migrated objects in the destination hierarchy.  
@@ -237,7 +237,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ### Review migration actions  
  When you set up a migration job, the Create Migration Job wizard shows a list of actions that you must take to ensure a successful migration and a list of actions that Configuration Manager takes during the migration of the selected data. Review this information carefully to check the expected outcome.  
 
-### Scheduling migration jobs  
+### Schedule migration jobs  
  By default, a migration job runs immediately after it is created. However, you can specify when the migration job runs when you create the job or by editing the properties of the job. You can schedule the migration job to run as follows:  
 
 -   Run the job now  
@@ -249,14 +249,14 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 ### Specify conflict resolution for migrated data  
  By default, migration jobs do not overwrite data in the destination database unless you configure the migration job to skip or overwrite data that has previously been migrated to the destination database.  
 
-##  <a name="About_Collection_Migration "></a> Planning for collection migration jobs  
+##  <a name="About_Collection_Migration "></a> Plan for collection migration jobs  
  Collection migration jobs are available only when you migrate data from a source hierarchy that runs a supported version of Configuration Manager 2007. You must specify one or more collections to migrate when you migrate by collection. For each collection that you specify, the migration job automatically selects all related objects for migration. For example, if you select a specific collection of users, the collection members are then identified, and you can migrate the deployments associated with that collection. Optionally, you can select other deployment objects to migrate that are associated with those members. All these selected items are added to the list of objects that can be migrated.  
 
  When you migrate a collection, System Center Configuration Manager also migrates collection settings, including maintenance windows and collection variables, but it cannot migrate collection settings for AMT client provisioning.  
 
  Use the information in the following sections to learn about additional configurations that can apply to collection-based migration jobs.  
 
-### Excluding objects from collection migration jobs  
+### Exclude objects from collection migration jobs  
  You can exclude specific objects from a collection migration job. When you exclude a specific object from a collection migration job, that object is added to a global exclusion list that has all the objects that you have excluded from migration jobs created for any source site in the current source hierarchy. Objects on the exclusion list are still available for migration in future jobs but are not automatically included when you create a new collection-based migration job.  
 
  You can edit the exclusion list to remove objects that you have previously excluded. After you remove an object from the exclusion list, it is then automatically selected when an associated collection is specified during the creation of a new migration job.  
@@ -299,12 +299,12 @@ Use migration jobs to configure the specific data that you want to migrate to yo
 
  To enable a program after migration, clear **Disable this program on computers where it is advertised** on the **Advanced** tab of the program properties.  
 
-##  <a name="About_Object_Migration"></a> Planning for object migration jobs  
+##  <a name="About_Object_Migration"></a> Plan for object migration jobs  
  Unlike collection migration, you must select each object and object instance that you want to migrate. You can select the individual objects (like advertisements from a Configuration Manager 2007 hierarchy or a publication from a System Center 2012 Configuration Manager or System Center Configuration Manager hierarchy) to add to the list of objects to migrate for a specific migration job. Any objects that you do not add to the migration list are not migrated to the destination site by the object migration job.  
 
  Object-based migration jobs do not have any additional configurations to plan for beyond those applicable to all migration jobs.  
 
-##  <a name="About_Object_Migrations"></a> Planning for previously migrated object migration jobs  
+##  <a name="About_Object_Migrations"></a> Plan for previously migrated object migration jobs  
  When an object that you have already migrated to the destination hierarchy is updated in the source hierarchy, you can migrate that object again by using the **Objects modified after migration** job type. For example, when you rename or update the source files for a package in the source hierarchy, the package version increments in the source hierarchy. After the package version increments, the package can be identified for migration by this job type.  
 
  This job type is similar to the object migration type except that when you select objects to migrate, you can only select from objects that have been updated after they were migrated by a previous migration job.   
