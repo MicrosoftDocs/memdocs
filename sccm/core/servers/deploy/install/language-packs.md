@@ -1,6 +1,6 @@
 ---
-title: "Language Packs | Microsoft Docs"
-description: "Learn about the language support available to you in System Center Configuration Manager."
+title: "Language packs | Microsoft Docs"
+description: "Learn about the language support available in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,17 +15,17 @@ caps.latest.revision: 10
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Language Packs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Language packs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides technical details about language support in System Center Configuration Manager.  
 
-##  <a name="BKMK_SupLanguagePacks"></a> Supported Operating System Languages  
- You can install support for the following display languages by installing **server language packs** or **client language packs** at a central administration site and at primary sites. Language pack files are downloaded when you run setup as part of the prerequisite and redistributable file download. You can also use [Setup Downloader](setup-downloader.md) to download these files before you run Setup. During installation of a site, you select the server and client languages to support at that site from the available language pack files.  
+## <a name="BKMK_SupLanguagePacks"></a> Supported operating system languages  
+ You can install support for the display languages in the following tables by installing **server language packs** or **client language packs** at a central administration site and at primary sites. Language pack files are downloaded when you run Setup as part of the prerequisite and redistributable file download. You can also use the [Setup downloader](setup-downloader.md) to download these files before you run Setup. During the installation of a site, you select the server and client languages to support at that site from the available language pack files.  
 
- Use the following table to map a locale ID to a language that you want to support on servers or clients. For more information about locale IDs, see [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609) in the MSDN online library.  
+ Use the following table to map a locale ID to a language that you want to support on servers or client computers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
-### Server Languages  
+### Server languages  
 
-|Server language|Locale ID (LCID)|Three letter code|  
+|Server language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  
 |English (default)|0409|ENU|  
 |Chinese (Traditional, Hong Kong SAR)|0c04|ZHH|  
@@ -47,9 +47,9 @@ This topic provides technical details about language support in System Center Co
 |Swedish|041d|SVE|  
 |Turkish|041f|TRK|  
 
-### Client Languages  
+### Client languages  
 
-|Client language|Locale ID (LCID)|Three letter code|  
+|Client language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  
 |English (default)|0409|ENG|  
 |Chinese (Traditional, Hong Kong SAR)|0c04|ZHH|  
@@ -75,12 +75,12 @@ This topic provides technical details about language support in System Center Co
 |Swedish|041d|SVE|  
 |Turkish|041f|TRK|  
 
-### Mobile Device Client Languages  
- When you add support for mobile device languages, all mobile device client languages are included. You cannot select individual language packs for mobile device support.  
+### Mobile device client languages  
+ When you add support for mobile device languages, all supported mobile device client languages are included. You cannot select individual language packs for mobile device support.  
 
-### How to Identify Installed Language Packs  
-You can identify the language packs that are installed on a computer that runs the Configuration Manager client by viewing the locale ID (LCID) of the installed language packs in the computer's registry. This information is available in the following location:  
+### How to identify installed language packs  
+To identify the language packs that are installed on a computer that runs the Configuration Manager client, check the locale ID (LCID) of the installed language packs in the computer's registry. This information is available in the following location:  
 
 -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-You can use hardware inventory to collect this information, and then build a custom report to view the language details. For information about collecting custom hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). For information on creating reports, see the [Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) section in the [Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md) topic.  
+You can use hardware inventory to collect this information, and then build a custom report to view the language details. For information about collecting a custom hardware inventory, see [How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md). For information about creating reports, see the [Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) section in the [Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md) topic.  
