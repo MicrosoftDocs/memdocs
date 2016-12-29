@@ -2,7 +2,7 @@
 title: "Migrate data | Microsoft Docs"
 description: "Learn how to transfer data from a source hierarchy to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Migrate data between hierarchies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Migrate data between hierarchies in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use migration to transfer data from a supported source hierarchy to your System Center Configuration Manager destination hierarchy.  When you migrate data from a source hierarchy:  
 
 -   You access data from the site databases that you identify in the source infrastructure and then transfer that data to your current environment.  
