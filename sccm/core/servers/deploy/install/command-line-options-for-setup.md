@@ -137,7 +137,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
 ##  <a name="bkmk_Unattended"></a> Unattended Setup script file keys  
- Use the following sections to help you create your script for unattended Setup. The tables list the available Setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description for the key.  
+ Use the following sections to help you create your script for unattended Setup. The lists show the available Setup script keys, their corresponding values, whether they are required, which type of installation they are used for, and a short description of the key.  
 
 ### Unattended install for a central administration site  
  Use the following details to install a central administration site by using an unattended Setup script file.  
@@ -378,7 +378,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
     -   **Details:** Specifies the port number to use for the proxy port.  
 
 ### Unattended install for a primary site  
-Use the following details to install a primary site or to install a central administration site by using an unattended Setup script file.  
+Use the following details to install a primary site by using an unattended Setup script file.  
 
 **Identification**  
 
