@@ -2,7 +2,7 @@
 title: "CEIP | Microsoft Docs"
 description: "Learn about the Customer Experience Improvement Program settings for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

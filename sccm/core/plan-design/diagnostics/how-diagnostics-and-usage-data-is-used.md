@@ -2,7 +2,7 @@
 title: "Use of diagnostics data | Microsoft Docs"
 description: "Learn about how Microsoft uses the diagnostics and usage data that System Center Configuration Manager collects."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
