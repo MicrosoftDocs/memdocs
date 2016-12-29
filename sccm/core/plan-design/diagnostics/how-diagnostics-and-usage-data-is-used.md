@@ -16,31 +16,31 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # How diagnostics and usage data is used for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Diagnostic and usage data collected for System Center Configuration Manager provides Microsoft nearly immediate feedback on how the product is working (or not working), and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
+Diagnostic and usage data that System Center Configuration Manager collects provides Microsoft nearly immediate feedback about how the product is working and is used to adjust future updates. We are also able to see configuration data that helps us engineer and test the configurations that are in production. For example:  
 
 -   The Windows server versions that are used by site servers  
 
--   The language packs installed  
+-   The installed language packs  
 
 -   The delta of the SQL schema against the product default  
 
-This data helps the engineering team plan future tests to ensure the best experience for the most common configurations. As updates to Configuration Manager are released on a faster cadence (to better support quickly moving technologies such as Windows 10 and Microsoft Intune) this data is crucial to quickly adjust and adapt.  
+This data helps the engineering team plan future tests to ensure the best experience for the most common configurations. As updates to Configuration Manager are released on a faster cadence (to better support quickly moving technologies such as Windows 10 and Microsoft Intune), this data is crucial to quickly adjust and adapt.  
 
-Equally as important is how the diagnostics and usage data is not used. Microsoft does not use this data for:  
+Equally important is how the diagnostics and usage data is not used. Microsoft does not use this data for:  
 
 -   Licensing audits, such as comparing customer usage against license agreements  
 
 -   Auditing of products that are out of support  
 
--   Advertising based on available data such as feature usage or geolocation (timezone)  
+-   Advertising based on available data such as feature usage or geolocation (time zone)  
 
-##  <a name="bkmk_improve"></a> Examples of how diagnostics and usage data is improving the product  
-Microsoft uses available data to improve to the product. The following are a few examples of how:  
+##  <a name="bkmk_improve"></a> Examples of how diagnostics and usage data improves the product  
+Microsoft uses available data to improve to the product. Following are a few examples:  
 
 -   **Revised support for older server operating systems:**  
 
-     The initial support offered by the current branch of System Center Configuration Manager included a limit on the support timeline for Windows Server 2008 R2. After examining the usage data from customers that had upgraded to the Configuration Manager current branch, we identified the need to revise and extend this timeline to support the large number of customers who still use this server operating system to host site servers and site system roles.  
+     The initial support offered by the current branch of System Center Configuration Manager limited the support timeline for Windows Server 2008 R2. After examining the usage data from customers who had upgraded to the Configuration Manager current branch, we identified the need to revise and extend this timeline to support customers who still use this server operating system to host site servers and site system roles.  
 
 -   **Improved prerequisite checks:**  
 
-     Based on the usage data, we have improved the prerequisite checks for installing an update to remove obsolete rules, account for additional cases, and in some cases to auto-remediate some issues.  
+     Based on the usage data, we have improved the prerequisite checks for installing an update to remove obsolete rules, account for additional cases, and, in some cases, to auto-remediate some issues.  
