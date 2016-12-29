@@ -53,7 +53,7 @@ These modifications don't affect the data in the source site database. Objects t
 
  The following are objects that can migrate based on the version of Configuration Manager in the source hierarchy. Some objects, like queries, do not migrate. If you want to continue to use these objects that do not migrate you must recreate them in the new hierarchy. Other objects, including some client data, are automatically recreated in the new hierarchy when you manage clients in that hierarchy.  
 
- ### Objects that you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch  
+### Objects that you can migrate from System Center 2012 Configuration Manager or System Center Configuration Manager current branch
 
 -   Advertisements  
 
