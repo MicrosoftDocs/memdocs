@@ -2,7 +2,7 @@
 title: "Features and capabilities | Microsoft Docs"
 description: "Learn about the primary management capabilities of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Features and capabilities of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Features and capabilities of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The following are the primary management capabilities of System Center Configuration Manager. Each capability has its own prerequisites, and the capabilities that you want to use might influence the design and implementation of your Configuration Manager hierarchy. For example, if you want to deploy software to devices in your hierarchy, you must install the distribution point site system role.  
 
  For more information about how to plan and install Configuration Manager to support these management capabilities in your environment, see [Get ready for System Center Configuration Manager](../../../core/plan-design/get-ready.md).  
@@ -41,11 +46,11 @@ The following are the primary management capabilities of System Center Configura
 
  Provides a set of tools to help identify and monitor assets:  
 
--   **Hardware inventory**. Collects detailed information about the hardware of devices in your enterprise. See [Introduction to hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md).  
+-   **Hardware inventory**: Collects detailed information about the hardware of devices in your enterprise. See [Introduction to hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md).  
 
--   **Software inventory**. Collects and reports information about the files that are stored on client computers in your organization. See [Introduction to software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-software-inventory.md).  
+-   **Software inventory**: Collects and reports information about the files that are stored on client computers in your organization. See [Introduction to software inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/introduction-to-software-inventory.md).  
 
--   **Asset Intelligence**. Provides tools to collect inventory data and to monitor software license usage in your enterprise. See [Introduction to Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
+-   **Asset Intelligence**: Provides tools to collect inventory data and to monitor software license usage in your enterprise. See [Introduction to Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 **Mobile device management with Microsoft Intune**  
 
@@ -53,7 +58,7 @@ The following are the primary management capabilities of System Center Configura
 
  Although you use the Intune service, management tasks are completed by using the service connection point site system role available through the Configuration Manager console. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
- **On-premises mobile device management**  
+ **On-premises Mobile Device Management**  
 
  Enrolls and manages PCs and mobile devices by using the on-premises Configuration Manager infrastructure and management functionality built into the device platforms (instead of relying on a separately installed Configuration Manager client). Currently supports managing Windows 10 Enterprise and Windows 10 Mobile devices. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
