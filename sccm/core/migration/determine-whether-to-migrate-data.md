@@ -2,7 +2,7 @@
 title: "Choose what to migrate | Microsoft Docs"
 description: "Learn which data you can migrate and which data you can't migrate to System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,17 +13,22 @@ ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Determine whether to migrate data to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Determine whether to migrate data to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In System Center Configuration Manager, migration provides a process for transferring data and configurations that you've created from supported versions of Configuration Manager to your new hierarchy.  You can use this to:  
 
 -   Combine multiple hierarchies into one.  
 
 -   Move data and configurations from a lab deployment into your production deployment.
 
--   Move data and configuration from a prior version of Configuration Manager, such as Configuration Manager 2007, which has no upgrade path to System Center Configuration Manager, or from System Center 2012 Configuration Manager (which does support an upgrade path to System Center Configuration Manager).  
+-   Move data and configuration from a prior version of Configuration Manager, like Configuration Manager 2007, which has no upgrade path to System Center Configuration Manager, or from System Center 2012 Configuration Manager (which does support an upgrade path to System Center Configuration Manager).  
 
 With the exception of the distribution point site system role and the computers that host distribution points, no infrastructure (which includes sites, site system roles, or computers that host a site system role), migrates, transfers, or can be shared between hierarchies.  
 
