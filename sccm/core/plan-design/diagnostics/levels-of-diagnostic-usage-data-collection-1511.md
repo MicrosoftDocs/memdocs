@@ -2,7 +2,7 @@
 title: "Diagnostic data for 1511 | Microsoft Docs"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1511 collects."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -32,14 +34,17 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Levels of diagnostic usage data collection for version 1511 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager version 1511 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.  
 
 > [!IMPORTANT]  
 >  Configuration Manager does not collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful, that is, potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft will not use this information to identify you, contact you, or develop advertising.  
 
 ##  <a name="bkmk_change"></a> How to change the level  
- Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the **Diagnostics** and **Usage Data** settings in the Configuration Manager console.
+ Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
  To do so, in the console, go to the backstage tab (the upper left tab with the dropdown arrow), select **Usage Data**, and then select the data level that you want to use.  
 
@@ -243,7 +248,7 @@ Beginning with System Center Configuration Manager version 1511, this level incl
     -   Count of collections by type  
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full  
-The Full level includes all data in the Basic and Enhanced levels. It also includes information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots, which might include personal information that existed in memory or log files at the time of capture.  
+The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots, which might include personal information that existed in memory or log files at the time of capture.  
 
 Beginning with System Center Configuration Manager version 1511, this level includes the following:  
 
