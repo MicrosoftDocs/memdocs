@@ -12,21 +12,26 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Install the System Center Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
+# Install the System Center Configuration Manager console
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Administrators use the System Center Configuration Manager console to manage the Configuration Manager environment. Each Configuration Manager console can connect to a central administration site or to a primary site. You cannot connect a Configuration Manager console to a secondary site.
 
 > [!NOTE]  
 >  Which objects an administrator who is running the console sees depends on the permissions that are assigned to their user account. For more information about role-based administration, see [Fundamentals of role-based administration for System Center Configuration Manager](../../../../core/understand/fundamentals-of-role-based-administration.md).  
 
- You can install the Configuration Manager console during the site server installation through the Setup Wizard, or you can run the standalone application.  
+ You can install the Configuration Manager console during the site server installation through the Setup Wizard, or you can run a standalone installation application that uses the Setup Wizard.  
 
  Use the following procedure to install a Configuration Manager console by using the standalone application.  
 
 ## To install the Configuration Manager console by using the Setup Wizard  
 
-1.  As an administrative user, verify that you meets these requirements:  
+1.  Verify that you meet these requirements:  
 
     -   You are signed in as a member of the **Administrators** group on the computer on which the console will run.  
 
@@ -65,7 +70,7 @@ Administrators use the System Center Configuration Manager console to manage the
     -   **<*Configuration Manager installation media*>\SMSSETUP\BIN\I386**  
 
     > [!TIP]  
-    >  When you install the Configuration Manager console from a command prompt, it always installs the English version, regardless of the language setting of the operating system that is running on the computer. To install the Configuration Manager console in a language other than English, you must [install the Configuration Manager console by using the Setup Wizard](#to-install-the-configuration-manager-console-by-using-the-setup-wizard).  
+    >  When you install the Configuration Manager console from a command prompt, the English version is always installed, regardless of the language setting of the operating system that is running on the computer. To install the Configuration Manager console in a language other than English, you must [install the Configuration Manager console by using the Setup Wizard](#to-install-the-configuration-manager-console-by-using-the-setup-wizard).  
 
 2.  At the command prompt, type **consolesetup.exe**. Choose from the following command-line options.  
 
