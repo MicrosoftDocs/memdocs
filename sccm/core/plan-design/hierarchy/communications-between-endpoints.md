@@ -38,25 +38,25 @@ For more information, see [Manage network bandwidth for content management](mana
 
 
 ##  <a name="Planning_Client_to_Site_System"></a> Communications from clients to site systems and services  
-Clients initiate communication to site system roles, Active Directory Domain Services, and on-line services. To enable these communications, firewalls must allow the network traffic between clients and the end point of their communications. Endpoints include:  
+Clients initiate communication to site system roles, Active Directory Domain Services, and online services. To enable these communications, firewalls must allow the network traffic between clients and the endpoint of their communications. Endpoints include:  
 
--   **Application Catalog website point**: (Supports HTTP and HTTPS communication)  
+-   **Application Catalog website point**: Supports HTTP and HTTPS communication
 
--   **Cloud-based resources** like Microsoft Azure and Microsoft Intune  
+-   **Cloud-based resources**: Includes Microsoft Azure and Microsoft Intune  
 
--   **Configuration Manager Policy Module (NDES)**: (Supports HTTP and HTTPS communication)  
+-   **Configuration Manager Policy Module (NDES)**: Supports HTTP and HTTPS communication
 
--   **Distribution points**: (Supports HTTP and HTTPS communication, and HTTPS is required by cloud-based distribution points)  
+-   **Distribution points**: Supports HTTP and HTTPS communication, and HTTPS is required by cloud-based distribution points  
 
--   **Fallback status point**: (Supports HTTP communication)  
+-   **Fallback status point**: Supports HTTP communication  
 
--   **Management point**: (Supports HTTP and HTTPS communication)  
+-   **Management point**: Supports HTTP and HTTPS communication  
 
 -   **Microsoft Update**  
 
--   **Software update points** : (Supports HTTP and HTTPS communication)  
+-   **Software update points** : Supports HTTP and HTTPS communication  
 
--   **State Migration point**: (Supports HTTP and HTTPS communication)  
+-   **State Migration point**: Supports HTTP and HTTPS communication  
 
 -   **Various domain services**  
 
