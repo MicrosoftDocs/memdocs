@@ -2,7 +2,7 @@
 title: "Changes from Configuration Manager 2012 | Microsoft Docs "
 description: "Identify the changes and new capabilities in System Center Configuration Manger versus System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 caps.latest.revision: 51
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# What&#39;s changed in System Center Configuration Manager from System Center 2012 Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  The current branch of System Center Configuration Manager introduces important changes from System Center 2012 Configuration Manager. This topic identifies significant changes and new capabilities found in the baseline version 1511 of System Center Configuration Manager. To learn about changes introduced in subsequent updates for System Center Configuration Manager, see [What’s new in System Center Configuration Manager incremental versions](/sccm/core/plan-design/changes/whats-new-incremental-versions).
 
@@ -76,7 +81,7 @@ Note that Out-of-Band Management in System Center 2012 Configuration Manager is 
  For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## Client deployment  
- System Center Configuration Manager introduces a new capability for testing new versions of the Configuration Manager client before upgrading the rest of site with the new software. You can set up a pre-production collection in which to pilot a new client. Once you are satisfied with the new client software in pre-production, you can promote the client to automatically upgrade the rest of the site with the new version.  
+ System Center Configuration Manager introduces a new capability for testing new versions of the Configuration Manager client before upgrading the rest of site with the new software. You can set up a pre-production collection in which to pilot a new client. Once you are satisfied with the new client software in preproduction, you can promote the client to automatically upgrade the rest of the site with the new version.  
 
  For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
@@ -138,7 +143,7 @@ Be aware of the following changes to compliance settings:
 
 -   Support for managing settings on Mac OS X computers that are either enrolled with Microsoft Intune or managed using the Configuration Manager client. See [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md).  
 
-## Data protection and site infrastructure  
+## Protect data and site infrastructure  
 System Center Configuration Manager lets you integrate with Windows Hello for Business (formerly Microsoft Passport for Work). Windows Hello for Business is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account, to replace a password, smart card, or virtual smart card on devices running Windows 10. See [Windows Hello for Business settings in System Center Configuration Manager](../../../protect/deploy-use/windows-hello-for-business-settings.md).
 
 ## Mobile device management with Microsoft Intune  
@@ -152,7 +157,7 @@ System Center Configuration Manager lets you integrate with Windows Hello for Bu
 
 For more information about mobile device management capabilities with Configuration Manager and Intune, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md).  
 
-## On-premises mobile device management  
+## On-premises Mobile Device Management  
  You can now manage mobile devices by using on-premises Configuration Manager infrastructure. All device management and management data is handled on-premises, and is not part of Microsoft Intune or other cloud services. This type of device management doesn't require client software. Configuration Manager manages devices with capabilities that are built into the device operating systems.  
 
  To learn more, see [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
