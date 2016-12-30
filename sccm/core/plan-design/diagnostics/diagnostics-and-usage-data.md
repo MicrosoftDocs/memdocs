@@ -2,7 +2,7 @@
 title: "Diagnostics and usage data | Microsoft Docs"
 description: "Learn about the diagnostics and usage data that System Center Configuration Manager collects about itself."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,16 +17,16 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Diagnostics and usage data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager collects diagnostics and usage data about itself which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
+System Center Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.  
 
- Diagnostics  and Usage Data is enabled for each System Center Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.  
+ Diagnostics  and Usage Data is enabled for each System Center Configuration Manager hierarchy. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site. When the hierarchy uses a central administration site, the data from primary sites is then replicated to that site. At the top-level site of your hierarchy, the service connection point submits this information when it checks for updates. If the service connection point is in offline mode, the information is transferred by using the service connection tool.  
 
 > [!NOTE]  
->  Configuration Manager only collects data from the sites SQL server database, and does not collect data directly from clients or site servers.  
+>  Configuration Manager collects data only from the site's SQL server database, and it does not collect data directly from clients or site servers.  
 
- For more information see the [Privacy Statement for System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527).  
+ For more information, see the [Privacy Statement for System Center Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=626527).  
 
- Learn more about diagnostic and usage data for System Center Configuration Manager in the following topics:  
+ Learn more about diagnostic and usage data for System Center Configuration Manager in the following articles:  
 
 -   [How diagnostics and usage data is used for System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
