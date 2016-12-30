@@ -63,46 +63,46 @@ You can now use the option to reassign distribution points. Configuration Manage
 
 ## Cloud management gateway for managing Internet-based clients
 
-Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
+Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure by using a new role called the cloud management gateway connection point. Once it's completely deployed and set up, cloud management gateway lets clients communicate with on-premises Configuration Manager site system roles and cloud-based distribution points. Clients need not be connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
 
 ## Improvements to the Windows 10 Edition Upgrade Policy
 In this release, the following improvements have been made to this policy type:
 
-- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs are enrolled with Microsoft Intune.
+- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client. This policy continues to apply to Windows 10 PCs that are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
 ## Manage hardware identifiers
-You can now provide a list of hardware IDs that Configuration Manager will ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address.
+You can now provide a list of hardware IDs that Configuration Manager should ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address:
 
-1. Many new devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for purposes of operating system deployment. However, these are often shared adapters due to cost and general usability. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager, current branch version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
-2. While the SMBIOS ID is supposed to be a unique hardware identifier, some specialty hardware devices are built with duplicate IDs. While not as common as the USB-to-Ethernet adapter scenario above, the list of hardware IDs can be used to address this issue as well.
+- Many devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for the purpose of deploying an operating system. However, due to cost and general usability, these are often shared adapters. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
+- The SMBIOS ID is supposed to be a unique hardware identifier, but some specialty hardware devices are built with duplicate IDs. This issue may not be as common as the USB-to-Ethernet adapter scenario just described, but you can address it by using the list of excluded hardware IDs.
 
 For details, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
-Changes in this release:
-- Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
+In this release, note the following changes:
+- Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid, online, licensed apps (for Intune enrolled devices only).
 - You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
-- You can now modify the client secret key that you obtained from Azure Active Directory
-- You can delete a subscription to the store
+- You can now modify the client secret key that you obtained from Azure Active Directory.
+- You can delete a subscription to the store.
 
-For details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+For details, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 
 ## Policy sync for Intune-enrolled devices
-You can now request a policy sync for an Intune-enrolled device from the Configuration Manager console instead of needing to request a sync from the Company Portal app on the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**, as well as in the discovery data section of the **Properties** dialog for each device.
-For details, see [Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console](/sccm/mdm/deploy-use/sync-intune-device)
+You can now request a policy sync for an Intune-enrolled device from the Configuration Manager console, instead of needing to request a sync from the Company Portal app on the device itself. Sync request state information is available as a new column in device views, called **Remote Sync State**. The information is also available in the discovery data section of the **Properties** dialog for each device.
+For details, see [Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console](/sccm/mdm/deploy-use/sync-intune-device).
 
 
 ## Use compliance settings to configure Windows Defender settings
-You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers using configuration items in the Configuration Manager console.
-For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
+You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers. You do this by using configuration items in the Configuration Manager console.
+For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 
 
 ## General improvements to Software Center
 - Users can now request apps from Software Center, as well as the Application Catalog.
-- Improvements to help users understand what software is new and relevant.
+- Easier identification of new and relevant software available to users.
 
 ## New columns in device collection views
 You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
