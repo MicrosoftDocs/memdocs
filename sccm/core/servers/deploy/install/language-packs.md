@@ -12,16 +12,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Language packs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Language packs in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic provides technical details about language support in System Center Configuration Manager.  
 
 ## <a name="BKMK_SupLanguagePacks"></a> Supported operating system languages  
  You can install support for the display languages in the following tables by installing **server language packs** or **client language packs** at a central administration site and at primary sites. You select the server and client languages to support at a site from the available language pack files during the site installation process.
 
- Language pack files are downloaded when you run Setup as part of the prerequisite and redistributable file download. You also can use [Setup Downloader](setup-downloader.md) to download these files before you run Setup.   
+ Language pack files are downloaded when you run Setup as part of the prerequisites and redistributable file download. You also can use [Setup Downloader](setup-downloader.md) to download these files before you run Setup.   
 
  Use the following table to map a locale ID to a language that you want to support on servers or client computers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609).  
 
