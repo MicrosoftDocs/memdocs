@@ -31,7 +31,9 @@ The System Center Configuration Manager service connection point is a site syste
 
     -   Identify updates for Configuration Manager that apply to the version of Configuration Manager you use  
 
-     See [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  For information about the data collected by each level, and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) and then follow the link for the version of Configuration Manager that you use.  
+
+    For additional information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available, based on usage data you upload.  
 
@@ -61,7 +63,7 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 -   **Query** the component again, to confirm it is stopped, and then right click on the component one more time, and select **Start**.  
 
 > [!IMPORTANT]  
->  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with a Intune subscription.  
+>  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with an Intune subscription.  
 
 **When the role installs on a computer that is remote from the site server:**  
 
