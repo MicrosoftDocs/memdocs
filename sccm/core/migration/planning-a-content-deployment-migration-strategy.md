@@ -2,7 +2,7 @@
 title: "Migrate content | Microsoft Docs"
 description: "Use distribution points to manage content while you migrate data to a System Center Configuration Manager destination hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan a content deployment migration strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan a content deployment migration strategy in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 While you actively migrate data to a System Center Configuration Manager destination hierarchy, Configuration Manager clients in both the source and destination hierarchies can maintain access to content that you deployed in the source hierarchy. You can also use migration to upgrade or reassign distribution points from the source hierarchy to become distribution points in the destination hierarchy. When you share and upgrade or reassign distribution points, this strategy can help you avoid having to redeploy content to new servers in the destination hierarchy for the clients that you migrate.  
 
 Although you can recreate and distribute content in the destination hierarchy, you can also use the following options to manage this content:  
