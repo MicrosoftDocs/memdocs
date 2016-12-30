@@ -2,7 +2,7 @@
 title: "Configure security in System Center Configuration Manager | Microsoft Docs"
 description: "Configure security-related options for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,19 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Configure security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure security in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the information in this article to help you set up security-related options for System Center Configuration Manager.  
-
--   [Configure settings for client PKI certificates](#BKMK_ConfigureClientPKI)  
-
--   [Configure signing and encryption](#BKMK_ConfigureSigningEncryption)  
-
--   [Configure role-based administration](#BKMK_ConfigureRBA)  
-
--   [Manage accounts that are used by Configuration Manager](#BKMK_ManageAccounts)  
 
 ##  <a name="BKMK_ConfigureClientPKI"></a> Configure settings for client PKI certificates  
 If you want to use public key infrastructure (PKI) certificates for client connections to site systems that use Internet Information Services (IIS), use the following procedure to configure settings for these certificates.  
