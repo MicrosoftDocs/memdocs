@@ -319,7 +319,11 @@ Many of the client settings are self-explanatory. Others are described here.
     -   NOIDMIF files should be in the Windows\System32\CCM\Inventory\Noidmif folder.  
 
     > [!NOTE]  
-    >  This setting is available only in the default client settings.  
+    >  This setting is available only in the default client settings. 
+
+-   **Maximum random delay**
+
+	The collection of hardware information is randomized by up to two hours so that the operation doesn't take place simultaneously on all clients. You can set the maximum delay in order to constrain the time during which the operation takes place.      
 
 ##  Metered Internet connections  
  You can manage how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  

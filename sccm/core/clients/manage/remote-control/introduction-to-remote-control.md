@@ -2,7 +2,7 @@
 title: "Remote control | Microsoft Docs"
 description: "Get an introduction to remote control in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Introduction to remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use remote control in System Center Configuration Manager to remotely administer, provide assistance, or view any client computer in the hierarchy. You can use remote control to troubleshoot hardware and software configuration problems on client computers and to provide help desk support when access to the user's computer is required. Configuration Manager supports the remote control of workgroup computers and computers that are joined to an Active Directory domain.  
+Use remote control to remotely administer, provide assistance, or view any client computer in the hierarchy. You can use remote control to troubleshoot hardware and software configuration problems on client computers and to provide support. Configuration Manager supports the remote control of workgroup computers and domain-joined computers.  
 
- In addition, Configuration Manager lets you configure client settings to run Windows Remote Desktop and Remote Assistance from the Configuration Manager console.  
+Configuration Manager also lets you configure client settings to run Windows Remote Desktop and Remote Assistance from the Configuration Manager console.  
 
 > [!NOTE]  
 >  You cannot establish a Remote Assistance session from the Configuration Manager console to a client computer in the following scenarios:  

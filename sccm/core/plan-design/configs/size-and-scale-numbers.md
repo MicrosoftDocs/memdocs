@@ -30,7 +30,9 @@ Use the information in this topic in conjunction with the information in the fol
 -   [Supported operating systems for clients and devices](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 -   [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
-The support numbers in this article are based on using the recommended hardware for Configuration Manager. When you don't use the recommended hardware, the performance of site systems can be degraded and might not meet the stated levels of support.
+
+The following support numbers are based on using the recommended hardware for Configuration Manager and the default settings for all available Configuration Manager features. When you do not use
+the recommended hardware, or use more aggressive custom settings (like running hardware or software inventory more frequently than the defaults of once every seven days), the performance of site systems can be degraded and might not meet the stated levels of support.
 
 ##  <a name="bkmk_SiteSystemScale"></a> Site types  
  **Central administration site:**  
