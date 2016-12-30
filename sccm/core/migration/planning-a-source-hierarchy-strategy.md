@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Plan a source hierarchy strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Before you set up a migration job in your System Center Configuration Manager environment, you must set up a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining the way in which Configuration Manager gathers information from the source sites in the source hierarchy.  
+Before you set up a migration job in your System Center Configuration Manager environment, you must set up a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy:  
 
 -   [Source hierarchies](#BKMK_Source_Hierarchies)  
 
@@ -36,13 +36,13 @@ You can set up only one source hierarchy at a time.
 
 -   If you set up a new source hierarchy, that hierarchy automatically becomes the current source hierarchy replacing the previous source hierarchy.  
 
--   When you set up a source hierarchy you must specify the top-level site of the source hierarchy and specify credentials for Configuration Manager to use to connect to the SMS Provider and site database of that source site.  
+-   When you set up a source hierarchy, you must specify the top-level site of the source hierarchy and specify credentials for Configuration Manager to use to connect to the SMS Provider and site database of that source site.  
 
 -   Configuration Manager uses these credentials to run data gathering to retrieve information about the objects and distribution points from the source site.  
 
 -   As part of the data gathering process, child sites in the source hierarchy are identified.  
 
--   If the source hierarchy is a Configuration Manager 2007 hierarchy, you can then set up those additional sites as source sites, with separate credentials for each source site.  
+-   If the source hierarchy is a Configuration Manager 2007 hierarchy, you can set up those additional sites as source sites with separate credentials for each source site.  
 
 Although you can set up multiple source hierarchies in succession, migration is active for only one source hierarchy at a time.  
 
@@ -52,7 +52,7 @@ Although you can set up multiple source hierarchies in succession, migration is 
 
 -   You can then set up connection credentials, additional source sites, and migration jobs for the new source hierarchy.  
 
-If you restore an inactive source hierarchy and have not previously used the **Cleanup Migration Data** action, you can view the previously configured migration jobs for that source hierarchy. However, before you can continue migration from that hierarchy, you must reconfigure the credentials to connect to applicable source sites in the hierarchy, and then reschedule any migration jobs that did not finish.  
+If you restore an inactive source hierarchy and have not previously used **Cleanup Migration Data**, you can view the previously configured migration jobs for that source hierarchy. However, before you can continue migration from that hierarchy, you must reconfigure the credentials to connect to applicable source sites in the hierarchy, and then reschedule any migration jobs that did not finish.  
 
 > [!CAUTION]  
 >  If you migrate data from more than a single source hierarchy, each additional source hierarchy must contain a unique set of site codes.  
@@ -74,7 +74,7 @@ For more about configuring a source hierarchy, see [Configuring source hierarchi
 > [!NOTE]  
 >  Only primary sites in a Configuration Manager 2007 SP2 hierarchy are supported for migration.  
 
-### Source sites that run System Center 2012 Configuration or later  
+### Source sites that run System Center 2012 Configuration Manager or later  
  After data is gathered from the initial source site of the System Center 2012 Configuration Manager or later hierarchy, you do not have to set up additional source sites in that source hierarchy. This is because unlike Configuration Manager 2007, these versions of Configuration Manager use a shared database, and the shared database lets you identify and then migrate all available objects from the initial source site.  
 
  When you set up the access accounts to gather data, you might need to grant the **Source Site SMS Provider Account** access to multiple computers in the source hierarchy. This might be needed when the source site supports multiple instances of the SMS Provider, each on a different computer. When data gathering begins, the top-level site of the destination hierarchy contacts the top-level site in the source hierarchy to identify the locations of the SMS Provider for that site. Only the first instance of the SMS provider is identified. If the data gathering process cannot access the SMS Provider at the location it identifies, the process fails and does not try to connect to additional computers that run an instance of SMS Provider for that site.  
@@ -82,7 +82,7 @@ For more about configuring a source hierarchy, see [Configuring source hierarchi
 ##  <a name="BKMK_Data_Gathering"></a> Data gathering  
  Immediately after you specify a source hierarchy, set up credentials for each additional source site in a source hierarchy, or share the distribution points for a source site, Configuration Manager starts to gather data from the source site.  
 
- The data gathering process then repeats itself on a simple schedule to maintain synchronization with any changes to data in the source site. By default, the process repeats every four hours. You can change the schedule for this cycle by editing the **Properties** of the source site. The initial data gathering process must review all objects in the Configuration Manager database and can take time to finish. Subsequent data gathering processes identify only changes to the data and require less time to finish.  
+ The data gathering process then repeats itself on a simple schedule to maintain synchronization with any changes to data in the source site. By default, the process repeats every four hours. You can change the schedule for this cycle by editing the **Properties** of the source site. The initial data gathering process must review all objects in the Configuration Manager database and can take a long time to finish. Subsequent data gathering processes identify only changes to the data and require less time to finish.  
 
  To gather data, the top-level site in the destination hierarchy connects to the SMS Provider and the site database of the source site to retrieve a list of objects and distribution points. These connections use the source site access accounts. For information about required configurations for gathering data, see [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md).  
 
