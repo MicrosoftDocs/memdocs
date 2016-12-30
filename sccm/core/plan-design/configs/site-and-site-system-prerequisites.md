@@ -2,7 +2,7 @@
 title: "Site prerequisites | Microsoft Docs"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,19 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Site and site system prerequisites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Site and site system prerequisites for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
  Windows-based computers require specific configurations to support their use as System Center Configuration Manager site system servers.  
 
 
- For some products, features, and roles (like Windows Server Update Services (WSUS)), for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
+ For some products, like Windows Server Update Services (WSUS) for the software update point, you need to refer to the product documentation to identify additional prerequisites and limitations for use of that product. Only configurations that directly apply for use with Configuration Manager are included here.   
 
 > [!NOTE]  
 >  In January 2016, support expired for the .NET Framework 4.0, 4.5, and 4.5.1. For more information, see [Microsoft .NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) at support.microsoft.com.  
@@ -39,7 +44,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   The name of the computer.  
 
-  If you have to change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
+  If you must change any of these, you must first remove the site system role from the computer and then reinstall the role after the change is complete. If this affects the site server computer, you must uninstall the site and then reinstall the site after the change is complete.  
 
 -   Site system roles are not supported on an instance of a Windows Server cluster. The only exception to this is the site database server.  
 
