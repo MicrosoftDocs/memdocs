@@ -18,7 +18,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Communications between endpoints in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
 ##  <a name="Planning_Intra-site_Com"></a> Communications between site systems in a site  
- When Configuration Manager site systems or components communicate across the network to other site systems or Configuration Manager components in the site, they use one of the following which depends on how you configure the site:  
+ When Configuration Manager site systems or components communicate across the network to other site systems or Configuration Manager components in the site, they use one of the following protocols, depending on how you configure the site:  
 
 -   Server message block (SMB)  
 
@@ -26,52 +26,52 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 -   HTTPS  
 
-With the exception of communication from the site server to a distribution point,  server-to-server communications in a site can occur at any time and do not use mechanisms to control the network bandwidth. Because you cannot control the communication between site systems, ensure that you install site system servers in locations that have well connected and fast networks.  
+With the exception of communication from the site server to a distribution point,  server-to-server communications in a site can occur at any time and do not use mechanisms to control the network bandwidth. Because you cannot control the communication between site systems, ensure that you install site system servers in locations that have fast and well-connected networks.  
 
 To help you manage the transfer of content from the site server to distribution points:  
 
--   Configure the distribution point for network bandwidth control and scheduling. These controls resemble the configurations used by intersite addresses, and you can often use this configuration instead of installing another Configuration Manager site when the transfer of content to remote network locations is your main bandwidth consideration.  
+-   Configure the distribution point for network bandwidth control and scheduling. These controls resemble the configurations that are used by intersite addresses, and you can often use this configuration instead of installing another Configuration Manager site when the transfer of content to remote network locations is your main bandwidth consideration.  
 
 -   You can install a distribution point as a prestaged distribution point. A prestaged distribution point lets you use content that is manually put on the distribution point server and removes the requirement to transfer content files across the network.  
 
-For more information see [Manage network bandwidth for content management](manage-network-bandwidth.md).
+For more information, see [Manage network bandwidth for content management](manage-network-bandwidth.md).
 
 
 ##  <a name="Planning_Client_to_Site_System"></a> Communications from clients to site systems and services  
 Clients initiate communication to site system roles, Active Directory Domain Services, and on-line services. To enable these communications, firewalls must allow the network traffic between clients and the end point of their communications. Endpoints include:  
 
--   **Application Catalog website point** - (Supports HTTP and HTTPS communication)  
+-   **Application Catalog website point**: (Supports HTTP and HTTPS communication)  
 
 -   **Cloud-based resources** like Microsoft Azure and Microsoft Intune  
 
--   **Configuration Manager Policy Module (NDES)** - (Supports HTTP and HTTPS communication)  
+-   **Configuration Manager Policy Module (NDES)**: (Supports HTTP and HTTPS communication)  
 
--   **Distribution points** - (Supports HTTP and HTTPS communication, and HTTPS is required by cloud-based distribution points)  
+-   **Distribution points**: (Supports HTTP and HTTPS communication, and HTTPS is required by cloud-based distribution points)  
 
--   **Fallback status point** - (Supports HTTP communication)  
+-   **Fallback status point**: (Supports HTTP communication)  
 
--   **Management point** - (Supports HTTP and HTTPS communication)  
+-   **Management point**: (Supports HTTP and HTTPS communication)  
 
 -   **Microsoft Update**  
 
--   **Software update points** - (Supports HTTP and HTTPS communication)  
+-   **Software update points** : (Supports HTTP and HTTPS communication)  
 
--   **State Migration point** - (Supports HTTP and HTTPS communication)  
+-   **State Migration point**: (Supports HTTP and HTTPS communication)  
 
 -   **Various domain services**  
 
-Before a client can communicate with a site system role, the client uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method available to them:  
+Before a client can communicate with a site system role, the client uses service location to find a site system role that supports the client's protocol (HTTP or HTTPS). By default, clients use the most secure method that's available to them:  
 
 -   To use HTTPS, you must have a public key infrastructure (PKI) and install PKI certificates on clients and servers. For information about how to use certificates, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
--   When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for Signing and Encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
+-   When you deploy a site system role that uses Internet Information Services (IIS) and supports communication from clients, you must specify whether clients connect to the site system by using HTTP or HTTPS. If you use HTTP, you must also consider signing and encryption choices. For more information, see [Planning for signing and encryption](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) in [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md).  
 
 For information about service location by clients, see  [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
 For details about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
 
 ###  <a name="BKMK_clientspan"></a> Considerations for client communications from the Internet or an untrusted forest  
-The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  
+The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest. (Secondary sites do not support client connections from untrusted locations):  
 
 -   Application Catalog website point  
 
@@ -87,8 +87,8 @@ The following site system roles installed at primary sites support connections f
 
 -   Software update point  
 
-**About internet facing site systems:**   
-Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+**About Internet-facing site systems:**   
+Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
 For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
@@ -122,7 +122,7 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     -   Manage these computers as if they are workgroup computers.  
 
-  When you install site system servers  an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest rather than downloading this information from their assigned management point.  
+  When you install site system servers  an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest, rather than downloading this information from their assigned management point.  
 
   > [!NOTE]  
   >  If you want to manage devices that are on the Internet, you can install Internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario does not require a two-way trust between the perimeter network and the site server's forest.  
@@ -137,23 +137,23 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     Related resources in this content library:  
 
-    -   [Manage Conflicting Records for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
+    -   [Manage conflicting records for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
-    -   [Network Access Account](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
+    -   [Network access account](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
     -   [How to Install Configuration Manager Clients on Workgroup Computers](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
 ###  <a name="bkmk_span"></a> Scenarios to support a site or hierarchy that spans multiple domains and forests  
 
 #### Communication between sites in a hierarchy that spans forests  
-This scenario requires a two-way forest trust, which supports Kerberos authentication.  If you do not have a two-way forest trust which supports Kerberos authentication, then Configuration Manager does not support a child site in the remote forest.  
+This scenario requires a two-way forest trust, which supports Kerberos authentication.  If you do not have a two-way forest trust that supports Kerberos authentication, then Configuration Manager does not support a child site in the remote forest.  
 
  **Configuration Manager supports installing a child site in a remote forest that has the required two-way trust with the forest of the parent site**  
 
 -   For example, you can place a secondary site in a different forest from its primary parent site so long as the required trust exists.  
 
 > [!NOTE]  
->  A child site can be primary site (where the central administration site is the parent site), or a secondary site.  
+>  A child site can be primary site (where the central administration site is the parent site) or a secondary site.  
 
 Intersite communication in Configuration Manager uses database replication and file-based transfers. When you install a site, you must specify an account to install the site on the designated server. This account also establishes and maintains communication between sites.  
 
@@ -186,7 +186,7 @@ When a site system role accepts connections from the Internet, as a security bes
 
 **To install a site system role on a computer in an untrusted forest:**  
 
--   You must specify a **Site System Installation Account** which is used to install the site system role. This account must have local administrative credentials to connect to, and then install site system roles on the specified computer.  
+-   You must specify a **Site System Installation Account**, which is used to install the site system role. This account must have local administrative credentials to connect to, and then install site system roles on the specified computer.  
 
 -   You must select the site system option **Require the site server to initiate connections to this site system**. This requires the site server to establish connections to the site system server to transfer data. This prevents the computer in the untrusted location from initiating contact with the site server that is inside your trusted network. These connections use the **Site System Installation Account**.  
 
@@ -206,7 +206,7 @@ Additionally, the following site system roles require direct access to the site 
 
 -   State migration point  
 
-See [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md) for more information.  
+For more information, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md).  
 
 **You might need to  configure site system role access to the site database:**  
 
@@ -224,22 +224,22 @@ If you configure a domain user account to be the  connection account for these s
 
 Consider the following additional information when you plan for site system roles in other forests:  
 
--   If you run a Windows Firewall, configure the applicable firewall profiles to pass communications between the site database server and computers that are installed with remote site system roles. For information about firewall profiles, see [Understanding Firewall Profiles](http://go.microsoft.com/fwlink/p/?LinkId=233629).  
+-   If you run Windows Firewall, configure the applicable firewall profiles to pass communications between the site database server and computers that are installed with remote site system roles. For information about firewall profiles, see [Understanding firewall profiles](http://go.microsoft.com/fwlink/p/?LinkId=233629).  
 
 -   When the Internet-based management point trusts the forest that contains the user accounts, user policies are supported. When no trust exists, only computer policies are supported.  
 
 #### Communication between clients and site system roles when the clients are not in the same Active Directory forest as their site server  
 Configuration Manager supports the following scenarios for clients that are not in the same forest as their site's site server:  
 
--   There is a two-way forest trust between the forest of the client and the forest of the site server  
+-   There is a two-way forest trust between the forest of the client and the forest of the site server.  
 
--   The site system role server is located in the same forest as the client  
+-   The site system role server is located in the same forest as the client.  
 
--   The client is on a domain computer that does not have a two-way forest trust with the site server and site system roles are not installed in the client's forest  
+-   The client is on a domain computer that does not have a two-way forest trust with the site server and site system roles are not installed in the client's forest.  
 
--   The client is on a workgroup computer  
+-   The client is on a workgroup computer.  
 
-Clients on a domain joined computer can use Active Directory Domain Services for service location when their site is published to their Active Directory forest.  
+Clients on a domain-joined computer can use Active Directory Domain Services for service location when their site is published to their Active Directory forest.  
 
 To publish site information to another Active Directory forest, you must:  
 
