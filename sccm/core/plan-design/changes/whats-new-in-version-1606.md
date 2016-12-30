@@ -2,7 +2,7 @@
 title: "New in System Center Configuration Manager update 1606 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1606 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -126,7 +126,7 @@ You can now use a Configuration Manager client setting to manage the Office 365 
 For details, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Manually switch clients to a new software update point
-When there are issues with the active software update point, you can now enable Configuration Manager clients to switch to a new software update point. Once enabled, the clients look for another software update point at the next scan.
+You can now enable an option that lets Configuration Manager clients switch to a new software update point when there are issues with the active software update point. Once enabled, the clients will look for another software update point at the next scan.
 
 For details, see [Plan for software updates in Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
@@ -202,7 +202,7 @@ You can create device categories, which can be used to place devices in device c
 
 For details, see [How to automatically categorize devices into collections with System Center Configuration Manager](../../../core/clients/manage/collections/automatically-categorize-devices-into-collections.md).
 
-### Identify devices with IMEI or iOS serial numbers
+### Predeclare devices with IMEI or iOS serial numbers
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as “Corporate” in lists of devices. An Intune license is still required for each user who accesses the service.
 
@@ -214,5 +214,5 @@ You can now enable Health Attestation services monitoring for Windows 10 PCs by 
 
 For details, see [Health attestation for System Center Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
 
-## Remote control
+## Remote Control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer does not have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.
