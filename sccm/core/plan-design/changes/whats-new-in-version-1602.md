@@ -2,7 +2,7 @@
 title: "New in System Center Configuration Manager version 1602 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1602 of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -166,9 +166,9 @@ For details, see [Health attestation for System Center Configuration Manager](..
 ### Improvements to Endpoint Protection antimalware settings  
  1602 adds the following new settings in Endpoint Protection antimalware policy for Windows Defender:  
 
--   Real-time protection to block potentially unwanted applications at download, prior to installation.  
+-   Real-time protection: Block potentially unwanted applications at download, prior to installation.  
 
--   Scan settings to scan mapped network drives during a full scan.  
+-   Scan settings: Scan mapped network drives during a full scan.  
 
 -   Automatic sample file submission settings:  
 
@@ -202,10 +202,10 @@ Configuration Manager can request the Activation Lock status of both supervised 
 
  Select the terms and conditions deployment from the list of deployments. The summary area shows the following statistics:  
 
--   **Compliant**. Users have accepted the latest version of the terms and conditions.  
+-   **Compliant**: Users have accepted the latest version of the terms and conditions.  
 
 -   **Error**  
 
--   **Noncompliant**. Users have accepted a version of the terms and conditions, but not the latest version.  
+-   **Noncompliant**: Users have accepted a version of the terms and conditions, but not the latest version.  
 
--   **Unknown**. Users have never accepted the terms and conditions, including those without an enrolled device.  
+-   **Unknown**: Users have never accepted the terms and conditions, including those without an enrolled device.  
