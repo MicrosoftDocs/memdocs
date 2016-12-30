@@ -2,7 +2,7 @@
 title: "Migration operations | Microsoft Docs"
 description: "Create and run jobs to migrate data and clients to System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
 caps.latest.revision: 6
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Operations for migrating to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Operations for migrating to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 For migration in System Center Configuration Manager, you can migrate data and clients after you successfully gather data from a source site in a supported source hierarchy. Use the information in the following sections to create and run migration jobs to migrate data and clients, and then finish the migration process.  
 
 -   [Create and edit migration jobs](#Create_Edit_migration_Jobs)  
@@ -44,13 +49,13 @@ For migration in System Center Configuration Manager, you can migrate data and c
 
 3.  On the **Home** tab, in the **Create** group, choose **Create Migration Job**.  
 
-4.  On the **General** page of the Create Migration Job wizard, set up the following, choose **OK**, and:  
+4.  On the **General** page of the Create Migration Job wizard, set up the following and then choose **OK**:  
 
     -   Specify a name for the migration job.  
 
     -   In the **Job type** drop-down list, select **Collection migration**.  
 
-5.  On the **Select Collections** page, set up the following, choose **Next**, and:  
+5.  On the **Select Collections** page, set up the following and then choose **Next**:  
 
     -   Select the collections that you want to migrate.  
 
