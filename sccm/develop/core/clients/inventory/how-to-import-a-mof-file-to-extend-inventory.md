@@ -24,12 +24,12 @@ You import a MOF file to extend inventory, in System Center Configuration Manage
 
 1.  Connect to the site server namespace (root\sms\site_\<site code>).  
 
-2.  Get the [SMS_InventoryReport](assetId:///SMS_InventoryReport?qualifyHint=False&autoUpgrade=True) class.  
+2.  Get the [SMS_InventoryReport](../../../../develop/reference/core/clients/manage/sms_inventoryreport-server-wmi-class.md) class.  
 
-3.  Invoke the [ImportInventoryReport](assetId:///ImportInventoryReport?qualifyHint=False&autoUpgrade=True) method, passing in the [InventoryReportID, ImportType, MofBuffer](assetId:///InventoryReportID, ImportType, MofBuffer?qualifyHint=False&autoUpgrade=True) parameters.  
+3.  Invoke the [ImportInventoryReport](../../../../develop/reference/core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md) method, passing in the *InventoryReportID*, *ImportType*, and *MofBuffer* parameters.  
 
 ## Example  
- The following example imports a MOF file to extend inventory using the assetId:///ImportInventoryReport?qualifyHint=False&autoUpgrade=True method.  
+ The following example imports a MOF file to extend inventory using the ImportInventoryReport method.  
 
 ```c#  
 

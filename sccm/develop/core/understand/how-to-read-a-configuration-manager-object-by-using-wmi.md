@@ -18,16 +18,16 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Read a Configuration Manager Object by Using WMI
-In System Center Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [Get](assetId:///Get?qualifyHint=False&autoUpgrade=True) method to return an object instance that is identified by a key value.  
+In System Center Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method to return an object instance that is identified by a key value.  
 
 > [!NOTE]
->  to query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
+>  To query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
 
 ### To read a Configuration Manager object  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object that you obtain from step 1, call the assetId:///Get?qualifyHint=False&autoUpgrade=True method and specify the class and key information for the object you want.  
+2.  Using the SWbemServices object that you obtain from step 1, call the Get method and specify the class and key information for the object you want.  
 
 ## Example  
  The following VBScript code example function displays the name and description for a supplied key package identifier (`packageID`).  
@@ -56,8 +56,8 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
-|`packageID`|`String`|A package identifier. This can be obtained from the [SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True) class [PackageID](assetId:///PackageID?qualifyHint=False&autoUpgrade=True) property.|  
+|`connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`packageID`|`String`|A package identifier. This can be obtained from the [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class PackageID property.|  
 
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   

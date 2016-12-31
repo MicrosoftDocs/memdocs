@@ -89,7 +89,7 @@ You define a custom task sequence action, its properties and its user interface 
 
 6.  Press ENTER to compile the CustomAction.mof.  
 
-7.  Confirm that the class has been added in CIM Studio. The class should be listed as a child class of [SMS_TaskSequence_Action](assetId:///SMS_TaskSequence_Action?qualifyHint=False&autoUpgrade=True).  
+7.  Confirm that the class has been added in CIM Studio. The class should be listed as a child class of [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
 8.  Complete [How to Use a Configuration Manager Custom Action Control](../../develop/osd/how-to-use-a-configuration-manager-custom-action-control.md).  
 
