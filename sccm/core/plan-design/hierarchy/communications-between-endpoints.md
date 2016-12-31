@@ -68,10 +68,10 @@ Before a client can communicate with a site system role, the client uses service
 
 For information about service location by clients, see  [Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
-For details about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md)  
+For details about ports and protocols used by clients when they communicate to these endpoints, see [Ports used in System Center Configuration Manager](../../../core/plan-design/hierarchy/ports.md).  
 
 ###  <a name="BKMK_clientspan"></a> Considerations for client communications from the Internet or an untrusted forest  
-The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the Internet or an untrusted forest. (Secondary sites do not support client connections from untrusted locations):  
+The following site system roles installed at primary sites support connections from clients that are in untrusted locations, such as the Internet or an untrusted forest. (Secondary sites do not support client connections from untrusted locations):  
 
 -   Application Catalog website point  
 
@@ -88,7 +88,7 @@ The following site system roles installed at primary sites support connections f
 -   Software update point  
 
 **About Internet-facing site systems:**   
-Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an Internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
+There is no requirement to have a trust between a client's forest and that of the site system server. However, when the forest that contains an Internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the Internet when you enable the **Client Policy** client setting **Enable user policy requests from Internet clients**.  
 
 For example, the following configurations illustrate when Internet-based client management supports user policies for devices on the Internet:  
 
@@ -101,14 +101,14 @@ For example, the following configurations illustrate when Internet-based client 
 > [!NOTE]  
 >  If Kerberos authentication fails, NTLM authentication is then automatically tried.  
 
-As the previous example shows, you can place Internet-based site systems in the intranet when they are published to the Internet by using a web proxy server, such as ISA Server and Forefront Threat Management Gateway. These site systems can be configured for client connection from the Internet only, or client connections from the Internet and intranet. When you use a web proxy server, you can configure it for Secure Sockets Layer (SSL) bridging to SSL (more secure) or SSL tunneling:  
+As the previous example shows, you can place Internet-based site systems in the intranet when they are published to the Internet by using a web proxy server, such as ISA Server and Forefront Threat Management Gateway. These site systems can be configured for client connection from the Internet only, or for client connections from the Internet and intranet. When you use a web proxy server, you can configure it for Secure Sockets Layer (SSL) bridging to SSL (more secure) or SSL tunneling as follows:  
 
 -   **SSL bridging to SSL:**   
     The recommended configuration when you use proxy web servers for Internet-based client management is SSL bridging to SSL, which uses SSL termination with authentication. Client computers must be authenticated by using computer authentication, and mobile device legacy clients are authenticated by using user authentication. Mobile devices that are enrolled by Configuration Manager do not support SSL bridging.  
 
      The benefit of SSL termination at the proxy web server is that packets from the Internet are subject to inspection before they are forwarded to the internal network. The proxy web server authenticates the connection from the client, terminates it, and then opens a new authenticated connection to the Internet-based site systems. When Configuration Manager clients use a proxy web server, the client identity (client GUID) is securely contained in the packet payload so that the management point does not consider the proxy web server to be the client. Bridging is not supported in Configuration Manager with HTTP to HTTPS, or from HTTPS to HTTP.  
 
--   **Tunneling:**:   
+-   **Tunneling**:   
     If your proxy web server cannot support the requirements for SSL bridging, or you want to configure Internet support for mobile devices that are enrolled by Configuration Manager, SSL tunneling is also supported. It is a less secure option because the SSL packets from the Internet are forwarded to the site systems without SSL termination, so they cannot be inspected for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.  
 
 ##  <a name="Plan_Com_X-Forest"></a> Communications across Active Directory forests  
@@ -122,10 +122,10 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     -   Manage these computers as if they are workgroup computers.  
 
-  When you install site system servers  an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest, rather than downloading this information from their assigned management point.  
+  When you install site system servers in an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest, and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest, rather than downloading this information from their assigned management point.  
 
   > [!NOTE]  
-  >  If you want to manage devices that are on the Internet, you can install Internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario does not require a two-way trust between the perimeter network and the site server's forest.  
+  >  If you want to manage devices that are on the Internet, you can install Internet-based site system roles in your perimeter network when the site system servers are in an Active Directory forest. This scenario does not require two-way trust between the perimeter network and the site server's forest.  
 
 -   **To support computers in a workgroup**, you must:  
 
@@ -182,13 +182,13 @@ This scenario does not require a two-way forest trust.
 
 -   The Application Catalog web service point is the only exception.  It  is only supported  in the same forest as the site server.  
 
-When a site system role accepts connections from the Internet, as a security best practice, install the site system roles in a location where the forest boundary provides protection for the site server (for example, in a perimeter network).  
+-   When a site system role accepts connections from the Internet, as a security best practice, install the site system roles in a location where the forest boundary provides protection for the site server (for example, in a perimeter network).  
 
 **To install a site system role on a computer in an untrusted forest:**  
 
--   You must specify a **Site System Installation Account**, which is used to install the site system role. This account must have local administrative credentials to connect to, and then install site system roles on the specified computer.  
+-   You must specify a **Site System Installation Account**, which is used to install the site system role. (This account must have local administrative credentials to connect to.) Then install site system roles on the specified computer.  
 
--   You must select the site system option **Require the site server to initiate connections to this site system**. This requires the site server to establish connections to the site system server to transfer data. This prevents the computer in the untrusted location from initiating contact with the site server that is inside your trusted network. These connections use the **Site System Installation Account**.  
+-   You must select the site system option **Require the site server to initiate connections to this site system**. This requires the site server to establish connections to the site system server to transfer data. This prevents the computer in the untrusted location from initiating contact with the site server that's inside your trusted network. These connections use the **Site System Installation Account**.  
 
 **To use a site system role that was installed in an untrusted forest,** firewalls must allow the network traffic even when the site server initiates the transfer of data.  
 
@@ -212,7 +212,7 @@ For more information, see [Ports used in System Center Configuration Manager](..
 
 Both the management point and enrollment point site system roles connect to the site database.  
 
--   By default, when these site system roles are installed, Configuration Manager configures the computer account of the new site system server as the connection account for the site system role, and adds the account to the appropriate SQL Server database role.  
+-   By default, when these site system roles are installed, Configuration Manager configures the computer account of the new site system server as the connection account for the site system role, and then adds the account to the appropriate SQL Server database role.  
 
 -   When you install these site system roles in an untrusted domain, you must configure the site system role connection account to enable the site system role to obtain information from the database.  
 
@@ -235,7 +235,7 @@ Configuration Manager supports the following scenarios for clients that are not 
 
 -   The site system role server is located in the same forest as the client.  
 
--   The client is on a domain computer that does not have a two-way forest trust with the site server and site system roles are not installed in the client's forest.  
+-   The client is on a domain computer that does not have a two-way forest trust with the site server, and site system roles are not installed in the client's forest.  
 
 -   The client is on a workgroup computer.  
 
