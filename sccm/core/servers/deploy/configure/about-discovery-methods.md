@@ -14,7 +14,7 @@ caps.latest.revision: 8
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # About discovery methods for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from your Active Directory. To efficiently use a discovery method you should understand its available configurations and limitations.  
+Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from Active Directory. To efficiently use a discovery method, you should understand its available configurations and limitations.  
 
 ##  <a name="bkmk_aboutForest"></a> Active Directory Forest Discovery  
  **Configurable:** Yes  
@@ -29,15 +29,15 @@ Each System Center Configuration Manager discovery method can find different dev
 
 Unlike other Active Directory discovery methods, Active Directory Forest Discovery does not discover resources that you can manage. Instead, this method discovers network locations that are configured in Active Directory and can convert those locations into boundaries for use throughout your hierarchy.  
 
-When this method runs it searches  the local Active Directory forest, each trusted forest, and each additional forest that you configure in the **Active Directory Forests** node of the Configuration Manager console.  
+When this method runs, it searches the local Active Directory forest, each trusted forest, and each additional forest that you configure in the **Active Directory Forests** node of the Configuration Manager console.  
 
 Use Active Directory Forest Discovery to:  
 
--   Discover Active Directory sites and subnets, and then create Configuration Manager boundaries based on those network locations  
+-   Discover Active Directory sites and subnets, and then create Configuration Manager boundaries based on those network locations.  
 
--   Identify supernets that are assigned to an Active Directory site and convert the supernet into an IP address range boundary  
+-   Identify supernets that are assigned to an Active Directory site and convert the supernet into an IP address range boundary.  
 
--   Publish to the Active Directory Domain Services of a forest when publishing to that forest is enabled, and the specified Active Directory Forest Account has permissions to that forest  
+-   Publish to Active Directory Domain Services (AD DS) in a forest when publishing to that forest is enabled, and the specified Active Directory Forest Account has permissions to that forest.  
 
 You can manage Active Directory Forest Discovery in the Configuration Manager console from the following nodes under **Hierarchy Configuration** in the **Administration** workspace:  
 
@@ -45,7 +45,7 @@ You can manage Active Directory Forest Discovery in the Configuration Manager co
 
 -   **Active Directory Forests**: Here you configure the additional Active Directory forests that you want to discover, specify the account to use as the Active Directory Forest Account for each forest, and configure publishing to each forest. Additionally, you can monitor the discovery process and add IP subnets and Active Directory sites to Configuration Manager as boundaries and members of boundary groups.  
 
-To configure publishing for Active Directory forests for each site in your hierarchy, connect your Configuration Manager console to the top-level site of your hierarchy. The **Publishing** tab in an Active Directory site **Properties** dialog box can only display the current site, and its child sites. When publishing is enabled for a forest and that forests schema is extended for Configuration Manager, the following information is published for each site that is enabled to publish to that Active Directory forest:  
+To configure publishing for Active Directory forests for each site in your hierarchy, connect your Configuration Manager console to the top-level site of your hierarchy. The **Publishing** tab in an Active Directory site **Properties** dialog box can display only the current site and its child sites. When publishing is enabled for a forest and that forest's schema is extended for Configuration Manager, the following information is published for each site that is enabled to publish to that Active Directory forest:  
 
 -    **SMS-Site-&lt;site code>**
 
@@ -56,7 +56,7 @@ To configure publishing for Active Directory forests for each site in your hiera
 -   **SMS-&lt;site code>-&lt;Active Directory site name or subnet>**  
 
 > [!NOTE]  
->  Secondary sites always use the secondary site server computer account to publish to Active Directory. If you want secondary sites to publish to Active Directory, ensure the secondary site server computer account has permissions to publish to Active Directory. A secondary site cannot publish data to an untrusted forest.  
+>  Secondary sites always use the secondary site server computer account to publish to Active Directory. If you want secondary sites to publish to Active Directory, ensure that the secondary site server computer account has permissions to publish to Active Directory. A secondary site cannot publish data to an untrusted forest.  
 
 > [!CAUTION]  
 >  When you clear the option to publish a site to an Active Directory forest, all previously published information for that site, including available site system roles, is removed from the Active Directory of that forest.  
@@ -65,7 +65,7 @@ Actions for Active Directory Forest Discovery are recorded in the following logs
 
 -   All actions, with the exception actions related to publishing, are recorded in the **ADForestDisc.Log** file in the **&lt;InstallationPath>\Logs** folder on the site server.  
 
--   Active Directory Forest Discovery publishing actions are recorded in the **hman.log** and **sitecomp.log** in the **&lt;InstallationPath>\Logs** folder on the site server.  
+-   Active Directory Forest Discovery publishing actions are recorded in the **hman.log** and **sitecomp.log** files in the **&lt;InstallationPath>\Logs** folder on the site server.  
 
 For more information about how to configure this discovery method, see [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
@@ -83,23 +83,23 @@ For more information about how to configure this discovery method, see [Configur
 > [!TIP]  
 >  In addition to the information in this section, see [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared).  
 
-Use this method to search Active Directory Domain Services (AD DS) to identify:  
+Use this method to search Active Directory Domain Services to identify:  
 
--   Local, global, and universal security groups  
+-   Local, global, and universal security groups.  
 
--   The membership of Groups  
+-   The membership of groups.  
 
--   Limited information about a groups member computers and users, even when those computers and users have not previously been discovered by another discovery method  
+-   Limited information about a group's member computers and users, even when another discovery method has not previously discovered those computers and users.  
 
-This discovery method is intended to identify groups and the group relationships of members of groups. By default, only security groups are discovered. If you want to also find the membership of distribution groups you must select the checkbox for the option **Discover the membership of distribution groups** on the **Option** tab in the Active Directory Group Discovery Properties dialog box.  
+This discovery method is intended to identify groups and the group relationships of members of groups. By default, only security groups are discovered. If you want to also find the membership of distribution groups, you must check the box for the option **Discover the membership of distribution groups** on the **Option** tab in the Active Directory Group Discovery **Properties** dialog box.  
 
-Active Directory Group Discovery does not support the extended Active Directory attributes that can be identified by using Active Directory System Discovery or Active Directory User Discovery. Because this discovery method is not optimized to discover computer and user resources, consider running this discovery method after you have run Active Directory System Discovery and Active Directory User Discovery. This is because this method creates a full DDR for groups, but only a limited DDR for computers and users that are members of groups.  
+Active Directory Group Discovery does not support the extended Active Directory attributes that can be identified by using Active Directory System Discovery or Active Directory User Discovery. Because this discovery method is not optimized to discover computer and user resources, consider running this discovery method after you have run Active Directory System Discovery and Active Directory User Discovery. This is because this method creates a full discovery data record (DDR) for groups, but only a limited DDR for computers and users that are members of groups.  
 
 You can configure the following discovery scopes that control how this method searches for information:  
 
--   **Location**: Use a location if you want to search one or more Active Directory containers. This scope option supports a recursive search of the specified Active Directory containers that also searches each child container under the container you specify. This process continues until no more child containers are found.  
+-   **Location**: Use a location if you want to search one or more Active Directory containers. This scope option supports a recursive search of the specified Active Directory containers that also searches each child container under the container that you specify. This process continues until no more child containers are found.  
 
--   **Groups**: Use groups if you want to search one or more specific Active Directory groups. You can configure the **Active Directory Domain** to use the default domain and forest, or limit the search to an individual domain controller. Additionally, you can specify one or more groups to search. If you do not specify at least one group, all groups found in the specified **Active Directory Domain** location are searched.  
+-   **Groups**: Use groups if you want to search one or more specific Active Directory groups. You can configure the Active Directory domain to use the default domain and forest, or limit the search to an individual domain controller. Additionally, you can specify one or more groups to search. If you do not specify at least one group, all groups found in the specified Active Directory domain location are searched.  
 
 > [!CAUTION]  
 >  When you configure a discovery scope, select only the groups that you must discover. This is because Active Directory Group Discovery attempts to discover each member of each group in the discovery scope. Discovery of large groups can require extensive use of bandwidth and Active Directory resources.  
@@ -125,9 +125,9 @@ For more information about how to configure this discovery method, see [Configur
 > [!TIP]  
 >  In addition to the information in this section, see [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared).  
 
-Use this discovery method to search the specified Active Directory Domain Services (AD DS) locations for computer resources that can be used to create collections and queries. You can also install the Configuration Manager client on a discovered device by using client push installation.  
+Use this discovery method to search the specified Active Directory Domain Services locations for computer resources that can be used to create collections and queries. You can also install the Configuration Manager client on a discovered device by using client push installation.  
 
-By default, this method discovers basic information about the computer including the following:  
+By default, this method discovers basic information about the computer, including the following:  
 
 -   Computer name  
 
@@ -139,11 +139,11 @@ By default, this method discovers basic information about the computer including
 
 -   Active Directory site  
 
--   Last Logon Timestamp  
+-   Last logon timestamp  
 
-To successfully create a discovery data record (DDR) for a computer, Active Directory System Discovery must be able to identify the computer account and then successfully resolve the computer name to an IP address.  
+To successfully create a DDR for a computer, Active Directory System Discovery must be able to identify the computer account and then successfully resolve the computer name to an IP address.  
 
-You can view the full list of default object attributes returned by Active Directory System Discovery, and configure the method to discover additional (extended) attributes in  the  **Active Directory System Discovery Properties** dialog box on the **Active Directory Attributes** tab.  
+In the **Active Directory System Discovery Properties** dialog box, on the **Active Directory Attributes** tab, you can view the full list of default object attributes that Active Directory System Discovery has returned. You can also configure the method to discover additional (extended) attributes.  
 
 Actions for Active Directory System Discovery are recorded in the file **adsysdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
@@ -163,7 +163,7 @@ For more information about how to configure this discovery method, see [Configur
 > [!TIP]  
 >  In addition to the information in this section, see [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared).  
 
-Use this discovery method to search Active Directory Domain Services (AD DS) to identify user accounts and associated attributes.  By default, this method discovers basic information about the user account including the following:  
+Use this discovery method to search Active Directory Domain Services to identify user accounts and associated attributes. By default, this method discovers basic information about the user account, including the following:  
 
 -   User name  
 
@@ -173,7 +173,7 @@ Use this discovery method to search Active Directory Domain Services (AD DS) to 
 
 -   Active Directory container names  
 
-You can view the full default list of object attributes returned by Active Directory User Discovery, and configure the method to discover additional  (extended) attributes in the **Active Directory User Discovery Properties** dialog box on the **Active Directory Attributes** tab.  
+In the **Active Directory User Discovery Properties** dialog box, on the **Active Directory Attributes** tab, you can view the full default list of object attributes that Active Directory User Discovery has returned. You can also configure the method to discover additional (extended) attributes.
 
 Actions for Active Directory User Discovery are recorded in the file **adusrdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
@@ -188,7 +188,7 @@ For more information about how to configure this discovery method, see [Configur
 
 -   **Computer account** of the site server  
 
-Heartbeat Discovery differs from other Configuration Manager discovery methods. It is enabled by default and runs on each computer client (instead of on a site server)  to create a discovery data record (DDR). For mobile device clients, this DDR is created by the management point that is being used by the mobile device client.  To help maintain the database record of Configuration Manager clients, do not disable Heartbeat Discovery.  In addition to maintaining the database record, this method can force discovery of a computer as a new resource record or can repopulate the database record of a computer that was deleted from the database.  
+Heartbeat Discovery differs from other Configuration Manager discovery methods. It is enabled by default and runs on each computer client (instead of on a site server) to create a DDR. For mobile device clients, this DDR is created by the management point that the mobile device client is using. To help maintain the database record of Configuration Manager clients, do not disable Heartbeat Discovery. In addition to maintaining the database record, this method can force discovery of a computer as a new resource record or can repopulate the database record of a computer that was deleted from the database.  
 
 Heartbeat Discovery runs either on a schedule configured for all clients in the hierarchy, or if manually invoked, on a specific client by running the **Discovery Data Collection Cycle** on the **Action** tab in a client’s Configuration Manager program. The default schedule for Heartbeat Discovery is set to every 7 days. If you change the heartbeat discovery interval, ensure that it runs more frequently than the site maintenance task **Delete Aged Discovery Data**, which deletes inactive client records from the site database. You can configure the **Delete Aged Discovery Data** task only for primary sites.  
 
@@ -236,7 +236,7 @@ For this method to  successfully discover a resource, Network Discovery must ide
 
 -   **SNMP Device:** Network Discovery can directly query a SNMP device. For Network Discovery to query a device, the device must have a local SNMP agent installed. You must also configure Network Discovery to use the community name that is being used by the SNMP agent.  
 
-When discovery identifies an IP-addressable object and can determine the objects subnet mask, it creates a discovery data record (DDR) for that object. Because different types of devices can connect to the network, Network Discovery can discover resources that cannot support the Configuration Manager client software. For example, devices that can be discovered but not managed include printers and routers.  
+When discovery identifies an IP-addressable object and can determine the objects subnet mask, it creates a DDR for that object. Because different types of devices can connect to the network, Network Discovery can discover resources that cannot support the Configuration Manager client software. For example, devices that can be discovered but not managed include printers and routers.  
 
 Network Discovery can return several attributes as part of the discovery record it creates. These include:  
 
@@ -316,7 +316,7 @@ Specify each SNMP device that you want Network Discovery to query.
 
 -   Network Discovery retrieves the ipNetToMediaTable value from any SNMP device that responds to the query. This value returns arrays of IP addresses that are client computers or other resources such as printers, routers, or other IP-addressable devices.  
 
--   To query a device, you must specify the IP Address or NetBIOS name of the device.  
+-   To query a device, you must specify the IP address or NetBIOS name of the device.  
 
 -   You must configure Network Discovery to use the community name of the device, or the device rejects the SNMP-based query.  
 
@@ -392,7 +392,7 @@ When discovery searches an untrusted forest for resources, the discovery agent m
 
 For each location that you specify, you can configure individual search options such as enabling a recursive search of the locations Active Directory child containers. You can also configure a unique account to use when it searches that location. This provides flexibility in configuring a discovery method at one site to search multiple Active Directory locations across multiple forests, without having to configure a single account that has permissions to all locations.  
 
-When each of these three discovery methods run at a specific site, the Configuration Manager site server at that site contacts the nearest domain controller in the specified Active Directory forest to locate Active Directory resources. The domain and forest can be in any supported Active Directory mode, and the account that you assign to each location instance must have **Read** access permission to the specified Active Directory locations. Discovery searches the specified locations for objects and then attempts to collect information about those objects. A discovery data record (DDR) is created when sufficient information about a resource can be identified. The required information varies depending on the discovery method that is being used.  
+When each of these three discovery methods run at a specific site, the Configuration Manager site server at that site contacts the nearest domain controller in the specified Active Directory forest to locate Active Directory resources. The domain and forest can be in any supported Active Directory mode, and the account that you assign to each location instance must have **Read** access permission to the specified Active Directory locations. Discovery searches the specified locations for objects and then attempts to collect information about those objects. A DDR is created when sufficient information about a resource can be identified. The required information varies depending on the discovery method that is being used.  
 
 If you configure the same discovery method to run at different Configuration Manager sites to take advantage of querying local Active Directory servers, you can configure each site with a unique set of discovery options. Because discovery data is shared with each site in the hierarchy, avoid overlap between these configurations to efficiently discover each resource a single time. For smaller environments, you might consider running each discovery method at only one single site in your hierarchy to reduce administrative overhead and the potential for multiple discovery actions to rediscover the same resources. When you minimize the number of sites that run discovery you can reduce the overall network bandwidth that is being used by discovery, and reduce the overall number of DDRs that are created and must be processed by your site servers.  
 
@@ -454,7 +454,7 @@ To use  this option:
 
 When configuring the time after the last logon that you want to use for this setting, consider the interval for replication between domain controllers.  
 
-You configure filtering on the **Option** tab in both **Active Directory System Discovery Properties** and **Active Directory Group Discovery Properties** dialog boxes by selecting the option **Only discover computers that have logged on to a domain in a given period of time**.  
+You configure filtering on the **Option** tab in the **Active Directory System Discovery Properties** and **Active Directory Group Discovery Properties** dialog boxes by selecting the option **Only discover computers that have logged on to a domain in a given period of time**.  
 
 > [!WARNING]  
 >  When you configure this filter and the **Filter stale records by computer password**, computers that meet the criteria of either filter are excluded from discovery.  
@@ -474,7 +474,7 @@ To use  this option:
 
 When configuring this option, consider the interval for updates to this attribute in addition to the replication interval between domain controllers.  
 
-You configure filtering on the **Option** tab in both **Active Directory System Discovery Properties** and **Active Directory Group Discovery Properties** dialog boxes by selecting the option **Only discover computers that have updated their computer account password in a given period of time**.  
+You configure filtering on the **Option** tab in the **Active Directory System Discovery Properties** and **Active Directory Group Discovery Properties** dialog boxes by selecting the option **Only discover computers that have updated their computer account password in a given period of time**.  
 
 > [!WARNING]  
 >  When you configure this filter and the **Filter stale records by domain logon**, computers that meet the criteria of either filter are excluded from discovery.  
@@ -488,4 +488,4 @@ You configure filtering on the **Option** tab in both **Active Directory System 
 
 Each discovery method supports a unique list of Active Directory attributes that can be discovered.  
 
-You can view and configure the list of  customized attributes on the **Active Directory Attributes** tab in both the **Active Directory System Discovery Properties** and **Active Directory User Discovery Properties** dialog boxes.  
+You can view and configure the list of customized attributes on the **Active Directory Attributes** tab in the **Active Directory System Discovery Properties** and **Active Directory User Discovery Properties** dialog boxes.  
