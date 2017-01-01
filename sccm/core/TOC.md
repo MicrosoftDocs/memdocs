@@ -293,7 +293,7 @@
 ###  [Security and privacy for power management](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [Upgrade clients](clients/manage/upgrade/upgrade-clients.md)
-###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
+###  [Test client upgrades in a pre-production collection](clients/manage/upgrade/test-client-upgrades.md)
 ###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md)
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
