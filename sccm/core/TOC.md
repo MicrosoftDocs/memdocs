@@ -260,7 +260,6 @@
 
 ##   Software inventory
 ###  [Introduction to software inventory](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [How to exclude folders from software inventory](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [How to configure software inventory](clients/manage/inventory/configure-software-inventory.md)
 ###  [How to use Resource Explorer to view software inventory](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Security and privacy for software inventory](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
