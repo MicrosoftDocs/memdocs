@@ -260,7 +260,6 @@
 
 ##   Software inventory
 ###  [Introduction to software inventory](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [How to exclude folders from software inventory](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [How to configure software inventory](clients/manage/inventory/configure-software-inventory.md)
 ###  [How to use Resource Explorer to view software inventory](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Security and privacy for software inventory](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
@@ -293,7 +292,7 @@
 ###  [Security and privacy for power management](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [Upgrade clients](clients/manage/upgrade/upgrade-clients.md)
-###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
+###  [Test client upgrades in a pre-production collection](clients/manage/upgrade/test-client-upgrades.md)
 ###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md)
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
