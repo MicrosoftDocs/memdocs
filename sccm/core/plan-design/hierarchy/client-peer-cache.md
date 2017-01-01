@@ -46,7 +46,7 @@ To help you understand the use of Peer Cache, you can view the Client Data Sourc
 - 	Because the current boundary of a Peer Cache content source is determined by that client's last hardware inventory submission, a client that roams to a network location and is in a different boundary group might still be considered a member of its former boundary group for the purposes of Peer Cache. This can result in a client being offered a Peer Cache content source that is not in its immediate network location. We recommend excluding clients that are prone to this configuration from participating as a Peer Cache source.
 
 ## To configure Client Peer Cache client settings
-1.	In the Configuration Manager console, go to **Administration** > **Client Settings**, and then open device client settings object you want to use. You can also modify the Default Client Settings object.
+1.	In the Configuration Manager console, go to **Administration** > **Client Settings**, and then open the device client settings object that you want to use. You can also modify the Default Client Settings object.
 2.	From the list of available settings, choose **Client Cache Settings**.
 3.	Set **Enable Configuration Manager client in full OS to share content** to **Yes**.
 4.	Configure the following settings to define the ports you want to use for Peer Cache:  

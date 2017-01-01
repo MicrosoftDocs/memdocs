@@ -120,7 +120,7 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     -   Install site system roles in that untrusted forest, with the option to publish site information to that Active Directory forest  
 
-    -   Manage these computers as if they are workgroup computers.  
+    -   Manage these computers as if they were workgroup computers.  
 
   When you install site system servers in an untrusted Active Directory forest, the client-to-server communication from clients in that forest is kept within that forest, and Configuration Manager can authenticate the computer by using Kerberos. When you publish site information to the client's forest, clients benefit from retrieving site information, such as a list of available management points, from their Active Directory forest, rather than downloading this information from their assigned management point.  
 
@@ -133,7 +133,7 @@ Configuration Manager also supports domain computers that are not in the same Ac
 
     -   Configure workgroup clients to use the Network Access Account so that these computers can retrieve content from distribution points.  
 
-    -   Provide an alternative mechanism for workgroup clients to find management points. You can use DNS publishing, or WINS, or directly assign a management point. This is because these clients cannot retrieve site information from Active Directory Domain Services.  
+    -   Provide an alternative mechanism for workgroup clients to find management points. You can use DNS publishing, WINS, or you can directly assign a management point. This is because these clients cannot retrieve site information from Active Directory Domain Services.  
 
     Related resources in this content library:  
 
@@ -146,16 +146,16 @@ Configuration Manager also supports domain computers that are not in the same Ac
 ###  <a name="bkmk_span"></a> Scenarios to support a site or hierarchy that spans multiple domains and forests  
 
 #### Communication between sites in a hierarchy that spans forests  
-This scenario requires a two-way forest trust, which supports Kerberos authentication.  If you do not have a two-way forest trust that supports Kerberos authentication, then Configuration Manager does not support a child site in the remote forest.  
+This scenario requires a two-way forest trust that supports Kerberos authentication.  If you do not have a two-way forest trust that supports Kerberos authentication, then Configuration Manager does not support a child site in the remote forest.  
 
  **Configuration Manager supports installing a child site in a remote forest that has the required two-way trust with the forest of the parent site**  
 
--   For example, you can place a secondary site in a different forest from its primary parent site so long as the required trust exists.  
+-   For example, you can place a secondary site in a different forest from its primary parent site as long as the required trust exists.  
 
 > [!NOTE]  
 >  A child site can be primary site (where the central administration site is the parent site) or a secondary site.  
 
-Intersite communication in Configuration Manager uses database replication and file-based transfers. When you install a site, you must specify an account to install the site on the designated server. This account also establishes and maintains communication between sites.  
+Intersite communication in Configuration Manager uses database replication and file-based transfers. When you install a site, you must specify an account with which to install the site on the designated server. This account also establishes and maintains communication between sites.  
 
 After the site successfully installs and initiates file-based transfers and database replication, you do not have to configure anything else for communication to the site.  
 
@@ -192,7 +192,7 @@ This scenario does not require a two-way forest trust.
 
 **To use a site system role that was installed in an untrusted forest,** firewalls must allow the network traffic even when the site server initiates the transfer of data.  
 
-Additionally, the following site system roles require direct access to the site database. Therefore, firewalls must allow applicable traffic from the untrusted forest to the sites SQL Server:  
+Additionally, the following site system roles require direct access to the site database. Therefore, firewalls must allow applicable traffic from the untrusted forest to the site's SQL Server:  
 
 -   Asset Intelligence synchronization point  
 
