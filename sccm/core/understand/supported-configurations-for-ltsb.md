@@ -1,6 +1,6 @@
 ---
 title: "Supported Configurations for the LTSB  | Microsoft Docs"
-description: "Understand what operating systems and dependent products work with the Long-Term Servicing branch of System Center Configuration Manager."
+description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/12/2016
 ms.prod: configuration-manager
@@ -20,7 +20,7 @@ Use the information in this topic to understand what operating systems and produ
 If not stated otherwise in this or the LTSB specific topics, the same configurations and limitations that apply to the Current Branch version 1606 apply to the LTSB.  When conflicts occur, use the information that applies to the edition you are using. Typically, the LTSB is more limited than the Current Branch.
 
 ## General statement of support
-The products and technologies detailed in the following sections are supported with Configuration Manager. However, their inclusion in this content does not express an extension of support for any product beyond that products individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website and read the [Microsoft Support Lifecycle Policy FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).
+The products and technologies detailed in the following sections are supported with Configuration Manager. But, their inclusion in this content does not express an extension of support for any product beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/p/?LinkId=208270) website and read the [Microsoft Support Lifecycle Policy FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976).
 
 Additionally, products and product versions that are not listed in the following topics are not supported unless they have been announced on the [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
 
@@ -28,58 +28,58 @@ Additionally, products and product versions that are not listed in the following
 The LTSB has limited support for future server and client operating systems and product dependencies. The platforms list for the LTSB is fixed for the life of the release:
 
 **Windows:**
-- Only quality and security updates for Windows will be supported
-- No support will be added for current branches (CB), current branches for business (CBB), or LTSB of Windows 10
--	No support for new major versions of Windows Server
+- Only quality and security updates for Windows is supported.
+- No support is added for current branches (CB), current branches for business (CBB), or LTSB of Windows 10.
+-	No support for new major versions of Windows Server.
 
 **SQL Server:**
-- Only quality and security updates or minor upgrades like service packs will be supported for SQL Server
-- No support for new major versions of SQL Server  
+- Only quality and security updates, or minor upgrades like service packs, is supported for SQL Server.
+- No support for new major versions of SQL Server.  
 
 ## Site systems and servers
-The LTSB supports using the following Windows computer operating systems as site systems.  Each operating system has the same requirements and limitations as the same entry in [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  For example, the server core installation of Windows 2012 R2 must be an x64 version, is only supported to host a distribution point, and does not support PXE or Multicast.
+The LTSB supports the use of the following Windows computer operating systems as site systems.  Each operating system has the same requirements and limitations as the same entry in [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  For example, the Server Core installation of Windows 2012 R2 must be an x64 version, is only supported to host a distribution point, and does not support PXE or Multicast.
 
 **Supported operating systems:**
-- **Windows Server 2016**
-- **Windows Server 2012** (x64) – Standard, Datacenter
-- **Windows Server 2008 R2 with SP1** (x64) – Standard, Enterprise, Datacenter
-- **Windows Server 2008 with SP2** (x86, x64) – Standard, Enterprise, Datacenter
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise
-- **Windows 7 with SP1** (x86, x64) – Professional, Enterprise, Ultimate
-- **The server core installation of Windows Server 2012**
-- **The server core installation of Windows Server 2012 R2**  
+- Windows Server 2016.
+- Windows Server 2012 (x64) – Standard, Datacenter.
+- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter.
+- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter.
+- Windows 10 Enterprise 2015 LTSB (x86, x64).
+- Windows 10 Enterprise 2016 LTSB (x86, x64).
+- Windows 8.1 (x86, x64) – Professional, Enterprise.
+- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate.
+- The Server Core installation of Windows Server 2012.
+- The Server Core installation of Windows Server 2012 R2.  
 
 ## Client management
-The following sections identify the client operating systems you can manage using the LTSB. The LTSB does not support the addition of new operating systems as supported clients.
+The following sections identify the client operating systems that you can manage with the LTSB. The LTSB does not support the addition of new operating systems as supported clients.
 
 ### Windows computers
-You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manage. For more information see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manage. For more information, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
 **Supported operating systems:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard, Datacenter (Note 1)
-- **Windows Server 2012** (x64) – Standard, Datacenter (Note 1)
-- **Windows Storage Server 2012 R2** (x64)
-- **Windows Storage Server 2012** (x64)
-- **Windows Server 2008 R2 with SP1** (x64) – Standard, Enterprise, Datacenter (Note 1)
-- **Windows Storage Server 2008 R2** (x86, x64) - Workgroup, Standard, Enterprise
-- **Windows Server 2008 with SP2** (x86, x64) - Standard, Enterprise, Datacenter (Note 1)
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise
-- **Windows 7 with SP1** (x86, x64) – Professional, Enterprise, Ultimate
-- **The Server Core installation of Windows Server 2012 R2** (x64) (Note 2)
-- **The Server Core installation of Windows Server 2012** (x64) (Note 2)
-- **The Server Core installation of Windows Server 2008 R2 SP1** (x64)
-- **The Server Core installation of Windows Server 2008 SP2** (x86, x64)
+- Windows Server 2016.
+- Windows Server 2012 R2 (x64) – Standard, Datacenter (Note 1).
+- Windows Server 2012 (x64) – Standard, Datacenter (Note 1).
+- Windows Storage Server 2012 R2 (x64).
+- Windows Storage Server 2012 (x64).
+- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter (Note 1).
+- Windows Storage Server 2008 R2 (x86, x64) – Workgroup, Standard, Enterprise.
+- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter (Note 1).
+- Windows 10 Enterprise 2015 LTSB (x86, x64).
+- Windows 10 Enterprise 2016 LTSB (x86, x64).
+- Windows 8.1 (x86, x64) – Professional, Enterprise.
+- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate.
+- The Server Core installation of Windows Server 2012 R2 (x64) (Note 2).
+- The Server Core installation of Windows Server 2012 (x64) (Note 2).
+- The Server Core installation of Windows Server 2008 R2 SP1 (x64).
+- The Server Core installation of Windows Server 2008 SP2 (x86, x64).
 
 **(Note 1)** Datacenter releases are supported but not certified for Configuration Manager.  
-**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see Install Server Roles and Features on a Server Core Server in the Windows Server 2012 TechNet library.
+**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install server roles and features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
 
-### Windows Embedded:
-You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
+### Windows Embedded
+You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
 
 **Requirements and limitations:**  
 
@@ -89,32 +89,32 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
     -   Enhanced Write Filters (EWF)    
 
-    -   RAM File Based Write Filters (FBWF)    
+    -   RAM File-Based Write Filters (FBWF)    
 
     -   Unified Write Filters (UWF)  
 
 -   The Application Catalog is not supported for any Windows Embedded device.  
 
--   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in the folder **%windir%\System32\WBEM** on the embedded device to ensure that detected malware is reported.  
+-   Before you can monitor detected malware on Windows Embedded devices based on Windows XP, you must install the Microsoft Windows WMI scripting package on the embedded device. Use Windows Embedded Target Designer to install this package. The *WBEMDISP.DLL* and *WBEMDISP.TLB* files must exist and be registered in the %windir%\System32\WBEM folder on the embedded device to ensure that detected malware is reported.  
 
 **Supported operating systems:**  
--   **Windows 10 Enterprise 2016 LTSB** (x86, x64)  
--   **Windows 10 Enterprise 2015 LTSB** (x86, x64)  
--   **Windows Embedded 8.1 Industry** (x86, x64)    
--   **Windows Thin PC** (x86, x64)    
--   **Windows Embedded POSReady 7** (x86, x64)    
--   **Windows Embedded Standard 7 with SP1** (x86, x64)    
--   **Windows Embedded POSReady 2009** (x86)   
--   **Windows Embedded Standard 2009** (x86)  
+-   Windows 10 Enterprise 2016 LTSB (x86, x64)  
+-   Windows 10 Enterprise 2015 LTSB (x86, x64)  
+-   Windows Embedded 8.1 Industry (x86, x64)    
+-   Windows Thin PC (x86, x64)    
+-   Windows Embedded POSReady 7 (x86, x64)    
+-   Windows Embedded Standard 7 with SP1 (x86, x64)    
+-   Windows Embedded POSReady 2009 (x86)   
+-   Windows Embedded Standard 2009 (x86)  
 
 ### Windows CE  
  You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
 
-**Requirements and limitations**  
+**Requirements and limitations:**  
 
--   The mobile device client requires 0.78 MB or storage space to install the client. Logging on the mobile device can require up to 256 KB of additional storage space.    
+-   The mobile device client requires 0.78 MB of storage space to install the client. A mobile device can require up to 256 KB of additional storage space to sign in.    
 
--   Features for these mobile devices vary by platform and client type. For information about which management functions Configuration Manager supports for mobile device legacy client, see [Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   Features for these mobile devices vary by platform and client type. For information about the kind of management functions that Configuration Manager supports for a mobile device legacy client, see [Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
 
 **Supported operating systems:**  
 
@@ -135,27 +135,27 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 ### Mac computers  
  You can use the LTSB to manage Mac OS X computers with the Configuration Manager client for Mac.
 
-The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the Clients for Additional Operating Systems download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
+The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
-Support for Mac operating systems is limited to those listed in this section and does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
+Support for Mac operating systems is limited to those listed in this section, and does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
 For more information, see [How to deploy clients to Macs in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
 **Supported versions:**  
--   **Mac OS X 10.9** (Mavericks)  
--   **Mac OS X 10.10** (Yosemite)  
--   **Mac OS X 10.11** (El Capitan)  
+-   Mac OS X 10.9 (Mavericks)  
+-   Mac OS X 10.10 (Yosemite)  
+-   Mac OS X 10.11 (El Capitan)  
 
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
 
-The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the Clients for Additional Operating Systems download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
+The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
 
 Support for Linux and UNIX operating systems is limited to those listed in this section and does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
 
 **Requirements and limitations:**  
 
--   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
+-   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for client deployment to Linux and UNIX servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
 -   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).
@@ -258,62 +258,63 @@ The following versions are supported by using the indicated .tar file.
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Exchange Server connector
- The LTSB supports limited management of devices that connect to your Exchange Server, without installing client software. For more information see [Manage mobile devices with System Center Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
+ The LTSB supports limited management of devices that connect to your Exchange Server, without installing client software. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
 
  **Requirements and limitations:**  
 
--   Configuration Manager offers limited management for mobile devices when you use the Exchange Server connector for Exchange Active Sync (EAS) capable devices that connect to a server running Exchange Server or Exchange Online.  
+-   Configuration Manager offers limited management for mobile devices. Limited management is available when you use the Exchange Server connector for Exchange Active Sync (EAS) capable devices that connect to a server running Exchange Server or Exchange Online.  
 
--   For more information about which management functions Configuration Manager supports for mobile devices that the Exchange Server connector manages, see [Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   For more information about the management functions that Configuration Manager supports for mobile devices that the Exchange Server connector manages, see [Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
 
 **Supported versions of Exchange Server:**  
--   **Exchange Server 2010 SP1**  
--   **Exchange Server 2010 SP2**  
--   **Exchange Server 2013**  
+-   Exchange Server 2010 SP1  
+-   Exchange Server 2010 SP2  
+-   Exchange Server 2013  
 
 > [!NOTE]
-> The LTSB does not support managing devices that connect thorough an online service, like Exchange Online (Office 365).
+> The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Office 365).
 
 
 ## Configuration Manager console
 The LTSB supports the following operating systems to run the Configuration Manager console. Each computer that hosts the console must have a minimum .NET Framework version of 4.5.2 except for Windows 10, which requires a minimum of .NET Framework 4.6.
 
 **Supported operating systems:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard, Datacenter
-- **Windows Server 2012** (x64) – Standard, Datacenter
-- **Windows Server 2008 R2 with SP1** (x64) – Standard, Enterprise, Datacenter
-- **Windows Server 2008 with SP2** (x86, x64) – Standard, Enterprise, Datacenter
-- **Windows 10 Enterprise 2016 LTSB** (x86, x64)
-- **Windows 10 Enterprise 2015 LTSB** (x86, x64)
-- **Windows 8.1** (x86, x64) – Professional, Enterprise
-Windows 7 with SP1** (x86, x64) – Professional, Enterprise, Ultimate
+- Windows Server 2016
+- Windows Server 2012 R2 (x64) – Standard, Datacenter
+- Windows Server 2012 (x64) – Standard, Datacenter
+- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter
+- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 8.1 (x86, x64) – Professional, Enterprise
+- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate
+
 
 ## SQL Server versions supported for the site database and reporting point
-The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) for the Current Branch apply to the LTSB.  This includes the use of a SQL Server Cluster, or SQL Server AlwaysOn availability group.  
+The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) for the Current Branch apply to the LTSB.  This includes the use of a SQL Server Cluster, or a SQL Server AlwaysOn availability group.  
 
 **Supported versions:**
 
-- **SQL Server 2016** - Standard, Enterprise
-- **SQL Server 2014 SP2** – Standard, Enterprise
-- **SQL Server 2014 SP1** – Standard, Enterprise
-- **SQL Server 2012 SP3** – Standard, Enterprise
-- **SQL Server 2012 SP2** – Standard, Enterprise
-- **SQL Server 2008 R2 SP3** – Standard, Enterprise, Datacenter
-- **SQL Server 2016 Express**
-- **SQL Server 2014 Express SP2**
-- **SQL Server 2014 Express SP1**
-- **SQL Server 2012 Express SP3**
-- **SQL Server 2012 Express SP2**
+- SQL Server 2016 – Standard, Enterprise
+- SQL Server 2014 SP2 – Standard, Enterprise
+- SQL Server 2014 SP1 – Standard, Enterprise
+- SQL Server 2012 SP3 – Standard, Enterprise
+- SQL Server 2012 SP2 – Standard, Enterprise
+- SQL Server 2008 R2 SP3 – Standard, Enterprise, Datacenter
+- SQL Server 2016 Express
+- SQL Server 2014 Express SP2
+- SQL Server 2014 Express SP1
+- SQL Server 2012 Express SP3
+- SQL Server 2012 Express SP2
 
 ## Support for Active Directory domains
 All LTSB site systems must be members of a supported Windows Active Directory domain. Support for Active Directory domains has the same requirements and limitations as those that appear in [Support for Active Directory domains](/sccm/core/plan-design/configs/support-for-active-directory-domains), but is limited to the following domain functional levels:
 
 **Supported levels:**
-- **Windows Server 2008**
-- **Windows Server 2008 R2**
-- **Windows Server 2012**
-- **Windows Server 2012 R2**
+- Windows Server 2008
+- Windows Server 2008 R2
+- Windows Server 2012
+- Windows Server 2012 R2
 
 ## Additional support topics that apply to the Long-Term Servicing Branch
 The information in the following Current Branch topics apply to the LTSB:
@@ -322,4 +323,4 @@ The information in the following Current Branch topics apply to the LTSB:
 - [High availability options](/sccm/protect/understand/high-availability-options)
 - [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
 - [Support for Windows features and networks](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
-- [Support for Virtualization Environments](/sccm/core/plan-design/configs/support-for-virtualization-environments)
+- [Support for virtualization environments](/sccm/core/plan-design/configs/support-for-virtualization-environments)
