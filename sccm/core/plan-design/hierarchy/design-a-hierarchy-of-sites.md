@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Design a hierarchy of sites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Before installing the first site of a new System Center Configuration Manager hierarchy, it's a good idea to understand the available topologies for Configuration Manager, the available types of sites and their relationships with each other, and the scope of management that each site type provides.
+Before installing the first site of a new System Center Configuration Manager hierarchy, it's a good idea to understand the available topologies for Configuration Manager, the types of available sites and their relationships with each other, and the scope of management that each site type provides.
 Then, after considering content management options that can reduce the number of sites you need to install, you can plan a topology that efficiently serves your current business needs and can later expand to manage future growth.  
 
 > [!NOTE]
@@ -26,7 +26,7 @@ Then, after considering content management options that can reduce the number of
 ##  <a name="bkmk_topology"></a> Hierarchy topology  
  Hierarchy topologies range from a single stand-alone primary site to a group of connected primary and secondary sites with a central administration site at the top-level (top-tier) site of the hierarchy.   The key driver of the type and count of sites that you use in a hierarchy is usually the number and type of devices you must support, as follows:   
 
- **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your company’s different geographic locations can be successful served by a single primary site.  To help manage the network traffic, you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
+ **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your company’s different geographic locations can be successfully served by a single primary site.  To help manage network traffic, you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
 
  Benefit of this topology include:  
 
@@ -74,7 +74,7 @@ Then, after considering content management options that can reduce the number of
 -   You can configure file replication and database replication to control communication between sites in the hierarchy. This includes scheduling database replication for site data and managing the bandwidth for the transfer of file-based data between sites.  
 
 ##  <a name="BKMK_ChoosePriimary"></a> Determine when to use a primary site  
- Use primary sites to manage clients. You can install a primary site as a child primary site below a central administration site, or as the first site of a new hierarchy. A primary site that installs as the first site of a hierarchy creates a stand-alone primary site. Both child primary sites and stand-alone primary sites support secondary sites as child sites of the primary site.  
+ Use primary sites to manage clients. You can install a primary site as a child primary site below a central administration site, or as the first site of a new hierarchy. A primary site that is installed as the first site of a hierarchy creates a stand-alone primary site. Both child primary sites and stand-alone primary sites support secondary sites as child sites of the primary site.  
 
  Consider using a primary site for any of the following reasons:  
 
@@ -97,7 +97,7 @@ Then, after considering content management options that can reduce the number of
 
 -   Primary sites are responsible for processing all client data from their assigned clients.  
 
--   Primary sites use database replication to communicate directly to their central administration site (this is configured automatically when a new site installs).  
+-   Primary sites use database replication to communicate directly to their central administration site (which is configured automatically when a new site installs).  
 
 ##  <a name="BKMK_ChooseSecondary"></a> Determine when to use a secondary site  
  Use secondary sites to manage the transfer of deployment content and client data across low-bandwidth networks.  
@@ -121,7 +121,7 @@ However, you can route content between two peer secondary sites to help manage t
 
 -   Secondary sites automatically install SQL Server Express during site installation if a local instance of SQL Server is not available.  
 
--   Secondary site installation is initiated from the Configuration Manager console, instead of by a Configuration Manager set up directly on a computer.  
+-   Secondary site installation is initiated from the Configuration Manager console, instead of by an instance of Configuration Manager that's set up directly on a computer.  
 
 -   Secondary sites use a subset of the information in the site database, which reduces the amount of data that replicates by database replication between the parent primary site and secondary site.  
 
@@ -152,7 +152,7 @@ However, you can route content between two peer secondary sites to help manage t
 
 -   Determine which [features and capabilities of System Center Configuration Manager](../../../core/plan-design/changes/features-and-capabilities.md) you plan to use, the site system roles or Windows infrastructure they require, and at which sites in a multiple site hierarchy you might deploy them for the most efficient use of your network and server resources.  
 
--   Consider security for data and devices, including the use of a PKI. See [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md)  
+-   Consider security for data and devices, including the use of a PKI. See [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
 
 **Review the following resources for site-specific configurations:**  

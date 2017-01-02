@@ -20,7 +20,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 > [!IMPORTANT]  
 > **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information that's specific to boundary groups with these versions of Configuration Manager.
 >
-> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Managers](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
+> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
 
 
 
@@ -28,7 +28,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **The following three settings define the behavior when clients request content:**
 
--  **Allow fallback source location for content** (Enabled or not enabled): This is an option that you can enable on the **Boundary Groups** tab of a distribution point. This allows the client to use a distribution point that's configured as a fallback location when content is not available on a preferred distribution point.  
+-  **Allow fallback source location for content** (enabled or not enabled): This is an option that you can enable on the **Boundary Groups** tab of a distribution point. This allows the client to use a distribution point that's configured as a fallback location when content is not available on a preferred distribution point.  
 
  - **Deployment behavior for network connection speed**: Each deployment is configured with one of the following behaviors to use when the connection to the distribution point is slow:  
 
@@ -36,9 +36,9 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
     -   **Do not download content**: This option is only used when a client uses a fallback location to obtain content.  
 
-    The connection speed for a distribution point is configured on the **References** tab of boundary group, and is specific to that boundary group.  
+    The connection speed for a distribution point is configured on the **References** tab of a boundary group, and is specific to that boundary group.  
 
- -  **On-demand package distribution** (to preferred distribution points): This is enabled when you select the option **Distribute the content for this package to preferred distribution points** on the **Distribution Settings** tab of a package or applications properties. When enabled, this option directs Configuration Manager to automatically copy the content to a preferred distribution point that does not yet have the content after a client requests that content from that distribution point.  
+ -  **On-demand package distribution** (to preferred distribution points): This is enabled when you select the option **Distribute the content for this package to preferred distribution points** on the **Distribution Settings** tab of a package's or application's properties. When enabled, this option directs Configuration Manager to automatically copy the content to a preferred distribution point that does not yet have the content after a client requests that content from that distribution point.  
 
 
  **The following requirements apply to all scenarios:**
@@ -97,7 +97,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **Details:** (The configuration for on-demand package distribution is not relevant in this scenario.)  
 
-1.  The client sends a content request to the management point. The client includes a flag with the request that indicates fallback distribution points are allowed.  
+1.  The client sends a content request to the management point. The client includes a flag with the request that indicates that fallback distribution points are allowed.  
 
 2.  A content location list is returned to the client from the management point with the preferred distribution points and fallback distribution points that contain the content.  
 
@@ -137,7 +137,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **Details:**  
 
-1.  The client sends a content request to the management point. The client includes a flag with the request that indicates fallback distribution points are allowed.  
+1.  The client sends a content request to the management point. The client includes a flag with the request that indicates that fallback distribution points are allowed.  
 
 2.  A content location list is returned to the client from the management point with the preferred distribution points and fallback distribution points that have the content. There are no preferred distribution points that have the content, but at least one fallback distribution point has the content.  
 
@@ -235,7 +235,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **Details:**  
 
-1.  The client sends a content request to the management point. The client includes a flag with the request that indicates fallback distribution points are allowed.  
+1.  The client sends a content request to the management point. The client includes a flag with the request that indicates that fallback distribution points are allowed.  
 
 2.  A content location list is returned to the client from the management point with the preferred distribution points and fallback distribution points that have the content. There are no preferred distribution points that have the content, but at least one fallback distribution point has the content.  
 
