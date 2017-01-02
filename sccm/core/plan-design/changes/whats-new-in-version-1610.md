@@ -150,22 +150,24 @@ For more information:
 - [How to configure client settings](../../clients/deploy/configure-client-settings.md)
 
 ## Software updates dashboard
-You can use the new Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+Use the new software updates dashboard to view the current compliance status of devices in your organization, and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
 For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
 
 
 ## Improvements to the application request process
-After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console (previously this button was grayed out after approval).
+After you have approved an application for installation, you can subsequently choose to deny the request by clicking **Deny** in the Configuration Manager console. Previously, this button was grayed out after approval.
+
 This action does not cause the application to be uninstalled from any devices. However, it does stop users from installing new copies of the application from Software Center.
 
 ## Filter by content size in automatic deployment rules
-You can now filter on the content size for software updates in automatic deployment rules. For example, you can set the **Content Size (KB)** filter to **< 2048** to only download software updates that are smaller than 2MB. Using this filter prevents large software updates from automatically downloading to better support simplified Windows down-level servicing when network bandwidth is limited. For details, see:
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+You can now filter on the content size for software updates in automatic deployment rules. For example, to download only software updates that are smaller than 2 MB, you can set the **Content Size (KB)** filter to **< 2048**. Using this filter prevents large software updates from automatically downloading, which better supports simplified Windows down-level servicing when network bandwidth is limited. For details, see:
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
 - [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 
-#### To configure the Content Size field
-To configure the **Content Size (KB)** field, go to the **Software Updates** page in the Create Automatic Deployment Rule Wizard when you create an ADR or go to the **Software Updates** tab in the properties for an existing ADR.
+To configure the **Content Size (KB)** field, do one of the following:
+- When you create an automatic deployment rule, in the Create Automatic Deployment Rule wizard, go to the **Software Updates** page.
+- In the properties for an existing automatic deployment rule, go to the **Software Updates** tab.
 
 ## Office 365 Client Management dashboard
 The Office 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
