@@ -46,7 +46,7 @@ Deploying clients across your site takes time and some installations are not suc
 
 -   If you want to change the scope of the report, click **Browse...** and choose a different collection.  
 
- To learn more about pre-production client deployments, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
+ To learn more about pre-production client deployments, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).
 
  > [!NOTE]
  > The deployment status on computers hosting site system roles in a pre-production collection may be reported as **Not compliant** even when the client was successfully deployed. When you promote the client to production, the deployment status is reported correctly.   

@@ -2,7 +2,7 @@
 title: "Upgrade clients | Microsoft Docs"
 description: "Get information about how to upgrade clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Upgrade clients in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You can use different methods to upgrade the System Center Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers in your enterprise. The following sections outlines the advantages and disadvantages of each client upgrade method to help you determine which will work best for your organization.  
+You can use different methods to upgrade the System Center Configuration Manager client software on Windows computers, UNIX and Linux servers, and Mac computers. Here are the advantages and disadvantages of each method.  
 
 > [!TIP]  
->  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients.   The latest current branch update contains the latest version of the client, so it's best to do client upgrades after you have installed all of the Configuration Manager updates you want to use.  
+>  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients. This way, you'll also have the most recent version of the client software.  
 
 ## Group Policy installation  
  **Supported client platform:** Windows  
@@ -36,11 +36,10 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Disadvantages**  
 
--   Can cause high network traffic if a large number of clients are being upgraded.  
+-   Can cause high network traffic if you're upgrading a lot of clients.  
 
--   If the Active Directory schema is not extended for Configuration Manager, you must use Group Policy settings to add client installation properties to computers in your site.  
+-   If the Active Directory schema is not extended for Configuration Manager, you must use [Group Policy settings](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) to add client installation properties to computers in your site.  
 
- For more information, see [How to Install Configuration Manager Clients by Using Group Policy](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP).  
 
 ## Logon script installation  
  **Supported client platform:** Windows  
@@ -55,9 +54,9 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Disadvantages**  
 
--   Can cause high network traffic if a large number of clients are being upgraded over a short time period.  
+-   Can cause high network traffic if you're upgrading a lot of clients in a short time.  
 
--   Can take a long time to upgrade on all client computers if users do not frequently log on to the network.  
+-   Can take a long time to upgrade all client computers if users do not frequently log on to the network.  
 
  For more information, see [How to Install Configuration Manager Clients by Using Logon Scripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
 
@@ -88,7 +87,7 @@ You can use different methods to upgrade the System Center Configuration Manager
  **Supported client platform:** Windows  
 
 > [!NOTE]  
->  You cannot upgrade Configuration Manager 2007 clients by using this method. In this scenario, you can deploy the Configuration Manager client as a package from the Configuration Manager 2007 site, or you can use automatic client upgrade which automatically creates and deploys a package that contains the latest version of the client.  
+>  You cannot upgrade Configuration Manager 2007 clients with this method. In this scenario, you can deploy the Configuration Manager client as a package from the Configuration Manager 2007 site, or you can use automatic client upgrade which automatically creates and deploys a package that contains the latest version of the client.  
 
  **Advantages**  
 
@@ -96,7 +95,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Disadvantages**  
 
--   Can cause high network traffic when distributing the client to large collections.  
+-   Can cause high network traffic if you distribute the client to large collections.  
 
 -   Can only be used to upgrade the client software on computers that have been discovered and assigned to the site.  
 
@@ -105,7 +104,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 ## Automatic client upgrade  
 
 > [!NOTE]  
->  Can be used to upgrade Configuration Manager 2007 clients to System Center Configuration Manager clients. A Configuration Manager 2007client can assign to a Configuration Manager site, but cannot perform any actions besides automatic client upgrade.  
+>  Can be used to upgrade Configuration Manager 2007 clients to System Center Configuration Manager clients. A Configuration Manager 2007 client can assign to a Configuration Manager site, but cannot perform any actions besides automatic client upgrade.  
 
  **Supported client platform:** Windows  
 
@@ -113,7 +112,7 @@ You can use different methods to upgrade the System Center Configuration Manager
 
 -   Can be used to automatically keep clients in your site at the latest version.  
 
--   Requires minimal administration by the administrative user.  
+-   Requires minimal administration.  
 
  **Disadvantages**  
 
@@ -132,12 +131,12 @@ You can use different methods to upgrade the System Center Configuration Manager
 
  **Advantages**  
 
--   Can be used to test new client versions in a smaller preproduction collection.  
+-   Can be used to test new client versions in a smaller pre-production collection.  
 
--   When testing is complete, clients in preproduction are promoted to production and automatically upgraded across the Configuration Manager site.  
+-   When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.  
 
  **Disadvantages**  
 
 -   Can only be used to upgrade the client software and cannot be used to install a new client.  
 
- [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
