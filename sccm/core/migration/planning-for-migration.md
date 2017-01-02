@@ -19,7 +19,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Plan for migration to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Before you migrate data to a System Center Configuration Manager destination hierarchy, make sure that you are familiar with sites and hierarchies in Configuration Manager. For more about sites and hierarchies, see [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md).  
 
- You must install a System Center Configuration Manager hierarchy to be the destination hierarchy before you can migrate data from a supported source hierarchy.  
+ You must install a System Center Configuration Manager hierarchy to be the destination hierarchy before you migrate data from a supported source hierarchy.  
 
  After you install the destination hierarchy, set up the management features and functions that you want to use in your destination hierarchy before you start to migrate data.  
 
@@ -28,7 +28,7 @@ Before you migrate data to a System Center Configuration Manager destination hie
  For more about site assignments, see [Client site assignment considerations](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) in [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
 ## Plan Topics  
- Use the following topics to help you plan how to migrate a supported source hierarchy to a System Center Configuration Manager destination hierarchy: 
+ Use the following topics to help you plan how to migrate a supported source hierarchy to a System Center Configuration Manager destination hierarchy:
 
 -   [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)  
 
