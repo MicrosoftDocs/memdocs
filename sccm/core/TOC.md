@@ -232,6 +232,7 @@
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [Maintain Mac clients](clients/manage/maintain-mac-clients)
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)

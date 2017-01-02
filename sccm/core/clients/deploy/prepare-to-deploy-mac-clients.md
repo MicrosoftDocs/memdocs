@@ -11,7 +11,7 @@ ms.suite: na
 ms.technology:
   - configmgr-client
 ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 caps.latest.revision: 12
 author: nbigman
@@ -21,6 +21,8 @@ manager: angrobe
 ---
 
 # Prepare to deploy client software to Macs
+
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 Follow these steps to ensure that you're ready to [deploy the Configuration Manager client to Mac computers](/sccm/core/clients/deploy/deploy-clients-to-macs). 
 
@@ -55,9 +57,9 @@ If Mac clients cannot confirm the certificate revocation status for a server cer
 
 Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
 
--   Use Configuration Manager enrollment by using the CMEnroll tool and follow the steps in the next section of this topic. The enrollment process does not support automatic certificate renewal so you must re-enroll Mac computers before the installed certificate expires.  
+-   Use Configuration Manager enrollment by using the [CMEnroll tool](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). The enrollment process does not support automatic certificate renewal so you must re-enroll Mac computers before the installed certificate expires.  
 
--   Use a certificate request and installation method that is independent from Configuration Manager. For this installation method, see the [Use a certificate request and installation method that is independent from Configuration Manager](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager) section in this topic.  
+-   [Use a certificate request and installation method that is independent from Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
 
 For more information about the Mac client certificate requirement and other PKI certificates that are required to support Mac computers, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
@@ -84,7 +86,6 @@ Specify the site system's Internet FQDN value in the web server certificate for 
 
 For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
- 
 
 ## Deploy a client authentication certificate to site system servers  
  If these site systems don't have it, deploy a client authentication certificate to the computers that host these site system roles:  
@@ -98,9 +99,6 @@ For an example deployment that creates and installs this web server certificate,
  For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
 
 ## Prepare the client certificate template for Macs  
-
-> [!NOTE]  
->  To run the Configuration Manager enrollment tool, you must have an Active Directory user account.  
 
  The certificate template must have **Read** and **Enroll** permissions for the user account that will enroll the certificate on the Mac computer.  
 
