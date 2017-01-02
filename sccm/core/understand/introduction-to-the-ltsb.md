@@ -53,7 +53,7 @@ When compared to the Current Branch, the LTSB has the following support limitati
 -	No support for Asset Intelligence.
 -	No support for cloud-based distribution points.
 -	No support for Support for Exchange Online as an Exchange Connector.
--	Does not support any pre-release features.
+-	Does not support any prerelease features.
 
 
 Although support for these features is not included in the LTSB, some features remain visible in the Configuration Manager console, but cannot be selected or used.
@@ -99,7 +99,7 @@ For information about the different versions of Configuration Manager, see "Base
 ### Updates and servicing of the LTSB
 Only critical security updates are made available as in-console updates in the LTSB.
 
-Information about regular updates for the subsequent Current Branch releases are visible in the console. Because these are not made available to the LTSB these updates are not downloaded, and cannot be installed.
+Information about regular updates for the subsequent Current Branch releases are visible in the console, but are not made available to the LTSB. They are not downloaded and cannot be installed.
 
 To support in-console updates for critical security fixes, an LTSB site requires the use of [the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point). You can configure this site system role in offline or online mode, as is done for the Current Branch. The LTSB collects and submits the same telemetry and usage data as the Current Branch.
 
