@@ -41,10 +41,8 @@ Note that, depending on the device type, some of these options might not be avai
 
     -   **Add the device to a new or existing collection**  
 
-         Quickly add the selected device to a collection with a direct rule.  
-
-         [Operations and maintenance for collections in System Center Configuration Manager](../../../core/clients/manage/collections/operations-and-maintenance-for-collections.md)  
-
+         Add the device to a collection with a direct rule.  
+         
     -   **Install and reinstall the client by using the Client Push wizard**  
 
          Install and reinstall the Configuration Manager client to repair it or to reconfigure it on computers that run Windows. Includes site configuration options and client.msi properties that you set for client push installation.  
