@@ -20,7 +20,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 > [!IMPORTANT]  
 > **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information that's specific to boundary groups with these versions of Configuration Manager.
 >
-> **If your sites run version 1610 or later**, use the information in [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
+> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for System Center Configuration Managers](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups) to understand how your clients find distribution points that have available content.
 
 
 
@@ -157,7 +157,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 **Details:**  
 
-1.  The client sends a content request to the management point. The client includes a flag with the request that indicates fallback distribution points are enabled.  
+1.  The client sends a content request to the management point. The client includes a flag with the request that indicates that fallback distribution points are enabled.  
 
 2.  A content location list is returned to the client from the management point with the preferred distribution points and fallback distribution points that have the content. There are no preferred distribution points that have the content, but at least one fallback distribution point that has the content.  
 
@@ -239,7 +239,7 @@ Prior to version 1610, System Center Configuration Manager supported several set
 
 2.  A content location list is returned to the client from the management point with the preferred distribution points and fallback distribution points that have the content. There are no preferred distribution points that have the content, but at least one fallback distribution point has the content.  
 
-3.  The content is downloaded from a fallback distribution point on the list because the deployment property for when the client uses a fallback distribution point is set to **Download and install the content**. This deployment setting allows a client that must use a fallback content location to obtain the content from that location.  
+3.  The content is downloaded from a fallback distribution point on the list because the deployment property for when the client uses a fallback distribution point is set to **Download and install the content**. This deployment setting enables a client that must use a fallback content location to obtain the content from that location.  
 
 4.  The management point creates a trigger for Distribution Manager to distribute the content to all preferred distribution points for the client that made the content request.  
 

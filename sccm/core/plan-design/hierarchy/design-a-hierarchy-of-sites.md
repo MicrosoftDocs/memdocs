@@ -26,7 +26,7 @@ Then, after considering content management options that can reduce the number of
 ##  <a name="bkmk_topology"></a> Hierarchy topology  
  Hierarchy topologies range from a single stand-alone primary site to a group of connected primary and secondary sites with a central administration site at the top-level (top-tier) site of the hierarchy.   The key driver of the type and count of sites that you use in a hierarchy is usually the number and type of devices you must support, as follows:   
 
- **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your company’s different geographic locations can be successful served by a single primary site.  To help manage the network traffic you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
+ **Stand-alone primary site:** Use a stand-alone primary site when a single primary site can support  management of all of your devices and users (see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)). This topology is also successful when your company’s different geographic locations can be successful served by a single primary site.  To help manage the network traffic, you can use preferred management points and a carefully planned content infrastructure (see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)).  
 
  Benefit of this topology include:  
 
@@ -34,7 +34,7 @@ Then, after considering content management options that can reduce the number of
 
 -   Simplified client site assignment and discovery of available resources and services.  
 
--   Elimination of possible lag introduced by database replication between sites.
+-   Elimination of possible lag that's introduced by database replication between sites.
 
 -   Option to expand a stand-alone primary hierarchy into a larger hierarchy with a central administration site. This enables you to then install new primary sites to expand the scale of your deployment.  
 
@@ -42,9 +42,9 @@ Then, after considering content management options that can reduce the number of
 **Central administration site with one or more child primary sites:** Use this topology when you require more than one  primary site to support  management of all your devices and users.  It's required when you need to use more than a single primary site. Benefits of this topology include:  
 
 
--   Supports up to 25 primary sites that enable you to extend the scale of your hierarchy.  
+-   It supports up to 25 primary sites that enable you to extend the scale of your hierarchy.  
 
--   Permanent option. You cannot detach a child primary site to make it a stand-alone primary site. Therefore, unless you reinstall your sites, you will always use the central administration site.  
+-   You will always use the central administration site (unless you reinstall your sites). This is a permanent option. You cannot detach a child primary site to make it a stand-alone primary site.
 
  The following sections can help you understand when to use a specific site or content management option in place of an additional site.  
 
@@ -89,7 +89,7 @@ Then, after considering content management options that can reduce the number of
 
 **The following information can help you decide when to install a primary site:**  
 
--   A primary site can be a stand-alone primary site or a child primary site in a larger hierarchy. When a primary site is a member of a hierarchy with a central administration site, the sites use database replication to replicate data between the sites. Unless you need to support more clients and devices than a single primary site can support, consider installing a stand-alone primary site.  After a stand-alone primary site installs, you can expand it to report to a new central administration site to scale up your deployment.  
+-   A primary site can be a stand-alone primary site or a child primary site in a larger hierarchy. When a primary site is a member of a hierarchy with a central administration site, the sites use database replication to replicate data between the sites. Unless you need to support more clients and devices than a single primary site can support, consider installing a stand-alone primary site.  After a stand-alone primary site is installed, you can expand it to report to a new central administration site to scale up your deployment.  
 
 -   A primary site supports only a central administration site as a parent site.  
 
@@ -121,7 +121,7 @@ However, you can route content between two peer secondary sites to help manage t
 
 -   Secondary sites automatically install SQL Server Express during site installation if a local instance of SQL Server is not available.  
 
--   Secondary site installation is initiated from the Configuration Manager console, instead of running Configuration Manager Setup directly on a computer.  
+-   Secondary site installation is initiated from the Configuration Manager console, instead of by a Configuration Manager set up directly on a computer.  
 
 -   Secondary sites use a subset of the information in the site database, which reduces the amount of data that replicates by database replication between the parent primary site and secondary site.  
 
@@ -142,7 +142,7 @@ However, you can route content between two peer secondary sites to help manage t
  For more information about content management options in Configuration Manager, see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 ##  <a name="bkmk_beyond"></a> Beyond hierarchy topology  
- In addition to an initial hierarchy topology, consider which services or capabilities will be available from different sites  in the hierarchy (site system roles), and how hierarchy wide configurations and capabilities will be managed in your infrastructure. The following are the more common considerations and are covered in separate topics. These should be considered because they can influence or be influenced by your hierarchy design:  
+ In addition to an initial hierarchy topology, consider which services or capabilities will be available from different sites  in the hierarchy (site system roles), and how hierarchy-wide configurations and capabilities will be managed in your infrastructure. The following common considerations are covered in separate topics. These are important because they can influence or be influenced by your hierarchy design:  
 
 -   When you are preparing to [Manage computers and devices with System Center Configuration Manager](/sccm/core/clients/manage/manage-clients), consider whether the devices that you manage are on-premises, in the cloud, or include user-owned devices (BYOD).  Additionally, consider how you will manage devices that are supported by multiple management options, such as Windows 10 computers that can be managed directly by Configuration Manager or though integration with Microsoft Intune.  
 
@@ -170,10 +170,10 @@ However, you can route content between two peer secondary sites to help manage t
 
 **Consider configurations that span sites and hierarchies:**  
 
--   [High availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options) for sites and hierarchies.  
+-   [High availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options) for sites and hierarchies
 
--   Will you [Extend the Active Directory schema for System Center Configuration Manager](../../../core/plan-design/network/extend-the-active-directory-schema.md) and configure and sites to [publish site data for System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md)?  
+-   [Extend the Active Directory schema for System Center Configuration Manager](../../../core/plan-design/network/extend-the-active-directory-schema.md) and configure sites to [publish site data for System Center Configuration Manager](../../../core/servers/deploy/configure/publish-site-data.md)  
 
--   To manage network bandwidth between sites in a hierarchy, see [Data transfers between sites in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md).  
+-   [Data transfers between sites in System Center Configuration Manager](../../../core/servers/manage/data-transfers-between-sites.md)  
 
--   [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md).
+-   [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md)
