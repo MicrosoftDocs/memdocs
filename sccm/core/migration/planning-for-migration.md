@@ -28,7 +28,7 @@ Before you migrate data to a System Center Configuration Manager destination hie
  For more about site assignments, see [Client site assignment considerations](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment) in [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md).  
 
 ## Plan Topics  
- Use the following topics to help you plan how to migrate a supported source hierarchy to a System Center Configuration Manager destination hierarchy:  
+ Use the following topics to help you plan how to migrate a supported source hierarchy to a System Center Configuration Manager destination hierarchy: 
 
 -   [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)  
 
