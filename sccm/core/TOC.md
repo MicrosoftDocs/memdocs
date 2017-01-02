@@ -218,6 +218,7 @@
 ###  [How to configure Wake on LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [How to deploy clients to Windows computers](clients/deploy/deploy-clients-to-windows-computers.md)
 ###  [How to deploy clients to UNIX and Linux servers](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
+###  [Prepare to deploy clients to Macs](prepare-to-deploy-mac-clients)
 ###  [How to deploy clients to Macs](clients/deploy/deploy-clients-to-macs.md)
 ###  [How to assign clients to a site](clients/deploy/assign-clients-to-a-site.md)
 ###  [How to configure client status](clients/deploy/configure-client-status.md)

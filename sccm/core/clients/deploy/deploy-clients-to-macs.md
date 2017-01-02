@@ -2,9 +2,9 @@
 title: "Deploy Mac clients | Microsoft Docs"
 description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 01/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: aaroncz
 ms.suite: na
 ms.technology:
   - configmgr-client
@@ -15,164 +15,15 @@ caps.latest.revision: 12
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to deploy clients to Macs in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-
-
-## Prerequisites and preparatory steps
-
-### Mac prerequisites
-
-Before you install the client make sure that the Mac computers meet the prerequisites, as described in [Supported operating systems for Macs](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
-
-### Certificate requirements
-Client installation and management for Mac computers requires public key infrastructure (PKI) certificates. PKI certificates secure the communication between the Mac computers and the Configuration Manager site by using mutual authentication and encrypted data transfers. Configuration Manager can request and install a user client certificate by using Microsoft Certificate Services with an enterprise certification authority (CA) and the Configuration Manager enrollment point and enrollment proxy point site system roles. Or, you can request and install a computer certificate independently from Configuration Manager if the certificate meets the requirements for Configuration Manager.   
-  
-Configuration Manager Mac clients always perform certificate revocation checking. You cannot disable this function.  
-  
-If Mac clients cannot confirm the certificate revocation status for a server certificate because they cannot locate the CRL, they will not be able to successfully connect to Configuration Manager site systems. Especially for Mac clients in a different forest to the issuing certification authority, check your CRL design to ensure that Mac clients can locate and connect to a CRL distribution point (CDP) for connecting site system servers.  
-
-Before you install the Configuration Manager client on a Mac computer, decide how to install the client certificate:  
-
--   Use Configuration Manager enrollment by using the CMEnroll tool and follow the steps in the next section of this topic. The enrollment process does not support automatic certificate renewal so you must re-enroll Mac computers before the installed certificate expires.  
-
--   Use a certificate request and installation method that is independent from Configuration Manager. For this installation method, see the [Use a certificate request and installation method that is independent from Configuration Manager](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager) section in this topic.  
-
-For more information about the Mac client certificate requirement and other PKI certificates that are required to support Mac computers, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
-
-Mac clients are automatically assigned to the Configuration Manager site that manages them. Mac clients install as Internet-only clients, even if communication is restricted to the intranet. This client configuration means that they will communicate with the site system roles (management points and distribution points) in their assigned site when you configure these site system roles to allow client connections from the Internet. Mac computers do not communicate with site system roles outside their assigned site.  
-
-> [!IMPORTANT]  
->  The Configuration Manager Mac client cannot be used to connect to a management point that is configured to use a [database replica](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
-
-
-### Deploy a web server certificate to site system servers  
-If these site systems don't have it, deploy a web server certificate to the computers that have these site system roles:  
-
--   Management point  
-
--   Distribution point  
-
--   Enrollment point  
-
--   Enrollment proxy point  
-
-The web server certificate must contain the Internet FQDN that is specified in the site system properties. The server doesn't have to be accessible from the Internet to support Mac computers. If you do not require Internet-based client management, you can specify the intranet FQDN value for the Internet FQDN.  
-
-Specify the site system's Internet FQDN value in the web server certificate for the management point, the distribution point, and the enrollment proxy point. 
-
-For an example deployment that creates and installs this web server certificate, see the [Deploying the Web Server Certificate for Site Systems that Run IIS](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
-
- 
-
-### Deploy a client authentication certificate to site system servers  
- If these site systems don't have it, deploy a client authentication certificate to the computers that host these site system roles:  
-
--   Management point  
-
--   Distribution point  
-
- For an example deployment that creates and installs the client certificate for management points, see the [Deploying the Client Certificate for Windows Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
-
- For an example deployment that creates and installs the client certificate for distribution points, see the [Deploying the Client Certificate for Distribution Points](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012).  
-
-### Prepare the client certificate template for Macs  
-
-> [!NOTE]  
->  To run the Configuration Manager enrollment tool, you must have an Active Directory user account.  
-
- The certificate template must have **Read** and **Enroll** permissions for the user account that will enroll the certificate on the Mac computer.  
-
- See [Deploying the Client Certificate for Mac Computers](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1).  
-
-### Configure the management point and distribution point  
- Configure management points for the following options:  
-
--   HTTPS  
-
--   Allow client connections from the Internet. This configuration value is required to manage Mac computers. However, it does not mean that site system servers must be accessible from the Internet.  
-
--   Allow mobile devices and Mac computers to use this management point  
-
- Although distribution points are not required to install the client, you must configure distribution points to allow client connections from the Internet if you want to deploy software to these computers after the client is installed.  
-
- 
-##### To configure management points and distribution points to support Macs  
-
-Before you start this procedure, make sure that the site system server that runs the management point and distribution point is configured with an Internet FQDN. If these servers won't support Internet-based client management, you can specify the intranet FQDN as the Internet FQDN value. 
-
-The site system roles must be in a primary site.  
-
-
-1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then choose the server that has the right site system roles.  
-
-3.  In the details pane, right-click **Management point**, choose **Role Properties**, and in the **Management Point Properties** dialog box, configure these options:  
-
-    1.  Choose **HTTPS**.  
-
-    2.  Choose **Allow Internet-only client connections** or **Allow intranet and Internet client connections**. These options require an Internet or intranet FQDN.  
-
-    3.  Choose **Allow mobile devices and Mac computers to use this management point**.  
-
-4.  In the details pane, right-click **Distribution point**, choose **Role Properties**, and in the **Distribution Point Properties** dialog box, configure these options:  
-
-    -   Choose **HTTPS**.  
-
-    -   Choose **Allow Internet-only client connections** or **Allow intranet and Internet client connections**. These options require an Internet or intranet FQDN.  
-
-    -   Choose **Import certificate**, browse to the exported client distribution point certificate file, and then specify the password.  
-
-5.  Repeat steps 2 through 4 for all management points and distribution points in primary sites that you will use with Macs.  
-
-### Configure the enrollment proxy point and the enrollment point  
- You must install both these site system roles in the same site but you do not have to install them on the same site system server, or in the same Active Directory forest.  
-
- For more information about site system role placement and considerations, see  [Site system roles](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles) in [Plan for site system servers and site system roles for System Center Configuration Manager](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).  
-
- These procedures configure the site system roles to support Mac computers.   
-
--   [New site system server](#new-site-system-server)  
-
--   [Existing site system server](#existing-site-system-server)  
-
-####  New site system server  
-
-1.  In the Configuration Manager console, choose **Administration** >  **Site Configuration** > **Servers and Site System Roles**  
-
-3.  On the **Home** tab, in the **Create** group, choose **Create Site System Server**.  
-
-4.  On the **General** page, specify the general settings for the site system.  Make sure that you specify a value for the Internet FQDN. If the server won't be accessible from the Internet, use the intranet FQDN.  
-
-5.  On the **System Role Selection** page, select **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
-
-6.  On the **Enrollment Proxy Point** page, review the settings and make any necessary changes.  
-
-7.  On the **Enrollment Point Settings** page, review the settings and make any necessary changes. Then, complete the wizard.  
-
-#### Existing site system server  
-
-1.  In the Configuration Manager console, choose **Administration** >  **Site Configuration** > **Servers and Site System Roles**, and then choose the server that you want to use to support Macs.  
-
-3.  On the **Home** tab, in the **Create** group, choose **Add Site System Roles**.  
-
-4.  On the **General** page, specify the general settings for the site system, and then click **Next**. Make sure that you specify a value for the Internet FQDN. If the server won't be accessible from the Internet, use the intranet FQDN.   
-
-5.  On the **System Role Selection** page, choose **Enrollment proxy point** and **Enrollment point** from the list of available roles.  
-
-6.  On the **Enrollment Proxy Point** page, review the settings and make any necessary changes.  
-
-7.  On the **Enrollment Point Settings** page, review the settings and make any necessary changes. Then, complete the wizard.  
-
-### Optional: Install the reporting services point  
- [Install the reporting services point](../../../core/servers/manage/configuring-reporting.md) if you want to run reports for Macs.  
-
-##  Install and configure the client for Macs  
-
-### Configure client settings for enrollment  
- You must use the [default client settings](../../../core/clients/deploy/about-client-settings.md)  to configure enrollment for Mac computers; you cannot use custom client settings.  
+# How to deploy clients to Macs*Applies to: System Center Configuration Manager (Current Branch)*
+This topic describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
+
+## Configure client settings for enrollment  
+ You must use the [default client settings](../../../core/clients/deploy/about-client-settings.md) to configure enrollment for Mac computers; you cannot use custom client settings.  
 
  This is required for Configuration Manager to request and install the certificate on the Mac.  
 
-#### To configure the default client settings for Configuration Manager to enroll certificates for Macs  
+### To configure the default client settings for Configuration Manager to enroll certificates for Macs  
 
 1.  In the Configuration Manager console, choose **Administration** >  **Client Settings** > **Default Client Settings**.  
 
@@ -213,7 +64,7 @@ The site system roles must be in a primary site.
 > [!NOTE]  
 >  For more information about Configuration Manager client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
-### Download the client source files for Macs  
+## Download the client source files for Macs  
  You must download and install the following programs before you can install and manage the Configuration Manager client on Macs:  
 
 -   **Ccmsetup**: Use this application to install the Configuration Manager client on your Mac computers.  
@@ -229,7 +80,7 @@ The site system roles must be in a primary site.
 > [!IMPORTANT]  
 >  When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console.  
 
-##### To download and install the Mac OS X client files  
+### To download and install the Mac OS X client files  
 
 1.  Download the Mac OS X client file package, **ConfigmgrMacClient.msi**, and save it to a computer that runs Windows.  
 
@@ -243,12 +94,12 @@ The site system roles must be in a primary site.
 
 5.  In the folder, ensure that the files Ccmsetup and CMClient.pkg are extracted and that a folder named Tools is created that contains the CMDiagnostics,  CMUninstall, CMAppUtil and CMEnroll tools.  
 
-### Install the client and then enroll the client certificate on the Mac  
+## Install the client and then enroll the client certificate on the Mac  
  This procedure installs the client and then uses the CMEnroll tool to request and install the client certificate for a Mac computer so that you can then manage this computer by using Configuration Manager.  
 
  You can enroll the client by using the Mac Computer Enrollment wizard without having to use the CMEnroll tool, as described in [Enroll the client by using the Mac Computer Enrollment Wizard](#enroll-the-client-by-using-the-mac-computer-enrollment-wizard)  
 
-#### To install the client and enroll the certificate by using the CMEnroll tool  
+### To install the client and enroll the certificate by using the CMEnroll tool  
 
 1.  On the Mac computer, navigate to the folder where you extracted the contents of the Macclient.dmg file.  
 
@@ -308,7 +159,7 @@ The site system roles must be in a primary site.
 >   
 >  The information collected by CmDiagnostics is added to a zip file that is saved to the desktop of the computer and is named cmdiag-*<hostname\>***-***<date and time\>*.zip.  
 
-####  Enroll the client by using the Mac Computer Enrollment Wizard  
+###  Enroll the client by using the Mac Computer Enrollment Wizard  
 
 1.  After you have finished installing the client, the Computer Enrollment wizard opens. If the wizard does not open, or if you accidentally close the wizard, click **Enroll** from the **Configuration Manager** preference page to open the wizard.  
 
