@@ -2,7 +2,7 @@
 title: "Site installation resources | Microsoft Docs"
 description: "Review a list of topics that help you install System Center Configuration Manager or add sites to your hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
 caps.latest.revision: 31
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Resources for installing System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
+# Resources for installing System Center Configuration Manager sites
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The following topics can help you install System Center Configuration Manager or add sites to your existing Configuration Manager hierarchy.
 
 - [Prepare to install sites](prepare-to-install-sites.md)
