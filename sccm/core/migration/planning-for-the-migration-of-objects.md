@@ -44,22 +44,22 @@ With System Center Configuration Manager, you can migrate many of the different 
 
  To successfully migrate software update objects, you must first set up your destination hierarchy with configurations that match your source hierarchy environment. This requires the following actions:  
 
--   Deploy an active software update point in the destination hierarchy.  
+-   Deploy an active software update point in the destination hierarchy  
 
--   Set up the catalog of products and languages to match the configuration of your source hierarchy.  
+-   Set up the catalog of products and languages to match the configuration of your source hierarchy  
 
--   Sync the software update point in the destination hierarchy with Windows Server Update Services (WSUS).  
+-   Sync the software update point in the destination hierarchy with Windows Server Update Services (WSUS)  
 
 When you migrate software updates, consider the following:  
 
 -   Migration of software update objects can fail when you have not synced information in your destination hierarchy to match the configuration of your source hierarchy.  
 
     > [!WARNING]  
-    >  It is not supported to use the WSUSutil tool to sync data between a source and destination hierarchy.  
+    >  Configuration Manager does not support use of the WSUSutil tool to sync data between a source and destination hierarchy.  
 
 -   You cannot migrate custom updates that are published by using System Center Updates Publisher. Instead, custom updates must be republished to the destination hierarchy.  
 
-When you migrate from a Configuration Manager 2007 source hierarchy, the migration process modifies some software updates objects to the format in use by the destination hierarchy. Use the following table to help you plan the migration of software update objects from Configuration Manager 2007.  
+When you migrate from a Configuration Manager 2007 source hierarchy, the migration process modifies some software update objects to the format in use by the destination hierarchy. Use the following table to help you plan the migration of software update objects from Configuration Manager 2007.  
 
 |Configuration Manager 2007 object|Object name after migration|  
 |-----------------------------------|---------------------------------|  
@@ -71,17 +71,17 @@ When you migrate from a Configuration Manager 2007 source hierarchy, the migrati
 When you migrate objects from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, the software updates objects are not modified.  
 
 ##  <a name="Plan_Migrate_content"></a> Plan to migrate content  
- You can migrate content from a supported source hierarchy to your destination hierarchy. For a Configuration Manager 2007 source hierarchy, this content includes software distribution packages and programs and virtual applications, like Microsoft Application Virtualization (App-V). For System Center 2012 Configuration Manager and System Center Configuration Manager source hierarchies, this content includes applications, and App-V virtual applications. When you migrate content between hierarchies, it is the compressed source files that migrate to the destination hierarchy.  
+ You can migrate content from a supported source hierarchy to your destination hierarchy. For a Configuration Manager 2007 source hierarchy, this content includes software distribution packages and programs and virtual applications, like Microsoft Application Virtualization (App-V). For System Center 2012 Configuration Manager and System Center Configuration Manager source hierarchies, this content includes applications and App-V virtual applications. When you migrate content between hierarchies, the compressed source files migrate to the destination hierarchy.  
 
 ### Packages and programs  
- When you migrate packages and programs, they are not modified by migration. However, before you migrate these, you must set up each package to use a Universal Naming Convention (UNC) path for its source file location. As part of the configuration to migrate packages and programs, you must assign a site in the destination hierarchy to manage this content. The content is not migrated from the assigned site, but after migration, the assigned site accesses the original source file location by using the UNC mapping.  
+ When you migrate packages and programs, they are not modified by migration. However, before you migrate them, you must set up each package to use a Universal Naming Convention (UNC) path for its source file location. As part of the configuration to migrate packages and programs, you must assign a site in the destination hierarchy to manage this content. The content is not migrated from the assigned site, but after migration, the assigned site accesses the original source file location by using the UNC mapping.  
 
  After you migrate a package and program to the destination hierarchy, and while migration from the source hierarchy remains active, you can make the content available to clients in that hierarchy by using a shared distribution point. To use a shared distribution point, the content must remain accessible on the distribution point at the source site. For information about shared distribution points, see [Share distribution points between source and destination hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) in [Plan a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md).  
 
- For content that has migrated, if the content version changes in either source hierarchy or the destination hierarchy, clients can no longer access the content from the shared distribution point in the destination hierarchy. In this scenario, you must re-migrate the content to restore a consistent version of the package between the source hierarchy and the destination hierarchy. This information syncs during the data gathering cycle.  
+ For content that has migrated, if the content version changes in the source hierarchy or the destination hierarchy, clients can no longer access the content from the shared distribution point in the destination hierarchy. In this scenario, you must re-migrate the content to restore a consistent version of the package between the source hierarchy and the destination hierarchy. This information syncs during the data gathering cycle.  
 
 > [!TIP]  
->  For each package that you migrate, update the package in the destination hierarchy. This action can prevent issues with deploying the package to distribution points in the destination hierarchy. However, when you update a package on the distribution point in the destination hierarchy, clients in that hierarchy will no longer be able to get that package from a shared distribution point. To update a package in the destination hierarchy, in the Configuration Manager console, go to the Software Library, right-click on the package, and then select **Update Distribution Points**. Do this action for each package that you migrated.  
+>  For each package that you migrate, update the package in the destination hierarchy. This action can prevent issues with deploying the package to distribution points in the destination hierarchy. However, when you update a package on the distribution point in the destination hierarchy, clients in that hierarchy will no longer be able to get that package from a shared distribution point. To update a package in the destination hierarchy, in the Configuration Manager console, go to the Software Library, right-click on the package, and then select **Update Distribution Points**. Do this action for each package that you migrate.  
 
 > [!TIP]  
 >  You can use Microsoft System Center Configuration Manager Package Conversion Manager to convert packages and programs into System Center Configuration Manager applications. Download Package Conversion Manager from the [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=212950) site. For more information, see [Configuration Manager Package Conversion Manager](http://go.microsoft.com/fwlink/p/?LinkId=247245).  
@@ -99,7 +99,7 @@ When you migrate App-V packages from a supported Configuration Manager 2007 site
 >  If you migrate a previously migrated Configuration Manager 2007 App-V package, the migration fails because virtual application packages do not support the overwrite migration behavior. In this scenario, you must delete the migrated virtual application package from the destination hierarchy, and then create a new migration job to migrate the virtual application.  
 
 > [!NOTE]  
->  After you migrate an App-V package, you can use the Update Content wizard to change the source path for App-V deployment types. For information on how to update content for a deployment type, see *How to manage deployment types* section in [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
+>  After you migrate an App-V package, you can use the Update Content wizard to change the source path for App-V deployment types. For information on how to update content for a deployment type, see How to manage deployment types section in [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).  
 
 When you migrate from a System Center 2012 Configuration Manager or System Center Configuration Manager source hierarchy, you can migrate objects for the App-V virtual environment in addition to App-V deployment types and applications. For more about App-V environments, see [Deploying App-V virtual applications with System Center Configuration Manager](../../apps/get-started/deploying-app-v-virtual-applications.md).  
 
@@ -139,7 +139,7 @@ You can migrate the following operating system deployment objects from a support
 You can migrate configuration items and configuration baselines.  
 
 > [!NOTE]  
->  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see Uninterpreted configuration item in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
+>  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For information about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](http://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
 
 You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the configuration packs to be compatible with System Center Configuration Manager.  
 
