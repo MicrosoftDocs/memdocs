@@ -19,9 +19,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Fundamental concepts for content management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager supports a robust system of tools and options to manage the content you deploy as applications, packages, software updates, and operating system deployments.  
 
- The content you deploy is stored  on both site servers and on distribution point site system servers. This content can require a large amount of network bandwidth while transferring between locations.  To effectively plan and use content management infrastructure you should understand the available options and configurations, and then consider how to use them to best fit your networking environment and content deployment needs.  
+ The content you deploy is stored  on both site servers and on distribution point site system servers. This content can require a large amount of network bandwidth when it's being transferred between locations. To effectively plan and use content management infrastructure, we recommend that you understand the available options and configurations, and then consider how to use them to best fit your networking environment and content deployment needs.  
 
-The key concepts for content management follow. When a concept requires additional or complex information, links are provided to direct you to those details.  
+Following are the key concepts for content management. When a concept requires additional or complex information, links are provided to direct you to those details.  
 
 ## Accounts used for content management  
  The following accounts can be used with content management:  
@@ -103,7 +103,7 @@ For more information, see [Windows PE peer cache](../../../osd/get-started/prepa
 
 
 
-## Content Library  
+## Content library  
  The single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content you distribute.  
 
 Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
