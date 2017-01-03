@@ -21,7 +21,7 @@ manager: "mbaldwin"
 This section provides task-based topics that show you how to programmatically manage inventory in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Inventory can be found in the [Documentation for System Center Configuration Manager](https://docs.microsoft.com/sccm/index) under [Inventory in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory).  
+>  General information about Inventory can be found in the [System Center Configuration Manager Documentation](https://docs.microsoft.com/sccm/index) under [Introduction to hardware inventory in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory) and [Introduction to software inventory in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
 ## Inventory topics  
 
