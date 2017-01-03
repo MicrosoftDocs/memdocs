@@ -2,7 +2,7 @@
 title: "Source hierarchy strategy | Microsoft Docs"
 description: "Configure a source hierarchy and gather data from a source site before you configure a System Center Configuration Manager migration job."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,17 +13,16 @@ ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan a source hierarchy strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Before you set up a migration job in your System Center Configuration Manager environment, you must set up a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy:  
+# Plan a source hierarchy strategy in System Center Configuration Manager
 
--   [Source hierarchies](#BKMK_Source_Hierarchies)  
+*Applies to: System Center Configuration Manager (Current Branch)*
 
--   [Source sites](#BKMK_Source_Sites)  
-
--   [Data gathering](#BKMK_Data_Gathering)  
+Before you set up a migration job in your System Center Configuration Manager environment, you must configure a source hierarchy and gather data from at least one source site in that hierarchy. Use the following sections to help you plan for configuring source hierarchies, configuring source sites, and determining how Configuration Manager gathers information from the source sites in the source hierarchy. 
 
 ##  <a name="BKMK_Source_Hierarchies"></a> Source hierarchies  
 A source hierarchy is a Configuration Manager hierarchy that has data that you want to migrate. When you set up migration and specify a source hierarchy, you specify the top-level site of the source hierarchy. This site is also called a source site. Additional sites that you can migrate data from in the source hierarchy are also called source sites.  
