@@ -104,8 +104,8 @@ Configuration Manager does not support the backup of secondary sites nor the tes
 It is not supported to run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) section in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active client.   
- To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for preproduction. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
-[How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
+[How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
 
  **Plan to use Maintenance windows**  
  **to control when site servers install updates:** You can use the Maintenance windows to define a period of time that applies to a primary site server during which updates to that site can be installed.   

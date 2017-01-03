@@ -81,9 +81,9 @@ Note that Out-of-Band Management in System Center 2012 Configuration Manager is 
  For details about supported products, operating systems, and configurations, see [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## Client deployment  
- System Center Configuration Manager introduces a new capability for testing new versions of the Configuration Manager client before upgrading the rest of site with the new software. You can set up a pre-production collection in which to pilot a new client. Once you are satisfied with the new client software in preproduction, you can promote the client to automatically upgrade the rest of the site with the new version.  
+ System Center Configuration Manager introduces a new capability for testing new versions of the Configuration Manager client before upgrading the rest of site with the new software. You can set up a pre-production collection in which to pilot a new client. Once you are satisfied with the new client software in pre-production, you can promote the client to automatically upgrade the rest of the site with the new version.  
 
- For more information on how to test clients, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+ For more information on how to test clients, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 ## Operating system deployment  
 
