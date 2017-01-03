@@ -29,7 +29,7 @@ Use the information in this article to help you plan for security in System Cent
 
  PKI certificates are also required when client computers connect to Internet-based site systems, and we recommend that you use PKI certificates when clients connect to site systems that run Internet Information Services (IIS). For more about client communication, see [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
- When you use a PKI certificate, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other scenarios when you transfer data between computers. The process that sets up and implements IPsec is independent from Configuration Manager.  
+ When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other scenarios when you transfer data between computers. The process that sets up and implements IPsec is independent from Configuration Manager.  
 
  Configuration Manager can automatically generate self-signed certificates when PKI certificates are not available, and some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you do not have to take additional action. One possible exception is the site server signing certificate. The site server signing certificate is always self-signed, and it ensures that the client policies that clients download from the management point were sent from the site server and were not tampered with.  
 
