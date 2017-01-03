@@ -2,7 +2,7 @@
 title: "Supported Active Directory domains | Microsoft Docs"
 description: "Get requirements for the membership of a System Center Configuration Manager site system in an Active Directory domain."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,11 +13,15 @@ ms.topic: article
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brendunsms.author: brenduns
+author: Brenduns
+ms.author: brenduns
 manager: angrobe
 
 ---
-# Supported Active Directory domains for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Supported Active Directory domains for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 All System Center Configuration Manager site systems must be members of a supported Windows Server Active Directory domain. Configuration Manager client computers can be domain members or workgroup members.  
 
  **Requirements and limitations:**  
@@ -70,4 +74,5 @@ The following table identifies the supported scenarios for a disjoint namespace.
 
      **For example:** The single label domain of Contoso is configured to have a disjoint namespace in DNS of contoso.com. Therefore, when you specify the DNS suffix in Configuration Manager for a computer in the Contoso domain, you specify "Contoso.com" and not "Contoso".  
 
--   The Distributed Component Object Model (DCOM) connections between site servers in the system context must be successfully using Kerberos authentication.  
+-   The Distributed Component Object Model (DCOM) connections between site servers in the system context must be successful by using Kerberos authentication.  
+  
