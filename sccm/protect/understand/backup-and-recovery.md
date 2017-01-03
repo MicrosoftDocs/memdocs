@@ -2,7 +2,7 @@
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/376/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -830,7 +830,7 @@ Use the following sections to help you create your Configuration Manager backup 
  After a site server recovery, you must re-enter Windows sideloading keys specified for the site because they are reset during site recovery. After you re-enter the sideloading keys, the count in the **Activations used** column for Windows sideloading keys is reset in the Configuration Manager console. For example, let's say before the site failure you have a **Total activations** count set to **100** and **Activations used** is at **90** for the number of the keys that have been used by devices. After the site recovery, the **Total activations** column still displays **100**, but the **Activations used** column incorrectly displays **0**. However, after 10 new devices use a sideloading key, there will be no remaining sideloading keys, and the next device will fail to apply a sideloading key.  
 
 #### Recreate the Microsoft Intune subscription  
- If you recover a Configuration Manager site server after the site server computer is  re-imaged, the Microsoft Intune subscription is not restored. You must recreate the subscription after you recover the site. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
+ If you recover a Configuration Manager site server after the site server computer is re-imaged, the Microsoft Intune subscription is not restored. You must reconnect your subscription after you recover the site.  Do not create a new APN-request, but instead upload the current valid .pem-file that was uploaded the last time iOS management was configured or renewed. For more information, see [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription).  
 
 #### Configure SSL for site system roles that use IIS  
  When you recover site systems that run IIS and that were configured for HTTPS before the failure, you must reconfigure IIS to use the web server certificate.  

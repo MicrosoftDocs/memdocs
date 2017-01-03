@@ -100,7 +100,7 @@ public void CreatePackage(WqlConnectionManager connection, string newPackageName
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the new package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new package.|  
 |`newPackageSourceFlag`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The package source.|  
