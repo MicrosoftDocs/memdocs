@@ -2,7 +2,7 @@
 title: "Content source location | Microsoft Docs"
 description: "Learn about the System Center Configuration Manager settings that enable clients to find content on a slow network."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017 
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Content source location scenarios in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Content source location scenarios in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Prior to version 1610, System Center Configuration Manager supported several settings that combined to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and whether they can successfully use a fallback location when a preferred source for content is not available.  
 
 > [!IMPORTANT]  
