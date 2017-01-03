@@ -2,7 +2,7 @@
 title: "Supported SQL Server versions | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 11/29/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: 21
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Supported SQL Server versions for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Supported SQL Server versions for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Each System Center Configuration Manager site requires a supported SQL Server version and configuration to host the site database.  
 
 ##  <a name="bkmk_Instances"></a> SQL Server instances and locations  
