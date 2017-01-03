@@ -184,13 +184,13 @@ The following table lists the log files located on the Configuration Manager cli
 |PolicySdk.log|Records activities for policy system SDK interfaces.|  
 |Pwrmgmt.log|Records information about turning on or turning off and configuring the wake-up proxy client settings.|  
 |PwrProvider.log|Records the activities of the power management provider (PWRInvProvider) hosted in the WMI service. On all supported versions of Windows, the provider enumerates the current settings on computers during hardware inventory and applies power plan settings.|  
-|SCClient_&lt;domain\>@&lt;username\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
-|SCClient_&lt;domain\>@&lt;username\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
+|SCClient_<*domain*\>@<*username*\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
+|SCClient_<*domain*\>@<*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
-|SCNotify_&lt;domain\>@&lt;username\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_&lt;domain\>@&lt;username\>_1-&lt;date_time>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_<*domain*\>@<*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
+|SCNotify_<*domain*\>@<*username*\>_1-<*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
-|SleepAgent_&lt;domain\>@&lt;@SYSTEM_0.log|Main log file for wake-up proxy.|  
+|SleepAgent_<*domain*\>@SYSTEM_0.log|Main log file for wake-up proxy.|  
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
 |SrcUpdateMgr.log|Records activity for installed Windows Installer applications that are updated with current distribution point source locations.|  
 |StatusAgent.log|Records status messages that are created by the client components.|  
@@ -206,10 +206,10 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|  
 |--------------|-----------------|  
-|ccmSetup.log|Records CCMSetup.exe tasks for client setup, client upgrade, and client removal. Can be used to troubleshoot client installation problems.|  
-|ccmsetup-ccmeval.log|Records CCMSetup.exe tasks for client status and remediation.|  
+|ccmsetup.log|Records ccmsetup.exe tasks for client setup, client upgrade, and client removal. Can be used to troubleshoot client installation problems.|  
+|ccmsetup-ccmeval.log|Records ccmsetup.exe tasks for client status and remediation.|  
 |CcmRepair.log|Records the repair activities of the client agent.|  
-|Client.msi.log|Records setup tasks performed by Client.msi. Can be used to troubleshoot client installation or removal problems.|  
+|client.msi.log|Records setup tasks performed by client.msi. Can be used to troubleshoot client installation or removal problems.|  
 
 ###  <a name="BKMK_LogFilesforLnU"></a> Client for Linux and UNIX  
  The Configuration Manager client for Linux and UNIX records information in the following log files.  
@@ -230,7 +230,7 @@ The following table lists the log files located on the Configuration Manager cli
 
  Both log files support several levels of logging:  
 
--   **scxcm.log** - To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
+-   **Scxcm.log**. To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
 
     -   ERROR: Indicates problems that require attention.  
 
@@ -240,7 +240,7 @@ The following table lists the log files located on the Configuration Manager cli
 
     -   TRACE: Verbose logging that is typically used to diagnose problems.  
 
--   **scxcmprovider.log** - To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
+-   **Scxcmprovider.log**. To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
 
     -   ERROR: Indicates problems that require attention.  
 
@@ -262,10 +262,10 @@ The Configuration Manager client for Mac computers records information in the fo
 
 |Log name|Details|  
 |--------------|-------------|  
-|CCMClient-*&lt;date_time>\*.log|Records activities that are related to the Mac client operations, including application management, inventory, and error logging.<br /><br /> This log file is located in the /Library/Application Support/Microsoft/CCM/Logs folder on the Mac computer.|  
-|CCMAgent-*&lt;date_time>*.log|Records information that is related to client operations, including user logon and logoff operations, and Mac computer activity.<br /><br /> This log file is in the ~/Library/Logs folder on the Mac computer.|  
-|CCMNotifications-*&lt;date_time>*.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
-|CCMPrefPane-*&lt;date_time>*.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
+|CCMClient-<*date_time*>.log|Records activities that are related to the Mac client operations, including application management, inventory, and error logging.<br /><br /> This log file is located in the /Library/Application Support/Microsoft/CCM/Logs folder on the Mac computer.|  
+|CCMAgent-<*date_time*>.log|Records information that is related to client operations, including user logon and logoff operations, and Mac computer activity.<br /><br /> This log file is in the ~/Library/Logs folder on the Mac computer.|  
+|CCMNotifications-<*date_time*>.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
+|CCMPrefPane-<*date_time*>.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
 
  The log file SMS_DM.log on the site system server also records communication between Mac computers and the management point that is set up for mobile devices and Mac computers.  
 
@@ -728,9 +728,9 @@ The following table lists the log files that contain information related to Disc
 |outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
-|SmsProv.log|Records activities performed by the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
+|Smsprov.log|Records activities performed by the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
 |SrvBoot.log|Records details about the service connection point installer service.|Computer with the service connection point|  
-|StateSys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
+|Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
 
 ###  <a name="BKMK_SU_NAPLog"></a> Software updates  
  The following table lists the log files that contain information related to software updates.  
@@ -742,7 +742,7 @@ The following table lists the log files that contain information related to Disc
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
 |RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
-|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, UpdatesHandler.log, provides more informative details about installing the software updates required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
+|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, Updateshandler.log, provides more informative details about installing the software updates required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
 |StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|  
@@ -759,7 +759,7 @@ The following table lists the log files that contain information related to Disc
  The following table lists the log files that contain information related to using Wake On LAN.  
 
 > [!NOTE]  
->  When you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_&lt;domain\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
+>  When you supplement Wake On LAN by using wake-up proxy, this activity is logged on the client. For example, see CcmExec.log and SleepAgent_<*domain*\>@SYSTEM_0.log in the [Client Operations](#BKMK_ClientOpLogs) section of this topic.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
@@ -784,7 +784,7 @@ The following table lists the log files that contain information related to Disc
 |StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
 |UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|  
-|UpdatesHandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
+|Updateshandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
 |UpdatesStore.log|Records details about compliance status for the software updates that were assessed during the compliance scan cycle.|Client|  
 |WCM.log|Records details about software update point configurations and connections to the WSUS server for subscribed update categories, classifications, and languages.|Site server|  
 |WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
