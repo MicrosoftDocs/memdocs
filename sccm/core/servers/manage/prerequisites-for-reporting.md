@@ -41,15 +41,16 @@ Reporting in System Center Configuration Manager has external dependencies and d
 
 |SQL Server version|Reporting Services point|  
 |------------------------|------------------------------|  
-|SQL Server 2008 SP2 with a minimum of cumulative update 9<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 SP3 with a minimum of cumulative update 4<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 R2 with SP1 and with a minimum of cumulative update 6<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 R2 with SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
+|SQL Server 2008 SP2 with a minimum of cumulative update 9<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|Yes|  
+|SQL Server 2008 SP3 with a minimum of cumulative update 4<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|Yes|  
+|SQL Server 2008 R2 with SP1 and with a minimum of cumulative update 6<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|Yes|  
+|SQL Server 2008 R2 with SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|Yes|  
 |SQL Server Express 2008 R2 with SP1 and with a minimum of cumulative update 4|Not Supported|  
 |SQL Server Express 2008 R2 with SP2|Not Supported|  
-|SQL Server 2012 and with a minimum of cumulative update 2<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SQL Server 2012 with SP1 and no minimum cumulative update<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|?|  
-
+|SQL Server 2012 and with a minimum of cumulative update 2<br /><br /> -   Standard<br />-   Enterprise|Yes|  
+|SQL Server 2012 with SP1 and no minimum cumulative update<br /><br /> -   Standard<br />-   Enterprise|Yes|  
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|Yes|
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|Yes|
+|SQL Server 2016 with SP1<br /><br /> -   Standard<br />-   Enterprise|Yes|
 ## Next steps
 [Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md)

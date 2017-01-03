@@ -60,7 +60,7 @@
 ###  [Security and privacy for site administration](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
 
 ##   [Plan for network infrastructure](plan-design/network/configure-firewalls-ports-domains.md)
-###  [Extend the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
+###  [Prepare the Active Directory schema](plan-design/network/extend-the-active-directory-schema.md)
 ###  [Prepare Windows Servers to support site systems](plan-design/network/prepare-windows-servers.md)
 ###  [Websites for site system servers](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI certificate requirements](plan-design/network/pki-certificate-requirements.md)
@@ -87,7 +87,7 @@
 ##   [Evaluate Configuration Manager in a lab](get-started/evaluate-with-lab-environment.md)
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md) 
+##   [Technical Preview](get-started/technical-preview.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
@@ -218,6 +218,7 @@
 ###  [How to configure Wake on LAN](clients/deploy/configure-wake-on-lan.md)
 ###  [How to deploy clients to Windows computers](clients/deploy/deploy-clients-to-windows-computers.md)
 ###  [How to deploy clients to UNIX and Linux servers](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
+###  [Prepare to deploy clients to Macs](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [How to deploy clients to Macs](clients/deploy/deploy-clients-to-macs.md)
 ###  [How to assign clients to a site](clients/deploy/assign-clients-to-a-site.md)
 ###  [How to configure client status](clients/deploy/configure-client-status.md)
@@ -231,6 +232,7 @@
 ###  [How to manage clients](clients/manage/manage-clients.md)
 ###  [How to manage Linux and UNIX clients](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [Sync data to OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [Maintain Mac clients](clients/manage/maintain-mac-clients.md)
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)
@@ -260,7 +262,6 @@
 
 ##   Software inventory
 ###  [Introduction to software inventory](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [How to exclude folders from software inventory](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [How to configure software inventory](clients/manage/inventory/configure-software-inventory.md)
 ###  [How to use Resource Explorer to view software inventory](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [Security and privacy for software inventory](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
@@ -293,7 +294,7 @@
 ###  [Security and privacy for power management](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [Upgrade clients](clients/manage/upgrade/upgrade-clients.md)
-###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md)
+###  [Test client upgrades in a pre-production collection](clients/manage/upgrade/test-client-upgrades.md)
 ###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md)
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)

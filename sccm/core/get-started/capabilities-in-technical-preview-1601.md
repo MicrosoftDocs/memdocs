@@ -21,7 +21,7 @@ This article introduces the features that are available in the Technical Preview
 
 -   When you manage **Client Update Options** to promote a pre-production client to production, the  text for the checkbox   displays a client version of zero (0) instead of the actual client build number. The correct pre-production client version is shown on the surface above this option, and is the client version that is promoted to production when you select this option.  
 
--   When updating to Technical Preview 1601 and choosing to test the Configuration Manager client in a preproduction collection, the client package for the collection will not be upgraded. This issue is for Technical Preview 1601 only.  
+-   When updating to Technical Preview 1601 and choosing to test the Configuration Manager client in a pre-production collection, the client package for the collection will not be upgraded. This issue is for Technical Preview 1601 only.  
 
      To workaround this issues, do one of the follow:  
 
@@ -46,7 +46,7 @@ This article introduces the features that are available in the Technical Preview
 
         ```  
 
-    -   Add a new distribution point site system role to your lab  site. The new distribution point will upgrade the preproduction collection with the new client package.  
+    -   Add a new distribution point site system role to your lab  site. The new distribution point will upgrade the pre-production collection with the new client package.  
 
 **The following are new features you can try out with this version.**  
 

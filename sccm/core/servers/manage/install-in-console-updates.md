@@ -60,7 +60,7 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
     - A user with this security role and access to the **Default** security scope can view updates, install updates and enable features during the install, and view features after an update has installed but not enable the features after the update has previously installed.
 
 - **Read-only Analyst** with **Read** permissions:
-  -  A user with this security role and acceUpdate to 1606 from either 1511 orss to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
+  -  A user with this security role and access to the **Default** scope can view updates but not install them, and can view features after an update has installed but cannot enable them.
 
 **Summary of permissions required for updates and servicing:**   
   - Use an account that is assigned a security role that includes the **Update packages** class with both **Modify** and **Read** permissions.
@@ -177,7 +177,7 @@ You are presented with the Updates Wizard that displays a list of the product ar
 
 
 
--   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+-   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 **2. During the update installation**  
 As part of the update installation, Configuration Manager:  
