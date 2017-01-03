@@ -1,5 +1,5 @@
 ---
-title: "Role-based administration Fundamentals | Microsoft Docs"
+title: "Role-based administration fundamentals | Microsoft Docs"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,7 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Fundamentals of role-based administration for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-With System Center Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage like collections, deployments, and sites. After you understand the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+With System Center Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage, like collections, deployments, and sites. After you understand the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
  The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings by using the following:  
 
@@ -65,7 +65,7 @@ When you  design and implement administrative security for Configuration Manager
 
 -   *Asset Analyst* grants administrative users the permission to view data that is collected by using Asset Intelligence, software inventory, hardware inventory, and software metering. Administrative users can create metering rules and Asset Intelligence categories, families, and labels.  
 
--   *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, templates, and set up software updates for Network Access Protection (NAP).  
+-   *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, and templates, and set up software updates for Network Access Protection (NAP).  
 
 > [!TIP]  
 >  You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To view the roles, in the **Administration** workspace, expand **Security**, and then select **Security Roles**.  
@@ -104,7 +104,7 @@ For information about how to create and configure security roles for role-based 
 For information about how to configure collections for role-based administration, see  [Configure collections to manage security](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) topic.  
 
 ##  <a name="bkmk_PlanScope"></a> Security scopes  
- Use security scopes to provide administrative users with access to securable objects. Security scopes are a named set of securable objects that are assigned to administrator users as a group. All securable objects must be assigned to one or more security scopes. Configuration Manager has two built-in security scopes:  
+ Use security scopes to provide administrative users with access to securable objects. A security scope is a named set of securable objects that are assigned to administrator users as a group. All securable objects must be assigned to one or more security scopes. Configuration Manager has two built-in security scopes:  
 
 -   The *All* built-in security scope grants access to all scopes. You cannot assign objects to this security scope.  
 
