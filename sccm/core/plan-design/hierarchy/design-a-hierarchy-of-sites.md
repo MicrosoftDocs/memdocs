@@ -2,7 +2,7 @@
 title: "Design a hierarchy of sites for System Center Configuration Manager | Microsoft Docs"
 description: "Understand the available topologies and management options for System Center Configuration Manager so you can plan your site hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 caps.latest.revision: 22
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Design a hierarchy of sites for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Design a hierarchy of sites for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before installing the first site of a new System Center Configuration Manager hierarchy, it's a good idea to understand the available topologies for Configuration Manager, the types of available sites and their relationships with each other, and the scope of management that each site type provides.
 Then, after considering content management options that can reduce the number of sites you need to install, you can plan a topology that efficiently serves your current business needs and can later expand to manage future growth.  
 
@@ -121,7 +126,7 @@ However, you can route content between two peer secondary sites to help manage t
 
 -   Secondary sites automatically install SQL Server Express during site installation if a local instance of SQL Server is not available.  
 
--   Secondary site installation is initiated from the Configuration Manager console, instead of by an instance of Configuration Manager that's set up directly on a computer.  
+-   Secondary site installation is initiated from the Configuration Manager console, instead of running Setup directly on a computer.  
 
 -   Secondary sites use a subset of the information in the site database, which reduces the amount of data that replicates by database replication between the parent primary site and secondary site.  
 
