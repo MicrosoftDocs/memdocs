@@ -133,9 +133,9 @@ It is not supported to run a test database upgrade on the production site databa
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active client.
 
-To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for preproduction.
+To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production.
 
-For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a preproduction collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a pre-production collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 **Plan to use service windows to control when site servers install updates:**   
 You can use service windows to define a period that applies to a primary site server during which updates to that site can be installed.
