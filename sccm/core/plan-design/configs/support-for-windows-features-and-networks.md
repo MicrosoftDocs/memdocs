@@ -2,7 +2,7 @@
 title: "Support for Windows features | Microsoft Docs"
 description: "Learn which Windows and networking features System Center Configuration Manager supports."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Support for Windows features and networks in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Support for Windows features and networks in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic identifies System Center Configuration Manager support for common Windows and networking features.  
 
 
@@ -43,7 +48,7 @@ These clients also cache the content. In this manner, successive clients on the 
 
 -   The operating system setting for BITS client settings must be enabled to support BranchCache.  
 
-**The following client operating systems are supported by Windows BranchCache:**  
+**Configuration Manager supports the following client operating systems with Windows BranchCache:**  
 
 |Operating system|Support details|  
 |----------------------|---------------------|  
@@ -104,7 +109,7 @@ Configuration Manager does not support the following over DirectAccess:
 |--------------|-------------------------------|  
 |Cloud-based distribution points|IPv4 is required to support Microsoft Azure and cloud-based distribution points.|  
 |Mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector|IPv4 is required to support mobile devices that are enrolled by Microsoft Intune and the Microsoft service connector.|  
-|Network discovery|IPv4 is required when you configure a DHCP server to search in network discovery.|  
+|Network Discovery|IPv4 is required when you configure a DHCP server to search in Network Discovery.|  
 |Operating system deployment|IPv4 is required to support operating system deployment.|  
 |Wake-up proxy communication|IPv4 is required to support the client wake-up proxy packets.|  
 |Windows CE|IPv4 is required to support the Configuration Manager client on Windows CE devices.|  
