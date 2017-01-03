@@ -2,7 +2,7 @@
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 1/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Peer Cache for Configuration Manager clients*Applies to: System Center Configuration Manager (Current Branch)*
+# Peer Cache for Configuration Manager clients
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Beginning with System Center Configuration Manager version 1610, you can use **Peer Cache** to help manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
 
 > [!TIP]  
