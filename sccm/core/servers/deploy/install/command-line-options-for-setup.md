@@ -2,7 +2,7 @@
 title: "Setup command-line options | Microsoft Docs"
 description: "Use information in this article to configure scripts or to install System Center Configuration Manager from a command line."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -45,7 +45,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  Example: `setupwpf.exe /UPGRADE xxxxx-xxxxx-xxxxx-xxxxx-xxxxx <path to external component files>`  
 
- For more information about Setup prerequisite files, see  [Setup downloader](setup-downloader.md).  
+ For more information about Setup prerequisite files, see  [Setup Downloader](setup-downloader.md).  
 
  **/SCRIPT <*Setup script path*>**  
  Performs unattended installations. A Setup initialization file is required when you use the **/SCRIPT** option. For more information about how to run Setup unattended, see [Install sites using a command line](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).  
@@ -298,7 +298,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -498,7 +498,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Distribution point site server FQDN*>  
 
-    -   **Details:** Specifies the protocol to use for the management point.  
+    -   **Details:** Specifies the protocol to use for the distribution point.  
 
 -   **Key Name:** DistributionPointProtocol  
 
@@ -588,7 +588,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the primary site database.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the primary site database.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -878,7 +878,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Values:** <*Site database name*> or <*Instance name*>\\<*Site database name*>  
 
-    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database. You must specify the same database name that was used before the failure.  
+    -   **Details:** Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. You must specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -921,7 +921,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
 
--   **Key Name:** CloudConnecorServer  
+-   **Key Name:** CloudConnectorServer  
 
     -   **Required:** Required when **CloudConnector** equals 1  
 
@@ -1130,7 +1130,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Details:**  
 
-         Specifies the name of the SQL Server database to create or the SQL Server database to use to install the central administration site database. You must specify the same database name that was used before the failure.  
+         Specifies the name of the SQL Server database to create or the SQL Server database to use when installing the central administration site database. You must specify the same database name that was used before the failure.  
 
         > [!IMPORTANT]  
         >  You must specify the instance name and site database name if you do not use the default instance.  
@@ -1199,7 +1199,7 @@ Use the following details to install a primary site by using an unattended Setup
 
     -   **Details:** Specifies whether to install a service connection point at this site. Because the service connection point can only be installed at the top-tier site of a hierarchy, this value must be **0** for a child primary site.  
 
--   **Key Name:** CloudConnecorServer  
+-   **Key Name:** CloudConnectorServer  
 
     -   **Required:** Required when **CloudConnector** equals 1  
 
