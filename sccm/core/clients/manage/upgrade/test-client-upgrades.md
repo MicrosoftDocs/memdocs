@@ -1,6 +1,6 @@
 ---
-title: "Test client upgrades preproduction collection | Microsoft Docs"
-description: "Test client upgrades in a preproduction collection in System Center Configuration Manager."
+title: "Test client upgrades pre-production collection | Microsoft Docs"
+description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/12/2016
 ms.prod: configuration-manager
@@ -16,23 +16,23 @@ caps.handback.revision: 0
 author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
-# How to test client upgrades in a preproduction collection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You can test a new Configuration Manager client version in a preproduction collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
+# How to test client upgrades in a pre-production collection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+You can test a new Configuration Manager client version in a pre-production collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
 
 > [!NOTE]
 > To promote a test client to production, you must be logged in as a user with security role of **full administrator** and a security scope of **All**. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration). You must also be logged into a server connected to the central administration site  or a top-level standalone primary site.
 
- There are 3 basic steps to testing clients in preproduction.  
+ There are 3 basic steps to testing clients in pre-production.  
 
-1.  Configure automatic client upgrades to use a preproduction collection.  
+1.  Configure automatic client upgrades to use a pre-production collection.  
 
 2.  Install a Configuration Manager update that includes a new version of the client.  
 
 3.  promote the new client to production.  
 
-##  To configure automatic client upgrades to use a preproduction collection  
+##  To configure automatic client upgrades to use a pre-production collection  
 
-1. [Set up a collection](..\collections\create-collections.md) that contains the computers you want to deploy the preproduction client to. Don't  include workgroup computers in preproduction collections. They can't use the authentication required for the distribution point to access the preproduction client package.   
+1. [Set up a collection](..\collections\create-collections.md) that contains the computers you want to deploy the pre-production client to. Don't  include workgroup computers in pre-production collections. They can't use the authentication required for the distribution point to access the pre-production client package.   
 
 1.  In the Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and choose **Hierarchy Settings**.  
 

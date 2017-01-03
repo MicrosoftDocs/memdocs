@@ -177,7 +177,7 @@ You are presented with the Updates Wizard that displays a list of the product ar
 
 
 
--   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+-   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 **2. During the update installation**  
 As part of the update installation, Configuration Manager:  
