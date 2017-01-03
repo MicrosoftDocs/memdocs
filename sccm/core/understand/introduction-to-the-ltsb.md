@@ -22,7 +22,7 @@ Use this topic to learn about the  Long-Term Servicing Branch (LTSB) of Configur
 The LTSB is a distinct branch of Configuration Manager that is based on version 1606 of the Current Branch. When compared to the Current Branch, the LTSB has [reduced functionality](#features-that-are-not-available-in-the-ltsb-of-configuration-manager). It is designed for customers who have [allowed their Software Assurance (SA) or equivalent subscription rights to lapse](/sccm/core/understand/learn-more-editions#software-assurance-and-the-ltsb).
 
 **Licensing overview:**   
-Customers with active Software Assurance (SA) on System Center Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
+Customers with active Software Assurance (SA) on System Center Configuration Manager licenses, or with equivalent subscription rights as of October 1, 2016, have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016, will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
 
 **Licensing specifics:**  
 [Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs can be found here](http://go.microsoft.com/fwlink/?LinkId=800052).
@@ -44,16 +44,16 @@ For information on how to install a LTSB site, see [Install and Upgrade for the 
 ## Features that are not available in the LTSB of Configuration Manager
 When compared to the Current Branch, the LTSB has the following support limitations:
 
-- Does not receive updates for new features.
+- Does not receive updates for new features
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
-  -	Intune in a hybrid mobile device management (MDM) configuration.
-  - On-premises MDM.
--	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch (CB) and Current Branch for Business (CBB).
-- Does not support future releases of Windows 10 LTSB and Windows Server.
--	No support for Asset Intelligence.
--	No support for cloud-based distribution points.
--	No support for Support for Exchange Online as an Exchange Connector.
--	Does not support any prerelease features.
+  -	Intune in a hybrid mobile device management (MDM) configuration
+  - On-premises MDM
+-	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch (CB) and Current Branch for Business (CBB)
+- Does not support future releases of Windows 10 LTSB and Windows Server
+-	Does not support  Asset Intelligence
+-	Does not support cloud-based distribution points
+-	Does not support  Support for Exchange Online as an Exchange Connector
+-	Does not support any prerelease features
 
 
 Although support for these features is not included in the LTSB, some features remain visible in the Configuration Manager console, but cannot be selected or used.
@@ -63,16 +63,16 @@ In addition, new operating systems that are added as supported by the Current Br
 ## Documentation for the LTSB
 Because the LTSB is based on the version 1606 Current Branch, the documentation you use for the LTSB is the [on-line documentation that applies to the Current Branch](https://docs.microsoft.com/sccm/), with the caveats and limitations that are specific to the LTSB as identified in the following topics:  
 
--	[Introduction to the  Long-Term Servicing Branch](introduction-to-the-ltsb.md)  – (This topic).
+-	[Introduction to the  Long-Term Servicing Branch](introduction-to-the-ltsb.md): (This topic).
 
--	[Which branch of Configuration Manager should I use](which-branch-should-i-use.md) – Information about the different System Center Configuration Manager branches, so you can be sure to install the best branch for your needs.
+-	[Which branch of Configuration Manager should I use](which-branch-should-i-use.md): Information about the different System Center Configuration Manager branches, so you can be sure to install the best branch for your needs.
 
--	[Install the  Long-Term Servicing Branch](install-the-ltsb.md) – How to install a new LTSB site, or upgrade a System Center 2012 Configuration Manager site to the LTSB.
+-	[Install the  Long-Term Servicing Branch](install-the-ltsb.md): How to install a new LTSB site, or upgrade a System Center 2012 Configuration Manager site to the LTSB.
 
--	[Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) – How to convert your LTSB installation to a Current Branch installation.
+-	[Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md): How to convert your LTSB installation to a Current Branch installation.
 
--	[Licensing and branches for System Center Configuration Manager](learn-more-editions.md) – Information about Software Assurance and related license requirement for System Center Configuration Manager.
--	[Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md) – The versions and requirements for operating system and dependent products like SQL Server that you can use with the LTSB.
+-	[Licensing and branches for System Center Configuration Manager](learn-more-editions.md): Information about Software Assurance and related license requirement for System Center Configuration Manager.
+-	[Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md): The versions and requirements for operating system and dependent products like SQL Server that you can use with the LTSB.
 
 
 To help you distinguish which branch specific documentation applies to, use the following guide:  
@@ -89,9 +89,9 @@ For example, the LTSB supports the same number of sites, site types, clients, an
 ## How to identify your branch and version
 When you view version information for a Configuration Manager site, you also confirm the branch.
 
-To check the version of your site, in the console go to **About System Center Configuration Manager** at the upper-left corner of the console where the **Site version** displays as **5.0.8412.1000**.
+To check the version of your site, in the console go to **About System Center Configuration Manager** at the upper-left corner of the console where the **Site version** appears as **5.0.8412.1000**.
 
-To confirm the branch of your site (as the LTSB or Current Branch), in the console go to **Administration** > **Site Configuration** > **Sites**, and open **Hierarchy Settings**.  If there is an option to convert to the Current Branch and it is active, the site runs the LTSB version. When the site runs the Current Branch, this option is dimmed.
+To confirm the branch of your site (as the LTSB or Current Branch), in the console go to **Administration** > **Site Configuration** > **Sites**, and open **Hierarchy Settings**.  If there is an option to convert to the Current Branch and it is active, the site runs the LTSB version. When the site runs the Current Branch, this option is grayed out.
 
 For information about the different versions of Configuration Manager, see "Baseline and update versions" in the [Updates for Configuration Manager](/sccm/core/servers/manage/updates) topic.
 
