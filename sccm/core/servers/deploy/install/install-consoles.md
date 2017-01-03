@@ -2,7 +2,7 @@
 title: "Install console | Microsoft Docs"
 description: "Read about installing the Configuration Manager console to connect to a central administration site or primary site."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -33,7 +33,7 @@ Administrators use the System Center Configuration Manager console to manage the
 
 1.  Verify that you meet these requirements:  
 
-    -   You are signed in as a member of the **Administrators** group on the computer on which the console will run.  
+    -  You have **Local Administrator** rights on the computer on which the console will run.  
 
     -   You have **Read** permissions to the location of the Configuration Manager console installation files.  
 
