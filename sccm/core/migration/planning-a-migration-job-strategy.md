@@ -13,18 +13,23 @@ ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 robots: noindex
 
 ---
-# Plan a migration job strategy in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan a migration job strategy in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use migration jobs to configure the specific data that you want to migrate to your System Center Configuration Manager environment. Migration jobs identify the objects that you plan to migrate, and they run at the top-level site in your destination hierarchy. You can set up one or more migration jobs per source site. This lets you migrate all objects at one time or limited subsets of data with each job.  
 
  You can create migration jobs after Configuration Manager has successfully gathered data from one or more sites from the source hierarchy. You can migrate data in any sequence from the source sites that have gathered data. With a Configuration Manager 2007 source site, you can migrate data only from the site where an object was created. With source sites that run System Center 2012 Configuration Manager or later, all data that you can migrate is available at the top-level site of the source hierarchy.  
 
  Before you migrate clients between hierarchies, ensure that the objects that clients use have migrated and that these objects are available in the destination hierarchy. For example, when you migrate from a Configuration Manager 2007 SP2 source hierarchy, you might have an advertisement for content that is deployed to a custom collection that has a client. In this scenario, we recommend that you migrate the collection, the advertisement, and the associated content before you migrate the client. This data cannot be associated with the client in the destination hierarchy if the content, collection, and advertisement are not migrated before the client migrates. If a client is not associated with the data related to a previously run advertisement and content, the client can be offered the content for installation in the destination hierarchy, which might be unnecessary. When the client migrates after the data has migrated, the client is associated with this content and advertisement, and unless the advertisement is recurring, is not offered this content for the migrated advertisement again.  
 
- Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and sync the software update point with Windows Server Update Services (WSUS) in the destination hierarchy.  
+ Some objects require more than the migration of data from the source hierarchy to the destination hierarchy. For example, to successfully migrate software updates for your clients to your destination hierarchy, you must deploy an active software update point, configure the catalog of products, and synchronize the software update point with Windows Server Update Services (WSUS) in the destination hierarchy.  
 
  Use the following sections to help you plan your migration jobs.  
 
@@ -295,7 +300,7 @@ Use migration jobs to configure the specific data that you want to migrate to yo
  By default, collection-based migration jobs disable advertisements that migrate to the destination hierarchy. This includes any programs that are associated with the advertisement. When you create a collection-based migration job that has advertisements, you see the **Enable programs for deployment in Configuration Manager after an advertisement is migrated** option on the **Settings** page of the Create Migration Job wizard. If you select this option, programs that are associated with the advertisements are enabled after they have migrated. As a best practice, do not select this option. Instead, enable the programs after they have migrated when you can verify the clients that will receive them.  
 
 > [!NOTE]  
->  You see the **Enable programs for deployment in Configuration Manager after an advertisement is migrated** option only after you create a collection-based migration job and the migration job contains advertisements.  
+>  You see the **Enable programs for deployment in Configuration Manager after an advertisement is migrated** option only when you are creating a collection-based migration job and the migration job contains advertisements.  
 
  To enable a program after migration, clear **Disable this program on computers where it is advertised** on the **Advanced** tab of the program properties.  
 
