@@ -2,7 +2,7 @@
 title: "Collections introduction | Microsoft Docs"
 description: "Get an introduction to using collections in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,13 +16,13 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Introduction to collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Collections in System Center Configuration Manager (also known as ConfigMgr and SCCM) help you organize resources into manageable units. You can create collections to match your client management needs, and to perform operations on multiple resources at one time. 
+Collections help you organize resources into manageable units. You can create collections to match your client management needs, and to perform operations on multiple resources at one time. 
 
-Most management tasks rely on or require using one or more collections. Although you can use the built-in collection of All Systems, using it for management tasks is not a best practice. Create your own custom collections to more specifically identify the devices or users for a task.  
+Most management tasks rely on or require using one or more collections. Although you can use the built-in collection of All Systems, using it for management tasks is not a best practice. Create custom collections to more specifically identify the devices or users for a task.  
 
  Built-in and custom collections appear in the **User Collections** and **Device Collections** nodes in the **Assets and Compliance** workspace in the Configuration Manager console.  
 
- Collections that you have recently viewed appear in the **Users** node and in the **Devices** node in the **Assets and Compliance** workspace in the Configuration Manager console.  
+ Collections that you have recently viewed appear in the **Users** node and in the **Devices** node in the **Assets and Compliance** workspace.  
 
 Here are some examples of collection use:  
 
