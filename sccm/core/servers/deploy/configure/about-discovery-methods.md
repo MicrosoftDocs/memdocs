@@ -11,9 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# About discovery methods for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# About discovery methods for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from Active Directory. To efficiently use a discovery method, you should understand its available configurations and limitations.  
 
 ##  <a name="bkmk_aboutForest"></a> Active Directory Forest Discovery  
@@ -392,9 +397,13 @@ When discovery searches an untrusted forest for resources, the discovery agent m
 
 For each location that you specify, you can configure individual search options, like enabling a recursive search of the location's Active Directory child containers. You can also configure a unique account to use when it searches that location. This provides flexibility in configuring a discovery method at one site to search multiple Active Directory locations across multiple forests, without having to configure a single account that has permissions to all locations.  
 
-When each of these three discovery methods runs at a specific site, the Configuration Manager site server at that site contacts the nearest domain controller in the specified Active Directory forest to locate Active Directory resources. The domain and forest can be in any supported Active Directory mode. The account that you assign to each location instance must have **Read** access permission to the specified Active Directory locations. Discovery searches the specified locations for objects and then tries to collect information about those objects. A DDR is created when sufficient information about a resource can be identified. The required information varies depending on the discovery method that is being used.  
+When each of these three discovery methods runs at a specific site, the Configuration Manager site server at that site contacts the nearest domain controller in the specified Active Directory forest to locate Active Directory resources. The domain and forest can be in any supported Active Directory mode. The account that you assign to each location instance must have **Read** access permission to the specified Active Directory locations.
 
-If you configure the same discovery method to run at different Configuration Manager sites to take advantage of querying local Active Directory servers, you can configure each site with a unique set of discovery options. Because discovery data is shared with each site in the hierarchy, avoid overlap between these configurations to efficiently discover each resource a single time. For smaller environments, you might consider running each discovery method at only one site in your hierarchy to reduce administrative overhead and the potential for multiple discovery actions to rediscover the same resources. When you minimize the number of sites that run discovery, you can reduce the overall network bandwidth that discovery is using. You can also reduce the overall number of DDRs that are created and must be processed by your site servers.  
+Discovery searches the specified locations for objects and then tries to collect information about those objects. A DDR is created when sufficient information about a resource can be identified. The required information varies depending on the discovery method that is being used.  
+
+If you configure the same discovery method to run at different Configuration Manager sites to take advantage of querying local Active Directory servers, you can configure each site with a unique set of discovery options. Because discovery data is shared with each site in the hierarchy, avoid overlap between these configurations to efficiently discover each resource a single time. 
+
+For smaller environments, you might consider running each discovery method at only one site in your hierarchy to reduce administrative overhead and the potential for multiple discovery actions to rediscover the same resources. When you minimize the number of sites that run discovery, you can reduce the overall network bandwidth that discovery is using. You can also reduce the overall number of DDRs that are created and must be processed by your site servers.  
 
 Many of the discovery method configurations are self-explanatory. Use the following sections for more information about the discovery options that might require additional information before you configure them.  
 
