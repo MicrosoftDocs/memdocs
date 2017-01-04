@@ -179,29 +179,29 @@ The dashboard displays charts for the following:
 - Office 365 client languages
 - Office 365 client channels     
 
-For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates)
+For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
 ## Task sequence steps to manage BIOS to UEFI conversion
-You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
+You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive. This means that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
 
-##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
-The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
+##  Improvements to the task sequence step: Prepare ConfigMgr Client for Capture  
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
 
 
 
 ## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices and the top reasons for non-compliance by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill-down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
 
 
-## Lookout integration for Hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+## Lookout integration for hybrid implementations to protect iOS and Android devices
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware and risky apps on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
 
-End users of noncompliant iOS devices will be prompted to enroll, and will be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
+Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 
 
 
 ## New compliance settings for configuration items
-We've added many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
+There are many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
 For details, see [Configuration items for devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
 
 ### New settings for Android devices
