@@ -2,7 +2,7 @@
 title: "Use the extended interoperability client with the Current Branch  | Microsoft Docs"
 description: "Learn about using the client from the Long-Term Servicing Branch of Configuration Manager with a Current Branch site."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: nbigmanms.author: nbigmanmanager: angrobe
 Robots: NOINDEX,NOFOLLOW
 ---
 # Use the client software from the version 1606 baseline media for extended interoperability with future versions of a Current Branch site
