@@ -2,7 +2,7 @@
 title: "Accounts to access content | Microsoft Docs"
 description: "Learn about the accounts where clients access System Center Configuration Manager content."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -21,7 +21,7 @@ Before deploying content in System Center Configuration Manager, take time to co
 
      This account is also used by pull-distribution points to obtain content from a source distribution point in a remote forest  
 
--   **Package access account** – By default, Configuration Manager grants access to content on a distribution point to generic access accounts Users and Administrators. However, you can configure additional permissions to restrict access.  
+-   **Package access account** – By default, Configuration Manager grants access to content on a distribution point to the built-in accounts named **Users** and **Administrators**. You can configure additional permissions to restrict access.  
 
 -   **Multicast Connection Account** – Used for operating system deployments.  
 
