@@ -48,7 +48,7 @@ public void ApplyCustomClientSettings(WqlConnectionManager connection,          
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`|The target collection for the custom client settings deployment.|  
 
 ## Compiling the Code  

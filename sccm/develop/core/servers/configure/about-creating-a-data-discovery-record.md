@@ -29,7 +29,7 @@ To create data discovery records (DDRs), you must use the SMSRsGenCtl.dll and th
  The `SMSResGen` method has the following functions:  
 
 > [!IMPORTANT]
->  The function [DDRSendToSMS](assetId:///DDRSendToSMS?qualifyHint=False&autoUpgrade=True), available in previous releases of the SDK and in versions of [SMSRsGen.dll](assetId:///SMSRsGen.dll?qualifyHint=False&autoUpgrade=True) and [SMSRsGenCtl.dll](assetId:///SMSRsGenCtl.dll?qualifyHint=False&autoUpgrade=True), has been deprecated and should not be used with System Center Configuration Manager.  
+>  The function `DDRSendToSMS`, available in previous releases of the SDK and in versions of `SMSRsGen.dll` and `SMSRsGenCtl.dll`, has been deprecated and should not be used with System Center Configuration Manager.  
 
  [DDRNew](../../../../develop/reference/core/servers/configure/ddrnew.md)  
  Creates a new DDR.  

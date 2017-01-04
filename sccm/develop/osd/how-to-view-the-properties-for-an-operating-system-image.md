@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to View the Properties for an Operating System Image
-In System Center Configuration Manager, you view the image properties for the Windows Image (WIM) file that is contained in an operating system package by calling the [SMS_ImagePackage](assetId:///SMS_ImagePackage?qualifyHint=False&autoUpgrade=True) class instance [GetImageProperties](assetId:///GetImageProperties?qualifyHint=False&autoUpgrade=True) method.  
+In System Center Configuration Manager, you view the image properties for the Windows Image (WIM) file that is contained in an operating system package by calling the [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [GetImageProperties](../../develop/reference/osd/getimageproperties-method-in-class-sms_imagepackage.md) method.  
 
  The image properties are available in XML format.  
 
@@ -26,11 +26,11 @@ In System Center Configuration Manager, you view the image properties for the Wi
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the assetId:///SMS_ImagePackage?qualifyHint=False&autoUpgrade=True class instance that you want to update.  
+2.  Get the `SMS_ImagePackage` class instance that you want to update.  
 
-3.  Call [the GetImageProperties](assetId:///the GetImageProperties?qualifyHint=False&autoUpgrade=True) class instance method.  
+3.  Call the [GetImageProperties](../../develop/reference/osd/getimageproperties-method-in-class-sms_imagepackage.md) class instance method.  
 
-4.  Access property XML by using the [ImageProperty](assetId:///ImageProperty?qualifyHint=False&autoUpgrade=True) parameter.  
+4.  Access property XML by using the *ImageProperty* parameter.  
 
 ## Example  
  The following example displays the operating system image package property XML that defines the package.  
@@ -93,7 +93,7 @@ public void ViewOSImage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`imagePackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package image identifier. It is available from `SMS_ImagePackage. PackageID`.|  
 
 ## Compiling the Code  

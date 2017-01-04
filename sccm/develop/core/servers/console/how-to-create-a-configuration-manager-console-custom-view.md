@@ -71,7 +71,7 @@ In System Center Configuration Manager, to create a custom console view, you mus
 1.  Build the project, and depending on where you created your project, the assembly should be created as \Visual Studio 2010\Projects\ConfigMgrControl\ConfigMgrObjectsControl\bin\Debug\NameofMyAssembly.dll.  
 
     > [!NOTE]
-    >  In other parts of the Console Extension section, the examples use an assembly named [ConfigMgrObjectsControl.dll](assetId:///ConfigMgrObjectsControl.dll?qualifyHint=False&autoUpgrade=True). If you are building the examples in other sections, make sure to name the assembly assetId:///ConfigMgrObjectsControl.dll?qualifyHint=False&autoUpgrade=True at this step (or change the other assembly references to your specific assembly name).  
+    >  In other parts of the Console Extension section, the examples use an assembly named `ConfigMgrObjectsControl.dll`. If you are building the examples in other sections, make sure to name the assembly `ConfigMgrObjectsControl.dll` at this step (or change the other assembly references to your specific assembly name).  
 
 2.  Copy the assembly to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder.  
 

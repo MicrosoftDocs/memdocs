@@ -44,7 +44,7 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
 |`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`|  
 

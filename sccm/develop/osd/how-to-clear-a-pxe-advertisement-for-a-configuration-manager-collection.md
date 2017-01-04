@@ -26,7 +26,7 @@ To clear a PXE advertisement for a System Center Configuration Manager collectio
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) object for the collection you want to clear the PXE advertisement for.  
+2.  Get the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object for the collection you want to clear the PXE advertisement for.  
 
 3.  Call the `ClearLastNBSAdvForCollection` method to clear the PXE advertisement for the collection.  
 
@@ -85,8 +85,8 @@ public void ClearPxeAdvertisementCollection(WqlConnectionManager connection, str
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True class [CollectionID](assetId:///CollectionID?qualifyHint=False&autoUpgrade=True) property.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the `SMS_Collection` class CollectionID property.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  
