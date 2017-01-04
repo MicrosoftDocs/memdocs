@@ -2,7 +2,7 @@
 title: "Plan for security in System Center Configuration Manager | Microsoft Docs"
 description: "Get best practices and other information about security in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,6 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Plan for security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use the information in this article to help you plan for security in System Center Configuration Manager.  
-
-   For more about how Configuration Manager uses certificates and cryptographic controls, see [Cryptographic controls technical reference for System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
-
-
 ##  <a name="BKMK_PlanningForCertificates"></a> Plan for certificates (self-signed and PKI)  
  Configuration Manager uses a combination of self-signed certificates and public key infrastructure (PKI) certificates.  
 
@@ -29,12 +24,12 @@ Use the information in this article to help you plan for security in System Cent
 
  PKI certificates are also required when client computers connect to Internet-based site systems, and we recommend that you use PKI certificates when clients connect to site systems that run Internet Information Services (IIS). For more about client communication, see [How to configure client communication ports in System Center Configuration Manager](../../../core/clients/deploy/configure-client-communication-ports.md).  
 
- When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other scenarios when you transfer data between computers. The process that sets up and implements IPsec is independent from Configuration Manager.  
+ When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other data transfer between computers. Implementation of IPsec is independent from Configuration Manager.  
 
  Configuration Manager can automatically generate self-signed certificates when PKI certificates are not available, and some certificates in Configuration Manager are always self-signed. In most cases, Configuration Manager automatically manages the self-signed certificates, and you do not have to take additional action. One possible exception is the site server signing certificate. The site server signing certificate is always self-signed, and it ensures that the client policies that clients download from the management point were sent from the site server and were not tampered with.  
 
 ### Plan for the site server signing certificate (self-signed)  
- Clients can securely get a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot get a copy of the site server signing certificate by using one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the client's first communication with the site is from the Internet, because the management point is connected to an untrusted network and, therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
+ Clients can securely get a copy of the site server signing certificate from Active Directory Domain Services and from client push installation. If clients cannot get a copy of the site server signing certificate by one of these mechanisms, as a security best practice, install a copy of the site server signing certificate when you install the client. This is especially important if the client's first communication with the site is from the Internet, because the management point is connected to an untrusted network and, therefore, vulnerable to attack. If you do not take this additional step, clients automatically download a copy of the site server signing certificate from the management point.  
 
  Scenarios when clients cannot securely get a copy of the site server certificate include the following:  
 
@@ -47,8 +42,6 @@ Use the information in this article to help you plan for security in System Cent
     -   The client is from an untrusted forest or a workgroup.  
 
 -   You install the client when it is on the Internet.  
-
-Use the following procedure to install clients together with a copy of the site server signing certificate.  
 
 ##### To install clients with a copy of the site server signing certificate  
 
@@ -72,7 +65,7 @@ Checking the CRL every time that a certificate is used offers more security agai
 
 Consult your PKI admins before you decide whether Configuration Manager clients must check the CRL, and then consider keeping this option enabled in Configuration Manager when both of the following conditions are true:  
 
--   Your PKI infrastructure supports a CRL, and it is published where all Configuration Manager clients can locate it. Remember that this might include clients on the Internet if you are using Internet-based client management and clients in untrusted forests.  
+-   Your PKI infrastructure supports a CRL, and it is published where all Configuration Manager clients can locate it. Remember that this might include clients on the Internet if you are using Internet-based client management, and clients in untrusted forests.  
 
 -   The requirement to check the CRL for each connection to a site system that's configured to use a PKI certificate is greater than the requirement for faster connections, efficient processing on the client, and the risk of clients failing to connect to servers if they cannot locate the CRL.  
 
@@ -86,7 +79,7 @@ If your IIS site systems use PKI client certificates for client authentication o
     > [!NOTE]  
     >  When you issue client PKI certificates from the same CA hierarchy that issues the server certificates that you use for management points, you do not have to specify this root CA certificate. However, if you use multiple CA hierarchies and you are not sure whether they trust each other, import the root CA for the clients' CA hierarchy.  
 
-If you must import root CA certificates for Configuration Manager, export them from the issuing CA or from the client computer. If you export the certificate from the issuing CA that is also the root CA, ensure that the private key is not exported. Store the exported certificate file in a secured location to prevent tampering. You must be able to access the file when you set up the site. If you access the file over the network, ensure that the communication is protected from tampering by using SMB signing or IPsec.  
+If you must import root CA certificates for Configuration Manager, export them from the issuing CA or from the client computer. If you export the certificate from the issuing CA that is also the root CA, ensure that the private key is not exported. Store the exported certificate file in a secure location to prevent tampering. You must be able to access the file when you set up the site. If you access the file over the network, ensure that the communication is protected from tampering by using SMB signing or IPsec.  
 
 If any root CA certificate that you import is renewed, you must import the renewed certificate.  
 
@@ -104,13 +97,13 @@ Independent from the site configuration, you might also have to import a root CA
 > [!NOTE]  
 >  Some devices do not support a certificate selection method. Instead, they automatically select the first certificate that fulfills the certificate requirements. For example, clients on Mac computers and mobile devices do not support a certificate selection method.  
 
-In many cases, the default configuration and behavior will be sufficient. The Configuration Manager client on Windows computers filters multiple certificates by using the following criteria in this order:  
+In many cases, the default configuration and behavior will be sufficient. The Configuration Manager client on Windows computers filters multiple certificates by using these criteria in this order:  
 
 1.  The certificate issuers list: The certificate chains to a root CA that is trusted by the management point.  
 
 2.  The certificate is in the default certificate store of **Personal**.  
 
-3.  The certificate is valid, not revoked, and not expired. The validity check verifies that the private key is accessible and that the certificate is not created by using a Version 3 certificate template, which is not compatible with Configuration Manager.  
+3.  The certificate is valid, not revoked, and not expired. The validity check verifies that the private key is accessible and that the certificate is not created with a Version 3 certificate template, which is not compatible with Configuration Manager.  
 
 4.  The certificate has client authentication capability, or it is issued to the computer name.  
 
@@ -128,7 +121,7 @@ Clients can be configured to use the certificate issuers list by using the follo
 
 Clients that do not have the certificate issuers list when they are first installed and are not yet assigned to the site skip this check. When clients do have the certificate issuers list and do not have a PKI certificate that chains to a trusted root certificate in the certificate issuers list, certificate selection fails, and clients do not continue with the other certificate selection criteria.  
 
-In most cases, the Configuration Manager client correctly identifies a unique and appropriate PKI certificate to use. However, when this is not the case, instead of selecting the certificate based on the client authentication capability, you can set up two alternative selection methods:  
+In most cases, the Configuration Manager client correctly identifies a unique and appropriate PKI certificate. However, when this is not the case, instead of selecting the certificate based on the client authentication capability, you can set up two alternative selection methods:  
 
 -   A partial string match on the client certificate Subject name. This is a case-insensitive match that is appropriate if you are using the fully qualified domain name (FQDN) of a computer in the subject field and want the certificate selection to be based on the domain suffix, for example **contoso.com**. However, you can use this selection method to identify any string of sequential characters in the certificate Subject name that differentiate the certificate from others in the client certificate store.  
 
@@ -162,24 +155,24 @@ The following table shows the attribute values that Configuration Manager suppor
 |2.5.4.43|I or Initials|Initials|  
 |2.5.29.17|(no value)|Subject Alternative Name|  
 
-If more than one appropriate certificate is located after the selection criteria are applied, you can override the default configuration to select the certificate that has the longest validity period and instead, specify that no certificate is selected. In this scenario, the client will not be able to communicate with IIS site systems by using a PKI certificate. The client sends an error message to its assigned fallback status point to alert you to the certificate selection failure so that you can change or refine your certificate selection criteria. The client behavior then depends on whether the failed connection was over HTTPS or HTTP:  
+If more than one appropriate certificate is located after the selection criteria are applied, you can override the default configuration to select the certificate that has the longest validity period and instead, specify that no certificate is selected. In this scenario, the client will not be able to communicate with IIS site systems with a PKI certificate. The client sends an error message to its assigned fallback status point to alert you to the certificate selection failure so that you can change or refine your certificate selection criteria. The client behavior then depends on whether the failed connection was over HTTPS or HTTP:  
 
 -   If the failed connection was over HTTPS: The client tries to connect over HTTP and uses the client self-signed certificate.  
 
 -   If the failed connection was over HTTP: The client tries to connect again over HTTP by using the self-signed client certificate.  
 
-To help identify a unique PKI client certificate, you can also specify a custom store other than the default of **Personal** in the **Computer** store. However, you must create this store independent from Configuration Manager and must be able to deploy certificates to this custom store and renew them before the validity period expires.  
+To help identify a unique PKI client certificate, you can also specify a custom store other than the default of **Personal** in the **Computer** store. However, you must create this store independently from Configuration Manager and must be able to deploy certificates to this custom store and renew them before the validity period expires.  
 
 For information about how to configure the settings for client certificates, see the [Configure Settings for Client PKI Certificates](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) section in the [Configure security in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md) article.  
 
 ###  <a name="BKMK_PlanningForPKITransition"></a> Plan a transition strategy for PKI certificates and Internet-based client management  
-The flexible configuration options in Configuration Manager let you gradually transition clients and the site to use PKI certificates to help secure client endpoints. PKI certificates provide better security and enable clients to be managed when they are on the Internet.  
+The flexible configuration options in Configuration Manager let you gradually transition clients and the site to use PKI certificates to help secure client endpoints. PKI certificates provide better security and enable you to manage Internet clients.  
 
 Because of the number of configuration options and choices in Configuration Manager, there is no single way to transition a site so that all clients use HTTPS connections. However, you can follow these steps as guidance:  
 
 1.  Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
 
-2.  Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select the **Use PKI client certificate (client authentication capability) when available** check box. Configure any other settings from this tab that you require. For more information, see the  [Configure settings for client PKI certificates](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) section in the [Configure security in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md) article.  
+2.  Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see the  [Configure settings for client PKI certificates](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI) section in the [Configure security in System Center Configuration Manager](../../../core/plan-design/security/configure-security.md) article.  
 
 3.  Pilot a PKI rollout for client certificates. For an example deployment, see the *Deploying the Client Certificate for Windows Computers* section in the [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates) article.  
 
@@ -192,7 +185,7 @@ Because of the number of configuration options and choices in Configuration Mana
      You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**cmHttpsReadiness.exe**) to computers and use the reports to view how many computers can use a client PKI certificate with Configuration Manager.  
 
     > [!NOTE]  
-    >  When the Configuration Manager client installs on client computers, the **cmHttpsReadiness.exe** tool is installed in the *%windir%***\CCM** folder. When you run this tool on clients, you can specify the following options:  
+    >  When the Configuration Manager client is installed, the **cmHttpsReadiness.exe** tool is installed in the *%windir%***\CCM** folder. When you run this tool on clients, you can specify the following options:  
     >   
     >  -   /Store:&lt;name\>  
     > -   /Issuers:&lt;list\>  
@@ -231,18 +224,18 @@ Clients can automatically retrieve the public copy of the trusted root key by us
 
 -   Clients are installed by using client push.  
 
-If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients by using the trusted root key.  
+If clients cannot retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that is provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This would likely be the action of a sophisticated attacker and might occur only in a limited time before the client retrieves the trusted root key from a valid management point. However, to reduce this risk of an attacker misdirecting clients to a rogue management point, you can pre-provision the clients with the trusted root key.  
 
 Use the following procedures to pre-provision and verify the trusted root key for a Configuration Manager client:  
 
--   Pre-provision a client by using the trusted root key by using a file.  
+-   Pre-provision a client with the trusted root key by using a file.  
 
--   Pre-provision a client by using the trusted root key without using a file.  
+-   Pre-provision a client with the trusted root key without using a file.  
 
 -   Verify the trusted root key on a client.  
 
 > [!NOTE]  
->  You do not have to pre-provision a client by using the trusted root key if they can get this from Active Directory Domain Services or they are installed by using client push. In addition, you do not have to pre-provision clients when they use HTTPS communication to management points because trust is established by using the PKI certificates.  
+>  You do not have to pre-provision a client by using the trusted root key if they can get this from Active Directory Domain Services or they are installed by using client push. In addition, you do not have to pre-provision clients when they use HTTPS communication to management points because trust is established by PKI certificates.  
 
 You can remove the trusted root key from a client by using the Client.msi property, **RESETKEYINFORMATION = TRUE**, with CCMSetup.exe. To replace the trusted root key, reinstall the client together with the new trusted root key, for example, by using client push, or by specifying the Client.msi **SMSPublicRootKey** property by using CCMSetup.exe.  
 
@@ -303,3 +296,6 @@ You can remove the trusted root key from a client by using the Client.msi proper
 
 ##  <a name="BKMK_PlanningForRBA"></a> Plan for role-based administration  
  For this information, see [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md).  
+
+### See also
+[Cryptographic controls technical reference for System Center Configuration Manager](../../../protect/deploy-use/cryptographic-controls-technical-reference.md).  
