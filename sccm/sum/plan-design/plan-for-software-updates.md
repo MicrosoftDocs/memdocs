@@ -73,7 +73,7 @@ Before you use software updates in a System Center Configuration Manager product
 
 2.  The client retries a minimum of four times at 30 minute intervals. After the fourth failure, and after it waits an additional two minutes, the client will move to the next software update point in the software update point list.  
 
-3.  After a successful scan, the client will continue to connect to the software update point.  
+3.  The client goes through the same process on the new software update point. After a successful scan, the client will continue to connect to the new software update point.
 
  The following list provides additional information that you can consider for software update point retry and switching scenarios:  
 
@@ -82,6 +82,13 @@ Before you use software updates in a System Center Configuration Manager product
 -   If Internet-based client management is enabled, and there are multiple software update points that are configured to accept communication from clients on the Internet, the switching process will follow the standard retry process that is described in the previous scenario.  
 
 -   If the scan process started, but the client was powered down before the scan completed, it is not considered a scan failure and it does not count as one of the four retries.  
+
+When Configuration Manager receives any of the following Windows Update Agent error codes, it will have the client retry the connection:  
+
+2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
+
+To look up the meaning of an error code, you must convert the decimal error code to hexadecimal, and then search for the hexadecimal value on a site such as the [Windows Update Agent - Error Codes Wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx).
+
 
 ###  <a name="BKMK_ManuallySwitchSUPs"></a>Manually switch clients to a new software update point
 Beginning in Configuration Manager version 1606, you can enable the option for Configuration Manager clients to switch to a new software update point when there are issues with the active software update point. This option results in changes only when a client receives multiple software update points from a management point.  

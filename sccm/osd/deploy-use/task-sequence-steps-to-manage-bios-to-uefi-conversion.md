@@ -32,7 +32,7 @@ In an existing task sequence to install an operating system, you will add a new 
 5. Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a **Run Command Line** task sequence step with a command line to start the OEM tool.
 6.	Add the Format and Partition Disk task sequence step that will partition and format the hard drive. In the step, do the following:
 	1.	Create the FAT32 partition that will be converted to UEFI before the operating system is installed. Choose **GPT** for **Disk type**.
-	![Format and partition disk step](../../core/get-started/media/format-and-partition-disk.png)
+	![Format and partition disk step](../media/format-and-partition-disk.png)
 	2.	Go to the properties for the FAT32 partition. Enter **TSUEFIDrive** in the **Variable** field. When the task sequence detects this variable, it will prepare for the UEFI transition before restarting the computer.
 	![Partition properties](../../core/get-started/media/partition-properties.png)
 	3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
