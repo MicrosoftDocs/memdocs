@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using WMI
-In System Center Configuration Manager, you perform a synchronous query for System Center Configuration Manager objects by calling the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [ExecQuery](assetId:///ExecQuery?qualifyHint=False&autoUpgrade=True) method and passing a WQL query.  
+In System Center Configuration Manager, you perform a synchronous query for System Center Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) method and passing a WQL query.  
 
  A synchronous query is a query that maintains control over the process of your application for the duration of the query. A synchronous query has the potential of locking up your application for large queries or for queries over a network. Alternatively, you can run an asynchronous query that returns control to the application while the query is run. For more information, see [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)  
 
@@ -29,9 +29,9 @@ In System Center Configuration Manager, you perform a synchronous query for Syst
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object that you obtain from step one, use the assetId:///ExecQuery?qualifyHint=False&autoUpgrade=True method to get a [SWbemObjectSet](assetId:///SWbemObjectSet?qualifyHint=False&autoUpgrade=True) collection containing the query results.  
+2.  Using the SWbemServices object that you obtain from step one, use the ExecQuery method to get a [SWbemObjectSet](https://msdn.microsoft.com/library/aa393762.aspx) collection containing the query results.  
 
-3.  Iterate through the assetId:///SWbemObjectSet?qualifyHint=False&autoUpgrade=True collection to access a [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True) for each object returned by the query.  
+3.  Iterate through the SWbemObjectSet collection to access a [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) for each object returned by the query.  
 
 ## Example  
  The following example performs a synchronous query of all packages in Configuration Manager.  
@@ -70,7 +70,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
+|`connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## See Also  
  [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950)   
