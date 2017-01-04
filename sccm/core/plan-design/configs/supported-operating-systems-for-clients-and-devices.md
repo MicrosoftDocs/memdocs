@@ -326,7 +326,7 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 -  **Windows 10 IoT Mobile Enterprise**
 
 ##  <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
- Configuration Manager supports limited management of devices that connect to your Exchange Server, without installing client software. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+Configuration Manager supports limited management of devices that connect to your Exchange Server, without installing the Configuration Manager client. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
  **Requirements and limitations:**  
 
