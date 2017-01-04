@@ -2,7 +2,7 @@
 title: "Capabilities in Technical Preview 1612 for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1612."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -61,6 +61,7 @@ In addition to installing and configuring the data warehouse database, several n
   - On a default or named instance
   - On a *SQL Server Cluster*. Although this configuration should work, it has not been tested and support is best effort.
   - When co-located with either the site database or Reporting services point database. However, we recommend it be installed on a separate server.  
+- The account that is used as the *Reporting Services Point Account* must have the **db_datareader** permission to the data warehouse database.  
 - The database is not supported on a *SQL Server AlwaysOn availability group*.
 
 ### Install the Data Warehouse
@@ -94,6 +95,8 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
   - **Synchronization interval (minutes)** - Specify a value in minutes. After the interval is reached, a new synchronization starts. This supports a range from 60 to 1440 minutes (24 hours).
   - **Schedule** - Specify the days that you want synchronization to run.
 
+**Reporting point access**:   
+After the data warehouse role is installed, ensure the account that is used as the *Reporting Services Point Account* has the **db_datareader** permission to the data warehouse database.
 
 #### Troubleshoot installation and data synchronization
 Use the following logs to investigate problems with the installation of the Data Warehouse Service point, or synchronization of data:

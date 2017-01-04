@@ -18,24 +18,24 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add an Operating System Deployment Task Sequence Action
-An operating system deployment task sequence action is added to a task sequence, in System Center Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](assetId:///SMS_TaskSequence_Action?qualifyHint=False&autoUpgrade=True) derived class and then adding it to the steps of the task sequence.  
+An operating system deployment task sequence action is added to a task sequence, in System Center Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class and then adding it to the steps of the task sequence.  
 
 > [!NOTE]
->  System Center Configuration Manager has a number of built-in actions that you can use. For example the command-line action class is [SMS_TaskSequence_RunCommandLineAction](assetId:///SMS_TaskSequence_RunCommandLineAction?qualifyHint=False&autoUpgrade=True). These classes derive from the assetId:///SMS_TaskSequence_Action?qualifyHint=False&autoUpgrade=True class.  
+>  System Center Configuration Manager has a number of built-in actions that you can use. For example the command-line action class is [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md). These classes derive from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class.  
 
- [SMS_TaskSequenceAction](assetId:///SMS_TaskSequenceAction?qualifyHint=False&autoUpgrade=True) derives from the  [SMS_TaskSequence_Step](assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True) class, which is the base class for both actions and groups. The task sequence stores its steps in an array of assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True, thus allowing actions and groups to be stored together.  
+ [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derives from the  [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) class, which is the base class for both actions and groups. The task sequence stores its steps in an array of [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md), thus allowing actions and groups to be stored together.  
 
 ### To add a task sequence action  
 
 1.  Set up a connection to the SMS Provider. For more information see, [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create a task sequence ([SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True)) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
+2.  Create a task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
 
-3.  Create an assetId:///SMS_TaskSequenceAction?qualifyHint=False&autoUpgrade=True derived class instance, for example, [SMS_TaskSequence_RunCommandLine](assetId:///SMS_TaskSequence_RunCommandLine?qualifyHint=False&autoUpgrade=True), for the action you want.  
+3.  Create an [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class instance, for example, [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md), for the action you want.  
 
 4.  Populate the action as appropriate.  
 
-5.  Add the action to the task sequences steps. This is stored the assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True class [Steps](assetId:///Steps?qualifyHint=False&autoUpgrade=True) property.  
+5.  Add the action to the task sequences steps. This is stored the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) class Steps property.  
 
 ## Example  
  The following example method creates a command-line action and adds it to the supplied task sequence.  
@@ -110,8 +110,8 @@ public IResultObject AddTaskSequenceActionCommandLine(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence.|  
 |`Name`|-   Managed: `String`<br />-   VBScript: `String`|A name for the new action.|  
 |`Description`|-   Managed: `String`<br />-   VBScript: `String`|A description for the action.|  
 
