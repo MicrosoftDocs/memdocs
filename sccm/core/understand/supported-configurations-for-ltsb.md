@@ -28,7 +28,7 @@ Additionally, products and product versions that are not listed in the following
 The LTSB has limited support for future server and client operating systems and product dependencies. The platforms list for the LTSB is fixed for the life of the release:
 
 **Windows:**
-- Only quality and security updates for Windows is supported.
+- Only quality and security updates for Windows are supported.
 - No support is added for current branches (CB), current branches for business (CBB), or LTSB of Windows 10.
 -	No support for new major versions of Windows Server.
 
@@ -40,43 +40,43 @@ The LTSB has limited support for future server and client operating systems and 
 The LTSB supports the use of the following Windows computer operating systems as site systems.  Each operating system has the same requirements and limitations as the same entry in [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  For example, the Server Core installation of Windows 2012 R2 must be an x64 version, is only supported to host a distribution point, and does not support PXE or Multicast.
 
 **Supported operating systems:**
-- Windows Server 2016.
-- Windows Server 2012 (x64) – Standard, Datacenter.
-- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter.
-- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter.
-- Windows 10 Enterprise 2015 LTSB (x86, x64).
-- Windows 10 Enterprise 2016 LTSB (x86, x64).
-- Windows 8.1 (x86, x64) – Professional, Enterprise.
-- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate.
-- The Server Core installation of Windows Server 2012.
-- The Server Core installation of Windows Server 2012 R2.  
+- Windows Server 2016
+- Windows Server 2012 (x64): Standard, Datacenter
+- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
+- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
+- The Server Core installation of Windows Server 2012
+- The Server Core installation of Windows Server 2012 R2  
 
 ## Client management
 The following sections identify the client operating systems that you can manage with the LTSB. The LTSB does not support the addition of new operating systems as supported clients.
 
 ### Windows computers
-You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manage. For more information, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manager. For more information, see [How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
 
 **Supported operating systems:**
-- Windows Server 2016.
-- Windows Server 2012 R2 (x64) – Standard, Datacenter (Note 1).
-- Windows Server 2012 (x64) – Standard, Datacenter (Note 1).
-- Windows Storage Server 2012 R2 (x64).
-- Windows Storage Server 2012 (x64).
-- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter (Note 1).
-- Windows Storage Server 2008 R2 (x86, x64) – Workgroup, Standard, Enterprise.
-- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter (Note 1).
-- Windows 10 Enterprise 2015 LTSB (x86, x64).
-- Windows 10 Enterprise 2016 LTSB (x86, x64).
-- Windows 8.1 (x86, x64) – Professional, Enterprise.
-- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate.
-- The Server Core installation of Windows Server 2012 R2 (x64) (Note 2).
-- The Server Core installation of Windows Server 2012 (x64) (Note 2).
-- The Server Core installation of Windows Server 2008 R2 SP1 (x64).
-- The Server Core installation of Windows Server 2008 SP2 (x86, x64).
+- Windows Server 2016
+- Windows Server 2012 R2 (x64): Standard, Datacenter (Note 1)
+- Windows Server 2012 (x64): Standard, Datacenter (Note 1)
+- Windows Storage Server 2012 R2 (x64)
+- Windows Storage Server 2012 (x64)
+- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter (Note 1)
+- Windows Storage Server 2008 R2 (x86, x64): Workgroup, Standard, Enterprise
+- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter (Note 1)
+- Windows 10 Enterprise 2015 LTSB (x86, x64)
+- Windows 10 Enterprise 2016 LTSB (x86, x64)
+- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
+- The Server Core installation of Windows Server 2012 R2 (x64) (Note 2)
+- The Server Core installation of Windows Server 2012 (x64) (Note 2)
+- The Server Core installation of Windows Server 2008 R2 SP1 (x64)
+- The Server Core installation of Windows Server 2008 SP2 (x86, x64)
 
 **(Note 1)** Datacenter releases are supported but not certified for Configuration Manager.  
-**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install server roles and features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
+**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
 
 ### Windows Embedded
 You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
@@ -155,7 +155,7 @@ Support for Linux and UNIX operating systems is limited to those listed in this 
 
 **Requirements and limitations:**  
 
--   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for client deployment to Linux and UNIX servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
+-   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu).  
 -   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.
 -   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).
@@ -280,14 +280,14 @@ The LTSB supports the following operating systems to run the Configuration Manag
 
 **Supported operating systems:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) – Standard, Datacenter
-- Windows Server 2012 (x64) – Standard, Datacenter
-- Windows Server 2008 R2 with SP1 (x64) – Standard, Enterprise, Datacenter
-- Windows Server 2008 with SP2 (x86, x64) – Standard, Enterprise, Datacenter
+- Windows Server 2012 R2 (x64): Standard, Datacenter
+- Windows Server 2012 (x64): Standard, Datacenter
+- Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
+- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
-- Windows 8.1 (x86, x64) – Professional, Enterprise
-- Windows 7 with SP1 (x86, x64) – Professional, Enterprise, Ultimate
+- Windows 8.1 (x86, x64): Professional, Enterprise
+- Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
 
 
 ## SQL Server versions supported for the site database and reporting point
@@ -295,12 +295,12 @@ The LTSB supports the following versions of SQL Server to host the site database
 
 **Supported versions:**
 
-- SQL Server 2016 – Standard, Enterprise
-- SQL Server 2014 SP2 – Standard, Enterprise
-- SQL Server 2014 SP1 – Standard, Enterprise
-- SQL Server 2012 SP3 – Standard, Enterprise
-- SQL Server 2012 SP2 – Standard, Enterprise
-- SQL Server 2008 R2 SP3 – Standard, Enterprise, Datacenter
+- SQL Server 2016: Standard, Enterprise
+- SQL Server 2014 SP2: Standard, Enterprise
+- SQL Server 2014 SP1: Standard, Enterprise
+- SQL Server 2012 SP3: Standard, Enterprise
+- SQL Server 2012 SP2: Standard, Enterprise
+- SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
