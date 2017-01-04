@@ -2,7 +2,7 @@
 title: "Manage clients | Microsoft Docs"
 description: "Learn how to manage clients in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/02/2017
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -152,7 +152,7 @@ Note that, depending on the device type, some of these options might not be avai
 
 1.  In the Configuration Manager console, choose **Assets and Compliance** > **Device Collections**.  
 
-3.  Select a collection, and then select one of the following client management tasks from the ribbon, or by right-clicking the collection:  
+3.  Select a collection, and then select one of the following client management tasks from the ribbon, or by right-clicking the collection. These client management tasks can *only* be performed at the collection level.  
 
     -   **Scan computers for malware and download antimalware definition files.**  
 
