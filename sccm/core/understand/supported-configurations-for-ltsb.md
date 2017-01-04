@@ -59,7 +59,7 @@ You can use the LTSB to manage the following Windows computer operating systems 
 
 **Supported operating systems:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard, Datacenter (Note 1)
+- Windows Server 2012 R2 (x64): Standard, Datacenter  (Note 1)
 - Windows Server 2012 (x64): Standard, Datacenter (Note 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
@@ -137,7 +137,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
 The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
-Support for Mac operating systems is limited to those listed in this section, and does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
+Support for Mac operating systems is limited to those listed in this section, and it does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
 For more information, see [How to deploy clients to Macs in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
@@ -258,7 +258,7 @@ The following versions are supported by using the indicated .tar file.
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Exchange Server connector
- The LTSB supports limited management of devices that connect to your Exchange Server, without installing client software. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
+ The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
 
  **Requirements and limitations:**  
 
