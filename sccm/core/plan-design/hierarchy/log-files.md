@@ -250,7 +250,7 @@ The following table lists the log files located on the Configuration Manager cli
 Under normal operating conditions, use the ERROR log level. This log level creates the smallest log file. As the log level is increased from ERROR to WARNING, to INFO, and then to TRACE, a larger log file is created as more data is written to the file.  
 
 ####  <a name="BKMK_ManageLinuxLogs"></a> Manage log files for the Linux and UNIX client  
-The client for Linux and UNIX does not limit the maximum size of the client log files, nor does the client automatically copy the contents of its .log files to another file, such as to an .lo_ file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
+The client for Linux and UNIX does not limit the maximum size of the client log files, nor does the client automatically copy the contents of its .log files to another file, such as to a .lo_ file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
 
 For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the client log files. The Configuration Manager client for Linux and UNIX has an interface in which you can set up **logrotate** to signal the client when the log rotation completes, so the client can resume logging to the log file.  
 
