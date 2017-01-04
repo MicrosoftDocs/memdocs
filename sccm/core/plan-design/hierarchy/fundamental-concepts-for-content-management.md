@@ -104,7 +104,7 @@ For more information, see [Windows PE peer cache](../../../osd/get-started/prepa
 
 
 ## Content library  
- The single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content that you distribute.  
+ The Content library is the single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content that you distribute.  
 
 Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
 
@@ -114,16 +114,16 @@ Learn more about the [content library](../../../core/plan-design/hierarchy/the-c
 
  The basic (non-specialized) distribution point is commonly referred to as a standard distribution point. There are two  variations on the standard distribution point that receive special attention:  
 
--   **Pull-distribution point**: A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point) similar to how clients download content from distribution points. Pull-distribution points can help you avoid network bandwidth bottlenecks that occur when the site server must directly distribute content to each distribution point.  [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+-   **Pull-distribution point**: A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point). This process is similar to how clients download content from distribution points. Pull-distribution points can help you avoid network bandwidth bottlenecks that occur when the site server must directly distribute content to each distribution point.  [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
 
--   **Cloud-based distribution point**: A variation of a distribution point that's installed in Microsoft Azure. [Learn how to use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
+-   **Cloud-based distribution point**: A variation of a distribution point that's installed on Microsoft Azure. [Learn how to use a cloud-based distribution point with System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md).  
 
 
 Standard distribution points support a range of configurations and features, such as throttling and scheduling, PXE and Multicast, or prestaged content.  
 
 -   You can use controls such as **schedules** or **bandwidth throttling** to help control this transfer.  
 
--   You can also use other options, including **prestaged content**, **pull-distribution points**, or leverage **BranchCache** to reduce the network bandwidth that is used when you deploy content.  
+-   You can also use other options, including **prestaged content**, and **pull-distribution points**. In addition, you can leverage **BranchCache** to reduce the network bandwidth that'ss used when you deploy content.  
 
 -   Distribution points support different configurations, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** for operating system deployments, or configurations to support **mobile devices**.  
 
@@ -151,8 +151,8 @@ The high distribution priority of the package ensures that Configuration Manager
 > [!NOTE]  
 >  Pull-distribution points also use a concept of priority to order the sequence of their source distribution points.  
 >   
->  -   The distribution point priority for content transfers to the distribution point is distinct from the priority that pull-distribution points use when they search for content from a source distribution point  
->  -   For more information see [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
+>  -   The distribution point priority for content transfers to the distribution point is distinct from the priority that pull-distribution points use when they search for content from a source distribution point.  
+>  -   For more information, see [Use a pull-distribution point with System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).  
 
 
 ## Fallback  
@@ -215,7 +215,7 @@ For information about the different content location and fallback scenarios, see
 -   Although this triggers Configuration Manager to automatically distribute the content to that client's preferred distribution points, the client might obtain that content from other distribution points before the preferred distribution points for the client receive the deployment. When this occurs, the content will then be present on that distribution point for use by the next client that seeks that deployment.  
 
 If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
-If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information, about the different content location and fallback scenarios.  
+If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information about the different content location and fallback scenarios.  
 
 
 
