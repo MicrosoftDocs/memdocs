@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Clear a PXE Advertisement For a Configuration Manager Collection
-To clear a PXE advertisement for a System Center Configuration Manager collection, you call the [ClearLastNBSAdvForCollection Method in Class SMS_Collection &#91;sdk&#93;](../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md) method.  
+To clear a PXE advertisement for a System Center Configuration Manager collection, you call the [ClearLastNBSAdvForCollection Method in Class SMS_Collection](../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md) method.  
 
  Clearing a PXE advertisement forces the PXE server to re-evaluate the mandatory advertisement that a PXE device must execute on the next PXE boot. It is most often used when the last advertisement that was executed failed or when the advertisement must be re-run. For information about clearing the PXE advertisement for a resource, see [How to Clear a PXE Advertisement for a Configuration Manager Resource](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md).  
 
@@ -26,7 +26,7 @@ To clear a PXE advertisement for a System Center Configuration Manager collectio
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) object for the collection you want to clear the PXE advertisement for.  
+2.  Get the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object for the collection you want to clear the PXE advertisement for.  
 
 3.  Call the `ClearLastNBSAdvForCollection` method to clear the PXE advertisement for the collection.  
 
@@ -85,8 +85,8 @@ public void ClearPxeAdvertisementCollection(WqlConnectionManager connection, str
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True class [CollectionID](assetId:///CollectionID?qualifyHint=False&autoUpgrade=True) property.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the `SMS_Collection` class CollectionID property.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

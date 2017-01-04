@@ -18,26 +18,26 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create an Operating System Deployment Task Sequence Package
-You create an operating system deployment task sequence, in System Center Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True) class. This class derives from the [SMS_Package](assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True class [SetSequence](assetId:///SetSequence?qualifyHint=False&autoUpgrade=True) method.  
+You create an operating system deployment task sequence, in System Center Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class. This class derives from the [SMS_Package](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the `SMS_TaskSequencePackage` class [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method.  
 
- You can organize task sequence packages into categories by assigning a category to them with the [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) class [Category](assetId:///Category?qualifyHint=False&autoUpgrade=True) property.  
+ You can organize task sequence packages into categories by assigning a category to them with the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class *Category* property.  
 
  For more information about creating task sequences, see [How to Create a Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md). For more information about task sequence packages, see the [Task Sequencing Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md).  
 
- You advertise a task sequence package in the same way that you advertise a System Center Configuration Manager package (assetId:///SMS_Package?qualifyHint=False&autoUpgrade=True). For more information, see [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md).  
+ You advertise a task sequence package in the same way that you advertise a System Center Configuration Manager package `SMS_Package`. For more information, see [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md).  
 
 ### To create a task sequence package  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md).  
 
-2.  Create an instance of assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True.  
+2.  Create an instance of `SMS_TaskSequencePackage`.  
 
 3.  Populate the task sequence package properties.  
 
-4.  Call the assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True class assetId:///SetSequence?qualifyHint=False&autoUpgrade=True method to associate a task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) with the task sequence package.  
+4.  Call the `SMS_TaskSequencePackage` class `SetSequence` method to associate a task sequence (`SMS_TaskSequence`) with the task sequence package.  
 
 ## Example  
- The following example method creates a task sequence package (assetId:///SMS_TaskSequencePackage?qualifyHint=False&autoUpgrade=True) and associates task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) with it.  
+ The following example method creates a task sequence package (`SMS_TaskSequencePackage`) and associates task sequence (`SMS_TaskSequence`) with it.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -116,8 +116,8 @@ public IResultObject CreateTaskSequencePackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence `SMS_TaskSequence`|  
 
 ## Compiling the Code  
  The C# example requires:  

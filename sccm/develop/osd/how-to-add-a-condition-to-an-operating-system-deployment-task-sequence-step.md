@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add a Condition to an Operating System Deployment Task Sequence Step
-Conditions can be added to an operating system deployment step (action and group), in System Center Configuration Manager, by creating a [SMS_TaskSequence_Condition](assetId:///SMS_TaskSequence_Condition?qualifyHint=False&autoUpgrade=True) class instance and then associating it with the step. If the condition operands are all met, then the step is processed; otherwise it is not. The condition can have one or more operands that are instances of assetId:///SMS_TaskSequence_Condition?qualifyHint=False&autoUpgrade=True derived classes. You specify operators for the operands with instances of [SMS_TaskSequence_ConditionOperator](assetId:///SMS_TaskSequence_ConditionOperator?qualifyHint=False&autoUpgrade=True).  
+Conditions can be added to an operating system deployment step (action and group), in System Center Configuration Manager, by creating a [SMS_TaskSequence_Condition](../../develop/reference/osd/sms_tasksequence_condition-server-wmi-class.md) class instance and then associating it with the step. If the condition operands are all met, then the step is processed; otherwise it is not. The condition can have one or more operands that are instances of SMS_TaskSequence_Condition derived classes. You specify operators for the operands with instances of [SMS_TaskSequence_ConditionOperator](../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md).  
 
 > [!NOTE]
 >  System Center Configuration Manager provides several classes that provide useful expressions such as Windows Management Instrumentation (WMI) queries and file operations. For more information, see [Operating System Deployment Server Classes](../../develop/reference/osd/operating-system-deployment-server-wmi-classes.md).  
@@ -27,17 +27,17 @@ Conditions can be added to an operating system deployment step (action and group
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Obtain a task sequence step object. This can be an [SMS_TaskSequence_Group](assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True) object for a group, or a  [SMS_TaskSequenceAction](assetId:///SMS_TaskSequenceAction?qualifyHint=False&autoUpgrade=True) derived class object for an action, for more information, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
+2.  Obtain a task sequence step object. This can be an [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) object for a group, or a  [SMS_TaskSequenceAction](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class object for an action, for more information, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
 
-3.  Create a new condition by creating an instance of assetId:///SMS_TaskSequence_Condition?qualifyHint=False&autoUpgrade=True.  
+3.  Create a new condition by creating an instance of `SMS_TaskSequence_Condition`.  
 
-4.  Create an expression for the condition by creating an instance of an [SMS_TaskSequence_ConditionExpression](assetId:///SMS_TaskSequence_ConditionExpression?qualifyHint=False&autoUpgrade=True) derived class. For example, [SMS_TaskSequence_RegistryConditionExpression](assetId:///SMS_TaskSequence_RegistryConditionExpression?qualifyHint=False&autoUpgrade=True).  
+4.  Create an expression for the condition by creating an instance of an [SMS_TaskSequence_ConditionExpression](../../develop/reference/osd/sms_tasksequence_conditionexpression-server-wmi-class.md) derived class. For example, [SMS_TaskSequence_RegistryConditionExpression](../../develop/reference/osd/sms_tasksequence_registryconditionexpression-server-wmi-class.md).  
 
 5.  Populate the expression properties.  
 
-6.  Add the expression to the condition [Operands](assetId:///Operands?qualifyHint=False&autoUpgrade=True) property.  
+6.  Add the expression to the condition *Operands* property.  
 
-7.  Add the condition to the task sequence step class [Condition](assetId:///Condition?qualifyHint=False&autoUpgrade=True) property.  
+7.  Add the condition to the task sequence step class *Condition* property.  
 
 ## Example  
  The following example method adds a condition to a supplied step that determines if the HKEY_LOCAL_MACHINE\MICROSOFT registry key exists. The SMS_TaskSequenc_RegistryCondition Expression is used to specify the condition.  
@@ -122,8 +122,8 @@ public void AddRegistryCondition(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`taskSequenceStep`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence step ([SMS_TaskSequenceStep](assetId:///SMS_TaskSequenceStep?qualifyHint=False&autoUpgrade=True)).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence step ([SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  
