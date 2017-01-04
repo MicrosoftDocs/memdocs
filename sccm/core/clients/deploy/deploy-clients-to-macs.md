@@ -2,7 +2,7 @@
 title: "Deploy Mac clients | Microsoft Docs"
 description: "Learn how to deploy clients to Mac computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/02/2017
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -20,9 +20,9 @@ This topic describes how to deploy and maintain the Configuration Manager client
 
 When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console. 
 
-In these procedures, you have two options for installing client certificates:   
+In these procedures, you have two options for installing client certificates. Read more about client certificates for Macs in [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements).  
 
--   Use Configuration Manager enrollment by using the [CMEnroll tool](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). The enrollment process does not support automatic certificate renewal so you must re-enroll Mac computers before the installed certificate expires.  
+-   Use Configuration Manager enrollment by using the [CMEnroll tool](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac). The enrollment process does not support automatic certificate renewal so you must re-enroll Mac computers before the installed certificate expires.    
 
 -   [Use a certificate request and installation method that is independent from Configuration Manager](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager).  
 

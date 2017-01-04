@@ -2,7 +2,7 @@
 title: "Troubleshooting Windows Defender or Endpoint Protection client | Microsoft Docs"
 description: "Learn how to troubleshoot problems with Windows Defender and Endpoint Protection."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,80 +20,14 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 
 If you encounter problems with Windows Defender or Endpoint Protection, contact your security administrator for support. You can also try to troubleshoot the following problems:  
 
+-   [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
+-   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpoint-protection-service)  
+-   [Internet connection issues](#internet-connection-issues)  
+-   [Detected threat can't be remediated](#detected-threat-cant-be-remediated)  
 -   [Install the Endpoint Protection client](#install-the-endpoint-protection-client)  
 
--   [Update Windows Defender or Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
-
--   [Starting Windows Defender or Endpoint Protection service](#starting-windows-defender-or-endpoint-protection-service)  
-
--   [Internet connection issues](#internet-connection-issues)  
-
--   [Detected threat can't be remediated](#detected-threat-cant-be-remediated)  
-
-##  Install the Endpoint Protection client  
-
-> [!NOTE]  
->  Windows Defender is installed with the operating system on Windows 10 PC's.  
-
- **Symptoms**  
-
- Installation fails for an unknown reason, or you receive an error message with error code, such as 0x80070643, 0X8007064A, 0x8004FF2E, 0x8004FF01, 0x8004FF07, 0x80070002, 0x8007064C, 0x8004FF00, 0x80070001, 0x80070656, 0x8004FF40, 0xC0000156, 0x8004FF41 0x8004FF0B, 0x8004FF11, 0x80240022, 0x8004FF04, 0x80070660, 0x800106B5, 0x80070715, 0x80070005, 0x8004EE00, 0x8007003, 0x800B0100, 0x8007064E, or 0x8007007E.  
-
- If your computer is running Windows XP Service Pack 2 (SP2), you might see one or more of the following error messages:  
-
--   Installation Wizard is missing a filter manager rollup package needed to complete the installation.  
-
--   KB914882 Setup Error, Setup cannot update your Windows XP files because the language installed on your system is different from the update language.  
-
- **Cause**  
-
- Endpoint Protection cannot be installed on a computer that is running other security programs. Sometimes, even if you remove other security programs, they do not completely uninstall. You must be running a genuine version of the Windows operating system to install Endpoint Protection.  
-
- **Solution**  
-
-> [!IMPORTANT]  
->  You will need to restart your computer while resolving this issue. Bookmark this page (mark it as a Favorite) to make it easier to find this topic again or print it for easy reference.  
-
-### Step 1: Remove any existing security programs  
-
-1.  Completely uninstall any existing Internet security programs.  
-
-2.  Restart your computer.  
-
-3.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
-
-### Step 2: Ensure that the Windows Installer service is running  
-
-1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
-
-2.  Right-click **Windows Installer**, and then click **Start**. If **Start** is unavailable and the **Stop** and **Restart** options are available, this tells you that the service is already started.  
-
-3.  On the **Services** page, on the **File** menu, click **Exit**.  
-
-4.  Click **Start**. In the **Search programs and files** box, type **command prompt**. Right-click **Command Prompt**, and then click **Run as administrator**.  
-
-5.  Type **MSIEXEC /REGSERVER**, and then press **Enter**.  
-
-    > [!NOTE]  
-    >  There is no indication that this command has succeeded or failed.  
-
-6.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
-
-### Step 3: Start Windows in Selective Startup mode  
-
-1.  Click **Start** and search for **msconfig**, and then press **Enter**.  
-
-2.  On the **General** tab, click **Selective Startup**, and then clear the **Load Startup Items** check box.  
-
-3.  On the **Services** tab, select the **Hide All Microsoft Services** check box, and then clear all the check boxes for the services that remain in the list.  
-
-4.  Click **OK**, and then click **Restart** to restart the computer.  
-
-5.  Try to install Endpoint Protection again.  
-
 ##  Update Windows Defender or Endpoint Protection  
- Windows Defender or  
-      Endpoint Protection works automatically with Microsoft Update to ensure that your virus and spyware definitions are kept up to date.  
+ Windows Defender or Endpoint Protection works automatically with Microsoft Update to ensure that your virus and spyware definitions are kept up to date.  
 
  **Symptoms**  
 
@@ -147,15 +81,13 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 5.  Click **OK**.  
 
-6.  Open Windows Defender or  
-          Endpoint Protection. Click the **Update** tab, and then click **Update**.  
+6.  Open Windows Defender or Endpoint Protection. Click the **Update** tab, and then click **Update**.  
 
 7.  If the issue persists, proceed to the next step.  
 
 ### Step 3: Ensure that the date and time are set correctly on your computer  
 
-1.  Open Windows Defender or  
-          Endpoint Protection.  
+1.  Open Windows Defender or Endpoint Protection.  
 
 2.  If the error message that you received contains the code 0x80072f8f, the problem is most likely caused by an incorrect date or time setting on your computer.  
 
@@ -197,9 +129,9 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
      **Cd\\**  
 
-     **Cd program files\microsoft security essentials**  
+     **Cd program files\windows defender**  
 
-     **Mpcmdrun â€“removedefinitions â€“all**  
+     **Mpcmdrun -RemoveDefinitions -all**  
 
      **Exit**  
 
@@ -235,7 +167,7 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 
 -   Close all applications and restart your computer.  
 
-### Step 2: Make sure the â€œWindows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
+### Step 2: Make sure the "Windows Defender" or<br />      "Endpoint Protectionâ€ service is set to automatic and is started  
 
 1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
 
@@ -308,6 +240,70 @@ If you encounter problems with Windows Defender or Endpoint Protection, contact 
 -   If the detected threat was in a network share, browse to the network share and scan it by right-clicking the file and selecting **Scan with Windows Defender** or **Scan with Endpoint Protection**. If Windows Defender or Endpoint Protection detects additional threats in the network share, it notifies you about these threats and enables you to choose an appropriate action.  
 
 -   If you're not sure of the file's origin, one of the best solutions is to run a full scan on your computer. A full scan may take some time to complete, but it makes it possible for Windows Defender or Endpoint Protection to look for the source of the infection and clean it.  
+
+##  Install the Endpoint Protection client  
+
+> [!NOTE]  
+>  Windows Defender is installed with the operating system on Windows 10 PC's.  
+
+ **Symptoms**  
+
+ Installation fails for an unknown reason, or you receive an error message with error code, such as 0x80070643, 0X8007064A, 0x8004FF2E, 0x8004FF01, 0x8004FF07, 0x80070002, 0x8007064C, 0x8004FF00, 0x80070001, 0x80070656, 0x8004FF40, 0xC0000156, 0x8004FF41 0x8004FF0B, 0x8004FF11, 0x80240022, 0x8004FF04, 0x80070660, 0x800106B5, 0x80070715, 0x80070005, 0x8004EE00, 0x8007003, 0x800B0100, 0x8007064E, or 0x8007007E.  
+
+ If your computer is running Windows XP Service Pack 2 (SP2), you might see one or more of the following error messages:  
+
+-   Installation Wizard is missing a filter manager rollup package needed to complete the installation.  
+
+-   KB914882 Setup Error, Setup cannot update your Windows XP files because the language installed on your system is different from the update language.  
+
+ **Cause**  
+
+ Endpoint Protection cannot be installed on a computer that is running other security programs. Sometimes, even if you remove other security programs, they do not completely uninstall. You must be running a genuine version of the Windows operating system to install Endpoint Protection.  
+
+ **Solution**  
+
+> [!IMPORTANT]  
+>  You will need to restart your computer while resolving this issue. Bookmark this page (mark it as a Favorite) to make it easier to find this topic again or print it for easy reference.  
+
+### Step 1: Remove any existing security programs  
+**Endpoint Protection only**
+
+1.  Completely uninstall any existing Internet security programs.  
+
+2.  Restart your computer.  
+
+3.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
+
+### Step 2: Ensure that the Windows Installer service is running  
+
+1.  Click **Start** and search for **services.msc**, and then press **Enter**.  
+
+2.  Right-click **Windows Installer**, and then click **Start**. If **Start** is unavailable and the **Stop** and **Restart** options are available, this tells you that the service is already started.  
+
+3.  On the **Services** page, on the **File** menu, click **Exit**.  
+
+4.  Click **Start** and search for **command prompt**. Right-click **Command Prompt**, and then click **Run as administrator**.  
+
+5.  Type **MSIEXEC /REGSERVER**, and then press **Enter**.  
+
+    > [!NOTE]  
+    >  There is no indication that this command has succeeded or failed.  
+
+6.  Install Endpoint Protection again. If this does not resolve the issue, continue to the next step.  
+
+### Step 3: Start Windows in Selective Startup mode  
+
+1.  Click **Start** and search for **msconfig**, and then press **Enter**.  
+
+2.  On the **General** tab, click **Selective Startup**, and then clear the **Load Startup Items** check box.  
+
+3.  On the **Services** tab, select the **Hide All Microsoft Services** check box, and then clear all the check boxes for the services that remain in the list.  
+
+4.  Click **OK**, and then click **Restart** to restart the computer.  
+
+5.  Try to install Endpoint Protection again.  
+
+
 
 ### See also  
  [Endpoint Protection client frequently asked questions](../../protect/deploy-use/endpoint-protection-client-faq.md)   
