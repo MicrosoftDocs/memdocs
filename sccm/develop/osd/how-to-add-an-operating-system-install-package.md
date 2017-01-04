@@ -24,9 +24,9 @@ You add an operating system install package to System Center Configuration Manag
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create an instance of [SMS_OperatingSystemInstallPackage](assetId:///SMS_OperatingSystemInstallPackage?qualifyHint=False&autoUpgrade=True).  
+2.  Create an instance of [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md).  
 
-3.  Set at least the [Name](assetId:///Name?qualifyHint=False&autoUpgrade=True), [PkgSourceFlag](assetId:///PkgSourceFlag?qualifyHint=False&autoUpgrade=True) and [PkgSourcePath](assetId:///PkgSourcePath?qualifyHint=False&autoUpgrade=True) properties.  
+3.  Set at least the *Name*, *PkgSourceFlag*, and *PkgSourcePath* properties.  
 
 4.  Commit the changes.  
 
@@ -89,7 +89,7 @@ public void AddOSInstallPackage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new operating system image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the operating system image package.|  
 |`path`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Universal Naming Convention (UNC) path to the image Windows Image (WIM) file.|  
