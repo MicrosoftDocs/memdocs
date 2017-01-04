@@ -50,7 +50,7 @@ public void SetResponseDelay(WqlConnectionManager connection,                   
 |Parameter|Type|Description|  
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  
 |delay|Managed: `Integer`|The delay, in seconds.|  
 
 ## Compiling the Code  

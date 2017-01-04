@@ -29,7 +29,7 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 
 2.  Using the SWbemServices you obtain in step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the class definition.  
 
-3.  Create the input parameters as a SWbemMethodSet.  
+3.  Create the input parameters as a [SWbemMethodSet](https://msdn.microsoft.com/library/aa393723.aspx).  
 
 4.  Using the SWbemServices object instance, call [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) and specify the class name and input parameters.  
 

@@ -46,7 +46,7 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 |Parameter|Type|Description|  
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

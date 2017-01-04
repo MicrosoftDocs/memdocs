@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # About Operating System Deployment Image Management
 There are several package types that System Center Configuration Manager uses to manage reference computer operating system images.  
 
- For more information about operating system deployment image management, see [http://go.microsoft.com/fwlink/?LinkId=110507](http://go.microsoft.com/fwlink/?LinkId=110507).  
+ For more information about operating system deployment image management, see [Manage operating system images with System Center Configuration Manager](https://docs.microsoft.com/sccm/osd/get-started/manage-operating-system-images).  
 
 ## Reference Computer  
 
@@ -50,7 +50,7 @@ There are several package types that System Center Configuration Manager uses to
  In Configuration Manager, you create a package (`SMS_Package`) object to run the USMT on the computer. A package program is not required.  
 
 ### Other Packages  
- You will need to create other package (`SMS_Package`) for the applications you want installed on the target computer.  
+ You will need to create other packages (`SMS_Package`) for the applications you want installed on the target computer.  
 
 ## Package Distribution  
  You copy the various package types to distribution points by using the same method that you would use for copying `SMS_Package` package object. For more information, see [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md).  
