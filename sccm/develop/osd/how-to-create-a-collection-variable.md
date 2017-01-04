@@ -24,11 +24,11 @@ You create a collection variable for a System Center Configuration Manager colle
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get an instance of [SMS_CollectionSettings](assetId:///SMS_CollectionSettings?qualifyHint=False&autoUpgrade=True).  
+2.  Get an instance of [SMS_CollectionSettings](../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md).  
 
-3.  For each variable to be added, add instances of the embedded object [SMS_CollectionVariable](assetId:///SMS_CollectionVariable?qualifyHint=False&autoUpgrade=True) to the [CollectionVariables](assetId:///CollectionVariables?qualifyHint=False&autoUpgrade=True) array property.  
+3.  For each variable to be added, add instances of the embedded object [SMS_CollectionVariable](../../develop/reference/osd/sms_collectionvariable-server-wmi-class.md) to the *CollectionVariables* array property.  
 
-4.  Commit the changes to the assetId:///SMS_CollectionSettings?qualifyHint=False&autoUpgrade=True class instance.  
+4.  Commit the changes to the `SMS_CollectionSettings` class instance.  
 
 ## Example  
  The following example method creates a collection variable and adds it to the collection identified by the supplied identifier. If the `SMS_CollectionSettings` object for the collection does not exist, it is created.  
@@ -138,7 +138,7 @@ public void CreateCollectionVariable(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`Name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable to be created.|  
 |`Value`|-   Managed: `String`<br />-   VBScript: `String`|The value of the variable|  
 |`Mask`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Specifies whether the value is displayed in the Configuration Manager console.<br /><br /> `true` - the variable value is not displayed.<br /><br /> `false` - the variable value is displayed.|  

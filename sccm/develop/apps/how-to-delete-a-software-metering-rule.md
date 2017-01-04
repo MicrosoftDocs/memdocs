@@ -24,7 +24,7 @@ You delete a software metering rule, in System Center Configuration Manager, by 
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Load the software metering rule object by using the [SMS_MeteredProductRule](assetId:///SMS_MeteredProductRule?qualifyHint=False&autoUpgrade=True) class and a known software metering rule ID.  
+2.  Load the software metering rule object by using the [SMS_MeteredProductRule](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md) class and a known software metering rule ID.  
 
 3.  Delete the software metering rule by using the delete method.  
 
@@ -32,7 +32,7 @@ You delete a software metering rule, in System Center Configuration Manager, by 
  The following example method shows how to delete a software metering rule by loading an instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.  
 
 > [!IMPORTANT]
->  The rule ID corresponds to the value stored in the property [RuleID](assetId:///RuleID?qualifyHint=False&autoUpgrade=True).  The System Center Configuration Manager console displays a **Rule ID** column, which actually corresponds to the value stored in the property [SecurityID](assetId:///SecurityID?qualifyHint=False&autoUpgrade=True).  
+>  The rule ID corresponds to the value stored in the property `RuleID`. The System Center Configuration Manager console displays a **Rule ID** column, which actually corresponds to the value stored in the property `SecurityID`.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -94,7 +94,7 @@ public void DeleteSWMRule(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingSWMRuleID`|-   Managed: `String`<br />-   VBScript: `String`|Identifies a specific software metering rule. In this case, identifies the specific software metering rule that will be deleted.|  
 
 ## Compiling the Code  
