@@ -42,7 +42,7 @@ For more information about these accounts, see [Manage accounts to access conten
  For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## Binary differential replication  
- A prerequisite for distribution points, binary differential replication (BDR), which is sometimes known as delta replication, is automatically used to reduce bandwidth use when you're distributing updates to content that you previously deployed to other sites, or to remote distribution points.  
+ A prerequisite for distribution points, binary differential replication (BDR), which is sometimes known as delta replication, is automatically used to reduce bandwidth use when you're distributing updates to content that you previously deployed to other sites or to remote distribution points.  
 
  BDR   minimizes the network bandwidth that is used to send updates for distributed content by resending only the new or changed content instead of sending the entire set of content source files each time a change to those files is made.  
 
@@ -62,12 +62,12 @@ Applications always use binary differential replication. For packages, binary di
 
  For example, when the first BranchCache-enabled client computer requests content from a distribution point that runs Windows Server 2012 and is configured as a BranchCache server, the client computer downloads that content and caches it.  
 
--   That client computer can then make the content available for additional BranchCache-enabled clients on the same subnet, that also cache the content.  
+-   That client computer can then make the content available for additional BranchCache-enabled clients on the same subnet that also cache the content.  
 
 -   In this way, subsequent clients on the same subnet do not have to download content from the distribution point, and the content is distributed across multiple clients for future transfers.  
 
 ## Peer Cache
-Beginning with version 1610, client Peer Cache helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients directly from their local cache.
+Beginning with version 1610, client Peer Cache helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.
 
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
 
@@ -123,7 +123,7 @@ Standard distribution points support a range of configurations and features, suc
 
 -   You can use controls such as **schedules** or **bandwidth throttling** to help control this transfer.  
 
--   You can also use other options, including **prestaged content**, and **pull-distribution points**. In addition, you can leverage **BranchCache** to reduce the network bandwidth that'ss used when you deploy content.  
+-   You can also use other options, including **prestaged content**, and **pull-distribution points**. In addition, you can leverage **BranchCache** to reduce the network bandwidth that's used when you deploy content.  
 
 -   Distribution points support different configurations, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** for operating system deployments, or configurations to support **mobile devices**.  
 
@@ -156,7 +156,7 @@ The high distribution priority of the package ensures that Configuration Manager
 
 
 ## Fallback  
- Beginning with version 1610, several things have changed in the way that clients find a distribution point that has content, including fallback. Please use the following information that applies to the version you use:
+ Beginning with version 1610, several things have changed in the way that clients find a distribution point that has content, including fallback. Use the following information that applies to the version you use:
 
 **Version 1610 and later**   
 Clients that cannot find content from a distribution point that's associated with their current boundary group can fall back to use content source locations that are associated with neighbor boundary groups. To be used for fallback, a neighbor boundary group must have a defined relationship with the client’s current boundary group. This relationship includes a configured time which must pass before a client that cannot find content locally can include content sources from the neighbor boundary group as part of its search.
@@ -179,14 +179,14 @@ For information about the different content location and fallback scenarios, see
 ## Network bandwidth  
  To help manage the amount of network bandwidth that's used when you distribute content, you can use the following options:  
 
--   **Use prestaged content**:  A process of transferring content to a distribution point without relying on  Configuration Manager to distribute the content across the network.  
+-   **Prestaged content**:  A process of transferring content to a distribution point without relying on  Configuration Manager to distribute the content across the network.  
 
--   **Use scheduling and throttling**: Configurations that help you control when and how content is distributed to distribution points.  
+-   **Scheduling and throttling**: Configurations that help you control when and how content is distributed to distribution points.  
 
 For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
 
 ## Network connection speed to content source  
-Beginning with version 1610, several things have changed in the way that clients find a distribution point that has content, including the network connection speed to a content source. Please use the following information that applies to the version you use:
+Beginning with version 1610, several things have changed in the way that clients find a distribution point that has content, including the network connection speed to a content source. Use the following information that applies to the version you use:
 
 **Version 1610 and later**   
 Network connection speeds that define a distribution point as **Fast** or **Slow** are no longer used. Instead, each site system that's associated with a boundary group is treated the same.
@@ -203,7 +203,7 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 
 -   The **network connection speed**, along with the configuration of a deployment, determine if a client can download content from a distribution point when the client is in an associated boundary group  
 
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about Boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
+For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
 
 ## On-demand content distribution  
  On-demand content distribution is an option you can set for individual applications and packages (deployments) to enable on-demand content distribution to preferred distribution points.  
@@ -238,6 +238,6 @@ For more information:
  - If you use version 1511, 1602, or 1606, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 ## Prestage content  
- When you prestage content, it's a process of transferring content to a distribution point without relying on Configuration Manager to distribute the content across the network.  
+ Prestaging a process of transferring content to a distribution point without relying on Configuration Manager to distribute the content across the network.  
 
  For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).

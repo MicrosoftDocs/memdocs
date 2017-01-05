@@ -52,7 +52,7 @@ For example, if two or more Configuration Manager hierarchies have overlapping b
 
  System Center Configuration Manager clients check the version of the Configuration Manager site before they complete site assignment, and cannot be assigned to a previous version when and if site boundaries overlap. However, System Center 2012 Configuration Manager clients might incorrectly be assigned to a System Center Configuration Manager site.  
 
- To prevent clients from unintentionally being assigned to a the wrong site when two hierarchies have overlapping boundaries, we recommend that you configure Configuration Manager client installation parameters to assign clients to a specific site.  
+ To prevent clients from unintentionally being assigned to the wrong site when two hierarchies have overlapping boundaries, we recommend that you configure Configuration Manager client installation parameters to assign clients to a specific site.  
 
 ##  <a name="bkmk_mixed"></a> Configuration Manager limitations  in a mixed-version hierarchy  
  When you're in the process of upgrading a System Center Configuration Manager site, there are times when different sites will have different versions.  For example, you might upgrade a central administration site to a new version but due to site maintenance windows, one or more primary sites might not upgrade until a later time and date.  
