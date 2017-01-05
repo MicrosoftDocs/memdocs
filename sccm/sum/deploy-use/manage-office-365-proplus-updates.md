@@ -61,12 +61,13 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
 
 <!--  ## Add other languages for Office 365 update downloads
-Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365.
+Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+
 ### To add support to download updates for additional languages
-Use the following procedure on the central administration site or stand-alone primary site where the software update point site system role is installed.
+Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
-2. Click Connect, and then type *root\sms\site_<siteCode>*.
-3. Click Query, and then run the following query:
+2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
+3. Click **Query**, and then run the following query:
    *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
 4. Double-click the object with the site code for the central administration site or stand-alone primary site.
 
@@ -77,10 +78,8 @@ Use the following procedure on the central administration site or stand-alone pr
 6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
 -->
 
-## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change using group policy to the Office 365 clients.
-
-Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
 
 - Current Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
@@ -93,6 +92,7 @@ Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configurati
 
 - First Release for Deferred Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
+-->
 
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
