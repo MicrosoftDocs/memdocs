@@ -1,7 +1,7 @@
 ---
 title: "Plan for cloud management gateway | Microsoft Docs"
 description: ""
-ms.date: 11/22/2016
+ms.date: 12/19/2016
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-client
@@ -15,11 +15,11 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Beginning in version 1610, cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once it's completely deployed and configured, clients will be able to access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
+Beginning in version 1610, cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service is deployed to Microsoft Azure and requires an Azure subscription. It connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. Once deployed and configured, clients will be able to access on-premises Configuration Manager site system roles regardless of whether they're on the internal private network or on the Internet.
 
-You use the Configuration Manager console to deploy the service to Azure, add the cloud management gateway connector point role, and configure site system roles to allow cloud management gateway traffic. Cloud management gateway currently only supports the management point and software update point roles.
+Use the Configuration Manager console to deploy the service to Azure, add the cloud management gateway connector point role, and configure site system roles to allow cloud management gateway traffic. Cloud management gateway currently only supports the management point and software update point roles.
 
-Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. In addition to these two types of certificates, you also need set up a management certificate on Azure that allows Configuration Manager to deploy the cloud management gateway service.
+Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. You also need set up a management certificate on Azure that allows Configuration Manager to deploy the cloud management gateway service.
 
 ## Requirements for cloud management gateway
 
@@ -31,36 +31,25 @@ Client certificates and Secure Socket Layer (SSL) certificates are required to a
 
 -   Azure management certificate - used to authenticate Configuration Manager with Azure.
 
-## Limitations of cloud management gateway
+## Specifications for cloud management gateway
 
--   Cloud management gateway only supports the management point and software update point roles.
-
+- Each instance of cloud management gateway supports 4,000 clients.
+- We recommend that you create at least two instances of cloud management gateway to improve availability.
+- Cloud management gateway only supports the management point and software update point roles.
 -   The following features in Configuration Manager are currently unsupported for cloud management gateway:
 
     -   Client deployment and upgrade using client push
-
     -   Automatic site assignment
-
     -   User policies
-
     -   Application catalog (including software approval requests)
-
     -   Full operating system deployment (OSD)
-
     -   Configuration Manager console
-
     -   Remote tools
-
     -   Reporting website
-
     -   Wake on LAN
-
     -   Mac, Linux, and UNIX clients
-
     -   Azure Resource Manager
-
     -   Peer cache
-
     -   On-premises Mobile Device Management
 
 ## Cost of cloud management gateway

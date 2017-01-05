@@ -42,7 +42,12 @@ Looking for Intune without Configuration Manager?
 [View Intune docs >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## Step 1: Create an MDM collection
-You will need a Configuration Manager user collection to specify users who can enroll devices into management. Only user collections can be targeted because Intune licenses are assigned to users. For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
+A Configuration Manager user collection is required to specify the users who can enroll devices into management. You can only use user collections (instead of device collections) because Intune licenses are assigned by user.
+
+> [!NOTE]
+> To enroll devices with Intune, you do not need to assign licenses to users in the Office 365 portal or Azure Active Directory portal. Including the users in a collection that gets associated with the Intune subscription (in a [later step](#step-3-configure-intune-subscription)) is all that's required.
+
+For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
 
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
 
@@ -270,24 +275,32 @@ Hybrid setup is now complete. Devices can be enrolled in Configuration Manager i
 - User-owned (BYOD) devices: [Inform users how to enroll their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) - Enrollment guidance is the same for Intune- and Hybrid-managed devices
 - Company-owned (COD) devices: [Enroll company-owned devices](enroll-company-owned-devices.md) provides guidance on different platform-specific ways to enroll company owned devices.
 
-### Managing Intune subscriptions associated with Configuration Manager
- If you add a Microsoft Intune (either a trial subscription or paid subscription) to Configuration Manager, and then need to switch to a different Intune subscription, you must delete both the  **Microsoft Intune Subscription** and the **Service connection point** from the Configuration Manager console before you can add a new subscription.
+## Managing Intune subscriptions associated with Configuration Manager
 
-#### How to delete an Intune subscription from Configuration Manager
+If you add a Microsoft Intune (either a trial subscription or paid subscription) to Configuration Manager, and then need to switch to a different Intune subscription, you must delete both the  **Microsoft Intune Subscription** and the **Service connection point** from the Configuration Manager console before you can add a new subscription.
 
-1.  In the Configuration Manager console, click **Administration**.
+### How to delete an Intune subscription from Configuration Manager
 
-2.  In the **Administration** workspace, expand **Overview**, go to **Cloud Services**, and click **Microsoft Intune Subscriptions**.
+> [!IMPORTANT]
+>  All content including user enrollments, policies, and app deployments configured for devices managed by the Intune subscription are removed when you delete the subscription.
 
-3.  Right-click **Microsoft Intune Subscription** and then click **Delete**. The **Microsoft Intune Subscription**.
+1.  In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions**.
 
-    > [!IMPORTANT]
-    >  All content including user enrollments, policies, and app deployments configured for the Intune evaluation subscription will be lost.
+2.  Right-click the listed **Microsoft Intune Subscription**, and then click **Delete**.
 
-4.  In the **Administration** workspace, expand **Overview**, go to **Site Configuration**, and select **Servers and Site System Roles**.
+3.   In the wizard, click **Remove Microsoft Intune Subscription from Configuration Manager**, click **Next**, and then click **Next** again to remove the subscription.
 
-5.  Select the server that hosts the **Service connection point** role.
 
-6.  In the **Site System Roles** list, select **Service connection point** and then click **Remove Role** in the ribbon. Confirm you want to remove the role. The service connection point is deleted.
+### How to remove the service connection point role
 
-7.  You can now create a new service connection point, add a new Intune subscription to Configuration Manager, and set Configuration Manager as the MDM Authority.
+1.  Go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**.
+
+2.  Select the server that hosts the **Service connection point** role.
+
+3.  In the **Site System Roles** list, select **Service connection point** and then click **Remove Role** in the ribbon. Confirm you want to remove the role. The service connection point is deleted.
+
+You can now create a new service connection point, add a new Intune subscription to Configuration Manager, and set Configuration Manager as the MDM Authority.
+
+### How to change MDM authority to Intune
+
+Beginning in version 1610, you can to switch the MDM authority from Configuration Manager to Intune. Information about this feature is coming soon.

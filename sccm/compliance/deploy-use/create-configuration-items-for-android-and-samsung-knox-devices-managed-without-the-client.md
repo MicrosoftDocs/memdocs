@@ -2,7 +2,7 @@
 title: "Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client | Microsoft Docs"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -178,7 +178,7 @@ On the **Configure Kiosk Mode Settings for Samsung KNOX Devices** page of the **
     |**Remove**|Deletes the selected app from the list.|  
     |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
 
-2.  When you are finished, click **Next**.  
+2.  When you are finished, click **Next**. Configuration items containing compliant and noncompliant app settings must be deployed to collections of users.
 
  You can use one of the following reports monitor compliant and noncompliant apps:  
 

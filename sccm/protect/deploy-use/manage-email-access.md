@@ -12,8 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaramanms.author: karamanmanager: angrobe
-
+author: andredm7ms.author: andredmmanager: angrobe
 ---
 # Manage email access in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Use System Center Configuration Manager conditional access to manage access to Exchange email based on conditions you specify.  

@@ -19,7 +19,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 The following are frequently asked questions about diagnostic and usage data for System Center Configuration Manager:  
 
 ###  <a name="bkmk_off"></a> How do I turn off telemetry?  
- The current branch of Configuration Manager needs to be updated on a regular basis in order to support new versions of Windows 10 and Microsoft Intune. Microsoft requires at least the Basic level of diagnostic and usage data to keep the product up to date, improve the update experience, and improve the quality and security of the product.  
+Telemetry does not support being turned off. However, you can choose the level of telemetry data collected, and use a service connection point in off-line mode to help manage when telemetry data is submitted.
+
+The current branch of Configuration Manager needs to be updated on a regular basis in order to support new versions of Windows 10 and Microsoft Intune. Microsoft requires at least the Basic level of diagnostic and usage data to keep the product up to date, improve the update experience, and improve the quality and security of the product.
 
 ###  <a name="bkmk_retention"></a> What is the data retention period?  
  Diagnostic and usage data is retained for one year.  
@@ -35,6 +37,7 @@ The following are frequently asked questions about diagnostic and usage data for
  - [Diagnostic data for 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [Diagnostic data for 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+ - [Diagnostic data for 1610](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
 ###  <a name="bkmk_tables"></a> Can you see data in custom tables?  

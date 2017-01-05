@@ -24,14 +24,14 @@ In System Center Configuration Manager, you enable or disable the Desired Config
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Make a connection to the Desired Configuration Management Client Agent section of the site control file by using the [SMS_SCI_ClientComp](assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True) class.  
+2.  Make a connection to the Desired Configuration Management Client Agent section of the site control file by using the [SMS_SCI_ClientComp](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class.  
 
 3.  Loop through the array of available properties, making changes as needed.  
 
 4.  Commit the changes to the site control file.  
 
 ## Example  
- The following example method enables or disables the Desired Configuration Management Client Agent by using the assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True class to connect to the site control file and change the `Flag` property.  
+ The following example method enables or disables the Desired Configuration Management Client Agent by using the [SMS_SCI_ClientComp](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class to connect to the site control file and change the `Flag` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -129,7 +129,7 @@ public void EnableDisableDCMClientAgent(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`enableDisableFlag`|-   Managed: `String`<br />-   VBScript: `String`|Determines whether the Desired Configuration Management Client Agent is enabled or disabled.<br /><br /> 0 - disabled<br /><br /> 1 - enabled|  

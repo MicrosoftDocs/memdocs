@@ -2,7 +2,7 @@
 title: "Configure remote control | Microsoft Docs"
 description: "Set up remote control in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/08/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,7 +17,7 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Configuring remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
- This procedure describes configuring the default client settings for remote control and applies to all computers in your hierarchy. If you want these settings to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers that you want to use in a remote control session. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
+ This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 
 To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.  
 
@@ -44,3 +44,17 @@ To turn on keyboard translation, in **Configuration Manager Remote Control**, ch
 > [!NOTE]
 >
 > Special keys, such as ~!#@$%, will not be translated correctly.
+
+
+## Keyboard shortcuts for the remote control viewer
+
+|Keyboard shortcut|Description|  
+|-----------------------|-----------------|  
+|Alt+Page Up|Switches between running programs from left to right.|  
+|Alt+Page Down|Switches between running programs from right to left.|  
+|Alt+Insert|Cycles through running programs in the order that they were opened.|  
+|Alt+Home|Displays the **Start** menu.|  
+|Ctrl+Alt+End|Displays the Windows Security dialog box (Ctrl+Alt+Del).|  
+|Alt+Delete|Displays the Windows menu.|  
+|Ctrl+Alt+Minus Sign (on the numeric keypad)|Copies the active window of the local computer to the remote computer Clipboard.|  
+|Ctrl+Alt+Plus Sign (on the numeric keypad)|Copies the entire local computer's window area to the remote computer Clipboard.|  

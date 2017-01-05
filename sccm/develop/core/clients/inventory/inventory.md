@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 051a5dcf-1672-4046-bdb6-31a44a53f4d7
-caps.latest.revision: 14
+ms.assetid: 421e07ab-4f34-41fa-9c1c-e4685c22f511
+caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
@@ -21,7 +21,7 @@ manager: "mbaldwin"
 This section provides task-based topics that show you how to programmatically manage inventory in System Center Configuration Manager.  
 
 > [!NOTE]
->  General information about Inventory can be found in the [Documentation for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt346023.aspx) under [Inventory in System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt634337.aspx).  
+>  General information about Inventory can be found in the [System Center Configuration Manager Documentation](https://docs.microsoft.com/sccm/index) under [Introduction to hardware inventory in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory) and [Introduction to software inventory in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
 ## Inventory topics  
 
@@ -39,7 +39,7 @@ This section provides task-based topics that show you how to programmatically ma
 
 -   [How to Reset the Software Inventory Cache](../../../../develop/core/clients/inventory/how-to-reset-the-software-inventory-cache.md)  
 
--   [HowTo Import a MOF file to Extend Inventory](../../../../develop/core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md)  
+-   [How to Import a MOF file to Extend Inventory](../../../../develop/core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md)  
 
 ## See Also  
  [Configuration Manager SDK](../../../../develop/core/misc/system-center-configuration-manager-sdk.md)

@@ -18,12 +18,12 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set an Operating System Deployment Task Sequence Variable
-In System Center Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
+In System Center Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
  A task sequence variable is a name/value pair that you can access by task sequence steps. You can also create computer and collection-specific variables. For more information, see [How to Create a Collection Variable in Configuration Manager](../../develop/osd/how-to-create-a-collection-variable.md) and [How to Create a Computer Variable in Configuration Manager](../../develop/osd/how-to-create-a-computer-variable.md).  
 
 > [!NOTE]
->  Variables that are set with the [SMS_TaskSequenceSetVariableAction](assetId:///SMS_TaskSequenceSetVariableAction?qualifyHint=False&autoUpgrade=True) class override variables that are set elsewhere. For example, If a collection variable and a assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True have the same name, the value of the assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True variable takes precedence.  
+>  Variables that are set with the [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md) class override variables that are set elsewhere. For example, if a collection variable and a SMS_TaskSequence_SetVariableAction have the same name, the value of the SMS_TaskSequence_SetVariableAction variable takes precedence.  
 
 ### To set a task sequence variable  
 
@@ -31,11 +31,11 @@ In System Center Configuration Manager, you create an operating system deploymen
 
 2.  Get a task sequence to add the task sequence variable to. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
 
-3.  Create an instance of assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True.  
+3.  Create an instance of [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md).  
 
-4.  Set the [VariableName](assetId:///VariableName?qualifyHint=False&autoUpgrade=True) and [VariableValue](assetId:///VariableValue?qualifyHint=False&autoUpgrade=True) properties for the variable that you are adding.  
+4.  Set the VariableName and VariableValue properties for the variable that you are adding.  
 
-5.  Add the assetId:///SMS_TaskSequence_SetVariableAction?qualifyHint=False&autoUpgrade=True object to the task sequence.  
+5.  Add the SMS_TaskSequence_SetVariableAction object to the task sequence.  
 
 ## Example  
  The following example method sets a task sequence variable name and value.  
@@ -105,8 +105,8 @@ public void AddTaskSequenceVariable(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|-   A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|-   The task sequence the variable is added to.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|-   A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|-   The task sequence the variable is added to.|  
 |`variableName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable.|  
 |`variableValue`|-   Managed: `String`<br />-   VBScript: `String`|The value for the variable.|  
 

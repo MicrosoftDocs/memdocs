@@ -31,7 +31,9 @@ The System Center Configuration Manager service connection point is a site syste
 
     -   Identify updates for Configuration Manager that apply to the version of Configuration Manager you use  
 
-     See [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  For information about the data collected by each level, and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) and then follow the link for the version of Configuration Manager that you use.  
+
+    For additional information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available, based on usage data you upload.  
 
@@ -61,7 +63,7 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 -   **Query** the component again, to confirm it is stopped, and then right click on the component one more time, and select **Start**.  
 
 > [!IMPORTANT]  
->  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with a Intune subscription.  
+>  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with an Intune subscription.  
 
 **When the role installs on a computer that is remote from the site server:**  
 
@@ -100,3 +102,8 @@ To enable operation, the computer that hosts the service connection point and an
 -   download.microsoft.com  
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
+
+## Install the service connection point
+When you run **Setup** to install the top-tier site of a hierarchy, you have the option to install the service connection point.
+
+After setup runs, or if you are reinstalling the site system role, use the **Add Site System Roles** wizard, or the **Create Site System Server** wizard to install the site system on a server at the top-tier site of your hierarchy (the central administration site, or a stand-alone primary site).  Both wizards are located on the **Home** tab in the console at **Administration** > **Site Configuration** > **Servers and Site System Roles**.

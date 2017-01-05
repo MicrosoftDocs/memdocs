@@ -23,7 +23,7 @@ The following example shows how to assign a distribution point to a package by u
  You only need to assign a distribution point to a package if the package contains source files. The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although the following example does not demonstrate that.  
 
 > [!NOTE]
->  To identify branch distribution points, check the [IsPeerDP](assetId:///IsPeerDP?qualifyHint=False&autoUpgrade=True) property of the specific [SMS_DistributionPoint](assetId:///SMS_DistributionPoint?qualifyHint=False&autoUpgrade=True) class instance. If the assetId:///IsPeerDP?qualifyHint=False&autoUpgrade=True property is true, then the distribution point is a branch distribution point.  
+>  To identify branch distribution points, check the [IsPeerDP](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) property of the specific [SMS_DistributionPoint](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) class instance. If the IsPeerDP property is true, then the distribution point is a branch distribution point.  
 
 ### To list distribution points for a site  
 
@@ -95,7 +95,7 @@ public void ListDistributionPointsForSite(WqlConnectionManager connection, strin
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code for the site that supports the distribution points.|  
 
 ## Compiling the Code  

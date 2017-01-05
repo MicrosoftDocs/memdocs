@@ -291,7 +291,7 @@ toc_rel: /sccm/toc.json
               <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
                 <div class="title column-third">
                   <span class="step-number">8</span>
-                  <p>Configuration Manager SDK</p>
+                  <p>Configuration Manager development and automation</p>
                 </div>
                 <p class="description column-two-thirds">Learn how to automate and extend Configuration Manager.</p>
               </a>
@@ -310,6 +310,12 @@ toc_rel: /sccm/toc.json
                     <p>Provides detailed information about the managed SMS Provider library, Configuration Manager class schema, extended WMI Query Language (WQL), named values and qualifiers, and the Configuration Manager console libraries.</p>
                   </a>
                 </li>
+                <li class="column-third">
+                  <a href="https://docs.microsoft.com/powershell/sccm/configurationmanager/vlatest/configurationmanager">
+                    <h3>Configuration Manager cmdlets</h3>
+                    <p>Provides the online help files for the Configuration Manager cmdlets, which include detailed information about each cmdlet and examples that demonstrate how to use the cmdlet.</p>
+                  </a>
+                </li>
               </ul>
             </section>
           </li>
@@ -326,7 +332,7 @@ toc_rel: /sccm/toc.json
           <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">Give feedback on the documentation</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="https://technet.microsoft.com/en-us/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager documentation</a></li>
+          <li><a href="https://technet.microsoft.com/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager documentation</a></li>
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet forums</a></li>
           <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Configuration Manager product page</a></li>
           </ul>

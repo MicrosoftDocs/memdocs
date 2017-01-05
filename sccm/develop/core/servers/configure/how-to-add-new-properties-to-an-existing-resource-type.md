@@ -161,9 +161,9 @@ public void CreateDDRToAddNewPropertiesToAnExistingResourceType(WqlConnectionMan
 ## Compiling the Code  
 
 > [!IMPORTANT]
->  This VBScript and C# examples require [smsrsgen.dll](assetId:///smsrsgen.dll?qualifyHint=False&autoUpgrade=True) and [smsrsgenctl.dll](assetId:///smsrsgenctl.dll?qualifyHint=False&autoUpgrade=True) respectively. Both files are included as a part of the downloadable Configuration Manager SDK (in the “Redistributables��? folder).  
+>  This VBScript and C# examples require **smsrsgen.dll** and **smsrsgenctl.dll**, respectively. Both files are included as a part of the downloadable Configuration Manager SDK (in the "Redistributables" folder).  
 >   
->  The file assetId:///smsrsgenctl.dll?qualifyHint=False&autoUpgrade=True is a 32-bit dll and must be registered on the system that will run the application. In addition, the application using assetId:///smsrsgenctl.dll?qualifyHint=False&autoUpgrade=True should be compiled as an x86 application.  
+>  The file **smsrsgenctl.dll** is a 32-bit dll and must be registered on the system that will run the application. In addition, the application using **smsrsgenctl.dll** should be compiled as an x86 application.  
 
 ## Robust Programming  
  For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
