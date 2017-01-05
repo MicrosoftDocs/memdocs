@@ -27,7 +27,7 @@ You can install and operate multiple, independent hierarchies of System Center C
 -   [Configuration Manager limitations in a mixed-version hierarchy](#bkmk_mixed)  
 
 ##  <a name="BKMK_SupConfigInterop"></a> Interoperability between System Center Configuration Manager and earlier product versions  
- Sites of different versions  cannot coexist in the same hierarchy, except during the process of upgrade from System Center 2012 Configuration Manager to System Center Configuration Manager, or from one System Center Configuration Manager version to a newer version (using in-console updates).   
+ Sites of different versions cannot coexist in the same hierarchy, except during the process of upgrade from System Center 2012 Configuration Manager to System Center Configuration Manager, or from one System Center Configuration Manager version to a newer version (using in-console updates).   
 
  Because you can deploy a System Center Configuration Manager site and hierarchy side-by-side with an existing System Center 2012 Configuration Manager site or hierarchy, we recommend that you plan to prevent clients from either version from trying to join a site from the other version.
 
@@ -55,7 +55,7 @@ For example, if two or more Configuration Manager hierarchies have overlapping b
  To prevent clients from unintentionally being assigned to the wrong site when two hierarchies have overlapping boundaries, we recommend that you configure Configuration Manager client installation parameters to assign clients to a specific site.  
 
 ##  <a name="bkmk_mixed"></a> Configuration Manager limitations  in a mixed-version hierarchy  
- When you're in the process of upgrading a System Center Configuration Manager site, there are times when different sites will have different versions.  For example, you might upgrade a central administration site to a new version but due to site maintenance windows, one or more primary sites might not upgrade until a later time and date.  
+ When you're in the process of upgrading a System Center Configuration Manager site, there are times when different sites will have different versions. For example, you might upgrade a central administration site to a new version but due to site maintenance windows, one or more primary sites might not upgrade until a later time and date.  
 
  When different sites in a single hierarchy run different versions, some functionality is not available. This can affect how you manage Configuration Manager objects in the Configuration Manager console, and which functionality is available to clients. Typically, functionality from the newer version of Configuration Manager is not accessible at sites or to clients that run a lower service pack version.  
 

@@ -104,7 +104,7 @@ For more information, see [Windows PE peer cache](../../../osd/get-started/prepa
 
 
 ## Content library  
- The Content library is the single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content that you distribute.  
+ The content library is the single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content that you distribute.  
 
 Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
 
@@ -238,6 +238,6 @@ For more information:
  - If you use version 1511, 1602, or 1606, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
 
 ## Prestage content  
- Prestaging a process of transferring content to a distribution point without relying on Configuration Manager to distribute the content across the network.  
+ Prestaging content is a process of transferring content to a distribution point without relying on Configuration Manager to distribute the content across the network.  
 
  For more information, see [Manage network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth).
