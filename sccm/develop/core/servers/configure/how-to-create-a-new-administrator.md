@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create a New Administrator
-The administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group. The Windows Management Instrumentation (WMI)`SMS_Admin` class contains all the administrators defined in Configuration Manager. The security roles for an admin are in the `SMS_Admin.Roles` property and the security scopes for an admin are in the `SMS_Admin.Categories` property. Both of these properties expose an array of strings which correspond to the identifier of the role or security scope. Both properties are also marked as `lazy` and are read-only.  
+The administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group. The Windows Management Instrumentation (WMI) `SMS_Admin` class contains all the administrators defined in Configuration Manager. The security roles for an admin are in the `SMS_Admin.Roles` property and the security scopes for an admin are in the `SMS_Admin.Categories` property. Both of these properties expose an array of strings which correspond to the identifier of the role or security scope. Both properties are also marked as `lazy` and are read-only.  
 
 > [!IMPORTANT]
 >  `Lazy` properties are never retrieved with the class instance if the class instance was loaded from a query. The object must be directly accessed from WMI. Generally the WMI provider will supply a `Get` method that will accept a query path to the object.  
@@ -79,10 +79,10 @@ public void CreateSMSAdmin(WqlConnectionManager connection, string distinguished
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`distinguishedName`|-   Managed: [String](assetId:///String?qualifyHint=False&autoUpgrade=True)|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
-|`categoryID`|-   Managed: assetId:///String?qualifyHint=False&autoUpgrade=True|The RBA secured categories associated with this account .|  
-|`CategoryTypeID`|-   Managed: [Integer](assetId:///Integer?qualifyHint=False&autoUpgrade=True)|The type of the category (collection or secured scope).|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
+|`distinguishedName`|-   Managed: `String`|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
+|`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account .|  
+|`CategoryTypeID`|-   Managed: `Integer`|The type of the category (collection or secured scope).|  
 
 ## Compiling the Code  
  The C# example requires:  

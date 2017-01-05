@@ -35,19 +35,19 @@ You create a package for an operating system deployment driver, in System Center
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create an [SMS_DriverPackage](assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True) object.  
+2.  Create an [SMS_DriverPackage](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object.  
 
-3.  Set the `PkgSourceFlag` property of the assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True object to `2` (Storage Direct).  
+3.  Set the `PkgSourceFlag` property of the `SMS_DriverPackage` object to `2` (Storage Direct).  
 
-4.  Commit the assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True object.  
+4.  Commit the `SMS_DriverPackage` object.  
 
-5.  Get the assetId:///SMS_DriverPackage?qualifyHint=False&autoUpgrade=True object.  
+5.  Get the `SMS_DriverPackage` object.  
 
-6.  Put the list of drivers that you want to add to the package in the [AddDriverContent](assetId:///AddDriverContent?qualifyHint=False&autoUpgrade=True) method `ContentIDs` in parameter.  
+6.  Put the list of drivers that you want to add to the package in the [AddDriverContent](../../develop/reference/osd/adddrivercontent-method-in-class-sms_driverpackage.md) method `ContentIDs` in parameter.  
 
-7.  Put the list of driver content source paths in the assetId:///AddDriverContent?qualifyHint=False&autoUpgrade=True method `ContentSourcePath` in parameter.  
+7.  Put the list of driver content source paths in the `AddDriverContent` method `ContentSourcePath` in parameter.  
 
-8.  Call the assetId:///AddDriverContent?qualifyHint=False&autoUpgrade=True method.  
+8.  Call the `AddDriverContent` method.  
 
 9. Call the [RefreshPkgSource Method in Class SMS_DriverPackage](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_driverpackage.md) to complete the operation.  
 
@@ -184,8 +184,8 @@ public void CreateDriverPackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`driverId`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The driver identifier ([SMS_Driver.CI_ID](assetId:///SMS_Driver.CI_ID?qualifyHint=False&autoUpgrade=True)).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`driverId`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The driver identifier (`SMS_Driver.CI_ID`).|  
 |`newPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|A description for the new package.|  
 |`newPackageSourcePath`|-   Managed: `String`<br />-   VBScript:  `String`|A valid UNC network path to the driver.|  

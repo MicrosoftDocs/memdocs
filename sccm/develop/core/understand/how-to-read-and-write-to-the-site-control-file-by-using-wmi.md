@@ -24,7 +24,7 @@ In System Center Configuration Manager, you write to the site control file using
 
  When you have finished writing to the site control file, you must commit your changes.  
 
- [SMS_SiteControlFile](assetId:///SMS_SiteControlFile?qualifyHint=False&autoUpgrade=True) has the following methods to manage changes to the site control file.  
+ [SMS_SiteControlFile](../../../develop/reference/core/servers/configure/sms_sitecontrolfile-server-wmi-class.md) has the following methods to manage changes to the site control file.  
 
 |Method|Description|  
 |------------|-----------------|  
@@ -261,7 +261,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   `String`|The site code for the Configuration Manager site.|  
 
 ## Compiling the Code  

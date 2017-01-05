@@ -61,7 +61,7 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`computerName`|`String`|The name of the site server.|  
 |`siteCode`|`String`|The site code.|  
 |`domainName`|`String`|The fully qualified domain name of the site server.|  

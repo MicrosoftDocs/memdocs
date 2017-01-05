@@ -79,8 +79,8 @@ public void EnableDriver(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`driverID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The Windows driver identifier available in [SMS_Driver.CI_ID](assetId:///SMS_Driver.CI_ID?qualifyHint=False&autoUpgrade=True).|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`driverID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The Windows driver identifier available in `SMS_Driver.CI_ID`.|  
 |`enableDriver`|-   Managed: `String`<br />-   VBScript: `String`|Flag to enable or disable the driver.<br /><br /> `true` - The driver is enabled.<br /><br /> `false` -  The driver is disabled.|  
 
 ## Compiling the Code  
