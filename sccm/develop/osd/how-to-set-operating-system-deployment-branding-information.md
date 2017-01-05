@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set Operating System Deployment Branding Information in Configuration Manager
-You set the operating system deployment branding information for the System Center Configuration Manager client by changing the [OSDBrandingSubtitle](assetId:///OSDBrandingSubtitle?qualifyHint=False&autoUpgrade=True) property of the client agent component section in the site control file.  
+You set the operating system deployment branding information for the System Center Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.  
 
 > [!NOTE]
 >  `OSDBrandingSubtitle` is encoded with BASE64 encoding.  

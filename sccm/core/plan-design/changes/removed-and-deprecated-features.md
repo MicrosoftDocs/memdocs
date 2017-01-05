@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 1/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,6 +48,7 @@ For more information, see:
 |Out of Band Management - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
 |Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Support for these task sequences ends with the first update released after June 1, 2017.|
 |The Software Center has a new, modern look. Apps that would have appeared only in the Silverlight-dependent Application Catalog (user-available apps) now appear in Software Center, on the **Applications** tab. The Application Catalog can still be accessed by using the link on the **Installation Status** tab of Software Center.<br><br>In the coming months, the previous version of Software Center will no longer be available.<br><br>You can set up clients to use the new Software Center by enabling the client setting, **Computer Agent** > **Use new Software Center**.<br><br>For more information about Software Center, see [Plan for and configure application management in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management).|December 13, 2016|To be announced|
+|Management of Virtual Hard Disks (VHDs) with Configuration Manager. </br></br>This includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. </br></br>When this support is removed, existing VHDs will not be deleted, but will no longer be accessible from within the Configuration Manager console.  |January 6, 2017 |Support for VHDs ends with the first update released after June 1, 2017.|
 
 
 Additional details for features removed with version 1511 of System Center Configuration Manager release:
@@ -104,4 +105,3 @@ Additional details for features removed with version 1511 of System Center Confi
 |-|-|-|  
 |SQL Server 2008|July 10, 2015|Version 1511|  
 |SQL Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016.|  
-
