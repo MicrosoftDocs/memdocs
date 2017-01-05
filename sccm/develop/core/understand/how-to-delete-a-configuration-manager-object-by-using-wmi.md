@@ -29,7 +29,7 @@ To delete a System Center Configuration Manager object, in System Center Configu
 3.  Using the `SWbemObject`, call `Delete` to delete the object.  
 
 ## Example  
- The following VBScript code example deletes the package ([SMS_Package](sms_package-server-wmi-class.md)) identified by its package identifier `packageID`.  
+ The following VBScript code example deletes the package ([SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)) identified by its package identifier `packageID`.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
