@@ -20,7 +20,7 @@ author: brendunsms.author: brendunsmanager: angrobe
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 ##  <a name="BKMK_LabCore"></a> Core components  
- Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.  
+ Setting up your environment for System Center Configuration Manager requires some core components to support the installation of Configuration Manager.    
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install System Center Configuration Manager.  
 

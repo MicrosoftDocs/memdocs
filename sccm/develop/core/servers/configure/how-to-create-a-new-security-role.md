@@ -69,9 +69,9 @@ public void CreateRole(WqlConnectionManager connection, string roleName, string 
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|roleName|-   Managed: [String](assetId:///String?qualifyHint=False&autoUpgrade=True)|A name for the new role.|  
-|`originalRoleID`|-   Managed: assetId:///String?qualifyHint=False&autoUpgrade=True|The identifier of the original security role.|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
+|roleName|-   Managed: `String`|A name for the new role.|  
+|`originalRoleID`|-   Managed: `String`|The identifier of the original security role.|  
 
 ## Compiling the Code  
  The C# example requires:  
