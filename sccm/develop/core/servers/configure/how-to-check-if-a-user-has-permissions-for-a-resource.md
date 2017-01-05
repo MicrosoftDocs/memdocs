@@ -78,7 +78,7 @@ public bool CheckUserPermissions(ConnectionManagerBase connectionManager, string
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [connectionManager](assetId:///connectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`resourceID`|`String`|Unique ID, supplied by Configuration Manager, for the resource.|  
 
 ## Compiling the Code  
