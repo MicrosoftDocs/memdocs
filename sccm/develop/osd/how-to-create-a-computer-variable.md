@@ -18,22 +18,22 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create a Computer Variable in Configuration Manager
-You create a computer variable for a computer that is running System Center Configuration Manager by adding instances of [SMS_MachineVariable](assetId:///SMS_MachineVariable?qualifyHint=False&autoUpgrade=True) to the [SMS_MachineSettings](assetId:///SMS_MachineSettings?qualifyHint=False&autoUpgrade=True) class [MachineVariables](assetId:///MachineVariables?qualifyHint=False&autoUpgrade=True) array property.  
+You create a computer variable for a computer that is running System Center Configuration Manager by adding instances of [SMS_MachineVariable](../../develop/reference/osd/sms_machinevariable-server-wmi-class.md) to the [SMS_MachineSettings](../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) class `MachineVariables` array property.  
 
 ### To create a computer variable  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get an instance of assetId:///SMS_MachineSettings?qualifyHint=False&autoUpgrade=True.  
+2.  Get an instance of `SMS_MachineSettings`.  
 
-3.  For each variable to be added, add instances of the embedded object a assetId:///SMS_MachineVariable?qualifyHint=False&autoUpgrade=True to the assetId:///MachineVariables?qualifyHint=False&autoUpgrade=True array property.  
+3.  For each variable to be added, add instances of the embedded object a `SMS_MachineVariable` to the `MachineVariables` array property.  
 
-4.  Commit the changes to the assetId:///SMS_MachineSettings?qualifyHint=False&autoUpgrade=True class instance.  
+4.  Commit the changes to the `SMS_MachineSettings` class instance.  
 
 ## Example  
  The following example method creates a collection variable and adds it to the collection identified by the supplied identifier.  
 
- In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
+ In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -140,12 +140,12 @@ public void CreateComputerVariable(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code of the source site.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable to be created.|  
 |`value`|-   Managed: `String`<br />-   VBScript: `String`|The value of the variable.|  
 |`mask`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Specifies whether the value is displayed in the Configuration Manager console.<br /><br /> `true` - the variable value is not displayed.<br /><br /> `false` - the variable value is displayed.|  
-|`computerID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The computer identifier. Typically this is the [SMS_R_System](assetId:///SMS_R_System?qualifyHint=False&autoUpgrade=True) class [ResourceID](assetId:///ResourceID?qualifyHint=False&autoUpgrade=True) property.|  
+|`computerID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The computer identifier. Typically this is the [SMS_R_System](../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md) class `ResourceID` property.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  
