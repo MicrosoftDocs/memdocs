@@ -36,7 +36,7 @@ To perform an asynchronous query on a System Center Configuration Manager client
 
 6.  Call the `ManagementObjectSearcher` object Get method and supply the `ManagmentOperationObserver` object as a parameter.  
 
-7.  Ensure you application still runs while the query is run.  
+7.  Ensure your application still runs while the query is run.  
 
 ## Example  
  The following C# code example asynchronously queries for components that are installed on a client.  

@@ -76,7 +76,7 @@ CreateDynamicCollection(WMIConnection, "New Dynamic Collection Name", "New dynam
 5.  Refresh the collection.  
 
 ## Example  
- The following example method creates a dynamic collection by using the[SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and the [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) classes and class properties.  
+ The following example method creates a dynamic collection by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and the [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) classes and class properties.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 

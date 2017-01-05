@@ -36,7 +36,7 @@ You create an update list that contains a set of software updates, in System Cen
 > [!IMPORTANT]
 >  The `LocalizedInformation` property that is used in this example requires an object array (embedded array) of the description information.  
 
- In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
+ In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
