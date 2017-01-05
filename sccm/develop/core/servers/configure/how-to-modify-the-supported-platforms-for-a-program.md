@@ -193,7 +193,7 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing package.|  
 |`existingProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The program name for an existing program.|  
 |`newMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  

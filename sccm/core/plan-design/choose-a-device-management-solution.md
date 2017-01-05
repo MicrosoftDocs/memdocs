@@ -83,4 +83,4 @@ You can use these device management solutions by themselves or in combination wi
 |Connections to distribution points|Yes|Yes|Yes||  
 |Block from Configuration Manager|Yes|Yes|Yes||  
 |Quarantine and block from Exchange Server (and Configuration Manager)||||Yes|  
-|Remote wipe|Yes|Yes|Yes|Yes|  
+|Remote wipe| |Yes|Yes|Yes|  
