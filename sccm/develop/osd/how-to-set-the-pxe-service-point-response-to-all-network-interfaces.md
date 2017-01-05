@@ -18,16 +18,16 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces
-In System Center Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the [BindPolicy](assetId:///BindPolicy?qualifyHint=False&autoUpgrade=True) embedded property.  
+In System Center Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the `BindPolicy` embedded property.  
 
- assetId:///BindPolicy?qualifyHint=False&autoUpgrade=True has the following possible values.  
+ `BindPolicy` has the following possible values.  
 
 |Value|Description|  
 |-----------|-----------------|  
 |0|Responds to PXE requests on all network interfaces.|  
 |1|Responds to requests on specific network interfaces.|  
 
- If assetId:///BindPolicy?qualifyHint=False&autoUpgrade=True is set to respond to specific network interfaces (1), you must add the media access control (MAC) addresses for the required network interfaces by using the [BindExcept](assetId:///BindExcept?qualifyHint=False&autoUpgrade=True) list. If assetId:///BindExcept?qualifyHint=False&autoUpgrade=True is not populated, PXE will not respond to any requests. For more information see, [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md).  
+ If `BindPolicy` is set to respond to specific network interfaces (1), you must add the media access control (MAC) addresses for the required network interfaces by using the `BindExcept` list. If `BindExcept` is not populated, PXE will not respond to any requests. For more information see, [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md).  
 
 ### To set the PXE response to network interfaces  
 
@@ -37,12 +37,12 @@ In System Center Configuration Manager, you set the operating system deployment 
 
 3.  Get the embedded properties.  
 
-4.  Update the assetId:///BindPolicy?qualifyHint=False&autoUpgrade=True embedded property.  
+4.  Update the `BindPolicy` embedded property.  
 
 5.  Commit the changes to the site control file.  
 
 ## Example  
- The following example method sets the PXE service point response to a network interface. If `respondToSpecificInterface` is set to `1` you must set the assetId:///BindExcept?qualifyHint=False&autoUpgrade=True list to specify the network interfaces that can respond. For more information, see [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md).  
+ The following example method sets the PXE service point response to a network interface. If `respondToSpecificInterface` is set to `1` you must set the `BindExcept` list to specify the network interfaces that can respond. For more information, see [How to Set the PXE Service Point Response for a Specific Network Interface](../../develop/osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -55,10 +55,10 @@ public void SetNetworkInterface(WqlConnectionManager connection,                
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM�?`.|  
-|respondToSpecficInterface|Managed: `String`|The value to set which network interfaces will respond to PXE requests.<br /><br /> -   0 - Responds to PXE requests on all network interfaces.<br />-   1 - Responds to requests on specific network interfaces.|  
+|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`respondToSpecficInterface`|Managed: `String`|The value to set which network interfaces will respond to PXE requests.<br /><br /> -   0 - Responds to PXE requests on all network interfaces.<br />-   1 - Responds to requests on specific network interfaces.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

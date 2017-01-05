@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create an Operating System Deployment Task Sequence
-You create a System Center Configuration Manager operating system deployment task sequence by creating an instance of the [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) class.  
+You create a System Center Configuration Manager operating system deployment task sequence by creating an instance of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class.  
 
  A task sequence contains one or more steps that are run sequentially on the client computer. For more information, see [Operating System Deployment Task Sequence Object Model](../../develop/osd/operating-system-deployment-task-sequence-object-model.md).  
 
@@ -28,7 +28,7 @@ You create a System Center Configuration Manager operating system deployment tas
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create a task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) object.  
+2.  Create a task sequence `SMS_TaskSequence` object.  
 
 3.  Add actions and, as required, add groups to the action. For more information, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
 
@@ -108,11 +108,11 @@ public void CreateInstallSoftwareTaskSequence(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:[WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript:  `String`|The task sequence step name.|  
 |`description`|-   VBScript:  `String`|The task sequence step description.|  
-|`packageID`|-   Managed: `String`<br />-   VBScript:  `String`|The package identifier containing the software to be installed. Obtained from [SMS_Package.PackageID](assetId:///SMS_Package.PackageID?qualifyHint=False&autoUpgrade=True).|  
-|`programName`|-   Managed: `String`<br />-   VBScript:  `String`|The name of the program to be installed. Obtained from [SMS_Program.ProgramName](assetId:///SMS_Program.ProgramName?qualifyHint=False&autoUpgrade=True).|  
+|`packageID`|-   Managed: `String`<br />-   VBScript:  `String`|The package identifier containing the software to be installed. Obtained from `SMS_Package.PackageID`.|  
+|`programName`|-   Managed: `String`<br />-   VBScript:  `String`|The name of the program to be installed. Obtained from `SMS_Program.ProgramName`.|  
 
 ## Compiling the Code  
  This C# example requires:  

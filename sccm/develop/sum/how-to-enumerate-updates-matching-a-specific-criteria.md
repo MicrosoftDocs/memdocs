@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Enumerate Updates Matching a Specific Criteria
-This topic explains how to enumerate software updates that match specific criteria in System Center Configuration Manager by building a query and then using the [ExecuteQuery](assetId:///ExecuteQuery?qualifyHint=False&autoUpgrade=True) method of the [QueryProcessor](assetId:///QueryProcessor?qualifyHint=False&autoUpgrade=True) class to run the query.  
+This topic explains how to enumerate software updates that match specific criteria in System Center Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  
 
 ### To enumerate updates matching a specific criteria  
 
@@ -26,10 +26,10 @@ This topic explains how to enumerate software updates that match specific criter
 
 2.  Assign a specific query to a variable.  
 
-3.  Pass the variable to the assetId:///ExecuteQuery?qualifyHint=False&autoUpgrade=True method.  
+3.  Pass the variable to the `ExecuteQuery` method.  
 
 ## Example  
- The following example method enumerates updates that match specific criteria by passing a query to the assetId:///ExecuteQuery?qualifyHint=False&autoUpgrade=True method.  
+ The following example method enumerates updates that match specific criteria by passing a query to the `ExecuteQuery` method.  
 
  Four example queries are demonstrated below:  
 
@@ -235,7 +235,7 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  This C# example requires:  

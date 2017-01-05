@@ -18,23 +18,23 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create an Update List
-You create an update list that contains a set of software updates, in System Center Configuration Manager, by creating an instance of the [SMS_AuthorizationList](assetId:///SMS_AuthorizationList?qualifyHint=False&autoUpgrade=True) class and populating the properties.  
+You create an update list that contains a set of software updates, in System Center Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.  
 
 ### To create an update list  
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Create the new update list object using the assetId:///SMS_AuthorizationList?qualifyHint=False&autoUpgrade=True class.  
+2.  Create the new update list object using the `SMS_AuthorizationList` class.  
 
 3.  Populate the new update list properties.  
 
 4.  Save the new update list and properties.  
 
 ## Example  
- The following example method shows how to create an update list that contains a set of software updates by creating an instance of the assetId:///SMS_AuthorizationList?qualifyHint=False&autoUpgrade=True class and populating the properties.  
+ The following example method shows how to create an update list that contains a set of software updates by creating an instance of the `SMS_AuthorizationList` class and populating the properties.  
 
 > [!IMPORTANT]
->  The [LocalizedInformation](assetId:///LocalizedInformation?qualifyHint=False&autoUpgrade=True) property that is used in this example requires an object array (embedded array) of the description information.  
+>  The `LocalizedInformation` property that is used in this example requires an object array (embedded array) of the description information.  
 
  In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
 
@@ -158,9 +158,9 @@ public void CreateSUMUpdateList(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newUpdates`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the updates that is associated with the Update List.|  
-|`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type assetId:///LocalizedInformation?qualifyHint=False&autoUpgrade=True.|  
+|`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type `LocalizedInformation`.|  
 
 ## Compiling the Code  
  This C# example requires:  

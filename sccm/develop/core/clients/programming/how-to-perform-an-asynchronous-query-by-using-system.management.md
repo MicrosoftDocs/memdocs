@@ -146,7 +146,7 @@ private void Done(object sender,
  System.Management.  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   
