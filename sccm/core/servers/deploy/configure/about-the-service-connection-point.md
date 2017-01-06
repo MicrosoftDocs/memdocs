@@ -74,7 +74,7 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 -   The Site System Installation Account is used by the distribution manager on the site server to transfer updates from the service connection point
 
 ##  <a name="bkmk_urls"></a> Internet access requirements  
-To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to access these locations.  
+To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** and **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to access these locations.  
 
 **Updates and Servicing**  
 
@@ -87,6 +87,8 @@ To enable operation, the computer that hosts the service connection point and an
 -   blob.core.windows.net  
 
 -   download.microsoft.com  
+
+-   download.windowsupdate.com
 
 -   sccmconnected-a01.cloudapp.net  
 
