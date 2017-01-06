@@ -119,7 +119,7 @@ This communication is used to confirm whether the other client computer is awake
 |Hypertext Transfer Protocol (HTTP)||80|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsClient-CloudDP"></a> Client -- > Cloud-Based distribution point  
+###  <a name="BKMK_PortsClient-CloudDP"></a> Client -- > Cloud-based distribution point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -651,17 +651,17 @@ The following ports are used for the discovery and publishing of site informatio
 
 -   [Configuration Manager console -- &gt; Internet](#BKMK_PortsConsole-Internet)  
 
--   [Management Point -- &gt; Domain controller](#BKMK_PortsMP-DC)  
+-   [Management point -- &gt; Domain controller](#BKMK_PortsMP-DC)  
 
 -   [Site server -- &gt; Domain controller](#BKMK_PortsSite-DC)  
 
 -   [Site server &lt; -- &gt; Issuing Certification Authority (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
--   [Software Update Point -- &gt; Internet](#BKMK_PortsSUP-Internet)  
+-   [Software update point -- &gt; Internet](#BKMK_PortsSUP-Internet)  
 
--   [Software Update Point -- &gt; Upstream WSUS Server](#BKMK_PortsSUP-WSUS)  
+-   [Software update point -- &gt; Upstream WSUS Server](#BKMK_PortsSUP-WSUS)  
 
--   [Service Connection Point -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
+-   [Service connection point -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
 ###  <a name="BKMK_IBCMports"></a> Installation requirements for site systems that support Internet-based clients  
  Management points and distribution points that support Internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
