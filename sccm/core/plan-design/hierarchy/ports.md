@@ -20,12 +20,12 @@ author: Brendunsms.author: brendunsmanager: angrobe
 System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
 
 > [!NOTE]  
->  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall. .  
+>  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall.   
 
  The port listings that follow are used by Configuration Manager and do not include information for standard Windows services, such as Group Policy settings for Active Directory Domain Services or Kerberos authentication. For information about Windows Server services and ports, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
 
 ##  <a name="BKMK_ConfigurablePorts"></a> Ports you can configure  
- Configuration Manager allows you to configure the ports for the following types of communication:  
+ Configuration Manager enabless you to configure the ports for the following types of communication:  
 
 -   Application Catalog website point to Application Catalog web service point  
 
@@ -522,8 +522,8 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server Service|--|1433 (See note 2, Alternate Port Available)|  
-|SQL Server Service Broker|--|4022 (See note 2, Alternate Port Available)|  
+|SQL Server Service|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL Server Service Broker|--|4022 (See note 2, **Alternate Port Available**)|  
 
 > [!TIP]  
 >  Configuration Manager does not require the SQL Server Browser, which uses port UDP 1434.  
@@ -561,7 +561,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
     -   RFC 2348: Block size option  
 
-    -   RFC 2349: Time-out interval, and transfer size options  
+    -   RFC 2349: Time-out interval and transfer size options  
 
      Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
 
@@ -668,13 +668,13 @@ The following ports are used for Discovery and publishing of site information:
 
 -   Site server --> Site system: RPC endpoint mapper using UDP and TCP port 135.  
 
--   Site server --> Site system: RPC dynamic TCP ports.  
+-   Site server --> Site system: RPC dynamic TCP ports  
 
--   Site server &lt; --> Site system: Server message blocks (SMB) using TCP port 445.  
+-   Site server &lt; --> Site system: Server message blocks (SMB) using TCP port 445
 
 Application and package installations on distribution points require the following RPC ports:  
 
--   Site server --> Distribution point: RPC endpoint mapper using UDP and TCP port 135.  
+-   Site server --> Distribution point: RPC endpoint mapper using UDP and TCP port 135
 
 -   Site server --> Distribution point: RPC dynamic TCP ports  
 
