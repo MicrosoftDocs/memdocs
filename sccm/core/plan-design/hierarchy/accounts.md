@@ -13,14 +13,19 @@ ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Accounts used in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Accounts used in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following information to identify the Windows groups and the accounts that are used in System Center Configuration Manager, how they are used, and any requirements.  
 
 ## Windows groups that Configuration Manager creates and uses  
- Configuration Manager automatically creates, and in many cases automatically maintains, the following Windows groups:  
+ Configuration Manager automatically creates, and in many cases automatically maintains, the following Windows groups.  
 
 > [!NOTE]  
 >  When Configuration Manager creates a group on a computer that is a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group that is shared among all domain controllers in the domain.  
