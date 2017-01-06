@@ -24,7 +24,7 @@ In System Center Configuration Manager, you write to the site control file using
 
  When you have finished writing to the site control file, you must commit your changes.  
 
- [SMS_SiteControlFile](assetId:///SMS_SiteControlFile?qualifyHint=False&autoUpgrade=True) has the following methods to manage changes to the site control file.  
+ [SMS_SiteControlFile](../../../develop/reference/core/servers/configure/sms_sitecontrolfile-server-wmi-class.md) has the following methods to manage changes to the site control file.  
 
 |Method|Description|  
 |------------|-----------------|  
@@ -59,7 +59,7 @@ In System Center Configuration Manager, you write to the site control file using
 ## Example  
  The following VBScript example access the client agent component of the site control file and creates a dummy property, property list and multi-string list. It then removes the updates that were made. The example demonstrates how to set up the session handle, get the site control file, query the site control file, make updates and commit changes to the site control file.
 
- In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
+ In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -261,7 +261,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   `String`|The site code for the Configuration Manager site.|  
 
 ## Compiling the Code  

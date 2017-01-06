@@ -26,19 +26,19 @@ You can import a Windows driver that is described by an information (.inf) file,
 
 2.  Call the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md) to get the initial [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) management base object.  
 
-3.  Create an instance of [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) by using the management base object.  
+3.  Create an instance of [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) by using the management base object.  
 
-4.  Populate the assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object.  
+4.  Populate the `SMS_Driver` object.  
 
-5.  Commit the assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object.  
+5.  Commit the `SMS_Driver` object.  
 
 ## Example  
- The following example method creates an assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object for a Windows driver by using the supplied path and file name. The example also enables the driver by setting the value of the [IsEnabled](assetId:///IsEnabled?qualifyHint=False&autoUpgrade=True) property to `true`. The helper function [GetDriverName](assetId:///GetDriverName?qualifyHint=False&autoUpgrade=True) is used to get the name of the driver from the driver package XML.  
+ The following example method creates an `SMS_Driver` object for a Windows driver by using the supplied path and file name. The example also enables the driver by setting the value of the `IsEnabled` property to `true`. The helper function `GetDriverName` is used to get the name of the driver from the driver package XML.  
 
 > [!NOTE]
 >  The `path` parameter must be supplied as a Universal Naming Convention (UNC) network path, for example, \\\localhost\Drivers\ATIVideo\\.  
 
- In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)`LocaleID` property.  
+ In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -206,7 +206,7 @@ public string GetDriverName(IResultObject driver)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`path`|-   Managed: `String`<br />-   VBScript: `String`|A valid UNC network path to the folder that contains the driver contents. For example, \\\Servers\Driver\VideoDriver.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the .inf file. For example, ATI.inf.|  
 
