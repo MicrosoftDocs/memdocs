@@ -2,7 +2,7 @@
 title: "Supported clients and devices | Microsoft Docs"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
-ms.date: 01/01/2017
+ms.date: 01/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -178,8 +178,6 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 -   **Mac OS X 10.8** (Mountain Lion)
 
 -   **Mac OS X 10.9** (Mavericks)
-
--   **Mac OS X 10.9** (Mavericks)  
 
 -   **Mac OS X 10.10** (Yosemite)  
 
