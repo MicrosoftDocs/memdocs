@@ -17,17 +17,17 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Ports used in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, and IPsec.  
+System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
 
 > [!NOTE]  
->  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might have to also allow some HTTP verbs and headers to traverse your firewall. .  
+>  If you support Internet-based clients by using SSL bridging, in addition to port requirements, you might also have to allow some HTTP verbs and headers to traverse your firewall. .  
 
- The port listings that follow are used by Configuration Manager and do not include information for standard Windows services, such as Group Policy settings for Active Directory Domain Services and Kerberos authentication. For information about Windows Server services and ports, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
+ The port listings that follow are used by Configuration Manager and do not include information for standard Windows services, such as Group Policy settings for Active Directory Domain Services or Kerberos authentication. For information about Windows Server services and ports, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
 
 ##  <a name="BKMK_ConfigurablePorts"></a> Ports you can configure  
  Configuration Manager allows you to configure the ports for the following types of communication:  
 
--   Application Catalog Website point to Application Catalog web service point  
+-   Application Catalog website point to Application Catalog web service point  
 
 -   Enrollment proxy point to enrollment point  
 
@@ -44,11 +44,11 @@ System Center Configuration Manager is a distributed client/server system. The d
 -   Reporting services points  
 
     > [!NOTE]  
-    >  The ports in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports defining the IP filter information for IPsec policies or for configuring firewalls.  
+    >  The ports that are in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports that define the IP filter information for IPsec policies or for configuring firewalls.  
 
-By default, the HTTP port used for client to site system communication is port 80, and the default HTTPS port is 443. Ports for client-to-site system communication over HTTP or HTTPS can be changed during Setup or in the Site Properties for your Configuration Manager site.  
+By default, the HTTP port that's used for client-to-site system communication is port 80, and the default HTTPS port is 443. Ports for client-to-site system communication over HTTP or HTTPS can be changed during setup or in the site properties for your Configuration Manager site.  
 
-The ports in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports defining the IP filter information for IPsec policies or for configuring firewalls.  
+The ports that are in use for the reporting services point site system role are configured in SQL Server Reporting Services. These ports are then used by Configuration Manager during communications to the reporting services point. Be sure to review these ports when you're defining the IP filter information for IPsec policies or for configuring firewalls.  
 
 ##  <a name="BKMK_NonConfigurablePorts"></a> Non-configurable ports  
 Configuration Manager does not allow you to configure ports for the following types of communication:  
@@ -64,11 +64,11 @@ Configuration Manager does not allow you to configure ports for the following ty
 -   Connections to cloud services, such as Microsoft Intune and cloud-based distribution points  
 
 ##  <a name="BKMK_CommunicationPorts"></a> Ports used by Configuration Manager clients and site systems  
-The following sections detail the ports used for communication in Configuration Manager. The arrows in the section title, between the computers, represent the direction of the communication:  
+The following sections details the ports that are used for communication in Configuration Manager. The arrows in the section title, between the computers, represent the direction of the communication:  
 
--   -- > indicates one computer initiates communication and the other computer always responds  
+-   -- > Indicates that one computer initiates communication and the other computer always responds  
 
--   &lt; -- > indicates that either computer can initiate communication  
+-   &lt; -- > Indicates that either computer can initiate communication  
 
 ###  <a name="BKMK_PortsAI"></a> Asset Intelligence Synchronization Point -- > Microsoft  
 
@@ -103,7 +103,9 @@ The following sections detail the ports used for communication in Configuration 
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
 
 ###  <a name="BKMK_PortsClient-ClientWakeUp"></a> Client -- > Client  
- In addition to the ports listed in the following table, wake-up proxy also uses Internet Control Message Protocol (ICMP) echo request messages from one client to another client when they are configured for wake-up proxy. This communication is used to confirm whether the other client computer is awake on the network. ICMP is sometimes referred to as TCP/IP ping commands. ICMP does not have a UDP or TCP protocol number, and so it is not listed in the following table. However, any host-based firewalls on these client computers or intervening network devices within the subnet must permit ICMP traffic for wake-up proxy communication to succeed.  
+ In addition to the ports that are listed in the following table, wake-up proxy also uses Internet Control Message Protocol (ICMP) echo request messages from one client to another client when they are configured for wake-up proxy.
+
+This communication is used to confirm whether the other client computer is awake on the network. ICMP is sometimes referred to as TCP/IP ping commands. ICMP does not have a UDP or TCP protocol number, and so it is not listed in the following table. However, any host-based firewalls on these client computers or intervening network devices within the subnet must permit ICMP traffic for wake-up proxy communication to succeed.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -197,9 +199,9 @@ The following sections detail the ports used for communication in Configuration 
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager Console -- > Reporting Services Point  
 
-||||  
-|-|-|-|  
-|Description|UDP|TCP|  
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|   
 |Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
 
@@ -463,7 +465,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
 
- During the installation of a site that will use a remote SQL Server to host the site database, you must open the following ports between the site server and the SQL Server:  
+ During the installation of a site that uses a remote SQL Server to host the site database, you must open the following ports between the site server and the SQL Server:  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -485,8 +487,8 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
-|Hypertext Transfer Protocol (HTTP)|--|80 or 8530 (See note 3, Windows Server Update Services)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 or 8531 (See note 3, Windows Server Update Services)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 or 8530 (See note 3, **Windows Server Update Services**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 or 8531 (See note 3, **Windows Server Update Services**)|  
 
 ###  <a name="BKMK_PortsSite-SMP"></a> Site Server &lt; -- > State Migration Point  
  (See note 5, **Communication between the site server and site systems**)  
@@ -516,7 +518,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 or 8531 (See note 3, **Windows Server Update Services**)|  
 
 ###  <a name="BKMK_PortsSQL-SQL"></a> SQL Server --> SQL Server  
- Intersite database replication requires the SQL Server at one site to communicate directly with the SQL Server of its parent or child site.  
+ Intersite database replication requires the SQL Server at one site to communicate directly with the SQL Server at its parent or child site.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -540,35 +542,35 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 2.  **Alternate Port Available**: An alternate port can be defined within Configuration Manager for this value. If a custom port has been defined, substitute that custom port when defining the IP filter information for IPsec policies or for configuring firewalls.  
 
-3.  **Windows Server Update Services**: WSUS can be installed either on the default Web site (port 80) or a custom Web site (port 8530).  
+3.  **Windows Server Update Services (WSUS)**: WSUS can be installed either on the default Web site (port 80) or a custom Web site (port 8530).  
 
      After installation, the port can be changed. You do not have to use the same port number throughout the site hierarchy.  
 
     -   If the HTTP port is 80, the HTTPS port must be 443.  
 
-    -   If the HTTP port is anything else, the HTTPS port must be 1 higher. For example, 8530 and 8531.  
+    -   If the HTTP port is anything else, the HTTPS port must be one or higher, for example, 8530 and 8531.  
 
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 
 4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of the Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol defined by the following RFCs:  
 
-    -   RFC 350 - TFTP  
+    -   RFC 350: TFTP  
 
-    -   RFC 2347 - Option extension  
+    -   RFC 2347: Option extension  
 
-    -   RFC 2348 - Block size option  
+    -   RFC 2348: Block size option  
 
-    -   RFC 2349 - Time-out interval, and transfer size options  
+    -   RFC 2349: Time-out interval, and transfer size options  
 
-     Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port will allow the TFTP service to receive incoming TFTP requests but will not allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
+     Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
 
-5.  **Communication between the site server and site systems**: By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points do not send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties, after the site system is installed, it will not initiate communication to the site server. Instead, the site server initiates the connections and uses the Site System Installation Account for authentication to the site system server.  
+5.  **Communication between the site server and site systems**: By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points do not send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties, after the site system is installed, it won't initiate communication to the site server. Instead, the site server initiates the connections and uses the Site System Installation account for authentication to the site system server.  
 
 6.  **Dynamic ports**: Dynamic ports (also known as ephemeral ports) use a range of port numbers, which is defined by the operating system version. For more information about the default port ranges, see [Service overview and network port requirements for Windows](http://go.microsoft.com/fwlink/p/?LinkId=317965).  
 
 ##  <a name="BKMK_AdditionalPorts"></a> Additional lists of ports  
- The following sections provide additional information about ports used by Configuration Manager.  
+ The following sections provide additional information about ports that are used by Configuration Manager.  
 
 ###  <a name="BKMK_ClientShares"></a> Client to server shares  
  Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:  
@@ -590,7 +592,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
     -   SQL Server Service, which defaults to port TCP 1433  
 
--   Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles default to port TCP 1433.  
+-   Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
 
 > [!WARNING]  
 >  Configuration Manager does not support dynamic ports. Because SQL Server named instances by default use dynamic ports for connections to the database engine, when you use a named instance, you must manually configure the static port that you want to use for intrasite communication.  
@@ -622,20 +624,20 @@ For an example of how to configure SQL Server to use a specific port, see [How t
 
 ### <a name="bkmk_discovery"> </a> Discovery and publishing
 The following ports are used for Discovery and publishing of site information:
- - Lightweight Directory Access Protocol (LDAP)  - 389
- - LDAP (Secure Sockets Layer [SSL] connection)  - 636
+ - Lightweight Directory Access Protocol (LDAP): 389
+ - LDAP (Secure Sockets Layer [SSL] connection): 636
 
 
- - Global Catalog LDAP - 3268
- - Global Catalog LDAP SSL -3269
+ - Global Catalog LDAP: 3268
+ - Global Catalog LDAP SSL: 3269
 
 
- - RPC Endpoint Mapper - 135
- - RPC - Dynamically allocated high TCP ports
+ - RPC Endpoint Mapper: 135
+ - RPC: Dynamically allocated high TCP ports
 
 
- - TCP: 1024 - 5000
- - TCP:  49152 - 65535
+ - TCP: 1024: 5000
+ - TCP:  49152: 65535
 
 
 ###  <a name="BKMK_External"></a> External connections made by Configuration Manager  
@@ -662,35 +664,35 @@ The following ports are used for Discovery and publishing of site information:
 -   [Service Connection Point -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
 ###  <a name="BKMK_IBCMports"></a> Installation requirements for site systems that support Internet-based clients  
- Management points and distribution points that support internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
+ Management points and distribution points that support Internet-based clients, the software update point, and the fallback status point use the following ports for installation and repair:  
 
--   Site server --> site system: RPC endpoint mapper using UDP and TCP port 135.  
+-   Site server --> Site system: RPC endpoint mapper using UDP and TCP port 135.  
 
--   Site server --> site system: RPC dynamic TCP ports.  
+-   Site server --> Site system: RPC dynamic TCP ports.  
 
--   Site server &lt; --> site system: Server message blocks (SMB) using TCP port 445.  
+-   Site server &lt; --> Site system: Server message blocks (SMB) using TCP port 445.  
 
 Application and package installations on distribution points require the following RPC ports:  
 
--   Site server --> distribution point: RPC endpoint mapper using UDP and TCP port 135.  
+-   Site server --> Distribution point: RPC endpoint mapper using UDP and TCP port 135.  
 
--   Site server --> distribution point: RPC dynamic TCP ports  
+-   Site server --> Distribution point: RPC dynamic TCP ports  
 
 Use IPsec to help secure the traffic between the site server and site systems. If you must restrict the dynamic ports that are used with RPC, you can use the Microsoft RPC configuration tool (rpccfg.exe) to configure a limited range of ports for these RPC packets. For more information about the RPC configuration tool, see [How to configure RPC to use certain ports and how to help secure those ports by using IPsec](http://go.microsoft.com/fwlink/p/?LinkId=124096).  
 
 > [!IMPORTANT]  
->  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a Site System Installation Account if the site system is in a different Active Directory forest without a trust relationship.  
+>  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship.  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation  
 The ports that are using during client installation depend on the client deployment method. See **Ports Used During Configuration Manager Client Deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) topic for a list of ports for each client deployment method. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Ports used by migration  
-The site server that runs Migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites SQL Server database, and to share distribution points.  
+The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites' SQL Server database, and to share distribution points.  
 
- For information these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the Prerequisites for [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) topic.  
+ For information about these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the  [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) topic.  
 
 ###  <a name="BKMK_ServerPorts"></a> Ports used by Windows Server  
- The following table lists some of the key ports that Windows Server uses and their respective functions. For a more complete list of Windows Server services and network ports requirements, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
+ The following table lists some of the key ports used by Windows Server and their respective functions. For a more complete list of Windows Server services and network ports requirements, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
