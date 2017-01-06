@@ -19,7 +19,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 The following sections detail the available prerequisite checks.  
 
 
- For  information about using the Prerequisite Checker, see the [Prerequisite checker](prerequisite-checker.md).  
+ For  information about using Prerequisite Checker, see the [Prerequisite Checker](prerequisite-checker.md).  
 
 ##  <a name="BKMK_Security"></a> Prerequisite checks for security rights  
  The following are prerequisite checks that Prerequisite Checker performs for security rights.  
@@ -31,7 +31,7 @@ The following sections detail the available prerequisite checks.
 -   **Applicability:**  
       -   Primary site  
 
-**Administrative rights on expand primary site**. Verifies that the user running Setup has local **Administrator** rights on the standalone primary site that will be expanded.  
+**Administrative rights on expand primary site**. Verifies that the user running Setup has **Administrator** rights on the standalone primary site that will be expanded.  
 
 -   **Severity:** Error  
 
@@ -39,7 +39,7 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site  
 
-**Administrative rights on site system**. Verifies the user account that runs Configuration Manager Setup has local **Administrator** rights on the site server computer.  
+**Administrative rights on site system**. Verifies the user account that runs Configuration Manager Setup has **Administrator** rights on the site server computer.  
 
 -   **Severity:** Error  
 
@@ -49,7 +49,7 @@ The following sections detail the available prerequisite checks.
     -   Primary site  
     -   Secondary site  
 
-**CAS Machine administrative rights on expand primary site**. Verifies that the computer account of the central administration site has local **Administrator** rights on the stand-alone primary site that will be expanded.  
+**CAS Machine administrative rights on expand primary site**. Verifies that the computer account of the central administration site has **Administrator** rights on the stand-alone primary site that will be expanded.  
 
 -   **Severity:** Error  
 
@@ -65,7 +65,7 @@ The following sections detail the available prerequisite checks.
 
     -   Primary site  
 
-**Site server computer account administrative rights**. Verifies that the site server computer account has administrative rights on the SQL Server and management point computers.  
+**Site server computer account administrative rights**. Verifies that the site server computer account has administrator rights on the SQL Server and management point computers.  
 
 -   **Severity:** Error  
 
@@ -91,7 +91,7 @@ The following sections detail the available prerequisite checks.
 
     -   SQL Server  
 
-**SQL Server sysadmin rights**. Verifies the user account that runs Configuration Manager Setup has the **sysadmin** role on the SQL Server instance selected for site database installation. This check also fails when Setup is unable to access the instance for the SQL Server to verify permissions.  
+**SQL Server sysadmin rights**. Verifies that the user account that runs Configuration Manager Setup has the **sysadmin** role on the SQL Server instance selected for site database installation. This check also fails when Setup is unable to access the instance for the SQL Server to verify permissions.  
 
 -   **Severity:** Error  
 
@@ -99,7 +99,7 @@ The following sections detail the available prerequisite checks.
 
     -   SQL Server  
 
-**SQL Server sysadmin rights for reference site**. Verifies that the user account running Configuration Manager Setup has the **sysadmin** role on the SQL Server role instance selected as the reference site database.  SQL Server **sysadmin** role permissions are required in order to modify the site database.  
+**SQL Server sysadmin rights for reference site**. Verifies that the user account running Configuration Manager Setup has the **sysadmin** role on the SQL Server role instance selected as the reference site database. SQL Server **sysadmin** role permissions are required to modify the site database.  
 
 -   **Severity:** Error  
 
@@ -107,7 +107,7 @@ The following sections detail the available prerequisite checks.
 
     -   SQL Server  
 
-##  <a name="BKMK_Dependencies"></a> Prerequisite Checks for Configuration Manager Dependencies  
+##  <a name="BKMK_Dependencies"></a> Prerequisite checks for Configuration Manager dependencies  
  The following are prerequisite checks that Prerequisite Checker performs for Configuration Manager dependencies.  
 
 **Active migration mappings on the target primary site**  
@@ -136,7 +136,7 @@ The following sections detail the available prerequisite checks.
 
     -   Distribution point  
 
-**Administrative rights on management point**.  Verifies that the computer account of site server has **Administrator** rights on the management point and distribution point computer.  
+**Administrative rights on management point**.  Verifies that the computer account of the site server has **Administrator** rights on the management point and distribution point computer.  
 
 -   **Severity:** Warning  
 
@@ -144,7 +144,7 @@ The following sections detail the available prerequisite checks.
 
     -   Management point  
 
-**Administrative share (Site system)**. Verifies that the required administrative shares are present on the site system computer.  
+**Administrative share (site system)**. Verifies that the required administrative shares are present on the site system computer.  
 
 -   **Severity:** Warning  
 
@@ -152,7 +152,7 @@ The following sections detail the available prerequisite checks.
 
     -   Management point  
 
-**Application Compatibility**. Verifies that current applications are compliant with the application schema.  
+**Application compatibility**. Verifies that current applications are compliant with the application schema.  
 
 -   **Severity:** Warning  
 
@@ -161,7 +161,7 @@ The following sections detail the available prerequisite checks.
     -   Central administration site    
     -   Primary site  
 
-**BITS enabled**. Verifies that Background Intelligent Transfer Service (BITS) is installed on the management point site system computer. When this check fails, BITS is not installed, IIS 6 WMI compatibility component for IIS7 is not installed on the computer or the remote IIS host, or Setup was unable to verify remote IIS settings because IIS common components were not installed on the site server computer.  
+**BITS enabled**. Verifies that Background Intelligent Transfer Service (BITS) is installed on the management point site system computer. When this check fails, BITS is not installed, the Internet Information Services (IIS) 6.0 Windows Management Instrumentation (WMI) compatibility component for IIS 7.0 is not installed on the computer or on the remote IIS host, or Setup was unable to verify remote IIS settings because IIS common components were not installed on the site server computer.  
 
 -   **Severity:** Error  
 
@@ -169,7 +169,7 @@ The following sections detail the available prerequisite checks.
 
     -   Management point  
 
-**BITS installed**. Verifies that Background Intelligent Transfer Service (BITS) is installed in Internet Information Services (IIS).  
+**BITS installed**. Verifies that BITS is installed in IIS.  
 
 -   **Severity:** Warning  
 
@@ -185,7 +185,7 @@ The following sections detail the available prerequisite checks.
 
     -   SQL Server  
 
-**Check existing stand-alone primary site for version and sitecode**. Verify that the primary site you plan to expand is a standalone primary site, and has the same version of Configuration Manager, but a different sitecode than the central administration site to be installed.  
+**Check existing standalone primary site for version and site code**. Verify that the primary site you plan to expand is a standalone primary site, and has the same version of Configuration Manager, but a different site code than the central administration site to be installed.  
 
 -   **Severity:** Error  
 
@@ -210,7 +210,7 @@ The following sections detail the available prerequisite checks.
 
     -   Management point  
 
-**Configuration for SQL Server memory usage**. Checks whether SQL Server is configured for unlimited memory usage. You should configure SQL Server memory to have a maximum limit.  
+**Configuration for SQL Server memory use**. Checks whether SQL Server is configured for unlimited memory use. You should configure SQL Server memory to have a maximum limit.  
 
 -   **Severity:** Warning  
 
@@ -218,7 +218,7 @@ The following sections detail the available prerequisite checks.
 
     -   SQL Server  
 
-**Dedicated SQL Server instance**. Checks whether a dedicated instance of the SQL Server is configured to host the Configuration Manager site database. If another site uses the instance, you must select a different instance for the new site to use. Alternatively, you can uninstall the other site or move its database to a different instance for the SQL Server.  
+**Dedicated SQL Server instance**. Checks whether a dedicated instance of the SQL server is configured to host the Configuration Manager site database. If another site uses the instance, you must select a different instance for the new site to use. Alternatively, you can uninstall the other site or move its database to a different instance for the SQL server.  
 
 -   **Severity:** Error  
 
@@ -238,7 +238,7 @@ The following sections detail the available prerequisite checks.
     -   Primary site    
     -   Secondary site  
 
-**Firewall exception for SQL Server**. Checks whether the Windows Firewall is disabled or if a relevant Windows Firewall exception exists for SQL Server. You must allow sqlservr.exe or the required TCP ports to be accessed remotely. By default, SQL Server listens on TCP port 1433 and the SQL Broker Service uses TCP port 4022.  
+**Firewall exception for SQL Server**. Checks whether the Windows Firewall is disabled or if a relevant Windows Firewall exception exists for SQL Server. You must allow sqlservr.exe or the required TCP ports to be accessed remotely. By default, SQL Server listens on TCP port 1433 and the SSB uses TCP port 4022.  
 
 -   **Severity:** Error  
 
@@ -249,13 +249,13 @@ The following sections detail the available prerequisite checks.
     -   Secondary site    
     -   Management point  
 
-**Firewall exception for SQL Server (stand-alone primary site)**. Checks whether the Windows Firewall is disabled or if a relevant Windows Firewall exception exists for SQL Server. You must allow sqlservr.exe or the required TCP ports to be accessed remotely. By default, SQL Server listens on TCP port 1433 and the SQL Broker Service uses TCP port 4022.  
+**Firewall exception for SQL Server (standalone primary site)**. Checks whether the Windows Firewall is disabled or if a relevant Windows Firewall exception exists for SQL Server. You must allow sqlservr.exe or the required TCP ports to be accessed remotely. By default, SQL Server listens on TCP port 1433 and the SSB uses TCP port 4022.  
 
 -   **Severity:** Warning  
 
 -   **Applicability:**  
 
-    -   Primary site (stand-alone only)  
+    -   Primary site (standalone only)  
 
 **Firewall exception for SQL Server for management point**. Checks whether the Windows Firewall is disabled or if a relevant Windows Firewall exception exists for SQL Server.  
 
@@ -265,7 +265,7 @@ The following sections detail the available prerequisite checks.
 
     -   Management point  
 
-**IIS HTTPS Configuration**. Verifies Internet Information Services (IIS) website bindings for HTTPS communication protocol. When you select to install site roles that require HTTPS, you must configure IIS site bindings on the specified server with a valid PKI certificate.  
+**IIS HTTPS Configuration**. Verifies IIS website bindings for HTTPS communication protocol. When you install site roles that require HTTPS, you must configure IIS site bindings on the specified server with a valid public key infrastructure (PKI) certificate.  
 
 -   **Severity:** Warning  
 
@@ -274,7 +274,7 @@ The following sections detail the available prerequisite checks.
     -   Management point    
     -   Distribution point  
 
-**IIS service running**. Verifies Internet Information Services (IIS) is installed and running on the computer to install the management point or distribution point.  
+**IIS service running**. Verifies IIS is installed and running on the computer to install the management point or distribution point.  
 
 -   **Severity:** Error  
 
@@ -283,7 +283,7 @@ The following sections detail the available prerequisite checks.
     -   Management point    
     -   Distribution point  
 
-**Match Collation of expand primary site**. Verify that the site database for the stand-alone primary site that you will expand has same collation as the site database at the central administration site.  
+**Match collation of expand primary site**. Verifies that the site database for the standalone primary site that you will expand has same collation as the site database at the central administration site.  
 
 -   **Severity:** Error  
 
@@ -291,7 +291,7 @@ The following sections detail the available prerequisite checks.
 
     -   Central administration site  
 
-**Microsoft Remote Differential Compression (RDC) library registered**. Verifies that the Microsoft Remote Differential Compression (RDC) library is registered on the Configuration Manager site server.  
+**Microsoft Remote Differential Compression (RDC) library registered**. Verifies that the RDC library is registered on the Configuration Manager site server.  
 
 -   **Severity:** Error  
 
@@ -311,7 +311,7 @@ The following sections detail the available prerequisite checks.
     -   Primary site    
     -   Secondary site  
 
-**Microsoft XML Core Services 6.0 (MSXML60)**. Verifies that Microsoft Core XML Services (MSXML) 6.0, or a later version, is installed on the computer.  
+**Microsoft XML Core Services 6.0 (MSXML60)**. Verifies that MSXML 6.0 or a later version is installed on the computer.  
 
 -   **Severity:** Warning  
 
@@ -324,7 +324,7 @@ The following sections detail the available prerequisite checks.
     -   Management point    
     -   Distribution point  
 
-**Minimum .NET Framework version for Configuration Manager console**. Checks whether Microsoft .NET Framework version 4.0 is installed on the Configuration Manager console computer. You can download Microsoft .NET Framework version 4.0 from [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=189149).  
+**Minimum .NET Framework version for Configuration Manager console**. Checks whether .NET Framework 4.0 is installed on the Configuration Manager console computer. You can download .NET Framework 4.0 from [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=189149).  
 
 -   **Severity:** Error  
 
@@ -332,7 +332,7 @@ The following sections detail the available prerequisite checks.
 
     -   Configuration Manager console  
 
-**Minimum .NET Framework version for Configuration Manager site server**. Checks whether Microsoft .NET Framework version 3.5 is installed on the Configuration Manager site server. For Windows Server 2008, you can download the Microsoft .NET Framework version 3.5 from [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=185604). For Windows Server 2008 R2, you can enable the Microsoft .NET Framework version 3.5 as a feature within Server Manager.  
+**Minimum .NET Framework version for Configuration Manager site server**. Checks whether .NET Framework 3.5 is installed on the Configuration Manager site server. For Windows Server 2008, you can download the Microsoft .NET Framework 3.5 from [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=185604). For Windows Server 2008 R2, you can enable the .NET Framework 3.5 as a feature within Server Manager.  
 
 -   **Severity:** Error  
 
@@ -342,7 +342,7 @@ The following sections detail the available prerequisite checks.
     -   Primary site    
     -   Secondary site  
 
-**Minimum .NET Framework version for SQL Server Express edition installation for Configuration Manager secondary site**. Verifies that the Microsoft .NET Framework version 4.0 is installed on Configuration Manager secondary site computers for installing SQL Server Express edition.  
+**Minimum .NET Framework version for SQL Server Express edition installation for Configuration Manager secondary site**. Verifies that the .NET Framework 4.0 is installed on Configuration Manager secondary site computers for installing SQL Server Express.  
 
 -   **Severity:** Error  
 
@@ -728,7 +728,7 @@ The following sections detail the available prerequisite checks.
 
     -   Configuration Manager console  
 
-**Unsupported site server operating system version for Setup**. Verifies that a supported operating system is running on the server. For more information, see  [Supported operating systems for sites and clients for System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+**Unsupported site server operating system version for Setup**. Verifies that a supported operating system is running on the server. For more information, see [Supported operating systems for sites and clients for System Center Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
 
 -   **Severity:** Error  
 
