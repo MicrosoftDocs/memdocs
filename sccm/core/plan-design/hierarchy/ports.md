@@ -119,7 +119,7 @@ This communication is used to confirm whether the other client computer is awake
 |Hypertext Transfer Protocol (HTTP)||80|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsClient-CloudDP"></a> Client -- > Cloud-Based Distribution point  
+###  <a name="BKMK_PortsClient-CloudDP"></a> Client -- > Cloud-Based distribution point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -158,8 +158,8 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Global Catalog LDAP|--|3268|  
-|Global Catalog LDAP SSL|--|3269|  
+|Global catalog LDAP|--|3268|  
+|Global catalog LDAP SSL|--|3269|  
 
 ###  <a name="BKMK_PortsClient-MP"></a> Client -- > Management point  
 
@@ -184,20 +184,20 @@ This communication is used to confirm whether the other client computer is awake
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
 |Server Message Block (SMB)|--|445|  
 
-###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager Console -- > Client  
+###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console -- > Client  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Remote Control (control)|--|2701|  
 |Remote Assistance (RDP and RTC)|--|3389|  
 
-###  <a name="BKMK_PortsConsole-Internet"></a> Configuration Manager Console -- > Internet  
+###  <a name="BKMK_PortsConsole-Internet"></a> Configuration Manager console -- > Internet  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP)|--|80|  
 
-###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager Console -- > Reporting services point  
+###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console -- > Reporting services point  
 
 
 |Description|UDP|TCP|
@@ -205,20 +205,20 @@ This communication is used to confirm whether the other client computer is awake
 |Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
 
-###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager Console -- > Site server  
+###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager console -- > Site server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC (initial connection to WMI to locate provider system)|--|135|  
 
-###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager Console -- > SMS provider  
+###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager console -- > SMS provider  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager Policy Module (Network Device Enrollment Service) -- > Certificate Registration Point  
+###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager Policy Module (Network Device Enrollment Service) -- > Certificate registration point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -288,8 +288,8 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |Lightweight Directory Access Protocol (LDAP)|--|389|  
 |LDAP (Secure Sockets Layer [SSL] connection)|636|636|  
-|Global Catalog LDAP|--|3268|  
-|Global Catalog LDAP SSL|--|3269|  
+|Global catalog LDAP|--|3268|  
+|Global catalog LDAP SSL|--|3269|  
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
@@ -326,7 +326,7 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
 
-###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service connection oint -- > Microsoft Intune  
+###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service connection point -- > Microsoft Intune  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -363,7 +363,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |-----------------|---------|---------|  
 |Wake on LAN|9 (See note 2, **Alternate Port Available**)|--|  
 
-###  <a name="BKMK_PortsSiteServer-CloudDP"></a> Site server -- > Cloud-Based Distribution point  
+###  <a name="BKMK_PortsSiteServer-CloudDP"></a> Site server -- > Cloud-based distribution point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -378,18 +378,18 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-DC"></a> Site server -- > Domain Controller  
+###  <a name="BKMK_PortsSite-DC"></a> Site server -- > Domain controller  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access Protocol (LDAP)|--|389|  
 |LDAP (Secure Sockets Layer [SSL] connection)|636|636|  
-|Global Catalog LDAP|--|3268|  
-|Global Catalog LDAP SSL|--|3269|  
+|Global catalog LDAP|--|3268|  
+|Global catalog LDAP SSL|--|3269|  
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Site server &lt; -- > Certificate Registration Point  
+###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> Site server &lt; -- > Certificate registration point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -405,7 +405,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> Site server &lt; -- > Enrollment Point  
+###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> Site server &lt; -- > Enrollment point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -502,7 +502,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, Alternate Port Available)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> Software update point -- > Internet  
 
@@ -628,8 +628,8 @@ The following ports are used for the discovery and publishing of site informatio
  - LDAP (Secure Sockets Layer [SSL] connection): 636
 
 
- - Global Catalog LDAP: 3268
- - Global Catalog LDAP SSL: 3269
+ - Global catalog LDAP: 3268
+ - Global catalog LDAP SSL: 3269
 
 
  - RPC Endpoint Mapper: 135
@@ -647,13 +647,13 @@ The following ports are used for the discovery and publishing of site informatio
 
 -   [Endpoint Protection point -- &gt; Internet](#BKMK_PortsEndpointProtection_Internet)  
 
--   [Client -- &gt; Global Catalog Domain Controller](#BKMK_PortsClient-GCDC)  
+-   [Client -- &gt; Global catalog domain controller](#BKMK_PortsClient-GCDC)  
 
--   [Configuration Manager Console -- &gt; Internet](#BKMK_PortsConsole-Internet)  
+-   [Configuration Manager console -- &gt; Internet](#BKMK_PortsConsole-Internet)  
 
--   [Management Point -- &gt; Domain Controller](#BKMK_PortsMP-DC)  
+-   [Management Point -- &gt; Domain controller](#BKMK_PortsMP-DC)  
 
--   [Site server -- &gt; Domain Controller](#BKMK_PortsSite-DC)  
+-   [Site server -- &gt; Domain controller](#BKMK_PortsSite-DC)  
 
 -   [Site server &lt; -- &gt; Issuing Certification Authority (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
