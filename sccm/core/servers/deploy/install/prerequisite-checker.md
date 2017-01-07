@@ -1,6 +1,6 @@
 ---
 title: "Prerequisite Checker | Microsoft Docs"
-description: "Learn how to use Prerequisite Checker to identify and fix problems that would block a site or site system role installation."
+description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
 # Prerequisite Checker for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
  Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this standalone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
@@ -25,22 +27,22 @@ By default, when Prerequisite Checker runs:
 -   It validates the server where it runs.  
 -   The local computer is scanned for an existing site server, and only the checks that are applicable to the site are run.  
 -   If no existing sites are detected, all prerequisite rules are run.  
--   It checks rules to verify that software and settings required for setup are installed. It is possible that required software requires additional configurations or software updates that are not verified by the prerequisite checker.  
--   It logs its results in the **ConfigMgrPrereq.log** file on the system drive of computer. The log file can contain additional information that does not display in user interface.  
+-   It checks rules to verify that software and settings required for setup are installed. It's possible that required software will require additional configuration or software updates that are not verified by Prerequisite Checker.  
+-   It logs its results in the **ConfigMgrPrereq.log** file on the system drive of the computer. The log file might contain additional information that doesn't appear in the application interface.  
 
 When you run Prerequisite Checker at a command prompt and specify specific command-line options:  
 
--   Prerequisite Checker performs only the checks that are associated with the site server or site systems that you specified in the command line.  
--   To check a remote computer, your user account must have Administrator privileges to the remote computer.  
+-   Prerequisite Checker performs only the checks that are associated with the site server or site systems that you specify in the command line.  
+-   To check a remote computer, your user account must have Administrator rights to the remote computer.  
 
-For more information about the prerequisite checks that Prerequisite Checker performs, see [List of prerequisite checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
+For more information about the checks that Prerequisite Checker performs, see [List of prerequisite checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
 
 ## Copy Prerequisite Checker files to another computer  
 
 1.  In Windows Explorer, go to one of the following locations:  
 
-    -   **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**  
-    -   **&lt;ConfigMgrInstallationPath\>\BIN\X64**  
+    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **<*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Copy the following files to the destination folder on the other computer:  
 
@@ -54,8 +56,8 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
 1.  In Windows Explorer, go to one of the following locations:  
 
-    -   **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**  
-    -   **&lt;ConfigMgrInstallationPath\>\BIN\X64**  
+    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **<*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Run **prereqchk.exe** to start Prerequisite Checker.   
     Prerequisite Checker detects existing sites, and if found, performs checks for upgrade readiness. If no sites are found, all checks are performed. The **Site Type** column provides information about the site server or site system with which the rule is associated.  
@@ -64,23 +66,23 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
 1.  Open a Command Prompt window and change directories to one of the following locations:  
 
-    -   **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**  
-    -   **&lt;ConfigMgrInstallationPath\>\BIN\X64**  
+    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **<*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Enter  **prereqchk.exe /LOCAL** to start Prerequisite Checker and run all prerequisite checks on the server.  
 
-## Run Prerequisite Checker from a command prompt for specified options  
+## Run Prerequisite Checker from a command prompt to use options  
 
 1.  Open a Command Prompt window and change directories to one of the following locations:  
 
-    -   **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**  
-    -   **&lt;ConfigMgrInstallationPath\>\BIN\X64**  
+    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **<*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Enter  **prereqchk.exe** with the addition of one or more of the following command-line options.  
 
-    For example, to check a primary site you might use the following:  
+    For example, to check a primary site, you might use the following:  
 
-    -   **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
+       **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
 
     **Central administration site server:**  
 
@@ -102,9 +104,9 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
     -   **/Ssbport**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication on the SQL Server Service Broker (SSB) port. The default is port number 4022.  
+         Not required. Verifies that a firewall exception is in effect to allow communication on the SQL Server Service Broker (SSB) port. The default SSB port is 4022.  
 
-    -   **InstallDir &lt;*ConfigMgrInstallationPath*>**  
+    -   **InstallDir <*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
@@ -140,9 +142,9 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
     -   **/Ssbport**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication on the SSB port. The default is port number 4022.  
+         Not required. Verifies that a firewall exception is in effect to allow communication on the SSB port. The default SSB port is 4022.  
 
-    -   **InstallDir &lt;*ConfigMgrInstallationPath*>**  
+    -   **InstallDir <*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
@@ -162,13 +164,13 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
     -   **/Ssbport**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication for the SSB port. The default is port number 4022.  
+         Not required. Verifies that a firewall exception is in effect to allow communication for the SSB port. The default SSB port is 4022.  
 
     -   **/Sqlport**  
 
-         Not required. Verifies that a firewall exception is in effect to allow communication for the SQL Server service port and that the port is not in use by another named instance of SQL Server. The default port is 1433.  
+         Not required. Verifies that a firewall exception is in effect to allow communication for the SQL Server service port, and that the port is not in use by another named instance of SQL Server. The default port is 1433.  
 
-    -   **InstallDir &lt;*ConfigMgrInstallationPath*>**  
+    -   **InstallDir <*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
@@ -176,7 +178,7 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
          Not required. Verifies that the computer account of the secondary site can access the folder that hosts the source files for Setup.  
 
-     **Configuration Manager console:**  
+   **Configuration Manager console:**  
 
     -   **/Adminui**  
 
@@ -186,4 +188,4 @@ For more information about the prerequisite checks that Prerequisite Checker per
 
     -   Click an item in the list for details about how to resolve the problem.  
     -   You must resolve all items in the list that have an **Error** status before you install the site server, site system, or the Configuration Manager console.  
-    -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file can contain additional information that are not displayed in the user interface.  
+    -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file might contain additional information that is not displayed in the user interface.  

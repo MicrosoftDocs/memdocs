@@ -12,11 +12,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Prepare to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
-To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. The information presented here can save you time when you install multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
- > [!TIP]
+# Prepare to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. The information presented here can save you time when you install multiple sites and help prevent missteps that might result in the need to reinstall one or more sites. > [!TIP]
  > The following scenarios are similar to, but distinct from, installing a System Center Configuration Manager current branch site:
  > -  **Upgrade**: To install System Center Configuration Manager to *upgrade* from System Center 2012 Configuration Manager, see [Upgrade to System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).
  > -  **Update**: To use in-console updates to install a new *update version* to an existing System Center Configuration Manager site, see [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md).
@@ -46,7 +46,7 @@ After the initial site is installed, you can add additional sites at any time. T
 |---|---|
 |Central administration site|Child primary site|
 |Child primary site|Secondary site|
-|Standalone primary site|Secondary site (expand the primary site, which converts the standalone primary site into a child primary site)|
+|Standalone primary site|Secondary site (expand the primary site, which converts the standalone primary site to a child primary site)|
 
 **Install media**: When you install a central administration site to expand on a standalone primary site, or if you install a new child primary site in an existing hierarchy, you must use installation media (source files) that matches the version of the existing site or sites.
 > [!IMPORTANT]
@@ -60,22 +60,22 @@ A secondary site must be installed from the Configuration Manager console. This 
 -   **Adding a secondary site**:  You use the Configuration Manager console to install a secondary site as a child site below a primary site. Other methods are not supported for secondary sites.
 
 ## <a name="bkmk_tasks"></a>  Common tasks to complete before starting an installation
--   **Understand the hierarchy topology you will use for your deployment.**    
+-   **Understand the hierarchy topology you will use for your deployment**    
 For more information, see [Design a hierarchy of sites for System Center Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
 
--   **Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager.**         
+-   **Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager**         
 For more information, see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
--   **Install and configure SQL Server to host the site database.**     
+-   **Install and configure SQL Server to host the site database**     
 For more information, see [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
--   **Prepare your network environment to support Configuration Manager.**      
+-   **Prepare your network environment to support Configuration Manager**      
 For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains).  
 
-- **If you will use a public key identifier (PKI), prepare your infrastructure and certificates.**      
+- **If you will use a public key infrastructure (PKI), prepare your infrastructure and certificates**      
 For more information, see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).
 
--   **Install the latest security updates on computers you will use as site servers or site system servers, and when necessary, restart them.**
+-   **Install the latest security updates on computers you will use as site servers or site system servers, and when necessary, restart them**
 
 ## <a name="bkmk_sitecodes"></a>  About site names and site codes
 Site codes and site names are used to identify and manage the sites in a Configuration Manager hierarchy. In the Configuration Manager console, the site code and site name are displayed in the &lt;*site code*\> - &lt;*site name*\> format. Every site code that you use in your hierarchy must be unique. If the Active Directory schema is extended for Configuration Manager, and sites are publishing data, the site codes used within an Active Directory forest must be unique even if they are used in a different Configuration Manager hierarchy or if they have been used in earlier Configuration Manager installations. Be sure to carefully plan your site codes and site names before you deploy your hierarchy.
@@ -103,7 +103,7 @@ Site codes cannot be used more than one time in a Configuration Manager hierarch
 
 ## Limits and restrictions for installed sites
 Before installing sites, understand the following limitations that apply to sites and site hierarchies:
--   After Setup is finished, you cannot change the following site properties without uninstalling the site and then reinstalling it with the new values:  
+-   After running Setup, you cannot change the following site properties without uninstalling the site and then reinstalling it with the new values:  
   -   Program Files installation directory  
   -   Site code  
   -   Site description  
@@ -111,22 +111,24 @@ Before installing sites, understand the following limitations that apply to site
   -   Configuration Manager does not support moving a child primary site out of a hierarchy to create a standalone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new standalone primary site or as a child of the central administration site of a different hierarchy.  
 
 
-## <a name="bkmk_optionalsteps"></a>  Optional steps to run before starting Setup
-**Manually run [Setup Downloader](../../../../core/servers/deploy/install/setup-downloader.md)** to download the updated Setup files for Configuration Manager.
+## <a name="bkmk_optionalsteps"></a>  Optional steps to run before running Setup
+**Manually run [Setup Downloader](../../../../core/servers/deploy/install/setup-downloader.md)**
 
-If the computer where you will run Setup is not connected to the Internet, or if you expect to install multiple site servers, consider using Setup Downloader to download the required updates to Setup files:
+To download the updated Setup files for Configuration Manager, you can run Setup Downloader. If the computer where you will run Setup is not connected to the Internet, or if you expect to install multiple site servers, consider using Setup Downloader to download the required updates to Setup files:
 
 -  By default, Setup connects to the Internet to download updated Setup files.
 -  By default, the files are stored in the Redist folder.
 -  You can direct Setup to a location on your network where you have previously stored a copy of these files.
 
+**Manually run [Prerequisite Checker](../../../../core/servers/deploy/install/prerequisite-checker.md)**
 
-**Manually run the [Prerequisite Checker](../../../../core/servers/deploy/install/prerequisite-checker.md)** to identify and fix problems before running Setup. Prior to starting Setup to install a site and before installing a site system role on a server, you can run Prerequisite Checker to ensure the computer meets the requirements to host the site or site system role.
- -  By default, Setup will run the prerequisite checker.
+To identify and fix problems before running Setup, you can run Prerequisite checker. Before you run Setup to install a site and before you install a site system role on a server, you can run Prerequisite Checker to ensure the computer meets the requirements to host the site or site system role.
+ -  By default, Setup runs Prerequisite Checker.
  -  If there are any errors, Setup stops until the issue is fixed.
 
+**Identify optional ports**
 
-**Identify optional ports** to use for site systems and clients.
+To use for site systems and clients, you can identify optional ports.
  -  By default, site systems and clients use predefined ports to communicate.
  -  During Setup, you can configure alternate ports.
 
