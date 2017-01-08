@@ -49,7 +49,7 @@ This topic contains security and privacy information for content management in S
 
 **Import prestaged content by using only the ExtractContent command-line tool (ExtractContent.exe) that is supplied with Configuration Manager, and make sure that is signed by Microsoft**: To avoid tampering and elevation of privileges, use only the authorized command-line tool that is supplied with Configuration Manager.  
 
-**Secure the communication channel between the site server and the package source location**: Use IPsec or SMB signing between the site server and the package source location for when you create applications and packages. This helps to prevent an attacker from tampering with the source files.  
+**Secure the communication channel between the site server and the package source location**: Use IPsec or SMB signing between the site server and the package source location when you create applications and packages. This helps to prevent an attacker from tampering with the source files.  
 
 **If you change the site configuration option to use a custom website rather than the default website after any distribution point roles are installed, remove the default virtual directories**: When you switch from the default website to a custom website, Configuration Manager does not remove the old virtual directories. Remove the virtual directories that Configuration Manager originally created under the default website:  
 
@@ -74,9 +74,9 @@ Consider the following when planning for content management:
 
      Configuration Manager clients validate the hash on content only after it is downloaded to their client cache. If an attacker tampers with the list of files to download or with the content itself, the download process can take up considerable network bandwidth for the client to then discard the content when it encounters the invalid hash.  
 
--   When you use cloud-based distribution points, access to the content is automatically restricted to your enterprise and you cannot restrict it further to selected users or groups.  
+-   When you use cloud-based distribution points, access to the content is automatically restricted to your enterprise, and you cannot restrict it further to selected users or groups.  
 
--   When you use cloud-based distribution points, clients are authenticated by the management point and then use a Configuration Manager token to access cloud-based distribution points. The token is valid for eight hours so if you block a client because it is no longer trusted, it can continue to download content from a cloud-based distribution point until the validity period of this token is expired. At this point, the management point won't issue another token for the client because the client is blocked.  
+-   When you use cloud-based distribution points, clients are authenticated by the management point and then use a Configuration Manager token to access cloud-based distribution points. The token is valid for eight hours so if you block a client because it is no longer trusted, it can continue to download content from a cloud-based distribution point until the validity period of this token has expired. At this point, the management point won't issue another token for the client because the client is blocked.  
 
      To avoid a blocked client from downloading content within this eight-hour window, you can stop the cloud service from the **Cloud** node, **Hierarchy Configuration**, in the **Administration** workspace in the Configuration Manager console.  
 
