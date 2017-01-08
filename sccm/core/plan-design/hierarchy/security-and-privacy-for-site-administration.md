@@ -18,7 +18,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 # Security and privacy for site administration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
-##  <a name="BKMK_Security_Sites"></a> Security Best Practices for Site Administration  
+##  <a name="BKMK_Security_Sites"></a> Security best practices for site administration  
  Use the following security best practices to help you secure System Center Configuration Manager sites and the hierarchy.  
 
  **Run Setup only from a trusted source and secure the communication channel between the Setup media and the site server.**  
@@ -33,7 +33,7 @@ This top contains security and privacy information for System Center Configurati
 
  Schema extensions are not required to run System Center Configuration Manager, but they do create a more secure environment because Configuration Manager clients and site servers can retrieve information from a trusted source.  
 
- If clients are in an untrusted domain, deploy the following site system roles in the clients' domain:  
+ If clients are in an untrusted domain, deploy the following site system roles in the clients' domains:  
 
 -   Management point  
 
@@ -46,7 +46,7 @@ This top contains security and privacy information for System Center Configurati
 
  **Use IPsec to secure communications between site system servers and sites.**  
 
- Although Configuration Manager does secure communication between the site server and the computer that runs SQL Server, Configuration Manager does not secure communication between site system roles and SQL Server. Only some site systems (the enrollment point and the Application Catalog web service point) can be configured for HTTPS for intrasite communication.  
+ Although Configuration Manager does secure communication between the site server and the computer that runs SQL Server, Configuration Manager does not secure communications between site system roles and SQL Server. Only some site systems (the enrollment point and the Application Catalog web service point) can be configured for HTTPS for intrasite communication.  
 
  If you do not use additional controls to secure these server-to-server channels, attackers can use various spoofing and man-in-the-middle attacks against site systems. Use SMB signing when you cannot use IPsec.  
 
@@ -71,7 +71,7 @@ To ensure service continuity and least privileges, do not manually edit these gr
 
 If clients cannot query the Global Catalog for Configuration Manager information, they must rely on the trusted root key to authenticate valid management points. The trusted root key is stored in the client registry and can be set by using Group Policy or manual configuration.  
 
-If the client does not have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+If the client does not have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 **Use non-default port numbers.**  
 
@@ -86,12 +86,12 @@ Although you can install all the site system roles on a single computer, this pr
 When you isolate each site system role on a different server, this reduces the chance that an attack against vulnerabilities on one site system can be used against a different site system. Many site system roles require the installation of Internet Information Services (IIS) on the site system and this increases the attack surface. If you must combine site system roles to reduce hardware expenditure, combine IIS site system roles only with other site system roles that require IIS.  
 
 > [!IMPORTANT]  
->  The fallback status point role is an exception: Because this site system role accepts unauthenticated data from clients, the fallback status point role should never be assigned to any other Configuration Manager site system role.  
+>  The fallback status point role is an exception. Because this site system role accepts unauthenticated data from clients, we recommend that you don't ever assign the fallback status point role to any other Configuration Manager site system role.  
 
 
 **Follow security best practices for Windows Server and run the Security Configuration Wizard on all site systems.**  
 
-The Security Configuration Wizard (SCW) helps you to create a security policy that you can apply to any server on your network. After you install the System Center Configuration Manager template, SCW recognizes Configuration Manager site system roles, services, ports, and applications. It then permits the communication that is required for Configuration Manager, and blocks communication that is not required.  
+The Security Configuration Wizard (SCW) helps you to create a security policy that you can apply to any server on your network. After you install the System Center Configuration Manager template, SCW recognizes Configuration Manager site system roles, services, ports, and applications. It then permits the communication that is required for Configuration Manager and blocks communication that is not required.  
 
 The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center: [System Center 2012 - Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
 
@@ -129,7 +129,7 @@ Restrict who can access the network folder.
 
 Use SMB signing or IPsec between the network location and the site server, and between the computer that runs the Configuration Manager console and site server to prevent an attacker from tampering with the exported data. Use IPsec to encrypt the data on the network to prevent information disclosure.  
 
-**If a site system fails to uninstall or stops functioning and cannot be restored, manually remove the Configuration Manager certificates for this server from other Configuration Manager servers.**  
+**If a site system isn't uninstalled properly or stops functioning and cannot be restored, manually remove the Configuration Manager certificates for this server from other Configuration Manager servers.**  
 
 To remove the PeerTrust that was originally established with the site system and site system roles, manually remove the Configuration Manager certificates for the failed server in the **Trusted People** certificate store on other site system servers. This is particularly important if you repurpose the server without reformatting it.  
 
@@ -137,7 +137,7 @@ For more information about these certificates, see the section Cryptographic Con
 
 **Do not configure Internet-based site systems to bridge the perimeter network and the intranet.**  
 
-Do not configure site system servers to be multi-homed so that they connected to the perimeter network and the intranet. Although this configuration allows Internet-based site systems to accept client connections from the Internet and the intranet, it eliminates a security boundary between the perimeter network and the intranet.  
+Do not configure site system servers to be multi-homed so that they connect to the perimeter network and the intranet. Although this configuration allows Internet-based site systems to accept client connections from the Internet and the intranet, it eliminates a security boundary between the perimeter network and the intranet.  
 
 **If the site system server is on an untrusted network (such as a perimeter network), configure the site server to initiate connections to the site system.**  
 
@@ -156,17 +156,17 @@ By default, site systems initiate connections to the site server to transfer dat
 
 **Configurations to use if you configure the site to wake up computers to install software.**  
 
--   If you use traditional wake-up packets, use unicast rather than subnet-directed broadcasts  
+-   If you use traditional wake-up packets, use unicast rather than subnet-directed broadcasts.  
 
--   If you must use subnet-directed broadcasts, configure routers to allow IP-directed broadcasts only from the site server and only on a non-default port number  
+-   If you must use subnet-directed broadcasts, configure routers to allow IP-directed broadcasts only from the site server and only on a non-default port number.  
 
-For more information about the different wake on LAN technologies, see [Planning How to Wake Up Clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
+For more information about the different wake on LAN technologies, see [Planning how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
 **If you use email notification, configure authenticated access to the SMTP mail server.**  
 
-Whenever possible, use a mail server that supports authenticated access and use the computer account of the site server for authentication. If you must specify a user account for authentication, use an account that has the least privileges.  
+Whenever possible, use a mail server that supports authenticated access, and use the computer account of the site server for authentication. If you must specify a user account for authentication, use an account that has the least privileges.  
 
-##  <a name="BKMK_Security_SiteServer"></a> Security Best Practices for the Site Server  
+##  <a name="BKMK_Security_SiteServer"></a> Security best practices for the site server  
  Use the following security best practices to help you secure the Configuration Manager site server.  
 
  **Install Configuration Manager on a member server instead of a domain controller.**  
@@ -177,32 +177,32 @@ Whenever possible, use a mail server that supports authenticated access and use 
 
  **Install secondary sites by avoiding copying the files to the secondary site server over the network.**  
 
- When you run Setup and create a secondary site, do not select the option to copy the files from the parent site to the secondary site, or use a network source location. When you copy files over the network, a skilled attacker could hijack the secondary site installation package and tamper with the files before they are installed, although timing this attack would be difficult. This attack can be mitigated by using IPsec or SMB when you transfer the files.  
+ When you run Setup and create a secondary site, do not select the option to copy the files from the parent site to the secondary site, and don't use a network source location. When you copy files over the network, a skilled attacker could hijack the secondary site installation package and tamper with the files before they are installed, although timing this attack would be difficult. This attack can be mitigated by using IPsec or SMB when you transfer the files.  
 
  Instead of copying the files over the network, on the secondary site server, copy the source files from media to a local folder. Then, when you run Setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
 
  For more information, see [Install a secondary site](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary) in the [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) topic.  
 
 ##  <a name="BKMK_Security_SQLServer"></a> Security Best Practices for SQL Server  
- Configuration Manager uses SQL Server as the back-end database. If the database is compromised, attackers could bypass Configuration Manager and access SQL Server directly to launch attacks through Configuration Manager. Consider attacks against the SQL Server to be very high risk and must be mitigated appropriately.  
+ Configuration Manager uses SQL Server as the back-end database. If the database is compromised, attackers could bypass Configuration Manager and access SQL Server directly to launch attacks through Configuration Manager. Consider attacks against SQL Server to be very high risk and mitigate appropriately.  
 
  Use the following security best practices to help you secure SQL Server for Configuration Manager.  
 
  **Do not use the Configuration Manager site database server to run other SQL Server applications.**  
 
- When you increase the access to the Configuration Manager site database server, this increases the risk to your Configuration Manager data. If the Configuration Manager site database is compromised, other applications on the same SQL Server computer then also become at risk.  
+ When you increase the access to the Configuration Manager site database server, this increases the risk to your Configuration Manager data. If the Configuration Manager site database is compromised, other applications on the same SQL Server computer are then also put at risk.  
 
  **Configure SQL Server to use Windows authentication.**  
 
- Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it is still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL logins to access the database, which is not required and increases the attack surface.  
+ Although Configuration Manager accesses the site database by using a Windows account and Windows authentication, it is still possible to configure SQL Server to use SQL Server mixed mode. SQL Server mixed mode allows additional SQL sign-ins to access the database, which is not required and increases the attack surface.  
 
  **Take additional steps to ensure that secondary sites that use SQL Server Express have the latest software updates.**  
 
- When you install a primary site, Configuration Manager downloads SQL Server Express from the Microsoft Download Center and copies the files to the primary site server. When you install a secondary site and select the option that installs SQL Server Express, Configuration Manager installs the previously downloaded version and does not check whether new versions are available. To ensure that the secondary site has the latest versions, perform one of the following:  
+ When you install a primary site, Configuration Manager downloads SQL Server Express from the Microsoft Download Center and copies the files to the primary site server. When you install a secondary site and select the option that installs SQL Server Express, Configuration Manager installs the previously downloaded version and does not check whether new versions are available. To ensure that the secondary site has the latest versions, do one of the following tasks:  
 
--   After the secondary site is installed, run Windows Update on the secondary site server.  
+-   After the secondary site has been installed, run Windows Update on the secondary site server.  
 
--   Before you install the secondary site, manually install SQL Server Express on the computer that will run the secondary site server and ensure that you install the latest version and any software updates. Then install the secondary site and select the option to use an existing SQL Server instance.  
+-   Before you install the secondary site, manually install SQL Server Express on the computer that will run the secondary site server and ensure that you install the latest version and any software updates. Then install the secondary site, and select the option to use an existing SQL Server instance.  
 
 Periodically run Windows Update for these sites and all installed versions of SQL Server to make sure that they have the latest software updates.  
 
