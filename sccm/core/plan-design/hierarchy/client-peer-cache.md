@@ -2,7 +2,7 @@
 title: "Client Peer Cache | System Center Configuration Manager"
 description: "Use Peer Cache for client content source locations when deploying content with System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 1/9/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -44,6 +44,8 @@ To help you understand the use of Peer Cache, you can view the Client Data Sourc
 
 
 ## Requirements and considerations for Peer Cache
+- Peer Cache is supported on any Windows OS that is supported as Configuration Manager client. Non-Windows operating systems are not supported for Peer Cache.
+
 - You must configure your site with a **Network Access Account** that has **Full Control** of the cache folder on each client. By default, this is ***%windir%\ccmcache***.
 
 - Clients can only transfer content from Peer Cache clients that are in their current boundary group.
