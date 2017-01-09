@@ -59,16 +59,16 @@
 ### [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
 ## [Get Started](get-started/preparation-steps-for-on-premises-mdm.md)
-#### [Set up the Intune subscription](get-started/set-up-intune-subscription-on-premises-mdm.md)
-#### [Install on-prem roles](get-started/install-site-system-roles-for-on-premises-mdm.md)
-#### [Set up certificates](get-started/set-up-certificates-on-premises-mdm.md)
-#### [Set up for enrollment](get-started/set-up-device-enrollment-on-premises-mdm.md)
+### [Set up the Intune subscription](get-started/set-up-intune-subscription-on-premises-mdm.md)
+### [Install on-prem roles](get-started/install-site-system-roles-for-on-premises-mdm.md)
+### [Set up certificates](get-started/set-up-certificates-on-premises-mdm.md)
+### [Set up for enrollment](get-started/set-up-device-enrollment-on-premises-mdm.md)
 
 ## How to
-#### [User enrollment](deploy-use/xxxxx.md)
-#### [Bulk enrollment](deploy-use/xxxxx.md)
-#### [Manage devices](deploy-use/xxxxx.md)
-#### [Manage applications](deploy-use/xxxxx.md)
-#### [Protect data and devices](deploy-use/xxxxx.md)
+### [User enrollment](deploy-use/xxxxx.md)
+### [Bulk enrollment](deploy-use/xxxxx.md)
+### [Manage devices](deploy-use/xxxxx.md)
+### [Manage applications](deploy-use/xxxxx.md)
+### [Protect data and devices](deploy-use/xxxxx.md)
 
 # [Device management with Exchange](deploy-use/manage-mobile-devices-with-on-premises-infrastructure.md)
