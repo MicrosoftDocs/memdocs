@@ -188,4 +188,4 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
     -   Click an item in the list for details about how to resolve the problem.  
     -   You must resolve all items in the list that have an **Error** status before you install the site server, site system, or the Configuration Manager console.  
-    -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file might contain additional information that is not displayed in the user interface.  
+    -   You also can open the **ConfigMgrPrereq.log** file in the root of the system drive to review Prerequisite Checker results. The log file might contain additional information that is not displayed in the Prerequisite Checker user interface.  
