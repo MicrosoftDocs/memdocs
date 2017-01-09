@@ -64,7 +64,7 @@ Configuration Manager does not allow you to configure ports for the following ty
 -   Connections to cloud services, such as Microsoft Intune and cloud-based distribution points  
 
 ##  <a name="BKMK_CommunicationPorts"></a> Ports used by Configuration Manager clients and site systems  
-The following sections details the ports that are used for communication in Configuration Manager. The arrows in the section title represent the direction of the communication:  
+The following sections detail the ports that are used for communication in Configuration Manager. The arrows in the section title represent the direction of the communication:  
 
 -   -- > Indicates that one computer initiates communication and the other computer always responds  
 
@@ -80,27 +80,27 @@ The following sections details the ports that are used for communication in Conf
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsAppCatalogService-SQL"></a> Application Catalog web service point -- > SQL Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> Application Catalog website point -- > Application Catalog web service point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> Client -- > Application Catalog website point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsClient-ClientWakeUp"></a> Client -- > Client  
  In addition to the ports that are listed in the following table, wake-up proxy also uses Internet Control Message Protocol (ICMP) echo request messages from one client to another client when they are configured for wake-up proxy.
@@ -109,8 +109,8 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Wake on LAN|9 (See note 2, **Alternate Port Available**)|--|  
-|Wake-up proxy|25536 (See note 2, **Alternate Port Available**)|--|  
+|Wake On LAN|9 (See note 2, **Alternate port available**)|--|  
+|Wake-up proxy|25536 (See note 2, **Alternate port available**)|--|  
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> Client -- > Configuration Manager Policy Module (Network Device Enrollment Service)  
 
@@ -129,29 +129,29 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsClient-DP2"></a> Client -- > Distribution point configured for multicast  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
-|Multicast Protocol|63000-64000|--|  
+|Multicast protocol|63000-64000|--|  
 
 ###  <a name="BKMK_PortsClient-DP3"></a> Client -- > Distribution point configured for PXE  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Dynamic Host Configuration Protocol (DHCP)|67 and 68|--|  
-|Trivial File Transfer Protocol (TFTP)|69 (See note 4 **Trivial FTP (TFTP) Daemon**)|--|  
+|Trivial File Transfer Protocol (TFTP)|69 (See note 4, **Trivial FTP (TFTP) Daemon**)|--|  
 |Boot Information Negotiation Layer (BINL)|4011|--|  
 
 ###  <a name="BKMK_PortsClient-FSP"></a> Client -- > Fallback status point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsClient-GCDC"></a> Client -- > Global catalog domain controller  
  A Configuration Manager client does not contact a global catalog server when it is a workgroup computer or when it is configured for Internet-only communication.  
@@ -165,9 +165,9 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Client notification (default communication before falling back to HTTP or HTTPS)|--|10123 (See note 2, **Alternate Port Available**)|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Client notification (default communication before falling back to HTTP or HTTPS)|--|10123 (See note 2, **Alternate port available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsClient-SUP"></a> Client -- > Software update point  
 
@@ -180,8 +180,8 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 |Server Message Block (SMB)|--|445|  
 
 ###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager console -- > Client  
@@ -202,8 +202,8 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|
 |-----------------|---------|---------|   
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager console -- > Site server  
 
@@ -222,7 +222,7 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsDist_MP"></a> Distribution point -- > Management point  
  A distribution point communicates to the management point in the following scenarios:  
@@ -237,8 +237,8 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate Port Available**)|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 2, **Alternate port available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection point -- > Internet  
 
@@ -250,19 +250,19 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> Enrollment proxy point -- > Enrollment point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate Port Available**)|  
+|Secure Hypertext Transfer Protocol (HTTPS)|--|443 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> Enrollment point -- > SQL Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server Connector -- > Exchange Online  
 
@@ -270,7 +270,7 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |Windows Remote Management over HTTPS|--|5986|  
 
-###  <a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server Connector -- > On-premises Exchange Server  
+###  <a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server Connector -- > On-Premises Exchange Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -306,9 +306,9 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
-###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobile Device -- > Enrollment proxy point  
+###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> Mobile device -- > Enrollment proxy point  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -324,7 +324,7 @@ This communication is used to confirm whether the other client computer is awake
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> Service connection point -- > Microsoft Intune  
 
@@ -361,7 +361,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Wake on LAN|9 (See note 2, **Alternate Port Available**)|--|  
+|Wake On LAN|9 (See note 2, **Alternate port available**)|--|  
 
 ###  <a name="BKMK_PortsSiteServer-CloudDP"></a> Site server -- > Cloud-based distribution point  
 
@@ -434,10 +434,10 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 1, **Proxy Server port**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 1, **Proxy server port**)|  
 
 ###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site server &lt; -- > Issuing certification authority (CA)  
- This communication is used when you deploy certificate profiles by using the certificate registration point. The communication is not used for every site server in the hierarchy; it is used only for the site server at the top of the hierarchy.  
+ This communication is used when you deploy certificate profiles by using the certificate registration point. The communication is not used for every site server in the hierarchy. Instead, it's used only for the site server at the top of the hierarchy.  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -463,7 +463,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
  During the installation of a site that uses a remote SQL Server to host the site database, you must open the following ports between the site server and the SQL Server:  
 
@@ -502,13 +502,13 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> Software update point -- > Internet  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Hypertext Transfer Protocol (HTTP)|--|80 (See note 1, **Proxy Server port**)|  
+|Hypertext Transfer Protocol (HTTP)|--|80 (See note 1, **Proxy server port**)|  
 
 ###  <a name="BKMK_PortsSUP-WSUS"></a> Software update point -- > Upstream WSUS server  
 
@@ -522,8 +522,8 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server Service|--|1433 (See note 2, **Alternate Port Available**)|  
-|SQL Server Service Broker|--|4022 (See note 2, **Alternate Port Available**)|  
+|SQL Server service|--|1433 (See note 2, **Alternate port available**)|  
+|SQL Server Service Broker|--|4022 (See note 2, **Alternate port available**)|  
 
 > [!TIP]  
 >  Configuration Manager does not require the SQL Server Browser, which uses port UDP 1434.  
@@ -532,15 +532,15 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433 (See note 2, **Alternate Port Available**)|  
+|SQL over TCP|--|1433 (See note 2, **Alternate port available**)|  
 
 
 
 ###  <a name="BKMY_PortNotes"></a> Notes for ports used by Configuration Manager clients and site systems  
 
-1.  **Proxy Server port**: This port cannot be configured but can be routed through a configured proxy server.  
+1.  **Proxy server port**: This port cannot be configured but can be routed through a configured proxy server.  
 
-2.  **Alternate Port Available**: An alternate port can be defined within Configuration Manager for this value. If a custom port has been defined, substitute that custom port when defining the IP filter information for IPsec policies or for configuring firewalls.  
+2.  **Alternate port available**: An alternate port can be defined within Configuration Manager for this value. If a custom port has been defined, substitute that custom port when defining the IP filter information for IPsec policies or for configuring firewalls.  
 
 3.  **Windows Server Update Services (WSUS)**: WSUS can be installed either on the default Web site (port 80) or a custom Web site (port 8530).  
 
@@ -553,7 +553,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
     > [!NOTE]  
     >  When you configure the software update point to use HTTPS, the HTTP port must also be open. Unencrypted data, such as the EULA for specific updates, uses the HTTP port.  
 
-4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of the Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  
+4.  **Trivial FTP (TFTP) Daemon**: The Trivial FTP (TFTP) Daemon system service does not require a user name or password and is an integral part of Windows Deployment Services (WDS). The Trivial FTP Daemon service implements support for the TFTP protocol that's defined by the following RFCs:  
 
     -   RFC 350: TFTP  
 
@@ -563,9 +563,9 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
     -   RFC 2349: Time-out interval and transfer size options  
 
-     Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. Allowing the selected server to respond to inbound TFTP requests cannot be accomplished unless the TFTP server is configured to respond from port 69.  
+     Trivial File Transfer Protocol is designed to support diskless boot environments. TFTP Daemons listen on UDP port 69 but respond from a dynamically allocated high port. Therefore, enabling this port allows the TFTP service to receive incoming TFTP requests but doesn't allow the selected server to respond to those requests. You can't enable the selected server to respond to inbound TFTP requests unless the TFTP server is configured to respond from port 69.  
 
-5.  **Communication between the site server and site systems**: By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points do not send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties, after the site system is installed, it won't initiate communication to the site server. Instead, the site server initiates the connections and uses the Site System Installation account for authentication to the site system server.  
+5.  **Communication between the site server and site systems**: By default, communication between the site server and site systems is bi-directional. The site server initiates communication to configure the site system, and then most site systems connect back to the site server to send status information. Reporting service points and distribution points do not send status information. If you select **Require the site server to initiate connections to this site system** on the site system properties after the site system has been installed, the site system won't initiate communication with the site server. Instead, the site server initiates the communication and uses the site system installation account for authentication to the site system server.  
 
 6.  **Dynamic ports**: Dynamic ports (also known as ephemeral ports) use a range of port numbers that's defined by the operating system version. For more information about the default port ranges, see [Service overview and network port requirements for Windows](http://go.microsoft.com/fwlink/p/?LinkId=317965).  
 
@@ -575,9 +575,9 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 ###  <a name="BKMK_ClientShares"></a> Client to server shares  
  Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:  
 
--   Manual client installation that specifies the CCMSetup.exe **/source:** command line property.  
+-   Manual client installation that specifies the CCMSetup.exe **/source:** command-line property  
 
--   Endpoint Protection clients that download definition files from a UNC path.  
+-   Endpoint Protection clients that download definition files from a UNC path
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -590,7 +590,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
     -   SQL Server Service Broker, which defaults to port TCP 4022.  
 
-    -   SQL Server Service, which defaults to port TCP 1433.  
+    -   SQL Server service, which defaults to port TCP 1433.  
 
 -   Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
 
@@ -684,7 +684,7 @@ Use IPsec to help secure the traffic between the site server and site systems. I
 >  Before you install these site systems, ensure that the remote registry service is running on the site system server and that you have specified a site system installation account if the site system is in a different Active Directory forest without a trust relationship.  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Ports used by Configuration Manager client installation  
-The ports that are using during client installation depend on the client deployment method. For a list of ports for each client deployment method, see **Ports Used During Configuration Manager Client Deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) topic. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
+The ports that are using during client installation depend on the client deployment method. For a list of ports for each client deployment method, see **Ports used during Configuration Manager client deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) topic. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Ports used by migration  
 The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites  SQL Server database, and to share distribution points.  
@@ -692,7 +692,7 @@ The site server that runs migration uses several ports to connect to applicable 
  For information about these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the  [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) topic.  
 
 ###  <a name="BKMK_ServerPorts"></a> Ports used by Windows Server  
- The following table lists some of the key ports used by Windows Server and their respective functions. For a more complete list of Windows Server services and network ports requirements, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
+ The following table lists some of the key ports used by Windows Server along with their respective functions. For a more complete list of Windows Server services and network ports requirements, see [Service overview and network port requirements for the Windows Server system](http://go.microsoft.com/fwlink/p/?LinkID=123652).  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
