@@ -56,7 +56,7 @@ After the initial site is installed, you can add more sites at any time. You hav
 A secondary site must be installed from the Configuration Manager console. This way, secondary sites are always installed by using source files from the parent primary site.
 
 **Installation method**: The method you use to install additional sites depends on the type of site you want to install.
--   **Add a central administration site**:  You can use the Configuration Manager Setup Wizard or a scripted command line to install the new central administration site as a parent site to your existing standalone primary site. For more information, see [Expand a standalone primary site](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
+-   **Add a central administration site**:  You can use the Configuration Manager Setup Wizard or a scripted command line to install the new central administration site as a parent site to your existing standalone primary site. For more information, see [Expanding a standalone primary site](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
 -   **Add a child primary site**:  You can use the Configuration Manager Setup Wizard or a command-line installation to add a child primary site below a central administration site.
 -   **Add a secondary site**:  Use the Configuration Manager console to install a secondary site as a child site below a primary site. Other methods are not supported for adding secondary sites.
 
@@ -71,7 +71,7 @@ For more information, see [Site and site system prerequisites](../../../../core/
 For more information, see [Support for SQL Server versions for System Center Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
 
 -   **Prepare your network environment to support Configuration Manager**      
-For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](/sccm/core/plan-design/network/configure-firewalls-ports-domains).  
+For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md).  
 
 - **If you will use a public key infrastructure (PKI), prepare your infrastructure and certificates**      
 For more information, see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).

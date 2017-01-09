@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Before you begin a site installation, it's a good idea to understand the prerequisites for installing the different types of System Center Configuration Manager sites.
+Before you begin a site installation, it's a good idea to learn about the prerequisites for installing the different types of System Center Configuration Manager sites.
 
 ## Primary sites and the central administration site
 The following prerequisites apply to installing a central administration site as the first site of a hierarchy, installing a standalone primary site, or installing a child primary site. If you are installing a central administration site as part of a hierarchy expansion, see [Expanding a standalone primary site](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand) in this topic.
@@ -58,14 +58,14 @@ The following prerequisites apply to installing a central administration site as
 ### <a name="bkmk_expand"></a> Expanding a standalone primary site
 A standalone primary site must meet the following prerequisites before you can expand it into a hierarchy with a central administration site:
 
--   **You must install the new central administration site installation media (which contains the source files) that matches the version of the standalone primary site.**
+-   **You must install the new central administration site installation media (which contains the source files) that matches the version of the standalone primary site**
 
      To ensure a version match, install the new site by using the source files found in the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) on the standalone primary site.
 
      For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) in the [Prepare to install sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md) topic.
 
 
--   **The standalone primary site cannot be configured to migrate data from another Configuration Manager hierarchy.**  
+-   **The standalone primary site cannot be configured to migrate data from another Configuration Manager hierarchy**  
 
      You must stop active migration to the standalone primary site from other Configuration Manager hierarchies and remove all configurations for migration. This includes migration jobs that have not completed, data gathering, and the configuration of the active source hierarchy.  
 
@@ -73,11 +73,11 @@ A standalone primary site must meet the following prerequisites before you can e
 
      After you expand the standalone primary site, if you reconfigure migration at the primary site, the central administration site performs the migration-related operations. For more information about how to configure migration, see [Configure source hierarchies and source sites for migration to System Center Configuration Manager](../../../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md).  
 
--   **The computer account of the computer that will host the new central administration site must be a member of the Administrator user group on the standalone primary site.**  
+-   **The computer account of the computer that will host the new central administration site must be a member of the Administrator user group on the standalone primary site**  
 
      To successfully expand the standalone primary site, the computer account of the new central administration site must have **Administrator** rights on the standalone primary site. This is required only during site expansion. The account can be removed from the user group on the primary site when site expansion is finished.  
 
--   **The user account that runs Setup to install the new central administration site must have role-based administration rights at the standalone primary site.**  
+-   **The user account that runs Setup to install the new central administration site must have role-based administration rights at the standalone primary site**  
 
      To install a central administration site as part of a site expansion, the user account that runs Setup to install the central administration site must be defined in role-based administration at the standalone primary site as either a **Full Administrator** or an **Infrastructure Administrator**.  
 
@@ -91,7 +91,7 @@ A standalone primary site must meet the following prerequisites before you can e
 
     All other site system roles can remain installed at the primary site.  
 
--   **The port for the SQL Server Service Broker (SSB) between the standalone primary site and the computer that will install the central administration site must be open.**  
+-   **The port for the SQL Server Service Broker (SSB) between the standalone primary site and the computer that will install the central administration site must be open**  
 
      To successfully replicate data between a central administration site and a primary site, Configuration Manager requires an open port between the two sites for SSB to use. When you install a central administration site and expand a standalone primary site, the prerequisite check does not verify that the port you specify for the SSB is open on the primary site.  
 
