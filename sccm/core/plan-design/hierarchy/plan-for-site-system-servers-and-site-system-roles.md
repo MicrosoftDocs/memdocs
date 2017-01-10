@@ -16,29 +16,29 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Plan for site system servers and site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Each System Center Configuration Manager site you install includes a  a site server which is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server.   Site system servers (the site server or a remote site system server) support **site system roles**.
+Each System Center Configuration Manager site you install includes a site server that is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server. Site system servers (the site server or a remote site system server) support **site system roles**.
 
 
 ##  <a name="bkmk_siteservers"></a> Site system servers  
- When you install a site system role on a  computer, that computer becomes a site system server. At each site you can install one or more additional site system servers. You can also choose to not install additional site system servers and run all site system roles directly on the site server computer.  Each site system server supports one or more site system roles and helps expand the capabilities and capacity of a site by sharing the CPU processing load that site system roles place on a server.  
+ When you install a site system role on a computer, that computer becomes a site system server. At each site, you can install one or more additional site system servers. You can also choose not to install additional site system servers, and run all site system roles directly on the site server computer. Each site system server supports one or more site system roles. Additional servers can help expand the capabilities and capacity of a site by sharing the CPU processing load that site system roles place on a server.  
 
- When considering the addition of a site system server, ensure the server meets prerequisites for the intended use, and is on a network location that has sufficient bandwidth to communicate with expected endpoints, including the site server, domain resources, cloud-based location, site system servers, and clients).  
+ When considering the addition of a site system server, ensure the server meets prerequisites for the intended use. It's also a good idea to add it on a network location that has sufficient bandwidth to communicate with expected endpoints, including the site server, domain resources, a cloud-based location, site system servers, and clients).  
 
- If you configure the site system server with a proxy for use by site system roles, see [Site system roles that can use a proxy server](#bkmk_proxy)  
+ If you configure the site system server with a proxy for use by site system roles, see [Site system roles that can use a proxy server](#bkmk_proxy).  
 
 ##  <a name="bkmk_planroles"></a> Site system roles  
  Site system roles are installed on a computer to provide additional capabilities to the site. Examples include:  
 
--   Additional management points so that the site can support more devices, up to the sites supported capacity  
+-   Additional management points so that the site can support more devices, up to the site's supported capacity.  
 
--   Additional distribution points to expand your content infrastructure, improving the performance of content distributions to devices and users  
+-   Additional distribution points to expand your content infrastructure, improving the performance of content distributions to devices and users.  
 
--   One or more feature specific site system roles like a software update point, which you use to manage software updates for managed devices, or a reporting services point so you can run reports to monitor and understand or share information about your deployment  
+-   One or more feature-specific site system roles. For example, a software update point lets you manage software updates for managed devices, or a reporting services point lets you run reports to monitor and understand, or share information about, your deployment.  
 
 
-Different Configuration Manager sites can support a different sets of site system roles. The supported site system roles depends on the type of site (a central administration site, primary site, or secondary site). The topology of your hierarchy can limit the placement of some roles at ceratin site types. For example, the service connection point is only supported at the top-tier site of the hierarchy, which might be a central administration site or a stand-alone primary site. This role is not supported at a child primary site or at secondary sites.  
+Different Configuration Manager sites can support different sets of site system roles. The supported set of site system roles depends on the type of site (a central administration site, primary site, or secondary site). The topology of your hierarchy can limit the placement of some roles at ceratin site types. For example, the service connection point is only supported at the top-tier site of the hierarchy, which might be a central administration site or a stand-alone primary site. This role is not supported at a child primary site or at secondary sites.  
 
-After a site installs, you can move the  location of some site system roles from their default location on the site server to another server (like the management point or distribution point that install by default on a primary or secondary site server). You can also install additional instances of some site system roles to expand the capabilities of your site (provide more services to clients) and to meet your business requirements. Some roles are required, while others are optional:  
+After a site installs, you can move the location of some site system roles from their default location on the site server to another server. For example, this is true of the management point or distribution point, which install by default on a primary or secondary site server. You can also install additional instances of some site system roles to expand the capabilities of your site (provide more services to clients), and to meet your business requirements. Some roles are required, while others are optional.  
 
 -   **Configuration Manager site server** - This role identifies the server where Configuration Manager Setup is run to install a site, or the server on which you install a secondary site. This role cannot be moved or uninstalled until the site is uninstalled.  
 
@@ -64,7 +64,7 @@ After a site installs, you can move the  location of some site system roles from
 
      Each certificate registration point requires access to a separate instance of a Network Device Enrollment Service. You cannot configure two or more certificate registration points to use the same Network Device Enrollment Service. Additionally, the certificate registration point must not be installed on the same server that runs the Network Device Enrollment Service.  
 
-- **Cloud management gateway connector point** - A site system role for communicating with the [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway). 
+- **Cloud management gateway connector point** - A site system role for communicating with the [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway).
 
 -   **Distribution point** - A site system role that contains source files for clients to download, such as application content, software packages, software updates, operating system images, and boot images. By default, this role installs on the site server computer of new primary and secondary sites when the site installs, but is not supported at a central administration site.  You can install multiple instances of this role at a supported site, and at multiple sites in the same hierarchy.  For more information, see [Fundamental concepts for content management in System Center Configuration Manager](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md), and [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
