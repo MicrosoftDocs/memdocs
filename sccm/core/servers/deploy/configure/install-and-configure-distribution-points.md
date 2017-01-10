@@ -162,29 +162,29 @@ The following sections describe the configurations that you can select when you'
 ### General  
  Configure the general distribution point settings:  
 
--   **Install and configure IIS if required by Configuration Manager:** Choose this setting to let Configuration Manager install and configure IIS on the server if it is not already installed. IIS must be installed on all distribution points. If IIS is not installed on the server and you do not choose this setting, you must install IIS before the distribution point can be installed successfully.  
+-   **Install and configure IIS if required by Configuration Manager**: Choose this setting to let Configuration Manager install and configure IIS on the server if it is not already installed. IIS must be installed on all distribution points. If IIS is not installed on the server and you do not choose this setting, you must install IIS before the distribution point can be installed successfully.  
 
     > [!NOTE]  
     >  This option is available only when you're installing a new distribution point.  
 
-- **Enable and configure BranchCache for this distribution point:** Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information about using Windows BranchCache with System Center Configuration Manager, see [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache) in *Support for Windows features and networks in System Center Configuration Manager*.
+- **Enable and configure BranchCache for this distribution point**: Choose this setting to let Configuration Manager configure Windows BranchCache on the distribution point server. For more information about using Windows BranchCache with System Center Configuration Manager, see [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache) in *Support for Windows features and networks in System Center Configuration Manager*.
 
--   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see "Security best practices for content management" in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
+-   **Configure how client devices communicate with the distribution point**: There are advantages and disadvantages to using HTTP and HTTPS. For more information, see "Security best practices for content management" in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   **Allow clients to connect anonymously:** This setting specifies whether the distribution point will allow anonymous connections from Configuration Manager clients to the content library.  
+-   **Allow clients to connect anonymously**: This setting specifies whether the distribution point will allow anonymous connections from Configuration Manager clients to the content library.  
 
     > [!IMPORTANT]  
     >  Repair of a Windows Installer application can fail on a client when you do not use this setting.  
     >   
-    >  -   When you deploy a Windows Installer application on a Configuration Manager client, Configuration Manager downloads the file to the local cache on the client and the files are eventually removed after the installation completes.  
-    > -   The Configuration Manager client updates the Windows Installer source list for the installed Windows Installer applications with the content path for the content library on associated distribution points.  
-    > -   Later, if you start the repair action from Add or Remove Programs on a Configuration Manager client, MSIExec attempts to access the content path by using an anonymous user.  
+    >  When you deploy a Windows Installer application on a Configuration Manager client, Configuration Manager downloads the file to the local cache on the client. The files are eventually removed after the installation finishes.
+    >  
+    >  The Configuration Manager client updates the Windows Installer source list for the installed Windows Installer applications with the content path for the content library on associated distribution points. Later, if you start the repair action from Add or Remove Programs on a Configuration Manager client, MSIExec attempts to access the content path by using an anonymous user.  
     >   
-    >  However, you can install the update described in Microsoft Knowledge Base article [2619572](http://go.microsoft.com/fwlink/?LinkId=279699) and  then modify a registry key to change this behavior.  
+    >  However, you can install the update described in Microsoft Knowledge Base article [2619572](http://go.microsoft.com/fwlink/?LinkId=279699) and then modify a registry key to change this behavior.  
     >   
-    >  -   After the update is installed on the clients, MSIExec will access the content path by using the logged on user account when you do not choose the **Allow clients to connect anonymously** setting.  
+    >  After the update is installed on the clients, MSIExec will access the content path by using the logged-on user account when you do not choose the **Allow clients to connect anonymously** setting.  
 
--   **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point:** The certificate has the following purposes:  
+-   **Create a self-signed certificate or import a public key infrastructure (PKI) client certificate for the distribution point**: The certificate has the following purposes:  
 
     -   It authenticates the distribution point to a management point before the distribution point sends status messages.  
 
@@ -205,18 +205,22 @@ The following sections describe the configurations that you can select when you'
 
      For an example deployment of this certificate, see the "Deploying the Client Certificate for Distribution Points" section in [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
--   **Enable this distribution point for prestaged content:** Choose this setting to enable the distribution point for prestaged content. When this setting is selected, you can configure distribution behavior when you distribute content. You can choose whether you always want to prestage the content on the distribution point, prestage the initial content for the package, but use the normal content distribution process when there are updates to the content, or always use the normal content distribution process for the content in the package.  
+-   **Enable this distribution point for prestaged content**: Choose this setting to enable the distribution point for prestaged content. When this setting is selected, you can configure distribution behavior when you distribute content. You can choose whether you always want to:
+
+ - Prestage the content on the distribution point.
+ - Prestage the initial content for the package, but use the normal content distribution process when there are updates to the content.
+ - Use the normal content distribution process for the content in the package.  
 
 ### Drive settings  
 
 > [!NOTE]  
 >  These options are available only when you're installing a new distribution point.  
 
-Specify the drive settings for the distribution point. You can configure up to two disk drives for the content library and two disk drives for the package share, although Configuration Manager can use additional drives when the first two reach the configured drive space reserve. The **Drive Settings** page configures the priority for the disk drives and the amount of free disk space that remains on each disk drive.  
+Specify the drive settings for the distribution point. You can configure up to two disk drives for the content library and two disk drives for the package share. Configuration Manager can use additional drives when the first two reach the configured drive space reserve. The **Drive Settings** page configures the priority for the disk drives and the amount of free disk space that remains on each disk drive.  
 
--   **Drive space reserve (MB):** The value that you configure for this setting determines the amount of free space on a drive before Configuration Manager chooses a different drive and continues the copy process to that drive. Content files can span multiple drives.  
+-   **Drive space reserve (MB)**: The value that you configure for this setting determines the amount of free space on a drive before Configuration Manager chooses a different drive and continues the copy process to that drive. Content files can span multiple drives.  
 
--   **Content Locations:** Specify the content locations for the content library and package share. Configuration Manager copies content to the primary content location until the amount of free space reaches the value specified for **Drive space reserve (MB)**. By default, the content locations are set to **Automatic**. The primary content location is set to the disk drive that has the most disk space at installation, and the secondary location is assigned to the disk drive that has the second most free disk space. When the primary and secondary drives reach the drive space reserve, Configuration Manager selects another available drive with the most free disk space and continues the copy process.  
+-   **Content Locations**: Specify the content locations for the content library and package share. Configuration Manager copies content to the primary content location until the amount of free space reaches the value specified for **Drive space reserve (MB)**. By default, the content locations are set to **Automatic**. The primary content location is set to the disk drive that has the most disk space at installation, and the secondary location is assigned to the disk drive that has the second most free disk space. When the primary and secondary drives reach the drive space reserve, Configuration Manager selects another available drive with the most free disk space and continues the copy process.  
 
 > [!NOTE]  
 >  To prevent Configuration Manager from installing on a specific drive, create an empty file named **no_sms_on_drive.sms** and copy it to the root folder of the drive before you install the distribution point.  
@@ -224,7 +228,7 @@ Specify the drive settings for the distribution point. You can configure up to t
 ### Pull-distribution point  
 When you choose **Enable this distribution point to pull content from other distribution points**, you change the behavior of how that computer obtains the content that you distribute to the distribution point. It becomes a pull-distribution point.  
 
-For each pull-distribution point you configure, you must specify one or more source distribution points from which the pull-distribution point obtains the content:  
+For each pull-distribution point that you configure, you must specify one or more source distribution points from which the pull-distribution point obtains the content:  
 
 -   Choose **Add**, and then select one or more of the available distribution points to be source distribution points.  
 
@@ -233,17 +237,17 @@ For each pull-distribution point you configure, you must specify one or more sou
 -   Use the arrow buttons to adjust the order in which the source distribution points are contacted by the pull-distribution point when the pull-distribution point attempts to transfer content. Distribution points with the lowest value are contacted first.  
 
 ### PXE  
-Specify whether to enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required. Windows Deployment Service is the service that performs the PXE boot to install operating systems. After you complete the wizard to create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.  
+Specify whether to enable PXE on the distribution point. When you enable PXE, Configuration Manager installs Windows Deployment Services on the server, if required. Windows Deployment Services is the service that performs the PXE boot to install operating systems. After you complete the wizard to create the distribution point, Configuration Manager installs a provider in Windows Deployment Services that uses the PXE boot functions.  
 
 When you choose **Enable PXE support for clients**, configure the following settings:  
 
 -   **Allow this distribution point to respond to incoming PXE requests**: Specify whether to enable Windows Deployment Services so that it responds to PXE service requests. Use this box to enable and disable the service without removing the PXE functionality from the distribution point.  
 
--   **Enable unknown computer support**: Specify whether to enable support for computers that are not managed by Configuration Manager.  
+-   **Enable unknown computer support**: Specify whether to enable support for computers that Configuration Manager does not manage.  
 
 -   **Require a password when computers use PXE**: To provide additional security for your PXE deployments, specify a strong password.  
 
--   **User device affinity**: Specify how you want the distribution point to associate users with the destination computer for PXE deployments. choose one of the following options:  
+-   **User device affinity**: Specify how you want the distribution point to associate users with the destination computer for PXE deployments. Choose one of the following options:  
 
     -   **Allow user device affinity with auto-approval**: Choose this setting to automatically associate users with the destination computer without waiting for approval.  
 
@@ -258,7 +262,10 @@ When you choose **Enable PXE support for clients**, configure the following sett
 -   **Specify the PXE server response delay (seconds)**: Specify, in seconds, how long the delay is for the distribution point before it responds to computer requests when multiple PXE-enabled distribution points are used. By default, the Configuration Manager PXE service point responds first to network PXE requests.  
 
 > [!NOTE]  
->  You can use the PXE protocol to start operating system deployments to Configuration Manager client computers. Configuration Manager uses the PXE-enabled distribution point site role to initiate the operating system deployment process. The PXE-enabled distribution point must be configured to respond to PXE boot requests that Configuration Manager clients make on the network and then interact with Configuration Manager infrastructure to determine the appropriate deployment actions to take.  
+>  You can use the PXE protocol to start operating system deployments to Configuration Manager client computers. Configuration Manager uses the PXE-enabled distribution point site role to initiate the operating system deployment process. The PXE-enabled distribution point must be configured to:
+>
+> 1. Respond to PXE boot requests that Configuration Manager clients make on the network.
+> 2. Interact with Configuration Manager infrastructure to determine the appropriate deployment actions to take.  
 
 ### Multicast  
 Specify whether to enable multicast on the distribution point. When you enable multicast, Configuration Manager installs Windows Deployment Services on the server, if required.  
@@ -267,12 +274,12 @@ When you check the **Enable multicast to simultaneously send data to multiple cl
 
 -   **Multicast Connection Account**: Specify the account to use when you configure Configuration Manager database connections for multicast.  
 
--   **Multicast address settings**: Specify the IP addresses used to send data to the destination computers. By default, the IP address is obtained from a DHCP server that is enabled to distribute multicast addresses. Depending on the network environment, you can specify a range of IP addresses between 239.0.0.0 and 239.255.255.255.  
+-   **Multicast address settings**: Specify the IP addresses for sending data to the destination computers. By default, the IP address is obtained from a DHCP server that is enabled to distribute multicast addresses. Depending on the network environment, you can specify a range of IP addresses from 239.0.0.0 through 239.255.255.255.  
 
     > [!IMPORTANT]  
     >  The IP addresses that you configure must be accessible by the destination computers that request the operating system image. Verify that routers and firewalls allow for multicast traffic between the destination computer and the site server.  
 
--   **UDP port range for multicast**: Specify the range of user datagram protocol (UDP) ports that are used to send data to the destination computers.  
+-   **UDP port range for multicast**: Specify the range of User Datagram Protocol (UDP) ports that are used to send data to the destination computers.  
 
     > [!IMPORTANT]  
     >  The UDP ports must be accessible by the destination computers that request the operating system image. Verify that routers and firewalls allow for multicast traffic between the destination computer and the site server.  
@@ -281,7 +288,7 @@ When you check the **Enable multicast to simultaneously send data to multiple cl
 
 -   **Maximum clients**: Specify the maximum number of destination computers that can download the operating system from this distribution point.  
 
--   **Enable scheduled multicast**: Specify how Configuration Manager controls when to start deploying operating systems to destination computers. When selected, configure the following options:  
+-   **Enable scheduled multicast**: Specify how Configuration Manager controls when to start deploying operating systems to destination computers. Configure the following options:  
 
     -   **Session start delay (minutes)**: Specify the number of minutes that Configuration Manager waits before it responds to the first deployment request.  
 
@@ -306,7 +313,7 @@ To remove this distribution point from a distribution point group, select the di
 > [!NOTE]  
 >  These options are available only when you're editing the properties of a previously installed distribution point.  
 
-Manage the content that has been distributed to the distribution point. The Deployment packages section provides a list of the packages distributed to this distribution point. You can select a package from the list and perform the following actions:  
+Manage the content that has been distributed to the distribution point. The **Deployment packages** section provides a list of the packages distributed to this distribution point. You can select a package from the list and perform the following actions:  
 
 -   **Validate**: Starts the process to validate the integrity of the content files in the package. To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node.  
 
@@ -317,15 +324,18 @@ Manage the content that has been distributed to the distribution point. The Depl
 ### Content validation  
 Specify whether to set a schedule to validate the integrity of content files on the distribution point. When you enable content validation on a schedule, Configuration Manager starts the process at the scheduled time, and all content on the distribution point is verified. You can also configure the content validation priority. By default, the priority is set to **Lowest**.  
 
-To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node. The content for each package type (for example, Application, Software Update Package, and Boot Image) is displayed.  
+To view the results of the content validation process, in the **Monitoring** workspace, expand **Distribution Status**, and then choose the **Content Status** node. The content for each package type (for example, application, software update package, and boot image) is displayed.  
 
 > [!WARNING]  
->  Although you specify the content validation schedule by using the local time for the computer, the schedule displays in the Configuration Manager console by using UTC.  
+>  Although you specify the content validation schedule by using the local time for the computer, the Configuration Manager console shows the schedule in UTC.  
 
 ### Boundary group  
 Manage the boundary groups for which this distribution point is assigned. You can associate boundary groups with a distribution point. During content deployment, clients must be in a boundary group associated with the distribution point to use it as a source location for content.
+
 Additionally:
+
 - Prior to version 1610, you can check the **Allow clients to use this site system as a fallback source location for content** box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available. For more information about boundary groups, see [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606). For preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+
 - With version 1610 or later, you configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
@@ -346,9 +356,9 @@ To restrict data, select the time period and then choose one of the following se
 
 -   **Open for all priorities**: Specifies that Configuration Manager sends data to the distribution point with no restrictions.  
 
--   **Allow medium and high priority**: Specifies that Configuration Manager sends only medium and high priority data to the distribution point.  
+-   **Allow medium and high priority**: Specifies that Configuration Manager sends only medium-priority and high-priority data to the distribution point.  
 
--   **Allow high priority only**: Specifies that Configuration Manager sends only high priority data to the distribution point.  
+-   **Allow high priority only**: Specifies that Configuration Manager sends only high-priority data to the distribution point.  
 
 -   **Closed**: Specifies that Configuration Manager does not send any data to the distribution point.  
 
@@ -362,10 +372,10 @@ You can restrict data by priority or close the connection for selected time peri
 > [!TIP]  
 >  This tab is available only when you edit the properties for a distribution point that is remote from the site server computer.  
 
-Specify whether to configure rate limits to control the network bandwidth that is in use when transferring content to the distribution point. You can choose from the following options:  
+Specify whether to configure rate limits to control the network bandwidth that is in use when Configuration Manager is transferring content to the distribution point. You can choose from the following options:  
 
 -   **Unlimited when sending to this destination**: This option specifies that Configuration Manager sends content to the distribution point with no rate limit restrictions.  
 
--   **Pulse mode**: This option specifies the size of the data blocks that are sent to the distribution point. You can also specify a time delay between sending each data block. Use this option when you must send data across a very low bandwidth network connection to the distribution point. For example, you might have constraints to send 1 KB of data every five seconds, regardless of the speed of the link or its usage at a given time.  
+-   **Pulse mode**: This option specifies the size of the data blocks that are sent to the distribution point. You can also specify a time delay between sending each data block. Use this option when you must send data across a very low-bandwidth network connection to the distribution point. For example, you might have constraints to send 1 KB of data every five seconds, regardless of the speed of the link or its usage at a given time.  
 
--   **Limited to specified maximum transfer rates by hour**: Specify this setting to have a site send data to a distribution point by using only the percentage of time that you configure. When you use this option, Configuration Manager does not identify the networks available bandwidth, but instead divides the time it can send data into slices of time. Then data is sent for a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to **50%**, Configuration Manager transmits data for a period of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.  
+-   **Limited to specified maximum transfer rates by hour**: Specify this setting to have a site send data to a distribution point by using only the percentage of time that you configure. When you use this option, Configuration Manager does not identify the network's available bandwidth, but instead divides the time that it can send data. Then data is sent for a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to **50%**, Configuration Manager transmits data for a period of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.  
