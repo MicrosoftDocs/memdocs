@@ -94,7 +94,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   The folder that stores the installation source files for site setup  
 
-    -   The folder that stores the prerequisite downloads for use by Setup  
+    -   The folder that stores the prerequisite downloads for use by setup  
 
 -   The path for the following objects:  
 

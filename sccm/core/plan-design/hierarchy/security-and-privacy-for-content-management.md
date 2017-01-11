@@ -76,7 +76,7 @@ Consider the following when planning for content management:
 
 -   When you use cloud-based distribution points, access to the content is automatically restricted to your enterprise, and you cannot restrict it further to selected users or groups.  
 
--   When you use cloud-based distribution points, clients are authenticated by the management point and then use a Configuration Manager token to access cloud-based distribution points. The token is valid for eight hours so if you block a client because it is no longer trusted, it can continue to download content from a cloud-based distribution point until the validity period of this token has expired. At this point, the management point won't issue another token for the client because the client is blocked.  
+-   When you use cloud-based distribution points, clients are authenticated by the management point and then use a Configuration Manager token to access cloud-based distribution points. The token is valid for eight hours. This means that if you block a client because it is no longer trusted, it can continue to download content from a cloud-based distribution point until the validity period of this token has expired. At this point, the management point won't issue another token for the client because the client is blocked.  
 
      To avoid a blocked client from downloading content within this eight-hour window, you can stop the cloud service from the **Cloud** node, **Hierarchy Configuration**, in the **Administration** workspace in the Configuration Manager console.  
 

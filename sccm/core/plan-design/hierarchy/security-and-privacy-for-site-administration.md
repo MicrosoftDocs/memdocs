@@ -16,18 +16,18 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Security and privacy for site administration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-This top contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
+This topic contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
 ##  <a name="BKMK_Security_Sites"></a> Security best practices for site administration  
  Use the following security best practices to help you secure System Center Configuration Manager sites and the hierarchy.  
 
- **Run Setup only from a trusted source and secure the communication channel between the Setup media and the site server.**  
+ **Run setup only from a trusted source and secure the communication channel between the setup media and the site server.**  
 
- To help prevent someone from tampering with the source files, run Setup from a trusted source. If you store the files on the network, secure the network location.  
+ To help prevent someone from tampering with the source files, run setup from a trusted source. If you store the files on the network, secure the network location.  
 
- If you do run Setup from a network location, to help prevent an attacker from tampering with the files as they are transmitted over the network, use IPsec or Server Message Block (SMB) signing between the source location of the Setup files and the site server.  
+ If you do run setup from a network location, to help prevent an attacker from tampering with the files as they are transmitted over the network, use IPsec or Server Message Block (SMB) signing between the source location of the setup files and the site server.  
 
- In addition, if you use the Setup Downloader to download the files that are required by Setup, make sure that you also secure the location where these files are stored and secure the communication channel for this location when you run Setup.  
+ In addition, if you use the Setup Downloader to download the files that are required by setup, make sure that you also secure the location where these files are stored and secure the communication channel for this location when you run setup.  
 
  **Extend the Active Directory schema for System Center Configuration Manager and publish sites to Active Directory Domain Services.**  
 
@@ -42,7 +42,7 @@ This top contains security and privacy information for System Center Configurati
 -   Application Catalog website point  
 
 > [!NOTE]  
->  A trusted domain for Configuration Manager requires Kerberos authentication. That means that if clients are in another forest that does not have a two-way forest trust with the site server's forest, these clients are considered to be in untrusted domain. An external trust is not sufficient for this purpose.  
+>  A trusted domain for Configuration Manager requires Kerberos authentication. This means that if clients are in another forest that does not have a two-way forest trust with the site server's forest, these clients are considered to be in untrusted domain. An external trust is not sufficient for this purpose.  
 
  **Use IPsec to secure communications between site system servers and sites.**  
 
@@ -177,9 +177,9 @@ Whenever possible, use a mail server that supports authenticated access, and use
 
  **Install secondary sites by avoiding copying the files to the secondary site server over the network.**  
 
- When you run Setup and create a secondary site, do not select the option to copy the files from the parent site to the secondary site, and don't use a network source location. When you copy files over the network, a skilled attacker could hijack the secondary site installation package and tamper with the files before they are installed, although timing this attack would be difficult. This attack can be mitigated by using IPsec or SMB when you transfer the files.  
+ When you run setup and create a secondary site, do not select the option to copy the files from the parent site to the secondary site, and don't use a network source location. When you copy files over the network, a skilled attacker could hijack the secondary site installation package and tamper with the files before they are installed, although timing this attack would be difficult. This attack can be mitigated by using IPsec or SMB when you transfer the files.  
 
- Instead of copying the files over the network, on the secondary site server, copy the source files from media folder to a local folder. Then, when you run Setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
+ Instead of copying the files over the network, on the secondary site server, copy the source files from media folder to a local folder. Then, when you run setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
 
  For more information, see [Install a secondary site](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary) in the [Use the Setup Wizard to install sites](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md) topic.  
 
@@ -210,12 +210,12 @@ Periodically run Windows Update for these sites and all installed versions of SQ
 
 Identify and follow the best practices for your version of SQL Server. However, take into consideration the following requirements for Configuration Manager:  
 
--   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision admin principals explicitly", the account that you use to run Setup on the site server must be a member of the SQL Users group.  
+-   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision admin principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Users group.  
 
--   If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that is published to Active Directory Domain Services. Without the SPN, Kerberos authentication fails and Configuration Manager Setup fails.  
+-   If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that is published to Active Directory Domain Services. Without the SPN, Kerberos authentication fails and Configuration Manager setup fails.  
 
 ##  <a name="BKMK_Security_IIS"></a> Security best practices for site systems that run IIS  
-Several site system roles in Configuration Manager require IIS. The process of securing IIS enables Configuration Manager to operate correctly and reduces the risk of security attacks. When it's practical, minimize the number of servers that require IIS. For example, run only the number of management points that you require to support your client base, taking into consideration high availability and network isolation for Internet-based client management.  
+Several site system roles in Configuration Manager require IIS. The process of securing IIS enables Configuration Manager to operate correctly and reduces the risk of security attacks. When practical, minimize the number of servers that require IIS. For example, run only the number of management points that you require to support your client base, taking into consideration high availability and network isolation for Internet-based client management.  
 
  Use the following security best practices to help you secure the site systems that run IIS.  
 
