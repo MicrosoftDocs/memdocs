@@ -39,7 +39,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
     > [!NOTE]  
     >  These accounts support ASCII characters and RUS characters on a site that runs in Russian.  
 
-    -   Client push installation Account  
+    -   Client push installation account  
 
     -   Health state reference publishing account  
 
@@ -64,7 +64,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
     >   
     >  The reporting services point account supports Unicode, with the exception of RUS characters.  
 
--   FQDN for site servers and site systems  
+-   Fully-qualified domain name (FQDN) for site servers and site systems  
 
 -   Installation path for Configuration Manager  
 
@@ -122,7 +122,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   The contents of the AMT data storage  
 
--   Boot media .ISO file names  
+-   Boot media ISO file names  
 
 ##  <a name="BKMK_OtherCharLimitations"></a> Additional limitations  
  The following are additional limitations for supported character sets and language versions:  
