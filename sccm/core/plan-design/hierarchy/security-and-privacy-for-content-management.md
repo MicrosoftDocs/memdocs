@@ -72,7 +72,7 @@ Consider the following when planning for content management:
 
 -   Clients do not validate content until after it is downloaded.  
 
-     Configuration Manager clients validate the hash on content only after it is downloaded to their client cache. If an attacker tampers with the list of files to download or with the content itself, the download process can take up considerable network bandwidth for the client to then discard the content when it encounters the invalid hash.  
+     Configuration Manager clients validate the hash on content only after it is downloaded to their client cache. If an attacker tampers with the list of files to download or with the content itself, the download process can take up considerable network bandwidth, only for the client to then discard the content when it encounters the invalid hash.  
 
 -   When you use cloud-based distribution points, access to the content is automatically restricted to your enterprise, and you cannot restrict it further to selected users or groups.  
 
