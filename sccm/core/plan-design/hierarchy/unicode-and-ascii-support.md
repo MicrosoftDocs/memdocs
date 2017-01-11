@@ -16,16 +16,16 @@ caps.handback.revision: 0
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Unicode and ASCII Support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Unicode and ASCII support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager creates most objects by using Unicode characters. However, several objects support ASCII characters only or they have other limitations.  
 
  The following sections list the objects that must use characters from the ASCII character set only, or that have additional limitations.  
 
--   [Objects That Use ASCII Characters](#BKMK_ASCIIchar)  
+-   [Objects that use ASCII characters](#BKMK_ASCIIchar)  
 
--   [Additional Limitations](#BKMK_OtherCharLimitations)  
+-   [Additional limitations](#BKMK_OtherCharLimitations)  
 
--   [Configuration Manager Objects that Are Not Localized](#BKMK_LangNonLocalize)  
+-   [Configuration Manager objects that are not localized](#BKMK_LangNonLocalize)  
 
 ##  <a name="BKMK_ASCIIchar"></a> Objects that use ASCII characters  
  Configuration Manager supports the ASCII character set only when you create the following objects:  
@@ -37,32 +37,32 @@ System Center Configuration Manager creates most objects by using Unicode charac
 -   The following Configuration Manager accounts:  
 
     > [!NOTE]  
-    >  These accounts support ASCII characters and RUS characters on a site that runs in the Russian language.  
+    >  These accounts support ASCII characters and RUS characters on a site that runs in Russian.  
 
-    -   Client Push Installation Account  
+    -   Client push installation Account  
 
-    -   Health State Reference Publishing Account  
+    -   Health state reference publishing account  
 
-    -   Health State Reference Querying Account  
+    -   Health state reference querying account  
 
-    -   Management Point Database Connect Account  
+    -   Management point database connect account  
 
-    -   Network Access Account  
+    -   Network access account  
 
-    -   Package Access Account  
+    -   Package access account  
 
-    -   Standard Sender Account  
+    -   Standard sender account  
 
-    -   Site System Installation Account  
+    -   Site system installation account  
 
-    -   Software Update Point Connection Account  
+    -   Software update point connection account  
 
-    -   Software Update Point Proxy Server Account  
+    -   Software update point proxy server account  
 
     > [!NOTE]  
     >  The accounts that you specify for role-based administration support Unicode.  
     >   
-    >  The Reporting Services Point Account supports Unicode, with the exception of RUS characters.  
+    >  The reporting services point account supports Unicode, with the exception of RUS characters.  
 
 -   FQDN for site servers and site systems  
 
@@ -90,9 +90,9 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   The folder that contains the Configuration Manager reports  
 
-    -   The folder that stores the Configuration Manager Backup  
+    -   The folder that stores the Configuration Manager backup  
 
-    -   The folder that stores the installation source files for site setup.  
+    -   The folder that stores the installation source files for site setup  
 
     -   The folder that stores the prerequisite downloads for use by Setup  
 
@@ -104,7 +104,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   Virtual application name  
 
--   The following objects for AMT and out of band management:  
+-   The following objects for AMT and out-of-band management:  
 
     -   The FQDN of the AMT-based computer  
 
