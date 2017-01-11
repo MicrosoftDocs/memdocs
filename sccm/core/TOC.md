@@ -4,7 +4,7 @@
 ### [Accessibility features](understand/accessibility-features.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
 ### [Fundamentals of sites and hierarchies](understand/fundamentals-of-sites-and-hierarchies.md)
-#### [About upgrade, update, and install for site and hierarchy infrastructure](upgrade-update-install.md)
+#### [About upgrade, update, and install for site and hierarchy infrastructure](understand/upgrade-update-install.md)
 ### [Fundamentals of managing devices](understand/fundamentals-of-managing-devices.md)
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
