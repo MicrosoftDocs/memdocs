@@ -123,7 +123,8 @@
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
 ##   Install infrastructure
-###  [Before you run Setup](servers/deploy/install/setup-downloader.md)
+###  [Get installation media](servers/deploy/install/get-install-media.md)
+###  Before you run Setup
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
 ###  [Installing sites](servers/deploy/install/installing-sites.md)
