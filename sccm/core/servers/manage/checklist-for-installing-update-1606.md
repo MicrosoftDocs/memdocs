@@ -2,7 +2,7 @@
 title: "Checklist for 1606 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 or 1602 to version 1606."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -25,7 +25,7 @@ For information about baselines versions, see [Baseline and update versions](../
 
 As an *update*, 1606 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site.  
 
--   Child primary sites install the update automatically after the central administration site completes installing the update. You can use service windows  to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+-   Child primary sites install the update automatically after the central administration site completes installing the update. You can use service windows  to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site completes the update installation. Automatic update of secondary site servers is not supported.  
 
@@ -121,7 +121,7 @@ It is not supported to run a test database upgrade on the production site databa
  **Plan to use service windows**  
  **to control when site servers install updates:** You can use service windows to define a period of time that applies to a primary site server during which updates to that site can be installed.   
 This can help you control when sites in your hierarchy install the update.
-Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
  **Run Setup Prerequisite Checker:**  Before you install update 1606, you can run the Prerequisite Checker independently from the update installation. When you install the update on the site, Prerequisite Checker runs again.  
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) topic.  
