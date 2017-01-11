@@ -2,7 +2,7 @@
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/376/2017
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
