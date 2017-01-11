@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 caps.latest.revision: 51
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Updates for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to find and install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
 
 > [!TIP]
@@ -111,7 +116,7 @@ When you install an in-console update:
 
 -   It automatically runs a prerequisite check. You can also run this check prior to starting the installation.  
 
--   It installs at the central administration site (if you have one), and at primary sites automatically. You can control when each primary site server is allowed to update its infrastructure by using [Service windows for site servers](../../../core/servers/manage/service-windows.mk).  
+-   It installs at the central administration site (if you have one), and at primary sites automatically. You can control when each primary site server is allowed to update its infrastructure by using [Service windows for site servers](../../../core/servers/manage/service-windows.md).  
 
 -   After a site server updates, all affected site system roles (including instances of the SMS Provider) automatically update. Configuration Manager consoles also prompt the console user to update the console, after the site installs the update.  
 
