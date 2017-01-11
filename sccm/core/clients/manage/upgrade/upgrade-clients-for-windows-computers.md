@@ -2,7 +2,7 @@
 title: "Upgrade clients | Microsoft Docs | Windows "
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/01/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
