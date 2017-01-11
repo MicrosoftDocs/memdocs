@@ -210,7 +210,7 @@ Periodically run Windows Update for these sites and all installed versions of SQ
 
 Identify and follow the best practices for your version of SQL Server. However, take into consideration the following requirements for Configuration Manager:  
 
--   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision admin principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Users group.  
+-   The computer account of the site server must be a member of the Administrators group on the computer that runs SQL Server. If you follow the SQL Server recommendation of "provision administrator principals explicitly", the account that you use to run setup on the site server must be a member of the SQL Users group.  
 
 -   If you install SQL Server by using a domain user account, make sure that the site server computer account is configured for a Service Principal Name (SPN) that is published to Active Directory Domain Services. Without the SPN, Kerberos authentication fails and Configuration Manager setup fails.  
 
@@ -235,7 +235,7 @@ Site system roles:
 
 -   A distribution point that is configured for HTTPS  
 
--   A management that is configured for HTTPS and enabled to support mobile devices
+-   A management point that is configured for HTTPS and enabled to support mobile devices
 
 A certificate trust list (CTL) is a defined list of trusted root certification authorities. When you use a CTL with Group Policy and a public key infrastructure (PKI) deployment, a CTL enables you to supplement the existing trusted root certification authorities that are configured on your network, such as those that are automatically installed with Microsoft Windows or added through Windows enterprise root certification authorities. However, when a CTL is configured in IIS, it defines a subset of those trusted root certification authorities.  
 
