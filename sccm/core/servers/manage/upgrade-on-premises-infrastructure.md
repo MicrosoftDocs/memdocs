@@ -68,10 +68,10 @@ This operating system upgrade scenario has the following conditions:
 
 - 	Ensure each server that hosts a site system role continues to meet all of the [prequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
-  After restoring any missing prerequisites, reboot the server one more time to ensure services are started and operational.
+  After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 **Known issue for remote Configuration Manager consoles:**  
-After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
+After you upgrade the site server or a server that hosts an instance of the SMS Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
 
 1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for  **WMI Control**, and then select **Local computer**.
 2. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
@@ -107,7 +107,7 @@ After you upgrade the site server or a server that hosts an instance of the SMS_
 
   - 	Ensure each server that hosts a site system role continues to meet all of the [prequisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
-  After restoring any missing prerequisites, reboot the server one more time to ensure services are started and operational.
+  After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 ### Upgrade Windows Server 2008 R2 to Windows Server 2012 R2
 This operating system upgrade scenario has the following conditions:  
@@ -133,7 +133,7 @@ This operating system upgrade scenario has the following conditions:
 
   - 	Ensure each server that hosts a site system role continues to meet all of [perquisites for site system roles](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) that run on that server. For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
-  After restoring any missing prerequisites, reboot the server one more time to ensure services are started and operational.
+  After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 
 ### Unsupported upgrade scenarios
@@ -172,9 +172,9 @@ The following Windows Server upgrade scenarios are commonly asked about, but not
 
 When you upgrade the version of SQL Server that hosts the site database, you must upgrade the SQL Server version that is used at sites in the following order:
 
- 1. Upgrade SQL Server at the central administration site first.
+ 1. Upgrade SQL Server at the central administration site.
  2. Upgrade secondary sites before you upgrade a secondary site's parent primary site.
- 3. Upgrade parent primary sites last. This includes both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.
+ 3. Upgrade parent primary sites. This includes both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.
 
 **SQL Server Cardinality Estimation level and the site database:**   
 When a site database is upgraded from an earlier version of SQL Server, the database retains its existing SQL Cardinality Estimation (CE) level if it is at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL Server.
