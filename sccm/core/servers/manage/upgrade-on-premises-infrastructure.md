@@ -31,16 +31,16 @@ Use the information in this topic to help you upgrade the server infrastructure 
 ##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade site operating system of site systems  
  Configuration Manager supports the in-place upgrade of the operating system of servers that host a site server and of remote servers that host any site system role, in the following situations:  
 
--   In-place upgrade to a higher Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
+-   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  
 -   In-place upgrade from:
-    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016))
-    - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2))
-    - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2))
+    - Windows Server 2012 R2 to Windows Server 2016 ([See additional details](#upgrade-windows-server-2012-r2-to-2016)).
+    - Windows Server 2012 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2012-to-windows-server-2012-r2)).
+    - When you use Configuration Manager version 1602 or later, it is also supported to upgrade Windows Server 2008 R2 to Windows Server 2012 R2 ([See additional details](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)).
 
     > [!WARNING]  
-    >  Before you upgrade to Windows Server 2012 R2, **you must uninstall WSUS 3.2** from the server.  
+    >  Before you upgrade to Windows Server 2012 R2, *you must uninstall WSUS 3.2* from the server.  
     >   
-    >  For information about this critical step, see the New and changed functionality section  in [Windows Server Update Services Overview](https://technet.microsoft.com/library/hh852345.aspx) in the Windows Server documentation.  
+    >  For information about this critical step, see the "New and changed functionality" section  in [Windows Server Update Services Overview](https://technet.microsoft.com/library/hh852345.aspx) in the Windows Server documentation.  
 
 To upgrade a server, use the upgrade procedures provided by the operating system you are upgrading to.  See the following:
   -  [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in the Windows Server documentation.  
@@ -147,7 +147,7 @@ The following Windows Server upgrade scenarios are commonly asked about, but not
 ##  <a name="BKMK_SupConfigUpgradeClient"></a> Upgrade the operating system of Configuration Manager clients  
  Configuration Manager supports an in-place upgrade of the operating system for Configuration Manager clients in the following situations:  
 
--   In-place upgrade to a higher Windows service pack if the resulting service pack level remains supported by Configuration Manager.  
+-   In-place upgrade to a later Windows service pack if the resulting service pack level remains supported by Configuration Manager.  
 
 -   In-place upgrade of Windows from a supported version to Windows 10. See [Upgrade Windows to the latest version with System Center Configuration Manager](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) for more information.  
 
