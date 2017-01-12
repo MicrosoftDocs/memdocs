@@ -2,7 +2,7 @@
 title: "Log files for Configuration Manager | Microsoft Docs"
 description: "Use log files to troubleshoot issues in a System Center Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 11/01/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -143,7 +143,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Log name|Description|  
 |--------------|-----------------|  
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
-|Ccm32BitLauncher.log|Records actions for startup applications on the client marked "run as 32bit".|  
+|Ccm32BitLauncher.log|Records actions for starting applications on the client marked "run as 32bit".|  
 |CcmEval.log|Records Configuration Manager client status evaluation activities and details for components that are required by the Configuration Manager client.|  
 |CcmEvalTask.log|Records the Configuration Manager client status evaluation activities that are initiated by the evaluation scheduled task.|  
 |CcmExec.log|Records activities of the client and the SMS Agent Host service. This log file also includes information about enabling and disabling wake-up proxy.|  
@@ -183,13 +183,13 @@ The following table lists the log files located on the Configuration Manager cli
 |PolicySdk.log|Records activities for policy system SDK interfaces.|  
 |Pwrmgmt.log|Records information about enabling or disabling and configuring the wake-up proxy client settings.|  
 |PwrProvider.log|Records the activities of the power management provider (PWRInvProvider) hosted in the WMI service. On all supported versions of Windows, the provider enumerates the current settings on computers during hardware inventory and applies power plan settings.|  
-|SCClient_<*domain*\>@<*username*\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
-|SCClient_<*domain*\>@<*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
+|SCClient_&lt;*domain*\>@&lt;*username*\>_1.log|Records the activity in Software Center for the specified user on the client computer.|  
+|SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
-|SCNotify_<*domain*\>@<*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_<*domain*\>@<*username*\>_1-<*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
-|SleepAgent_<*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
+|SleepAgent_&lt;*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
 |SrcUpdateMgr.log|Records activity for installed Windows Installer applications that are updated with current distribution point source locations.|  
 |StatusAgent.log|Records status messages that are created by the client components.|  
@@ -229,7 +229,7 @@ The following table lists the log files located on the Configuration Manager cli
 
  Both log files support several levels of logging:  
 
--   **Scxcm.log**. To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
+-   **scxcm.log**. To change the log level, edit **/opt/microsoft/configmgr/etc/scxcm.conf** and change each instance of the  **MODULE** tag to the log level you want:  
 
     -   ERROR: Indicates problems that require attention  
 
@@ -239,7 +239,7 @@ The following table lists the log files located on the Configuration Manager cli
 
     -   TRACE: Verbose logging that typically is used to diagnose problems  
 
--   **Scxcmprovider.log**. To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
+-   **scxcmprovider.log**. To change the log level, edit **/opt/microsoft/omi/etc/scxcmprovider.conf** and change each instance of the **MODULE** tag to the log level you want:  
 
     -   ERROR: Indicates problems that require attention  
 
@@ -252,7 +252,7 @@ Under normal operating conditions, use the ERROR log level. This log level creat
 ####  <a name="BKMK_ManageLinuxLogs"></a> Manage log files for the Linux and UNIX client  
 The client for Linux and UNIX does not limit the maximum size of the client log files, nor does the client automatically copy the contents of its .log files to another file, such as to a .lo_ file. If you want to control the maximum size of log files, implement a process to manage the log files independent from the Configuration Manager client for Linux and UNIX.  
 
-For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the client log files. The Configuration Manager client for Linux and UNIX has an interface in which you can set up **logrotate** to signal the client when the log rotation completes, so the client can resume logging to the log file.  
+For example, you can use the standard Linux and UNIX command **logrotate** to manage the size and rotation of the client log files. The Configuration Manager client for Linux and UNIX has an interface that enables **logrotate** to signal the client when the log rotation completes, so the client can resume logging to the log file.  
 
 For information about **logrotate**, see the documentation for the Linux and UNIX distributions that you use.  
 
@@ -261,12 +261,12 @@ The Configuration Manager client for Mac computers records information in the fo
 
 |Log name|Details|  
 |--------------|-------------|  
-|CCMClient-<*date_time*>.log|Records activities that are related to the Mac client operations, including application management, inventory, and error logging.<br /><br /> This log file is located in the /Library/Application Support/Microsoft/CCM/Logs folder on the Mac computer.|  
-|CCMAgent-<*date_time*>.log|Records information that is related to client operations, including user logon and logoff operations, and Mac computer activity.<br /><br /> This log file is in the ~/Library/Logs folder on the Mac computer.|  
-|CCMNotifications-<*date_time*>.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
-|CCMPrefPane-<*date_time*>.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
+|CCMClient-&lt;*date_time*>.log|Records activities that are related to the Mac client operations, including application management, inventory, and error logging.<br /><br /> This log file is located in the /Library/Application Support/Microsoft/CCM/Logs folder on the Mac computer.|  
+|CCMAgent-&lt;*date_time*>.log|Records information that is related to client operations, including user logon and logoff operations, and Mac computer activity.<br /><br /> This log file is in the ~/Library/Logs folder on the Mac computer.|  
+|CCMNotifications-&lt;*date_time*>.log|Records activities that are related to Configuration Manager notifications displayed on the Mac computer.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
+|CCMPrefPane-&lt;*date_time*>.log|Records activities related to the Configuration Manager preferences dialog box on the Mac computer, which includes general status and error logging.<br /><br /> This log file is located in the ~/Library/Logs folder on the Mac computer.|  
 
- The log file SMS_DM.log on the site system server also records communication between Mac computers and the management point that is set up for mobile devices and Mac computers.  
+M The log file SMS_DM.log on the site system server also records communication between Mac computers and the management point that is set up for mobile devices and Mac computers.  
 
 ##  <a name="BKMK_ServerLogs"></a> Configuration Manager site server log files  
  The following sections list log files that are on the site server or that are related to specific site system roles.  
@@ -305,7 +305,7 @@ The Configuration Manager client for Mac computers records information in the fo
 |inboxmgr.log|Records file transfer activities between inbox folders.|Site server|  
 |inboxmon.log|Records the processing of inbox files and performance counter updates.|Site server|  
 |invproc.log|Records the forwarding of MIF files from a secondary site to its parent site.|Site server|  
-|migmctrl.log|Records information for migration actions that involve migration jobs, shared distribution points, and distribution point upgrades.|Top-level site in the Configuration Manager hierarchy, and each child primary site.<br /><br /> In a multi-primary site hierarchy, use the log file that is created at the central administration site.|  
+|migmctrl.log|Records information for Migration actions that involve migration jobs, shared distribution points, and distribution point upgrades.|Top-level site in the Configuration Manager hierarchy, and each child primary site.<br /><br /> In a multi-primary site hierarchy, use the log file that is created at the central administration site.|  
 |mpcontrol.log|Records the registration of the management point with Windows Internet Name Service (WINS). Records the availability of the management point every 10 minutes.|Site system server|  
 |mpfdm.log|Records the actions of the management point component that moves client files to the corresponding INBOXES folder on the site server.|Site system server|  
 |mpMSI.log|Records details about the management point installation.|Site server|  
@@ -318,7 +318,7 @@ The Configuration Manager client for Mac computers records information in the fo
 |OfflineServicingMgr.log|Records the activities of applying updates to operating system image files.|Site server|  
 |outboxmon.log|Records the processing of outbox files and performance counter updates.|Site server|  
 |PerfSetup.log|Records the results of the installation of performance counters.|Site system server|  
-|PkgXferMgr.log|Records the actions of the Systems Management Server (SMS) Executive component that is responsible for sending content from a primary site to a remote distribution point.|Site server|  
+|PkgXferMgr.log|Records the actions of the SMS_Executive component that is responsible for sending content from a primary site to a remote distribution point.|Site server|  
 |policypv.log|Records updates to the client policies to reflect changes to client settings or deployments.|Primary site server|  
 |rcmctrl.log|Records the activities of database replication between sites in the hierarchy.|Site server|  
 |replmgr.log|Records the replication of files between the site server components and the Scheduler component.|Site server|  
@@ -379,7 +379,7 @@ The Configuration Manager client for Mac computers records information in the fo
 |MP_GetPolicy.log|Records policy request activity from client computers.|Site system server|  
 |MP_Hinv.log|Records details about the conversion of XML hardware inventory records from clients and the copy of those files to the site server.|Site system server|  
 |MP_Location.log|Records location request and reply activity from clients.|Site system server|  
-|MP_OOBMgr.log|Records the management point activities related to receiving a One-Time Password (OTP) from a client.|Site system server|  
+|MP_OOBMgr.log|Records the management point activities related to receiving a OTP from a client.|Site system server|  
 |MP_Policy.log|Records policy communication.|Site system server|  
 |MP_Relay.log|Records the transfer of files that are collected from the client.|Site system server|  
 |MP_Retry.log|Records hardware inventory retry processes.|Site system server|  
@@ -396,13 +396,13 @@ The Configuration Manager client for Mac computers records information in the fo
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|objreplmgr.log|Records details about the replication of software update notification files from a parent site to child sites.|Site server|  
+|objreplmgr.log|Records details about the replication of software updates notification files from a parent site to child sites.|Site server|  
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|Computer that hosts the Configuration Manager console from which downloads are initiated|  
 |ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
 |WCM.log|Records details about the software update point configuration and connections to the WSUS server for subscribed update categories, classifications, and languages.|Site server that connects to the WSUS server|  
 |WSUSCtrl.log|Records details about the configuration, database connectivity, and health of the WSUS server for the site.|Site system server|  
-|wsyncmgr.log|Records details about the software update sync process.|Site system server|  
+|wsyncmgr.log|Records details about the software updates sync process.|Site system server|  
 |WUSSyncXML.log|Records details about the Inventory Tool for the Microsoft Updates sync process.|Client computer configured as the sync host for the Inventory Tool for Microsoft Updates|  
 
 ##  <a name="BKMK_FunctionLogs"></a> Log files for Configuration Manager functionality  
@@ -538,7 +538,7 @@ The following table lists the log files that contain information related to the 
 
 
 ###  <a name="BKMK_DiscoveryLog"></a> Discovery  
-The following table lists the log files that contain information related to discovery.  
+The following table lists the log files that contain information related to Discovery.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
@@ -609,8 +609,8 @@ The following table lists the log files that contain information related to disc
 |enrollmentservice.log|Records communication between an enrollment proxy point and an enrollment point.|Site system server|  
 |SMS_DM.log|Records communication between mobile devices, Mac computers, and the management point that is enabled for mobile devices and Mac computers.|Site system server|  
 
-####  <a name="BKMK_ExchSrvLog"></a> Exchange Server connector  
- The following logs contain information related to the Exchange Server connector.  
+####  <a name="BKMK_ExchSrvLog"></a> Exchange Server Connector  
+ The following logs contain information related to the Exchange Server Connector.  
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
@@ -776,11 +776,11 @@ The following table lists the log files that contain information related to disc
 |PolicyEvaluator.log|Records details about the evaluation of policies on client computers, including policies from software updates.|Client|  
 |RebootCoordinator.log|Records details about the coordination of system restarts on client computers after software update installations.|Client|  
 |ScanAgent.log|Records details about scan requests for software updates, the WSUS location, and related actions.|Client|  
-|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software update log file, UpdatesHandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
+|SdmAgent.log|Records details about the tracking of remediation and compliance. However, the software updates log file, UpdatesHandler.log, provides more informative details about installing the software updates that are required for compliance.<br /><br /> This log file is shared with compliance settings.|Client|  
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|  
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 |SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|  
-|StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|  
+|StateMessage.log|Records details about software updates state messages that are created and sent to the management point.|Client|  
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|  
 |UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|  
 |Updateshandler.log|Records details about software update compliance scanning and about the download and installation of software updates on the client.|Client|  
