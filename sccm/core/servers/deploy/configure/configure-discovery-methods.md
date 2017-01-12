@@ -18,7 +18,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 You configure discovery methods to run at a  System Center Configuration Manager site to find resources that you can manage from your network infrastructure and Active Directory. This requires you to enable and then configure each method that you want to use to search your environment. (You can also disable a method by using the same procedure that you use to enable it.)  The only exceptions to this are Heartbeat Discovery and Server Discovery:  
 
--   By default, Heartbeat Discovery is already enabled when you install a Configuration Manager primary site, and configured to run on a basic schedule. It's a good idea to keep Heartbeat Discovery enabled because it ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)  
+-   By default, Heartbeat Discovery is already enabled when you install a Configuration Manager primary site, and configured to run on a basic schedule. It's a good idea to keep Heartbeat Discovery enabled because it ensures that the discovery data records (DDRs) for devices are up-to-date. For more information about Heartbeat Discovery, see [About Heartbeat Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat).  
 
 -   Server Discovery is an automatic discovery method that finds computers that you use as site systems. You can't configure or disable it.  
 
@@ -61,7 +61,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and return to enable discovery later.  
+4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
 
 5.  Specify options to create site boundaries for discovered locations.  
 
@@ -77,7 +77,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
     -   To configure a new forest that is not listed, on the **Home** tab, in the **Create** group, choose **Add Forest** to open the **Add Forests** dialog box. Continue with step 3.  
 
-2.  On the **General** tab, finish configurations for the forest that you want to discover and specify the **Active Directory Forest Account**.  
+2.  On the **General** tab, finish configurations for the forest that you want to discover, and specify the **Active Directory Forest Account**.  
 
     > [!NOTE]  
     >  Active Directory Forest Discovery requires a global account to discover and publish to untrusted forests. If you do not use the computer account of the site server, you can select only a global account.  
@@ -90,7 +90,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 4.  When you finish the configuration of this forest for use with Active Directory Forest Discovery, choose **OK** to save the configuration.  
 
 ##  <a name="BKMK_ConfigADDiscGeneral"></a> Configure Active Directory Discovery for computers, users, or groups  
- Use the information in the following sections to configure discovery of computers, users, or groups, by using one of the following discovery methods:  
+ Use the information in the following sections to configure discovery of computers, users, or groups. You'll use these discovery methods:  
 
 -   Active Directory Group Discovery  
 
@@ -114,7 +114,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and return to enable discovery later.  
+4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
 
 5.  Choose **Add** to configure a discovery scope, choose either **Groups** or **Location**, and finish the following configurations in the **Add Groups** or **Add Active Directory Location** dialog box:  
 
@@ -180,7 +180,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and return to enable discovery later.  
+4.  On the **General** tab, check the box to enable discovery. Or you can configure discovery now, and then return to enable discovery later.  
 
 5.  Choose the **New** icon ![New icon](media/Disc_new_Icon.gif) to specify a new Active Directory container. In the **Active Directory Container** dialog box, finish the following configurations:  
 
@@ -202,7 +202,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 8.  When you have finished configuring Active Directory User Discovery for this site, choose **OK** to save the configuration.  
 
 ##  <a name="BKMK_ConfigHBDisc"></a> Configure Heartbeat Discovery  
- By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record (DDR) to a management point when you do not want to use the default of every seven days.  
+ By default, Heartbeat Discovery is enabled when you install a Configuration Manager primary site. As a result, you only have to configure the schedule for how often clients send the Heartbeat Discovery data record to a management point when you do not want to use the default of every seven days.  
 
 > [!NOTE]  
 >  If both client push installation and the site maintenance task for **Clear Install Flag** are enabled at the same site, set the schedule of Heartbeat Discovery to be less than the **Client Rediscovery period** of the **Clear Install Flag** site maintenance task. For more information about site maintenance tasks, see [Maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/maintenance-tasks.md).  
@@ -215,7 +215,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 3.  On the **Home** tab, in the **Properties** group, choose **Properties**.  
 
-4.  Configure the frequency with which clients submit a Heartbeat discovery data records (DDR), and then choose **OK** to save the configuration.  
+4.  Configure the frequency with which clients submit a Heartbeat discovery data record, and then choose **OK** to save the configuration.  
 
 ##  <a name="BKMK_ConfigNetworkDisc"></a> Configure Network Discovery  
  Use the information in the following sections to help you configure Network Discovery.  
@@ -229,7 +229,7 @@ Use the following procedures to enable Active Directory Forest Discovery, and to
 
 -   Limiting Network Discovery on the network  
 
-For more information, see the section [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
+For more information, see [About Network Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutNetwork).  
 
  The following sections provide information about common configurations for Network Discovery. You can configure one or more of these configurations for use during the same discovery run. If you use multiple configurations, you must plan for the interactions that can affect the discovery results.  
 
@@ -279,7 +279,7 @@ For more information, see the section [About Network Discovery](../../../../core
  If multiple SNMP communities are shown on the **SNMP** tab in the **Network Discovery Properties** dialog box, Network Discovery searches them in the order in which they are shown. To help minimize network traffic that is generated by attempts to contact a device by using different names, ensure that the most frequently used names are at the top of the list.  
 
 > [!NOTE]  
->  In addition to using the SNMP community name, you can specify the IP address or resolvable name of a specific SNMP device. You configure the IP address or resolvable name for a specific device on the **SNMP Devices** tab in the **Network Discovery Properties** dialog box.  
+>  In addition to using the SNMP community name, you can specify the IP address or resolvable name of a specific SNMP device. You do this on the **SNMP Devices** tab in the **Network Discovery Properties** dialog box.  
 
 ####  <a name="BKMK_SearchByDHCP"></a> Search a specific DHCP server  
  You can configure Network Discovery to use a specific DHCP server or multiple servers to discover DHCP clients during a discovery run.  
@@ -339,13 +339,13 @@ For more information, see the section [About Network Discovery](../../../../core
 
         1.  If the subnet is not listed, choose the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New Subnet Assignment** dialog box, enter the **Subnet** and **Mask** information, and then choose **OK**. By default, a new subnet is enabled for search.  
 
-        2.  To change the **Search** value for a listed subnet, select the subnet, and then choose the **Toggle** icon to toggle the value between **Disabled** and **Enabled**.  
+        2.  To change the **Search** value for a listed subnet, select the subnet, and then choose the **Toggle** icon to switch the value between **Disabled** and **Enabled**.  
 
 6.  To configure discovery to search domains, choose the **Domains** tab, and then configure one or more of the following options:  
 
     -   To run discovery on the domain of the computer that runs discovery, check the **Search local domain** box.  
 
-    -   To search a specific domain, make sure that the domain is listed in **Domains** and has **Search** value of **Enabled**:  
+    -   To search a specific domain, make sure that the domain is listed in **Domains** and has a **Search** value of **Enabled**:  
 
         1.  If the domain is not listed, choose the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **Domain Properties** dialog box, enter the **Domain** information, and then choose **OK**. By default, a new domain is enabled for search.  
 
@@ -372,7 +372,7 @@ For more information, see the section [About Network Discovery](../../../../core
 
 8.  To configure the maximum number of router hops for use by SNMP searches, choose the **SNMP** tab, and then select the number of hops from the **Maximum hops** drop-down list.  
 
-9. To configure **SNMP Devices**, choose the **SNMP Devices** tab. If the device is not listed there, choose the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New SNMP Device** dialog box, specify the IP address or device name of the SNMP device, and then choose **OK**.  
+9. To configure an SNMP device, choose the **SNMP Devices** tab. If the device is not listed there, choose the **New** icon ![New icon](media/Disc_new_Icon.gif). In the **New SNMP Device** dialog box, specify the IP address or device name of the SNMP device, and then choose **OK**.  
 
     > [!NOTE]  
     >  If you specify a device name, Configuration Manager must be able to resolve the NetBIOS name to an IP address.  
@@ -391,7 +391,7 @@ For more information, see the section [About Network Discovery](../../../../core
 
 11. To configure when discovery runs, choose the **Schedule** tab, and then choose the **New** icon ![New icon](media/Disc_new_Icon.gif) to set a schedule for running Network Discovery.  
 
-     You can configure multiple schedules for Network Discovery that include multiple recurring schedules and multiple schedules that have no recurrence.  
+     You can configure multiple recurring schedules and multiple schedules that have no recurrence.  
 
     > [!NOTE]  
     >  If multiple schedules are shown on the **Schedule** tab at the same time, all schedules result in a run of Network Discovery as it is configured at the time indicated in the schedule. This is also true for recurring schedules.  
