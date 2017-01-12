@@ -21,7 +21,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-A cloud-based distribution point is a System Center Configuration Manager distribution point that is hosted in Azure. The following information is intended to help you learn about configurations and limitations for using a cloud-based distribution point.
+A cloud-based distribution point is a System Center Configuration Manager distribution point that is hosted in Microsoft Azure. The following information is intended to help you learn about configurations and limitations for using a cloud-based distribution point.
 
 After you have installed a primary site and are ready to install a cloud-based distribution point, see [Install cloud-based distribution points in Azure](../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
@@ -64,7 +64,7 @@ A cloud-based distribution point has the following limitations:
 
 -   Clients are not offered a cloud-based distribution point as a content location for a task sequence that is deployed by using the deployment option **Download content locally when needed by running task sequence**. However, task sequences that are deployed by using the deployment option of **Download all content locally before starting task sequence** can use a cloud-based distribution point as a valid content location.  
 
--   A cloud-based distribution point does not support packages that run from the distribution point. All content must be downloaded by the client, and then run locally.  
+-   A cloud-based distribution point does not support packages that run from the distribution point. All content must be downloaded by the client and then run locally.  
 
 -   A cloud-based distribution point does not support streaming applications by using Application Virtualization or similar programs.  
 
@@ -75,9 +75,9 @@ A cloud-based distribution point has the following limitations:
 ##  <a name="BKMK_PrereqsCloudDP"></a> Prerequisites for cloud-based distribution points  
  A cloud-based distribution point requires the following prerequisites for its use:  
 
--   A subscription to Azure.  (See, [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
+-   A subscription to Azure (see [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
 
--   A self-signed or PKI management certificate for communication from a Configuration Manager primary site server to the cloud service in Azure.  (See, [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
+-   A self-signed or PKI management certificate for communication from a Configuration Manager primary site server to the cloud service in Azure (See [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
 
 -   A service certificate (PKI) that Configuration Manager clients use to connect to cloud-based distribution points and download content from them by using HTTPS.  
 
@@ -96,7 +96,7 @@ A cloud-based distribution point has the following limitations:
 
 -   You can configure Configuration Manager to alert you when **thresholds** for client downloads meet or exceed monthly limits.  
 
--   In addition, you can  use peer caching (BranchCache) to help reduce the number of data transfers from cloud-based distribution points by clients. Configuration Manager clients that are configured for Windows BranchCache can transfer content by using cloud-based distribution points.  
+-   In addition, you can  use peer caching (Windows BranchCache) to help reduce the number of data transfers from cloud-based distribution points by clients. Configuration Manager clients that are configured for BranchCache can transfer content by using cloud-based distribution points.  
 
 
 **Options:**  
@@ -111,7 +111,7 @@ A cloud-based distribution point has the following limitations:
 
     -   **Storage alert threshold**: A storage alert threshold sets an upper limit on the amount of data or content that you want store on the cloud-based distribution point. You can specify Configuration Manager to generate a warning alert when the remaining free space reaches the level that you specify.  
 
-    -   **Transfer alert threshold**: A transfer alert threshold helps you to monitor the amount of content that transfers from the distribution point to clients for a 30-day period. The transfer alert threshold monitors the transfer of data for the last 30 days, and can raise a warning alert and a critical alert when transfers reach values that you define.  
+    -   **Transfer alert threshold**: A transfer alert threshold helps you to monitor the amount of content that transfers from the distribution point to clients for a 30-day period. The transfer alert threshold monitors the transfer of data for the previous 30 days, and can raise a warning alert and a critical alert when transfers reach values that you define.  
 
         > [!IMPORTANT]  
         >  Configuration Manager monitors the transfer of data, but does not stop the transfer of data beyond the specified transfer alert threshold.  
@@ -126,7 +126,7 @@ A cloud-based distribution point has the following limitations:
     >  Because information about data transfers is downloaded from Azure hourly, that data usage might exceed a warning or critical threshold before Configuration Manager can access the data and raise an alert.  
 
     > [!NOTE]  
-    >  Alerts for a cloud-based distribution point depend on usage statistics from Azure, and can take up to 24 hours to become available. For information about Storage Analytics for Azure, including how frequently Azure updates use statistics, see [Storage Analytics](http://go.microsoft.com/fwlink/p/?LinkID=275111) in the MSDN Library.  
+    >  Alerts for a cloud-based distribution point depend on usage statistics from Azure, which can take up to 24 hours to become available. For information about Storage Analytics for Azure, including how frequently Azure updates use statistics, see [Storage Analytics](http://go.microsoft.com/fwlink/p/?LinkID=275111) in the MSDN Library.  
 
 
 -   **Stop or start the cloud service on demand**: You can use the option to stop a cloud service at any time to prevent clients from using the service continuously. When you stop the cloud service, you immediately prevent clients from downloading additional content from the service. Additionally, you can restart the cloud service to restore access for clients. For example, you might want to stop a cloud service when data thresholds are reached.  
@@ -136,7 +136,7 @@ A cloud-based distribution point has the following limitations:
      To stop a cloud service, in the Configuration Manager console, select the distribution point in the **Cloud Distribution Points** node under **Cloud Services**, in the **Administration** workspace. Next, choose **Stop service** to stop the cloud service that runs in Azure.  
 
 ##  <a name="BKMK_CloudDPCerts"></a> About subscriptions and certificates for cloud-based distribution points  
- Cloud-based distribution points require certificates to enable Configuration Manager to manage the cloud service that hosts the distribution point, and for clients to access content from the distribution point. The following information provides an overview information about these certificates. For more detailed information, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
+ Cloud-based distribution points require certificates to enable Configuration Manager to manage the cloud service that hosts the distribution point, and for clients to access content from the distribution point. The following information provides an overview about these certificates. For more detailed information, see [PKI certificate requirements for System Center Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
  **Certificates**  
 
@@ -152,7 +152,7 @@ A cloud-based distribution point has the following limitations:
 
     For more information, see [How to create a management certificate](http://go.microsoft.com/fwlink/p/?LinkId=220281) and [How to add a management certificate to an Azure subscription](http://go.microsoft.com/fwlink/p/?LinkId=241722) in the Azure platform section of the MSDN Library.  
 
--   **Service certificate for client communication to the distribution point**: The Configuration Manager cloud-based distribution point service certificate establishes trust between the Configuration Manager clients and the cloud-based distribution point and secures the data that clients download from it by using Secure Socket Layer (SSL) over HTTPS.  
+-   **Service certificate for client communication to the distribution point**: The Configuration Manager cloud-based distribution point service certificate establishes trust between the Configuration Manager clients and the cloud-based distribution point, and secures the data that clients download from it by using Secure Socket Layer (SSL) over HTTPS.  
 
     > [!IMPORTANT]  
     >  The common name in the certificate subject box of the service certificate must be unique in your domain and not match any domain-joined device.  
@@ -173,7 +173,7 @@ A cloud-based distribution point has the following limitations:
 
 This means that if you install cloud-based distribution points in multiple regions, and a client receives multiple cloud-based distribution points as content locations, the client might not use a cloud-based distribution point from the same Azure region as the client.  
 
-Clients that use cloud-based distribution points uses the following sequence for content location requests:  
+Clients that use cloud-based distribution points use the following sequence for content location requests:  
 
 1.  A client that is configured to use cloud-based distribution points always attempts to obtain content from a preferred distribution point first.  
 
@@ -182,22 +182,22 @@ Clients that use cloud-based distribution points uses the following sequence for
 3.  When a preferred distribution point or remote distribution point is not available, the client can then fall back to obtain the content from a cloud-based distribution point.  
 
     > [!NOTE]  
-        >  Clients on the Internet that receive both an Internet-based distribution point and a cloud-based distribution point as content locations for a deployment, only attempt to retrieve content from the Internet-based distribution point.If the client on the Internet fails to retrieve content from the Internet-based distribution point, the client does not then attempt to access the cloud-based distribution point.  
+        >  Clients on the Internet that receive both an Internet-based distribution point and a cloud-based distribution point as content locations for a deployment, only attempt to retrieve content from the Internet-based distribution point. If the client on the Internet fails to retrieve content from the Internet-based distribution point, the client does not then attempt to access the cloud-based distribution point.  
 
 
   When a client uses a cloud-based distribution point as a content location, the client authenticates itself to the cloud-based distribution point by using a Configuration Manager access token. If the client trusts the Configuration Manager cloud-based distribution point certificate, the client can then download the requested content.  
 
 -   **Monitor cloud-based distribution points**: You can monitor the content that you deploy to each cloud-based distribution point, and you can monitor the cloud service that hosts the distribution point.  
 
-    -   **Content**: You monitor content that you deploy to a cloud-based distribution point the same way as you would deploy content to on-premises distribution points.  
+    -   **Content**: You monitor content that you deploy to a cloud-based distribution point the same way you do when you deploy content to on-premises distribution points.  
 
-    -   **Cloud service**: Configuration Manager periodically checks the Azure service and raises an alert if the service is not active, or if there are subscription or certificate issues. You can also view details about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. From this location, you view high-level information about the distribution point, or select a distribution point, and then edit its **Properties**.  
+    -   **Cloud service**: Configuration Manager periodically checks the Azure service and raises an alert if the service is not active, or if there are subscription or certificate issues. You can also view details about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. From this location, you view high-level information about the distribution point. You can also select a distribution point and then edit its **Properties**.  
 
     When you edit the properties of a cloud-based distribution point, you can:  
 
-    -   Adjust the data thresholds for storage and alerts  
+    -   Adjust the data thresholds for storage and alerts.  
 
-    -   Manage content as you would for an on-premises distribution point  
+    -   Manage content as you would for an on-premises distribution point.  
 
     Finally, for each cloud-based distribution point, you can view, but not edit, the subscription ID, service name, and other related details that are specified when the cloud-based distribution is installed.  
 
@@ -205,7 +205,7 @@ Clients that use cloud-based distribution points uses the following sequence for
 
     -   When you use the predefined **Backup Site Server** maintenance task, Configuration Manager automatically includes the configurations for the cloud-based distribution point.  
 
-    -   It is a best practice to back up and save a copy of both the management certificate and service certificate in use with a cloud-based distribution point. In the event that you restore the Configuration Manager primary site that manages the cloud-base distribution point to a different computer, you must re-import the certificates before you can continue to use them.  
+    -   It is a best practice to back up and save a copy of both the management certificate and service certificate that are in use with a cloud-based distribution point. If you restore the Configuration Manager primary site that manages the cloud-based distribution point to a different computer, you must re-import the certificates before you can continue to use them.  
 
 -   **Uninstall a cloud-based distribution point** : To uninstall a cloud-based distribution point, select the distribution point in the Configuration Manager console, and then select **Delete**.  
 
