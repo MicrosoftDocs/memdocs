@@ -2,7 +2,7 @@
 title: "Complete migration | Microsoft Docs"
 description: "Learn how to finish migration to a System Center Configuration Manager destination hierarchy after a source hierarchy no longer has data."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan to complete migration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan to complete migration in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 With System Center Configuration Manager, you can complete the process of migration when a source hierarchy no longer has data that you want to migrate to your destination hierarchy. Completing migration includes the following general steps:  
 
 -   Ensure that data you require has migrated. Before you complete migration from a source hierarchy, make sure that you have successfully migrated all of the resources from the source hierarchy that you require in the destination hierarchy. This can include data and clients.  
