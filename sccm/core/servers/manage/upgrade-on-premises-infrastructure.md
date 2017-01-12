@@ -192,9 +192,9 @@ To identify the SQL Server CE compatibility level in use for your site database,
 
 
 For more information about SQL Server, see the SQL Server documentation on TechNet:
--   [Upgrade to SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110)
--   [Upgrade to SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
--   [Upgrade to SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130)
+-   [Upgrade to SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [Upgrade to SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
+-   [Upgrade to SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
 
