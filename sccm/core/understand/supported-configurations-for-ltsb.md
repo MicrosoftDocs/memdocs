@@ -2,7 +2,7 @@
 title: "Supported Configurations for the LTSB  | Microsoft Docs"
 description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+# Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+
 Use the information in this topic to understand what operating systems and product dependencies are supported by the Long-Term Servicing Branch (LTSB) of Configuration Manager.
 If not stated otherwise in this or the LTSB specific topics, the same configurations and limitations that apply to the Current Branch version 1606 apply to the LTSB.  When conflicts occur, use the information that applies to the edition you are using. Typically, the LTSB is more limited than the Current Branch.
 
@@ -59,7 +64,7 @@ You can use the LTSB to manage the following Windows computer operating systems 
 
 **Supported operating systems:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard, Datacenter  (Note 1)
+- Windows Server 2012 R2 (x64): Standard, Datacenter (Note 1)
 - Windows Server 2012 (x64): Standard, Datacenter (Note 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
@@ -137,7 +142,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
 The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
 
-Support for Mac operating systems is limited to those listed in this section, and it does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
+Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
 For more information, see [How to deploy clients to Macs in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs).
 
@@ -151,7 +156,7 @@ You can use the LTSB to manage Linux and UNIX servers with the Configuration Man
 
 The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
 
-Support for Linux and UNIX operating systems is limited to those listed in this section and does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
+Support for Linux and UNIX operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
 
 **Requirements and limitations:**  
 
