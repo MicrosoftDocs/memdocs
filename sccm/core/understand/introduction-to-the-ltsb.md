@@ -2,7 +2,7 @@
 title: "Introduction to the Long-Term Servicing Branch | Microsoft Docs"
 description: "Learn about the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid:  694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 caps.latest.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Introduction to the Long-Term Servicing Branch of System Center Configuration Manager*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+# Introduction to the Long-Term Servicing Branch of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+
 Use this topic to learn about the  Long-Term Servicing Branch (LTSB) of Configuration Manager and understand the documentation for this branch.
 
 
@@ -50,9 +55,9 @@ When compared to the Current Branch, the LTSB has the following support limitati
   - On-premises MDM
 -	Does not support use of the Windows 10 Servicing Dashboard, Servicing Plans, and does not support Windows 10 Current Branch (CB) and Current Branch for Business (CBB)
 - Does not support future releases of Windows 10 LTSB and Windows Server
--	Does not support  Asset Intelligence
+-	Does not support Asset Intelligence
 -	Does not support cloud-based distribution points
--	Does not support  Support for Exchange Online as an Exchange Connector
+-	Does not support Support for Exchange Online as an Exchange Connector
 -	Does not support any prerelease features
 
 
