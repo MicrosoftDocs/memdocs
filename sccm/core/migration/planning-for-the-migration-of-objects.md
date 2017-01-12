@@ -2,7 +2,7 @@
 title: "Migrate objects | Microsoft Docs"
 description: "Learn how to plan for the migration of objects between hierarchies in a System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan for the migration of Configuration Manager objects to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for the migration of Configuration Manager objects to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 With System Center Configuration Manager, you can migrate many of the different objects that are associated with different features found at a source site. Use the following sections to help you plan for the migration of objects between hierarchies.  
 
 -   [Plan to migrate software updates](#Plan_migrate_Software_updates)  
