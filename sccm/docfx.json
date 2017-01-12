@@ -32,7 +32,7 @@
       "product_feedback_displaytext" : "Configuration Manager Feedback",
       "product_feedback_url": "https://configurationmanager.uservoice.com/",
       "ms.locale": "en-us",
-      "searchScope": "ConfigMgr"
+      "searchScope": ["ConfigMgr"]
       },
     "fileMetadata": {},
     "template": [
