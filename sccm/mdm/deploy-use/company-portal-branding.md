@@ -16,5 +16,5 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Brand your Company Portal using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Brand your Company Portal using System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
 PLACEHOLDER TOPIC

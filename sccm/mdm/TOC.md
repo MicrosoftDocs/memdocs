@@ -7,19 +7,24 @@
 ## Plan and design
 ### [Plan for hybrid EMM](plan-design/plan-hybrid-mobile-device-management.md)
 ### [placeholder - Privacy statement for hybrid EMM](plan-design/emm-privacy-statement-for-hybrid.md)
-### [placeholder - Migrate between hybrid and Intune stand alone](plan-design/emm-migrate-between-hybrid-and-SA.md)
 
-## Get Started
-### [Setup for hybrid](deploy-use/setup-hybrid-mdm.md)
-### [iOS and MAC](deploy-use/enroll-hybrid-ios-mac.md)
-### [Windows](deploy-use/enroll-hybrid-windows.md)
-### [Android](deploy-use/enroll-hybrid-android.md)
-### [Terms and conditions](deploy-use/terms-and-conditions.md)
-#### [placeholder - Multi-factor authentication in EMM](deploy-use/emm-multi-factor-authentication-in-emm.md)
-### [placeholder - Device enrollment manager setup](deploy-use/emm-device-enrollment-manager-setup.md)
-### [placeholder - Company portal branding](deploy-use/emm-company-portal-branding.md)
+## [Get Started](deploy-use/setup-hybrid-mdm.md)
+### [Create an MDM collection](deploy-use/create-mdm-collection.md)
+### [Confirm domain name requirements](deploy-use/confirm-dns.md)
+### [Configure Intune subscription](deploy-use/configure-intune-subscription.md)
+### [Add terms and conditions](deploy-use/terms-and-conditions.md)
+### [Create service connection point](deploy-use/create-service-connection-point.md)
+### [Enable platform enrollment](deploy-use/enable-platform-enrollment.md)
+### [Set up additional management](deploy-use/set-up-additional-management.md)
+### [Verify MDM configuration](deploy-use/verify-mdm-configuration.md)
+### [placeholder - Brand company portal](deploy-use/company-portal-branding.md)
+### [placeholder - Multi-factor authentication in EMM](deploy-use/emm-multi-factor-authentication-in-emm.md)
 
 ## How to
+### [Enroll user-owned (BYOD) devices](deploy-use/enroll-hybrid-ios-mac.md)
+#### [iOS and MAC](deploy-use/enroll-hybrid-ios-mac.md)
+#### [Windows](deploy-use/enroll-hybrid-windows.md)
+#### [Android](deploy-use/enroll-hybrid-android.md)
 ### [Enroll corporate-owned devices](deploy-use/enroll-company-owned-devices.md)
 #### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
 #### [Apple Configurator enrollment](deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
@@ -40,6 +45,7 @@
 #### [placeholder - iOS volume-purchased apps](deploy-use/emm-manage-volume-purchased-ios-apps.md)
 #### [placeholder - Mobile application management policies](deploy-use/emm-protect-apps-using-mam-policies.md)
 #### [placeholder - WSFB](deploy-use/emm-windows-store-for-business.md)
+### [*Manage Intune subscriptions](deploy-use/emm-manage-intune-subscriptions.md)
 ### Protect data and devices
 #### [placeholder - Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
 #### [placeholder - Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
