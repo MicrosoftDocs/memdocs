@@ -92,12 +92,12 @@ The following Intune features introduced in November 2016 work in hybrid deploym
 
 The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1610.
 
-* [Additional settings and improved experience for Configuration items](/sccm/core/plan-design/changes/whats-new-in-version-1610?branch=sccm-1610-release#new-compliance-settings-for-configuration-items)
+* [Additional settings and improved experience for Configuration items](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
 * [Additional settings for DEP profiles](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Paid apps in Windows Store for Business](whats-new-hybrid-archive.md/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Paid apps in Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 * [Native connection types for Windows 10 VPN profiles](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Intune compliance charts](whats-new-hybrid-archive.md/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
-* [Request to policy sync from console](whats-new-hybrid-archive.md/sccm/mdm/deploy-use/sync-intune-device)
+* [Intune compliance charts](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
+* [Request to policy sync from console](/sccm/mdm/deploy-use/sync-intune-device)
 * [Windows Defender configuration settings](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
 
 The following additional hybrid features are also included in version 1610 of Configuration Manager (current branch):
