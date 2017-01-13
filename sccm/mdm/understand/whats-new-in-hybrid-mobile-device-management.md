@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 caps.latest.revision: 40
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 ---
-# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# What's new in hybrid mobile device management with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This article provides details on the new mobile device management (MDM) features available for hybrid deployments with System Center Configuration Manager and Microsoft Intune.  
 
 ##  Compatibility with Configuration Manager versions  
@@ -35,7 +40,7 @@ The following Intune features introduced in January 2017 work in hybrid deployme
 
 - **Android 7.1.1 support**
 
-  Intune now fully supports and manages Android 7.1.1.+.
+  Intune now fully supports and manages Android 7.1.1.
 
 - **Resolve issue where iOS devices are inactive, or the admin console cannot communicate with them**
 
