@@ -79,7 +79,7 @@ Additional considerations:
 -   The TCP/IP ports that you set up in IIS for the custom website must match the client request ports for the site.  
 
 ## Switch between default and custom websites  
-Although you can select or clear the check box for using custom websites at a primary site at any time (the check box is on the General tab of the site's Properties), plan carefully before you make this change. When this configuration changes, all applicable site system roles at the primary site and child secondary sites must uninstall and then reinstall:  
+Although you can check or uncheck the box for using custom websites at a primary site at any time (the box is on the General tab of the site's Properties), plan carefully before you make this change. When this configuration changes, all applicable site system roles at the primary site and child secondary sites must uninstall and then reinstall:  
 
 The following roles **reinstall automatically**:  
 
