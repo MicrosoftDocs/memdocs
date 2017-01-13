@@ -2,7 +2,7 @@
 title: "Prepare to install sites | Microsoft Docs"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,13 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ---
-# Prepare to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*As you prepare for a successful deployment of one or more System Center Configuration Manager sites, it's a good idea to be familiar with the information in this topic. The information presented here can help save you time when you install multiple sites, and help prevent missteps that might result in needing to reinstall one or more sites. > [!TIP]
- > The following scenarios are similar to, but distinct from, installing a System Center Configuration Manager current branch site:
- > -  **Upgrading**: To install System Center Configuration Manager to *upgrade* from System Center 2012 Configuration Manager, see [Upgrade to System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).
- > -  **Updating**: To use in-console updates to install a new *update version* to an existing System Center Configuration Manager site, see [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md).
- > -  **Migrating**: To *migrate data* from another Configuration Manager hierarchy to your current System Center Configuration Manager hierarchy, see [Planning for migration to System Center Configuration Manager](../../../../core/migration/planning-for-migration.md).
-
-
+# Prepare to install System Center Configuration Manager sites
+*Applies to: System Center Configuration Manager (Current Branch)*
+To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
+> [!TIP]
+> When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
 ## <a name="bkmk_options"></a> Options for installing different types of sites
 When you install a new Configuration Manager site, the version of the source files that you can use depends on the version of sites that are already in the hierarchy (if any). The installation methods that you can use depend on the type of site you want to install.  
