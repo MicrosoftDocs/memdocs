@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add a State Migration Point Folder
-In System Center Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the [Directories](assetId:///Directories?qualifyHint=False&autoUpgrade=True) embedded property list.  
+In System Center Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the `Directories` embedded property list.  
 
  The folder description is a string that defines the following information.  
 
@@ -35,9 +35,9 @@ In System Center Configuration Manager, you add an operating system deployment s
 
 2.  Make a connection to the state migration point resources section of the site control file.  
 
-3.  Get the assetId:///Directories?qualifyHint=False&autoUpgrade=True embedded properties list.  
+3.  Get the `Directories` embedded properties list.  
 
-4.  Update the assetId:///Directories?qualifyHint=False&autoUpgrade=True embedded property with new folder.  
+4.  Update the `Directories` embedded property with new folder.  
 
 5.  Commit the changes to the site control file.  
 
@@ -185,7 +185,7 @@ public void AddSmpFolder(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`context (VBScript)`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`directory`|-   Managed: `String`<br />-   VBScript: `String`|The folder to be added.|  
 |`maxClients`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The maximum number of supported clients.|  

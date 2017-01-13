@@ -21,7 +21,7 @@ manager: "mbaldwin"
 The following example shows how to create an advertisement by using the `SMS_Advertisement` class and class properties in System Center Configuration Manager.  
 
 > [!IMPORTANT]
->  To create an advertisement that targets a collection, you must have “Deploy Packages��? permissions for the collection and “Read��? permissions for the package.  
+>  To create an advertisement that targets a collection, you must have "Deploy Packages" permissions for the collection and "Read" permissions for the package.  
 
 ### To create an advertisement  
 
@@ -101,7 +101,7 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of an existing collection with which to associate the advertisement.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of an existing package with which to associate the advertisement.|  
 |`existingProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the program associated with the advertisement.|  

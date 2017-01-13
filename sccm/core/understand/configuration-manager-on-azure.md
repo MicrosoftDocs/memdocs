@@ -2,7 +2,7 @@
 title: "Configuration Manager on Azure  | Microsoft Docs"
 description: "Information about using Configuration Manager on an Azure environment."
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/04/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -132,9 +132,11 @@ The approach for content management is much the same as for site servers and sit
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my Internet-based clients. Do I have any other options?
-You will soon! With the Configuration Manager Technical Preview version 1606, we introduced the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet). The Cloud Proxy Service provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud proxy connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
+Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)). 
 
-You can start testing the Cloud Service Proxy in your test environment and give us feedback to make this better.
+The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
+
+You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
 ### I also heard that you have another new feature called Peer Cache in the Technical Preview version 1604. Is that different than BranchCache? Which one should I choose?
 Yes, totally different. [Peer Cache](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.

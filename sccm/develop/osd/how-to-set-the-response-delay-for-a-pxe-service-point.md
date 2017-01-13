@@ -18,7 +18,7 @@ ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Set the Response Delay for a PXE Service Point
-In System Center Configuration Manager, you set the operating system deployment PXE service point response delay by updating [ResponseDelay](assetId:///ResponseDelay?qualifyHint=False&autoUpgrade=True) embedded property. assetId:///ResponseDelay?qualifyHint=False&autoUpgrade=True specifies how long the delay should be for this PXE service point before it responds to computer requests when multiple PXE service points are used. By default, the System Center Configuration Manager PXE service point will respond immediately to the network PXE requests.  
+In System Center Configuration Manager, you set the operating system deployment PXE service point response delay by updating the *ResponseDelay* embedded property. *ResponseDelay* specifies how long the delay should be for this PXE service point before it responds to computer requests when multiple PXE service points are used. By default, the System Center Configuration Manager PXE service point will respond immediately to the network PXE requests.  
 
  The delay is provided by the PXE client, and it shows the time that has passed since the client started the PXE boot process (seconds elapsed since client began address acquisition or renewal process). A client sends requests to the server at intervals of 0 (default), 4, 8, 16, or 32 seconds.  
 
@@ -30,7 +30,7 @@ In System Center Configuration Manager, you set the operating system deployment 
 
 3.  Get the embedded properties.  
 
-4.  Update the assetId:///ResponseDelay?qualifyHint=False&autoUpgrade=True embedded property.  
+4.  Update the *ResponseDelay* embedded property.  
 
 5.  Commit the changes to the site control file.  
 
@@ -48,9 +48,9 @@ public void SetResponseDelay(WqlConnectionManager connection,                   
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`.|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`.|  
 |delay|Managed: `Integer`|The delay, in seconds.|  
 
 ## Compiling the Code  

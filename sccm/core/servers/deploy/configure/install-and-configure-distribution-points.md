@@ -2,7 +2,7 @@
 title: "Manage distribution points | Microsoft Docs"
 description: "Host the content (files and software) you deploy to devices and users by using distribution points. Here's how to install and configure them."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -166,6 +166,8 @@ The following sections describe the  configurations you can select when installi
 
     > [!NOTE]  
     >  This option is only available when installing a new distribution point  
+
+- **Enable and configure BranchCache for this distribution point:** Select this setting to let Configuration Manager configure Windows BranchCache on the distribution point server.  For more information about using Windows BranchCache with System Center Configuration Manager, see [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache) in *Support for Windows features and networks in System Center Configuration Manager*.
 
 -   **Configure how client devices communicate with the distribution point:** There are advantages and disadvantages for using HTTP and HTTPS. For more information, see *Security best practices for content management* in [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 

@@ -2,7 +2,7 @@
 title: "Support for virtualization | Microsoft Docs"
 description: "Get requirements for installing System Center Configuration Manager client and site system roles in a virtualization environment."
 ms.custom: na
-ms.date: 11/30/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,7 +26,11 @@ Configuration Manager supports installing the client and site system roles on su
 |Microsoft Hyper-V Server 2008 R2|  
 |Windows Server 2012|  
 |Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|  
+|Windows Server 2012 R2|
+|Windows Server 2016 <sup>(See *note 1*)</sup>|
+|Microsoft Hyper-V Server 2016 <sup>(See *note 1*)|
+-  *Note 1*: Configuration Manager does not support [nested virtualization](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new), which is new with Windows Server 2016.
+
 
  Each virtual computer that you use must meet or exceed the same hardware and software requirements that you would use for a physical Configuration Manager computer.  
 

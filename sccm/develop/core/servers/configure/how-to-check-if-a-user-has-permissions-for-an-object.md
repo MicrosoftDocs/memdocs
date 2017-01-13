@@ -76,7 +76,7 @@ public static bool UserHasPermissions(ConnectionManagerBase connectionManager, s
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connectionManager`|-   Managed: [connectionManager](assetId:///connectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`objectName`|`String`|Name of the object.|  
 |permissions|Integer|The permissions.|  
 |currentPermissions|Integer|The current permissions.|  

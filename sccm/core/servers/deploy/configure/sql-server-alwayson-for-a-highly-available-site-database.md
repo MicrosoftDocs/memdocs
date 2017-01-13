@@ -1,7 +1,7 @@
 ---
 title: "SQL Server AlwaysOn | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -89,9 +89,12 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  **Requirements for AlwaysOn availability groups you use with System Center Configuration Manager:**  
 
--   Each node (or replica) in the availability group must run a version of SQL Server supported by System Center Configuration Manager  
+-  *Version*: Each node (or replica) in the availability group must run a version of SQL Server supported by System Center Configuration Manager. If supported by SQL Server, different nodes of the availability group can run different versions of SQL Server.   
 
--   The availability group must have one primary replica, and can have up to two synchronous secondary replicas  
+- *Edition*: You must use an Enterprise edition of SQL Server.  SQL Server 2016 Standard edition introduces Basic availability groups, which are not supported by Configuration Manager.
+
+
+-   The availability group must have one primary replica, and can have up to two synchronous secondary replicas.  
 
 -  After you add a database to an availability group, you must failover the primary replica to a secondary (making it the new primary replica), and then configure the database with the following:
     - Enable Trustworthy: equal to True
@@ -121,8 +124,10 @@ author: Brendunsms.author: brendunsmanager: angrobe
         > [!TIP]  
         >  System Center Configuration Manager supports using the availability group replicas when set to Automatic Failover. However, Manual Failover must be set when you run Setup to specify use of the site database in the availability group, and at the time you install any updates to Configuration Manager (not just updates that apply to the site database).  
 
-  **LImitations for availability groups**
-   - Availability groups are supported only for the site database, and not for the software update database or reporting database   
+  **Limitations for availability groups**
+   - Basic availability groups (introduced with SQL Server 2016 Standard edition) are not supported. This is because basic availability groups do not support read access to secondary replicas, a requirement for use with Configuration Manager. For more, see [Basic Availability Groups (Always On Availability Groups)](https://msdn.microsoft.com/en-us/library/mt614935.aspx).
+
+   - Availability groups are supported only for the site database, and not for the software update database or reporting database.   
    - When you use an availability group, you must manually configure your reporting point to use the current primary replica, and not the availability group listener. If the primary replica fails over to another replica, you must then reconfigure the reporting point to use the new primary replica.  
    - Before installing updates, like version 1606, ensure the availability group is set to manual failover. After the site updates, you can restore failover to be automatic.
 

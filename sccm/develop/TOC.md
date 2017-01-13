@@ -244,6 +244,7 @@
 ## [About Configuration Manager Inventory](core/clients/inventory/about-configuration-manager-inventory.md)
 ## [How to Enable Hardware Inventory](core/clients/inventory/how-to-enable-hardware-inventory.md)
 ## [How to Configure Hardware Inventory Settings](core/clients/inventory/how-to-configure-hardware-inventory-settings.md)
+## [Requirements of IDMIF files](core/clients/inventory/requirements-of-idmif-files.md)
 ## [How to Reset the Hardware Inventory Cache](core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md)
 ## [How to Enable Software Inventory](core/clients/inventory/how-to-enable-software-inventory.md)
 ## [How to Configure Software Inventory Settings](core/clients/inventory/how-to-configure-software-inventory-settings.md)

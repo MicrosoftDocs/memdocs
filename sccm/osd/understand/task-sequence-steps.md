@@ -2,7 +2,7 @@
 title: Task sequence steps | Microsoft Docs
 description: "Learn about the task sequence steps that you can add to a Configuration Manager task sequence."
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -1368,7 +1368,7 @@ Prior to Configuration Manager version 1610, this step performs the following ta
  When you specify files or programs on the command line that are not already present on the destination computer, select this option to specify the Configuration Manager package that contains the appropriate files. The package does not require a program. This option is not required if the specified files exist on the destination computer.  
 
  **Time-out**  
- Specifies a value that represents how long Configuration Manager will allow the command line to run. This value can be from 10 minutes to 999 minutes. The default value is 15 minutes.  
+ Specifies a value that represents how long Configuration Manager will allow the command line to run. This value can be from 1 minute to 999 minutes. The default value is 15 minutes.  
 
  This option is disabled by default.  
 
