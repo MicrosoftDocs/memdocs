@@ -2,7 +2,7 @@
 title: "Technical Preview for System Center Configuration Manager | Microsoft Docs"
 description: "Learn about the Technical Preview release that let's you test-drive new functionality and capabilities in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -125,6 +125,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
+ |   [New Feature 1]    | [Tech Preview 1701](capabilities-in-technical-preview-1701.md)    |![Not added](media/Red_X.gif)  |
  |OData endpoint data access |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Not added](media/Red_X.gif)|
  |Data Warehouse Service point |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Not added](media/Red_X.gif)|
  |Content library cleanup tool |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Not added](media/Red_X.gif)|
