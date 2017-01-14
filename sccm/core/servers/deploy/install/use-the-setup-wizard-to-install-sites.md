@@ -15,29 +15,29 @@ author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Use the Setup Wizard to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
 
-To install a new System Center Configuration Manager site using a guided user interface, you use the Configuration Manager Setup Wizard (setup.exe). The Wizard supports install of a primary site or central administration site. You also use the Wizard to [upgrade an Evaluation install](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md) of Configuration Manager to a fully licensed installation.  When you do not want to use the Wizard you can instead use an [installation script](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md) and run an unattended command line installation.
+To install a new System Center Configuration Manager site using a guided user interface, you use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an Evaluation installation](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md) and run an unattended command-line installation.
 
-To install a secondary site, you must install the site from within the Configuration Manager console.  Secondary sites do not support a scripted command line install.
+To install a secondary site, you must install the site from within the Configuration Manager console. Secondary sites don't support a scripted command-line installation.
 
 ## <a name="bkmk_primary"></a>  Install a central administration site or primary site
-Use the following procedure to install a central administration site, a primary site, or to upgrade and evaluation site to a fully licensed Configuration Manager site.   
+Use the following procedure to install a central administration site or a primary site, or to upgrade an evaluation site to a fully licensed Configuration Manager site.   
 
-Before starting the site install, be familiar with the details in the following articles:
+Before starting the site installation, be familiar with the details in the following articles:
  -  [Prepare to install sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md)
  -  [Prerequisites for installing sites](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md)
 
-If you are installing a central administration site as part of a site expansion scenario, review the [Expanding a stand-alone primary site](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand) section of this topic before using the following procedure.
+If you're installing a central administration site as part of a site expansion scenario, review the [Expanding a stand-alone primary site](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand) section of this topic before using the following procedure.
 
-### <a name="bkmk_installpri"></a>   To install a primary or central administration site
+### <a name="bkmk_installpri"></a> To install a primary or central administration site
 
 1.  On the computer where you want to install the site, run **&lt;InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** to start the **System Center Configuration Manager Setup Wizard**.  
 
     > [!NOTE]  
-    >  When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, you must use installation media (source files) that matches the version of the existing site or sites.  If you have installed in-console updates that have changed the version of the previously installed sites, do not use the original install media and instead use source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of an updated site.  Configuration Manager requires you to use source files that match the version of the existing site your new site will connect to.  
+    >  When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, you must use installation media (source files) that matches the version of the existing site or sites. If you've installed in-console updates that have changed the version of the previously installed sites, don't use the original installation media. Instead, use source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of an updated site. Configuration Manager requires you to use source files that match the version of the existing site that your new site will connect to.  
 
-2.  On the **Before You Begin** page, click **Next**.  
+2.  On the **Before You Begin** page, choose **Next**.  
 
-3.  On the **Getting Started**  page select the type of site you want to install:  
+3.  On the **Getting Started** page, select the type of site that you want to install:  
 
      **Central administration site** – as the first site of a new hierarchy, or when expanding a stand-alone primary site:  
 
@@ -61,9 +61,9 @@ If you are installing a central administration site as part of a site expansion 
 4.  On the **Product Key** page:
     - Choose whether to install Configuration Manager as an evaluation edition or a licensed edition.  
 
-      -   If you select a licensed edition, enter your product key and click **Next**.  
+      -   If you select a licensed edition, enter your product key and choose **Next**.  
 
-      -   If you select an evaluation edition, click **Next**. (You can upgrade an evaluation install to a full install at a later time.)  
+      -   If you select an evaluation edition, choose **Next**. (You can upgrade an evaluation install to a full install at a later time.)  
     - Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. On this page you have the option specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you do not enter this during setup, you can specify it later from within the Configuration Manager console.
 
       >  [!NOTE]   
@@ -73,7 +73,7 @@ If you are installing a central administration site as part of a site expansion 
 
 5.  On the **Microsoft Software License Terms** page, read and accept the license terms.  
 
-6.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software.  Setup downloads and automatically installs the software on site systems or clients when it is required. You must select all check boxes before you can continue to the next page.  
+6.  On the **Prerequisite Licenses** page, read and accept the license terms for the prerequisite software.  Setup downloads and automatically installs the software on site systems or clients when it is required. You must check all the boxes before you can continue to the next page.  
 
 7.  On the **Prerequisite Downloads** page, specify whether Setup must download the latest prerequisite redistributable files from the Internet or use previously downloaded files:  
 
@@ -111,21 +111,21 @@ If you are installing a central administration site as part of a site expansion 
 
     -   **I am installing a central administration site:**  
 
-         On the **Central Administration Site Installation** page, select **Install as the first site in a new hierarchy**, and then click **Next** to continue.  
+         On the **Central Administration Site Installation** page, select **Install as the first site in a new hierarchy**, and then choose **Next** to continue.  
 
     -   **I am expanding a stand-alone primary into a hierarchy with a central administration site:**  
 
-         On the **Central Administration Site Installation** page, select **Expand an existing stand-alone primary into a hierarchy**, specify the FQDN of the stand-alone primary site server, and then click **Next** to continue.  
+         On the **Central Administration Site Installation** page, select **Expand an existing stand-alone primary into a hierarchy**, specify the FQDN of the stand-alone primary site server, and then choose **Next** to continue.  
 
          The media you use to install the new central administration site must match the version of the primary site.  
 
     -   **I am installing a stand-alone primary site:**  
 
-         On the **Primary Site Installation** page, select Ins**tall the primary site as a stand-alone site**, and then click **Next**.  
+         On the **Primary Site Installation** page, select Ins**tall the primary site as a stand-alone site**, and then choose **Next**.  
 
     -   **I am installing a child primary site:**  
 
-         On the **Primary Site Installation** page, select **Join the primary site to an existing hierarchy**, specify the FQDN for the central administration site, and then click **Next**.  
+         On the **Primary Site Installation** page, select **Join the primary site to an existing hierarchy**, specify the FQDN for the central administration site, and then choose **Next**.  
 
 12. On the Database Information page, specify the following information:  
 
@@ -137,19 +137,19 @@ If you are installing a central administration site as part of a site expansion 
 
     -   **Service Broker Port:** By default, this is set to use the default SQL Server Service Broker (SSB) port of 4022, and is used by SQL to communicate directly to the site database at other sites.  
 
-13. On the second **Database Information** you can specify non-default locations for the SQL Server data file and SQL Server log file for the site database:  
+13. On the second **Database Information** page, you can specify non-default locations for the SQL Server data file and SQL Server log file for the site database:  
 
-    -   Default file locations for SQL server are provided  
+    -   Default file locations for SQL server are provided.  
 
-    -   The option to specify non-default file locations is not available when you use a SQL Server cluster  
+    -   The option to specify non-default file locations is not available when you use a SQL Server cluster.  
 
-    -   The prerequisite checker does not run a check for free disk space for non-default file locations  
+    -   The prerequisite checker does not run a check for free disk space for non-default file locations.  
 
 14. On the **SMS Provider Settings** page, specify the FQDN for the server where you want to install the SMS Provider.  
 
     -   By default, the site server is specified.  
 
-    -   After the site installs, you can configure additional SMS Providers  
+    -   After the site installs, you can configure additional SMS Providers.  
 
 15. On the **Client Communication Settings** page, choose whether to configure all site systems to accept only HTTPS communication from clients or for the communication method to be configured for each site system role.  
 
@@ -158,7 +158,7 @@ If you are installing a central administration site as part of a site expansion 
     > [!NOTE]  
     >  This step only applies when you install a primary site. If you are installing a central administration site, skip this step.  
 
-16. On the **Site System Roles** page, choose whether to install a management point or distribution point. For each role you choose to have installed by Setup:  
+16. On the **Site System Roles** page, choose whether to install a management point or distribution point. For each role, you choose to have installed by Setup:  
 
     -   You must enter the **FQDN** for the computer that will host the role and choose the client connection method that server will support (HTTP or HTTPS).  
 
@@ -170,32 +170,32 @@ If you are installing a central administration site as part of a site expansion 
     > [!NOTE]  
     >  To install site system roles, Setup uses the **site system installation account**. By default, this uses the primary site’s computer account.  This account must be a local administrator on a remote computer to install the site system role. If this account lacks the required permissions, uncheck the site system roles and install them later from within the Configuration Manager console, after configuring additional accounts to use as site system installation accounts.  
 
-17. On the **Usage Data** page, review the information about data Microsoft collects, and then click **Next**.  
+17. On the **Usage Data** page, review the information about data Microsoft collects, and then choose **Next**.  
 
 18. The **Service Connection Point Setup** page is only available during Setup when:  
 
-    -   You are installing a stand-alone primary site  
+    -   You are installing a stand-alone primary site.  
 
-    -   You are installing a central administration site  
+    -   You are installing a central administration site.  
 
     > [!NOTE]  
-    >  If you are installing a child primary site, skip this step (This page is not available).  
+    >  If you are installing a child primary site, skip this step (this page is not available).  
 
      If you are installing a central administration site as part of a site expansion scenario and this role is already installed at the stand-alone primary site, you must uninstall this role from the stand-alone primary site. Only one instance of this role is permitted in a hierarchy, and it is only permitted at the top-tier site of the hierarchy.  
 
-     After you select a configuration for the **Service Connection Point**, click **Next**. (After Setup completes, you can change this configuration from within the Configuration Manager console.)  
+     After you select a configuration for the **Service Connection Point**, choose **Next**. (After Setup completes, you can change this configuration from within the Configuration Manager console.)  
 
-19. On the **Settings Summary** page, review the setting you have selected and when ready, click **Next** to start Prerequisite Checker.  
+19. On the **Settings Summary** page, review the setting you have selected and when ready, choose **Next** to start Prerequisite Checker.  
 
 20. On the **Prerequisite Installation Check** page, any problems that can be identified will be listed.  
 
-    -   When Prerequisite Checker finds a problem, click an item in the list for details about how to resolve the problem.  
+    -   When Prerequisite Checker finds a problem, choose an item in the list for details about how to resolve the problem.  
 
     -   You must resolve each item with a status of **Failed** before continuing to install the site. Items with a status of **Warning** should be resolved, but do not block installation of the site.  
 
-    -   After resolving issues, click **Run Check** to rerun the prerequisite checker.  
+    -   After resolving issues, choose **Run Check** to rerun the prerequisite checker.  
 
-     When the prerequisite checker runs and no checks receive a **Failed** status, you can click **Begin Install** to start the site installation.  
+     When the prerequisite checker runs and no checks receive a **Failed** status, you can choose **Begin Install** to start the site installation.  
 
     > [!TIP]  
     >  In addition to the feedback provided in the Wizard, you can find additional information about prerequisite issues when you view the **ConfigMgrPrereq.log** file in the root of the system drive of the computer you are installing.  For a list of installation prerequisite rules and descriptions, see [List of Prerequisite Checks for System Center Configuration Manager](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md).  
@@ -225,7 +225,7 @@ To expand the site, you use the System Center Configuration Manager Setup Wizard
 
 -   You must install the central administration site using the same version of Configuration Manager as the stand-alone primary site.  
 
--   On the Getting Started page of the Setup wizard, you select the option to install a central administration site. At a later stage of Setup you will choose an option to expand an existing stand-alone primary site.  
+-   On the Getting Started page of the Setup Wizard, you select the option to install a central administration site. At a later stage of Setup you will choose an option to expand an existing stand-alone primary site.  
 
 -   When you configure the Client Language Selection page for the new central administration site, you must select the same client languages that are configured for the stand-alone primary site you are expanding.  
 
@@ -246,11 +246,11 @@ To expand a stand-alone primary site, use the procedure *[To install a primary o
 ### <a name="bkmk_installsecondary"></a> To install a secondary site  
 
 
-1.  In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**, and select the site that will be the parent primary site of the new secondary site  
+1.  In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**, and select the site that will be the parent primary site of the new secondary site.  
 
-2.  Click **Create Secondary Site** to start the **Create Secondary Site Wizard**.  
+2.  Choose **Create Secondary Site** to start the **Create Secondary Site Wizard**.  
 
-3.  On the **Before You Begin** page, confirm that the primary site that is listed is the site that you want to be the parent of the new secondary site, and then click **Next**.  
+3.  On the **Before You Begin** page, confirm that the primary site that is listed is the site that you want to be the parent of the new secondary site, and then choose **Next**.  
 
 4.  On the **General** page, specify the following:  
 
@@ -272,7 +272,7 @@ To expand a stand-alone primary site, use the procedure *[To install a primary o
     -   **Installation folder**: This is the folder path to the Configuration Manager installation. You cannot change the location after the site installs, and the path cannot contain Unicode characters, or trailing spaces.  
 
     > [!IMPORTANT]  
-    >  After you specify details on this page, you can click **Summary** to use the default settings for the remainder of the secondary site options, and to go directly to the **Summary** page of the wizard.  
+    >  After you specify details on this page, you can choose **Summary** to use the default settings for the remainder of the secondary site options, and to go directly to the **Summary** page of the wizard.  
     >   
     >  -   Only use this option when you are familiar with the default settings in this wizard, and they are the settings you want to use.  
     >  -   Boundary groups are not associated with the distribution point when you use the default settings. Therefore, until you configure boundary groups that include the secondary site server, clients will not use the distribution point that is installed on this secondary site as a content source location.  
@@ -331,16 +331,16 @@ To expand a stand-alone primary site, use the procedure *[To install a primary o
 
     **Optional settings:**  
 
-    -   **Install and configure IIS if required by Configuration Manager** -  Select this setting to let Configuration Manager install and configure Internet Information Services (IIS) on the server if it is not already installed. IIS must be installed on all distribution points.  
+    -   **Install and configure IIS if required by Configuration Manager**: Select this setting to let Configuration Manager install and configure Internet Information Services (IIS) on the server if it is not already installed. IIS must be installed on all distribution points.  
 
         > [!NOTE]  
-        >  Although this setting is optional, IIS must be installed on the server before a distribution point can be  installed successfully.  
+        >  Although this setting is optional, IIS must be installed on the server before a distribution point can be installed successfully.  
 
-    -   **Enable and configure BranchCache for this distribution point** •  
+    -   **Enable and configure BranchCache for this distribution point**.  
 
-    -   **Description** – this is a friendly description for the distribution point to help you recognize it.  
+    -   **Description**. This is a friendly description for the distribution point to help you recognize it.  
 
-    -   **Enable this distribution point for prestaged content**  
+    -   **Enable this distribution point for prestaged content**.  
 
 8.  On the **Drive Settings** page, specify the drive settings for the secondary site distribution point.  
 
@@ -366,14 +366,14 @@ To expand a stand-alone primary site, use the procedure *[To install a primary o
 
      For  information about preferred distribution points, see the [Fundamental concepts for content management](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md) topic.  
 
-11. On the **Summary** page, verify the settings, and then click **Next** to install the secondary site. When the wizard presents  the **Completion** page, you can close the wizard. The secondary site installation continues in the background.  
+11. On the **Summary** page, verify the settings, and then choose **Next** to install the secondary site. When the wizard presents the **Completion** page, you can close the wizard. The secondary site installation continues in the background.  
 
 
 ### <a name="bkmk_verify"></a> To verify the secondary site installation status  
 
 1.  In the Configuration Manager console, navigate to **Administration** > **Site Configuration** > **Sites**.  
 
-2.  Select the secondary site server you are installing, and then click **Show Install Status**.  
+2.  Select the secondary site server you are installing, and then choose **Show Install Status**.  
 
     > [!TIP]  
     >  When you install more than one secondary site at a time, the prerequisite check runs against a single site at a time, and must complete for a site before it starts to check the next site.  
