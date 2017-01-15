@@ -38,20 +38,20 @@ When you use a cloud-based distribution, you:
 
 Based on the thresholds that you configure, Configuration Manager can raise alerts that warn you when the combined amount of content that you have stored on the distribution point is near the specified storage amount, or when transfers of data by clients are close to the thresholds that you defined.  
 
-Cloud-based distribution points support the following features that are also supported by on-premises distribution points:  
+Cloud-based distribution points offer the following advanages that are also offered by on-premises distribution points:  
 
--   You manage cloud-based distribution points individually, or as members of distribution point groups.  
+-   You manage cloud-based distribution points individually or as members of distribution point groups.  
 
 -   You can use a cloud-based distribution point for fallback content location.  
 
 -   You receive support for both intranet and Internet-based clients.  
 
 
-Cloud-based distribution point provides the following additional benefits:  
+Cloud-based distribution points provide the following additional benefits:  
 
--   Content that is sent to the cloud-based distribution point is encrypted by Configuration Manager before Configuration Manager sends it to Azure.  
+-   Content that is sent to a cloud-based distribution point is encrypted by Configuration Manager before Configuration Manager sends it to Azure.  
 
--   In Azure, you can manually scale the cloud service to meet changing demands for content request by clients, without the requirement to install and provision additional distribution points.  
+-   In Azure, you can manually scale the cloud service to meet changing demands for content requests by clients, without the requirement to install and provision additional distribution points.  
 
 -   The cloud-based distribution point supports the download of content by clients that are configured for Windows BranchCache.  
 
@@ -77,7 +77,7 @@ A cloud-based distribution point has the following limitations:
 
 -   A subscription to Azure (see [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
 
--   A self-signed or PKI management certificate for communication from a Configuration Manager primary site server to the cloud service in Azure (See [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
+-   A self-signed or public key infrastructure (PKI) management certificate for communication from a Configuration Manager primary site server to the cloud service in Azure (See [About subscriptions and certificates](#BKMK_CloudDPCerts) in this topic).
 
 -   A service certificate (PKI) that Configuration Manager clients use to connect to cloud-based distribution points and download content from them by using HTTPS.  
 
@@ -109,7 +109,7 @@ A cloud-based distribution point has the following limitations:
 
      Thresholds for cloud-based distribution points include the following:  
 
-    -   **Storage alert threshold**: A storage alert threshold sets an upper limit on the amount of data or content that you want store on the cloud-based distribution point. You can specify Configuration Manager to generate a warning alert when the remaining free space reaches the level that you specify.  
+    -   **Storage alert threshold**: A storage alert threshold sets an upper limit on the amount of data or content that you want store on the cloud-based distribution point. Configuration Manager can generate a warning alert when the remaining free space reaches the level that you specify.  
 
     -   **Transfer alert threshold**: A transfer alert threshold helps you to monitor the amount of content that transfers from the distribution point to clients for a 30-day period. The transfer alert threshold monitors the transfer of data for the previous 30 days, and can raise a warning alert and a critical alert when transfers reach values that you define.  
 
@@ -157,7 +157,7 @@ A cloud-based distribution point has the following limitations:
     > [!IMPORTANT]  
     >  The common name in the certificate subject box of the service certificate must be unique in your domain and not match any domain-joined device.  
 
-   For an example deployment of this certificate, see the *Deploying the service certificate for cloud-based distribution points* section in the topic [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
+   For an example deployment of this certificate, see the section **Deploying the service certificate for cloud-based distribution points** in the topic [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).  
 
 ##  <a name="bkmk_Tasks"></a> Common management tasks for cloud-based distribution points  
 
@@ -169,7 +169,7 @@ A cloud-based distribution point has the following limitations:
 
     -   Clients on the intranet only use cloud-based distribution points as a fallback option if on-premises distribution points are not available.  
 
-    Even though you install cloud-based distribution points in specific regions of Azure, clients that use cloud-based distribution points are not aware of the Azure regions, and non-deterministically select a cloud-based-distribution point.
+    Even though you install cloud-based distribution points in specific regions of Azure, clients that use cloud-based distribution points are not aware of the Azure regions and non-deterministically select a cloud-based-distribution point.
 
 This means that if you install cloud-based distribution points in multiple regions, and a client receives multiple cloud-based distribution points as content locations, the client might not use a cloud-based distribution point from the same Azure region as the client.  
 

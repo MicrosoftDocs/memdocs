@@ -25,11 +25,11 @@ The content library is a single-instance store of content that System Center Con
 On computers where you install a distribution point, you can configure:
 
 - One or more disk drives on which you want to create the content library.
-- A priority for each drive you use.
+- A priority for each drive that you use.
 
-When Configuration Manager copies content files, copies them to the drive with the highest priority until that drive contains less than a minimum amount of free space that you specify.
+When Configuration Manager copies content files, it copies them to the drive with the highest priority until that drive contains less than a minimum amount of free space that you specify.
 - You configure the drive settings during the distribution point installation.
-- You cannot configure the drive settings in the distribution point properties after installation has finished.
+- You cannot configure the drive settings in the distribution point properties after the installation has finished.
 
 
 For more information about how to configure the drive settings for the distribution point, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
@@ -45,7 +45,7 @@ For more information about how to configure the drive settings for the distribut
 
 -   When you create content on the central administration site.  
 
--   When you migrate content from another Configuration Manager site, and assign the central administration site as the site that manages that content.  
+-   When you migrate content from another Configuration Manager site and assign the central administration site as the site that manages that content.  
 
 > [!NOTE]  
 >  When you create content at a primary site and then distribute it to a different primary site or a secondary site below a different primary site, the central administration site temporarily stores that content in the scheduler inbox on the central administration site but does not add that content to its content library.  

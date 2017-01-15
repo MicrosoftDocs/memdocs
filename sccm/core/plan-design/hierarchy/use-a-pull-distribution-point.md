@@ -39,7 +39,7 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   When the Package Transfer Manager confirms that the content is available, it notifies the pull-distribution point to download the content. When the pull-distribution point receives this notification, it attempts to download the content from its source distribution points.  
 
--   After the pull-distribution point completes the download of content, it submits this status to a management point. However, if after 60 minutes, this status is not received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm whether the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
+-   After the pull-distribution point completes the download of content, it submits this status to a management point. However, if after 60 minutes, this status has not been received, the Package Transfer Manager wakes up and checks with the pull-distribution point to confirm whether the pull-distribution point has downloaded the content. If the content download is in progress, the Package Transfer Manager sleeps for 60 minutes before it checks with the pull-distribution point again. This cycle continues until the pull-distribution point completes the content transfer.  
 
 **You can configure a pull-distribution point** when you install the distribution point or after it is installed by editing the properties of the distribution point site system role.  
 
@@ -60,7 +60,7 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   A pull-distribution point does not use the **Retry settings** for content distribution. **Retry Settings** can be configured as part of the **Software Distribution Component Properties** for each site. To view or configure these properties, in the **Administration** workspace of the Configuration Manager console, expand **Site Configuration**, and then select **Sites**. Next, in the results pane, select a site, and then on the **Home** tab, select **Configure Site Components**. Finally, select **Software Distribution**.  
 
--   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A network access cccount that can access the source distribution point must be configured for use.  
+-   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A network access account that can access the source distribution point must be configured for use.  
 
 -   On a computer that is configured as a pull-distribution point and that runs a Configuration Manager client, the version of the  client must be the same as the Configuration Manager site that installs the pull-distribution point. This is a requirement for the pull-distribution point to use the CCMFramework that is common to both the pull-distribution point and the Configuration Manager client.  
 
@@ -94,7 +94,7 @@ When a pull-distribution point downloads content from a source distribution poin
 ## About content transfers  
  To manage the transfer of content, pull-distribution points use the **CCMFramework** component of the Configuration Manager client software.  
 
--   This framework is installed by the **Pulldp.msi** when you configure the distribution point to be a pull-distribution point. Using the framework doesn't require that the Configuration Manager client be installed.  
+-   This framework is installed by the **Pulldp.msi** when you configure the distribution point to be a pull-distribution point. The framework doesn't require the Configuration Manager client.  
 
 -   After the pull-distribution point is installed, the CCMExec service on the distribution point computer must be operational for the pull-distribution point to function.  
 
