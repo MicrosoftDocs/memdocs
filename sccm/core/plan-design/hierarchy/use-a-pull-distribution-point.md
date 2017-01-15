@@ -51,7 +51,7 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   A distribution point on a site server cannot be configured as a pull-distribution point.  
 
--   **The prestage content configuration overrides the pull-distribution point configuration**. A pull-distribution point that is configured for prestaged content waits for the content. It does not pull content from source distribution point, and, like a standard distribution point that has the prestage content configuration, does not receive content from the site server.  
+-   **The prestage content configuration overrides the pull-distribution point configuration**. A pull-distribution point that is configured for prestaged content waits for the content. It does not pull content from the source distribution point, and, like a standard distribution point that has the prestage content configuration, does not receive content from the site server.  
 
 -   **A pull-distribution point does not use configurations for rate limits** when it transfers content. If you configure a previously installed distribution point to be a pull-distribution point, configurations for rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the rate limit configurations are implemented as previously configured.  
 

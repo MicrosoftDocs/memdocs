@@ -42,7 +42,7 @@ Cloud-based distribution points offer the following advanages that are also offe
 
 -   You manage cloud-based distribution points individually or as members of distribution point groups.  
 
--   You can use a cloud-based distribution point for fallback content location.  
+-   You can use a cloud-based distribution point as a fallback content location.  
 
 -   You receive support for both intranet and Internet-based clients.  
 
@@ -191,7 +191,7 @@ Clients that use cloud-based distribution points use the following sequence for 
 
     -   **Content**: You monitor content that you deploy to a cloud-based distribution point the same way you do when you deploy content to on-premises distribution points.  
 
-    -   **Cloud service**: Configuration Manager periodically checks the Azure service and raises an alert if the service is not active, or if there are subscription or certificate issues. You can also view details about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. From this location, you view high-level information about the distribution point. You can also select a distribution point and then edit its **Properties**.  
+    -   **Cloud service**: Configuration Manager periodically checks the Azure service and raises an alert if the service is not active, or if there are subscription or certificate issues. You can also view details about the distribution point in the **Cloud Distribution Points** node under **Cloud Services** in the **Administration** workspace of the Configuration Manager console. From this location, you view high-level information about the distribution point. You can also select a distribution point and then edit its properties.  
 
     When you edit the properties of a cloud-based distribution point, you can:  
 
