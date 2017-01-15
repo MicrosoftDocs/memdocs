@@ -2,7 +2,7 @@
 title: "Example scenario - deploy Windows Embedded clients | Microsoft Docs"
 description: "See an example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # Example scenario for deploying and managing System Center Configuration Manager clients on Windows Embedded devices*Applies to: System Center Configuration Manager (Current Branch)*
-This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices by using System Center Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and you do not have to take the steps in this scenario that are required to manage write filters.  
+This scenario demonstrates how you can manage write-filter-enabled Windows Embedded devices with Configuration Manager.If your embedded devices do not support write filters, they behave as standard Configuration Manager clients and these procedures don't apply.  
 
- Coho Vineyard & Winery is opening a visitor center and is interested in kiosks that run Windows Embedded to run interactive presentations. The building for the new visitor center is not close to the IT department, so it is important that the kiosks can be managed remotely. In addition to installing the software that runs the interactive presentations, these devices must run up-to-date antimalware protection software to comply with the company security policies. To make sure that the interactive presentations are always available for visitors, the kiosks must run 7 days a week, with no downtime while the visitor center is open.  
+Coho Vineyard & Winery is opening a visitor center and needs kiosks that run Windows Embedded to run interactive presentations. The building for the new visitor center is not close to the IT department, so the kiosks must be managed remotely. In addition to the software that runs the presentations, these devices must run up-to-date antimalware protection software to comply with the company security policies. The kiosks must run 7 days a week, with no downtime while the visitor center is open.  
 
- Coho Vineyard & Winery already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks that are in the company's reception lobby. If the pilot is successful in remotely managing these devices, the purchase order for the visitor center kiosks can be approved.  
+ Coho already runs Configuration Manager to manage devices on their network. Configuration Manager is configured to run Endpoint Protection, and install software updates and applications. However, because the IT team has not managed Windows Embedded devices before, Jane, the Configuration Manager administrator, runs a pilot to manage two kiosks in the reception lobby.   
 
  To manage these Windows Embedded devices that are write-filter-enabled, Jane performs the following steps to install the Configuration Manager client, protect the client by using Endpoint Protection, and install the interactive presentation software.  
 
@@ -61,7 +61,7 @@ This scenario demonstrates how you can manage write-filter-enabled Windows Embed
 
      Jane knows that it always takes a while for clients to install and send back their status to the site. So she waits before she confirms that the clients successfully install, assign to the site, and appear as clients in the collection that she created for Windows Embedded devices.  
 
-     As additional confirmation, on the Windows Embedded devices, she checks the properties of Configuration Manager in Control Panel and compares them to standard Windows computers that are managed by the site. For example, on the **Components** tab, the **Hardware Inventory Agent** displays **Enabled**, and on the **Actions** tab, there are 11 available actions, which include **Application Deployment Evaluation Cycle** and **Discovery Data Collection Cycle**.  
+     As additional confirmation, she checks the properties of Configuration Manager in Control Panel on the devices and compares them to standard Windows computers that are managed by the site. For example, on the **Components** tab, the **Hardware Inventory Agent** displays **Enabled**, and on the **Actions** tab, there are 11 available actions, which include **Application Deployment Evaluation Cycle** and **Discovery Data Collection Cycle**.  
 
      Confident that the clients are successfully installed, assigned, and receiving client policy from the management point, Jane then manually enables the write filters by following the instructions from the OEM.  
 
