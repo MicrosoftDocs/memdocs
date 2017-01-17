@@ -26,15 +26,15 @@ Before updating from System Center Configuration Manager version 1511 to version
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site finishes installing the update. Automatic updates of secondary site servers are not supported.  
 
-When the site server installs the update, site system roles that are installed on the site server and those that are installed on remote computers automatically update. Therefore, before installing the update, make sure each site system server meets any new prerequisites for operations with the new update version.  
+When the site server installs the update, site system roles that are installed on the site server and those that are installed on remote computers automatically get updated. Therefore, before installing the update, make sure each site system server meets any new prerequisites for operations with the new update version.  
 
 The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and select the option to update the console. We recommend that you do not delay installing the update to the console.  
 
  **Checklist:**  
 
- **Ensure all sites run a supported version of System Center Configuration Manager:**  Each site server in the hierarchy must run System Center Configuration Manager version 1511 before you can start the installation of update 1602.  
+ **Ensure that all sites run a supported version of System Center Configuration Manager:**  Each site server in the hierarchy must run System Center Configuration Manager version 1511 before you can start the installation of update 1602.  
 
- **Review installed Microsoft .NET versions on site system servers:** When a site installs update 1602, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles when .NET Framework 4.5 or later is not already installed:  
+ **Review installed Microsoft .NET versions on site system servers:** When a site installs update 1602, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles (if .NET Framework 4.5 or later is not already installed):  
 
 -   Enrollment proxy point  
 
@@ -44,7 +44,7 @@ The first time you use a Configuration Manager console after the update has fini
 
 -   Service connection point  
 
-This installation can put the site system server into a reboot pending state, and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might have random failures until the server is rebooted.  
+This installation can put the site system server into a reboot pending state, and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might experience random failures until the server is rebooted.  
 
  For more information, see [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -72,9 +72,9 @@ For more information, see   [Database replicas for management points for System 
 
  For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
- **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install updates, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:  
+ **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install updates, disable any site maintenance task that might run during the time the update process is active. These tasks includ (but are not limited) to the following:  
 
--   Backup site server  
+-   Back up site server  
 
 -   Delete aged client operations  
 
@@ -108,23 +108,21 @@ You can't run a test database upgrade on the production site database. Doing so 
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
 
- To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
+ To take advantage of this option, you must configure your site to support automatic upgrades for pre-production before beginning installation of the update. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
 [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
- **Plan to use Maintenance windowsto control when site servers install updates:** You can use the maintenance windows to define a period of time that applies to a primary site server during which updates to that site can be installed.   
+ **Plan to use Maintenance windowsto control when site servers install updates:** You can use the maintenance windows to define a period of time during which updates to the site server can be installed. This can help you control when sites in your hierarchy install the update.   
 
-This can help you control when sites in your hierarchy install the update.   
-Beginning with the release of the 1602 update, maintenance windows are renamed as service windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
+Beginning with the release of the 1602 update, maintenance windows have been renamed *service windows*. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
  **Run setup prerequisite checker:**  Before you install update 1602, you can run the prerequisite checker independently from the update installation. When you install the update on the site, prerequisite checker runs again.  
 
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) topic.  
 
 > [!IMPORTANT]  
->  When the prerequisite checker runs as part of an update install or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1602 update, if need to perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
+>  When the prerequisite checker runs indepently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1602 update, if you need to perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
 
- **Update sites:** You are now ready to start the update installation for your hierarchy.  
-  We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
+ **Update sites:** You are now ready to start the update installation for your hierarchy. We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 
 For more information, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
 

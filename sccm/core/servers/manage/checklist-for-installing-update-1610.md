@@ -25,7 +25,7 @@ To get the update for version 1610, you must use a service connection point site
 
     -   Usually, you can also restart the **SMS\_Executive** service on the site server to restart the download of the updates redistribution files.
 
-    -   Another common download issue occurs when proxy server settings  prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
+    -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
 
@@ -94,8 +94,8 @@ Configuration Manager cannot successfully update a primary site that has a datab
 
 For more information, see [Database replicas for management points for System Center Configuration Manager](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).
 
-**Set SQL Server AlwaysOn availability groups to manual failover:**   
-Before installing updates, such as version 1610, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information see [SQL Server AlwaysOn for a site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+**Set SQL Server Always On availability groups to manual failover:**   
+Before installing updates, such as version 1610, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information see [SQL Server Always On for a site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 **Reconfigure software update points that use NLBs:**   
 Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.

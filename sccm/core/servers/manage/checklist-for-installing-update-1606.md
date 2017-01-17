@@ -31,7 +31,7 @@ As an *update*, 1606 can only be installed at the top-level site of your hierarc
 
 When the site server installs the update, site system roles that are installed on the site server and those that are installed on remote computers get updated automatically. Therefore, before installing the update, make sure that each site system server meets any new prerequisites for operations with the new update version.  
 
- The first time you use a Configuration Manager consoles after the update has been installed, you will be prompted to update that console.  To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
+ The first time you use a Configuration Manager console after the update has been installed, you will be prompted to update that console.  To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
 
  **Known issues for this update**   
   The following issues apply when you view the update pack installation status:
@@ -41,9 +41,9 @@ When the site server installs the update, site system roles that are installed o
 
 ## Checklist  
 
- **Ensure all sites run a supported version of System Center Configuration Manager:**  Before you start the installation of update 1606, each site server in the hierarchy must run the same version of System Center Configuration Manager: either version 1511 or 1602.
+ **Ensure that all sites run a supported version of System Center Configuration Manager:**  Before you start the installation of update 1606, each site server in the hierarchy must run the same version of System Center Configuration Manager: either version 1511 or 1602.
 
- **Review installed .NET versions on site system servers:** When a site installs update 1606, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles (if .NET Framework 4.5 or later is not already installed):  
+ **Review installed Microsoft.NET versions on site system servers:** When a site installs update 1606, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles (if .NET Framework 4.5 or later is not already installed):  
 
 -   Enrollment proxy point  
 
@@ -53,7 +53,7 @@ When the site server installs the update, site system roles that are installed o
 
 -   Service connection point  
 
-This installation can put the site system server into a reboot pending state, and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might have random failures until the server is rebooted.  
+This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might have random failures until the server is rebooted.  
 
  For more information see [Site and site system prerequisites](../../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -63,8 +63,7 @@ This installation can put the site system server into a reboot pending state, an
 
  **Review file and data replication between sites:**  Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update.    
 
-For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update.  For more information, see   
-[About the Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) in the [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) topic.  
+For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update. For more information, see   [About the Replication Link Analyzer](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA) in the topic [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md).  
 
  **Install all applicable critical updates  for operating systems on computers that host the site, the site database server, and remote site system roles:** Before you install an update for Configuration Manager, install any critical updates for each applicable site system. If an update that you install requires a restart, restart the applicable computers before you start the upgrade.  
 
@@ -76,18 +75,18 @@ For database replication, you can use the Replication Link Analyzer to help reso
 
 For more information, see   [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
- **Set SQL Server AlwaysOn availability groups to manual failover:**  
- Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+ **Set SQL Server Always On availability groups to manual failover:**  
+ Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [SQL Server Always On for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
- **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.  
+ **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 
-If you use NLB clusters for software update points, use Azure PowerShell to remove the NLB cluster.    
+If you use NLB clusters for software update points, use Windows PowerShell to remove the NLB cluster.    
 
  For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install the update, disable any site maintenance tasks that might run during the time that the update process is active. This includes but is not limited to the following:  
 
--   Backup site server  
+-   Back up site server  
 
 -   Delete aged client operations  
 
@@ -128,12 +127,12 @@ You can't run a test database upgrade on the production site database. Doing so 
 This can help you control when sites in your hierarchy install the update.
 Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
- **Run Setup Prerequisite Checker:**  Before you install update 1606, you can run the Prerequisite Checker independently from the update installation. When you install the update on the site, Prerequisite Checker runs again.  
+ **Run setup prerequisite checker:**  Before you install update 1606, you can run the prerequisite checker independently from the update installation. When you install the update on the site, prerequisite checker runs again.  
 
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md) topic.  
 
 > [!IMPORTANT]  
->  When the prerequisite checker runs as part of an update installation or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
+>  When the prerequisite checker runs independently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1606 update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
 
  **Update sites:** You are now ready to start the update installation for your hierarchy.  
   We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
