@@ -99,9 +99,9 @@ Starting with version 1606 of Configuration Manager (current branch), Endpoint P
 
  These products cannot be managed from the Configuration Manager console. However, a System Center Operations Manager management pack is supplied with the installation files, which allows you to manage the client for Linux by using Operations Manager.  
 
-### How to get Endpoint Protection client for Mac computers and Linux servers
+### How to get the Endpoint Protection client for Mac computers and Linux servers
 
-https://www.microsoft.com/Licensing/servicecenter/home.aspx
+Use the following steps to download the image file containing the Endpoint Protection client software and documentation for Mac computers and Linux servers.
 1. Login to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).
 2. Select the **Downloads and Keys** tab at the top of the website.
 3. Filter on product **System Center Endpoint Protection (current branch)**.
