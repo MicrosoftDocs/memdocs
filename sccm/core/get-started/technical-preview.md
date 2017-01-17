@@ -126,6 +126,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
  |Boundary groups improvements for software update points | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![Not added](media/Red_X.gif)  |
+ |Hardware inventory collects UEFI information | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![Not added](media/Red_X.gif)  |
  |OData endpoint data access |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![Not added](media/Red_X.gif)|
  |Data Warehouse Service point |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![Not added](media/Red_X.gif)|
  |Content library cleanup tool |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![Not added](media/Red_X.gif)|

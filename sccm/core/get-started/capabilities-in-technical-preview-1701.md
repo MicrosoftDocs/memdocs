@@ -60,4 +60,5 @@ Configurations for when clients start fallback to search for a new software upda
 
 To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), but remember that fallback times you might configure are not yet used for software update points.
 
-## [Feature 2]
+## Hardware inventory collects UEFI information
+A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
