@@ -17,13 +17,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
 # How to create queries in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use the following sections in this topic to help you create or import queries in System Center Configuration Manager.  
-
--   [How to create queries](#BKMK_Create)  
-
--   [How to import queries](#BKMK_Import)  
-
--   [Example WQL queries](#BKMK_Example)  
+You can use this topic to help you create or import queries in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Create"></a> How to create queries  
  Use this procedure to help you create queries in Configuration Manager.  
@@ -32,7 +26,7 @@ Use the following sections in this topic to help you create or import queries in
 
 1.  In the Configuration Manager console, choose **Monitoring**.  
 
-2.  In the **Monitoring** workspace, choose **Queries**. Then, in the **Home** tab, in the **Create** group, choose **Create Query**.  
+2.  In the **Monitoring** workspace, choose **Queries**. Then, on the **Home** tab, in the **Create** group, choose **Create Query**.  
 
 3.  On the **General** tab of the **Create Query Wizard**, specify a unique name and an optional comment for the query.  
 
@@ -43,7 +37,7 @@ Use the following sections in this topic to help you create or import queries in
     |Object type|Description|  
     |-----------------|-----------------|  
     |**System Resource**|Use to search for typical system attributes, such as the NetBIOS name of a device, the client version, the client IP address, and Active Directory Domain Services information.|  
-    |**User Resource**|Use to search for typical user information such as user names, user group names, and security group names.|  
+    |**User Resource**|Use to search for typical user information, such as user names, user group names, and security group names.|  
     |**Deployment**|Use to search for typical attributes of a deployment, such as the deployment name, the schedule, and the collection that it was deployed to.|  
 
 6.  Choose **Edit Query Statement** to open the *&lt;Query Name\>* **Statement Properties** dialog box.  
@@ -71,7 +65,7 @@ Use the following sections in this topic to help you create or import queries in
     |Right|Displays all the results for the join attribute and only the matching results for the base attribute.|  
     |Full|Displays all the results for both the base attribute and the join attribute.|  
 
-     For more information about how to use Join operations, see your SQL Server documentation.  
+     For more information about how to use join operations, see your SQL Server documentation.  
 
 10. Choose **OK** to close the *&lt;Query Name\>* **Statement Properties** dialog box.  
 
@@ -115,7 +109,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### Computers with a specific software package installed  
 
-Use the following query to return the NetBIOS name and software package name of all computers that have a specific software package installed. This example displays all computers with a version of Microsoft Visio installed. Replace `%Visio%` with the software package you want to query for.  
+Use the following query to return the NetBIOS name and software package name of all computers that have a specific software package installed. This example displays all computers with a version of Microsoft Visio installed. Replace `%Visio%` with the software package that you want to query for.  
 
 > [!TIP]  
 > This query searches for the software package by using the names that are displayed in the programs list in Windows Control Panel.  
@@ -173,7 +167,7 @@ Use one of the following values for *&lt;Device ID\>*:
 |iPad|9|  
 |iPod Touch|10|  
 |Android|11|  
-|Intel system on a chip|12|  
+|Intel System-on-a-Chip|12|  
 |Unix and Linux servers|13|  
 
  For example, if you want the query to return only Mac computers, use the following query:  
