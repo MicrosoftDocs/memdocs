@@ -24,17 +24,17 @@ System Center Configuration Manager Setup provides links to several topics that 
 -   [Diagnostics and usage data for System Center Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
 ##  <a name="bkmk_start"></a> Before you begin  
-Before you install new Configuration Manager sites, make sure you have reviewed the following information, which can help you set the stage for a successful deployment design:  
+Before you install new Configuration Manager sites, make sure you have reviewed the following information, which can help set the stage for a successful deployment design:  
 
 -   [Fundamentals of System Center Configuration Manager](../../../../core/understand/fundamentals.md)  
 -   [Plan for System Center Configuration Manager infrastructure](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 -   [Prepare to install System Center Configuration Manager sites](prepare-to-install-sites.md)  
 
 ##  <a name="bkmk_assess"></a> Assess server readiness  
-Before you begin the installation of a new site, make sure the site server and remote site system servers you plan to use for the site (for example, the server that hosts the site database) meet all  prerequisite configurations. The following topics in the documentation library can help:  
+Before you begin the installation of a new site, make sure that the site server and the remote site system servers you plan to use for the site (for example, the server that hosts the site database) meet all prerequisite configurations. These topics in the documentation library can help:  
 
 -   [Supported configurations for System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
--   [Prerequisite Checker](https://technet.microsoft.com/library/mt590813.aspx#bkmk_PreqChk)  
+-   [Prerequisite Checker](prerequisite-checker.md)  
 
 ##  <a name="bkmk_Addclients"></a> Clients for additional operating systems  
 You can download client software for Configuration Manager from the Microsoft Download Center for the following operating systems:  
@@ -43,7 +43,7 @@ You can download client software for Configuration Manager from the Microsoft Do
 -   UNIX  
 -   Linux  
 
-**Use the following links to download clients for the version of Configuration Manager you use:**  
+Use the following links to download clients for the version of Configuration Manager you use:  
 
 -   [System Center Configuration Manager (current branch)](http://www.microsoft.com/download/details.aspx?id=47719)  
 -   [System Center 2012 R2 Configuration Manager SP1 and System Center 2012 Configuration Manager SP2](http://go.microsoft.com/fwlink/?LinkID=626550)  
@@ -53,8 +53,8 @@ You can download client software for Configuration Manager from the Microsoft Do
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first System Center Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  
 
--   **Online** mode (an offline mode also is supported)  
--   **Enhanced** data collection level (two other data collection levels, Basic and Full, also are supported)  
+-   **Online** mode (an offline mode also is available)  
+-   **Enhanced** data collection level (two other data collection levels, Basic and Full, also are available)  
 
 When the service connection point site system role is online, Microsoft can automatically collect diagnostics and usage information over the Internet. Information that is collected helps us:  
 

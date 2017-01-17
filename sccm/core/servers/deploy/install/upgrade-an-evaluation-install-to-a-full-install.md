@@ -20,21 +20,21 @@ If you installed System Center Configuration Manager as an evaluation version, a
 > [!NOTE]  
 >  When you connect a Configuration Manager console to an evaluation installation of Configuration Manager, the console title bar displays the number of days that remain until the evaluation installation expires. The number of days does not automatically refresh and it only updates when you make a new connection to a site.  
 
- **You can upgrade the following sites that run an evaluation installation:**  
+ You can upgrade the following sites that run an evaluation installation:  
 
 -   Central administration site  
 -   Primary site  
 
 Because secondary sites are not treated as evaluation installations, you do not need to modify a secondary site after its primary parent site upgrades to a full installation.  
 
-**Prerequisites to upgrade an evaluation edition to a licensed version:**  
+Prerequisites to upgrading an evaluation version to a licensed version:  
 
 -   You must have a valid product to use during the upgrade.  
 -   Your account must have **Administrator** rights on the computer where the site is installed.  
 
 ### To upgrade an evaluation version of Configuration Manager to a licensed version  
 
-1.  On the site server, from the Configuration Manager installation folder (**%path%\BIN\X64**), run **Setup.exe** (Configuration Manager setup). You must run the copy of Setup that is located on the site server in the Configuration Manager folder because site maintenance options are not available when you run Setup from installation media.  
+1.  On the site server, run **Setup.exe** (Configuration Manager setup) from the Configuration Manager installation folder (**%path%\BIN\X64**). You must run the copy of Setup that is located on the site server in the Configuration Manager folder because site maintenance options are not available when you run Setup from installation media.  
 2.  On the **Before You Begin** page, select **Next**.  
 3.  On the **Getting Started** page, select **Perform site maintenance or reset the Site**, and then select **Next**.  
 4.  On the **Site Maintenance** page, select **Upgrade the evaluation edition to a licensed edition**, enter a valid product key, and then select **Next**.  
