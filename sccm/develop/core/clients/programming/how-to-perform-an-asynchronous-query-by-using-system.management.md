@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: caf4341e-edbe-45e8-8bc1-eb205ba57ca4
+ms.assetid: caf4341e-edbe-45e8-8bc1-eb205ba57ca4searchScope: - ConfigMgr SDK
 caps.latest.revision: 6
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -36,7 +36,7 @@ To perform an asynchronous query on a System Center Configuration Manager client
 
 6.  Call the `ManagementObjectSearcher` object Get method and supply the `ManagmentOperationObserver` object as a parameter.  
 
-7.  Ensure you application still runs while the query is run.  
+7.  Ensure your application still runs while the query is run.  
 
 ## Example  
  The following C# code example asynchronously queries for components that are installed on a client.  
@@ -146,7 +146,7 @@ private void Done(object sender,
  System.Management.  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 0a910d9f-9064-4295-b286-01a6d809702b
+ms.assetid: 0a910d9f-9064-4295-b286-01a6d809702bsearchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -81,7 +81,7 @@ public static void Method(object sender, ScopeNode scopeNode, ActionDescription 
 ```  
 
 ## AssemblyType Action XML  
- The following XML example demonstrates how to call a method, [Method](assetId:///Method?qualifyHint=False&autoUpgrade=True), in a class, [SampleClass](assetId:///SampleClass?qualifyHint=False&autoUpgrade=True). The method is in the assembly [AdminUI.PrototypeDialog.dll](assetId:///AdminUI.PrototypeDialog.dll?qualifyHint=False&autoUpgrade=True).  
+ The following XML example demonstrates how to call a method, `Method`, in a class, `SampleClass`. The method is in the assembly `AdminUI.PrototypeDialog.dll`.  
 
 ```  
 <ActionDescription Class="AssemblyType" DisplayName="Test Action (method)" MnemonicDisplayName="Mnemonic" Description="Description">  

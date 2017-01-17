@@ -2,7 +2,7 @@
 title: "Checklist for 1602 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -22,7 +22,7 @@ Before updating from System Center Configuration Manager version 1511 to  versio
 
  Update 1602 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site.  
 
--   Child primary sites install the update automatically after the central administration site completes installing the update. You can use maintenance windows  to control when a site installs updates. Beginning with the release of  the  1602 update, maintenance windows are renamed as service windows. For more information, see [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+-   Child primary sites install the update automatically after the central administration site completes installing the update. You can use maintenance windows  to control when a site installs updates. Beginning with the release of  the  1602 update, maintenance windows are renamed as service windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site completes the update installation. Automatic update of secondary site servers is not supported.  
 
@@ -104,13 +104,13 @@ Configuration Manager does not support the backup of secondary sites nor the tes
 It is not supported to run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) section in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active client.   
- To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for preproduction. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
-[How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+ To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
+[How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
 
  **Plan to use Maintenance windows**  
  **to control when site servers install updates:** You can use the Maintenance windows to define a period of time that applies to a primary site server during which updates to that site can be installed.   
 This can help you control when sites in your hierarchy install the update.   
-Beginning with the release of  the  1602 update, maintenance windows are renamed as service windows. For more information, see [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+Beginning with the release of  the  1602 update, maintenance windows are renamed as service windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
  **Run Setup Prerequisite Checker:**  Before you install update 1602, you can run the Prerequisite Checker independently from the update installation. When you install the update on the site, Prerequisite Checker runs again.  
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) topic.  

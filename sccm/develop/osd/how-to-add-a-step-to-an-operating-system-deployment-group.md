@@ -11,24 +11,24 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 71c37f65-c745-4f17-88f0-5bed1ba14d82
+ms.assetid: 71c37f65-c745-4f17-88f0-5bed1ba14d82searchScope: - ConfigMgr SDK
 caps.latest.revision: 11
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add a Step to an Operating System Deployment Group
-You add a step (an action or a group) to an operating system deployment task sequence group, in System Center Configuration Manager, by adding the step to the [SMS_TaskSequenceGroup.Steps](assetId:///SMS_TaskSequenceGroup.Steps?qualifyHint=False&autoUpgrade=True) array property.  
+You add a step (an action or a group) to an operating system deployment task sequence group, in System Center Configuration Manager, by adding the step to the `SMS_TaskSequenceGroup.Steps` array property.  
 
 ### To add a step to a task sequence group  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the [SMS_TaskSequenceGroup](assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) object that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
+2.  Get the [SMS_TaskSequenceGroup](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) object that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
 
 3.  Create the task sequence step. For an example of creating an action step, see [How to Add an Operating System Deployment Task Sequence Action](../../develop/osd/how-to-add-an-operating-system-deployment-task-sequence-action.md).  
 
-4.  Add the step to the assetId:///SMS_TaskSequenceGroup.Steps?qualifyHint=False&autoUpgrade=True array property.  
+4.  Add the step to the `SMS_TaskSequenceGroup.Steps` array property.  
 
 5.  Reorder the step within the array property as necessary. For more information, see [How to Re-order an Operating System Deployment Task Sequence](../../develop/osd/how-to-reorder-an-operating-system-deployment-task-sequence.md)  
 
@@ -101,9 +101,9 @@ public void AddStepToGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`taskSequence`<br /><br /> `taskSequenceStep`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|-   A valid task sequence ([SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True)).that contains the group.|  
-|`groupName`<br /><br /> `group`|-   Managed: `String`<br />-   VBScript: `String`|The name of the group that the command-line action is added to. This is obtained from the [SMS_TaskSequenceGroup.Name](assetId:///SMS_TaskSequenceGroup.Name?qualifyHint=False&autoUpgrade=True) property.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`taskSequence`<br /><br /> `taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|-   A valid task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) that contains the group.|  
+|`groupName`<br /><br /> `group`|-   Managed: `String`<br />-   VBScript: `String`|The name of the group that the command-line action is added to. This is obtained from the `SMS_TaskSequenceGroup.Name` property.|  
 
 ## Compiling the Code  
  This C# example requires:  

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 06e69335-82f8-471f-9d42-b3e157c3fd35
+ms.assetid: 06e69335-82f8-471f-9d42-b3e157c3fd35searchScope: - ConfigMgr SDK
 caps.latest.revision: 12
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -44,9 +44,9 @@ public void DisablePXE(WqlConnectionManager connection,                         
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
+ms.assetid: d931362e-25f6-4316-ab95-32b5771f670csearchScope: - ConfigMgr SDK
 caps.latest.revision: 7
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Change the Deployment Package Source
-You change the deployment package source for a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True) class and by using the [ValidateNewPackageSource](assetId:///ValidateNewPackageSource?qualifyHint=False&autoUpgrade=True) method.  
+You change the deployment package source for a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [ValidateNewPackageSource](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md) method.  
 
 > [!NOTE]
 >  The package source for most other types of packages can be changed in the console. However, this option is not available for software updates packages.  
@@ -27,14 +27,14 @@ You change the deployment package source for a software updates deployment packa
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Obtain an existing package object by using the assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True class.  
+2.  Obtain an existing package object by using the `SMS_SoftwareUpdatesPackage` class.  
 
-3.  Verify the package source by using the assetId:///ValidateNewPackageSource?qualifyHint=False&autoUpgrade=True method.  
+3.  Verify the package source by using the `ValidateNewPackageSource` method.  
 
-4.  Change the package source for an existing software updates deployment package by changing the [PkgSourcePath](assetId:///PkgSourcePath?qualifyHint=False&autoUpgrade=True) property of the package.  
+4.  Change the package source for an existing software updates deployment package by changing the `PkgSourcePath` property of the package.  
 
 ## Example  
- The following example method shows how to change the deployment package source for a software updates deployment package by using the assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True class and the assetId:///ValidateNewPackageSource?qualifyHint=False&autoUpgrade=True method.  
+ The following example method shows how to change the deployment package source for a software updates deployment package by using the `SMS_SoftwareUpdatesPackage` class and the `ValidateNewPackageSource` method.  
 
 > [!NOTE]
 >  All of the updates available in the old package source must be available in the new package source (the content source path, passed in as the `newPackageSourceLocation` variable in the below scripts).  
@@ -160,7 +160,7 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing software updates deployment package.|  
 |`validateNewPackageSource`|-   Managed: `dictionary` object|The `validateNewPackageSource` is a dictionary object containing the parameters that the `ValidateNewPackageSource` method requires.<br /><br /> `PackageSource`|  
 |`newPackageSourceLocation`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package source location. The source path must be a Universal Naming Convention (UNC) path. All of the updates available in the old package source must be available in the new package source.|  

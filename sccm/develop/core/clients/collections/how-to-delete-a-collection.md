@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8
+ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8searchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: nbigman
@@ -21,9 +21,9 @@ manager: "mbaldwin"
 Your application can delete a collection in System Center Configuration Manager by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and class properties.  
 
 > [!IMPORTANT]
-> 
+>
 > - Care should be exercised when deleting any System Center Configuration Manager object.
-> 
+>
 > - We recommend that if you are deleting several collections, you do so one at a time, to allow database operations time to manage changes associated with the deletions.  
 
  Collections are closely tied to packages, programs, and advertisements. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  
@@ -119,7 +119,7 @@ public void DeleteCollection(WqlConnectionManager connection, string collectionI
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`collectionIDToDelete`|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the `CollectionID` property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
 
 ## Compiling the Code  

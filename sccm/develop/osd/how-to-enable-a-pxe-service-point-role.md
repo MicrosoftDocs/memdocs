@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 340ab144-d2e3-475b-9a1b-e3346c2be551
+ms.assetid: 340ab144-d2e3-475b-9a1b-e3346c2be551searchScope: - ConfigMgr SDK
 caps.latest.revision: 12
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -44,9 +44,9 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
-|`serverName`|Managed: `String`|The server name. For example, `“SERVER1.DOMAIN1.COM��?`|  
+|`serverName`|Managed: `String`|The server name. For example, `"SERVER1.DOMAIN1.COM"`|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

@@ -2,7 +2,7 @@
 title: "Security best practices and privacy information for System Center Configuration Manager | Microsoft Docs"
 description: "Find resources that provide security best practices and privacy information for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Security best practices and privacy information for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security best practices and privacy information for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following information to find security best practices and privacy information for System Center Configuration Manager.  
 
-## Security and Privacy content:  
+## Security and privacy content:  
 
 -   [Security and privacy for site administration in System Center Configuration Manager](../../../core/plan-design/hierarchy/security-and-privacy-for-site-administration.md)  
 

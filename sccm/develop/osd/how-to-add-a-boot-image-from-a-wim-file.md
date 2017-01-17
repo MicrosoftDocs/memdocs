@@ -11,27 +11,27 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: c995b2e6-c364-4d59-8bc7-d8ef3596a0fd
+ms.assetid: c995b2e6-c364-4d59-8bc7-d8ef3596a0fdsearchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add a Boot Image from a WIM File in Configuration Manager
-You add a boot image from a Windows Image (WIM) file to System Center Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property [ImagePath](assetId:///ImagePath?qualifyHint=False&autoUpgrade=True) must be set to the Universal Naming Convention (UNC) path to the WIM file. The property [ImageIndex](assetId:///ImageIndex?qualifyHint=False&autoUpgrade=True) is the index to the required image within the WIM file.  
+You add a boot image from a Windows Image (WIM) file to System Center Configuration Manager by creating an instance of [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md). The property ImagePath must be set to the Universal Naming Convention (UNC) path to the WIM file. The property ImageIndex is the index to the required image within the WIM file.  
 
  If the boot image requires Windows drivers, you specify them in the `ReferencedDrivers` property, which is an array of [SMS_Driver_Details](../../develop/reference/osd/sms_driver_details-server-wmi-class.md).  
 
 > [!NOTE]
->  When the boot image is updated, for example, when a System Center Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True) class [RefreshPkgSource](assetId:///RefreshPkgSource?qualifyHint=False&autoUpgrade=True) method.  
+>  When the boot image is updated, for example, when a System Center Configuration Manager binary or boot image property is changed, the boot image must be updated by calling the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class [RefreshPkgSource](../../develop/reference/osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md) method.  
 
 ### To add a boot image from a WIM file  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create an instance of assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True.  
+2.  Create an instance of SMS_BootImagePackage.  
 
-3.  Set at least the [Name](assetId:///Name?qualifyHint=False&autoUpgrade=True), assetId:///ImagePath?qualifyHint=False&autoUpgrade=True and assetId:///ImageIndex?qualifyHint=False&autoUpgrade=True properties.  
+3.  Set at least the Name, ImagePath, and ImageIndex properties.  
 
 4.  Commit the changes.  
 
@@ -93,7 +93,7 @@ public void AddBootImage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new boot image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the boot image package.|  
 |`pathToWIM`|-   Managed: `Integer`<br />-   VBScript: `Integer`|UNC path to the image.|  

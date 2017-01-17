@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 2c295b3b-e23c-4084-ad4a-8bba328ef6fc
+ms.assetid: 2c295b3b-e23c-4084-ad4a-8bba328ef6fcsearchScope: - ConfigMgr SDK
 caps.latest.revision: 14
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -100,7 +100,7 @@ public void CreatePackage(WqlConnectionManager connection, string newPackageName
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the new package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new package.|  
 |`newPackageSourceFlag`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The package source.|  

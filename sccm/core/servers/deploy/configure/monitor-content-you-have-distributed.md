@@ -2,7 +2,7 @@
 title: "Monitor content | Microsoft Docs"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -147,6 +147,15 @@ Beginning with version 1610, you can use the **Client Data Sources** dashboard t
 > [!TIP]  
 > With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
-In the console go to **Monitoring** > **Client Status** > **Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.  
+In the console go to **Monitoring** > **Client Status** > **Client Data Sources**. Here you can select a time period to apply to the dashboard. Then, in the display, you can select the boundary group or package for which you want to view information. When viewing information, you can hover your mouse over the surface to see more details about the different content or policy sources.
+
+Details:  
+- **Client Content Sources**: Displays the source from which clients got content.
+- **Distribution points**: Displays the number of distribution points that are part of the selected Boundary Group.
+- **Clients that used a distribution point**: Of the number of clients that are in the selected Boundary Group, this shows how many used a distribution point to get content.
+- **Peer Cache sources**: For the selected Boundary Group, this shows how many peer cache sources have reported download history.
+- **Clients that used a peer**: Of the number of clients that are in the selected Boundary Group, this shows how many used a peer cache source to get content.
+
+
 
 You can also use a new report, **Client Data Sources - Summarization**, to view a summarization of the client data sources for each boundary group.

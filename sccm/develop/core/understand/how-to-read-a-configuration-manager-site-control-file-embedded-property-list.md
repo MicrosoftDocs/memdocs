@@ -11,16 +11,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694
+ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Read a Configuration Manager Site Control File Embedded Property List
-In System Center Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True) object for the embedded object from the resources [PropLists](assetId:///PropLists?qualifyHint=False&autoUpgrade=True) property array.  
+In System Center Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  
 
- An embedded property list has the following properties that you can set. For more information, see assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True.  
+ An embedded property list has the following properties that you can set. For more information, see [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md).  
 
 |Value|Description|  
 |-----------|-----------------|  
@@ -36,12 +36,12 @@ In System Center Configuration Manager, you read an embedded property list from 
 
 2.  Using the connection object from step one, get a site control file resource. For more information, see [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
 
-3.  Get the assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True for the required embedded property list.  
+3.  Get the `SMS_EmbeddedPropertyList` for the required embedded property list.  
 
-4.  Access the property list values by using the assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True object [Values](assetId:///Values?qualifyHint=False&autoUpgrade=True) property array.  
+4.  Access the property list values by using the `SMS_EmbeddedPropertyList` object *Values* property array.  
 
 ## Example  
- The following example method populates the supplied `values` parameter with the assetId:///Values?qualifyHint=False&autoUpgrade=True array of the embedded property list (assetId:///SMS_EmbeddedPropertyList?qualifyHint=False&autoUpgrade=True) identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.  
+ The following example method populates the supplied `values` parameter with the *Values* array of the embedded property list `SMS_EmbeddedPropertyList` identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.  
 
  To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md).  
 
@@ -105,9 +105,9 @@ public bool GetScfEmbeddedPropertyList(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`Resource`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|The site control file resource that contains the embedded property.|  
+|`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|The site control file resource that contains the embedded property.|  
 |`propertyListName`|-   Managed: `String`<br />-   VBScript: `String`|The embedded property list to be read.|  
-|`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The [SMS_EmbeddedProperty](assetId:///SMS_EmbeddedProperty?qualifyHint=False&autoUpgrade=True) class Values property. An array of string values.|  
+|`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The `SMS_EmbeddedProperty` class Values property. An array of string values.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

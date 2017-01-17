@@ -11,21 +11,21 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 2ed7e134-02da-4492-bb81-ce4a1f484955
+ms.assetid: 2ed7e134-02da-4492-bb81-ce4a1f484955searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence
-In System Center Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object ([Microsoft.SMS.TSEnvironment](assetId:///Microsoft.SMS.TSEnvironment?qualifyHint=False&autoUpgrade=True)).  
+In System Center Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object (`Microsoft.SMS.TSEnvironment`).  
 
  Typically, you use a command-line action that runs a script to access the task sequence variables. But you can also access them, within a running a task sequence, by using any programming environment that can use COM automation objects.  
 
 > [!NOTE]
 >  When you set a task variable on the System Center Configuration Manager client, it becomes available to subsequent steps in the task sequence.  
 
- To create a custom task sequence variable, you set a assetId:///Microsoft.SMS.TSEnvironment?qualifyHint=False&autoUpgrade=True property by using the name of the new variable that you want to create. If the variable does not already exist, it is created. If the variable already exists, its value is updated. You can subsequently get the custom variable value from assetId:///Microsoft.SMS.TSEnvironment?qualifyHint=False&autoUpgrade=True.  
+ To create a custom task sequence variable, you set a `Microsoft.SMS.TSEnvironment` property by using the name of the new variable that you want to create. If the variable does not already exist, it is created. If the variable already exists, its value is updated. You can subsequently get the custom variable value from `Microsoft.SMS.TSEnvironment`.  
 
  When a task sequence variable is an array, it is passed in the following format:  
 
@@ -72,12 +72,12 @@ OSDPartitions0Type="Primary"
 
 ### To use task variables in a running task sequence  
 
-1.  In a running task sequence, create an instance of assetId:///Microsoft.SMS.TSEnvironment?qualifyHint=False&autoUpgrade=True.  
+1.  In a running task sequence, create an instance of `Microsoft.SMS.TSEnvironment`.  
 
 2.  Get or set the required environment variable.  
 
 ## Example  
- The following example method gets the [_SMSTSLogPath](assetId:///_SMSTSLogPath?qualifyHint=False&autoUpgrade=True) variable. It also sets the value of a custom variable and an array custom variable value.  
+ The following example method gets the `_SMSTSLogPath` variable. It also sets the value of a custom variable and an array custom variable value.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

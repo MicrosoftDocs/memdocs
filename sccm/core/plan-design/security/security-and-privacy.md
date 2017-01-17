@@ -2,7 +2,7 @@
 title: "Security and privacy for System Center Configuration Manager | Microsoft Docs"
 description: "Find resources about security and privacy for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Security and privacy for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-This topic includes resources for Security and Privacy for System Center Configuration Manager.  
+# Security and privacy for System Center Configuration Manager
 
- Before preceding, ensure  you understand the [Fundamentals of System Center Configuration Manager](../../../core/understand/fundamentals.md). If you have already installed System Center Configuration Manager, identify the design decisions for your implementation. You might find the Configuration Manager planning and deployment content helpful.  
+*Applies to: System Center Configuration Manager (Current Branch)*
 
- See the following topics for security-related features in the product:  
+This article includes resources for Security and Privacy for System Center Configuration Manager.  
+
+ Before proceeding, ensure that you learn the [Fundamentals of System Center Configuration Manager](../../../core/understand/fundamentals.md). If you already installed System Center Configuration Manager, identify the design decisions for your implementation. You might find the Configuration Manager planning and deployment content helpful.  
+
+ See the following articles for security-related features in the product:  
 
 -   [Security and privacy for operating system deployment in System Center Configuration Manager](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -50,7 +55,7 @@ This topic includes resources for Security and Privacy for System Center Configu
 
 
 
- **Security and Privacy topics:**  
+ **Security and privacy articles:**  
 
 -   [Plan for security in System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md)  
 

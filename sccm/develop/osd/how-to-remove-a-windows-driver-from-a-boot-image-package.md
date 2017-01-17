@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 0d142253-1065-4b18-be64-d0513c7a3044
+ms.assetid: 0d142253-1065-4b18-be64-d0513c7a3044searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -27,16 +27,16 @@ In System Center Configuration Manager, you remove a Windows driver from an oper
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the [SMS_BootImagePackage](assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True) object for the boot image package that contains the driver you want to remove.  
+2.  Get the [SMS_BootImagePackage](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object for the boot image package that contains the driver you want to remove.  
 
 3.  Remove the driver from the `ReferencedDrivers` property. The driver is identified by its configuration item identifier represented by the `ID` property of the [SMS_Driver_Details Server WMI Class](../../develop/reference/osd/sms_driver_details-server-wmi-class.md) object. This identifier matches the `CI_ID` property of `SMS_Driver`.  
 
-4.  Commit the assetId:///SMS_BootImagePackage?qualifyHint=False&autoUpgrade=True object changes.  
+4.  Commit the `SMS_BootImagePackage` object changes.  
 
 5.  Refresh the boot image package by calling `RefreshPkgSource`.  
 
 ## Example  
- The following example method removes the Windows driver from the boot image package. The package is identified by its [PackageID](assetId:///PackageID?qualifyHint=False&autoUpgrade=True) property and the driver is identified by its [CI_ID](assetId:///CI_ID?qualifyHint=False&autoUpgrade=True) property.  
+ The following example method removes the Windows driver from the boot image package. The package is identified by its `PackageID` property and the driver is identified by its `CI_ID` property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -117,9 +117,9 @@ public void RemoveDriverFromBootImagePackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`driverID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The Windows driver identifier available in [SMS_Driver.CI_ID](assetId:///SMS_Driver.CI_ID?qualifyHint=False&autoUpgrade=True).|  
-|`PackageID`|-   Managed: `String`<br />-   VBScript: `String`|The boot image package identifier available in [SMS_BootImagePackage.PackageID](assetId:///SMS_BootImagePackage.PackageID?qualifyHint=False&autoUpgrade=True).|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`driverID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The Windows driver identifier available in `SMS_Driver.CI_ID`.|  
+|`PackageID`|-   Managed: `String`<br />-   VBScript: `String`|The boot image package identifier available in `SMS_BootImagePackage.PackageID`.|  
 
 ## Compiling the Code  
  This C# example requires:  

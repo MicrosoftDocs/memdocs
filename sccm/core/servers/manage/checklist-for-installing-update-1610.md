@@ -2,7 +2,7 @@
 title: "Checklist for 1610 | System Center Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1610."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 1/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610. 
+When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610.
 
 To get the update for version 1610, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in on-line or off-line mode. After your hierarchy downloads the update package from Microsoft, you will find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
@@ -36,7 +36,7 @@ For information about the versions of the Current Branch, see [Baseline and upda
 **Sites:**  
 Update 1610 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site. After the update installs at the top-tier site, child sites have the following update behavior:
 
--   Child primary sites install the update automatically after the central administration site completes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_ServiceWindow).
+-   Child primary sites install the update automatically after the central administration site completes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site completes the update installation. Automatic update of secondary site servers is not supported.
 
@@ -133,14 +133,14 @@ It is not supported to run a test database upgrade on the production site databa
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active client.
 
-To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for preproduction.
+To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production.
 
-For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a preproduction collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
+For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a pre-production collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 **Plan to use service windows to control when site servers install updates:**   
 You can use service windows to define a period that applies to a primary site server during which updates to that site can be installed.
 
-This can help you control when sites in your hierarchy install the update. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service Windows for site servers](/sccm/core/servers/manage/install-in-console-updates#bkmk_servicewindow).
+This can help you control when sites in your hierarchy install the update. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
 **Run Setup Prerequisite Checker:**   
 When the update is listed in the console as **Available,** you can independently run the Prerequisite Checker before installing the update. (When you install the update on the site, Prerequisite Checker runs again.)

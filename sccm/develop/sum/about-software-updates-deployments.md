@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
+ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82searchScope: - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -47,7 +47,7 @@ Software updates are delivered to client computers in System Center Configuratio
  The software updates deployment package holds the software updates content. For information about creating a deployment package, see [How to Create a Deployment Package](../../develop/sum/how-to-create-a-deployment-package.md).  
 
  Add update content to the software updates package.  
- After a software updates deployment package has been created, software updates contents can be added to the package by using the [AddUpdateContent](assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True) method in the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class. For information about adding software updates content to a deployment package, see [How to Add Updates to a Deployment Package](../../develop/sum/how-to-add-updates-to-a-deployment-package.md).  
+ After a software updates deployment package has been created, software updates contents can be added to the package by using the [AddUpdateContent](../../develop/reference/sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md) method in the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class. For information about adding software updates content to a deployment package, see [How to Add Updates to a Deployment Package](../../develop/sum/how-to-add-updates-to-a-deployment-package.md).  
 
  Create a software updates deployment to distribute the software updates.  
  Distribute software updates by creating a software updates deployment. For information about the process for creating a software updates deployment, see [How to Configure and Deploy Updates](../../develop/sum/how-to-configure-and-deploy-updates.md).  

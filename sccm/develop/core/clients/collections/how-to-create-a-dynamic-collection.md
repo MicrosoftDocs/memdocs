@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891eb
+ms.assetid: 7d27ea5b-8941-4453-b90b-35d9ad2891ebsearchScope: - ConfigMgr SDK
 caps.latest.revision: 16
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -76,7 +76,7 @@ CreateDynamicCollection(WMIConnection, "New Dynamic Collection Name", "New dynam
 5.  Refresh the collection.  
 
 ## Example  
- The following example method creates a dynamic collection by using the[SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and the [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) classes and class properties.  
+ The following example method creates a dynamic collection by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) and the [SMS_CollectionRuleQuery Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) classes and class properties.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -147,7 +147,7 @@ public void CreateDynamicCollection(WqlConnectionManager connection, string newC
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`newCollectionName`|-   Managed: `String`<br />-   VBScript: `String`|The unique name that represents the collection in the Configuration Manager console.|  
 |`newCollectionComment`|-   Managed: `String`<br />-   VBScript: `String`|General comment or note that documents the collection.|  
 |`ownedByThisSite`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|`true` if the collection originated at the local Configuration Manager site.|  

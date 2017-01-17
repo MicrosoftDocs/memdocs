@@ -2,7 +2,7 @@
 title: "Service connection point | Microsoft Docs"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,9 @@ The System Center Configuration Manager service connection point is a site syste
 
     -   Identify updates for Configuration Manager that apply to the version of Configuration Manager you use  
 
-     See [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
+  For information about the data collected by each level, and how to change the collection level after the role installs, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data) and then follow the link for the version of Configuration Manager that you use.  
+
+    For additional information, see [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage).  
 
 -   **Download updates that apply to your Configuration Manager infrastructure** - Only relevant updates for your infrastructure are made available, based on usage data you upload.  
 
@@ -61,7 +63,7 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 -   **Query** the component again, to confirm it is stopped, and then right click on the component one more time, and select **Start**.  
 
 > [!IMPORTANT]  
->  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with a Intune subscription.  
+>  When you add a  Microsoft Intune subscription to the service connection point, it automatically sets the site system role to be online. The service connection point does not support offline mode when configured with an Intune subscription.  
 
 **When the role installs on a computer that is remote from the site server:**  
 
@@ -72,7 +74,7 @@ To use the Configuration Manager Service Manager, in the console navigate to **M
 -   The Site System Installation Account is used by the distribution manager on the site server to transfer updates from the service connection point
 
 ##  <a name="bkmk_urls"></a> Internet access requirements  
-To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to access these locations.  
+To enable operation, the computer that hosts the service connection point and any firewalls between that computer and the Internet must pass communications through **port TCP 443** and **port TCP 443** to the following Internet locations. The service connection point also supports using a web proxy (with or without authentication) to access these locations.  
 
 **Updates and Servicing**  
 
@@ -85,6 +87,8 @@ To enable operation, the computer that hosts the service connection point and an
 -   blob.core.windows.net  
 
 -   download.microsoft.com  
+
+-   download.windowsupdate.com
 
 -   sccmconnected-a01.cloudapp.net  
 

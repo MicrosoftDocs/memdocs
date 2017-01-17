@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: ffbb43e0-32f3-452a-9c94-9427b61817fa
+ms.assetid: ffbb43e0-32f3-452a-9c94-9427b61817fasearchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Configure a Package to Use Binary Delta Replication
-The following example shows how to configure an existing package to use binary delta replication, in System Center Configuration Manager, by using the `SMS_Package` class and the [PkgFlags](assetId:///PkgFlags?qualifyHint=False&autoUpgrade=True) class property.  
+The following example shows how to configure an existing package to use binary delta replication, in System Center Configuration Manager, by using the `SMS_Package` class and the `PkgFlags` class property.  
 
 ### To configure an existing package to use binary delta replication  
 
@@ -26,7 +26,7 @@ The following example shows how to configure an existing package to use binary d
 
 2.  Load the existing package object using `SMS_Package` class.  
 
-3.  Modify the assetId:///PkgFlags?qualifyHint=False&autoUpgrade=True property using the hexadecimal value for AP_USE_BINARY_DELTA_REP.  
+3.  Modify the `PkgFlags` using the hexadecimal value for AP_USE_BINARY_DELTA_REP.  
 
 4.  Save the package and the new package properties.  
 
@@ -34,7 +34,7 @@ The following example shows how to configure an existing package to use binary d
  The following example method configures an existing package to use binary delta replication.  
 
 > [!IMPORTANT]
->  The hexadecimal values that define the assetId:///PkgFlags?qualifyHint=False&autoUpgrade=True property are listed in the `SMS_Package` class reference material.  
+>  The hexadecimal values that define the `PkgFlags` property are listed in the `SMS_Package` class reference material.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -120,7 +120,7 @@ public void ModifyPackageToUseBinaryDeltaReplication(WqlConnectionManager connec
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`<br /><br /> `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the existing package.|  
 
 ## Compiling the Code  

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0
+ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0searchScope: - ConfigMgr SDK
 caps.latest.revision: 14
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # How to Synchronize with the Software Update Point
 You synchronize the software update point, in System Center Configuration Manager SP1, by calling the `SyncNow` method.  
 
-### To synchronize the software update point  
+## To synchronize the software update point  
 
 1.  Set up a connection to the SMS Provider.  
 
@@ -28,10 +28,10 @@ You synchronize the software update point, in System Center Configuration Manage
 
 3.  Create and populate the method parameter value `fullSync`.  
 
-4.  Call the [>SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md) method, passing in the method parameter value.  
+4.  Call the [SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md) method, passing in the method parameter value.  
 
 ## Example  
- The following example method shows how to synchronize the software update point by calling the [>SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md) method.  
+ The following example method shows how to synchronize the software update point by calling the [SyncNow Method in Class SMS_SoftwareUpdate](../../develop/reference/sum/syncnow-method-in-class-sms_softwareupdate.md) method.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -68,7 +68,7 @@ public void SynchronizeSoftwareUpdatePoint(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: b83b28f0-0af9-44b9-a7c8-4901e3e08b51
+ms.assetid: b83b28f0-0af9-44b9-a7c8-4901e3e08b51searchScope: - ConfigMgr SDK
 caps.latest.revision: 7
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Call a Configuration Manager Object Class Method by Using WMI
-To call a SMS Provider class method, in System Center Configuration Manager, you use the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object [ExecMethod](assetId:///ExecMethod?qualifyHint=False&autoUpgrade=True) method to call methods that are defined by the class.  
+To call a SMS Provider class method, in System Center Configuration Manager, you use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) method to call methods that are defined by the class.  
 
 > [!NOTE]
 >  To call a method on an object instance, call the method from the object directly. For example,  `ObjectInstance.MethodName parameters`.  
@@ -27,16 +27,16 @@ To call a SMS Provider class method, in System Center Configuration Manager, you
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True you obtain in step one, call [Get](assetId:///Get?qualifyHint=False&autoUpgrade=True) to get the class definition.  
+2.  Using the SWbemServices you obtain in step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the class definition.  
 
-3.  Create the input parameters as a SWbemMethodSet.  
+3.  Create the input parameters as a [SWbemMethodSet](https://msdn.microsoft.com/library/aa393723.aspx).  
 
-4.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object instance, call [ExecuteMethod](assetId:///ExecuteMethod?qualifyHint=False&autoUpgrade=True) and specify the class name and input parameters.  
+4.  Using the SWbemServices object instance, call [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) and specify the class name and input parameters.  
 
-5.  Retrieve the method return value from the [ReturnValue](assetId:///ReturnValue?qualifyHint=False&autoUpgrade=True) property in the returned [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True) object.  
+5.  Retrieve the method return value from the *ReturnValue* property in the returned [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object.  
 
 ## Example  
- The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](assetId:///SMS_CollectionRuleQuery?qualifyHint=False&autoUpgrade=True) class [ValidateQuery](assetId:///ValidateQuery?qualifyHint=False&autoUpgrade=True) class method.  
+ The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) class [ValidateQuery](../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md) class method.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -86,7 +86,7 @@ Sub ValidateQueryRule(connection, wqlQuery)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`wqlQuery`|-   `String`|A WQL query string. For this example, `SELECT * FROM SMS_R_System` is a valid query.|  
 
 ## Compiling the Code  

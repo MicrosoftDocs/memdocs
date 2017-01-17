@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 015c0e0a-3ef1-4c12-8796-7dc184ea584c
+ms.assetid: 015c0e0a-3ef1-4c12-8796-7dc184ea584csearchScope: - ConfigMgr SDK
 caps.latest.revision: 7
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -31,7 +31,7 @@ To synchronously query the System Center Configuration Manager client Windows Ma
 3.  Iterate through the ManagementObjectSearcher collection to view the ManagementObject for each WMI object that is returned by the query.  
 
 ## Example  
- The following C# code example queries for the single `SMS_Clien`[t](assetId:///t?qualifyHint=False&autoUpgrade=True) object that is on a System Center Configuration Manager client.  
+ The following C# code example queries for the single `SMS_Client` object that is on a System Center Configuration Manager client.  
 
  For information about calling the sample code, see [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md).  
 
@@ -62,7 +62,7 @@ public void QueryObjects(ManagementScope scope)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`scope`|[ManagementScope](assetId:///ManagementScope?qualifyHint=False&autoUpgrade=True)|Represents a scope (namespace) for management operations.|  
+|`scope`|`ManagementScope`|Represents a scope (namespace) for management operations.|  
 
 ## Compiling the Code  
 
@@ -75,7 +75,7 @@ public void QueryObjects(ManagementScope scope)
  System.Management.  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   

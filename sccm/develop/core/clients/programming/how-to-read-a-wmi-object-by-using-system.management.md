@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 59065142-89c1-40f8-b4c0-83803650c06d
+ms.assetid: 59065142-89c1-40f8-b4c0-83803650c06dsearchScope: - ConfigMgr SDK
 caps.latest.revision: 6
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Read a WMI Object by Using System.Management
-To read a Configuration Manager client Windows Management Instrumentation (WMI) object, in System Center Configuration Manager, you use a [ManagementObject](assetId:///ManagementObject?qualifyHint=False&autoUpgrade=True) object to read the WMI object.  
+To read a Configuration Manager client Windows Management Instrumentation (WMI) object, in System Center Configuration Manager, you use a `ManagementObject` object to read the WMI object.  
 
 ### To read a WMI object  
 
@@ -35,7 +35,7 @@ To read a Configuration Manager client Windows Management Instrumentation (WMI) 
 6.  Use the `ManagementObject` object to read the WMI provider object properties.  
 
 ## Example  
- The following C# code example gets the Configuration Manager client WMI object [SMS_Client](assetId:///SMS_Client?qualifyHint=False&autoUpgrade=True) object and displays its properties.  
+ The following C# code example gets the Configuration Manager client WMI object [SMS_Client](../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md) object and displays its properties.  
 
  For information about calling the sample code, see [How to Call a WMI Class Method by Using System.Management](../../../../develop/core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md).  
 
@@ -73,7 +73,7 @@ void ReadObject(ManagementScope scope)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`scope`|-   [ManagementScope](assetId:///ManagementScope?qualifyHint=False&autoUpgrade=True)|The client management scope. The namespace should be root\ccm.|  
+|`scope`|-   `ManagementScope`|The client management scope. The namespace should be root\ccm.|  
 
 ## Compiling the Code  
 
@@ -86,7 +86,7 @@ void ReadObject(ManagementScope scope)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   

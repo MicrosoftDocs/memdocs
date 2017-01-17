@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 2b623f07-91ab-43cf-999c-7f868855eb3a
+ms.assetid: 2b623f07-91ab-43cf-999c-7f868855eb3asearchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -92,7 +92,7 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`existingAssignmentID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|An existing Assignment ID to modify.|  
 
 ## Compiling the Code  

@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -153,7 +153,7 @@ Later, when you install  an update, you have the option to configure the update 
 
  We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.  
 
--   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service Windows for site servers](#bkmk_ServiceWindow) to control when a primary site installs updates.  
+-   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service windows for site servers](/sccm/core/servers/manage/service-windows) to control when a primary site installs updates.  
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site update is complete. Automatic update of secondary site servers is not supported.  
 
@@ -177,7 +177,7 @@ You are presented with the Updates Wizard that displays a list of the product ar
 
 
 
--   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+-   When an update applies to the Configuration Manager client, you are presented with the option to test the client update with a limited set of clients. For more information see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 **2. During the update installation**  
 As part of the update installation, Configuration Manager:  
@@ -346,16 +346,6 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 |Conditional access for PCs managed by System Center Configuration Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
-
-
-##  <a name="bkmk_ServiceWindow"></a> Service Windows for site servers  
-On a site server you can configure service windows to control when infrastructure updates for Configuration Manager can be applied to that site server.  Each site server supports multiple windows, with the window allowed for installing infrastructure updates determined by a combination of  all configured windows for that site server.  
-
-**To configure a service window:**  
-
-1.  In  Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and then select the site server where you want to configure a service window.  
-
-2.  Next, edit the site servers **Properties** and select the **Service Window** tab, where you can then set one or more service windows for that site server.  
 
 ##  <a name="bkmk_faq"></a> Why don't I see certain updates in my console?  
  If you cannot find a specific update, or any updates in your console after a successful sync with the Microsoft cloud service, this might be because:  

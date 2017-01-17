@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 1b6e61bc-ac48-4229-8c13-d470e4e8caf0
+ms.assetid: 1b6e61bc-ac48-4229-8c13-d470e4e8caf0searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -27,16 +27,16 @@ You can import a Windows driver that is described by a Txtsetup.oem file, in Sys
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Call the [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) class [CreateFromOEM](assetId:///CreateFromOEM?qualifyHint=False&autoUpgrade=True) method to get a collection of management base objects.  
+2.  Call the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) class [CreateFromOEM](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) method to get a collection of management base objects.  
 
-3.  For the management base objects create an assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object for each driver.  
+3.  For the management base objects create an SMS_Driver object for each driver.  
 
-4.  Populate the assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object.  
+4.  Populate the SMS_Driver object.  
 
-5.  Commit the assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object.  
+5.  Commit the SMS_Driver object.  
 
 ## Example  
- The following example method creates an assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True object for a Windows driver by using the supplied path and Txtsetup.oem file name. The example also enables the driver by setting the value of the [IsEnabled](assetId:///IsEnabled?qualifyHint=False&autoUpgrade=True) property to `true`. The helper function [GetDriverName](assetId:///GetDriverName?qualifyHint=False&autoUpgrade=True) is used to get the name of the driver from the driver package XML.  
+ The following example method creates an [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object for a Windows driver by using the supplied path and Txtsetup.oem file name. The example also enables the driver by setting the value of the *IsEnabled* property to `true`. The helper function `GetDriverName` is used to get the name of the driver from the driver package XML.  
 
 > [!NOTE]
 >  The `path` parameter must be supplied as a Universal Naming Convention (UNC) network path, for example, \\\localhost\Drivers\VMSCSI\\.  
@@ -203,7 +203,7 @@ public string GetDriverName(IResultObject driver)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`path`|-   Managed: `String`<br />-   VBScript: `String`|A valid UNC network path to the folder that contains the driver contents. For example, \\\Servers\Driver\VideoDriver.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the Txtsetup.oem file. For example, you might have \\\server\drivers\Video for `path` and Txtsetup.oem for `name`.|  
 

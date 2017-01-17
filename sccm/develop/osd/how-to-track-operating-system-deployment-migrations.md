@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765e
+ms.assetid: 08466d8e-e837-429d-a30b-2d90701a765esearchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -20,15 +20,15 @@ manager: "mbaldwin"
 # How to Track Operating System Deployment Migrations in Configuration Manager
 You track System Center Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.  
 
- The [StoreCreationDate](assetId:///StoreCreationDate?qualifyHint=False&autoUpgrade=True), [StoreDeletionDate](assetId:///StoreDeletionDate?qualifyHint=False&autoUpgrade=True), and [StoreReleaseDate](assetId:///StoreReleaseDate?qualifyHint=False&autoUpgrade=True) properties can be used to identify the current state of the migration.  
+ The `StoreCreationDate`, `StoreDeletionDate`, and `StoreReleaseDate` properties can be used to identify the current state of the migration.  
 
 ### To track state migrations  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get an instance of [SMS_StateMigration](assetId:///SMS_StateMigration?qualifyHint=False&autoUpgrade=True).  
+2.  Get an instance of [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md).  
 
-3.  Calculate the current migration state using the assetId:///StoreCreationDate?qualifyHint=False&autoUpgrade=True, assetId:///StoreDeletionDate?qualifyHint=False&autoUpgrade=True, and assetId:///StoreReleaseDate?qualifyHint=False&autoUpgrade=True properties.  
+3.  Calculate the current migration state using the `StoreCreationDate`, `StoreDeletionDate`, and `StoreReleaseDate` properties.  
 
 ## Example  
  The following example method enumerates through all migrations and determines whether they are in progress.  
@@ -133,7 +133,7 @@ public void MigrationState(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

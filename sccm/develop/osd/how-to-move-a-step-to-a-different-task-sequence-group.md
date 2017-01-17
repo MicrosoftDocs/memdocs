@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: f93360ef-677e-48e0-886a-a07b8451611c
+ms.assetid: f93360ef-677e-48e0-886a-a07b8451611csearchScope: - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -24,7 +24,7 @@ You move a step (an action or a group) from one operating system deployment task
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Get the source and target [SMS_TaskSequenceGroup](assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) objects. Copy a step that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
+2.  Get the source and target [SMS_TaskSequenceGroup](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) objects. Copy a step that you want to add the step to. For more information, see [How to Create an Operating System Deployment Task Sequence Group](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-group.md).  
 
 3.  Add the step to the target group. For more information, see [How to Add a Step to an Operating System Deployment Group](../../develop/osd/how-to-add-a-step-to-an-operating-system-deployment-group.md).  
 
@@ -91,9 +91,9 @@ public void MoveActionToGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequenceStep`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True)).|  
-|`sourceGroup`|-   Managed: assetId:///IResultObject?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True|The group (assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) the step is copied from.|  
-|`targetGroup`|-   Managed: assetId:///IResultObject?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True|The group (assetId:///SMS_TaskSequenceGroup?qualifyHint=False&autoUpgrade=True) the step is copied to.|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
+|`sourceGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied from.|  
+|`targetGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied to.|  
 
 ## Compiling the Code  
  This C# example requires:  

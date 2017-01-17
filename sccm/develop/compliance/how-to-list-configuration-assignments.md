@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58
+ms.assetid: cd79bf83-591d-47b1-afdb-a23fbae90e58searchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -160,7 +160,7 @@ public void DCMAssignments_ListProperties(WqlConnectionManager connection)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|-   `connection`<br />-   `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
 

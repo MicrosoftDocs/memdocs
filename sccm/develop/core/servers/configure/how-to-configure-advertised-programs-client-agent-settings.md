@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 5a5ffe1b-6e82-480f-97e8-2840ba704170
+ms.assetid: 5a5ffe1b-6e82-480f-97e8-2840ba704170searchScope: - ConfigMgr SDK
 caps.latest.revision: 11
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -27,7 +27,7 @@ In System Center Configuration Manager, the site control file maintains configur
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Make a connection to the software distribution client component section of the site control file by using the [SMS_SCI_ClientComp](assetId:///SMS_SCI_ClientComp?qualifyHint=False&autoUpgrade=True) class.  
+2.  Make a connection to the software distribution client component section of the site control file by using the [SMS_SCI_ClientComp](../../../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class.  
 
 3.  Loop through the array of available properties, making changes as needed.  
 
@@ -365,7 +365,7 @@ try
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`<br /><br /> `siteToChange`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`enableDisableSWDClientAgent`|-   Managed: `String`<br />-   VBScript: `String`|Flag to enable or disable the client agent.|  

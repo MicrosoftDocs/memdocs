@@ -11,22 +11,22 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 1f01d10f-1aff-4f56-9f23-b53f222a57e9
+ms.assetid: 1f01d10f-1aff-4f56-9f23-b53f222a57e9searchScope: - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Reorder an Operating System Deployment Task Sequence
-In System Center Configuration Manager, you can reorder the steps (an action or a group) in a task sequence or group by rearranging the step sequence in the [Steps](assetId:///Steps?qualifyHint=False&autoUpgrade=True) property [SMS_TaskSequences _Steps](assetId:///SMS_TaskSequences _Steps?qualifyHint=False&autoUpgrade=True) array.  
+In System Center Configuration Manager, you can reorder the steps (an action or a group) in a task sequence or group by rearranging the step sequence in the [Steps](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) property [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) array.  
 
 ### To reorder a task sequence  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Obtain a valid task sequence ([SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True)) or task sequence group ([SMS_TaskSequence_Group](assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True)). For more information, see [How to Read a Task Sequence From a Task Sequence Package](../../develop/osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md).  
+2.  Obtain a valid task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) or task sequence group ([SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md)). For more information, see [How to Read a Task Sequence From a Task Sequence Package](../../develop/osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md).  
 
-3.  Within the `Steps` array property, move the [SMS_TaskSequence_Step](assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True) to its new location.  
+3.  Within the `Steps` array property, move the [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) to its new location.  
 
 4.  Update the task sequence or group.  
 
@@ -157,8 +157,8 @@ public void MoveTaskSequenceStepUp(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) or task sequence group (assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True)|  
-|`taskSequenceStepName`<br /><br /> `stepName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the task sequence step (assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True) to move.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence or task sequence group|  
+|`taskSequenceStepName`<br /><br /> `stepName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the task sequence step to move.|  
 
 ## Compiling the Code  
  This C# example requires:  

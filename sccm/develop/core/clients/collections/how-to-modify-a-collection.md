@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
+ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408searchScope: - ConfigMgr SDK
 caps.latest.revision: 11
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -45,10 +45,10 @@ public void RenameCollection(WqlConnectionManager connection, string collectionI
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|collectionID|-   Managed: [String](assetId:///String?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: assetId:///String?qualifyHint=False&autoUpgrade=True|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
-|name|-   Managed: assetId:///String?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///String?qualifyHint=False&autoUpgrade=True|An example collection property. The property value is modified in the code snippet.|  
-|comment|-   Managed: assetId:///String?qualifyHint=False&autoUpgrade=True<br />-   VBScript: assetId:///String?qualifyHint=False&autoUpgrade=True|An example collection property. The property value is modified in the code snippet.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|collectionID|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
+|name|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  
+|comment|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  
 
 ## Compiling the Code  
  The C# example requires:  

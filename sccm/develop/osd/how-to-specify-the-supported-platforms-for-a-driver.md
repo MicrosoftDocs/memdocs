@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 1d0c07a0-dbab-4279-9fa1-114a3d992a24
+ms.assetid: 1d0c07a0-dbab-4279-9fa1-114a3d992a24searchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -226,7 +226,7 @@ public void AddSupportedPlatform(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`driver`<br /><br /> `objDriver`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript:  [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|-   A valid [SMS_Driver](assetId:///SMS_Driver?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
+|`driver`<br /><br /> `objDriver`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|-   A valid [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [How to Import a Windows Driver Described by an INF File into Configuration Manager](../../develop/osd/how-to-import-a-windows-driver-described-by-an-inf-file.md).|  
 |`displayName`<br /><br /> `sDisplayName`|-   Managed: `String`<br />-   VBScript: `String`|The display name for the condition shown in the System Center Configuration Manager console.|  
 |`maxVersion`<br /><br /> `sMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  
 |`minVersion`<br /><br /> `sMinVersion`|-   Managed: `String`<br />-   VBScript: `String`|The minimum supported version.|  

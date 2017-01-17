@@ -2,7 +2,7 @@
 title: "Upgrade clients | Microsoft Docs | Windows "
 description: "Upgrade clients on Windows computers in System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,7 +71,7 @@ You can upgrade the client on Windows computers using client installation method
 
 3.  On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.  
 
-4.  In the **Client Upgrade** tab of the **Hierarchy Settings Properties** dialog box, review the version and date of the production client, and make sure it's the version you want to use for upgrading Windows computers.  If it's not the client version you were expecting to see, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a preproduction collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
+4.  In the **Client Upgrade** tab of the **Hierarchy Settings Properties** dialog box, review the version and date of the production client, and make sure it's the version you want to use for upgrading Windows computers.  If it's not the client version you were expecting to see, you may need to promote the pre-production client to production. For more information, see [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
 5.  Click **Upgrade all clients in the hierarchy using the production client** and click **OK** in the confirmation dialog box.  
 

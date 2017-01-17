@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: a7d16ad6-fc1f-4eb5-a190-1d9fc06c3678
+ms.assetid: a7d16ad6-fc1f-4eb5-a190-1d9fc06c3678searchScope: - ConfigMgr SDK
 caps.latest.revision: 6
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -36,7 +36,7 @@ Programming the System Center Configuration Manager client Windows Management In
  If you are using VBScript you access and use Configuration Manager client WMI objects by using the same coding techniques that are used for accessing other WMI objects, including the Configuration Manager WMI objects. For more information see the [Windows Management Instrumentation](http://go.microsoft.com/fwlink/?LinkId=43950).  
 
 ## Client WMI Namespace  
- The Configuration Manager client WMI namespace begins at \\\\<client\>\root\ccm. For example, root\ccm contains the [SMS_Client](assetId:///SMS_Client?qualifyHint=False&autoUpgrade=True) class that can be used to get and set client information.  
+ The Configuration Manager client WMI namespace begins at \\\\<client\>\root\ccm. For example, root\ccm contains the [SMS_Client](../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md) class that can be used to get and set client information.  
 
 ## See Also  
  [Configuration Manager Programming Fundamentals](../../../../develop/core/understand/configuration-manager-programming-fundamentals.md)   

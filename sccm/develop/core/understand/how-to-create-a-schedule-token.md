@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066b
+ms.assetid: 27028a26-7ec2-4f0c-842f-1c7a6255066bsearchScope: - ConfigMgr SDK
 caps.latest.revision: 7
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -20,20 +20,20 @@ manager: "mbaldwin"
 # How to Create a Schedule Token
 You create a schedule token, in System Center Configuration Manager, by creating and populating an instance of the appropriate `SMS_ST_` schedule token class. `SMS_ST` schedule classes are child classes of the `SMS_ScheduleToken` class and handle the scheduling of events with differing frequencies such as daily, weekly and monthly.  
 
- The [SMS_ScheduleMethods](assetId:///SMS_ScheduleMethods?qualifyHint=False&autoUpgrade=True) Windows Management Instrumentation (WMI) class, and the corresponding [ReadFromString](assetId:///ReadFromString?qualifyHint=False&autoUpgrade=True) and [WriteToString](assetId:///WriteToString?qualifyHint=False&autoUpgrade=True) methods are used to decode and encode schedule tokens into and from an interval string. The interval strings can then be used to set schedule properties when defining or modifying objects. An example of this can be seen in the [How to Create a Maintenance Window for a Collection](../../../develop/core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md) topic where the [ServiceWindowSchedules](assetId:///ServiceWindowSchedules?qualifyHint=False&autoUpgrade=True) property is configured.  
+ The [SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md) Windows Management Instrumentation (WMI) class, and the corresponding [ReadFromString](../../../develop/reference/core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md) and [WriteToString](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md) methods are used to decode and encode schedule tokens into and from an interval string. The interval strings can then be used to set schedule properties when defining or modifying objects. An example of this can be seen in the [How to Create a Maintenance Window for a Collection](../../../develop/core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md) topic where the `ServiceWindowSchedules` property is configured.  
 
 ### To create a schedule token and convert it to an interval string  
 
-1.  Create a schedule token object by using one of the [SMS_ScheduleToken](assetId:///SMS_ScheduleToken?qualifyHint=False&autoUpgrade=True) child classes. This example uses the [SMS_ST_RecurInterval](assetId:///SMS_ST_RecurInterval?qualifyHint=False&autoUpgrade=True) class.  
+1.  Create a schedule token object by using one of the [SMS_ScheduleToken](../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) child classes. This example uses the [SMS_ST_RecurInterval](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md) class.  
 
 2.  Populate the properties of the new schedule token object.  
 
-3.  Convert the schedule token object to an interval string by using the assetId:///SMS_ScheduleMethods?qualifyHint=False&autoUpgrade=True class and assetId:///WriteToString?qualifyHint=False&autoUpgrade=True method.  
+3.  Convert the schedule token object to an interval string by using the `SMS_ScheduleMethods` class and `WriteToString` method.  
 
 4.  Use the interval string to populate an object's schedule properties, as needed.  
 
 ## Example  
- The following example method shows how to create a schedule token by creating and populating an instance of the assetId:///SMS_ST_RecurInterval?qualifyHint=False&autoUpgrade=True schedule token class. In addition, the example shows how to convert the schedule to an interval string by using the assetId:///SMS_ScheduleMethods?qualifyHint=False&autoUpgrade=True class and assetId:///WriteToString?qualifyHint=False&autoUpgrade=True method.  
+ The following example method shows how to create a schedule token by creating and populating an instance of the `SMS_ST_RecurInterval` schedule token class. In addition, the example shows how to convert the schedule to an interval string by using the `SMS_ScheduleMethods` class and `WriteToString` method.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -128,7 +128,7 @@ public void CreateDailyRecurringScheduleToken(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`hourDuration`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Number of hours during which the scheduled action occurs. Allowable values are in the range 0-23. The default value is 0, indicating no duration.|  
 |`daySpan`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Number of days spanning schedule intervals. Allowable values are in the range 0-31. The default value is 0.|  
 |`startTime`|-   Managed: `String` (DateTime)<br />-   VBScript: `String` (DateTime)|Date and time when the scheduled action takes place. The default value is "19700201000000.000000+***". This is the format in which (WMI) CIM DATETIME values are stored.|  

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 84cd8c38-f7d2-4c99-94d4-3d4c17ab7645
+ms.assetid: 84cd8c38-f7d2-4c99-94d4-3d4c17ab7645searchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"

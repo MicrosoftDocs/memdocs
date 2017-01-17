@@ -11,26 +11,26 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 4a4e9896-549e-4a20-92fc-30bf9ae6e1c8
+ms.assetid: 4a4e9896-549e-4a20-92fc-30bf9ae6e1c8searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Create an Operating System Deployment Task Sequence Group
-An operating system deployment task sequence group, in System Center Configuration Manager, can be added to a task sequence by creating an instance of the [SMS_TaskSequence_Group](assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True) class. The group is then added to the list of steps of the task sequence. The list of steps is an array of the [SMS_TaskSequence_Step](assetId:///SMS_TaskSequence_Step?qualifyHint=False&autoUpgrade=True) derived classes. The array is stored in the task sequence, [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True), [Steps](assetId:///Steps?qualifyHint=False&autoUpgrade=True) property.  
+An operating system deployment task sequence group, in System Center Configuration Manager, can be added to a task sequence by creating an instance of the [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) class. The group is then added to the list of steps of the task sequence. The list of steps is an array of the [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) derived classes. The array is stored in the task sequence, [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md), `Steps` property.  
 
 ### To create a task sequence group  
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Obtain a valid task sequence ([SMS_TaskSequence)](assetId:///SMS_TaskSequence)?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
+2.  Obtain a valid task sequence ([SMS_TaskSequence)](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md).  
 
-3.  Create an instance of the assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True class.  
+3.  Create an instance of the `SMS_TaskSequence_Group` class.  
 
 4.  Populate the group with the appropriate properties.  
 
-5.  Update the task sequence assetId:///Steps?qualifyHint=False&autoUpgrade=True property with the new group.  
+5.  Update the task sequence `Steps` property with the new group.  
 
 ## Example  
  The following example method adds a new group to the supplied task sequence. Because the group is added to the end of the task sequence `Steps` array, you might want to reorder its position. For more information, see [How to Reorder an Operating System Deployment Task Sequence](../../develop/osd/how-to-reorder-an-operating-system-deployment-task-sequence.md).  
@@ -96,15 +96,15 @@ public IResultObject AddTaskSequenceGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True). The group is added to this task sequence.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`Name`|-   Managed: `String`<br />-   VBScript: `String`|A name for the new group.|  
 |`Description`|-   Managed: `String`<br />-   VBScript: `String`|A description for the new group.|  
 
 |Parameter|Description|  
 |---------------|-----------------|  
-|`connection`|A assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True object that is a valid connection to the SMS Provider.|  
-|`taskSequence`|An assetId:///IResultObject?qualifyHint=False&autoUpgrade=True that is a valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True). The group is added to this task sequence.|  
+|`connection`|A `WqlConnectionManager` object that is a valid connection to the SMS Provider.|  
+|`taskSequence`|An `IResultObject` that is a valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`name`|A string name for the new group.|  
 |`description`|A string description for the new group.|  
 

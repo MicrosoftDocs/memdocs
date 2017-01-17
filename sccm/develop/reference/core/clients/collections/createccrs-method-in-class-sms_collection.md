@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5
+ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5searchScope: - ConfigMgr SDK
 caps.latest.revision: 12
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -89,14 +89,14 @@ SInt32 CreateCCRs(
 
  Qualifiers: [in, optional]  
 
- [SpecifySiteCode](assetId:///SpecifySiteCode?qualifyHint=False&autoUpgrade=True) is used to control whether the [PushSiteCode](assetId:///PushSiteCode?qualifyHint=False&autoUpgrade=True) parameter is used. If [SpecificySiteCode](assetId:///SpecificySiteCode?qualifyHint=False&autoUpgrade=True) is set to `true`, assetId:///PushSiteCode?qualifyHint=False&autoUpgrade=True will be used. If assetId:///SpecificySiteCode?qualifyHint=False&autoUpgrade=True is not set to `true`, assetId:///PushSiteCode?qualifyHint=False&autoUpgrade=True will not be used.  
+ `SpecifySiteCode` is used to control whether the `PushSiteCode` parameter is used. If `SpecificySiteCode` is set to `true`, `PushSiteCode` will be used. If `SpecificySiteCode` is not set to `true`, `PushSiteCode` will not be used.  
 
  `PushSiteCode`  
  Data type: `Boolean`  
 
  Qualifiers: [in, optional]  
 
- assetId:///PushSiteCode?qualifyHint=False&autoUpgrade=True defines which site will initiate the actual push. The specified site will push its client files to the client and do the actual installation.  
+ `PushSiteCode` defines which site will initiate the actual push. The specified site will push its client files to the client and do the actual installation.  
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

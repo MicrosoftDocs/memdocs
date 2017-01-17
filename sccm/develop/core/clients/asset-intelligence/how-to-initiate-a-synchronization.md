@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 6b484801-89a1-4707-ac9f-46da72365fdf
+ms.assetid: 6b484801-89a1-4707-ac9f-46da72365fdfsearchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -27,9 +27,9 @@ The Asset Intelligence catalog can be refreshed manually, outside the normal syn
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Query the SMS Provider for the [SMS_AIProxy](assetId:///SMS_AIProxy?qualifyHint=False&autoUpgrade=True) instance that you want refresh the catalog on.  
+2.  Query the SMS Provider for the [SMS_AIProxy](../../../../develop/reference/core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md) instance that you want refresh the catalog on.  
 
-3.  Call the assetId:///SMS_AIProxy?qualifyHint=False&autoUpgrade=True class [RequestCatalogUpdate](assetId:///RequestCatalogUpdate?qualifyHint=False&autoUpgrade=True) method to run an action on the collection.  
+3.  Call the SMS_AIProxy class [RequestCatalogUpdate](../../../../develop/reference/core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md) method to run an action on the collection.  
 
 ## Example  
  The following example method runs the refresh on the provided server.  
@@ -48,7 +48,7 @@ public void InitateSync(WqlConnectionManager connection, string serverName){    
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|connection|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br /><br /> VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the provider.|  
+|connection|Managed: `WqlConnectionManager`<br /><br /> VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the provider.|  
 |serverName|Managed: `String`<br /><br /> VBScript: `String`|Name of the server to run the refresh on. This name maps to the `ProxyName` property of an `SMS_AIProxy` instance.|  
 
 ## Compiling the Code  

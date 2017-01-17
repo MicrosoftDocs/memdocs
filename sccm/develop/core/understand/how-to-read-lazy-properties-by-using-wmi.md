@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 1fa2d52e-b5e6-4362-81cf-e175ff45435a
+ms.assetid: 1fa2d52e-b5e6-4362-81cf-e175ff45435asearchScope: - ConfigMgr SDK
 caps.latest.revision: 7
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -29,14 +29,14 @@ To read a lazy property from a System Center Configuration Manager object return
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True) object you obtain from step one, use the [ExecQuery](assetId:///ExecQuery?qualifyHint=False&autoUpgrade=True) object to query System Center Configuration Manager objects.  
+2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use the [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) object to query System Center Configuration Manager objects.  
 
 3.  Iterate through the query results.  
 
-4.  Using the assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True object you obtain from step one, call [Get](assetId:///Get?qualifyHint=False&autoUpgrade=True) to get the [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True) object for each queried object you want to get lazy properties from.  
+4.  Using the `SWbemServices` object you obtain from step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object for each queried object you want to get lazy properties from.  
 
 ## Example  
- The following VBScript code example queries for all [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) objects and then displays rule names obtained from the `CollectionRules` lazy property.  
+ The following VBScript code example queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects and then displays rule names obtained from the `CollectionRules` lazy property.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -76,7 +76,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True|A valid connection to the SMS Provider.|  
+|`connection`|-   `SWbemServices`|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
 

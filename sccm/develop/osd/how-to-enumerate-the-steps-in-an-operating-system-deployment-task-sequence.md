@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438a
+ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438asearchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -24,9 +24,9 @@ You enumerate an operating system deployment task sequence, in System Center Con
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Obtain a valid task sequence [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md)  
+2.  Obtain a valid task sequence [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object. For more information, see [How to Create an Operating System Deployment Task Sequence](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence.md)  
 
-3.  Enumerate through the steps to display any action ([SMS_TaskSequence_Actions](assetId:///SMS_TaskSequence_Actions?qualifyHint=False&autoUpgrade=True) names. Use recursion to access any groups ([SMS_TaskSequence_Group](assetId:///SMS_TaskSequence_Group?qualifyHint=False&autoUpgrade=True)) that are found and display their actions.  
+3.  Enumerate through the steps to display any action ([SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)) names. Use recursion to access any groups ([SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md)) that are found and display their actions.  
 
 ## Example  
  The following example displays the actions and groups within a task sequence.  
@@ -107,7 +107,7 @@ public void RecurseTaskSequenceSteps(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemObject](assetId:///SWbemObject?qualifyHint=False&autoUpgrade=True)|A valid task sequence (assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True). The group is added to this task sequence.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393854.aspx)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`indent`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Indent is used to space console output for child groups.|  
 
 ## Compiling the Code  

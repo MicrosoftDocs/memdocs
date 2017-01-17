@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: c249e680-0275-4d8a-a3f5-39643b40a8b7
+ms.assetid: c249e680-0275-4d8a-a3f5-39643b40a8b7searchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -76,7 +76,7 @@ public static bool UserHasPermissions(ConnectionManagerBase connectionManager, s
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connectionManager`|-   Managed: [connectionManager](assetId:///connectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`objectName`|`String`|Name of the object.|  
 |permissions|Integer|The permissions.|  
 |currentPermissions|Integer|The current permissions.|  

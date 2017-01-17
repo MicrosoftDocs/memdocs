@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054be
+ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054besearchScope: - ConfigMgr SDK
 caps.latest.revision: 14
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -22,13 +22,13 @@ In System Center Configuration Manager, to create a custom console view, you mus
 
  The following procedure creates a view that displays a custom control. In this case, the view displays the string content of a label control.  
 
- The procedures in this topic create a “My View��? console extension node that displays. beneath the **Site Configuration** console node in the Administration workspace. When you click the “My View��? node, your custom view control will load into the Configuration Manager console  
+ The procedures in this topic create a "My View" console extension node that displays. beneath the **Site Configuration** console node in the Administration workspace. When you click the "My View" node, your custom view control will load into the Configuration Manager console.  
 
 ## Creating a Custom View  
  The following procedures create an extension node with a custom view control.  
 
 ### Create the View Controller Class  
- The following procedure creates the *OverviewControllerBase* derived class. The controller class’s Content property is set contain your custom control. In the example below, the Content property is assigned a simple label control.  
+ The following procedure creates the `OverviewControllerBase` derived class. The controller class’s Content property is set contain your custom control. In the example below, the Content property is assigned a simple label control.  
 
 ##### To create a console view class  
 
@@ -40,7 +40,7 @@ In System Center Configuration Manager, to create a custom console view, you mus
     ```  
 
 ### Create the View Description Class  
- The following procedure creates the *IConsoleView2* derived class.  
+ The following procedure creates the `IConsoleView2` derived class.  
 
 ##### To create a console view class  
 
@@ -64,14 +64,14 @@ In System Center Configuration Manager, to create a custom console view, you mus
 ```  
 
 ## Deploy the Assembly  
- The following procedure builds the assembly you have created and copies it to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [About Configuration Manager Administrator Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
+ The following procedure builds the assembly you have created and copies it to the Configuration Manager console assemblies folder. For important information about deploying Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 
 #### To deploy the view assembly  
 
 1.  Build the project, and depending on where you created your project, the assembly should be created as \Visual Studio 2010\Projects\ConfigMgrControl\ConfigMgrObjectsControl\bin\Debug\NameofMyAssembly.dll.  
 
     > [!NOTE]
-    >  In other parts of the Console Extension section, the examples use an assembly named [ConfigMgrObjectsControl.dll](assetId:///ConfigMgrObjectsControl.dll?qualifyHint=False&autoUpgrade=True). If you are building the examples in other sections, make sure to name the assembly assetId:///ConfigMgrObjectsControl.dll?qualifyHint=False&autoUpgrade=True at this step (or change the other assembly references to your specific assembly name).  
+    >  In other parts of the Console Extension section, the examples use an assembly named `ConfigMgrObjectsControl.dll`. If you are building the examples in other sections, make sure to name the assembly `ConfigMgrObjectsControl.dll` at this step (or change the other assembly references to your specific assembly name).  
 
 2.  Copy the assembly to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder.  
 

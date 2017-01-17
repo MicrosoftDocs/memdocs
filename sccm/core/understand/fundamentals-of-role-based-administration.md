@@ -1,8 +1,8 @@
 ---
-title: "Role-based administration Fundamentals | Microsoft Docs"
+title: "Role-based administration fundamentals | Microsoft Docs"
 description: "Use role-based administration to control administrative access to Configuration Manager and objects that you manage."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,37 +12,42 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Fundamentals of role-based administration for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-With System Center Configuration Manager you use role-based administration to secure access to administer Configuration Manager, and to the objects that you manage like collections, deployments, and sites.   After you understand the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
+# Fundamentals of role-based administration for System Center Configuration Manager
 
- The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings using the following:  
+*Applies to: System Center Configuration Manager (Current Branch)*
 
--   **Security roles** - which are assigned to administrative users to provide those users (or groups of users) permissions to different Configuration Manager objects,   such as the permissions to create or change client settings.  
+With System Center Configuration Manager, you use role-based administration to secure the access that is needed to administer Configuration Manager. You also secure access to the objects that you manage, like collections, deployments, and sites. After you understand the concepts introduced in this topic, you can [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).  
 
--   **Security scopes** - which group specific instances of objects that an administrative user is responsible to manage, such as an application that installs Microsoft Office 2010.  
+ The role-based administration model centrally defines and manages hierarchy-wide security access settings for all sites and site settings by using the following:  
 
--   **Collections** - which are how you specify groups of user and device resources that the administrative user can manage.  
+-   *Security roles* are assigned to administrative users to provide those users (or groups of users) permission to different Configuration Manager objects. For example, permission to create or change client settings.  
 
- The combination of security roles, security scopes, and collections allow you to segregate the administrative assignments that meet your organization requirements, and together define the administrative scope of a user (which is what that use can view and manage in your Configuration Manager deployment).  
+-   *Security scopes* are used to group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft Office 2010.  
 
-**Role-based administration provides the following benefits:**  
+-   *Collections* are used to specify groups of user and device resources that the administrative user can manage.  
 
--   Sites are not used as administrative boundaries  
+ With the combination of security roles, security scopes, and collections, you segregate the administrative assignments that meet your organization's requirements. Used together, they define the administrative scope of a user, which is what that user can view and manage in your Configuration Manager deployment.  
 
--   You create administrative users for a hierarchy and only need to assign security to them one time  
+## Benefits of role-based administration  
 
--   All security assignments are replicated and available throughout the hierarchy  
+-   Sites are not used as administrative boundaries.  
 
--   There are built-in security roles to assign the typical administration tasks, and you can create your own custom security roles to support your specific business requirements  
+-   You create administrative users for a hierarchy and only need to assign security to them one time.  
 
--   Administrative users see only the objects that they have permissions to manage  
+-   All security assignments are replicated and available throughout the hierarchy.  
+
+-   There are built-in security roles that are used to assign the typical administration tasks. Create your own custom security roles to support your specific business requirements.  
+
+-   Administrative users see only the objects that they have permissions to manage.  
 
 -   You can audit administrative security actions.  
 
-When you  design and implement administrative security for Configuration Manager you use  the following to create an **administrative scope** for an administrative user:  
+When you  design and implement administrative security for Configuration Manager, you use the following to create an *administrative scope* for an administrative user:  
 
 -   [Security roles](#bkmk_Planroles)  
 
@@ -50,7 +55,8 @@ When you  design and implement administrative security for Configuration Manager
 
 -   [Security scopes](#bkmk_PlanScope)  
 
- The administrative scope controls the objects that an administrative user can view in the Configuration Manager console and the permissions that user has on those objects. Role-based administration configurations replicate to each site in the hierarchy as global data, and then are applied to all administrative connections.  
+
+ The administrative scope controls the objects that an administrative user views in the Configuration Manager console, and it controls the permissions that a user has on those objects. Role-based administration configurations replicate to each site in the hierarchy as global data, and then are applied to all administrative connections.  
 
 > [!IMPORTANT]  
 >  Intersite replication delays can prevent a site from receiving changes for role-based administration. For information about how to monitor intersite database replication, see the [Data transfers between sites in System Center Configuration Manager](../../core/servers/manage/data-transfers-between-sites.md) topic.  
@@ -60,18 +66,20 @@ When you  design and implement administrative security for Configuration Manager
 
  Configuration Manager has several built-in security roles to support typical groupings of administrative tasks, and you can create your own custom security roles to support your specific business requirements. Examples of the built-in security roles:  
 
--   **Full Administrator**: This security role grants all permissions in Configuration Manager.  
+-   *Full Administrator* grants all permissions in Configuration Manager.  
 
--   **Asset Analyst**: This security role allows administrative users to view data collected by using Asset Intelligence, software inventory, hardware inventory, and software metering. Administrative users can create metering rules and Asset Intelligence categories, families, and labels.  
+-   *Asset Analyst* grants administrative users the permission to view data that is collected by using Asset Intelligence, software inventory, hardware inventory, and software metering. Administrative users can create metering rules and Asset Intelligence categories, families, and labels.  
 
--   **Software Update Manager**: This security role grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, templates, and enable software updates for Network Access Protection (NAP).  
+-   *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, and templates, and set up software updates for Network Access Protection (NAP).  
 
 > [!TIP]  
->  You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To do so, in the **Administration** workspace, expand **Security**, and select **Security Roles**.  
+>  You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To view the roles, in the **Administration** workspace, expand **Security**, and then select **Security Roles**.  
 
- Each security role has specific permissions for different object types. For example, the **Application MMM** security role has the following permissions for applications: **Approve**, **Create**, **Delete**, **Modify**, **Modify Folders**, **Move Objects**, **Read/Deploy**, **Set Security Scope**. You cannot change the permissions for the built-in security roles, but you can copy the role, make changes, and then save these changes as a new custom security role. You can also import security roles that you have exported from another hierarchy (for example, from a test network). Review the security roles and their permissions to determine whether you will use the built-in security roles or you have to create your own custom security roles.  
+ Each security role has specific permissions for different object types. For example, the *Application MMM* security role has the following permissions for applications: Approve, Create, Delete, Modify, Modify Folders, Move Objects, Read/Deploy, and Set Security Scope.
 
- **Use the following steps to help you plan for security roles:**  
+ You cannot change the permissions for the built-in security roles, but you can copy the role, make changes, and then save these changes as a new custom security role. You can also import security roles that you have exported from another hierarchy, for example, from a test network. Review the security roles and their permissions to determine whether you'll use the built-in security roles, or whether you have to create your own custom security roles.  
+
+ ### To help you plan for security roles  
 
 1.  Identify the tasks that the administrative users perform in Configuration Manager. These tasks might relate to one or more groups of management tasks, such as deploying applications and packages, deploying operating systems and settings for compliance, configuring sites and security, auditing, remotely controlling computers, and collecting inventory data.  
 
@@ -101,11 +109,11 @@ For information about how to create and configure security roles for role-based 
 For information about how to configure collections for role-based administration, see  [Configure collections to manage security](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) topic.  
 
 ##  <a name="bkmk_PlanScope"></a> Security scopes  
- Use security scopes to provide administrative users with access to securable objects. Security scopes are a named set of securable objects that are assigned to administrator users as a group. All securable objects must be assigned to one or more security scopes. Configuration Manager has two built-in security scopes:  
+ Use security scopes to provide administrative users with access to securable objects. A security scope is a named set of securable objects that are assigned to administrator users as a group. All securable objects must be assigned to one or more security scopes. Configuration Manager has two built-in security scopes:  
 
--   **All**: This built-in security scope grants access to all scopes. You cannot assign objects to this security scope.  
+-   The *All* built-in security scope grants access to all scopes. You cannot assign objects to this security scope.  
 
--   **Default**: This built-in security scope is used for all objects, by default. When you first install Configuration Manager, all objects are assigned to this security scope.  
+-   The *Default* built-in security scope is used for all objects, by default. When you first install Configuration Manager, all objects are assigned to this security scope.  
 
 If you want to restrict the objects that administrative users can see and manage, you must create and use your own custom security scopes. Security scopes do not support a hierarchical structure and cannot be nested. Security scopes can contain one or more object types, which include the following:  
 
@@ -149,7 +157,7 @@ If you want to restrict the objects that administrative users can see and manage
 
 -   Windows CE device setting items and packages  
 
-There are also some objects that you cannot include in security scopes because they are only secured by security roles. Administrative access to these cannot be limited to a subset of the available objects. For example, you might have an administrative user who creates boundary groups that are used for a specific site. Because the boundary object does not support security scopes, you cannot assign this user a security scope that provides access to only the boundaries that might be associated with that site. Because a boundary object cannot be associated to a security scope, when you assign a security role that includes access to boundary objects to a user, that user can access every boundary in the hierarchy.  
+There are also some objects that you cannot include in security scopes because they are only secured by security roles. Administrative access to these objects cannot be limited to a subset of the available objects. For example, you might have an administrative user who creates boundary groups that are used for a specific site. Because the boundary object does not support security scopes, you cannot assign this user a security scope that provides access to only the boundaries that might be associated with that site. Because a boundary object cannot be associated to a security scope, when you assign a security role that includes access to boundary objects to a user, that user can access every boundary in the hierarchy.  
 
 Objects that are not limited by security scopes include the following:  
 
@@ -159,7 +167,7 @@ Objects that are not limited by security scopes include the following:
 
 -   Alerts  
 
--   Antimalware Policies  
+-   Antimalware policies  
 
 -   Boundaries  
 
@@ -197,6 +205,6 @@ Create security scopes when you have to limit access to separate instances of ob
 
 -   You have a group of administrative users who must be able to see production applications and not test applications. Create one security scope for production applications and another for the test applications.  
 
--   Different administrative users require different access for some instances of an object type. For example, one group of administrative users requires **Read** permission to specific software update groups, and another group of administrative users requires **Modify** and **Delete** permissions for other software update groups. Create different security scopes for these software update groups.  
+-   Different administrative users require different access for some instances of an object type. For example, one group of administrative users requires Read permission to specific software update groups, and another group of administrative users requires Modify and Delete permissions for other software update groups. Create different security scopes for these software update groups.  
 
 For information about how to configure security scopes for role-based administration, see the [Configure security scopes for an object](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope) in the [Configure role-based administration for System Center Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md) topic.  
