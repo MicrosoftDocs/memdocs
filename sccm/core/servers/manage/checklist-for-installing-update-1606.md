@@ -34,7 +34,7 @@ When the site server installs the update, site system roles that are installed o
  The first time you use a Configuration Manager consoles after the update has been installed, you will be prompted to update that console.  To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
 
  **Known issues for this update**   
-  The following issues apply when you view the Update Pack Installation Status:
+  The following issues apply when you view the update pack installation status:
   - When updating from version 1602 to 1606, the step **Extract update package payload** displays a Status of **Not started**, even though the download has completed.
   - When updating from version 1511 to 1606, some steps will show a status of **Completed** but will not display a value for **Last Update Time**.
 
@@ -43,7 +43,7 @@ When the site server installs the update, site system roles that are installed o
 
  **Ensure all sites run a supported version of System Center Configuration Manager:**  Before you start the installation of update 1606, each site server in the hierarchy must run the same version of System Center Configuration Manager: either version 1511 or 1602.
 
- **Review installed .NET versions on site system servers:** When a site installs update 1606, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles when .NET Framework 4.5 or later is not already installed:  
+ **Review installed .NET versions on site system servers:** When a site installs update 1606, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles (if .NET Framework 4.5 or later is not already installed):  
 
 -   Enrollment proxy point  
 
@@ -123,7 +123,7 @@ You can't run a test database upgrade on the production site database. Doing so 
  To take advantage of this option, before starting the installation of the update, you must configure your site to support automatic upgrades for pre-production. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
 [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
- **Plan to use service windows to control when site servers install updates:** You can use service windows to define a period of time that applies to a primary site server during which updates to that site can be installed.
+ **Plan to use service windows to control when site servers install updates:** You can use service windows to define a period during which updates to a site server can be installed.
 
 This can help you control when sites in your hierarchy install the update.
 Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  

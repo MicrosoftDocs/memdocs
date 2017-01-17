@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: Brendunsms.author: brendunsmanager: angrobe
 ---
 # Checklist for installing update 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-When you use the Current Branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610.
+When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610.
 
 To get the update for version 1610, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
@@ -144,12 +144,12 @@ To take advantage of this option, before beginning installation of the update yo
 For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a pre-production collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
 **Plan to use service windows to control when site servers install updates:**   
-You can use service windows to define a period that applies to a primary site server during which updates to that site can be installed.
+You can use service windows to define a period during which updates to a site server can be installed.
 
 This can help you control when sites in your hierarchy install the update. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
-**Run Setup Prerequisite Checker:**   
-When the update is listed in the console as **Available,** you can independently run the Prerequisite Checker before installing the update. (When you install the update on the site, Prerequisite Checker runs again.)
+**Run the setup prerequisite checker:**   
+When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
 To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1610 update package**, and then select **Run prerequisite check**.
 

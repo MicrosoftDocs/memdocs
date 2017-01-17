@@ -34,7 +34,7 @@ The first time you use a Configuration Manager console after the update has fini
 
  **Ensure all sites run a supported version of System Center Configuration Manager:**  Each site server in the hierarchy must run System Center Configuration Manager version 1511 before you can start the installation of update 1602.  
 
- **Review installed .NET versions on site system servers:** When a site installs update 1602, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles when .NET Framework 4.5 or later is not already installed:  
+ **Review installed Microsoft .NET versions on site system servers:** When a site installs update 1602, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles when .NET Framework 4.5 or later is not already installed:  
 
 -   Enrollment proxy point  
 
@@ -68,7 +68,7 @@ For database replication, you can use the Replication Link Analyzer to help reso
 
 For more information, see   [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
- **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.  If you use NLB clusters for software update points, use Azure PowerShell to remove the NLB cluster.    
+ **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  If you use NLB clusters for software update points, use Windows PowerShell to remove the NLB cluster.    
 
  For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
@@ -116,7 +116,7 @@ You can't run a test database upgrade on the production site database. Doing so 
 This can help you control when sites in your hierarchy install the update.   
 Beginning with the release of the 1602 update, maintenance windows are renamed as service windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
- **Run Setup Prerequisite Checker:**  Before you install update 1602, you can run the Prerequisite Checker independently from the update installation. When you install the update on the site, Prerequisite Checker runs again.  
+ **Run setup prerequisite checker:**  Before you install update 1602, you can run the prerequisite checker independently from the update installation. When you install the update on the site, prerequisite checker runs again.  
 
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) topic.  
 
