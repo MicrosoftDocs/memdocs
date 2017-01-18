@@ -23,7 +23,7 @@ To get the update for version 1610, you must use a service connection point site
 
 -   If the update displays as **Downloading** and does not change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    -   Usually, you can also restart the **SMS\_Executive** service on the site server to restart the download of the updates redistribution files.
+    -   Usually, you can also restart the **SMS\_Executive** service on the site server to restart the download of the update's redistribution files.
 
     -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
 
@@ -34,7 +34,7 @@ For information about the versions of the current branch, see [Baseline and upda
 ## About installing update 1610
 
 **Sites:**  
-Update 1610 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site. After the update installs at the top-tier site, child sites have the following update behavior:
+Update 1610 can only be installed at the top-level site of your hierarchy. This means you initiate the installation from your central administration site if you have one, or from your stand-alone primary site. After the update gets installed at the top-tier site, child sites have the following update behavior:
 
 -   Child primary sites install the update automatically after the central administration site completes the installation of the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).
 
@@ -44,7 +44,7 @@ Update 1610 can only be installed at the top-level site of your hierarchy. This 
 When the site server installs the update, the site system roles that are installed on the site server and those that are installed on remote computers automatically get updated. So before installing the update, make sure that each site system server meets any new prerequisites for operation with the new update version.
 
 **Configuration Manager consoles:**   
-The first time you use a Configuration Manager consoles after the update has finished, you will be prompted to update that console. To do so you must run Configuration Manager Setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
+The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
 
 
 
@@ -60,7 +60,7 @@ This is an optional value that you can specify as a convenient reminder of your 
 
 For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
-**Review installed .NET versions on site system servers:** 
+**Review installed Microsoft .NET versions on site system servers:** 
 When a site installs update 1610, Configuration Manager automatically installs .NET Framework 4.5.2 on each computer that hosts one of the following site system roles when .NET Framework 4.5 or later is not already installed:
 
 -   Enrollment proxy point
@@ -100,11 +100,11 @@ Before installing updates, such as version 1610, ensure that the availability gr
 **Reconfigure software update points that use NLBs:**   
 Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.
 
-If you use NLB clusters for software update points, use PowerShell to remove the NLB cluster.
+If you use NLB clusters for software update points, use Windows PowerShell to remove the NLB cluster.
 For more information, see [Plan for software updates in System Center Configuration Manager](/sccm/sum/plan-design/plan-for-software-updates).
 
 **Disable all site maintenance tasks at each site for the duration of the update installation on that site:**   
-Before you install update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:
+Before you install the update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:
 
 -   Back up site server
 -   Delete aged client operations
@@ -139,7 +139,7 @@ You can't run a test database upgrade on the production site database. Doing so 
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.
 
-To take advantage of this option, before beginning installation of the update you must configure your site to support automatic upgrades for pre-production.
+To take advantage of this option, you must configure your site to support automatic upgrades for pre-production before beginning installation of the update.
 
 For more information, see [Upgrade clients in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/upgrade-clients) and [How to test client upgrades in a pre-production collection in System Center Configuration Manager](/sccm/core/clients/manage/upgrade/test-client-upgrades).
 
@@ -156,11 +156,11 @@ To run a prerequisite check from the console, go to **Administration > Overview 
 For more information about starting and then monitoring the prerequisite check, see **Step 3: Run the prerequisite checker before installing an update** in the [Install in-console updates for System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates) topic.
 
 > [!IMPORTANT]  
-> When the prerequisite checker runs as part of an update installation or independently, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1610 update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
+> When the prerequisite checker runs independently of as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1610 update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 **Update sites:**   
 You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)
 
-We recommend you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
+We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 
 For more information, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).

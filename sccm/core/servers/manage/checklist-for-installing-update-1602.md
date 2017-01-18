@@ -72,7 +72,7 @@ For more information, see   [Database replicas for management points for System 
 
  For more information, see [Plan for software updates in System Center Configuration Manager](../../../sum/plan-design/plan-for-software-updates.md).  
 
- **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install updates, disable any site maintenance task that might run during the time the update process is active. These tasks includ (but are not limited) to the following:  
+ **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install updates, disable any site maintenance task that might run during the time the update process is active. These tasks include (but are not limited) to the following:  
 
 -   Back up site server  
 
@@ -88,7 +88,7 @@ When a site database maintenance task runs during the update installation, the u
 
 For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
 
- **Backup a customized Configuration.mof file:** If you use a customized Configuration.mof file to define data classes that you use with hardware inventory, create a backup of this file before updating the site. Then after the update, restore this file to your version 1602 site. When you update a site, the current file is overwritten with the original (default) version of the file. For more information about using this file, see [How to extend hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
+ **Backup a customized Configuration.mof file:** If you use a customized Configuration.mof file to define data classes that you use with hardware inventory, create a backup of this file before updating the site. After the update, restore this file to your version 1602 site. When you update a site, the current file is overwritten with the original (default) version of the file. For more information about using this file, see [How to extend hardware inventory in System Center Configuration Manager](../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
  **Test the database upgrade on a copy of the most recent site database backup:** Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
 
@@ -111,7 +111,7 @@ You can't run a test database upgrade on the production site database. Doing so 
  To take advantage of this option, you must configure your site to support automatic upgrades for pre-production before beginning installation of the update. For more information, see [Upgrade clients in System Center Configuration Manager](../../../core/clients/manage/upgrade/upgrade-clients.md) and   
 [How to test client upgrades in a pre-production collection in System Center Configuration Manager](../../../core/clients/manage/upgrade/test-client-upgrades.md).  
 
- **Plan to use Maintenance windowsto control when site servers install updates:** You can use the maintenance windows to define a period of time during which updates to the site server can be installed. This can help you control when sites in your hierarchy install the update.   
+ **Plan to use Maintenance windows to control when site servers install updates:** You can use the maintenance windows to define a period of time during which updates to the site server can be installed. This can help you control when sites in your hierarchy install the update.   
 
 Beginning with the release of the 1602 update, maintenance windows have been renamed *service windows*. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
@@ -120,7 +120,7 @@ Beginning with the release of the 1602 update, maintenance windows have been ren
 For more information, see **Step 3: Run the prerequisite checker before installing an update** in the [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) topic.  
 
 > [!IMPORTANT]  
->  When the prerequisite checker runs indepently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1602 update, if you need to perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
+>  When the prerequisite checker runs independently or as part of an update installation, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the 1602 update, if you need to perform a site maintenance task, run **Setupwfe.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.  
 
  **Update sites:** You are now ready to start the update installation for your hierarchy. We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 

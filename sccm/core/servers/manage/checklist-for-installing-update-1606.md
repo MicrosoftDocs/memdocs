@@ -19,11 +19,11 @@ Version 1606 for System Center Configuration Manager current branch is an update
 
 Before installing version 1606 as an update, review the following information and checklist for actions to take before starting the update.
 
-For information about baselines versions, see [Baseline and update versions](../../../core/servers/manage/updates.md#bkmk_Baselines) in [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).
+For information about baseline versions, see [Baseline and update versions](../../../core/servers/manage/updates.md#bkmk_Baselines) in [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).
 
  ## About installing update 1606
 
-As an *update*, 1606 can only be installed at the top-level site of your hierarchy. This means you initiate the install from your central administration site if you have one, or from your stand-alone primary site.  
+As an *update*, 1606 can only be installed at the top-level site of your hierarchy. This means you initiate the installation from your central administration site if you have one, or from your stand-alone primary site.  
 
 -   Child primary sites install the update automatically after the central administration site finishes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
 
