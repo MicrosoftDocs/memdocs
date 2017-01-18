@@ -64,4 +64,7 @@ Configurations for when clients start fallback to search for a new software upda
 
 To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), but remember that fallback times you might configure are not yet used for software update points.
 
-## [Feature 2]
+## Host software updates on cloud-based distribution points
+Beginning with this preview version, you can use a cloud-based distribution point to host a software update package. However, because you can configure clients to download software updates directly from Microsoft Update, consider the additional costs that deploying a software update package to a cloud-based distribution point can incur.
+
+For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
