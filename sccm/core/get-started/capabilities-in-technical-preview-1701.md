@@ -58,6 +58,10 @@ Configurations for when clients start fallback to search for a new software upda
 
   When a client does use fallback, it will use the boundary group configurations for fallback to create a pool of available software update points. This pool includes all software update points from the clients *current boundary group*, *neighbor boundary groups*, and the clients *site default boundary group*.
 
+- **Configure the default site boundary group:**  
+ Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
+
+
 To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups), but remember that fallback times you might configure are not yet used for software update points.
 
 ## [Feature 2]
