@@ -1,3 +1,4 @@
+
 ---
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
@@ -11,33 +12,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
-author: Brendunsms.author: brendunsmanager: angrobe
-
----
-# Backup and recovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.  
-
--   [Back up a Configuration Manager site](#BKMK_SiteBackup)  
-
-    -   [Backup maintenance task](#BKMK_BackupMaintenanceTask)  
-
-    -   [Using Data Protection Manager to back up your site database](#BKMK_DPMBackup)  
 
     -   [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)  
-
     -   [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)  
 
-    -   [Supplemental backup tasks](#BKMK_SupplementalBackup)  
-
--   [Recover a Configuration Manager site](#BKMK_RecoverSite)  
-
-    -   [Determine your recovery options](#BKMK_DetermineRecoveryOptions)  
 
         -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)  
-
         -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)  
-
         -   [SQL Server change tracking retention period](#bkmk_SQLretention)  
 
         -   [Process to reinitialize site or global data](#bkmk_reinit)  
@@ -205,16 +186,16 @@ Use the following sections to help you create your Configuration Manager backup 
 
 3.  Select the site system that hosts the state migration role, and choose **State migration point** in **Site System Roles**.  
 
-4.  On the **Site Role** tab, in the **Properties** group, click **Properties**.  
 
+4.  On the **Site Role** tab, in the **Properties** group, click **Properties**.  
 5.  The folders that store the user state migration data are listed in the **Folder details** section on the **General** tab.  
 
-##  <a name="BKMK_RecoverSite"></a> Recover a Configuration Manager site  
+
  A Configuration Manager site recovery is required whenever a Configuration Manager site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.  
 
 > [!IMPORTANT]  
 >  When you recover the database for a site:  
->   
+
 >  -   You must use the same version and edition of SQL Server. For example, restoring a database that ran on SQL Server 2012 to SQL Server 2014 is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2014 to an Enterprise edition of SQL Server 2014 is not supported.  
 > -   SQL Server must not be set to **single-user mode**.  
 > -   Ensure the .MDF and .LDF files are valid. When you recover a site, there is not check for the state of the files you are restoring.  
@@ -224,7 +205,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
 > [!IMPORTANT]  
 >  If you run Configuration Manager Setup from the **Start** menu on the site server, the **Recover a site** option is not available.  
->   
+
 >  If you have installed any updates from within the Configuration Manager console before making your backup, you cannot successfully reinstall the site by using Setup from installation media or the Configuration Manager installation path.  
 
 > [!NOTE]  
@@ -234,7 +215,6 @@ Use the following sections to help you create your Configuration Manager backup 
  There are two main areas that you have to consider for Configuration Manager primary site server and central administration site recovery; the site server and the site database. Use the following sections to help you determine the options that you have to select for your recovery scenario.  
 
 > [!NOTE]  
->  When a previous site recovery failed or when you are trying to recover a site that it is not completely uninstalled, you must select **Uninstall a Configuration Manager site** from Setup before you have the option to recover the site. If the failed site has child sites, and you have to uninstall the site, you must manually delete the site database from the failed site before you select the **Uninstall a Configuration Manager site** option or the uninstall process will fail.  
 
 ####  <a name="BKMK_SiteServerRecoveryOptions"></a> Site server recovery options  
  You must start Setup from a copy of the CD.Latest folder that you create outside of the Configuration Manager installation folder. You then select the **Recover a site** option. When you run Setup, you have the following recovery options for the failed site server:  
@@ -266,7 +246,11 @@ Use the following sections to help you create your Configuration Manager backup 
 -   **Skip database recovery**: Use this option when no data loss has occurred on the Configuration Manager site database server. This option is only valid when the site database is on a different computer than the site server that you are recovering.  
 
 ####  <a name="bkmk_SQLretention"></a> SQL Server change tracking retention period  
- Change tracking is enabled for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes that have been made to database tables after a previous point in time. The retention period specifies how long change tracking information is retained. By default, the site database is configured to have a retention period of 5 days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your site database server fails, and your last backup is 7 days old, it is outside the retention period.  
+ Change tracking is enabled for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes that have been made to database tables after a previous point in time. The retention period specifies how long change tracking information is retained. By default, the site database is configured to have a retention period of 5 days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your site database server fails, and your last backup is 7 days old, it is outside the retention period.
+
+ For more information about SQL Server change tracking internals, see the following blogs from the SQL Server team: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1) and [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+
+
 
 ####  <a name="bkmk_reinit"></a> Process to reinitialize site or global data  
  The process to reinitialize site or global data replaces existing data in the site database with data from another site database. For example, when site ABC reinitializes data from site XYZ, the following steps occur:  
