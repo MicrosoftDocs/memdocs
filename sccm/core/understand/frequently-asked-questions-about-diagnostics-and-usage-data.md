@@ -19,9 +19,9 @@ author: Brendunsms.author: brendunsmanager: angrobe
 The following are frequently asked questions about diagnostic and usage data for System Center Configuration Manager:  
 
 ###  <a name="bkmk_off"></a> How do I turn off telemetry?  
-Telemetry does not support being turned off. However, you can choose the level of telemetry data collected, and use a service connection point in off-line mode to help manage when telemetry data is submitted.
+Telemetry cannot be turned off. However, you can choose the level of telemetry data that's collected. You can also use a service connection point in offline mode to help manage when telemetry data is submitted.
 
-The current branch of Configuration Manager needs to be updated on a regular basis in order to support new versions of Windows 10 and Microsoft Intune. Microsoft requires at least the Basic level of diagnostic and usage data to keep the product up to date, improve the update experience, and improve the quality and security of the product.
+The current branch of Configuration Manager needs to be updated on a regular basis to support new versions of Windows 10 and Microsoft Intune. Microsoft requires at least the basic level of diagnostic and usage data to keep the product up to date, improve the update experience, and improve the quality and security of the product.
 
 ###  <a name="bkmk_retention"></a> What is the data retention period?  
  Diagnostic and usage data is retained for one year.  
@@ -30,10 +30,10 @@ The current branch of Configuration Manager needs to be updated on a regular bas
  No. Diagnostics and usage data is only sent after the site is installed and operational.  
 
 ###  <a name="bkmk_frequency"></a> How frequently is the data sent?  
- The SQL stored procedures run every seven days (from the date the site is installed). In online mode, the service connection point is configured to upload the data after the queries run. In offline mode, the administrator uses the service connection tool to upload the data. (Note: the data is not initially available for offline use until seven days after the site is installed.)  
+ The SQL stored procedures run every seven days (from the date the site is installed). In online mode, the service connection point is configured to upload the data after the queries run. In offline mode, the administrator uses the service connection tool to upload the data. (Note that the data is not initially available for offline use until seven days after the site is installed.)  
 
 ###  <a name="bkmk_network"></a> Can the data be used to form a network map?  
- As shown in the description of the levels of diagnostic usage data collection for System Center Configuration, site details include timezone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details, such as IP addresses or more detailed geographical information, is collected.
+ As shown in the description of the levels of diagnostic usage data collection for System Center Configuration Manager, site details include time zone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details, such as IP addresses or more detailed geographical information, is collected.
  - [Diagnostic data for 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [Diagnostic data for 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
@@ -46,5 +46,5 @@ The current branch of Configuration Manager needs to be updated on a regular bas
 ###  <a name="bkmk_databases"></a> Can you see names of other databases, or data in other databases?  
  No. The stored procedures to collect data are limited to the site database.  
 
-## See Also  
+## See also  
  [Diagnostics and usage data for System Center Configuration Manager](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
