@@ -12,25 +12,68 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
+-caps.latest.revision: 22
+-author: Brenduns
+ms.author: brendunsmanager: angrobe
 
-    -   [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)  
-    -   [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)  
+----
 
 
-        -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)  
-        -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)  
-        -   [SQL Server change tracking retention period](#bkmk_SQLretention)  
+-# Backup and recovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 
-        -   [Process to reinitialize site or global data](#bkmk_reinit)  
+-Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.   
 
-        -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
+- [Back up a Configuration Manager site](#BKMK_SiteBackup)   
 
-    -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
+  - [Backup maintenance task](#BKMK_BackupMaintenanceTask)   
 
-    -   [Post-recovery tasks](#BKMK_PostRecovery)  
+  - [Using Data Protection Manager to back up your site database](#BKMK_DPMBackup)   
 
-    -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
+  -  [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)   
 
+  -  [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)   
+
+  -  [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)   
+
+  -  [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)   
+
+  -  [Supplemental backup tasks](#BKMK_SupplementalBackup)   
+
+-  [Recover a Configuration Manager site](#BKMK_RecoverSite)   
+
+  -   [Determine your recovery options](#BKMK_DetermineRecoveryOptions)   
+
+         -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)   
+
+         -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)   
+
+         -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)   
+
+         -  [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)   
+
+         -   [SQL Server change tracking retention period](#bkmk_SQLretention)   
+
+         -   [SQL Server change tracking retention period](#bkmk_SQLretention)   
+
+         -   [Process to reinitialize site or global data](#bkmk_reinit)   
+
+         -   [Process to reinitialize site or global data](#bkmk_reinit)   
+
+         -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
+
+         -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
+
+  -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [Post-recovery tasks](#BKMK_PostRecovery)  
+
+  -   [Post-recovery tasks](#BKMK_PostRecovery)  
+
+  -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
+
+  -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
 -   [SMS Writer service](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
