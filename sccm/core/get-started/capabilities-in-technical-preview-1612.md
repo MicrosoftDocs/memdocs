@@ -238,7 +238,8 @@ You can now return to a previous page when you run a task sequence and there is 
 We have added express installation files support in Configuration Manager for Windows 10 updates. When you use a supported version of Windows 10, you can now use Configuration Manager settings to download only the delta between the current month's Windows 10 Cumulative Update and the previous month's update. Currently in Configuration Manager Current Branch, the full Windows 10 Cumulative Update (including all updates from previous months) are downloaded each month. Using express installation files provides for smaller downloads and faster installation times on clients.
 
 > [!IMPORTANT]
-> While the settings to support the use of express installation files is available in Configuration Manager, this functionality is only supported in Windows 10 version 1607 with an update that will be released in early 2017 and later versions of Windows. Windows 10 version 1607 without the update and prior versions do not support express installation files.
+> While the settings to support the use of express installation files is available in Configuration Manager, this functionality is only supported in Windows 10 version 1607 with a Windows Update Agent update included with the updates released on January 10, 2017 (Patch Tuesday). For more information about these updates, see [support article 3213986](https://support.microsoft.com/help/4009938/january-10-2017-kb3213986-os-build-14393-693). You can take advantage of express installation files when the next set of updates are released on February 14, 2017. Windows 10 version 1607 without the update and prior versions do not support express installation files.
+
 
 ### To enable the download of express installation files for Windows 10 updates on the server
 To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.
