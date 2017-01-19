@@ -20,13 +20,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 Beginning in October of 2016, there are three branches of System Center Configuration Manager available. Use this topic to help choose the right branch for you.
 
 ## Current Branch of System Center Configuration Manager
-This is a licensed branch for use in a production environment where you want the option to get the latest features and functionalities. This is the branch you should use if you have one of the following: System Center Datacenter, System Center Standard, System Center Configuration Manager, or equivalent subscription rights.  For more information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
+This is a licensed branch for use in a production environment where you want the option to get the latest features and functionalities. This is the branch you should use if you have one of the following: System Center Datacenter, System Center Standard, System Center Configuration Manager, or equivalent subscription rights. For more information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
 
 >  [!TIP]
 > The Current Branch can also be installed as an evaluation edition that does not require a license. An evaluation edition can be used for 180 days, and it supports upgrade to a licensed edition of the Current Branch.
 
-The Current Branch is updated several times a year with new features. Each update version is supported for one (1) year after its release. You must update to a newer version of the Current Branch on or before expiration of that 1 year period. Updates to newer versions are available as in-console updates.
+The Current Branch is updated several times a year with new features. Each update version is supported for one (1) year after its release. You must update to a newer version of the Current Branch on or before expiration of that one-year period. Updates to newer versions are available as in-console updates.
 
 To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
 
@@ -42,7 +42,7 @@ You can also use the baseline media to install a new site that is an evaluation 
 **Features of the Current Branch**
 - Receives [in-console updates](/sccm/core/servers/manage/install-in-console-updates) that make new features available for use.
 - Receives in-console updates that deliver security and quality fixes to existing features.
-- Supports out-of-band updates when necessary. See [Use the Update Registration Tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes) or [Use the Hotfix Installer](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).
+- Supports out-of-band updates when necessary. See [Use the update registration tool](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes) or [Use the hotfix installer](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates).
 - Can interoperate with Microsoft Intune and other cloud-based services and infrastructure.
 - Supports [migration of data](/sccm/core/migration/migrate-data-between-hierarchies) to and from other Configuration Manager installations.
 - Supports upgrade from previous versions of Configuration Manager.
@@ -67,7 +67,7 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 > [!TIP]  
 > To learn about System Center 2016, see [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/system-center). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.
 
-> To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC]((https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for *system center config*, and then select **System Center Config Mgr (current branch and LTSB 1606)**.
+> To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for *system center config*, and then select **System Center Config Mgr (current branch and LTSB 1606)**.
 
 >
  You can also get an evaluation edition of System Center 2016 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
