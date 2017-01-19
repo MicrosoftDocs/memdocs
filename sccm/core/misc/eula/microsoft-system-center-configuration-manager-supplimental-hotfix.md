@@ -15,6 +15,8 @@ author: Brendunsms.author: brendunsmanager: angrobe
 robots: noindex,nofollow
 
 ---
+
+# Configuration Manager Hotfix
 **PLEASE NOTE:** You may use any number of copies of this update or supplemental software (“Supplement”) with your company’s validly licensed Microsoft server software or online service (“Microsoft Product”).
 
 Refer to the Microsoft Product’s license terms for additional use terms, to identify the entity licensing this Supplement to you and for support information. You may not use the Supplement if you, or your company, do not have a license for the underlying Microsoft Product.
