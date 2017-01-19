@@ -33,7 +33,7 @@ for this software, unless other terms accompany those items. If so, those terms 
 1.	**INSTALLATION AND USE RIGHTS.**   
   - 	You may install and use any number of copies of the software on your devices.<br><br>
 2.	**ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**   <br><br>
-  a.	Distributable Code. The software is comprised of Distributable Code. “Distributable Code” is code that you are permitted to distribute in programs you develop if you comply with the terms below.   <br><br>
+  a.	**Distributable Code.** The software is comprised of Distributable Code. “Distributable Code” is code that you are permitted to distribute in programs you develop if you comply with the terms below.   <br><br>
     i.	**Right to Use and Distribute.**
 
     - You may copy and distribute the object code form of the software.
