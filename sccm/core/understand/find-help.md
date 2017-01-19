@@ -33,9 +33,9 @@ Use the following resources to get additional information about System Center Co
 ##  <a name="bkmk_Info"></a> Information and support  
  Use the following resources for additional information about Configuration Manager.  
 
--   **To access the most current System Center Configuration Manager product documentation:** Use the TechNet [Documentation Library for System Center Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=691974)  
+-   **To access the most current System Center Configuration Manager product documentation:** Use the TechNet [Documentation Library for System Center Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=691974).
 
--   **To provide feedback about the documentation:** Submit feedback using  **User Voice** at [System Center Configuration Manager Feedback (Documentation)](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)  
+-   **To provide feedback about the documentation:** Submit feedback using  **User Voice** at [System Center Configuration Manager Feedback (Documentation)](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation).  
 
 -   **To download an archived copy of documentation:** go to the TechNet Gallery:
 
@@ -47,15 +47,15 @@ Use the following resources to get additional information about System Center Co
 
 -   When using your preferred search engine to locate content for System Center Configuration Manager, you can help scope the search results to only the current content library by including the following two terms,  including the quotes:   **"current branch"** and **"System Center Configuration Manager"**  
 
--   Use search terms that match those that you see in the user interface (UI) and on-line documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP;" "deployment type" rather than "DT;" and "software updates" rather than "SUM."  
+-   Use search terms that match those that you see in the user interface (UI) and online documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP;" "deployment type" rather than "DT;" and "software updates" rather than "SUM."  
 
--   When you search on a page in TechNet or in the help file (for example, press Ctrl-F1, and enter search terms in the **Find** box), the results exclude text that is in collapsed sections. To search for text in collapsed sections, expand the sections before you search on the page. To do this, you can choose the **Expand All** button at the top of the page, or double-click any collapsed section. When all sections are expanded, a search on the page can then search all sections on that page.  
+-   When you search on a page in TechNet or in the help file (for example, select Ctrl+F1, and enter search terms in the **Find** box), the results exclude text that is in collapsed sections. To search for text in collapsed sections, expand the sections before you search on the page. To do this, you can select the **Expand All** button at the top of the page, or double-click any collapsed section. When all sections are expanded, a search on the page can then search all sections on that page.  
 
--   To search a topic in the help file, press F1, and enter search terms in the **Find** dialog box. The help file does not support the **Expand All** option, and you must manually expand individual sections that are collapsed before search on the page finds text in those sections.  
+-   To search a topic in the help file, select F1, and then enter search terms in the **Find** dialog box. The help file does not support the **Expand All** option, and you must manually expand individual sections that are collapsed before search on the page finds text in those sections.  
 
 -   Whenever possible, use the TechNet online library rather than downloaded documentation. TechNet contains the most up-to-date information, and the information that you are searching for might not be in the downloaded documentation or there might be corrections or additional information online.  
 
--   If you find it easier and faster to search documentation when it is stored locally, you can select multiple topics in TechNet and save them locally. Sign in to TechNet, then, on the top of the page that you want to save locally, choose **Export** (next to **Print**). You then see the **Export multiple sets of pages** banner that lets you add and remove pages that you want to save. Then choose **Manage pages** to export them. For more information, choose **Help** on the banner.  
+-   If you find it easier and faster to search documentation when it is stored locally, you can select multiple topics in TechNet and save them locally. First, sign in to TechNet. Then, on the top of the page that you want to save locally, choose **Export** (next to **Print**). You then see the **Export multiple sets of pages** banner that lets you add and remove pages that you want to save. Then choose **Manage pages** to export them. For more information, choose **Help** on the banner.  
 
 ###  <a name="BKMK_ProductGroupBlog"></a> The System Center Configuration Manager team blog  
  The Configuration Manager engineering and partner teams use the [System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941) to provide you with technical information and other news about Configuration Manager and related technologies. Our blog posts supplement the product documentation and support information.  
@@ -63,8 +63,8 @@ Use the following resources to get additional information about System Center Co
 ###  <a name="BKMK_SupportOptions"></a> Support options and community resources  
  The following links provide information about support options and community resources:  
 
--   [Microsoft Help and Support](http://go.microsoft.com/fwlink/?LinkId=243064)  
+-   [Microsoft support](http://go.microsoft.com/fwlink/?LinkId=243064)  
 
 -   [Configuration Manager Community - System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
--   [Configuration Manager Forums Page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
+-   [Configuration Manager forums page](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  

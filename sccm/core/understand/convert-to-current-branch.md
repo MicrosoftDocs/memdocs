@@ -26,7 +26,7 @@ If you have multiple sites, you only need to convert the top-tier site of your h
 -	You must manually update secondary sites from within the Configuration Manager console.
 
 ## Run setup to convert the long-term servicing branch
-On the top-tier site of your hierarchy, you can run Configuration Manager Setup from qualifying baseline media and select **Site maintenance**.  Then, when presented with the licensing page, select the option for current branch and complete the wizard.
+On the top-tier site of your hierarchy, you can run Configuration Manager Setup from qualifying baseline media and select **Site maintenance**.  Then, when presented with the licensing page, select the option for the current branch and complete the wizard.
 
 When your site has converted to the current branch, previously unavailable features and capabilities will be available for use.
 
@@ -42,6 +42,6 @@ If your site runs the LTSB, you can use the following option in the Configuratio
 
  1. In the console go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.  
 
- 2. Select the option to convert to the Current Branch, and then click **Apply**.  
+ 2. Select the option to convert to the current branch, and then click **Apply**.  
 
 When your site has converted to the current branch, previously unavailable features and capabilities will be available for use.

@@ -33,7 +33,7 @@ The current branch of Configuration Manager needs to be updated on a regular bas
  The SQL stored procedures run every seven days (from the date the site is installed). In online mode, the service connection point is configured to upload the data after the queries run. In offline mode, the administrator uses the service connection tool to upload the data. (Note that the data is not initially available for offline use until seven days after the site is installed.)  
 
 ###  <a name="bkmk_network"></a> Can the data be used to form a network map?  
- As shown in the description of the levels of diagnostic usage data collection for System Center Configuration Manager, site details include time zone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details, such as IP addresses or more detailed geographical information, is collected.
+ As shown in the description of the levels of diagnostic usage data collection for System Center Configuration Manager, site details include time zone information from each site. This can provide insights into the broad geolocation and global dispersion of sites in a hierarchy. However, no network details are collected, (such IP addresses or more detailed geographic information).
  - [Diagnostic data for 1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [Diagnostic data for 1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
