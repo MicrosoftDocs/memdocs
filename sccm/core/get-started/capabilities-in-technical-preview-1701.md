@@ -99,7 +99,7 @@ With this technical preview, you can now use the Microsoft Operations Management
 To do so, you modify a configuration file to point to the Government cloud, and then install the OMS connector.
 
 ### Set up an OMS connector to Microsoft Azure Government cloud
-1.  On any computer that has the Configuration Manager console installed, edit and then save the following configuration  file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+1.  On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
   **Edits:**
 
@@ -125,6 +125,6 @@ To do so, you modify a configuration file to point to the Government cloud, and 
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.	After you save the file with these two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
+2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
-3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site. 
+3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
