@@ -68,3 +68,12 @@ To manage software update points for boundary groups, use the [procedures from t
 Beginning with this preview version, you can use a cloud-based distribution point to host a software update package. However, because you can configure clients to download software updates directly from Microsoft Update, consider the additional costs that deploying a software update package to a cloud-based distribution point can incur.
 
 For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
+
+## Validate device health attestation data via management points
+
+Beginning with this preview version, you can configure management points to validate health attestation reporting data for cloud or on-premises health attestation service. A new **Advanced Options** tab in the **Management Point Component Properties** dialog box lets you **Add**, **Edit**, or **Remove** the **On-premises device health attestation service URL**. You can also specify **Custom Device Settings** for the client agent to **Use on-premises Health Attestation Service**.  Setting **Yes** for this setting will enable reporting to the on-premises management point instead of the cloud-based service.
+
+### Try it out
+
+- **Enable on-premises device health attestation on a management point**<br>  In the Configuration Manager console, navigate to the management point and open **Management Point Component Properties** and then click the **Advanced Options** tab. Click **Add** and specify the on-premises URL (for example, https://10.10.10.10) for **On-premises device health attestation service URLs**.
+- **Enable on-premises management point health attestation reporting for the client agent**<br>In the Configuration Manager console, choose **Administration** > **Client Settings** and double-click or create a new **Custom Device Settings**. Select **Computer Agent** and set **Use on-premises Health Attestation Service** to **Yes**. If **Enable communication with Device Health Attestation Service** is set to **Yes** and **Use on-premises Health Attestation** is set to **No**, the management point will use the cloud-based device health attestation service.
