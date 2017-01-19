@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
 caps.latest.revision: 7
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Checklist for installing update 1610 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Checklist for installing update 1610 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1610 to update your hierarchy from version 1606. If your hierarchy runs version 1511, 1602, or 1606, you can update to version 1610.
 
 To get the update for version 1610, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
@@ -44,7 +49,7 @@ Update 1610 can only be installed at the top-level site of your hierarchy. This 
 When the site server installs the update, the site system roles that are installed on the site server and those that are installed on remote computers automatically get updated. So before installing the update, make sure that each site system server meets any new prerequisites for operation with the new update version.
 
 **Configuration Manager consoles:**   
-The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
+The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and then choose the option to update the console. We recommend that you do not delay installing the update to the console.
 
 
 
