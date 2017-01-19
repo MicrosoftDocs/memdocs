@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 caps.latest.revision: 13
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Checklist for installing update 1602 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Checklist for installing update 1602 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before updating from System Center Configuration Manager version 1511 to version 1602, review the following information and checklist for actions to take before starting the update.  
 
  **About installing update 1602:**  
@@ -28,7 +33,7 @@ Before updating from System Center Configuration Manager version 1511 to version
 
 When the site server installs the update, site system roles that are installed on the site server and those that are installed on remote computers automatically get updated. Therefore, before installing the update, make sure each site system server meets any new prerequisites for operations with the new update version.  
 
-The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and select the option to update the console. We recommend that you do not delay installing the update to the console.  
+The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and choose the option to update the console. We recommend that you do not delay installing the update to the console.  
 
  **Checklist:**  
 
