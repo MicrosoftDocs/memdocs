@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 caps.latest.revision: 22
 author: Brendunsms.author: brendunsmanager: angrobe
-
 ---
+
 # Backup and recovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.  
 
