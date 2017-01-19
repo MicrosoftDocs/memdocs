@@ -115,7 +115,7 @@ To do so, you modify a configuration file to point to the Government cloud, and 
       &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  Change the value for the setting name *FairFaxAuthorityResource* to be equal to ""https://login.microsoftonline.com/""
+  Change the value for the setting name *FairFaxAuthorityResource* to be equal to "https://login.microsoftonline.com/"
 
   - **Original:**
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
