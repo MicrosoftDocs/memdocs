@@ -45,7 +45,7 @@ Use the following resources to get additional information about System Center Co
 ###  <a name="BKMK_SearchTips"></a> Search the documentation library  
  Use the following search tips to help you find the information that you need:  
 
--   When using your preferred search engine to locate content for System Center Configuration Manager, you can help scope the search results to only the current content library by including the following two terms,  including the quotes:   **"current branch"** and **"System Center Configuration Manager"**  
+-   When using your preferred search engine to locate content for System Center Configuration Manager, you can scope the search results to only the current content library by including the following two terms,  including the quotes:   **"current branch"** and **"System Center Configuration Manager"**  
 
 -   Use search terms that match those that you see in the user interface (UI) and online documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP;" "deployment type" rather than "DT;" and "software updates" rather than "SUM."  
 
