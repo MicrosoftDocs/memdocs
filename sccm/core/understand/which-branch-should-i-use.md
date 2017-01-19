@@ -28,12 +28,12 @@ This is a licensed branch for use in a production environment where you want the
 
 The Current Branch is updated several times a year with new features. Each update version is supported for one (1) year after its release. You must update to a newer version of the Current Branch on or before expiration of that 1 year period. Updates to newer versions are available as in-console updates.
 
-To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Cener 2016, or that is available as part of a stand-alone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
+To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
 
 You can also use the baseline media to install a new site that is an evaluation edition of the Current Branch. If you want to install only an evaluation edition, you can get software from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
 
 >  [!NOTE]
-> You only use baseline media to install sites for a new Configuration Manager hierarchy. If you have previously installed a baseline version like version 1511, you use in-console updates to update your sites to a new version, like 1606.
+> Use baseline media to install sites for a new Configuration Manager hierarchy. If you have previously installed a baseline version like version 1511, use in-console updates to update your sites to a new version, like 1606.
 >
 > Sites that are updated using in-console updates result in sites that are the same as the new site installed using the baseline media.
 >
@@ -46,7 +46,7 @@ You can also use the baseline media to install a new site that is an evaluation 
 - Can interoperate with Microsoft Intune and other cloud-based services and infrastructure.
 - Supports [migration of data](/sccm/core/migration/migrate-data-between-hierarchies) to and from other Configuration Manager installations.
 - Supports upgrade from previous versions of Configuration Manager.
-- Supports install as an evaluation installation, from which you can later upgrade to a fully licensed installation.
+- Supports install as an evaluation edition, from which you can later upgrade to a fully licensed installation.
 
 The initial release of the Current Branch was version 1511. Subsequent updates include versions 1602, 1606, and so on. Each version remains in support for one year, and Microsoft recommends you update to the newest version soon after its release. You can wait up to one year before updating to a newer version, and you can also skip an update to install the newest version available. Because each version is cumulative, if you skip over an update and install the newest version, you will still get access to all features and improvements from previous versions.
 
@@ -55,14 +55,14 @@ For more information, see [Support for Current Branch versions](/sccm/core/serve
 **Update options**
 - With active Software Assurance, you can install in-console updates for Current Branch versions.  
 - There is no option to convert the Current Branch to a Technical Preview. Technical Previews are separate installations that do not require a license.
-- There is no option to convert your Current Branch to the  Long-Term Servicing Branch (LTSB). You must uninstall the Current Branch and then install the LTSB as a new installation.
+- There is no option to convert your Current Branch to the Long-Term Servicing Branch (LTSB). You must uninstall the Current Branch and then install the LTSB as a new installation.
 
 ##  Long-Term Servicing Branch (LTSB) of System Center Configuration
-This is a licensed branch for use in production for Configuration Manager customers who are using the Current Branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October, 1st 2016.  For information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
+This is a licensed branch for use in production for Configuration Manager customers who are using the Current Branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016.  For information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
 The LTSB does not receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided.
 
-To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use baseline media to install a new site that runs version 1606 of the Current Branch, or a new site that runs the  Long-Term Servicing Branch.
+To install the LTSB as a new site or as an upgrade from a supported Configuration Manager 2012 site, use the version 1606 [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) that you get as a DVD with System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release. You can use baseline media to install a new site that runs version 1606 of the Current Branch, or a new site that runs the Long-Term Servicing Branch.
 
 > [!TIP]  
 > To learn about System Center 2016, see [System Center 2016 documentation](https://technet.microsoft.com/system-center-docs/system-center). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.
@@ -70,7 +70,7 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 > To find System Center Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC]((https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for *system center config*, and then select **System Center Config Mgr (current branch and LTSB 1606)**.
 
 >
- You can also get an evaluation version of System Center 2016 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
+ You can also get an evaluation edition of System Center 2016 from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).
 
 **Features of the LTSB**
 -	Receives in-console updates that deliver critical security fixes
@@ -121,7 +121,7 @@ To install a new site that runs the Technical Preview, use the latest [baseline 
 -  Cannot be upgraded to a Current Branch or LTSB.
 -  Does not support using migration to import or export data to another Configuration Manager installation.
 -  Does not support upgrade from a previous version of Configuration Manager.
--  Does not support install as an evaluation installation.
+-  Does not support installation as an evaluation edition.
 
 Features that are first introduced in a Technical Preview are often added to the Current Branch in a later update.  Each new Technical Preview version includes the features from previous technical previews, even after those features have been added to the Current Branch.
 
