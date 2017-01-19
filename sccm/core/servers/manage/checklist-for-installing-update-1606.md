@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
 caps.latest.revision: 7
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Checklist for installing update 1606 for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Checklist for installing update 1606 for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Version 1606 for System Center Configuration Manager current branch is an update that you can use to update from version 1511 or 1602.
 
 Before installing version 1606 as an update, review the following information and checklist for actions to take before starting the update.
@@ -31,7 +36,7 @@ As an *update*, 1606 can only be installed at the top-level site of your hierarc
 
 When the site server installs the update, site system roles that are installed on the site server and those that are installed on remote computers get updated automatically. Therefore, before installing the update, make sure that each site system server meets any new prerequisites for operations with the new update version.  
 
- The first time you use a Configuration Manager console after the update has been installed, you will be prompted to update that console.  To do so, you must run Configuration Manager setup on the computer that hosts the console, and then select the option to update the console. We recommend that you do not delay installing the update to the console.
+The first time you use a Configuration Manager console after the update has been installed, you will be prompted to update that console.  To do so, you must run Configuration Manager setup on the computer that hosts the console, and then choose the option to update the console. We recommend that you do not delay installing the update to the console.
 
  **Known issues for this update**   
   The following issues apply when you view the update pack installation status:
