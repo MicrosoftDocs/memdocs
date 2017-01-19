@@ -91,3 +91,40 @@ We have made the following improvements to operating system deployment, many of 
 Beginning with this preview version, you can use a cloud-based distribution point to host a software update package. However, because you can configure clients to download software updates directly from Microsoft Update, consider the additional costs that deploying a software update package to a cloud-based distribution point can incur.
 
 For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
+
+
+## Use the OMS connector for Microsoft Azure Government cloud
+With this technical preview, you can now use the Microsoft Operations Management Suite (OMS) connector to connect to an OMS workspace that is on Microsoft Azure Government cloud.  
+
+To do so, you modify a configuration file to point to the Government cloud, and then install the OMS connector.
+
+### Set up an OMS connector to Microsoft Azure Government cloud
+1.  On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+
+  **Edits:**
+
+    Change the value for the setting name *FairFaxArmResourceID* to be equal to “https://management.usgovcloudapi.net/”
+
+   - **Original:**
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+      &lt;value>&lt;/value>   
+      &lt;/setting>
+
+   - **Edited:**     
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String">
+      &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
+      &lt;/setting>
+
+  Change the value for the setting name *FairFaxAuthorityResource* to be equal to ""https://login.microsoftonline.com/""
+
+  - **Original:**
+    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>&lt;/value>
+
+	- **Edited:**
+    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>https://login.microsoftonline.com/&lt;/value>
+
+2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
+
+3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
