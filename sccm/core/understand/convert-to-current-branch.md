@@ -40,8 +40,8 @@ For a list of baseline versions, see **Baseline and update versions** in [Update
 ## Use the Configuration Manager console to convert the long-term servicing branch
 If your site runs the LTSB, you can use the following option in the Configuration Manager console to convert to the current branch:
 
- 1. In the console go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.  
+ 1. In the console, go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.  
 
- 2. Select the option to convert to the current branch, and then click **Apply**.  
+ 2. Select the option to convert to the current branch, and then choose **Apply**.  
 
 When your site has converted to the current branch, previously unavailable features and capabilities will be available for use.
