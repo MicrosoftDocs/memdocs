@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
 # Capabilities in Technical Preview 1701 for System Center Configuration Manager
 
@@ -93,6 +95,15 @@ Beginning with this preview version, you can use a cloud-based distribution poin
 For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
 
 
+## Validate device health attestation data via management points
+
+Beginning with this preview version, you can configure management points to validate health attestation reporting data for cloud or on-premises health attestation service. A new **Advanced Options** tab in the **Management Point Component Properties** dialog box lets you **Add**, **Edit**, or **Remove** the **On-premises device health attestation service URL**. You can also specify **Custom Device Settings** for the client agent to **Use on-premises Health Attestation Service**.  Setting **Yes** for this setting will enable reporting to the on-premises management point instead of the cloud-based service.
+
+### Try it out
+
+- **Enable on-premises device health attestation on a management point**<br>  In the Configuration Manager console, navigate to the management point and open **Management Point Component Properties** and then click the **Advanced Options** tab. Click **Add** and specify the on-premises URL (for example, https://10.10.10.10) for **On-premises device health attestation service URLs**.
+- **Enable on-premises management point health attestation reporting for the client agent**<br>In the Configuration Manager console, choose **Administration** > **Client Settings** and double-click or create a new **Custom Device Settings**. Select **Computer Agent** and set **Use on-premises Health Attestation Service** to **Yes**. If **Enable communication with Device Health Attestation Service** is set to **Yes** and **Use on-premises Health Attestation** is set to **No**, the management point will use the cloud-based device health attestation service.
+
 ## Use the OMS connector for Microsoft Azure Government cloud
 With this technical preview, you can now use the Microsoft Operations Management Suite (OMS) connector to connect to an OMS workspace that is on Microsoft Azure Government cloud.  
 
@@ -128,3 +139,4 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
 3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
+
