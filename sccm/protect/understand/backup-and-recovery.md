@@ -1,4 +1,3 @@
-
 ---
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
@@ -25,9 +24,6 @@ manager: angrobe
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.  
 
 
--# Backup and recovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-
--Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.   
 
 - [Back up a Configuration Manager site](#BKMK_SiteBackup)   
 
