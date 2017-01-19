@@ -156,7 +156,7 @@ This can help you control when sites in your hierarchy install the update. Prior
 **Run the setup prerequisite checker:**   
 When the update is listed in the console as **Available,** you can independently run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1610 update package**, and then select **Run prerequisite check**.
+To run a prerequisite check from the console, go to **Administration > Overview > Cloud Services > Updates and Servicing.** Next, right-click  **Configuration Manager 1610 update package**, and then choose **Run prerequisite check**.
 
 For more information about starting and then monitoring the prerequisite check, see **Step 3: Run the prerequisite checker before installing an update** in the topic [Install in-console updates for System Center Configuration Manager](/sccm/core/servers/manage/install-in-console-updates).
 
