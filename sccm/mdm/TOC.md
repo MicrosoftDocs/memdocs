@@ -4,8 +4,9 @@
 ### [Choose Intune or hybrid EMM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ### [What's new in hybrid EMM](understand/whats-new-in-hybrid-mobile-device-management.md)
 
-## Plan and design
-### [Plan for hybrid EMM](plan-design/plan-hybrid-mobile-device-management.md)
+## [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
+### [Device Enrollment Methods](plan-design/device-enrollment-methods.md)
+### [Supported Device Platforms](plan-design/supported-device-platforms-for-hybrid.md)
 ### [placeholder - Privacy statement for hybrid EMM](plan-design/emm-privacy-statement-for-hybrid.md)
 
 ## [Get Started](deploy-use/setup-hybrid-mdm.md)
@@ -15,16 +16,16 @@
 ### [Add terms and conditions](deploy-use/terms-and-conditions.md)
 ### [Create service connection point](deploy-use/create-service-connection-point.md)
 ### [Enable platform enrollment](deploy-use/enable-platform-enrollment.md)
+#### [iOS and MAC](deploy-use/enroll-hybrid-ios-mac.md)
+#### [Windows](deploy-use/enroll-hybrid-windows.md)
+#### [Android](deploy-use/enroll-hybrid-android.md)
 ### [Set up additional management](deploy-use/set-up-additional-management.md)
 ### [Verify MDM configuration](deploy-use/verify-mdm-configuration.md)
 ### [placeholder - Brand company portal](deploy-use/company-portal-branding.md)
 ### [placeholder - Multi-factor authentication in EMM](deploy-use/emm-multi-factor-authentication-in-emm.md)
 
 ## How to
-### [Enroll user-owned (BYOD) devices](deploy-use/enroll-hybrid-ios-mac.md)
-#### [iOS and MAC](deploy-use/enroll-hybrid-ios-mac.md)
-#### [Windows](deploy-use/enroll-hybrid-windows.md)
-#### [Android](deploy-use/enroll-hybrid-android.md)
+### [placeholder - Enroll user-owned (BYOD) devices](deploy-use/enroll-user-owned-devices.md)
 ### [Enroll corporate-owned devices](deploy-use/enroll-company-owned-devices.md)
 #### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
 #### [Apple Configurator enrollment](deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
