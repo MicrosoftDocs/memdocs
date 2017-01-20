@@ -79,7 +79,7 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 **Limitations**  
 The LTSB is based on the Current Branch version 1606 and has the following limitations:
 - The LTSB is supported for 10 years of critical security updates after its general availability (October of 2016), after which support for this branch expires.  For more information about the support lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/lifecycle).
-- Supports a limited set list of server and client operating systems and related technologies like SQL Server versions.  For more information about what is supported with this branch, see [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md).
+- Supports a limited set list of server and client operating systems and related technologies, like SQL Server versions.  For more information about what is supported with this branch, see [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md).
 - Does not receive updates for new features.
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
   -	Intune in a hybrid MDM configuration
@@ -128,4 +128,4 @@ For more information, see [Technical Preview for System Center Configuration Man
 
 **Update options**
 -	You can install any in-console update for a new Technical Preview version.
--	There is no option to convert a Technical Preview to the Current Branch, or LTSB.
+-	There is no option to convert a Technical Preview to the Current Branch or LTSB.
