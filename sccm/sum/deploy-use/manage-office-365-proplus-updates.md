@@ -35,6 +35,18 @@ For more information, see [Overview of update channels for Office 365 ProPlus](h
 
 At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
 
+### Display data in the Office 365 Client Management dashboard
+The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Hardware inventory must be enabled and you must select the **Office 365 ProPlus Configurations** hardware inventory class before data is displayed in the dashboard.
+#### To display data in the Office 365 Client Management dashboard
+1. Enable hardware inventory, if it is not yet enabled. For details, see [Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory).
+2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
+3. On the **Home** tab, in the **Properties** group, click **Properties**.  
+4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
+5. In the **Device Settings** list, click **Set Classes**.  
+6. In the **Hardware Inventory Classes** dialog box, select **Office 365 ProPlus Configurations**.  
+7.  Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box.  
+The Office 365 Client Management dashboard will start displaying data as hardware inventory is reported.
+
 <!---
  On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
 - On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
