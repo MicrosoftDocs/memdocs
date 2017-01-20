@@ -67,7 +67,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Delete Detection Data**: Use this task to delete aged data from the database that has been created by Extraction Views. By default, Extraction Views are disabled and can only be enabled by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.  
+**Delete Aged Delete Detection Data**: Use this task to delete aged data from the database that has been created by Extraction Views. By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
@@ -103,7 +103,9 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Enrolled Devices**: Beginning with the update for 1602, this task is disabled by default. You can use this task to delete from the site database the aged data about mobile devices that have not reported any information to the site for a specified time. This task applies to devices that are enrolled by Microsoft Intune (hybrid) or with Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by Configuration Manager or by Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_IntuneOS) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+**Delete Aged Enrolled Devices**: Beginning with the update for 1602, this task is disabled by default. You can use this task to delete from the site database the aged data about mobile devices that haven't reported any information to the site for a specified time.
+
+This task applies to devices that are enrolled by Microsoft Intune (hybrid) or with Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by Configuration Manager or by Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_IntuneOS) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 -   Central administration site: Not available    
 -   **Primary site**: Not enabled    
@@ -118,7 +120,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 **Delete Aged Log Data**: Use this task to delete aged log data that is used for troubleshooting from the database. This data isn't related to Configuration Manager component operations.  
 
 > [!IMPORTANT]  
->  By default, this task runs daily at each site. At a central administration site and primary sites, the task deletes data that is older than 30 days. When you use SQL Server Express at a secondary site, ensure that this task runs daily and deletes data that has been inactive for seven days.  
+> By default, this task runs daily at each site. At a central administration site and primary sites, the task deletes data that is older than 30 days. When you use SQL Server Express at a secondary site, ensure that this task runs daily and deletes data that has been inactive for seven days.  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
@@ -184,10 +186,12 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Inactive Client Discovery Data**: Use this task to delete discovery data for inactive clients from the database. Clients are marked as inactive when the client is flagged as obsolete and by configurations that are made for Client status. This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+**Delete Inactive Client Discovery Data**: Use this task to delete discovery data for inactive clients from the database. Clients are marked as inactive when the client is flagged as obsolete and by configurations that are made for Client status.
+
+This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
 > [!IMPORTANT]  
->  When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.  
+> When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.  
 
 -   Central administration site: Not available    
 -   **Primary site**: Not enabled    
@@ -202,7 +206,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 **Delete Obsolete Client Discovery Data**: Use this task to delete obsolete client records from the database. A record that is marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the client's current record. For information about Discovery, see [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md).  
 
 > [!IMPORTANT]  
->  When it's enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This enables the client to send a Heartbeat Discovery record that sets the obsolete status correctly.  
+> When it's enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This enables the client to send a Heartbeat Discovery record that sets the obsolete status correctly.  
 
 -   Central administration site: Not available    
 -   **Primary site**: Not enabled    
@@ -232,7 +236,9 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Rebuild Indexes**: Use this task to rebuild the Configuration Manager database indexes. An index is a database structure that is created on a database table to speed up data retrieval. For example, searching an indexed column is often much faster than searching a column that isn't indexed. To improve performance, the Configuration Manager database indexes are frequently updated to remain synchronized with the constantly changing data that is stored in the database. This task creates indexes on database columns that are at least 50 percent unique, drops indexes on columns that are less than 50 percent unique, and rebuilds all existing indexes that meet the data uniqueness criteria.  
+**Rebuild Indexes**: Use this task to rebuild the Configuration Manager database indexes. An index is a database structure that is created on a database table to speed up data retrieval. For example, searching an indexed column is often much faster than searching a column that isn't indexed.
+
+To improve performance, the Configuration Manager database indexes are frequently updated to remain synchronized with the constantly changing data that is stored in the database. This task creates indexes on database columns that are at least 50 percent unique, drops indexes on columns that are less than 50 percent unique, and rebuilds all existing indexes that meet the data uniqueness criteria.  
 
 -   **Central administration site**: Not enabled    
 -   **Primary site**: Not enabled    
@@ -244,13 +250,17 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Summarize Software Metering File Usage Data**: Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering Monthly Usage Data** task to summarize software metering data and to conserve disk space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
+**Summarize Software Metering File Usage Data**: Use this task to summarize the data from multiple records for software metering file usage into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database.
+
+You can use this task with the **Summarize Software Metering Monthly Usage Data** task to summarize software metering data and to conserve disk space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site: Not available    
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Summarize Software Metering Monthly Usage Data**: Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database. You can use this task with the **Summarize Software Metering File Usage Data** task to summarize software metering data and to conserve space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
+**Summarize Software Metering Monthly Usage Data**: Use this task to summarize the data from multiple records for software metering monthly usage into one general record. Data summarization can compress the amount of data that is stored in the Configuration Manager database.
+
+You can use this task with the **Summarize Software Metering File Usage Data** task to summarize software metering data and to conserve space in the Configuration Manager database. For more information, see [Software metering in System Center Configuration Manager](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 -   Central administration site: Not available    
 -   **Primary site**: Enabled    
