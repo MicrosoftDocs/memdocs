@@ -2,7 +2,7 @@
 title: "Site prerequisites | Microsoft Docs"
 description: "Learn how to configure a Windows computer as a System Center Configuration Manager site system server."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 1/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -66,7 +66,7 @@ manager: angrobe
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
--   For more information about this requirement, see Operating System Deployment.  
+-   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 **Visual C++ Redistributable:**  
 
@@ -115,7 +115,7 @@ manager: angrobe
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
--   For more information about this requirement, see Operating System Deployment.  
+-   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 ###  <a name="bkmk_2012acwspreq"></a> Application Catalog website point  
 **Windows Server roles and features:**  
@@ -448,7 +448,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
--   For more information about this requirement, see Operating System Deployment.  
+-   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 **Visual C++ Redistributable:**  
 
@@ -495,7 +495,7 @@ Windows Server 2008 and Windows Server 2008 R2 are now in extended support and a
 
     -   The 1511 version of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
 
--   For more information about this requirement, see Operating System Deployment.  
+-   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
 
 ###  <a name="bkmk_2008acwspreq"></a> Application Catalog website point  
 **.NET Framework:**  
