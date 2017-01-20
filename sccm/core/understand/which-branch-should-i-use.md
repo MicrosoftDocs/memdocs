@@ -122,7 +122,7 @@ To install a new site that runs the Technical Preview, use the latest [baseline 
 -  Does not support upgrade from a previous version of Configuration Manager.
 -  Does not support installation as an evaluation edition.
 
-Features that are first introduced in a Technical Preview are often added to the Current Branch in a later update.  Each new Technical Preview version includes the features from previous technical previews, even after those features have been added to the Current Branch.
+Features that are first introduced in a Technical Preview are often added to the Current Branch in a later update.  Each new Technical Preview version includes the features from previous technical previews, even after those features have been added to the Current Branch. 
 
 For more information, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
 
