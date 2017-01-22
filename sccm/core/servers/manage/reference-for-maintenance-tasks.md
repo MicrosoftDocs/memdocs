@@ -105,7 +105,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 
 **Delete Aged Enrolled Devices**: Beginning with the update for 1602, this task is disabled by default. You can use this task to delete from the site database the aged data about mobile devices that haven't reported any information to the site for a specified time.
 
-This task applies to devices that are enrolled by Microsoft Intune (hybrid) or with Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by Configuration Manager or by Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_IntuneOS) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+This task applies to devices that are enrolled by using Microsoft Intune (hybrid) or Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by using Configuration Manager or Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_IntuneOS) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 -   Central administration site: Not available    
 -   **Primary site**: Not enabled    
@@ -162,7 +162,7 @@ This task applies to devices that are enrolled by Microsoft Intune (hybrid) or w
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Aged Status Messages**: Use this task to delete aged status message data as configured in status filter rules from the database. For information, see the "Monitor the status system of Configuration Manager section" in the topic [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
+**Delete Aged Status Messages**: Use this task to delete aged status message data as configured in status filter rules from the database. For information, see the "Monitor the status system of Configuration Manager" section in the topic [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md).  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
@@ -186,9 +186,9 @@ This task applies to devices that are enrolled by Microsoft Intune (hybrid) or w
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Delete Inactive Client Discovery Data**: Use this task to delete discovery data for inactive clients from the database. Clients are marked as inactive when the client is flagged as obsolete and by configurations that are made for Client status.
+**Delete Inactive Client Discovery Data**: Use this task to delete discovery data for inactive clients from the database. Clients are marked as inactive when the client is flagged as obsolete and by configurations that are made for client status.
 
-This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
+This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task, which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
 
 > [!IMPORTANT]  
 > When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.  
@@ -230,7 +230,7 @@ This task operates only on resources that are Configuration Manager clients. It'
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
-**Monitor Keys**: Use this task to monitor the integrity of the Configuration Manager database primary keys. A primary key is a column or combination of columns that uniquely identify one row and distinguish it from any other row in a Microsoft SQL Server database table.  
+**Monitor Keys**: Use this task to monitor the integrity of the Configuration Manager database primary keys. A primary key is a column (or a combination of columns) that uniquely identifies one row and distinguishes it from any other row in a Microsoft SQL Server database table.  
 
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
