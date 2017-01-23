@@ -26,7 +26,7 @@ This is a licensed branch for use in a production environment where you want the
 >  [!TIP]
 > The Current Branch can also be installed as an evaluation edition that does not require a license. An evaluation edition can be used for 180 days, and it supports upgrade to a licensed edition of the Current Branch.
 
-The Current Branch is updated several times a year with new features. Each update version is supported for one (1) year after its release. You must update to a newer version of the Current Branch on or before expiration of that one-year period. Updates to newer versions are available as in-console updates.
+The Current Branch is updated several times a year with new features. Each update version is supported for one year after its release. You must update to a newer version of the Current Branch on or before expiration of that one-year period. Updates to newer versions are available as in-console updates.
 
 To install the Current Branch as a new site or as an upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1, you use [baseline media](/sccm/core/servers/manage/updates#baseline-and-update-versions) for System Center Configuration Manager that comes as a DVD with System Center 2016, or that is available as part of a standalone release of System Center Configuration Manager. Access to this media depends on how you have licensed System Center Configuration Manager.
 
@@ -46,9 +46,9 @@ You can also use the baseline media to install a new site that is an evaluation 
 - Can interoperate with Microsoft Intune and other cloud-based services and infrastructure.
 - Supports [migration of data](/sccm/core/migration/migrate-data-between-hierarchies) to and from other Configuration Manager installations.
 - Supports upgrade from previous versions of Configuration Manager.
-- Supports install as an evaluation edition, from which you can later upgrade to a fully licensed installation.
+- Supports installation as an evaluation edition, from which you can later upgrade to a fully licensed installation.
 
-The initial release of the Current Branch was version 1511. Subsequent updates include versions 1602, 1606, and so on. Each version remains in support for one year, and Microsoft recommends you update to the newest version soon after its release. You can wait up to one year before updating to a newer version, and you can also skip an update to install the newest version available. Because each version is cumulative, if you skip over an update and install the newest version, you will still get access to all features and improvements from previous versions.
+The initial release of the Current Branch was version 1511. Subsequent updates include versions 1602, 1606, and so on. Each version remains in support for one year, and Microsoft recommends that you update to the newest version soon after its release. You can wait up to one year before updating to a newer version, and you can also skip an update to install the newest version available. Because each version is cumulative, if you skip over an update and install the newest version, you will still get access to all features and improvements from previous versions.
 
 For more information, see [Support for Current Branch versions](/sccm/core/servers/manage/current-branch-versions-supported).
 
@@ -57,8 +57,8 @@ For more information, see [Support for Current Branch versions](/sccm/core/serve
 - There is no option to convert the Current Branch to a Technical Preview. Technical Previews are separate installations that do not require a license.
 - There is no option to convert your Current Branch to the Long-Term Servicing Branch (LTSB). You must uninstall the Current Branch and then install the LTSB as a new installation.
 
-##  Long-Term Servicing Branch (LTSB) of System Center Configuration
-This is a licensed branch for use in production for Configuration Manager customers who are using the Current Branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016.  For information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
+##  Long-Term Servicing Branch of System Center Configuration
+This is a licensed branch for use in production for Configuration Manager customers who are using the Current Branch and have allowed their Configuration Manager Software Assurance (SA) or equivalent subscription rights to expire after October 1, 2016. For more about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
 The LTSB does not receive in-console updates that deliver new features or update existing capabilities. However, critical security fixes are provided.
 
@@ -78,8 +78,8 @@ To install the LTSB as a new site or as an upgrade from a supported Configuratio
 
 **Limitations**  
 The LTSB is based on the Current Branch version 1606 and has the following limitations:
-- The LTSB is supported for 10 years of critical security updates after its general availability (October of 2016), after which support for this branch expires.  For more information about the support lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/lifecycle).
-- Supports a limited set list of server and client operating systems and related technologies, like SQL Server versions.  For more information about what is supported with this branch, see [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md).
+- The LTSB is supported for 10 years of critical security updates after its general availability (October of 2016), after which, support for this branch expires. For more information about the support lifecycle, see [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/lifecycle).
+- Supports a limited set list of server and client operating systems and related technologies, like SQL Server versions. For more information about what is supported with this branch, see [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md).
 - Does not receive updates for new features.
 - Does not support adding a Microsoft Intune Subscription, which prevents the use of:
   -	Intune in a hybrid MDM configuration
@@ -96,12 +96,12 @@ The LTSB is based on the Current Branch version 1606 and has the following limit
 **Update options**
 - You can convert your LTSB install to a Current Branch installation. Conversion to the current branch is supported before or after support for the LTSB expires.
 
-  To convert, you must have an active Software Assurance agreement with Microsoft.  For more information, see the following links:
+  To convert, you must have an active Software Assurance agreement with Microsoft. For more information, see the following links:
   - [Upgrade the Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md)
   - [Licensing and branches for System Center Configuration Manager](learn-more-editions.md)
   - [Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-update-versions) in [Updates for Configuration Manager](/sccm/core/servers/manage/updates)
 - There is no option to convert the LTSB to a Technical Preview. Technical Previews are separate installations that do not require a license.
--	You cannot upgrade an evaluation edition of the Current Branch to a LTSB installation.
+-	You cannot upgrade an evaluation edition of the Current Branch to an LTSB installation.
 
 
 ## Technical Preview for System Center Configuration Manager
@@ -122,7 +122,7 @@ To install a new site that runs the Technical Preview, use the latest [baseline 
 -  Does not support upgrade from a previous version of Configuration Manager.
 -  Does not support installation as an evaluation edition.
 
-Features that are first introduced in a Technical Preview are often added to the Current Branch in a later update.  Each new Technical Preview version includes the features from previous technical previews, even after those features have been added to the Current Branch.
+Features that are first introduced in a Technical Preview are often added to the Current Branch in a later update. Each new Technical Preview version includes the features from previous technical previews, even after those features have been added to the Current Branch.
 
 For more information, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview).
 
