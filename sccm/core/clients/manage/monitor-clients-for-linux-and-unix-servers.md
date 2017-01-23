@@ -1,5 +1,5 @@
 ---
-title: "Monitor Linux/UNIX clients | Configuration Manager | Microsoft Docs"
+title: "Monitor Linux/UNIX clients - Configuration Manager | Microsoft Docs"
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/23/2016

@@ -1,5 +1,5 @@
 ---
-title: "Upgrade clients | Configuration Manager | Microsoft Docs"
+title: "Upgrade clients - Configuration Manager | Microsoft Docs"
 description: "Get information about how to upgrade clients in System Center Configuration Manager."
 ms.custom: na
 ms.date: 01/01/2017

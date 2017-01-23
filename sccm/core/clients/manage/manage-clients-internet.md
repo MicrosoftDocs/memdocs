@@ -1,5 +1,5 @@
 ---
-title: "Manage clients on the Internet | Configuration Manager | Microsoft Docs"
+title: "Manage clients on the Internet - Configuration Manager | Microsoft Docs"
 description: "Learn about managing clients with cloud management gateway and Internet-based client management in Configuration Manager."
 ms.date: 11/18/2016
 ms.prod: configuration-manager
