@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Mac OS X devices managed with the System Center Configuration Manager client | Microsoft Docs"
+title: "Create configuration items for client-managed Macs - Configuration Manager | Microsoft Docs"
 description: "Use the System Center Configuration Manager Mac OS X configuration item to manage settings for Mac OS X devices."
 ms.custom: na
 ms.date: 12/27/2016
@@ -45,8 +45,8 @@ Use the System Center Configuration Manager **Mac OS X (custom)** configuration 
 
              For example, if you want to edit settings for the Safari Web browser, you might use **com.apple.Safari.plist**.  
 
-        -   **Key** – Specify the name of the key that you want to evaluate for compliance on Mac computers. Use the following syntax: 
-        
+        -   **Key** – Specify the name of the key that you want to evaluate for compliance on Mac computers. Use the following syntax:
+
 			```
 		    */<dictionary\>/<keyname\>*.  
 			```		
