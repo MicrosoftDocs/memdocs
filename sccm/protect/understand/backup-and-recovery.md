@@ -17,7 +17,7 @@ ms.author: brenduns
 manager: angrobe
 ---
 
-# Backup and recovery for System Center Configuration Manager
+# Backup and recovery 
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
