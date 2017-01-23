@@ -105,7 +105,7 @@ This topic lists details for each of the System Center Configuration Manager sit
 
 **Delete Aged Enrolled Devices**: Beginning with the update for 1602, this task is disabled by default. You can use this task to delete from the site database the aged data about mobile devices that haven't reported any information to the site for a specified time.
 
-This task applies to devices that are enrolled by using Microsoft Intune (hybrid) or Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by using Configuration Manager or Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_IntuneOS) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+This task applies to devices that are enrolled by using Microsoft Intune (hybrid) or Configuration Manager on-premises mobile device management. For information about the operating systems of devices that are enrolled by using Configuration Manager or Intune, see the [Mobile devices enrolled by Microsoft Intune](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune) section in [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 -   Central administration site: Not available    
 -   **Primary site**: Not enabled    
