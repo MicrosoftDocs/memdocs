@@ -1,5 +1,5 @@
 ---
-title: "Configure hardware inventory | Microsoft Docs | mobile devices"
+title: "Configure mobile device inventory - Configuration Manager | Microsoft Docs"
 description: "Configure hardware inventory for mobile devices enrolled by Microsoft Intune and System Center Configuration Manager."
 ms.custom: na
 ms.date: 12/26/2016
