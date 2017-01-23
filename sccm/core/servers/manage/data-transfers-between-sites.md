@@ -16,22 +16,22 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Data transfers between sites in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager uses **file-based replication** and **database replication** to transfer different types of information between sites.  The subjects in this topic can help you understand how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network.  
+System Center Configuration Manager uses **file-based replication** and **database replication** to transfer different types of information between sites.  Learn about how Configuration Manager moves data between sites, and how you can manage the transfer of that data across your network.  
 
 
 ##  <a name="bkmk_fileroute"></a> File-based replication  
-Configuration Manager uses file-based replication to transfer file-based data between sites in your hierarchy. This data includes content such as applications and packages that you want to deploy to distribution points in child sites, and unprocessed discovery data records that are transferred to parent sites where they are processed.  
+Configuration Manager uses file-based replication to transfer file-based data between sites in your site hierarchy. This data includes content such as applications and packages that you want to deploy to distribution points in child sites, and unprocessed discovery data records that are transferred to parent sites where they are processed.  
 
-File-based communication between sites uses the **Server Message Block** (SMB) protocol by using **TCP/IP port 445**. You can specify configurations that include bandwidth throttling and pulse mode to control the amount of data transferred across the network, and schedules to control when to send data across the network.  
+File-based communication between sites uses the **Server Message Block** (SMB) protocol by using **TCP/IP port 445**. You can specify configurations that include bandwidth throttling and pulse mode to control the amount of data transferred across the network. You also can use schedules to control when to send data across the network.  
 
 ###  <a name="bkmk_routes"></a> File replication routes  
-The following information can help you configure and use file replication routes:  
+You can use the following information to help you configure and use file replication routes.  
 
-**File replication route** - Each file replication route identifies a destination site to which file-based data can transfer. Each site supports a single file replication route to a specific destination site.  
+**File replication route**. Each file replication route identifies a destination site to which file-based data can transfer. Each site supports a single file replication route to a specific destination site.  
 
 Configuration Manager supports the following configurations for file replication routes:  
 
--   **File Replication Account**: This account is used to connect to the destination site and to write data to that site's **SMS_SITE** share. Data written to this share is processed by the receiving site. By default, when a site is added to the hierarchy, Configuration Manager assigns the computer account of the new sites site server as that sites **File Replication Account**. This account is then added to the destination site's **SMS_SiteToSiteConnection_&lt;Sitecode\>** group which is a local group on the computer that grants access to the **SMS_SITE** share. You can change this account to be a Windows user account. If you change the account, ensure you add the new account to the destination site's **SMS_SiteToSiteConnection_&lt;Sitecode\>** group.  
+-   **File Replication Account**. This account is used to connect to the destination site and to write data to that site's **SMS_SITE** share. Data written to this share is processed by the receiving site. By default, when a site is added to the hierarchy, Configuration Manager assigns the computer account of the new site's site server as that sites File Replication Account. This account is then added to the destination site's **SMS_SiteToSiteConnection_&lt;Sitecode\>** group which is a local group on the computer that grants access to the **SMS_SITE** share. You can change this account to be a Windows user account. If you change the account, ensure you add the new account to the destination site's **SMS_SiteToSiteConnection_&lt;Sitecode\>** group.  
 
     > [!NOTE]  
     >  Secondary sites always use the computer account of the secondary site server as the **File Replication Account**.  
