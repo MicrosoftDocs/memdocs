@@ -1,5 +1,5 @@
 ---
-title: "Configuring Endpoint Protection | Microsoft Docs"
+title: "Create Endpoint Protection point site system role | Microsoft Docs"
 description: "Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers."
 defintion: ""
 definition: ""
@@ -14,10 +14,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
 
 ---
-# Create an Endpoint Protection Point Site System Role*Applies to: System Center Configuration Manager (Current Branch)*
+# Create an Endpoint Protection point site system role
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site.
 
  Use one of the following procedures depending on whether you want to install a new site system server for Endpoint Protection or use an existing site system server:
