@@ -1,5 +1,5 @@
 ---
-title: "Upgrade clients | Microsoft Docs | Macs "
+title: "Upgrade macOS clients | Configuration Manager | Microsoft Docs"
 description: "Upgrade clients on Mac computers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016

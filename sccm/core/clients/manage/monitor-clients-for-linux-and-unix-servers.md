@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients |System Center Configuration Manager | Linux UNIX "
+title: "Monitor Linux/UNIX clients | Configuration Manager | Microsoft Docs"
 description: "Monitor clients on Linux and UNIX servers in System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/23/2016
@@ -29,7 +29,7 @@ You can view information from Linux and UNIX servers in the System Center Config
  The following sections describe hoe to get these details from the resource explorer and reports.  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> Use resource explorer to view inventory for Linux and UNIX servers  
- 
+
  After a Configuration Manager client submits hardware inventory to the Configuration Manager site, you can use Resource Explorer to view this information. The Configuration Manager client for Linux and UNIX does not add new classes or views for inventory to the Resource Explorer. The Linux and UNIX inventory data maps to existing WMI classes. You can view the inventory details for your Linux and UNIX servers in the Windows-based classifications using Resource Explorer.  
 
  For example, you can collect the list of all natively installed programs found on your Linux and UNIX servers. Examples of natively installed programs include **.rpms** in Linux or **.pkgs** in Solaris. After inventory has been submitted by a Linux or UNIX client, you can view the list of all the natively installed Linux or UNIX programs in Resource Explorer in the Configuration Manager console.  
