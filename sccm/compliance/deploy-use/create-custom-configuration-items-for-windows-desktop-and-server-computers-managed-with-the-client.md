@@ -1,5 +1,5 @@
 ---
-title: "Create custom configuration items for Windows desktop and server computers managed with the System Center Configuration Manager client | Microsoft Docs"
+title: "Create configuration items for client-managed Windows computers - Configuration Manager | Microsoft Docs"
 description: "Manage settings for Windows computers and servers with a custom Windows Desktops and Servers configuration item."
 ms.custom: na
 ms.date: 11/18/2016
