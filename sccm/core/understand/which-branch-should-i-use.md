@@ -20,7 +20,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 Beginning in October of 2016, there are three branches of System Center Configuration Manager available. Use this topic to help choose the right branch for you.
 
 ## Current Branch of System Center Configuration Manager
-This is a licensed branch for use in a production environment where you want the option to get the latest features and functionalities. This is the branch to use if you have one of the following: System Center Datacenter, System Center Standard, System Center Configuration Manager, or equivalent subscription rights. For more information about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
+This is a licensed branch for use in a production environment where you want the option to get the latest features and functionalities. This is the branch to use if you have one of the following: System Center Datacenter, System Center Standard, System Center Configuration Manager, or equivalent subscription rights. For more about Software Assurance and licensing options, see [Licensing and branches for System Center Configuration Manager](learn-more-editions.md).
 
 
 >  [!TIP]
