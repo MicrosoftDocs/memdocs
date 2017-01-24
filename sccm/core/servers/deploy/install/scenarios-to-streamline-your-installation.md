@@ -16,7 +16,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Update versions for System Center Configuration Manager current branch give you new scenarios to streamline the installation of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
+Update versions for System Center Configuration Manager, current branch, give you new scenarios to streamline the installation of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
 
 Supported scenarios include:  
 
@@ -26,7 +26,7 @@ Supported scenarios include:
 -   In this scenario, you skip the process of installing additional sites to a baseline level, and then updating them to the update version that you want to use.  
 -   In this scenario, you skip the process of installing clients to a baseline version, and then reinstalling them when you update to a later version.  
 
-**Upgrade Microsoft System Center 2012 Configuration Manager** infrastructure to an update version of System Center Configuration Manager.  
+**Upgrade a Microsoft System Center 2012 Configuration Manager** infrastructure to an update version of System Center Configuration Manager.  
 
 -   Manually upgrade your central administration site and each primary site to a baseline version (like version 1511) before you install an update version (like version 1602).  
 -   Don't upgrade secondary sites from Microsoft System Center 2012 Configuration Manager until your primary sites run the update version that you will use.  
@@ -76,7 +76,7 @@ Follow this sequence:
 
     After this step, new clients are installed that run version 1602.  
 
-## Scenario: Upgrade System Center 2012 Configuration Manager to an update version of System Center Configuration Manager current branch  
+## Scenario: Upgrade System Center 2012 Configuration Manager to an update version of System Center Configuration Manager, current branch  
 In this example scenario, upgrade your Microsoft System Center 2012 Configuration Manager infrastructure to an update version of System Center Configuration Manager, like version 1602.  
 
 -   The central administration site and each primary site must upgrade to the baseline version 1511 before you install the update for version 1602.  
@@ -93,7 +93,7 @@ Follow this sequence:
 2.  **Upgrade each child primary site in your hierarchy** to that same baseline version.  
 
     -   When you upgrade from Microsoft System Center 2012 Configuration Manager, you must manually upgrade each primary site to a baseline version of the current branch.  
-    -   You will not upgrade secondary sites at this time.  
+    -   You will not upgrade secondary sites at this point.  
 
     After this step, each primary site runs version 1511.  
 
@@ -111,7 +111,7 @@ Follow this sequence:
 
     -   For example, you can update your top-level site from version 1511 to version 1602. For more information, see [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md).  
 
-    After this step, your central administration site and each primary sites runs version 1602.  
+    After this step, your central administration site and each primary site runs version 1602.  
 
 5.  **Upgrade secondary sites.** After a primary site installs the update and runs version 1602, use the in-console option to upgrade secondary sites.  
 
