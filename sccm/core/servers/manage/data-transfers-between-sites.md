@@ -22,7 +22,7 @@ System Center Configuration Manager uses **file-based replication** and **databa
 ## <a name="bkmk_fileroute"></a> File-based replication  
 Configuration Manager uses file-based replication to transfer file-based data between sites in your site hierarchy. This data includes applications and packages that you want to deploy to distribution points in child sites, and unprocessed discovery data records that are transferred to parent sites and then processed.  
 
-File-based communication between sites uses the **Server Message Block** (SMB) protocol on **TCP/IP port 445**. You can specify bandwidth throttling and pulse mode to control the amount of data transferred across the network, and you can use schedules to control when to send data across the network.  
+File-based communication between sites uses the **Server Message Block** (SMB) protocol on TCP/IP port 445. You can specify bandwidth throttling and pulse mode to control the amount of data transferred across the network, and you can use schedules to control when to send data across the network.  
 
 ### <a name="bkmk_routes"></a> File replication routes  
 The following information can help you set up and use file replication routes.  
@@ -83,11 +83,11 @@ Configuration Manager groups data that replicates by database replication into d
 
 -   You can modify the following settings for database replication:  
 
-    -  **Database replication links** let you control when specific traffic traverses the network.  
-    -  **Distributed views** are a setting for replication links by which requests that are made at a central administration site for selected site data can access that site data directly from the database at a child primary site.  
-    -  **Schedules** let you configure when a replication link is used, and specify when different types of site data replicates.  
-    -  **Summarization** of data about network traffic that transverse replication links occurs every 15 minutes, by default, and is used in reports for database replication.  
-    -  **Database replication thresholds** define when links are reported as degraded or failed. You also can configure when Configuration Manager raises alerts about replication links that have a degraded or failed status.  
+    -  **Database replication links**. Control when specific traffic traverses the network.  
+    -  **Distributed views**. Change settings for replication links by which requests that are made at a central administration site for selected site data can access that site data directly from the database at a child primary site.  
+    -  **Schedules**. Specify when a replication link is used, and when different types of site data replicates.  
+    -  **Summarization**. Change settings for data summarization about network traffic that traverses replication links. Summarization occurs every 15 minutes, by default, and is used in reports for database replication.  
+    -  **Database replication thresholds**. Define when links are reported as degraded or failed. You also can configure when Configuration Manager raises alerts about replication links that have a degraded or failed status.  
 
 Configuration Manager classifies the data that it replicates by database replication as either **global data** or **site data**. When database replication occurs, changes to global data and site data are transferred across the database replication link. Global data can replicate to a parent or child site. Site data replicates only to a parent site. A third data type, local data, does not replicate to other sites. Local data is information that is not required by other sites. Note the following about data types:  
 
@@ -185,7 +185,7 @@ For information about configuring database replication thresholds, see [Site dat
 ## <a name="BKMK_DBRepControls"></a> Site database replication controls  
 You can change the settings for each site database to help you control the network bandwidth used for database replication. The settings apply only to the site database in which you configure the settings. The settings are always used when the site replicates any data by database replication to any other site.  
 
-The following are replication controls for each site database that you can modify:  
+The following are replication controls that you can modify for each site database:  
 
 -  Change the SSB port.  
 -  Configure the period of time to wait before replication failures trigger the site to reinitialize its copy of the site database.  
