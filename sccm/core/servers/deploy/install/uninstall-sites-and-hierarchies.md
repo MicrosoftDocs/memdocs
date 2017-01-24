@@ -1,6 +1,6 @@
 ---
 title: "Uninstall sites | Microsoft Docs"
-description: "Use these details as a guide when you must uninstall a System Center Configuration Manager site."
+description: "Use these details as a guide to uninstall a System Center Configuration Manager site."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,7 +17,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Uninstall sites and hierarchies in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use the following details as a guide when you must uninstall a System Center Configuration Manager sites.  
+Use the following details as a guide if you need to uninstall a System Center Configuration Manager site.  
 
 To decommission a hierarchy with multiple sites, the sequence of removal is important. Start by uninstalling the sites  at the bottom of the hierarchy and then move upward:  
 
@@ -27,14 +27,14 @@ To decommission a hierarchy with multiple sites, the sequence of removal is impo
 
 
 ##  <a name="BKMK_RemoveSecondarysite"></a> Remove a secondary site from a hierarchy  
-You cannot move a secondary site or reassign a secondary sites to a new parent primary site. To be removed from a hierarchy, a secondary site must be deleted from its direct parent site. Use the Delete Secondary Site Wizard from the Configuration Manager console to remove the secondary site. When you remove a secondary site, you must choose whether to delete it or uninstall it:  
+You cannot move a secondary site or reassign a secondary site to a new parent primary site. To be removed from a hierarchy, a secondary site must be deleted from its direct parent site. Use the Delete Secondary Site Wizard from the Configuration Manager console to remove a secondary site. When you remove a secondary site, you must choose whether to delete it or uninstall it:  
 
--   **Uninstall the secondary site**. Use this option to remove a functional secondary site that is accessible from the network. This option uninstalls Configuration Manager from the secondary site server, and then deletes all information about the site and its resources from the Configuration Manager hierarchy. If Configuration Manager installed SQL Server Express as part of the secondary site installation, Configuration Manager will uninstall SQL Express when it uninstalls the secondary site. If SQL Server Express was installed before you installed the secondary site, Configuration Manager will not uninstall SQL Server Express.  
+-   **Uninstall the secondary site**. Use this option to remove a functional secondary site that is accessible from the network. This option uninstalls Configuration Manager from the secondary site server, and then deletes all information about the site and its resources from the Configuration Manager site hierarchy. If Configuration Manager installed SQL Server Express as part of the secondary site installation, Configuration Manager will uninstall SQL Express when it uninstalls the secondary site. If SQL Server Express was installed before you installed the secondary site, Configuration Manager will not uninstall SQL Server Express.  
 
 -   **Delete the secondary site**. Use this option if one of the following is true:  
 
-    -   A secondary site failed to install.  
-    -   The secondary site continues to be displayed in the Configuration Manager console after you uninstall it.  
+    -   A secondary site failed to install  
+    -   The secondary site continues to be displayed in the Configuration Manager console after you uninstall it
 
     This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but leaves Configuration Manager installed on the secondary site server.  
 
@@ -43,12 +43,12 @@ You cannot move a secondary site or reassign a secondary sites to a new parent p
 
 #### To uninstall or delete a secondary site  
 
-1.  Verify the administrative user that runs Setup has the following security rights:  
+1.  Verify that the administrative user that runs Setup has the following security rights:  
 
-    -   Administrative rights on the secondary site computer.  
-    -   Local Administrator rights on the remote site database server for the primary site, if it is remote.  
-    -   Infrastructure Administrator or Full Administrator security role on the parent primary site.  
-    -   Sysadmin rights on the site database of the secondary site.  
+    -   Administrative rights on the secondary site computer  
+    -   Local Administrator rights on the remote site database server for the primary site, if it is remote  
+    -   Infrastructure Administrator or Full Administrator security role on the parent primary site  
+    -   Sysadmin rights on the site database of the secondary site  
 
 2.  In the Configuration Manager console, select **Administration**.  
 3.  In the **Administration** workspace, expand **Site Configuration**, and then select **Sites**.  
@@ -70,12 +70,12 @@ Use the following procedure to uninstall a primary site.
 
 1.  Verify that the administrative user that runs Setup has the following security rights:  
 
-    -   Local Administrator rights on the central administration site server.  
-    -   Local Administrator rights on the remote site database server for the central administration site, if it is remote.  
-    -   Sysadmin rights on the site database of the central administration site.  
-    -   Local Administrator rights on the primary site computer.  
-    -   Local Administrator rights on the remote site database server for the primary site, if it is remote.  
-    -   A user name associated with the Infrastructure Administrator or Full Administrator security role on the central administration site.  
+    -   Local Administrator rights on the central administration site server  
+    -   Local Administrator rights on the remote site database server for the central administration site, if it is remote
+    -   Sysadmin rights on the site database of the central administration site  
+    -   Local Administrator rights on the primary site computer  
+    -   Local Administrator rights on the remote site database server for the primary site, if it is remote  
+    -   A user name associated with the Infrastructure Administrator or Full Administrator security role on the central administration site  
 
 2.  Start Configuration Manager Setup on the primary site server by using one of the following methods:  
 
@@ -85,12 +85,12 @@ Use the following procedure to uninstall a primary site.
 
 3.  On the **Before You Begin** page, select **Next**.  
 4.  On the **Getting Started** page, select **Uninstall a Configuration Manager site**, and then select **Next**.  
-5.  On the **Uninstall the Configuration Manager Site**, specify whether to remove the site database from the primary site server and whether to remove the Configuration Manager console. By default, Setup removes both items.  
+5.  On the **Uninstall the Configuration Manager Site**, specify whether to remove the site database from the primary site server, and whether to remove the Configuration Manager console. By default, Setup removes both items.  
 
     > [!IMPORTANT]  
     >  When a secondary site is attached to the primary site, you must remove the secondary site before you can uninstall the primary site.  
 
-6.  Select **Yes** to confirm to uninstall the Configuration Manager primary site.  
+6.  Select **Yes** to confirm the uninstallation of the Configuration Manager primary site.  
 
 ##  <a name="BKMK_UninstallPrimaryDistViews"></a> Uninstall a primary site that is configured with distributed views  
  Before you uninstall a child primary site that has distributed views turned on for its replication link to the central administration site, you must turn off distributed views in your hierarchy. Use the following information to turn off distributed views before you uninstall a primary site.  
@@ -103,7 +103,7 @@ Use the following procedure to uninstall a primary site.
 4.  When the primary site is completely uninstalled, you can reconfigure distributed views on links to primary sites.  
 
     > [!IMPORTANT]  
-    >  If you uninstall the primary site before you disable distributed views at each site, or before the data from the primary site successfully reinitializes at the central administration site, replication of data between primary sites and the central administration site might fail. In this scenario, you must turn off distributed views for each link in your site hierarchy, and then, after the data successfully reinitializes with the central administration site, you can reconfigure distributed views.  
+    >  If you uninstall the primary site before you turn off distributed views at each site, or before the data from the primary site successfully reinitializes at the central administration site, replication of data between primary sites and the central administration site might fail. In this scenario, you must turn off distributed views for each link in your site hierarchy, and then, after the data successfully reinitializes with the central administration site, you can reconfigure distributed views.  
 
 ##  <a name="BKMK_UninstallCAS"></a> Uninstall the central administration site  
  You can run Configuration Manager Setup to uninstall a central administration site that does not have child primary sites. Use the following procedure to uninstall the central administration site.  
@@ -112,8 +112,8 @@ Use the following procedure to uninstall a primary site.
 
 1.  Verify that the administrative user who runs Setup has the following security rights:  
 
-    -   Local Administrator rights on the central administration site server.  
-    -   Local Administrator rights on the site database server for the central administration site, if the site database server is not installed on the site server.  
+    -   Local Administrator rights on the central administration site server  
+    -   Local Administrator rights on the site database server for the central administration site, if the site database server is not installed on the site server 
 
 2.  Start Configuration Manager Setup on the central administration site server by using one of the following methods:  
 
