@@ -17,7 +17,7 @@ ms.author: brenduns
 manager: angrobe
 ---
 
-# Backup and recovery for System Center Configuration Manager
+# Backup and recovery 
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -33,10 +33,6 @@ Prepare backup and recovery approaches to avoid data loss. For Configuration Man
 
   -  [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)   
 
-  -  [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)   
-
-  -  [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)   
-
   -  [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)   
 
   -  [Supplemental backup tasks](#BKMK_SupplementalBackup)   
@@ -47,35 +43,20 @@ Prepare backup and recovery approaches to avoid data loss. For Configuration Man
 
          -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)   
 
-         -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)   
-
          -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)   
 
-         -  [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)   
-
          -   [SQL Server change tracking retention period](#bkmk_SQLretention)   
-
-         -   [SQL Server change tracking retention period](#bkmk_SQLretention)   
-
-         -   [Process to reinitialize site or global data](#bkmk_reinit)   
 
          -   [Process to reinitialize site or global data](#bkmk_reinit)   
 
          -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
 
-         -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
-
   -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [Post-recovery tasks](#BKMK_PostRecovery)  
 
   -   [Post-recovery tasks](#BKMK_PostRecovery)  
 
   -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
 
-  -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
 -   [SMS Writer service](#BKMK_SMSWriterService)  
 
 > [!NOTE]  

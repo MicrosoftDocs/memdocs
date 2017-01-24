@@ -1,9 +1,9 @@
 ---
-title: Download software updates | Microsoft Docs
-description: "Use the Download Software Updates Wizard to download software updates from the Software Library workspace."
+title: "Download software updates - Configuration Manager | Microsoft Docs"
+description: "Use the Download Software Updates Wizard to download software updates and distribute them to distribution points so they are ready to deploy to clients."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
