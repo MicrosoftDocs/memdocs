@@ -1,6 +1,6 @@
 ---
 title: "Install scenarios | Microsoft Docs"
-description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading."
+description: "Learn techniques for installing a new Configuration Manager hierarchy when you are updating or upgrading a site."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,13 +16,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
 # Scenarios to streamline your installation of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-With the release of update versions for System Center Configuration Manager current branch, there are new scenarios to streamline the install of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
+With the release of update versions for System Center Configuration Manager Current Branch, there are new scenarios to streamline the installation of a new hierarchy to an update version (like update 1602), and to upgrade from Microsoft System Center 2012 Configuration Manager.  
 
 Supported scenarios include:  
 
 **Install a new System Center Configuration Manager current branch hierarchy** that runs an update version:  
 
--   You only install the top-tier site followed immediately by installing an update to bring that site up to the update version you will use. Then you can install additional sites directly to that update version.  
+-   You only install the top-tier site, followed immediately by installing an update to bring that site up to the update version you will use. Then you can install additional sites directly to that update version.  
 
 -   This scenario skips installing additional sites to a baseline level and then having to update them to the update version you want to use.  
 
@@ -45,7 +45,7 @@ In this example scenario, you install the first site of a hierarchy using a base
 
 **Use the following sequence:**  
 
-1.  **Install a top-level site for your new hierarchy** using the baseline media.  
+1.  **Install a top-level site for your new hierarchy** by using the baseline media.  
 
     -   You can only use baseline media to install the first site of a new hierarchy.  
 
@@ -103,7 +103,6 @@ In this example scenario, you upgrade your Microsoft System Center 2012 Configur
 2.  **Upgrade each child primary site in your hierarchy** to that same baseline version.  
 
     -   When you upgrade from Microsoft System Center 2012 Configuration Manager, you must manually upgrade each primary site to a baseline version of the current branch.  
-
     -   You will not upgrade secondary sites at this time.  
 
     After this step, each primary site runs version 1511.  
@@ -111,7 +110,6 @@ In this example scenario, you upgrade your Microsoft System Center 2012 Configur
 3.  **Set maintenance windows on child-primary sites.** After you upgrade all your primary sites to the baseline version, plan to configure maintenance windows  to control when those sites install infrastructure updates. See [How to use maintenance windows in System Center Configuration Manager](../../../../core/clients/manage/collections/use-maintenance-windows.md).  (Maintenance windows are called service windows in version 1511.)  
 
     -   A child primary site automatically installs the same updates that you install at a central administration site.  
-
     -   Secondary sties do not automatically install new versions and must be upgraded manually from within the console.  
 
     > [!NOTE]  
