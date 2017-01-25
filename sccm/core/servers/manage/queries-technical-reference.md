@@ -19,7 +19,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 Queries in System Center Configuration Manager return information from the site database based on criteria that you specify. You can use queries to retrieve information about resources in your site or about inventory data and status messages.  
 
 ## Topics about using queries in Configuration Manager  
- Use the following topics to help you use queries in Configuration Manager.  
+ Use the following topics to help you use queries in Configuration Manager:  
 
 -   [Introduction to queries in System Center Configuration Manager](../../../core/servers/manage/introduction-to-queries.md)  
 
