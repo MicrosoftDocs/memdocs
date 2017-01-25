@@ -136,3 +136,25 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 2.	After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
 3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
+
+## Android and iOS versions are no longer targetable in creation wizards
+
+Beginning in this technical preview, you no longer need to choose specific versions of Android and iOS to target to when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
+
+- Android
+- Samsung KNOX Standard 4.0 and higher
+- iPhone
+- iPad
+
+This change affects the wizards for creating the following items:
+
+- Configuration items
+- Compliance policies
+- Certificate profiles
+- Email profiles
+- VPN profiles
+- Wi-Fi profiles
+
+With this change, hybrid deployments can provide support for new Android and iOS versions faster without needing a new Configuration Manager release or extension. Once a new version is supported in Intune Standalone, users will be able to upgrade their mobile devices to that version.
+
+To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target specific version, you can also create a new item, and then specify specific versions on the properties page of the newly created item.
