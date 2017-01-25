@@ -37,3 +37,6 @@ manager: angrobe
 - [SharePoint access](/sccm/protect/deploy-use/manage-sharepoint-online-access)
 - [Skype for Business access](/sccm/protect/deploy-use/manage-skype-for-business-online-access)
 - [Dynamic CRM Online](/sccm/protect/deploy-use/manage-dynamics-crm-online-access)
+
+**Multi-factor Authentication (MFA)** lets you require more than one verification method, which adds a critical second layer of security to user sign-ins and transactions.
+Previously, you would go to either the Intune console or the Configuration Manager console to set MFA for Intune enrollments. Now, you login to the [Microsoft Azure portal](https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. To learn more, see [Multi-factor authentication for Microsoft Intune](https://aka.ms/mfa_ad).

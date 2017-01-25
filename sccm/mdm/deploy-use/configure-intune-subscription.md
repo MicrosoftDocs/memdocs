@@ -17,7 +17,9 @@ author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
-The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. The Intune subscription does the following:
+The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. While creating the Intune subscription, you can also add company branding to the Intune company portal with your company logo and custom color schemes.
+
+The Intune subscription does the following:
 
 -   Retrieves the certificate that the service connection point requires to connect to the Intune service
 -   Defines the user collection that enables users to enroll mobile devices
