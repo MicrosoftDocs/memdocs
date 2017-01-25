@@ -137,9 +137,9 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 
 3.	After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
 
-## Android and iOS versions are no longer targetable in creation wizards
+## Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
 
-Beginning in this technical preview, you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
+Beginning in this technical preview for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
 
 - Android
 - Samsung KNOX Standard 4.0 and higher
