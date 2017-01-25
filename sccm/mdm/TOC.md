@@ -33,7 +33,7 @@
 #### [User affinity](deploy-use/user-affinity-for-hybrid-managed-devices.md)
 ### Manage devices
 #### [Retire/wipe, lock, reset devices, activation lock](deploy-use/wipe-lock-reset-devices.md)
-#### [Hardware inventory](../core/clients/manage/inventory/configure-hardware-inventory.md)
+#### [Configure hardware inventory for mobile devices in a hybrid deployment](deploy-use/emm-mobile-device-hardware-inventory-hybrid.md)
 #### [placeholder - Software inventory](deploy-use/emm-introduction-to-software-inventory.md)
 #### [placeholder - Compliance settings](deploy-use/emm-get-started-with-compliance-settings.md)
 ### Manage mobile applications
