@@ -34,7 +34,7 @@
 ### Manage devices
 #### [Retire/wipe, lock, reset devices, activation lock](deploy-use/wipe-lock-reset-devices.md)
 #### [Configure hardware inventory for mobile devices in a hybrid deployment](deploy-use/emm-mobile-device-hardware-inventory-hybrid.md)
-#### [placeholder - Software inventory](deploy-use/emm-introduction-to-software-inventory.md)
+#### [Software inventory for mobile devices enrolled with Microsoft Intune](deploy-use/emm-software-inventory-mobile-devices.md)
 #### [placeholder - Compliance settings](deploy-use/emm-get-started-with-compliance-settings.md)
 ### Manage mobile applications
 #### [placeholder - Create applications](deploy-use/emm-create-applications.md)
