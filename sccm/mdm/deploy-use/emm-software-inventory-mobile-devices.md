@@ -20,7 +20,7 @@ manager: angrobe
  You can collect inventory for apps installed on mobile devices. The apps that are inventoried will depend on whether the device is company-owned or personal-owned. For personal devices, the only apps that are inventoried are apps that are managed by Microsoft Intune.  
 
 > [!NOTE]  
->  Inventory on the apps installed on mobile devices is collected as part of the [hardware inventory](../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) process.  
+>  Inventory on the apps installed on mobile devices is collected as part of the [hardware inventory](deploy-use/emm-mobile-device-hardware-inventory-hybrid.md) process.  
 
  Here are the apps that are inventoried for personal-owned or company-owned devices.  
 
@@ -33,4 +33,4 @@ manager: angrobe
 |iOS|Only managed apps|All apps installed on the device|  
 |Android|Only managed apps|All apps installed on the device|  
 
-Reaad through the topics around [Introduction to Software inventory](../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) for detailed information
+See [Introduction to software inventory](../../core/clients/manage/inventory/introduction-to-software-inventory.md) and [How to configure software inventory ](../../core/clients/manage/inventory/configure-software-inventory.md) for detailed information about using software inventory to collect file information on client devices.
