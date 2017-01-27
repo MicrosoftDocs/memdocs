@@ -1,6 +1,6 @@
 ---
-title: "Create Applications in System Center Configuration Manager | Microsoft Docs"
-description: "Create Applications in System Center Configuration Manager."
+title: "Create Applications for Mobile Devices in System Center Configuration Manager | Microsoft Docs"
+description: "Create applications for mobile devices in System Center Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,5 +16,5 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Create Applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create applications for mobile devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 PLACEHOLDER TOPIC

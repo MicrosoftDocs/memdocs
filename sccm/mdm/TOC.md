@@ -20,7 +20,6 @@
 #### [Android](deploy-use/enroll-hybrid-android.md)
 ### [Set up additional management](deploy-use/set-up-additional-management.md)
 ### [Verify MDM configuration](deploy-use/verify-mdm-configuration.md)
-### [placeholder - Multi-factor authentication in EMM](deploy-use/emm-multi-factor-authentication-in-emm.md)
 
 ## How to
 ### [placeholder - Enroll user-owned (BYOD) devices](deploy-use/enroll-user-owned-devices.md)
@@ -37,7 +36,7 @@
 #### [Software inventory for mobile devices enrolled with Microsoft Intune](deploy-use/emm-software-inventory-mobile-devices.md)
 #### [placeholder - Compliance settings](deploy-use/emm-get-started-with-compliance-settings.md)
 ### Manage mobile applications
-#### [placeholder - Create applications](deploy-use/emm-create-applications.md)
+#### [Create applications for mobile devices](deploy-use/emm-create-applications.md)
 #### [placeholder - Deploy and monitor](deploy-use/emm-deploy-monitor-applications.md)
 #### [placeholder - Manage applications](deploy-use/emm-management-tasks-applications.md)
 #### [placeholder - App configuration policies](deploy-use/emm-configure-apps-with-app-configuration-policies.md)
@@ -49,7 +48,7 @@
 #### [placeholder - Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
 #### [placeholder - Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
 #### [placeholder - VPN profiles](deploy-use/emm-create-vpn-profiles.md)
-#### [placeholder - Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
+#### [Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
 #### [placeholder - Remote protection profiles](deploy-use/emm-create-remote-connection-profiles.md)
 #### [placeholder - Conditional access](deploy-use/emm-manage-access-to-services.md)
 #### [placeholder - Passport settings](deploy-use/emm-passport-settings.md)
@@ -70,8 +69,9 @@
 ### [Set up for enrollment](get-started/set-up-device-enrollment-on-premises-mdm.md)
 
 ## How to
-### [User enrollment](deploy-use/xxxxx.md)
-### [Bulk enrollment](deploy-use/xxxxx.md)
+### [Enroll devices for on-premises MDM](deploy-use/enroll-devices-on-premises-mdm.md)
+#### [User enrollment](deploy-use/user-enroll-devices-on-premises-mdm.md)
+#### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
 ### [Manage devices](deploy-use/xxxxx.md)
 ### [Manage applications](deploy-use/xxxxx.md)
 ### [Protect data and devices](deploy-use/xxxxx.md)
