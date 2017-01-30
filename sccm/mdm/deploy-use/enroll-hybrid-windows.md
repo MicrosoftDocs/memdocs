@@ -67,6 +67,8 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
 ### Create DNS alias for device enrollment  
  A DNS alias (CNAME record type) makes it easier for users to enroll their devices by automatically populating the server name during device enrollment. To create a DNS alias (CNAME record type), you have to configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
 
+ Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, [https://enrollment.manage.microsoft.com](https://enrollment.manage.microsoft.com).
+
 |Type|Host name|Points to|  
 |----------|---------------|---------------|  
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|  
