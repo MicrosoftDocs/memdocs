@@ -33,7 +33,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 7.  On the **Supported Platforms** page, select the specific Android or Samsung KNOX Standard platforms that will evaluate the configuration item.  
 
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX Standard configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Android and Samsung KNOX Standard configuration item settings reference](#android-and-samsung-knox-standard-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
 
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -100,7 +100,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 ### Browser
 |Setting|Details|  
-|-------------|-------------| 
+|-------------|-------------|
 |**Allow web browser**|Specifies whether the device's default web browser can be used.|
 |**Autofill**|Allows the autofill function of the web browser to be used.|
 |**Active scripting**|Allows the device web browser to use active scripting.|
@@ -126,9 +126,9 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 |**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX Standard devices.|  
 |**Near field communication (NFC)**|Allows operations that use near field communication if the device supports it.|
 |**YouTube**|Allows use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX Standard devices only.|  
-|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.| 
+|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.|
 
-### Roaming 
+### Roaming
 |Setting|Details|  
 |-------------|-------------|
 |**Voice roaming**|Allows voice roaming when the device is on a cellular network.|

@@ -37,7 +37,7 @@ Use the System Center Configuration Manager **Windows Phone** configuration item
 
 7.  On the **Supported Platforms** page, select the specific Windows Phone platforms that will evaluate the configuration item.  
 
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client#windows-phone-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows Phone configuration item settings reference](#windows-phone-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
 
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  

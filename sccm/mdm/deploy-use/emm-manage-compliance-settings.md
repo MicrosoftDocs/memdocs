@@ -18,7 +18,7 @@ author: robstackmsftms.author: robstackmanager: angrobe
 # Managing compliance on devices not running the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
 These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
- If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed without the System Center Configuration Manager client](#Configuration items for devices managed without the System Center Configuration Manager client) section.  
+ If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed without the System Center Configuration Manager client](#configuration-items-for-devices-managed-without-the-system-center-configuration-manager-client) section.  
 
  [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) provides the basics about compliance settings and [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) will help you implement any necessary prerequisites.  
 

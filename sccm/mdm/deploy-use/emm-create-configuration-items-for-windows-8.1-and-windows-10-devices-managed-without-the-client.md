@@ -34,7 +34,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 
 7.  On the **Supported Platforms** page, select the specific Windows platforms that will evaluate the configuration item.  
 
-8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-81-and-windows-10-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
+8.  On the **Device Settings** page, select the settings group that you want to configure. See [Windows 8.1 and Windows 10 configuration item settings reference](#windows-81-and-windows-10-configuration-item-settings-reference) in this topic for details, and then click **Next**.  
 
     > [!TIP]  
     >  If the setting that you want is not listed, select the **Configure additional settings that are not in the default setting groups check box**.  
@@ -65,7 +65,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 ##  Windows 8.1 and Windows 10 configuration item settings reference  
 
 ### Password  
- 
+
 |Setting|Details|  
 |-------------|-------------|  
 |**Require password settings on devices**|Require a password on supported devices.|  
@@ -91,8 +91,8 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Bluetooth**|Allow use of the devices Bluetooth capability.|  
 |**Bluetooth discoverable mode**|Allow the device to be discovered by other Bluetooth devices.<br>(Windows 10 only)|  
 |**Bluetooth advertising**|Allow the use of Bluetooth advertising.<br> (Windows 10 only)|  
-|**Voice recording**|Allow the use of the voice recording features of the device.<br>(Windows 10 only)| 
-|**Cortana**|Enable or disable the Cortana voice assistant.| 
+|**Voice recording**|Allow the use of the voice recording features of the device.<br>(Windows 10 only)|
+|**Cortana**|Enable or disable the Cortana voice assistant.|
 
 ### Email management  
 
@@ -144,7 +144,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Go to intranet site for single word entry**|Enables or disables the setting that allows Internet Explorer to automatically go to an Intranet site if a valid site name is entered without a preceding HTTP:|  
 |**Enterprise Mode menu option**|Allow users to activate and deactivate Enterprise Mode from the Internet Explorer **Tools** menu.|  
 |**Logging report location (URL)**|Specify a URL where visited websites will be logged when Enterprise Mode is active.|  
-|**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that will use Enterprise Mode when it is active.| 
+|**Enterprise Mode site list location (URL)**|Specify the location of the list of websites that will use Enterprise Mode when it is active.|
 
 ### Microsoft Edge  
  These settings are for devices running Windows 10 and later.  
@@ -166,7 +166,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
  These settings are for devices running Windows 10 November Update (1511) and later.  
 
 |Setting name|Details|  
-|------------------|-------------| 
+|------------------|-------------|
 |**Allow real-time monitoring**|Enables real-time scanning for malware, spyware, and other unwanted software.|
 |**Allow behavior monitoring**|Lets Defender check for certain known patterns of suspicious activity on devices.|
 |**Enable Network Inspection System**|The Network Inspection System (NIS) helps to protect devices against network-based exploits by using the signatures of known vulnerabilities from the Microsoft Endpoint Protection Center to help detect and block malicious traffic.|
@@ -192,7 +192,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**File extension exclusions**|Add one or more file extensions like jpg or txt to the exclusions list. Any files with these extensions will not be included in any real-time, or scheduled scans.|
 |**Process exclusions**|Add one or more processes of the type .exe, .com, or .scr to the exclusions list. These processes will not be included in any real-time, or scheduled scans.|
 
- 
+
 
 ###  Cloud  
 
@@ -235,9 +235,9 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Device management while roaming**|Allows the device to be managed by Configuration Manager when it is roaming.<br>(Windows 10 only)|  
 |**Software download while roaming**|Allows the download of apps and software when roaming.<br>(Windows 10 only)|  
 |**Email download while roaming**|Allows e-mail downloads when roaming.<br>(Windows 10 only)|  
-|**Data roaming**|Allow roaming between networks when accessing data.| 
+|**Data roaming**|Allow roaming between networks when accessing data.|
 |**VPN over cellular**|Controls whether the device can access VPN connections when connected to a cellular network.<br>(Windows 10 only)|
-|**VPN roaming over cellular**|Controls whether the device can access VPN connections when roaming on a cellular network.<br>(Windows 10 only)| 
+|**VPN roaming over cellular**|Controls whether the device can access VPN connections when roaming on a cellular network.<br>(Windows 10 only)|
 
 ###  Encryption  
 
@@ -278,7 +278,7 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |**Proxy server settings**|Specify as required, **Server** and **Port** settings for **HTTP**, **WAP** and **Sockets**.|  
 |**Enable 802.1X network access**|Select this option if you want to secure the connection by specifying an EAP type.|  
 |**EAP type**|Choose the EAP type to use from:<br>- **PEAP**<br>- **Smart card or certificate**|  
- 
+
 
 ### Certificates  
  Lets you import certificates to install on mobile devices.  
@@ -347,11 +347,11 @@ Use the System Center Configuration Manager **Windows 8.1 and Windows 10** confi
 |------------------|-------------|  
 |**Allow screen to wake automatically when sensors detect someone in the room**|Allows the device to wake automatically when its sensor detects someone in the room.|  
 |**Required PIN for wireless projection**|Specifies whether you must enter a PIN before you can use the wireless projection capabilities of the device.|  
-|**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).| 
+|**Maintenance Window**|Configures the window when updates can take place to the device. You can configure the start time of the window and the duration (from 1-5 hours).|
 |**Azure Operational Insights**|Azure Operational Insights , part of the Microsoft Operations Manager suite collects, stores, and analyzes log file data from Windows 10 Team devices.<br>To connect to Azure Operational insights, you must specify a **Workspace ID** and a **Workspace Key**.|
 |**Miracast wireless projection**|Enable this option if you want to let the Windows 10 Team device use Miracast enabled devices to project.<br>If you enable this option, from **Choose Miracast channel** select the Miracast channel used to project content.|
 |**Meeting information displayed on welcome screen**|If you enable this option, you can choose the information that will be displayed on the **Meetings** tile of the Welcome screen. You can:<br>- **Show organizer and time only**<br>- **Show organizer, time and subject (subject hidden for private meetings)**|
-|**Lockscreen background image URL**|Enable this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.| 
+|**Lockscreen background image URL**|Enable this setting to display a custom background on the **Welcome** screen of Windows 10 Team devices from the URL you specify.<br>The image must be in PNG format and the URL must begin with **https://**.|
 
 ### Windows Information Protection
  These settings are for devices running Windows 10 only.
@@ -381,4 +381,3 @@ For information about how to configure Windows Information Protection with Confi
 |**Edit**|Lets you edit the name, publisher and URL of the selected app.|  
 |**Remove**|Deletes the selected app from the list.|  
 |**Import**|Imports a list of apps you have specified in a comma-separated values file. Use the format, application name, publisher, app URL in the file.|  
-
