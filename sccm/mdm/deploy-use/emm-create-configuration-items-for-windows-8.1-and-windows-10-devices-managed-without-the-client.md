@@ -10,7 +10,7 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: c262291a-80fe-47f3-a6d0-a605fe8b1f06
+ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 caps.latest.revision: 20
 caps.handback.revision: 0
 author: robstackmsftms.author: robstackmanager: angrobe

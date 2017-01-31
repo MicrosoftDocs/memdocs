@@ -42,6 +42,9 @@
 #### [Sync Intune-enrolled devices](deploy-use/sync-intune-device.md)
 ### Manage mobile applications
 #### [Create applications for mobile devices](deploy-use/emm-create-applications.md)
+##### [Create iOS applications](deploy-use/emm-creating-ios-applications.md)
+##### [Create Windows Phone applications](deploy-use/emm-creating-windows-phone-applications.md)
+##### [Create Android applications](deploy-use/emm-creating-android-applications.md)
 #### [*  Deploy and monitor](deploy-use/emm-deploy-monitor-applications.md)
 #### [*  Manage applications](deploy-use/emm-management-tasks-applications.md)
 #### [*  App configuration policies](deploy-use/emm-configure-apps-with-app-configuration-policies.md)

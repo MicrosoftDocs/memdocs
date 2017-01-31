@@ -9,7 +9,7 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: fae7f9e0-d5e7-422f-a6ed-6f6d73f6a617
+ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
 caps.latest.revision: 13
 caps.handback.revision: 0
 author: robstackmsft

@@ -11,12 +11,9 @@
 # Deploy and use
 
 ## [Create applications](deploy-use/create-applications.md)
-### [Create iOS applications](get-started/creating-ios-applications.md)
 ### [Create Mac computer applications](get-started/creating-mac-computer-applications.md)
 ### [Create Windows applications](get-started/creating-windows-applications.md)
-### [Create Windows Phone applications](get-started/creating-windows-phone-applications.md)
 ### [Create Linux and UNIX server applications](get-started/creating-linux-and-unix-server-applications.md)
-### [Create Android applications](get-started/creating-android-applications.md)
 ### [Create Windows Embedded applications](get-started/creating-windows-embedded-applications.md)
 ### [Create global conditions](deploy-use/create-global-conditions.md)
 ### [Packages and programs](deploy-use/packages-and-programs.md)
