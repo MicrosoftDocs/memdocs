@@ -69,13 +69,13 @@ Some updates for Configuration Manager are available as both an in-console updat
 
 The following versions of Configuration Manager are available as a baseline, an update, or both:  
 
-|Version|Availability date|Baseline|in-console update|  
+|Version|Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supporte) |Baseline|in-console update|  
 |-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|12/8/2015|Yes|No|  
-|**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Yes|
-|**1606**<br /><br /> 5.00.8412.1000|7/22/2016|No|Yes|
-|**1606** with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016|Yes|No|
-|**1610**<br /><br /> 5.00.8458.1000|11/18/2016|No|Yes|
+|**1511**<br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Yes|No|  
+|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|3/11/2016| 3/11/2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016| 7/22/2017|Yes|No|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 11/18/2017|No|Yes|
 *(Note 1)* This 1606 baseline media is available as part of Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
