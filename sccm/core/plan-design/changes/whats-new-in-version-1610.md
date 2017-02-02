@@ -1,8 +1,8 @@
 ---
-title: "New in System Center Configuration Manager version 1610 | Microsoft Docs"
+title: "New version 1610 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1610 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  
+ms.date:  11/23/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -11,10 +11,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 caps.latest.revision: 40
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# What&#39;s new in version 1610 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Update 1610 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
@@ -37,16 +42,16 @@ You can exclude Windows clients from getting upgraded with new versions of the c
 
 
 ## Improvements for boundary groups
-Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure, while giving you more control over how and when clients fall back to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
-These improvements replace concepts and behaviors you might be familiar with (like configuring distribution points to be fast or slow) The new model should be easier to set up and maintain. These changes also lay the groundwork for future changes that will improve other site system roles you associate to boundary groups.
+Version 1610 introduces important changes to boundary groups and how they work with distribution points. These changes can simplify the design of your content infrastructure, while giving you more control over how and when clients fallback to search additional distribution points as content source locations. This includes both on-premises and cloud-based distribution points.
+These improvements replace concepts and behaviors you might be familiar with (like configuring distribution points to be fast or slow). The new model should be easier to set up and maintain. These changes also lay the groundwork for future changes that will improve other site system roles you associate to boundary groups.
 
-When you update to version 1610, the update converts your current boundary group configurations to fit the new model. These changes do not disturb your existing content distribution configurations.
+When you update to version 1610, the update converts your current boundary group configurations to fit the new model so that these changes do not disturb your existing content distribution configurations.
 
 For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-groups).
 
 
 ## Peer Cache for content distribution to clients
-Beginning with version 1610, a client solution called **Peer Cache** helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients, directly from their local cache.
+Beginning with version 1610, client **Peer Cache** helps you manage deployment of content to clients in remote locations. Peer Cache is a built-in Configuration Manager solution for clients to share content with other clients, directly from their local cache.
 
 After you deploy client settings that enable Peer Cache to a collection, members of that collection can act as a peer content source for other clients in the same boundary group.
 
@@ -59,29 +64,29 @@ For more information, see [Peer Cache for Configuration Manager clients](/sccm/c
 
 
 ## Migrate multiple shared distribution points at the same time
-You can now use the option to reassign distribution points. Configuration Manager can process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
+You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
 
 ## Cloud management gateway for managing Internet-based clients
 
-Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure by using a new role called the cloud management gateway connection point. Once it's completely deployed and set up, cloud management gateway lets clients communicate with on-premises Configuration Manager site system roles and cloud-based distribution points. Clients need not be connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
+Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
 
 ## Improvements to the Windows 10 Edition Upgrade Policy
 In this release, the following improvements have been made to this policy type:
 
-- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client. This policy continues to apply to Windows 10 PCs that are enrolled with Microsoft Intune.
+- You can now use the edition upgrade policy with Windows 10 PCs that run the Configuration Manager client in addition to Windows 10 PCs that are enrolled with Microsoft Intune.
 - You can upgrade from Windows 10 Professional to any of the platforms in the wizard that are compatible with your hardware.
 
 ## Manage hardware identifiers
 You can now provide a list of hardware IDs that Configuration Manager should ignore for the purpose of PXE boot and client registration. There are two common issues that this helps to address:
 
-- Many devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for the purpose of deploying an operating system. However, due to cost and general usability, these are often shared adapters. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
-- The SMBIOS ID is supposed to be a unique hardware identifier, but some specialty hardware devices are built with duplicate IDs. This issue may not be as common as the USB-to-Ethernet adapter scenario just described, but you can address it by using the list of excluded hardware IDs.
+1. Many devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for the purpose of deploying an operating system. However, due to cost and general usability, these are often shared adapters. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
+2. The SMBIOS ID is supposed to be a unique hardware identifier, but some specialty hardware devices are built with duplicate IDs. This issue may not be as common as the USB-to-Ethernet adapter scenario just described, but you can address it by using the list of excluded hardware IDs.
 
 For details, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
-In this release, note the following changes:
-- Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid, online, licensed apps (for Intune enrolled devices only).
+Changes in this release:
+- Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
 - You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
 - You can now modify the client secret key that you obtained from Azure Active Directory.
 - You can delete a subscription to the store.
@@ -95,14 +100,14 @@ For details, see [Remotely synchronize policy on Intune-enrolled devices from th
 
 
 ## Use compliance settings to configure Windows Defender settings
-You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers. You do this by using configuration items in the Configuration Manager console.
+You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers by using configuration items in the Configuration Manager console.
 For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
 
 
 
 ## General improvements to Software Center
 - Users can now request apps from Software Center, as well as the Application Catalog.
-- Easier identification of new and relevant software available to users.
+- Improvements to help users understand what software is new and relevant.
 
 ## New columns in device collection views
 You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
@@ -121,18 +126,18 @@ Custom branding for the Software Center is applied according to the following ru
 
 
 ## Enforcement grace period for required application and software update deployments
-In some cases, you might want to give users more time to install required application deployments or software updates, beyond any deadlines you set up. For example, this might be necessary when a computer has been turned off for an extended period of time, and it needs to install a large number of application or update deployments. Perhaps a user has just returned from vacation, and would have to wait as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
+In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you set up. For example, this might be necessary when a computer has been turned off for an extended period of time and it needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection. 
 
-To set up the grace period:
-1.      On the **Computer Agent** page of client settings, set the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
+To configure the grace period, take the following actions:
+1.      On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
 2.      In a new required application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the check box **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. All deployments that have this check box selected, and are targeted to devices to which you also deployed the client setting, will use the enforcement grace period.
 
-If you set an enforcement grace period and select the check box, once the application installation deadline is reached, it will be installed according to the user's preferences. This occurs in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments. Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages.
+If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments. Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages. 
 
 
 
 ## Improved functionality in dialog boxes about required software
-When a user encounters a dialog box about required software, he or she can use the **Snooze and remind me:** setting to select from the following options:
+WWhen a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values: 
 - **Later**. Specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
 - **Fixed time**. Specifies that the notification will be scheduled to display again after the selected time (for example, in 30 minutes).
 
@@ -182,7 +187,7 @@ The dashboard displays charts for the following:
 For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
 
 ## Task sequence steps to manage BIOS to UEFI conversion
-You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive. This means that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
+You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
 
 ##  Improvements to the task sequence step: Prepare ConfigMgr Client for Capture  
 The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
@@ -194,7 +199,7 @@ You can now get a quick view of overall compliance for devices, and the top reas
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware and risky apps on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk). 
 
 Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 
