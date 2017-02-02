@@ -69,7 +69,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
     - Method 2: [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
-4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
+4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.   
 
 ## Add other languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
@@ -96,8 +96,8 @@ For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Afr
 ![Filenames with additional languages](..\media\5-verification.png)
 
 
-<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute to Office 365 clients a registry key value change by using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
 
 - Current Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
@@ -110,7 +110,6 @@ To change the update channel after you enable Office 365 clients to receive upda
 
 - First Release for Deferred Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
--->
 
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
