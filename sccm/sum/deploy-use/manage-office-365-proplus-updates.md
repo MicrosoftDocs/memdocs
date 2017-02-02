@@ -79,8 +79,8 @@ When you download Office 365 updates, you specify the update file languages to d
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
-   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
-   ![WMI query](..\media\1-wmiquery.png)
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
+![WMI query](..\media\1-wmiquery.png)
 4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
 5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
 ![Property editor](..\media\2-propeditor.png)
