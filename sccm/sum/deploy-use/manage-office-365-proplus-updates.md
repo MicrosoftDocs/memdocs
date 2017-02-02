@@ -85,11 +85,11 @@ When you download Office 365 updates, you specify the update file languages to d
 5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
 ![Property editor](..\media\2-propeditor.png)
 6. Starting at the first query result, open each object until you find the one with **AdditionalUpdateLanguagesForO365** for the **PropertyName** property.
-7. Select **Value2** and click **Edit**.
-   ![Edit the Value2 property](..\media\3-queryresult.png)
+7. Select **Value2** and click **Edit Property**.  
+![Edit the Value2 property](..\media\3-queryresult.png)
 8. Add additional languages to the **Value2** property and click **Save Property**.  
-   For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
-   ![Add languages in Property Editor](..\media\4-props.png)
+For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
+![Add languages in Property Editor](..\media\4-props.png)  
 9. Click **Close**, click **Close**, click **Save Property**, click **Save Object** (if you click **Close** here the values are discarded), click **Close**, and then click **Exit** to exit the Windows Management Intstrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
 11. Now, when you download Office 365 updates, the updates will be downloaded in the language that you select in the wizard and the languages that you configured in this procedure. To verify that the updates downloaded in those languages, go to the package source for the update and look for files with the language code in the filename.  
