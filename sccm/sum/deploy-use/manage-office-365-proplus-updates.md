@@ -72,23 +72,29 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
 
-<!--  ## Add other languages for Office 365 update downloads
+## Add other languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
 
 ### To add support to download updates for additional languages
 Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
-2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
+2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
    *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
-4. Double-click the object with the site code for the central administration site or stand-alone primary site.
+   ![WMI query](..\media\1-Query.png)
+4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
+5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
+![Property editor](..\media\2-propeditor.png)
+6. Starting at the first query result, open each object until you find the one with **AdditionalUpdateLanguagesForO365** for the **PropertyName** property.
+7. Select **Value2** and click **Edit**.
+   ![Edit the Value2 property](..\media\3-queryresult.png)
+8. Add additional languages to the **Value2** property and click **Save Property**.  
+   For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
+   ![Add languages in Property Editor](..\media\4-props.png)
+9. Close the Windows Management Intstrumentation Tester.
 
-5. Browse the properties for View Embedded.
-3). Find the SMS_EmbeddedProperty instance with the PropertyName of "AdditionalUpdateLanguagesForO365"
-4). Set Value2 to be additional languages, e.g.:  pt-pt,af-za,nn-no, and save
-5). Right click to download an O365 update, choose languages from UI
-6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
--->
+When you download an Office 365 update, you should now be able to choose languages that you specified in the Configuration Manager console as well as the languages that you added in the previous steps.
+
 
 <!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
