@@ -17,4 +17,13 @@ author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Manage Applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-PLACEHOLDER TOPIC
+When you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these additional application types:
+- Windows Phone app package (*.xap file)
+- App Package for iOS (*.ipa file)
+- App Package for Android (*.apk file)
+- App Package for Android on Google Play
+- Windows Phone app package (in the Windows Phone Store)
+- Windows Installer through MDM
+- Web Application
+
+This section provides detailed information about creating and managing applications using hybrid EMM or on-premises MDM.
