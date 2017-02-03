@@ -27,3 +27,5 @@ When you manage devices through Microsoft Intune or Configuration Manager on-pre
 - Web Application
 
 This section provides detailed information about creating and managing applications using hybrid EMM or on-premises MDM.
+
+[Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types. 

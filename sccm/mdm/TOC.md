@@ -29,7 +29,7 @@
 #### [Device enrollment manager](deploy-use/enroll-devices-with-device-enrollment-manager.md)
 #### [Predeclare hardware ID](deploy-use/predeclare-devices-with-hardware-id.md)
 #### [Manage iOS activation lock](deploy-use/manage-ios-activation-lock.md)
-#### [User affinity](deploy-use/user-affinity-for-hybrid-managed-devices.md)
+#### [User device affinity](deploy-use/user-affinity-for-hybrid-managed-devices.md)
 ### Manage devices
 #### [Retire/wipe, lock, reset devices, activation lock](deploy-use/wipe-lock-reset-devices.md)
 #### [Configure hardware inventory for mobile devices in a hybrid deployment](deploy-use/emm-mobile-device-hardware-inventory-hybrid.md)
@@ -46,10 +46,11 @@
 ##### [Create Windows Phone applications](deploy-use/emm-creating-windows-phone-applications.md)
 ##### [Create Android applications](deploy-use/emm-creating-android-applications.md)
 #### [*  Deploy and monitor](deploy-use/emm-deploy-monitor-applications.md)
-#### [*  App configuration policies](deploy-use/emm-configure-apps-with-app-configuration-policies.md)
+#### [App configuration policies](deploy-use/emm-configure-ios-apps-with-app-configuration-policies.md)
 #### [iOS volume-purchased apps](deploy-use/emm-manage-volume-purchased-ios-apps.md)
-#### [*  Mobile application management policies](deploy-use/emm-protect-apps-using-mam-policies.md)
-#### [*  WSFB](deploy-use/emm-windows-store-for-business.md)
+#### [Mobile application management policies](deploy-use/emm-protect-apps-using-mam-policies.md)
+#### [Managed browser policies](deploy-use/emm-manage-internet-access-using-managed-browser-policies.md)
+#### [Windows Store for Business apps](deploy-use/emm-windows-store-for-business.md)
 ### [Manage Intune subscriptions](deploy-use/emm-manage-intune-subscriptions.md)
 ### Protect data and devices
 #### [*  Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)

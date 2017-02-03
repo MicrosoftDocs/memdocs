@@ -17,4 +17,6 @@ author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # WSfB in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-PLACEHOLDER TOPIC
+Configuration Manager supports managing Windows Store for Business apps on Windows 10 devices that are enrolled with Microsoft Intune (hybrid configuration) in addition to Windows 10 devices running the Configuration Manager client.
+
+To see the capabilities Configuration Manager offers for online and offline apps, and to set up Windows Store for Business synchronization, see [Manage apps from the Windows Store for Business with System Center Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
