@@ -4,10 +4,10 @@
 title: Upgrade analytics | System Center Configuration Manager
 description: Integrate Upgrade Analytics with Configuration Manager. Access upgrade compatibility data in your admin console. Target devices for upgrade or remediation.
 keywords:
-author: nbigman
-ms.author: nbigman
+author: brenduns
+ms.author: brenduns
 manager: angerobe
-ms.date: 11/23/2016
+ms.date: 12/3/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -82,13 +82,13 @@ The Upgrade Analytics deployment script does the following:
 - Sets commercial ID key + CommercialDataOptIn + RequestAllAppraiserVersions keys.  
 - Verifies that user computers can send data to Microsoft.  
 - Checks whether the computer has a pending restart.   
-- Verifies that the latest version of KB package 10.0.x is installed (requires 10.0.14348 or subsequent releases).  
+- Verifies that the latest version of KB package 10.0.x is installed (requires 10.0.14913 or subsequent releases).  
 - If enabled, turns on verbose mode for troubleshooting.  
 - Initiates the collection of the telemetry data that Microsoft needs to assess your organization’s upgrade readiness.  
 - If enabled, displays the script’s progress in a cmd window, providing you visibility into issues (success or fail for each step) and/or writes to log file.  
-  
+
 ### To run the Upgrade Analytics deployment script:  
-  
+
 1. Download the [Upgrade Analytics deployment script](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409) and extract UpgradeAnalytics.zip. The files in the **Diagnostics** folder are necessary only if you plan to run the script in troubleshooting mode.  
 2. Edit these parameters in RunConfig.bat:  
 - Storage location for log information. Example: %SystemDrive%\UADiagnostics. You can store log information on a remote file share or a local directory. If the script is blocked from creating the log file for the given path, it creates the log files in the drive with the Windows directory.  
@@ -99,12 +99,12 @@ The Upgrade Analytics deployment script does the following:
 	- logMode = 2 log to file only  
     - For troubleshooting, set **isVerboseLogging** to **$true** to generate log information that can help with diagnosing issues. By default, **isVerboseLogging** is set to **$false**. Ensure the Diagnostics folder is installed in the same directory as the script to use this mode.  
 	- Notify users if they need to restart their computers. By default, this is set to off.  
-  
+
 3. After you finish editing the parameters in RunConfig.bat, run the script as an administrator.  
-  
-  
+
+
 ## View Microsoft Upgrade Analytics properties in Configuration Manager  
-  
+
 1.  In the Configuration Manager console, navigate to **Cloud Services**, then choose **OMS Connector** to open the **OMS Connection Properties** page.  
 
 2.  Within this page there are two tabs:
