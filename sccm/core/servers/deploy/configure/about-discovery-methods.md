@@ -1,7 +1,7 @@
 ---
 title: "Discovery methods | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,7 +19,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Each System Center Configuration Manager discovery method can find different devices on your network or devices and users from Active Directory. To efficiently use a discovery method, you should understand its available configurations and limitations.  
+System Center Configuration Manager discovery methods can find different devices on your network or devices and users from Active Directory. To efficiently use a discovery method, you should understand its available configurations and limitations.  
 
 ##  <a name="bkmk_aboutForest"></a> Active Directory Forest Discovery  
  **Configurable:** Yes  
@@ -96,7 +96,7 @@ Use this method to search Active Directory Domain Services to identify:
 
 -   Limited information about a group's member computers and users, even when another discovery method has not previously discovered those computers and users.  
 
-This discovery method is intended to identify groups and the group relationships of members of groups. By default, only security groups are discovered. If you want to also find the membership of distribution groups, you must check the box for the option **Discover the membership of distribution groups** on the **Option** tab in the Active Directory Group Discovery **Properties** dialog box.  
+This discovery method is intended to identify groups and the group relationships of members of groups. By default, only security groups are discovered. If you want to also find the membership of distribution groups, you must check the box for the option **Discover the membership of distribution groups** on the **Option** tab in the **Active Directory Group Discovery Properties** dialog box.  
 
 Active Directory Group Discovery does not support the extended Active Directory attributes that can be identified by using Active Directory System Discovery or Active Directory User Discovery. Because this discovery method is not optimized to discover computer and user resources, consider running this discovery method after you have run Active Directory System Discovery and Active Directory User Discovery. This is because this method creates a full discovery data record (DDR) for groups, but only a limited DDR for computers and users that are members of groups.  
 
@@ -104,7 +104,7 @@ You can configure the following discovery scopes that control how this method se
 
 -   **Location**: Use a location if you want to search one or more Active Directory containers. This scope option supports a recursive search of the specified Active Directory containers that also searches each child container under the container that you specify. This process continues until no more child containers are found.  
 
--   **Groups**: Use groups if you want to search one or more specific Active Directory groups. You can configure the Active Directory domain to use the default domain and forest, or limit the search to an individual domain controller. Additionally, you can specify one or more groups to search. If you do not specify at least one group, all groups found in the specified Active Directory domain location are searched.  
+-   **Groups**: Use groups if you want to search one or more specific Active Directory groups. You can configure **Active Directory Domain** to use the default domain and forest, or limit the search to an individual domain controller. Additionally, you can specify one or more groups to search. If you do not specify at least one group, all groups found in the specified **Active Directory Domain** location are searched.  
 
 > [!CAUTION]  
 >  When you configure a discovery scope, choose only the groups that you must discover. This is because Active Directory Group Discovery tries to discover each member of each group in the discovery scope. Discovery of large groups can require extensive use of bandwidth and Active Directory resources.  
@@ -214,9 +214,9 @@ Heartbeat Discovery is the only discovery method that provides details about the
 
 Actions for Heartbeat Discovery are logged in the following locations:  
 
--   For computer clients, Heartbeat Discovery actions are recorded on the client in the **InventoryAgent.log** file in the **%Windir%\CCM\Logs** folder.  
+-   For computer clients, Heartbeat Discovery actions are recorded on the client in the **InventoryAgent.log** file in the *%Windir%\CCM\Logs* folder.  
 
--   For mobile device clients, Heartbeat Discovery actions are recorded in the **DMPRP.log** file in the **%Program Files%\CCM\Logs** folder of the management point that the mobile device client uses.  
+-   For mobile device clients, Heartbeat Discovery actions are recorded in the **DMPRP.log** file in the *%Program Files%\CCM\Logs* folder of the management point that the mobile device client uses.  
 
 For more information about how to configure this discovery method, see [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
@@ -257,7 +257,7 @@ Network Discovery can return several attributes as part of the discovery record 
 
 -   MAC addresses  
 
-Network Discovery activity is recorded in the **Netdisc.log** file in **&lt;InstallationPath\>\Logs** on the site server that runs discovery.  
+Network Discovery activity is recorded in the **Netdisc.log** file in *&lt;InstallationPath\>\Logs* on the site server that runs discovery.  
 
  For more information about how to configure this discovery method, see [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md).  
 
@@ -315,7 +315,7 @@ Specify each domain that you want Network Discovery to query.
 
 -   Network Discovery retrieves the IP address and then uses an Internet Control Message Protocol echo request to ping each device that it finds. The **ping** command helps determine which computers are currently active.  
 
-**SNMP devices:**  
+**SNMP Devices:**  
 
 Specify each SNMP device that you want Network Discovery to query.  
 
