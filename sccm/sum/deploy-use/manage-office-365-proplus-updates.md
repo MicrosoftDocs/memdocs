@@ -73,9 +73,11 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
 ## Add other languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+> [!IMPORTANT]  
+> Configuring additional Office 365 update languages is a site-wide setting. After you add the languages by using the following procedure, all Office 365 updates will be downloaded in those languages as well as the languages that you select on the Language Selection page in the Download Software Updates or Deploy Software Updates wizards.
 
 ### To add support to download updates for additional languages
-When you download Office 365 updates, you specify the update file languages to download in the wizard. You can specify that all Office 365 updates are also downloaded in additional languages by using the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
+Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
@@ -97,7 +99,7 @@ For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Afr
 
 
 ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute to Office 365 clients a registry key value change by using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you can use group policy to distribute a registry key value change to Office 365 clients . Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
 
 - Current Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
