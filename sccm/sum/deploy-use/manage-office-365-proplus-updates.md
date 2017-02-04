@@ -58,8 +58,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
 1.  [Verify the requirements](https://technet.microsoft.com/library/mt628083.aspx) for using Configuration Manager to manage Office 365 client updates in the **Requirements for using Configuration Manager to manage Office 365 client updates** section of the topic.  
 
-2.  [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Office 365 client updates. Set **Updates** for the classification and select **Office 365 Client** for the product. You might have to synchronize software updates at least one time before the Office 365 Client product is available for you to choose. You must synchronize software updates after you configure the software update points to use the **Updates** classification.  
-
+2.  [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Office 365 client updates. Set **Updates** for the classification and select **Office 365 Client** for the product. You might have to synchronize software updates at least one time before the Office 365 Client product is available for you to choose. You must synchronize software updates after you configure the software update points to use the **Updates** classification.
 3.  Enable Office 365 clients to receive updates from Configuration Manager. You can do this by using Configuration Manager client settings or use group policy. Use one of the following methods to enable the client:  
     - Method 1: Beginning in Configuration Manager version 1606, you can use the Configuration Manager client setting to manage the Office 365 client agent. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager takes inventory of Office 365 ProPlus Client settings.
       1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.  
@@ -70,28 +69,37 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 
     - Method 2: [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
-4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.  
+4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.   
 
-<!--  ## Add other languages for Office 365 update downloads
+## Add other languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+> [!IMPORTANT]  
+> Configuring additional Office 365 update languages is a site-wide setting. After you add the languages by using the following procedure, all Office 365 updates will be downloaded in those languages as well as the languages that you select on the Language Selection page in the Download Software Updates or Deploy Software Updates wizards.
 
 ### To add support to download updates for additional languages
 Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
-2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
+2. Click **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Click **Query**, and then run the following query:
-   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
-4. Double-click the object with the site code for the central administration site or stand-alone primary site.
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
+![WMI query](..\media\1-wmiquery.png)
+4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
+5. Select the **Props** property, click **Edit Property**, and then click **View Embedded**.
+![Property editor](..\media\2-propeditor.png)
+6. Starting at the first query result, open each object until you find the one with **AdditionalUpdateLanguagesForO365** for the **PropertyName** property.
+7. Select **Value2** and click **Edit Property**.  
+![Edit the Value2 property](..\media\3-queryresult.png)
+8. Add additional languages to the **Value2** property and click **Save Property**.  
+For example, pt-pt (for Portuguese - Portugal), af-za (for Afrikaans - South Africa), nn-no (for Norwegian (Nynorsk) - Norway), etc.  
+![Add languages in Property Editor](..\media\4-props.png)  
+9. Click **Close**, click **Close**, click **Save Property**, click **Save Object** (if you click **Close** here the values are discarded), click **Close**, and then click **Exit** to exit the Windows Management Intstrumentation Tester.
+10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
+11. Now, when you download Office 365 updates, the updates will be downloaded in the language that you select in the wizard and the languages that you configured in this procedure. To verify that the updates downloaded in those languages, go to the package source for the update and look for files with the language code in the filename.  
+![Filenames with additional languages](..\media\5-verification.png)
 
-5. Browse the properties for View Embedded.
-3). Find the SMS_EmbeddedProperty instance with the PropertyName of "AdditionalUpdateLanguagesForO365"
-4). Set Value2 to be additional languages, e.g.:  pt-pt,af-za,nn-no, and save
-5). Right click to download an O365 update, choose languages from UI
-6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
--->
 
-<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you can use group policy to distribute a registry key value change to Office 365 clients . Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
 
 - Current Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
@@ -104,7 +112,6 @@ To change the update channel after you enable Office 365 clients to receive upda
 
 - First Release for Deferred Channel:  
   **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
--->
 
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
