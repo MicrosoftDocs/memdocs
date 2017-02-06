@@ -24,7 +24,9 @@ Use VPN profiles in System Center Configuration Manager (also known as ConfigMgr
 
  When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md).  
 
- The sections below explain what devices you can configure with VPN profiles if you are using Configuration Manager, or Configuration Manager with Microsoft Intune.  
+ The sections below explain what devices you can configure with VPN profiles if you are using Configuration Manager.
+
+ [](../../mdm/deploy-use/mm-create-vpn-profiles.md) reviews the devices you can configure with VPN profiles when using Configuration Manager with Microsoft Intune.  
 
 ## VPN profiles when using Configuration Manager  
  The following table describes the VPN profiles you can configure for various device platforms.  

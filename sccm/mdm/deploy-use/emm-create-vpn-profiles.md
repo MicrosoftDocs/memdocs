@@ -40,7 +40,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
  |L2TP|Yes|No|Yes|Yes|Yes|No|Yes (OMA-URI)|  
 
 ## Create VPN Profiles
-[How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profile.md) provides general information about creating VPN profiles.
+[How to Create VPN profiles in System Center Configuration Manager](../../protect/deploy-use/create-vpn-profiles.md) provides general information about creating VPN profiles.
 
 ###   Windows 10 VPN features, available when using Configuration Manager with Intune  
 

@@ -55,8 +55,8 @@
 ### Protect data and devices
 #### [Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
 #### [*  Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
-#### [*  VPN profiles](deploy-use/emm-create-vpn-profiles.md)
-#### [Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
+#### [VPN profiles](deploy-use/emm-create-vpn-profiles.md)
+#### [* Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
 #### [*  Remote protection profiles](deploy-use/emm-create-remote-connection-profiles.md)
 #### [Manage access to services](deploy-use/emm-manage-access-to-services.md)
 ##### [Device compliance policies](deploy-use/emm-device-compliance-policies.md)
