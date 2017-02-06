@@ -53,7 +53,7 @@
 #### [Windows Store for Business apps](deploy-use/emm-windows-store-for-business.md)
 ### [Manage Intune subscriptions](deploy-use/emm-manage-intune-subscriptions.md)
 ### Protect data and devices
-#### [*  Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
+#### [Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
 #### [*  Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
 #### [*  VPN profiles](deploy-use/emm-create-vpn-profiles.md)
 #### [Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
@@ -73,7 +73,6 @@
 ##### [Enable device threat protection policy](deploy-use/emm-enable-device-threat-protection-rule-compliance-policy.md)
 ##### [Troubleshoot Lookout integration](deploy-use/emm-troubleshoot-lookout-integration.md)
 #### [*  Passport settings](deploy-use/emm-passport-settings.md)
-#### [*  Compliance settings](deploy-use/emm-device-compliance-policies.md)
 #### [*  Device settings](deploy-use/xxxxx.md)
 
 # On-premises mobile device management (MDM)
