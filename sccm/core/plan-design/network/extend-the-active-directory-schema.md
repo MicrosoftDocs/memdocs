@@ -2,7 +2,7 @@
 title: "Publishing and the Active Directory schema | Microsoft Docs"
 description: "Extend the Active Directory schema for System Center Configuration Manager to simplify the process of deploying and configuring clients."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Prepare Active Directory for site publishing*Applies to: System Center Configuration Manager (Current Branch)*
+# Prepare Active Directory for site publishing
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 When you extend the Active Directory schema for System Center Configuration Manager, you introduce new structures to Active Directory that are used by Configuration Manager sites to publish key information in a secure location where clients can easily access it.  
 
 It's a good idea to use Configuration Manager with an extended Active Directory schema when you manage on-premises clients. An extended schema can simplify the process of deploying and setting up clients. An extended schema also lets clients efficiently locate resources like content servers and additional services that the different Configuration Manager site system roles provide.  
