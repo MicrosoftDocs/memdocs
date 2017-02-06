@@ -2,7 +2,7 @@
 title: "Manage network bandwidth for content | Microsoft Docs"
 description: "Configure scheduling, throttling, and prestaged content for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
