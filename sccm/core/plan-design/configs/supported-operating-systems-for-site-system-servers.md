@@ -2,7 +2,7 @@
 title: "Supported site system servers | Microsoft Docs"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -321,12 +321,7 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-## The server core installation of Windows Server 2016
-Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October of 2016) this operating system is supported for use as a distribution point with the following limitations:  
 
-  -   Only the x64-bit version is supported.
-
-  -   Distribution points on this operating system do not support PXE or Multicast.  
 
 ## The server core installation of Windows Server 2012 R2  
  In addition to the previous operating systems that are listed, the server core installation of Windows Server 2012 R2 is supported for use as a distribution points with the following limitations:  
