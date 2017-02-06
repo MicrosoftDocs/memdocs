@@ -2,7 +2,7 @@
 title: "Endpoint Protection | Microsoft Docs"
 description: "Learn how to manage antimalware policies and Windows Firewall security for client computers in your Configuration Manager hierarchy."
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,7 +34,7 @@ Endpoint Protection in System Center Configuration Manager lets you to manage an
 
 -   Send email notifications, use in-console monitoring, and view reports to keep administrative users informed when malware is detected on client computers  
 
-Windows 10 computers don't require any additional client for endpoint protection management. On Windows 8.1 and earlier computers, Endpoint Protection installs its own client in addition to the Configuration Manager client. Endpoint Protection can manage. The Endpoint Protection client has the following capabilities:  
+Beginning with Windows 10 and Windows Server 2016, computers don’t require any additional client for endpoint protection management. On Windows 8.1 and earlier computers, Endpoint Protection installs its own client in addition to the Configuration Manager client. The Endpoint Protection client has the following capabilities:  
 
 -   Malware and spyware detection and remediation  
 
