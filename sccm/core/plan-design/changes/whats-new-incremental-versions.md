@@ -2,7 +2,7 @@
 title: "Incremental versions of System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to install and manage System Center Configuration Manager updates."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# What’s new in System Center Configuration Manager incremental versions*Applies to: System Center Configuration Manager (Current Branch)*
+# What’s new in System Center Configuration Manager incremental versions
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 
 
