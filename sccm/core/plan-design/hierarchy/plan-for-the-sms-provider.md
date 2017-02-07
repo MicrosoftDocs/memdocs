@@ -2,7 +2,7 @@
 title: "Plan the SMS Provider | Microsoft Docs"
 description: "Learn about how the SMS Provider helps you manage System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,19 +12,23 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan for the SMS Provider for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-To manage System Center Configuration Manager, you use a Configuration Manager console that connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on a central administration site or primary site. This happens when the site installs.  
+# Plan for the SMS Provider for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+To manage System Center Configuration Manager, you use a Configuration Manager console that connects to an instance of the **SMS Provider**. By default, an SMS Provider installs on the site server when you install a central administration site or primary site. 
 
 
 ##  <a name="BKMK_PlanSMSProv"></a> About the SMS Provider  
  The SMS Provider is a Windows Management Instrumentation (WMI) provider that assigns **read** and **write** access to the Configuration Manager database at a site:  
 
--   The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each SMS Provider computer.  
-
 -   Each central administration site and primary site require at least one SMS Provider. You can install additional providers as needed.  
+-   The **SMS Admins** security group provides access to the SMS Provider. Configuration Manager automatically creates this group on the site server, and on each computer where you install an instance of the SMS Provider.  
 
 -   Secondary sites do not support the SMS Provider.  
 
@@ -38,7 +42,7 @@ Configuration Manager administrative users use an SMS Provider to access informa
 
  For information about how to manage the SMS Provider, see [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) in [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md).  
 
- ### Prerequisites to install the SMS Provider  
+## Prerequisites to install the SMS Provider  
 
  To support the SMS Provider:  
 
@@ -176,9 +180,13 @@ The structure of the SMS Provider is defined by the WMI schema. Schema namespace
 |root\CIMv2\SMS|The location of inventory reporting classes that are collected by the inventory client agent. These settings are compiled by clients during computer policy evaluation, and are based on the client settings configuration for the computer.|  
 
 ##  <a name="BKMK_WAIKforSMSProv"></a> Operating system deployment requirements for the SMS Provider  
-The SMS Provider requires that Windows Assessment and Deployment Kit 8.1 (Windows ADK) be installed on the computer that runs the SMS Provider. This enables you to use operating system deployment task functions by using the Configuration Manager console.  
+The computer where you install an instance of the SMS Provider must have the required version of the Windows ADK that the version of Configuration Manager you're using requires.  
 
- When you manage operating system deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:  
+ -   For example, version 1511 of Configuration Manager requires the Windows 10 RTM (10.0.10240) version of the Windows ADK.  
+
+ -   For more information about this requirement, see [Infrastructure requirements for operating system deployment](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment).  
+
+When you manage operating system deployments, the Windows ADK allows the SMS Provider to complete various tasks, such as:  
 
 -   View WIM file details.  
 
