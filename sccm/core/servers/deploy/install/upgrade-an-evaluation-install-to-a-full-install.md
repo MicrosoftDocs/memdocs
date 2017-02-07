@@ -2,7 +2,7 @@
 title: "Upgrade evaluation installs | Microsoft Docs"
 description: "Learn how to upgrade an evaluation installation to a full installation of System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Upgrade an evaluation installation of System Center Configuration Manager to a full installation*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade an evaluation installation of System Center Configuration Manager to a full installation
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 If you installed System Center Configuration Manager as an evaluation version, after 180 days, the Configuration Manager console becomes read-only until you activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180-day period, you have the option to upgrade an evaluation installation to a full installation.  
 
 > [!NOTE]  
