@@ -2,7 +2,7 @@
 title: "Checklist for 1602 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 to version 1602."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -79,17 +79,17 @@ For more information, see   [Database replicas for management points for System 
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install updates, disable any site maintenance task that might run during the time the update process is active. These tasks include (but are not limited) to the following:  
 
--   Back up site server  
+-   Backup Site Server  
 
--   Delete aged client operations  
+-   Delete Aged Client Operations  
 
--   Delete aged discovery data  
+-   Delete Aged Discovery Data  
 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has installed.  
 
  For more information, see [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md) and [Reference for maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/reference-for-maintenance-tasks.md).  
 
- **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.   
+ **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, backup the site database to ensure that you have a successful backup to use for disaster recovery.   
 
 For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
 
@@ -108,8 +108,7 @@ For more information, see [Backup and recovery for System Center Configuration M
 -   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.  
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
-
-You can't run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) section in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) section in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
 
