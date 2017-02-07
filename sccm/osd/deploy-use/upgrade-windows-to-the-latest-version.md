@@ -1,8 +1,8 @@
 ---
 title: Upgrade Windows to the latest version | Microsoft Docs
-description: "Learn how to use stand-alone media or Software Center in Configuration Manager to upgrade an operating system from Windows 7 or later to Windows 10."
+description: "Learn how to use Configuration Manager to upgrade an operating system from Windows 7 or later to Windows 10."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -59,6 +59,10 @@ This topic provides the steps in System Center Configuration Manager to upgrade 
 2.  **Create a task sequence to upgrade the operating system**  
 
      Use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to automate the upgrade of the operating system.  
+
+    > [IMPORTANT]
+    > When you use stand-alone media, you must include a boot image in the task sequence for it to be available in the Task Sequence Media Wizard.
+
 
     > [!NOTE]  
     >  Typically you will use the steps in [Create a task sequence to upgrade an operating system](create-a-task-sequence-to-upgrade-an-operating-system.md) to create a task sequence to upgrade an operating system to Windows 10. The task sequence includes the Upgrade Operating System step, as well as additional recommended steps and groups to handle the end-to-end upgrade process. However, you can create a custom task sequence and add the [Upgrade Operating System](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to upgrade the operating system. This is the only step required to upgrade the operating system to Windows 10. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer) step after the Upgrade Operating System step to complete the upgrade. Be sure to use the **The currently installed default operating system** setting to restart the computer into the installed operating system and not Windows PE.  
