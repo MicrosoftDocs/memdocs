@@ -2,7 +2,7 @@
 title: "Schema extensions | Microsoft Docs"
 description: "Extend the Active Directory schema to support System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,11 +13,16 @@ ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 robots: noindex
 
 ---
-# Schema extensions for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Schema extensions for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can extend the Active Directory schema to support Configuration Manager. This edits a forest's Active Directory schema to add a new container and several attributes that Configuration Manager sites use to publish key information in Active Directory where clients can securely use it. This information can simplify the deployment and configuration of clients and helps clients locate site resources like servers with deployed content or that provide different services to clients.  
 
 -   It's a good idea to extend the Active Directory schema, but it's not required.  
@@ -54,7 +59,7 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
 -   Mobile device legacy clients  
 
--   Windows clients that are set up for Internet-only client management  
+-   Windows clients that are configured for Internet-only client management  
 
 -   Windows clients that are detected by Configuration Manager to be on the Internet  
 
@@ -63,7 +68,7 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers must install:  
 
-    -   **Use client push installation**. Before you use a client installation method, make sure that all prerequisites are met. For more information, see the 'Installation Method Dependencies' section in Prerequisites for Computer Clients.  
+    -   **Use client push installation**. Before you use a client installation method, make sure that all prerequisites are met. For more information, see the 'Installation Method Dependencies' section in [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).  
 
     -   **Install clients manually** and provide client installation properties by using CCMSetup installation command-line properties. This must include the following:  
 
@@ -71,9 +76,9 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
         -   Specify a list of initial management points for the client to use so that it can assign them to the site and then download client policy and site settings. Use the CCMSetup Client.msi property SMSMP to do this.  
 
-    -   **Publish the management point in DNS or WINS** and set up clients to use this service location method.  
+    -   **Publish the management point in DNS or WINS** and configure clients to use this service location method.  
 
-**Port configuration for client-to-server communication** - When a client installs, it is set up with port information stored in Active Directory. If you later change the client-to-server communication port for a site, a client can get this new port setting from Active Directory Domain Services.  
+**Port configuration for client-to-server communication** - When a client installs, it is configured with port information stored in Active Directory. If you later change the client-to-server communication port for a site, a client can get this new port setting from Active Directory Domain Services.  
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide new port configurations to existing clients:  
 
