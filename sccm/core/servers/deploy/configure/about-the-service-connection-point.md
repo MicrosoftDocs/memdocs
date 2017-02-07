@@ -2,7 +2,7 @@
 title: "Service connection point | Microsoft Docs"
 description: "Learn about this Configuration Manager site system role, and understand and plan for its range of uses."
 ms.custom: na
-ms.date: 1/6/2017
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,15 +13,20 @@ ms.topic: article
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# About the service connection point in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# About the service connection point in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The System Center Configuration Manager service connection point is a site system role that serves several important functions for the hierarchy. Before you set up the service connection point, understand and plan for its range of uses, which might affect how you set up this site system role:  
 
 -   **Manage mobile devices with Microsoft Intune** - This role replaces the Windows Intune connector that previous versions of Configuration Manager used and can be configured with your Intune subscription details. See [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../../mdm/understand/hybrid-mobile-device-management.md).  
 
--   **Manage mobile devices with on-premises mobile device management (MDM)** - This role provides support for on-premises devices that you manage and that do not connect to the Internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+-   **Manage mobile devices with on-premises MDM** - This role provides support for on-premises devices that you manage and that do not connect to the Internet. See [Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 -   **Upload usage data from your Configuration Manager infrastructure** - You can control the level or amount of detail that you upload. Uploaded data helps us:  
 
@@ -39,7 +44,7 @@ The System Center Configuration Manager service connection point is a site syste
 
  **Each hierarchy supports a single instance of this role:**  
 
-    -   The site system role can only be installed at the top-tier site of your hierarchy, like a central administration site or the stand-alone primary site.  
+    -   The site system role can only be installed at the top-tier site of your hierarchy, which is a central administration site or stand-alone primary site.  
 
     -   If you expand a stand-alone primary site to a larger hierarchy, you must uninstall this role from the primary site and can then install it at the central administration site.  
 
