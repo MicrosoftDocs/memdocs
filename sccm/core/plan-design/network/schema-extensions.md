@@ -2,7 +2,7 @@
 title: "Schema extensions | Microsoft Docs"
 description: "Extend the Active Directory schema to support System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -132,7 +132,7 @@ When you extend the schema for System Center Configuration Manager, the followin
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
->  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but not used by Configuration Manager 2015. For example:  
+>  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but not used by System Center Configuration Manager. For example:  
 >   
 >  -   Attribute: cn=MS-SMS-Site-Boundaries  
 > -   Class: cn=MS-SMS-Server-Locator-Point  
