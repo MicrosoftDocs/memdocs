@@ -2,7 +2,7 @@
 title: "Install site system roles | Microsoft Docs"
 description: "Wizards help you add site system roles to an existing or new site system server in the site."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,19 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Install site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install site system roles for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The  System Center Configuration Manager console has two wizards you can use to install site system roles:  
 
--   **Add Site System Roles**: Use this wizard to add site system roles to an existing site system server in the site.  
+-   **Add Site System Roles Wizard**: Use this wizard to add site system roles to an existing site system server in the site.  
 
--   **Create Site System Server**: Use this wizard to specify a new server as a site system server, and then install one or more site system roles on the server. This wizard is the same as the **Add Site System Roles** wizard, except that on the first page, you must specify the name of the server to use and the site in which you want to install it.  
+-   **Create Site System Server Wizard**: Use this wizard to specify a new server as a site system server, and then install one or more site system roles on the server. This wizard is the same as the **Add Site System Roles Wizard**, except that on the first page, you must specify the name of the server to use and the site in which you want to install it.  
 
 When you install a site system role on a remote computer (including an instance of the SMS Provider), the computer account of the remote computer is added to a local group on the site server. When the site is installed on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role is not operational until either the site system role computer restarts, or the Kerberos ticket for the remote computer's account is refreshed. For more information, see [Accounts used in System Center Configuration Manager](../../../../core/plan-design/hierarchy/accounts.md).  
 
