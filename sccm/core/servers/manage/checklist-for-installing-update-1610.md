@@ -2,7 +2,7 @@
 title: "Checklist for 1610 | System Center Configuration Manager"
 description: "Learn about actions to take before updating to System Center Configuration Manager version 1610."
 ms.custom: na
-ms.date: 1/7/2017
+ms.date: 2/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -28,13 +28,13 @@ To get the update for version 1610, you must use a service connection point site
 
 -   If the update displays as **Downloading** and does not change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    -   Usually, you can also restart the **SMS\_Executive** service on the site server to restart the download of the update's redistribution files.
+    -   Usually, you can also restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
 
     -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
 
 For more information about installing updates, see [In-console updates and servicing](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing).
 
-For information about the versions of the current branch, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) in [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
+For information about the versions of the Current Branch, see [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines) in [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
 ## About installing update 1610
 
@@ -56,7 +56,7 @@ The first time you use a Configuration Manager console after the update has fini
 ## Checklist
 
 **Ensure that all sites run a supported version of System Center Configuration Manager:** 
-Before you start the installation of update 1610, each site in the hierarchy must be runing the same version of System Center Configuration Manager: either version 1511, 1602, or 1606.
+Before you start the installation of update 1610, each site in the hierarchy must be running the same version of System Center Configuration Manager: either version 1511, 1602, or 1606.
 
 **Review the status of your Software Assurance or equivalent subscription rights:**   
 You must have an active Software Assurance (SA) agreement to install update 1610. When you install version 1610, you will have the option on the **Licensing** tab to confirm your **Software Assurance expiration date**.
@@ -99,8 +99,8 @@ Configuration Manager cannot successfully update a primary site that has a datab
 
 For more information, see [Database replicas for management points for System Center Configuration Manager](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).
 
-**Set SQL Server Always On availability groups to manual failover:**   
-Before installing updates, such as version 1610, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information see [SQL Server Always On for a site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+**Set SQL Server AlwaysOn availability groups to manual failover:**   
+Before installing updates, such as version 1610, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information see [SQL Server AlwaysOn for a site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
 
 **Reconfigure software update points that use NLBs:**   
 Configuration Manager cannot update a site that uses a network load balancing (NLB) cluster to host software update points.
@@ -111,9 +111,9 @@ For more information, see [Plan for software updates in System Center Configura
 **Disable all site maintenance tasks at each site for the duration of the update installation on that site:**   
 Before you install the update, disable any site maintenance task that might run during the time the update process is active. This includes but is not limited to the following:
 
--   Back up site server
--   Delete aged client operations
--   Delete aged discovery data
+-   Backup Site Server
+-   Delete Aged Client Operations
+-   Delete Aged Discovery Data
 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has been installed.
 
@@ -139,7 +139,7 @@ Before you update a System Center Configuration Manager central administration s
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-You can't run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test) section in [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test) section in [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
 
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.
