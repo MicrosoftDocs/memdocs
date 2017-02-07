@@ -1,5 +1,5 @@
 ---
-title: "Create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client | Microsoft Docs"
+title: "Create configuration items for Android & Samsung KNOX Standard - Configuration Manager | Microsoft Docs"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
 ms.date: 12/14/2016
@@ -100,7 +100,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
 ### Browser
 |Setting|Details|  
-|-------------|-------------| 
+|-------------|-------------|
 |**Allow web browser**|Specifies whether the device's default web browser can be used.|
 |**Autofill**|Allows the autofill function of the web browser to be used.|
 |**Active scripting**|Allows the device web browser to use active scripting.|
@@ -126,9 +126,9 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 |**Camera**|Allows the use of the device camera.<br /><br /> Applies to Android and Samsung KNOX Standard devices.|  
 |**Near field communication (NFC)**|Allows operations that use near field communication if the device supports it.|
 |**YouTube**|Allows use of the YouTube app on the device.<br /><br /> Applies to Samsung KNOX Standard devices only.|  
-|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.| 
+|**Power off**|Allows the device to be powered off.<br /><br /> Applies to Samsung KNOX Standard devices only.|
 
-### Roaming 
+### Roaming
 |Setting|Details|  
 |-------------|-------------|
 |**Voice roaming**|Allows voice roaming when the device is on a cellular network.|

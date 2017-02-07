@@ -1,5 +1,5 @@
 ---
-title: "Create certificate profiles | Microsoft Docs"
+title: "How to create SCEP certificate profiles | Microsoft Docs"
 description: "Learn how to use certificate profiles to provision managed devices with the certificates they need in System Center Configuration Manager."
 ms.custom: na
 ms.date: 11/22/2016
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: Nbigman
+ms.author: nbigman
+manager: angrobe
 
 ---
-# How to create SCEP certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create certificate profiles
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Use certificate profiles in Configuration Manager (SCCM) to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure for System Center Configuration Manager](certificate-infrastructure.md).  
 

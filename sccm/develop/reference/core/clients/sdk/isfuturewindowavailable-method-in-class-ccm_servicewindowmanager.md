@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 83ae2265-47db-441d-986f-7e3869ef8d9e
+ms.assetid: 83ae2265-47db-441d-986f-7e3869ef8d9esearchScope: - ConfigMgr SDK
 caps.latest.revision: 20
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -62,7 +62,7 @@ uint32 IsFutureWindowAvailable(
 
  Qualifiers: [in]  
 
- Maximum run time, in minutes, that a software update installation has to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough time to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs and 5 minutes for all other software update types. Values can range from 5 to 9999 minutes.  
+ Maximum run time, in seconds, that a software update installation has to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough time to install the update before the end of a maintenance window. The default setting is 60 minutes (3600 seconds) for service packs and 5 minutes (300 seconds) for all other software update types.  
 
 > [!IMPORTANT]
 >  Make sure that the maximum run time value is not set for more time than the configured maintenance window or the software update installation will not initiate.  

@@ -137,7 +137,9 @@ When you extend the schema for System Center Configuration Manager, the followin
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
->  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but are not used by Configuration Manager 2015. For example:  
+
+>  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but not used by System Center Configuration Manager. For example:  
+
 >   
 >  -   Attribute: cn=MS-SMS-Site-Boundaries  
 > -   Class: cn=MS-SMS-Server-Locator-Point  
