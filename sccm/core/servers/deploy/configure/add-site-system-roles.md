@@ -2,7 +2,7 @@
 title: "Add site system roles | Microsoft Docs"
 description: "Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
 caps.latest.revision: 12
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Add site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Add site system roles for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Each System Center Configuration Manager site supports multiple site system roles. Each role extends the functionality and capacity of your site to provide services to the site and to manage devices and users. Each site system role on a site system server must be from the same site.   
 
 Configuration Manager does not support site system roles for multiple sites on a single site system server.  
