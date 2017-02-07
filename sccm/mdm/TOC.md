@@ -45,7 +45,7 @@
 ##### [Create iOS applications](deploy-use/emm-creating-ios-applications.md)
 ##### [Create Windows Phone applications](deploy-use/emm-creating-windows-phone-applications.md)
 ##### [Create Android applications](deploy-use/emm-creating-android-applications.md)
-#### [*  Deploy and monitor](deploy-use/emm-deploy-monitor-applications.md)
+#### [Deploy and monitor](deploy-use/emm-deploy-monitor-applications.md)
 #### [iOS App configuration policies](deploy-use/emm-configure-ios-apps-with-app-configuration-policies.md)
 #### [iOS volume-purchased apps](deploy-use/emm-manage-volume-purchased-ios-apps.md)
 #### [Mobile application management policies](deploy-use/emm-protect-apps-using-mam-policies.md)
@@ -54,11 +54,11 @@
 ### [Manage Intune subscriptions](deploy-use/emm-manage-intune-subscriptions.md)
 ### Protect data and devices
 #### [Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
-#### [*  Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
+#### [Certificate profiles](deploy-use/emm-introduction-to-certificate-profiles.md)
 #### [VPN profiles](deploy-use/emm-create-vpn-profiles.md)
 #### [Email profiles](deploy-use/emm-introduction-to-email-profiles.md)
 ##### [Create Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
-#### [*  Remote protection profiles](deploy-use/emm-create-remote-connection-profiles.md)
+#### [Remote connection profiles](deploy-use/emm-create-remote-connection-profiles.md)
 #### [Manage access to services](deploy-use/emm-manage-access-to-services.md)
 ##### [Device compliance policies](deploy-use/emm-device-compliance-policies.md)
 ##### [Create a device compliance policy](deploy-use/emm -create-compliance-policy.md)
@@ -73,8 +73,6 @@
 ##### [Deploy Lookout for Work apps](deploy-use/emm-configure-and-deploy-lookout-for-work-apps.md)
 ##### [Enable device threat protection policy](deploy-use/emm-enable-device-threat-protection-rule-compliance-policy.md)
 ##### [Troubleshoot Lookout integration](deploy-use/emm-troubleshoot-lookout-integration.md)
-#### [*  Passport settings](deploy-use/emm-passport-settings.md)
-#### [*  Device settings](deploy-use/xxxxx.md)
 
 # On-premises mobile device management (MDM)
 ## Overview
