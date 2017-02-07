@@ -13,32 +13,37 @@ ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 robots: noindex
 
 ---
-# Schema extensions for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-You can extend the Active Directory schema to support Configuration Manager. This edits a forests Active Directory schema  to add a new container and several attributes that are used by Configuration Manager sites to publish key information in Active Directory where clients can securely access it.  This information can simplify the deployment and configuration of clients, and helps clients locate site resources like servers with deployed content or that provide various services to clients.  
+# Schema extensions for System Center Configuration Manager
 
--   Extending the Active Directory schema is not required, but is recommended.  
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+You can extend the Active Directory schema to support Configuration Manager. This edits a forest's Active Directory schema to add a new container and several attributes that Configuration Manager sites use to publish key information in Active Directory where clients can securely use it. This information can simplify the deployment and configuration of clients and helps clients locate site resources like servers with deployed content or that provide different services to clients.  
+
+-   It's a good idea to extend the Active Directory schema, but it's not required.  
 
 Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx), you should be familiar with Active Directory Domain Services and comfortable with [modifying the Active Directory schema](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
 
-## Considerations for Extending the Active Directory Schema for Configuration Manager  
+## Considerations for extending the Active Directory schema for Configuration Manager  
 
--   The Active Directory schema extensions for System Center Configuration Manager are unchanged from those used by Configuration Manager 2007 and Configuration Manager 2012. If you previously extended the schema for either version, you do not have to extend the schema again.  
+-   The Active Directory schema extensions for System Center Configuration Manager are unchanged from those that Configuration Manager 2007 and Configuration Manager 2012 use. If you previously extended the schema for either version, you do not have to extend the schema again.  
 
--   Extending the schema is forest-wide, one-time, irreversible action.  
+-   Extending the schema is a forest-wide, one-time, irreversible action.  
 
--   Extending the schema can only be done by a user who is a member of the Schema Admins Group or who has been delegated sufficient permissions to modify the schema.  
+-   Only a user who is a member of the Schema Admins Group or who has been delegated sufficient permissions to change the schema can extend the schema.  
 
--   Although you can extend the schema before or after running Configuration Manager Setup, we recommend doing so before you start configuring your sites and hierarchy settings.  This can simplify many of the later configuration steps.  
+-   Although you can extend the schema before or after you run Configuration Manager Setup, it's a good idea to extend the schema before you start to configure your sites and hierarchy settings. This can simplify many of the later configuration steps.  
 
--   After you extend the schema,  the Active Directory global catalog is replicated throughout the forest. Therefore, plan to extend the schema when the replication traffic will not adversely affect other network-dependent processes:  
+-   After you extend the schema, the Active Directory global catalog is replicated throughout the forest. Therefore, plan to extend the schema when the replication traffic will not adversely affect other network-dependent processes:  
 
-    -   In Windows 2000 forests, extending the schema causes a full synchronization of the whole global catalog  
+    -   In Windows 2000 forests, extending the schema causes a full sync of the whole global catalog.  
 
-    -   Beginning with Windows 2003 forests, only the newly added attributes are replicated  
+    -   Beginning with Windows 2003 forests, only the newly added attributes are replicated.  
 
 **Devices and clients that do not use the Active Directory schema:**  
 
@@ -59,17 +64,17 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 -   Windows clients that are detected by Configuration Manager to be on the Internet  
 
 ## Capabilities that benefit from extending the schema  
-**Client computer installation and site assignment** - When a new client installs on a Windows computer, the client searches Active Directory Domain Services for installation properties.  
+**Client computer installation and site assignment** - When a Windows computer installs a new client, the client searches Active Directory Domain Services for installation properties.  
 
--   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers require to install:  
+-   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers must install:  
 
-    -   **Use client push installation**. Before you use client installation method, make sure that all prerequisites are met. For more information, see the section 'Installation Method Dependencies' in Prerequisites for Computer Clients.  
+    -   **Use client push installation**. Before you use a client installation method, make sure that all prerequisites are met. For more information, see the 'Installation Method Dependencies' section in [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).  
 
     -   **Install clients manually** and provide client installation properties by using CCMSetup installation command-line properties. This must include the following:  
 
         -   Specify a management point or source path from which the computer can download the installation files by using the CCMSetup property **/mp:=&lt;management point name computer name\>** or **/source:&lt;path to client source files\>** on the CCMSetup command line during client installation.  
 
-        -   Specify a list of initial management points for the client to use so that it can assign to the site and then download client policy and site settings. Use the CCMSetup Client.msi property SMSMP to do this.  
+        -   Specify a list of initial management points for the client to use so that it can assign them to the site and then download client policy and site settings. Use the CCMSetup Client.msi property SMSMP to do this.  
 
     -   **Publish the management point in DNS or WINS** and configure clients to use this service location method.  
 
@@ -77,18 +82,18 @@ Before you [extend the Active Directory schema](https://msdnstage.redmond.corp.m
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide new port configurations to existing clients:  
 
-    -   **Reinstall clients** using options that configure the new port.  
+    -   **Reinstall clients** by using options that configure the new port.  
 
-    -   **Deploy a custom script to clients that updates the port information**. If clients cannot communicate with a site because of a port change, you cannot use Configuration Manager to  deploy this script. For example, you could use Group Policy.  
+    -   **Deploy a custom script to clients that updates the port information**. If clients cannot communicate with a site because of a port change, you cannot use Configuration Manager to deploy this script. For example, you could use Group Policy.  
 
-**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a site's public key is made available to all sites in the hierarchy.  
+**Content deployment scenarios** - When you create content at one site and then deploy that content to another site in the hierarchy, the receiving site must be able to verify the signature of the signed content data. This requires access to the public key of the source site where you create this data. When you extend the Active Directory schema for Configuration Manager, a site's public key is available to all sites in the hierarchy.  
 
 -   **Workaround:** If you do not extend the schema, use the hierarchy maintenance tool, **preinst.exe**, to exchange the secure key information between sites.  
 
-     For example, if you plan to create content at a primary site and deploy that content to a secondary site below a different primary site, you must either extend the Active Directory schema to enable the secondary site to obtain the source primary sites public key, or use preinst.exe to share keys between the two sites directly.  
+     For example, if you plan to create content at a primary site and deploy that content to a secondary site below a different primary site, you must either extend the Active Directory schema to let the secondary site get the source primary site's public key, or use preinst.exe to share keys between the two sites directly.  
 
-## Active Directory Attributes and Classes  
-When you extend the schema for System Center Configuration Manager, the following classes and attributes are added to the schema and made available to all Configuration Manager sites in that Active Directory forest.  
+## Active Directory attributes and classes  
+When you extend the schema for System Center Configuration Manager, the following classes and attributes are added to the schema and available to all Configuration Manager sites in that Active Directory forest.  
 
 -   Attributes:  
 
@@ -132,7 +137,9 @@ When you extend the schema for System Center Configuration Manager, the followin
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
+
 >  The  schema extensions might include attributes and classes that are carried forward from previous versions of the product but not used by System Center Configuration Manager. For example:  
+
 >   
 >  -   Attribute: cn=MS-SMS-Site-Boundaries  
 > -   Class: cn=MS-SMS-Server-Locator-Point  
