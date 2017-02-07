@@ -93,8 +93,8 @@
 ### [Enroll devices for on-premises MDM](deploy-use/enroll-devices-on-premises-mdm.md)
 #### [User enrollment](deploy-use/user-enroll-devices-on-premises-mdm.md)
 #### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
-### [* Manage devices](deploy-use/xxxxx.md)
-### [* Manage applications](deploy-use/xxxxx.md)
-### [* Protect data and devices](deploy-use/xxxxx.md)
+### [Manage devices](deploy-use/onprem-manage-devices.md)
+### [Manage applications](deploy-use/onprem-manage-applications.md)
+### [Protect data and devices](deploy-use/onprem-protect-data-devices.md)
 
 # [Device management with Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)

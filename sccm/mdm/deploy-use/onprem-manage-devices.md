@@ -1,0 +1,19 @@
+---
+title: "Manage Mobile Devices in System Center Configuration Manager On-Premises | Microsoft Docs"
+description: "Manage mobile devices in System Center Configuration Manager on-premises."
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+  - configmgr-hybrid
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 6e233f17-8ead-4984-a3fa-12687c4381ee
+caps.latest.revision: 18
+caps.handback.revision: 0
+author: mtillmanms.author: mtillman
+manager: angrobe
+---
+# Manage devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You can manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management. To do so, the [devices need to be enrolled](enroll-devices-on-premises-mdm.md) so that Configuration Manager can communicate with the devices for management tasks.Managing devices in ConfigMgr on-premises is the same as managing devices in a hybrid mobile devicce management environment. [Manage devices in EMM](wipe-lock-reset-devices.md) provides detailed information about device management.
