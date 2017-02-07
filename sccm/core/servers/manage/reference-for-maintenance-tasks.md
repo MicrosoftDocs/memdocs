@@ -2,7 +2,7 @@
 title: "Reference for maintenance tasks | Microsoft Docs"
 description: "Read details for each of the System Center Configuration Manager site maintenance tasks and whether these tasks are enabled by default."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Reference for maintenance tasks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Reference for maintenance tasks for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic lists details for each of the System Center Configuration Manager site maintenance tasks and specifies the site types where the task is available. Each entry also indicates if the task is enabled or not enabled by default. For information about planning for and configuring sites to run maintenance tasks, see [Maintenance tasks for System Center Configuration Manager](../../../core/servers/manage/maintenance-tasks.md).  
 
 **Backup Site Server**: Use this task to prepare for the recovery of critical data. You can create a backup of your critical information to restore a site and the Configuration Manager database. For more information, see [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md).  
