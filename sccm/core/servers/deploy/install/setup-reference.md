@@ -2,7 +2,7 @@
 title: "Setup reference | Microsoft Docs"
 description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 caps.latest.revision: 22
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Reference for System Center Configuration Manager Setup*Applies to: System Center Configuration Manager (Current Branch)*
+# Reference for System Center Configuration Manager Setup
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager Setup provides links to several topics that are detailed in the following sections. The information presented here can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation.  
 
 -   [Before you begin](#bkmk_start)  
