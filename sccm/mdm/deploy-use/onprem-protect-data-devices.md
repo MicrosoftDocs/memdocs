@@ -16,4 +16,4 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Protect data and devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack.Follow the same processes in [protect data and devices for EMM](wipe-lock-reset-devices.md) to use System Center Configuration Manager on-premises MDM to help protect your organization's resources. 
+# Protect data and devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack.Follow the same processes outlined in the topics under [protect data and devices for EMM](emm-create-wifi-profiles.md) to use System Center Configuration Manager on-premises MDM to help protect your organization's resources.
