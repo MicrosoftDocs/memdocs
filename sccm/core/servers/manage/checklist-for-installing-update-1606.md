@@ -2,7 +2,7 @@
 title: "Checklist for 1606 | Microsoft Docs"
 description: "Learn about actions to take before updating from System Center Configuration Manager version 1511 or 1602 to version 1606."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -80,8 +80,8 @@ For database replication, you can use the Replication Link Analyzer to help reso
 
 For more information, see   [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md).  
 
- **Set SQL Server Always On availability groups to manual failover:**  
- Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [SQL Server Always On for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+ **Set SQL Server AlwaysOn availability groups to manual failover:**  
+ Before installing updates, such as version 1606, ensure that the availability group is set to manual failover. After the site has been updated, you can restore failover to be automatic. For more information, see [SQL Server AlwaysOn for a site database](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
  **Reconfigure software update points that use NLBs:** Configuration Manager cannot update a site that uses a Network Load Balancing (NLB) cluster to host software update points.  
 
@@ -91,11 +91,11 @@ If you use NLB clusters for software update points, use Windows PowerShell to re
 
  **Disable all site maintenance tasks at each site for the duration of the update installation on that site:** Before you install the update, disable any site maintenance tasks that might run during the time that the update process is active. This includes but is not limited to the following:  
 
--   Back up site server  
+-   Backup Site Server  
 
--   Delete aged client operations  
+-   Delete Aged Client Operations  
 
--   Delete aged discovery data  
+-   Delete Aged Discovery Data  
 
 When a site database maintenance task runs during the update installation, the update installation can fail. Before you disable a task, record the schedule of the task so you can restore its configuration after the update has been installed.  
 
@@ -120,7 +120,7 @@ For more information, see [Backup and recovery for System Center Configuration M
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
 
-You can't run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the section [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the section [Test the site database upgrade](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test) in [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).  
 
  **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
 
