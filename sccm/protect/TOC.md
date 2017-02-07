@@ -56,9 +56,7 @@
 ### [Endpoint Protection client help](deploy-use/endpoint-protection-client-help.md)
 ### [Troubleshooting client](deploy-use/troubleshoot-endpoint-client.md)
 
-## [Email profiles](deploy-use/introduction-to-email-profiles.md)
-### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
-### [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
+## [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 
