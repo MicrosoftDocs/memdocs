@@ -2,7 +2,7 @@
 title: "Diagnostic data FAQ | Microsoft Docs"
 description: "Find frequently asked questions about diagnostic and usage data for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 caps.latest.revision: 6
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Frequently asked questions about diagnostics and usage data for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Frequently asked questions about diagnostics and usage data for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The following are frequently asked questions about diagnostic and usage data for System Center Configuration Manager:  
 
 ###  <a name="bkmk_off"></a> How do I turn off telemetry?  
