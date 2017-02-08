@@ -2,7 +2,7 @@
 title: "Proxy server support | Microsoft Docs"
 description: "Learn about System Center Configuration Manager support for proxy servers that site system servers and clients use."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,16 +13,21 @@ ms.topic: article
 ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Proxy server support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Proxy server support in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Both System Center Configuration Manager site system servers and clients can use a proxy server.  
 
 ## Site system servers  
 When site system roles need to connect to the Internet, you can configure them to use a proxy server.  
 
--   A computer that hosts a site system server supports a single proxy server configuration that all site system roles on that computer share. If you need separate proxy servers for different roles or instances of a role, you must place those roles on separate site system servers.  
+-   A computer that hosts a site system server supports a single proxy server configuration that is shared by all site system roles on that same computer. If you need separate proxy servers for different roles or instances of a role, you must place those roles on separate site system servers.  
 
 -   When you configure new proxy server settings for a site system server that already has a proxy server configuration, the original configuration is overwritten.  
 
@@ -50,8 +55,7 @@ You cannot set up a proxy server on the cloud-based-distribution point in Micros
 
 **Service connection point** - This site system role connects to Microsoft Intune and uses a proxy server configuration on the computer that hosts the service connection point.  
 
-**Software updates point** - This site system role can use the proxy when it connects to Microsoft Update to download patches and sync information about updates.   
-Software update points use a proxy only for the two following options when you enable that option as you set up the software update point:  
+**Software updates point** - This site system role can use the proxy when it connects to Microsoft Update to download patches and synchronize information about updates. Software update points use a proxy only for the following options when you enable that option as you set up the software update point:  
 
 -   **Use a proxy server when synchronizing software updates**  
 
