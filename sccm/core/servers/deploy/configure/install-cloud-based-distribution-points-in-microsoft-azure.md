@@ -2,7 +2,7 @@
 title: "Install cloud-based distribution points | Microsoft Docs"
 description: "Learn what you need to do to start using cloud-based distribution points in Microsoft Azure."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 caps.latest.revision: 7
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install cloud-based distribution points in Microsoft Azure for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can install System Center Configuration Manager cloud-based distribution points in Microsoft Azure. If you're unfamiliar with cloud-based distribution points, see [Use a cloud-based distribution point](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) before continuing.
 
  Before you begin the installation, make sure that you have the required certificate files:  
@@ -52,7 +57,7 @@ The management certificate is loaded in Azure, and you can now install a cloud-b
 
 2.  In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and select **Cloud Distribution Points**. On the **Home** tab, click **Create Cloud Distribution Point**.  
 
-3.  On the **General** page of the Create Cloud Distribution Point wizard, set up the following:  
+3.  On the **General** page of the Create Cloud Distribution Point Wizard, set up the following:  
 
     -   Specify the **Subscription ID** for your Azure account.  
 
@@ -101,14 +106,14 @@ The wizard creates a new hosted service for the cloud-based distribution point. 
 To map the service name that you provided with the Configuration Manager cloud-based distribution point service certificate (for example, **clouddp1.contoso.com**) to your Azure service FQDN (for example, **d1594d4527614a09b934d470.cloudapp.net**), DNS servers on the Internet must have a DNS alias (CNAME record). Clients can then resolve the Azure service FQDN to the IP address by using DNS servers on the Internet.  
 
 ##  <a name="BKMK_ConfigProxyforCloud"></a> Set up proxy settings for primary sites that manage cloud services  
- When you use cloud services with Configuration Manager, the primary site that manages the cloud-based distribution point must be able to connect to the Azure portal. You do this by using the **System** account of the primary site computer. This connection is made by using the default web browser on the primary site server computer.  
+ When you use cloud services with Configuration Manager, the primary site that manages the cloud-based distribution point must be able to connect to the Azure portal. The site connects using the **System** account of the primary site computer. This connection is made by using the default web browser on the primary site server computer.  
 
  On the primary site server that manages the cloud-based distribution point, you might have to set up proxy settings to enable the primary site to access the Internet and Azure.  
 
  Use the following procedure to set up proxy settings for the primary site server in the Configuration Manager console.  
 
 > [!TIP]  
->  You can also set up the proxy server when you install new site system roles on the primary site server by using the **Add Site System Roles** wizard.  
+>  You can also set up the proxy server when you install new site system roles on the primary site server by using the **Add Site System Roles Wizard**.  
 
 #### To set up proxy settings for the primary site server  
 
