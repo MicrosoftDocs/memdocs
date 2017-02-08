@@ -2,7 +2,7 @@
 title: "Boundary groups for 1511, 1602, and 1606 | System Center Configuration Manager"
 description: "Use boundary groups with Configuration Manager versions 1511, 1602, and 1606."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 caps.latest.revision: 10
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606*Applies to: System Center Configuration Manager (Current Branch)*
+# Boundary groups for System Center Configuration Manager version 1511, 1602, and 1606
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The information in this topic is specific to using boundary groups with versions 1511, 1602, and 1606 of System Center Configuration Manager.
 If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/) in *Define site boundaries and boundary groups or System Center Configuration Manager* for information about how to use the redesigned boundary groups.  
 
