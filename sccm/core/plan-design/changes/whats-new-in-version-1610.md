@@ -11,15 +11,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 caps.latest.revision: 40
-author: Brenduns
-ms.author: brenduns
-manager: angrobe
+author: Brendunsms.author: brendunsmanager: angrobe
 ROBOTS: "NOINDEX, NOFOLLOW"
 ---
-# What&#39;s new in version 1610 of System Center Configuration Manager
-
-*Applies to: System Center Configuration Manager (Current Branch)*
-
+# What&#39;s new in version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Update 1610 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
@@ -113,8 +108,8 @@ For details, see the **Windows Defender** section in [Create configuration items
 You can now display columns for **IMEI** and **Serial Number** (for iOS devices) in device collection views.
 For more details, see [Predeclare devices with IMEI or iOS serial numbers](https://docs.microsoft.com/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id).
 
-## Customizable branding for Software Center dialog boxes
-Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes, to provide a more consistent experience to Software Center users.
+## Customizable branding for Software Center dialogs
+Custom branding for the Software Center was introduced in Configuration Manager version 1602. In version 1610, that branding is now extended to all associated dialog boxes to provide a more consistent experience to Software Center users.
 
 Custom branding for the Software Center is applied according to the following rules:
 
@@ -132,7 +127,7 @@ To configure the grace period, take the following actions:
 1.      On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
 2.      In a new required application deployment, or in the properties of an existing deployment, on the **Scheduling** page, select the check box **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. All deployments that have this check box selected, and are targeted to devices to which you also deployed the client setting, will use the enforcement grace period.
 
-If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments. Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages. 
+If you configure an enforcement grace period and select the checkbox, once the application install deadline is reached, it will be installed in the first non-business window that the user configured up to that grace period. However, the user can still open Software Center and install the application at any time they want. Once the grace period expires, enforcement reverts to normal behavior for overdue deployments. Similar options have been added to the software updates deployment wizard, automatic deployment rules wizard, and properties pages.
 
 
 
@@ -199,7 +194,7 @@ You can now get a quick view of overall compliance for devices, and the top reas
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk). 
+Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in System Center Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status. To learn about the integration and how it works, see [Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk).
 
 Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data. Learn how to [Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps).
 

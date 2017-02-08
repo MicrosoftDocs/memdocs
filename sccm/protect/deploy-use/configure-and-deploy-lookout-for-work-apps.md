@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfdbfee6-4b9b-4d53-816a-62bbc3a43b6e
 caps.latest.revision:
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---
