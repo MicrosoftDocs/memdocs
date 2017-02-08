@@ -2,7 +2,7 @@
 title: "Monitor content | Microsoft Docs"
 description: "Understand how to monitor distributed content by using the Configuration Manager console."
 ms.custom: na
-ms.date: 1/4/2017
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Monitor content you have distributed with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Monitor content you have distributed with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the System Center Configuration Manager console to monitor distributed content, including:  
 
 -   The status for all package types in relation to the associated distribution points.  
 -   The content validation status for the content in a package.  
 -   The status of content assigned to a specific distribution point group.  
 -   The state of content assigned to a distribution point.  
--   The status of optional features for each distribution point (such as content validation, the PXE standard, and multicasting).  
+-   The status of optional features for each distribution point (content validation, PXE, and multicast).  
 
 > [!NOTE]  
 >  Configuration Manager only monitors the content on a distribution point that is in the content library. Content stored on the distribution point in package or custom shares is not monitored.  
@@ -123,8 +128,8 @@ You also view detailed status information for the following:
 
 4.  On the **Home** tab, click **View Status**. Detailed status information for the distribution point group is displayed.  
 
-## Distribution point configuration status  
- The **Distribution Point Configuration Status** node in the **Monitoring** workspace provides information about the distribution point. You can review what attributes are enabled for the distribution point, such as the PXE standard, multicasting, and content validation, and the distribution status for the distribution point. You can also view detailed status information for the distribution point.  
+## Distribution point Configuration Status  
+ The **Distribution Point Configuration Status** node in the **Monitoring** workspace provides information about the distribution point. You can review what attributes are enabled for the distribution point, such as the PXE, multicast, content validation, and the distribution status for the distribution point. You can also view detailed status information for the distribution point.  
 
 > [!WARNING]  
 >  Distribution point configuration status is relative to the last 24 hours. If the distribution point has an error and recovers, the error status might be displayed for up to 24 hours after the distribution point recovers.  
