@@ -2,7 +2,7 @@
 title: "Discover device and user resources | Microsoft Docs"
 description: "Read an overview of the discovery process and discovery data records."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
 caps.latest.revision: 20
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Run discovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Run discovery for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You use one or more discovery methods in System Center Configuration Manager to find device and user resources that you can manage. You can also use discovery to identify network infrastructure in your environment. There are several different methods you can use to discover different things, and each method has its own configurations and limitations.  
 
 ## Overview of discovery  
