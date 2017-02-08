@@ -56,24 +56,7 @@
 ### [Endpoint Protection client help](deploy-use/endpoint-protection-client-help.md)
 ### [Troubleshooting client](deploy-use/troubleshoot-endpoint-client.md)
 
-## [Email profiles](deploy-use/introduction-to-email-profiles.md)
-### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
-### [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
-## [Manage access to services](deploy-use/manage-access-to-services.md)
-### [Device compliance policies](deploy-use/device-compliance-policies.md)
-### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
-### [Manage email access](deploy-use/manage-email-access.md)
-### [Manage SharePoint Online access](deploy-use/manage-sharepoint-online-access.md)
-### [Manage Skype for Business Online access](deploy-use/manage-skype-for-business-online-access.md)
-### [Manage Dynamics CRM Online access](deploy-use/manage-dynamics-crm-online-access.md)
-### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [Manage access based on device, network, and application risk](deploy-use/manage-access-based-on-device-network-app-risk.md)
-### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md)
-### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
-### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
-### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md)
+## [Deploy Wi-Fi, VPN, email, and certificate profiles](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Windows Hello for Business settings](deploy-use/windows-hello-for-business-settings.md)
 

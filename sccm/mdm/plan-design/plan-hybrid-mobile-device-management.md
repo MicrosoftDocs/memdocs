@@ -17,12 +17,18 @@ author: mtillmanms.author: mtillman
 manager: angrobe
 ---
 # Plan for hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
-Mobile device management with Configuration Manager using Microsoft Intune supports the following mobile device platforms:
+You can only use one management solution, the mobile device management authority, to manage your mobile devices. Before making this setting you should [choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md).
 
+In addition, the [Intune Deployment Planning, Design and Implementation Guide](https://docs.microsoft.com/en-us/intune/plan-design/introduction) provides a great deal of information about the process of developing a deployment plan, creating a design, onboarding Intune, and conducting a production rollout.
 
-[!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
+## Device Enrollment Methods
+[Device Enrollment Methods](plan-design/device-enrollment-methods.md)
 
-You can only use one management solution, the mobile device management authority, to manage your mobile devices. Before making this setting you should [choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
+## Supported Device Platforms
+[Supported Device Platforms](plan-design/supported-device-platforms-for-hybrid.md)
+
+## Privacy statement for hybrid EMM
+[Privacy statement for hybrid EMM](plan-design/emm-privacy-statement-for-hybrid.md)
 
 ## Next steps
  [Setup hybrid MDM](../deploy-use/setup-hybrid-mdm.md)

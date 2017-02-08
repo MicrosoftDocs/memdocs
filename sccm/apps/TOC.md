@@ -11,12 +11,9 @@
 # Deploy and use
 
 ## [Create applications](deploy-use/create-applications.md)
-### [Create iOS applications](get-started/creating-ios-applications.md)
 ### [Create Mac computer applications](get-started/creating-mac-computer-applications.md)
 ### [Create Windows applications](get-started/creating-windows-applications.md)
-### [Create Windows Phone applications](get-started/creating-windows-phone-applications.md)
 ### [Create Linux and UNIX server applications](get-started/creating-linux-and-unix-server-applications.md)
-### [Create Android applications](get-started/creating-android-applications.md)
 ### [Create Windows Embedded applications](get-started/creating-windows-embedded-applications.md)
 ### [Create global conditions](deploy-use/create-global-conditions.md)
 ### [Packages and programs](deploy-use/packages-and-programs.md)
@@ -33,14 +30,8 @@
 ## Manage applications
 ### [Management tasks](deploy-use/management-tasks-applications.md)
 ### [User device affinity](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [iOS app configuration policies](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
-### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [Windows Store for Business volume-purchased apps](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V virtual environments](deploy-use/create-app-v-virtual-environments.md)
-
-## Protect apps
-### [Mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
-### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 
 ## Update and retire applications
 ### [Update and retire applications](deploy-use/update-and-retire-applications.md)
