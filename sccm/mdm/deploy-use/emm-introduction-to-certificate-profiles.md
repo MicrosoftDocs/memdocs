@@ -37,6 +37,12 @@ Certificate profiles work with Active Directory Certificate Services and the Net
 
 - For other prerequisites, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
+## PFX certificate profiles
+
+System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange, and can be deployed to iOS, Android, and Windows 10 devices.
+
+[Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md) provides  information about creating and deploying .pfx files. 
+
 **Create:** [Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md) walks you through the Create Certificate Profile Wizard.
 
 

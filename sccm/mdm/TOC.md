@@ -22,7 +22,7 @@
 ### [Verify MDM configuration](deploy-use/verify-mdm-configuration.md)
 
 ## How to
-### [* Enroll user-owned (BYOD) devices](deploy-use/enroll-user-owned-devices.md)
+### [Enroll user-owned (BYOD) devices](deploy-use/enroll-user-owned-devices.md)
 ### [Enroll corporate-owned devices](deploy-use/enroll-company-owned-devices.md)
 #### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
 #### [Apple Configurator enrollment](deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
