@@ -2,7 +2,7 @@
 title: "Site system role options | Microsoft Docs"
 description: "Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Configuration options for site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configuration options for site system roles for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Most configuration options for System Center Configuration Manager site system roles are self-explanatory or are explained in the wizard or dialog boxes when you configure them. The following sections explain site system roles whose settings might require additional information.  
 
 ##  <a name="BKMK_ApplicationCatalog_Website"></a> Application Catalog website point  
