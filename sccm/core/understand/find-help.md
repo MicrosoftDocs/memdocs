@@ -1,8 +1,8 @@
----
+  ---
 title: "Find help for using System Center Configuration Manager | Microsoft Docs"
 description: "Find resources for additional information about System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: 19
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Find help for using System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Find help for using System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following resources to get additional information about System Center Configuration Manager:  
 
 -   [Information and support](#bkmk_Info)  
@@ -24,7 +29,6 @@ Use the following resources to get additional information about System Center Co
     -   [Search the documentation library](#BKMK_SearchTips)  
 
     -   [The System Center Configuration Manager team blog](#BKMK_ProductGroupBlog)  
-
     -   [Support options and community resources](#BKMK_SupportOptions)
 
   For help with accessibility, see
@@ -45,9 +49,9 @@ Use the following resources to get additional information about System Center Co
 ###  <a name="BKMK_SearchTips"></a> Search the documentation library  
  Use the following search tips to help you find the information that you need:  
 
--   When using your preferred search engine to locate content for System Center Configuration Manager, you can scope the search results to only the current content library by including the following two terms,  including the quotes:   **"current branch"** and **"System Center Configuration Manager"**  
+-   When using your preferred search engine to locate content for System Center Configuration Manager, you can focus the search results to the current content library by including the following two terms, **SCCM** and **Docs**.
 
--   Use search terms that match those that you see in the user interface (UI) and online documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP;" "deployment type" rather than "DT;" and "software updates" rather than "SUM."  
+-   Use search terms that match those that you see in the user interface (UI) and online documentation, rather than unofficial terms or abbreviations that you might see in community content. For example, search for "management point" rather than "MP"; "deployment type" rather than "DT"; and "software updates" rather than "SUM."  
 
 -   When you search on a page in TechNet or in the help file (for example, select Ctrl+F1, and enter search terms in the **Find** box), the results exclude text that is in collapsed sections. To search for text in collapsed sections, expand the sections before you search on the page. To do this, you can select the **Expand All** button at the top of the page, or double-click any collapsed section. When all sections are expanded, a search on the page can then search all sections on that page.  
 
