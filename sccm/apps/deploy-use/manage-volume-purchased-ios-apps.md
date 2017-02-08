@@ -2,7 +2,7 @@
 title: "Manage volume-purchased iOS apps | Microsoft Docs"
 description: "Deploy, manage, and track licenses for apps you purchased through the iOS app store."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -83,7 +83,7 @@ You can fully sync the data held by Apple with Configuration Manager at any time
 1.  In the Configuration Manager console, choose **Software Library** > **Application Management** > **License Information for Store Apps**.  
 
 3.  Choose the app that you want to deploy, and then, in the **Home** tab, in the **Create** group, choose **Create Application**.
-The Configuration Manager application that is created has the Windows Store for Business app. You can then deploy and monitor this application as you would any other Configuration Manager application.
+The Configuration Manager application that is created contains the iOS app you purchased. You can then deploy and monitor this application as you would any other Configuration Manager application.
 
     > [!IMPORTANT]  
     > You must choose a deployment purpose of **Required**. Available installations are not currently supported.

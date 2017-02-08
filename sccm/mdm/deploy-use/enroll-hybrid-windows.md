@@ -12,11 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 caps.latest.revision: 9
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
 # Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune
-*Applies to: System Center Configuration Manager (Current Branch)*
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can use Configuration Manager with  Intune to manage desktops, laptops, and other devices running Windows as mobile devices. You can set up Azure Active Directory to allow automatic enrollment of Windows PCs. You can also configure Configuration Manager to simplify enrollment using the Company Portal app.
 
 
@@ -49,7 +53,7 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
 
 5. Specify the URLs for Intune:
 
-  - **MDM Enrollment URL** – Use `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` for the MDM Enrollment URL.
+  - **MDM Enrollment URL** – Use the default value.
   - **MDM Terms of Use URL** – Use the default value. This URL displays terms of use for users when enrolling devices.
   - **MDM Compliance URL** – Use the default value. If a device is found to be out of compliance, an **Access denied** message is displayed with this URL. The URL points to a page that helps users understand why their device is not compliant with policy and how they can bring it back into compliance.
 
@@ -67,7 +71,7 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
 ### Create DNS alias for device enrollment  
  A DNS alias (CNAME record type) makes it easier for users to enroll their devices by automatically populating the server name during device enrollment. To create a DNS alias (CNAME record type), you have to configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
 
- Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, [https://enrollment.manage.microsoft.com](https://enrollment.manage.microsoft.com).
+ Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
 |Type|Host name|Points to|  
 |----------|---------------|---------------|  
