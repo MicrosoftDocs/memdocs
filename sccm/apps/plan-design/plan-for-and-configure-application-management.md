@@ -2,7 +2,7 @@
 title: "Plan for and configure application management | Microsoft Docs"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/03/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -123,7 +123,7 @@ Use the information in this article to help you implement the necessary dependen
 
     Status messages: Use the components **SMS_PORTALWEB_CONTROL_MANAGER** and **SMS_AWEBSVC_CONTROL_MANAGER**.  
 
-    For example, status ID **1015** for **SMS_PORTALWEB_CONTROL_MANAGER** confirms that Site Component Manager was successfully installed the Application Catalog website point.  
+    For example, status ID **1015** for **SMS_PORTALWEB_CONTROL_MANAGER** confirms that Site Component Manager successfully installed the Application Catalog website point.  
 
     Log files: Search for **SMSAWEBSVCSetup.log** and **SMSPORTALWEBSetup.log**.  
 
