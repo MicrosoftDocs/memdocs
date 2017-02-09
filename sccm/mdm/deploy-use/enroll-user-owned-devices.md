@@ -16,10 +16,10 @@ author: mtillmanms.author: mtillmanmanager: angrobe
 
 ---
 # Enroll user-owned devices for hybrid deployments with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-User-owned devices (COD) can be brought into management in a variety of ways depending upon the device and how it was purchased.  
+User-owned devices (BYOD) can be brought into management in a variety of ways depending upon the device and how it was purchased.  
 
 Once enrollment is enabled, user-owned devices can be enrolled via the company portal app.
 
 
 ## See Also  
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
+ [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../understand/hybrid-mobile-device-management.md)

@@ -28,4 +28,21 @@ When you manage devices through Microsoft Intune or Configuration Manager on-pre
 
 This section provides detailed information about creating and managing applications using hybrid EMM or on-premises MDM.
 
-[Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types. 
+[Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types.
+
+## Deploying and monitoring apps
+
+Deploying and monitoring applications in System Center Configuration Manager are the same processes for mobile devices as they are for onsite devices, such as laptops and desktops. You can read through the following topics for general information about deploying and monitoring applications:
+
+- [Deploy applications in System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)
+- [Monitor applications in System Center Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console)
+
+Here are some considerations to keep in mind when deploying and monitoring applications, specific to mobile device management.
+
+- MDM-enrolled devices do not support simulated deployments, user experience, or scheduling settings.
+
+- You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](emm-configure-ios-apps-with-app-configuration-policies.md).
+
+### Next Steps
+
+You might eventually want to make changes to an application, uninstall an application, or replace an already deployed application with a new application. Read through [Update and retire applications with System Center Configuration Manager](../../apps/deploy-use/update-and-retire-applications.md) to understand these capabilities.

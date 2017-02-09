@@ -31,7 +31,6 @@
 
 ## [Certificate profiles](deploy-use/introduction-to-certificate-profiles.md)
 ### [Create certificate profiles](deploy-use/create-certificate-profiles.md)
-### [Create PFX certificate profiles](deploy-use/create-pfx-certificate-profiles.md)
 ### [Configuring certificate infrastructure](deploy-use/certificate-infrastructure.md)
 ### [Cryptographic controls technical reference](deploy-use/cryptographic-controls-technical-reference.md)
 
