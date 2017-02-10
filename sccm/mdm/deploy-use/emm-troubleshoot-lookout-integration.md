@@ -36,10 +36,10 @@ You can contact Lookout Support through on the following methods:
 ### Unable to sign in
 You may see the following error when the Azure AD global admin user has not accepted the initial Lookout setup.
 
-![screenshot of the Lookout login screen showing sign in error](../media/lookout-consent-not-accepted-error.png)
+![screenshot of the Lookout login screen showing sign in error](media/lookout-consent-not-accepted-error.png)
 
 To resolve this issue, the global admin user must login to  https://aad.lookout.com/les?action=consent
-and accept the prompt to initiate the setup. More detailed information can be found in  [Set up your subscription with Lookout MTP](set-up-your-subscription-with-lookout.md) topic
+and accept the prompt to initiate the setup. More detailed information can be found in  [Set up your subscription with Lookout MTP](emm-set-up-your-subscription-with-lookout.md) topic
 
 ## Troubleshoot device status issues
 
