@@ -49,7 +49,7 @@ robots: noindex
 >  Windows PCs with Windows 10 operating system, the version should be set as "10.0"+ the OS Build number returned by the winver command. For example, it could be something like 10.0.10586.  
 > Windows 10 Mobile does not have this issue.  
 >   
->  ![CA&#95;Win10OSversion](../media/CA_Win10OSversion.png)  
+>  ![CA&#95;Win10OSversion](media/CA_Win10OSversion.png)  
 
 7.  On the **Summary** page of the wizard, review the settings you made, and then complete the wizard.
 

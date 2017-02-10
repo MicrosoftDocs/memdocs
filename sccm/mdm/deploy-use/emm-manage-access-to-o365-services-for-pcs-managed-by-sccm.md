@@ -79,7 +79,7 @@ author: mtillmanms.author: mtillmanmanager: angrobe
 ### Step 2. Evaluate the effect of conditional access  
  Run the Conditional Access Compliance Report. It can be found in Monitoring section under Reports >Compliance and Settings Management . This displays the compliance status for all devices.  Devices that are reported as not compliant will be blocked from accessing  Exchange Online and SharePoint Online.  
 
- ![CA&#95;compliance&#95;report](../media/CA_compliance_report.png)  
+ ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
 
 ### Configure Active Directory Security Groups  
  You target conditional access policies to groups of users depending on the policy types. These groups contain the users that will be targeted, or exempt from the policy. When a user is targeted by a policy, each device they use must be compliant in order to be able to access the service.  

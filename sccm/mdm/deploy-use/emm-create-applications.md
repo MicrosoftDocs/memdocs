@@ -27,4 +27,4 @@ A System Center Configuration Manager application has the files and information 
 
 -   Import an application from a file.  
 
-See [Start the create application wizard](../../apps/deploy-use/create-applications#start-the-create-application-wizard) for the steps required to create Configuration Manager applications and deployment types.  
+See [Start the create application wizard](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard) for the steps required to create Configuration Manager applications and deployment types.  

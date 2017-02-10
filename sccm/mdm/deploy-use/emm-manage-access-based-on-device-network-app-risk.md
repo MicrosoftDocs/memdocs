@@ -59,38 +59,38 @@ When malicious apps such as malware is detected on the device, you can block suc
 
 **Access blocked when malicious apps are detected:**
 
-![diagram showing conditional access policy blocking access when device is determined to be non-compliant due to malicious apps on the device](../media/config-mgr-maliciousapps_blocked.png)
+![diagram showing conditional access policy blocking access when device is determined to be non-compliant due to malicious apps on the device](media/config-mgr-maliciousapps_blocked.png)
 
 **Device unblocked and is able to access company resources when the threat is remediated:**
 
-![diagram showing conditional access policy granting access when device is determined to be compliant after remediation](../media/config-mgr-maliciousapps-unblocked.png)
+![diagram showing conditional access policy granting access when device is determined to be compliant after remediation](media/config-mgr-maliciousapps-unblocked.png)
 ### Control access based on threat to network:
 Detect threats to your network such as Man-in-the-middle attacks and restrict access to WiFi networks based on the device risk.
 
 **Access to network through WiFi blocked:**
 
-![diagram showing conditional access blocking WiFi access based on network threats](../media/config-mgr-network-wifi-blocked.png)
+![diagram showing conditional access blocking WiFi access based on network threats](media/config-mgr-network-wifi-blocked.png)
 
 **Access granted on remediation:**
 
-![diagram showing conditional access allowing access on remediation of the threat](../media/config-mgr-network-wifi-unblocked.png)
+![diagram showing conditional access allowing access on remediation of the threat](media/config-mgr-network-wifi-unblocked.png)
 ### Control access to SharePoint Online based on threat to network:
 
 Detect threats to your network such as Man-in-the-middle attacks, and prevent synchronization of corporate files based on the device risk.
 
 **Access blocked SharePoint Online based on network threat detected on the device:**
 
-![Diagram showing conditional access blocking device access to SharePoint Online based on threat detection](../media/config-mgr-network-spo-blocked.png)
+![Diagram showing conditional access blocking device access to SharePoint Online based on threat detection](media/config-mgr-network-spo-blocked.png)
 
 
 **Access granted on remediation:**
 
-![Diagram showing conditional access allowing access after the network threat is remediated](../media/config-mgr-network-spo-unblocked.png)
+![Diagram showing conditional access allowing access after the network threat is remediated](media/config-mgr-network-spo-unblocked.png)
 
 ## Next steps
 Here are the main steps you must do to implement this solution:
-1.	[Set up your subscription with Lookout mobile threat protection](set-up-your-subscription-with-lookout.md)
-2.	[Enable Lookout MTP connection in Intune](enable-lookout-connection-in-intune.md)
-3.  [Configure and deploy Lookout for work application](configure-and-deploy-lookout-for-work-apps.md)
-4.	[Configure compliance policy](enable-device-threat-protection-rule-compliance-policy.md)
-5.	[Troubleshoot Lookout integration](troubleshoot-lookout-integration.md)
+1.	[Set up your subscription with Lookout mobile threat protection](emm-set-up-your-subscription-with-lookout.md)
+2.	[Enable Lookout MTP connection in Intune](emm-enable-lookout-connection-in-intune.md)
+3.  [Configure and deploy Lookout for work application](emm-configure-and-deploy-lookout-for-work-apps.md)
+4.	[Configure compliance policy](emm-enable-device-threat-protection-rule-compliance-policy.md)
+5.	[Troubleshoot Lookout integration](emm-troubleshoot-lookout-integration.md)

@@ -26,7 +26,7 @@ Use **conditional access**  to help secure email and other services on devices t
 
  A typical flow for conditional access might look as follows:  
 
- ![ConditionalAccess4](../media/ConditionalAccess4.png)  
+ ![ConditionalAccess4](media/ConditionalAccess4.png)  
 
  Use conditional access to manage access to the following services:  
 
