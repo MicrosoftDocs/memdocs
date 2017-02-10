@@ -2,7 +2,7 @@
 title: "Support for Windows 10 | Microsoft Docs"
 description: "Learn which Windows 10 versions are supported to run the System Center Configuration Manager client."
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 2/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -26,21 +26,22 @@ manager: angrobe
 - This supplements [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
 - If you use the Long-Term Servicing Branch of Configuration Manager, see [Supported Configurations for the Long-Term Servicing Branch](/sccm/core/understand/supported-configurations-for-ltsb).
 
-Configuration Manager attempts to provide support for each new Windows 10 version as soon as possible after that Windows version releases. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when the versions of each product release.  
+Configuration Manager attempts to provide support for each new Windows 10 version as soon as possible after that Windows version releases. Because the products have separate development and release schedules, the support that Configuration Manager provides depends on when the versions and branches of each product release.  
 
 
 
 |Windows 10 versions |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|1507 Enterprise, Pro | ![Supported](media/green_check.png)| ![Supported](media/green_check.png)|![Supported](media/green_check.png) |
-|1511 Enterprise, Pro |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1507 <br />Enterprise, Pro | ![Supported](media/green_check.png)| ![Supported](media/green_check.png)|![Supported](media/green_check.png) |
+|1511 <br />Enterprise, Pro <br />(CB), (CBB) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |Enterprise 2016 LTSB	|![Not supported](media/Red_X.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png)|
-|1607 Enterprise, Pro	|![Not supported](media/Red_X.png) |![Backwards compatible](media/yellow-bang.png) |![Supported](media/green_check.png) |
+|1607 <br />Enterprise, Pro<br /> (CB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
+|1607 <br />Enterprise, Pro <br />(CBB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/Red_X.png) |![Supported](media/green_check.png) |
 
 
 |Key|
 |--|
 |![Supported](media/green_check.png) = **Supported**  |
+|![Not supported](media/blue_compat.png)  = **Backwards compatible** - This means that existing client management features (hardware inventory, software inventory, software updates, etc.) should work with the new Windows 10 Current Branch build. Any known issues or caveats will be documented. <br><br>This approach gives you the ability to deploy and manage new Windows 10 CB builds on day one with support and without requiring a Configuration Manager update or new version. |
 |![Supported](media/Red_X.png) = **Not supported**|
-|![Not supported](media/yellow-bang.png)  = **Backwards compatible** - This means that existing client management features (hardware inventory, software inventory, software updates, etc.) should work with the new Windows 10 Current Branch build. Any known issues or caveats will be documented. <br><br>This approach gives you the ability to deploy and manage new Windows 10 CB builds on day one with support and without requiring a Configuration Manager update or new version. |
