@@ -1,6 +1,6 @@
 ---
-title: "Deploy Lookout for Work app | System Center Configuration Manager"
-description: "Configure and deploy Lookout for Work apps."
+title: "Configure and deploy Lookout for Work apps | Microsoft Docs"
+description: "Instructions for how to configure and deploy the Lookout for Work app for Android and iOS devices."
 ms.custom: na
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfdbfee6-4b9b-4d53-816a-62bbc3a43b6e
 caps.latest.revision:
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---
-# Configure and deploy Lookout for Work apps
+# Deploy Lookout for Work apps
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

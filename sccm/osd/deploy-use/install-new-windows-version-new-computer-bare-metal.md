@@ -1,8 +1,8 @@
 ---
-title: "Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager  | Microsoft Docs"
-description: "Follow these steps in System Center Configuration Manager to install an operating system on a new computer by using PXE, OEM, or stand-alone media."
+title: "Install Windows on a new computer - Configuration Manager | Microsoft Docs"
+description: "Use Configuration Manager to install an operating system on a new computer (bare metal) by using PXE, OEM, or stand-alone media."
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,7 @@ author: Dougebyms.author: dougebymanager: angrobe
 # Install a new version of Windows on a new computer (bare metal) with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides the general steps in System Center Configuration Manager to install an operating system on a new  computer. For this scenario, you can choose from many different deployment methods, such as PXE, OEM, or stand-alone media. If you are unsure that this is the right operating system deployment scenario for you, see [Scenarios to deploy enterprise operating systems](scenarios-to-deploy-enterprise-operating-systems.md).  
 
- Use the following sections to refresh an existing computer with a new version of Windows.  
+Use the following sections to refresh an existing computer with a new version of Windows.  
 
 ##  <a name="BKMK_Plan"></a> Plan  
 
