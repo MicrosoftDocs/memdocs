@@ -64,7 +64,7 @@
 #### [Remote connection profiles](deploy-use/emm-create-remote-connection-profiles.md)
 #### [Manage access to services](deploy-use/emm-manage-access-to-services.md)
 ##### [Device compliance policies](deploy-use/emm-device-compliance-policies.md)
-##### [Create a device compliance policy](deploy-use/emm -create-compliance-policy.md)
+##### [Create a device compliance policy](deploy-use/emm-create-compliance-policy.md)
 ##### [Manage email access](deploy-use/emm-manage-email-access.md)
 ##### [Manage SharePoint Online access](deploy-use/emm-manage-sharepoint-online-access.md)
 ##### [Manage Skype for Business Online access](deploy-use/emm-manage-skype-for-business-online-access.md)
