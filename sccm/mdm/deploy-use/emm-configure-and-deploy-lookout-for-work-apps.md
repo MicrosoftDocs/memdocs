@@ -52,7 +52,7 @@ This article explains how to configure and deploy the Lookout for Work app for A
 * **Step 3:** Enable Azure Active Directory authentication for the iOS users by doing the following:
   1.  Login to the [Azure Active Directory management portal](https://manage.windowsazure.com), and navigate to the application page.
   2.  Add the **Lookout for Work iOS app** as a **native client application**.
-  ![screenshot of the add apps dialog showing the native client app option](../media/aad-add-app.png)
+  ![screenshot of the add apps dialog showing the native client app option](media/aad-add-app.png)
 
   3. Replace the **com.lookout.enterprise.yourcompanyname** with the customer bundle ID you selected when you signed the IPA.
   4.  Add additional redirect URI: **&lt;companyportal://code/>** followed by a URLencoded version of your original redirect URI.
@@ -84,4 +84,4 @@ When the user opens the Lookout for Work on the device they are prompted to acti
 * [You need to resolve a threat that Lookout for Work found on your Android device](http://docs.microsoft.com/intune/enduser/you-need-to-resolve-a-threat-found-by-lookout-for-work-android)
 
 ## Next steps
-* [Enable device threat protection rule in the compliance policy](enable-device-threat-protection-rule-compliance-policy.md)
+* [Enable device threat protection rule in the compliance policy](emm-enable-device-threat-protection-rule-compliance-policy.md)
