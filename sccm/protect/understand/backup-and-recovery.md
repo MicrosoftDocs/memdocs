@@ -17,7 +17,7 @@ ms.author: brenduns
 manager: angrobe
 ---
 
-# Backup and recovery 
+# Backup and recovery
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
@@ -216,7 +216,7 @@ Use the following sections to help you create your Configuration Manager backup 
 4.  On the **Site Role** tab, in the **Properties** group, click **Properties**.  
 5.  The folders that store the user state migration data are listed in the **Folder details** section on the **General** tab.  
 
-
+## Recover a Configuration Manager site
  A Configuration Manager site recovery is required whenever a Configuration Manager site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.  
 
 > [!IMPORTANT]  
