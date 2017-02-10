@@ -19,8 +19,8 @@ manager: angrobe
 # Deploy and Monitor Applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 Deploying and monitoring applications in System Center Configuration Manager are the same processes for mobile devices as they are for onsite devices, such as laptops and desktops. You can read through the following topics for general information about deploying and monitoring applications:
 
-- [Deploy applications in System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)
-- [Manage applications in System Center Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console)
+- Deploy applications in System Center Configuration Manager
+- Manage applications in System Center Configuration Manager
 
 Here are some considerations to keep in mind when deploying and monitoring applications, specific to mobile device management.
 
