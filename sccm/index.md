@@ -694,7 +694,7 @@ description: Learn how to use System Center Configuration Manager.
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-1.svg" alt="" />
+                                                    <img src="/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -728,7 +728,7 @@ description: Learn how to use System Center Configuration Manager.
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-3.svg" alt="" />
+                                                    <img src="/media/common/i_support.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -745,7 +745,7 @@ description: Learn how to use System Center Configuration Manager.
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-4.svg" alt="" />
+                                                    <img src="/media/common/i_feedback.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -762,7 +762,7 @@ description: Learn how to use System Center Configuration Manager.
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-5.svg" alt="" />
+                                                    <img src="/media/common/i_feedback.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
