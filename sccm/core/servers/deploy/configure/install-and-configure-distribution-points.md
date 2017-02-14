@@ -2,7 +2,7 @@
 title: "Manage distribution points | Microsoft Docs"
 description: "Host the content (files and software) that you deploy to devices and users by using distribution points. Here's how to install and configure them."
 ms.custom: na
-ms.date: 1/9/2017
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Install and configure distribution points for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install and configure distribution points for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You install System Center Configuration Manager distribution points to host the content (files and software) that you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
  When you *install a new distribution point* (by using the installation wizard) or *manage the properties of an existing distribution point* (by editing the distribution point's properties), you can configure most of the distribution point settings. A few settings are available only when you're either installing or editing, but not both:  
