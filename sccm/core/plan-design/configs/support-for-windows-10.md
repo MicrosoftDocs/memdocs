@@ -43,5 +43,5 @@ Configuration Manager attempts to provide support for each new Windows 10 versio
 |Key|
 |--|
 |![Supported](media/green_check.png) = **Supported**  |
-|![Not supported](media/blue_compat.png)  = **Backwards compatible** - This means that existing client management features (hardware inventory, software inventory, software updates, etc.) should work with the new Windows 10 Current Branch build. Any known issues or caveats will be documented. <br><br>This approach gives you the ability to deploy and manage new Windows 10 CB builds on day one with support and without requiring a Configuration Manager update or new version. |
+|![Not supported](media/blue_compat.png)  = **Backwards compatible** - This means that existing client management features (hardware inventory, software inventory, software updates, etc.) should work with the new Windows 10 Current Branch build. Any known issues or caveats will be documented. <br><br>This approach gives you the ability to deploy and manage new Windows 10 CB builds on day one with application compatibility support without requiring a new Configuration Manager update version. |
 |![Supported](media/Red_X.png) = **Not supported**|
