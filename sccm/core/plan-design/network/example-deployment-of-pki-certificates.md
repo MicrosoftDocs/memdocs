@@ -2,7 +2,7 @@
 title: "Deployment PKI certificates | Microsoft Docs"
 description: "Follow a step-by-step example to learn how to create and deploy PKI certificates that System Center Configuration Manager uses."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -193,10 +193,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
 ##  <a name="BKMK_clouddp2008_cm2012"></a> Deploy the service certificate for cloud-based distribution points  
 
-> [!NOTE]  
->  The service certificate for cloud-based distribution points applies to System Center Configuration Manager SP1 and later.  
-
- This certificate deployment has the following procedures:  
+This certificate deployment has the following procedures:  
 
 -   [Create and issue a custom web server certificate template on the certification authority](#BKMK_clouddpcreating2008)  
 
@@ -728,10 +725,7 @@ This step-by-step example deployment, which uses a Windows Server 2008 certifica
 
 ##  <a name="BKMK_MacClient_SP1"></a> Deploy the client certificate for Mac computers  
 
-> [!NOTE]  
->  The client certificate for Mac computers applies to System Center Configuration Manager SP1 and later.  
-
- This certificate deployment has a single procedure to create and issue the enrollment certificate template on the certification authority.  
+This certificate deployment has a single procedure to create and issue the enrollment certificate template on the certification authority.  
 
 ###  <a name="BKMK_MacClient_CreatingIssuing"></a> Create and issue a Mac client certificate template on the certification authority  
  This procedure creates a custom certificate template for System Center Configuration Manager Mac computers and adds the certificate template to the certification authority.  
