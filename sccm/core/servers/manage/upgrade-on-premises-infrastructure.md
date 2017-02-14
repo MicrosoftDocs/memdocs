@@ -2,7 +2,7 @@
 title: "Upgrade on-premises infrastructure | Microsoft Docs"
 description: "Learn how to upgrade infrastructure, such as SQL Server and the site operating system of site systems."
 ms.custom: na
-ms.date: 10/28/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -71,14 +71,14 @@ This operating system upgrade scenario has the following conditions:
   After restoring any missing prerequisites, restart the server one more time to ensure services are started and operational.
 
 **Known issue for remote Configuration Manager consoles:**  
-After you upgrade the site server or a server that hosts an instance of the SMS Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
+After you upgrade the site server or a server that hosts an instance of the SMS_Provider to Windows Server 2016, administrative users might not be able to connect a Configuration Manager console to the site. To work around this problem, you must manually restore permissions for the SMS Admins group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS_Provider:
 
 1. On the applicable servers, open the Microsoft Management Console (MMC) and add the snap-in for  **WMI Control**, and then select **Local computer**.
 2. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
 3. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Ensure the **SMS Admins** group has the following permissions:
   - 	Enable Account
   - 	Remote Enable
-4. On the **Security tab** below the **SMS** node, select the **site_**<*sitecode*> node, and then choose **Security**. Ensure the **SMS Admins** group has the following permissions:
+4. On the **Security tab** below the **SMS** node, select the **site_**&lt;*sitecode*> node, and then choose **Security**. Ensure the **SMS Admins** group has the following permissions:
   -   Execute Methods
   -   Provider Write
   -   Enable Account
@@ -172,9 +172,9 @@ The following Windows Server upgrade scenarios are commonly asked about, but not
 
 When you upgrade the version of SQL Server that hosts the site database, you must upgrade the SQL Server version that is used at sites in the following order:
 
- 1. Upgrade SQL Server at the central administration site.
+ 1. Upgrade SQL Server at the central administration site first.
  2. Upgrade secondary sites before you upgrade a secondary site's parent primary site.
- 3. Upgrade parent primary sites. This includes both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.
+ 3. Upgrade parent primary sites last. This includes both child primary sites that report to a central administration site, and stand-alone primary sites that are the top-level site of a hierarchy.
 
 **SQL Server Cardinality Estimation level and the site database:**   
 When a site database is upgraded from an earlier version of SQL Server, the database retains its existing SQL Cardinality Estimation (CE) level if it is at the minimum allowed for that instance of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by SQL Server.
