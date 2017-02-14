@@ -2,7 +2,7 @@
 title: "Prepare Windows Servers | Microsoft Docs"
 description: "Ensure that a computer meets prerequisites for use as a site server or a site system server for System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Prepare Windows Servers to support System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prepare Windows Servers to support System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you can use a Windows computer as a site system server for System Center Configuration Manager, the computer must meet the prerequisites for its intended use as a site server or site system server.  
 
 -   These prerequisites often include one or more Windows features or roles, which are enabled by using the computers Server Manager.  
@@ -28,7 +33,7 @@ The information in this article provides an overview of the types of Windows con
 ##  <a name="BKMK_WinFeatures"></a> Windows features and roles  
  When you set up Windows features and roles on a computer, you might be required to reboot the computer to complete that configuration. Therefore, it's a good idea to identify computers that will host specific site system roles before you install a Configuration Manager site or site system server.
 ### Features  
- The following Windows features are required on certain site system servers and should be set up before you install a site's system role on that computer.  
+ The following Windows features are required on certain site system servers and should be set up before you install a site system role on that computer.  
 
 -   **.NET Framework**: Including  
 
