@@ -2,7 +2,7 @@
 title: "Updates | Microsoft Docs"
 description: "Learn about an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,11 +13,20 @@ ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 caps.latest.revision: 51
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and then install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
+# Updates for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+System Center Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to find and install recommended updates for your Configuration Manager infrastructure. This in-console servicing method is supplemented by out-of-band updates such as hotfixes that are intended for customers who need to resolve issues that might be specific to their environment.  
+
+> [!TIP]
+> When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts.. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
+
 
  **The following topics can help you understand how to find and install the different update types for System Center Configuration Manager:**  
 
@@ -29,17 +38,18 @@ System Center Configuration Manager uses an in-console service method called **U
 
 -   [Use the Hotfix Installer to install updates for System Center Configuration Manager](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
-> [!TIP]  
-> If you use the Technical Preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) for additional information that is specific to that branch.
+
+If you use the Technical Preview branch, see [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) for additional information that is specific to that branch.
+
 
 ##  <a name="bkmk_Baselines"></a> Baseline and update versions  
- The initial release of System Center Configuration Manager current branch is version 1511. This is a baseline version:  
+ The initial release of System Center Configuration Manager current branch was version 1511, which is a baseline version. More recently version 1606 was released as a baseline:  
 
 -   Use the latest baseline version when you install a new site in a new hierarchy.  
 
 -   You must use a baseline version to upgrade from System Center 2012 Configuration Manager.  
 
--   Periodically, new baseline versions will be released. When you use a newer baseline version to install a new hierarchy you avoid installing the original 1511 baseline followed by an upgrade of your infrastructure.  
+-   Periodically, additional baseline versions will be released. When you use the latest baseline version to install a new hierarchy you avoid installing an outdated version of Configuration Manager, followed by an upgrade of your infrastructure to bring it up to date.  
 
 After you install a baseline version, additional versions of Configuration Manager are available as in-console updates. In-console updates update your infrastructure to the latest version of Configuration Manager.  
 
@@ -59,13 +69,13 @@ Some updates for Configuration Manager are available as both an in-console updat
 
 The following versions of Configuration Manager are available as a baseline, an update, or both:  
 
-|Version|Availability date|Baseline|in-console update|  
-|-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|12/8/2015|Yes|No|  
-|**1602**<br /><br /> 5.00.8355.1000|3/11/2016|No|Yes|
-|**1606**<br /><br /> 5.00.8412.1000|7/22/2016|No|Yes|
-|**1606** with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016|Yes|No|
-|**1610**<br /><br /> 5.00.8458.1000|11/18/2016|No|Yes|
+|Version|Availability date|[Support end date](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|in-console update|  
+|-------------|-----------|------------|--------------|------------------------|  
+| 1511 <br /><br /> 5.00.8325.1000|12/8/2015| 12/8/2016|Yes|No|  
+|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|3/11/2016| 3/11/2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|7/22/2016| 7/22/2017|No|Yes|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) with the 1606 hotfix rollup (KB3186654) </br></br>5.00.8412.1307 *(Note 1)* |10/12/2016| 7/22/2017|Yes|No|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 11/18/2017|No|Yes|
 *(Note 1)* This 1606 baseline media is available as part of Microsoft System Center 2016 or System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) release.
 
 To check the version of your Configuration Manager site, in the console go to **About System Center Configuration Manager** at the top-left corner of the console where the new site and console version displays.  
@@ -106,7 +116,7 @@ When you install an in-console update:
 
 -   It automatically runs a prerequisite check. You can also run this check prior to starting the installation.  
 
--   It installs at the central administration site (if you have one), and at primary sites automatically. You can control when each primary site server is allowed to update its infrastructure by using [Service Windows for site servers](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow).  
+-   It installs at the central administration site (if you have one), and at primary sites automatically. You can control when each primary site server is allowed to update its infrastructure by using [Service windows for site servers](../../../core/servers/manage/service-windows.md).  
 
 -   After a site server updates, all affected site system roles (including instances of the SMS Provider) automatically update. Configuration Manager consoles also prompt the console user to update the console, after the site installs the update.  
 

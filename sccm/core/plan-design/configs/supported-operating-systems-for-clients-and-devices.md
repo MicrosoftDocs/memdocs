@@ -2,7 +2,7 @@
 title: "Supported clients and devices | Microsoft Docs"
 description: "Learn which operating systems System Center Configuration Manager supports for clients and devices."
 ms.custom: na
-ms.date: 01/06/2017
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -35,7 +35,7 @@ manager: angrobe
 **Supported operating systems:**  
 
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
-  - Windows Server 2016 is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October 2016).  
+  - This operating system is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October 2016).  
 
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
@@ -61,6 +61,10 @@ manager: angrobe
 -   **Windows 8** (x86, x64): Professional, Enterprise    
 
 -   **Windows 7 with SP1** (x86, x64): Professional, Enterprise, and Ultimate    
+
+-   **The Server Core installation of Windows Server 2016** (x64) <sup>2</sup>
+  - This operating system is supported beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October of 2016). However, this operating system does not support use with Endpoint Protection.
+
 
 -   **The Server Core installation of Windows Server 2012 R2** (x64) <sup>2</sup>    
 

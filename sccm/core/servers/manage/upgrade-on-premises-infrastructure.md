@@ -28,7 +28,7 @@ Use the information in this topic to help you upgrade the server infrastructure 
 
 - If you want to update your System Center Configuration Manager infrastructure to a new version, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
 
-##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade site operating system of site systems  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade the operating system of site systems  
  Configuration Manager supports the in-place upgrade of the operating system of servers that host a site server and of remote servers that host any site system role, in the following situations:  
 
 -   In-place upgrade to a later Windows Server service pack if the resulting service pack level of Windows remains supported by Configuration Manager.  

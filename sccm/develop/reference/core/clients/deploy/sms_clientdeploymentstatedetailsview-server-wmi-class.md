@@ -9,7 +9,7 @@ ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6f8ad726-3bb7-4d01-98b9-f3b08459edef
+ms.assetid: 6f8ad726-3bb7-4d01-98b9-f3b08459edefsearchScope: - ConfigMgr SDK
 caps.latest.revision: 4
 author: "shill-ms"
 ms.author: "v-suhill"

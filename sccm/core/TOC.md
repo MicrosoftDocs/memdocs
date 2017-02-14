@@ -4,6 +4,7 @@
 ### [Accessibility features](understand/accessibility-features.md)
 ##  [Fundamentals of Configuration Manager](understand/fundamentals.md)
 ### [Fundamentals of sites and hierarchies](understand/fundamentals-of-sites-and-hierarchies.md)
+#### [About upgrade, update, and install for site and hierarchy infrastructure](understand/upgrade-update-install.md)
 ### [Fundamentals of managing devices](understand/fundamentals-of-managing-devices.md)
 ### [Fundamentals of client management](understand/fundamentals-of-client-management-tasks.md)
 ### [Fundamentals of security](understand/fundamentals-of-security.md)
@@ -88,6 +89,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
 ###  [Capabilities in 1610](get-started/capabilities-in-technical-preview-1610.md)
@@ -122,7 +124,8 @@
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
 ##   Install infrastructure
-###  [Before you run Setup](servers/deploy/install/setup-downloader.md)
+###  [Get installation media](servers/deploy/install/get-install-media.md)
+###  Before you run Setup
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
 ###  [Installing sites](servers/deploy/install/installing-sites.md)
@@ -167,6 +170,7 @@
 ###  [Install in-console updates](servers/manage/install-in-console-updates.md)
 #### [Flowchart - Download updates](servers/manage/download-updates-flowchart.md)
 #### [Flowchart - Update replication](servers/manage/update-replication-flowchart.md)
+###  [Service windows for site servers](servers/manage/service-windows.md)
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
@@ -255,7 +259,6 @@
 ###  [How to extend hardware inventory](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [How to configure hardware inventory](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [How to configure hardware inventory for mobile devices in a hybrid deployment](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [How to use Resource Explorer to view hardware inventory](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Hardware inventory for Linux and UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Security and privacy for hardware inventory](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)

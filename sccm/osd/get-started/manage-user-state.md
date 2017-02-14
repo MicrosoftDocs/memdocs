@@ -1,8 +1,8 @@
 ---
-title: Manage user state | Microsoft Docs
+title: "Manage user state - Configuration Manager| Microsoft Docs"
 description: "System Center Configuration Manager uses the User State Migration Tool to capture and restore user state data in operating system deployment scenarios."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

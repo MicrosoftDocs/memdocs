@@ -2,7 +2,7 @@
 title: "Configuration Manager on Azure  | Microsoft Docs"
 description: "Information about using Configuration Manager on an Azure environment."
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -84,7 +84,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
 - For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
-- We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
+- We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 in a striped volume instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
 
 
 
@@ -94,18 +94,18 @@ The following tables list the initial suggested disk counts to utilize at primar
 
 | Desktop Clients    |Recommended VM size|Recommended Disks|
 |--------------------|-------------------|-----------------|
-|**Up to 25k**       |   DS4_V2          |2xP30            |
-|**25k to 50k**      |   DS13_V2         |2xP30            |
-|**50k to 100k**     |   DS14_V2         |3xP30            |
+|**Up to 25k**       |   DS4_V2          |2xP30 (striped)  |
+|**25k to 50k**      |   DS13_V2         |2xP30 (striped)  |
+|**50k to 100k**     |   DS14_V2         |3xP30 (striped)  |
 
 
 **Remote site database** - Primary or central administration site with the site database on a remote server:
 
 | Desktop Clients    |Recommended VM size|Recommended Disks |
 |--------------------|-------------------|------------------|
-|**Up to 25k**       | Site server: F4S </br>Database server: DS12_V2 | Site server: 1xP30 </br>Database server: 2xP30 |
-|**25k to 50k**      | Site server: F4S </br>Database server: DS13_V2 | Site server: 1xP30 </br>Database server: 2xP30 |
-|**50k to 100k**     | Site server: F8S </br>Database server: DS14_V2 | Site server: 2xP30 </br>Database server: 3xP30 |
+|**Up to 25k**       | Site server: F4S </br>Database server: DS12_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped)  |
+|**25k to 50k**      | Site server: F4S </br>Database server: DS13_V2 | Site server: 1xP30 </br>Database server: 2xP30 (striped)   |
+|**50k to 100k**     | Site server: F8S </br>Database server: DS14_V2 | Site server: 2xP30 (striped)   </br>Database server: 3xP30 (striped)   |
 
 The following shows an example configuration for 50k to 100k clients on DS14_V2 with 3xP30 disks in a striped volume with separate logical volumes for the Configuration Manager install and database files:
  ![VM)disks](media/vm_disks.png)  
@@ -132,7 +132,7 @@ The approach for content management is much the same as for site servers and sit
 
 
 ### While I am OK with the limitations of cloud-based distribution points, I don't want to put my management point into a DMZ even though that is needed to support my Internet-based clients. Do I have any other options?
-Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)). 
+Yes! With the Configuration Manager version 1610, we introduced the [Cloud Management Gateway](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) as a pre-release feature. (This feature first appeared in the Technical Preview version 1606 as the [Cloud Proxy Service](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)).
 
 The **Cloud Management Gateway** provides a simple way to manage Configuration Manager clients on the Internet. The service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connector point. After it's deployed and configured, clients can access on-premises Configuration Manager site system roles regardless of whether they're connected to the internal private network or on the Internet.
 
