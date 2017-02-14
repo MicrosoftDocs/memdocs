@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 caps.latest.revision: 11
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Plan for site system servers and site system roles for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for site system servers and site system roles for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Each System Center Configuration Manager site you install includes a site server that is a **site system server**. The site can also include additional site system servers on computers that are remote from the site server. Site system servers (the site server or a remote site system server) support **site system roles**.
 
 
@@ -56,7 +61,7 @@ After a site installs, you can move the location of some site system roles from 
 
 -   **Application Catalog website point.** A site system role that provides users with a list of available software from the Application Catalog. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
-     When the Application Catalog supports client computers on the Internet, it's a good idea to install the Application Catalog website point in a perimeter network for security, and to install the Application Catalog web service point on the intranet.  
+     When the Application Catalog supports client computers on the Internet, it's a security best practice to install the Application Catalog website point in a perimeter network for security, and to install the Application Catalog web service point on the intranet.  
 
 -   **Asset Intelligence synchronization point.** A site system role that connects to Microsoft to download information for the Asset Intelligence catalog. This role also uploads uncategorized titles, so that they can be considered for future inclusion in the catalog. A hierarchy supports only a single instance of this role, and that must be at the top-tier site of your hierarchy (a central administration site or the stand-alone primary site). If you expand a stand-alone primary site into a larger hierarchy, you must uninstall this role from the primary site, and then install it at the central administration site.   For more information, see [Asset Intelligence in System Center Configuration Manager](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
