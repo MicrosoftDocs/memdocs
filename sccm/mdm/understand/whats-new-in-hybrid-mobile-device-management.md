@@ -2,7 +2,7 @@
 title: "What's new hybrid MDM  | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
-ms.date: 01/12/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
