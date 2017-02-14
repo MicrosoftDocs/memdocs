@@ -2,7 +2,7 @@
 title: "Pull-distribution point | Microsoft Docs"
 description: "Learn about configurations and limitations for using a pull-distribution point with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
 
-# Use a pull-distribution point with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Use a pull-distribution point with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 A pull-distribution point for System Center Configuration Manager is a standard distribution point that obtains distributed content by downloading it from a source location like a client, instead of having the content pushed to it from the site server.  
 
@@ -60,9 +65,9 @@ Pull-distribution points support the same configurations and functionality as ty
 
 -   A pull-distribution point does not use the **Retry settings** for content distribution. **Retry Settings** can be configured as part of the **Software Distribution Component Properties** for each site. To view or configure these properties, in the **Administration** workspace of the Configuration Manager console, expand **Site Configuration**, and then select **Sites**. Next, in the results pane, select a site, and then on the **Home** tab, select **Configure Site Components**. Finally, select **Software Distribution**.  
 
--   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A network access account that can access the source distribution point must be configured for use.  
+-   To transfer content from a source distribution point in a remote forest, the computer that hosts the pull-distribution point must have a Configuration Manager client installed. A Network Access Account that can access the source distribution point must be configured for use.  
 
--   On a computer that is configured as a pull-distribution point and that runs a Configuration Manager client, the version of the  client must be the same as the Configuration Manager site that installs the pull-distribution point. This is a requirement for the pull-distribution point to use the CCMFramework that is common to both the pull-distribution point and the Configuration Manager client.  
+-   On a computer that is configured as a pull-distribution point and that runs a Configuration Manager client, the version of the client must be the same version as the Configuration Manager site that installs the pull-distribution point. This is a requirement for the pull-distribution point to use the CCMFramework that is common to both the pull-distribution point and the Configuration Manager client.  
 
 ## About source distribution points  
  When you configure the pull-distribution point, you must specify one or more source distribution points:  
