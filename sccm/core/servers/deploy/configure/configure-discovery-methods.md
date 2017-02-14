@@ -2,7 +2,7 @@
 title: "Configure discovery | Microsoft Docs"
 description: "Configure discovery methods to run at a Configuration Manager site to find resources you can manage from your network infrastructure and Active Directory."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Configure discovery methods for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure discovery methods for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 You configure discovery methods to run at a  System Center Configuration Manager site to find resources that you can manage from your network infrastructure and Active Directory. This requires you to enable and then configure each method that you want to use to search your environment. (You can also disable a method by using the same procedure that you use to enable it.)  The only exceptions to this are Heartbeat Discovery and Server Discovery:  
 
