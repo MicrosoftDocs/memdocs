@@ -2,7 +2,7 @@
 title: "Cloud-based distribution point | Microsoft Docs"
 description: "Learn about configurations and limitations for using a cloud-based distribution point with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -38,7 +38,7 @@ When you use a cloud-based distribution, you:
 
 Based on the thresholds that you configure, Configuration Manager can raise alerts that warn you when the combined amount of content that you have stored on the distribution point is near the specified storage amount, or when transfers of data by clients are close to the thresholds that you defined.  
 
-Cloud-based distribution points offer the following advanages that are also offered by on-premises distribution points:  
+Cloud-based distribution points support several features tht are also offered by on-premises distribution points:  
 
 -   You manage cloud-based distribution points individually or as members of distribution point groups.  
 
@@ -70,7 +70,7 @@ A cloud-based distribution point has the following limitations:
 
 -   A cloud-based distribution point does not support prestaged content. The distribution manager of the primary site that manages the distribution point transfers all content to the distribution point.  
 
--   A cloud-based distribution point cannot be configured as pull-distribution points.  
+-   A cloud-based distribution point cannot be configured as a pull-distribution point.  
 
 ##  <a name="BKMK_PrereqsCloudDP"></a> Prerequisites for cloud-based distribution points  
  A cloud-based distribution point requires the following prerequisites for its use:  
@@ -81,9 +81,9 @@ A cloud-based distribution point has the following limitations:
 
 -   A service certificate (PKI) that Configuration Manager clients use to connect to cloud-based distribution points and download content from them by using HTTPS.  
 
--   A device or user must receive the client setting for **Cloud Services** of **Allow access to cloud distribution points** set to **Yes**, before a device or user can access content from a cloud-based distribution point. By default, this value is set to **No**.  
+-  A device or user must have **Allow Access to cloud distribution points** set to **Yes** in the client setting of **Cloud Services** before a device or user can access content from a cloud-based distribution point. By default, this value is set to **No**.  
 
--   A client must be able to resolve the name of the cloud service, which requires a Domain Name System (DNS) alias, CNAME record, in your DNS namespace.  
+-   A client must be able to resolve the name of the cloud service, which requires a Domain Name System (DNS) alias and a CNAME record in your DNS namespace.  
 
 -   A client must be able to access the Internet to use the cloud-based distribution point.  
 
