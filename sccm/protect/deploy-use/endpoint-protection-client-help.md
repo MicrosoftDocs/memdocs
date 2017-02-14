@@ -2,7 +2,7 @@
 title: "Endpoint Protection Client Help | Microsoft Docs"
 description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,14 +20,12 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 This version of Windows Defender or Endpoint Protection includes the following features to help protect your computer from threats:  
 
 -   **Windows Firewall integration.** Endpoint Protection setup enables you to turn on or off Windows Firewall.  
-
 -   **Network Inspection System.** This feature enhances real-time protection by inspecting network traffic to help proactively block exploitation of known network-based vulnerabilities.  
-
 -   **Protection engine.** Real-time protection finds and stops malware from installing or running on your PC. The updated engine offers enhanced detection and cleanup capabilities with better performance.  
 
 Windows Defender comes as part of the Windows 10 operating system.  On earlier versions of Windows, your administrator can provide either Windows Defender or Endpoint Protection using management software.
 
-For help troubleshooting, see [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md). For a list of new features, see [What's new Windows Defender client](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender).
+You can also find a list of [frequently asked questions for Windows Defender and Endpoint Protection](endpoint-protection-client-faq.md). For help troubleshooting, see [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md). For a list of new features, see [What's new Windows Defender client](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender).
 
 ## Windows Firewall integration  
  Windows Firewall can help prevent attackers or malicious software from gaining access to your computer through the Internet or a network. Now when you install Endpoint Protection, the installation wizard verifies that Windows Firewall is turned on. If you have intentionally turned off Windows Firewall, you can avoid turning it on by clearing a check box. You can change your Windows Firewall settings at any time via the System and Security settings in Control Panel.  
@@ -51,5 +49,4 @@ To view Windows Defender settings, search for `Windows Defender` on your PC. Ope
 
 ### See also  
  [Endpoint Protection client frequently asked questions](endpoint-protection-client-faq.md)   
-
  [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md)
