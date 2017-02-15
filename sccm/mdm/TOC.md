@@ -1,13 +1,13 @@
-# Overview of hybrid enterprise mobility management (EMM)
-## [What is Hybrid EMM](understand/hybrid-mobile-device-management.md)
+# Overview
+## [What is hybrid EMM](understand/hybrid-mobile-device-management.md)
 ## [Choose Intune standalone or hybrid EMM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [What's new in hybrid EMM](understand/whats-new-in-hybrid-mobile-device-management.md)
 
-# [Plan and design hybrid EMM](plan-design/plan-hybrid-mobile-device-management.md)
-## [Supported Device Platforms](plan-design/supported-device-platforms-for-hybrid.md)
-## [Device Enrollment Methods](plan-design/device-enrollment-methods.md)
+# [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
+## [Supported device platforms](plan-design/supported-device-platforms-for-hybrid.md)
+## [Device enrollment methods](plan-design/device-enrollment-methods.md)
 
-# [Get started with hybrid](deploy-use/setup-hybrid-mdm.md)
+# [Get started](deploy-use/setup-hybrid-mdm.md)
 ## [Create an MDM collection](deploy-use/create-mdm-collection.md)
 ## [Confirm domain name requirements](deploy-use/confirm-dns.md)
 ## [Configure Intune subscription](deploy-use/configure-intune-subscription.md)
@@ -20,7 +20,7 @@
 ## [Set up additional management](deploy-use/set-up-additional-management.md)
 ## [Verify MDM configuration](deploy-use/verify-mdm-configuration.md)
 
-# How to, in hybrid
+# How to
 ## [Enroll user-owned (BYOD) devices](deploy-use/enroll-user-owned-devices.md)
 ## [Enroll corporate-owned devices](deploy-use/enroll-company-owned-devices.md)
 ### [iOS DEP enrollment](deploy-use/ios-device-enrollment-program-for-hybrid.md)
@@ -34,7 +34,7 @@
 ## [Configure hardware inventory](deploy-use/emm-mobile-device-hardware-inventory-hybrid.md)
 ## [Configure software inventory](deploy-use/emm-software-inventory-mobile-devices.md)
 
-## [Manage Compliance settings](deploy-use/emm-manage-compliance-settings.md)
+## [Manage compliance settings](deploy-use/emm-manage-compliance-settings.md)
 ### [Windows 8.1 and Windows 10](deploy-use/emm-create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
 ### [Windows Phone](deploy-use/emm-create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
 ### [iOS and Mac OS X](deploy-use/emm-create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
@@ -43,7 +43,7 @@
 
 ## [Manage mobile applications](deploy-use/emm-management-tasks-applications.md)
 ### [Create iOS applications for mobile devices](deploy-use/emm-creating-ios-applications.md)
-### [iOS App configuration policies](deploy-use/emm-configure-ios-apps-with-app-configuration-policies.md)
+### [iOS app configuration policies](deploy-use/emm-configure-ios-apps-with-app-configuration-policies.md)
 ### [iOS volume-purchased apps](deploy-use/emm-manage-volume-purchased-ios-apps.md)
 ### [Create Windows Phone applications](deploy-use/emm-creating-windows-phone-applications.md)
 ### [Create Android applications](deploy-use/emm-creating-android-applications.md)
@@ -56,7 +56,7 @@
 ### [Create Wi-Fi profiles](deploy-use/emm-create-wifi-profiles.md)
 ### [Create PFX certificate profiles](deploy-use/emm-create-pfx-certificate-profiles.md)
 ### [VPN profiles](deploy-use/emm-create-vpn-profiles.md)
-### [Create Email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
+### [Create email profiles](deploy-use/emm-create-exchange-activesync-profiles.md)
 ### [Remote connection profiles](deploy-use/emm-create-remote-connection-profiles.md)
 
 ## [Manage access to services](deploy-use/emm-manage-access-to-services.md)
@@ -82,7 +82,7 @@
 ## Plan and design
 ### [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
-## [Get Started](get-started/preparation-steps-for-on-premises-mdm.md)
+## [Get started](get-started/preparation-steps-for-on-premises-mdm.md)
 ### [Set up the Intune subscription](get-started/set-up-intune-subscription-on-premises-mdm.md)
 ### [Install on-prem roles](get-started/install-site-system-roles-for-on-premises-mdm.md)
 ### [Set up certificates](get-started/set-up-certificates-on-premises-mdm.md)
