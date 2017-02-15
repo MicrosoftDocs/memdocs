@@ -35,7 +35,6 @@ Before you can manage iOS, Windows, and Android devices with Configuration Manag
  |**Step 6:** [Enable platform enrollment](enable-platform-enrollment.md)|MDM enrollment for iOS and Windows devices require additional steps for communication between the service and devices. Android requires no additional configuration.|  
  |**Step 7:** [Set up additional management](set-up-additional-management.md)|(Optional) Set up configuration items and conditional access for enrolled devices|
  |**Step 8:** [Verify MDM configuration](verify-mdm-configuration.md)|View log files to confirm that the service connection point was created successfully and user accounts are synchronizing.|
- |**Step 9:** [Brand company portal](company-portal-branding.md)|Customize the appearance of the portal with your company logo and custom color schemes.|
 
 Looking for Intune without Configuration Manager?
 > [!div class="button"]
@@ -44,5 +43,5 @@ Looking for Intune without Configuration Manager?
 
 ## Enroll devices
 After hybrid setup is complete, devices can be enrolled in Configuration Manager in a number of ways:
-- Company-owned (COD) devices: [Enroll company-owned devices](enroll-company-owned-devices.md) provides guidance on different platform-specific ways to enroll company-owned devices.
-- User-owned (BYOD) devices: [Enroll user-owned (BYOD) devices](enroll-hybrid-ios-mac.md) provides guidance on ways to enroll user-owned devices.
+- **Company-owned (COD) devices:** [Enroll company-owned devices](enroll-company-owned-devices.md) provides guidance on different platform-specific ways to enroll company-owned devices.
+- **User-owned (BYOD) devices:** [Enroll user-owned (BYOD) devices](enroll-hybrid-ios-mac.md) provides guidance on ways to enroll user-owned devices.

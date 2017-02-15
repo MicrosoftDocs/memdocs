@@ -4,10 +4,10 @@
 ## [What's new in hybrid EMM](understand/whats-new-in-hybrid-mobile-device-management.md)
 
 # [Plan and design hybrid EMM](plan-design/plan-hybrid-mobile-device-management.md)
-## [Device Enrollment Methods](plan-design/device-enrollment-methods.md)
 ## [Supported Device Platforms](plan-design/supported-device-platforms-for-hybrid.md)
+## [Device Enrollment Methods](plan-design/device-enrollment-methods.md)
 
-# [Get Started with hybrid](deploy-use/setup-hybrid-mdm.md)
+# [Get started with hybrid](deploy-use/setup-hybrid-mdm.md)
 ## [Create an MDM collection](deploy-use/create-mdm-collection.md)
 ## [Confirm domain name requirements](deploy-use/confirm-dns.md)
 ## [Configure Intune subscription](deploy-use/configure-intune-subscription.md)

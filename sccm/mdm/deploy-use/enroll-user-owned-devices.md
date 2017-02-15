@@ -20,6 +20,4 @@ User-owned devices (BYOD) can be brought into management in a variety of ways de
 
 Once enrollment is enabled, user-owned devices can be enrolled via the company portal app.
 
-
-## See Also  
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../understand/hybrid-mobile-device-management.md)
+[Resources about the end-user experience with Microsoft Intune](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) reviews some of the steps that end users take to do different tasks in Intune after they enroll their devices.
