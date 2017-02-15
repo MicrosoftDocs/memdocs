@@ -1,5 +1,5 @@
 ---
-title: "How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client | System Center Configuration Manager"
+title: "How to create configuration items for Windows Phone devices managed with Intune | System Center Configuration Manager"
 ms.custom: na
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -17,7 +17,7 @@ ms.author: robstack
 manager: angrobe
 
 ---
-# How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client
+# How to create configuration items for Windows Phone devices managed with Intune
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 

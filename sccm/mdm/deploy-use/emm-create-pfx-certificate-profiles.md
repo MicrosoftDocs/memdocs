@@ -17,15 +17,33 @@ author: Nbigmanms.author: nbigmanmanager: angrobe
 
 ---
 # How to create PFX certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
 
+[Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provides general information about creating and configuring certificaate profiles. This topic highlights some specific information about certificate profiles related to mobile device management.
+
+- Certificate profiles provide certificate enrollment and renewal from an enterprise certification authority (CA) for devices that run iOS, Windows 8.1, Windows RT 8.1, Windows 10 Desktop and Mobile, and Android. These certificates can then be used for Wi-Fi and VPN connections.
+
+-  To deploy certificate profiles that use the SCEP, you must install a policy module for NDES on a server that runs Windows Server 2012 R2 with the Active Directory Certificate Services role and a working NDES that is accessible to the devices that require the certificates. For devices that are enrolled by Microsoft Intune, this requires the NDES to be accessible from the Internet, for example, in a screened subnet (also known as a DMZ).
+
+-  Configuration Manager supports deploying certificates to different certificate stores, depending on the requirements, the device type, and  the operating system. The following devices and operating systems are supported:
+ -   Windows RT 8.1  
+ -   Windows 8.1  
+ -   Windows Phone 8.1  
+ -   Windows 10 Desktop and Mobile  
+ -   iOS  
+ -   Android  
+ > [!IMPORTANT]  
+ >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be [enrolled in Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx).   
+
+- For other prerequisites, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
+
+## PFX certificate profiles
 System Center Configuration Manager allows you to provision personal information exchange (.pfx) files to user devices. PFX files can be used to generate user-specific certificates to support encrypted data exchange. PFX certificates can be created within Configuration Manager or imported. With System Center Configuration Manager, imported or new PFX certificates can be deployed to iOS, Android, and Windows 10 devices. These files can then be deployed to multiple devices to support user-based PKI communication.  
 
 > [!TIP]  
 >  A step-by-step walkthrough describing this process is available in [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx).  
 
-## Create and Deploy Personal Information Exchange (PFX) Certificate Profiles  
-
-#### How to create and deploy a Personal Information Exchange (PFX) certificate profile  
+### Create and deploy a Personal Information Exchange (PFX) certificate profile  
 
 1.  In the System Center Configuration Manager console, click **Assets and Compliance**.  
 
@@ -105,3 +123,8 @@ System Center Configuration Manager allows you to provision personal information
     -   $ProfileName = The name of the PFX profile  
 
     -   ComputerName = Name of host computer  
+
+### See also
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile) walks you through the Create Certificate Profile Wizard.
+
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) provides information about deploying certificate profiles.

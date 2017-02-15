@@ -23,7 +23,7 @@ You can use Configuration Manager with  Intune to manage desktops, laptops, and 
 Windows enrollment options include:
 
 - [Automatic enrollment with Azure AD](#azure-active-directory-enrollment)
-- [Windows PCs](#set-up-windows-device-enrollment)
+- [Windows PCs](#configure-windows-pc-enrollment)
 - [Windows 10 Mobile abd Windows Phone devices](#enable-windows-phone-devices)
 
 ## Azure Active Directory enrollment
