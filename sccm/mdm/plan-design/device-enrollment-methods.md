@@ -1,6 +1,6 @@
 ---
-title: "Device Enrollment Methods for EMM"
-description: "Device enrollment methods for EMM."
+title: "Device Enrollment Methods for hybrid MDM"
+description: "Device enrollment methods for hybrid MDM."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager

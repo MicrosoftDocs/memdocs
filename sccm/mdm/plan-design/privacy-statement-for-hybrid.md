@@ -1,6 +1,6 @@
 ---
-title: "Privacy Statement for EMM"
-description: "Privacy Statement for EMM."
+title: "Privacy Statement for hybrid MDM"
+description: "Privacy Statement for hybrid MDM."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,5 +16,5 @@ caps.handback.revision: 0
 author: Mtillmanms.author: mtillmanmanager: angrobe
 
 ---
-# Privacy Statement for EMM*Applies to: System Center Configuration Manager (Current Branch)*
+# Privacy Statement for hybrid MDM*Applies to: System Center Configuration Manager (Current Branch)*
 PLACEHOLDER TOPIC

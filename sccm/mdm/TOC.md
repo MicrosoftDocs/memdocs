@@ -1,7 +1,7 @@
 # Overview
-## [What is hybrid EMM](understand/hybrid-mobile-device-management.md)
-## [Choose Intune standalone or hybrid EMM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
-## [What's new in hybrid EMM](understand/whats-new-in-hybrid-mobile-device-management.md)
+## [What is hybrid MDM](understand/hybrid-mobile-device-management.md)
+## [Choose Intune standalone or hybrid MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
+## [What's new in hybrid MDM](understand/whats-new-in-hybrid-mobile-device-management.md)
 
 # [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
 ## [Supported device platforms](plan-design/supported-device-platforms-for-hybrid.md)
