@@ -32,9 +32,9 @@ You can find the **Feedback** option:
 -  In the ribbon, at the far left of the Home tab of each node.  
    ![Ribbon](./media/feedback-home.png)
 
--  When you right-click on any object in the console.
+-  When you right-click on any object in the console.   
     ![Righ-click option](./media/feedback-option.png)   
-    
+
 Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
 
 ##  Second Feature
