@@ -25,7 +25,16 @@ This article introduces the features that are available in the Technical Preview
 
 **The following are new features you can try out with this version.**  
 
-##  First Feature
+##  Send feedback from the Configuration Manager console
+This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
 
+You can find the **Feedback** option:
+-  In the ribbon, at the far left of the Home tab of each node.  
+   ![Ribbon](./media/feedback-home.png)
+
+-  When you right-click on any object in the console.   
+    ![Righ-click option](./media/feedback-option.png)   
+
+Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
 
 ##  Second Feature
