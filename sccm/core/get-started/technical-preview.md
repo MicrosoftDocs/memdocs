@@ -28,7 +28,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
 ##  <a name="bkmk_reqs"></a> Requirements and limitations for the Technical Preview  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]     
 >  The Technical Preview is licensed for use only in a lab environment.  Microsoft may not provide support services and certain features may not be available in the Preview software. Additionally, the Preview software may have reduced or different security, privacy, accessibility, availability and reliability standards relative to commercially provided software.  
 
  For most product prerequisites, use the information in the [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md). The following exceptions apply to the Technical Preview releases:  
@@ -43,7 +43,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   SQL Server 2016 (with no Service Pack, and later)
     -   SQL Server 2014 (with no Service Pack, and later)
-    -   SQL Server 2012 (with cumulative update 2 or later)
+    -   SQL Server 2012 (with Service Pack 2, or later)
 
 
 -   The site supports up to 10 clients, which must run one of the following:  
