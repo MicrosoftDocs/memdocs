@@ -72,7 +72,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  To use the technical preview you must first install a **baseline version** of the technical preview build. After installing a baseline version, you then use **in-console updates** to bring your installation up to date with the most recent preview version.     Typically, new versions of the Technical Preview are available each month.
 
-Each preview release is supported up until three successive releases are available. Meaning, when version 1702 releases, version 1610 would no longer be in support, but versions 1611, 1612, and 1701 would remain in support. 
+Each preview release is supported up until three successive releases are available. Meaning, when version 1702 releases, version 1610 would no longer be in support, but versions 1611, 1612, and 1701 would remain in support. However, if the last baseline would fall out of support (like vesion 1610), it is still supported for installing a new Technical Preview site, so long as you then update that intsall to a supported version.
 
 > [!TIP]  
 >  When you install  an update to the  technical preview, you  update your preview installation to that new technical preview version.    A technical preview installation  never has the option to upgrade to a current branch installation, nor  receive updates from the current branch release.  
@@ -100,7 +100,7 @@ Each preview release is supported up until three successive releases are availab
 
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
- |First 1702 feature | [Tech Preview 1702](capabilities-in-technical-preview-1702.md)    |![Not added](media/Red_X.gif)  |
+ |Send feedback from the Configuration Manager console | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |![Not added](media/Red_X.gif)  |
  |Boundary groups improvements for software update points | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![Not added](media/Red_X.gif)  |
  |Hardware inventory collects UEFI information | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![Not added](media/Red_X.gif)  |
  |Improvements to operating system deployment| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|![Not added](media/Red_X.gif)  |
