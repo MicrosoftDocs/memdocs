@@ -76,11 +76,8 @@
 ### [Troubleshoot Lookout integration](deploy-use/emm-troubleshoot-lookout-integration.md)
 
 # On-premises mobile device management (MDM)
-## Overview
-### [On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
-
-## Plan and design
-### [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
+## [What is On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+## [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
 ## [Get started](get-started/preparation-steps-for-on-premises-mdm.md)
 ### [Set up the Intune subscription](get-started/set-up-intune-subscription-on-premises-mdm.md)
@@ -88,12 +85,11 @@
 ### [Set up certificates](get-started/set-up-certificates-on-premises-mdm.md)
 ### [Set up for enrollment](get-started/set-up-device-enrollment-on-premises-mdm.md)
 
-## How to
-### [Enroll devices for on-premises MDM](deploy-use/enroll-devices-on-premises-mdm.md)
-#### [User enrollment](deploy-use/user-enroll-devices-on-premises-mdm.md)
-#### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
-### [Manage devices](deploy-use/onprem-manage-devices.md)
-### [Manage applications](deploy-use/onprem-manage-applications.md)
-### [Protect data and devices](deploy-use/onprem-protect-data-devices.md)
+## [Enroll devices for on-premises MDM](deploy-use/enroll-devices-on-premises-mdm.md)
+### [User enrollment](deploy-use/user-enroll-devices-on-premises-mdm.md)
+### [Bulk enrollment](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
+## [Manage devices](deploy-use/onprem-manage-devices.md)
+## [Manage applications](deploy-use/onprem-manage-applications.md)
+## [Protect data and devices](deploy-use/onprem-protect-data-devices.md)
 
 # [Device management with Exchange](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
