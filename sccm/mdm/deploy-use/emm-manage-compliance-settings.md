@@ -1,5 +1,5 @@
 ---
-title: "Managing compliance on devices not running the System Center Configuration Manager client | Microsoft Docs"
+title: "Managing compliance on devices managed with Intune | Microsoft Docs"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,10 +15,10 @@ caps.latest.revision: 5
 author: robstackmsftms.author: robstackmanager: angrobe
 
 ---
-# Managing compliance on devices not running the System Center Configuration Manager client*Applies to: System Center Configuration Manager (Current Branch)*
+# Managing compliance on devices managed with Intune*Applies to: System Center Configuration Manager (Current Branch)*
 These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
- If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed without the System Center Configuration Manager client](#configuration-items-for-devices-managed-without-the-system-center-configuration-manager-client) section.  
+ If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with Intune](#configuration-items-for-devices-managed-with-intune) section.  
 
  [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md) provides the basics about compliance settings and [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) will help you implement any necessary prerequisites.  
 
@@ -31,9 +31,9 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
 4.  On the **General** tab of the Create Configuration Item Wizard as shown below, specify a name and description for the configuration item, then choose the appropriate configuration item type for each scenario in this topic.  
 
-     ![Shows general page of the create configuration item wizard.](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
+     ![Shows general page of the create configuration item wizard.](media/Compliance-Settings-Wizard---1.png)  
 
-## Scenarios for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client  
+## Scenarios for Windows 8.1 and Windows 10 devices managed with Intune  
 
 ### Scenario: Restrict access to the app store on all Windows PCs  
  In this scenario, you are the IT admin for a company that deals with highly sensitive information. Because of this, you restrict the apps that users can install. You want to stop users of all Windows 10 PCs from downloading apps from the Windows Store, so you take the following actions.  
@@ -52,7 +52,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Scenarios for Windows Phone devices managed without the Configuration Manager client  
+## Scenarios for Windows Phone devices managed with Intune  
 
 ### Scenario: Disable the use of screen capture on a Windows Phone  
  In this scenario, you use Windows Phone 8.1 devices in your company. These devices run a sales app that contains sensitive information. To protect your company, you want to disable the use of screen capture on the device which could potentially be used to transmit sensitive information outside of your company.  
@@ -71,7 +71,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Scenarios for iOS and Mac OS X devices managed without the Configuration Manager client  
+## Scenarios for iOS and Mac OS X devices managed with Intune  
 
 ### Scenario: Disable the camera on iOS devices  
  In this scenario, your company produces blueprints for new product designs. These contain sensitive information that must not be leaked. As your company issues iPhones or iPads to all employees, you want to disable the use of the camera on these devices to prevent them being used to photograph the blueprints.  
@@ -90,7 +90,7 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Scenarios for Android and Samsung KNOX Standard devices managed without the Configuration Manager client  
+## Scenarios for Android and Samsung KNOX Standard devices managed with Intune  
 
 ### Scenario: Require a password on all Android 5 devices  
  In this scenario, you'll create a configuration item for Android 5 devices only that requires users to configure a password of at least 6 characters on their devices. Additionally, if a user enters an incorrect password 5 times, then the device will be wiped.  
@@ -113,14 +113,14 @@ These scenarios give you an introduction to using System Center Configuration Ma
 
  You can now use the information in the [Common tasks for creating and deploying configuration baselines](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) topic to help you deploy the configuration you have created to devices.  
 
-## Configuration items for devices managed without the System Center Configuration Manager client
+## Configuration items for devices managed with Intune
 
 The following System Center Configuration Manager configuration item types are available for devices that are not managed by the Configuration Manager client, for example, devices that are enrolled with Microsoft Intune.  
 
- -   [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](emm-create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
+ -   [How to create configuration items for Windows 8.1 and Windows 10 devices managed with Intune](emm-create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for Windows Phone devices managed without the System Center Configuration Manager client](emm-create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
+ -   [How to create configuration items for Windows Phone devices managed with Intune](emm-create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for iOS and Mac OS X devices managed without the System Center Configuration Manager client](emm-create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
+ -   [How to create configuration items for iOS and Mac OS X devices managed with Intune](emm-create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)  
 
- -   [How to create configuration items for Android and Samsung KNOX Standard devices managed without the System Center Configuration Manager client](emm-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
+ -   [How to create configuration items for Android and Samsung KNOX Standard devices managed with Intune](emm-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)  
