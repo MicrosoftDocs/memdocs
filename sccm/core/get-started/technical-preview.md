@@ -43,7 +43,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
     -   SQL Server 2016 (with no Service Pack, and later)
     -   SQL Server 2014 (with no Service Pack, and later)
-    -   SQL Server 2012 (with cumulative update 2 or later)
+    -   SQL Server 2012 (with Service Pack 2 or later)
 
 
 -   The site supports up to 10 clients, which must run one of the following:  
