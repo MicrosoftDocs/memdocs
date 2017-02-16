@@ -19,7 +19,7 @@
 ### [Configuration Manager on Azure](understand/configuration-manager-on-azure.md)
 ##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
-#    [Plan and design](plan-design/get-ready.md)
+#    [Plan and design](plan-design/get-ready.md) 
 
 ##   Product changes
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
