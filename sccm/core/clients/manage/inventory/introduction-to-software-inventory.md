@@ -35,4 +35,4 @@ After software inventory is enabled and the clients run a software inventory cyc
 
  Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time of inventory.  
 
-**Mobile Devices:** See [software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/emm-software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.
+**Mobile Devices:** See [software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.

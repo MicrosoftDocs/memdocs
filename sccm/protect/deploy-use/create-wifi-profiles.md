@@ -32,7 +32,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 
 -   Devices that run Windows 10 Desktop or Mobile  
 
-[Create Wi-Fi profiles for mobile devices](../../mdm/deploy-use/emm-create-wifi-profiles.md) provides  information about how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to mobile device users."
+[Create Wi-Fi profiles for mobile devices](../../mdm/deploy-use/create-wifi-profiles.md) provides  information about how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to mobile device users."
 
 > [!IMPORTANT]  
 >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled in Microsoft Intune. For information about how to get your devices enrolled, see [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  

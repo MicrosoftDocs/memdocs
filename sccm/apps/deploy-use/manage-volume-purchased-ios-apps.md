@@ -1,4 +1,4 @@
 ---
-redirect_url: https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/emm-manage-volume-purchased-ios-apps
+redirect_url: https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps
 redirect_document_id: TRUE
 ---

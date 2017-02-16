@@ -33,7 +33,7 @@ A System Center Configuration Manager application has the files and information 
 -   Import an application from a file.  
 
 > [!NOTE]  
->  [Create applications for mobile devices ](../../mdm/deploy-use/emm-create-applications.md) provides detailed information about creating iOS, Windows Phone, and Android applications.  
+>  [Create applications for mobile devices ](../../mdm/deploy-use/create-applications.md) provides detailed information about creating iOS, Windows Phone, and Android applications.  
 
 Use the following steps to create Configuration Manager applications and deployment types.  
 
