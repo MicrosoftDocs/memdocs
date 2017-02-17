@@ -20,7 +20,7 @@ manager: angrobe
 # Manage Internet access using managed browser policies with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the websites that users of the managed browser can go to.  
 
- Because this app is a managed app, you can also apply mobile application management policies to it, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](emm-protect-apps-using-mam-policies.md).  
+ Because this app is a managed app, you can also apply mobile application management policies to it, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](protect-apps-using-mam-policies.md).  
 
 > [!IMPORTANT]  
 >  If users install the managed browser themselves, it will not be managed by any policies you specify. To ensure that the browser is managed by Configuration Manager, they must uninstall the app before you can deploy it to them as a managed app.  
@@ -56,7 +56,7 @@ In System Center Configuration Manager, you can deploy the Intune Managed Browse
      For more about the URL formats you can specify, see URL format for allowed and blocked URLs in this article.  
 
     > [!NOTE]  
-    >  The General policy type lets you change the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app. For more about the General policy type, see [Protect apps using mobile application management policies](emm-protect-apps-using-mam-policies.md).  
+    >  The General policy type lets you change the functionality of apps that you deploy to help bring them into line with your company compliance and security policies. For example, you can restrict cut, copy, and paste operations within a restricted app. For more about the General policy type, see [Protect apps using mobile application management policies](protect-apps-using-mam-policies.md).  
 
 6.  Finish the wizard.  
 
@@ -65,7 +65,7 @@ The new policy is displayed in the **Application Management Policies** node of t
 ## Create a software deployment for the managed browser app  
  After you have created the managed browser policy, you can then create a software deployment type for the managed browser app. You must associate both a general and managed browser policy for the managed browser app.  
 
- For more information, see [Create applications](emm-create-applications.md).  
+ For more information, see [Create applications](create-applications.md).  
 
 ## Security and privacy for the managed browser  
 

@@ -26,7 +26,7 @@ When you manage devices through Microsoft Intune or Configuration Manager on-pre
 - Windows Installer through MDM
 - Web Application
 
-This section provides detailed information about creating and managing applications using hybrid EMM or on-premises MDM.
+This section provides detailed information about creating and managing applications using hybrid MDM or on-premises MDM.
 
 [Management tasks for System Center Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md) provides more general information about managing System Center Configuration Manager applications and deployment types.
 
@@ -41,7 +41,7 @@ Here are some considerations to keep in mind when deploying and monitoring appli
 
 - MDM-enrolled devices do not support simulated deployments, user experience, or scheduling settings.
 
-- You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](emm-configure-ios-apps-with-app-configuration-policies.md).
+- You can associate the deployment with an iOS app configuration policy if you have already congured one. See [Configure iOS apps with app configuration policies](configure-ios-apps-with-app-configuration-policies.md).
 
 ### Next Steps
 

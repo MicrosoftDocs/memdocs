@@ -64,7 +64,7 @@ For third-party VPN connections, distribute the VPN app before deploying the VPN
     |**Custom XML (optional)**|Specify custom XML commands that configure the VPN connection.<br /><br /> Examples:<br /><br /> For **Pulse Secure**:<br /><br /> **<pulse-schema><isSingleSignOnCredential\>true</isSingleSignOnCredential\></pulse-schema>**<br /><br /> For **CheckPoint Mobile VPN**:<br /><br /> **<CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" /\>**<br /><br /> For **Dell SonicWALL Mobile Connect**:<br /><br /> **<MobileConnect\><Compression\>false</Compression\><debugLogging\>True</debugLogging\><packetCapture\>False</packetCapture\></MobileConnect\>**<br /><br /> For **F5 Edge Client**:<br /><br /> **<f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>**<br /><br /> Refer to each manufacturers VPN documentation for more information about how to write custom XML commands.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
 
 > [!NOTE]  
->  For information specific to creating VPN profiles for mobile devices, see [Create VPN Profiles](../../mdm/deploy-use/emm-create-vpn-profiles.md)  
+>  For information specific to creating VPN profiles for mobile devices, see [Create VPN Profiles](../../mdm/deploy-use/create-vpn-profiles.md)  
 
 Complete the wizard. The new VPN profile is displayed in the **VPN Profiles** node in the **Assets and Compliance** workspace.
 

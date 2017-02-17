@@ -81,7 +81,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
         -   **Remember the user credentials at each logon**: User credentials are remembered so that the user does not have to enter them each time they connect.  
 
-        -   **Select a client certificate for client authentication** - Select the client [SCEP certificate](emm-introduction-to-certificate-profiles.md) that you previously created that will be used to authenticate the VPN connection.   
+        -   **Select a client certificate for client authentication** - Select the client [SCEP certificate](introduction-to-certificate-profiles.md) that you previously created that will be used to authenticate the VPN connection.   
 
             > [!NOTE]  
             >  For iOS devices, the SCEP profile you select will be embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile is not installed if the certificate is not present, or not compliant.  
