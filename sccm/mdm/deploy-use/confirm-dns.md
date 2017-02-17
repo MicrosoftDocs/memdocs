@@ -41,3 +41,7 @@ If necessary, take the following steps to satisfy any dependencies external to C
 4.  Optional, not recommended: If you are not using Active Directory Federation Services, reset users' Microsoft Online passwords.
 
      If you are not using AD FS, you must set a Microsoft Online password for each user.
+
+     > [!div class="button"]
+     [< Previous step](create-mdm-collection.md)  [!div class="button"]
+     [Next step >](configure-intune-subscription.md)
