@@ -81,7 +81,7 @@
 ## [What is On-premises MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 ## [Plan for on-premises MDM](plan-design/plan-on-premises-mdm.md)
 
-## [Get started](get-started/preparation-steps-for-on-premises-mdm.md)
+## [Setup steps](get-started/preparation-steps-for-on-premises-mdm.md)
 ### [Set up the Intune subscription](get-started/set-up-intune-subscription-on-premises-mdm.md)
 ### [Install on-prem roles](get-started/install-site-system-roles-for-on-premises-mdm.md)
 ### [Set up certificates](get-started/set-up-certificates-on-premises-mdm.md)
