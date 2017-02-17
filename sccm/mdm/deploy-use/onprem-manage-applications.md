@@ -1,6 +1,6 @@
 ---
-title: "Manage Applications in System Center Configuration Manager On-Premises | Microsoft Docs"
-description: "Manage applications in System Center Configuration Manager on-premises."
+title: "Manage Applications for On-premises Mobile Device Management | Microsoft Docs"
+description: "Manage applications for On-premises Mobile Device Management."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,4 +16,4 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Manage applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*When you manage devices through Configuration Manager on-premises device management, you can manage certain additional application types. Managing applications in ConfigMgr on-premises is the same as managing apps in a hybrid mobile devicce management environment.[Manage mobile applications](management-tasks-applications.md) provides detailed information about creating and managing applications using hybrid MDM or on-premises MDM.
+# Manage applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*When you manage devices through On-premises Mobile Device Management in Configuration Manager, you can manage certain additional application types. Managing applications in on-premises MDM is the same as managing apps in a hybrid MDM environment.[Manage mobile applications](management-tasks-applications.md) provides detailed information about creating and managing applications using hybrid MDM or on-premises MDM.

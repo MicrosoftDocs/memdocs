@@ -1,6 +1,6 @@
 ---
-title: "Manage Mobile Devices in System Center Configuration Manager On-Premises | Microsoft Docs"
-description: "Manage mobile devices in System Center Configuration Manager on-premises."
+title: "Manage devices for On-Premises Mobile Device Management | Microsoft Docs"
+description: "Manage devices for On-premises Mobile Device Management with Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,4 +16,4 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Manage devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You can manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management. To do so, the [devices need to be enrolled](enroll-devices-on-premises-mdm.md) so that Configuration Manager can communicate with the devices for management tasks.Managing devices in ConfigMgr on-premises is the same as managing devices in a hybrid mobile devicce management environment. [Manage devices in hybrid MDM](wipe-lock-reset-devices.md) provides detailed information about device management.
+# Manage devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You can manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management (MDM). To do so, the [devices need to be enrolled](enroll-devices-on-premises-mdm.md) so that Configuration Manager can communicate with the devices for management tasks.Managing devices in on-premises MDM is the same as managing devices in a hybrid MDM environment. [Manage devices in hybrid MDM](wipe-lock-reset-devices.md) provides detailed information about device management.

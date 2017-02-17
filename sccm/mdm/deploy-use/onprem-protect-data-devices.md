@@ -1,6 +1,6 @@
 ---
-title: "Certificate Profiles in System Center Configuration Manager | Microsoft Docs"
-description: "Certificate Profiles in System Center Configuration Manager."
+title: "Protect data and devices for On-premises Mobile Device Management "
+description: "Protect data and devices of On-premises Mobile Device Management in Configuration Manager."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,4 +16,4 @@ caps.handback.revision: 0
 author: mtillmanms.author: mtillman
 manager: angrobe
 ---
-# Protect data and devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack.Follow the same processes outlined in [Manage resource access](create-wifi-profiles.md), [Manage access to services](manage-access-to-services.md), and [Manage access based on risk](manage-access-based-on-device-network-app-risk.md) to use System Center Configuration Manager on-premises MDM to help protect your organization's resources.
+# Protect data and devices in On-premises Mobile Device Management*Applies to: System Center Configuration Manager (Current Branch)*You want your users to be able to securely access your organization's resources, so that both your infrastructure and your data are protected from exposure or malicious attack.Follow the same guidance for hybrid MDM deployments (listed below) to help protect your organization's resources:- [Create Wi-Fi profiles](create-wifi-profiles.md)- [Create PFX certificate profiles](create-pfx-certificate-profiles)- [Create VPN profiles](create-vpn-profiles)- [Create email profiles](create-exchange-activesync-profiles)
