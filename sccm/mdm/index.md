@@ -1,3 +1,3 @@
 ---
-redirect_URL: understand/hybrid-mobile-device-management.md
+redirect_URL: /sccm/mdm/understand/hybrid-mobile-device-management
 ---
