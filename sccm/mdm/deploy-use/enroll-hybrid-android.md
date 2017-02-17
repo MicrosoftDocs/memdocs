@@ -33,3 +33,6 @@ For System Center Configuration Manager, users can download the Android company 
 4.  In the **Microsoft Intune Subscription Properties** dialog box, select the **Android** tab and click to select the **Enable Android enrollment** checkbox.  
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+
+ > [!div class="button"]
+ [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
