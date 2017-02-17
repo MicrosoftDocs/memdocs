@@ -39,10 +39,11 @@
 ### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
 ### [iOS and Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
 ### [Android and Samsung KNOX Standard](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
+
 ## [Sync Intune-enrolled devices](deploy-use/sync-intune-device.md)
 
-## [Manage mobile applications](deploy-use/management-tasks-applications.md)
-### [Create iOS applications for mobile devices](deploy-use/creating-ios-applications.md)
+## [Manage applications](deploy-use/management-tasks-applications.md)
+### [Create iOS applications](deploy-use/creating-ios-applications.md)
 ### [iOS app configuration policies](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
 ### [iOS volume-purchased apps](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [Create Windows Phone applications](deploy-use/creating-windows-phone-applications.md)
@@ -50,9 +51,10 @@
 ### [Mobile application management policies](deploy-use/protect-apps-using-mam-policies.md)
 ### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ### [Windows Store for Business apps](deploy-use/windows-store-for-business.md)
+
 ## [Manage Intune subscriptions](deploy-use/manage-intune-subscriptions.md)
 
-## [Manage resource access](deploy-use/create-wifi-profiles.md)
+## Manage resource access
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
 ### [Create PFX certificate profiles](deploy-use/create-pfx-certificate-profiles.md)
 ### [VPN profiles](deploy-use/create-vpn-profiles.md)
