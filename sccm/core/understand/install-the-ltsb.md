@@ -66,7 +66,7 @@ The version 1606 baseline media supports a new unattended script file key for sc
 When using an unattended script to install a licensed branch, you must add the following section, key names, and values to the Options section of your script. You don't need to use these values to script the install of an Evaluation edition of the Current Branch:  
 
  **SABranchOptions**
-- 	**Key Name: SSActive**
+- 	**Key Name: SAActive**
   - Values: 0 or 1.  
   - Details:  0 installs a non-licensed Evaluation edition of Current Branch, and 1 installs a licensed edition.   
 
@@ -77,7 +77,7 @@ When using an unattended script to install a licensed branch, you must add the f
 For example, to install a licensed Current Branch edition you would use:
 
   **Key Name: SABranchOptions**
-   -	**SSActive = 1**
+   -	**SAActive = 1**
    - **CurrentBranch = 1**
 
 
