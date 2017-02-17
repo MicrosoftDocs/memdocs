@@ -25,3 +25,6 @@ A Configuration Manager user collection is required to specify the users who can
 For testing purposes you can set up a **Direct rule** and add specific users who can enroll devices. In athe Configuration Manager console, choose, **Assets and Compliance** > **User Collections**, click the **Home** tab > **Create** group, and then click **Create User Collection**. For broader distribution you should use **Query rules** to define users. For more information about collections, see [How to create collections](https://technet.microsoft.com/library/mt629371.aspx).
 
 ![Create a user collection for MDM](../media/mdm-create-user-collection.png)
+
+> [!div class="button"]
+[Next step >](confirm-dns.md)

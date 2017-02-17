@@ -70,3 +70,6 @@ The Intune subscription does the following:
 9. On the **Company Logo** page, you can choose whether to display logos in the company portal, and then click **Next**.
 
 10. Complete the wizard.
+
+> [!div class="button"]
+[< Previous step](confirm-dns.md)  [Next step >](terms-and-conditions.md)

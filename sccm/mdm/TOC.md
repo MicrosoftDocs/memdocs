@@ -61,7 +61,7 @@
 ### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
 ### [Remote connection profiles](deploy-use/create-remote-connection-profiles.md)
 
-## [Manage access to services](deploy-use/manage-access-to-services.md)
+## [Manage conditional access](deploy-use/manage-access-to-services.md)
 ### [Device compliance policies](deploy-use/device-compliance-policies.md)
 ### [Create a device compliance policy](deploy-use/create-compliance-policy.md)
 ### [Manage email access](deploy-use/manage-email-access.md)

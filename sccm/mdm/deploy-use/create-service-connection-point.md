@@ -48,3 +48,6 @@ When you have created your subscription, you can then install the service connec
 1.  When you create an Intune subscription in the Configuration Manager console, the Configuration Manager admin is authenticated by connecting to Azure Active Directory, which redirects to the respective ADFS server to prompt for user name and password. Then, Intune issues a certificate to the tenant.
 
 2.  The certificate from step 1 is installed on the service connection point site role and is used to authenticate and authorize all further communication with the Microsoft Intune service.
+
+> [!div class="button"]
+[< Previous step](terms-and-conditions.md)  [Next step >](enable-platform-enrollment.md)
