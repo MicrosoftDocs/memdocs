@@ -66,8 +66,9 @@ For more information about app installation types, see the [introduction to appl
 
       To find out more about XML property lists, see [Understanding XML Property Lists](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) in the iOS Developer Library.
 
-			The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-			Intune supports the following data types in a property list:
+		The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
+		Intune supports the following data types in a property list:
+
 			```
 			<integer>
 			<real>
@@ -76,8 +77,9 @@ For more information about app installation types, see the [introduction to appl
 			<dict>
 			<true /> or <false />
 			```
-			For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-			Intune also supports the following token types in the property list:
+	For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
+	Intune also supports the following token types in the property list:
+	
 			```
 			{{userprincipalname}} - (Example: John@contoso.com)
 			{{mail}} - (Example: John@contoso.com)
