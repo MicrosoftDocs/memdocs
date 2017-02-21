@@ -47,10 +47,14 @@ Class SMS_BoundaryGroupSiteSystems : SMS_BaseClass
 
  Specifies the connection type of the boundary. Possible values are:  
 
-|||  
-|-|-|  
+|Value|Description|  
+|---|---|  
 |0|FAST|  
 |1|SLOW|  
+
+> [!NOTE]
+> This parameter is no longer used for distribution points.
+
 
  `GroupID`  
  Data type: `UInt32`  
