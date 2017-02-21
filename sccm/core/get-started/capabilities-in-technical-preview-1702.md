@@ -37,4 +37,25 @@ You can find the **Feedback** option:
 
 Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
 
-##  Second Feature
+##  Changes for Updates and Servicing
+The following are introduced with this preview.
+
+**Simpler update choices**  
+The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
+
+You have the option to download and install the other available updates, even when they are not the most current version, however you will receive a warning that the update has been replaced by a newer one. To download additional updates, select the update in the console and then click Download
+
+**Improved cleanup of older updates**   
+We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
+
+
+## Peer Cache improvements
+Starting with this release, a peer cache source computer will reject a request for content when the source computer meets any of the following conditions:
+ - Low battery
+ - Excessive CPU load
+ - Excessive disk I/O
+ - No connections to the computer are available
+
+When the computer rejects a request for the content, the computer seeking content will attempt the next alternate source in its pool of available content source locations.  
+
+In addition to this behavior, a new report is available to provide more details about peer cache request rejections:
