@@ -30,13 +30,13 @@ manager: angrobe
 -   Installing or running the Configuration Manager client for Linux or UNIX or the client for Mac on computers under an account other than root is not supported. Doing so can prevent key services from running correctly.  
 
 ##  Windows computers  
- You can manage Windows computers with the Configuration Manager client that is included with Configuration Manager. For more information, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
+ You can use the Configuration Manager client that is included with Configuration Manager to manage the following Windows operating systems. For more information, see [How to deploy clients to Windows computers in System Center Configuration Manager](../../../core/clients/deploy/deploy-clients-to-windows-computers.md).  
 
 **Supported operating systems:**  
 
+
 -  **Windows Server 2016**: Standard, Datacenter <sup>1</sup>
   - This operating system is supported beginning with Configuration Manager version 1606, with the hotfix rollup from KB3186654 (or the baseline version of 1606, which was released in October 2016).  
-
 
 -   **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>1</sup>    
 
@@ -52,9 +52,8 @@ manager: angrobe
 
 -   **Windows  Server 2008 with SP2** (x86, x64): Standard, Enterprise, Datacenter <sup>1</sup>    
 
--   **Windows 10 Enterprise LTSB** (x86, x64) <sup>3</sup>    
-
--   **Windows 10** (x86, x64): Pro, Enterprise    
+-   **Windows 10**: Pro, Enterprise  
+   See [Support for versions of Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) for details about the different release versions of Windows 10 that are supported by the different versions of Configuration Manager.
 
 -   **Windows 8.1** (x86, x64): Professional, Enterprise    
 
@@ -79,7 +78,6 @@ manager: angrobe
 
  <sup>2</sup> To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](http://go.microsoft.com/fwlink/p/?LinkId=299359) in the Windows Server 2012 TechNet library.  
 
- <sup>3</sup> Use of  this operating system requires Configuration Manager version 1602 or later.  
 
 ##  Windows Embedded computers  
  You can manage Windows Embedded devices by installing Configuration Manager client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
