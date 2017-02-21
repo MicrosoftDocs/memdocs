@@ -52,14 +52,13 @@
 ### [Managed browser policies](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ### [Windows Store for Business apps](deploy-use/windows-store-for-business.md)
 
-## [Manage Intune subscriptions](deploy-use/manage-intune-subscriptions.md)
+## [Manage an Intune subscription](deploy-use/manage-intune-subscriptions.md)
 
 ## Manage resource access
 ### [Create Wi-Fi profiles](deploy-use/create-wifi-profiles.md)
 ### [Create PFX certificate profiles](deploy-use/create-pfx-certificate-profiles.md)
 ### [VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
-### [Remote connection profiles](deploy-use/create-remote-connection-profiles.md)
 
 ## [Manage conditional access](deploy-use/manage-access-to-services.md)
 ### [Device compliance policies](deploy-use/device-compliance-policies.md)
