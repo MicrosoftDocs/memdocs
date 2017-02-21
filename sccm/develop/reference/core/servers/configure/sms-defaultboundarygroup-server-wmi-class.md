@@ -47,8 +47,8 @@ Class SMS_DefaultBoundaryGroup : SMS_BaseClass
 |Method|Description|  
 |------------|-----------------|  
 |[AddBoundary Method in Class SMS_DefaultBoundaryGroup](../../../../../develop/reference/core/servers/configure/addboundary-method-in-class-sms-defaultboundarygroup.md)|Adds one or more boundaries to a default boundary group.|  
-|[RemoveBoundary Method in Class SMS_DefaultBoundaryGroup](../../../../../develop/reference/core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md)|Removes one or more boundaries from a default boundary group.|  
 |[AddSiteSystem Method in Class SMS_DefaultBoundaryGroup](../../../../../develop/reference/core/servers/configure/addsitesystem-method-in-class-sms-defaultboundarygroup.md)|Adds one or more site system servers to a default boundary group.|
+|[RemoveBoundary Method in Class SMS_DefaultBoundaryGroup](../../../../../develop/reference/core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md)|Removes one or more boundaries from a default boundary group.|  
 |[RemoveSiteSystem Method in Class SMS_DefaultBoundaryGroup](../../../../../develop/reference/core/servers/configure/removesitesystem-method-in-class-sms-defaultboundarygroup.md)|Removes one or more site system servers from a default boundary group.|
 
 ## Properties  

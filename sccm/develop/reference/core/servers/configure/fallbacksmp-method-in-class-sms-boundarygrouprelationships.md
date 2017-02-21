@@ -1,7 +1,7 @@
 ---
 title: "FallbackSMP Method | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/13/2017"
+ms.date: "02/21/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""

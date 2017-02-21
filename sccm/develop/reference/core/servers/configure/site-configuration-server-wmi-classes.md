@@ -60,7 +60,7 @@ This section contains detailed reference information about the site configuratio
 
 -   [SMS_CMSiteConfiguration Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_cmsiteconfiguration-server-wmi-class.md)  
 
--   [SMS_DefaultBoundaryGroup Server WMI Class]((../../../../../develop/reference/core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md)
+-   [SMS_DefaultBoundaryGroup Server WMI Class](../../../../../develop/reference/core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md)
 
 -   [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)  
 
