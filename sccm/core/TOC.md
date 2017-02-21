@@ -35,6 +35,7 @@
 ###  [Site and site system prerequisites](plan-design/configs/site-and-site-system-prerequisites.md)
 ###  [Supported operating systems for site system servers](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [Supported operating systems for clients and devices](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+###  [Support for Windows 10 as a client](plan-design/configs/support-for-windows-10.md)
 ###  [Supported operating systems for consoles](plan-design/configs/supported-operating-systems-consoles.md)
 ###  [Recommended hardware](plan-design/configs/recommended-hardware.md)
 ###  [Support for SQL Server versions](plan-design/configs/support-for-sql-server-versions.md)
@@ -89,7 +90,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
-###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
+<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
