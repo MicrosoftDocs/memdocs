@@ -1,7 +1,7 @@
 ---
 title: "SMS_DefaultBoundaryGroup Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/10/2017"
+ms.date: "02/21/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
