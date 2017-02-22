@@ -28,6 +28,7 @@ This article introduces the features that are available in the Technical Preview
 **The following are new features you can try out with this version.**  
 
 ##  Send feedback from the Configuration Manager console
+
 This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
 
 >You can find the **Feedback** option:
@@ -80,7 +81,7 @@ After you set up Configuration Manager to run in Azure AD, you can use the follo
 For each method you use, edit the LDAP query to search the Azure AD OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.  
 
 The following examples use an Azure AD of *contoso.onmicrosoft.com*:
-- **System Discovery**   
+ - **System Discovery**   
 Azure AD stores devices under the **AADDC Computers** OU.  Configure the following:  
   -	*LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
@@ -91,4 +92,9 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 
 
 - **Group Discovery**  
-Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
+Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover. 
+
+See the following for more information about Azure AD:  
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com
+ - [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
+
