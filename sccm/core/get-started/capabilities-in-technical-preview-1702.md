@@ -45,7 +45,7 @@ The following are introduced with this preview.
 **Simpler update choices**  
 The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
 
-You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*,, select the update in the console and then click **Download**.
+You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 **Improved cleanup of older updates**   
 We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
@@ -60,8 +60,10 @@ Starting with this release, a peer cache source computer will reject a request f
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
-## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to discover devices, users, and groups
-Beginning with this preview version, Configuration Manager can use Azure Active Directory (AD) Domain Services to discover devices, users, and groups.  
+## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to manage devices, users, and groups
+
+With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
+
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
@@ -107,11 +109,10 @@ This helps organizations to mitigate data leakage through unsecured apps, and pr
 - Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
 - Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
 
-
 ## Antimalware client version alert
 Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
 
 ### Try it out
 Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
 
-To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option. 
+To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
