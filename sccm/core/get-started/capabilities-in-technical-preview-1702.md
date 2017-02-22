@@ -56,7 +56,7 @@ Starting with this release, a peer cache source computer will reject a request f
  - 	Is in low battery mode.
  -  CPU load exceeds 80% at the time the content is requested.
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
- -  There are no more available connections to the computer, based on the computers *MaxConnections* for the peer source service.   
+ -  There are no more available connections to the computer.   
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
@@ -97,7 +97,7 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com.
  - [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
 
 ## Conditional access device compliance policy improvements
