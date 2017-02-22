@@ -2,7 +2,7 @@
 title: "Configure hardware inventory | Microsoft Docs"
 description: "Set up hardware inventory for all clients or for a collection in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,7 @@ ms.topic: article
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to configure hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
