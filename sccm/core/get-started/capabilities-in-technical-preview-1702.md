@@ -92,7 +92,7 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 
 
 - **Group Discovery**  
-Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover. 
+Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
  - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com
@@ -106,3 +106,12 @@ This helps organizations to mitigate data leakage through unsecured apps, and pr
 
 - Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
 - Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+
+
+## Antimalware client version alert
+Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
+
+### Try it out
+Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
+
+To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option. 
