@@ -2,7 +2,7 @@
 title: "Collections best practices | Microsoft Docs"
 description: "Get best practices for collections in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm
+manager: angrobe
 
 ---
-# Best practices for collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Best practices for collections in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the following best practices for collections in System Center Configuration Manager.  
 
 ## Do not use incremental updates for a large number of collections  

@@ -2,7 +2,7 @@
 title: "Configure software inventory | Microsoft Docs"
 description: "Configure software inventory, and exclude folders from software inventory in Configuration Manager."
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # How to configure software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

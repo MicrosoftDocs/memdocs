@@ -2,7 +2,7 @@
 title: "Create collections | Microsoft Docs"
 description: "Create collections in System Center Configuration Manager to more easily manage groups of users and devices."
 ms.custom: na
-ms.date: 12/27/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm 
+manager: angrobe
 
 ---
-# How to create collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create collections in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Collections are groupings of users or devices. Use collections for tasks such as application management, deploying compliance settings, or installing software updates. You can also use collections to manage groups of client settings or use them with role-based administration to specify the resources that an administrative user can access. Configuration Manager contains several built-in collections. For more information, see [Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md).  
 
 > [!NOTE]  
