@@ -2,7 +2,7 @@
 title: "Asset Intelligence security privacy | Microsoft Docs"
 description: "Get security and privacy information for Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm 
+manager: angrobe
 
 ---
-# Security and privacy for Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for Asset Intelligence in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic contains security and privacy information for Asset Intelligence in System Center Configuration Manager.  
 
 ##  <a name="BKMK_Security_AI"></a> Security best practices for Asset Intelligence  

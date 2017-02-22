@@ -2,7 +2,7 @@
 title: "Software inventory | Microsoft Docs"
 description: "Get an introduction to software inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/26/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7
+ms.author: andredm
+manager: angrobe
 
 ---
-# Introduction to software inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Introduction to software inventory in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use software inventory to collect information about files on client devices. Software inventory can also collect files from client devices and store them on the site server. Software inventory is collected when you choose the **Enable software inventory on clients** setting in client settings, where you can also schedule the operation.  
 
 After software inventory is enabled and the clients run a software inventory cycle, the client sends the information to a management point in the client's site. The management point then forwards the inventory information to the Configuration Manager site server, which stores the information in the site database.   
