@@ -59,6 +59,7 @@
 ### [Create PFX certificate profiles](deploy-use/create-pfx-certificate-profiles.md)
 ### [VPN profiles](deploy-use/create-vpn-profiles.md)
 ### [Create email profiles](deploy-use/create-exchange-activesync-profiles.md)
+### [Windows Hello for Business settings ](deploy-use/windows-hello-for-business-settings.md)
 
 ## [Manage conditional access](deploy-use/manage-access-to-services.md)
 ### [Device compliance policies](deploy-use/device-compliance-policies.md)
