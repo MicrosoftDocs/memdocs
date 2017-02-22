@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 caps.latest.revision: 5
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
 # Capabilities in Technical Preview 1702 for System Center Configuration Manager
 
@@ -28,7 +30,7 @@ This article introduces the features that are available in the Technical Preview
 ##  Send feedback from the Configuration Manager console
 This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
 
-You can find the **Feedback** option:
+>You can find the **Feedback** option:
 -  In the ribbon, at the far left of the Home tab of each node.  
    ![Ribbon](./media/feedback-home.png)
 
@@ -36,7 +38,6 @@ You can find the **Feedback** option:
     ![Righ-click option](./media/feedback-option.png)   
 
 Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
-
 ##  Changes for Updates and Servicing
 The following are introduced with this preview.
 
@@ -58,7 +59,7 @@ Starting with this release, a peer cache source computer will reject a request f
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
-## Use Azure Active Directory Domain Services to discover devices, users, and groups
+## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to discover devices, users, and groups
 Beginning with this preview version, Configuration Manager can use Azure Active Directory (AD) Domain Services to discover devices, users, and groups.  
 
 ### Set up Configuration Manager to use Azure AD
