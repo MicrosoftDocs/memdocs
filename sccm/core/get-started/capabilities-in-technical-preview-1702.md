@@ -45,7 +45,7 @@ The following are introduced with this preview.
 **Simpler update choices**  
 The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
 
-You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*,, select the update in the console and then click **Download**.
+You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 **Improved cleanup of older updates**   
 We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
@@ -60,8 +60,10 @@ Starting with this release, a peer cache source computer will reject a request f
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
-## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to discover devices, users, and groups
-Beginning with this preview version, Configuration Manager can use Azure Active Directory (AD) Domain Services to discover devices, users, and groups.  
+## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to manage devices, users, and groups
+
+With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
+
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
@@ -92,7 +94,7 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 
 
 - **Group Discovery**  
-Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover. 
+Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
  - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com
