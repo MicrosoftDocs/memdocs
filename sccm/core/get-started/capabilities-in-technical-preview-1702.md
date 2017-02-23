@@ -246,7 +246,7 @@ We've added new settings you can use in your configuration items for iOS devices
 - **Changes to app cellular data usage settings**
 - **Erase all content and settings**
 - **Configure restrictions on device**
-- **Host pairing to control the devices an IOS device can pair with (supervised only)**
+- **Use host pairing to control the devices an iOS device can pair with**
 - **Install configuration profiles and certificates**
 - **Device name modification**
 - **Passcode modification**
