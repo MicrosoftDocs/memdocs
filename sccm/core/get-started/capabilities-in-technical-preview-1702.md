@@ -216,7 +216,7 @@ Now, if the application was deployed as **Available**, end users will see a dial
 If the application was deployed as **Required**, the applications you specified will be closed automatically, and the application installation can proceed.
 
 
-## Create PFX certificates with S/MIME support
+## Create PFX certificates with S MIME support
 
 You can now create PFX certificate profiles for in Configuration Manager. Use these certificates to support S/MIME encryption on iOS devices that are enrolled with Intune.
 When you create an email profile, you can choose which PFX profile is associated with it so that S/MIME is enabled in the iOS native mail app. 
