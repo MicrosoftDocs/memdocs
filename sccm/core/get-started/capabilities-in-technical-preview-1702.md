@@ -120,3 +120,83 @@ Beginning with this preview version, Configuration Manager Endpoint Protection p
 Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
 
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
+
+## Compliance assessment for Windows Update for Business updates
+You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the conditional access evaluation.
+
+### Allow Windows Update for Business to manage Windows 10 updates
+To gather compliance assessment information for Windows Update for Business updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update for Business to manage Windows 10 updates.
+1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
+2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update for Business** setting.
+
+### Create a compliance policy for Windows Update for Business assessment
+1. In the Configuration Manager console, go to **Assets and Compliance** > **Compliance Settings** > **Compliance policies**.
+2. Click **Create Compliance Policy** or select an existing compliance policy to modify.
+3. On the General page, provide a name and description, select **Compliance rules for devices managed with the Configuration Manager client**, set the non-compliance severity for reporting, and click **Next**.
+4. On the Supported Platforms page, select **Windows 10**, and then click **Next**.
+5. On the Rules page, click **New....**, and then for **Condition** choose **Require Windows Update for Business compliance**.
+6. For **Value**, select **True**.    
+
+The new policy displays in the **Compliance Policies** node of the **Assets and Compliance** workspace.
+
+### Deploy a compliance policy
+1. In the Configuration Manager console, go to **Assets and Compliance** > **Compliance Settings**, and then click **Compliance Policies**.
+2. On the **Home** tab, in the **Deployment** group, click **Deploy**.
+3. In the **Deploy Compliance Policy** dialog box, click **Browse** to select the user collection to which to deploy the policy.
+   Additionally, you can select options to generate alerts when the policy is not compliant, and also to configure the schedule by which this policy will be evaluated for compliance.
+4. When you are done, click **OK**.
+
+### Monitor the compliance policy
+After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy).
+
+
+## Improvements to Software Center settings and notification messages for high-impact task sequences
+This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
+
+- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
+- In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
+- The default high-impact deployment message for in-place upgrades now states that
+your apps, data, and settings are automatically migrated. Previously, the default message for any operating system installation indicated that all apps, data, and settings would be lost, which was not true for an in-place upgrade.
+
+### Set a task sequence as a high-impact task sequence
+Use the following procedure to set a task sequence as high-impact.
+> [!NOTE]
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **This is a high-impact task sequence**.
+
+### Create a custom notification for high-risk deployments
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **Use custom text**.
+>  [!NOTE]
+>  [You can only set user notification text when the **This is a high-impact task sequence** is selected]
+
+4. Configure the following settings (max of 255 characters for each text box):
+
+   **User notification headline text**: Specifies the blue text that displays on the Software Center user notification. For example, in the default user notification, this section contains something like "Confirm you want to upgrade the operating system on this computer".
+
+   **User notification message text**: There are three text boxes that provide the body of the custom notification.
+   - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
+   - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
+   - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
+
+   Let's say you configure the following custom notification in properties.
+
+   ![Custom notification for a task sequence](.\media\user-notification.png)
+
+   The following notification message will be displayed when the end-user opens the installation from Software Center.
+
+   ![Custom notification for a task sequence](.\media\user-notification-enduser.png)
+
+### Configure Software Center properties
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **General** tab, the following settings for Software Center are available:
+  - **Restart required**: Lets the user know whether a restart is required during the installation.
+  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
