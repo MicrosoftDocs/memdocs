@@ -200,3 +200,71 @@ Use the following procedure to configure the details for the task sequence displ
   - **Restart required**: Lets the user know whether a restart is required during the installation.
   - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
   - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
+
+
+## Check for running executable files before installing an application
+
+In the *<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+ 
+### Try it out.
+ 
+1.	In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
+2.	Choose **Add** to add one of more executable file names you want to check for. You can also add a friendly name to make files easier to identify in the list.
+3.	If the deployment will have a purpose of required, in the deploy software wizard, make sure to select the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
+ 
+Now, if the application was deployed as **Available**, end users will see a dialog box informing them that they must close the applications you specified and then try to install the application again.
+If the application was deployed as **Required**, the applications you specified will be closed automatically, and the application installation can proceed.
+
+
+## Create PFX certificates with S MIME support
+
+You can now create PFX certificate profiles for in Configuration Manager. Use these certificates to support S/MIME encryption on iOS devices that are enrolled with Intune.
+When you create an email profile, you can choose which PFX profile is associated with it so that S/MIME is enabled in the iOS native mail app. 
+
+## New compliance settings for iOS devices
+
+We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/ios-policy-settings-in-microsoft-intune).
+
+- **Sync data from managed apps to iCloud**
+- **Handoff to continue activities on other device**
+- **iCloud Photo Sharing**
+- **iCloud Photo Library**
+- **Trust new enterprise app authors**
+- **Allow the user to download content from the iBook store flagged as 'Erotica'**
+- **Force paired Apple Watches to use wrist detection**
+- **Password for AirPlay outgoing requests**
+- **Modify account settings**
+- **Changes to app cellular data usage settings**
+- **Erase all content and settings**
+- **Configure restrictions on device**
+- **Host pairing to control the devices an IOS device can pair with (supervised only)**
+- **Install configuration profiles and certificates**
+- **Device name modification**
+- **Passcode modification**
+- **Apple Watch pairing**
+- **Notification settings modification**
+- **Wallpaper modification**
+- **Diagnostics submission settings modification**
+- **Bluetooth Modification**
+- **AirDrop**
+- **Use Siri to query user-generated content from the Internet**
+- **Siri profanity filter**
+- **Return results from the Internet in Spotlight search**
+- **Word definition lookup**
+- **Predictive keyboards**
+- **Auto-correction**
+- **Keyboard spell-check**
+- **Keyboard shortcuts**
+<!--- - **Enterprise app trust settings modification** --->
+- **Installing apps using Apple Configurator and iTunes only**
+- **Automatic app downloads**
+- **Make changes to the Find My Friends app settings**
+- **Access to the iBooks store**
+- **Messages app**
+- **Podcasts**
+- **Apple Music**
+- **iTunes Radio**
+- **Apple News**
+- **Game Center**
+- **Treat AirDrop as an unmanaged destination**
+
