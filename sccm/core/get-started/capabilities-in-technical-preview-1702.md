@@ -221,8 +221,14 @@ If the application was deployed as **Required** and the option **Automatically c
 
 ## Create PFX certificates with S MIME support
 
-You can now create PFX certificate profiles for in Configuration Manager. Use these certificates to support S/MIME encryption on iOS devices that are enrolled with Intune.
-When you create an email profile, you can choose which PFX profile is associated with it so that S/MIME is enabled in the iOS native mail app.
+You can now create a PFX certificate profile that supports S/MIME and deploy it to users.  This certificate can then be used for S/MIME encryption and decryption across devices that the user has enrolled.
+
+Additionally, you can now specify multiple certification authorities (CAs) on multiple Certificate Registration Point site system roles and then assign which CAs process requests as part of the certificate profile.
+
+For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it. 
+
+For more information about certificates in Configuration Manager, see [Introduction to certificate profiles in System Center Configuration Manager]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+
 
 ## New compliance settings for iOS devices
 
