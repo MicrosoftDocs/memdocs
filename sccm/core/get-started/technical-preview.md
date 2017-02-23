@@ -106,7 +106,7 @@ Each preview release is supported up until three successive releases are availab
  |Capability|Technical Preview version|Current Branch version|  
  |----------------|---------------------|--------------------|
  |New compliance settings for iOS devices|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|![Not added](media/Red_X.gif)|
- |Create PFX certificates with S/MIME support|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s/mime-support)|![Not added](media/Red_X.gif)|
+ |Create PFX certificates with S/MIME support|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|![Not added](media/Red_X.gif)|
  |Check for running executable files before installing an application|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|![Not added](media/Red_X.gif)|
  |Send feedback from the Configuration Manager console | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |![Not added](media/Red_X.gif)  |
  | Changes for Updates and Servicing  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |![Not added](media/Red_X.gif) |
