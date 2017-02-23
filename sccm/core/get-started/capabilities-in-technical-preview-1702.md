@@ -45,7 +45,7 @@ The following are introduced with this preview.
 **Simpler update choices**  
 The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
 
-You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*,, select the update in the console and then click **Download**.
+You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 **Improved cleanup of older updates**   
 We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
@@ -56,12 +56,14 @@ Starting with this release, a peer cache source computer will reject a request f
  - 	Is in low battery mode.
  -  CPU load exceeds 80% at the time the content is requested.
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
- -  There are no more available connections to the computer, based on the computers *MaxConnections* for the peer source service.   
+ -  There are no more available connections to the computer.   
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
-## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to discover devices, users, and groups
-Beginning with this preview version, Configuration Manager can use Azure Active Directory (AD) Domain Services to discover devices, users, and groups.  
+## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to manage devices, users, and groups
+
+With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
+
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
@@ -95,17 +97,29 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Azure AD:  
- - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com
+ - [Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds) on azure.microsoft.com.
  - [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
 
 ## Conditional access device compliance policy improvements
 
 A new device compliance policy rule is available to help you block access to corporate resources that support conditional access, when users are using apps that are part of a non-compliant list of apps. The non-compliant list of apps can be defined by the admin when adding the new compliant rule **Apps that cannot be installed**. This rule requires the admin to enter the **App Name**, the **App ID**, and the **App Publisher** (optional) when adding an app to the non-compliant list. This setting only applies to iOS and Android devices.
 
-This helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
+Additionally, this helps organizations to mitigate data leakage through unsecured apps, and prevent excessive data consumption through certain apps.
 
 - Learn more [how device compliance policies work](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies).
 - Learn more [how to create device compliance policies](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+
+### Try it out
+
+**Scenario:** Identify apps that might be causing data leakage by sending corporate data outside your company, or that are causing excessive data consumption, then [create a conditional access device compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy) that adds these apps into the non-compliant list of apps. This will block access to corporate resources that support conditional access until the user can remove the blocked app.
+
+## Antimalware client version alert
+Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
+
+### Try it out
+Ensure Endpoint Protection is enabled on all desktop and server clients using client settings policy. You can now view **Antimalware Client Version** and **Endpoint Protection Deployment Status** by going **Assets and Compliance** > **Overview** > **Devices** > **All Desktops and Serve Clients**. To check for an alert, view **Alerts** in the **Monitoring** workspace. If more than 20% of managed clients are running an expired version of antimalware software, the Antimalware client version is outdated alert is displayed. This alert doesn’t appear on the **Monitoring** > **Overview** tab. To update expired antimalware clients, enable software updates for antimalware clients.
+
+To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
 ## Compliance assessment for Windows Update for Business updates
 You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the conditional access evaluation.
@@ -184,5 +198,5 @@ Use the following procedure to configure the details for the task sequence displ
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **General** tab, the following settings for Software Center are available:
   - **Restart required**: Lets the user know whether a restart is required during the installation.
-  - **Download size (MB)***: Specifies how many megabytes is displayed in Software Center for the task sequence.  
-  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence. 
+  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
