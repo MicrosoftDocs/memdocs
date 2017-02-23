@@ -239,40 +239,40 @@ We've added new settings you can use in your configuration items for iOS devices
 - **iCloud Photo Sharing**
 - **iCloud Photo Library**
 - **Trust new enterprise app authors**
-- **Allow the user to download content from the iBook store flagged as 'Erotica'**
+- **Allow the user to download content from the iBook store flagged as 'Erotica'** (supervised mode only)
 - **Force paired Apple Watches to use wrist detection**
 - **Password for AirPlay outgoing requests**
-- **Modify account settings**
-- **Changes to app cellular data usage settings**
-- **Erase all content and settings**
-- **Configure restrictions on device**
-- **Use host pairing to control the devices an iOS device can pair with**
-- **Install configuration profiles and certificates**
-- **Device name modification**
-- **Passcode modification**
-- **Apple Watch pairing**
-- **Notification settings modification**
-- **Wallpaper modification**
-- **Diagnostics submission settings modification**
-- **Bluetooth Modification**
-- **AirDrop**
-- **Use Siri to query user-generated content from the Internet**
-- **Siri profanity filter**
-- **Return results from the Internet in Spotlight search**
-- **Word definition lookup**
-- **Predictive keyboards**
-- **Auto-correction**
-- **Keyboard spell-check**
-- **Keyboard shortcuts**
+- **Modify account settings** (supervised mode only)
+- **Changes to app cellular data usage settings** (supervised mode only)
+- **Erase all content and settings** (supervised mode only)
+- **Configure restrictions on device** (supervised mode only)
+- **Use host pairing to control the devices an iOS device can pair with** (supervised mode only)
+- **Install configuration profiles and certificates** (supervised mode only)
+- **Device name modification** (supervised mode only)
+- **Passcode modification** (supervised mode only)
+- **Apple Watch pairing** (supervised mode only)
+- **Notification settings modification** (supervised mode only)
+- **Wallpaper modification** (supervised mode only)
+- **Diagnostics submission settings modification** (supervised mode only)
+- **Bluetooth Modification** (supervised mode only)
+- **AirDrop** (supervised mode only)
+- **Use Siri to query user-generated content from the Internet** (supervised mode only)
+- **Siri profanity filter** (supervised mode only)
+- **Return results from the Internet in Spotlight search** (supervised mode only)
+- **Word definition lookup** (supervised mode only)
+- **Predictive keyboards** (supervised mode only)
+- **Auto-correction** (supervised mode only)
+- **Keyboard spell-check** (supervised mode only)
+- **Keyboard shortcuts** (supervised mode only)
 <!--- - **Enterprise app trust settings modification** --->
-- **Installing apps using Apple Configurator and iTunes only**
-- **Automatic app downloads**
-- **Make changes to the Find My Friends app settings**
-- **Access to the iBooks store**
-- **Messages app**
-- **Podcasts**
-- **Apple Music**
-- **iTunes Radio**
-- **Apple News**
-- **Game Center**
+- **Installing apps using Apple Configurator and iTunes only** (supervised mode only)
+- **Automatic app downloads** (supervised mode only)
+- **Make changes to the Find My Friends app settings** (supervised mode only)
+- **Access to the iBooks store** (supervised mode only)
+- **Messages app** (supervised mode only)
+- **Podcasts** (supervised mode only)
+- **Apple Music** (supervised mode only)
+- **iTunes Radio** (supervised mode only)
+- **Apple News** (supervised mode only)
+- **Game Center** (supervised mode only)
 - **Treat AirDrop as an unmanaged destination**
