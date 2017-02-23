@@ -123,6 +123,8 @@ To configure the percentage at which the alert is generated, expand **Monitoring
 
 ## Compliance assessment for Windows Update for Business updates
 You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the conditional access evaluation.
+> [!IMPORTANT]
+> You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update for Business updates.
 
 ### Allow Windows Update for Business to manage Windows 10 updates
 To gather compliance assessment information for Windows Update for Business updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update for Business to manage Windows 10 updates.
@@ -134,8 +136,7 @@ To gather compliance assessment information for Windows Update for Business upda
 2. Click **Create Compliance Policy** or select an existing compliance policy to modify.
 3. On the General page, provide a name and description, select **Compliance rules for devices managed with the Configuration Manager client**, set the non-compliance severity for reporting, and click **Next**.
 4. On the Supported Platforms page, select **Windows 10**, and then click **Next**.
-5. On the Rules page, click **New....**, and then for **Condition** choose **Require Windows Update for Business compliance**.
-6. For **Value**, select **True**.    
+5. On the Rules page, click **New....**, and then for **Condition** choose **Require Windows Update for Business compliance**. The **Value** setting is automatically set to **True**.
 
 The new policy displays in the **Compliance Policies** node of the **Assets and Compliance** workspace.
 
@@ -205,13 +206,13 @@ Use the following procedure to configure the details for the task sequence displ
 ## Check for running executable files before installing an application
 
 In the *<deployment type name>* **Properties** dialog box of a deployment type, on the Install Behavior tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
- 
+
 ### Try it out.
- 
+
 1.	In the properties of a Configuration Manager deployment type, choose the **Install Behavior** tab.
 2.	Choose **Add** to add one of more executable file names you want to check for. You can also add a friendly name to make files easier to identify in the list.
 3.	If the deployment will have a purpose of required, in the deploy software wizard, make sure to select the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**.
- 
+
 Now, if the application was deployed as **Available**, end users will see a dialog box informing them that they must close the applications you specified and then try to install the application again.
 If the application was deployed as **Required**, the applications you specified will be closed automatically, and the application installation can proceed.
 
@@ -219,7 +220,7 @@ If the application was deployed as **Required**, the applications you specified 
 ## Create PFX certificates with S MIME support
 
 You can now create PFX certificate profiles for in Configuration Manager. Use these certificates to support S/MIME encryption on iOS devices that are enrolled with Intune.
-When you create an email profile, you can choose which PFX profile is associated with it so that S/MIME is enabled in the iOS native mail app. 
+When you create an email profile, you can choose which PFX profile is associated with it so that S/MIME is enabled in the iOS native mail app.
 
 ## New compliance settings for iOS devices
 
@@ -267,4 +268,3 @@ We've added new settings you can use in your configuration items for iOS devices
 - **Apple News**
 - **Game Center**
 - **Treat AirDrop as an unmanaged destination**
-
