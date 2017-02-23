@@ -173,7 +173,7 @@ Use the following procedure to set a task sequence as high-impact.
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **User Notification** tab, select **Use custom text**.
 >  [!NOTE]
->  [You can only set user notification text when the **This is a high-impact task sequence** is selected]
+>  You can only set user notification text when the **This is a high-impact task sequence** is selected.
 
 4. Configure the following settings (max of 255 characters for each text box):
 
