@@ -2,7 +2,7 @@
 title: "Manage collections | Microsoft Docs"
 description: "Do common collections management tasks in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm 
+manager: angrobe
 
 ---
-# How to manage collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to manage collections in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the overview information in this topic to help you perform management tasks for collections in System Center Configuration Manager.  
 
 > [!NOTE]  
