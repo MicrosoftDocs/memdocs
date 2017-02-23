@@ -58,6 +58,8 @@ Starting with this release, a peer cache source computer will reject a request f
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
  -  There are no more available connections to the computer.   
 
+You can configure these settings when you use the System Center Configuration Manager SDK.
+
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
 ## <a name="azurediscovery"></a> Use Azure Active Directory Domain Services to manage devices, users, and groups
@@ -225,7 +227,7 @@ You can now create a PFX certificate profile that supports S/MIME and deploy it 
 
 Additionally, you can now specify multiple certification authorities (CAs) on multiple Certificate Registration Point site system roles and then assign which CAs process requests as part of the certificate profile.
 
-For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it. 
+For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it.
 
 For more information about certificates in Configuration Manager, see [Introduction to certificate profiles in System Center Configuration Manager]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
