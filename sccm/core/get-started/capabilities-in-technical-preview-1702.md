@@ -58,7 +58,7 @@ Starting with this release, a peer cache source computer will reject a request f
  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
  -  There are no more available connections to the computer.   
 
-You can configure these settings when you use the System Center Configuration Manager SDK.
+You can configure these settings using the client agent config class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the System Center Configuration Manager SDK.
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
 
