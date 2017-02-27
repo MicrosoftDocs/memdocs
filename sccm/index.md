@@ -6,64 +6,6 @@ description: Learn how to use System Center Configuration Manager.
 ---
 <div id="main" class="v2">
     <div class="container">
-        <ul class="cardsY panelContent featuredContent">
-            <li>
-                <a href="/sccm/core/get-started/set-up-your-lab">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                        <img data-hoverimage="/media/hubs/sccm/sccm-get-started.svg" src="/media/hubs/sccm/sccm-get-started.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="cardText">
-                                    <h3>Get started by setting up your lab</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                        <img data-hoverimage="/media/hubs/sccm/sccm-whats-new.svg" src="/media/hubs/sccm/sccm-whats-new.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="cardText">
-                                    <h3>What's new?</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="/intune/understand-explore/common-ways-to-use-intune">
-                    <div class="cardSize">
-                        <div class="cardPadding">
-                            <div class="card">
-                                <div class="cardImageOuter">
-                                    <div class="cardImage">
-                                        <img data-hoverimage="/media/hubs/sccm/sccm-checkout-intune.svg" src="/media/hubs/sccm/sccm-checkout-intune.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="cardText">
-                                    <h3>Check out Intune</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="container">
         <h1>System Center Configuration Manager Documentation</h1>
         <ul class="pivots">
             <li>
@@ -622,11 +564,11 @@ description: Learn how to use System Center Configuration Manager.
                 </ul>
             </li>
             <li>
-                <a href="#tools">Tools</a>
-                <ul id="tools">
+                <a href="#sdkstools">SDKs/Tools</a>
+                <ul id="sdkstools">
                     <li>
-                        <a href="#tools-all">All</a>
-                        <ul id="tools-all" class="cardsC">
+                        <a href="#sdkstools-all">All</a>
+                        <ul id="sdkstools-all" class="cardsC">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
