@@ -12,40 +12,62 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 020f43e8-738e-4a82-91be-27b10cda9665
 caps.latest.revision:
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---
-# Enable device threat protection rule in the compliance policy
+# Create a Lookout device threat protection rule
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Intune with Lookout mobile threat protection gives you the ability to detect mobile threats and make a risk assessment on the device. You can create an compliance policy rule in Configuration Manager  to include the risk assessment to determine if the device is compliant. You can then use the conditional access policy to allow or block access to Exchange, SharePoint, and other services based on device compliance.
+## Before you begin
+
+Intune with Lookout mobile threat protection gives you the ability to detect mobile threats and make a risk assessment on the device. You can create an compliance policy rule in Configuration Manager to include the risk assessment to determine if the device is compliant. You can then use the conditional access policy to allow or block access to Exchange, SharePoint, and other services based on device compliance.
 
 To have Lookout device threat detection influence the compliance policy for the device:
 
-* The  **Device Threat Protection** rule must be enabled on the compliance policy.
+-   The **Device Threat Protection** rule must be enabled on the compliance policy.
 
-* The **Lookout Status** page in the **Intune administrator console** must show as **Active**. See the [Enable Lookout MTP connection in Intune](enable-lookout-connection-in-intune.md) topic for more details and instructions on how to activate Lookout integration.
+-   The **Lookout Status** page in the **Intune administrator console** must show as **Active**. See the [Enable Lookout MTP connection in Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-lookout-connection-in-intune) topic for more details and instructions on how to activate Lookout integration.
 
+Before creating the device threat protection rule in the compliancy policy, we recommend that you do the following:
 
-Before creating the device threat protection rule in the compliancy policy, we recommend that you [set up your subscription with Lookout device threat protection](set-up-your-subscription-with-lookout.md), [enable the Lookout connection in Intune](enable-lookout-connection-in-intune.md),and [configure the Lookout for work app](configure-and-deploy-lookout-for-work-apps.md). The compliance rule enforced only after the setup is completed.
+1.  [Set up your subscription with Lookout device threat protection](https://docs.microsoft.com/sccm/protect/deploy-use/set-up-your-subscription-with-lookout)
 
-To enable the device threat protection rule, you can either use an existing compliance policy or create a new one.
+2.  [Enable the Lookout connection in Intune](https://docs.microsoft.com/sccm/protect/deploy-use/enable-lookout-connection-in-intune)
 
-As part of the Lookout device threat protection setup, in the [Lookout console](https://aad.lookout.com), you created a policy that classifies various threats into high, medium and low levels. In the Intune compliance policy you will use the threat level to set the maximum allowed threat level.
+3.  [Configure the Lookout for work app](https://docs.microsoft.com/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)
 
-On the **Rules** page of the compliance policy wizard,  define a new rule with the following information:
-  * Condition: Device threat protection maximum risk level.
-  * Value: The value can be one of the following:
-    * **None (secured)**: This is the most secure. This means that the device cannot have any threats. If any level of threats are found, the device is evaluated as non-compliant.
-    * **Low**: The device is evaluated as compliant if only low level threats are present. Anything higher puts the device in a non-compliant status.
-    * **Medium**: The device is evaluated as compliant if the threats found on the device are low or medium level. If high level threats are detected, the device is determined as non-compliant.
-    * **High**: This is the least secure. Essentially, this allows all threat levels, and perhaps only useful if you are using this solution only for reporting purposes.
+>[!NOTE]
+>The compliance rule gets enforced only after the setup is completed.
 
-If you create conditional access policies for Office 365 and other services, the above compliance evaluation is taken into consideration and non-compliant devices are blocked from accessing company resources until the threat is resolved.
+## To create a device threat protection rule
 
-The device threat protection status is displayed on the **Security** node in the **Monitoring** workspace.
-A summary of the status with various thread level is displayed in a visual chart. You can click on the individual sections of the chart to see more information like, the number of devices reporting as non-compliant by platform, and any errors that are reported.
-You can also see the individual device status in the **Assets and compliance** workspace, under **Devices**.  You can add the **Device threat compliance** and the **Device threat level** columns to see the status.  These columns are not displayed by default.
+As part of the Lookout device threat protection setup, in the [Lookout console](https://aad.lookout.com), you created a policy that classifies various threats into high, medium and low levels. In the Intune compliance policy, you’ll use the threat level to set the maximum allowed threat level.
+
+To create a Lookout device threat protection rule:
+
+1.  In the Configuration Manager console, click on **Assets and Compliance** workspace.
+
+2.  In the **Assets and Compliance**, expand **Compliance Policies.**
+
+3.  Right-click on **Compliance Policies**, and then select **Create Compliance Policy**.
+
+4.  Enter the compliance policy name, and then select **Compliance rules for devices managed without the Configuration Manager client**.
+
+5.  Select the OS platforms that will be provisioned with the compliance policy (Android 4.1 and later, and/or iOS 8 and later).
+
+6.  On the **Rules** page, click **New** to specify the rules for a compliant device.
+
+7.  On the **Add Rule** page, define a new rule with the following information:
+	1.  Condition: Device threat protection maximum risk level.
+	
+	2.  Value: The value can be one of the following:
+		1.  **None (secured)**: This is the most secure. This means that the device cannot have any threats. If any level of threats is found, the device is evaluated as non-compliant.
+		2.  **Low**: The device is evaluated as compliant if only low level threats are present. Anything higher puts the device in a non-compliant status.
+		3.  **Medium**: The device is evaluated as compliant if the threats found on the device are low or medium level. If high level threats are detected, the device is determined as non-compliant.
+		4.  **High**: This is the least secure. Essentially, this allows all threat levels, and perhaps only useful if you are using this solution only for reporting purposes.
+
+>[!IMPORTANT]
+>If you create conditional access policies for Office 365 and other services, the above compliance evaluation is taken into consideration and non-compliant devices are blocked from accessing company resources until the threat is resolved.

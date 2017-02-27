@@ -2,7 +2,7 @@
 title: "Define site boundaries | Microsoft Docs"
 description: "Understand how to define network locations on your intranet that can contain devices you want to manage."
 ms.custom: na
-ms.date: 12/15/2016
+ms.date: 2/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -151,11 +151,9 @@ In addition to the links you define, there is an implied link that is created au
 - 	Is a default fallback option from the current boundary group to the sites default boundary group that is used after 120 minutes.
 
 **When content is not available from a current boundary group:**  
-When content that is being requested by a client is not available from a valid content source in a current boundary group, the client uses immediate fallback to seek the content from a distribution point in a neighbor boundary group:   
-- Immediate fallback happens to the neighbor boundary group or groups that are configured with the smallest fallback time. This can include the default site boundary group when there are no neighbor boundary groups with a shorter fallback time.
-- After immediate fallback to the first set of neighbor boundary groups, fallback to additional boundary groups occurs based on the configured fallback time to those groups.
+When content that is being requested by a client is not available from a valid content source in a current boundary group, the client waits until the fallback period for a neighbor boundary group or the site default boundary group is reached before the client can search for additional content sources.
 
-If the content is distributed on-demand but not available when requested by a client, the process to transfer the content to a distribution point in the current boundary begins. However, because the content is not available at that time, the client uses immediate fallback to a neighbor boundary group with the shortest fallback time. After content becomes available in the current boundary group, additional clients no longer use immediately fallback to neighbor groups.
+If the content is distributed on-demand but not available when requested by a client, the process to transfer the content to a distribution point in the current boundary begins.  
 
 
 

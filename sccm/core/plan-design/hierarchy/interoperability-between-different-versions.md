@@ -2,7 +2,7 @@
 title: "Interoperability between Configuration Manager versions | Microsoft Docs"
 description: "Learn how to avoid conflicts between multiple System Center Configuration Manager hierarchies on the same network."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Interoperability between different versions of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Interoperability between different versions of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can install and operate multiple, independent hierarchies of System Center Configuration Manager on the same network. However, because different hierarchies of Configuration Manager do not interoperate outside of the migration process, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can create certain configurations to help resources that you manage interact with the site systems from the correct hierarchy.  
 
  The following sections provide information about using different versions of Configuration Manager on the same network:  
@@ -73,5 +78,5 @@ For example, if two or more Configuration Manager hierarchies have overlapping b
 
 |Interoperability environment|More information|  
 |----------------------------------|----------------------|  
-|An environment with both System Center 2012 Configuration Manager and System Center Configuration Manager|To manage a Configuration Manager site, both the console and the site to which the console connects must run the same version of Configuration Manager. For example, you cannot use a System Center 2012 Configuration Manager console to manage a System Center Configuration Manager site, or vice versa.<br /><br /> You can't install both the System Center 2012 Configuration Manager console and the System Center Configuration Manager console on the same computer.|  
-|An environment with multiple versions of System Center Configuration Manager|You can't install more than a single Configuration Manager console on a computer. To use multiple consoles that are specific to different versions of System Center Configuration Manager, you must install the different consoles on separate computers.<br /><br /> During the process of upgrading sites in a hierarchy, you can connect a console to a site that runs a newer version and view information about other sites in that hierarchy. However, this configuration is not recommended because it's possible that differences between the console version and the Configuration Manager site version can result in data issues. Also, some features that are available in the latest product version might not be available in the console.|  
+|An environment with both System Center 2012 Configuration Manager and System Center Configuration Manager|To manage a Configuration Manager site, both the console and the site the console connects to must run the same version of Configuration Manager. For example, you cannot use a System Center 2012 Configuration Manager console to manage a System Center Configuration Manager site, or vice versa.<br /><br /> It is not supported to install both the System Center 2012 Configuration Manager console and the System Center Configuration Manager console on the same computer.|  
+|An environment with multiple versions of System Center Configuration Manager|System Center Configuration Manager does not support installing more than a single Configuration Manager console on a computer. To use multiple consoles that are specific to different versions of System Center Configuration Manager, you must install the different consoles on separate computers.<br /><br /> During the process of updating sites in a hierarchy to a new version, you can connect a console to a site that runs a newer version and view information about other sites in that hierarchy. However, this configuration is not recommended as it is possible that differences between the console version and Configuration Manager site version can result in data issues, and some features that are available in the latest product version will not be available in the console. <br /></br /> It is not supported to manage a site when using a console with a version that does not match the site version. Doing so might cause loss of data and can put your site at risk. For example, it is not supported to use a console from version 1610 to manage a site that runs version 1606. |

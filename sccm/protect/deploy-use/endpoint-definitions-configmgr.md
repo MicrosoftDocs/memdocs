@@ -2,7 +2,7 @@
 title: "Endpoint Protection malware definitions | Microsoft Docs"
 description: "Learn to configure Configuration Manager software updates to deliver definition updates to client computers."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

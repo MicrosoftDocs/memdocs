@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 caps.latest.revision: 8
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm 
+manager: angrobe
 
 ---
-# Introduction to collections in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Introduction to collections in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Collections help you organize resources into manageable units. You can create collections to match your client management needs, and to perform operations on multiple resources at one time. 
 
 Most management tasks rely on or require using one or more collections. Although you can use the built-in collection of All Systems, using it for management tasks is not a best practice. Create custom collections to more specifically identify the devices or users for a task.  

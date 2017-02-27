@@ -1,8 +1,8 @@
 ---
-title: "Incremental versions | Microsoft Docs"
+title: "Incremental versions of System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to install and manage System Center Configuration Manager updates."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,24 +12,29 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# What’s new in System Center Configuration Manager incremental versions*Applies to: System Center Configuration Manager (Current Branch)*
+# What’s new in System Center Configuration Manager incremental versions
+
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 
 
- System Center Configuration Manager uses an in-console [Updates and Servicing](/sccm/core/servers/manage/updates) process that makes it easy to discover and install Configuration Manager updates. This means no more service packs or cumulative update versions to track, or searching for the download of the most recent release or updates.
 
- Instead, to update the product to a new version of the  current branch you use the Configuration Manager console to find and then [Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md). A few times each year new versions release that include product updates. Each release can also introduce new features.  
+ System Center Configuration Manager uses an in-console [updates and servicing](/sccm/core/servers/manage/updates) process that makes it easy to discover and install Configuration Manager updates. This means no more service packs or cumulative update versions to track. You no longer have to search for the download of the most recent release or updates.
 
- When you install an update with new features you can choose to use (or not use) those features in your deployment. Different update versions are identified by year and month numbers like 1511, which identifies November 2015 (the month when System Center Configuration Manager was first released to manufacturing). Later updates, beginning in 2016, have version names like 1602, which indicates an update that was created in February of 2016.
+ Instead, to update the product to a new version of the current branch, you use the Configuration Manager console to find and then [install in-console updates](../../../core/servers/manage/install-in-console-updates.md). A few times each year, new versions release that include product updates. Each version can also introduce new features.  
 
- These update versions are key to understanding the incremental version of your System Center Configuration Manager installation, and what features you might have available to enable in your deployment.
+ When you install an update with new features, you can choose to use (or not use) those features in your deployment. Different update versions are identified by year and month. For example, version 1511 identifies November 2015 (the month when System Center Configuration Manager current branch was first released to manufacturing). Later updates, beginning in 2016, have version names like 1602, which indicates an update that was created in February 2016.
 
- The initial release of System Center Configuration Manager current branch is also referred to as version 1511. Since this initial release additional updates are available. Use the following links to discover what’s new with each version:
+ These update versions are key to understanding the incremental version of your System Center Configuration Manager installation, and what features you have available to enable in your deployment.
+
+ The initial release of System Center Configuration Manager current branch is version 1511. Since this initial release, additional updates are available. Use the following links to discover what’s new with each version:
   - [What's new in version 1610](../../../core/plan-design/changes/whats-new-in-version-1610.md)
   - [What's new in version 1606](../../../core/plan-design/changes/whats-new-in-version-1606.md)
   - [What's new in version 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
 
 
- Each update version is supported for a year after its release. We recommend you stay current with the most recent update version whenever possible. For more information, see [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md).  
+ Each update version is supported for a year after its release. It's a good idea to stay current with the most recent update version whenever possible. For more information, see [Support for System Center Configuration Manager current branch versions](../../../core/servers/manage/current-branch-versions-supported.md).  

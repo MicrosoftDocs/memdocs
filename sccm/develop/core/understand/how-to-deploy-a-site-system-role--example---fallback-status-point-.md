@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4
+ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4searchScope: - ConfigMgr SDK
 caps.latest.revision: 16
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -20,7 +20,7 @@ manager: "mbaldwin"
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
 The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for System Center Configuration Manager](https://technet.microsoft.com/en-us/library/mt621987.aspx).  
 
- Configuring a site is performed through Windows Management Instrumentation (WMI) classes. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information about the server components stored on a Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Hierarchy Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
+ Configuring a site is performed through Windows Management Instrumentation (WMI) classes. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information about the server components stored on a Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
 
 > [!NOTE]
 >  In earlier versions of Configuration Manager, the `SMS_SiteControlFile` WMI class  was used to receive the latest copy of a site’s configuration, to update a site’s configuration, and to manage update sessions. This is no longer required as the changes that are made to a site’s configuration are immediately written to the database and a file is no longer used.  
@@ -61,7 +61,7 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |`computerName`|`String`|The name of the site server.|  
 |`siteCode`|`String`|The site code.|  
 |`domainName`|`String`|The fully qualified domain name of the site server.|  

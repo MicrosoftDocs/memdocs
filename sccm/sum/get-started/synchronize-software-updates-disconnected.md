@@ -1,10 +1,10 @@
 ---
 
-title: Synchronize software updates from a disconnected software update point | Microsoft Docs
-description: "Follow these procedures to verify that software updates synchronization was successful on the export server, export updates, and import updates metadata."
+title: "Synchronize updates with no Internet connection - Configuration Manager | Microsoft Docs"
+description: "Run software updates synchronization on the top-level software update point that is disconnected from the Internet."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:

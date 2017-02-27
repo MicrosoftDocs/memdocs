@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -94,9 +94,11 @@ Before installing a new update from within the Configuration Manager console, re
 - Update to 1610 from either 1511, 1602, or 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md)  
 
 ###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
-Before you install a new update in your hierarchy, like update 1602, you should test the upgrade of your site database. The name of the command line option you use to test installing an update to a backup of your site database is **testdbupgrade**.  
+The information in this step applies only when you are installing an update for a System Center Configuration Manager site. If you are upgrading a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
 
-Unlike past versions of Configuration Manager, if installing an update fails you should not need to perform a site recovery and instead can Retry the update installation. Therefore, while the test upgrade of the database is less critical than in past product versions it remains a recommended step.  
+Before you install a new update in your hierarchy, like update 1610, you should test the upgrade of your site database. The name of the command line option you use to test installing an update to a backup of your site database is **testdbupgrade**.  
+
+With System Cener Configuration Manager, if installing an update fails you should not need to perform a site recovery and instead can Retry the update installation. Therefore, while the test upgrade of the database is less critical than in past product versions like System Center 2012 Configuration Manager, it remains a recommended step.  
 
 #### To run testdbupgrade before installing an update  
 
@@ -104,7 +106,7 @@ Unlike past versions of Configuration Manager, if installing an update fails you
 
      The **CD.Latest** folder for a site contains the source files for that version. You must use these source files to run the test upgrade of your site database. For more information see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
 
-     For example, if your site runs version 1501 and you want to update to 1602, you must get a CD.Latest folder from a site that has already updated to version 1602. Typically, you can install a new and temporary site in a lab, and upgrade that to version 1602 to create the CD.Latest folder with the required files.  
+     For example, if your site runs version 1606 and you want to update to 1610, you must get a CD.Latest folder from a site that has already updated to version 1610. Typically, you can install a new and temporary site in a lab, and upgrade that to version 1610 to create the CD.Latest folder with the required files.  
 
 2.  Copy the CD.Latest folder to a location on the SQL Server that you will use to run the test database upgrade. (See the next step).  
 
@@ -153,7 +155,7 @@ Later, when you install  an update, you have the option to configure the update 
 
  We recommend you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.  
 
--   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service Windows for site servers](#bkmk_ServiceWindow) to control when a primary site installs updates.  
+-   Child primary sites start the update automatically after the central administration site completes installation of the update. This is the default and recommended process. However, you can use [Service windows for site servers](/sccm/core/servers/manage/service-windows) to control when a primary site installs updates.  
 
 -   You must manually update secondary sites from within the Configuration Manager console after the primary parent site update is complete. Automatic update of secondary site servers is not supported.  
 
@@ -346,18 +348,9 @@ If you gave consent at a stand-alone primary site and then expand the hierarchy 
 |Conditional access for PCs managed by System Center Configuration Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
+## Known issues
 
-
-##  <a name="bkmk_ServiceWindow"></a> Service Windows for site servers  
-On a site server you can configure service windows to control when infrastructure updates for Configuration Manager can be applied to that site server.  Each site server supports multiple windows, with the window allowed for installing infrastructure updates determined by a combination of  all configured windows for that site server.  
-
-**To configure a service window:**  
-
-1.  In  Configuration Manager console open **Administration** > **Site Configuration** > **Sites**, and then select the site server where you want to configure a service window.  
-
-2.  Next, edit the site servers **Properties** and select the **Service Window** tab, where you can then set one or more service windows for that site server.  
-
-##  <a name="bkmk_faq"></a> Why don't I see certain updates in my console?  
+###  <a name="bkmk_faq"></a> Why don't I see certain updates in my console?  
  If you cannot find a specific update, or any updates in your console after a successful sync with the Microsoft cloud service, this might be because:  
 
 -   The update requires a configuration that your infrastructure does not use, or your current product version does not fulfill a prerequisite for receiving the update.  
@@ -367,3 +360,16 @@ On a site server you can configure service windows to control when infrastructur
 -   Your account lacks the correct role-based administration permissions to view updates in the Configuration Manager console.
 
     See [Permissions to manage updates](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features) in this topic for information about required permissions to view updates and enable features from within the console.
+
+### Why do I see two updates for version 1610
+When viewing updates in the console, you might see two updates to install version 1610. These updates have different dates. This happens when one of the following is true:   
+-	You installed an earlier version (like 1606) after version 1610 became available
+
+-	You hierarchy runs version 1511 or 1602 and you have not been able to download version 1606
+
+There are two update releases for version 1610 because this update was re-released after some minor changes to some file binaries were made. These changes do not affect the functionality of Configuration Manager or the update.
+
+When both updates are available in your console, we recommend you install the update with the more recent date. However, because both updates deliver the same functionality, if you already installed one of them you do not need to take further action.
+-	If you previously installed the older update, you do not need to install the update with the newer date. However, if you do install the newer update after having installed the first update, the binaries in question will update, but no additional change occurs, and no additional actions on your part are needed.
+
+-	If you previously installed the newest update and then install the update with the older date, no additional action is needed. This is because the newer binaries you already installed will not be overwritten by those same binaries from the original update.

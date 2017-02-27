@@ -1,8 +1,8 @@
 ---
-title: Create bootable media | Microsoft Docs
+title: "Create bootable media - Configuration Manager | Microsoft Docs"
 description: "Bootable media in Configuration Manager make it easy to install a new version of Windows or replace a computer and transfer settings."
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

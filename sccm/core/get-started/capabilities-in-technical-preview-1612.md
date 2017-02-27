@@ -1,8 +1,8 @@
 ---
-title: "Capabilities in Technical Preview 1612 for System Center Configuration Manager | Microsoft Docs"
+title: "Capabilities in Technical Preview 1612 Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1612."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -201,7 +201,7 @@ Based on User Voice feedback, we have added the following improvements to in-con
   Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
 
 - **Preservation of search text:**  
-  When you enter text in the search text box, and then change the node you are searching in, the text you typed will now persist and remain available for use without having to retype it.  
+  When you enter text in the search text box, and then switch between searching a sub-node and the current node, the text you typed will now persist and remain available for a new search without having to retype it.
 
 - **Preservation of your decision to search sub-nodes:**  
  The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you are working in.   This new behavior means you do not need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
@@ -238,7 +238,8 @@ You can now return to a previous page when you run a task sequence and there is 
 We have added express installation files support in Configuration Manager for Windows 10 updates. When you use a supported version of Windows 10, you can now use Configuration Manager settings to download only the delta between the current month's Windows 10 Cumulative Update and the previous month's update. Currently in Configuration Manager Current Branch, the full Windows 10 Cumulative Update (including all updates from previous months) are downloaded each month. Using express installation files provides for smaller downloads and faster installation times on clients.
 
 > [!IMPORTANT]
-> While the settings to support the use of express installation files is available in Configuration Manager, this functionality is only supported in Windows 10 version 1607 with an update that will be released in early 2017 and later versions of Windows. Windows 10 version 1607 without the update and prior versions do not support express installation files.
+> While the settings to support the use of express installation files is available in Configuration Manager, this functionality is only supported in Windows 10 version 1607 with a Windows Update Agent update included with the updates released on January 10, 2017 (Patch Tuesday). For more information about these updates, see [support article 3213986](https://support.microsoft.com/help/4009938/january-10-2017-kb3213986-os-build-14393-693). You can take advantage of express installation files when the next set of updates are released on February 14, 2017. Windows 10 version 1607 without the update and prior versions do not support express installation files.
+
 
 ### To enable the download of express installation files for Windows 10 updates on the server
 To start synchronizing the metadata for Windows 10 express installation files, you must enable it in the Software Update Point Properties.

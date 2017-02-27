@@ -11,31 +11,31 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: bc094f2a-47a5-4a39-8d28-696676b64cbd
+ms.assetid: bc094f2a-47a5-4a39-8d28-696676b64cbdsearchScope: - ConfigMgr SDK
 caps.latest.revision: 8
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Add Updates to a Deployment Package
-You add updates to a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True) class and by using the [AddUpdateContent](assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True) method.  
+You add updates to a software updates deployment package, in System Center Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [AddUpdateContent](../../develop/reference/sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md) method.  
 
 ### To create a software updates deployment package  
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Obtain an existing package object by using the assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True class.  
+2.  Obtain an existing package object by using the `SMS_SoftwareUpdatesPackage` class.  
 
-3.  Add update content to the existing package using the assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True method.  
+3.  Add update content to the existing package using the `AddUpdateContent` method.  
 
 ## Example  
- The following example method shows how to add updates to a software updates deployment package by using the assetId:///SMS_SoftwareUpdatesPackage?qualifyHint=False&autoUpgrade=True class and the assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True method.  
+ The following example method shows how to add updates to a software updates deployment package by using the `SMS_SoftwareUpdatesPackage` class and the `AddUpdateContent` method.  
 
 > [!NOTE]
 >  The updates must be available in the content source path (as part of the dictionary object `addUpdateContentParameters` in C#). If the updates exist in a package source, that package source cannot be used for more than one deployment package.  
 
 > [!IMPORTANT]
->  No VBScript example was included, as the assetId:///AddUpdateContent?qualifyHint=False&autoUpgrade=True method does not return from the method call on failure. This is a known issue and is being investigated.  
+>  No VBScript example was included, as the `AddUpdateContent` method does not return from the method call on failure. This is a known issue and is being investigated.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
@@ -96,7 +96,7 @@ public void AddUpdatestoSUMDeploymentPackage(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`|The package ID for an existing software updates deployment package.|  
 |`addUpdateContentParameters`|-   Managed: `dictionary` object|The set of parameters (`ContentIDs`, `ContentSourcePath`, `bRefreshDPs`) that is passed into the method and used with the `AddUpdateContent` method call.|  
 

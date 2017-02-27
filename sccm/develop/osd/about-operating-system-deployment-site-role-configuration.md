@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678
+ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678searchScope: - ConfigMgr SDK
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -29,7 +29,7 @@ The following two site roles are of particular importance to Operating System De
 ## Programming the Site Roles  
  Most information about Configuration Manager site roles is stored in the Configuration Manager site control file.  
 
- You can make updates to the site control file through Windows Management Instrumentation (WMI) by using the [SMS_SiteControlFile](assetId:///SMS_SiteControlFile?qualifyHint=False&autoUpgrade=True) class. In managed code, [IResultObject](assetId:///IResultObject?qualifyHint=False&autoUpgrade=True) allows access to the site control file. For more information, see [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
+ You can make updates to the site control file through Windows Management Instrumentation (WMI) by using the [SMS_SiteControlFile](../../develop/reference/core/servers/configure/sms_sitecontrolfile-server-wmi-class.md) class. In managed code, `IResultObject` allows access to the site control file. For more information, see [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
 
  The properties you will need to access are stored as system resources in the site control file. For example, the following site control file section shows the properties for the PXE service point site role.  
 
@@ -60,7 +60,7 @@ BEGIN_SYSTEM_RESOURCE_USE
 END_SYSTEM_RESOURCE_USE  
 ```  
 
- When you have access to the site control file, the various properties are stored as embedded properties or in embedded property lists. For example [UserName](assetId:///UserName?qualifyHint=False&autoUpgrade=True) in the sample above is an embedded property. Other properties are stored as embedded property lists. In the example above, the MAC addresses in [BindExcept](assetId:///BindExcept?qualifyHint=False&autoUpgrade=True) are stored in an embedded property list.  
+ When you have access to the site control file, the various properties are stored as embedded properties or in embedded property lists. For example `UserName` in the sample above is an embedded property. Other properties are stored as embedded property lists. In the example above, the MAC addresses in `BindExcept` are stored in an embedded property list.  
 
 ## See Also  
  [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)   

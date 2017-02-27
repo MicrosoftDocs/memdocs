@@ -2,7 +2,7 @@
 title: "Diagnostic data for 1602 | Microsoft Docs"
 description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1602 collects."
 ms.custom: na
-ms.date:12/29/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +11,10 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
-
 caps.latest.revision: 4
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 translation.priority.ht:
   - cs-cz
   - de-de
@@ -33,7 +34,10 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1602 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Levels of diagnostic usage data collection for version 1602 of System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager version 1602 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]*** or ***[Updated]***.

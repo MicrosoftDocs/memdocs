@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58
+ms.assetid: 0599e22f-3de3-4182-bcc2-3175d91b5b58searchScope: - ConfigMgr SDK
 caps.latest.revision: 11
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -27,7 +27,7 @@ In System Center Configuration Manager, to export a configuration baseline or co
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Get the specific instance of [SMS_ConfigurationItem](assetId:///SMS_ConfigurationItem?qualifyHint=False&autoUpgrade=True) class using the unique ID of the configuration item (CI_ID).  
+2.  Get the specific instance of [SMS_ConfigurationItem](../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md) class using the unique ID of the configuration item (CI_ID).  
 
 3.  Copy the configuration item XML (SDMPackageXML) into a variable.  
 
@@ -127,7 +127,7 @@ public void DCMExportBaselineOrCI(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
 |-   pathToOutputFile<br />-   pathToFile|-   Managed: `String`<br />-   VBScript: `String`|Path to the output file.|  
 |`configurationItemId`|-   Managed: `String`<br />-   VBScript: `String`|Identifier of a configuration item to export.|  
 

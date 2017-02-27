@@ -2,7 +2,7 @@
 title: "Backup and recovery | Microsoft Docs"
 description: "Learn to back up and recover your sites in the event of failure or data loss in System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/376/2017
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,43 +12,50 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 caps.latest.revision: 22
-author: Brendunsms.author: brendunsmanager: angrobe
-
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Backup and recovery for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+
+# Backup and recovery
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites a backup and recovery approach can help recover sites and hierarchies more quickly, and with the least data loss. The sections in this topic can help you back up your sites and recover a site in the event of failure or data loss.  
 
--   [Back up a Configuration Manager site](#BKMK_SiteBackup)  
 
-    -   [Backup maintenance task](#BKMK_BackupMaintenanceTask)  
 
-    -   [Using Data Protection Manager to back up your site database](#BKMK_DPMBackup)  
+- [Back up a Configuration Manager site](#BKMK_SiteBackup)   
 
-    -   [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)  
+  - [Backup maintenance task](#BKMK_BackupMaintenanceTask)   
 
-    -   [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)  
+  - [Using Data Protection Manager to back up your site database](#BKMK_DPMBackup)   
 
-    -   [Supplemental backup tasks](#BKMK_SupplementalBackup)  
+  -  [Archiving the backup snapshot](#BKMK_ArchivingBackupSnapshot)   
 
--   [Recover a Configuration Manager site](#BKMK_RecoverSite)  
+  -  [Using the AfterBackup.bat file](#BKMK_UsingAfterBackup)   
 
-    -   [Determine your recovery options](#BKMK_DetermineRecoveryOptions)  
+  -  [Supplemental backup tasks](#BKMK_SupplementalBackup)   
 
-        -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)  
+-  [Recover a Configuration Manager site](#BKMK_RecoverSite)   
 
-        -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)  
+  -   [Determine your recovery options](#BKMK_DetermineRecoveryOptions)   
 
-        -   [SQL Server change tracking retention period](#bkmk_SQLretention)  
+         -   [Site server recovery options](#BKMK_SiteServerRecoveryOptions)   
 
-        -   [Process to reinitialize site or global data](#bkmk_reinit)  
+         -   [Site database recovery options](#BKMK_SiteDatabaseRecoveryOption)   
 
-        -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
+         -   [SQL Server change tracking retention period](#bkmk_SQLretention)   
 
-    -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
+         -   [Process to reinitialize site or global data](#bkmk_reinit)   
 
-    -   [Post-recovery tasks](#BKMK_PostRecovery)  
+         -   [Site database recovery scenarios](#BKMK_SiteDBRecoveryScenarios)  
 
-    -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
+  -   [Unattended site recovery script file keys](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [Post-recovery tasks](#BKMK_PostRecovery)  
+
+  -   [Recover a secondary site](#BKMK_RecoverSecondarySite)  
 
 -   [SMS Writer service](#BKMK_SMSWriterService)  
 
@@ -78,7 +85,7 @@ Use the following sections to help you create your Configuration Manager backup 
 >  Configuration Manager can recover the site database from the Configuration Manager backup maintenance task or from a site database backup that you created with another process. For example, you can restore the site database from a backup that is created as part of a Microsoft SQL Server maintenance plan. You can restore the site database from a backup that is created by using System Center 2012 Data Protection Manager (DPM). For more information, see [Using Data Protection Manager to back up your site database](#BKMK_DPMBackup).  
 
 ###  <a name="BKMK_BackupMaintenanceTask"></a> Backup maintenance task  
- You can automate backup for Configuration Manager sites by scheduling the predefined Backup Site Server maintenance task. You can back up a central administration site and primary site, but there is no backup support for secondary sites or site system servers. When the Configuration Manager backup service runs, it follows the instructions defined in the backup control file (**<ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**). You can modify the backup control file to change the behavior of the backup service. Site backup status information is written to the **Smsbkup.log** file. This file is created in the destination folder that you specify in the Backup Site Server maintenance task properties.  
+ You can automate backup for Configuration Manager sites by scheduling the predefined Backup Site Server maintenance task. You can back up a central administration site and primary site, but there is no backup support for secondary sites or site system servers. When the Configuration Manager backup service runs, it follows the instructions defined in the backup control file (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**). You can modify the backup control file to change the behavior of the backup service. Site backup status information is written to the **Smsbkup.log** file. This file is created in the destination folder that you specify in the Backup Site Server maintenance task properties.  
 
 
 ##### To enable the site backup maintenance task  
@@ -128,7 +135,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   When the Backup Site Server maintenance task is configured to create an alert if backup fails, you can check the **Alerts** node in the **Monitoring** workspace for backup failures.  
 
-    -   In <*ConfigMgrInstallationFolder*>\Logs, review Smsbkup.log for warnings and errors. When site backup is completed successfully, you see `Backup completed` with a timestamp and message ID `STATMSG: ID=5035`.  
+    -   In &lt;*ConfigMgrInstallationFolder*>\Logs, review Smsbkup.log for warnings and errors. When site backup is completed successfully, you see `Backup completed` with a timestamp and message ID `STATMSG: ID=5035`.  
 
     > [!TIP]  
     >  When the backup maintenance task fails, you can restart the backup task by stopping and restarting the SMS_SITE_BACKUP service.  
@@ -153,7 +160,7 @@ Use the following sections to help you create your Configuration Manager backup 
 -   The site might have no backup snapshot at all if, for example, the Backup Site Server maintenance task fails. Because the backup task removes the previous backup snapshot before it starts to back up the current data, there will not be a valid backup snapshot.  
 
 ###  <a name="BKMK_UsingAfterBackup"></a> Using the AfterBackup.bat file  
- After successfully backing up the site, the Backup Site Server task automatically attempts to run a file that is named AfterBackup.bat. You must manually create the AfterBackup.bat file in <*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup. If an AfterBackup.bat file exists, and is stored in the correct folder, it automatically runs after the backup task is completed. The AfterBackup.bat file lets you archive the backup snapshot at the end of every backup operation, and automatically perform other post-backup tasks that are not part of the Backup Site Server maintenance task. The AfterBackup.bat file integrates the archive and the backup operations, thereby ensuring that every new backup snapshot is archived. When the AfterBackup.bat file is not present, the backup task skips it without effect on the backup operation. To verify that the site backup task successfully ran the AfterBackup.bat file, see the **Component Status** node in the **Monitoring** workspace and review the status messages for SMS_SITE_BACKUP. When the task successfully started the AfterBackup.bat command file, you see message ID 5040.  
+ After successfully backing up the site, the Backup Site Server task automatically attempts to run a file that is named AfterBackup.bat. You must manually create the AfterBackup.bat file in &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup. If an AfterBackup.bat file exists, and is stored in the correct folder, it automatically runs after the backup task is completed. The AfterBackup.bat file lets you archive the backup snapshot at the end of every backup operation, and automatically perform other post-backup tasks that are not part of the Backup Site Server maintenance task. The AfterBackup.bat file integrates the archive and the backup operations, thereby ensuring that every new backup snapshot is archived. When the AfterBackup.bat file is not present, the backup task skips it without effect on the backup operation. To verify that the site backup task successfully ran the AfterBackup.bat file, see the **Component Status** node in the **Monitoring** workspace and review the status messages for SMS_SITE_BACKUP. When the task successfully started the AfterBackup.bat command file, you see message ID 5040.  
 
 > [!TIP]  
 >  To create the AfterBackup.bat file to archive your site server backup files, you must use a copy command tool, such as Robocopy, in the batch file. For example, you could create the AfterBackup.bat file, and on the first line, you could add something similar to: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`. For more information about Robocopy, see the [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) command-line reference webpage.  
@@ -205,16 +212,16 @@ Use the following sections to help you create your Configuration Manager backup 
 
 3.  Select the site system that hosts the state migration role, and choose **State migration point** in **Site System Roles**.  
 
-4.  On the **Site Role** tab, in the **Properties** group, click **Properties**.  
 
+4.  On the **Site Role** tab, in the **Properties** group, click **Properties**.  
 5.  The folders that store the user state migration data are listed in the **Folder details** section on the **General** tab.  
 
-##  <a name="BKMK_RecoverSite"></a> Recover a Configuration Manager site  
+## Recover a Configuration Manager site
  A Configuration Manager site recovery is required whenever a Configuration Manager site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.  
 
 > [!IMPORTANT]  
 >  When you recover the database for a site:  
->   
+
 >  -   You must use the same version and edition of SQL Server. For example, restoring a database that ran on SQL Server 2012 to SQL Server 2014 is not supported. Similarly, restoring a site database that ran on a Standard edition of SQL Server 2014 to an Enterprise edition of SQL Server 2014 is not supported.  
 > -   SQL Server must not be set to **single-user mode**.  
 > -   Ensure the .MDF and .LDF files are valid. When you recover a site, there is not check for the state of the files you are restoring.  
@@ -224,7 +231,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
 > [!IMPORTANT]  
 >  If you run Configuration Manager Setup from the **Start** menu on the site server, the **Recover a site** option is not available.  
->   
+
 >  If you have installed any updates from within the Configuration Manager console before making your backup, you cannot successfully reinstall the site by using Setup from installation media or the Configuration Manager installation path.  
 
 > [!NOTE]  
@@ -234,7 +241,6 @@ Use the following sections to help you create your Configuration Manager backup 
  There are two main areas that you have to consider for Configuration Manager primary site server and central administration site recovery; the site server and the site database. Use the following sections to help you determine the options that you have to select for your recovery scenario.  
 
 > [!NOTE]  
->  When a previous site recovery failed or when you are trying to recover a site that it is not completely uninstalled, you must select **Uninstall a Configuration Manager site** from Setup before you have the option to recover the site. If the failed site has child sites, and you have to uninstall the site, you must manually delete the site database from the failed site before you select the **Uninstall a Configuration Manager site** option or the uninstall process will fail.  
 
 ####  <a name="BKMK_SiteServerRecoveryOptions"></a> Site server recovery options  
  You must start Setup from a copy of the CD.Latest folder that you create outside of the Configuration Manager installation folder. You then select the **Recover a site** option. When you run Setup, you have the following recovery options for the failed site server:  
@@ -266,7 +272,11 @@ Use the following sections to help you create your Configuration Manager backup 
 -   **Skip database recovery**: Use this option when no data loss has occurred on the Configuration Manager site database server. This option is only valid when the site database is on a different computer than the site server that you are recovering.  
 
 ####  <a name="bkmk_SQLretention"></a> SQL Server change tracking retention period  
- Change tracking is enabled for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes that have been made to database tables after a previous point in time. The retention period specifies how long change tracking information is retained. By default, the site database is configured to have a retention period of 5 days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your site database server fails, and your last backup is 7 days old, it is outside the retention period.  
+ Change tracking is enabled for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes that have been made to database tables after a previous point in time. The retention period specifies how long change tracking information is retained. By default, the site database is configured to have a retention period of 5 days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your site database server fails, and your last backup is 7 days old, it is outside the retention period.
+
+ For more information about SQL Server change tracking internals, see the following blogs from the SQL Server team: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1) and [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+
+
 
 ####  <a name="bkmk_reinit"></a> Process to reinitialize site or global data  
  The process to reinitialize site or global data replaces existing data in the site database with data from another site database. For example, when site ABC reinitializes data from site XYZ, the following steps occur:  
@@ -419,7 +429,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Maybe  
 
-    -   **Values:** <ReferenceSiteFQDN\>  
+    -   **Values:** &lt;ReferenceSiteFQDN\>  
 
     -   **Details:** Specifies the reference primary site that the central administration site uses to recover global data if the database backup is older than the change tracking retention period or when you recover the site without a backup.  
 
@@ -433,7 +443,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <PathToSiteServerBackupSet\>  
+    -   **Values:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -441,7 +451,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Maybe  
 
-    -   **Values:** <PathToSiteDatabaseBackupSet\>  
+    -   **Values:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Details:** Specifies the path to the site database backup set. The **BackupLocation** key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
@@ -463,7 +473,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <Site code\>  
+    -   **Values:** &lt;Site code\>  
 
     -   **Details:** Three alpha-numeric characters that uniquely identifies the site in your hierarchy. You must specify the site code that was used by the site before the failure.  
 
@@ -479,7 +489,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*ConfigMgrInstallationPath*>  
+    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -490,7 +500,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*FQDN of SMS Provider*>  
+    -   **Values:** &lt;*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.  
 
@@ -512,7 +522,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -546,7 +556,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** *<SQLServerName\>*  
+    -   **Values:** *&lt;SQLServerName\>*  
 
     -   **Details:** The name of the server, or clustered instance name, running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
@@ -556,11 +566,11 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Values:**  
 
-         *<SiteDatabaseName\>*  
+         *&lt;SiteDatabaseName\>*  
 
          or  
 
-         *<InstanceName\>*\\*<SiteDatabaseName\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.  
 
@@ -571,7 +581,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <*SSBPortNumber*>  
+    -   **Values:** &lt;*SSBPortNumber*>  
 
     -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.  
 
@@ -632,7 +642,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <PathToSiteServerBackupSet\>  
+    -   **Values:** &lt;PathToSiteServerBackupSet\>  
 
     -   **Details:** Specifies the path to the site server backup set. This key is optional when the **ServerRecoveryOptions** setting has a value of **1** or **2**. Specify a value for the **SiteServerBackupLocation** key to recover the site by using a site backup. If you do not specify a value, the site is reinstalled without restoring it from a backup set.  
 
@@ -640,7 +650,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Maybe  
 
-    -   **Values:** <PathToSiteDatabaseBackupSet\>  
+    -   **Values:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **Details:** Specifies the path to the site database backup set. The **BackupLocation** key is required when you configure a value of **1** or **4** for the **ServerRecoveryOptions** key, and configure a value of **10** for the **DatabaseRecoveryOptions** key.  
 
@@ -662,7 +672,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <Site code\>  
+    -   **Values:** &lt;Site code\>  
 
     -   **Details:** Three alpha-numeric characters that uniquely identifies the site in your hierarchy. You must specify the site code that was used by the site before the failure.  
 
@@ -678,7 +688,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*ConfigMgrInstallationPath*>  
+    -   **Values:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **Details:** Specifies the installation folder for the Configuration Manager program files.  
 
@@ -689,7 +699,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*FQDN of SMS Provider*>  
+    -   **Values:** &lt;*FQDN of SMS Provider*>  
 
     -   **Details:** Specifies the FQDN for the server that will host the SMS Provider. You must specify the server that hosted the SMS Provider before the failure.  
 
@@ -711,7 +721,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** <*PathToSetupPrerequisiteFiles*>  
+    -   **Values:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **Details:** Specifies the path to the Setup prerequisite files. Depending on the **PrerequisiteComp** value, Setup uses this path to store downloaded files or to locate previously downloaded files.  
 
@@ -745,7 +755,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Yes  
 
-    -   **Values:** *<SQLServerName\>*  
+    -   **Values:** *&lt;SQLServerName\>*  
 
     -   **Details:** The name of the server, or clustered instance name, running SQL Server that will host the site database. You must specify the same server that hosted the site database before the failure.  
 
@@ -755,11 +765,11 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Values:**  
 
-         *<SiteDatabaseName\>*  
+         *&lt;SiteDatabaseName\>*  
 
          or  
 
-         *<InstanceName\>*\\*<SiteDatabaseName\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **Details:** The name of the SQL Server database to create or use to install the central administration site database. You must specify the same database name that was used before the failure.  
 
@@ -770,7 +780,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <*SSBPortNumber*>  
+    -   **Values:** &lt;*SSBPortNumber*>  
 
     -   **Details:** Specify the SQL Server Service Broker (SSB) port used by SQL Server. Typically, SSB is configured to use TCP port 4022, but other ports are supported. You must specify the same SSB port that was used before the failure.  
 
@@ -780,7 +790,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** Maybe  
 
-    -   **Values:** <*SiteCodeForCentralAdministrationSite*>  
+    -   **Values:** &lt;*SiteCodeForCentralAdministrationSite*>  
 
     -   **Details:** Specifies the central administration site that a primary site will attach to when it joins the Configuration Manager hierarchy. This setting is required if the primary site was attached to a central administration site before the failure. You must specify the site code that was used for the central administration site before the failure.  
 
@@ -788,7 +798,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <*Interval*>  
+    -   **Values:** &lt;*Interval*>  
 
     -   **Details:** Specifies the retry interval (in minutes) to attempt a connection to the central administration site after the connection fails. For example, if the connection to the central administration site fails, the primary site waits the number of minutes that you specify for CASRetryInterval, and then re-attempts the connection.  
 
@@ -796,7 +806,7 @@ Use the following sections to help you create your Configuration Manager backup 
 
     -   **Required:** No  
 
-    -   **Values:** <*Timeout*>  
+    -   **Values:** &lt;*Timeout*>  
 
     -   **Details:** Specifies the maximum timeout value (in minutes) for a primary site to connect to the central administration site. For example, if a primary site fails to connect to a central administration site, the primary site retries the connection to the central administration site based on the CASRetryInterval until the WaitForCASTimeout period is reached. You can specify a value of 0 to 100.  
 
@@ -889,7 +899,7 @@ Use the following sections to help you create your Configuration Manager backup 
  The SMS Writer is a service that interacts with the Volume Shadow Copy Service (VSS) during the backup process. The SMS Writer service must be running for the Configuration Manager site back up to successfully complete.  
 
 ### Purpose  
- SMS Writer registers with the VSS service and binds to its interfaces and events. When VSS broadcasts events, or if it sends specific notifications to the SMS Writer, the SMS Writer responds to the notification and takes the appropriate action. The SMS Writer reads the backup control file (smsbkup.ctl), located in the <*ConfigMgr Installation Path*>\inboxes\smsbkup.box, and determines the files and data that is to be backed up. The SMS Writer builds metadata, which consists of various components, based on this information as well as specific data from the SMS registry key and subkeys. It sends the metadata to VSS when it is requested. VSS then sends the metadata to the requesting application; Configuration Manager Backup Manager. Backup Manager selects the data that gets backed up and sends this data to the SMS Writer via VSS. The SMS Writer takes the appropriate steps to prepare for the backup. Later, when VSS is ready to take the snapshot, it sends an event, the SMS Writer stops all Configuration Manager services and ensures that the Configuration Manager activities are frozen while the snapshot is created. After the snapshot is complete, the SMS Writer restarts services and activities.  
+ SMS Writer registers with the VSS service and binds to its interfaces and events. When VSS broadcasts events, or if it sends specific notifications to the SMS Writer, the SMS Writer responds to the notification and takes the appropriate action. The SMS Writer reads the backup control file (smsbkup.ctl), located in the &lt;*ConfigMgr Installation Path*>\inboxes\smsbkup.box, and determines the files and data that is to be backed up. The SMS Writer builds metadata, which consists of various components, based on this information as well as specific data from the SMS registry key and subkeys. It sends the metadata to VSS when it is requested. VSS then sends the metadata to the requesting application; Configuration Manager Backup Manager. Backup Manager selects the data that gets backed up and sends this data to the SMS Writer via VSS. The SMS Writer takes the appropriate steps to prepare for the backup. Later, when VSS is ready to take the snapshot, it sends an event, the SMS Writer stops all Configuration Manager services and ensures that the Configuration Manager activities are frozen while the snapshot is created. After the snapshot is complete, the SMS Writer restarts services and activities.  
 
  The SMS Writer service is installed automatically. It must be running when the VSS application requests a backup or restore.  
 

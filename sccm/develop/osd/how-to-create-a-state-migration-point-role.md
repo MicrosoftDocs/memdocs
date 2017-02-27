@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: dd3b2d67-edcb-44fb-9efc-72afef3896c9
+ms.assetid: dd3b2d67-edcb-44fb-9efc-72afef3896c9searchScope: - ConfigMgr SDK
 caps.latest.revision: 11
 author: "shill-ms"
 ms.author: "v-suhill"
@@ -168,7 +168,7 @@ public void WriteScfEmbeddedProperty(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
+|`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`serverName`|Managed: `String`|The Configuration Manager server that the state migration point is running on.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  
 |`nalPath`|Managed: `String`|The NAL path to the state migration point. For example, `["Display=\\SERVERNAME\"]MSWNET:["SMS_SITE=SITECODE"]\\SERVERNAME\`|  

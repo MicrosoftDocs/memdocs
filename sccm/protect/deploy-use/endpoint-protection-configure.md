@@ -2,7 +2,7 @@
 title: "Configure Endpoint Protection | Microsoft Docs"
 description: "Learn how to set up Configuration Manager to update and distribute malware definitions for Windows Defender."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 caps.latest.revision: 21
-author: NathBarnms.author: nathbarnmanager: angrobe
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
 
 ---
 
-# Configure Endpoint Protection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure Endpoint Protection
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you can use Endpoint Protection to manage security and malware on Configuration Manager client computers, you must perform the configuration steps detailed in this topic.  
 
 ## How to Configure Endpoint Protection in Configuration Manager  
@@ -30,8 +35,8 @@ Before you can use Endpoint Protection to manage security and malware on Configu
 
 |Steps|Details|  
 |-----------|-------------|  
-|**Step 1:** Create an Endpoint Protection point site system role.|The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site. See [Step 1: Create an Endpoint Protection Point Site System Role](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Step 2:** Configure alerts for Endpoint Protection.|Alerts inform the administrator when specific events have occurred, such as a malware infection. Alerts are displayed in the **Alerts** node of the **Monitoring** workspace, or optionally can be emailed to specified users. See [Step 2: Configure Alerts for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Step 3:** Configure definition update sources for Endpoint Protection clients.|Endpoint Protection can be configured to use various sources to download definition updates. See [Step 3: Configure Definition Updates for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
-|**Step 4:** Configure the default antimalware policy and create any custom antimalware policies.|The default antimalware policy is applied when the Endpoint Protection client is installed. Any custom policies you have deployed are applied by default, within 60 minutes of deploying the client. Ensure that you have configured antimalware policies before you deploy the Endpoint Protection client.See [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](../../protect/deploy-use/endpoint-antimalware-policies.md).|  
-|**Step 5:** Configure custom client settings for Endpoint Protection.|Use custom client settings to configure Endpoint Protection settings for collections of computers in your hierarchy.<br /><br /> Note: Do not configure the default Endpoint Protection client settings unless you are sure that you want these settings applied to all computers in your hierarchy. See [Step 5: Configure Custom Client Settings for Endpoint Protection](../../protect/deploy-use/configure-endpoint-protection.md).|  
+|**Step 1:** [Create an Endpoint Protection point site system role](endpoint-protection-site-role.md)|The Endpoint Protection point site system role must be installed before you can use Endpoint Protection. It must be installed on one site system server only, and it must be installed at the top of the hierarchy on a central administration site or a stand-alone primary site. |  
+|**Step 2:** [Configure alerts for Endpoint Protection](endpoint-configure-alerts.md)|Alerts inform the administrator when specific events have occurred, such as a malware infection. Alerts are displayed in the **Alerts** node of the **Monitoring** workspace, or optionally can be emailed to specified users. |  
+|**Step 3:** [Configure definition update sources for Endpoint Protection clients](endpoint-definition-updates.md)|Endpoint Protection can be configured to use various sources to download definition updates. |  
+|**Step 4:** [Configure the default antimalware policy and create custom antimalware policies](endpoint-antimalware-policies.md)|The default antimalware policy is applied when the Endpoint Protection client is installed. Any custom policies you have deployed are applied by default, within 60 minutes of deploying the client. Ensure that you have configured antimalware policies before you deploy the Endpoint Protection client.See |  
+|**Step 5:** [Configure custom client settings for Endpoint Protection](endpoint-protection-configure-client.md)|Use custom client settings to configure Endpoint Protection settings for collections of computers in your hierarchy.<br /><br /> Note: Do not configure the default Endpoint Protection client settings unless you are sure that you want these settings applied to all computers in your hierarchy. |  

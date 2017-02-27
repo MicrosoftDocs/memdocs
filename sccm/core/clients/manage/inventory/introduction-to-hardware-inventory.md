@@ -1,8 +1,8 @@
 ---
-title: "Hardware inventory | Microsoft Docs"
+title: "Hardware inventory - Configuration Manager | Microsoft Docs"
 description: "Get an introduction to hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/05/2016
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,7 +13,7 @@ ms.topic: get-started-article
 ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Introduction to hardware inventory in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*

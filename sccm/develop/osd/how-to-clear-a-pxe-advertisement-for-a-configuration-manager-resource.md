@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
+ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6searchScope: - ConfigMgr SDK
 caps.latest.revision: 10
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
 # How to Clear a PXE Advertisement for a Configuration Manager Resource
-To clear a PXE advertisement for a System Center Configuration Manager resource, you call the [SMS_Collection](assetId:///SMS_Collection?qualifyHint=False&autoUpgrade=True) object [ClearLastNBSAdvForMachines](assetId:///ClearLastNBSAdvForMachines?qualifyHint=False&autoUpgrade=True) method.  
+To clear a PXE advertisement for a System Center Configuration Manager resource, you call the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object [ClearLastNBSAdvForMachines](../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md) method.  
 
  Clearing PXE advertisement is used to re-advertise a mandatory advertisement that is enabled for a PXE device or assigned to a collection. For information about clearing the PXE advertisement for a collection, see [How to Clear a PXE Advertisement For a Configuration Manager Collection](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md).  
 
@@ -28,9 +28,9 @@ To clear a PXE advertisement for a System Center Configuration Manager resource,
 
 1.  Set up a connection to the SMS Provider. For more information, see [About the SMS Provider in Configuration Manager](../../develop/core/understand/about-the-sms-provider-in-configuration-manager.md).  
 
-2.  Create the assetId:///ClearLastNBSAdvForMachines?qualifyHint=False&autoUpgrade=True method resource identifier array for the method parameters.  
+2.  Create the `ClearLastNBSAdvForMachines` method resource identifier array for the method parameters.  
 
-3.  Call the assetId:///ClearLastNBSAdvForMachines?qualifyHint=False&autoUpgrade=True method to clear the PXE advertisement for the resource.  
+3.  Call the `ClearLastNBSAdvForMachines` method to clear the PXE advertisement for the resource.  
 
 ## Example  
  The following example clears the PXE advertisement for the resource identified by the `resourceID` parameter.  
@@ -95,8 +95,8 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider.|  
-|`resourceID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The resource identifier. You can obtain this from the [SMS_Resource](assetId:///SMS_Resource?qualifyHint=False&autoUpgrade=True) class [ResourceId](assetId:///ResourceId?qualifyHint=False&autoUpgrade=True) property.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`resourceID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The resource identifier. You can obtain this from the [SMS_Resource](../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md) class `ResourceId` property.|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  
