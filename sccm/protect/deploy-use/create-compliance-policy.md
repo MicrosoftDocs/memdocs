@@ -210,6 +210,13 @@ robots: noindex
   - **Secure boot is enabled:** When Secure Boot is enabled, the system is forced to boot to a factory trusted state. Also, when Secure Boot is enabled, the core components used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies this before it lets the machine start. If any files have been tampered with, breaking their signature, the system will not boot.
   - **Early-launch antimalware is enabled (this setting only applies to PCs.):** Early launch anti-malware (ELAM) provides protection for the computers in your network when they start up and before third-party drivers initialize.<br />This rule is turned off by default.
 
+- **Apps that cannot be installed on the device:** If users install an app from the admin-non-compliant list of apps, they’ll be blocked when trying to access corporate e-mail. This rule requires the app name, and the app ID when adding an app to the non-compliant list defined by the admin. The app publisher can also be added, but it’s not required.
+
+  **Supported on:**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
+
   For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).
   **Supported on:**
   * Windows 10 and Windows 10 Mobile
