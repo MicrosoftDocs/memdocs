@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -94,9 +94,11 @@ Before installing a new update from within the Configuration Manager console, re
 - Update to 1610 from either 1511, 1602, or 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md)  
 
 ###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
-Before you install a new update in your hierarchy, like update 1602, you should test the upgrade of your site database. The name of the command line option you use to test installing an update to a backup of your site database is **testdbupgrade**.  
+The information in this step applies only when you are installing an update for a System Center Configuration Manager site. If you are upgrading a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
 
-Unlike past versions of Configuration Manager, if installing an update fails you should not need to perform a site recovery and instead can Retry the update installation. Therefore, while the test upgrade of the database is less critical than in past product versions it remains a recommended step.  
+Before you install a new update in your hierarchy, like update 1610, you should test the upgrade of your site database. The name of the command line option you use to test installing an update to a backup of your site database is **testdbupgrade**.  
+
+With System Cener Configuration Manager, if installing an update fails you should not need to perform a site recovery and instead can Retry the update installation. Therefore, while the test upgrade of the database is less critical than in past product versions like System Center 2012 Configuration Manager, it remains a recommended step.  
 
 #### To run testdbupgrade before installing an update  
 
@@ -104,7 +106,7 @@ Unlike past versions of Configuration Manager, if installing an update fails you
 
      The **CD.Latest** folder for a site contains the source files for that version. You must use these source files to run the test upgrade of your site database. For more information see [The CD.Latest folder for System Center Configuration Manager](../../../core/servers/manage/the-cd.latest-folder.md).  
 
-     For example, if your site runs version 1501 and you want to update to 1602, you must get a CD.Latest folder from a site that has already updated to version 1602. Typically, you can install a new and temporary site in a lab, and upgrade that to version 1602 to create the CD.Latest folder with the required files.  
+     For example, if your site runs version 1606 and you want to update to 1610, you must get a CD.Latest folder from a site that has already updated to version 1610. Typically, you can install a new and temporary site in a lab, and upgrade that to version 1610 to create the CD.Latest folder with the required files.  
 
 2.  Copy the CD.Latest folder to a location on the SQL Server that you will use to run the test database upgrade. (See the next step).  
 

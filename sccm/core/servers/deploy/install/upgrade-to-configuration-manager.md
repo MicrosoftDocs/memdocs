@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -247,6 +247,8 @@ When a site upgrades to System Center Configuration Manager, some configurations
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
+The following information applies only when you are upgrading a prior versoin like System Center 2012 Configuration Manager to System Center Configuration Manager. If your site already runs System Center Configuration Manager and you are installing a new update, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+
 Before you upgrade a site, test a copy of that site's database for the upgrade.  
 
 To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that does not host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that the version of Configuration Manager supports that is the source of the database copy.  

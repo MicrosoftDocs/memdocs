@@ -2,7 +2,7 @@
 title: "Configure Asset Intelligence | Microsoft Docs"
 description: "Set up Asset Intelligence in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7 
+ms.author: andredm 
+manager: angrobe
 
 ---
-# Configure Asset Intelligence in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure Asset Intelligence in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Asset Intelligence inventories and manages software license usage.   
 
 ## Steps to configure Asset Intelligence  

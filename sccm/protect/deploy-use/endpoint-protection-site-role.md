@@ -4,7 +4,7 @@ description: "Learn how to configure Endpoint Protection to manage security and 
 defintion: ""
 definition: ""
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -56,11 +56,6 @@ manager: angrobe
 
 8.  Complete the wizard.
 
-> [!div class="button"]
-[Next step >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Back >](endpoint-protection-configure.md)
 
 ## Existing site system server
 
@@ -85,9 +80,3 @@ manager: angrobe
     >  This option configures the Cloud Protection Service settings (formerly known as MAPS) that are used by default. You can configure custom settings for each antimalware policy you configure. For more information, see [How to create and deploy antimalware policies for Endpoint Protection in System Center Configuration Manager](endpoint-antimalware-policies.md).
 
 8.  Complete the wizard.
-
-> [!div class="button"]
-[Next step >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[Back >](endpoint-protection-configure.md)
