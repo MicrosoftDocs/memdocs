@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 caps.latest.revision: 9
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Site components for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Site components for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 At each System Center Configuration Manager site, you can set up site components to modify the behavior of site system roles and site status reporting. Site component configurations apply to a site, and to each instance of an applicable site system role at the site.  
 
 ## About site components  
@@ -35,7 +40,7 @@ At each System Center Configuration Manager site, you can set up site components
 
 -   **Management points:** You can set up the site to publish information about its management points to Active Directory Domain Services.  
 
-     Configuration Manager clients use management points to locate service, and to find site information such as boundary group membership and PKI certificate selection options. Clients also use management points to find other management points in the site, as well as distribution points from which to download software. Management points also help clients to complete site assignment, and to download client policy and upload client information.  
+     Configuration Manager clients use management points to locate services, and to find site information such as boundary group membership and PKI certificate selection options. Clients also use management points to find other management points in the site, as well as distribution points from which to download software. Management points also help clients to complete site assignment, and to download client policy and upload client information.  
 
      Because the most secure method for clients to find management points is to publish them in Active Directory Domain Services, you will typically always select all functioning management points to publish to Active Directory Domain Services. However, this service location method requires the following to be true:
 
