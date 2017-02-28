@@ -1,7 +1,7 @@
 ---
 title: "Setup Wizard | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,9 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 caps.latest.revision: 3
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 ---
-# Use the Setup Wizard to install System Center Configuration Manager sites*Applies to: System Center Configuration Manager (Current Branch)*
+# Use the Setup Wizard to install System Center Configuration Manager sites
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 To install a new System Center Configuration Manager site by using a guided user interface, you use the Configuration Manager Setup Wizard (setup.exe). The wizard supports installing a primary site or central administration site. You also use the wizard to [upgrade an Evaluation installation](../../../../core/servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md) of Configuration Manager to a fully licensed installation. When you don't want to use the wizard, you can instead use an [installation script](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md) and run an unattended command-line installation.
 
@@ -67,7 +72,7 @@ If you're installing a central administration site as part of a site expansion s
     - Beginning with the October 2016 release of version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. On this page, you have the option to specify the **Software Assurance expiration date** of your licensing agreement as a convenient reminder to you of that date. If you don't enter this during Setup, you can specify it later from within the Configuration Manager console.
 
       > [!NOTE]   
-      > Microsoft doesn't validate the expiration date that you entered and won't use this date for license validation. Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered online—and your software assurance license status should be current so that you're eligible to use these additional updates.    
+      > Microsoft doesn't validate the expiration date that you entered and won't use this date for license validation. Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered online — and your software assurance license status should be current so that you're eligible to use these additional updates.    
 
       For more information, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
