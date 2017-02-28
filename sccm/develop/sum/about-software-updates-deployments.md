@@ -1,7 +1,7 @@
 ---
 title: "Software Updates Deployments | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "12/30/2016"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,12 +11,13 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to:
   - "System Center Configuration Manager (current branch)"
-ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82searchScope: - ConfigMgr SDK
+ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
 caps.latest.revision: 9
 author: "shill-ms"
 ms.author: "v-suhill"
 manager: "mbaldwin"
 ---
+
 # About Software Updates Deployments
 Software updates are delivered to client computers in System Center Configuration Manager by creating software update deployments. It is a multistep process to create software update deployments by using the Configuration Manager SDK interfaces. A basic approach to deploying software updates, by using the Configuration Manager SDK interfaces, is outlined below.  
 
