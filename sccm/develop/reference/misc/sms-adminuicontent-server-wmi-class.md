@@ -9,8 +9,8 @@ ms.technology:
   - "configmgr-other"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to:
-  - "System Center Configuration Manager (current branch)"
+searchScope:
+ - ConfigMgr SDK
 ms.assetid: c4bb10ba-7fad-4307-afc2-b0b4c7db7658
 author: "shill-ms"
 ms.author: "v-suhill"
