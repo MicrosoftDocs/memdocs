@@ -19,7 +19,7 @@ manager: angrobe
 ---
 
 # Licensing and branches for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch), (Long-Term Servicing Branch)*
-Use this topic to learn about the licensing requirements for the installation options available with the October 2016 release of System Center Configuration Manager version 1606, which include the Current Branch version 1606, Long-Term Servicing Branch (LTSB), and Evaluation installation of the Current Branch version 1606.
+Use this topic to learn about the licensing requirements for the installation options available with the October 2016 release of System Center Configuration Manager version 1606. These installation options include the Current Branch version 1606, the Long-Term Servicing Branch (LTSB), and the evaluation installation of the Current Branch version 1606.
 
 **Licensing overview:**   
 Customers with active Software Assurance (SA) on System Center Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have rights to use the October 2016 version 1606 release of System Center Configuration Manager. Customers with rights to System Center Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: Current Branch and Long-Term Servicing Branch (LTSB).
@@ -30,7 +30,7 @@ Customers with active Software Assurance (SA) on System Center Configuration Man
 
 
 ## System Center Configuration Manager licensed branches  
-This topic references the Software Assurance agreement (or equivalent subscription rights) which is the Microsoft licensing agreements that grant rights to install and use Configuration Manager.
+This topic references the Software Assurance agreement (or equivalent subscription rights), which is the Microsoft licensing agreement that grants rights to install and use Configuration Manager.
 
 
 |Branch|Licensing|Details|
@@ -52,14 +52,14 @@ See the table in the previous section for more information.
 
 
 ## Software Assurance agreements and System Center Configuration Manager
-The status of Software Assurance on your System Center Configuration Manager licenses, or equivalent subscription rights, on or after October 1, 2016 determines the branch you can install and use.
+The status of Software Assurance on your System Center Configuration Manager licenses, or equivalent subscription rights, on or after October 1, 2016, determines the branch you can install and use.
 
 
 ### Software Assurance and the Current Branch
 Rights to use System Center Configuration Manager Current Branch can be provided by:
--  **System Center:** Customers with active SA on System Center Standard or Datacenter Licenses can install and use the Current Branch option of System Center Configuration Manager.
+-  **System Center:** Customers with active SA on System Center Standard or Datacenter licenses can install and use the Current Branch option of System Center Configuration Manager.
 
--  **System Center Configuration Manager:** Customers with active SA on System Center Configuration Manager Licenses, or with equivalent subscription rights, can install and use the Current Branch option of System Center Configuration Manager.
+-  **System Center Configuration Manager:** Customers with active SA on System Center Configuration Manager licenses, or with equivalent subscription rights, can install and use the Current Branch option of System Center Configuration Manager.
 
 If you have active SA on System Center Configuration Manager licenses (or equivalent subscription rights) on or after October 1, 2016:
 - You can install and use the Current Branch.
@@ -67,24 +67,24 @@ If you have active SA on System Center Configuration Manager licenses (or equiva
 
 ### Software Assurance and the LTSB
  If you have an active SA on System Center Configuration Manager licenses (or equivalent subscription rights) on or after October 1, 2016:
- - You can install and use the LTSB. Customers that have perpetual rights to System Center Configuration Manager, or that allow SA or subscription to lapse, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
+ - You can install and use the LTSB. Customers who have perpetual rights to System Center Configuration Manager, or who allow thier SA or subscription to lapse, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
 
-LTSB is based on Current Branch version 1606 and has the following limitations:
+LTSB is based on Current Branch version 1606, and has the following limitations:
   - There is no support to convert a Current Branch to the LTSB. If you currently have a Current Branch site, you must install the LTSB as a new site.  
 
   - LTSB does not support all the capabilities of the Current Branch. Limitations are detailed in [Introduction to the  Long-Term Servicing Branch](introduction-to-the-ltsb.md) and its related documentation. These limitations include a limited feature set, limited upgrade options, and a separate product support lifecycle.  
 
 
 ### Software Assurance expiration date
-Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. To do so, you use the **Software Assurance expiration date** which is an optional value you can specify as a convenient reminder when you run Configuration Manager Setup or later from within the Configuration Manager console.
+Beginning with the October 2016 release of the version 1606 baseline media for System Center Configuration Manager, you can specify the expiration date of your Software Assurance agreement. The **Software Assurance expiration date** is an optional value you can specify as a convenient reminder when you run Configuration Manager Setup or later from within the Configuration Manager console.
 
 >  [!NOTE]   
->  Microsoft does not validate the expiration date you entered and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online and your software assurance license status should be current to be eligible to use these additional updates.    
+>  Microsoft does not validate the expiration date you specify, and does not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered  online, and your Software Assurance license status should be current to be eligible to use these additional updates.    
 
 **To specify the date:**
-- You can specify the value on the **Product Key** page of the Setup Wizard when you run Setup from the System Center Configuration Manager version 1606 baseline media.
+- When you run Setup from the System Center Configuration Manager version 1606 baseline media, you can specify the value on the **Product Key** page of the Setup wizard.
 
-- You can also specify this date on the **Licensing** tab of the **Hierarchy Settings Properties** in the Configuration Manager console.
+- In the Configuration Manager console, in **Hierarchy Settings Properties**, you can specify the value on the **Licensing** tab.
 
 For more information about Software Assurance licensing and the Current Branch of System Center Configuration Manager, see [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions).
 
@@ -98,7 +98,7 @@ Use the following links to learn more about product licensing details.
 - Microsoft Volume Licensing Product Terms: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052).
 
 - Volume license customers can get a summary of their licenses here:  [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx).  
-  Go to the **Licenses** menu and click **Licenses Summary** for an overview of licenses.
+  Go to the **Licenses** menu, and click **Licenses Summary** for an overview of licenses.
 
 **VLSC Videos:**
 - Training videos on how VLSC works: m[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2).
