@@ -2,7 +2,7 @@
 title: "Product and Licensing FAQ | Microsoft Docs"
 description: "Find answers for common product and license questions for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,10 +27,9 @@ This FAQ addresses common licensing questions about System Center Configuration 
 For more information about System Center Configuration Manager features, refer to the Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) product page
 
 
-## Details
-System Center Configuration Manager is….
 
-## FAQ
+
+## System Center Configuration Manager licensing FAQ
 
 1.	**What is Current Branch (CB)?**   
 The Current Branch is the production ready build of System Center Configuration Manager that provides an active servicing model. This servicing model is like the experience with Windows 10 or the Windows Server 2016 Nano Server installation option. This approach supports customers who are moving at a “cloud cadence” and wish to innovate more quickly. With the Current Branch servicing model, System Center Configuration Manager customers continue to receive new features and functionality. For this reason, only customers with active Software Assurance on System Center Configuration Manager Licenses or with equivalent subscription rights may install and use the Current Branch of System Center Configuration Manager.
