@@ -2,7 +2,7 @@
 title: "Evaluate System Center Configuration Manager by building your own lab environment | Microsoft Docs"
 description: "Create a lab environment to evaluate System Center Configuration Manager for use in your organization."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 caps.latest.revision: 25
 caps.handback.revision: 0
-author: brendunsms.author: brendunsmanager: angrobe
+author: brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Evaluate System Center Configuration Manager by building your own lab environment*Applies to: System Center Configuration Manager (Current Branch)*
+# Evaluate System Center Configuration Manager by building your own lab environment
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  Learn how to create a lab environment to evaluate System Center Configuration Manager for use in your organization.  
 
  System Center Configuration Manager is a complex and powerful tool to manage your users, devices, and software. It's a good idea to thoroughly evaluate System Center Configuration Manager before full deployment, so that you can marry conceptual understanding with hands-on exercises.  
