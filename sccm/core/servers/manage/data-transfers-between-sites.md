@@ -12,15 +12,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 caps.latest.revision: 12
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Data transfers between sites in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Data transfers between sites in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager uses **file-based replication** and **database replication** to transfer different types of information between sites. Learn about how Configuration Manager moves data between sites, and how you can manage the transfer of data across your network.  
 
 
 ## <a name="bkmk_fileroute"></a> File-based replication  
-Configuration Manager uses file-based replication to transfer file-based data between sites in your site hierarchy. This data includes applications and packages that you want to deploy to distribution points in child sites, and unprocessed discovery data records that are transferred to parent sites and then processed.  
+Configuration Manager uses file-based replication to transfer file-based data between sites in your hierarchy. This data includes applications and packages that you want to deploy to distribution points in child sites, and unprocessed discovery data records that are transferred to parent sites and then processed.  
 
 File-based communication between sites uses the **Server Message Block** (SMB) protocol on TCP/IP port 445. You can specify bandwidth throttling and pulse mode to control the amount of data transferred across the network, and you can use schedules to control when to send data across the network.  
 
@@ -60,6 +65,7 @@ By default, the sender writes data to a destination site by using multiple **con
 You can change the following settings for a sender:  
 
 -  **Maximum concurrent sendings**. By default, each site uses five concurrent sendings, with three available for use when it sends data to any one destination site. When you increase this number, you can increase the throughput of data between sites because Configuration Manager can transfer more files at the same time. Increasing this number also increases the demand for network bandwidth between sites.  
+
 -  **Retry settings**. By default, each site retries a problem connection two times, with a one-minute delay between connection attempts. You can modify the number of connection attempts the site makes, and how long to wait between attempts.  
 
 To manage the sender for a site, in the **Administration** workspace, expand the **Site Configuration** node, select the **Sites** node, and then select **Properties** for the site you want to manage. Select the **Sender** tab to change the sender settings.  
@@ -79,7 +85,7 @@ Configuration Manager groups data that replicates by database replication into d
 
 -  Each replication group has a separate, fixed replication schedule that determines how frequently changes to the data in the group is replicated to other sites.  
 
-     For example, a change to a role-based administration configuration replicates quickly to other sites to ensure that these changes are enforced as soon as possible. Meanwhile, a lower-priority configuration change, such as a request to install a new secondary site, replicates with less urgency. It takes several minutes for the new site request to reach the destination primary site.  
+     For example, a change to a role-based administration configuration replicates quickly to other sites to ensure that these changes are enforced as soon as possible. Meanwhile, a lower-priority configuration change, such as a request to install a new secondary site, replicates with less urgency. It can take several minutes for a new site request to reach the destination primary site.  
 
 -   You can modify the following settings for database replication:  
 
@@ -119,7 +125,7 @@ For information about how to configure replication links, see [Site database rep
 Use the information in the following sections to help you plan for database replication links.  
 
 ### <a name="bkmk_distviews"></a> Distributed views  
-Through distributed views, requests that are made at a central administration site for selected site data can access that site data directly from the database at a child primary site. The direct access replaces the need to replicate this site data from the primary site to the central administration site. Because each replication link is independent from other replication links, you can use distributed views only on the replication links that you choose. You cannot use distributed views between a primary site and a secondary site.  
+Through distributed views, requests that are made at a central administration site for selected site data access that site data directly from the database at a child primary site. The direct access replaces the need to replicate that site data from the primary site to the central administration site. Because each replication link is independent from other replication links, you can use distributed views on only the replication links that you choose. You cannot use distributed views between a primary site and a secondary site.  
 
 Distributed views can provide the following benefits:  
 
@@ -165,7 +171,7 @@ When you configure a database replication link schedule, you can restrict the tr
 > Distributed views and schedules for when data can replicate are mutually exclusive configurations for a database replication link.  
 
 ### <a name="BKMK_SummarizeDBReplication"></a> Summarization of database replication traffic  
-Each site periodically summarizes data about the network traffic that traverses database replication links for the site. Summarized data is used in reports for database replication. Both sites on a replication link summarize the network traffic that traverses the replication link. The summarization of data is performed by the SQL server that hosts the site database. After data is summarized, the information replicates to other sites as global data.  
+Each site periodically summarizes data about the network traffic that traverses database replication links for the site. Summarized data is used in reports for database replication. Both sites on a replication link summarize the network traffic that traverses the replication link. The summarization of data is performed by the SQL Server that hosts the site database. After data is summarized, the information replicates to other sites as global data.  
 
 By default, summarization occurs every 15 minutes. To modify the frequency of summarization for network traffic, in the properties of the database replication link, edit the **Summarization interval**. The frequency of summarization affects the information that you view in reports about database replication. You can choose an interval of between 5 minutes and 60 minutes. When you increase the frequency of summarization, you increase the processing load on the SQL server at each site on the replication link.  
 
