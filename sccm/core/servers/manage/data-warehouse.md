@@ -12,10 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 caps.latest.revision:
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-#  The Data Warehouse Service point for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+#  The Data Warehouse Service point for System Center Configuration Manager
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Begning with version 1702 you can use the Data Warehouse Service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!TIP]  
@@ -99,8 +103,9 @@ After you install a Data Warehouse site system role, the following reports are a
 ## Move the Data Warehouse database
 Use the following steps to move the data warehouse database to a new SQL Server:
 
-1.	Use SQL Server Management Studio to backup the data warehouse database, and then restore that database to a SQL Server on the new computer that will host the data warehouse.
-> [!NOTE]  
+1.	Use SQL Server Management Studio to backup the data warehouse database, and then restore that database to a SQL Server on the new computer that will host the data warehouse.   
+
+> [!NOTE]     
 > After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.   
 2.	Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
 3.	Reinstall the Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
