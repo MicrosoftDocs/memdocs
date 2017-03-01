@@ -130,7 +130,7 @@
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
 ###  [Installing sites](servers/deploy/install/installing-sites.md)
--#### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
+#### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
 #### [Prerequisites for installing sites](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [Use the Setup Wizard](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
 #### [Use a command line](servers/deploy/install/use-a-command-line-to-install-sites.md)
