@@ -66,6 +66,8 @@ When the computer rejects a request for the content, the requesting computer wil
 
 With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
 
+The technical preview site infrastructure, clients, and the Azure AD Domain Services domain must all run in Azure.
+
 
 ### Set up Configuration Manager to use Azure AD
 To use Azure AD with Configuration Manager, you’ll need the following:
@@ -77,7 +79,8 @@ To use Azure AD with Configuration Manager, you’ll need the following:
 To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
 
 ### Discover resources
-After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search for resources:  
+After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
+Azure AD for resources:  
 - Active Directory System Discovery
 - Active Directory User Discovery
 - Active Directory Group Discovery  
