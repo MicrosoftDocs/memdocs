@@ -172,14 +172,18 @@
 ###  [Install in-console updates](servers/manage/install-in-console-updates.md)
 #### [Flowchart - Download updates](servers/manage/download-updates-flowchart.md)
 #### [Flowchart - Update replication](servers/manage/update-replication-flowchart.md)
+###  [Pre-release features](servers/manage/pre-release-features.md)
 ###  [Service windows for site servers](servers/manage/service-windows.md)
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
+<!-- Deprecated from Content: 
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+-->
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
