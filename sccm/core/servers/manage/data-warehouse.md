@@ -105,9 +105,8 @@ After you install a Data Warehouse site system role, the following reports are a
 Use the following steps to move the data warehouse database to a new SQL Server:
 
 1.	Use SQL Server Management Studio to backup the data warehouse database, and then restore that database to a SQL Server on the new computer that will host the data warehouse.   
-
 > [!NOTE]     
-> After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.
+> After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.  
 
 2.	Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
 3.	Reinstall the Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
@@ -145,7 +144,7 @@ A connection was successfully established with the server, but then an error occ
     4.	Open the Microsoft Management Console (MMC) and add the snap-in for **Certificates**, select to manage the certificate for **Computer account** of the local machine. Then, in the MMC, expand the **Personal** folder > **Certificates**, and export the **Data Warehouse SQL Server Identification Certificate** as a **DER encoded binary X.509 (.CER)** file.    
   2.	On the computer that hosts SQL Server Reporting Services, open the MMC and add the snap-in for **Certificates**, and then select to manage certificate for **Computer account**. Under the **Trusted Root Certificate Authorities** folder, import the **Data Warehouse SQL Server Identification Certificate**.
 
- 
+
 ## Data Warehouse Dataflow   
 ![Datawarehouse_flow](./media/datawarehouse.png)
 
