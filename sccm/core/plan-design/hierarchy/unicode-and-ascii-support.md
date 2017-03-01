@@ -2,7 +2,7 @@
 title: "Unicode and ASCII Support | Microsoft Docs"
 description: "Learn about support for Unicode and ASCII characters in System Center Configuration Manager objects."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Unicode and ASCII support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Unicode and ASCII support in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager creates most objects by using Unicode characters. However, several objects support ASCII characters only or they have other limitations.  
 
  The following sections list the objects that must use characters from the ASCII character set only, or that have additional limitations.  
@@ -62,7 +67,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
     > [!NOTE]  
     >  The accounts that you specify for role-based administration support Unicode.  
     >   
-    >  The reporting services point account supports Unicode, with the exception of RUS characters.  
+    >  The Reporting Services point account supports Unicode, with the exception of RUS characters.  
 
 -   Fully-qualified domain name (FQDN) for site servers and site systems  
 
