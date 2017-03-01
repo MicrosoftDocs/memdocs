@@ -120,8 +120,7 @@
 #### [Planning to monitor migration](migration/planning-to-monitor-migration-activity.md)
 #### [Planning to complete migration](migration/planning-to-complete-migration.md)
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operations for migrating](migration/operations-for-migration.md)
-###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
+###  [Operations for migrating](migration/operations-for-migration.md)###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
@@ -177,10 +176,12 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!-- 
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-<!-- Deprecated from Content: 
+<!-- Deprecated from Content:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
@@ -206,6 +207,7 @@
 #### [Operations and maintenance for reporting](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
+###  [Data warehouse](servers/manage/data-warehouse.md)
 
 #    Deploy clients
 ##   Planning for client deployment
