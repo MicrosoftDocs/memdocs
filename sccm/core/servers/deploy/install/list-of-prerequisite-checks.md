@@ -2,7 +2,7 @@
 title: "Prerequisite checks | Microsoft Docs"
 description: "Review the available prerequisite checks for System Center Configuration Manager. Includes checks for security rights."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,7 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ---
-# List of prerequisite checks for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*This topic provides details about the prerequisite checks available in the Preqrequisite Checker standalone application. You can run Prerequisite Checker before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server.  
+# List of prerequisite checks for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+The following sections detail the available prerequisite checks. 
+
 For information about using Prerequisite Checker, see [Prerequisite Checker](prerequisite-checker.md).  
 
 ##  <a name="BKMK_Security"></a> Prerequisite checks for security rights  
