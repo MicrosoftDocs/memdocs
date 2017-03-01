@@ -2,7 +2,7 @@
 title: "Content management security and privacy | Microsoft Docs"
 description: "Optimize security and privacy for content management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5f38b726-dc00-433a-ba05-5b7dbb0d8e99
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Security and privacy for content management for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for content management for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic contains security and privacy information for content management in System Center Configuration Manager. Read it in conjunction with the following topics:  
 
 -   [Security and privacy for application management in System Center Configuration Manager](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
