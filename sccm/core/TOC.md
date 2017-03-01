@@ -180,7 +180,7 @@
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-<!-- Deprecated from Content: 
+<!-- Deprecated from Content:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
@@ -206,6 +206,7 @@
 #### [Operations and maintenance for reporting](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
+###  [Data warehouse](servers/manage/data-warehouse.md)
 
 #    Deploy clients
 ##   Planning for client deployment
