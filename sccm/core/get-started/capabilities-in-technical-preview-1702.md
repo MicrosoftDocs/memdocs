@@ -66,8 +66,7 @@ When the computer rejects a request for the content, the requesting computer wil
 
 With this technical preview version you can manage devices that are joined to an Azure Active Directory (AD) Domain Services managed domain. You can also discover devices, users, and groups in that domain with various Configuration Manager Discovery methods.
 
-Use of Azure AD with this technical preview is not supported with on-premises deployments. The technical preview site infrastructure, clients, and the Azure AD Domain Services domain must all run in Azure.
-
+The technical preview site infrastructure, clients, and the Azure AD Domain Services domain must all run in Azure.
 
 
 ### Set up Configuration Manager to use Azure AD
