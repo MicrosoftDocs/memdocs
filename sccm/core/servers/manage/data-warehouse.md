@@ -73,7 +73,8 @@ Before the Wizard displays the *Data Warehouse Service point*, the site must hav
  - **Database name**:   
  Specify a name for the data warehouse database.  Configuration Manager will create the data warehouse database with this name. If you specify a database name that already exists on the instance of SQL server, Configuration Manager will use that database.
  - **SQL Server port used for connection**:   
- Specify the TCP/IP port number that is configured for the SQL Server that hosts the data warehouse datbase. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
+
+Specify the TCP/IP port number that is configured for the SQL Server that hosts the data warehouse datbase. This port is used by the data warehouse synchronization service to connect to the data warehouse database.  
 
 **Synchronization schedule** page:   
 - **Synchronization schedule**:
@@ -83,7 +84,7 @@ Before the Wizard displays the *Data Warehouse Service point*, the site must hav
     - **Daily**: Specify that synchronization runs every day.
     - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
 
-## Reporting
+  ## Reporting
 After you install a Data Warehouse site system role, the following reports are available on your reporting services point with a Category of **Data Warehouse**:
  - **Application Deployment Report**:   
  View details for application deployment for a specific application and machine.
@@ -106,7 +107,8 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 1.	Use SQL Server Management Studio to backup the data warehouse database, and then restore that database to a SQL Server on the new computer that will host the data warehouse.   
 
 > [!NOTE]     
-> After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.   
+> After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.
+
 2.	Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
 3.	Reinstall the Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
 4.	After the site system role installs, the move is complete.
