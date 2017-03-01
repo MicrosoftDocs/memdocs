@@ -2,7 +2,7 @@
 title: "Unicode and ASCII Support | Microsoft Docs"
 description: "Learn about support for Unicode and ASCII characters in System Center Configuration Manager objects."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,19 +13,24 @@ ms.topic: article
 ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Unicode and ASCII Support in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Unicode and ASCII support in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager creates most objects by using Unicode characters. However, several objects support ASCII characters only or they have other limitations.  
 
  The following sections list the objects that must use characters from the ASCII character set only, or that have additional limitations.  
 
--   [Objects That Use ASCII Characters](#BKMK_ASCIIchar)  
+-   [Objects that use ASCII characters](#BKMK_ASCIIchar)  
 
--   [Additional Limitations](#BKMK_OtherCharLimitations)  
+-   [Additional limitations](#BKMK_OtherCharLimitations)  
 
--   [Configuration Manager Objects that Are Not Localized](#BKMK_LangNonLocalize)  
+-   [Configuration Manager objects that are not localized](#BKMK_LangNonLocalize)  
 
 ##  <a name="BKMK_ASCIIchar"></a> Objects that use ASCII characters  
  Configuration Manager supports the ASCII character set only when you create the following objects:  
@@ -37,34 +42,34 @@ System Center Configuration Manager creates most objects by using Unicode charac
 -   The following Configuration Manager accounts:  
 
     > [!NOTE]  
-    >  These accounts support ASCII characters and RUS characters on a site that runs in the Russian language.  
+    >  These accounts support ASCII characters and RUS characters on a site that runs in Russian.  
 
-    -   Client Push Installation Account  
+    -   Client push installation account  
 
-    -   Health State Reference Publishing Account  
+    -   Health state reference publishing account  
 
-    -   Health State Reference Querying Account  
+    -   Health state reference querying account  
 
-    -   Management Point Database Connect Account  
+    -   Management point database connect account  
 
-    -   Network Access Account  
+    -   Network access account  
 
-    -   Package Access Account  
+    -   Package access account  
 
-    -   Standard Sender Account  
+    -   Standard sender account  
 
-    -   Site System Installation Account  
+    -   Site system installation account  
 
-    -   Software Update Point Connection Account  
+    -   Software update point connection account  
 
-    -   Software Update Point Proxy Server Account  
+    -   Software update point proxy server account  
 
     > [!NOTE]  
     >  The accounts that you specify for role-based administration support Unicode.  
     >   
-    >  The Reporting Services Point Account supports Unicode, with the exception of RUS characters.  
+    >  The Reporting Services point account supports Unicode, with the exception of RUS characters.  
 
--   FQDN for site servers and site systems  
+-   Fully-qualified domain name (FQDN) for site servers and site systems  
 
 -   Installation path for Configuration Manager  
 
@@ -90,11 +95,11 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   The folder that contains the Configuration Manager reports  
 
-    -   The folder that stores the Configuration Manager Backup  
+    -   The folder that stores the Configuration Manager backup  
 
-    -   The folder that stores the installation source files for site setup.  
+    -   The folder that stores the installation source files for site setup  
 
-    -   The folder that stores the prerequisite downloads for use by Setup  
+    -   The folder that stores the prerequisite downloads for use by setup  
 
 -   The path for the following objects:  
 
@@ -104,7 +109,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   Virtual application name  
 
--   The following objects for AMT and out of band management:  
+-   The following objects for AMT and out-of-band management:  
 
     -   The FQDN of the AMT-based computer  
 
@@ -122,7 +127,7 @@ System Center Configuration Manager creates most objects by using Unicode charac
 
     -   The contents of the AMT data storage  
 
--   Boot media .ISO file names  
+-   Boot media ISO file names  
 
 ##  <a name="BKMK_OtherCharLimitations"></a> Additional limitations  
  The following are additional limitations for supported character sets and language versions:  
