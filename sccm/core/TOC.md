@@ -120,8 +120,7 @@
 #### [Planning to monitor migration](migration/planning-to-monitor-migration-activity.md)
 #### [Planning to complete migration](migration/planning-to-complete-migration.md)
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operations for migrating](migration/operations-for-migration.md)
-###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
+###  [Operations for migrating](migration/operations-for-migration.md)###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
@@ -131,7 +130,7 @@
 #### [Setup Downloader](servers/deploy/install/setup-downloader.md)
 #### [Prerequisite checker](servers/deploy/install/prerequisite-checker.md)
 ###  [Installing sites](servers/deploy/install/installing-sites.md)
-#### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
+-#### [Prepare to install sites](servers/deploy/install/prepare-to-install-sites.md)
 #### [Prerequisites for installing sites](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [Use the Setup Wizard](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
 #### [Use a command line](servers/deploy/install/use-a-command-line-to-install-sites.md)
@@ -177,7 +176,9 @@
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!-- 
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 <!-- Deprecated from Content:
