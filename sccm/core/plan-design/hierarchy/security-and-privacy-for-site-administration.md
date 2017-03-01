@@ -2,7 +2,7 @@
 title: "Site administration security and privacy | Microsoft Docs"
 description: "Optimize security and privacy for site administration in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 caps.latest.revision: 8
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Security and privacy for site administration in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Security and privacy for site administration in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 This topic contains security and privacy information for System Center Configuration Manager sites and the hierarchy.
 
 ##  <a name="BKMK_Security_Sites"></a> Security best practices for site administration  
@@ -93,7 +98,7 @@ Isolating each site system role on a different server reduces the chance that an
 
 The Security Configuration Wizard (SCW) helps you to create a security policy that you can apply to any server on your network. After you install the System Center Configuration Manager template, SCW recognizes Configuration Manager site system roles, services, ports, and applications. It then permits the communication that is required for Configuration Manager and blocks communication that is not required.  
 
-The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center: [System Center 2012 —Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
+The Security Configuration Wizard is included with the toolkit for System Center 2012 Configuration Manager, which you can download from the Microsoft Download Center: [System Center 2012 — Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931).  
 
 **Configure static IP addresses for site systems.**  
 
@@ -347,7 +352,7 @@ Identify and follow the best practices for your version of IIS Server. However, 
 
     Identify and follow any security best practices for the version of DNS and WINS that you use for name resolution.  
 
-##  <a name="BKMK_Privacy_Cliients"></a> Privacy information for discovery  
+##  <a name="BKMK_Privacy_Cliients"></a> Privacy information for Discovery  
  Discovery creates records for network resources and stores them in the System Center Configuration Manager database. Discovery data records contain computer information such as IP addresses, operating systems, and computer names. Active Directory discovery methods can also be configured to discover any information that is stored in Active Directory Domain Services.  
 
  The only discovery method that is enabled by default is Heartbeat Discovery, but that method only discovers computers that are already have the System Center Configuration Manager client software installed.  
