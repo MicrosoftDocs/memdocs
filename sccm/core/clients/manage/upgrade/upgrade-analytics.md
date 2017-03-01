@@ -29,7 +29,6 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 ---
 
 # Integrate Upgrade Readiness with System Center Configuration Manager
-
 Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness and compatibility with Windows 10, to allow easier and smoother upgrades. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You'll then be able to target devices for upgrade or remediation from the device list.
 
 Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
