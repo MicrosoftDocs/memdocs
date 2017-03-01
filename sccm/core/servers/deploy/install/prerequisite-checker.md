@@ -2,7 +2,7 @@
 title: "Prerequisite Checker | Microsoft Docs"
 description: "Learn how to use Prerequisite Checker to identify and fix problems that might block a site or site system role installation."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ---
-# Prerequisite Checker for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
- Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this standalone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
+# Prerequisite Checker for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+ Before you run Setup to install or upgrade a System Center Configuration Manager site, or before you install a site system role on a new server, you can use this stand-alone application (**Prereqchk.exe**) from the version of Configuration Manager that you want use to verify server readiness. Use Prerequisite Checker to identify and fix problems that would block a site or site system role installation.  
 
 > [!NOTE]  
 >  Prerequisite Checker always runs as part of Setup.  
@@ -41,8 +44,8 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 1.  In Windows Explorer, go to one of the following locations:  
 
-    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
-    -   **<*Configuration Manager installation path*\>\BIN\X64**  
+    -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Copy the following files to the destination folder on the other computer:  
 
@@ -56,8 +59,8 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 1.  In Windows Explorer, go to one of the following locations:  
 
-    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
-    -   **<*Configuration Manager installation path*\>\BIN\X64**  
+    -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Run **prereqchk.exe** to start Prerequisite Checker.   
     Prerequisite Checker detects existing sites, and if found, performs checks for upgrade readiness. If no sites are found, all checks are performed. The **Site Type** column provides information about the site server or site system with which the rule is associated.  
@@ -66,8 +69,8 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 1.  Open a Command Prompt window and change directories to one of the following locations:  
 
-    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
-    -   **<*Configuration Manager installation path*\>\BIN\X64**  
+    -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Enter  **prereqchk.exe /LOCAL** to start Prerequisite Checker and run all prerequisite checks on the server.  
 
@@ -75,8 +78,8 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
 1.  Open a Command Prompt window and change directories to one of the following locations:  
 
-    -   **<*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
-    -   **<*Configuration Manager installation path*\>\BIN\X64**  
+    -   **&lt;*Configuration Manager installation media*\>\SMSSETUP\BIN\X64**  
+    -   **&lt;*Configuration Manager installation path*\>\BIN\X64**  
 
 2.  Enter  **prereqchk.exe** with the addition of one or more of the following command-line options.  
 
@@ -106,7 +109,7 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
          Not required. Verifies that a firewall exception is in effect to allow communication on the SQL Server Service Broker (SSB) port. The default SSB port is 4022.  
 
-    -   **InstallDir <*Configuration Manager installation path*>**  
+    -   **InstallDir &lt;*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
@@ -144,7 +147,7 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
          Not required. Verifies that a firewall exception is in effect to allow communication on the SSB port. The default SSB port is 4022.  
 
-    -   **InstallDir <*Configuration Manager installation path*>**  
+    -   **InstallDir &lt;*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
@@ -170,7 +173,7 @@ For more information about the checks that Prerequisite Checker performs, see [L
 
          Not required. Verifies that a firewall exception is in effect to allow communication for the SQL Server service port, and that the port is not in use by another named instance of SQL Server. The default port is 1433.  
 
-    -   **InstallDir <*Configuration Manager installation path*>**  
+    -   **InstallDir &lt;*Configuration Manager installation path*>**  
 
          Not required. Verifies the minimum disk space on requirements for site installation.  
 
