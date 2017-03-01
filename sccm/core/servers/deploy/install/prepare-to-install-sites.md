@@ -2,7 +2,7 @@
 title: "Prepare to install sites | Microsoft Docs"
 description: "If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,11 @@ ms.author: brenduns
 manager: angrobe
 ---
 # Prepare to install System Center Configuration Manager sites
-*Applies to: System Center Configuration Manager (Current Branch)*
-To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+To prepare for a successful deployment of one or more System Center Configuration Manager sites, become familiar with the details in this article. These steps can save you time during installation of multiple sites and help prevent missteps that might result in the need to reinstall one or more sites.
+
 > [!TIP]
 > When managing System Center Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](/sccm/core/understand/upgrade-update-install).
 
@@ -29,10 +32,10 @@ Before installing a site, make sure you have planned your hierarchy, and that yo
 
 
 ### First site
-The first site that you install in a site hierarchy will be either a standalone primary site or a central administration site.
+The first site that you install in a hierarchy will be either a stand-alone primary site or a central administration site.
 
 **Installation media**:
-To install a central administration site or a standalone primary site as the first site in a new hierarchy, you must [use a baseline version](../../../../core/servers/manage/updates.md#bkmk_Baselines) of Configuration Manager. Do not install the first site of a new hierarchy by using updated source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of any site.
+To install a central administration site or a stand-alone primary site as the first site in a new hierarchy, you must [use a baseline version](../../../../core/servers/manage/updates.md#bkmk_Baselines) of Configuration Manager. Do not install the first site of a new hierarchy by using updated source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of any site.
 
 **Installation method**: You can install either type of site by using the [Configuration Manager Setup Wizard](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md), or you can configure a script to use with a [scripted command-line installation](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md).
 
@@ -44,9 +47,9 @@ After the initial site is installed, you can add more sites at any time. You hav
 |---|---|
 |Central administration site|Child primary site|
 |Child primary site|Secondary site|
-|Standalone primary site|Secondary site (you can expand the primary site, which converts the standalone primary site to a child primary site)|
+|Stand-alone primary site|Secondary site (you can expand the primary site, which converts the stand-alone primary site to a child primary site)|
 
-**Installation media**: When you install a central administration site to expand a standalone primary site, or if you install a new child primary site in an existing hierarchy, you must use installation media (that contains source files) that matches the version of the existing site or sites.
+**Installation media**: When you install a central administration site to expand a stand-alone primary site, or if you install a new child primary site in an existing hierarchy, you must use installation media (that contains source files) that matches the version of the existing site or sites.
 
 > [!IMPORTANT]
 > If you have installed in-console updates that have changed the version of the previously installed sites, do not use the original installation media. Instead, in that scenario, use source files from the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) of an updated site. Configuration Manager requires you to use source files that match the version of the existing site that your new site will connect to.
@@ -54,7 +57,7 @@ After the initial site is installed, you can add more sites at any time. You hav
 A secondary site must be installed from the Configuration Manager console. This way, secondary sites are always installed by using source files from the parent primary site.
 
 **Installation method**: The method you use to install additional sites depends on the type of site you want to install.
--   **Add a central administration site**:  You can use the Configuration Manager Setup Wizard or a scripted command line to install the new central administration site as a parent site to your existing standalone primary site. For more information, see [Expanding a standalone primary site](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
+-   **Add a central administration site**:  You can use the Configuration Manager Setup Wizard or a scripted command line to install the new central administration site as a parent site to your existing stand-alone primary site. For more information, see [Expanding a stand-alone primary site](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand).
 -   **Add a child primary site**:  You can use the Configuration Manager Setup Wizard or a command-line installation to add a child primary site below a central administration site.
 -   **Add a secondary site**:  Use the Configuration Manager console to install a secondary site as a child site below a primary site. Other methods are not supported for adding secondary sites.
 
@@ -95,7 +98,7 @@ To enter the site code for a site when you're running Configuration Manager Setu
 The site name is a friendly name identifier for the site. You can only use the characters *A* through *Z*, *a* through *z*, *0* through *9*, and the hyphen (*-*) in site names.
 
 > [!IMPORTANT]
-> You cannot change a site code or site name after you install the site.
+> A change of the site code or site name after you install the site is not supported.
 
 ### Reuse a site code
 Site codes cannot be used more than one time in a Configuration Manager hierarchy for a central administration site or for a primary site, even if the original site and site code have been uninstalled. If you reuse a site code, you risk having object ID conflicts in your hierarchy. You can reuse the site code for a secondary site if that secondary site and the site code are no longer in use in your Configuration Manager hierarchy or in the Active Directory forest.
@@ -107,7 +110,7 @@ Before you install a site, it's important to understand the following limitation
   -   Site code  
   -   Site description  
 -   When your hierarchy includes a central administration site:  
-  -   Configuration Manager does not support moving a child primary site out of a hierarchy to create a standalone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new standalone primary site or as a child site of the central administration site of a different hierarchy.  
+  -   Configuration Manager does not support moving a child primary site out of a hierarchy to create a stand-alone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new stand-alone primary site or as a child site of the central administration site of a different hierarchy.  
 
 
 ## <a name="bkmk_optionalsteps"></a>  Optional steps before running Setup
