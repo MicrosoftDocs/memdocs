@@ -32,17 +32,17 @@ ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 
 Upgrade Readiness (formerly Upgrade Analytics) enables you to assess and analyze device readiness and compatibility with Windows 10, to allow easier and smoother upgrades. Integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in the Configuration Manager admin console. You'll then be able to target devices for upgrade or remediation from the device list.
 
-Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsot.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+Upgrade Readiness is a solution in the Microsoft Operations Management Suite (OMS). You can read more about Upgrade Readiness in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
 
 ## Configure clients
 
 There are several configuration steps that you have to take to ensure that your clients can provide data to Upgrade Readiness:
 
 -  Configure client telemetry settings as described in [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
--  Install the KBs described in the *Deploy the compatibility update and related KBs *section of [Get started with Upgrade Readiness](https://technet.microsot.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
+-  Install the KBs described in the *Deploy the compatibility update and related KBs *section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).
 
 	> [!NOTE]
-	> You can download a script to automate many of the client setup tasks. See the *Run the Upgrade Readiness deployment script* section of [Get started with Upgrade Readiness](https://technet.microsot.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness) for information about the script.
+	> You can download a script to automate many of the client setup tasks. See the *Run the Upgrade Readiness deployment script* section of [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness) for information about the script.
 
 ## Create a connection to Upgrade Readiness
 
@@ -68,7 +68,7 @@ There are several configuration steps that you have to take to ensure that your 
 
 ### Complete Upgrade Readiness tasks  
 
-After you've create the connection in Configuration Manager, perform these tasks, as described in [Get started with Upgrade Readiness](https://technet.microsot.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).  
+After you've create the connection in Configuration Manager, perform these tasks, as described in [Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness).  
 
 1. Add the UpgradeReadiness service to the OMS workspace.  
 2. Generate a commercial ID.  
