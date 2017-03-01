@@ -2,7 +2,7 @@
 title: "Ports used by Configuration Manager | Microsoft Docs"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Ports used in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Ports used in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager is a distributed client/server system. The distributed nature of Configuration Manager means that connections can be established between site servers, site systems, and clients. Some connections use ports that are not configurable, and some support custom ports that you specify. You must verify that the required ports are available if you use any port filtering technology such as firewalls, routers, proxy servers, or IPsec.  
 
 > [!NOTE]  
@@ -57,7 +62,7 @@ Configuration Manager does not allow you to configure ports for the following ty
 
 -   Site server to site system  
 
--   Configuration Manager console to SMS provider  
+-   Configuration Manager console to SMS Provider  
 
 -   Configuration Manager console to the Internet  
 
@@ -197,7 +202,7 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |Hypertext Transfer Protocol (HTTP)|--|80|  
 
-###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console -- > Reporting services point  
+###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console -- > Reporting Services point  
 
 
 |Description|UDP|TCP|
@@ -211,7 +216,7 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |RPC (initial connection to WMI to locate provider system)|--|135|  
 
-###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager console -- > SMS provider  
+###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager console -- > SMS Provider  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -233,7 +238,7 @@ This communication is used to confirm whether the other client computer is awake
 
 -   To report content validation  
 
--   To report the status of package downloads
+-   To report the status of package downloads (pull-distribution point)
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -320,7 +325,7 @@ This communication is used to confirm whether the other client computer is awake
 |-----------------|---------|---------|  
 |Secure Hypertext Transfer Protocol (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsRSP-SQL"></a> Reporting services point -- > SQL Server  
+###  <a name="BKMK_PortsRSP-SQL"></a> Reporting Services point -- > SQL Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -473,7 +478,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC (See note 6, **Dynamic ports**)|  
 
-###  <a name="BKMK_PortsSite-Provider"></a> Site server -- > SMS provider  
+###  <a name="BKMK_PortsSite-Provider"></a> Site server -- > SMS Provider  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -498,7 +503,7 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 |Server Message Block (SMB)|--|445|  
 |RPC Endpoint Mapper|135|135|  
 
-###  <a name="BKMK_PortsProvider-SQL"></a> SMS provider -- > SQL Server  
+###  <a name="BKMK_PortsProvider-SQL"></a> SMS Provider -- > SQL Server  
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -609,15 +614,15 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
 
 -   Site server  
 
--   Reporting services point  
+-   Reporting Services point  
 
--   SMS provider  
+-   SMS Provider  
 
 -   SQL Server --> SQL Server  
 
 When a SQL Server hosts a database from more than one site, each database must use a separate instance of SQL Server, and each instance must be configured with a unique set of ports.  
 
-If you have a firewall enabled on the SQL Server computer, ensure that it is configured to allow the ports in use by your deployment, and at any locations on the network between computers that communicate with the SQL Server.  
+If you have a firewall enabled on the SQL Server computer, ensure that it is configured to allow the ports in use by your deployment. Also configure firewalls that are at additional locations on the network between computers that communicate with the SQL Server to allow these same ports.  
 
 For an example of how to configure SQL Server to use a specific port, see [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) in the SQL Server TechNet library.  
 
@@ -687,7 +692,7 @@ Use IPsec to help secure the traffic between the site server and site systems. I
 The ports that are using during client installation depend on the client deployment method. For a list of ports for each client deployment method, see **Ports used during Configuration Manager client deployment** in the [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) topic. For information about how to configure Windows Firewall on the client for client installation and post-installation communication, see [Windows Firewall and port settings for clients in System Center Configuration Manager](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md).  
 
 ###  <a name="BKMK_MigrationPorts"></a> Ports used by migration  
-The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites  SQL Server database, and to share distribution points.  
+The site server that runs migration uses several ports to connect to applicable sites in the source hierarchy to gather data from the source sites' SQL Server databases, and to share distribution points.  
 
  For information about these ports, see the [Required configurations for migration](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) section in the  [Prerequisites for migration in System Center Configuration Manager](../../../core/migration/prerequisites-for-migration.md) topic.  
 
