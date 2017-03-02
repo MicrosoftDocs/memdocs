@@ -13,10 +13,14 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 You can manage iOS, Windows, and Android devices with Configuration Manager and Microsoft Intune. All management tasks are handled from the Configuration Manager console where you perform the rest of your management tasks seamlessly integrated with Microsoft Intune's online service over the internet.  You can use Configuration Manager to let users access company resources on their devices in a secure, managed way. By using device management, you protect company data while letting users enroll their personal or company-owned devices to access company data. Management capabilities on devices:
 
@@ -38,9 +42,3 @@ To bring devices into hybrid management, those devices must be enrolled with the
 - "Bring your own device" (BYOD) enrollment lets users enroll their personal phones, tablets, or PCs.
 - Corporate-owned device (COD) enrollment enables management scenarios like remote wipe, shared devices, or user affinity for a device.
 - If you use [Exchange ActiveSync](../plan-design/device-enrollment-methods.md#mobile-device-management-with-exchange-activesync-and-configuration-manager), either on-premises or hosted in the cloud, you can enable simple Intune management without enrollment. Windows PCs can also be managed using [Intune client software](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune).
-
-
-## Next steps
- - [Plan and design](plan-design/plan-hybrid-mobile-device-management.md)
- - [Prerequisites for device enrollment](../deploy-use/setup-hybrid-mdm.md)
- - [Manage corporate-owned devices](../deploy-use/enroll-company-owned-devices.md)
