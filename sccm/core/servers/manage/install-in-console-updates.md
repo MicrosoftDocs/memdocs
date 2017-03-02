@@ -15,7 +15,7 @@ caps.latest.revision: 36
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Install in-console updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install in-console updates for System Center Configuration Manager *Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager synchronizes with the Microsoft cloud service to get updates. You can then install these updates from within the Configuration Manager console.
 
 ## Get available updates
