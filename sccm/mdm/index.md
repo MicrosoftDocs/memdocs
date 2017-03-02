@@ -1,3 +1,3 @@
 ---
-redirect_URL: /sccm/mdm/understand/hybrid-mobile-device-management
+redirect_URL: https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management
 ---
