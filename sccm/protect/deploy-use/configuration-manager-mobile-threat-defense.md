@@ -19,7 +19,7 @@ manager: angrobe
 ---
 # Intune Mobile Threat Defense connectors in Configuration Manager
 
-[!INCLUDE[classic-portal](../includes/classic-portal.md)]
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 The [hybrid MDM deployment (SCCM with Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) and the integration between Intune and the Mobile Threat Defense partners give you the ability to control the access to company resources and data based on device risk assessment.
 
