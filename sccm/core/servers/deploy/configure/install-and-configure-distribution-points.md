@@ -19,7 +19,7 @@ manager: angrobe
 # Install and configure distribution points for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
+ 
 You install System Center Configuration Manager distribution points to host the content (files and software) that you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
  When you *install a new distribution point* (by using the installation wizard) or *manage the properties of an existing distribution point* (by editing the distribution point's properties), you can configure most of the distribution point settings. A few settings are available only when you're either installing or editing, but not both:  
@@ -339,9 +339,9 @@ Manage the boundary groups for which this distribution point is assigned. You ca
 
 Additionally:
 
-- Before version 1610, you can check the **Allow clients to use this site system as a fallback source location for content** box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available. For more information about boundary groups, see [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606). For preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
+- Before version 1610, you can check the **Allow clients to use this site system as a fallback source location for content** box to let clients outside these boundary groups fall back and use the distribution point as a source location for content when no other distribution points are available. For more information about boundary groups, see [Boundary groups for versions 1511, 1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606). For preferred distribution points, see [Fundamental concepts for content management in System Center Configuration Manager](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).
 
-- With version 1610 or later, you configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups).
+- With version 1610 or later, you configure boundary group *relationships* that define when and to which boundary groups a client can fall back to find content. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
 
 
 ### Schedule  
