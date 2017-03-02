@@ -1,6 +1,6 @@
 ---
 title: "Data warehouse| Microsoft Docs"
-description: "Data warehouse service point and database for System Center Configuration Manager"
+description: "Data Warehouse service point and database for System Center Configuration Manager"
 ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
@@ -17,15 +17,15 @@ ms.author: brenduns
 manager: angrobe
 
 ---
-#  The Data Warehouse Service point for System Center Configuration Manager
+#  The Data Warehouse service point for System Center Configuration Manager
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-Begning with version 1702 you can use the Data Warehouse Service point to store and report on long-term historical data for your Configuration Manager deployment.
+Beginning with version 1702 you can use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
 > [!TIP]  
-> Introduced with version 1610, the data warehouse service point is a pre-release feature. To enable it, see [Use pre-release features](/sccm/core/servers/manage/pre-release-features).
+> Introduced with version 1702, the Data Warehouse service point is a pre-release feature. To enable it, see [Use pre-release features](/sccm/core/servers/manage/pre-release-features).
 
-The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your reporting services point.
+The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
 
 
 Data that is synchronized includes the following from the Global Data and Site Data groups:
@@ -36,25 +36,24 @@ Data that is synchronized includes the following from the Global Data and Site D
 - Software deployments
 - Inventory details (however, inventory history is not synchronized)
 
-When the site system role installs, it installs and configures the data warehouse database. It also installs several new reports so you can easily search for and report on this data.
+When the site system role installs, it installs and configures the data warehouse database. It also installs several reports so you can easily search for and report on this data.
 
 
 
-## Prerequisites for the Data Warehouse Service point
+## Prerequisites for the Data Warehouse service point
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
 - The computer account of the computer where you install the site system role is used to synchronize data with the data warehouse database. This account requires the following permissions:  
   - **Administrator** on the computer that will host the data warehouse database.
   - **DB_owner** permission on the data warehouse database.
--	Your hierarchy must have a Reporting Services point site system role installed before you can install the data warehouse.
 -	The data warehouse database is supported on a default or named instance of SQL Server 2012 or later. The edition must be Enterprise or Datacenter.
-  - SQL Server Cluster:  This configuration should work, but has not been tested.
   - SQL Server AlwaysOn availability group: This configuration is not supported.
+  - SQL Server Cluster: SQL Server failover clusters are not supported. This is because the data warehouse database has not been deeply tested on SQL Server failover clusters.
 
 
 ## Install the Data Warehouse
-You can install the Data Warehouse site system role at the top-tier site of your hierarchy (a central administration site or stand-alone primary site).
+You can install the data warehouse site system role only at the top-tier site of your hierarchy (a central administration site or stand-alone primary site).
 
-Each hierarchy supports a single instance of this role, and it can be located on any site system. The SQL Server that hosts the database for the warehouse can be local to the site system role, or remote. Although you must have a Reporting Services point installed before you can install the data warehouse service point, the data warehouse service point does not need to be installed on the same server as the reporting services point.
+Each hierarchy supports a single instance of this role, and it can be located on any site system of that top-tier site. The SQL Server that hosts the database for the warehouse can be local to the site system role, or remote. Although the data warehouse works with the Reporting Services point that is installed at the same site, the two site system roles do not need to be installed on the same server.   
 
 To install the role, use the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles) for more information.  
 
@@ -62,12 +61,11 @@ When you install the role, Configuration Manager creates the data warehouse data
 
 ### Configurations used during installation
 **System Role Selection** page:  
-Before the Wizard displays the *Data Warehouse Service point*, the site must have a reporting services point.
 
 **General** page:
 - 	**Configuration Manager data warehouse database connection settings**:
  - **SQL Server fully qualified domain name**:  
- Specify the full qualified domain name (FQDN) of the server that hosts the data warehouse service database.
+ Specify the full qualified domain name (FQDN) of the server that hosts the Data Warehouse service point database.
  - **SQL Server instance name, if applicable**:   
  If you do not use a default instance of SQL Server, you must specify the instance.
  - **Database name**:   
@@ -84,22 +82,33 @@ Specify the TCP/IP port number that is configured for the SQL Server that hosts 
     - **Daily**: Specify that synchronization runs every day.
     - **Weekly**: Specify a single day each week, and weekly recurrence for synchronization.
 
-  ## Reporting
-After you install a Data Warehouse site system role, the following reports are available on your reporting services point with a Category of **Data Warehouse**:
- - **Application Deployment Report**:   
+## Reporting
+After you install a Data Warehouse service point, several reports become available on the Reporting Services point that is installed at the same site. If you install the Data Warehouse service point before installing a Reporting Services point, the reports will be added automatically when you later install the Reporting Services point.
+
+The Data Warehouse site system role includes the following reports, which have a Category of **Data Warehouse**:
+ - **Application Deployment - Historical**:   
  View details for application deployment for a specific application and machine.
- - **Endpoint Protection and Software Update Compliance Report**:
+ - **Endpoint Protection and Software Update Compliance - Historical**:
   View computers that are missing software updates.  
- - **General Hardware Inventory Report**:	  
+ - **General Hardware Inventory - Historical**:	  
  View all hardware inventory for a specific machine.
- - **General Software Inventory Report**:	  
+ - **General Software Inventory - Historical**:	  
  View all software inventory for a specific machine.
- - **Infrastructure Health Overview**:	 
+ - **Infrastructure Health Overview - Historical**:	 
  Displays an overview of the health of your Configuration Manager infrastructure
- - **List of Malware Detected**:	 
+ - **List of Malware Detected - Historical**:	 
  View malware that has been detected in the organization.
- - **Software Distribution Summary Report**:	 
+ - **Software Distribution Summary - Historical**:	 
  A summary of software distribution for a specific advertisement and machine.
+
+
+## Expand an existing stand-alone primary into a hierarchy
+Before you can install a central administration site to expand an existing stand-alone primary site, you must first uninstall the Data Warehouse service point role. After you install the central administration site, you can then install the site system role at the central administration site.  
+
+Unlike a move of the data warehouse database, this change results in a loss of the historic data you have previously synchronized at the primary site. It is not supported to backup the database from the primary site and restore it at the central administration site.
+
+
+
 
 ## Move the Data Warehouse database
 Use the following steps to move the data warehouse database to a new SQL Server:
@@ -108,15 +117,21 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 > [!NOTE]     
 > After you restore the database to the new server, ensure that the database access permissions are the same on the new data warehouse database as they were on the original data warehouse database.  
 
-2.	Use the Configuration Manager console to remove the Data Warehouse Service point site system role from the current server.
-3.	Reinstall the Data Warehouse Service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
+2.	Use the Configuration Manager console to remove the Data Warehouse service point site system role from the current server.
+3.	Reinstall the Data Warehouse service point and specify the name of the new SQL Server and instance that hosts the Data Warehouse database you restored.
 4.	After the site system role installs, the move is complete.
 
 ## Troubleshooting data warehouse issues
 **Log Files**:  
-Use the following logs to investigate problems with the installation of the Data Warehouse Service point, or synchronization of data:
- - *DWSSMSI.log* and *DWSSSetup.log* - Use these logs to investigate errors when installing the Data warehouse service point.
+Use the following logs to investigate problems with the installation of the Data Warehouse service point, or synchronization of data:
+ - *DWSSMSI.log* and *DWSSSetup.log* - Use these logs to investigate errors when installing the Data Warehouse service point.
  - *Microsoft.ConfigMgrDataWarehouse.log* – Use this log to investigate data synchronization between the site database to the data warehouse database.
+
+**Set up Failure**  
+ Installation of the Data Warehouse service point fails on a remote site system server when the data warehouse is the first site system role installed on that computer.  
+  - **Solution**:   
+    Make sure that the computer you are installing the Data Warehouse service point on already hosts at least one other site system role.  
+
 
 **Known synchronization issues**:   
 Synchronization fails with the following in the *Microsoft.ConfigMgrDataWarehouse.log*: **“failed to populate schema objects”**  
@@ -153,8 +168,8 @@ A connection was successfully established with the server, but then an error occ
 | Step   | Details  |
 |:------:|-----------|  
 | **1**  | 	The site server transfers and stores data in the site database.  |  
-| **2**  |  	Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
-| **3**  |  The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
+| **2**  |  	Based on its schedule and configuration, the Data Warehouse service point gets data from the site database.  |  
+| **3**  |  The Data Warehouse service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
 **Reporting**
 
 | Step   | Details  |
