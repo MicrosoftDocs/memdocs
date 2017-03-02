@@ -19,7 +19,7 @@ manager: angrobe
 # Install and configure distribution points for System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Current Branch)*
-
+ 
 You install System Center Configuration Manager distribution points to host the content (files and software) that you deploy to devices and users. You can also create distribution point groups that simplify how you manage distribution points, and how you distribute content to distribution points.  
 
  When you *install a new distribution point* (by using the installation wizard) or *manage the properties of an existing distribution point* (by editing the distribution point's properties), you can configure most of the distribution point settings. A few settings are available only when you're either installing or editing, but not both:  
