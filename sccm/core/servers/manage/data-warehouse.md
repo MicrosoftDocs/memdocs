@@ -48,6 +48,7 @@ When the site system role installs, it installs and configures the data warehous
 -	The data warehouse database is supported on a default or named instance of SQL Server 2012 or later. The edition must be Enterprise or Datacenter.
   - SQL Server AlwaysOn availability group: This configuration is not supported.
   - SQL Server Cluster: SQL Server failover clusters are not supported. This is because the data warehouse database has not been deeply tested on SQL Server failover clusters.
+  - When the data warehouse database is remote from the site server database, you must have a separate license for the SQL Server that hosts the database.
 
 
 ## Install the Data Warehouse
