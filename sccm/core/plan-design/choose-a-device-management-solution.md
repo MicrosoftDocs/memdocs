@@ -1,5 +1,5 @@
 ---
-title: "Choose a device management solution for System Center Configuration Manager | Microsoft Docs"
+title: "Choose a device management solution - Configuration Manager | Microsoft Docs"
 description: "Learn about the solutions that System Center Configuration Manager offers for managing PCs, servers, and devices."
 ms.custom: na
 ms.date: 12/08/2016
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 caps.latest.revision: 14
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: nbigman
+ms.author: nbigman
+manager: angrobe
 
 ---
-# Choose a device management solution for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Choose a device management solution for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager (also known as ConfgMgr or SCCM) offers different solutions for managing PCs, servers, and devices. You can choose the solution that's right for you, based on the device platforms you need to manage and the management functionality you need.  
 
 
@@ -80,7 +85,7 @@ You can use these device management solutions by themselves or in combination wi
 |Software deployment|Yes|Yes|Yes||  
 |Monitor with fallback status point|Yes||||  
 |Connections to management points|Yes||Yes||  
-|Connections to distribution points|Yes|Yes|Yes||  
+|Connections to distribution points|Yes||Yes||  
 |Block from Configuration Manager|Yes|Yes|Yes||  
 |Quarantine and block from Exchange Server (and Configuration Manager)||||Yes|  
 |Remote wipe| |Yes|Yes|Yes|  

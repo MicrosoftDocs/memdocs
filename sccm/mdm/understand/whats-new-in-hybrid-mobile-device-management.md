@@ -2,7 +2,7 @@
 title: "What's new hybrid MDM  | Microsoft Docs"
 description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
-ms.date: 01/12/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -32,6 +32,34 @@ This article provides details on the new mobile device management (MDM) features
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
 
+## New hybrid features in February 2017
+
+### New in Microsoft Intune
+
+The following Intune features introduced in February 2017 work in hybrid deployments:
+
+- **Modernizing the Company Portal website**
+
+  The Company Portal website supports apps that are targeted to users who do not have managed devices. The website aligns with other Microsoft products and services by using a new contrasting color scheme, dynamic illustrations, and a "hamburger menu," which contains helpdesk contact details and information on existing managed devices. The landing page is rearranged to emphasize apps that are available to users, with carousels for Featured and Recently Updated apps. You can find before-and-after images available on the [UI updates](/intune/whats-new/whats-new-in-intune-app-ui) page.
+
+- **New MDM server address for Windows devices**
+
+  The MDM server address for enrolling Windows and Windows Phone devices has changed from manage.microsoft.com to enrollment.manage.microsoft.com. Notify your user to use enrollment.manage.microsoft.com as the MDM server address if prompted for it while enrolling a Windows or and Windows Phone device. This update also requires any CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to manage.microsoft.com to be replaced with a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com. For additional information about this change, visit http://aka.ms/intuneenrollsvrchange.
+
+### New in Configuration Manager Technical Preview 1702
+
+- **Android for Work Support**
+
+  You can now manage Android devices using Android for Work in hybrid MDM environments using Configuration Manager Technical Preview 1702. Supported Android devices can now be enrolled as Android for Work devices, which creates a work profile on the device to which apps approved in Play for Work can be deployed. You can also configure and deploy configuration items, compliance policies, and resource access profiles for these devices.
+
+- **Non-Compliant Apps Compliance Settings**
+
+  You can now create non-compliant apps rules for Android and iOS apps in compliance policies. If devices have the specified applications installed, they will be marked “non-compliant” and will lose access to company resources according to conditional access policies in place.
+
+- **PFX Certificate Creation and Distribution and S/MIME Support**
+
+  You can now create and deploy PFX certificates to users in a hybrid environment. These certificates can then be used for S/MIME email encryption and decryption by devices that the user has enrolled.
+
 ## New hybrid features in January 2017
 
 ### New in Microsoft Intune
@@ -45,6 +73,12 @@ The following Intune features introduced in January 2017 work in hybrid deployme
 - **Resolve issue where iOS devices are inactive, or the admin console cannot communicate with them**
 
   When users’ devices lose contact with Intune, you can give them new troubleshooting steps to help them regain access to company resources. See [Devices are inactive, or the admin console cannot communicate with them](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them).
+
+### New in Configuration Manager Technical Preview 1701
+
+- **Android and iOS versions are no longer targetable in creation wizards for hybrid MDM**
+
+  Beginning in Technical Preview 1701 for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. To learn more, see [Android and iOS versions are no longer targetable in creation wizards](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm).
 
 
 ## New hybrid features in December 2016

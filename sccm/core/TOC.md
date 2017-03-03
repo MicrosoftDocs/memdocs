@@ -17,10 +17,10 @@
 ### [Upgrade the Long-Term Servicing Branch to the Current Branch](understand/convert-to-current-branch.md)
 ##  [Use cloud services](understand/use-cloud-services.md)
 ### [Configuration Manager on Azure](understand/configuration-manager-on-azure.md)
-##  [Frequently asked questions about diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
+##  [FAQ for product and licensing](understand/product-and-licensing-faq.md)
+##  [FAQ for diagnostics and usage data](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [Plan and design](plan-design/get-ready.md)
-
 ##   Product changes
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
@@ -35,6 +35,7 @@
 ###  [Site and site system prerequisites](plan-design/configs/site-and-site-system-prerequisites.md)
 ###  [Supported operating systems for site system servers](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [Supported operating systems for clients and devices](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+###  [Support for Windows 10 as a client](plan-design/configs/support-for-windows-10.md)
 ###  [Supported operating systems for consoles](plan-design/configs/supported-operating-systems-consoles.md)
 ###  [Recommended hardware](plan-design/configs/recommended-hardware.md)
 ###  [Support for SQL Server versions](plan-design/configs/support-for-sql-server-versions.md)
@@ -89,6 +90,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
@@ -258,7 +260,6 @@
 ###  [Introduction to hardware inventory](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [How to extend hardware inventory](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [How to configure hardware inventory](clients/manage/inventory/configure-hardware-inventory.md)
-<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [How to use Resource Explorer to view hardware inventory](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Hardware inventory for Linux and UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Security and privacy for hardware inventory](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
@@ -302,4 +303,4 @@
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
-###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md)
+###  [Upgrade readiness](clients/manage/upgrade/upgrade-analytics.md)

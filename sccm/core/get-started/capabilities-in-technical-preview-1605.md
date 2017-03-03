@@ -1,8 +1,8 @@
 ---
-title: "Capabilities in Technical Preview 1605 for System Center Configuration Manager | Microsoft Docs"
+title: "Capabilities in Technical Preview 1605 Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1605."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other

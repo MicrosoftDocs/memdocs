@@ -35,7 +35,7 @@
 ### [Cryptographic controls technical reference](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
-### [Configure Endpoint Protection](deploy-use/configure-endpoint-protection.md)
+### [Configure Endpoint Protection](deploy-use/endpoint-protection-configure.md)
 #### [Site system role](deploy-use/endpoint-protection-site-role.md)
 #### [Alerts](deploy-use/endpoint-configure-alerts.md)
 #### [Definition updates](deploy-use/endpoint-definition-updates.md)

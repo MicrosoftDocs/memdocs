@@ -1,5 +1,5 @@
 ---
-title: "Monitor clients | cloud management gateway | Microsoft Docs"
+title: "Monitor cloud management gateway - Configuration Manager | Microsoft Docs"
 description: ""
 ms.date: 11/18/2016
 ms.prod: configuration-manager

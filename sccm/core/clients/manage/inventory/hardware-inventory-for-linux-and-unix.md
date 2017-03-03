@@ -2,7 +2,7 @@
 title: "Hardware inventory | Microsoft Docs | Linux UNIX "
 description: "Learn how use hardware inventory for Linux and UNIX in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 caps.latest.revision: 6
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: andredm7ms.author: andredmmanager: angrobe
 
 ---
 # Hardware inventory for Linux and UNIX in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
