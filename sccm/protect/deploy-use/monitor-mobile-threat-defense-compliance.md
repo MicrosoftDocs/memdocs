@@ -45,7 +45,8 @@ You can also see the individual device status:
 
 2.  Click on **Devices**.
 
-> [!TIP] You can add the **Device threat compliance** and the **Device threat level** columns to see the status. These columns are not displayed by default.
+> [!TIP] You can add the **Device threat compliance** and the **Device threat level** columns to see the status.
+> These columns are not displayed by default.
 
 ## Device Threat Protection tab
 
