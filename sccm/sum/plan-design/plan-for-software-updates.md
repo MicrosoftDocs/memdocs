@@ -4,7 +4,7 @@ title: Plan for software updates | Microsoft Docs
 description: "A plan for the software update point infrastructure is essential before you use software updates in a System Center Configuration Manager production environment."
 keywords:
 author: dougebyms.author: dougebymanager: angrobe
-ms.date: 01/04/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service:
@@ -33,8 +33,7 @@ Before you use software updates in a System Center Configuration Manager product
 
     For details about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems).
 
--   By default, Configuration Manager does not support configuring software update points as NLB clusters. However, you can use the Configuration Manager SDK to configure up to four software update points on a NLB cluster.  
-
+-   By default, Configuration Manager does not support configuring software update points as NLB clusters. Prior to Configuration Manager version 1702, you could use the Configuration Manager SDK to configure up to four software update points on a NLB cluster. However, starting in Configuration Manager version 1702, software update points are not supported as NLB clusters and upgrades to Configuration Manager version 1702 will be blocked if this configuration is detected.
 
 ### Capacity planning for software updates objects  
  Use the following capacity information to plan for software updates objects.  
@@ -46,7 +45,12 @@ Before you use software updates in a System Center Configuration Manager product
      You must also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](../../compliance/deploy-use/create-configuration-baselines.md).
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
- The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies: where to install the software update point for the site; which sites require a software update point that accepts communication from Internet-based clients; whether you will configure the software update point as an NLB cluster’ and whether you need a software update point at a secondary site. Use the following sections to determine the software update point infrastructure.  
+ The central administration site and all child primary sites must have a software update point where you will deploy software updates. As you plan for the software update point infrastructure, you need to determine the following dependencies:
+ - where to install the software update point for the site
+ - which sites require a software update point that accepts communication from Internet-based clients
+ - whether you need a software update point at a secondary site.
+
+Use the following sections to determine the software update point infrastructure.  
 
 > [!IMPORTANT]  
 >  For information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates](prerequisites-for-software-updates.md).  
@@ -115,7 +119,7 @@ Enable this option on a device collection or on a set of selected devices. Once 
  Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your corporate security policy does not allow access to the Internet from the top-level site, you can configure the synchronization source for the top-level site to use an existing WSUS server that is not in your Configuration Manager hierarchy. For example, you might have a WSUS server installed in your DMZ that has Internet access, but your top-level site does not. You can configure the WSUS server in the DMZ as your synchronization source for software updates metadata. You must ensure that the WSUS server in the DMZ synchronizes software updates that meet the criteria that you need in your Configuration Manager hierarchy. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS connection account that has access to the WSUS server in the DMZ and confirm that the firewall permits traffic for the appropriate ports. For more information, review the [ports used by the software update point to the synchronization source](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
 ###  <a name="BKMK_NLBSUPSP1"></a> Software update point configured to use an NLB  
- Software update point switching will likely address the fault tolerance needs that you have. However, NLB is more robust than software update point failover for pure load balancing, and NLB can increase the reliability and performance of a network. Though there is no option in the Configuration Manager console to configure the software update point to use NLB, you have the option to configure NLB by using the Set-CMSoftwareUpdatePoint PowerShell cmdlet. For more information about the Set-CMSoftwareUpdatePoint PowerShell cmdlet, see the [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
+ Software update point switching will likely address the fault tolerance needs that you have. By default, Configuration Manager does not support configuring software update points as NLB clusters. Prior to Configuration Manager version 1702, you could use the Configuration Manager SDK to configure up to four software update points on a NLB cluster. However, starting in Configuration Manager version 1702, software update points are not supported as NLB clusters and upgrades to Configuration Manager version 1702 will be blocked if this configuration is detected. For more information about the Set-CMSoftwareUpdatePoint PowerShell cmdlet, see the [Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834).
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
  The software update point is optional on a secondary site. When you install a software update point on a secondary site, the WSUS database is configured as a replica of the default software update point at the parent primary site. You can install only one software update point at a secondary site. The devices that are assigned to a secondary site are configured to use a software update point at the parent site when a software update point is not installed at the secondary site. Typically, you will install a software update point at a secondary site when there is limited network bandwidth between the devices that are assigned to the secondary site and the software update points at the parent primary site, or when the software update point approaches the capacity limit. After a software update point is successfully installed and configured at the secondary site, a site-wide policy is updated for client computers that are assigned to the site, and they will start to use the new software update point.  
