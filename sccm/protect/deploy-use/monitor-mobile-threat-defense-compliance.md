@@ -30,7 +30,10 @@ To monitor the mobile threat defense status:
 
 2.  In the **Monitoring** workspace, click on the **Security** node.
 
-A summary of the compliance status with various thread level is displayed in visual charts. You can click on the individual sections of the chart to see more information like, the number of devices reporting as non-compliant by platform, and any errors that are reported.
+You can see a summary of the compliance status with different threat levels, which is displayed in a visual chart format. You can click on the individual sections of the charts to see more information like: 
+
+- The number of devices reporting as non-compliant by platform
+- Any errors related to the device compliance status
 
 ![](http://i.imgur.com/bmPsiWk.png)
 
