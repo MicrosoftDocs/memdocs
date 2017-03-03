@@ -52,42 +52,13 @@ Additionally, on the **Devices** screen, you can click on specific devices, then
 |-|-|-|
 |**Description**| Yes | Details about the threat provided by the Mobile Threat Defense partner. |
 |**Last update time**| Yes | The last time the Mobile Threat Defense partner sent updated detail about the threat to Intune. |
-|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of 3 values:- **Low**- **Medium**- **High** |
-|**Threat status**| Yes | The current state of the threat on the device. Possible states:
-- **Active**
-- **Resolved**
-- **Ignored:** Indicates that the user ignored the threat on their device, but the threat is still present. |
-|**Threat type**| Yes | Mobile Threat Defense partner type of threat. Possible values:
-- App
-- File
-- OS |
+|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of the three values: **Low**, **Medium** or **High** |
+|**Threat status**| Yes | The current state of the threat on the device. Possible states: **Active**, **Resolved** or **Ignored:** Indicates that the user ignored the threat on their device, but the threat is still present. |
+|**Threat type**| Yes | Mobile Threat Defense partner type of threat. Possible values: App, File or OS |
 |**AAD Account ID**| No | The Azure Active Directory unique identifier. |
-|**Classification**| Yes | Mobile Threat Defense partner provided classification of threat. Possible values:
-- Root Enabler
-- Riskware
-- Adware
-- Chargeware
-- DataLeak
-- Trojan
-- Worm
-- Virus
-- Exploit
-- Backdoor
-- Bot
-- AppDropper
-- ClickFraud
-- Spam
-- Spyware
-- SurveillanceWare
-- Vulnerability
-- Unknown
-- RootJailbrake
-- Connectivity
-- TollFraud
-- SideloadedApp |
+|**Classification**| Yes | Mobile Threat Defense partner provided classification of threat. Possible values: Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, RootJailbrake, Connectivity, TollFraud, SideloadedApp |
 |**Device ID**| No | The Azure Active Directory object ID representing the Workplace Joined Device with threat information. |
-|**Entity type**| No | It’s used by the Mobile Threat Defense service to service communication. Possible value: <br /><br />
-- Threat |
+|**Entity type**| No | It’s used by the Mobile Threat Defense service to service communication. Possible value: Threat |
 |**Threat ID**| No | Mobile Threat Defense partner generated unique identifier for the threat. The Threat ID is used for tracking resolution. |
 |**Threat URL**| No | When present, the Threat URL links back to the Mobile Threat Defense partner’s management console view of this specific threat. |
 |**Partner ID**| No | The identifier for the Azure AD multi-tenant app owned by the Mobile Threat Defense partner. This app has permission to send data to Intune. |
