@@ -52,20 +52,20 @@ Additionally, on the **Devices** screen, you can click on specific devices, then
 |-|-|-|
 |**Description**| Yes | Details about the threat provided by the Mobile Threat Defense partner. |
 |**Last update time**| Yes | The last time the Mobile Threat Defense partner sent updated detail about the threat to Intune. |
-|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of 3 values:<br /><br />
+|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of 3 values:
 - **Low**
 - **Medium**
 - **High** |
-|**Threat status**| Yes | The current state of the threat on the device. Possible states:<br /><br />
+|**Threat status**| Yes | The current state of the threat on the device. Possible states:
 - **Active**
 - **Resolved**
 - **Ignored:** Indicates that the user ignored the threat on their device, but the threat is still present. |
-|**Threat type**| Yes | Mobile Threat Defense partner type of threat. Possible values:<br /><br />
+|**Threat type**| Yes | Mobile Threat Defense partner type of threat. Possible values:
 - App
 - File
 - OS |
 |**AAD Account ID**| No | The Azure Active Directory unique identifier. |
-|**Classification**| Yes | Mobile Threat Defense partner provided classification of threat. Possible values:<br /><br />
+|**Classification**| Yes | Mobile Threat Defense partner provided classification of threat. Possible values:
 - Root Enabler
 - Riskware
 - Adware
