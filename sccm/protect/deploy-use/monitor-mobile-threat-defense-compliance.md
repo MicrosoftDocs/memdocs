@@ -46,7 +46,7 @@ You can also see the individual device status:
 
 ## Device Threat Protection tab
 
-Additionally, on the **Devices** screen, you can click on specific devices, then click on the **Device Threat Protection** tab to gather more details about their compliance status. Find below a list of column descriptions, its details, and expected values when using this tab to monitor the compliance status on your devices.
+Additionally, on the **Devices** screen, you can click on specific devices, then click on the **Device Threat Protection** tab that provides more details about the device compliance status. Find below the column descriptions and the its expected values to help you analyze the device compliance status.
 
 |Column name|Visible by default|Description| 
 |-|-|-|
