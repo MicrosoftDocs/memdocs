@@ -58,3 +58,6 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
     4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.  
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+
+ > [!div class="button"]
+ [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

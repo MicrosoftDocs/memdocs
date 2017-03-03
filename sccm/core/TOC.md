@@ -266,7 +266,6 @@
 ###  [Introduction to hardware inventory](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [How to extend hardware inventory](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [How to configure hardware inventory](clients/manage/inventory/configure-hardware-inventory.md)
-###  [How to configure hardware inventory for mobile devices in a hybrid deployment](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
 ###  [How to use Resource Explorer to view hardware inventory](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Hardware inventory for Linux and UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Security and privacy for hardware inventory](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
@@ -310,4 +309,4 @@
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
-###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md)
+###  [Upgrade readiness](clients/manage/upgrade/upgrade-analytics.md)

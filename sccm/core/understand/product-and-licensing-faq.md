@@ -2,7 +2,7 @@
 title: "Product and Licensing FAQ | Microsoft Docs"
 description: "Find answers for common product and license questions for System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,16 +27,15 @@ This FAQ addresses common licensing questions about System Center Configuration 
 For more information about System Center Configuration Manager features, refer to the Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) product page
 
 
-## Details
-System Center Configuration Manager is….
 
-## FAQ
+
+## System Center Configuration Manager licensing FAQ
 
 1.	**What is Current Branch (CB)?**   
 The Current Branch is the production ready build of System Center Configuration Manager that provides an active servicing model. This servicing model is like the experience with Windows 10 or the Windows Server 2016 Nano Server installation option. This approach supports customers who are moving at a “cloud cadence” and wish to innovate more quickly. With the Current Branch servicing model, System Center Configuration Manager customers continue to receive new features and functionality. For this reason, only customers with active Software Assurance on System Center Configuration Manager Licenses or with equivalent subscription rights may install and use the Current Branch of System Center Configuration Manager.
 
 2.	**What is Long Term Servicing Branch (LTSB)?**  
-The Long-Term Servicing Branch is a production ready build of System Center Configuration Manager that is intended for customers who allow Software Assurance or equivalent subscription rights to lapse. When compared to the Current Branch, the LTSB has [reduced functionality](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager). Customers who allow Software Assurance or equivalent subscription rights to lapse must uninstall the Current Branch of System Center Configuration Manager. Customers who have perpetual license rights to System Center Configuration Manager may then install and use the LTSB build of the version of System Center Configuration Manager that is current at the time of lapse.
+The Long-Term Servicing Branch is a production ready build of System Center Configuration Manager that is intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the Current Branch, the LTSB has [reduced functionality](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the Current Branch of System Center Configuration Manager. Customers who have perpetual license rights to System Center Configuration Manager may then install and use the LTSB build of the version of System Center Configuration Manager that is current at the time of expiration.
 
 3.	**I’ve seen SA and L&SA used in licensing content. What do these mean in regard to System Center Configuration Manager?**    
 Both SA (Software Assurance) and L&SA (License and Software Assurance) are license options that grant rights to use System Center Configuration Manager. SA is an option for a customer that is renewing SA coverage from a prior agreement. L&SA is an option for a customer buying a new license and SA coverage.

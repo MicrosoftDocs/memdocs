@@ -8,7 +8,6 @@
 ## [Plan for, and configure compliance settings](plan-design/plan-for-and-configure-compliance-settings.md)
 ## [Common tasks for managing compliance](plan-design/common-tasks-for-managing-compliance.md)
 ### [Devices with the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md)
-### [Devices not running the Configuration Manager client](plan-design/common-tasks-for-managing-compliance-on-devices-not-running-the-client.md)
 ### [Create and deploy configuration baselines](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [Security and privacy](plan-design/security-and-privacy-for-compliance-settings.md)
 
@@ -19,11 +18,6 @@
 #### [Windows 10](deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
 #### [Mac OS X](deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
 #### [Windows desktop and server (custom)](deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)
-### [Devices managed without the Configuration Manager client](deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-#### [Windows 8.1 and Windows 10](deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-#### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
-#### [iOS and Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
-#### [Android and Samsung KNOX Standard](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
 ## [Create child configuration items](deploy-use/create-child-configuration-items.md)
 
 ## [Create configuration baselines](deploy-use/create-configuration-baselines.md)

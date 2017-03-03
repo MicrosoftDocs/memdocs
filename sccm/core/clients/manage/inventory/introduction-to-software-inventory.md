@@ -32,7 +32,7 @@ After software inventory is enabled and the clients run a software inventory cyc
 
 -   Create [query-based collections](../../../../core/clients/manage/collections/introduction-to-collections.md) that include devices with specified files.   
 
--   [Run reports](../../../../core/servers/manage/reporting.md) that provide details about files on devices. 
+-   [Run reports](../../../../core/servers/manage/reporting.md) that provide details about files on devices.
 
 -   Use [Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md) to examine detailed information about the files that were inventoried and collected from client devices.   
 
@@ -40,21 +40,4 @@ After software inventory is enabled and the clients run a software inventory cyc
 
  Configuration Manager can discover dual-boot computers but only returns inventory information from the operating system that was active at the time of inventory.  
 
-## Software inventory for mobile devices enrolled with Microsoft Intune  
- You can collect inventory for apps installed on mobile devices. The apps that are inventoried will depend on whether the device is company-owned or personal-owned. For personal devices, the only apps that are inventoried are apps that are managed by Microsoft Intune.  
-
-> [!NOTE]  
->  Inventory on the apps installed on mobile devices is collected as part of the [hardware inventory](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) process.  
-
- Here are the apps that are inventoried for personal-owned or company-owned devices.  
-
-|Platform|For Personal-owned Devices|For Company-owned devices|  
-|--------------|---------------------------------|--------------------------------|  
-|Windows 10 (without the Configuration Manager client)|Only managed apps|Only managed apps| 
-|Windows 8.1 (without the Configuration Manager client)|Only managed apps|Only managed apps|  
-|Windows Phone 8|Only managed apps|Only managed apps|  
-|Windows RT|Only managed apps|Only managed apps|  
-|iOS|Only managed apps|All apps installed on the device|  
-|Android|Only managed apps|All apps installed on the device|  
-
-
+**Mobile Devices:** See [software inventory for mobile devices enrolled with Microsoft Intune](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)  for information about collecting inventory for apps installed on mobile devices.
