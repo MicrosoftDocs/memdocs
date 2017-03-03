@@ -52,10 +52,7 @@ Additionally, on the **Devices** screen, you can click on specific devices, then
 |-|-|-|
 |**Description**| Yes | Details about the threat provided by the Mobile Threat Defense partner. |
 |**Last update time**| Yes | The last time the Mobile Threat Defense partner sent updated detail about the threat to Intune. |
-|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of 3 values:
-- **Low**
-- **Medium**
-- **High** |
+|**Threat severity**| Yes | Threat severity is the definition for an individual threat based on the configuration of the admin in the Mobile Threat Defense partner console. It has one of 3 values:- **Low**- **Medium**- **High** |
 |**Threat status**| Yes | The current state of the threat on the device. Possible states:
 - **Active**
 - **Resolved**
