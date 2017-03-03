@@ -294,7 +294,7 @@ Identify and follow the best practices for your version of IIS Server. However, 
 ##  <a name="BKMK_Security_FSP"></a> Security Best Practices for the Fallback Status Point  
  Use the following security best practices if you install a fallback status point in Configuration Manager.  
 
- For more information about the security considerations when you install a fallback status point, see [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP).  
+ For more information about the security considerations when you install a fallback status point, see [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point).  
 
 **Do not run other site system roles on the site system and do not install it on a domain controller.**  
 
