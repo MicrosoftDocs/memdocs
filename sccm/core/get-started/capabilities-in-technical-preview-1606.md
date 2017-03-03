@@ -1,8 +1,8 @@
 ---
-title: "Capabilities in Technical Preview 1606 for System Center Configuration Manager | Microsoft Docs"
+title: "Capabilities in Technical Preview 1606 Configuration Manager"
 description: "Learn about features available in the Technical Preview for System Center Configuration Manager, version 1606."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
   - configmgr-other
@@ -216,10 +216,16 @@ For more information, see [Manage Office 365 ProPlus updates](https://technet.mi
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.
-1. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
-2. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.
+2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md).
+3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
+
+
 ## <a name="osdpreservedriveletter"></a>The OSDPreserveDriveLetter task sequence variable has been deprecated
-The OSDPreserveDriveLetter task sequence variable determines whether or not the task sequence uses the drive letter captured in the operating system image WIM file when applying that image to a destination computer. This task sequence variable has been deprecated in Technical Preview 1606. During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer.
+The OSDPreserveDriveLetter task sequence variable determines whether or not the task sequence uses the drive letter captured in the operating system image WIM file when applying that image to a destination computer.
+- This task sequence variable has been deprecated in Technical Preview 1606.
+
+During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer. 
+
 ## <a name="updatesandservicing"></a>Changes for the Updates and Servicing Node
 With Technical Preview 1606 several changes have been introduced that apply to Updates and Servicing in the Configuration Manager console:
 - **Node name change:**

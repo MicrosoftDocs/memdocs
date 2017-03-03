@@ -2,7 +2,7 @@
 title: "Endpoint Protection client frequently asked questions | Microsoft Docs"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,39 +20,23 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
 
 -   [Why do I need antivirus and antispyware software?](#why-do-i-need-antivirus-and-antispyware-software)  
-
--   [How can I tell if my computer is infected with malicious software?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)  
-
+-   [How can I tell if my computer is infected with malicious software?](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
+-   [How can I find the version of Windows Defender?](#how-can-i-find-the-version-of-windows-defender)
 -   [What should I do if Windows Defender or Endpoint Protection detects malicious software on my computer?](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
-
 -   [What is a virus?](#what-is-a-virus)  
-
 -   [What is a spyware?](#what-is-spyware)  
-
 -   [What's the difference between viruses, spyware, and other potentially harmful software?](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
-
 -   [Where do viruses, spyware, and other potentially unwanted software come from?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
-
 -   [Can I get malicious software without knowing it?](#can-i-get-malicious-software-without-knowing-it)  
-
 -   [Why is it important to review license agreements before installing software?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
-
 -   [What's the difference between Endpoint Protection and Windows Defender?](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
-
 -   [Why doesn't Windows Defender detect cookies?](#why-doesn-t-windows-defender-detect-cookies)  
-
 -   [How can I prevent malware?](#how-can-i-prevent-malware)  
-
 -   [What are virus and spyware definitions?](#what-are-virus-and-spyware-definitions)  
-
 -   [How do I keep virus and spyware definitions up to date?](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  
-
 -   [How do I remove or restore items quarantined by Windows Defender or Endpoint Protection?](#how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection)  
-
 -   [What is real-time protection?](#what-is-real-time-protection)  
-
 -   [How do I know that Windows Defender or Endpoint Protection is running on my computer?](#how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer)
-
 -   [How to set up Windows Defender or Endpoint Protection alerts?](#how-to-set-up-windows-defender-or-endpoint-protection-alerts)  
 
 ##  Why do I need antivirus and antispyware software?  
@@ -95,6 +79,9 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 -   Your computer suddenly starts running more slowly than it usually does. Not all computer performance problems are caused by malicious software, but malicious software, especially spyware, can cause a noticeable change.  
 
 There might be malicious software on your computer even if you don't see any symptoms. This type of software can collect information about you and your computer without your knowledge or consent. To help protect your privacy and your computer, you should run Windows Defender or Endpoint Protection at all times.  
+
+## How can I find the version of Windows Defender?
+ To view the version of Windows Defender running on your computer, open Windows Defender (click **Start** and then search for **Windows Defender**), click **Settings**, and scroll to the bottom of the Windows Defender settings to find **Version info**.
 
 ##  What should I do if Windows Defender or Endpoint Protection detects malicious software on my computer?  
 

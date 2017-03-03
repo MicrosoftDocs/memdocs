@@ -2,7 +2,7 @@
 title: "Plan for and configure application management | Microsoft Docs"
 description: "Implement and configure the necessary dependencies for deploying applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -108,7 +108,7 @@ Use the information in this article to help you implement the necessary dependen
 
 1.  In the Configuration Manager console, choose **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then select the server to use for the Application Catalog.  
 
-3.  On the **Home** tab, in the **Create** group, choose **Add Site System Roles**.  
+3.  On the **Home** tab, in the **Server** group, choose **Add Site System Roles**.  
 
 4.  On the **General** page, specify the general settings for the site system, and then choose **Next**.  
 
@@ -123,7 +123,7 @@ Use the information in this article to help you implement the necessary dependen
 
     Status messages: Use the components **SMS_PORTALWEB_CONTROL_MANAGER** and **SMS_AWEBSVC_CONTROL_MANAGER**.  
 
-    For example, status ID **1015** for **SMS_PORTALWEB_CONTROL_MANAGER** confirms that Site Component Manager was successfully installed the Application Catalog website point.  
+    For example, status ID **1015** for **SMS_PORTALWEB_CONTROL_MANAGER** confirms that Site Component Manager successfully installed the Application Catalog website point.  
 
     Log files: Search for **SMSAWEBSVCSetup.log** and **SMSPORTALWEBSetup.log**.  
 

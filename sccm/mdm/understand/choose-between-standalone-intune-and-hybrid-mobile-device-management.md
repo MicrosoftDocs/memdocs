@@ -40,7 +40,7 @@ If you are choosing between standalone and hybrid, you should take into consider
 
 -   Role-based Access Control – restrict access to administrative functions based on assigned roles.
 
--   Scale – deploy and manage over 50,000 mobile devices.
+-   Scale – deploy and manage over 100,000 mobile devices.
 
 -   Single pane of glass –manage both traditional PC clients and Intune-managed devices using the same console.
 

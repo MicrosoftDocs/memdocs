@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/19/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: robstackmsftms.author: robstackmanager: angrobe
 ---
 # Manage apps from the Windows Store for Business with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and buy Windows apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can synch the list of apps you've bought with Configuration Manager, view them in the Configuration Manager console, and deploy them like you would any other app.
+The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and buy Windows apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can sync the list of apps you've bought with Configuration Manager, view them in the Configuration Manager console, and deploy them like you would any other app.
 
 
 ## Online and offline apps
@@ -34,7 +34,7 @@ Configuration Manager supports managing Windows Store for Business apps on Windo
 
 |Capability|Offline apps|Online apps|
 |------------|------------|------------|
-|Synch app data to Configuration Manager<br>(Synchronization occurs every 24 hours, or you can initiate an immediate synchronization,)|Yes|Yes|
+|Sync app data to Configuration Manager<br>(Synchronization occurs every 24 hours, or you can initiate an immediate synchronization,)|Yes|Yes|
 |Create Configuration Manager applications from store apps|Yes|Yes|
 |Support for free apps from the store|Yes|Yes<sup>1</sup>|
 |Support for paid apps from the store|No|Yes<sup>1</sup>|
@@ -89,6 +89,9 @@ In the Windows Store for Business, set up Configuration Manager as the store man
 5.  Choose **Activate** next to the application you just imported.
 6.  On the **Manage > Account Information** page, select **Show Offline-Licensed Apps** if you want to allow offline-licensed apps to be purchased.
 
+> [!Note]
+> If you are using more than one management tool to deploy Windows Store for Business apps, previously, you could only associate one of these with the Windows Store for Business. You can now associate multiple management tools with the store, for example, Intune and Configuration Manager.
+
 Add the store account to Configuration Manager.
 
 1. Ensure that you have bought at least one app from the Windows Store for Business. In the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and then choose **Windows Store for Business**.
@@ -113,7 +116,7 @@ Modify the client secret key from Azure Active Directory.
 2.	Select your Windows Store for Business account, and then choose **Properties**.
 3.	In the **Windows Store for Business Account Properties** dialog box, enter a new key in the **Client secret key** field, and then choose **Verify**. Once verified, choose **Apply**, and then close the dialog box.
 
-## Synch apps from the store with Configuration Manager
+## Sync apps from the store with Configuration Manager
 
 Synchronization occurs every 24 hours, or you can initiate an immediate synchronization using this procedure:
 

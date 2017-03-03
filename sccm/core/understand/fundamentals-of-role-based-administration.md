@@ -68,9 +68,9 @@ When you  design and implement administrative security for Configuration Manager
 
 -   *Full Administrator* grants all permissions in Configuration Manager.  
 
--   *Asset Analyst* grants administrative users the permission to view data that is collected by using Asset Intelligence, software inventory, hardware inventory, and software metering. Administrative users can create metering rules and Asset Intelligence categories, families, and labels.  
+-   *Asset Manager* grants permissions to manage the Asset Intelligence Synchronization Point, Asset Intelligence reporting classes, software inventory, hardware inventory, and metering rules.  
 
--   *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, and templates, and set up software updates for Network Access Protection (NAP).  
+-   *Software Update Manager* grants permissions to define and deploy software updates. Administrative users who are associated with this role can create collections, software update groups, deployments, and templates.  
 
 > [!TIP]  
 >  You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To view the roles, in the **Administration** workspace, expand **Security**, and then select **Security Roles**.  

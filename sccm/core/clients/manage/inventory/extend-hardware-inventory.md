@@ -2,7 +2,7 @@
 title: "Extend hardware inventory | Microsoft Docs"
 description: "Learn ways to extend hardware inventory in System Center Configuration Manager."
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 
 ---

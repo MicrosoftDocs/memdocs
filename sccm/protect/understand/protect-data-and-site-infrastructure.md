@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: Robstackms.author: robstackmanager: angrobe
 
 ---
 # Protect data and site infrastructure with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
@@ -21,7 +21,7 @@ You want your users to be able to securely access your organization's resources,
 
 -   You can minimize your users' efforts to connect to corporate resources by enabling VPN connectivity using VPN profiles. Learn more in [VPN profiles in System Center Configuration Manager](../deploy-use/vpn-profiles.md).  
 
--   Wi-Fi profiles in provide a set of tools and resources to help you create, deploy, and monitor wireless network settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to corporate wireless networks. Learn more in [Wi-Fi Profiles in System Center Configuration Manager](../deploy-use/introduction-to-wifi-profiles.md).  
+-   Wi-Fi profiles in provide a set of tools and resources to help you create, deploy, and monitor wireless network settings to devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to corporate wireless networks. Learn more in [Wi-Fi Profiles in System Center Configuration Manager](/sccm/protect/deploy-use/create-wifi-profiles).  
 
 -   [Certificate profiles in System Center Configuration Manager](../deploy-use/introduction-to-certificate-profiles.md) describes how to provision your users' devices with the certificates they need to connect to company resources.  
 

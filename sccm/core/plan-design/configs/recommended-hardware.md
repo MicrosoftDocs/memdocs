@@ -2,7 +2,7 @@
 title: "Recommended hardware | Microsoft Docs"
 description: "Get hardware recommendations to help you scale your System Center Configuration Manager environment beyond a basic deployment."
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -45,12 +45,12 @@ For best performance, use RAID 10 configurations for all data drives and a 1-Gbp
 |Stand-alone primary site server with a database site role on the same server<sup>1</sup>|16|96|80|  
 |Stand-alone primary site server with a remote site database|8|16|-|  
 |Remote database server for a stand-alone primary site|16|64|90|  
-|Central administration site server with a database site role on the same server<sup>1</sup>|16|96|80|  
+|Central administration site server with a database site role on the same server<sup>1</sup>|20|128|80|  
 |Central administration site server with a remote site database|8|16|-|  
 |Remote database server for a central administration site|16|96|90|  
 |Child primary site with a database site role on the same server|16|96|80|  
 |Child primary site server with a remote site database|8|16|-|  
-|Remote database server for a child primary site|16|64|90|  
+|Remote database server for a child primary site|16|72|90|  
 |Secondary site server|8|16|-|  
 
  <sup>1</sup> When the site server and SQL Server are installed on the same computer, the deployment supports the maximum [sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) for sites and clients. But, this configuration can limit [high availability options for System Center Configuration Manager](/sccm/protect/understand/high-availability-options), like using a SQL Server cluster. Also, because of the higher I/O requirements that are needed to support both SQL Server and the Configuration Manager site server when you're running both on the same computer, it's a good idea to consider using a configuration with a remote SQL Server machine if you have a larger deployment.  
