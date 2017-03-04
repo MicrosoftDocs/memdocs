@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: Nbigman
+ms.author: nbigman
+manager: angrobe
 
 ---
-# VPN profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# VPN profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Use VPN profiles in System Center Configuration Manager (also known as ConfigMgr or SCCM) to deploy VPN settings to users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
 
@@ -26,7 +31,7 @@ Use VPN profiles in System Center Configuration Manager (also known as ConfigMgr
 
  The sections below explain what devices you can configure with VPN profiles if you are using Configuration Manager.
 
- [](../../mdm/deploy-use/mm-create-vpn-profiles.md) reviews the devices you can configure with VPN profiles when using Configuration Manager with Microsoft Intune.  
+ See [VPN profiles on mobile devices](/sccm/mdm/deploy-use/create-vpn-profiles) to review the devices you can configure when using Configuration Manager with Microsoft Intune.  
 
 ## VPN profiles when using Configuration Manager  
  The following table describes the VPN profiles you can configure for various device platforms.  
