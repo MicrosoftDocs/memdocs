@@ -35,15 +35,9 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 
 -   Devices that run Windows RT 8.1  
 
--   Devices that run Windows Phone 8.1  
-
 -   Devices that run Windows 10 Desktop or Mobile  
 
--   IPhone devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
-
--   IPad devices that run iOS 5, iOS 6, iOS 7 and iOS 8  
-
--   Android devices that run version 4 or later
+[Create Wi-Fi profiles for mobile devices](../../mdm/deploy-use/create-wifi-profiles.md) provides  information about how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to mobile device users."
 
 > [!IMPORTANT]  
 >  To deploy profiles to Android, iOS, Windows Phone, and enrolled Windows 8.1 or later devices, these devices must be enrolled in Microsoft Intune. For information about how to get your devices enrolled, see [Enroll devices for management in Intune](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune).  
@@ -88,7 +82,7 @@ Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless net
 	>  Security types: **WPA2 Enterprise** or **WPA2 Personal**  
 	> Encryption types: **AES** or **TKIP**  
 	> EAP types: **Smart Card or other certificate** or **PEAP**  
-  
+
     > For Android devices, the security types **WPA Personal**, **WPA2 Personal** and **WEP** are not supported.  
 
 2.  Select the encryption method that the wireless network uses.  

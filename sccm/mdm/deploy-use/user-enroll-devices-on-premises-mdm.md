@@ -68,6 +68,3 @@ The following tasks explain how to enroll and verify enrollment of computers and
 1.  Start the Configuration Manager console.  
 
 2.  Click **Assets and Compliance** > **Overview** > **Devices**. The enrolled device appears in the list.  
-
-## See Also  
- [Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)

@@ -2,7 +2,7 @@
 title: "In-console updates | Microsoft Docs"
 description: "System Center Configuration Manager synchronizes with the Microsoft cloud to get updates you can install within the console."
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,7 +15,7 @@ caps.latest.revision: 36
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Install in-console updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Install in-console updates for System Center Configuration Manager *Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager synchronizes with the Microsoft cloud service to get updates. You can then install these updates from within the Configuration Manager console.
 
 ## Get available updates
@@ -23,7 +23,7 @@ Only updates that apply to your infrastructure and version are downloaded and ma
 
 -   In **online mode**, the service connection point automatically connects to the Microsoft cloud service and downloads applicable updates.  
 
-     By default, Configuration Manager checks for new updates every 24 hours. Beginning with version 1602, you can also check for updates immediately by choosing **Check for Updates** in the **Administration** > **Cloud Services** > **Updates and Servicing** node of the Configuration Manager console.  
+     By default, Configuration Manager checks for new updates every 24 hours. You can also check for updates immediately by choosing **Check for Updates** in the **Administration** > **Cloud Services** > **Updates and Servicing** node of the Configuration Manager console.  
 
 -   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. You must manually [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) to download and then import available updates.  
 
@@ -34,7 +34,7 @@ After updates are synchronized you can view them in the Configuration Manager co
 
 -   Updates you have not installed display as **Available**.
 
--   Updates you have installed display as **Installed**.  Beginning with version 1606, only the most recently installed update is shown. You can choose the **History** button on the ribbon to view previously installed updates.
+-   Updates you have installed display as **Installed**.  Only the most recently installed update is shown. You can choose the **History** button on the ribbon to view previously installed updates.
 
 
 
@@ -51,7 +51,7 @@ To better understand what happens when updates are downloaded, see:
 -   [Flowchart - Update replication for System Center Configuration Manager](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## Assign permissions to view and manage updates and features
-Prior to installing update 1606, to view updates in the console, a user must be assigned a security role that includes the **Read** permission in the permission group **Site**, and the security scope **All**. Beginning with update 1606, a role-based administration security class named **Update packages** grants access to view and manage updates in the Configuration Manager console.    
+To view updates in the console, a user must be assigned a role-based administration security role that includes the security class named **Update packages**. This class grants access to view and manage updates in the Configuration Manager console.    
 
 **About the Update packages class:**  
 By default, **Update packages** (SMS_CM_Updatepackages) is part of the following built-in security roles with the listed permissions:
@@ -85,13 +85,10 @@ By default, **Update packages** (SMS_CM_Updatepackages) is part of the following
 ###  <a name="bkmk_step1"></a> Step 1: Review the update checklist  
 Review the applicable update checklist for actions to take before you start the update:
 
--   Upgrade to 1511 from [Upgrade to System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md).    
+- Update to 1606: See [Checklist for installing update 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
 
--   Update to 1602 from 1511: See  [Checklist for installing update 1602](../../../core/servers/manage/checklist-for-installing-update-1602.md).
-
-- Update to 1606 from either 1511 or 1602: See [Checklist for installing update 1606](../../../core/servers/manage/checklist-for-installing-update-1606.md).  
-
-- Update to 1610 from either 1511, 1602, or 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+- Update to 1610 from either 1606: See [Checklist for installing update 1610](../../../core/servers/manage/checklist-for-installing-update-1610.md).  
+- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md).  
 
 ###  <a name="bkmk_step2"></a> Step 2: Test the database upgrade before installing an update  
 The information in this step applies only when you are installing an *update* for a System Center Configuration Manager site. If you are *upgrading* a System Center 2012 Configuration Manager site to System Center Configuration Manager, see [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade).
@@ -162,7 +159,7 @@ Later, when you install the update, you have the option to configure the update 
 
 -   When you use a Configuration Manager console after the site is updated, you are prompted to update the console.  
 
--  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat to this is for distribution points. When installing an update to a site that already runs version 1606 or later, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
+-  After the site server successfully completes installation of an update, it automatically updates all applicable site system roles.  The only caveat to this is for distribution points. When installing an update, all distribution points do not reinstall and go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at a time. The result is that only some distribution points go off-line to install the update. This allows distribution points that have not yet begun to update or that have completed the update to remain on-line and able to provide content to clients.
 
 
 ###  <a name="bkmk_overview"></a> Overview of in-console update installation  
@@ -175,7 +172,7 @@ You are presented with the Updates Wizard that displays a list of the product ar
     -   Prerequisite warnings can also stop the update installation. You should fix warnings before you retry the update installation. See [Retry installation of a failed update](#bkmk_retry) for more information.  
     -   Selecting the option **Ignore any prerequisite check warnings and install this update regardless of missing requirements**, sets a condition for the update installation that ignores prerequisite warnings. This allows the update installation to continue. If you do not select this option, the update installation will stop when a warning is encountered. Unless you have previously run the prerequisite check and fixed prerequisite warnings for a site, we do not recommend use of this option.  
 
-      Beginning with version 1606, in both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the Ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, if you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard), and that update installation stops with a state of prerequisite warning but no errors, you can later choose **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update installation that then ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.
+      In both the **Administration** and **Monitoring** workspaces, the Updates and Servicing node includes a button on the Ribbon named **Ignore prerequisite warnings**. This button becomes available when an update package fails to complete installation due to prerequisite check warnings. For example, if you install an update without using the option to ignore prerequisite warnings (from within the Updates Wizard), and that update installation stops with a state of prerequisite warning but no errors, you can later choose **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update installation that then ignores prerequisite warnings. When you use this option, the update installation automatically continues after a few minutes.
 
 
 
@@ -201,7 +198,7 @@ Use the following to monitor progress:
 
 -   In the Configuration Manager console: **Monitoring** > **Overview** > **Updates and Servicing Status** node. This node shows the installation status of only the update package that is currently being installed.  
 
-    Beginning with version 1606, the update pack installation is broken down to the following phases for ease of monitoring. For each phase, additional details include which log file to view for more information.:  
+  The update pack installation is broken down to the following phases for ease of monitoring. For each phase, additional details include which log file to view for more information.:  
     -   **Download** (This phase applies only to the top-tier site where the service connection point site system role is installed.)
     -   **Replication**
     -   **Prerequisites Check**
@@ -314,36 +311,7 @@ To view available features and their status, in the console navigate to **Admini
 When a feature is not optional, it's installed automatically and does not appear in the **Features** node.  
 
 ##  <a name="bkmk_prerelease"></a> Use pre-release features from updates
-Pre-release features are included in the product for early testing in a production environment, but should not be considered production ready. Beginning with 1606, you must give consent to use Pre-release features in System Center Configuration Manager before you can select and enable their use.  
-
-Giving consent is a one-time action per hierarchy that cannot be undone. Until you give consent, you cannot enable new pre-release features included with update 1606 or later update versions.
-
-To give consent, in the console go to **Administration** > **Site Configuration** > **Sites**, and then choose **Hierarchy Settings**. On the **General** tab, choose **Consent to use Pre-Release features**.
-
- > [!NOTE]
- > If you enabled pre-release features from Update 1602 before installing update 1606, those features remain enabled for use after you install 1606, even if you do not give consent to use pre-release features.
-
-When your hierarchy runs version 1606 or later, and you then install an update that includes pre-release features, those features are visible in the Updates and Servicing Wizard with the regular features included in the update:
-  - **If you have given consent:** You can enable pre-release features from within the Updates and Servicing Wizard when you are installing the update. To do so, select the pre-release features as you would any other feature.     
-
-    Optionally, you can wait to enable a pre-release feature later from the **Administration** > **Cloud Services** > **Updates and Servicing** > **Features** node of the console. In the **Features** node choose the feature and then choose **Turn on**. (This option is grayed out until you give consent.)  
-  -   **If you have not given consent:** When your're installing an update, pre-release features are visible in the Updates and Servicing Wizard but are grayed out and cannot be enabled. After the update is installed, you can view these features in the **Features** node, but you cannot enable them until after you have given consent in **Hierarchy Settings**.
-
- > [!TIP]
- > When you are installing update 1606, pre-release features that are included with update 1606 are not visible in the Updates and Servicing Wizard and cannot be enabled at that time. After update 1606 is installed, you can view the pre-release features it includes in the **Features** node.
-
-If you gave consent at a stand-alone primary site and then expand the hierarchy by installing a new central administration site, you must give consent again at the central administration site.
-
-**The following pre-release features are available:**
-
- |Feature                    |Added as pre-release |Added as a full feature |  
-|----------------------------|---------------------|------------------------|
-| Peer Cache for content distribution to clients |  [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Cloud management gateway |  [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Client Data Sources dashboard |  [Version 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite Connector  | [Version 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Servicing a cluster aware collection (service a server group)| [Version 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|Conditional access for PCs managed by System Center Configuration Manager | [Version 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+Pre-release features are features that are included in the Current Branch for early testing in a production environment. These features should not be considered production ready, but can be used in your production environement. To learn more about pre-release features, including how to enable them in your environement, see [Pre-release featuers](/sccm/core/servers/manage/pre-release-features).                |
 
 
 ## Known issues
