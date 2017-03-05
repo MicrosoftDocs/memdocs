@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# How to test client upgrades in a pre-production collection in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to test client upgrades in a pre-production collection in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can test a new Configuration Manager client version in a pre-production collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
 
 > [!NOTE]

@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Plan for security in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for security in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 ##  <a name="BKMK_PlanningForCertificates"></a> Plan for certificates (self-signed and PKI)  
  Configuration Manager uses a combination of self-signed certificates and public key infrastructure (PKI) certificates.  
 

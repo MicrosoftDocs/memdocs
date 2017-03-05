@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Configuring remote control in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Configuring remote control in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md). 
 
 To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.  

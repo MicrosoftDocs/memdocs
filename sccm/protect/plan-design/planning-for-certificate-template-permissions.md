@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Planning for certificate template permissions for certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Planning for certificate template permissions for certificate profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 The following information can help you plan for how to configure permissions for the certificate templates that System Center Configuration Manager uses when you deploy certificate profiles.  
 
