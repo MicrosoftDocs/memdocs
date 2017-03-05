@@ -2,7 +2,7 @@
 title: "Archive of  What's new hybrid MDM | Microsoft Docs"
 description: "Archive of past mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

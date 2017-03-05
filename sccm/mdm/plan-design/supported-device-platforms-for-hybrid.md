@@ -1,8 +1,8 @@
 ---
-title: "Supported Device Platforms for hybrid MDM"
+title: "Supported Device Platforms for hybrid MDM | Microsoft Docs"
 description: "Supported Device Platforms for hybrid MDM."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Supported Device Platforms for hybrid MDM*Applies to: System Center Configuration Manager (Current Branch)*
+# Supported Device Platforms for hybrid MDM
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Mobile device management with Configuration Manager using Microsoft Intune supports the following mobile device platforms:
 
 [!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]

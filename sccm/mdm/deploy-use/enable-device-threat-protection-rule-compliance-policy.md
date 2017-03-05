@@ -1,8 +1,8 @@
 ---
-title: "Enable device protection rule in compliance policy | System Center Configuration Manager"
+title: "Enable device protection rule in compliance policy | Microsoft Docs"
 description: "Enable mobile threat protection rule in the device compliance policy."
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

@@ -1,9 +1,9 @@
 ---
 
-title: "Enroll devices  | Microsoft Docs | MDM System Center"
+title: "Enroll devices  | Microsoft Docs"
 description: "Learn about methods to enroll devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
 caps.latest.revision: 6
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enroll devices for On-premises Mobile Device Management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 To manage computers and devices with System Center Configuration Manager On-premises Mobile Device Management, the devices need to be enrolled so that Configuration Manager can communicate with the devices for management tasks. Configuration Manager provides two methods for enrolling devices:  
 
 -   **User enrollment** - In this method, users initiate the enrollment process on their devices. For user enrollment to be successful, the device must have a trusted root certificate installed on it, and the user must be provisioned for enrollment by Configuration Manager.  To enroll device, the user simply provides work credentials, and the device is enrolled to be managed.  

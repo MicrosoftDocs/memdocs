@@ -2,7 +2,7 @@
 title: "Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Prepare to manage Android mobile devices with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up Android hybrid device management with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 For System Center Configuration Manager, users can download the Android company portal app from Google Play that lets them enroll Android (including Samsung KNOX Standard) devices. With the Android company portal app, you can manage compliance settings, wipe or delete Android devices, deploy apps, and collect software and hardware inventory. If the Android company portal app is not installed on Android devices, then you will not have all the management capabilities, such as inventory and compliance settings, but you can still deploy apps to Android devices.  
 
 ## Prepare to manage Android mobile devices with Configuration Manager and Intune  

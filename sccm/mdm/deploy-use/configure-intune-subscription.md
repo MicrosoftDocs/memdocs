@@ -2,7 +2,7 @@
 title: "Configure your Intune subscription using System Center Configuration Manager | Microsoft Docs"
 description: "Configure your Intune subscription using System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Configure your Intune subscription with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The Intune subscription lets you manage devices over the internet. This includes specifying which user collection can enroll devices and defining information presented to users. While creating the Intune subscription, you can also add company branding to the Intune company portal with your company logo and custom color schemes.
 
 The Intune subscription does the following:

@@ -2,7 +2,7 @@
 title: "Manage Applications in System Center Configuration Manager | Microsoft Docs"
 description: "Manage Applications in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# Manage Applications in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage Applications in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 When you manage devices through Microsoft Intune or Configuration Manager on-premises device management, you can manage these additional application types:
 - Windows Phone app package (*.xap file)
 - App Package for iOS (*.ipa file)

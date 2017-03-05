@@ -2,7 +2,7 @@
 title: "Manage Skype for Business Online access | Microsoft Docs"
 description: "Learn how to use conditional access policy to manage access to Skype for Business Online."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 caps.latest.revision: 6
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
+
 ---
-# Manage Skype for Business Online access*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage Skype for Business Online access
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Use conditional access policy for  **Skype for Business Online** to manage access to Skype for Business Online, based on conditions you specify.  
 
