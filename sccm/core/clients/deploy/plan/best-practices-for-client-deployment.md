@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Best practices for client deployment in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Best practices for client deployment in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ## Use software update-based client installation for Active Directory computers  
  This client deployment method uses existing Windows technologies, integrates with your Active Directory infrastructure, requires the least configuration in Configuration Manager, is the easiest to configure for firewalls, and is the most secure. By using security groups and WMI filtering for the Group Policy configuration, you also have a lot of flexibility to control which computers install the Configuration Manager client.  

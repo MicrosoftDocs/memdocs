@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# How to deploy clients to Windows computers in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to deploy clients to Windows computers in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Before you install Configuration Manager clients, ensure that all the [prerequisites](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md) are in place and that you have completed all required deployment configurations.   
 
 ##  <a name="BKMK_ClientPush"></a> How to install clients with client push  
