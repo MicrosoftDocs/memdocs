@@ -2,7 +2,7 @@
 title: "Conditional access | Microsoft Docs"
 description: "Learn how to use conditional access in System Center Configuration Manager to help secure email and other services."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,11 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 caps.latest.revision: 26
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
 
-# Manage access to services in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage access to services in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 ## Conditional access in System Center Configuration Manager
 Use **conditional access**  to help secure email and other services on devices that are enrolled with Microsoft Intune, depending on conditions you specify.  

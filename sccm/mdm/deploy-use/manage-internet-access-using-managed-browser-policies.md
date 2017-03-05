@@ -2,7 +2,7 @@
 title: "Manage Internet access using managed browser policies | Microsoft Docs"
 description: "Deploy the Intune Managed Browser to manage and restrict Internet access."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,11 +13,15 @@ ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 
 ---
-# Manage Internet access using managed browser policies with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage Internet access using managed browser policies with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 In System Center Configuration Manager, you can deploy the Intune Managed Browser (a web browsing application) and associate the application with a managed browser policy. The managed browser policy sets up an allow list or a block list that restricts the websites that users of the managed browser can go to.  
 
  Because this app is a managed app, you can also apply mobile application management policies to it, like controlling the use of cut, copy, and paste. This prevents screen captures and also ensures that links to content only open in other managed apps. For details, see [Protect apps using mobile application management policies](protect-apps-using-mam-policies.md).  

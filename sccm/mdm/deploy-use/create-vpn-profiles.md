@@ -2,7 +2,7 @@
 title: "VPN Profiles in System Center Configuration Manager | Microsoft Docs"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

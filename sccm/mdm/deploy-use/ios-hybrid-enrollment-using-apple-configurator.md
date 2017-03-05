@@ -2,7 +2,7 @@
 title: "Enroll iOS devices Apple Configurator - Configuration Manager | Microsoft Docs"
 descriptions: "Pre-enroll iOS devices by using Apple Configurator with Configuration Manager."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 caps.latest.revision: 5
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# iOS hybrid enrollment using Apple Configurator with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# iOS hybrid enrollment using Apple Configurator with Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Companies that buy iOS devices to be used by employees can manage them using Microsoft Intune. To prepare corporate-owned iOS devices for enrollment, you configure an enrollment profile in the Configuration Manager console and then export the profile URL for use by Apple Configurator. You prepare the iOS device for enrollment by connecting it to a Mac computer with a USB cable and using Apple Configurator to set it up. Apple Configurator factory resets the device and adds the enrollment profile so that the device can be enrolled when the user first powers it up and goes through the Setup Assistant process.
 
 The following procedure is recommended for dedicated iOS devices that will have a single user who uses the device to access company email and company resources such as apps and date.  

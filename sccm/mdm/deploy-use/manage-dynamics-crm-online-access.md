@@ -2,7 +2,7 @@
 title: "Manage Dynamics CRM Online access | Microsoft Docs"
 description: "Learn how to control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.prod: configuration-manager
 ms.technology:
@@ -16,7 +16,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ---
-# Manage Dynamics CRM Online access in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage Dynamics CRM Online access in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can control access to Microsoft Dynamics CRM Online from iOS and Android devices with Microsoft Intune conditional access.  Intune conditional access has two components:
 * [Device compliance policy](../../protect/deploy-use/device-compliance-policies.md) that the device must comply with in order to be considered compliant.
 * [Conditional access policy](../../protect/deploy-use/manage-access-to-services.md) that where you specify the conditions that the device must meet in order to access the service.

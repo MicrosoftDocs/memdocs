@@ -1,8 +1,8 @@
 ---
-title: "Device Enrollment Methods for hybrid MDM"
+title: "Device Enrollment Methods for hybrid MDM | Microsoft Docs"
 description: "Device enrollment methods for hybrid MDM."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: b81d06dc-3844-4117-9937-16732a227994
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Overview of device enrollment methods*Applies to: System Center Configuration Manager (Current Branch)*
+# Overview of device enrollment methods
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 After you extend Configuration Manager with Intune, you can enroll and manage corporate-owned devices or give users permission to enroll their personal devices. You can also manage company-owned devices with Intune using Configuration Manager.
 
 The following table shows enrollment methods with their supported capabilities. These capabilities include:

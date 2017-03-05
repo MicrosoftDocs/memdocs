@@ -1,8 +1,8 @@
 ---
-title: "Enable Lookout MTP in Intune | System Center Configuration Manager"
+title: "Enable Lookout MTP in Intune | Microsoft Docs"
 description: "Enable Lookout mobile threat protection in the Intune admin console."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

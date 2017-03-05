@@ -2,7 +2,7 @@
 title: "Managing compliance on devices managed with Intune | Microsoft Docs"
 description: "Learn about System Center Configuration Manager compliance settings by working through some common scenarios."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 caps.latest.revision: 5
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Managing compliance on devices managed with Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Managing compliance on devices managed with Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 These scenarios give you an introduction to using System Center Configuration Manager compliance settings by working through some common scenarios you might encounter.  
 
  If you are already familiar with compliance settings, detailed documentation about all the features you use can be found in the [Configuration items for devices managed with Intune](#configuration-items-for-devices-managed-with-intune) section.  
