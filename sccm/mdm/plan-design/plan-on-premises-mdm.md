@@ -2,7 +2,7 @@
 title: "Plan On-premises MDM | Microsoft Docs"
 description: "Plan for On-premises Mobile Device Management to manage mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Plan for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Plan for On-premises Mobile Device Management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle On\-premises Mobile Device Management.
 
 ##  <a name="bkmk_devices"></a> Supported devices  

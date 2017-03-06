@@ -2,7 +2,7 @@
 title: "Create PFX certificate profiles | Microsoft Docs"
 description: "Learn how to use PFX files in System Center Configuration Manager to generate user-specific certificates that support encrypted data exchange."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# How to create PFX certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create PFX certificate profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Certificate profiles work with Active Directory Certificate Services and the Network Device Enrollment Service role to provision authentication certificates for managed devices so that users can seamlessly access company resources. For example, you can create and deploy certificate profiles to provide the necessary certificates for users to initiate VPN and wireless connections.
 
 [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md) provides general information about creating and configuring certificaate profiles. This topic highlights some specific information about certificate profiles related to mobile device management.

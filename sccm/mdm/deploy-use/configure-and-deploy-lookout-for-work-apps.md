@@ -1,8 +1,8 @@
 ---
-title: "Deploy Lookout for Work app | System Center Configuration Manager"
+title: "Deploy Lookout for Work app | Microsoft Docs"
 description: "Configure and deploy Lookout for Work apps."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

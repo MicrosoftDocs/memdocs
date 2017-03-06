@@ -1,8 +1,8 @@
 ---
-title: "Restrict access based on risk | System Center Configuration Manager"
+title: "Restrict access based on risk | Microsoft Docs"
 description: "Restrict access to company resources based on device, network and application risk."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

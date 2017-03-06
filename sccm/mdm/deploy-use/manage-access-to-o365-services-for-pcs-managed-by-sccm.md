@@ -2,7 +2,7 @@
 title: "Manage access to O365 services for managed PCs | Microsoft Docs"
 description: "Learn how to configure conditional access for PCs that are managed by System Center Configuration Manager."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,9 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 caps.latest.revision: 15
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
+
 ---
-# Manage access to O365 services for PCs managed by System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Manage access to O365 services for PCs managed by System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 
  Beginning with version 1602 of Configuration Manager, you can configure conditional access for PCs managed by System Center Configuration Manager.  

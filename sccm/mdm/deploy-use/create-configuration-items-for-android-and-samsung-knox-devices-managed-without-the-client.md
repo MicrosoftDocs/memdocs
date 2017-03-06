@@ -2,7 +2,7 @@
 title: "Create configuration items for Android and Samsung KNOX Standard devices managed with Intune | Microsoft Docs"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
-ms.date: 12/14/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: article
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
 caps.latest.revision: 17
 caps.handback.revision: 0
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Create configuration items for Android and Samsung KNOX Standard devices managed with Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Create configuration items for Android and Samsung KNOX Standard devices managed with Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use the System Center Configuration Manager **Android and Samsung KNOX** configuration item to manage settings  for Android and Samsung KNOX Standard devices that are enrolled in Microsoft Intune or managed on-premises by Configuration Manager.  
 
 ## Create an Android and Samsung KNOX Standard configuration item  
