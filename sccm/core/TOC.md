@@ -52,6 +52,7 @@
 #### [Use a cloud-based distribution point](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [Use a pull-distribution point](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [The content library](plan-design/hierarchy/the-content-library.md)
+#### [Content library cleanup tool](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [Manage accounts to access content](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md)
 #### [Content source location scenarios](plan-design/hierarchy/content-source-location-scenarios.md)
