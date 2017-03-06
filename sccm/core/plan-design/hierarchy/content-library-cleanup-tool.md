@@ -26,13 +26,12 @@ The tool only affects the content on the distribution point that you specify whe
 
 You can find **ContentLibraryCleanup.exe** in the *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* folder on the site server at a central administration site or primary site.
 
-
-### Requirements  
+## Requirements  
  The tool can only run against a single distribution point at a time.  
  - It can run directly on the computer that hosts the distribution point you want to clean, or remotely from another server.
  - The user account that runs the tool must have direct role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy. The tool does not work when the account receives these permissions as a member of a Windows security group that has the Full Administrator permissions.
 
-### Modes of operation
+## Modes of operation
 You can run the tool in the following two modes. We recommend you run the tool in *What-If* mode so you can review the results before you run the tool in *delete mode*:
   1.	**What-If mode**:   
       If you do not specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point.
@@ -52,13 +51,13 @@ When the tool runs in either mode, it automatically creates a log with a name th
 By default, the log file is written to the temp folder of the user account that runs the tool, on the computer where the tool is run. You can use the **/log** switch to redirect the log file to another location, including a network share.
 
 
-### Run the tool
+## Run the tool
 To run the tool, open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.  
 
 Next, enter a command line that includes the required command line switches, and optional switches you want to use.
 
 
-#### Command line switches  
+### Command line switches  
 The following command line switches can be used in any order.   
 
 |Switch|Details|
