@@ -36,6 +36,8 @@ Use the Data Warehouse service point to store and report on long-term historical
 
 The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
 
-
-
 For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+
+
+## Content library cleanup tool
+Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
