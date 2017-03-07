@@ -31,21 +31,6 @@ Update 1702 for System Center Configuration Manager current branch is available 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
 
-## Data Warehouse service point
-Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
-
-The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
-
-For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
-
-
-
-
-## Content library cleanup tool
-Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
-
-
-
 
 ## Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
@@ -71,3 +56,39 @@ The following are improvements to using search in the Configuration Manager cons
      ![Righ-click option](./media/feedback-option.png)   
 
  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
+
+
+
+##  Changes for Updates and Servicing
+The following are changes for Updates and Servicing:
+
+**Node location**   
+The **Updates and Servicing** is now a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
+
+**New update states**  
+When you view available updates in the console, there are two new states:  
+  - **Available for install** - This is an update that has been downloaded and ready to install.
+  - **Ready for download**  - This update is available, but has not been downloaded. You can choose to download this update, but it has been superseded by a more recent update.
+
+
+ **Simpler update choices**  
+ The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
+
+ You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
+
+ **Improved cleanup of older updates**   
+ We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
+
+
+ ## Data Warehouse service point
+ Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
+
+ The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
+
+ For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+
+
+
+
+ ## Content library cleanup tool
+ Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
