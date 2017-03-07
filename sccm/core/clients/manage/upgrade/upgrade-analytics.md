@@ -57,8 +57,8 @@ There are several configuration steps that you have to take to ensure that your 
 
 ### Create the connection
 
-1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Readiness Connector** > **Create Connection to Upgrade Readiness** to start the **Add Upgrade Readiness Connection wizard**.
-3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client Secret Key**, then select **Next**.
+1.  In the Configuration Manager console, choose **Administration** > **Cloud Services** > **Upgrade Readiness Connector** > **Create Connection to Upgrade Analytics** to start the **Add Upgrade Analytics Connection Wizard**.
+3.  On the **Azure Active Directory** screen, provide **Tenant**, **Client ID**, and **Client secret key**, then select **Next**.
 4.  On the **Upgrade Readiness** screen, provide your connection settings by filling in your **Azure subscription**, **Azure resource group**, and **Operations Management Suite workspace**.
 5.  Verify your connection settings on the **Summary** screen, then select **Next**.
 
