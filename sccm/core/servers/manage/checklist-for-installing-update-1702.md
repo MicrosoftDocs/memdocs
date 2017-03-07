@@ -166,6 +166,6 @@ For more information about starting and then monitoring the prerequisite check, 
 **Update sites:**   
 You are now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates.](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)
 
-We recommend that you plan to install the update outside of normal business hours for each site, when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
+We recommend that you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 
 For more information, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
