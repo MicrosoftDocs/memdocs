@@ -20,7 +20,7 @@ ROBOTS: "NOINDEX, NOFOLLOW"
 *Applies to: System Center Configuration Manager (Current Branch)*
 
 Update 1702 for System Center Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606 or 1610. It is also available as a baseline version you can use when installing a new deployment.
-
+-
 > [!TIP]  
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >  Learn more about:    
@@ -62,22 +62,22 @@ The following are improvements to using search in the Configuration Manager cons
 ##  Changes for Updates and Servicing
 The following are changes for Updates and Servicing:
 
-**Node location**   
-The **Updates and Servicing** is now a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
+- **Node location**   
+  The **Updates and Servicing** is now a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
 
-**New update states**  
-When you view available updates in the console, there are two new states:  
+- **New update states**  
+  When you view available updates in the console, there are two new states:  
   - **Available for install** - This is an update that has been downloaded and ready to install.
   - **Ready for download**  - This update is available, but has not been downloaded. You can choose to download this update, but it has been superseded by a more recent update.
 
 
- **Simpler update choices**  
- The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
+- **Simpler update choices**  
+  The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
 
- You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
+  You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
- **Improved cleanup of older updates**   
- We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
+- **Improved cleanup of older updates**   
+  We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
 
 
  ## Data Warehouse service point
