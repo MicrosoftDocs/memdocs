@@ -319,7 +319,7 @@ You'll see the account name and organization name in the Intune portal when the 
 #### Approve and deploy Android for Work apps
 Follow these steps to approve apps in the Play for Work store, sync them to the Configuration Manager console, and deploy them to managed Android for Work devices. To deploy apps to users' work profiles, you'll need to approve the apps in Play for Work, and then sync the apps with the Configuration Manager console.
 
-1. Open a browser and go to: http://www.play.com/work
+1. Open a browser and go to: https://play.google.com/work.
 2. Sign in using the Google admin account you bound to your Intune tenant.
 3. Browse for apps you'd like to deploy in your environment and click **Approve** for each of them.
 4. In the Configuration Manager console, go to **Administrator** > **Overview** > **Cloud Services** > **Android for Work** and click **Sync**.
