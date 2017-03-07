@@ -110,7 +110,7 @@ Each preview release is supported up until three successive releases are availab
  |Check for running executable files before installing an application|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|![Not added](media/Red_X.gif)|
  |Send feedback from the Configuration Manager console | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#send-feedback-from-the-configuration-managercconsole)  |
  |Changes for Updates and Servicing  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#changes-for-updates-and-servicing) |
- |Peer Cache improvements  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#peer-cache-improvements) |![Not added](media/Red_X.gif)|
+ |Peer Cache improvements  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#peer-cache-improvements) |[1702](/sccm/core/plan-design/hierarchy/client-peer-cache)|
  |Use Azure Active Directory  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |![Not added](media/Red_X.gif)|
  |Conditional access device compliance policy improvements | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#conditional-access-device-compliance-policy-improvements) |![Not added](media/Red_X.gif)|
  |Antimalware client version alert | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#antimalware-client-version-alert) |![Not added](media/Red_X.gif)|

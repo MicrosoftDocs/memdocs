@@ -88,7 +88,15 @@ When you view available updates in the console, there are two new states:
  For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
 
+## Peer Cache improvements
+ Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+  -  Is in low battery mode.
+  -  CPU load exceeds 80% at the time the content is requested.
+  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+  -  There are no more available connections to the computer.   
+
+For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
 
- ## Content library cleanup tool
+## Content library cleanup tool
  Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
