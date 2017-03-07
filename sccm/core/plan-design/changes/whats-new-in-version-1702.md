@@ -80,7 +80,7 @@ The following are changes for Updates and Servicing:
   We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
 
 
- ## Data Warehouse service point
+## Data Warehouse service point
  Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
  The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
@@ -88,7 +88,15 @@ The following are changes for Updates and Servicing:
  For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
 
+## Peer Cache improvements
+ Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+  -  Is in low battery mode.
+  -  CPU load exceeds 80% at the time the content is requested.
+  -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
+  -  There are no more available connections to the computer.   
+
+For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
 
- ## Content library cleanup tool
+## Content library cleanup tool
  Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
