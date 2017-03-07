@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
 caps.latest.revision: 6
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Cryptographic controls technical reference*Applies to: System Center Configuration Manager (Current Branch)*
+# Cryptographic controls technical reference
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 System Center Configuration Manager uses signing and encryption to help protect the management of the devices in the Configuration Manager hierarchy. With signing, if data has been altered in transit, it's discarded. Encryption helps prevent an attacker from reading the data by using a network protocol analyzer.  
 

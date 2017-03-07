@@ -2,7 +2,7 @@
 title: "Predeclare devices with IMEI or iOS serial numbers | Microsoft Docs"
 description: "Predeclare corporate-owned devices with their IMEI or iOS serial number."
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,9 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 caps.latest.revision: 3
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 ---
-# Predeclare devices with IMEI or iOS serial numbers*Applies to: System Center Configuration Manager (Current Branch)*
+# Predeclare devices with IMEI or iOS serial numbers
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  Imported information will set **Ownership** of the devices that enroll as **Corporate** in lists of devices. An Intune license is still required for each user that accesses the service.  
 
 ## How to predeclare corporate-owned devices

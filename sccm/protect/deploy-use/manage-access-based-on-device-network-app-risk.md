@@ -1,3 +1,4 @@
 ---
-redirect_url: https://docs.microsoft.com/sccm/protect/deploy-use/lookout-mobile-threat-defense-in-configuration-manager
+redirect_url: /sccm/mdm/deploy-use/manage-access-based-on-device-network-app-risk
+redirect_document_id: TRUE
 ---

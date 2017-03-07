@@ -1,8 +1,8 @@
 ---
-title: "Set up certificates  | Microsoft Docs| On-premises MDM"
+title: "Set up certificates  | Microsoft Docs"
 description: "Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 caps.latest.revision: 27
 caps.handback.revision: 0
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 System Center Configuration Manager On\-premises Mobile Device Management requires the enrollment point, enrollment proxy point, distribution point, and device management point  site system roles to be set up for trusted communications with managed devices. Any site system server hosting one or more of those roles must have a unique PKI certificate bound to the web server on that system. A certificate with the same  root as the certificate on the servers most also be stored on managed devices to establish trusted communication with them.  
 
  For domain-joined devices, Active Directory Certificate Services installs the needed certificate with the trusted root on all devices automatically. For non-domain-joined devices, you must obtain a valid certificate with a trusted root by some other means. If you use the site CA as your trusted root (which is the same one Active Directory uses for domain-joined devices), the site system servers for the enrollment point and enrollment proxy point must have a certificate issued by that CA bound to them.  

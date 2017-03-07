@@ -2,7 +2,7 @@
 title: "Set up iOS and Mac hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up iOS device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,15 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up iOS hybrid device management with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 With Configuration Manager and Intune, you can enable BYOD ("bring your own device") iOS and Mac OS X device enrollment to give access to company email and resources to iPhone, iPad and Mac users. Once users install the Intune company portal app, their devices can be targeted with policy. Before you can manage iOS and Mac devices, you must import an Apple Push Notification service (APNs) certificate from Apple. This certificate allows Intune to manage iOS and Mac devices and establishes an accredited and encrypted IP connection with the mobile device management authority services.  
 
  You can also enroll corporate-owned iOS devices.  See [Enroll company-owned devices](enroll-company-owned-devices.md).  
@@ -58,3 +63,6 @@ With Configuration Manager and Intune, you can enable BYOD ("bring your own devi
     4.  Click **Browse**, and go to the APNs certificate (.cer) file downloaded from Apple. Configuration Manager displays the APNs certificate information. Click **OK** to save the APNs certificate to Intune.  
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
+
+ > [!div class="button"]
+ [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

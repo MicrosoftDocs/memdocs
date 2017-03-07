@@ -2,7 +2,7 @@
 title: "Migration prerequisites | Microsoft Docs"
 description: "Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -30,14 +30,17 @@ To migrate from a supported source hierarchy, you must have access to each appli
 ##  <a name="BKMK_SupportedMigrationVersions"></a> Versions of Configuration Manager that are supported for migration  
  You can migrate data from a source hierarchy that runs any of  the following versions of Configuration Manager:  
 
--   Configuration Manager 2007 SP2  (For the purpose of migration, Configuration Manager 2007 R2 or R3 on the source site are not a consideration. So long as the source site runs SP2, sites with either the R2 or R3  add-on installed are supported for migration to System Center Configuration Manager)  
+-   Configuration Manager 2007 SP2  (For the purpose of migration, Configuration Manager 2007 R2 or R3 on the source site are not a consideration. So long as the source site runs SP2, sites with either the R2 or R3  add-on installed are supported for migration to System Center Configuration Manager).  
 
--   System Center 2012 Configuration Manager SP2 or System Center 2012 R2 Configuration Manager SP1  
+-   System Center 2012 Configuration Manager SP2 or System Center 2012 R2 Configuration Manager SP1.  
 
     > [!TIP]  
     >  In addition to migration, you can use an in-place upgrade of sites that run System Center 2012 Configuration Manager to System Center Configuration Manager.  
 
--   A System Center Configuration Manager hierarchy of the same or lesser version of System Center Configuration Manager  
+-   A System Center Configuration Manager hierarchy of the same or lesser version of System Center Configuration Manager.  
+
+  For example, if you have a destination hierarchy that runs System Center Configuration Manager 1606, you could use migration to copy data from a source hierarchy that runs version 1606 or 1602. However you could not migrate data from a source hierarchy that runs 1610.  
+
 
 ##  <a name="BKMK_SorceSiteLanguage"></a> Source site languages that are supported for migration  
  When you migrate data between Configuration Manager hierarchies, the data is stored in the destination hierarchy in the language neutral format for System Center Configuration Manager. Because Configuration Manager2007 does not store data in a language neutral format, the migration process must convert objects to this format during migration from Configuration Manager 2007. Therefore, only Configuration Manager 2007 source sites that are installed with the following languages are supported for migration:  
