@@ -25,9 +25,12 @@
 ###  [Features and capabilities](plan-design/changes/features-and-capabilities.md)
 ###  [What's changed from Configuration Manager 2012](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [What’s new in incremental versions](plan-design/changes/whats-new-incremental-versions.md)
+###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
 ###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
+<!--
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
+-->
 ###  [Removed and deprecated features](plan-design/changes/removed-and-deprecated-features.md)
 
 ##   [Supported configurations](plan-design/configs/supported-configurations.md)
@@ -70,8 +73,10 @@
 
 ##   [Diagnostics and usage data](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [How diagnostics and usage data is used](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+<!--
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
+-->
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [How diagnostics and usage data is collected](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
@@ -103,10 +108,12 @@
 ###  [Capabilities in 1605](get-started/capabilities-in-technical-preview-1605.md)
 ###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
 ###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
+<!--
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
 ###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
+-->
 
 ##   [Migrate data between hierarchies](migration/migrate-data-between-hierarchies.md)
 ###  [Planning for migration](migration/planning-for-migration.md)
@@ -121,7 +128,8 @@
 #### [Planning to monitor migration](migration/planning-to-monitor-migration-activity.md)
 #### [Planning to complete migration](migration/planning-to-complete-migration.md)
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operations for migrating](migration/operations-for-migration.md)###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
+###  [Operations for migrating](migration/operations-for-migration.md)
+###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
