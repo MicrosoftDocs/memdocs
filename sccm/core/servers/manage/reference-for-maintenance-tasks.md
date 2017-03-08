@@ -2,7 +2,7 @@
 title: "Reference for maintenance tasks | Microsoft Docs"
 description: "Read details for each of the System Center Configuration Manager site maintenance tasks and whether these tasks are enabled by default."
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,6 +48,11 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
+**Delete Aged Client Download History**: Use this task to delete historical data about the download source used by clients. Download source information is used to populate the [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).  
+-  Central administration site – Not available
+-	 **Primary site** - Enabled
+-  Secondary site - Not available
+
 **Delete Aged Client Operations**: Use this task to delete all aged data for client operations from the site database. For example, this includes data for aged or expired client notifications (like download requests for machine or user policy), and for Endpoint Protection (like requests by an administrative user for clients to run a scan or download updated definitions).
 
 -   **Central administration site**: Enabled    
@@ -59,6 +64,13 @@ This topic lists details for each of the System Center Configuration Manager sit
 -   **Central administration site**: Enabled   
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
+
+**Delete Aged Cloud Management Gateway Traffic Data**:
+Use this task to delete all aged data about the traffic that passes through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) from the site database. For example, this includes data about the number of requests, total request bytes, total response bytes, number of failed requests, and maximum number of concurrent requests.  
+- **Central administration site** - Enabled
+- **Primary site** - Enabled
+- Secondary site - Not available
+
 
 **Delete Aged Collected Files**: Use this task to delete aged information about collected files from the database. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory in System Center Configuration Manager](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).  
 
@@ -222,6 +234,11 @@ This task operates only on resources that are Configuration Manager clients. It'
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
+
+**Delete Orphaned Client Deployment State Records**: Use this task to periodically purge the table that contains client deployment state information. This task will clean up records associated with obsolete or decommissioned devices.  
+-   **Central administration site**: Enabled    
+-   **Primary site**: Enabled    
+-   Secondary site: Not available 
 
 **Delete Unused Application Revisions**: Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
 
