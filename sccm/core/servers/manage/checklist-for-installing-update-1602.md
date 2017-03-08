@@ -15,7 +15,7 @@ caps.latest.revision: 13
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-
+robots: NOINDEX, NOFOLLOW
 ---
 # Checklist for installing update 1602 for System Center Configuration Manager
 
