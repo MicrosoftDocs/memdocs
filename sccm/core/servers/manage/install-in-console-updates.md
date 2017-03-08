@@ -15,7 +15,7 @@ caps.latest.revision: 36
 author: Brendunsms.author: brendunsmanager: angrobe
 
 ---
-# Install in-console updates for System Center Configuration Manager *Applies to: System Center Configuration Manager (Current Branch)*
+# Install in-console updates for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 System Center Configuration Manager synchronizes with the Microsoft cloud service to get updates. You can then install these updates from within the Configuration Manager console.
 
 ## Get available updates
@@ -23,14 +23,14 @@ Only updates that apply to your infrastructure and version are downloaded and ma
 
 -   In **online mode**, the service connection point automatically connects to the Microsoft cloud service and downloads applicable updates.  
 
-     By default, Configuration Manager checks for new updates every 24 hours. You can also check for updates immediately by choosing **Check for Updates** in the **Administration** > **Cloud Services** > **Updates and Servicing** node of the Configuration Manager console.  
+     By default, Configuration Manager checks for new updates every 24 hours. You can also check for updates immediately by choosing **Check for Updates** in the **Administration** > **Updates and Servicing** node of the Configuration Manager console. (Prior to version 1702, this node was under **Administration** > **Cloud Services**.)
 
 -   In **offline mode**, the service connection point does not connect to the Microsoft cloud service. You must manually [use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md) to download and then import available updates.  
 
 > [!NOTE]  
 >  In addition to the updates that you get when synchronizing with the Microsoft cloud service, out-of-band fixes that are installed by using the [Update Registration Tool](http://technet.microsoft.com/library/mt691544.aspx) are also imported into your console where you can then select them to install.  
 
-After updates are synchronized you can view them in the Configuration Manager console by going to the **Administration** > **Cloud Services** > **Updates and Servicing** node:  
+After updates are synchronized you can view them in the Configuration Manager console by going to the **Administration** > **Updates and Servicing** node:  
 
 -   Updates you have not installed display as **Available**.
 
@@ -136,7 +136,7 @@ Later, when you install the update, you have the option to configure the update 
 
 #### To run the prerequisite checker before installing an update  
 
-1.  In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Updates and Servicing**.  
+1.  In the Configuration Manager console, go to **Administration** > **Updates and Servicing**.   
 
 2.  Right click on the update package you want to run the prerequisite check for.  
 
@@ -193,7 +193,7 @@ As part of the update installation, Configuration Manager:
 **3. Monitor the progress of updates as they install**  
 Use the following to monitor progress:  
 
--   In the Configuration Manager console: **Administration** > **Cloud Services** > **Updates and Servicing** node. This node shows the installation status for all update packages.
+-   In the Configuration Manager console: **Administration** > **Updates and Servicing** node. This node shows the installation status for all update packages.
 
 
 -   In the Configuration Manager console: **Monitoring** > **Overview** > **Updates and Servicing Status** node. This node shows the installation status of only the update package that is currently being installed.  
@@ -231,7 +231,7 @@ We recommend that you install the update immediately.
 After the console update completes, you can verify the console and site version is correct. Go to **About System Center Configuration Manager** at the top-left corner of the console.  
 
 ###  <a name="bkmk_toptier"></a> To start the update installation at the top-tier site  
-At the top-tier site of your hierarchy, in the Configuration Manager console go to **Administration** > **Cloud Services** > **Updates and Servicing**, select an **Available** update, and then click **Install Update Pack**.  
+At the top-tier site of your hierarchy, in the Configuration Manager console go to **Administration** > **Updates and Servicing**, select an **Available** update, and then click **Install Update Pack**.  
 
 ###  <a name="bkmk_secondary"></a> To start the update installation at a secondary site  
 After a secondary sites parent primary site is updated, you can then update the secondary site from within the Configuration Manager console.  To do so, you use the **Upgrade Secondary Site Wizard**.  
@@ -258,7 +258,7 @@ You can retry the installation of an update for the entire hierarchy when that u
     -   Installation failed
     -   Replication of the content to the site failed   
 
-    Go to **Administration** > **Cloud Services** > **Updates and Servicing**, select the update, and then choose one of the following:  
+    Go to **Administration** > **Updates and Servicing**, select the update, and then choose one of the following:  
 
     -   **Retry** - When you run **Retry** from this node, the update install starts again and will automatically ignore prerequisite warnings. It will also re-replicate content for the update if replication previously failed.
     - **Ignore prerequisite warnings** - Beginning with version 1606, if the update install stops due to a warning, you can then choose **Ignore prerequisite warnings**. This action allows the installation of the update to continue (after a few minutes) and uses the option to ignore prerequisite warnings.   
@@ -306,7 +306,7 @@ For more information, see
 ##  <a name="bkmk_options"></a> Enable optional features from updates  
 When you install an update that includes one or more optional features, you will have the opportunity to enable those features in your hierarchy.  You can do so at the time the update is installed, or you can return to the console later and enable the optional features.
 
-To view available features and their status, in the console navigate to **Administration** > **Cloud Services** > **Updates and Servicing** > **Features**.
+To view available features and their status, in the console navigate to **Administration** > **Updates and Servicing** > **Features**.
 
 When a feature is not optional, it's installed automatically and does not appear in the **Features** node.  
 
