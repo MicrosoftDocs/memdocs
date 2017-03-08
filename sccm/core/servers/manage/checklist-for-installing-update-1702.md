@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version.
+When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version. (Because version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)  
 
 To get the update for version 1702, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
@@ -28,7 +28,7 @@ To get the update for version 1702, you must use a service connection point site
 
 -   If the update displays as **Downloading** and does not change, review the **hman.log** and **dmpdownloader.log** for errors.
 
-    -   Usually, you can also restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
+    -   If the dmpdownloader.log indicates the dmpdownloader process is asleep and waiting for an interval before checking for updates, you can can restart the **SMS_Executive** service on the site server to restart the download of the update's redistribution files.
 
     -   Another common download issue occurs when proxy server settings prevent downloads from <http://silverlight.dlservice.microsoft.com> and <http://download.microsoft.com>.
 
@@ -55,8 +55,8 @@ The first time you use a Configuration Manager console after the update has fini
 
 ## Checklist
 
-**Ensure that all sites run a supported version of System Center Configuration Manager:** 
-Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. Supported versions include 1606 or 1610.
+**Ensure that all sites run the same version of System Center Configuration Manager:** 
+Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702.
 
 **Review the status of your Software Assurance or equivalent subscription rights:**   
 You must have an active Software Assurance (SA) agreement to install update 1702. When you install this update, the **Licensing** tab presents the option to confirm your **Software Assurance expiration date**.
@@ -76,6 +76,11 @@ When a site installs this update, Configuration Manager automatically installs .
 This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. Additionally, .NET applications on the server might experience random failures until the server is restarted.
 
 For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).
+
+**Review the version of the Windows Assessment and Deployment Kit (ADK) for Windows 10**
+The Windows 10 ADK should be version 1607 or later. If you must update the ADK, do so before you begin update of Configuration Manager. This ensures the default boot images are automatically updated to the latest version of Windows PE. (Custom boot images must be updated manually.)
+
+If you update the site before you update the ADK, see the blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) for a script that can be used to regenerate the boot images.
 
 **Review the site and hierarchy status and verify that there are no unresolved issues:** 
 Before you update a site, resolve all operational issues for the site server, the site database server, and site system roles that are installed on remote computers. A site update can fail due to existing operational problems.
@@ -169,3 +174,11 @@ You are now ready to start the update installation for your hierarchy. For more 
 We recommend that you plan to install the update outside of normal business hours for each site when the process of installing the update and its actions to reinstall site components and site system roles will have the least effect on your business operations.
 
 For more information, see [Updates for System Center Configuration Manager](/sccm/core/servers/manage/updates).
+
+## Post update Checklist
+Review the following actions to take after the update installation is finished.
+1.	Make sure that site-to-site replication is active. In the console, view **Monitoring** > **Site Hierarchy**, and **Monitoring** > **Database Replication** for indications of problems or confirmation that replication links are active.
+2.	Make sure version 1702 is installed on all Site system computers including remote distribution points, management points, software update points, and other remote site system roles. Site system roles should reinstall automatically to update to the new version. I necessary, consider restarting remote site systems that do not update successfully.
+3.	Reconfigure database replicas for management points at primary sites that you disabled before starting the update.
+4.  Reconfigure database maintenance tasks that you disabled before starting the update.
+5.	If you configured client piloting before installing the update, upgrade clients per the plan you created.
