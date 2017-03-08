@@ -28,8 +28,11 @@ The public key infrastructure (PKI) certificates that you might require for Syst
 -   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. You can read about this in [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx). In general, we recommend that you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others).
->  Additionally, we recommend that any Internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.
+> Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. System Center Configuration Manager supports SHA-2 certificates and the use of SHA-2 certificates brings an important security advantage. Therefore, we recommend:
+> - That you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others).
+> - That any Internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.  
+>
+> In most cases the change to SHA-2 certificates has no impact on operations. For more information, see [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
  With the exception of the client certificates that System Center Configuration Manager enrolls on mobile devices and Mac computers, the certificates that Microsoft Intune automatically creates for managing mobile devices, and the certificates that System Center Configuration Manager installs on AMT-based computers, you can use any PKI to create, deploy, and manage the following certificates. However, when you use Active Directory Certificate Services and certificate templates, this Microsoft PKI solution can ease the management of the certificates. Use the **Microsoft certificate template to use** column in the following tables to identify the certificate template that most closely matches the certificate requirements. Template-based certificates can be issued only by an enterprise certification authority running on the Enterprise Edition or Datacenter Edition of the server operating system, such as Windows Server 2008 Enterprise and Windows Server 2008 Datacenter.  
 
