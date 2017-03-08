@@ -63,7 +63,7 @@ The following are improvements to using search in the Configuration Manager cons
 The following are changes for Updates and Servicing:
 
 - **Node location**   
-  The **Updates and Servicing** is now a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
+  After installing version 1702, the **Updates and Servicing** node appears as a top-level node under **Administration**. It is no longer a child node below **Cloud Services**.
 
 - **New update states**  
   When you view available updates in the console, there are two new states:  

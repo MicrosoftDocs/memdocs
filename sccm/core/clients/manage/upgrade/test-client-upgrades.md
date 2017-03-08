@@ -2,7 +2,7 @@
 title: "Test client upgrades pre-production collection | Microsoft Docs"
 description: "Test client upgrades in a pre-production collection in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,7 +47,7 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 ##  To install a Configuration Manager update that includes a new version of the client  
 
-1.  In the Configuration Manager console,  open **Administration** > **Cloud Services** > **Updates and Services**, select an **Available** update, and then choose **Install Update Pack**  
+1.  In the Configuration Manager console,  open **Administration** > **Updates and Servicing**, select an **Available** update, and then choose **Install Update Pack**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
      For more information on installing updates, see [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 
@@ -62,7 +62,7 @@ You can test a new Configuration Manager client version in a pre-production coll
 
 ##  To promote the new client to production  
 
-1.  In the Configuration Manager console, open **Administration** > **Cloud Services** > **Updates and Servicing**, and choose  **Promote Pre-production Client**.
+1.  In the Configuration Manager console, open **Administration** > **Updates and Servicing**, and choose  **Promote Pre-production Client**. (Prior to version 1702, Updates and Servicing was under **Administration** > **Cloud Services**.)
 
     > [!TIP]
     > The **Promote Pre-production Client** button is also available when you're monitoring client deployments in the console at **Monitoring** > **Client Status** > **Pre-production Client Deployment**.
