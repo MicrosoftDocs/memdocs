@@ -2,7 +2,7 @@
 title: "Supported Configurations for the LTSB  | Microsoft Docs"
 description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -48,13 +48,15 @@ The LTSB supports the use of the following Windows computer operating systems as
 - Windows Server 2016
 - Windows Server 2012 (x64): Standard, Datacenter
 - Windows Server 2008 R2 with SP1 (x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter
+- Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, Datacenter  *(See note 1)*
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 8.1 (x86, x64): Professional, Enterprise
 - Windows 7 with SP1 (x86, x64): Professional, Enterprise, Ultimate
 - The Server Core installation of Windows Server 2012
-- The Server Core installation of Windows Server 2012 R2  
+- The Server Core installation of Windows Server 2012 R2    
+
+*Note 1*: This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 
 ## Client management
 The following sections identify the client operating systems that you can manage with the LTSB. The LTSB does not support the addition of new operating systems as supported clients.

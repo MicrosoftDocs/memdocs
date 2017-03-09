@@ -2,7 +2,7 @@
 title: "Supported site system servers | Microsoft Docs"
 description: "Learn which Windows versions you can use to host a System Center Configuration Manager site or site system role."
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -227,24 +227,9 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 ## Windows Server 2008 with SP2 (x86, x64): Standard, Enterprise, and Datacenter  
  Windows Server 2008 is now in extended support and no longer in mainstream support, as detailed in  [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle). For more information about future support for these operating systems as site system servers with Configuration Manager, see [Removed and deprecated features for System Center Configuration Manager](../../../core/plan-design/changes/removed-and-deprecated-features.md).  
 
-**Site servers:**  
-
--   Central administration site  
-
--   Primary site  
-
--   Secondary site  
+This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 
 **Site system servers:**  
-
--   Application Catalog web service point  
-
--   Application Catalog website point  
-
--   Asset Intelligence synchronization point  
-
--   Certificate registration point  
-
 -   Distribution point  
 
     -   Distribution points on this operating system do not support Multicast.  
@@ -253,29 +238,7 @@ Beginning with version 1606 with the hotfix rollup from KB3186654 (or the baseli
 
     -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
--   Endpoint Protection point  
 
--   Enrollment point  
-
--   Enrollment proxy point  
-
--   Fallback status point  
-
--   Management point
-
--   Reporting services point  
-
--   Service connection point  
-
--   Site database server  
-
-     Site database servers are not supported on a read-only domain controller (RODC). For more information, see [You may encounter problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) in the Microsoft Knowledge Base. Additionally, secondary site servers are not supported on any domain controller.  
-
--   SMS_Provider  
-
--   Software update point  
-
--   State migration point  
 
 ## Windows 10 (x86, x64): Pro and Enterprise  
 **Site system servers:**  
