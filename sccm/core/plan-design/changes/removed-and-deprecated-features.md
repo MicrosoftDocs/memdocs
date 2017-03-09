@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 1/5/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,10 +72,10 @@ Additional details for features removed with version 1511 of System Center Confi
 
 |**Operating systems**|**Deprecation first announced**|**Support removed** |  
 |-|-|-|  
-|Windows Server 2008|July 10, 2015|Support ends with the first update released after December 31, 2016 (see note 1).|  
+|Windows Server 2008|July 10, 2015|1511 </br></br>Support as a site system is removed. (See note 1).|  
 |Windows Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016 (see note 2).|  
 
--   Note 1:   After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the distribution point site system role (including the pull-distribution point) until deprecation of this support is announced, or this operating system's extended support period expires.  
+-   Note 1: This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095). 
 
 -   Note 2:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multicast) until deprecation of this support is announced, or this operating system's extended support period expires. Beginning with version 1602, you can upgrade in-place the operating system of a site server from Windows Server 2008 R2 to Windows Server 2012 R2.  
 

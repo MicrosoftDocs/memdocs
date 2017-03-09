@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 ---
 # Device compliance policies in System Center Configuration Manager
