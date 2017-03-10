@@ -25,7 +25,7 @@ You can use the Microsoft Operations Management Suite (OMS) Connector to sync da
 > TIP
 The OMS Connector is a pre-release feature. To learn more, see [Use pre-release features from updates](/sccm/core/servers/manage/pre-release-features).
 
-Beginning with version 1702, you can use the OMS connector to connect to an OMS workspace that is on Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector. See [use the OMS connector with the Azure Government cloud](#fairfaxconfig ) in this topic.
+Beginning with version 1702, you can use the OMS connector to connect to an OMS workspace that is on Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector. See [use the OMS connector with the Azure Government cloud](#fairfaxconfig) in this topic.
 
 ## Prerequisites
 - Before you install the OMS connector in Configuration Manager, you must provide Configuration Manager with permissions to OMS. Specifically, you must grant *contributor access* to the Azure *Resource Group* that contains the OMS Log Analytics workspace. The procedures to do so are documented in the Log Analytics content. See [Provide Configuration Manager with permissions to OMS](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms) in the OMS documentation.
@@ -69,7 +69,7 @@ After you have linked Configuration Manager to OMS, you can add or remove collec
   - **OMS Connection Properties:**  
     This tab shows your **Azure subscription**, **Azure resource group**, **Operations Management Suite Workspace**, and a list of **Device collections that Operations Management Suite can get data for**. Use the **Add** and **Remove** buttons to modify which collections are allowed.
 
-## <a name="fairfacconfig"> </a> Use  the OMS connector with the Azure Government cloud
+## <a name="fairfaxconfig"> </a> Use the OMS connector with the Azure Government cloud
 
 
 1.  On any computer that has the Configuration Manager console installed, edit the following configuration file to point to the government cloud:  ***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
