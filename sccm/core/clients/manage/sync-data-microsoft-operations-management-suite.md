@@ -12,11 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: brenduns
+ms.author: brenduns
 manager: angrobe
 ---
-# Sync data from Configuration Manager to the Microsoft Operations Management Suite*Applies to: System Center Configuration Manager (Current Branch)*
+# Sync data from Configuration Manager to the Microsoft Operations Management Suite
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can use the Microsoft Operations Management Suite (OMS) Connector to sync data such as your collections from System Center Configuration Manager to OMS Log Analytics  in Microsoft Azure. This makes data from your Configuration Manager deployment visible in OMS.
 > [!TIP]
 > TIP
