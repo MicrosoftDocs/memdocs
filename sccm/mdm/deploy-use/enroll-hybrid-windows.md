@@ -21,22 +21,20 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-You can use Intune with Configuration Manager to manage Windows desktops, laptops, phones, and tables. You can set up Azure Active Directory (AD) to allow automatic enrollment of Windows devices. You can also configure Configuration Manager to simplify enrollment using the Company Portal app.
+This topic tells IT admins how they can enable their users to bring Windows PCs and mobile devices into management using Configuration Manager and Microsoft Intune. Two enrollment methods are available:
+-  Azure Active Directory (AD) automatic enrollment when users connect their account to a device
+- Enrollment by installing and signing in with the Company Portal app
 
 ## Choose how to enroll Windows devices
 
 Two factors determine how you'll enroll Windows devices:
-- **Do you use Azure Active Directory Premium?** [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security as well as a number of other licensing plans.
-- **What versions of Windows clients will enroll?** Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
+- **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
+- **What versions of Windows clients will enroll?** <br>Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
 
 ||**Azure AD Premium**|**Other AD **|
 |----------|---------------|---------------|  
 |**Windows 10**|[Automatic enrollment](#automatic-enrollment) |[Company Portal enrollment](#company-portal-enrollment)|
 |**Earlier Windows versions**|[Company Portal enrollment](#company-portal-enrollment)|[Company Portal enrollment](#company-portal-enrollment)|
-
-- [Automatic enrollment with Azure AD](#azure-active-directory-enrollment)
-- [Windows PCs](#configure-windows-pc-enrollment)
-- [Windows 10 Mobile abd Windows Phone devices](#enable-windows-phone-devices)
 
 ## Automatic enrollment
 
@@ -48,42 +46,37 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
 
 ### Configure automatic enrollment
 
-1. Sign in to the [Azure portal](https://manage.windowsazure.com) (https://manage.windowsazure.com), navigate to the **Active Directory** node in the left pane, and select your directory.
+1. Sign in to the [Azure portal](https://manage.windowsazure.com), navigate to the **Active Directory** node in the left pane, and select your directory.
 2. Select the **Configure** tab and scroll to the section called **Devices**.
 3. Select **All** for **Users may workplace join devices**.
 4. Select the maximum number of devices you want to authorize per user.
 
-By default, two-factor authentication is not enabled for the service. However, two-factor authentication is recommended when registering a device.
-
-- Before requiring two-factor authentication for this service, you must configure a two-factor authentication provider in Azure Active Directory and configure your user accounts for Multi-Factor Authentication, see [Adding Multi-Factor Authentication to Azure Active Directory](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)
-- If you are using AD FS with Windows Server 2012 R2, you must configure a two-factor authentication module in AD FS, see [Using Multi-Factor Authentication with Active Directory Federation Services](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-server).
+By default, two-factor authentication is not enabled for the service. However, two-factor authentication is recommended when registering a device. Before requiring two-factor authentication for this service, you must configure a two-factor authentication provider in Azure Active Directory and configure your user accounts for multi-factor authentication. See [Getting started with the Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ## Company Portal enrollment
-You can let users or a [device enrollment manager](enroll-devices-with-device-enrollment-manager.md) enroll Windows devices by installing the Company Portal app and signing in.
-
-You can also add a DNS CNAME to simplify enrollment for users.
+Your end users or a [device enrollment manager](enroll-devices-with-device-enrollment-manager.md) can enroll Windows devices by installing the Company Portal app and then signing in with their work credentials. To simplify enrollment for your end users, you should add a CNAME to your DNS registration.
 
 ### Enable Windows device management
 To enable Windows device management for either PCs or mobile devices, use the following steps:
 
-1.  **Prerequisites** - Before you can set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).  
-2.  In the Configuration Manager console in the **Administration** workspace, go to **Cloud Services** > **Microsoft Intune Subscriptions**.  
-3.  On the **Home** tab, click **Configure Platforms**, and then select the Windows platform to enable:
-    - **Windows** - Select **Windows** for Windows PCs and laptops, then perform the following steps:
+1.  Before you set up enrollment for any platform, complete the prerequisites and procedures in [Setup hybrid MDM](setup-hybrid-mdm.md).  
+2.  In the Configuration Manager console in the **Administration** workspace, go to **Overview** > **Cloud Services** > **Microsoft Intune Subscriptions**.  
+3.  In the ribbon, click **Configure Platforms**, and then select the Windows platform:
+    - **Windows** for Windows PCs and laptops, then perform the following steps:
       1. In the **General** tab, click the **Enable Windows enrollment** checkbox.
       2. If you use a certificate to code-sign and deploy the Company Portal app, browse to the **Code-signing certificate**. Device users can also install the Company Portal app from the Windows Store or you can deploy the app from the Windows Store for Business without code-signing.
       3. You can also configure [Windows Hello for Business settings](windows-hello-for-business-settings.md).
-    - **Windows Phone** - Select **Windows** for Windows PCs and laptops, then perform the following steps:
+    - **Windows Phone** for Windows phones and tablets, then perform the following steps:
       1. In the **General** tab, click the **Windows Phone 8.1 and Windows 10 Mobile** checkbox. Windows Phone 8.0 is no longer supported.
       2. If your organization needs to sideload company apps, you can upload the required token or file. For more information about sideloading apps, see [Creat Windows apps](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
         - **Application enrollment token**
         - **.pfx file**
         - **None**
-        If you use a Symantec certificate, you can specify **Show an alert before Symantec certificates expire**.
+      If you use a Symantec certificate, you can specify **Show an alert before Symantec certificates expire**.
 4. Click **OK** to close the dialog box.  To simplify the enrollment process using the Company Portal, you should create a DNS alias for device enrollment. You can then tell users how to enroll their devices.
 
 ### Create DNS alias for device enrollment  
-A DNS alias (CNAME record type) makes it easier for users to enroll their devices by automatically populating the server name during device enrollment. To create a DNS alias (CNAME record type), you have to configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
+A DNS alias (CNAME record type) makes it easier for users to enroll their devices by connecting to the service without requiring the user to enter a server address. To create a DNS alias (CNAME record type), you have to configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
 
  Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
@@ -99,10 +92,9 @@ If you have more than one UPN suffix, you need to create one CNAME for each doma
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hour|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hour|
 
-### Tell users how to enroll devices  
+## Tell users how to enroll devices  
 
  Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) for guidance. You can direct users to [Enroll your Windows device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.
- 
 
-  > [!div class="button"]
-  [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [!div class="button"]
+[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
