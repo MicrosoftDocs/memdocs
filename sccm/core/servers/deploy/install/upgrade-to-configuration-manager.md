@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: 21
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
@@ -68,8 +73,8 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 Review the server operating systems in use to host site system roles:  
 
--   Some older operating systems supported by System Center 2012 Configuration Manager are not supported by System Center Configuration Manager, and site system roles on those operating systems must be relocated or removed before the upgrade  
--   Prerequisite Checker for Configuration Manager does not verify the prerequisites for site system roles on the site server or on remote computers  
+-   Some older operating systems supported by System Center 2012 Configuration Manager are not supported by System Center Configuration Manager, and site system roles on those operating systems must be relocated or removed before the upgrade. Review the [Supported Operating Systems for Site System Servers](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md) documentation.   
+-   Prerequisite Checker for Configuration Manager does not verify the prerequisites for site system roles on the site server or on remote site systems  
 
 Review required prerequisites for each computer that hosts a site system role:  
 
