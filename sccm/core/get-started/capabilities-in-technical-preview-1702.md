@@ -311,8 +311,9 @@ The following sections describe Android for Work management.
   - **Manage all devices as Android** - (Disabled) All Android devices, including devices that support Android for Work, will be enrolled as conventional Android devices
   - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
   - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
+  
 > [!NOTE]
-> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**. 
+> A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.
 
 
   In order to enable Android for Work enrollment, you must choose one of the bottom two options. The **Manage supported devices for users only in these groups as Android for Work** option requires you have Azure Active Directory security groups set up first.
