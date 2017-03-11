@@ -311,6 +311,9 @@ The following sections describe Android for Work management.
   - **Manage all devices as Android** - (Disabled) All Android devices, including devices that support Android for Work, will be enrolled as conventional Android devices
   - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
   - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
+  > [!NOTE]
+  > A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Azure AD groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.
+
 
   In order to enable Android for Work enrollment, you must choose one of the bottom two options. The **Manage supported devices for users only in these groups as Android for Work** option requires you have Azure Active Directory security groups set up first.
 
@@ -348,3 +351,7 @@ To try this, create a configuration item through the standard workflow, choose *
 Devices enrolled as Android for Work can only be selectively wiped because you only manage the work profile. This protects the personal profile from being wiped. Performing a selective wipe on an Android for Work device removes the work profile, including all apps and data, and unenrolls the device.
 
 To selectively wipe an Android for Work device, use the normal [selective wipe process](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in the Configuration Manager console.
+
+#### Known issues for Android for Work
+**Configuring sync schedule in Android for Work email profiles causes them to fail to deploy**
+One of the options in the ConfigMgr UI for Android for Work email profiles is "Schedule". On other platforms, this allows the admin to configure a schedule for syncing email and other email account data down to the mobile devices it's deployed to. However, it does not work for Android for Work email profiles, and choosing any option other than "Not Configured" will cause the profile to not be deployed to any devices.
