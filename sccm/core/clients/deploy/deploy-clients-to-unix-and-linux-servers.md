@@ -34,7 +34,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  When you install a client, you can use the same process and command line properties regardless of the client installation package you use.  
 
- For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS).  
+ For information about the operating systems, platforms, and client installation packages that are supported by each release of the Configuration Manager client for Linux and UNIX, see [Linux and UNIX servers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers).  
 
 ##  <a name="BKMK_InstallLnUClient"></a> Install the Client on Linux and UNIX Servers  
  To install the client for Linux and UNIX, you run a script on each Linux or UNIX computer. The script is named **install** and supports command line properties that modify the installation behavior and reference the client installation package. The install script and client installation package must be located on the client. The client installation package contains the Configuration Manager client files for a specific Linux or UNIX operating system and platform.
@@ -112,7 +112,7 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
      Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages.  
 
-     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) .  
+     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) .  
 
 -   **-dir &lt;directory\>**  
 
@@ -232,4 +232,4 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
- For more information about how clients locate management points, see [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs).
+ For more information about how clients locate management points, see [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-point).
