@@ -166,6 +166,8 @@
 #### [Select discovery methods](servers/deploy/configure/select-discovery-methods-to-use.md)
 #### [Configure discovery methods](servers/deploy/configure/configure-discovery-methods.md)
 ###  [Site boundaries and boundary groups](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
+#### [Boundaries](servers/deploy/configure/boundaries.md)
+#### [Boundary groups](servers/deploy/configure/boundary-groups.md)
 ###  [Use SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [Use a SQL Server cluster](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [Custom locations for database files](servers/deploy/configure/custom-locations-for-site-database-files.md)
