@@ -1,7 +1,7 @@
 ---
 title: Plan for Endpoint Protection | Microsoft Docs
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -84,11 +84,7 @@ Starting with version 1606 of Configuration Manager (current branch), Endpoint P
  ![Endpoint Protection Workflow](../media/Endpoint-Protection-Workflow.gif)
 
 ## Endpoint Protection Client for Mac Computers and Linux Servers  
- System Center 2012 includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
-
--   System Center 2012 Endpoint Protection for the Mac  
-
--   System Center 2012 Endpoint Protection for Linux  
+ System Center includes an Endpoint Protection client for Linux and for Mac computers. These clients are not supplied with Configuration Manager; instead, you must download the following products from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter/default.aspx).  
 
 > [!IMPORTANT]  
 >  You must be a Microsoft Volume License customer to download the Endpoint Protection installation files for Linux and the Mac.  
@@ -106,9 +102,7 @@ Starting with version 1606 of Configuration Manager (current branch), Endpoint P
  When you configure custom client settings, you can do the following:  
 
 -   Customize antimalware and security settings for different parts of your organization.  
-
 -   Test the effects of running Endpoint Protection on a small group of computers before you deploy it to the entire hierarchy.  
-
 -   Add more clients to the collection over time to phase your deployment of the Endpoint Protection client.  
 
 ### Distributing definition updates by using software updates  
