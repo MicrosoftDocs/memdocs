@@ -13,9 +13,14 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 ---
-# About client settings in System Center Configuration Manager*Applies to: System Center Configuration Manager (current branch)*
+# About client settings in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (current branch)*
+
 All client settings in System Center Configuration Manager are managed in the Configuration Manager console from the **Client Settings** node in the **Administration** workspace. Configuration Manager comes with a set of default settings. When you change the default client settings, these settings are applied to all clients in the hierarchy. You can also configure custom client settings, which override the default client settings when you assign these to collections. For information about how to configure client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
 Many of the client settings are self-explanatory. Others are described here.  
@@ -323,7 +328,7 @@ Many of the client settings are self-explanatory. Others are described here.
 
 -   **Maximum random delay**
 
-	The collection of hardware information is randomized by up to two hours so that the operation doesn't take place simultaneously on all clients. You can set the maximum delay in order to constrain the time during which the operation takes place.      
+	The collection of hardware information is randomized by up to four hours so that the operation doesn't take place simultaneously on all clients. You can set the maximum delay in order to constrain the time during which the operation takes place.      
 
 ##  Metered Internet connections  
  You can manage how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered Internet connection.  

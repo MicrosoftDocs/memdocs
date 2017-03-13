@@ -2,7 +2,7 @@
 title: "VPN Profiles in System Center Configuration Manager | Microsoft Docs"
 description: "VPN Profiles on mobile devices in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,18 +13,23 @@ ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# VPN Profiles on mobile devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-Use VPN profiles in System Center Configuration Manager to deploy VPN settings to mobile ddevice users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
+# VPN Profiles on mobile devices in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
+Use VPN profiles in System Center Configuration Manager to deploy VPN settings to mobile device users in your organization. By deploying these settings, you minimize the end-user effort required to connect to resources on the company network.  
 
  For example, you want to provision all devices that run the iOS operating system with the settings required to connect to a file share on the corporate network. You can create a VPN profile containing the settings necessary to connect to the corporate network and then deploy this profile to all users that have devices that run iOS in your hierarchy. Users of iOS devices see the VPN connection in the list of available networks and can connect to this network with the minimum of effort.  
 
  When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md).  
 
- ## VPN profiles when using Configuration Manager together with Intune  
-  To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled into Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). This table shows which connection type is supported for each device platform:  
+ ## VPN profiles when using Configuration Manager together with Intune 
+ 
+ To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled into Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). This table shows which connection type is supported for each device platform:  
 
  |Connection type|iOS    and Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  

@@ -2,7 +2,7 @@
 title: "Troubleshoot Lookout integration | System Center Configuration Manager"
 description: "This topic describes troubleshooting issues that commonly occur with Lookout Integration."
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

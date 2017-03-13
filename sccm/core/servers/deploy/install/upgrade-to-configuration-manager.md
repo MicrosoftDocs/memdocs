@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: 21
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
@@ -50,7 +55,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 
 > [!TIP]  
->  When you upgrade from a System Center 2012 Configuration Manager version might be able to streamline your upgrade process. For more information, see the following:  
+>  When you upgrade from a System Center 2012 Configuration Manager version to Current Branch, you might be able to streamline your upgrade process. For more information, see the following:  
 >   
 >  -   The [Baseline and update versions](../../../../core/servers/manage/updates.md#bkmk_Baselines) section in [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 >  -   [The CD.Latest folder for System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  

@@ -2,7 +2,7 @@
 title: "Software Inventory for Mobile Devices Enrolled with Microsoft Intune | Microsoft Docs"
 description: "Software inventory for mobile devices enrolled with Microsoft Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: a0eae17a-60a8-4132-91af-0b10ad338c92
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# Software inventory for mobile devices enrolled with Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Software inventory for mobile devices enrolled with Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
  You can collect inventory for apps installed on mobile devices. The apps that are inventoried will depend on whether the device is company-owned or personal-owned. For personal devices, the only apps that are inventoried are apps that are managed by Microsoft Intune.  
 
 > [!NOTE]  

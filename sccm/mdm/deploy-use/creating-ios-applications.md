@@ -2,7 +2,7 @@
 title: "Create iOS applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for iOS devices."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 caps.latest.revision: 10
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 
 ---
-# Create iOS applications with System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Create iOS applications with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 A System Center Configuration Manager application has one or more deployment types that comprise the installation files and information that are required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.  
 
  You can create applications by using the following methods:  

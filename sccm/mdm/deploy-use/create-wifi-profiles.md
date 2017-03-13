@@ -2,7 +2,7 @@
 title: "Create Wi-Fi Profiles in System Center Configuration Manager | Microsoft Docs"
 description: "Learn how to use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to mobile device users in your organization."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# How to create Wi-Fi profiles for mobile devices in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# How to create Wi-Fi profiles for mobile devices in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Use Wi-Fi profiles in System Center Configuration Manager to deploy wireless network settings to mobile device users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
 
 You can configure the following mobile device types with Wi-Fi profiles:  

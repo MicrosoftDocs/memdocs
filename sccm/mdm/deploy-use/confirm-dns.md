@@ -2,7 +2,7 @@
 title: "Confirm domain name requirements using System Center Configuration Manager | Microsoft Docs"
 description: "Confirm domain name requirements using System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillmanms.author: mtillman
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ---
-# Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune*Applies to: System Center Configuration Manager (Current Branch)*
+# Confirm domain name requirements with System Center Configuration Manager and Microsoft Intune
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 If necessary, take the following steps to satisfy any dependencies external to Configuration Manager:
 
 1. Each user must have an Intune license assigned to enroll devices. To associate Intune licenses to users, each user must have a user principal name (UPN) that can be publicly resolved (for example, johndoe@contoso.com) or an alternate login ID configured in Azure Active Directory. Configuring an alternate login ID allows users to sign in with an email address, for example, even if their UPN is in a NetBIOS format (for example, CONTOSO\johndoe).
