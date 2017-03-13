@@ -106,7 +106,8 @@ For more information, see [Windows PE peer cache](../../../osd/get-started/prepa
 ## Content library  
  The content library is the single-instance store of content that Configuration Manager uses to reduce the overall size of the combined body of content that you distribute.  
 
-Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
+- Learn more about the [content library](../../../core/plan-design/hierarchy/the-content-library.md).
+- Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content that is no longer associated with an application.  
 
 
 ## Distribution points  
