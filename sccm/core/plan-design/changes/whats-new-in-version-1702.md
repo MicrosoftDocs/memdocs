@@ -94,9 +94,9 @@ The following are changes for Updates and Servicing:
   -  CPU load exceeds 80% at the time the content is requested.
   -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
   -  There are no more available connections to the computer.   
-
 For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache).   
 
+Additionally, three new reports are added to your reporting point. You can use these reports to understand more details about rejected content requests, including which boundary group, computer, and content was involved. See [Monitoring](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring) in the peer cache topic.
 
 ## Content library cleanup tool
  Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
