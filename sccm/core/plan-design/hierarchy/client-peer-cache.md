@@ -53,7 +53,7 @@ Beginning with version 1702, a peer cache source computer will reject a request 
   -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
   -  There are no more available connections to the computer.   
 
-You can configure these settings using the client agent config class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the System Center Configuration Manager SDK.
+You can configure these settings using the client configuration server WMI class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the System Center Configuration Manager SDK.
 
 When the computer rejects a request for the content, the requesting computer will continue to seek content from alternate sources in its pool of available content source locations.   
 
@@ -61,6 +61,24 @@ When the computer rejects a request for the content, the requesting computer wil
 
 ### Monitoring   
 To help you understand the use of Peer Cache, you can view the Client Data Sources dashboard. See [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+
+Beginning with version 1702, you can use three reports to view peer cache use. In the console, go to **Monitoring** > **Reporting** > **Reports**. The reports all have a type of **Software Distribution Content**:
+1.  **Peer cache source content rejection**:  
+Use this report to understand how often the peer cache sources in a boundary group rejected a content request.
+ - **Known issue:** When drilling down on results like *MaxCPULoad* or *MaxDiskIO*, you might receive an error that suggests the report or details cannot be found. To work around this, use the following two reports which show the results directly. 
+
+2. **Peer cache source content rejection by condition**:  
+Use this report to understand rejection details for a specified boundary group or rejection type. You can specify
+
+  - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the values for *Boundary Group Name* and *Rejection Type* as seen in the first report. For example, for *Rejection Type* you might enter *MaxCPULoad* or *MaxDiskIO*.
+
+3. **Peer cache source content rejection details**:   
+  Use this report to understand the content that was being requested when it was rejected.
+
+ - **Known issue:** You cannot select from available parameters and instead must enter them manually. Enter the value for *Rejection Type* as displayed in the first report (Peer cache source content rejection), and then enter the *Resource ID* for the content source that you want more information about.  To find the Resource ID of the content source:  
+
+    1. Find the computer name which displays as the *Peer cache source* in the results of the 2nd report (Peer cache source content rejection by condition).  
+    2. Next, go to **Assets and Compliance** > **Devices** and then search for that computers name. Use the value from the Resource ID column.  
 
 
 ## Requirements and considerations for Peer Cache
