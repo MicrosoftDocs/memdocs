@@ -2,7 +2,7 @@
 title: "Deprecated features | Microsoft Docs"
 description: "Learn about the features, products, and operating systems that System Center Configuration Manager no longer supports."
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -72,12 +72,12 @@ Additional details for features removed with version 1511 of System Center Confi
 
 |**Operating systems**|**Deprecation first announced**|**Support removed** |  
 |-|-|-|  
-|Windows Server 2008|July 10, 2015|1511 </br></br>Support as a site system is removed. (See note 1).|  
-|Windows Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016 (see note 2).|  
+|Windows Server 2008|July 10, 2015|Version 1511 </br></br>Support as a site system is removed. (See note 1).|  
+|Windows Server 2008 R2|July 10, 2015| Version 1702  (See note 2)|  
 
--   Note 1: This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095). 
+-   Note 1: This operating system is not supported for site servers or site system roles with the exception of the distribution point and pull-distribution point. You can continue to use this operating system as a distribution point until deprecation of this support is announced, or this operating system's extended support period expires. For more information, see [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095).
 
--   Note 2:    After support ends, this operating system will no longer be supported for site servers or most site system roles. However, it will remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multicast) until deprecation of this support is announced, or this operating system's extended support period expires. Beginning with version 1602, you can upgrade in-place the operating system of a site server from Windows Server 2008 R2 to Windows Server 2012 R2.  
+-   Note 2:    Beginning with version 1702, this operating system is not supported for site servers or most site system roles, however versions prior to 1702 continue to support its use. This operating system does remain supported for the state migration point and distribution point site system role (including pull-distribution points, and for PXE and multicast) until deprecation of this support is announced, or this operating system's extended support period expires. Beginning with version 1602, you can upgrade in-place the operating system of a site server from Windows Server 2008 R2 to Windows Server 2012 R2.  
 
      For more information about in-place upgrade of a site servers operating system, see the [In-place upgrade the operating system of site servers that run Windows Server 2008 R2](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS) section in [What's changed in System Center Configuration Manager](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
@@ -90,7 +90,7 @@ Additional details for features removed with version 1511 of System Center Confi
 |**Operating systems**|**Deprecation first announced**|**Support removed**|  
 |-|-|-|  
 |Windows XP|July 10, 2015|Version 1511|  
-|Windows XP Embedded|July 10, 2015|Support ends with the first update released after December 31, 2016.|  
+|Windows XP Embedded|July 10, 2015|Version 1702|  
 |Windows Server 2003|July 10, 2015|Version 1511|  
 |Windows Server 2003 R2|July 10, 2015|Version 1511|  
 |Windows Vista|July 10, 2015|Version 1511|  
@@ -105,4 +105,9 @@ Additional details for features removed with version 1511 of System Center Confi
 |**SQL Server versions**|**Deprecation first announced**|**Support removed**|   
 |-|-|-|  
 |SQL Server 2008|July 10, 2015|Version 1511|  
-|SQL Server 2008 R2|July 10, 2015|Support ends with the first update released after December 31, 2016.|  
+|SQL Server 2008 R2|July 10, 2015|Version 1702|  
+
+If you need to upgrade your version of SQL Server, We recommend the following methods, from easy to more complex.
+1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended).
+2. Install a new version of SQL Server on a new computer, and then [use the datbase move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
+3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). 

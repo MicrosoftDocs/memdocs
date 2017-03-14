@@ -2,7 +2,7 @@
 title: "Supported SQL Server versions | Microsoft Docs"
 description: "Get SQL Server version and configuration requirements for hosting a System Center Configuration Manager site database."
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -105,7 +105,10 @@ You can use this version of SQL Server with no minimum cumulative update version
 
 
 ### SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
-You can use this version of SQL Server with no minimum cumulative update version for the following:  
+  This version of SQL Server is not supported [beginning with version 1702](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database).  
+ This version of SQL Server remains supported when you use a version of Configuration Manager prior to 1702.
+
+When supported by your version of Configuration Manager, you can use this version of SQL Server with no minimum cumulative update version for the following:  
 
 -   A central administration site  
 -   A primary site
@@ -232,3 +235,9 @@ When a computer running SQL Server hosts a database from more than one site, eac
 If you have a firewall enabled on the computer that is running SQL Server, make sure that it is configured to allow the ports that are being used by your deployment and at any locations on the network between computers that communicate with the SQL Server.  
 
 For an example of how to configure SQL Server to use a specific port, see [How to: Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) in the SQL Server TechNet library.  
+
+## Upgrade options for SQL Server
+If you need to upgrade your version of SQL Server, We recommend the following methods, from easy to more complex.
+1. [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (recommended).
+2. Install a new version of SQL Server on a new computer, and then [use the datbase move option](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration) of Configuration Manager setup to point your site server to the new SQL Server.
+3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).
