@@ -28,6 +28,14 @@ Update 1702 for System Center Configuration Manager current branch is available 
 >  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
 >  -   [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
+
+**Support is dropped in version 1702 for the following products:**
+- **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10,2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
+- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on July 10,2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
+- **Windows Server 2008**,for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10,2015.
+- **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10,2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
+
+
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
 
