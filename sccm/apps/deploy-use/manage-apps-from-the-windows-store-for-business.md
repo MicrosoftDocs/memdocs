@@ -2,7 +2,7 @@
 title: "Manage apps from the Windows Store for Business | Microsoft Docs"
 description: "Manage and deploy apps from the Windows Store for Business by using System Center Configuration Manager."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -55,7 +55,7 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 4. Choose **OK**.
 
 **Activate the Windows Store for Business capability**
-1. In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Features**.
+1. In the **Administration** workspace of the Configuration Manager console, choose **Updates and Servicing** > **Features**. (Prior to version 1702, the **Updates and Servicing** node was under **Administration** > **Cloud Services**.)
 2. Select **Windows Store for Business Integration**, and then in the **Home** tab, in the **Features** group, choose **Turn on**.
 3. Close and re-open the Configuration Manager console.
 4. You'll now see the node **Windows Store for Business** in the **Administration** workspace under **Cloud Services**. --->
@@ -101,7 +101,7 @@ Add the store account to Configuration Manager.
 
 Change the app languages that will be shown in the Application Catalog for users to download.
 
-1.	In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
+1.	In the **Administration** workspace of the Configuration Manager console, choose **Updates and Servicing** > **Windows Store for Business**.
 2.	Select your Windows Store for Business account, and then choose **Properties**.
 3.	Select the **Language** tab.
 4.	Add or remove the languages that will be shown in the Application Catalog. Select the default application catalog language that will be made available to users.
@@ -112,7 +112,7 @@ Change the app languages that will be shown in the Application Catalog for users
 
 Modify the client secret key from Azure Active Directory.
 
-1.	In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
+1.	In the **Administration** workspace of the Configuration Manager console, choose **Updates and Servicing** > **Windows Store for Business**.
 2.	Select your Windows Store for Business account, and then choose **Properties**.
 3.	In the **Windows Store for Business Account Properties** dialog box, enter a new key in the **Client secret key** field, and then choose **Verify**. Once verified, choose **Apply**, and then close the dialog box.
 
@@ -120,7 +120,7 @@ Modify the client secret key from Azure Active Directory.
 
 Synchronization occurs every 24 hours, or you can initiate an immediate synchronization using this procedure:
 
-1. In the **Administration** workspace of the Configuration Manager console, choose **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
+1. In the **Administration** workspace of the Configuration Manager console, choose **Updates and Servicing** > **Windows Store for Business**. (Prior to version 1702, the **Updates and Servicing** node was under **Administration** > **Cloud Services**.)
 3.	On the **Home** tab, in the **Sync** group, choose **Sync Now**.
 4.	The app you bought will appear in the **License Information for Store Apps** node of the **Application Management** workspace.
 
