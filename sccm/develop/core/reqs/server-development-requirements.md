@@ -59,7 +59,7 @@ In System Center Configuration Manager, the SMS Provider and associated technolo
 ## VBScript  
  You can use Windows Management Instrumentation (WMI) to access the SMS Provider.  
 
- The scripting samples are provided in VBScript and use WMI to access Configuration Manager. For more information, see How to Use Configuration Manager Objects with WMI.  
+ The scripting samples are provided in VBScript and use WMI to access Configuration Manager. For more information, see [How to Use Configuration Manager Objects with WMI](../../../develop/core/understand/how-to-use-configuration-manager-objects-with-wmi.md).  
 
  Programming the SMS Provider with VBScript has the following requirements:  
 

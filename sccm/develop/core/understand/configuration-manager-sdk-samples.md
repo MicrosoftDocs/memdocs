@@ -53,7 +53,7 @@ The System Center Configuration Manager Software Development Kit (SDK) ships wit
  The following sample is in the %*Program Files*%\Microsoft System Center 2012 R2 Configuration Manager SDK\Samples\Rdp Deployment Technology\Code Sample folder.  
 
 > [!IMPORTANT]
->  The sample contains an error in the `RdpTechnology.AdminConsole` project. When creating the resource manager instance, the code incorrectly references “RdpTechnoloy.AdminConsole.Properties.Resources��?. This incorrect reference causes an exception when running the Create Deployment Type Wizard. To fix the problem, change the reference to “Microsoft.RdpTechnoloy.AdminConsole.Properties.Resources��?.  
+>  The sample contains an error in the `RdpTechnology.AdminConsole` project. When creating the resource manager instance, the code incorrectly references "RdpTechnoloy.AdminConsole.Properties.Resources". This incorrect reference causes an exception when running the Create Deployment Type Wizard. To fix the problem, change the reference to "Microsoft.RdpTechnoloy.AdminConsole.Properties.Resources".  
 
 |Sample|Description|  
 |------------|-----------------|  
