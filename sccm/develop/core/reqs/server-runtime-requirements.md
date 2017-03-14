@@ -1,7 +1,7 @@
 ---
 title: "Server Runtime Requirements | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "3/14/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 
 ## Managed Code  
 
--   Supported Windows Server 2008 operating systems for site server installation  
+-   A supported version of Windows Server as defined in [Supported operating systems for System Center Configuration Manager site system servers](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
 
 -   Installed Configuration Manager site server  
 
@@ -53,7 +53,7 @@ Microsoft System Center Configuration Manager server applications that are devel
 ## General Requirements  
 
 > [!IMPORTANT]
->  For more information about general System Center Configuration Manager requirements, see [Supported Configurations for Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=248211).  
+>  For more information about general System Center Configuration Manager requirements, see [Supported configurations for System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/supported-configurations).  
 
 ## See Also  
  [Configuration Manager Console Extension](../../../develop/core/servers/console/console-extension.md)   
