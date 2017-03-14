@@ -2,7 +2,7 @@
 title: "Enroll company-owned devices - Configuration Manager | Microsoft Docs"
 description: "Learn about different methods to enroll company-owned devices for hybrid deployments with Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: 13
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Enroll company-owned devices for hybrid deployments with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enroll company-owned devices for hybrid deployments with Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Organization or corporate-owned devices (COD) can be brought into management in a variety of ways depending upon the device and how it was purchased.  
 
 ## Enroll Device Enrollment Program iOS devices  
@@ -36,6 +41,3 @@ Organization or corporate-owned devices (COD) can be brought into management in 
  ## Predeclare devices with IMEI or iOS serial numbers
 
 You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers or you can manually enter device information.  See [Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md).
-
-## See Also  
- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)

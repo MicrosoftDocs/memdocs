@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# Prerequisites for certificate profiles in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Prerequisites for certificate profiles in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 Certificate profiles in System Center Configuration Manager (also known as ConfigMgr or SCCM) have external dependencies and dependencies in the product.  
 

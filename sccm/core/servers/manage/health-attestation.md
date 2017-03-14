@@ -35,7 +35,7 @@ Administrators can view the status of [Windows 10 Device Health Attestation](htt
  **Requirements:**  
 
 -   Client devices running Win10  
--   Windows Server 2016 Technical Preview 5 with [Device Health Attestation enabled](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
+-   Windows Server 2016 with [Device Health Attestation enabled](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
 -    TPM 2 enabled  
 -   Unblock communication between Configuration Manager client agent and has.spserv.microsoft.com (port 443) Health Attestation service
 

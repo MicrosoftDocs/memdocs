@@ -2,7 +2,7 @@
 title: "Enroll devices with device enrollment manager - Configuration Manager | Microsoft Docs"
 description: "Enroll corporate-owned devices with the device enrollment manager account with System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Enroll devices with device enrollment manager with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Enroll devices with device enrollment manager with Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Organizations can use System Center Configuration Manager and Intune to manage large numbers of mobile devices with a single user account. The *device enrollment manager* account is a special Intune account with permission to enroll more than five devices.  
 
 ## Enroll corporate-owned devices with the device enrollment manager  

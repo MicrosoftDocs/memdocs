@@ -2,7 +2,7 @@
 title: "Terms and Conditions in System Center Configuration Manager | Microsoft Docs"
 description: "Deploy terms and conditions to user groups in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: mtillmanms.author: mtillmanmanager: angrobe
+author: mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Terms and Conditions in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Add Terms and Conditions with System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can deploy System Center Configuration Manager terms and conditions to user groups to explain how device enrollment, access to work resources, and using the Company Portal affect devices and users. Users must accept the terms and conditions before they can use the Company Portal to enroll and access their work.  
 
  ## Working with terms and conditions policies in System Center Configuration Manager  
@@ -110,3 +115,6 @@ You can deploy System Center Configuration Manager terms and conditions to user 
 4.  On the **Terms** page you can then specify whether this new version requires all users to accept the terms and conditions, or if only new users will see the new version.  
 
      We recommend you increase the version number and require acceptance any time you make significant changes to your terms and conditions. Keep the current version number if you are fixing typos or changing formatting, for example.
+
+> [!div class="button"]
+ [< Previous step](configure-intune-subscription.md)  [Next step >](create-service-connection-point.md)

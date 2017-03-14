@@ -2,7 +2,7 @@
 title: Remotely synchronize policy on devices enrolled with Intune | Microsoft Docs
 description: Learn how to synchronize policy on Intune-enrolled devices from the Configuration Manager console
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,10 +13,14 @@ ms.topic: article
 ms.assetid: b3731ad0-2a24-4042-994e-5e4c1230e3fe
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: robstackmsftms.author: robstack
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 ---
-# Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console*Applies to: System Center Configuration Manager (Current Branch)*
+# Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 
 You can request a policy sync for a device that is enrolled with Intune from the Configuration Manager console instead of having to request a sync from the Company Portal app on the device itself. 
 

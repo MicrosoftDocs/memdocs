@@ -2,7 +2,7 @@
 title: Scenario Endpoint Protection protects computers from malware | Microsoft Docs
 description: "Learn how to implement Endpoint Protection in Configuration Manager to protect computers from malware attacks."
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,7 +18,7 @@ author: NathBarnms.author: nathbarnmanager: angrobe
 # Example scenario: Using System Center Endpoint Protection to protect computers from malware in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
 This topic provides an example scenario for how you can implement Endpoint Protection in Configuration Manager to protect computers in an organization from malware attacks.  
 
- John is the Configuration Manager administrator at Woodgrove Bank. The bank currently uses Microsoft Forefront Endpoint Protection 2010 to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
+ John is the Configuration Manager administrator at Woodgrove Bank. The bank currently uses System Center Endpoint Protection to protect computers against malware attacks. Additionally, the bank uses Windows Group Policy to ensure that the Windows Firewall is enabled on all computers in the company and that users are notified when Windows Firewall blocks a new program.  
 
  John has been asked to upgrade the Woodgrove Bank antimalware software to System Center Endpoint Protection so that the bank can benefit from the latest antimalware features and be able to centrally manage the antimalware solution from the Configuration Manager console. This implementation has the following requirements:  
 

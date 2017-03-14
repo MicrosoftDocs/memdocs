@@ -2,7 +2,7 @@
 title: "Upgrade to System Center Configuration Manager | Microsoft Docs"
 description: "Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager."
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: 21
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# Upgrade to System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Upgrade to System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 You can run an in-place upgrade to upgrade to System Center Configuration Manager from a site and hierarchy that runs System Center 2012 Configuration Manager.  
 
  Before upgrading from System Center 2012 Configuration Manager, you must prepare sites which requires you to remove specific configurations that can prevent a successful upgrade, and then follow the upgrade sequence when more than a single site is involved.  
@@ -50,7 +55,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 
 > [!TIP]  
->  When you upgrade from a System Center 2012 Configuration Manager version might be able to streamline your upgrade process. For more information, see the following:  
+>  When you upgrade from a System Center 2012 Configuration Manager version to Current Branch, you might be able to streamline your upgrade process. For more information, see the following:  
 >   
 >  -   The [Baseline and update versions](../../../../core/servers/manage/updates.md#bkmk_Baselines) section in [Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md)  
 >  -   [The CD.Latest folder for System Center Configuration Manager](../../../../core/servers/manage/the-cd.latest-folder.md)  
@@ -247,6 +252,8 @@ When a site upgrades to System Center Configuration Manager, some configurations
      Custom summarization schedules for software updates or software update groups are reset to the default value of 1 hour. After the upgrade finishes, reset custom summarization values to the required frequency.  
 
 ##  <a name="bkmk_test"></a> Test the site database upgrade  
+The following information applies only when you are upgrading a prior versoin like System Center 2012 Configuration Manager to System Center Configuration Manager. If your site already runs System Center Configuration Manager and you are installing a new update, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+
 Before you upgrade a site, test a copy of that site's database for the upgrade.  
 
 To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that does not host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that the version of Configuration Manager supports that is the source of the database copy.  

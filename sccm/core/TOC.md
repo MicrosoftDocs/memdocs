@@ -90,7 +90,7 @@
 ###  [Set up your lab](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
-<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
+###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md)
 ###  [Capabilities in 1701](get-started/capabilities-in-technical-preview-1701.md)
 ###  [Capabilities in 1612](get-started/capabilities-in-technical-preview-1612.md)
 ###  [Capabilities in 1611](get-started/capabilities-in-technical-preview-1611.md)
@@ -120,8 +120,7 @@
 #### [Planning to monitor migration](migration/planning-to-monitor-migration-activity.md)
 #### [Planning to complete migration](migration/planning-to-complete-migration.md)
 ###  [Configure source hierarchies and source sites](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [Operations for migrating](migration/operations-for-migration.md)
-###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
+###  [Operations for migrating](migration/operations-for-migration.md)###  [Security and privacy for migration](migration/security-and-privacy-for-migration.md)
 
 #    [Deploy servers and roles](servers/deploy/start-using.md)
 
@@ -172,14 +171,22 @@
 ###  [Install in-console updates](servers/manage/install-in-console-updates.md)
 #### [Flowchart - Download updates](servers/manage/download-updates-flowchart.md)
 #### [Flowchart - Update replication](servers/manage/update-replication-flowchart.md)
+###  [Pre-release features](servers/manage/pre-release-features.md)
 ###  [Service windows for site servers](servers/manage/service-windows.md)
 ###  [Use the Service Connection Tool](servers/manage/use-the-service-connection-tool.md)
 ###  [Use the Update Registration Tool](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [Use the Hotfix Installer](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!--
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
+<!-- Deprecated from Content:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+-->
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+
 
 ##   Monitor infrastructure
 ###  [Use alerts and the status system](servers/manage/use-alerts-and-the-status-system.md)
@@ -202,6 +209,7 @@
 #### [Operations and maintenance for reporting](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [Creating custom report models](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [Security and privacy for reporting](servers/manage/security-and-privacy-for-reporting.md)
+###  [Data warehouse](servers/manage/data-warehouse.md)
 
 #    Deploy clients
 ##   Planning for client deployment
@@ -260,7 +268,6 @@
 ###  [Introduction to hardware inventory](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [How to extend hardware inventory](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [How to configure hardware inventory](clients/manage/inventory/configure-hardware-inventory.md)
-###  [How to configure hardware inventory for mobile devices in a hybrid deployment](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
 ###  [How to use Resource Explorer to view hardware inventory](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Hardware inventory for Linux and UNIX](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [Security and privacy for hardware inventory](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
@@ -304,4 +311,4 @@
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
-###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md)
+###  [Upgrade readiness](clients/manage/upgrade/upgrade-analytics.md)

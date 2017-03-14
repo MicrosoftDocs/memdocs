@@ -2,7 +2,7 @@
 title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up Windows device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -27,7 +27,7 @@ You can use Configuration Manager with  Intune to manage desktops, laptops, and 
 Windows enrollment options include:
 
 - [Automatic enrollment with Azure AD](#azure-active-directory-enrollment)
-- [Windows PCs](#set-up-windows-device-enrollment)
+- [Windows PCs](#configure-windows-pc-enrollment)
 - [Windows 10 Mobile abd Windows Phone devices](#enable-windows-phone-devices)
 
 ## Azure Active Directory enrollment
@@ -113,3 +113,6 @@ Automatic enrollment lets users enroll either company-owned or personal Windows 
       Click **OK**.  
 
   Once you're set up, you'll need to let your users know how to enroll their devices. See [What to tell users about enrolling their devices](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune). This information applies to both Microsoft Intune and Configuration Manager-managed mobile devices.  
+
+  > [!div class="button"]
+  [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)

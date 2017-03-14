@@ -2,7 +2,7 @@
 title: "Choose Intune standalone or hybrid MDM | Microsoft Docs"
 description: "Choose whether to deploy hybrid mobile device management with Intune and Configuration Manager or run Intune standalone."
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -40,7 +40,7 @@ If you are choosing between standalone and hybrid, you should take into consider
 
 -   Role-based Access Control – restrict access to administrative functions based on assigned roles.
 
--   Scale – deploy and manage over 50,000 mobile devices.
+-   Scale – deploy and manage over 100,000 mobile devices.
 
 -   Single pane of glass –manage both traditional PC clients and Intune-managed devices using the same console.
 

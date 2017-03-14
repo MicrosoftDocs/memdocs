@@ -1,8 +1,8 @@
 ---
-title: "Set up device enrollment  | Microsoft Docs | On-premises MDM"
+title: "Set up device enrollment  | Microsoft Docs"
 description: "Grant users permission to enroll their devices for On-premises Mobile Device Management in System Center Configuration Manager."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 caps.latest.revision: 10
-author: Mtillmanms.author: mtillmanmanager: angrobe
+author: Mtillman
+ms.author: mtillman
+manager: angrobe
 
 ---
-# Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 Enabling users to enroll their devices for System Center Configuration Manager On\-premises Mobile Device Management requires you to grant them permission to do so. To grant users permission to enroll devices, follow the tasks below.
 
 -   [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf)  

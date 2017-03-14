@@ -2,7 +2,7 @@
 title: "Cloud-based distribution point | Microsoft Docs"
 description: "Learn about configurations and limitations for using a cloud-based distribution point with System Center Configuration Manager."
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -58,7 +58,7 @@ Cloud-based distribution points provide the following additional benefits:
 
 A cloud-based distribution point has the following limitations:  
 
--   You cannot use a cloud-based distribution point to host software update packages.  
+-  Prior to using version 1610 with the Hotfix KB4010155, you cannot use a cloud-based distribution point to host software update packages. This issue is fixed beginning with version 1702, and later.  
 
 -   You cannot use a cloud-based distribution point for PXE or multicast-enabled deployments.  
 
@@ -181,8 +181,6 @@ Clients that use cloud-based distribution points use the following sequence for 
 
 3.  When a preferred distribution point or remote distribution point is not available, the client can then fall back to obtain the content from a cloud-based distribution point.  
 
-    > [!NOTE]  
-        >  Clients on the Internet that receive both an Internet-based distribution point and a cloud-based distribution point as content locations for a deployment, only attempt to retrieve content from the Internet-based distribution point. If the client on the Internet fails to retrieve content from the Internet-based distribution point, the client does not then attempt to access the cloud-based distribution point.  
 
 
   When a client uses a cloud-based distribution point as a content location, the client authenticates itself to the cloud-based distribution point by using a Configuration Manager access token. If the client trusts the Configuration Manager cloud-based distribution point certificate, the client can then download the requested content.  

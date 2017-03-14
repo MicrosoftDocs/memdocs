@@ -2,7 +2,7 @@
 title: "PKI certificate requirements | Microsoft Docs"
 description: "Find requirements for PKI certificates that you might need for System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,10 +12,15 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 caps.latest.revision: 17
-author: Nbigmanms.author: nbigmanmanager: angrobe
+author: arob98
+ms.author: angrobe
+manager: angrobe
 
 ---
-# PKI certificate requirements for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# PKI certificate requirements for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
+
 The public key infrastructure (PKI) certificates that you might require for System Center Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For step-by-step deployment guidance  see [Step-by-step example deployment of the PKI certificates for System Center Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates). For more information about Active Directory Certificate Services, see the following documentation:  
 
 -   For Windows Server 2012: [Active Directory Certificate Services Overview](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
@@ -23,9 +28,11 @@ The public key infrastructure (PKI) certificates that you might require for Syst
 -   For Windows Server 2008: [Active Directory Certificate Services in Windows Server 2008](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  Effective January 1, 2017, Windows will no longer trust certain certificates signed with SHA-1.  We recommend that you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256).  
->   
->  For more details about this change, and possible updates to the deadline, follow this blog post: [Windows Enforcement of Authenticode Code Signing and Timestamping](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
+> Effective February 14, 2017, Windows no longer trusts certain certificates signed with SHA-1. System Center Configuration Manager supports SHA-2 certificates and the use of SHA-2 certificates brings an important security advantage. Therefore, we recommend:
+> - That you issue new server and client authentication certificates signed with SHA-2 (which includes SHA-256 and SHA-512, among others).
+> - That any Internet-facing services use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.  
+>
+> In most cases the change to SHA-2 certificates has no impact on operations. For more information, see [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
  With the exception of the client certificates that System Center Configuration Manager enrolls on mobile devices and Mac computers, the certificates that Microsoft Intune automatically creates for managing mobile devices, and the certificates that System Center Configuration Manager installs on AMT-based computers, you can use any PKI to create, deploy, and manage the following certificates. However, when you use Active Directory Certificate Services and certificate templates, this Microsoft PKI solution can ease the management of the certificates. Use the **Microsoft certificate template to use** column in the following tables to identify the certificate template that most closely matches the certificate requirements. Template-based certificates can be issued only by an enterprise certification authority running on the Enterprise Edition or Datacenter Edition of the server operating system, such as Windows Server 2008 Enterprise and Windows Server 2008 Datacenter.  
 

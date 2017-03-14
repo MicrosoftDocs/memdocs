@@ -139,7 +139,7 @@ Before you update a System Center Configuration Manager central administration s
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see the [Test the site database upgrade](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test) section in [Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
 
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.
