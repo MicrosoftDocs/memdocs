@@ -52,10 +52,15 @@ By default, the log file is written to the temp folder of the user account that 
 
 
 ## Run the tool
-To run the tool, open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.  
+To run the tool:
+1. Open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.  
+2. Next, enter a command line that includes the required command line switches, and optional switches you want to use.
 
-Next, enter a command line that includes the required command line switches, and optional switches you want to use.
+**Known issue**
+When the tool is run, an error like the following might be returned when any package or deployment has failed, or is in progress:
+-  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.*
 
+**Workaround:** None. The tool cannot reliable identify orphaned files when content is in progress or has failed to deploy. Therefore, the tool will not allow you to clean-up content until that issue is resolved.
 
 ### Command line switches  
 The following command line switches can be used in any order.   
