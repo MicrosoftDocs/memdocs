@@ -50,7 +50,7 @@ The configuration of each relationship determines when a client that fails to fi
 ## Fallback
 To prevent problems for clients when they cannot find an available site system in their current boundary group, you define relationships between boundary groups that defines fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
 
-Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of site system role that is supported, you can configure independent settings for fallback to that neighbor boundary group. As an example, when you configure a relationship to a specific boundary group you can set fallback for distribution points to occur after 20 minutes, and fallback for state migration points to occur after 60 minutes. See [Example of using boundary groups](#example-of-using-boundary-groups) for a more extensive example.
+Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of site system role that is supported, you can configure independent settings for fallback to that neighbor boundary group. As an example, when you configure a relationship to a specific boundary group you can set fallback for distribution points to occur after 20 minutes instead of the default of 120. See [Example of using boundary groups](#example-of-using-boundary-groups) for a more extensive example.
 
 If a client fails to find an available site system role in its current boundary group, the client uses the fallback time in minutes to determine after how long it can begin to search for an available site system that is associated with that neighbor boundary group.  
 
@@ -68,7 +68,7 @@ For each boundary group you create, Configuration Manager automatically creates 
 -	Clients that are not on a boundary associated with any boundary group in your hierarchy use the default site boundary group from their assigned site to identify valid site system roles they can use.
 
 To manage fallback to the default site boundary group:
-- You can go to the site default boundary group’s properties and change the values on the **Default Behavior** tab. Changes you make here apply to *all* implied links to this boundary group. These settings can be overriden when you configure the explicit link to this default site boundary group from another boundary group.
+- You can go to the site default boundary group’s properties and change the values on the **Default Behavior** tab. Changes you make here apply to *all* implied links to this boundary group. These settings can be overridden when you configure the explicit link to this default site boundary group from another boundary group.
 - You can go to the properties of a boundary group you created, and change the values for the explicit link that goes to a default site boundary group. When you set a new time in minutes for fallback or block fallback, that change affects only the link you are configuring. Configurations of the explicit link override those on the **Default Behavior** tab of a default site boundary group.
 
 
@@ -122,8 +122,8 @@ Fallback for software update points is configured like other site system roles, 
  Preferred management points enable a client to identify a management point that is associated with its current network location (boundary).  
 
 -   A client attempts to use a preferred management point from its assigned site before using a management point from its assigned site that is not configured as preferred.  
--   To use this option you must enable it for the hierarchy, and configure boundary groups at individual primary sites to include the management points that should be associated with that boundary group's associated boundaries  
--   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the client's assigned site)  
+-   To use this option, you must enable it for the hierarchy and then configure boundary groups at individual primary sites to include the management points that should be associated with that boundary group's associated boundaries.  
+-   When preferred management points are configured and a client organizes its list of management points, the client places the preferred management points at the top of its list of assigned management points (which includes all management points from the client's assigned site).  
 
 > [!NOTE]  
 >  When a client roams (which means to change its network locations such as  when a laptop travels to a remote office location) it might use a management point (or proxy management point) from the local site at its new location before attempting to use a management point from its assigned site (which includes the preferred management points).  See [Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) for more information.  
@@ -160,7 +160,7 @@ With this configuration:
 -	The client begins searching for content from distribution points in its *current* boundary group (BG_A), searching each distribution point for two minutes before switching to the next distribution point in the boundary group. The clients pool of valid content source locations includes DP_A1 and DP_A2.
 -	If the client fails to find content from its *current* boundary group after searching for 10 minutes, it then adds the distribution points from the BG_B boundary group to its search. It then continues to search for content from a distribution point in its combined pool of distribution points that now includes those from both the BG_A and BG_B boundary groups. The client continues to contact each distribution point for two minutes before switching to the next distribution point from its pool. The clients pool of valid content source locations includes DP_A1, DP_A2, DP_B1, and DP_B2.
 -	After an additional 10 minutes (20 minutes total) if the client still has not found a distribution point with content, it expands its pool of available distribution points to include those from the second *neighbor* group, boundary group BG_C. The client now has 6 distribution points to search (DP_A1, DP_A2, DP_B2, DP_B2, DP_C1, and DP_C2) and continues changing to a new distribution point every two minutes until content is found.
--	If the client has not found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool of distribution points includes all the distribution points from the three configured boundary groups and the final distribution point located on the site server computer.  The client then continues its search for content, changing distribution points every two minutes until content is found.
+-	If the client has not found content after a total of 120 minutes, it falls back to include the *default site boundary group* as part of its continued search. Now the pool of distribution points includes all the distribution points from the three configured boundary groups, and the final distribution point located on the site server computer.  The client then continues its search for content, changing distribution points every two minutes until content is found.
 
 By configuring the different neighbor groups to be available at different times you control when specific distribution points are added as a content source location, and when, or if, the client uses fallback to the default site boundary group as a safety net for content that is not available from any other location.
 
@@ -170,7 +170,7 @@ By configuring the different neighbor groups to be available at different times 
 
 
 ### Update existing boundary groups to the new model
-When you update to version prior to 1610, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available, until you configure new boundary groups and relationships.
+When you update to version prior to 1610, the following configurations are automatically made. These are intended to ensure your current fallback behavior remains available until you configure new boundary groups and relationships.
 
 -	A default site boundary group is created for each primary site, the name is ***Default-Site-Boundary-Group&lt;sitecode>.***
   -	Distribution points with *Allow fallback source location for content* checked and state migration points at primary sites are added to the *Default-Site-Boundary-Group&lt;sitecode>* boundary group of that site.
@@ -231,7 +231,7 @@ The following are the key changes to boundary groups and how clients find conten
 
 	- After two minutes, if the client has not found the content, it switches to a new distribution point and attempts to get content from that server. This process repeats every two minutes until the client finds the content or reaches the last server in its pool.
 
-	- If a client cannot find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list, and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
+	- If a client cannot find a valid content source location from its *current* pool before the period for fallback to a *neighbor* boundary group is reached, the client then adds the distribution points from that *neighbor* group to the end of its current list and will then search the expanded group of source locations that includes the distribution points from both boundary groups.
 
 		> [!TIP]  
 		> When you create an explicit link from the current boundary group to the default site boundary group and define a fallback time that is less than the fallback time for a link to a neighbor boundary group, clients will begin searching source locations from the default site boundary group before including the neighbor group.
