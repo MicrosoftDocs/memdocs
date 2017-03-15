@@ -2,7 +2,7 @@
 title: "Release notes - Configuration Manager | Microsoft Docs"
 description: "Consult these notes for urgent issues that are not yet fixed in the product or covered in a Microsoft Knowledge Base article."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/27
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -25,6 +25,16 @@ With System Center Configuration Manager, product release notes are limited to u
 >  This topic contains release notes for the current branch of System Center Configuration Manager. For the Technical Preview for System Center Configuration Manager, see [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
 
 ## Setup and upgrade  
+
+### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
+<!--  SMS 486420  Applicability though to be 1610 and 1702. Not yet fixed in 1706  -->
+After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed langauge packs might not be availble. This occurs when:
+- Your site runs version 1610 or 1702.
+- The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
+
+When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs avaialble to the console will not have changed.  
+
+**Workaround:** Uninstall the current console, and then reinstall the console as a new installation. You can use ConsoleSetup.exe from the site servers installation folder. During the installation, be sure to select the language pack files you want to use.
 
 ### When installing a Long-Term Service Branch site using version 1606, a Current Branch site is installed
 When you use the version 1606 baseline media from the October 2016 release to install a Long-Term Servicing Branch (LTSB) site, Setup installs a Current Branch site instead. This occurs because the option to install a service connection point with the site install is not selected.
@@ -50,10 +60,12 @@ To confirm which branch installed, in the console at **Administration** > **Site
 
 **Workaround**: After upgrade to version 1511, review your SQL Server configuration and restore it to full if necessary.  
 
-### When you add a service window to a new site server, service windows that were   configured for another site server are deleted  
+<!--
+ ### When you add a service window to a new site server, service windows that were   configured for another site server are deleted  
  When you use service windows with System Center Configuration Manager version 1511, you can only configure service windows for  a single site server in a hierarchy. After configuring service windows on one server, when you then configure a service window on a second site server, the service windows on the first site server are silently deleted, with no warning or errors.  
 
 **Workaround**: Install the hotfix from the [Microsoft Knowledge Base article 3142341](http://support.microsoft.com/kb/3142341). This issue is also resolved when you install the 1602 update for System Center Configuration Manager.  
+-->
 
 ### An update is stuck with a state of Downloading in the Updates and Servicing node of the Configuration Manager console  
 During the automatic download of updates by an on-line service connection point, an update can become stuck with a stat of Downloading. When the download of an update is stuck, entries similar to the following appear in the indicated log files:  
@@ -93,6 +105,7 @@ System Center Configuration Manager version 1602 introduces two pre-release feat
 
 
 
+<!--
 ### Recovery options for a secondary site are not available in the console  
 After recovery of a secondary site fails, the option **Recover Secondary Site** might no longer be available in the Configuration Manager console.  
 
@@ -116,6 +129,7 @@ This issue affects System Center Configuration Manager version 1511 and 1602, an
     FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
     WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
   ```  
+  -->
 
 ###  Setup fails when using redist files from the CD.Latest folder with a manifest verification error
 When you run Setup from a CD.Latest folder created for version 1606 and use the redist files included with that CD.Latest folder, Setup fails with the following errors in the Configuration Manager Setup log:
@@ -167,6 +181,7 @@ This issue is resolved in version 1606.
 
 ## Client deployment and upgrade  
 
+<!--
 ### Expansion to central administration site stops automatic client upgrades  
 In version 1511 only, you will not be able to run automatic client upgrades for any site that is expanded from a primary site to a central administration site. When the site is expanded, the authoritative site on the client upgrade package is not correctly set to the new central administration site, which prevents automatic client upgrades from running successfully. This issue only exists for version 1511. In version 1602 and later, this issue is fixed.  
 
@@ -200,6 +215,8 @@ In version 1511 only, you will not be able to run automatic client upgrades for 
   WHERE OfferID IN  
       (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
   ```  
+-->
+
 
 ## Operating system deployment  
 
