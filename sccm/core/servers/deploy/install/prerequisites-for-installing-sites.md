@@ -60,10 +60,9 @@ A stand-alone primary site must meet the following prerequisites before you can 
 
 -   **You must install the new central administration site installation using media from a CD.Latest folder (which contains the source files) that matches the version of the stand-alone primary site**
 
-     To ensure a version match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)] on the stand-alone primary site.
+ To ensure a version match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) on the stand-alone primary site.
 
-
-     For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) in the [Prepare to install sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md) topic.
+ For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) in the [Prepare to install sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md) topic.
 
 
 -   **The stand-alone primary site cannot be configured to migrate data from another Configuration Manager hierarchy**  
