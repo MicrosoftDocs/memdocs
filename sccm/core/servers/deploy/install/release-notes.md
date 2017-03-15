@@ -27,7 +27,7 @@ With System Center Configuration Manager, product release notes are limited to u
 ## Setup and upgrade  
 
 ### After you update a Configuration Manager console using ConsoleSetup.exe from the site server folder, recent language pack changes are not available
-<!--  SMS 486420  Applicability though to be 1610 and 1702. Not yet fixed in 1706  -->
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
 After you run an in-place update to a console by using ConsoleSetup.exe from a site servers installation folder, recently installed langauge packs might not be availble. This occurs when:
 - Your site runs version 1610 or 1702.
 - The console is updated in-place by using ConsoleSetup.exe from the site server installation folder.
@@ -35,6 +35,15 @@ After you run an in-place update to a console by using ConsoleSetup.exe from a s
 When this issue occurs, the reinstalled console does not use the latest set of language packs that were configured. No errors are returned, but language packs avaialble to the console will not have changed.  
 
 **Workaround:** Uninstall the current console, and then reinstall the console as a new installation. You can use ConsoleSetup.exe from the site servers installation folder. During the installation, be sure to select the language pack files you want to use.
+
+
+### With version 1702, the default site boundary group is configured for use for site assignment
+<!--  SMS 486380   Applicability should only be to 1702. -->
+With version 1702, the default site boundary groups Reference tab has a check for **Use this boundary group for site assignment**, lists the site as the **Assigned site**, and is grayed out so that the configuration cannot be edited or removed.
+
+**Workaround:** None. You can ignore this setting. Although the group is enabled for site assignment, the default site boundary group is not used for site assignment. With 1702, this configuration ensures the default site boundary group is associated with the correct site.
+
+
 
 ### When installing a Long-Term Service Branch site using version 1606, a Current Branch site is installed
 When you use the version 1606 baseline media from the October 2016 release to install a Long-Term Servicing Branch (LTSB) site, Setup installs a Current Branch site instead. This occurs because the option to install a service connection point with the site install is not selected.
@@ -165,9 +174,11 @@ The exception is similar to the following:
 
 
 
-
-
+<!-- No curretn Backup and Recovery relenotes
 ## Backup and recovery
+-->
+
+<!--
 ### Pre\-production client is not available after a site restore
 With version 1602, when you use pre-production clients and you restore the top-tier site of your hierarchy from a backup, the pre\-production client version is not available after the site is restored.  
 
@@ -177,9 +188,11 @@ With version 1602, when you use pre-production clients and you restore the top-t
 2. Create an empty file named **client.acu** and copy or paste this file into the *&lt;CM_Install_Location\>\\Inboxes\\hman.box* folder on the site server. (This file can be a text file that has been renamed, so long as it no longer has the txt extension). After this file is placed in the hman.box folder, the Hierarchy Manager on the site server will start and process the client files and restore the pre\-production client files for use.
 
 This issue is resolved in version 1606.
+-->
 
-
+<!-- No curretn Backup and Recovery relenotes
 ## Client deployment and upgrade  
+-->
 
 <!--
 ### Expansion to central administration site stops automatic client upgrades  
