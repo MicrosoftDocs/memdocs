@@ -2,7 +2,7 @@
 title: "Prerequisites for sites | Microsoft Docs"
 description: "Learn about prerequisites for installing the different types of System Center Configuration Manager sites."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -55,12 +55,13 @@ The following prerequisites apply to installing a central administration site as
 - The site server and site database computers must meet all prerequisite configurations. Before starting Setup, you can [manually run Prerequisite Checker](../../../../core/servers/deploy/install/prerequisite-checker.md) to identify and fix problems.  
 
 
-### <a name="bkmk_expand"></a> Expanding a stand-alone primary site
+### <a name="bkmk_expand"></a> Prerequisites to expand a stand-alone primary site
 A stand-alone primary site must meet the following prerequisites before you can expand it into a hierarchy with a central administration site:
 
--   **You must install the new central administration site installation media (which contains the source files) that matches the version of the stand-alone primary site**
+-   **You must install the new central administration site installation using media from a CD.Latest folder (which contains the source files) that matches the version of the stand-alone primary site**
 
-     To ensure a version match, install the new site by using the source files found in the [CD.Latest folder](../../../../core/servers/manage/the-cd.latest-folder.md) on the stand-alone primary site.
+     To ensure a version match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)] on the stand-alone primary site.
+
 
      For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options) in the [Prepare to install sites](../../../../core/servers/deploy/install/prepare-to-install-sites.md) topic.
 
