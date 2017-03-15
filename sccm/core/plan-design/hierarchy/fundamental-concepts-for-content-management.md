@@ -2,7 +2,7 @@
 title: "Content management fundamentals | Microsoft Docs"
 description: "Use tools and options in System Center Configuration Manager to manage the content that you deploy."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -53,7 +53,7 @@ For more information about these accounts, see [Manage accounts to access conten
 -   Configuration Manager supports up to five incremental versions of a content set before it resends the entire content set. After the fifth update, the next change to the content set causes Configuration Manager to create a new version of the content set. Configuration Manager then distributes the new version of the content set to replace the previous set and any of its incremental versions. After the new content set is distributed, subsequent incremental changes to the source files are again replicated by binary differential replication.  
 
 
-BDR is supported between each parent and child site in a hierarchy. Within a site, BDR is supported between the site server and its distribution points. This support includes pull-distribution points but does not include cloud-based distribution points. Cloud-based distribution points do not support binary differential replication to transfer content.  
+BDR is supported between each parent and child site in a hierarchy. Within a site, BDR is supported between the site server and its regular distribution points. However, pull-distribution points and cloud-based distribution points do not support binary differential replication to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
 
 Applications always use binary differential replication. For packages, binary differential replication is optional and is not enabled by default. To use binary differential replication for packages, you must enable this functionality for each package. To do so, select the option **Enable binary differential replication** when you create a new package or when you edit the **Data Source** tab of the package properties.  
 
