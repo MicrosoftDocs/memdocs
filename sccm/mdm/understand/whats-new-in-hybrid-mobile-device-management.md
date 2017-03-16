@@ -1,8 +1,8 @@
 ---
-title: "What's new hybrid MDM | Microsoft Docs"
-description: "Learn about the new mobile device management features available for hybrid deployments with System Center Configuration Manager and Intune."
+title: "What's new in hybrid MDM with Configuration Manager | Microsoft Docs"
+description: "Learn about the new mobile device management features available for hybrid deployments with Configuration Manager and Intune."
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,6 +31,52 @@ This article provides details on the new mobile device management (MDM) features
 |**New in Microsoft Intune** | In general, all the features listed under this category should work with all Configuration Manager releases including System Center 2012 R2 Configuration Manager releases, since these features only require the  Intune service and do not require additional functionality in  Configuration Manager.|
 |**New in Configuration Manager Technical Preview**| All the features listed under this category only work with the specified Technical Preview release. To try out these features, you must install the Technical Preview version specified in the feature description. For more information, see [Technical Preview for System Center Configuration Manager](../../core/get-started/technical-preview.md).|
 |**New in Configuration Manager (current branch)**| All the features listed under this category only work with the specified version of Configuration Manager (current branch), such as version 1511 or 1602. If you're using an older version of Configuration Manager for your hybrid deployment, you must upgrade to the Configuration Manager (current branch)  version specified in the feature description. For more information, see [Upgrade to System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md).|
+
+## New hybrid features in March 2017
+
+### New in Microsoft Intune
+
+The following Intune features introduced in March 2017 work in hybrid deployments:
+
+- **New user experience for the Company Portal app for Android**
+
+  The Company Portal app for Android has a more modern look and feel to its user interface. The notable updates are:
+
+  - Colors: Company Portal tab headers are colored in IT-defined branding.
+  - Apps: In the **Apps** tab, the **Featured Apps** and **All Apps** buttons are updated.
+  - Search: In the **Apps** tab, the **Search** button is a floating action button.
+  - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
+  - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
+
+  For more details about these changes, see [UI updates for Intune end user apps](whats-new-in-intune-app-ui.md).
+
+- **Signing Script for Windows 10 Company Portal**
+
+If you need to download and sideload the Windows 10 Company Portal app, you can now use a script to simplify and streamline the app-signing process for your organization.  To download the script and the instructions for using it, see  [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) on TechNet Gallery. For more details about this announcement, see [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) on the Intune Support Team Blog.
+
+- **Improved support for Android users based in China**
+
+  Due to the absence of the Google Play Store in China, Android devices must obtain apps from Chinese marketplaces. The Company Portal will support this workflow by redirecting Android users in China to download the Company Portal and Outlook apps from local app stores. This will improve the user experience when Conditional Access policies are enabled, both for Mobile Device Management and for Mobile Application Management. The Company Portal and Outlook apps for Android are available on the following Chinese app stores:
+
+  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
+
+- **Make sure your Company Portal apps are up-to-date**
+
+In December 2016, we released an update that enabled enforcement for multi-factor authentication (MFA) on a group of users when they enroll an iOS, Android, Windows 8.1+, or Windows Phone 8.1+ device. This feature cannot work without certain baseline versions of the Company Portal app for Android (v5.0.3419.0+) and iOS (v2.1.17+).
+
+Intune's management capabilities are continuously improving and many improvements have coordinated updates to the Company Portal apps on all supported platforms. As a result, we recommend that you keep the latest versions of the Company Portal apps on installed on devices to take advantage of improvements in Intune and for the best user experience.
+
+>[!Tip]
+> Have your users set their devices to automatically update apps from the appropriate app store. If you have made the Android Company Portal app available on a network share, you can download the latest version from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49140).
+
+- **Microsoft Teams is now enabled for MAM on iOS and Android**
+
+  The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities, so you can empower your teams to work freely across devices, while ensuring that conversations and corporate data is protected at every turn. For more details, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
+
 
 ## New hybrid features in February 2017
 
