@@ -48,7 +48,7 @@ The following Intune features introduced in March 2017 work in hybrid deployment
   - Navigating Apps: **All Apps** view shows a tabbed view of **Featured**, **All**, and **Categories** for easier navigation.
   - Support: **My Devices** and **Contact IT** tabs are updated to improve readability.
 
-  For more details about these changes, see [UI updates for Intune end user apps](whats-new-in-intune-app-ui.md).
+  For more details about these changes, see [UI updates for Intune end user apps](/intune/enduser/whats-new-in-intune-app-ui).
 
 - **Signing Script for Windows 10 Company Portal**
 
