@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-  - configmgr-other
+  - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
