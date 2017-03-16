@@ -34,7 +34,7 @@ System Center Configuration Manager On\-premises Mobile Device Management requir
  Intune is required to make On\-premises Mobile Device Management functional. Simply [sign up](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/) for a trial or paid subscription and go to the next step to add the subscription to Configuration Manager.  
 
 ##  Add the Intune subscription to Configuration Manager  
- To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [Configure your Intune subscription](../deploy-use/configure-intune-subscription).  
+ To add the subscription to Configuration Manager, you follow the same basic steps as you would when adding the subscription for mobile device management with  Intune. Read the notes below for specific differences, and then use the instructions in [Configure your Intune subscription](../deploy-use/configure-intune-subscription.md).  
 
 > [!NOTE]  
 >  When adding the Intune subscription, keep the following in mind:  
