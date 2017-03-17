@@ -44,7 +44,7 @@ manager: angrobe
  Some versions are only available as updates for existing sites (from within the Configuration Manager console), and cannot be used to install new Configuration Manager sites.   
 For example, the 1610 update is only available from within the Configuration Manager console. It is used to update a site that already runs a version of System Center Configuration Manager.
 
-Periodically, an update version is also released as a new baseline version (like update 1610 or 1702). This kind of update can be used to install a new hierarchy, without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
+Periodically, an update version is also released as a new baseline version (like update 1702). This kind of update can be used to install a new hierarchy, without the need to start with an older baseline version (like 1511) and upgrade your way to the most current version.
 
 
 For more information about using updates, see [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md).  
