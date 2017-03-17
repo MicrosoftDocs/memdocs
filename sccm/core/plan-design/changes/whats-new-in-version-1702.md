@@ -28,19 +28,23 @@ Update 1702 for System Center Configuration Manager current branch is available 
 >  -   [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
 >  -   [Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
+The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
-**Support is dropped in version 1702 for the following products:**
+## Deprecated features and operating systems
+Learn about support changes before they are implemented in [removed and deprecated features](/sccm/core/plan-design/changes/removed-and-deprecated-features),
+
+Version 1702 drops support for the following products:
 - **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) on July 10,2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
 - **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on July 10,2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
 - **Windows Server 2008**,for site system servers and most site system roles. Deprecation of support was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10,2015.
 - **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems) on  July 10,2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 
 
-The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
 
 
+## Site infrastructure
 
-## Improvements for in-console search
+### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
  - **Object Path:**  
   Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
@@ -52,7 +56,7 @@ The following are improvements to using search in the Configuration Manager cons
  The option that you choose for searching the *current node* or *all sub-nodes* now persists when you change the node you are working in. This new behavior means that you do not need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
-## Send feedback from the Configuration Manager console
+### Send feedback from the Configuration Manager console
 
  You can use the in-console feedback options to send feedback directly to the development team.
 
@@ -66,8 +70,7 @@ The following are improvements to using search in the Configuration Manager cons
  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
 
 
-
-##  Changes for Updates and Servicing
+###  Changes for Updates and Servicing
 The following are changes for Updates and Servicing:
 
 - **Node location**   
@@ -88,7 +91,7 @@ The following are changes for Updates and Servicing:
   We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server.  
 
 
-## Data Warehouse service point
+### Data Warehouse service point
  Use the Data Warehouse service point to store and report on long-term historical data for your Configuration Manager deployment.
 
  The data warehouse supports up to 2 TB of data, with timestamps for change tracking. Storage of data is accomplished by automated synchronizations from the Configuration Manager site database to the data warehouse database. This information is then accessible from your Reporting Services point.
@@ -96,7 +99,7 @@ The following are changes for Updates and Servicing:
  For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
 
 
-## Peer Cache improvements
+### Peer Cache improvements
  Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
   -  Is in low battery mode.
   -  CPU load exceeds 80% at the time the content is requested.
@@ -106,12 +109,31 @@ For more information, see **Limited access to a peer cache source** in [Peer Cac
 
 Additionally, three new reports are added to your reporting point. You can use these reports to understand more details about rejected content requests, including which boundary group, computer, and content was involved. See [Monitoring](/sccm/core/plan-design/hierarchy/client-peer-cache#monitoring) in the peer cache topic.
 
-## Content library cleanup tool
+### Content library cleanup tool
  Use the [content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) to remove content from distribution points when that content is no longer associated with an application.
 
 
-## Use the OMS connector with the Azure Government cloud
+### Use the OMS connector with the Azure Government cloud
 You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig).
 
-## Software update points are added to boundary groups
+### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
+
+
+<!-- ## Migration  --> 
+
+<!-- ## Client management  -->
+
+<!-- ## Compliance settings  -->
+
+<!-- ## Application Management   -->
+
+<!-- ## Operating system deployment  -->
+
+<!-- ## Software updates  -->
+
+<!-- ## Reporting  -->
+
+<!-- ## Inventory  -->
+
+<!-- ## Mobile device management - on-premises and hybrid  -->
