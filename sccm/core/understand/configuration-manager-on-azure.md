@@ -2,7 +2,7 @@
 title: "Configuration Manager on Azure  | Microsoft Docs"
 description: "Information about using Configuration Manager on an Azure environment."
 ms.custom: na
-ms.date: 01/30/2017
+ms.date: 03/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -138,8 +138,8 @@ The **Cloud Management Gateway** provides a simple way to manage Configuration M
 
 You can start using the cloud management gateway in your environment and give us feedback to make this better. For information about pre-release features, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates).
 
-### I also heard that you have another new feature called Peer Cache in the Technical Preview version 1604. Is that different than BranchCache? Which one should I choose?
-Yes, totally different. [Peer Cache](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
+### I also heard that you have another new feature called Peer Cache introduced as a pre-release feature in version 1610. Is that different than BranchCache? Which one should I choose?
+Yes, totally different. [Peer Cache](/sccm/core/plan-design/hierarchy/client-peer-cache) is a 100% native Configuration Manager technology where BranchCache is a feature of Windows. Both can be useful for you; BranchCache uses a broadcast to find the required content whereas Peer Cache uses Configuration Managers regular distribution workflow and boundary group settings.
 
 You can configure any client to be a Peer Cache source. Then, when management points provide  clients information about content source locations, they provide details about both the distribution points and any Peer Cache sources that have the content that client requires.
 
