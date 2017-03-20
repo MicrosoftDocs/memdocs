@@ -47,12 +47,6 @@ The data that is displayed in the Office 365 Client Management dashboard comes f
 7.  Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box.  
 The Office 365 Client Management dashboard will start displaying data as hardware inventory is reported.
 
-<!---
- On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
-- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
-- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
---->
-
 ## Deploy Office 365 updates with Configuration Manager
 Use the following steps to deploy Office 365 updates with Configuration Manager:
 
@@ -70,6 +64,36 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
     - Method 2: [Enable Office 365 clients to receive updates](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
 
 4. [Deploy the Office 365 updates](deploy-software-updates.md) to clients.   
+
+    Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.  
+
+    > [!NOTE]
+    > - The computer that runs the Office 365 Installer must have Internet access.  
+    > - The user that runs the Office 365 Installer must have **Read** and **Write** access to the content location share is provided in the wizard.
+    > - If you receive a 404 download error, copy the following files to the user %temp% folder:
+    >    - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)  
+    >    - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+
+    **To deploy Office 365 apps to clients from the Office 365 Client Management dashboard**
+    1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
+    2. Click **Office 365 Installer** in the upper-right pane. The Office 365 Client Installation Wizard opens.
+    3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then click **Next**. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*.
+    4. On the **Import Client Settings** page, choose whether to import the Office 365 client settings from an existing XML configuration file or to manually specify the settings, and then click **Next**.  
+
+    When you have an existing configuration file, enter the location for the file and skip to step 7. Note that the location must be specified in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.    
+    5. On the **Client Products** page, select the Office 365 suite that you use, select the applications that you want to include, select any additional Office products that should be included, and then click **Next**.
+    6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
+    7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**.  
+    If you choose not to deploy the package in the wizard, skip to step 9.
+    8. Configure the remainder of the wizard pages as you would for a typical application deployment. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
+    9. Complete the wizard.
+    10. You can deploy or edit the application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**.   
+
+  >[!NOTE]
+  >After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the Office 365 Client Management dashboard, and select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+
+
+
 
 ## Add other languages for Office 365 update downloads
 Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
