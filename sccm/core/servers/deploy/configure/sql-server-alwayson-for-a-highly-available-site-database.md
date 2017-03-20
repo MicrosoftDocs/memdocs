@@ -11,10 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: 16
-author: Brendunsms.author: brendunsmanager: angrobe
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
 
 ---
-# SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+# SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager
+
+*Applies to: System Center Configuration Manager (Current Branch)*
 
 
  Beginning with System Center Configuration Manager version 1602, you can use  SQL Server [AlwaysOn Availability Groups](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx) to host the site database at primary sites and the central administration site as a high-availability and disaster-recovery solution. The availability group can be hosted on-premises or in Microsoft Azure.  
@@ -28,7 +32,7 @@ author: Brendunsms.author: brendunsmanager: angrobe
   - RPC Endpoint Mapper: TCP 135
 
 
- The following are scenarios that are supported with availability groups:  
+The following are scenarios that are supported with availability groups:  
 
 -   You can move your site database to the default instance of an availability group  
 
