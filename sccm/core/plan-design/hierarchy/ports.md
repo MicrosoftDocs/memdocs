@@ -2,7 +2,7 @@
 title: "Ports used by Configuration Manager | Microsoft Docs"
 description: "Learn about the required and customizable ports that System Center Configuration Manager uses for connections."
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -598,6 +598,14 @@ For more information see [Internet access requirements](/sccm/core/servers/deplo
     -   SQL Server service, which defaults to port TCP 1433.  
 
 -   Intrasite communication between the SQL Server database engine and various Configuration Manager site system roles defaults to port TCP 1433.  
+
+- Configuration Manager uses the same ports and protocols to communicate with each SQL Availability Group replica that hosts the site database as if the replica was a standalone SQL Server instance.
+
+When you use Azure and the site database is behind an Internal or External Load Balancer, configure the following firewall exceptions on each replica and add load balancing rules for the following ports:
+ - SQL over TCP: TCP 1433
+ - SQL Server Service Broker: TCP 4022
+ - Server Message Block (SMB): TCP 445
+ - RPC Endpoint Mapper: TCP 135
 
 > [!WARNING]  
 >  Configuration Manager does not support dynamic ports. Because SQL Server named instances by default use dynamic ports for connections to the database engine, when you use a named instance, you must manually configure the static port that you want to use for intrasite communication.  
