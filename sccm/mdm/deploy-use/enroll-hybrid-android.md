@@ -59,5 +59,5 @@ The following steps allow Configuration Manager to manage Android devices.
 ### Enroll an Android for Work device
  How your end users enroll Android for Work devices is similar to enrollment for Android. Users can download and install the Company Portal app for Android on their mobile devices. The app prompts them to create a work profile as part of the enrollment process.  Once the work profile is created, users must switch to the managed version of the Company Portal. The managed Company Portal is tagged with a small orange briefcase in the bottom-right corner.
 
- > [!div class="button"]
- [< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
+> [!div class="button"]
+[< Previous step](create-service-connection-point.md)  [Next step >](set-up-additional-management.md)
