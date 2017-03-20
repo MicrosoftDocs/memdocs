@@ -21,6 +21,13 @@ author: Brendunsms.author: brendunsmanager: angrobe
 
  When you use Microsoft Azure to host the availability group, you can further increase availability of your site database by using SQL Server AlwaysOn Availability Groups with Azure Availability Sets. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).  
 
+ Configuration Manager supports hosting the site database on a SQL Availability Group that is behind an Internal or External Load Balancer. In addition to configuring firewall exceptions on each replica, you will need to add load balancing rules for the following ports:
+  - SQL over TCP: TCP 1433
+  - SQL Server Service Broker: TCP 4022
+  - Server Message Block (SMB): TCP 445
+  - RPC Endpoint Mapper: TCP 135
+
+
  The following are scenarios that are supported with availability groups:  
 
 -   You can move your site database to the default instance of an availability group  
