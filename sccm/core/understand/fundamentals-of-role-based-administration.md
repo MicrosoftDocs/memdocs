@@ -75,7 +75,7 @@ When you  design and implement administrative security for Configuration Manager
 > [!TIP]  
 >  You can view the list of built-in security roles and custom security roles you create, including their descriptions, in the Configuration Manager console. To view the roles, in the **Administration** workspace, expand **Security**, and then select **Security Roles**.  
 
- Each security role has specific permissions for different object types. For example, the *Application MMM* security role has the following permissions for applications: Approve, Create, Delete, Modify, Modify Folders, Move Objects, Read/Deploy, and Set Security Scope.
+ Each security role has specific permissions for different object types. For example, the *Application Author* security role has the following permissions for applications: Approve, Create, Delete, Modify, Modify Folder, Move Object, Read, Run Report and Set Security Scope.
 
  You cannot change the permissions for the built-in security roles, but you can copy the role, make changes, and then save these changes as a new custom security role. You can also import security roles that you have exported from another hierarchy, for example, from a test network. Review the security roles and their permissions to determine whether you'll use the built-in security roles, or whether you have to create your own custom security roles.  
 
