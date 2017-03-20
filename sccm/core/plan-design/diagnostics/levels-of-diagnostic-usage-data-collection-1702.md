@@ -1,8 +1,8 @@
 ---
-title: "Diagnostic data for 1610 | System Center Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1610 collects."
+title: "Diagnostic data for 1702 | System Center Configuration Manager"
+description: "Learn about the levels of diagnostics and usage data that System Center Configuration Manager version 1702 collects."
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -10,8 +10,7 @@ ms.technology:
   - configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
-
+ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 caps.latest.revision: 4
 author: Brendunsms.author: brendunsmanager: angrobe
 translation.priority.ht:
@@ -33,8 +32,8 @@ translation.priority.ht:
   - zh-cn
   - zh-tw
 ---
-# Levels of diagnostic usage data collection for version 1610 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
-System Center Configuration Manager version 1610 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
+# Levels of diagnostic usage data collection for version 1702 of System Center Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+System Center Configuration Manager version 1702 collects three levels of diagnostics and usage data: **Basic**, **Enhanced**, and **Full**. By default, this feature is set at the Enhanced level. The following sections provide additional detail about data that each level collects.
 
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
@@ -45,26 +44,26 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 ##  <a name="bkmk_change"></a> How to change the level
  Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
-Beginning with version 1610, you change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.  
+You change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.  
 
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
  The Basic level includes data about your hierarchy, data that's required to help improve your installation or upgrade experience, and data that helps determine the Configuration Manager updates that are applicable for your hierarchy.
 
- For System Center Configuration Manager version 1610, this level includes the following:
+ For System Center Configuration Manager version 1702, this level includes the following:
 
 
  -   Setup Information:
- 	  - Build, install type, language packs, features that you enabled  
+ 	  -  Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+ 	  -  Update pack deployment status and errors, download progress, and prerequisite errors 	
 
  	  -  Version of post-upgrade script
 
  	  -  Use of update fast ring
 
-    -  ***[New]*** Pre-release use, setup media type, branch type
+    -  Pre-release use, setup media type, branch type
 
-    - ***[New]*** Software Assurance expiration date
+    -  Software Assurance expiration date
 
 
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
@@ -95,7 +94,7 @@ Beginning with version 1610, you change the data collection level from within th
 
 -   Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
 
--   Telemetry stats (when run, runtime, errors)
+-  Telemetry stats (when run, runtime, errors)
 
 -  Configured telemetry level, mode (online or offline), and fast update configuration
 
@@ -113,7 +112,7 @@ The Enhanced level is the default after setup finishes. This level includes data
 
 This level is recommended because it provides Microsoft with the minimum data that's required to make useful improvements in future versions of products and services. This level does not collect object names (sites, users, computer, or objects), details of security-related objects, or vulnerabilities like counts of systems that require software updates.
 
-For System Center Configuration Manager version 1610, this level includes the following:
+For System Center Configuration Manager version 1702, this level includes the following:
 
 -   **Application management:**  
 
@@ -139,7 +138,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -  Application policy size and complexity statistics
 
-    - ***[Updated]*** Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
+    -  Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
 
     - Boundary group statistics (how many fast, how many slow, and count per group)
 
@@ -151,7 +150,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     - Universal Data Access (UDA) usage, how created
 
-    - ***[New]*** Application approval statistics and usage frequency
+    - Application approval statistics and usage frequency
 
 
 
@@ -163,7 +162,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Count of client installation failures  
 
-    -  ***[Updated]*** Client auto-upgrade: deployment configuration including client piloting and exclusion usage (extended interoperability client)
+    -   Client auto-upgrade: deployment configuration including client piloting and exclusion usage (extended interoperability client)
 
     -  Client health statistics and top issue summary
 
@@ -183,7 +182,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     - Client cache size configuration
 
-    - ***[New]***  Number of hardware inventory classes, software inventory rules, and file collection rules
+    - Number of hardware inventory classes, software inventory rules, and file collection rules
 
 
 
@@ -192,18 +191,18 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
   - Count of collections synced to Operations Management Suite
 
-  -  Whether the Operations Management Suite cloud connector is enabled
+  - Whether the Operations Management Suite cloud connector is enabled
 
-  - ***[New]*** Configuration and usage statistics of Cloud Management Gateway
+  - Configuration and usage statistics of Cloud Management Gateway
 
-  - ***[New]*** Count of Upgrade Analytics Connectors
+  - Count of Upgrade Analytics Connectors
 
 
 
 
 - **Collections:**
 
-    -  Collection evaluation statistics (query time, assigned versus unassigned counts, counts by type, ID rollover, and rule usage)
+    - Collection evaluation statistics (query time, assigned versus unassigned counts, counts by type, ID rollover, and rule usage)
 
     - Collections without a deployment
 
@@ -213,14 +212,14 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   **Compliance settings:**  
 
-    -   Count of configuration items by type  
+    -  Count of configuration items by type  
 
-    -   Basic configuration baseline information (count, number of deployments, and number of references)  
+    -  Basic configuration baseline information (count, number of deployments, and number of references)  
 
-    -   Count of deployments that reference built-in settings (now capturing remediate setting)  
+    -  Count of deployments that reference built-in settings (now capturing remediate setting)  
 
-    -   Count of rules and deployments created for custom settings (now capturing remediate setting)  
-    -   Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and Compliance Policy templates
+    -  Count of rules and deployments created for custom settings (now capturing remediate setting)  
+    -  Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and Compliance Policy templates
 
     -  Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx) and Compliance Policy deployments by platform
 
@@ -230,21 +229,21 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   **Content:**  
 
-    -   Count of boundaries by type  
+    -  Count of boundaries by type  
 
-    -   Boundary group information (count of boundaries and site systems that are assigned to each boundary group)  
+    -  Boundary group information (count of boundaries and site systems that are assigned to each boundary group)  
 
-    - ***[New]*** Boundary group relationships and fallback configuration
+    -  Boundary group relationships and fallback configuration
 
-    -   Distribution point group information (count of packages and distribution points that are assigned to each distribution point group)  
+    -  Distribution point group information (count of packages and distribution points that are assigned to each distribution point group)  
 
-    -   Distribution point configuration information (use of branch cache and distribution point monitoring)  
+    -  Distribution point configuration information (use of branch cache and distribution point monitoring)  
 
-    -   Distribution Manager configuration information (threads, retry delay, number of retries, and pull distribution point settings)  
+    -  Distribution Manager configuration information (threads, retry delay, number of retries, and pull distribution point settings)  
 
-    - ***[New]*** Count of peer cache clients and usage statistics
+    -  Count of peer cache clients and usage statistics
 
-    - ***[New]*** Client content download statistics
+    -  Client content download statistics
 
 
 -   **Endpoint Protection:**  
@@ -268,7 +267,7 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   **Mobile device management (MDM):**  
 
-    -   ***[Updated]*** Count of issued mobile device actions: lock, pin rest, wipe, retire, and Sync now commands  
+    -   Count of issued mobile device actions: lock, pin rest, wipe, retire, and Sync now commands  
 
     -   Count of mobile devices that are managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)  
 
@@ -297,11 +296,11 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   **Operating system deployment:**  
 
-    -   Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
+    -  Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
 
-    -   Counts of task sequence step usage
+    -  Counts of task sequence step usage
 
-    - ***[New]*** Count of edition upgrade policies
+    -  Count of edition upgrade policies
 
 
 
@@ -356,18 +355,18 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     -   Software update point load balancing statistics
 
-    -  ***[New]*** Configuration of Windows 10 express updates
+    -   Configuration of Windows 10 express updates
 
 
 
 
 -   **SQL/performance data:**  
 
-    -   Count of largest database tables  
+    - Count of largest database tables  
 
-    -   ***[Updated]***  SQL AlwaysOn replica information, usage, and health status
+    - SQL AlwaysOn replica information, usage, and health status
 
-    -  SQL change tracking retention period
+    - SQL change tracking retention period
 
     - Discovery types, enabled and schedule (full, incremental)
 
@@ -381,14 +380,14 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
     - Count of sites with Wake On Lan (WOL)
 
-    - ***[New]*** Reporting usage and performance statistics  
+    - Reporting usage and performance statistics  
 
 
 
 ##  <a name="bkmk_level3"></a> Level 3 - Full
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information.  This level can also include advanced diagnostic information like system files and memory snapshots which might include personal information that existed in memory or log files at the time of capture.
 
-For System Center Configuration Manager version 1610, this level includes the following:
+For System Center Configuration Manager version 1702, this level includes the following:
 
 -   Collection evaluation and refresh statistics
 
@@ -429,4 +428,4 @@ For System Center Configuration Manager version 1610, this level includes the fo
 
 -   Detailed client deployment installation errors
 
-- ***[New]*** Windows Store for Business application details (non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts)
+-  Windows Store for Business application details (non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts)
