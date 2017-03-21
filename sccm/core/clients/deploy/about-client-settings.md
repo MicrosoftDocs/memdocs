@@ -2,7 +2,7 @@
 title: "Client settings | Microsoft Docs"
 description: "Choose client settings by using the admin console in System Center Configuration Manager."
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

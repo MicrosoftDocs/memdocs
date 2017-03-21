@@ -2,7 +2,7 @@
 title: Manage task sequences to automate tasks | Microsoft Docs
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -61,6 +61,52 @@ Use task sequences to automate steps in your System Center Configuration Manager
 5.  Click **OK** to save the changes.  
 
  For a list of the available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
+
+## Configure high-impact task sequence settings
+Beginning in Configuration Manager version 1702, you can set a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
+
+### Set a task sequence as a high-impact task sequence
+Use the following procedure to set a task sequence as high-impact.
+> [!NOTE]
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **This is a high-impact task sequence**.
+
+### Create a custom notification for high-risk deployments
+Use the following procedure to create a custom notification for high-impact deployments.
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **Use custom text**.
+>  [!NOTE]
+>  You can only set user notification text when the **This is a high-impact task sequence** is selected.
+
+4. Configure the following settings (max of 255 characters for each text box):
+
+  **User notification headline text**: Specifies the blue text that displays on the Software Center user notification. For example, in the default user notification, this section contains something like "Confirm you want to upgrade the operating system on this computer".
+
+  **User notification message text**: There are three text boxes that provide the body of the custom notification.
+  - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
+  - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
+  - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
+
+  Let's say you configure the following custom notification in properties.
+
+    ![Custom notification for a task sequence](..\media\user-notification.png)
+
+    The following notification message will be displayed when the end-user opens the installation from Software Center.
+
+    ![Custom notification for a task sequence](..\media\user-notification-enduser.png)
+
+### Configure Software Center properties
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **General** tab, the following settings for Software Center are available:
+  - **Restart required**: Lets the user know whether a restart is required during the installation.
+  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
 
 ##  <a name="BKMK_DistributeTS"></a> Distribute content referenced by a task sequence  
  Before clients run a task sequence that references content, you must distribute that content to distribution points. At any time, you can select the task sequence and distribute its content to build a new list of reference packages for distribution. If you make changes to the task sequence with updated content, you must redistribute the content before it is available to clients. Use the following procedure to distribute the content that is referenced by a task sequence.  

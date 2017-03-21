@@ -2,7 +2,7 @@
 title: Task sequence steps to manage BIOS to UEFI conversion | Configuration Manager
 description: "Learn how to customize an operating system deployment task sequence to prepare a FAT32 partition for transition to UEFI."
 ms.custom: na
-ms.date: 11/08/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -40,3 +40,6 @@ In an existing task sequence to install an operating system, you will add a new 
 	   ![Partition properties](../../core/get-started/media/partition-properties.png)
 	3. Create an NTFS partition that the task sequence engine uses to save its state and to store log files.
 7.	Add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected** to start the computer in Windows PE.  
+
+## Hardware inventory collects UEFI information
+Beginning in version 1702, a new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
