@@ -159,39 +159,21 @@ your apps, data, and settings are automatically migrated. Previously, the defaul
 
 For details, see [Configure high-impact task sequence settings](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#set-a-task-sequence-as-a-high-impact-task-sequence)
 
+## Return to previous page when a task sequence fails
+You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+
+- When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
 
-
-
-
-## Improvements to operating system deployment
-Beginning in version 1702, the following improvements to operating system deployment are available:
-- Increased the maximum number of applications that you can install to 99 in the **Install Applications** task sequence step. The previous maximum number was 9 applications.
-- When you add applications to the **Install Applications** task sequence step in the task sequence editor, you can now select multiple applications from the **Select the application to install** pane.
-- [**Expire standalone media**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media): When you create standalone media, there are new options to set optional start and expiration dates on the media. These settings are disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media is not started. These options are also available by using the New-CMStandaloneMedia PowerShell cmdlet.
-
-- [**Configurable timeout for Auto Apply Driver task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-   - SMSTSDriverRequestResolveTimeOut
-     Default: 60
-   - SMSTSDriverRequestConnectTimeOut
-     Default: 60
-   - SMSTSDriverRequestSendTimeOut
-     Default: 60
-   - SMSTSDriverRequestReceiveTimeOut
-     Default: 480
-- [**Package ID is now displayed in task sequence steps**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): Any task sequence step that references a package, driver package, operating system image, boot image, or operating system upgrade package will now display the package ID of the referenced object. When a task sequence step references an application it will display the object ID.
-- **Windows 10 ADK tracked by build version**: The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
-- **Default boot image source path can no longer be changed**: Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
-
-
-### Pre-cache content for available deployments and task sequences
+## Pre-cache content for available deployments and task sequences
 Beginning in version 1702, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
 
 For example, let's say you want to deploy a Windows 10 in-place upgrade task sequence, only want a single task sequence for all users, and have multiple architectures and/or languages. In Current Branch, if you create an available deployment, and then the user clicks **Install** in Software Center, the content downloads at that time. This adds additional time before the installation is ready to start. Alternatively, in Current Branch if you create an available task sequence deployment, all content referenced in the task sequence is downloaded. This includes the operating system upgrade package for all languages and architectures. If each is roughly 3 GB in size, the download package can be quite large.
 
 The pre-cache content feature gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive.
 
-#### To configure the pre-cache feature
+### To configure the pre-cache feature
 
 1. Create operating system upgrade packages for specific architectures and languages. Specify the architecture and language on the **Data Source** tab of the package. For the language, use the decimal conversion (for example, 1033 is the decimal for English and 0x0409 is the hexadecimal equivalent). For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
 
@@ -214,6 +196,30 @@ The pre-cache content feature gives you the option to allow the client to only d
 - When the deployment is made available to users (setting on the **Scheduling** tab of the deployment), a notification displays to inform users about the new deployment and the deployment becomes visible in Software Center. The user can go to Software Center and click **Install** to start the installation.
 - If the content is not fully pre-cached, then it will use the settings specified on the **Deployment Option** tab of the deployment. We recommend that there is sufficient time between when the deployment is created and the time in which the deployment becomes available to users to allow clients enough time to pre-cache the content.
 
+
+
+
+## Improvements to operating system deployment  - RAW DATA - WILL REMOVE SOON
+Beginning in version 1702, the following improvements to operating system deployment are available:
+- Increased the maximum number of applications that you can install to 99 in the **Install Applications** task sequence step. The previous maximum number was 9 applications.
+- When you add applications to the **Install Applications** task sequence step in the task sequence editor, you can now select multiple applications from the **Select the application to install** pane.
+
+- [**Configurable timeout for Auto Apply Driver task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
+   - SMSTSDriverRequestResolveTimeOut
+     Default: 60
+   - SMSTSDriverRequestConnectTimeOut
+     Default: 60
+   - SMSTSDriverRequestSendTimeOut
+     Default: 60
+   - SMSTSDriverRequestReceiveTimeOut
+     Default: 480
+- [**Package ID is now displayed in task sequence steps**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): Any task sequence step that references a package, driver package, operating system image, boot image, or operating system upgrade package will now display the package ID of the referenced object. When a task sequence step references an application it will display the object ID.
+- **Windows 10 ADK tracked by build version**: The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
+- **Default boot image source path can no longer be changed**: Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
+
+
+
+
 <!-- ## Software updates  -->
 
 
@@ -228,5 +234,3 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 <!-- ## Inventory  -->
 
 <!-- ## Mobile device management - on-premises and hybrid  -->
-
-

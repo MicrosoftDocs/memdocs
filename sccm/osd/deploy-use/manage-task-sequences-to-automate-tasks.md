@@ -32,6 +32,12 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |[Task sequence to manage virtual hard disks](use-a-task-sequence-to-manage-virtual-hard-disks.md)|This task sequence type contains the steps to create a VHD, which includes to install an operating system and applications, that you can publish to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.|  
 |[Custom task sequence](create-a-custom-task-sequence.md)|This task sequence type does not add any steps to the task sequence. You must edit the task sequence and add steps to the task sequence after it is created.|  
 
+## Return to previous page when a task sequence fails
+Beginning in Configuration Manager version 1702, you can return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+
+- When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
+
 ##  <a name="BKMK_ModifyTaskSequence"></a> Edit a task sequence  
  You can modify a task sequence by adding or removing task sequence steps, adding or removing task sequence groups, or by changing the order of the steps. Use the following procedure to modify an existing task sequence.  
 
