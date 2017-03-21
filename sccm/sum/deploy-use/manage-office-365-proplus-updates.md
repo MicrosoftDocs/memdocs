@@ -13,7 +13,11 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ---
 
 # Manage Office 365 ProPlus updates with Configuration Manager*Applies to: System Center Configuration Manager (Current Branch)*
+Configuration Manager synchronizes Office 365 client updates and makes them available to deploy to clients with Office 365 installed. Beginning in Configuration Manager version 1610, you can review Office 365 client information from the Office 365 Client Management dashboard.
+
 Beginning in Configuration Manager version 1602, Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.
+
+Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App install experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
 
 ## Office 365 Client Management dashboard  
 Starting in Configuration Manager version 1610, the Office 365 Client Management dashboard is available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
@@ -109,10 +113,9 @@ To change the update channel after you enable Office 365 clients to receive upda
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
 
 ## Deploy Office 365 apps  
-Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer to make the initial Office 365 App install experience easier. It will let you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
+Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App install experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
 
 This is especially helpful because Office 365 updates are not applicable for clients without Office 365 installed. Before version 1702, to install Office 365 apps for the first time on clients, you would need to manually download Office 365 Deployment Tool (ODT) and the Office 365 installation source files, including all of the language packs that you need, and generate the Configuration.xml that specifies the correct Office version and channel. Then, you would need to create and deploy either a legacy package or a script application for clients to install the Office 365 apps.
-
 
 > [!NOTE]
 > - The computer that runs the Office 365 Installer must have Internet access.  
