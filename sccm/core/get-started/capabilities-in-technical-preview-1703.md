@@ -95,8 +95,6 @@ For example, to configure WSfB:
 You can now use the remainder of the [Current Branch content](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) for managing apps from the WSfB to synchronize, create and deploy, and monitor Windows Store for Business Apps.
 
 ### Modify a cloud service configuration
-You can view and edit the properties of a Cloud Service type to modify the configuration.
+You can view and edit the properties of a cloud service to modify the configuration.
 
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
-
-You cannot change the Cloud service name, the Azure service name, or the app content storage location. You can modify the friendly descriptions for the cloud and Azure services, and the language configurations for WSfB apps.
