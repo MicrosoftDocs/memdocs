@@ -34,7 +34,7 @@ With this preview, you use the new boundary group behavior to manage which softw
 - Clients that are seeking a new software update point will try to use one that is associated with their current boundary group.
 - When the client fails to reach their current software update point and cannot find one from their current boundary group, the client uses Fallback behavior to expand the available pool of software update points it can use.    
 
-For more information on boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups) in the content for the Current Branch.
+For more information on boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) in the content for the Current Branch.
 
 However, with this preview, boundary groups for software update points are only partially implemented. You can add software update points and configure neighbor boundary groups that contain software update points, but the fallback time for software update points is not yet supported, and clients will wait two hours before starting fallback.
 

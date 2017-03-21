@@ -232,4 +232,8 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
  The Configuration Manager client for Linux and UNIX contacts this management point at the time the client installs. If the client fails to contact the management point, the client software continues to retry until successful.  
 
+<<<<<<< HEAD
  For more information about how clients locate management points, see [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).
+=======
+ For more information about how clients locate management points, see [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-point).
+>>>>>>> 9e9995875f299daf06e077f392bfd47be1119ef9

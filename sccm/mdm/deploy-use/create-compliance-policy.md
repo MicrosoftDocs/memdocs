@@ -217,3 +217,10 @@ robots: noindex
   For information on how the HAS service works, see [Health Attestation CSP](https://msdn.microsoft.com/library/dn934876.aspx).
   **Supported on:**
   * Windows 10 and Windows 10 Mobile
+
+- **Apps that cannot be installed on the device:** If users install an app from the admin-non-compliant list of apps, they’ll be blocked when trying to access corporate e-mail and other corporate resources that support conditional access. This rule requires the app name, and the app ID when adding an app to the non-compliant list defined by the admin. The app publisher can also be added, but it’s not required.
+
+  **Supported on:**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX Standard 4.0+
