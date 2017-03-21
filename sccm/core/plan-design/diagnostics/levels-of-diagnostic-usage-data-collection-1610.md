@@ -53,56 +53,55 @@ Beginning with version 1610, you change the data collection level from within th
  For System Center Configuration Manager version 1610, this level includes the following:
 
 
- -   Setup Information:
+-   Setup Information:
  	  - Build, install type, language packs, features that you enabled  
 
- 	  -   Update pack deployment status and errors, download progress, and prerequisite errors 	
+ 	  - Update pack deployment status and errors, download progress, and prerequisite errors 	
 
- 	  -  Version of post-upgrade script
+ 	  - Version of post-upgrade script
 
- 	  -  Use of update fast ring
+ 	  - Use of update fast ring
 
-    -  ***[New]*** Pre-release use, setup media type, branch type
+    - ***[New]*** Pre-release use, setup media type, branch type
 
     - ***[New]*** Software Assurance expiration date
-    
--   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
--   Basic database configuration (processors, cluster configuration, and configuration of distributed views)
+- Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
--   Configuration Manager database schema (hash of all object definitions)
+- Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
--   Count of Configuration Manager client versions and operating system versions
+- Configuration Manager database schema (hash of all object definitions)
 
--   Count of operating systems for managed devices and policies set by the Exchange Connector
+- Count of Configuration Manager client versions and operating system versions
 
--   Count of client languages and locales
+- Count of operating systems for managed devices and policies set by the Exchange Connector
 
--   Count of Windows 10 devices by branch and build
+- Count of client languages and locales
 
--   Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
+- Count of Windows 10 devices by branch and build
 
--   Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
+- Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
 
--   Basic user discovery statistics (user discovery count and minimum/maximum/average group sizes)
+- Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
 
--   Basic Endpoint Protection information (antimalware client versions)
+- Basic user discovery statistics (user discovery count and minimum/maximum/average group sizes)
 
--   Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
+- Basic Endpoint Protection information (antimalware client versions)
 
--   Basic operating system deployment (OSD) counts (images)
+- Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
 
--   Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
+- Basic operating system deployment (OSD) counts (images)
 
--   Telemetry stats (when run, runtime, errors)
+- Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
 
--  Configured telemetry level, mode (online or offline), and fast update configuration
+- Telemetry stats (when run, runtime, errors)
 
--  Use of Network Discovery (enabled or disabled)
--  Admin Console:
+- Configured telemetry level, mode (online or offline), and fast update configuration
 
-	 -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
+- Use of Network Discovery (enabled or disabled)
+- Admin Console:
 
+	 - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)    
 
 - SQL version, service pack level, edition, collation ID, and character set
 
