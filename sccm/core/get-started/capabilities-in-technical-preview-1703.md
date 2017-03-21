@@ -27,7 +27,6 @@ This article introduces the features that are available in the Technical Preview
 
 ## Deploy volume-purchased iOS apps to device collections
 
-
 You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
 |||||
@@ -44,7 +43,13 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 
 For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
+## PFX certificates for Configuration Manager Windows client computers
 
+You can now deploy PFX certificate profiles you imported to Configuration Manager client computers running Windows 10.
+
+### Try it out
+
+Use the instructions in [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) to import a PFX profile, deploy the profile, and then check if the certificate was installed for the targeted user.
 
 ## Configure Azure Services wizard
 Technical preview 1703 introduces the **Configure Azure Services** wizard. This wizard provides a common configuration experience that replaces the individual workflows to set up the cloud services you use with Configuration Manager. This is done by using an **Azure web app** to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure.
