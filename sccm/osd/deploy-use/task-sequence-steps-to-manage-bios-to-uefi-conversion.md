@@ -19,6 +19,9 @@ manager: angrobe
 # Task sequence steps to manage BIOS to UEFI conversion
 Windows 10 provides many new security features that require UEFI-enabled devices. You might have modern Windows PCs that support UEFI, but are using legacy BIOS. Converting a device to UEFI has required you to go to each PC, repartition the hard disk, and reconfigure the firmware. By using task sequences in Configuration Manager, you can prepare a hard drive for BIOS to UEFI conversion, convert from BIOS to UEFI as part of the in-place upgrade process, and collect UEFI information as part of hardware inventory.
 
+## Hardware inventory collects UEFI information
+Beginning in version 1702, a new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+
 ## Create a custom task sequence to prepare the hard drive for BIOS to UEFI conversion
 Starting in Configuration Manager version 1610, you can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion.
 
@@ -59,7 +62,3 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
     2.	Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a Run Command Line task sequence step with a command line to start the OEM tool.
     3.	From General, add the **Restart Computer** step. For Specify what to run after restart, select **The currently installed default operating system**.
 3.	Deploy the task sequence.
-
-
-## Hardware inventory collects UEFI information
-Beginning in version 1702, a new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
