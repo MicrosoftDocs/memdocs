@@ -64,7 +64,7 @@ At each System Center Configuration Manager site, you can set up site components
     -   The specified fully qualified domain names (FQDNs) for the management points in Configuration Manager have host entries (A or AAA records) in DNS.  
 
     > [!WARNING]  
-    >  For clients to find management points that are published in DNS, you must assign the clients to a specific site (rather than use automatic-site assignment). Set up these clients to use the site code with the domain suffix of their management point. For more information, see [Locating Management Points](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
+    >  For clients to find management points that are published in DNS, you must assign the clients to a specific site (rather than use automatic-site assignment). Set up these clients to use the site code with the domain suffix of their management point. For more information, see [Locating Management Points](../../../../core/clients/deploy/assign-clients-to-a-site#locating-management-points) in [How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md).  
 
      If Configuration Manager clients cannot use Active Directory Domain Services or DNS to find management points on the intranet, they use [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins). The first management point that is installed for the site is automatically published to WINS when it is set up to accept HTTP client connections on the intranet.  
 
