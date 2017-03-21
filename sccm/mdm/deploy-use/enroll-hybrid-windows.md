@@ -2,7 +2,7 @@
 title: "Set up Windows hybrid device management with System Center Configuration Manager and Microsoft Intune | Microsoft Docs"
 description: "Set up Windows device management with System Center Configuration Manager and Microsoft Intune."
 ms.custom: na
-ms.date: 03/09/2017
+ms.date: 03/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,7 +31,7 @@ Two factors determine how you'll enroll Windows devices:
 - **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
 - **What versions of Windows clients will enroll?** <br>Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
 
-||**Azure AD Premium**|**Other AD **|
+||**Azure AD Premium**|**Other AD**|
 |----------|---------------|---------------|  
 |**Windows 10**|[Automatic enrollment](#automatic-enrollment) |[Company Portal enrollment](#company-portal-enrollment)|
 |**Earlier Windows versions**|[Company Portal enrollment](#company-portal-enrollment)|[Company Portal enrollment](#company-portal-enrollment)|
@@ -68,7 +68,7 @@ To enable Windows device management for either PCs or mobile devices, use the fo
       3. You can also configure [Windows Hello for Business settings](windows-hello-for-business-settings.md).
     - **Windows Phone** for Windows phones and tablets, then perform the following steps:
       1. In the **General** tab, click the **Windows Phone 8.1 and Windows 10 Mobile** checkbox. Windows Phone 8.0 is no longer supported.
-      2. If your organization needs to sideload company apps, you can upload the required token or file. For more information about sideloading apps, see [Creat Windows apps](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
+      2. If your organization needs to sideload company apps, you can upload the required token or file. For more information about sideloading apps, see [Create Windows apps](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications).
         - **Application enrollment token**
         - **.pfx file**
         - **None**
@@ -76,7 +76,7 @@ To enable Windows device management for either PCs or mobile devices, use the fo
 4. Click **OK** to close the dialog box.  To simplify the enrollment process using the Company Portal, you should create a DNS alias for device enrollment. You can then tell users how to enroll their devices.
 
 ### Create DNS alias for device enrollment  
-A DNS alias (CNAME record type) makes it easier for users to enroll their devices by connecting to the service without requiring the user to enter a server address. To create a DNS alias (CNAME record type), you have to configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should to create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
+A DNS alias (CNAME record type) makes it easier for users to enroll their devices by connecting to the service without requiring the user to enter a server address. To create a DNS alias (CNAME record type), you must configure a CNAME in your company's DNS records that redirects requests sent to a URL in your company's domain to Microsoft's cloud service servers.  For example, if your company's domain is contoso.com, you should create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.  
 
  Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
 
@@ -84,7 +84,7 @@ A DNS alias (CNAME record type) makes it easier for users to enroll their device
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hour|
 
-If you have more than one UPN suffix, you need to create one CNAME for each domain name and point each one to EnterpriseEnrollment-s.manage.microsoft.com. For example if users at Contoso use name@contoso.com, but also use name@us.contoso.com, and name@eu.constoso.com as their email/UPN, the Contoso DNS admin would need to create the following CNAMEs.
+If you have more than one UPN suffix, you need to create one CNAME for each domain name and point each one to EnterpriseEnrollment-s.manage.microsoft.com. For example, if users at Contoso use name@contoso.com, but also use name@us.contoso.com, and name@eu.constoso.com as their email/UPN, the Contoso DNS admin would need to create the following CNAMEs.
 
 |Type|Host name|Points to|TTL|  
 |----------|---------------|---------------|---|

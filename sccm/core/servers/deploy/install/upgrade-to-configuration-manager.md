@@ -73,8 +73,8 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 Review the server operating systems in use to host site system roles:  
 
--   Some older operating systems supported by System Center 2012 Configuration Manager are not supported by System Center Configuration Manager, and site system roles on those operating systems must be relocated or removed before the upgrade  
--   Prerequisite Checker for Configuration Manager does not verify the prerequisites for site system roles on the site server or on remote computers  
+-   Some older operating systems supported by System Center 2012 Configuration Manager are not supported by System Center Configuration Manager, and site system roles on those operating systems must be relocated or removed before the upgrade. Review the [Supported Operating Systems for Site System Servers](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md) documentation.   
+-   Prerequisite Checker for Configuration Manager does not verify the prerequisites for site system roles on the site server or on remote site systems  
 
 Review required prerequisites for each computer that hosts a site system role:  
 
