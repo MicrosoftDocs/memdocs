@@ -1,7 +1,7 @@
 ---
 title: "Site Configuration Server WMI Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,11 +52,15 @@ This section contains detailed reference information about the site configuratio
 
 -   [SMS_BoundaryGroupMembers Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_boundarygroupmembers-server-wmi-class.md)  
 
+-   [SMS_BoundaryGroupRelationships Server WMI Class](../../../../../develop/reference/core/servers/configure/sms-boundarygrouprelationships-server-wmi-class.md)
+
 -   [SMS_BoundaryGroupSiteSystems Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class.md)  
 
 -   [SMS_Client_Reg_MultiString_List Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md)  
 
 -   [SMS_CMSiteConfiguration Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_cmsiteconfiguration-server-wmi-class.md)  
+
+-   [SMS_DefaultBoundaryGroup Server WMI Class](../../../../../develop/reference/core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md)
 
 -   [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)  
 

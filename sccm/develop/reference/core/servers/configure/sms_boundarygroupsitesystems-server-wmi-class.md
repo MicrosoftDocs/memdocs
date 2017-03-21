@@ -1,7 +1,7 @@
 ---
 title: "SMS_BoundaryGroupSiteSystems Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -47,10 +47,14 @@ Class SMS_BoundaryGroupSiteSystems : SMS_BaseClass
 
  Specifies the connection type of the boundary. Possible values are:  
 
-|||  
-|-|-|  
+|Value|Description|  
+|---|---|  
 |0|FAST|  
 |1|SLOW|  
+
+> [!NOTE]
+> This parameter is no longer used for distribution points.
+
 
  `GroupID`  
  Data type: `UInt32`  
