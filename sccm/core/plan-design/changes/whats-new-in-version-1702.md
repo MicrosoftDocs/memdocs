@@ -132,7 +132,30 @@ For more information, see [Windows Hello for Business settings](/sccm/protect/de
 
 <!-- ## Compliance settings  -->
 
-<!-- ## Application Management   -->
+## Application Management
+
+### Deploy volume-purchased iOS apps to device collections
+
+You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+
+|||||
+|-|-|-|
+|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+|Earlier than 1702|Yes|User|User license|
+|Earlier than 1702|No|User|User license|
+|Earlier than 1702|Yes|Device|User license|
+|Earlier than 1702|No|Device|User license|
+|1702 and later|Yes|User|User license|
+|1702 and later|No|User|User license|
+|1702 and later|Yes|Device|Device license|
+|1702 and later|No|Device|User license|
+
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+### Support for iOS Volume Purchase Program for Education
+
+You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
 <!-- ## Operating system deployment  -->
 
