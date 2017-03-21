@@ -12,7 +12,9 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 caps.latest.revision: 11
-author: robstackmsftms.author: robstackmanager: angrobe
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
 ---
 
 # Manage apps from the Windows Store for Business with System Center Configuration Manager
@@ -115,6 +117,3 @@ A Configuration Manager application is created containing the Windows Store for 
 In the **Software Library** workspace, expand **Application Management**, then click **License Information for Store Apps**.
 
 For each store app you manage, you can view information about the app including its name, platform, then number of licenses for the app that you own, and the number of licenses you have available.
-
-## See Also  
- [Manage and protect apps with System Center Configuration Manager](../Topic/Manage%20and%20protect%20apps%20with%20System%20Center%20Configuration%20Manager.md)
