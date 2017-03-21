@@ -2,7 +2,7 @@
 title: "Create configuration items for Android and Samsung KNOX Standard devices managed with Intune | Microsoft Docs"
 description: "Use the System Center Configuration Manager Android and Samsung KNOX Standard configuration item to manage settings for devices."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -66,7 +66,7 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 
  You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.  
 
-##  Android and Samsung KNOX Standard configuration item settings reference  
+## Android and Samsung KNOX Standard configuration item settings reference  
 
 ### Password  
  These settings apply to both Android and Samsung KNOX Standard devices.  
@@ -153,8 +153,19 @@ Use the System Center Configuration Manager **Android and Samsung KNOX** configu
 |**Wireless network connection**|Allows the use of the Wi-Fi capabilities of the device.|
 |**Wi-Fi Tethering**|Allows the use of Wi-Fi tethering on the device.|
 
+## Android for Work configuration items
+Android for Work has two setting groups for configuration items:
+- Password
+- Work Profile
 
-### Kiosk mode (Samsung KNOX Standard only)  
+You can configure content sharing between work profiles, as well as the following configuration items on devices running Android 6 or higher:
+
+- The behavior for apps asking for specific permissions
+- Whether notifications for applications within the work profile are visible on the lock screen
+
+To create a configuration item in the Android work profile, choose **Android for Work** on the **General** page and configure settings for each of the setting groups, adding the configuration item to a baseline, and deploying as usual. These settings will only apply to devices enrolled as Android for Work, and not those enrolled as Android.
+
+## Kiosk mode (Samsung KNOX Standard only)  
  Kiosk mode allows you to lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device.  
 
 #### To configure kiosk mode for a Samsung KNOX Standard device  
