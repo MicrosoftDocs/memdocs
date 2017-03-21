@@ -30,7 +30,11 @@ manager: angrobe
 ## Manage volume-purchased apps for iOS devices  
  You buy multiple licenses for iOS apps through the Apple Volume Purchase Program (VPP). This involves setting up an Apple VPP account from the Apple web site and uploading the Apple VPP token to Configuration Manager, which provides the following capabilities:  
 
--   Sync your volume purchase information with Configuration Manager.  
+-   Sync your volume purchase information with Configuration Manager. 
+ 
+- Sync apps from both the Apple Volume Purchase Program for Business, and the Apple Volume Purchase Program for Education.
+
+- Associate multiple Apple volume-purchase program tokens with Configuration Manager.
 
 -   Apps that you bought are displayed in the Configuration Manager console.  
 
@@ -41,7 +45,6 @@ manager: angrobe
 ## Before you start  
  Before you begin, you'll need to get a VPP token from Apple and upload this to Configuration Manager.  
 
--   After you associate an Apple VPP account to Intune, you cannot subsequently associate a different account. For this reason, make sure that more than one person has the details of the account that you use.  
 -   If you previously used a VPP token with a different MDM product in your existing Apple VPP account, you must generate a new one to use with Configuration Manager.  
 -   Each token is valid for one year.  
 -   By default, Configuration Manager syncs with the Apple VPP service twice a day to ensure that your licenses are synced with Configuration Manager.  
@@ -100,7 +103,9 @@ The Configuration Manager application that is created has the Windows Store for 
     > [!IMPORTANT]  
     > You must choose a deployment purpose of **Required**. Available installations are not currently supported.
 
- When you deploy the app, a license is used by each user, or for device installs, each device that installs the app.  
+ When you deploy the app, a license is used by each user, or for device installs, each device that installs the app.  If you target a device collection with an app that supports device licensing, a device license is claimed.  If you target a device collection with an app that does not support device licensing, a user license is claimed. 
+
+ When you create an app from the **License Information for Store Apps** node, the app is associated with licenses from the token for the app you selected.  For example, you might see two versions of the same app in the node. This is because each version of the app is associated with a different Apple VPP token.  You could then create apps from each token, and deploy them seperately.
 
  To reclaim a license, you must change the deployment action to **Uninstall**. The license will be reclaimed after the app uninstalls.  
 
