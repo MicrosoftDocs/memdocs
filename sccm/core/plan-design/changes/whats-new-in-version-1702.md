@@ -157,6 +157,11 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
 For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
 
+### Improved support for Windows Store for Business apps
+
+You can now deploy online licensed apps from the Windows Store for Business to Windows 10 PCs that you manage using the Configuration Manager client.
+For more information, see [Manage apps from the Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+
 <!-- ## Operating system deployment  -->
 
 <!-- ## Software updates  -->
