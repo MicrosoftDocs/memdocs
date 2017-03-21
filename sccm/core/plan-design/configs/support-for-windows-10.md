@@ -33,11 +33,11 @@ Configuration Manager attempts to provide support for each new Windows 10 versio
 |Windows 10 versions |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
-|1507 <br />Enterprise, Pro | ![Supported](media/green_check.png)| ![Supported](media/green_check.png)|![Supported](media/green_check.png) |
-|1511 <br />Enterprise, Pro <br />(CB), (CBB) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
+|1507 <br />Enterprise, Education, Pro | ![Supported](media/green_check.png)| ![Supported](media/green_check.png)|![Supported](media/green_check.png) |
+|1511 <br />Enterprise, Education, Pro <br />(CB), (CBB) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |![Supported](media/green_check.png) |
 |Enterprise 2016 LTSB	|![Not supported](media/Red_X.png) |![Supported](media/green_check.png) | ![Supported](media/green_check.png)|
-|1607 <br />Enterprise, Pro<br /> (CB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
-|1607 <br />Enterprise, Pro <br />(CBB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/Red_X.png) |![Supported](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro<br /> (CB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/blue_compat.png) |![Supported](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro <br />(CBB)	|![Not supported](media/Red_X.png) |![Backwards compatible](media/Red_X.png) |![Supported](media/green_check.png) |
 
 
 |Key|
