@@ -65,8 +65,7 @@ Beginning with version 1610, you change the data collection level from within th
     -  ***[New]*** Pre-release use, setup media type, branch type
 
     - ***[New]*** Software Assurance expiration date
-
-
+    
 -   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
 -   Basic database configuration (processors, cluster configuration, and configuration of distributed views)

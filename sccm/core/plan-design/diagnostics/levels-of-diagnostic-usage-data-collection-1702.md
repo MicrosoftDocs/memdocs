@@ -55,59 +55,56 @@ The Basic level includes data about your hierarchy, data that's required to help
 
 For System Center Configuration Manager version 1702, this level includes the following:
 
--  Admin Console:
-   -  Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
+- Admin Console:
+   - Statistics about console connections (operating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
 
-   -  SQL version, service pack level, edition, collation ID, and character set     
+- Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
 
+- Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
 
+- Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
--   Basic application and deployment type counts (total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use)
+- ***[Updated]*** Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Azure Active Directory Services.
 
--   Basic Configuration Manager site hierarchy data (site list, type, version, status, client count, and time zone)
+- Basic Endpoint Protection information (antimalware client versions)
 
--   Basic database configuration (processors, cluster configuration, and configuration of distributed views)
+- Basic operating system deployment (OSD) counts (images)
 
--   ***[Updated]*** Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Azure Active Directory Services.
+- Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
 
--   Basic Endpoint Protection information (antimalware client versions)
+- Configuration Manager database schema (hash of all object definitions)
 
--   Basic operating system deployment (OSD) counts (images)
+- Configured telemetry level, mode (online or offline), and fast update configuration
 
--   Basic site system server information (site system roles used, Internet and SSL status, operating system, processors, and physical or virtual machine)
+- Count of client languages and locales
 
--   Configuration Manager database schema (hash of all object definitions)
+- Count of Configuration Manager client versions and operating system versions
 
--   Configured telemetry level, mode (online or offline), and fast update configuration
+- Count of operating systems for managed devices and policies set by the Exchange Connector
 
--   Count of client languages and locales
+- Count of Windows 10 devices by branch and build
 
--   Count of Configuration Manager client versions and operating system versions
+- Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
 
--   Count of operating systems for managed devices and policies set by the Exchange Connector
+- Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
 
--   Count of Windows 10 devices by branch and build
+- Setup Information:
+     - Build, install type, language packs, features that you enabled   
 
--   Database performance metrics (replication processing information, top SQL Server stored procedures by processor and disk usage)
+     - Pre-release use, setup media type, branch type
 
--   Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
+     - Software Assurance expiration date      
 
--  Setup Information:
-     -  Build, install type, language packs, features that you enabled   
+     - Update pack deployment status and errors, download progress, and prerequisite errors 	
 
-     -  Pre-release use, setup media type, branch type
+     - Use of update fast ring
 
-     -  Software Assurance expiration date      
+     - Version of post-upgrade script
 
-     -  Update pack deployment status and errors, download progress, and prerequisite errors 	
+- SQL version, service pack level, edition, collation ID, and character set     
+- Telemetry stats (when run, runtime, errors)
 
-     -  Use of update fast ring
-
-     -  Version of post-upgrade script
-
--  Telemetry stats (when run, runtime, errors)
-
--  Use of Network Discovery (enabled or disabled)
+- Use of Network Discovery (enabled or disabled)
 
 
 
