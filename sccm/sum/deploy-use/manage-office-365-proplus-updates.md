@@ -18,9 +18,6 @@ Beginning in Configuration Manager version 1602, Configuration Manager has the a
 ## Office 365 Client Management dashboard  
 Starting in Configuration Manager version 1610, the Office 365 Client Management dashboard is available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
 
-<!--- >[!NOTE]
->In the **What's New** workspace in the Configuration Manager console, the new dashboard is incorrectly named **Office 365 Servicing dashboard**. --->
-
 The dashboard displays charts for the following:
 
 - Number of Office 365 clients
@@ -112,7 +109,10 @@ To change the update channel after you enable Office 365 clients to receive upda
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
 
 ## Deploy Office 365 apps  
-Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.  
+Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer to make the initial Office 365 App install experience easier. It will let you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
+
+This is especially helpful because Office 365 updates are not applicable for clients without Office 365 installed. Before version 1702, to install Office 365 apps for the first time on clients, you would need to manually download Office 365 Deployment Tool (ODT) and the Office 365 installation source files, including all of the language packs that you need, and generate the Configuration.xml that specifies the correct Office version and channel. Then, you would need to create and deploy either a legacy package or a script application for clients to install the Office 365 apps.
+
 
 > [!NOTE]
 > - The computer that runs the Office 365 Installer must have Internet access.  
@@ -120,6 +120,7 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 > - If you receive a 404 download error, copy the following files to the user %temp% folder:
 >    - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
 >    - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+> - After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager will not manage the Office updates by default. the update will not be managed by SCCM by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates-with-configuration-manager).
 
 ### To deploy Office 365 apps to clients from the Office 365 Client Management dashboard
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
@@ -139,8 +140,7 @@ If you choose not to deploy the package in the wizard, skip to step 9.
 >[!NOTE]
 >After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the Office 365 Client Management dashboard, and select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
 
-## Deploy Office 365 apps without the Office 365 Installation Wizard
-You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.
+<!--- You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.
 > [!Note]
 > The Office 365 Installation Wizard was introduced in Configuration Manager version 1702 and provides an easy way to create Office 365 apps.
 
@@ -148,6 +148,7 @@ You can create an Office 365 app without using the Office 365 Installation Wizar
 - Review the [configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/jj219426.aspx).
 
 You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
+--->
 
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
