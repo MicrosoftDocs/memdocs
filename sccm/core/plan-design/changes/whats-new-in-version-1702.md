@@ -119,6 +119,12 @@ You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure
 ### Software update points are added to boundary groups
 Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the [configuring boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) topic.
 
+## Protect data and infrastructure
+
+- If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
+For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
+
+
 
 <!-- ## Migration  -->
 
@@ -222,3 +228,5 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 <!-- ## Inventory  -->
 
 <!-- ## Mobile device management - on-premises and hybrid  -->
+
+
