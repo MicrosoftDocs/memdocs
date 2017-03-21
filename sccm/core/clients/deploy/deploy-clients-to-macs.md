@@ -23,7 +23,7 @@ manager: angrobe
 
 This topic describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
 
-When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console. 
+When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console.
 
 In these procedures, you have two options for installing client certificates. Read more about client certificates for Macs in [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements).  
 
@@ -79,7 +79,7 @@ In these procedures, you have two options for installing client certificates. Re
 >  For more information about Configuration Manager client settings, see [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md).  
 
 ## Download the client source files for Macs  
-  
+
 1.  Download the Mac OS X client file package, **ConfigmgrMacClient.msi**, and save it to a computer that runs Windows.  
 
      This file is not supplied on the Configuration Manager installation media. You can download this file from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=525184).  
@@ -90,7 +90,7 @@ In these procedures, you have two options for installing client certificates. Re
 
 4.  On the Mac computer, run the Macclient.dmg file to extract the files to a folder on the local disk.  
 
-5.  In the folder, ensure that the files Ccmsetup and CMClient.pkg are extracted and that a folder named Tools is created that contains the CMDiagnostics,  CMUninstall, CMAppUtil and CMEnroll tools. 
+5.  In the folder, ensure that the files Ccmsetup and CMClient.pkg are extracted and that a folder named Tools is created that contains the CMDiagnostics,  CMUninstall, CMAppUtil and CMEnroll tools.
 
 	-  **Ccmsetup**: Installs the Configuration Manager client on your Mac computers.  
 
@@ -103,7 +103,7 @@ In these procedures, you have two options for installing client certificates. Re
 	-   **CMEnroll**: Requests and installs the client certificate for a Mac computer so that you can then install the Configuration Manager client.   
 
 ## Install the client and then enroll the client certificate on the Mac  
-  
+
 You can enroll individual clients with the [Mac Computer Enrollment wizard](#enroll-the-client-with-the-mac-computer-enrollment-wizard).
 
 For automation that enables enrollment of many clients, use the [CMEnroll tool](#client-and-certificate-automation-with-cmenroll).   
@@ -191,12 +191,12 @@ Use this procedure for automation of client installation and requesting and enro
 > -   The Bill of Materials (BOM) file and property list (.plist) file created by the Configuration Manager client installation.  
 > -   The contents of the folder /Library/Application Support/Microsoft/CCM/Logs.  
 >   
->  The information collected by CmDiagnostics is added to a zip file that is saved to the desktop of the computer and is named cmdiag-*<hostname\>***-***<date and time\>*.zip.  
+>  The information collected by CmDiagnostics is added to a zip file that is saved to the desktop of the computer and is named cmdiag-*<hostname\>***-***&gt;date and time\>*.zip.***
 
 
 ##  Use a certificate request and installation method that is independent from Configuration Manager  
 
-First, perform these specific tasks from [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients): 
+First, perform these specific tasks from [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients):
 
 1. [Deploy a web server certificate to site system servers](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 
