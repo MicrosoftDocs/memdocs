@@ -203,6 +203,11 @@ This task applies to devices that are enrolled by using Microsoft Intune (hybrid
 -   **Primary site**: Enabled    
 -   Secondary site: Not available  
 
+**Delete Expired MDM Bulk Enroll Package Records**: Use this task to delete old Bulk Enrollment certificates and corresponding profiles after the enrollment certificate has expired. For more information, see [Create certificate profiles](/sccm/protect/deploy-use/create-certificate-profiles).
+-   **Central administrations site**: Enabled
+-   **Primary site**: Enabled
+-   Secondary Site: Not available
+
 **Delete Inactive Client Discovery Data**: Use this task to delete discovery data for inactive clients from the database. Clients are marked as inactive when the client is flagged as obsolete and by configurations that are made for client status.
 
 This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task, which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md).  
@@ -238,7 +243,7 @@ This task operates only on resources that are Configuration Manager clients. It'
 **Delete Orphaned Client Deployment State Records**: Use this task to periodically purge the table that contains client deployment state information. This task will clean up records associated with obsolete or decommissioned devices.  
 -   **Central administration site**: Enabled    
 -   **Primary site**: Enabled    
--   Secondary site: Not available 
+-   Secondary site: Not available
 
 **Delete Unused Application Revisions**: Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications in System Center Configuration Manager](../../../apps/deploy-use/revise-and-supersede-applications.md).  
 
