@@ -2,7 +2,7 @@
 title: "Monitor Mobile Threat Defense compliance | System Center Configuration Manager"
 description: "Monitor the Mobile Threat Defense partner compliance status from the Configuration Manager manager console"
 ms.custom: na
-ms.date: 03/03/2017
+ms.date: 03/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
