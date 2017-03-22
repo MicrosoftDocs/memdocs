@@ -309,21 +309,23 @@ The files **WBEMDISP.DLL** and **WBEMDISP.TLB** must exist and be registered in 
 
  **Requirements and limitations:**  
 
--   You must configure the **Service connection point** at the top-tier site of your hierarchy  
+-   You must configure the **Service connection point** at the top-tier site of your hierarchy.  
 
 **Supported operating systems:**  
 
--   **Windows 10 Pro** (x86, x64)  
+- **Windows 10 Pro** (x86, x64)  
 
--   **Windows 10 Pro Enterprise** (x86, x64)  
+- **Windows 10 Pro Enterprise** (x86, x64)  
 
--   **Windows 10 IoT Enterprise** (x86, x64)
+- **Windows 10 IoT Enterprise** (x86, x64)
 
--   **Windows 10 Mobile**  
+- **Windows 10 Mobile**  
 
--   **Windows 10 Mobile Enterprise**  
+- **Windows 10 Mobile Enterprise**  
 
--  **Windows 10 IoT Mobile Enterprise**
+- **Windows 10 IoT Mobile Enterprise**
+
+- **Windows 10 Team for Surface Hub**
 
 ##  <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
 Configuration Manager supports limited management of devices that connect to your Exchange Server, without installing the Configuration Manager client. For more information, see [Manage mobile devices with System Center Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
