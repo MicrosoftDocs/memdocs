@@ -2,7 +2,7 @@
 title: "The CD.Latest folder | Microsoft Docs"
 description: "Learn about the new update process that delivers updates to the product from within the Configuration Manager console."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,11 +31,13 @@ However, baseline media, like the baseline version 1606 that released in October
 
 -   You run the built-in Configuration Manager backup task: The folder is created or updated under the designated backup folder location.  
 
+-  Begining with version 1606, the CD.Latest folder is created when you install a new site using baseline media (like verison 1606 or 1702).
+
 The source files from the CD.Latest folder are supported for the following:  
 
-1.  **Backup and recovery:** The CD.Latest folder contains source files you use to reinstall your site as part of a site recovery. To recover a Configuration Manager site, your site backup must include the CD.Latest folder (the built-in site backup task automatically includes this folder as part of the site backup).  
+1.  **Backup and recovery:** To recover a site, you must use the source files from a CD.Latest folder that matches your site. When you run a site backup using the built-in site backup task, the CD.Latest folder is included as part of the backup.
 
-    -   **When you reinstall a site as part of a site recovery,** you install the site from the CD.Latest folder included in your backup. This installs the site using the file versions that match your site backup and site database.  
+    -   **When you reinstall a site as part of a site recovery,** you install the site from the CD.Latest folder included in your backup. This installs the site using the file versions that match your site backup and site database.  If you do not have access the correct CD.Latest folder version, you can obtain a CD.Latest folder with the correct file versions by installing a site in a lab environement, and then updating that site to match the version you want to recover.
 
         > [!IMPORTANT]  
         >  If you do not have the correct CD.Latest folder and its contents available, you cannot recover a site and it must be reinstalled.  
