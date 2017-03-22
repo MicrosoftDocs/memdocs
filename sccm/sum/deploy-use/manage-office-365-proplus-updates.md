@@ -113,7 +113,7 @@ To change the update channel after you enable Office 365 clients to receive upda
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
 
 ## Deploy Office 365 apps  
-Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App install experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
+Beginning in version 1702, you can start the Office 365 Installer from the Office 365 Client Management dashboard to make the initial Office 365 App installation experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application for the files.
 
 This is especially helpful because Office 365 updates are not applicable for clients without Office 365 installed. Before version 1702, to install Office 365 apps for the first time on clients, you would need to manually download Office 365 Deployment Tool (ODT) and the Office 365 installation source files, including all of the language packs that you need, and generate the Configuration.xml that specifies the correct Office version and channel. Then, you would need to create and deploy either a legacy package or a script application for clients to install the Office 365 apps.
 
@@ -123,7 +123,7 @@ This is especially helpful because Office 365 updates are not applicable for cli
 > - If you receive a 404 download error, copy the following files to the user %temp% folder:
 >    - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
 >    - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
-> - After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager will not manage the Office updates by default. the update will not be managed by SCCM by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates-with-configuration-manager).
+> - After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager will not manage the Office updates by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates-with-configuration-manager).
 
 ### To deploy Office 365 apps to clients from the Office 365 Client Management dashboard
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
