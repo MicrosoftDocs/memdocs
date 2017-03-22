@@ -112,7 +112,8 @@ Before you can manage a Linux or UNIX server with System Center Configuration Ma
 
      Optional. Specifies by FQDN, the fallback status point server that the client uses to submit state messages.  
 
-     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point).  
+     For more information about the fallback status point, see [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) .  
+
 
 -   **-dir &lt;directory\>**  
 
