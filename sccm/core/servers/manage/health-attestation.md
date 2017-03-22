@@ -42,18 +42,21 @@ Configuration Manager Device Health Attestation displays the following:
 
 ### How to enable Health Attestation service communication on Configuration Manager client computers
 
+Use this procedure to enable device health attestation monitoring for devices that connect to the internet.
+
 1.  In the Configuration Manager console, choose **Administration** > **Overview** > **Client Settings**.  Select the tab for **Computer Agent** settings.  
 2.  In the **Default Settings** dialog box, select **Computer Agent** and then scroll down to **Enable communication with Health Attestation Service**  
 3.  Set **Enable communication with Health Attestation Service** to **Yes**, and then click **OK**.  
 4. Target the collections of devices that should report device health.
 
 ### How to enable on-premises Health Attestation service communication on Configuration Manager client computers
+Use this procedure to enable device health attestation monitoring for on-premises devices that don't connect to the internet.
 
 Starting with Configuration Manager 1702, the on-premises device health attestation service URL can be configured on the management point to support client devices without internet access.
 
 1. In the Configuration Manager console, navigate **Administration** > **Overview** > **Site Configuration** > **Sites**.
-2. Right-click the primary or secondary site and select **Configure site components** > **Management Point**. The management point properties page opens.
-3. Select **Advanced Options**. In **Configure On-premises Device Health Attestation Service URL** select **Add** and provide the **On-premises URL**. You can specify URLs. If multiple on-premises URLs are specified, clients receive the full set and randomly choose which to use.
+2. Right-click the primary or secondary site with the management point that support on-premises device health attestation clients, and select **Configure site components** > **Management Point**. The **Management Point Component Properties** page opens.
+3. On the **Advanced Options** tab, select **Add** and specify a valid on-premises device health attestation service URL. You can add multiple URLs. If multiple on-premises URLs are specified, clients receive the full set and randomly choose which to use.
 
 > [!NOTE]
 > If you used device health attestation prior to upgrading to Configuration Manager 1702, the on-premises URLs specified in the client agent settings is pre-populate in the management point properties during the upgrade. On-premises clients will continue to use the URL specified in client agent settings until they are upgraded. They will then switch to one of the URLs specified on the management point.
