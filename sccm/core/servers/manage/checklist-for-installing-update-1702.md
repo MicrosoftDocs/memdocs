@@ -51,7 +51,7 @@ When a site server installs the update, the site system roles that are installed
 **Configuration Manager consoles:**   
 The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and then choose the option to update the console. We recommend that you do not delay installing the update to the console.
 
->! [IMPORTANT]
+> [!IMPORTANT]  
 > When you install an update at the central administration site, be aware of the following limitations and delays that exist until all child primary site also complete the update installation:    
 > - **Client upgrades** do not start. This includes automatic updates of clients and pre-production clients. Additionally, you cannot promote pre-production clients to production until the last site completes the update installation. After the last site completes the update installation, client upgrades will begin based on your configuration choices.   
 > - **New features** you enable with the update are not available. This is to prevent the replication of data related to that feature from being sent to a site that has not yet installed support for that feature. After all primary sites install the update, the feature will be available for use.   
