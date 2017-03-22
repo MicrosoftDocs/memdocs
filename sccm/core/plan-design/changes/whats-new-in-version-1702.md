@@ -164,6 +164,14 @@ For more information about volume-purchased iOS apps, see [Manage volume-purchas
 You can now deploy online licensed apps from the Windows Store for Business to Windows 10 PCs that you manage using the Configuration Manager client.
 For more information, see [Manage apps from the Windows Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
+### Check for running executable files before installing an application
+
+In the **Properties** dialog box of a deployment type, on the **Install Behavior** tab, you can now specify one of more executable files that, if running, will block the installation of the deployment type. The user must close the running executable file (or it can be closed automatically for deployments with a purpose of required) before the deployment type can be installed.
+
+If the application was deployed as **Available**, and an end user tries to install an application, they will be prompted to close any running executables you specified before they can proceed with the installation.
+
+If the application was deployed as **Required**, and the option **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box** is selected, they will see a dialog box which informs them that executables you specified will be automatically closed when the application installation deadline is reached.
+
 ## Operating system deployment
 
 ### Expire stand-alone media
