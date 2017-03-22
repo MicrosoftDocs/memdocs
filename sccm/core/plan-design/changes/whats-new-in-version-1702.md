@@ -235,7 +235,7 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 
 ## Mobile device management
 
-### <a id="target-android-ios"></a> Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
+### Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
 
 Beginning in version 1702 for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
 
