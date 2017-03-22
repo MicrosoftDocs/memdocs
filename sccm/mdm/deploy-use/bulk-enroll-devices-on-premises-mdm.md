@@ -29,7 +29,7 @@ Bulk enrollment in System Center Configuration Manager On-premises Mobile Device
 > [!NOTE]  
 >  The current branch of Configuration Manager supports enrollment in On-premises Mobile Device Management for devices running the following operating systems:  
 >   
->  -  Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team \(beginning in Configuration Manager version 1602\)  
 > -   Windows 10 Mobile  
