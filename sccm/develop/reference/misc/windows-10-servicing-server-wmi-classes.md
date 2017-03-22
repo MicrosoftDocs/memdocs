@@ -20,6 +20,8 @@ This section provides information about classes used by System Center Configurat
 
 ## Windows Servicing Classes  
 
+-   [SMS_AdminUIContent Server WMI Class](misc/sms-adminuicontent-server-wmi-class.md)
+
 -   [SMS_Windows10Dashboard Server WMI Class](../../../develop/reference/misc/sms_windows10dashboard-server-wmi-class.md)  
 
 -   [SMS_WindowsServicingBusinessReadyUpdates Server WMI Class](../../../develop/reference/misc/sms_windowsservicingbusinessreadyupdates-server-wmi-class.md)  
