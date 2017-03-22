@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Servicing Server WMI Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "03/22/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,6 +19,8 @@ manager: "mbaldwin"
 This section provides information about classes used by System Center Configuration Manager to manage Windows as a service.  
 
 ## Windows Servicing Classes  
+
+-   [SMS_AdminUIContent Server WMI Class](../../../develop/reference/misc/sms-adminuicontent-server-wmi-class.md)
 
 -   [SMS_Windows10Dashboard Server WMI Class](../../../develop/reference/misc/sms_windows10dashboard-server-wmi-class.md)  
 
