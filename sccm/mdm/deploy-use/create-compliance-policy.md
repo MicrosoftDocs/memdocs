@@ -219,8 +219,26 @@ robots: noindex
   * Windows 10 and Windows 10 Mobile
 
 - **Apps that cannot be installed on the device:** If users install an app from the admin-non-compliant list of apps, they’ll be blocked when trying to access corporate e-mail and other corporate resources that support conditional access. This rule requires the app name, and the app ID when adding an app to the non-compliant list defined by the admin. The app publisher can also be added, but it’s not required.
+	- **Supported on:**
+	  * iOS 6+
+	  * Android 4.0+
+	  * Samsung KNOX Standard 4.0+
 
-  **Supported on:**
-  * iOS 6+
-  * Android 4.0+
-  * Samsung KNOX Standard 4.0+
+#### What's App ID?
+
+App ID is an identifier that uniquely identifies the app within the Apple and Google application services.
+
+#### Find App IDs
+
+- **Android**
+	- You can find the App ID in Google Play store URL used to create the app:
+		- Example App ID: ***…?id=com.companyname.appname&hl=en***
+<br></br>
+- **iOS**
+	- In iTunes store URL find the **ID#**, example: ***/id875948587?mt=8***
+	- In a web browser navigate to the following URL, replacing the number with the ID# just found: 
+		- https://itunes.apple.com/lookup?id=875948587
+	- Download and open the text file
+	- Search for text “*bundleid*”
+	- Example of App ID: "*bundleId*":"*com.companyname.appname*" 
+
