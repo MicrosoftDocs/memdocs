@@ -103,3 +103,22 @@ You can now use the remainder of the [Current Branch content](/sccm/apps/deploy-
 You can view and edit the properties of a cloud service to modify the configuration.
 
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
+
+## Convert from BIOS to UEFI in an operating system upgrade task sequence
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update.
+
+**Requirements**:
+- Windows 10 Creators Update
+- Computers that support UEFI
+- OEM tool that converts the computer’s firmware from BIOS to UEFI
+
+### To convert from BIOS to UEFI during an in-place upgrade
+1.	Create an operating system upgrade task sequence that performs an in-place upgrade to Windows 10 Creators Update. For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
+2.	Edit the task sequence. In the **Post-Processing group**, add the following task sequence steps:
+    1.	From General, add a **Run Command Line** step. You will add the command line for the MBR2GPT tool that coverts a disk from MBR to GPT without modifying or deleting data from the disk. In Command line, type the following:  **MBR2GPT /convert /disk:0 /AllowFullOS**. For details about the tool, see [MBR2GPT.EXE]().
+    2.	Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a Run Command Line task sequence step with a command line to start the OEM tool.
+    3.	From General, add the **Restart Computer** step. For Specify what to run after restart, select **The currently installed default operating system**.
+3.	Deploy the task sequence.
+
+## Collapsible task sequence groups
+This version introduced the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once. 
