@@ -129,7 +129,10 @@ For more information, see [Windows Hello for Business settings](/sccm/protect/de
 
 <!-- ## Client management  -->
 
-<!-- ## Compliance settings  -->
+## Compliance settings
+
+We've added many new settings for iOS devices to match those available with Microsoft Intune.
+For a list of all available settings, see [Create configuration items for iOS and Mac OS X devices managed with Intune](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client).
 
 ## Application Management
 
