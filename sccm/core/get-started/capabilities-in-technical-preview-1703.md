@@ -121,4 +121,4 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
 3.	Deploy the task sequence.
 
 ## Collapsible task sequence groups
-This version introduced the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once. 
+This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once. 
