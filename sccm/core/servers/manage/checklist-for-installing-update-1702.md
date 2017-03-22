@@ -51,12 +51,18 @@ When a site server installs the update, the site system roles that are installed
 **Configuration Manager consoles:**   
 The first time you use a Configuration Manager console after the update has finished, you will be prompted to update that console. To do so, you must run Configuration Manager setup on the computer that hosts the console, and then choose the option to update the console. We recommend that you do not delay installing the update to the console.
 
+>! IMPORTANT  
+< When you install an update at the central administration site, be aware of the following limitations and delays that exist until all child primary site also complete the update installation:    
+> - **Client upgrades** do not start. This includes automatic updates of clients and pre-production clients. Additionally, you cannot promote pre-production clients to production until the last site completes the update installation. After the last site completes the update installation, client upgrades will begin based on your configuration choices.   
+> - **New features** you enable with the update are not available. This is to prevent the replication of data related to that feature from being sent to a site that has not yet installed support for that feature. After all primary sites install the update, the feature will be available for use.   
+> - **Replication links** between the central administration site and child primary sites display as not upgraded. This displays in the update pack installation status as a status of Completed with warning for Monitoring replication initialization.
+
 
 
 ## Checklist
 
 **Ensure that all sites run a version of System Center Configuration Manager that supports update to 1702:**   
-Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. To update to 1702, you must use version 1602, 1606 or 1610.
+Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. To update to 1702, you must use version 1602, 1606, or 1610.
 
 **Review the status of your Software Assurance or equivalent subscription rights:**   
 You must have an active Software Assurance (SA) agreement to install update 1702. When you install this update, the **Licensing** tab presents the option to confirm your **Software Assurance expiration date**.
