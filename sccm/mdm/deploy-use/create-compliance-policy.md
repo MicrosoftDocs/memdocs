@@ -226,7 +226,7 @@ robots: noindex
 
 #### What's App ID?
 
-App ID is an identifier that uniquely identifies the app within the Apple and Google application services.
+App ID is an identifier that uniquely identifies the app within the Apple and Google application services. For example, com.contoso.myapp.
 
 #### Find App IDs
 
