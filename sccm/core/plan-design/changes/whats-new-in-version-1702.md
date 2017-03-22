@@ -123,6 +123,8 @@ Beginning with version 1702, clients use boundary groups to find a new software 
 - If you intend to store certificate profiles in the Windows Hello for Business key container, and the certificate profile uses the Smart Card Logon EKU, you must configure permissions for key registration to ensure the certificate is validated correctly.
 For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).
 
+## New Windows Hello for Business notification for end users
+A new Windows 10 notification informs end users that they must take additional actions to complete Windows Hello for Business setup (for example, setting up a PIN).
 
 
 <!-- ## Migration  -->
