@@ -35,7 +35,8 @@ manager: angrobe
 
 -   Whether the device is jailbroken or rooted  
 
--   Whether email on the device is managed by an Intune policy, or if the device is reported as unhealthy by the Windows device health attestation service.  
+-   Whether email on the device is managed by an Intune policy, or if the device is reported as unhealthy by the Windows device health attestation service.
+-   Apps that cannot be installed on the device.
 
 
  You deploy compliance policies to user collections. When a compliance policy is deployed to a user, then all of the users devices are checked for compliance.  
@@ -51,6 +52,7 @@ manager: angrobe
 |**Minimum OS version**|Quarantined|Quarantined|Quarantined|Quarantined|  
 |**Maximum OS version**|Quarantined|Quarantined|Quarantined|Quarantined|  
 |**Device Health Attestation (1602 update)**|Setting is not applicable to Windows 8.1<br /><br /> Windows 10 and Windows 10 Mobile are Quarantined.|N/A|N/A|N/A|  
+|**Apps that cannot be installed**|N/A|N/A|Quarantined|Quarantined| 
 
  **Remediated** = Compliance is enforced by the device operating system (for example, the user is forced to set a PIN).  There is never a case when the setting will be noncompliant.  
 

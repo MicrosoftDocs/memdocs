@@ -2,7 +2,7 @@
 title: Manage task sequences to automate tasks | Microsoft Docs
 description: "You can create, edit, deploy, import, and export task sequences to manage them in your System Center Configuration Manager environment."
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -31,6 +31,12 @@ Use task sequences to automate steps in your System Center Configuration Manager
 |[Task sequence to capture and restore user state](create-a-task-sequence-to-capture-and-restore-user-state.md)|This task sequence provides the steps to add to an existing task sequence to capture and restore user state data.|  
 |[Task sequence to manage virtual hard disks](use-a-task-sequence-to-manage-virtual-hard-disks.md)|This task sequence type contains the steps to create a VHD, which includes to install an operating system and applications, that you can publish to System Center Virtual Machine Manager (VMM) from the Configuration Manager console.|  
 |[Custom task sequence](create-a-custom-task-sequence.md)|This task sequence type does not add any steps to the task sequence. You must edit the task sequence and add steps to the task sequence after it is created.|  
+
+## Return to previous page when a task sequence fails
+Beginning in Configuration Manager version 1702, you can return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
+
+- When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
 ##  <a name="BKMK_ModifyTaskSequence"></a> Edit a task sequence  
  You can modify a task sequence by adding or removing task sequence steps, adding or removing task sequence groups, or by changing the order of the steps. Use the following procedure to modify an existing task sequence.  
@@ -61,6 +67,52 @@ Use task sequences to automate steps in your System Center Configuration Manager
 5.  Click **OK** to save the changes.  
 
  For a list of the available task sequence steps, see [Task sequence steps](../understand/task-sequence-steps.md).  
+
+## Configure high-impact task sequence settings
+Beginning in Configuration Manager version 1702, you can set a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
+
+### Set a task sequence as a high-impact task sequence
+Use the following procedure to set a task sequence as high-impact.
+> [!NOTE]
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **This is a high-impact task sequence**.
+
+### Create a custom notification for high-risk deployments
+Use the following procedure to create a custom notification for high-impact deployments.
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **User Notification** tab, select **Use custom text**.
+>  [!NOTE]
+>  You can only set user notification text when the **This is a high-impact task sequence** is selected.
+
+4. Configure the following settings (max of 255 characters for each text box):
+
+  **User notification headline text**: Specifies the blue text that displays on the Software Center user notification. For example, in the default user notification, this section contains something like "Confirm you want to upgrade the operating system on this computer".
+
+  **User notification message text**: There are three text boxes that provide the body of the custom notification.
+  - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
+  - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
+  - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
+
+  Let's say you configure the following custom notification in properties.
+
+    ![Custom notification for a task sequence](..\media\user-notification.png)
+
+    The following notification message will be displayed when the end-user opens the installation from Software Center.
+
+    ![Custom notification for a task sequence](..\media\user-notification-enduser.png)
+
+### Configure Software Center properties
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
+2. Select the task sequence to edit, and click **Properties**.
+3. On the **General** tab, the following settings for Software Center are available:
+  - **Restart required**: Lets the user know whether a restart is required during the installation.
+  - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+  - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
 
 ##  <a name="BKMK_DistributeTS"></a> Distribute content referenced by a task sequence  
  Before clients run a task sequence that references content, you must distribute that content to distribution points. At any time, you can select the task sequence and distribute its content to build a new list of reference packages for distribution. If you make changes to the task sequence with updated content, you must redistribute the content before it is available to clients. Use the following procedure to distribute the content that is referenced by a task sequence.  
