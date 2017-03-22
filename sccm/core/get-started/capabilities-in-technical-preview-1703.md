@@ -51,6 +51,8 @@ You can now deploy PFX certificate profiles you imported to Configuration Manage
 
 Use the instructions in [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) to import a PFX profile, deploy the profile, and then check if the certificate was installed for the targeted user.
 
+
+
 ## Configure Azure Services wizard
 Technical preview 1703 introduces the **Configure Azure Services** wizard. This wizard provides a common configuration experience that replaces the individual workflows to set up the cloud services you use with Configuration Manager. This is done by using an **Azure web app** to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure.
 
@@ -104,6 +106,8 @@ You can view and edit the properties of a cloud service to modify the configurat
 
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
 
+
+
 ## Convert from BIOS to UEFI in an operating system upgrade task sequence
 Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update.
 
@@ -116,7 +120,7 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
 1.	Create an operating system upgrade task sequence that performs an in-place upgrade to Windows 10 Creators Update. For details, see [Create a task sequence to upgrade an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system).
 2.	Edit the task sequence. In the **Post-Processing group**, add the following task sequence steps:
     1.	From General, add a **Run Command Line** step. You will add the command line for the MBR2GPT tool that coverts a disk from MBR to GPT without modifying or deleting data from the disk. In Command line, type the following:  **MBR2GPT /convert /disk:0 /AllowFullOS**.
-       
+
         > [!NOTE]  
             > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full operating system. You can do this by adding a step to restart the computer to WinPE before the step to run the MBR2GPT.EXE tool and removing the /AllowFullOS option from the command line. For details about the tool and available options, see [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).    
 
@@ -124,5 +128,33 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
     3.	From General, add the **Restart Computer** step. For Specify what to run after restart, select **The currently installed default operating system**.
 3.	Deploy the task sequence.
 
+
 ## Collapsible task sequence groups
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
+
+
+## Client settings to configure Windows Analytics for Upgrade Readiness
+Beginning with this version, you can use device client settings to simplify the configuration of Windows Analytics when you use [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) with Configuration Manager. Windows Analytics collects and reports telemetry data about your Configuration Manager clients to your Operations Manager Suite (OMS) workspace. The telemetry data you collect can help you prioritize decisions about Windows upgrades for your managed devices.
+
+Telemetry data that Configuration Manager collects is in the form of the Event Tracing for Windows (ETW) log files. These log file are submitted to the Configuration Manager site when the client submits hardware inventory. These files are then transferred to your OMS workspace. The log files and their data are removed from your Configuration Manager site after the logs transfer to OMS.
+
+For information about Windows telemetry settings, see [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization).
+
+### Prerequisites
+- You must have configured your site to use Log Analytics from the OMS Upgrade Readiness. For information see [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) in the content library for the Current Branch.
+- Clients must use hardware inventory to submit the telemetry data.
+
+### Configure Windows Analytics client settings
+To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Default Client Settings** and then select **Windows Analytics**.  
+
+Then, configure the following:
+- **Commercial ID**  
+The commercial ID maps information from devices you manage to your OMS workspace. If you have already configured commercial ID for use with Upgrade Readiness for use with Configuration Manager, use that ID. If you do not yet have a commercial ID, see [Generate your commercial ID key]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key).
+
+- Set a **Telemetry level for Windows 10 devices**   
+For information about what is collected by each Windows 10 telemetry level, see  [Telemetry levels]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels) in the Windows on-line documentation.
+
+- Choose to **opt-in to commercial data collection on Windows 7, 8 and 8.1 devices**   
+For information about data collected from these operating systems when you opt-in, see download  the [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965) pdf file from Microsoft.
+
+- **Configure Internet Explore data collection**
