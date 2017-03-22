@@ -84,7 +84,7 @@ The following features that were previously available in Configuration Manager T
 - [Android for Work Support](#android-for-work-support)
 - [Non-Compliant Apps Compliance Settings](#non-compliant-apps-compliance-settings)
 - [PFX Certificate Creation and Distribution and S/MIME Support](#pfx-certificate-creation-and-distribution-and-smime-support)
-- [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/plan-design/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
+- [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
 
 The following additional hybrid features are also included in version 1702 of Configuration Manager (current branch):
 
