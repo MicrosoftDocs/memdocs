@@ -233,4 +233,26 @@ Beginning in version 1702, from the Office 365 Client Management dashboard, you 
 
 <!-- ## Inventory  -->
 
-<!-- ## Mobile device management - on-premises and hybrid  -->
+## Mobile device management
+
+### <a id="target-android-ios"></a> Android and iOS versions are no longer targetable in creation wizards for hybrid MDM
+
+Beginning in version 1702 for hybrid mobile device management (MDM), you no longer need to target specific versions of Android and iOS when creating new policies and profiles for Intune-managed devices. Instead, you choose one of the following device types:
+
+- Android
+- Samsung KNOX Standard 4.0 and higher
+- iPhone
+- iPad
+
+This change affects the wizards for creating the following items:
+
+- Configuration items
+- Compliance policies
+- Certificate profiles
+- Email profiles
+- VPN profiles
+- Wi-Fi profiles
+
+With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. Once a new version is supported in Intune standalone, users will be able to upgrade their mobile devices to that version.
+
+To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item.

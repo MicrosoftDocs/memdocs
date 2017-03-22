@@ -77,6 +77,41 @@ The following Intune features introduced in March 2017 work in hybrid deployment
 
   The Microsoft Teams apps for iOS and Android are now enabled with Intune mobile app management (MAM) capabilities, so you can empower your teams to work freely across devices, while ensuring that conversations and corporate data is protected at every turn. For more details, see [the Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/) on the Enterprise Mobility and Security blog.
 
+### New in Configuration Manager (current branch)
+
+The following features that were previously available in Configuration Manager Technical Preview releases are now available in hybrid deployments with Intune and Configuration Manager (current branch) version 1702.
+
+- [Android for Work Support](#android-for-work-support)
+- [Non-Compliant Apps Compliance Settings](#non-compliant-apps-compliance-settings)
+- [PFX Certificate Creation and Distribution and S/MIME Support](#pfx-certificate-creation-and-distribution-and-smime-support)
+- [Android and iOS versions are no longer targetable in creation wizards for hybrid MDM](/sccm/core/changes/whats-new-in-version-1702#target-android-ios)
+
+The following additional hybrid features are also included in version 1702 of Configuration Manager (current branch):
+
+- **Deploy volume-purchased iOS apps to device collections**
+
+  You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
+
+  |||||
+  |-|-|-|
+  |Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
+  |Earlier than 1702|Yes|User|User license|
+  |Earlier than 1702|No|User|User license|
+  |Earlier than 1702|Yes|Device|User license|
+  |Earlier than 1702|No|Device|User license|
+  |1702 and later|Yes|User|User license|
+  |1702 and later|No|User|User license|
+  |1702 and later|Yes|Device|Device license|
+  |1702 and later|No|Device|User license|
+
+  For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
+- **Support for iOS Volume Purchase Program for Education**
+
+  You can now also deploy and track apps you purchased from the iOS Volume Purchase Program for Education.
+
+  For more information about volume-purchased iOS apps, see [Manage volume-purchased iOS apps](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps).
+
 
 ## New hybrid features in February 2017
 
