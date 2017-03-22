@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Servicing Server WMI Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/20/2016"
+ms.date: "03/22/2017"
 ms.prod: "configuration-manager"
 ms.reviewer: ""
 ms.suite: ""
