@@ -25,7 +25,6 @@ Administrators can view the status of [Windows 10 Device Health Attestation](htt
 
 This functionality is available for PCs and on-premises resources managed by Configuration Manager and mobile devices managed with Microsoft Intune. Administrators can specify whether reporting is done via the cloud or on-premises infrastructure. On-premises device health attestation monitoring enables administrator to monitor client PCs without internet access.
 
-##  Device Health Attestation  
 Configuration Manager Device Health Attestation displays the following:  
 
 -   **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states  
@@ -34,8 +33,6 @@ Configuration Manager Device Health Attestation displays the following:
 -   **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting  
 
 ## Enable Health Attestation
-
-Starting with Configuration Manager 1702, on-premises device health attestation can be configured on the management point to support client devices without internet access.
 
  **Requirements:**  
 
@@ -52,9 +49,16 @@ Starting with Configuration Manager 1702, on-premises device health attestation 
 
 ### How to enable on-premises Health Attestation service communication on Configuration Manager client computers
 
+Starting with Configuration Manager 1702, the on-premises device health attestation service URL can be configured on the management point to support client devices without internet access.
+
 1. In the Configuration Manager console, navigate **Administration** > **Overview** > **Site Configuration** > **Sites**.
 2. Right-click the primary or secondary site and select **Configure site components** > **Management Point**. The management point properties page opens.
-3. Select **Advanced Options**. In **Configure On-premises Device Health Attestation Service URL** select **Add** and provide the **On-premises URL**.
+3. Select **Advanced Options**. In **Configure On-premises Device Health Attestation Service URL** select **Add** and provide the **On-premises URL**. You can specify URLs. If multiple on-premises URLs are specified, clients receive the full set and randomly choose which to use.
+
+> [!NOTE]
+> If you used device health attestation prior to upgrading to Configuration Manager 1702, the on-premises URLs specified in the client agent settings is pre-populate in the management point properties during the upgrade. On-premises clients will continue to use the URL specified in client agent settings until they are upgraded. They will then switch to one of the URLs specified on the management point.
+
+  You can also **Edit** or **Remove** device health attestation service URLs.
 
 ## How to view Health Attestation  
 
@@ -62,4 +66,4 @@ Starting with Configuration Manager 1702, on-premises device health attestation 
 
 2.  Device Health Attestation is displayed.  
 
- Client device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).  
+ Client device Health Attestation status can be used to define rules for conditional access in compliance policies for devices managed by Configuration Manager with Microsoft Intune. For details, see [Manage device compliance policies in System Center Configuration Manager](/sccm/protect/deploy-use/device-compliance-policies).
