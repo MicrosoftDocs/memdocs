@@ -27,8 +27,8 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
  When you create a VPN profile, you can include a wide range of security settings, including certificates for server validation and client authentication that have been provisioned by using System Center Configuration Manager certificate profiles. For more information about certificate profiles, see [Certificate profiles in System Center Configuration Manager](../../protect/deploy-use/introduction-to-certificate-profiles.md).  
 
- ## VPN profiles when using Configuration Manager together with Intune 
- 
+ ## VPN profiles when using Configuration Manager together with Intune
+
  To deploy profiles to iOS, Android, Windows Phone, and Windows 8.1 devices, these devices must be enrolled into Microsoft Intune. Devices on other platforms can also be enrolled to Intune. For information about how to enroll, see [Manage mobile devices with Microsoft Intune](https://technet.microsoft.com/en-us/library/dn646962.aspx). This table shows which connection type is supported for each device platform:  
 
  |Connection type|iOS    and Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop and Mobile|  
@@ -86,7 +86,7 @@ Use VPN profiles in System Center Configuration Manager to deploy VPN settings t
 
         -   **Remember the user credentials at each logon**: User credentials are remembered so that the user does not have to enter them each time they connect.  
 
-        -   **Select a client certificate for client authentication** - Select the client [SCEP certificate](introduction-to-certificate-profiles.md) that you previously created that will be used to authenticate the VPN connection.   
+        -   **Select a client certificate for client authentication** - Select the client [SCEP certificate](create-pfx-certificate-profiles.md) that you previously created that will be used to authenticate the VPN connection.   
 
             > [!NOTE]  
             >  For iOS devices, the SCEP profile you select will be embedded in the VPN profile. For other platforms, an applicability rule is added to ensure that the VPN profile is not installed if the certificate is not present, or not compliant.  
