@@ -55,8 +55,8 @@ The first time you use a Configuration Manager console after the update has fini
 
 ## Checklist
 
-**Ensure that all sites run a supported version of System Center Configuration Manager:**   
-Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. To update to 1702, you must use version 1606 or 1610.
+**Ensure that all sites run a version of System Center Configuration Manager that supports update to 1702:**   
+Each site server in the hierarchy must run the same version of System Center Configuration Manager before you can start the installation of update 1702. To update to 1702, you must use version 1602, 1606 or 1610.
 
 **Review the status of your Software Assurance or equivalent subscription rights:**   
 You must have an active Software Assurance (SA) agreement to install update 1702. When you install this update, the **Licensing** tab presents the option to confirm your **Software Assurance expiration date**.
