@@ -128,7 +128,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
         -   **Release Ready (Current Branch)**: In the CB servicing model, feature updates are available as soon as Microsoft releases them.
 
-        -   **Business Ready (Current Branch for Business**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
+        -   **Business Ready (Current Branch for Business)**: The CBB servicing branch is typically used for broad deployment. Windows 10 clients in the CBB servicing branch receive the same build of Windows 10 as those in the CB servicing branch, just at a later time.
 
     -   **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment**: Configuration Manager evaluates whether to include an upgrade in the deployment if the current date is after the release date plus the number of days that you configure for this setting.
 
@@ -195,7 +195,7 @@ Servicing plans use only the **Upgrades** software updates classification, not c
 
     4.  **Sending priority**: Specify the sending priority for the deployment package. Configuration Manager uses the sending priority for the deployment package when it sends the package to distribution points. Deployment packages are sent in priority order: High, Medium, or Low. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority.  
 
-11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations).  
+11. On the Distribution Points page, specify the distribution points or distribution point groups that will host the update files. For more information about distribution points, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
 
     > [!NOTE]  
     >  This page is available only when you create a new software update deployment package.  

@@ -177,6 +177,7 @@
 
 #    Manage infrastructure
 ##   [Maintenance tasks](servers/manage/maintenance-tasks.md)
+###  [Reference for maintenance tasks](servers/manage/reference-for-maintenance-tasks.md)
 ##   [Modify your infrastructure](servers/manage/modify-your-infrastructure.md)
 ###  [The CD.Latest folder](servers/manage/the-cd.latest-folder.md)
 ##   [Upgrade on-premises infrastructure](servers/manage/upgrade-on-premises-infrastructure.md)
