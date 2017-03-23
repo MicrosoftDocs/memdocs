@@ -2,7 +2,7 @@
 title: "New version 1702 | Microsoft Docs"
 description: "Get details about changes and new capabilities introduced in version 1702 of System Center Configuration Manager."
 ms.custom: na
-ms.date:  03/27/2017
+ms.date:  3/01/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
