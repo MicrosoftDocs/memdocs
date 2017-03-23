@@ -2,7 +2,7 @@
 title: "Create Android applications | Microsoft Docs"
 description: "See which considerations you must take into account when you create and deploy applications for Android devices."
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -47,17 +47,17 @@ The following deployment actions are supported:
 |Android|**Available**, **Required**. The user must consent to both installation and uninstallation.
 
 ## Approve and deploy Android for Work apps
-As a Configuration Manager admin, you can also approve and deploy apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices. 
+As a Configuration Manager admin, you can also approve and deploy apps in the [Play for Work website](https://play.google.com/work), and deploy those apps to managed Android for Work devices.
 
 Follow these steps to approve apps in the Play for Work store, sync them to the Configuration Manager console, and deploy them to managed Android for Work devices. To deploy apps to users' work profiles, you'll need to approve the apps in Play for Work, and then sync the apps with the Configuration Manager console.
 
 1. Open a browser and go to: https://play.google.com/work.
 2. Sign in using the Google admin account you bound to your Intune tenant.
-3. Browse for apps you'd like to deploy in your environment and click **Approve** for each of them.
+3. Browse for apps you'd like to deploy in your environment and click **Approve** for each of them to make the app available for Android for Work.
 4. In the Configuration Manager console, go to **Administrator** > **Overview** > **Cloud Services** > **Android for Work** and click **Sync**.
 5. Wait for up to 10 minutes for apps to sync, and then go **Software Library** > **Overview** > **Application Management** > **License Information for Store Apps**.
 6. Click on an app synced from Play for Work and then click **Create Application**.
 7. Complete the wizard and click **Close**.
 8. Go to **Software Library** > **Overview** > **Application Management** > **Applications**, select an Android for Work apps, and deploy as usual.
 
-To sync Play for Work apps with Configuration Manager, you must approve at least one app on the Play for Work website.
+To sync Play for Work apps with Configuration Manager, you must approve at least one app on the Play for Work website first.
