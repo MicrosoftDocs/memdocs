@@ -20,7 +20,7 @@ manager: angrobe
 
 *Applies to: System Center Configuration Manager (Current Branch)*
 
-When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version. (Because version 1702 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)  
+When you use the current branch of System Center Configuration Manager, you can install the in-console update for version 1702 to update your hierarchy from a previous version.
 
 To get the update for version 1702, you must use a service connection point site system role at the top-level site of your hierarchy. This can be in online or offline mode. After your hierarchy downloads the update package from Microsoft, you can find it in the console under **Administration &gt; Overview &gt; Cloud Services &gt; Updates and Servicing**.
 
