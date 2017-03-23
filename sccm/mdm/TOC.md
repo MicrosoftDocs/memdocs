@@ -72,10 +72,11 @@
 ### [Manage PC access to O365 services](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [Manage access based on risk](deploy-use/manage-access-based-on-device-network-app-risk.md)
-### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md)
+### [Set up Lookout Mobile Threat Defense](deploy-use/set-up-your-subscription-with-lookout.md)
 ### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md)
 ### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
 ### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+### [Monitor Mobile Threat Defense](deploy-use/monitor-mobile-threat-defense-compliance.md)
 ### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md)
 
 # On-premises mobile device management (MDM)

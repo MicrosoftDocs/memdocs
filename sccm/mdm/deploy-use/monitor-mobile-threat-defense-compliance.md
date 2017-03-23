@@ -45,14 +45,15 @@ You can also see the individual device status:
 
 2.  Click on **Devices**.
 
-> [!TIP] You can add the **Device threat compliance** and the **Device threat level** columns to see the status.
-> These columns are not displayed by default.
+> [!TIP] 
+> You can add the **Device threat compliance** and the **Device threat level** columns to see the status. These columns are not displayed by default.
 
 ## Device Threat Protection tab
 
 Additionally, on the **Devices** screen, you can select specific devices, then click on the **Device Threat Protection** tab that provides more details about the device compliance status. Find below the column descriptions and their expected values to help you analyze the device compliance status.
 
-> [!IMPORTANT] The Device Threat Protection tab only shows up if the selected device is a mobile device.
+> [!IMPORTANT] 
+> The Device Threat Protection tab only shows up if the selected device is a mobile device.
 
 |Column name|Visible by default|Description| 
 |-|-|-|
@@ -67,4 +68,5 @@ Additionally, on the **Devices** screen, you can select specific devices, then c
 |**Threat ID**| No | Mobile Threat Defense partner generated unique identifier for the threat. The Threat ID is used for tracking resolution. |
 |**Threat URL**| No | When present, the Threat URL links back to the Mobile Threat Defense partner’s management console view of this specific threat. |
 
-> [!TIP] Make sure to enable the columns that are not **visible by default** to see more details about the Mobile Threat Defense compliance status for your devices.
+> [!TIP] 
+> Make sure to enable the columns that are not **visible by default** to see more details about the Mobile Threat Defense compliance status for your devices.
